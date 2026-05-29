@@ -10,6 +10,15 @@ from pathlib import Path
 from corpus_common import REPO_ROOT, normalize_match_text, read_jsonl, write_tsv
 
 
+def repo_relative_path(path: Path | None) -> str | None:
+    if path is None:
+        return None
+    try:
+        return str(path.relative_to(REPO_ROOT))
+    except ValueError:
+        return str(path)
+
+
 def base_inscription_number(value: str | None) -> str:
     if not value:
         return ""
@@ -246,7 +255,7 @@ def audit_recently_found_vs_vol7(
         "status_counts": dict(status_counter),
         "review_decisions": dict(decision_counter),
         "editorial_overrides": {
-            "override_file": str(override_file) if override_file is not None else None,
+            "override_file": repo_relative_path(override_file),
             "override_count": len(editorial_overrides),
             "applied_override_count": applied_override_count,
             "missing_target_count": missing_target_count,

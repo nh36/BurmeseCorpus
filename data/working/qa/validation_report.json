@@ -1,7 +1,7 @@
 {
   "datasets": [
     {
-      "dataset": "/Users/nathanhill/Code/BurmeseCorpus/data/extracted/structured_corpus_current",
+      "dataset": "data/extracted/structured_corpus_current",
       "errors": [],
       "record_counts": {
         "inscriptions": 1121,
@@ -9,7 +9,7 @@
       }
     },
     {
-      "dataset": "/Users/nathanhill/Code/BurmeseCorpus/data/extracted/supplementary_1302525",
+      "dataset": "data/extracted/supplementary_1302525",
       "errors": [],
       "record_counts": {
         "inscriptions": 51,
@@ -17,7 +17,7 @@
       }
     },
     {
-      "dataset": "/Users/nathanhill/Code/BurmeseCorpus/data/extracted/supplementary_1203709",
+      "dataset": "data/extracted/supplementary_1203709",
       "errors": [],
       "record_counts": {
         "inscriptions": 31,
@@ -25,7 +25,7 @@
       }
     },
     {
-      "dataset": "/Users/nathanhill/Code/BurmeseCorpus/data/release/sagaing_v0_1",
+      "dataset": "data/release/sagaing_v0_1",
       "errors": [],
       "record_counts": {
         "inscriptions": 31,
@@ -33,11 +33,20 @@
       }
     },
     {
-      "dataset": "/Users/nathanhill/Code/BurmeseCorpus/data/release/unified_release_v0_1",
+      "dataset": "data/release/unified_release_v0_1",
       "errors": [],
       "record_counts": {
         "inscriptions": 1123,
         "lines": 23722
+      }
+    },
+    {
+      "dataset": "data/release/unified_release_v0_2",
+      "errors": [],
+      "record_counts": {
+        "inscriptions": 1121,
+        "lines": 23696,
+        "editorial_relations": 3
       }
     }
   ],

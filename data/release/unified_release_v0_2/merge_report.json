@@ -1,0 +1,16 @@
+{
+  "structured_record_count": 1121,
+  "structured_line_count": 23696,
+  "source_record_count": 51,
+  "source_line_count": 1067,
+  "matched_with_source": 49,
+  "title_variant_matches": 1,
+  "added_from_source_only": 0,
+  "suppressed_source_only_by_policy": 2,
+  "editorial_relation_count": 3,
+  "target_records_annotated": 3,
+  "merged_record_count": 1121,
+  "merged_line_count": 23696,
+  "release_policy_file": "data/working/inventory/recently_found_release_policy.tsv",
+  "warnings": []
+}

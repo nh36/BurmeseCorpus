@@ -13,7 +13,7 @@
     "title_variant_same_record": 1
   },
   "editorial_overrides": {
-    "override_file": "/Users/nathanhill/Code/BurmeseCorpus/data/working/inventory/recently_found_editorial_overrides.tsv",
+    "override_file": "data/working/inventory/recently_found_editorial_overrides.tsv",
     "override_count": 3,
     "applied_override_count": 3,
     "missing_target_count": 0,

@@ -7,6 +7,13 @@ from pathlib import Path
 from corpus_common import REPO_ROOT, read_jsonl
 
 
+def repo_relative_path(path: Path) -> str:
+    try:
+        return str(path.relative_to(REPO_ROOT))
+    except ValueError:
+        return str(path)
+
+
 def validate_inscriptions(records: list[dict]) -> list[str]:
     errors: list[str] = []
     seen_ids: set[str] = set()
@@ -59,8 +66,41 @@ def validate_lines(records: list[dict], inscription_ids: set[str]) -> list[str]:
     return errors
 
 
+def validate_editorial_relations(records: list[dict], inscription_ids: set[str]) -> list[str]:
+    errors: list[str] = []
+    seen_ids: set[str] = set()
+    required_fields = {
+        "relation_id": str,
+        "relation_type": str,
+        "source_entry_number": str,
+        "target_record_id": str,
+        "confidence": str,
+        "release_action": str,
+        "rationale": str,
+    }
+
+    for index, record in enumerate(records, start=1):
+        for field, expected_type in required_fields.items():
+            if field not in record:
+                errors.append(f"editorial_relations[{index}] missing field {field}")
+                continue
+            if not isinstance(record[field], expected_type):
+                errors.append(f"editorial_relations[{index}] field {field} has wrong type")
+        relation_id = record.get("relation_id")
+        if relation_id in seen_ids:
+            errors.append(f"duplicate editorial relation_id {relation_id}")
+        else:
+            seen_ids.add(relation_id)
+        if record.get("target_record_id") not in inscription_ids:
+            errors.append(
+                "editorial relation "
+                f"{record.get('relation_id')} references unknown target_record_id {record.get('target_record_id')}"
+            )
+    return errors
+
+
 def validate_dataset(dataset_dir: Path) -> dict:
-    result = {"dataset": str(dataset_dir), "errors": [], "record_counts": {}}
+    result = {"dataset": repo_relative_path(dataset_dir), "errors": [], "record_counts": {}}
     inscriptions_path = dataset_dir / "inscriptions.jsonl"
     lines_path = dataset_dir / "lines.jsonl"
     if not inscriptions_path.exists() or not lines_path.exists():
@@ -74,6 +114,19 @@ def validate_dataset(dataset_dir: Path) -> dict:
     result["errors"].extend(validate_inscriptions(inscriptions))
     result["errors"].extend(validate_lines(lines, inscription_ids))
     result["record_counts"] = {"inscriptions": len(inscriptions), "lines": len(lines)}
+
+    editorial_relations_path = dataset_dir / "editorial_relations.jsonl"
+    if dataset_dir.name == "unified_release_v0_2":
+        if not editorial_relations_path.exists():
+            result["errors"].append("missing editorial_relations.jsonl")
+            return result
+        editorial_relations = read_jsonl(editorial_relations_path)
+        result["errors"].extend(validate_editorial_relations(editorial_relations, inscription_ids))
+        result["record_counts"]["editorial_relations"] = len(editorial_relations)
+    elif editorial_relations_path.exists():
+        editorial_relations = read_jsonl(editorial_relations_path)
+        result["errors"].extend(validate_editorial_relations(editorial_relations, inscription_ids))
+        result["record_counts"]["editorial_relations"] = len(editorial_relations)
     return result
 
 
@@ -98,6 +151,7 @@ def main() -> None:
         REPO_ROOT / "data" / "extracted" / "supplementary_1203709",
         REPO_ROOT / "data" / "release" / "sagaing_v0_1",
         REPO_ROOT / "data" / "release" / "unified_release_v0_1",
+        REPO_ROOT / "data" / "release" / "unified_release_v0_2",
     ]
 
     report = {"datasets": [validate_dataset(dataset) for dataset in datasets]}

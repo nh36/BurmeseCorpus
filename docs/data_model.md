@@ -13,6 +13,7 @@ One record per inscription text unit or face. The current scripts populate this 
 - `data/extracted/supplementary_1203709/`
 - `data/release/sagaing_v0_1/`
 - `data/release/unified_release_v0_1/`
+- `data/release/unified_release_v0_2/`
 
 Key fields:
 
@@ -71,11 +72,29 @@ Those files establish the minimum field contracts for later bibliography and tra
 
 - `data/release/sagaing_v0_1/`
 - `data/release/unified_release_v0_1/`
+- `data/release/unified_release_v0_2/`
 
-The unified release merges the structured corpus with parsed `1302525` source records, preserving structured records as canonical where they already exist and adding only the source-only omissions. `scripts/validate_corpus.py` now checks:
+The unified releases currently have two distinct semantics:
+
+- `data/release/unified_release_v0_1/` is the first merged release. It preserves structured records as canonical where they already exist and adds source-only Recently Found entries as independent canonical records when no structured match is present.
+- `data/release/unified_release_v0_2/` is the override-aware release. It still preserves structured records as canonical, but uses `data/working/inventory/recently_found_release_policy.tsv` plus the editorial override audit to avoid emitting embedded Recently Found entries as duplicate canonical records.
+
+`unified_release_v0_2/` adds a third release file:
+
+- `editorial_relations.jsonl`
+
+Each editorial relation preserves a conservative relationship between a Recently Found source entry and a structured target record without splitting or rewriting the canonical inscription. This is now used for:
+
+- embedded-in-previous-record cases such as source entries `12` and `37`, which are preserved as editorial relations instead of standalone canonical inscription records;
+- title-variant cases such as source entry `21`, which remain aligned to the structured record while preserving the alternate source title as editorial metadata rather than normalizing it away.
+
+The target inscription rows in `unified_release_v0_2/inscriptions.jsonl` carry compact `editorial_relation_ids` annotations, while full relation metadata lives in `editorial_relations.jsonl`.
+
+`scripts/validate_corpus.py` now checks:
 
 - `data/extracted/structured_corpus_current/`
 - `data/extracted/supplementary_1302525/`
 - `data/extracted/supplementary_1203709/`
 - `data/release/sagaing_v0_1/`
 - `data/release/unified_release_v0_1/`
+- `data/release/unified_release_v0_2/`

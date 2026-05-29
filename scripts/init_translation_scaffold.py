@@ -15,7 +15,7 @@ def main() -> None:
     parser.add_argument(
         "--input-jsonl",
         type=Path,
-        default=REPO_ROOT / "data" / "release" / "unified_release_v0_1" / "inscriptions.jsonl",
+        default=REPO_ROOT / "data" / "release" / "unified_release_v0_2" / "inscriptions.jsonl",
     )
     parser.add_argument(
         "--output-dir",
