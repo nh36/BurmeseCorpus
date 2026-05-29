@@ -1,0 +1,30 @@
+OBI CORPUS REF: Sagaing 1203709 block 19 p65
+INFORMATION SOURCE: စစ်ကိုင်းတိုင်းဒေသကြီးအတွင်းရှိအသစ်တွေ့ကျောက်စာများ (Zenodo 1203709)
+VOLUME: 
+PART: 
+INSCRIPTION NUMBER: 19
+PAGE NUMBER: 65
+NUMBER OF FACES: 2
+FACE: reverse
+LANGUAGE: 
+INSCRIPTION SOURCE: မူလထိုး
+PLACE OF ORIGIN: ဆားလင်းကြီးမြို့ ရွှေမုဌောဘုရားဝင်းအတွင်းရှိကျောက်စာ
+CURRENT LOCATION: ဆားလင်းကြီးမြို့ ရွှေမုဌောဘုရားဝင်းအတွင်းရှိကျောက်စာ
+REFERENCE NUMBER: 
+REFERENCES: 
+TITLE: ရွှေမုဌောဘုရားကျောက်စာ
+DATE: ၇၉(၁) - ခု
+DONOR: မင်တြ
+SUBJECT: ကျောင်း၊ လယ်
+LENGTH: 
+NOTES: ။	။	ဤကျောက်စာကျောက် အလွှားလိုက်ကွာကျနေသည်။
+FOOTNOTES: 
+INSCRIPTION: ၁	။ ။ သက္က ရာဇ် ၇၉(၁)
+၂	င် မင်တြ ကည လေ . . . . . . . .
+၃	က် တဝ် ကိုဝ် မူ သော တယ် . . . .
+၄	ဝ် ကိုဝ် ။ က္လောင် ပ္လု ရုယ် လှ ရ သ . . . .
+၅	ထဝ် ပ ပါ မဲ လယ် နှစ် ပယ် ခွဲ
+၆	ယ် အ ရာ သုံမ် က္လောင် နှင် အ တို
+၈	ဝ် မု . . . . ။ ပေါင် ဝဲ ၏ ။ ။
+FULL TRANSCRIPTION: ရ။ စေ ဟု ထင် လယ် ကိုဝ် ဆိုဝ် တ .
+FULL TRANSLITERATION: 

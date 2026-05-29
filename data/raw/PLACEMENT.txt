@@ -1,0 +1,5 @@
+Raw-source placement for the new layout:
+
+- The existing Zenodo source material currently remains in the repository root directories `4321314/`, `1302525/`, and `1203709/`.
+- `data/raw/` has been created as the target immutable location for future normalized placement or copied ZIPs.
+- The current extraction and parser scripts read from the existing root directories so the raw sources are not moved or overwritten.

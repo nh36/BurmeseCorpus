@@ -1,0 +1,10 @@
+.DS_Store
+__pycache__/
+*.pyc
+
+*.pdf
+*.odt
+*.zip
+
+data/extracted/structured_corpus_current/inscriptions.jsonl
+data/extracted/structured_corpus_current/lines.jsonl

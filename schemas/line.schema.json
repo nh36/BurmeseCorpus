@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://burmesecorpus.local/schemas/line.schema.json",
+  "title": "Inscription line record",
+  "type": "object",
+  "required": [
+    "record_id",
+    "line_id",
+    "line_number_original",
+    "line_number_arabic",
+    "text_original"
+  ],
+  "properties": {
+    "record_id": {
+      "type": "string"
+    },
+    "line_id": {
+      "type": "string"
+    },
+    "line_number_original": {
+      "type": "string"
+    },
+    "line_number_arabic": {
+      "type": "integer"
+    },
+    "text_original": {
+      "type": "string"
+    },
+    "transliteration": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "page_break_before": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "footnote_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "uncertain": {
+      "type": "boolean"
+    }
+  },
+  "additionalProperties": true
+}

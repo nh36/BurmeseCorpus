@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://burmesecorpus.local/schemas/bibliography.schema.json",
+  "title": "Bibliography item",
+  "type": "object",
+  "required": [
+    "bibliography_id",
+    "short_label",
+    "raw_reference_strings"
+  ],
+  "properties": {
+    "bibliography_id": {
+      "type": "string"
+    },
+    "short_label": {
+      "type": "string"
+    },
+    "raw_reference_strings": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "author": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "year": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "title": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "publication": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "local_library_candidates": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "local_file_path": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "ocr_status": {
+      "type": "string"
+    },
+    "translation_relevance": {
+      "type": "string"
+    },
+    "notes": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,26 @@
+OBI CORPUS REF: Sagaing 1203709 block 29 p107
+INFORMATION SOURCE: စစ်ကိုင်းတိုင်းဒေသကြီးအတွင်းရှိအသစ်တွေ့ကျောက်စာများ (Zenodo 1203709)
+VOLUME: 
+PART: 
+INSCRIPTION NUMBER: 29
+PAGE NUMBER: 107
+NUMBER OF FACES: 
+FACE: reverse
+LANGUAGE: 
+INSCRIPTION SOURCE: မူလထိုး
+PLACE OF ORIGIN: ဘုရားကြီးဝင်းအတွင်းချောင်းဦးမြို့နယ်၊ အနိမ့်ရွာ
+CURRENT LOCATION: ဘုရားကြီးဝင်းအတွင်းချောင်းဦးမြို့နယ်၊ အနိမ့်ရွာ
+REFERENCE NUMBER: အမှတ် (၃)
+REFERENCES: 
+TITLE: အနိမ့်ကျေးရွာဘုရားကြီး ကျောက်စာ(၃-ခ)
+DATE: 
+DONOR: 
+SUBJECT: 
+LENGTH: 
+NOTES: ။	။	ကျောက်ချက်မှာ အပေါ်ပိုင်ကျိုနေပါသည်။ ထိုကြောင့် စာမည်မျှ ရှိသည်ကို မသိပါ။
+FOOTNOTES: 
+INSCRIPTION: ၁	စုံ တန် လောင် . . . . . . . .
+၂	စိယ် တွင် လေ ေ . . . . . . . .
+၃	တင် စွာ တ ကာ ယူ ကော . . . . .
+FULL TRANSCRIPTION: 
+FULL TRANSLITERATION: 

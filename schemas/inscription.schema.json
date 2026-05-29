@@ -1,0 +1,202 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://burmesecorpus.local/schemas/inscription.schema.json",
+  "title": "Inscription record",
+  "type": "object",
+  "required": [
+    "record_id",
+    "source_deposit",
+    "source_inscription_number",
+    "title_original",
+    "source_file",
+    "provenance"
+  ],
+  "properties": {
+    "record_id": {
+      "type": "string"
+    },
+    "source_deposit": {
+      "type": "string"
+    },
+    "source_volume": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "source_part": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "source_inscription_number": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "source_page": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "face": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "number_of_faces": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "title_original": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "title_transliteration": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "date_original": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "date_normalized": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "place_of_origin_original": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "place_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "current_location_original": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "donor_original": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "subject_original": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "language_original": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "references_original": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "notes_original": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "full_transliteration": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "source_file": {
+      "type": "string"
+    },
+    "reference_number_original": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "information_source": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "inscription_source_original": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "footnotes_original": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "source_section_marker": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "continuous_text_original": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "parse_warnings": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "required": [
+        "created_from",
+        "created_by_script",
+        "created_date"
+      ],
+      "properties": {
+        "created_from": {
+          "type": "string"
+        },
+        "created_by_script": {
+          "type": "string"
+        },
+        "created_date": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}

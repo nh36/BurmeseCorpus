@@ -1,0 +1,29 @@
+{
+  "datasets": [
+    {
+      "dataset": "/Users/nathanhill/Code/BurmeseCorpus/data/extracted/structured_corpus_current",
+      "errors": [],
+      "record_counts": {
+        "inscriptions": 1121,
+        "lines": 23696
+      }
+    },
+    {
+      "dataset": "/Users/nathanhill/Code/BurmeseCorpus/data/extracted/supplementary_1203709",
+      "errors": [],
+      "record_counts": {
+        "inscriptions": 31,
+        "lines": 603
+      }
+    },
+    {
+      "dataset": "/Users/nathanhill/Code/BurmeseCorpus/data/release/sagaing_v0_1",
+      "errors": [],
+      "record_counts": {
+        "inscriptions": 31,
+        "lines": 603
+      }
+    }
+  ],
+  "ok": true
+}

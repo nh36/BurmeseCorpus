@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://burmesecorpus.local/schemas/place.schema.json",
+  "title": "Place record",
+  "type": "object",
+  "required": [
+    "place_id",
+    "label_original"
+  ],
+  "properties": {
+    "place_id": {
+      "type": "string"
+    },
+    "label_original": {
+      "type": "string"
+    },
+    "label_normalized": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "latitude": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "longitude": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "source_note": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,95 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://burmesecorpus.local/schemas/translation.schema.json",
+  "title": "Translation segment",
+  "type": "object",
+  "required": [
+    "translation_id",
+    "record_id",
+    "translation_text",
+    "translation_type",
+    "review_status"
+  ],
+  "properties": {
+    "translation_id": {
+      "type": "string"
+    },
+    "record_id": {
+      "type": "string"
+    },
+    "line_start": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "line_end": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "translation_text": {
+      "type": "string"
+    },
+    "translation_type": {
+      "type": "string",
+      "enum": [
+        "published",
+        "ai_assisted"
+      ]
+    },
+    "source_bibliography_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "source_page": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "source_note": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "confidence": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "review_status": {
+      "type": "string"
+    },
+    "model": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "prompt_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "controlled_vocabulary_version": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "human_reviewer": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "additionalProperties": true
+}
