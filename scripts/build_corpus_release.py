@@ -40,6 +40,9 @@ REQUIRED_INSCRIPTION_FIELDS = [
 ]
 
 
+RELEASE_README_FILENAME = "README.md"
+
+
 def repo_relative_path(path: Path | None) -> str | None:
     if path is None:
         return None
@@ -172,58 +175,128 @@ def count_lines_by_source(inscriptions: list[dict], lines: list[dict]) -> dict[s
     return counts
 
 
+def infer_relation_source_id(relation: dict) -> str | None:
+    source_record_id = relation.get("source_record_id") or ""
+    if source_record_id.startswith("rfi-z1302525-"):
+        return "zenodo_1302525"
+    if source_record_id.startswith("sagaing-z1203709-"):
+        return "zenodo_1203709"
+    if source_record_id.startswith("obi-"):
+        return "zenodo_4321314"
+    return None
+
+
+def count_editorial_relations_by_source(editorial_relations: list[dict]) -> dict[str, int]:
+    counts: dict[str, int] = {}
+    for relation in editorial_relations:
+        source_id = infer_relation_source_id(relation)
+        if source_id is None:
+            continue
+        counts[source_id] = counts.get(source_id, 0) + 1
+    return counts
+
+
+def source_entry(
+    *,
+    source_id: str,
+    source_type: str,
+    title_original: str,
+    title_english: str,
+    zenodo_doi: str,
+    local_source_path: str,
+    release_role: str,
+    inscription_record_count: int,
+    line_record_count: int,
+    editorial_relation_count: int,
+    parser_script: str,
+    source_status: str,
+    notes: str,
+) -> dict:
+    return {
+        "source_id": source_id,
+        "source_type": source_type,
+        "title_original": title_original,
+        "title_english": title_english,
+        "zenodo_doi": zenodo_doi,
+        "local_source_path": local_source_path,
+        "release_role": release_role,
+        "inscription_record_count": inscription_record_count,
+        "line_record_count": line_record_count,
+        "editorial_relation_count": editorial_relation_count,
+        "record_count": inscription_record_count,
+        "line_count": line_record_count,
+        "parser_script": parser_script,
+        "source_status": source_status,
+        "notes": notes,
+    }
+
+
 def build_sources_registry(inscriptions: list[dict], lines: list[dict], editorial_relations: list[dict]) -> list[dict]:
-    record_counts: dict[str, int] = {}
+    inscription_counts: dict[str, int] = {}
     for record in inscriptions:
         source_id = record["source_deposit"]
-        record_counts[source_id] = record_counts.get(source_id, 0) + 1
+        inscription_counts[source_id] = inscription_counts.get(source_id, 0) + 1
     line_counts = count_lines_by_source(inscriptions, lines)
+    editorial_relation_counts = count_editorial_relations_by_source(editorial_relations)
 
     return [
-        {
-            "source_id": "zenodo_4321314",
-            "source_type": "zenodo_deposit",
-            "title_original": "OBI Corpus",
-            "title_english": "Structured Corpus of Old Burmese Stone Inscriptions",
-            "zenodo_doi": "10.5281/zenodo.4321314",
-            "local_source_path": "4321314/",
-            "release_role": "canonical_release_base",
-            "record_count": record_counts.get("zenodo_4321314", 0),
-            "line_count": line_counts.get("zenodo_4321314", 0),
-            "parser_script": "scripts/extract_structured_corpus.py; scripts/merge_unified_release.py; scripts/build_corpus_release.py",
-            "source_status": "canonical_structured_source",
-            "notes": "Structured OBI records remain the canonical corpus base in corpus_release_v0_3.",
-        },
-        {
-            "source_id": "zenodo_1302525",
-            "source_type": "zenodo_deposit",
-            "title_original": "Recently Found Burmese Inscriptions",
-            "title_english": "Thein Tun / Recently Found Inscriptions",
-            "zenodo_doi": "10.5281/zenodo.1302525",
-            "local_source_path": "1302525/Recently Found Burmese Inscriptiosn text.txt",
-            "release_role": "editorial_relation_source",
-            "record_count": record_counts.get("zenodo_1302525", 0),
-            "line_count": line_counts.get("zenodo_1302525", 0),
-            "parser_script": "scripts/parse_recently_found.py; scripts/parse_recently_found_records.py; scripts/merge_unified_release.py; scripts/build_corpus_release.py",
-            "source_status": "aligned_supplementary_source",
-            "editorial_relation_count": len(editorial_relations),
-            "notes": "Recently Found contributes editorial relations in this release rather than duplicate canonical inscription rows for embedded cases 12 and 37.",
-        },
-        {
-            "source_id": "zenodo_1203709",
-            "source_type": "zenodo_deposit",
-            "title_original": "စစ်ကိုင်းတိုင်းဒေသကြီးအတွင်းရှိအသစ်တွေ့ကျောက်စာများ",
-            "title_english": "Sagaing Region newly found inscriptions",
-            "zenodo_doi": "10.5281/zenodo.1203709",
-            "local_source_path": "1203709/စစ်ကိုင်းတိုင်းဒေသကြီးအတွင်းရှိအသစ်တွေ့ကျောက်စာများ.txt",
-            "release_role": "supplementary_release_component",
-            "record_count": record_counts.get("zenodo_1203709", 0),
-            "line_count": line_counts.get("zenodo_1203709", 0),
-            "parser_script": "scripts/parse_sagaing.py; scripts/build_corpus_release.py",
-            "source_status": "supplementary_unaligned_source",
-            "notes": "Sagaing records are included as supplementary structured data and retain their sagaing- identifiers pending any reviewed crosswalk.",
-        },
+        source_entry(
+            source_id="zenodo_4321314",
+            source_type="zenodo_deposit",
+            title_original="OBI Corpus",
+            title_english="Structured Corpus of Old Burmese Stone Inscriptions",
+            zenodo_doi="10.5281/zenodo.4321314",
+            local_source_path="4321314/",
+            release_role="canonical_release_base",
+            inscription_record_count=inscription_counts.get("zenodo_4321314", 0),
+            line_record_count=line_counts.get("zenodo_4321314", 0),
+            editorial_relation_count=editorial_relation_counts.get("zenodo_4321314", 0),
+            parser_script="scripts/extract_structured_corpus.py; scripts/merge_unified_release.py; scripts/build_corpus_release.py",
+            source_status="canonical_structured_source",
+            notes="Structured OBI records remain the canonical corpus base in corpus_release_v0_3.",
+        ),
+        source_entry(
+            source_id="zenodo_1302525",
+            source_type="zenodo_deposit",
+            title_original="Recently Found Burmese Inscriptions",
+            title_english="Thein Tun / Recently Found Inscriptions",
+            zenodo_doi="10.5281/zenodo.1302525",
+            local_source_path="1302525/Recently Found Burmese Inscriptiosn text.txt",
+            release_role="editorial_relation_source",
+            inscription_record_count=inscription_counts.get("zenodo_1302525", 0),
+            line_record_count=line_counts.get("zenodo_1302525", 0),
+            editorial_relation_count=editorial_relation_counts.get("zenodo_1302525", 0),
+            parser_script="scripts/parse_recently_found.py; scripts/parse_recently_found_records.py; scripts/merge_unified_release.py; scripts/build_corpus_release.py",
+            source_status="aligned_supplementary_source",
+            notes="Recently Found contributes editorial relations in this release rather than duplicate canonical inscription rows for embedded cases 12 and 37.",
+        ),
+        source_entry(
+            source_id="zenodo_1203709",
+            source_type="zenodo_deposit",
+            title_original="စစ်ကိုင်းတိုင်းဒေသကြီးအတွင်းရှိအသစ်တွေ့ကျောက်စာများ",
+            title_english="Sagaing Region newly found inscriptions",
+            zenodo_doi="10.5281/zenodo.1203709",
+            local_source_path="1203709/စစ်ကိုင်းတိုင်းဒေသကြီးအတွင်းရှိအသစ်တွေ့ကျောက်စာများ.txt",
+            release_role="supplementary_release_component",
+            inscription_record_count=inscription_counts.get("zenodo_1203709", 0),
+            line_record_count=line_counts.get("zenodo_1203709", 0),
+            editorial_relation_count=editorial_relation_counts.get("zenodo_1203709", 0),
+            parser_script="scripts/parse_sagaing.py; scripts/build_corpus_release.py",
+            source_status="supplementary_unaligned_source",
+            notes="Sagaing records are included as supplementary structured data and retain their sagaing- identifiers pending any reviewed crosswalk.",
+        ),
     ]
+
+
+def build_source_contribution_counts(sources: list[dict]) -> dict[str, dict]:
+    return {
+        record["source_id"]: {
+            "inscription_records": record["inscription_record_count"],
+            "line_records": record["line_record_count"],
+            "editorial_relations": record["editorial_relation_count"],
+        }
+        for record in sources
+    }
 
 
 def build_release_manifest(
@@ -239,6 +312,7 @@ def build_release_manifest(
 ) -> dict:
     record_counts_by_source = {record["source_id"]: record["record_count"] for record in sources}
     line_counts_by_source = {record["source_id"]: record["line_count"] for record in sources}
+    source_contribution_counts = build_source_contribution_counts(sources)
     return {
         "release_id": "corpus_release_v0_3",
         "release_date": TODAY,
@@ -247,6 +321,7 @@ def build_release_manifest(
         "input_working_files": [repo_relative_path(path) for path in input_working_files],
         "record_counts_by_source": record_counts_by_source,
         "line_counts_by_source": line_counts_by_source,
+        "source_contribution_counts": source_contribution_counts,
         "total_inscription_count": len(inscriptions),
         "total_line_count": len(lines),
         "editorial_relation_count": len(editorial_relations),
@@ -269,8 +344,7 @@ def build_release_manifest(
 
 
 def build_release_notes(manifest: dict, sources: list[dict]) -> str:
-    source_counts = {record["source_id"]: record["record_count"] for record in sources}
-    line_counts = {record["source_id"]: record["line_count"] for record in sources}
+    source_counts = manifest["source_contribution_counts"]
     return textwrap.dedent(
         f"""\
         # Corpus Release v0_3
@@ -279,9 +353,9 @@ def build_release_notes(manifest: dict, sources: list[dict]) -> str:
 
         ## What this release contains
 
-        - **Structured OBI base:** {source_counts.get("zenodo_4321314", 0)} inscription records and {line_counts.get("zenodo_4321314", 0)} lines carried forward from `data/release/unified_release_v0_2/`.
-        - **Sagaing supplementary layer:** {source_counts.get("zenodo_1203709", 0)} inscription records and {line_counts.get("zenodo_1203709", 0)} lines carried forward from `data/release/sagaing_v0_1/`, with existing `sagaing-` identifiers preserved.
-        - **Recently Found editorial relations:** {manifest["editorial_relation_count"]} relation records carried forward from `unified_release_v0_2` to document the relationship between Recently Found source entries and canonical structured targets.
+        - **Structured OBI base:** {source_counts["zenodo_4321314"]["inscription_records"]} inscription records and {source_counts["zenodo_4321314"]["line_records"]} lines carried forward from `data/release/unified_release_v0_2/`.
+        - **Sagaing supplementary layer:** {source_counts["zenodo_1203709"]["inscription_records"]} inscription records and {source_counts["zenodo_1203709"]["line_records"]} lines carried forward from `data/release/sagaing_v0_1/`, with existing `sagaing-` identifiers preserved.
+        - **Recently Found contribution:** {source_counts["zenodo_1302525"]["inscription_records"]} independent inscription records, {source_counts["zenodo_1302525"]["line_records"]} lines, and {source_counts["zenodo_1302525"]["editorial_relations"]} editorial relations carried forward from `unified_release_v0_2`.
 
         ## What changed from earlier releases
 
@@ -311,6 +385,39 @@ def build_release_notes(manifest: dict, sources: list[dict]) -> str:
         ## What not to infer
 
         Researchers should not infer that Sagaing has been canonically folded into the OBI numbering, that embedded Recently Found cases have been split into separate canonical inscriptions, that bibliography and place identifiers are final authority data, or that translation is complete.
+        """
+    )
+
+
+def build_release_readme(manifest: dict) -> str:
+    source_counts = manifest["source_contribution_counts"]
+    return textwrap.dedent(
+        f"""\
+        # corpus_release_v0_3
+
+        `corpus_release_v0_3` is the current whole-corpus release candidate and the stable Phase 1 baseline for later authority work.
+
+        Start with **`inscriptions.jsonl`**. Pair it with **`lines.jsonl`** for line-level work. Those two JSONL files are the canonical release data.
+
+        ## Files in this directory
+
+        - `inscriptions.jsonl` — canonical inscription-level release data across structured OBI and Sagaing.
+        - `lines.jsonl` — canonical line-level release data keyed by `record_id` and `line_id`.
+        - `editorial_relations.jsonl` — conservative editorial relationships, especially the Recently Found / Volume 7 cases `12`, `21`, and `37`.
+        - `sources.jsonl` — source registry for the three Zenodo deposits and their release-layer contribution counts.
+        - `release_manifest.json` — release metadata, input paths, counts, known limitations, and next-step notes.
+        - `release_notes.md` — human-readable overview of what this release contains and what it does not claim.
+        - `validation_report.json` — release-local validation output.
+        - `corpus_release.sqlite` — derived convenience export; not authoritative.
+
+        ## Practical notes
+
+        - Canonical data: `inscriptions.jsonl` and `lines.jsonl`
+        - Derived convenience export: `corpus_release.sqlite`
+        - Structured OBI contributes {source_counts["zenodo_4321314"]["inscription_records"]} inscription rows and {source_counts["zenodo_4321314"]["line_records"]} line rows.
+        - Recently Found contributes {source_counts["zenodo_1302525"]["editorial_relations"]} editorial relations in this release and no separate canonical inscription rows.
+        - Sagaing contributes {source_counts["zenodo_1203709"]["inscription_records"]} supplementary inscription rows and retains `sagaing-` identifiers.
+        - This release does not yet contain completed translations or final bibliography/place authority data.
         """
     )
 
@@ -388,6 +495,7 @@ def build_corpus_release(
     )
     (output_dir / "release_manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
     (output_dir / "release_notes.md").write_text(build_release_notes(manifest, sources), encoding="utf-8")
+    (output_dir / RELEASE_README_FILENAME).write_text(build_release_readme(manifest), encoding="utf-8")
 
     validation_result = validate_dataset(output_dir, allow_missing_dataset_validation_report=True)
     validation_report = {"datasets": [validation_result], "ok": not validation_result["errors"]}

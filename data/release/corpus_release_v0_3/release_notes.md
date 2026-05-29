@@ -6,7 +6,7 @@ Corpus release v0_3 is the first whole-corpus release candidate for this reposit
 
 - **Structured OBI base:** 1121 inscription records and 23696 lines carried forward from `data/release/unified_release_v0_2/`.
 - **Sagaing supplementary layer:** 31 inscription records and 603 lines carried forward from `data/release/sagaing_v0_1/`, with existing `sagaing-` identifiers preserved.
-- **Recently Found editorial relations:** 3 relation records carried forward from `unified_release_v0_2` to document the relationship between Recently Found source entries and canonical structured targets.
+- **Recently Found contribution:** 0 independent inscription records, 0 lines, and 3 editorial relations carried forward from `unified_release_v0_2`.
 
 ## What changed from earlier releases
 

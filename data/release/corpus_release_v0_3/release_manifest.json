@@ -21,6 +21,23 @@
     "zenodo_1302525": 0,
     "zenodo_1203709": 603
   },
+  "source_contribution_counts": {
+    "zenodo_4321314": {
+      "inscription_records": 1121,
+      "line_records": 23696,
+      "editorial_relations": 0
+    },
+    "zenodo_1302525": {
+      "inscription_records": 0,
+      "line_records": 0,
+      "editorial_relations": 3
+    },
+    "zenodo_1203709": {
+      "inscription_records": 31,
+      "line_records": 603,
+      "editorial_relations": 0
+    }
+  },
   "total_inscription_count": 1152,
   "total_line_count": 24299,
   "editorial_relation_count": 3,

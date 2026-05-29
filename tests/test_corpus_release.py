@@ -171,6 +171,19 @@ class CorpusReleaseTests(unittest.TestCase):
         self.assertEqual(manifest["total_line_count"], 2)
         self.assertEqual(manifest["editorial_relation_count"], 1)
         self.assertEqual(manifest["validation_status"], "valid")
+        self.assertEqual(
+            manifest["source_contribution_counts"]["zenodo_1302525"],
+            {"inscription_records": 0, "line_records": 0, "editorial_relations": 1},
+        )
+
+        sources = [json.loads(line) for line in (self.output_dir / "sources.jsonl").read_text(encoding="utf-8").splitlines()]
+        by_source_id = {record["source_id"]: record for record in sources}
+        self.assertEqual(by_source_id["zenodo_1302525"]["inscription_record_count"], 0)
+        self.assertEqual(by_source_id["zenodo_1302525"]["line_record_count"], 0)
+        self.assertEqual(by_source_id["zenodo_1302525"]["editorial_relation_count"], 1)
+        self.assertEqual(by_source_id["zenodo_1302525"]["record_count"], 0)
+        self.assertEqual(by_source_id["zenodo_1302525"]["line_count"], 0)
+        self.assertTrue((self.output_dir / "README.md").exists())
 
         validation = validate_dataset(self.output_dir)
         self.assertFalse(validation["errors"])
@@ -232,6 +245,42 @@ class CorpusReleaseTests(unittest.TestCase):
         validation = validate_dataset(self.output_dir)
 
         self.assertTrue(any("SQLite export table inscriptions count mismatch" in error for error in validation["errors"]))
+
+    def test_validate_dataset_detects_missing_release_readme(self) -> None:
+        self.build_minimal_release()
+        (self.output_dir / "README.md").unlink()
+
+        validation = validate_dataset(self.output_dir)
+
+        self.assertTrue(any("README.md" in error for error in validation["errors"]))
+
+    def test_validate_dataset_detects_missing_release_workflow_doc(self) -> None:
+        self.build_minimal_release()
+
+        validation = validate_dataset(self.output_dir, docs_root=self.root)
+
+        self.assertTrue(any("docs/release_workflow.md" in error for error in validation["errors"]))
+
+    def test_validate_dataset_detects_missing_field_dictionary_doc(self) -> None:
+        self.build_minimal_release()
+        docs_dir = self.root / "docs"
+        docs_dir.mkdir(parents=True, exist_ok=True)
+        (docs_dir / "release_workflow.md").write_text("workflow", encoding="utf-8")
+        (docs_dir / "phase1_closeout.md").write_text("closeout", encoding="utf-8")
+
+        validation = validate_dataset(self.output_dir, docs_root=self.root)
+
+        self.assertTrue(any("docs/field_dictionary.md" in error for error in validation["errors"]))
+
+    def test_validate_dataset_detects_source_contribution_count_mismatch(self) -> None:
+        self.build_minimal_release()
+        manifest = json.loads((self.output_dir / "release_manifest.json").read_text(encoding="utf-8"))
+        manifest["source_contribution_counts"]["zenodo_1302525"]["editorial_relations"] = 0
+        (self.output_dir / "release_manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
+
+        validation = validate_dataset(self.output_dir)
+
+        self.assertTrue(any("source_contribution_counts" in error for error in validation["errors"]))
 
 
 if __name__ == "__main__":

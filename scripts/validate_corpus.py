@@ -10,6 +10,7 @@ from corpus_common import REPO_ROOT, read_jsonl
 
 
 CORPUS_RELEASE_REQUIRED_FILES = [
+    "README.md",
     "inscriptions.jsonl",
     "lines.jsonl",
     "editorial_relations.jsonl",
@@ -21,6 +22,11 @@ CORPUS_RELEASE_REQUIRED_FILES = [
 ]
 
 ABSOLUTE_PATH_PATTERN = re.compile(r"(^/|^[A-Za-z]:\\\\|/Users/|/home/)")
+REQUIRED_RELEASE_DOCS = [
+    "docs/release_workflow.md",
+    "docs/field_dictionary.md",
+    "docs/phase1_closeout.md",
+]
 
 
 def repo_relative_path(path: Path) -> str:
@@ -139,6 +145,9 @@ def validate_sources(records: list[dict]) -> list[str]:
         "zenodo_doi": str,
         "local_source_path": str,
         "release_role": str,
+        "inscription_record_count": int,
+        "line_record_count": int,
+        "editorial_relation_count": int,
         "record_count": int,
         "line_count": int,
         "parser_script": str,
@@ -157,7 +166,27 @@ def validate_sources(records: list[dict]) -> list[str]:
             errors.append(f"duplicate source_id {source_id}")
         else:
             seen_ids.add(source_id)
+        if (
+            isinstance(record.get("record_count"), int)
+            and isinstance(record.get("inscription_record_count"), int)
+            and record["record_count"] != record["inscription_record_count"]
+        ):
+            errors.append(f"sources[{index}] record_count does not match inscription_record_count")
+        if (
+            isinstance(record.get("line_count"), int)
+            and isinstance(record.get("line_record_count"), int)
+            and record["line_count"] != record["line_record_count"]
+        ):
+            errors.append(f"sources[{index}] line_count does not match line_record_count")
         errors.extend(scan_for_absolute_paths(record, context=f"sources[{index}]"))
+    return errors
+
+
+def validate_required_docs(repo_root: Path) -> list[str]:
+    errors: list[str] = []
+    for relative_path in REQUIRED_RELEASE_DOCS:
+        if not (repo_root / relative_path).exists():
+            errors.append(f"missing required documentation file {relative_path}")
     return errors
 
 
@@ -178,6 +207,7 @@ def validate_manifest(
         "input_working_files": list,
         "record_counts_by_source": dict,
         "line_counts_by_source": dict,
+        "source_contribution_counts": dict,
         "total_inscription_count": int,
         "total_line_count": int,
         "editorial_relation_count": int,
@@ -195,10 +225,20 @@ def validate_manifest(
 
     expected_record_counts = {record["source_id"]: record["record_count"] for record in sources}
     expected_line_counts = {record["source_id"]: record["line_count"] for record in sources}
+    expected_source_contribution_counts = {
+        record["source_id"]: {
+            "inscription_records": record["inscription_record_count"],
+            "line_records": record["line_record_count"],
+            "editorial_relations": record["editorial_relation_count"],
+        }
+        for record in sources
+    }
     if manifest.get("record_counts_by_source") != expected_record_counts:
         errors.append("release_manifest record_counts_by_source does not match sources.jsonl")
     if manifest.get("line_counts_by_source") != expected_line_counts:
         errors.append("release_manifest line_counts_by_source does not match sources.jsonl")
+    if manifest.get("source_contribution_counts") != expected_source_contribution_counts:
+        errors.append("release_manifest source_contribution_counts does not match sources.jsonl")
     if manifest.get("total_inscription_count") != len(inscriptions):
         errors.append("release_manifest total_inscription_count does not match inscriptions.jsonl")
     if manifest.get("total_line_count") != len(lines):
@@ -243,7 +283,12 @@ def validate_sqlite_export(
     return errors
 
 
-def validate_dataset(dataset_dir: Path, *, allow_missing_dataset_validation_report: bool = False) -> dict:
+def validate_dataset(
+    dataset_dir: Path,
+    *,
+    allow_missing_dataset_validation_report: bool = False,
+    docs_root: Path = REPO_ROOT,
+) -> dict:
     result = {"dataset": repo_relative_path(dataset_dir), "errors": [], "record_counts": {}}
     inscriptions_path = dataset_dir / "inscriptions.jsonl"
     lines_path = dataset_dir / "lines.jsonl"
@@ -285,6 +330,7 @@ def validate_dataset(dataset_dir: Path, *, allow_missing_dataset_validation_repo
         sources = read_jsonl(dataset_dir / "sources.jsonl")
         result["errors"].extend(validate_sources(sources))
         result["record_counts"]["sources"] = len(sources)
+        result["errors"].extend(validate_required_docs(docs_root))
         source_ids = {record["source_id"] for record in sources if "source_id" in record}
         for record in inscriptions:
             if record.get("source_deposit") not in source_ids:
@@ -315,6 +361,18 @@ def validate_dataset(dataset_dir: Path, *, allow_missing_dataset_validation_repo
                     context="validation_report",
                 )
             )
+        result["errors"].extend(
+            scan_for_absolute_paths(
+                (dataset_dir / "README.md").read_text(encoding="utf-8"),
+                context="release_readme",
+            )
+        )
+        result["errors"].extend(
+            scan_for_absolute_paths(
+                (dataset_dir / "release_notes.md").read_text(encoding="utf-8"),
+                context="release_notes",
+            )
+        )
         result["errors"].extend(
             validate_sqlite_export(
                 dataset_dir / "corpus_release.sqlite",
