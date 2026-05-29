@@ -2,15 +2,27 @@
   "source_entry_count": 41,
   "vol7_record_count": 49,
   "status_counts": {
-    "matched": 29,
+    "matched": 28,
     "matched_split_face": 20,
-    "missing_from_vol7": 2
+    "editorial_override": 3
   },
   "review_decisions": {
     "matched": 28,
     "matched_split_face": 20,
-    "omission_in_volume7": 2,
-    "title_mismatch": 1
+    "embedded_in_previous_vol7_record": 2,
+    "title_variant_same_record": 1
+  },
+  "editorial_overrides": {
+    "override_file": "/Users/nathanhill/Code/BurmeseCorpus/data/working/inventory/recently_found_editorial_overrides.tsv",
+    "override_count": 3,
+    "applied_override_count": 3,
+    "missing_target_count": 0,
+    "status_counts_after_overrides": {
+      "matched": 28,
+      "matched_split_face": 20,
+      "editorial_override": 3
+    },
+    "warnings": []
   },
   "source_duplicate_title_keys": {},
   "vol7_duplicate_title_keys": {
