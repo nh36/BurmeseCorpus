@@ -1,0 +1,459 @@
+{
+  "scope": "Exploratory review of the remaining 1302525 versus volume 7 exception cases. This artifact records evidence and provisional dispositions only; it does not change parser or merge behavior.",
+  "case_count": 3,
+  "disposition_counts": {
+    "embedded_in_previous_vol7_record": 2,
+    "title_variant_same_record": 1
+  },
+  "recommendation": "Treat entry 21 as a title-variant match to volume 7 record 21. Treat entries 12 and 37 as segmentation problems inside volume 7 records 11 and 36 rather than as clean source-only omissions. Review audit and merge policy only after that editorial decision is accepted.",
+  "cases": [
+    {
+      "case_id": "rfi-v07-12",
+      "source_entry_number": 12,
+      "source_entry_key": "12",
+      "source_title": "ကန်သင်ဘုရားမြေကျောက်စာ",
+      "source_page": 34,
+      "source_page_span": [
+        34,
+        35
+      ],
+      "inferred_heading": true,
+      "title_only_pages": [
+        {
+          "page_number": 35,
+          "title": "ကန်သင်ဘုရားမြေကျောက်စာ"
+        }
+      ],
+      "current_crosswalk": {
+        "match_status": "missing_from_vol7",
+        "match_confidence": "low",
+        "review_decision": "omission_in_volume7",
+        "evidence": "No volume 7 record with matching number or normalized title",
+        "notes": "No title or number match in OBI volume 7",
+        "vol7_record_id": "",
+        "vol7_inscription_number": "",
+        "vol7_title": ""
+      },
+      "exploratory_disposition": "embedded_in_previous_vol7_record",
+      "confidence": "high",
+      "candidate_structured_record": {
+        "record_id": "obi-v07-n0011-tx-p0030",
+        "source_inscription_number": "11",
+        "title_original": "နက္ကာပြံကြီးမယားကျောက်စာ",
+        "face": null,
+        "source_page": "30"
+      },
+      "source_excerpt_lines": [
+        "၁\t။ ။ ငဖုန်မ ကန်သင်ဖုရာ ",
+        "၂\tကိုဝ်သာငမာ  အ အခြင်မျာလတ်",
+        "၃\tတိုဝ်နှင် သတင်သည်တိုဝ်",
+        "၄\tအာမိန်ကြလိယ်ဧအ်သာကာ မ",
+        "၅\tဧအ်ဟူသောဖြတ် ဧအ်၊ ငာ မာ မလှူ",
+        "၆\tတေဟူရုယ်သုကြွယ်မြင်သူ",
+        "၇\tသုကြွယ်ဟူဧအ်နင်လေလှူပြီမု ",
+        "၈\tပလိယ် ဟုရကာက္လောင်သ္ခင် (အ) . . "
+      ],
+      "structured_evidence_lines": [
+        {
+          "source_line_number_original": "၁",
+          "source_text_original": "။ ငဖုန်မ ကန်သင်ဖုရာ",
+          "structured_line_id": "obi-v07-n0011-tx-p0030-l001-02",
+          "structured_line_number_original": "၁",
+          "structured_text_original": "။ ငဖုန်မ ကန်သင်ဖုရာ",
+          "page_break_before": "34"
+        },
+        {
+          "source_line_number_original": "၂",
+          "source_text_original": "ကိုဝ်သာငမာ  အ အခြင်မျာလတ်",
+          "structured_line_id": "obi-v07-n0011-tx-p0030-l002-02",
+          "structured_line_number_original": "၂",
+          "structured_text_original": "ကိုဝ်သာငမာ အ အခြင်မျာလတ်",
+          "page_break_before": null
+        },
+        {
+          "source_line_number_original": "၃",
+          "source_text_original": "တိုဝ်နှင် သတင်သည်တိုဝ်",
+          "structured_line_id": "obi-v07-n0011-tx-p0030-l003-02",
+          "structured_line_number_original": "၃",
+          "structured_text_original": "တိုဝ်နှင် သတင်သည်တိုဝ်",
+          "page_break_before": null
+        },
+        {
+          "source_line_number_original": "၄",
+          "source_text_original": "အာမိန်ကြလိယ်ဧအ်သာကာ မ",
+          "structured_line_id": "obi-v07-n0011-tx-p0030-l004-02",
+          "structured_line_number_original": "၄",
+          "structured_text_original": "အာမိန်ကြလိယ်ဧအ်သာကာ မ",
+          "page_break_before": null
+        },
+        {
+          "source_line_number_original": "၅",
+          "source_text_original": "ဧအ်ဟူသောဖြတ် ဧအ်၊ ငာ မာ မလှူ",
+          "structured_line_id": "obi-v07-n0011-tx-p0030-l005-02",
+          "structured_line_number_original": "၅",
+          "structured_text_original": "ဧအ်ဟူသောဖြတ် ဧအ်၊ ငာ မာ မလှူ",
+          "page_break_before": null
+        },
+        {
+          "source_line_number_original": "၆",
+          "source_text_original": "တေဟူရုယ်သုကြွယ်မြင်သူ",
+          "structured_line_id": "obi-v07-n0011-tx-p0030-l006-02",
+          "structured_line_number_original": "၆",
+          "structured_text_original": "တေဟူရုယ်သုကြွယ်မြင်သူ",
+          "page_break_before": null
+        },
+        {
+          "source_line_number_original": "၇",
+          "source_text_original": "သုကြွယ်ဟူဧအ်နင်လေလှူပြီမု",
+          "structured_line_id": "obi-v07-n0011-tx-p0030-l007-02",
+          "structured_line_number_original": "၇",
+          "structured_text_original": "သုကြွယ်ဟူဧအ်နင်လေလှူပြီမု",
+          "page_break_before": null
+        },
+        {
+          "source_line_number_original": "၈",
+          "source_text_original": "ပလိယ် ဟုရကာက္လောင်သ္ခင် (အ) . .",
+          "structured_line_id": "obi-v07-n0011-tx-p0030-l008-02",
+          "structured_line_number_original": "၈",
+          "structured_text_original": "ပလိယ် ဟုရကာက္လောင်သ္ခင် (အ) . .",
+          "page_break_before": null
+        },
+        {
+          "source_line_number_original": "၉",
+          "source_text_original": "ယာလာရုယ်နင်လှူဧအ် .",
+          "structured_line_id": "obi-v07-n0011-tx-p0030-l009-02",
+          "structured_line_number_original": "၉",
+          "structured_text_original": "ယာလာရုယ်နင်လှူဧအ် .",
+          "page_break_before": null
+        },
+        {
+          "source_line_number_original": "၁၀",
+          "source_text_original": "ကရစ် ၅၉၄ ခုက(ဆုန်လ)",
+          "structured_line_id": "obi-v07-n0011-tx-p0030-l010-02",
+          "structured_line_number_original": "၁၀",
+          "structured_text_original": "ကရစ် ၅၉၄ ခုက(ဆုန်လ)",
+          "page_break_before": null
+        },
+        {
+          "source_line_number_original": "၁၂",
+          "source_text_original": "ထိုဝ်ရှဝ်ကြာပါသကာ",
+          "structured_line_id": "obi-v07-n0011-tx-p0030-l012-02",
+          "structured_line_number_original": "၁၂",
+          "structured_text_original": "ထိုဝ်ရှဝ်ကြာပါသကာ",
+          "page_break_before": null
+        },
+        {
+          "source_line_number_original": "၁၃",
+          "source_text_original": "ငနှောင်သင် ငပည်သ .",
+          "structured_line_id": "obi-v07-n0011-tx-p0030-l013-02",
+          "structured_line_number_original": "၁၃",
+          "structured_text_original": "ငနှောင်သင် ငပည်သ .",
+          "page_break_before": null
+        }
+      ],
+      "neighboring_source_entries": [
+        {
+          "source_entry_number": 11,
+          "source_entry_key": "11",
+          "source_title": "နက္ကာပြံကြီးမယားကျောက်စာ",
+          "source_page": 31
+        },
+        {
+          "source_entry_number": 12,
+          "source_entry_key": "12",
+          "source_title": "ကန်သင်ဘုရားမြေကျောက်စာ",
+          "source_page": 34
+        },
+        {
+          "source_entry_number": 13,
+          "source_entry_key": "13",
+          "source_title": "သ္ခိင်မဟာထီမြေကျွန်ကျောက်စာ",
+          "source_page": 36
+        }
+      ],
+      "neighboring_structured_entries": [
+        {
+          "record_id": "obi-v07-n0011-tx-p0030",
+          "source_inscription_number": "11",
+          "title_original": "နက္ကာပြံကြီးမယားကျောက်စာ",
+          "face": null,
+          "source_page": "30"
+        },
+        {
+          "record_id": "obi-v07-n0013-tx-p0036",
+          "source_inscription_number": "13",
+          "title_original": "သ္ခိင်မဟာထီမြေကျွန်ကျောက်စာ",
+          "face": null,
+          "source_page": "36"
+        }
+      ],
+      "evidence_summary": "Source entry 12 is currently labeled as missing from volume 7, but 14 of 15 parsed source lines match duplicate-suffix lines inside obi-v07-n0011-tx-p0030.",
+      "downstream_impact": "The unified release likely duplicates this inscription: once as a source-only addition and once as embedded text inside the previous structured volume 7 record.",
+      "recommended_next_step": "Do not treat this as a simple omission. Review whether volume 7 record segmentation should be split editorially or overridden during audit/merge."
+    },
+    {
+      "case_id": "rfi-v07-21",
+      "source_entry_number": 21,
+      "source_entry_key": "21",
+      "source_title": "ဆင်ဖြူသိခင်ကျောက်စာ",
+      "source_page": 64,
+      "source_page_span": [
+        64,
+        65,
+        66,
+        67
+      ],
+      "inferred_heading": true,
+      "title_only_pages": [
+        {
+          "page_number": 67,
+          "title": "ဆင်ဖြူသိခင်ကျောက်စာ"
+        }
+      ],
+      "current_crosswalk": {
+        "match_status": "matched",
+        "match_confidence": "medium",
+        "review_decision": "title_mismatch",
+        "evidence": "Matched by source entry number, but source and volume 7 titles differ",
+        "notes": "Matched by source entry number; title differs between source and volume 7",
+        "vol7_record_id": "obi-v07-n0021-tx-p0064",
+        "vol7_inscription_number": "21",
+        "vol7_title": "ဆင်ပြူ့သိခင်ကျောက်စာ"
+      },
+      "exploratory_disposition": "title_variant_same_record",
+      "confidence": "high",
+      "candidate_structured_record": {
+        "record_id": "obi-v07-n0021-tx-p0064",
+        "source_inscription_number": "21",
+        "title_original": "ဆင်ပြူ့သိခင်ကျောက်စာ",
+        "face": null,
+        "source_page": "64"
+      },
+      "source_excerpt_lines": [
+        "၁\t၊.၊ နမော၊ တဿ၊ ဘဂဝတော၊ အရဟတော၊ သံမ္ပာသဗုဓဿ။ ဝ။ ",
+        "၂\t။ သက္က်ရစ် ၆၃၄ ခု၊ ဝ။ ဘဿနှစ် နတ္တော်လဆန်ဆယ်ရက် ကြသပတေိယ်နေိယ်",
+        "၃\tအာစံမ္ဗူဒီပါကျွန်မျက်နှာထက် မင်တိုဝ္အ်ကိုဝ်အစိုဝ်ရဓသော . . . မြစ်တော်",
+        "၄\tဖြစ်သော ပင်ယဟုသော ရွှေပြည်ကြီကိုဝ်အုပ်စိုတော်မူသော သိရိတြိဘဝနာ တိတြပဝရ ပဏ္ဍိတဓါ",
+        "၅\tမ္မရာဇာ ရာဇာဓိမည်တော်ဟိသော။ ဝ။ ဆင်ဖြူသိခင် ဘဝရှင်မင်သှ် ရတနာသုံမ်ပါ ၆ ထက်ဓါ",
+        "၆\t. သင်္သရာဆင်ရဲကိုဝ်ကြောက်သောကြောင် အရိမတနာမည်သော ပုကံပြည် (၏) အရှေ့နှိုက်တာတ် ၆",
+        "၇\tထောင်သော မြေမျက်နှာထက်ကျောင်ကြီလှစွာတည်ပြီသော ထိုဝ်ကျောင်တ် ရွှေအတိကျံတော်မူ၏",
+        "၈\tဖြာ စသော ပိဋကတ်လဲပြုတော်မူ၏ သင်္ဃာတိဝ်အာဆေကြောစိမ်သောငှါ . . ပြုတော်မူ၏ သီလသမာဓိနှင္အ်"
+      ],
+      "structured_evidence_lines": [
+        {
+          "structured_line_id": "obi-v07-n0021-tx-p0064-l005",
+          "text_original": "မ္မရာဇာ ရာဇာဓိမည်တော်ဟိသော။ 𝚘 ။ ဆင်ဖြူသိခင် ဘဝရှင်မင်သှ် ရတနာသုံမ်ပါ ၆ ထက်ဓါ",
+          "page_break_before": null
+        }
+      ],
+      "neighboring_source_entries": [
+        {
+          "source_entry_number": 20,
+          "source_entry_key": "20",
+          "source_title": "မင်မတ်စတုရင်ကပတိလင်မယားကျောင်းကျောက်စာ",
+          "source_page": 62
+        },
+        {
+          "source_entry_number": 21,
+          "source_entry_key": "21",
+          "source_title": "ဆင်ဖြူသိခင်ကျောက်စာ",
+          "source_page": 64
+        },
+        {
+          "source_entry_number": 22,
+          "source_entry_key": "22",
+          "source_title": "အမတ်ကြီးကျောက်စာ",
+          "source_page": 68
+        }
+      ],
+      "neighboring_structured_entries": [
+        {
+          "record_id": "obi-v07-n0020-tx-p0061",
+          "source_inscription_number": "20",
+          "title_original": "မင်မတ်စတုရင်ကပတိလင်မယားကျောင်းကျောက်စာ",
+          "face": null,
+          "source_page": "61"
+        },
+        {
+          "record_id": "obi-v07-n0021-tx-p0064",
+          "source_inscription_number": "21",
+          "title_original": "ဆင်ပြူ့သိခင်ကျောက်စာ",
+          "face": null,
+          "source_page": "64"
+        },
+        {
+          "record_id": "obi-v07-n0022-tx-p0068",
+          "source_inscription_number": "22",
+          "title_original": "အမတ်ကြီးကျောက်စာ",
+          "face": null,
+          "source_page": "68"
+        }
+      ],
+      "evidence_summary": "Source entry 21 and obi-v07-n0021-tx-p0064 share inscription number 21 and source page 64. The source uses the title variant 'ဆင်ဖြူသိခင်ကျောက်စာ', while the structured title is 'ဆင်ပြူ့သိခင်ကျောက်စာ'; the source spelling also appears inside the structured text.",
+      "downstream_impact": "This case looks like a title normalization/variant issue, not a missing or duplicated inscription.",
+      "recommended_next_step": "Keep the alignment, but preserve both title forms in the review data so future authority work can record the variant explicitly."
+    },
+    {
+      "case_id": "rfi-v07-37",
+      "source_entry_number": 37,
+      "source_entry_key": "37",
+      "source_title": "စူလာပိကြံသမီးကျောက်စာ",
+      "source_page": 123,
+      "source_page_span": [
+        123
+      ],
+      "inferred_heading": false,
+      "title_only_pages": [],
+      "current_crosswalk": {
+        "match_status": "missing_from_vol7",
+        "match_confidence": "low",
+        "review_decision": "omission_in_volume7",
+        "evidence": "No volume 7 record with matching number or normalized title",
+        "notes": "No title or number match in OBI volume 7",
+        "vol7_record_id": "",
+        "vol7_inscription_number": "",
+        "vol7_title": ""
+      },
+      "exploratory_disposition": "embedded_in_previous_vol7_record",
+      "confidence": "high",
+      "candidate_structured_record": {
+        "record_id": "obi-v07-n0036-tx-p0121",
+        "source_inscription_number": "36",
+        "title_original": "သူကြွယ်ငကုလားသင်သိမ်ကျောက်စာ",
+        "face": null,
+        "source_page": "121"
+      },
+      "source_excerpt_lines": [
+        "၁\tသကရစ် ၆၀(၅)ခုဖ္လ ကိုန်နှစ်",
+        "၂\t+ တပေါင်လ္ဆုတ် ၁၁",
+        "၃\tရျက်ကြာသပတိယ်နိယ်85 အာ၊ အကြီစာသီ။",
+        "၄\tစေယပိကြ။ သစ် (ကြံ)ပါတိယ်။",
+        "၅\tဤယ်သင်ဖမ ၃ ယောက်အတူ",
+        "၆\t. . . ယောက် . . . စာသူမိယ်သော ",
+        "၇\tတံဆိပ်နှိတ်ဩတိုင်၊ ကျယ်နွာထီ . . . ",
+        "၈\t၁၄၀၆ ပယ်သောကိုဝ်ရာစိယ်သတေ "
+      ],
+      "structured_evidence_lines": [
+        {
+          "source_line_number_original": "၁",
+          "source_text_original": "သကရစ် ၆၀(၅)ခုဖ္လ ကိုန်နှစ်",
+          "structured_line_id": "obi-v07-n0036-tx-p0121-l001-02",
+          "structured_line_number_original": "၁",
+          "structured_text_original": "သကရစ် ၆၀(၅)ခုဖ္လ ကိုန်နှစ်",
+          "page_break_before": null
+        },
+        {
+          "source_line_number_original": "၂",
+          "source_text_original": "+ တပေါင်လ္ဆုတ် ၁၁",
+          "structured_line_id": "obi-v07-n0036-tx-p0121-l002-02",
+          "structured_line_number_original": "၂",
+          "structured_text_original": "+ တပေါင်လ္ဆုတ် ၁၁",
+          "page_break_before": null
+        },
+        {
+          "source_line_number_original": "၄",
+          "source_text_original": "စေယပိကြ။ သစ် (ကြံ)ပါတိယ်။",
+          "structured_line_id": "obi-v07-n0036-tx-p0121-l004-02",
+          "structured_line_number_original": "၄",
+          "structured_text_original": "စေယပိကြ။ သစ် (ကြံ)ပါတိယ်။",
+          "page_break_before": null
+        },
+        {
+          "source_line_number_original": "၅",
+          "source_text_original": "ဤယ်သင်ဖမ ၃ ယောက်အတူ",
+          "structured_line_id": "obi-v07-n0036-tx-p0121-l005-02",
+          "structured_line_number_original": "၅",
+          "structured_text_original": "ဤယ်သင်ဖမ ၃ ယောက်အတူ",
+          "page_break_before": null
+        },
+        {
+          "source_line_number_original": "၆",
+          "source_text_original": ". . ယောက် . . . စာသူမိယ်သော",
+          "structured_line_id": "obi-v07-n0036-tx-p0121-l006-02",
+          "structured_line_number_original": "၆",
+          "structured_text_original": ". . ယောက် . . . စာသူမိယ်သော",
+          "page_break_before": null
+        },
+        {
+          "source_line_number_original": "၇",
+          "source_text_original": "တံဆိပ်နှိတ်ဩတိုင်၊ ကျယ်နွာထီ . . .",
+          "structured_line_id": "obi-v07-n0036-tx-p0121-l007-02",
+          "structured_line_number_original": "၇",
+          "structured_text_original": "တံဆိပ်နှိတ်ဩတိုင်၊ ကျယ်နွာထီ . . .",
+          "page_break_before": null
+        },
+        {
+          "source_line_number_original": "၈",
+          "source_text_original": "၁၄၀၆ ပယ်သောကိုဝ်ရာစိယ်သတေ",
+          "structured_line_id": "obi-v07-n0036-tx-p0121-l008-02",
+          "structured_line_number_original": "၈",
+          "structured_text_original": "၁၄၀၆ ပယ်သောကိုဝ်ရာစိယ်သတေ",
+          "page_break_before": null
+        },
+        {
+          "source_line_number_original": "၉",
+          "source_text_original": "စူလာပိကြံသ္မိနှစ်မတိုဝ်ငါခမည်",
+          "structured_line_id": "obi-v07-n0036-tx-p0121-l009-02",
+          "structured_line_number_original": "၉",
+          "structured_text_original": "စူလာပိကြံသ္မိနှစ်မတိုဝ်ငါခမည်",
+          "page_break_before": null
+        },
+        {
+          "source_line_number_original": "၁၀",
+          "source_text_original": "သင်၊ ရုကုနန္တသူစာခီငယ်ကိုဝ်သင်",
+          "structured_line_id": "obi-v07-n0036-tx-p0121-l010-02",
+          "structured_line_number_original": "၁၀",
+          "structured_text_original": "သင်၊ ရုကုနန္တသူစာခီငယ်ကိုဝ်သင်",
+          "page_break_before": null
+        },
+        {
+          "source_line_number_original": "၁၁",
+          "source_text_original": "ဖမတိုဝ်ပိယ်လိယ်ရုယ်တိုင်ဆောက်လှာ",
+          "structured_line_id": "obi-v07-n0036-tx-p0121-l011-02",
+          "structured_line_number_original": "၁၁",
+          "structured_text_original": "ဖမတိုဝ်ပိယ်လိယ်ရုယ်တိုင်ဆောက်လှာ",
+          "page_break_before": null
+        }
+      ],
+      "neighboring_source_entries": [
+        {
+          "source_entry_number": 36,
+          "source_entry_key": "36",
+          "source_title": "သူကြွယ်ငကုလားသင်သိမ်ကျောက်စာ",
+          "source_page": 121
+        },
+        {
+          "source_entry_number": 37,
+          "source_entry_key": "37",
+          "source_title": "စူလာပိကြံသမီးကျောက်စာ",
+          "source_page": 123
+        },
+        {
+          "source_entry_number": 38,
+          "source_entry_key": "38",
+          "source_title": "နွားထိန်းအလိုတော်ပြည့်စလင်းအသင်္ခရာကျောက်စာ",
+          "source_page": 124
+        }
+      ],
+      "neighboring_structured_entries": [
+        {
+          "record_id": "obi-v07-n0036-tx-p0121",
+          "source_inscription_number": "36",
+          "title_original": "သူကြွယ်ငကုလားသင်သိမ်ကျောက်စာ",
+          "face": null,
+          "source_page": "121"
+        },
+        {
+          "record_id": "obi-v07-n0038-tx-p0124",
+          "source_inscription_number": "38",
+          "title_original": "နွားထိန်းအလိုတော်ပြည့်စလင်းအသင်္ခရာကျောက်စာ",
+          "face": null,
+          "source_page": "124"
+        }
+      ],
+      "evidence_summary": "Source entry 37 is currently labeled as missing from volume 7, but 10 of 11 parsed source lines match duplicate-suffix lines inside obi-v07-n0036-tx-p0121.",
+      "downstream_impact": "The unified release likely duplicates this inscription: once as a source-only addition and once as embedded text inside the previous structured volume 7 record.",
+      "recommended_next_step": "Do not treat this as a simple omission. Review whether volume 7 record segmentation should be split editorially or overridden during audit/merge."
+    }
+  ]
+}

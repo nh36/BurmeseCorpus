@@ -38,6 +38,7 @@
   - `parse_recently_found.py` segments the 1302525 source into source-entry inventory records.
   - `parse_recently_found_records.py` turns the 1302525 source into inscription/line JSONL and resolves canonical volume 7 IDs when clear matches exist.
   - `audit_inventory.py` compares the parsed source inventory against volume 7 and writes the crosswalk summary with review decisions.
+  - `review_recently_found_exceptions.py` creates an exploratory case file for the remaining 1302525 versus volume 7 exception cases without changing parser or merge logic.
   - `parse_sagaing.py` converts the Sagaing source into per-record JSONL plus corpus-style text files and writes the `sagaing_v0_1` release candidate.
   - `merge_unified_release.py` merges the structured corpus with parsed 1302525 records into `data/release/unified_release_v0_1/`.
   - `extract_bibliography.py`, `extract_places.py`, and `init_translation_scaffold.py` initialize the normalization layer under `data/working/`.
@@ -57,6 +58,7 @@
 - `data/raw/` is the target immutable raw-data location, but the current scripts intentionally still read from the top-level Zenodo deposit directories so the original materials stay untouched.
 - Do not assume `OBI_Corpus_Vol7.zip` is complete or authoritative. The project brief explicitly treats volume 7 as likely derived from the `1302525/` source and requires a coverage audit for matches, gaps, duplicates, and face splits before relying on it.
 - Treat `data/working/inventory/recently_found_to_vol7_summary.json` as the current authority for that audit. The current validated result is: 28 straightforward matches, 20 split-face matches, 1 title mismatch (`21`), and 2 source entries missing from volume 7 (`12`, `37`).
+- Treat `data/working/inventory/recently_found_exception_review.{json,tsv}` as the exploratory manual-review layer above the audit summary. The current exploratory finding is that `21` is a title-variant match to volume 7 `21`, while `12` and `37` are probably embedded in the previous structured records (`11` and `36`) rather than being clean omissions.
 - Translation is a new layer, not a correction pass over the current corpus. The structured `.txt` entries include inscription text and transliteration fields but no `TRANSLATION:` field, so any translation workflow should preserve the existing transcription/transliteration data and record provenance separately.
 - Preserve exact source strings and provenance when transforming data. The project brief distinguishes diplomatic transcription, normalized forms, transliteration, translation, and editorial notes; future scripts should keep those layers separate instead of collapsing them into one cleaned text field.
 - Keep generated IDs stable and collision-safe. `record_id` and `line_id` are the join keys across extracted and release datasets; repeated line numbers or duplicated structured keys are handled with suffixes rather than by altering source content.
