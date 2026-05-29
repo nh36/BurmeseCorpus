@@ -1,5 +1,26 @@
 # Phase 2 bibliography/source authority triage
 
+## BibTeX authority addendum
+
+This triage layer now feeds a first BibTeX authority scaffold under `data/working/bibliography/bibtex_authority/`.
+
+The new BibTeX layer keeps three things separate:
+
+- raw reference strings as extracted from the corpus;
+- locators inside those strings, such as page, plate, or catalogue numbers;
+- reusable BibTeX authority records for confirmed or provisional works and source families.
+
+Additional Phase 2 working files now include:
+
+- `bibtex_authority/source_abbreviation_seeds.tsv`
+- `bibtex_authority/bibliography_authority.bib`
+- `bibtex_authority/bibliography_candidates.bib`
+- `bibtex_authority/bibtex_authority.tsv`
+- `bibtex_authority/raw_reference_to_bibtex.tsv`
+- `bibtex_authority/bibtex_authority_report.json`
+
+This BibTeX layer is still provisional. It is a scaffold for authority review and later published-translation discovery, not a final normalized bibliography.
+
 Phase 2 begins with bibliography/source authority because later work depends on understanding which publications, catalogues, and internal reference systems are already present in the corpus. Translation discovery, source comparison, and citation cleanup all become safer once the raw reference landscape is visible and grouped into reviewable families.
 
 ## What the triage files are

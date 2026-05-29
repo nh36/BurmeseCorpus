@@ -1,5 +1,18 @@
 # Release workflow
 
+## Phase 2 BibTeX authority addendum
+
+After `corpus_release_v0_3` has been regenerated and the bibliography triage files exist, the BibTeX authority workflow continues with:
+
+1. `python3 scripts/triage_bibliography.py`
+2. `python3 scripts/validate_bibliography_triage.py`
+3. `python3 scripts/import_external_bibtex.py --input-bibtex "$HOME/Downloads/asia 2.bib" --source-label "asia 2.bib" --output-dir data/working/bibliography/external_bibtex`
+4. `python3 scripts/build_bibtex_authority.py`
+5. `python3 scripts/validate_bibtex_authority.py`
+6. `OBI_LIBRARY_ROOT=/path/to/local/library python3 scripts/match_local_bibliography_sources.py` *(optional local-library evidence step)*
+
+These steps build working bibliography authority artifacts under `data/working/bibliography/`. They do **not** modify `data/release/corpus_release_v0_3/`.
+
 This repository builds the current release layer through a small set of Python scripts. The workflow is deliberately linear at the release level even though some source-specific parsing steps are independent.
 
 ## Conceptual dependency order

@@ -1,0 +1,25 @@
+{
+  "authority_entry_count": 21,
+  "candidate_entry_count": 1071,
+  "crosswalk_row_count": 2938,
+  "matched_external_entry_count": 0,
+  "external_entries_available": true,
+  "manual_seed_family_count": 18,
+  "authority_status_counts": {
+    "provisional_publication": 12,
+    "provisional_catalogue": 11,
+    "confirmed_local_source": 1,
+    "needs_human_review": 1,
+    "machine_stub": 1067
+  },
+  "match_type_counts": {
+    "machine_stub_match": 1215,
+    "abbreviation_catalogue_match": 1716,
+    "title_author_year_match": 7
+  },
+  "external_entries_path": "data/working/bibliography/external_bibtex/asia_2_entries.tsv",
+  "notes": [
+    "bibliography_authority.bib is conservative and combines repository-backed source-family seeds with any matched external BibTeX entries when available.",
+    "bibliography_candidates.bib contains provisional stubs for unresolved families and requires human review."
+  ]
+}

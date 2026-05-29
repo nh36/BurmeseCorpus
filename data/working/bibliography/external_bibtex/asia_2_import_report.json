@@ -1,0 +1,45 @@
+{
+  "source_label": "asia 2.bib",
+  "input_path": "local:~/Downloads/asia 2.bib",
+  "copied_path": "data/working/bibliography/external_bibtex/asia_2.bib",
+  "sha256": "49e8b74b48a5c8f9b457685e124caf88b7650703956e3f2a77fc2abb3408b263",
+  "entry_count": 3464,
+  "entry_types": {
+    "article": 1573,
+    "book": 695,
+    "bookinbook": 10,
+    "collection": 59,
+    "customa": 71,
+    "customb": 12,
+    "inbook": 10,
+    "incollection": 546,
+    "inproceedings": 152,
+    "lecture": 18,
+    "mastersthesis": 1,
+    "misc": 50,
+    "mvbook": 10,
+    "mvcollection": 16,
+    "mvreference": 1,
+    "online": 78,
+    "phdthesis": 19,
+    "proceedings": 22,
+    "reference": 41,
+    "report": 5,
+    "set": 30,
+    "techreport": 2,
+    "thesis": 38,
+    "unknown": 2,
+    "unpublished": 3
+  },
+  "duplicate_keys": [
+    "KratylosSet",
+    "WikipediaSet",
+    "mazaudon1994"
+  ],
+  "parse_warnings": [
+    "asia 2.bib: salvaged malformed entry mazaudon1994 without explicit @type",
+    "asia 2.bib: unterminated BibTeX entry near malformed entry vonmengden2008",
+    "asia 2.bib: salvaged malformed entry vonmengden2008 without explicit @type"
+  ],
+  "import_date": "2026-05-29T19:11:36.537215+00:00"
+}

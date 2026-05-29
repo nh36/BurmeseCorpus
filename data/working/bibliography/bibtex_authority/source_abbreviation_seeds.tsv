@@ -1,0 +1,23 @@
+abbreviation	family_id	provisional_label	probable_bibtex_key	source_type	confidence	evidence	needs_human_review	notes
+List	fam-list-catalogue	List catalogue reference family	listCatalogueUnresolved	source_catalogue	medium	Recurring List references are clustered into a stable catalogue family in bibliography triage.	true	Catalogue work still needs fuller bibliographic identification.
+OBI	fam-obi-internal	Old Burmese Inscriptions corpus source set	obiCorpusSource	source_catalogue	high	Recurring OBI references point to the repository-backed structured corpus source set.	false	Repository-backed source family.
+Pl.	fam-plate-references	Plate reference system	plateReferenceSystem	internal_reference	medium	Recurring Pl. references behave as internal plate locators rather than standalone works.	true	Plate family remains an internal-reference scaffold.
+PPA	fam-ppa-catalogue	PPA catalogue family	ppaCatalogue	source_catalogue	medium	Recurring PPA references behave as a catalogue/source abbreviation.	true	Catalogue identity unresolved.
+TN	fam-tn-catalogue	Than Tun catalogue family	thanTunCatalogue	source_catalogue	medium	Recurring TN references behave as a catalogue/source abbreviation.	true	Catalogue identity unresolved.
+RDASB	fam-rdasb-publication	Report of the Director, Archaeological Survey of Burma	rdasbSeries	publication	high	Recurring RDASB references identify a serial/report family.	false	Use locators for year and page pending issue-level review.
+U Min Hswe	fam-u-min-hswe-catalogue	U Min Hswe catalogue family	uMinHsweCatalog	source_catalogue	medium	Recurring named U Min Hswe references identify a stable source family.	true	Named family pending fuller bibliographic confirmation.
+IPPA	fam-ippa-catalogue	IPPA catalogue family	ippaCatalogue	source_catalogue	medium	Recurring IPPA references behave as a catalogue/source abbreviation.	true	Catalogue identity unresolved.
+UEM	fam-uem-catalogue	UEM catalogue family	uemCatalogue	source_catalogue	medium	Recurring UEM references behave as a catalogue/source abbreviation.	true	Catalogue identity unresolved.
+BED B	fam-bed-b-catalogue	BED B catalogue family	bedBCatalogue	source_catalogue	medium	Recurring BED B references behave as a catalogue/source abbreviation.	true	Catalogue identity unresolved.
+SIP	fam-sip-catalogue	SIP catalogue family	sipCatalogue	source_catalogue	medium	Recurring SIP references behave as a catalogue/source abbreviation.	true	Catalogue identity unresolved.
+MM	fam-mm-catalogue	MM catalogue family	mmCatalogue	source_catalogue	medium	Recurring MM references behave as a catalogue/source abbreviation.	true	Catalogue identity unresolved.
+OR	fam-or-catalogue	OR catalogue family	orCatalogue	source_catalogue	medium	Recurring OR references behave as a catalogue/source abbreviation.	true	Catalogue identity unresolved.
+IOB	fam-iob-catalogue	IOB catalogue family	iobCatalogue	source_catalogue	medium	Recurring IOB references behave as a catalogue/source abbreviation.	true	Catalogue identity unresolved.
+JBRS	fam-jbrs-publication	Journal of the Burma Research Society	jbrsSeries	publication	high	Recurring JBRS references identify a stable journal family.	false	Article-level matches can override this series-level mapping.
+BBHC	fam-bbhc-publication	BBHC publication family	bbhcSeries	publication	medium	Recurring BBHC references identify a stable publication family but still need finer separation.	true	May cover bulletin and conference publication contexts.
+JRAS	fam-jras-publication	Journal of the Royal Asiatic Society	jrasSeries	publication	high	Recurring JRAS references identify a stable journal family.	false	Article-level matches can override this series-level mapping.
+EB	fam-eb-publication	Epigraphia Birmanica	epigraphiaBirmanica	publication	high	Recurring EB references point to Epigraphia Birmanica.	false	Series-level entry only at this stage.
+MP	fam-raw-mp	MP abbreviation family	mpCatalogueUnresolved	source_catalogue	low	Short MP references remain unresolved in the triage layer.	true	Placeholder mapping only.
+UB	fam-raw-ub	UB abbreviation family	ubCatalogueUnresolved	source_catalogue	low	Short UB references remain unresolved in the triage layer.	true	Placeholder mapping only.
+A	fam-raw-a	A abbreviation family	aCatalogueUnresolved	source_catalogue	low	Single-letter A references remain unresolved in the triage layer.	true	Placeholder mapping only.
+B	fam-raw-b	B abbreviation family	bCatalogueUnresolved	source_catalogue	low	Single-letter B references remain unresolved in the triage layer.	true	Placeholder mapping only.

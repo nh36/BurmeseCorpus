@@ -1,0 +1,6 @@
+{
+  "available": false,
+  "matched_file_count": 0,
+  "library_root": "",
+  "instructions": "Set OBI_LIBRARY_ROOT to the root of the local Burma bibliography/library tree before running this script."
+}
