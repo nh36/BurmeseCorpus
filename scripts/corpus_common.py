@@ -179,6 +179,11 @@ def write_tsv(path: Path, rows: Iterable[dict], fieldnames: list[str]) -> None:
             writer.writerow(row)
 
 
+def read_tsv(path: Path) -> list[dict]:
+    with path.open("r", encoding="utf-8", newline="") as handle:
+        return list(csv.DictReader(handle, delimiter="\t"))
+
+
 def read_jsonl(path: Path) -> list[dict]:
     records: list[dict] = []
     with path.open("r", encoding="utf-8") as handle:

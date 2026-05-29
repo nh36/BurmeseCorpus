@@ -1,6 +1,9 @@
 {
+  "input_jsonl": "data/release/corpus_release_v0_3/inscriptions.jsonl",
   "raw_reference_count": 872,
   "occurrence_count": 4737,
   "candidate_count": 2849,
-  "coverage_group_count": 2
+  "coverage_group_count": 2,
+  "records_with_references": 920,
+  "records_without_references": 232
 }

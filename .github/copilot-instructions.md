@@ -12,10 +12,12 @@
   - `python3 scripts/merge_unified_release.py`
   - `python3 scripts/build_corpus_release.py`
   - `python3 scripts/extract_bibliography.py`
+  - `python3 scripts/triage_bibliography.py`
+  - `python3 scripts/validate_bibliography_triage.py`
   - `python3 scripts/extract_places.py`
   - `python3 scripts/init_translation_scaffold.py`
   - `python3 scripts/validate_corpus.py`
-- Full test suite: `python3 -m unittest tests.test_parsers tests.test_recently_found_overrides tests.test_merge_unified_release tests.test_corpus_release`
+- Full test suite: `python3 -m unittest tests.test_parsers tests.test_recently_found_overrides tests.test_merge_unified_release tests.test_corpus_release tests.test_bibliography_triage`
 - Single test: `python3 -m unittest tests.test_parsers.RecentlyFoundParserTests.test_recently_found_parser_finds_entries_and_pages`
 - There is still no dedicated lint configuration checked in.
 
@@ -45,7 +47,10 @@
   - `parse_sagaing.py` converts the Sagaing source into per-record JSONL plus corpus-style text files and writes the `sagaing_v0_1` release candidate.
   - `merge_unified_release.py` now defaults to `data/release/unified_release_v0_2/`, reads `data/working/inventory/recently_found_release_policy.tsv`, suppresses duplicate-like source-only emission where policy says `annotate_target_only`, and writes `editorial_relations.jsonl`.
   - `build_corpus_release.py` assembles `data/release/corpus_release_v0_3/` from `unified_release_v0_2` and `sagaing_v0_1`, writes the release manifest, source registry, release notes, validation report, and derived SQLite export.
-  - `extract_bibliography.py`, `extract_places.py`, and `init_translation_scaffold.py` now default to `data/release/corpus_release_v0_3/inscriptions.jsonl` and initialize the normalization layer under `data/working/`.
+  - `extract_bibliography.py` now defaults to `data/release/corpus_release_v0_3/inscriptions.jsonl`, writes the raw-reference working files, and reports reference coverage by source.
+  - `triage_bibliography.py` groups raw reference fragments into conservative reference families, writes provisional bibliographic work candidates, and produces `bibliography_triage_report.json`.
+  - `validate_bibliography_triage.py` validates the bibliography triage files and their family/work candidate linkage.
+  - `extract_places.py` and `init_translation_scaffold.py` now default to `data/release/corpus_release_v0_3/inscriptions.jsonl` and initialize the downstream working layers under `data/working/`.
   - `validate_corpus.py` checks generated JSONL datasets for ID, shape, linkage, source-registry, manifest, SQLite-export, and editorial-relation errors, including full release validation for `corpus_release_v0_3`.
 - `schemas/` defines the first release contracts for `inscription`, `line`, `bibliography`, `translation`, and `place`, and `docs/data_model.md` describes how those records fit together.
 - `4321314/OBI_Corpus_Vol1.zip` through `4321314/OBI_Corpus_Vol7.zip` are the canonical structured corpus archives. Each archive contains one `.txt` file per inscription face or text unit, with filenames such as `OBI_Vol1_No100__ob_p167.txt` and `OBI_Vol7_No10b__re_p28.txt`.
@@ -68,7 +73,8 @@
 - Treat `data/release/unified_release_v0_2/` as the current default unified release. In this release, embedded Recently Found entries are represented through `editorial_relations.jsonl` plus compact `editorial_relation_ids` on target inscriptions rather than as duplicate canonical records.
 - Treat `data/release/corpus_release_v0_3/` as the stable Phase 1 whole-corpus release baseline. JSONL files remain authoritative; `corpus_release.sqlite` is a derived convenience export. Sagaing is included as supplementary structured data with `sagaing-` identifiers retained and no implied reconciliation to OBI numbering.
 - Avoid release-layer redesign unless the user explicitly asks for it. New work should normally build on `corpus_release_v0_3` rather than introducing another release layout.
-- Phase 2 should begin with bibliography/source authority work and the related authority tables for places, dates, and names.
+- Phase 2 has begun with bibliography/source authority triage under `data/working/bibliography/`. This triage layer is for reviewability, not final bibliography normalization.
+- Phase 2 should continue with bibliography/source authority work and the related authority tables for places, dates, and names.
 - Translation generation and public interface work should wait until the authority layers are substantially more stable.
 - Translation is a new layer, not a correction pass over the current corpus. The structured `.txt` entries include inscription text and transliteration fields but no `TRANSLATION:` field, so any translation workflow should preserve the existing transcription/transliteration data and record provenance separately.
 - Preserve exact source strings and provenance when transforming data. The project brief distinguishes diplomatic transcription, normalized forms, transliteration, translation, and editorial notes; future scripts should keep those layers separate instead of collapsing them into one cleaned text field.

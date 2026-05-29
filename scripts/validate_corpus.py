@@ -21,7 +21,7 @@ CORPUS_RELEASE_REQUIRED_FILES = [
     "validation_report.json",
 ]
 
-ABSOLUTE_PATH_PATTERN = re.compile(r"(^/|^[A-Za-z]:\\\\|/Users/|/home/)")
+ABSOLUTE_PATH_PATTERN = re.compile(r"(^/(?:Users|home|var|private|tmp|opt|Volumes)\b|^[A-Za-z]:\\\\)")
 REQUIRED_RELEASE_DOCS = [
     "docs/release_workflow.md",
     "docs/field_dictionary.md",

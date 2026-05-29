@@ -1,0 +1,1092 @@
+work_candidate_id	family_id	provisional_short_label	author_original	author_normalized	year	title_original	title_normalized	publication_details	language	script	translation_relevance	evidence_raw_references	review_status	notes
+work-anthology	fam-anthology	Anthology references				Anthology	anthology			latin	possible_translation	Anthology 5, p. 81 | Anthology 1, p. 39 | Anthology 5, p. 82	unreviewed	Grouped by recurring title keyword.
+work-bbhc-publication	fam-bbhc-publication	BBHC references	Luce/U Pe Maung Tin	luce/u pe maung tin	1963	BBHC 3, 1963	bbhc 3 1963			latin	possible_translation	Luce/U Pe Maung Tin, BBHC 3, 1963, p. 96 | Luce/ U Pe Maung Tin, BBHC 1 (2) | Luce/ U Pe Maung Tin, BBHC 3, 1963, p. 72	unreviewed	Grouped by recurring publication abbreviation.
+work-bed-b-catalogue	fam-bed-b-catalogue	BED B references								latin	unlikely_translation	BED B 645-2 | BED B 622-4 | BED B 623-1	unreviewed	Grouped by recurring leading label.
+work-eb-publication	fam-eb-publication	EB references			1919					latin	unknown	EB 1 (1), 1919, p. 1 | EB Vol.1, n°1 | EB Vol.1 n°1 BED B 474-1	unreviewed	Grouped by recurring leading label.
+work-harvey-history	fam-harvey-history	Harvey, History references	Harvey	harvey		History of Myanmar	history of myanmar			latin	possible_translation	The Myazedi Inscription in Four Languages, ed. by the Cultu… | Harvey, History, p. 331	unreviewed	Grouped by recurring author/title pair.
+work-iob-catalogue	fam-iob-catalogue	IOB references								latin	unlikely_translation	IOB--278 BED B 622-4 | IOB--462/b | IOB-1-51. BED B 572	unreviewed	Grouped by recurring leading label.
+work-ippa-catalogue	fam-ippa-catalogue	IPPA references								latin	unlikely_translation	IPPA | IPPA 101-102 | IPPA 137-138	unreviewed	Grouped by recurring leading label.
+work-jbrs-publication	fam-jbrs-publication	JBRS references	U Hswai	u hswai	1965	JBRS 48 (2), 1965	jbrs 48 2 1965			latin	possible_translation	U Hswai, JBRS 48 (2), 1965, p. 67, no. 5 | Duroiselle, JBRS 6.2, 1916, p. 88 | Luce, Myanmar's Debt, JBRS 1932, p. 125	unreviewed	Grouped by recurring publication abbreviation.
+work-jras-publication	fam-jras-publication	JRAS references	Blagden	blagden	1909	JRAS 1909	jras 1909			latin	possible_translation	Blagden, JRAS 1909, p. 10	unreviewed	Grouped by recurring publication abbreviation.
+work-list-catalogue	fam-list-catalogue	List references								latin	unlikely_translation	List 90 | List 302 | List 255	unreviewed	Grouped by recurring leading label.
+work-mm-catalogue	fam-mm-catalogue	MM references								latin	unlikely_translation	MM 1, no. 13, p. 117 | MM 1, no. 15, p. 136 | MM 1, no. 16, p. 140	unreviewed	Grouped by recurring leading label.
+work-obi-internal	fam-obi-internal	OBI internal references								latin	unlikely_translation	OBI 3, p. 2 | OBI 3, p. 1 | OBI 3, p. 3	unreviewed	Grouped by recurring leading label.
+work-or-catalogue	fam-or-catalogue	OR references								latin	unlikely_translation	OR 3475, no. 4 | OR 3434 (gā: verso) | OR 3434 fol. ghā verso (with further dates)	unreviewed	Grouped by recurring leading label.
+work-plate-references	fam-plate-references	Plate references								latin	unlikely_translation	Pl. II 198 | Pl. II 195b | Pl. II 201b	unreviewed	Grouped by recurring leading label.
+work-ppa-catalogue	fam-ppa-catalogue	PPA references								latin	unlikely_translation	PPA, p. 55 | PPA, p. 191 | PPA, p. 155	unreviewed	Grouped by recurring leading label.
+work-raw-12	fam-raw-12	12								unknown	unknown	12	unreviewed	No stronger conservative family signal was detected.
+work-raw-17	fam-raw-17	17								unknown	unknown	17	unreviewed	No stronger conservative family signal was detected.
+work-raw-184-bed-b-614-2	fam-raw-184-bed-b-614-2	-184 BED B 614-2								latin	unknown	-184 BED B 614-2	unreviewed	No stronger conservative family signal was detected.
+work-raw-1936-37-4003-1938-39-4080	fam-raw-1936-37-4003-1938-39-4080	1936 37 4003 1938 39 4080			1936					unknown	unknown	-1936-37/ 4003, 1938-39/ 4080	unreviewed	No stronger conservative family signal was detected.
+work-raw-1958-59	fam-raw-1958-59	1958-59			1958					unknown	unknown	1958-59	unreviewed	No stronger conservative family signal was detected.
+work-raw-1960	fam-raw-1960	1960, p. 241			1960					latin	unknown	1960, p. 241	unreviewed	No stronger conservative family signal was detected.
+work-raw-1962-63-bed-b-622-6	fam-raw-1962-63-bed-b-622-6	1962 63 bed b 622 6			1962					latin	unknown	1962-63 BED B 622-6	unreviewed	No stronger conservative family signal was detected.
+work-raw-1963	fam-raw-1963	1963,			1963					unknown	unknown	1963,	unreviewed	No stronger conservative family signal was detected.
+work-raw-1970-71	fam-raw-1970-71	1970-71			1970					unknown	unknown	1970-71	unreviewed	No stronger conservative family signal was detected.
+work-raw-2	fam-raw-2	& 2								unknown	unknown	& 2 | -2	unreviewed	No stronger conservative family signal was detected.
+work-raw-265	fam-raw-265	---265,								unknown	unknown	---265,	unreviewed	No stronger conservative family signal was detected.
+work-raw-3	fam-raw-3	3 ,								unknown	unknown	3 ,	unreviewed	No stronger conservative family signal was detected.
+work-raw-31-2-3	fam-raw-31-2-3	-31 . . . . . . 2 . . . . . . 3 . . . . . . . . .								unknown	unknown	-31 . . . . . . 2 . . . . . . 3 . . . . . . . . .	unreviewed	No stronger conservative family signal was detected.
+work-raw-377	fam-raw-377	-377								unknown	unknown	-377	unreviewed	No stronger conservative family signal was detected.
+work-raw-6	fam-raw-6	-6-,								unknown	unknown	-6-,	unreviewed	No stronger conservative family signal was detected.
+work-raw-617	fam-raw-617	617								unknown	unknown	617	unreviewed	No stronger conservative family signal was detected.
+work-raw-769	fam-raw-769	--769								unknown	unknown	--769	unreviewed	No stronger conservative family signal was detected.
+work-raw-a	fam-raw-a	A, p. 79								latin	unknown	A, p. 79 | A, p. 101 | A, p. 103-105	unreviewed	No stronger conservative family signal was detected.
+work-raw-a-and-549	fam-raw-a-and-549	A, p. 97 and 549								latin	unknown	A, p. 97 and 549	unreviewed	No stronger conservative family signal was detected.
+work-raw-and-mm-4-said-to-come-from-sagaing	fam-raw-and-mm-4-said-to-come-from-sagaing	and mm 4 said to come from sagaing								latin	unknown	and MM 4, no. 47, p. 214 (said to come from Sagaing)	unreviewed	No stronger conservative family signal was detected.
+work-raw-another-is-list-401	fam-raw-another-is-list-401	another copy is List 401								latin	unknown	another copy is List 401	unreviewed	No stronger conservative family signal was detected.
+work-raw-another-mm-3	fam-raw-another-mm-3	another copy MM 3, no. 25, p. 107								latin	unknown	another copy MM 3, no. 25, p. 107	unreviewed	No stronger conservative family signal was detected.
+work-raw-another-mm-4	fam-raw-another-mm-4	another copy MM 4, no. 20, p. 90								latin	unknown	another copy MM 4, no. 20, p. 90 | another copy MM 4, no. 9, p. 44	unreviewed	No stronger conservative family signal was detected.
+work-raw-arasi-1921-22-and-pl-19a	fam-raw-arasi-1921-22-and-pl-19a	arasi 1921 22 and pl 19a			1921					latin	unknown	ARASI 1921-22, p. 35 and pl. 19a	unreviewed	No stronger conservative family signal was detected.
+work-raw-arasi-1930-34	fam-raw-arasi-1930-34	ARASI 1930-34, p. 190			1930					latin	unknown	ARASI 1930-34, p. 190	unreviewed	No stronger conservative family signal was detected.
+work-raw-arasi-1936-37	fam-raw-arasi-1936-37	ARASI 1936-37, p. 114			1936					latin	unknown	ARASI 1936-37, p. 114 | ARASI 1936-37, p. 115 | ARASI 1936-37, p. 116	unreviewed	No stronger conservative family signal was detected.
+work-raw-arasi-1936-7-u-min-hswe	fam-raw-arasi-1936-7-u-min-hswe	arasi 1936 7 u min hswe			1936					latin	unknown	ARASI 1936-7, p. 114, U Min Hswe, no. 11	unreviewed	No stronger conservative family signal was detected.
+work-raw-aung-thwin-ceylonese-burmese-relations-jss-1976	fam-raw-aung-thwin-ceylonese-burmese-relations-jss-1976	aung thwin ceylonese burmese relations jss 1976	Aung-Thwin	aung-thwin	1976	Ceylonese-Burmese Relations, JSS 1976	ceylonese burmese relations jss 1976			latin	unknown	Aung-Thwin, Ceylonese-Burmese Relations, JSS 1976, p. 53-74	unreviewed	No stronger conservative family signal was detected.
+work-raw-b-1	fam-raw-b-1	B 1, p. 420								latin	unknown	B 1, p. 420 | B 1, p. 428	unreviewed	No stronger conservative family signal was detected.
+work-raw-b-2	fam-raw-b-2	B 2, p. 815								latin	unknown	B 2, p. 815 | B 2, p. 830 | B 2 p. 747	unreviewed	No stronger conservative family signal was detected.
+work-raw-b-2-dated-cs-636-1274-and-list-453-second-inscr	fam-raw-b-2-dated-cs-636-1274-and-list-453-second-inscr	b 2 dated cs 636 1274 and list 453 second inscr								latin	unknown	B 2, p. 819 (dated CS 636/ 1274) and List 453 (second inscr…	unreviewed	No stronger conservative family signal was detected.
+work-raw-b-2-dated-cs-676-1314	fam-raw-b-2-dated-cs-676-1314	b 2 dated cs 676 1314								latin	unknown	B 2, p. 827 (dated CS 676/1314)	unreviewed	No stronger conservative family signal was detected.
+work-raw-b-2-first-inscr	fam-raw-b-2-first-inscr	B 2, p. 819 (first inscr.)								latin	unknown	B 2, p. 819 (first inscr.)	unreviewed	No stronger conservative family signal was detected.
+work-raw-b-2-first-part	fam-raw-b-2-first-part	B 2, p. 665 (first part)								latin	unknown	B 2, p. 665 (first part)	unreviewed	No stronger conservative family signal was detected.
+work-raw-b-2-mm	fam-raw-b-2-mm	B 2, p. 796 (MM)								latin	unknown	B 2, p. 796 (MM)	unreviewed	No stronger conservative family signal was detected.
+work-raw-b-28	fam-raw-b-28	/b+ 28								latin	unknown	/b+ 28	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-1-9	fam-raw-ba-1-9	BA 1, 9								latin	unknown	BA 1, 9	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-10	fam-raw-ba-10	BA-10								latin	unknown	BA-10	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-101	fam-raw-ba-101	BA-101								latin	unknown	BA-101	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-103	fam-raw-ba-103	BA-103								latin	unknown	BA-103	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-105	fam-raw-ba-105	BA-105								latin	unknown	BA-105	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-106	fam-raw-ba-106	BA-106,								latin	unknown	BA-106,	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-107	fam-raw-ba-107	BA 107								latin	unknown	BA 107	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-109-157	fam-raw-ba-109-157	BA-109, 157								latin	unknown	BA-109, 157	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-11	fam-raw-ba-11	BA-11								latin	unknown	BA-11	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-110	fam-raw-ba-110	BA-110								latin	unknown	BA-110	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-111	fam-raw-ba-111	BA-111								latin	unknown	BA-111	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-112	fam-raw-ba-112	BA 112								latin	unknown	BA 112	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-113	fam-raw-ba-113	BA-113,								latin	unknown	BA-113,	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-114	fam-raw-ba-114	BA-114								latin	unknown	BA-114	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-115	fam-raw-ba-115	BA-115								latin	unknown	BA-115	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-116	fam-raw-ba-116	BA-116								latin	unknown	BA-116	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-117	fam-raw-ba-117	BA-117								latin	unknown	BA-117	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-118	fam-raw-ba-118	BA-118								latin	unknown	BA-118	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-121	fam-raw-ba-121	BA-121								latin	unknown	BA-121	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-122	fam-raw-ba-122	BA-122								latin	unknown	BA-122	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-124	fam-raw-ba-124	BA-124								latin	unknown	BA-124	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-125	fam-raw-ba-125	BA-125								latin	unknown	BA-125	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-127	fam-raw-ba-127	BA-127								latin	unknown	BA-127	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-128	fam-raw-ba-128	BA-128								latin	unknown	BA-128	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-130	fam-raw-ba-130	BA-130								latin	unknown	BA-130	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-133	fam-raw-ba-133	BA-133								latin	unknown	BA-133	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-135	fam-raw-ba-135	BA 135								latin	unknown	BA 135	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-137-138	fam-raw-ba-137-138	BA-137-138								latin	unknown	BA-137-138	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-139-140	fam-raw-ba-139-140	BA-139-140								latin	unknown	BA-139-140	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-141	fam-raw-ba-141	BA-141								latin	unknown	BA-141	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-142	fam-raw-ba-142	BA-142								latin	unknown	BA-142	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-143-144	fam-raw-ba-143-144	BA-143-144								latin	unknown	BA-143-144	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-145	fam-raw-ba-145	BA-145								latin	unknown	BA-145	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-146	fam-raw-ba-146	BA-146								latin	unknown	BA-146	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-147	fam-raw-ba-147	BA-147								latin	unknown	BA-147	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-149	fam-raw-ba-149	BA-149								latin	unknown	BA-149	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-150	fam-raw-ba-150	BA-150								latin	unknown	BA-150	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-151-152	fam-raw-ba-151-152	BA-151-152								latin	unknown	BA-151-152	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-153	fam-raw-ba-153	BA-153								latin	unknown	BA-153	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-154	fam-raw-ba-154	BA-154								latin	unknown	BA-154	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-156	fam-raw-ba-156	BA-156								latin	unknown	BA-156	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-16	fam-raw-ba-16	BA-16								latin	unknown	BA-16	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-162	fam-raw-ba-162	BA-162								latin	unknown	BA-162	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-164	fam-raw-ba-164	BA-164								latin	unknown	BA-164	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-165	fam-raw-ba-165	BA-165								latin	unknown	BA-165	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-166-167	fam-raw-ba-166-167	BA-166-167								latin	unknown	BA-166-167	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-168	fam-raw-ba-168	BA-168								latin	unknown	BA-168	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-169	fam-raw-ba-169	BA-169								latin	unknown	BA-169	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-170	fam-raw-ba-170	BA-170								latin	unknown	BA-170	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-174	fam-raw-ba-174	BA-174								latin	unknown	BA-174	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-177	fam-raw-ba-177	BA-177								latin	unknown	BA-177	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-179	fam-raw-ba-179	BA-179								latin	unknown	BA-179	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-18	fam-raw-ba-18	BA-18								latin	unknown	BA-18	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-183	fam-raw-ba-183	BA-183								latin	unknown	BA-183	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-184	fam-raw-ba-184	BA-184								latin	unknown	BA-184	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-185	fam-raw-ba-185	BA-185								latin	unknown	BA-185	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-186	fam-raw-ba-186	BA-186								latin	unknown	BA-186	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-187	fam-raw-ba-187	BA-187								latin	unknown	BA-187	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-188	fam-raw-ba-188	BA-188								latin	unknown	BA-188	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-189	fam-raw-ba-189	BA-189								latin	unknown	BA-189	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-19	fam-raw-ba-19	BA-19								latin	unknown	BA-19	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-190	fam-raw-ba-190	BA-190								latin	unknown	BA-190	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-191	fam-raw-ba-191	BA-191								latin	unknown	BA-191	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-192	fam-raw-ba-192	BA-192								latin	unknown	BA-192	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-193	fam-raw-ba-193	BA-193								latin	unknown	BA-193	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-194	fam-raw-ba-194	BA-194,								latin	unknown	BA-194,	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-195	fam-raw-ba-195	BA-195,								latin	unknown	BA-195,	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-197	fam-raw-ba-197	BA-197								latin	unknown	BA-197	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-198-199	fam-raw-ba-198-199	BA-198-199								latin	unknown	BA-198-199	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-200	fam-raw-ba-200	BA-200								latin	unknown	BA-200	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-202	fam-raw-ba-202	BA-202,								latin	unknown	BA-202,	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-209	fam-raw-ba-209	BA-209								latin	unknown	BA-209	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-215	fam-raw-ba-215	BA-215								latin	unknown	BA-215	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-217	fam-raw-ba-217	BA-217								latin	unknown	BA-217	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-225-226	fam-raw-ba-225-226	BA-225-226								latin	unknown	BA-225-226	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-228-582	fam-raw-ba-228-582	BA-228 & 582								latin	unknown	BA-228 & 582	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-229	fam-raw-ba-229	BA-229								latin	unknown	BA-229	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-244	fam-raw-ba-244	BA-244								latin	unknown	BA-244	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-254	fam-raw-ba-254	BA-254								latin	unknown	BA-254	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-27	fam-raw-ba-27	BA-27								latin	unknown	BA-27	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-270	fam-raw-ba-270	BA-270								latin	unknown	BA-270	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-271-272	fam-raw-ba-271-272	BA-271-272								latin	unknown	BA-271-272	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-273	fam-raw-ba-273	BA-273								latin	unknown	BA-273	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-274	fam-raw-ba-274	BA-274								latin	unknown	BA-274	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-28	fam-raw-ba-28	BA-28								latin	unknown	BA-28	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-332	fam-raw-ba-332	BA-332								latin	unknown	BA-332	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-34	fam-raw-ba-34	BA-34								latin	unknown	BA-34	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-357	fam-raw-ba-357	BA-357								latin	unknown	BA-357	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-36	fam-raw-ba-36	BA-36								latin	unknown	BA-36	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-39	fam-raw-ba-39	BA-39								latin	unknown	BA-39	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-395	fam-raw-ba-395	BA-395								latin	unknown	BA-395	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-399	fam-raw-ba-399	BA-399,								latin	unknown	BA-399,	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-41	fam-raw-ba-41	BA-41								latin	unknown	BA-41	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-419	fam-raw-ba-419	BA-419								latin	unknown	BA-419	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-42	fam-raw-ba-42	BA-42								latin	unknown	BA-42	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-428	fam-raw-ba-428	BA-428,								latin	unknown	BA-428,	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-43	fam-raw-ba-43	BA-43								latin	unknown	BA-43	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-436-1-2-3-4-5	fam-raw-ba-436-1-2-3-4-5	ba 436 1 2 3 4 5								latin	unknown	BA-436, 1-2-3-4-5-,	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-437	fam-raw-ba-437	BA-437								latin	unknown	BA-437	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-466	fam-raw-ba-466	BA-466								latin	unknown	BA-466	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-47	fam-raw-ba-47	BA-47								latin	unknown	BA-47	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-471	fam-raw-ba-471	BA-471								latin	unknown	BA-471	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-472	fam-raw-ba-472	BA-472								latin	unknown	BA-472	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-474	fam-raw-ba-474	BA-474								latin	unknown	BA-474	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-487	fam-raw-ba-487	BA-487								latin	unknown	BA-487	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-49	fam-raw-ba-49	BA-49								latin	unknown	BA-49	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-494	fam-raw-ba-494	BA-494								latin	unknown	BA-494	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-496	fam-raw-ba-496	BA-496								latin	unknown	BA-496	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-50	fam-raw-ba-50	BA-50								latin	unknown	BA-50	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-508	fam-raw-ba-508	BA-508								latin	unknown	BA-508	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-51	fam-raw-ba-51	BA-51								latin	unknown	BA-51	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-510	fam-raw-ba-510	BA-510								latin	unknown	BA-510	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-52	fam-raw-ba-52	BA-52								latin	unknown	BA-52	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-535	fam-raw-ba-535	BA-535								latin	unknown	BA-535	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-54	fam-raw-ba-54	BA-54								latin	unknown	BA-54	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-545	fam-raw-ba-545	BA-545								latin	unknown	BA-545	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-546	fam-raw-ba-546	BA-546								latin	unknown	BA-546	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-55-56	fam-raw-ba-55-56	BA-55 & 56								latin	unknown	BA-55 & 56	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-554	fam-raw-ba-554	BA-554								latin	unknown	BA-554	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-57-539	fam-raw-ba-57-539	BA-57 & 539								latin	unknown	BA-57 & 539	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-574-227	fam-raw-ba-574-227	BA-574-227								latin	unknown	BA-574-227	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-58	fam-raw-ba-58	BA-58								latin	unknown	BA-58	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-583	fam-raw-ba-583	BA-583								latin	unknown	BA-583	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-59	fam-raw-ba-59	BA-59								latin	unknown	BA-59	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-595	fam-raw-ba-595	BA-595								latin	unknown	BA-595	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-60	fam-raw-ba-60	BA-60								latin	unknown	BA-60	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-61	fam-raw-ba-61	BA-61								latin	unknown	BA-61	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-62	fam-raw-ba-62	BA-62								latin	unknown	BA-62	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-63	fam-raw-ba-63	BA-63								latin	unknown	BA-63	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-66	fam-raw-ba-66	BA-66,								latin	unknown	BA-66,	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-67	fam-raw-ba-67	BA-67								latin	unknown	BA-67	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-68	fam-raw-ba-68	BA-68								latin	unknown	BA-68	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-69	fam-raw-ba-69	BA 69								latin	unknown	BA 69	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-7	fam-raw-ba-7	BA-7								latin	unknown	BA-7	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-70	fam-raw-ba-70	BA-70								latin	unknown	BA-70	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-71	fam-raw-ba-71	BA-71								latin	unknown	BA-71	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-72	fam-raw-ba-72	BA-72								latin	unknown	BA-72	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-75	fam-raw-ba-75	BA-75								latin	unknown	BA-75	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-79	fam-raw-ba-79	BA-79								latin	unknown	BA-79	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-80	fam-raw-ba-80	BA-80								latin	unknown	BA-80	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-81	fam-raw-ba-81	BA-81								latin	unknown	BA-81	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-82	fam-raw-ba-82	BA-82								latin	unknown	BA-82	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-83	fam-raw-ba-83	BA-83								latin	unknown	BA-83	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-85	fam-raw-ba-85	BA-85								latin	unknown	BA-85	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-86	fam-raw-ba-86	BA-86								latin	unknown	BA-86	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-88	fam-raw-ba-88	BA-88								latin	unknown	BA-88	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-89	fam-raw-ba-89	BA-89								latin	unknown	BA-89	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-90	fam-raw-ba-90	BA-90								latin	unknown	BA-90	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-93	fam-raw-ba-93	BA-93								latin	unknown	BA-93	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-97-492	fam-raw-ba-97-492	BA-97 & 492								latin	unknown	BA-97 & 492	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-98	fam-raw-ba-98	BA-98								latin	unknown	BA-98	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-99	fam-raw-ba-99	BA-99								latin	unknown	BA-99	unreviewed	No stronger conservative family signal was detected.
+work-raw-ba-bed-b-635-2	fam-raw-ba-bed-b-635-2	BA BED B 635-2								latin	unknown	BA BED B 635-2	unreviewed	No stronger conservative family signal was detected.
+work-raw-bed-a	fam-raw-bed-a	BED A								latin	unknown	BED A	unreviewed	No stronger conservative family signal was detected.
+work-raw-bm1-183-184	fam-raw-bm1-183-184	BM1-183-184								latin	unknown	BM1-183-184	unreviewed	No stronger conservative family signal was detected.
+work-raw-bm1-184	fam-raw-bm1-184	BM1-184								latin	unknown	BM1-184	unreviewed	No stronger conservative family signal was detected.
+work-raw-bm1-245	fam-raw-bm1-245	BM1-245								latin	unknown	BM1-245	unreviewed	No stronger conservative family signal was detected.
+work-raw-bm1-250	fam-raw-bm1-250	BM1-250,								latin	unknown	BM1-250,	unreviewed	No stronger conservative family signal was detected.
+work-raw-bm1-262-270	fam-raw-bm1-262-270	BM1-262+270								latin	unknown	BM1-262+270	unreviewed	No stronger conservative family signal was detected.
+work-raw-bm1-270-279	fam-raw-bm1-270-279	BM1-270 + 279								latin	unknown	BM1-270 + 279	unreviewed	No stronger conservative family signal was detected.
+work-raw-bm1-351-352	fam-raw-bm1-351-352	BM1-351-352								latin	unknown	BM1-351-352	unreviewed	No stronger conservative family signal was detected.
+work-raw-bm1-380	fam-raw-bm1-380	BM1-380								latin	unknown	BM1-380	unreviewed	No stronger conservative family signal was detected.
+work-raw-bm1-381	fam-raw-bm1-381	BM1-381								latin	unknown	BM1-381	unreviewed	No stronger conservative family signal was detected.
+work-raw-bm1-420	fam-raw-bm1-420	BM1-420								latin	unknown	BM1-420	unreviewed	No stronger conservative family signal was detected.
+work-raw-bm1-72	fam-raw-bm1-72	BM1-72								latin	unknown	BM1-72	unreviewed	No stronger conservative family signal was detected.
+work-raw-bm1-80	fam-raw-bm1-80	BM1-80								latin	unknown	BM1-80	unreviewed	No stronger conservative family signal was detected.
+work-raw-bm1184	fam-raw-bm1184	BM1184								latin	unknown	BM1184	unreviewed	No stronger conservative family signal was detected.
+work-raw-bm2-558	fam-raw-bm2-558	BM2 -558								latin	unknown	BM2 -558	unreviewed	No stronger conservative family signal was detected.
+work-raw-bm2-760	fam-raw-bm2-760	BM2-760								latin	unknown	BM2-760	unreviewed	No stronger conservative family signal was detected.
+work-raw-bm2-768	fam-raw-bm2-768	BM2-768								latin	unknown	BM2-768	unreviewed	No stronger conservative family signal was detected.
+work-raw-bm2-830-838	fam-raw-bm2-830-838	BM2-830, 838								latin	unknown	BM2-830, 838	unreviewed	No stronger conservative family signal was detected.
+work-raw-co-pies-list-225	fam-raw-co-pies-list-225	co pies List 225								latin	unknown	co pies List 225	unreviewed	No stronger conservative family signal was detected.
+work-raw-copies-list-212	fam-raw-copies-list-212	copies: List 212								latin	unknown	copies: List 212	unreviewed	No stronger conservative family signal was detected.
+work-raw-copies-list-217	fam-raw-copies-list-217	copies List 217								latin	unknown	copies List 217	unreviewed	No stronger conservative family signal was detected.
+work-raw-copies-list-402-second-inscr	fam-raw-copies-list-402-second-inscr	copies List 402 (second inscr.)								latin	unknown	copies List 402 (second inscr.)	unreviewed	No stronger conservative family signal was detected.
+work-raw-cp-a-first-part	fam-raw-cp-a-first-part	cp. A, p. 17 (first part)	cp. A	cp. a				p. 17 (first part)		latin	unknown	cp. A, p. 17 (first part)	unreviewed	No stronger conservative family signal was detected.
+work-raw-duroiselle-arasi-1912-hledaung-inscr	fam-raw-duroiselle-arasi-1912-hledaung-inscr	Duroiselle, ARASI 1912, p. 149-51 (Hledaung inscr.)	Duroiselle	duroiselle	1912	ARASI 1912	arasi 1912			latin	unknown	Duroiselle, ARASI 1912, p. 149-51 (Hledaung inscr.)	unreviewed	No stronger conservative family signal was detected.
+work-raw-frasch-coastal-peripheries	fam-raw-frasch-coastal-peripheries	Frasch, “Coastal Peripheries”, p. 74	Frasch	frasch		“Coastal Peripheries”	coastal peripheries			latin	unknown	Frasch, “Coastal Peripheries”, p. 74	unreviewed	No stronger conservative family signal was detected.
+work-raw-frasch-mhrj-1998	fam-raw-frasch-mhrj-1998	Frasch, MHRJ 1998, p. 23-37	Frasch	frasch	1998	MHRJ 1998	mhrj 1998			latin	unknown	Frasch, MHRJ 1998, p. 23-37	unreviewed	No stronger conservative family signal was detected.
+work-raw-frasch-pagan	fam-raw-frasch-pagan	Frasch, Pagan, p. 102-103	Frasch	frasch		Pagan	pagan			latin	unknown	Frasch, Pagan, p. 102-103	unreviewed	No stronger conservative family signal was detected.
+work-raw-hla-thamein-bagan-hket	fam-raw-hla-thamein-bagan-hket	Hla Thamein, Bagan-hket, p. 113	Hla Thamein	hla thamein		Bagan-hket	bagan hket			latin	unknown	Hla Thamein, Bagan-hket, p. 113	unreviewed	No stronger conservative family signal was detected.
+work-raw-htupayon-2	fam-raw-htupayon-2	Htupayon 2, p. 117								latin	unknown	Htupayon 2, p. 117 | Htupayon 2, p. 183	unreviewed	No stronger conservative family signal was detected.
+work-raw-htupayon1	fam-raw-htupayon1	Htupayon1 p.249,								latin	unknown	Htupayon1 p.249,	unreviewed	No stronger conservative family signal was detected.
+work-raw-in-situ	fam-raw-in-situ	in situ								latin	unknown	in situ	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-1-bed-b-493-1	fam-raw-iob1-1-bed-b-493-1	iob1 1 bed b 493 1								latin	unknown	IOB1-1 BED B 493-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-10-a-bed-b-552-1	fam-raw-iob1-10-a-bed-b-552-1	iob1 10 a bed b 552 1								latin	unknown	IOB1-10/a BED B 552-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-10-b	fam-raw-iob1-10-b	IOB1-10/b								latin	unknown	IOB1-10/b	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-100-a-bed-b-597-10	fam-raw-iob1-100-a-bed-b-597-10	iob1 100 a bed b 597 10								latin	unknown	IOB1-100/a BED B 597-10	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-100-b-bed-b-599-2	fam-raw-iob1-100-b-bed-b-599-2	iob1 100 b bed b 599 2								latin	unknown	IOB1-100/b BED B 599-2	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-101-bed-b-599-3	fam-raw-iob1-101-bed-b-599-3	iob1 101 bed b 599 3								latin	unknown	IOB1-101 BED B 599-3	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-102-bed-b-602-1	fam-raw-iob1-102-bed-b-602-1	iob1 102 bed b 602 1								latin	unknown	IOB1-102 BED B 602-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-103-bed-b-600-8	fam-raw-iob1-103-bed-b-600-8	iob1 103 bed b 600 8								latin	unknown	IOB1-103 BED B 600-8	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-104	fam-raw-iob1-104	IOB1-104								latin	unknown	IOB1-104	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-105-a-bed-b-599-4	fam-raw-iob1-105-a-bed-b-599-4	iob1 105 a bed b 599 4								latin	unknown	IOB1-105/a BED B 599-4	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-106-bed-b-509-1	fam-raw-iob1-106-bed-b-509-1	iob1 106 bed b 509 1								latin	unknown	IOB1-106 BED B 509-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-107	fam-raw-iob1-107	IOB1-107								latin	unknown	IOB1-107	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-108-a-bed-b-567-6	fam-raw-iob1-108-a-bed-b-567-6	iob1 108 a bed b 567 6								latin	unknown	IOB1-108/a BED B 567-6	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-108-b-bed-b-585-2	fam-raw-iob1-108-b-bed-b-585-2	iob1 108 b bed b 585 2								latin	unknown	IOB1-108/b BED B 585-2	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-109-a-bed-b-598-7	fam-raw-iob1-109-a-bed-b-598-7	iob1 109 a bed b 598 7								latin	unknown	IOB1-109/a BED B 598-7	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-109-b-bed-b-596-2	fam-raw-iob1-109-b-bed-b-596-2	iob1 109 b bed b 596 2								latin	unknown	IOB1-109/b BED B 596-2	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-11-bed-b-553-1	fam-raw-iob1-11-bed-b-553-1	iob1 11 bed b 553 1								latin	unknown	IOB1-11 BED B 553-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-118-b-bed-b-579-1	fam-raw-iob1-118-b-bed-b-579-1	iob1 118 b bed b 579 1								latin	unknown	IOB1-118/b BED B 579-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-12-bed-b-554-1	fam-raw-iob1-12-bed-b-554-1	iob1 12 bed b 554 1								latin	unknown	IOB1-12 BED B 554-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-14-bed-b-558-1	fam-raw-iob1-14-bed-b-558-1	iob1 14 bed b 558 1								latin	unknown	IOB1-14 BED B 558-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-15	fam-raw-iob1-15	IOB1-15								latin	unknown	IOB1-15	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-16	fam-raw-iob1-16	IOB1-16								latin	unknown	IOB1-16	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-17	fam-raw-iob1-17	IOB1-17								latin	unknown	IOB1-17	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-18	fam-raw-iob1-18	IOB1-18								latin	unknown	IOB1-18	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-19-a-bed-b-560-1	fam-raw-iob1-19-a-bed-b-560-1	iob1 19 a bed b 560 1								latin	unknown	IOB1-19/a, BED B 560-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-2	fam-raw-iob1-2	IOB1-2								latin	unknown	IOB1-2	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-20-a	fam-raw-iob1-20-a	IOB1-20/a,								latin	unknown	IOB1-20/a,	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-21-bed-b-560-4	fam-raw-iob1-21-bed-b-560-4	iob1 21 bed b 560 4								latin	unknown	IOB1-21 BED B 560-4	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-22-bed-b-563-2	fam-raw-iob1-22-bed-b-563-2	iob1 22 bed b 563 2								latin	unknown	IOB1-22 BED B 563-2	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-23	fam-raw-iob1-23	IOB1-23								latin	unknown	IOB1-23	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-24-bed-b-564-1	fam-raw-iob1-24-bed-b-564-1	iob1 24 bed b 564 1								latin	unknown	IOB1-24 BED B 564-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-25-bed-a	fam-raw-iob1-25-bed-a	IOB1-25 BED A								latin	unknown	IOB1-25 BED A	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-26-bed-b-600-7	fam-raw-iob1-26-bed-b-600-7	iob1 26 bed b 600 7								latin	unknown	IOB1-26 BED B 600-7	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-28-a-bed-b-568-1	fam-raw-iob1-28-a-bed-b-568-1	iob1 28 a bed b 568 1								latin	unknown	IOB1-28/a BED B 568-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-28-b	fam-raw-iob1-28-b	IOB1-28/b								latin	unknown	IOB1-28/b	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-29-bed-b-568-2	fam-raw-iob1-29-bed-b-568-2	iob1 29 bed b 568 2								latin	unknown	IOB1-29 BED B 568-2	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-3-bed-b-512-2	fam-raw-iob1-3-bed-b-512-2	iob1 3 bed b 512 2								latin	unknown	IOB1-3 BED B 512-2	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-3-bed-b-550-1	fam-raw-iob1-3-bed-b-550-1	iob1 3 bed b 550 1								latin	unknown	IOB1-3 BED B 550-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-31-bed-b-593-1	fam-raw-iob1-31-bed-b-593-1	iob1 31 bed b 593 1								latin	unknown	IOB1-31 BED B 593-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-32-33-bed-b-570-2	fam-raw-iob1-32-33-bed-b-570-2	iob1 32 33 bed b 570 2								latin	unknown	IOB1-32, 33 BED B 570-2	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-32-bed-b-570-1	fam-raw-iob1-32-bed-b-570-1	iob1 32 bed b 570 1								latin	unknown	IOB1-32 BED B 570-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-33	fam-raw-iob1-33	IOB1-33								latin	unknown	IOB1-33	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-35	fam-raw-iob1-35	IOB1-35								latin	unknown	IOB1-35	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-36-bed-b-574-1	fam-raw-iob1-36-bed-b-574-1	iob1 36 bed b 574 1								latin	unknown	IOB1-36 BED B 574-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-37-bed-574-2	fam-raw-iob1-37-bed-574-2	IOB1-37 BED 574-2								latin	unknown	IOB1-37 BED 574-2	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-38-a	fam-raw-iob1-38-a	IOB1-38/a								latin	unknown	IOB1-38/a	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-38-b-bed-b-573-4	fam-raw-iob1-38-b-bed-b-573-4	iob1 38 b bed b 573 4								latin	unknown	IOB1-38/b BED B 573-4	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-39-bed-b-575-1	fam-raw-iob1-39-bed-b-575-1	iob1 39 bed b 575 1								latin	unknown	IOB1-39 BED B 575-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-4-bed-b-527-1	fam-raw-iob1-4-bed-b-527-1	iob1 4 bed b 527 1								latin	unknown	IOB1-4 BED B 527-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-40	fam-raw-iob1-40	IOB1-40								latin	unknown	IOB1-40	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-41-bed-b-578-1	fam-raw-iob1-41-bed-b-578-1	iob1 41 bed b 578 1								latin	unknown	IOB1-41 BED B 578-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-42-bed-b-578-2	fam-raw-iob1-42-bed-b-578-2	iob1 42 bed b 578 2								latin	unknown	IOB1-42 BED B 578-2	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-43	fam-raw-iob1-43	IOB1-43								latin	unknown	IOB1-43	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-44-a-bed-b-578-3	fam-raw-iob1-44-a-bed-b-578-3	iob1 44 a bed b 578 3								latin	unknown	IOB1-44/a BED B 578-3	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-45-bed-b-581-2	fam-raw-iob1-45-bed-b-581-2	iob1 45 bed b 581 2								latin	unknown	IOB1-45 BED B 581-2	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-46-bed-b-586-6	fam-raw-iob1-46-bed-b-586-6	iob1 46 bed b 586 6								latin	unknown	IOB1-46 BED B 586-6	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-47	fam-raw-iob1-47	IOB1-47								latin	unknown	IOB1-47	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-48-bed-b-582-1	fam-raw-iob1-48-bed-b-582-1	iob1 48 bed b 582 1								latin	unknown	IOB1-48 BED B 582-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-49	fam-raw-iob1-49	IOB1-49								latin	unknown	IOB1-49	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-5	fam-raw-iob1-5	IOB1-5								latin	unknown	IOB1-5	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-50-b	fam-raw-iob1-50-b	IOB1-50 -b								latin	unknown	IOB1-50 -b	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-51-bed-b-585-3	fam-raw-iob1-51-bed-b-585-3	iob1 51 bed b 585 3								latin	unknown	IOB1-51 BED B 585-3	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-53-bed-b-586-5	fam-raw-iob1-53-bed-b-586-5	iob1 53 bed b 586 5								latin	unknown	IOB1-53 BED B 586-5	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-54-587-bed-b-586-10	fam-raw-iob1-54-587-bed-b-586-10	iob1 54 587 bed b 586 10								latin	unknown	IOB1-54 587 BED B 586-10	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-55-a-bed-b-587-5	fam-raw-iob1-55-a-bed-b-587-5	iob1 55 a bed b 587 5								latin	unknown	IOB1-55/a BED B 587-5	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-55-b-bed-b-599-1	fam-raw-iob1-55-b-bed-b-599-1	iob1 55 b bed b 599 1								latin	unknown	IOB1-55/b BED B 599-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-56-a	fam-raw-iob1-56-a	IOB1-56/a								latin	unknown	IOB1-56/a	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-56-b-bed-b-577-2	fam-raw-iob1-56-b-bed-b-577-2	iob1 56 b bed b 577 2								latin	unknown	IOB1-56/b BED B 577-2	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-56-b-bed-b-587-6	fam-raw-iob1-56-b-bed-b-587-6	iob1 56 b bed b 587 6								latin	unknown	IOB1-56/b BED B 587-6	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-57-a-iob5-563-b-bed-b-588-5	fam-raw-iob1-57-a-iob5-563-b-bed-b-588-5	iob1 57 a iob5 563 b bed b 588 5								latin	unknown	IOB1-57/a & IOB5-563/b BED B 588-5	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-57-b-bed-b-588-1	fam-raw-iob1-57-b-bed-b-588-1	iob1 57 b bed b 588 1								latin	unknown	IOB1-57/b BED B 588-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-58	fam-raw-iob1-58	IOB1-58								latin	unknown	IOB1-58	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-59-bed-b-561-1-b-509-2	fam-raw-iob1-59-bed-b-561-1-b-509-2	iob1 59 bed b 561 1 b 509 2								latin	unknown	IOB1-59 BED B 561-1 & B 509-2	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-6-bed-b-541-1	fam-raw-iob1-6-bed-b-541-1	iob1 6 bed b 541 1								latin	unknown	IOB1-6 BED B 541-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-60-a-bed-b-591-2	fam-raw-iob1-60-a-bed-b-591-2	iob1 60 a bed b 591 2								latin	unknown	IOB1-60/a BED B 591-2	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-60-b	fam-raw-iob1-60-b	IOB1-60/b								latin	unknown	IOB1-60/b	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-61-bed-b-591-3	fam-raw-iob1-61-bed-b-591-3	iob1 61 bed b 591 3								latin	unknown	IOB1-61 BED B 591-3	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-62-bed-b-591-7	fam-raw-iob1-62-bed-b-591-7	iob1 62 bed b 591 7								latin	unknown	IOB1-62 BED B 591-7	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-63-a-b-bed-a	fam-raw-iob1-63-a-b-bed-a	iob1 63 a b bed a								latin	unknown	IOB1-63/a-b BED A	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-64-bed-b-585-1	fam-raw-iob1-64-bed-b-585-1	iob1 64 bed b 585 1								latin	unknown	IOB1-64 BED B 585-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-65-a-bed-b-592-4	fam-raw-iob1-65-a-bed-b-592-4	iob1 65 a bed b 592 4								latin	unknown	IOB1-65/a BED B 592-4	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-65-b	fam-raw-iob1-65-b	IOB1-65/b								latin	unknown	IOB1-65/b	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-66	fam-raw-iob1-66	IOB1-66								latin	unknown	IOB1-66	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-67-bed-b-577-3	fam-raw-iob1-67-bed-b-577-3	iob1 67 bed b 577 3								latin	unknown	IOB1-67, BED B 577-3	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-68-bed-b-595-1	fam-raw-iob1-68-bed-b-595-1	iob1 68 bed b 595 1								latin	unknown	IOB1-68 BED B 595-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-69-bed-b-593-2	fam-raw-iob1-69-bed-b-593-2	iob1 69 bed b 593 2								latin	unknown	IOB1-69 BED B 593-2	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-7-bed-b-543-1	fam-raw-iob1-7-bed-b-543-1	iob1 7 bed b 543 1								latin	unknown	IOB1-7 BED B 543-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-70-bed-b-595-2	fam-raw-iob1-70-bed-b-595-2	iob1 70 bed b 595 2								latin	unknown	IOB1-70 BED B 595-2	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-71-bed-b-595-6	fam-raw-iob1-71-bed-b-595-6	iob1 71 bed b 595 6								latin	unknown	IOB1-71 BED B 595-6	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-72	fam-raw-iob1-72	IOB1-72								latin	unknown	IOB1-72	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-73-bed-b-585-4	fam-raw-iob1-73-bed-b-585-4	iob1 73 bed b 585 4								latin	unknown	IOB1-73 BED B 585-4	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-74-bed-b-585-5	fam-raw-iob1-74-bed-b-585-5	iob1 74 bed b 585 5								latin	unknown	IOB1-74 BED B 585-5	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-75-a-bed-b-587-3	fam-raw-iob1-75-a-bed-b-587-3	iob1 75 a bed b 587 3								latin	unknown	IOB1-75/a BED B 587-3	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-75-b-bed-b-586-1	fam-raw-iob1-75-b-bed-b-586-1	iob1 75 b bed b 586 1								latin	unknown	IOB1-75/b BED B 586-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-76	fam-raw-iob1-76	IOB1-76								latin	unknown	IOB1-76	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-77	fam-raw-iob1-77	IOB1-77								latin	unknown	IOB1-77	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-78-a	fam-raw-iob1-78-a	IOB1 78/a								latin	unknown	IOB1 78/a	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-78-b-bed-b-595-3	fam-raw-iob1-78-b-bed-b-595-3	iob1 78 b bed b 595 3								latin	unknown	IOB1-78/b BED B 595-3	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-79-a	fam-raw-iob1-79-a	IOB1-79/a								latin	unknown	IOB1-79/a	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-79-b-bed-b-595-4	fam-raw-iob1-79-b-bed-b-595-4	iob1 79 b bed b 595 4								latin	unknown	IOB1-79/b BED B 595-4	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-8-a-bed-b-544-1	fam-raw-iob1-8-a-bed-b-544-1	iob1 8 a bed b 544 1								latin	unknown	IOB1-8/a BED B 544-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-8-bed-b-597-9	fam-raw-iob1-8-bed-b-597-9	iob1 8 bed b 597 9								latin	unknown	IOB1--8 BED B 597-9	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-80-bed-b-589-2	fam-raw-iob1-80-bed-b-589-2	iob1 80 bed b 589 2								latin	unknown	IOB1-80 BED B 589-2	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-81	fam-raw-iob1-81	IOB1-81								latin	unknown	IOB1-81	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-82-a-bed-b-589-1	fam-raw-iob1-82-a-bed-b-589-1	iob1 82 a bed b 589 1								latin	unknown	IOB1-82/a BED B 589-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-82-b	fam-raw-iob1-82-b	IOB1-82/b								latin	unknown	IOB1-82/b	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-84-bed-b-571-2	fam-raw-iob1-84-bed-b-571-2	iob1 84 bed b 571 2								latin	unknown	IOB1-84 BED B 571-2	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-86-bed-b-597-5	fam-raw-iob1-86-bed-b-597-5	iob1 86 bed b 597 5								latin	unknown	IOB1-86 BED B 597-5	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-87	fam-raw-iob1-87	IOB1-87								latin	unknown	IOB1-87	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-89	fam-raw-iob1-89	IOB1-89								latin	unknown	IOB1-89	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-9-a-bed-b-555-1	fam-raw-iob1-9-a-bed-b-555-1	iob1 9 a bed b 555 1								latin	unknown	IOB1-9/a BED B 555-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-91-n-48-bed-b-598-2	fam-raw-iob1-91-n-48-bed-b-598-2	iob1 91 n 48 bed b 598 2								latin	unknown	IOB1-91 n°48 BED B 598-2	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-92	fam-raw-iob1-92	IOB1-92								latin	unknown	IOB1-92	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-93-bed-b-598-5	fam-raw-iob1-93-bed-b-598-5	iob1 93 bed b 598 5								latin	unknown	IOB1-93 BED B 598-5	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-94-a-bed-b-598-4	fam-raw-iob1-94-a-bed-b-598-4	iob1 94 a bed b 598 4								latin	unknown	IOB1-94/a BED B 598-4	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-94-b	fam-raw-iob1-94-b	IOB1-94/b								latin	unknown	IOB1-94/b	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-95-a-bed-b-598-8	fam-raw-iob1-95-a-bed-b-598-8	iob1 95 a bed b 598 8								latin	unknown	IOB1-95/a BED B 598-8	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-96-bed-b-598-9	fam-raw-iob1-96-bed-b-598-9	iob1 96 bed b 598 9								latin	unknown	IOB1-96 BED B 598-9	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-97	fam-raw-iob1-97	IOB1-97								latin	unknown	IOB1-97	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob1-c-b-bed-b-546-1	fam-raw-iob1-c-b-bed-b-546-1	iob1 c b bed b 546 1								latin	unknown	IOB1-c/b BED B 546-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob183-bed-b-591-5	fam-raw-iob183-bed-b-591-5	IOB183 BED B 591-5								latin	unknown	IOB183 BED B 591-5	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-110-bed-b-443-1	fam-raw-iob2-110-bed-b-443-1	iob2 110 bed b 443 1								latin	unknown	IOB2-110 BED B 443-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-111-bed-b-482-1	fam-raw-iob2-111-bed-b-482-1	iob2 111 bed b 482 1								latin	unknown	IOB2-111 BED B 482-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-112-bed-b-482-2	fam-raw-iob2-112-bed-b-482-2	iob2 112 bed b 482 2								latin	unknown	IOB2-112 BED B 482-2	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-113-bed-b-537-6	fam-raw-iob2-113-bed-b-537-6	iob2 113 bed b 537 6								latin	unknown	IOB2-113 BED B 537-6	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-114-a-bed-b-537-1	fam-raw-iob2-114-a-bed-b-537-1	iob2 114 a bed b 537 1								latin	unknown	IOB2 114/a BED B 537-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-114-b-bed-b-548-1	fam-raw-iob2-114-b-bed-b-548-1	iob2 114 b bed b 548 1								latin	unknown	IOB2-114/b BED B 548-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-115-bed-b-549-1	fam-raw-iob2-115-bed-b-549-1	iob2 115 bed b 549 1								latin	unknown	IOB2-115 BED B 549-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-116-bed-b-559-1	fam-raw-iob2-116-bed-b-559-1	iob2 116 bed b 559 1								latin	unknown	IOB2-116 BED B 559-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-117-a	fam-raw-iob2-117-a	IOB2-117/a								latin	unknown	IOB2-117/a	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-117-b-bed-b-560-5	fam-raw-iob2-117-b-bed-b-560-5	iob2 117 b bed b 560 5								latin	unknown	IOB2-117/b BED B 560-5	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-118-a-bed-b-570-2	fam-raw-iob2-118-a-bed-b-570-2	iob2 118 a bed b 570 2								latin	unknown	IOB2-118/a BED B 570-2	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-119-a-bed-b-577-5	fam-raw-iob2-119-a-bed-b-577-5	iob2 119 a bed b 577 5								latin	unknown	IOB2-119/a BED B 577-5	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-119-b-bed-b-591-8	fam-raw-iob2-119-b-bed-b-591-8	iob2 119 b bed b 591 8								latin	unknown	IOB2-119/b BED B 591-8	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-120-a-bed-b-579-8	fam-raw-iob2-120-a-bed-b-579-8	iob2 120 a bed b 579 8								latin	unknown	IOB2-120/a BED B 579-8	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-120-b	fam-raw-iob2-120-b	IOB2-120/b								latin	unknown	IOB2-120/b	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-121-a-bed-b-581-1	fam-raw-iob2-121-a-bed-b-581-1	iob2 121 a bed b 581 1								latin	unknown	IOB2-121/a BED B 581-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-121-b-bed-b-586-2	fam-raw-iob2-121-b-bed-b-586-2	iob2 121 b bed b 586 2								latin	unknown	IOB2-121/b BED B 586-2	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-122-a-bed-b-587-1	fam-raw-iob2-122-a-bed-b-587-1	iob2 122 a bed b 587 1								latin	unknown	IOB2-122/a BED B 587-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-122-b-bed-b-587-8	fam-raw-iob2-122-b-bed-b-587-8	iob2 122 b bed b 587 8								latin	unknown	IOB2-122/b BED B 587-8	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-123-bed-b-587-4	fam-raw-iob2-123-bed-b-587-4	iob2 123 bed b 587 4								latin	unknown	IOB2-123 BED B 587-4	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-125-a-bed-b-591-1	fam-raw-iob2-125-a-bed-b-591-1	iob2 125 a bed b 591 1								latin	unknown	IOB2-125/a BED B 591-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-125-b-bed-b-580-1	fam-raw-iob2-125-b-bed-b-580-1	iob2 125 b bed b 580 1								latin	unknown	IOB2-125/b BED B 580-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-126-a-bed-b-592-1	fam-raw-iob2-126-a-bed-b-592-1	iob2 126 a bed b 592 1								latin	unknown	IOB2-126/a BED B 592-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-126-b-bed-b-592-2	fam-raw-iob2-126-b-bed-b-592-2	iob2 126 b bed b 592 2								latin	unknown	IOB2-126/b BED B 592-2	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-127-a-bed-b-597-2	fam-raw-iob2-127-a-bed-b-597-2	iob2 127 a bed b 597 2								latin	unknown	IOB2-127/a BED B 597-2	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-127-b-bed-b-597-1	fam-raw-iob2-127-b-bed-b-597-1	iob2 127 b bed b 597 1								latin	unknown	IOB2-127/b BED B 597-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-128-bed-b-597-6	fam-raw-iob2-128-bed-b-597-6	iob2 128 bed b 597 6								latin	unknown	IOB2-128 BED B 597-6	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-128-bed-b-597-7	fam-raw-iob2-128-bed-b-597-7	iob2 128 bed b 597 7								latin	unknown	IOB2-128 BED B 597-7	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-128-bed-b-597-8	fam-raw-iob2-128-bed-b-597-8	iob2 128 bed b 597 8								latin	unknown	IOB2-128 BED B 597-8	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-129-bed-b-600-9	fam-raw-iob2-129-bed-b-600-9	iob2 129 bed b 600 9								latin	unknown	IOB2-129 BED B 600-9	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-130-bed-b-600-3	fam-raw-iob2-130-bed-b-600-3	iob2 130 bed b 600 3								latin	unknown	IOB2-130 BED B 600-3	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-131-a-bed-b-600-4	fam-raw-iob2-131-a-bed-b-600-4	iob2 131 a bed b 600 4								latin	unknown	IOB2-131/a BED B 600-4	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-131-b-bed-b-600-5	fam-raw-iob2-131-b-bed-b-600-5	iob2 131 b bed b 600 5								latin	unknown	IOB2-131/b BED B 600-5	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-132-a-bed-b-600-6	fam-raw-iob2-132-a-bed-b-600-6	iob2 132 a bed b 600 6								latin	unknown	IOB2-132/a BED B 600-6	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-132-b-bed-b-601-2	fam-raw-iob2-132-b-bed-b-601-2	iob2 132 b bed b 601 2								latin	unknown	IOB2 132/b BED B 601-2	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-133-bed-b-601-4	fam-raw-iob2-133-bed-b-601-4	iob2 133 bed b 601 4								latin	unknown	IOB2-133 BED B 601-4	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-134-a	fam-raw-iob2-134-a	IOB2-134/a								latin	unknown	IOB2-134/a	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-134-b-bed-b-593-5	fam-raw-iob2-134-b-bed-b-593-5	iob2 134 b bed b 593 5								latin	unknown	IOB2-134/b BED B 593-5	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-135-a-bed-b-600-7	fam-raw-iob2-135-a-bed-b-600-7	iob2 135 a bed b 600 7								latin	unknown	IOB2-135/a BED B 600-7	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-135-b-bed-b-600-7	fam-raw-iob2-135-b-bed-b-600-7	iob2 135 b bed b 600 7								latin	unknown	IOB2-135/b BED B 600-7	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-137-bed-b-600-7	fam-raw-iob2-137-bed-b-600-7	iob2 137 bed b 600 7								latin	unknown	IOB2-137 BED B 600-7	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-138-bed-b-603-3	fam-raw-iob2-138-bed-b-603-3	iob2 138 bed b 603 3								latin	unknown	IOB2-138 BED B 603-3	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-139-bed-b-603-5	fam-raw-iob2-139-bed-b-603-5	iob2 139 bed b 603 5								latin	unknown	IOB2-139 BED B 603-5	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-140-a-bed-b-604-1	fam-raw-iob2-140-a-bed-b-604-1	iob2 140 a bed b 604 1								latin	unknown	IOB2 140/a BED B 604-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-140-b-bed-b-571-2	fam-raw-iob2-140-b-bed-b-571-2	iob2 140 b bed b 571 2								latin	unknown	IOB2-140/b BED B 571-2	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-141-bed-b-604-7	fam-raw-iob2-141-bed-b-604-7	iob2 141 bed b 604 7								latin	unknown	IOB2 141/ BED B 604-7	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-141-bed-b-604-8	fam-raw-iob2-141-bed-b-604-8	iob2 141 bed b 604 8								latin	unknown	IOB2 141/ BED B 604-8	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-143-a-bed-b-571-2	fam-raw-iob2-143-a-bed-b-571-2	iob2 143 a bed b 571 2								latin	unknown	IOB2-143/a BED B 571-2	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-143-b-bed-b-571-2	fam-raw-iob2-143-b-bed-b-571-2	iob2 143 b bed b 571 2								latin	unknown	IOB2-143/b BED B 571-2	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-144-bed-b-571-2	fam-raw-iob2-144-bed-b-571-2	iob2 144 bed b 571 2								latin	unknown	IOB2-144 BED B 571-2	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-145-bed-b-604-3	fam-raw-iob2-145-bed-b-604-3	iob2 145 bed b 604 3								latin	unknown	IOB2-145 BED B 604-3	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-146-bed-b-604-4	fam-raw-iob2-146-bed-b-604-4	iob2 146 bed b 604 4								latin	unknown	IOB2-146 BED B 604-4	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-147-a-bed-b-604-5	fam-raw-iob2-147-a-bed-b-604-5	iob2 147 a bed b 604 5								latin	unknown	IOB2-147/a BED B 604-5	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-147-bed-b-601-2	fam-raw-iob2-147-bed-b-601-2	iob2 147 bed b 601 2								latin	unknown	IOB2-147/ BED B 601-2	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-149-bed-b-604-10	fam-raw-iob2-149-bed-b-604-10	iob2 149 bed b 604 10								latin	unknown	IOB2-149 BED B 604-10	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-150-bed-b-601-4	fam-raw-iob2-150-bed-b-601-4	iob2 150 bed b 601 4								latin	unknown	IOB2-150 BED B 601-4	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-151-bed-b-601-4	fam-raw-iob2-151-bed-b-601-4	iob2 151 bed b 601 4								latin	unknown	IOB2-151 BED B 601-4	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-152-bed-b-601-4	fam-raw-iob2-152-bed-b-601-4	iob2 152 bed b 601 4								latin	unknown	IOB2-152 BED B 601-4	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-153-a-bed-b-601-4	fam-raw-iob2-153-a-bed-b-601-4	iob2 153 a bed b 601 4								latin	unknown	IOB2-153/a BED B 601-4	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-153-b-bed-b-601-4	fam-raw-iob2-153-b-bed-b-601-4	iob2 153 b bed b 601 4								latin	unknown	IOB2-153/b BED B 601-4	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-154-iob3-340-bed-b-601-4	fam-raw-iob2-154-iob3-340-bed-b-601-4	iob2 154 iob3 340 bed b 601 4								latin	unknown	IOB2-154 & IOB3-340 BED B 601-4	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-155-bed-b-601-4	fam-raw-iob2-155-bed-b-601-4	iob2 155 bed b 601 4								latin	unknown	IOB2-155 BED B 601-4	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-156-bed-b-607-1	fam-raw-iob2-156-bed-b-607-1	iob2 156 bed b 607 1								latin	unknown	IOB2-156 BED B 607-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-157-bed-b-607-2	fam-raw-iob2-157-bed-b-607-2	iob2 157 bed b 607 2								latin	unknown	IOB2-157 BED B 607-2	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-158-bed-b-607-6	fam-raw-iob2-158-bed-b-607-6	iob2 158 bed b 607 6								latin	unknown	IOB2-158 BED B 607-6	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-159	fam-raw-iob2-159	IOB2-159								latin	unknown	IOB2-159	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-160-a-bed-b-609-1	fam-raw-iob2-160-a-bed-b-609-1	iob2 160 a bed b 609 1								latin	unknown	IOB2-160/a BED B 609-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-161-a-bed-b-622-4	fam-raw-iob2-161-a-bed-b-622-4	iob2 161 a bed b 622 4								latin	unknown	IOB2-161/a BED B 622-4	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-161-b-bed-b-593-5	fam-raw-iob2-161-b-bed-b-593-5	iob2 161 b bed b 593 5								latin	unknown	IOB2-161/b BED B 593-5	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-162-bed-b-610-2	fam-raw-iob2-162-bed-b-610-2	iob2 162 bed b 610 2								latin	unknown	IOB2-162 BED B 610-2	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-163-bed-b-593-5	fam-raw-iob2-163-bed-b-593-5	iob2 163 bed b 593 5								latin	unknown	IOB2-163 BED B 593-5	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-164-bed-b-593-5	fam-raw-iob2-164-bed-b-593-5	iob2 164 bed b 593 5								latin	unknown	IOB2-164 BED B 593-5	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-165-a-bed-b-600-7	fam-raw-iob2-165-a-bed-b-600-7	iob2 165 a bed b 600 7								latin	unknown	IOB2-165/a BED B 600-7	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-165-b-bed-b-600-7	fam-raw-iob2-165-b-bed-b-600-7	iob2 165 b bed b 600 7								latin	unknown	IOB2-165/b BED B 600-7	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-166-a-bed-b-600-7	fam-raw-iob2-166-a-bed-b-600-7	iob2 166 a bed b 600 7								latin	unknown	IOB2-166/a BED B 600-7	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-166-b-bed-b-600-7	fam-raw-iob2-166-b-bed-b-600-7	iob2 166 b bed b 600 7								latin	unknown	IOB2-166/b BED B 600-7	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-167-bed-b-600-7	fam-raw-iob2-167-bed-b-600-7	iob2 167 bed b 600 7								latin	unknown	IOB2 167 BED B 600-7	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-168-bed-b-600-7	fam-raw-iob2-168-bed-b-600-7	iob2 168 bed b 600 7								latin	unknown	IOB2-168 BED B 600-7	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-169-bed-b-600-7	fam-raw-iob2-169-bed-b-600-7	iob2 169 bed b 600 7								latin	unknown	IOB2-169 BED B 600-7	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-170-bed-b-600-7	fam-raw-iob2-170-bed-b-600-7	iob2 170 bed b 600 7								latin	unknown	IOB2-170 BED B 600-7	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-171-bed-b-600-7	fam-raw-iob2-171-bed-b-600-7	iob2 171 bed b 600 7								latin	unknown	IOB2-171 BED B 600-7	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-172-bed-b-600-7	fam-raw-iob2-172-bed-b-600-7	iob2 172 bed b 600 7								latin	unknown	IOB2-172 BED B 600-7	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-173-bed-b-604-2	fam-raw-iob2-173-bed-b-604-2	iob2 173 bed b 604 2								latin	unknown	IOB2-173 BED B 604-2	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-174-bed-b-600-7	fam-raw-iob2-174-bed-b-600-7	iob2 174 bed b 600 7								latin	unknown	IOB2-174 BED B 600-7	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-175-bed-b-600-7	fam-raw-iob2-175-bed-b-600-7	iob2 175 bed b 600 7								latin	unknown	IOB2-175 BED B 600-7	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-176-a-bed-b-600-7	fam-raw-iob2-176-a-bed-b-600-7	iob2 176 a bed b 600 7								latin	unknown	IOB2-176/a BED B 600-7	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-176-b-bed-b-602-1	fam-raw-iob2-176-b-bed-b-602-1	iob2 176 b bed b 602 1								latin	unknown	IOB2-176/b BED B 602-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-177-a-bed-b-613-2	fam-raw-iob2-177-a-bed-b-613-2	iob2 177 a bed b 613 2								latin	unknown	IOB2-177/a BED B 613-2	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-177-b-bed-b-602-1	fam-raw-iob2-177-b-bed-b-602-1	iob2 177 b bed b 602 1								latin	unknown	IOB2 177/b BED B 602-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-178-bed-b-513-1	fam-raw-iob2-178-bed-b-513-1	iob2 178 bed b 513 1								latin	unknown	IOB2-178 BED B 513-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-180-bed-b-622-6	fam-raw-iob2-180-bed-b-622-6	iob2 180 bed b 622 6								latin	unknown	IOB2-180 BED B 622-6	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-181-bed-b-600-7	fam-raw-iob2-181-bed-b-600-7	iob2 181 bed b 600 7								latin	unknown	IOB2-181 BED B 600-7	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-182-a-bed-b-615-4	fam-raw-iob2-182-a-bed-b-615-4	iob2 182 a bed b 615 4								latin	unknown	IOB2-182/a BED B 615-4	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-182-b	fam-raw-iob2-182-b	IOB2-182/b								latin	unknown	IOB2-182/b	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-183-a-bed-b-615-6	fam-raw-iob2-183-a-bed-b-615-6	iob2 183 a bed b 615 6								latin	unknown	IOB2-183/a BED B 615-6	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-183-b-bed-b-600-7	fam-raw-iob2-183-b-bed-b-600-7	iob2 183 b bed b 600 7								latin	unknown	IOB2-183/b BED B 600-7	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-185-bed-b-617-1	fam-raw-iob2-185-bed-b-617-1	iob2 185 bed b 617 1								latin	unknown	IOB2-185 BED B 617-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-186-bed-b-600-7	fam-raw-iob2-186-bed-b-600-7	iob2 186 bed b 600 7								latin	unknown	IOB2-186 BED B 600-7	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-187-bed-b-616-4	fam-raw-iob2-187-bed-b-616-4	iob2 187 bed b 616 4								latin	unknown	IOB2-187 BED B 616-4	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-188-bed-b-617-3	fam-raw-iob2-188-bed-b-617-3	iob2 188 bed b 617 3								latin	unknown	IOB2-188 BED B 617-3	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-189-bed-b-600-7	fam-raw-iob2-189-bed-b-600-7	iob2 189 bed b 600 7								latin	unknown	IOB2-189 BED B 600-7	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-190-a-bed-b-586-3	fam-raw-iob2-190-a-bed-b-586-3	iob2 190 a bed b 586 3								latin	unknown	IOB2-190/a BED B 586-3	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-190-b-bed-b-600-7	fam-raw-iob2-190-b-bed-b-600-7	iob2 190 b bed b 600 7								latin	unknown	IOB2-190/b BED B 600-7	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-191-a-bed-b-620-1	fam-raw-iob2-191-a-bed-b-620-1	iob2 191 a bed b 620 1								latin	unknown	IOB2-191/a BED B 620-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-191-b-bed-b-600-7	fam-raw-iob2-191-b-bed-b-600-7	iob2 191 b bed b 600 7								latin	unknown	IOB2-191/b BED B 600-7	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-193-bed-b-600-7	fam-raw-iob2-193-bed-b-600-7	iob2 193 bed b 600 7								latin	unknown	IOB2-193 BED B 600-7	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-194-bed-b-600-7	fam-raw-iob2-194-bed-b-600-7	iob2 194 bed b 600 7								latin	unknown	IOB2-194 BED B 600-7	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-195-a-bed-b-622-3	fam-raw-iob2-195-a-bed-b-622-3	iob2 195 a bed b 622 3								latin	unknown	IOB2-195/a BED B 622-3	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-195-b-bed-b-622-4	fam-raw-iob2-195-b-bed-b-622-4	iob2 195 b bed b 622 4								latin	unknown	IOB2-195/b BED B 622-4	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-196-bed-b-622-4	fam-raw-iob2-196-bed-b-622-4	iob2 196 bed b 622 4								latin	unknown	IOB2-196 BED B 622-4	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-197-bed-b-600-7	fam-raw-iob2-197-bed-b-600-7	iob2 197 bed b 600 7								latin	unknown	IOB2-197 BED B 600-7	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-198-bed-b-622-6	fam-raw-iob2-198-bed-b-622-6	iob2 198 bed b 622 6								latin	unknown	IOB2-198 BED B 622-6	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-199-bed-b-600-7	fam-raw-iob2-199-bed-b-600-7	iob2 199 bed b 600 7								latin	unknown	IOB2-199 BED B 600-7	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-200-bed-b-631-6	fam-raw-iob2-200-bed-b-631-6	iob2 200 bed b 631 6								latin	unknown	IOB2-200 BED B 631-6	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-201-a	fam-raw-iob2-201-a	IOB2-201/a								latin	unknown	IOB2-201/a	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-201-b-bed-b-623-1	fam-raw-iob2-201-b-bed-b-623-1	iob2 201 b bed b 623 1								latin	unknown	IOB2-201/b BED B 623-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-202-bed-b-624-1	fam-raw-iob2-202-bed-b-624-1	iob2 202 bed b 624 1								latin	unknown	IOB2-202 BED B 624-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-203-bed-b-624-2	fam-raw-iob2-203-bed-b-624-2	iob2 203 bed b 624 2								latin	unknown	IOB2-203 BED B 624-2	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-204-a-bed-b-624-3	fam-raw-iob2-204-a-bed-b-624-3	iob2 204 a bed b 624 3								latin	unknown	IOB2-204/a BED B 624-3	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-204-b-bed-b-624-3	fam-raw-iob2-204-b-bed-b-624-3	iob2 204 b bed b 624 3								latin	unknown	IOB2-204/b BED B 624-3	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-205-bed-b-624-4	fam-raw-iob2-205-bed-b-624-4	iob2 205 bed b 624 4								latin	unknown	IOB2 205 BED B 624-4	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-206-bed-b-622-4	fam-raw-iob2-206-bed-b-622-4	iob2 206 bed b 622 4								latin	unknown	IOB2-206 BED B 622-4	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-207-bed-b-622-6	fam-raw-iob2-207-bed-b-622-6	iob2 207 bed b 622 6								latin	unknown	IOB2-207 BED B 622-6	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-208-bed-b-622-4	fam-raw-iob2-208-bed-b-622-4	iob2 208 bed b 622 4								latin	unknown	IOB2-208 BED B 622-4	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-209-bed-b-622-4	fam-raw-iob2-209-bed-b-622-4	iob2 209 bed b 622 4								latin	unknown	IOB2-209 BED B 622-4	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-210-a-bed-b-600-2	fam-raw-iob2-210-a-bed-b-600-2	iob2 210 a bed b 600 2								latin	unknown	IOB2-210/a BED B 600-2	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-210-b-bed-b-622-6	fam-raw-iob2-210-b-bed-b-622-6	iob2 210 b bed b 622 6								latin	unknown	IOB2-210/b BED B 622-6	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-211-bed-b-622-6	fam-raw-iob2-211-bed-b-622-6	iob2 211 bed b 622 6								latin	unknown	IOB2-211 BED B 622-6	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-212-bed-b-622-8	fam-raw-iob2-212-bed-b-622-8	iob2 212 bed b 622 8								latin	unknown	IOB2-212 BED B 622-8	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-213-a-bed-b-622-6	fam-raw-iob2-213-a-bed-b-622-6	iob2 213 a bed b 622 6								latin	unknown	IOB2-213/a BED B 622-6	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-213-b-bed-b-622-6	fam-raw-iob2-213-b-bed-b-622-6	iob2 213 b bed b 622 6								latin	unknown	IOB2-213/b BED B 622-6	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-214-a-iob5-579-bed-b-622-6	fam-raw-iob2-214-a-iob5-579-bed-b-622-6	iob2 214 a iob5 579 bed b 622 6								latin	unknown	IOB2-214/a & IOB5-579 BED B 622-6	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-214-b-bed-b-622-6	fam-raw-iob2-214-b-bed-b-622-6	iob2 214 b bed b 622 6								latin	unknown	IOB2 214/b BED B 622-6	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-215-a-bed-b-622-6	fam-raw-iob2-215-a-bed-b-622-6	iob2 215 a bed b 622 6								latin	unknown	IOB2-215/a BED B 622-6	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-215-b-bed-b-622-6	fam-raw-iob2-215-b-bed-b-622-6	iob2 215 b bed b 622 6								latin	unknown	IOB2-215/b BED B 622-6	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-216-bed-b-622-6	fam-raw-iob2-216-bed-b-622-6	iob2 216 bed b 622 6								latin	unknown	IOB2-216 BED B 622-6	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-217-bed-b-623-1	fam-raw-iob2-217-bed-b-623-1	iob2 217 bed b 623 1								latin	unknown	IOB2-217 BED B 623-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-218-a-bed-b-623-1	fam-raw-iob2-218-a-bed-b-623-1	iob2 218 a bed b 623 1								latin	unknown	IOB2-218/a BED B 623-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-218-b-bed-b-623-1	fam-raw-iob2-218-b-bed-b-623-1	iob2 218 b bed b 623 1								latin	unknown	IOB2-218/b BED B 623-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-218-b-bed-b-628-6b	fam-raw-iob2-218-b-bed-b-628-6b	iob2 218 b bed b 628 6b								latin	unknown	IOB2-218/b BED B 628-6b	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-219-a-bed-b-629-1	fam-raw-iob2-219-a-bed-b-629-1	iob2 219 a bed b 629 1								latin	unknown	IOB2-219/a BED B 629-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-219-b-bed-b-623-1	fam-raw-iob2-219-b-bed-b-623-1	iob2 219 b bed b 623 1								latin	unknown	IOB2-219/b BED B 623-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-220-bed-b-623-1	fam-raw-iob2-220-bed-b-623-1	iob2 220 bed b 623 1								latin	unknown	IOB2-220 BED B 623-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-221-bed-a	fam-raw-iob2-221-bed-a	IOB2-221 BED A								latin	unknown	IOB2-221 BED A	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-222-a-bed-b-630-1	fam-raw-iob2-222-a-bed-b-630-1	iob2 222 a bed b 630 1								latin	unknown	IOB2-222/a BED B 630-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-222-b-bed-a	fam-raw-iob2-222-b-bed-a	IOB2-222/b BED A								latin	unknown	IOB2-222/b BED A	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-223-a-bed-a	fam-raw-iob2-223-a-bed-a	IOB2-223/a BED A								latin	unknown	IOB2-223/a BED A	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2-223-b-bed-a	fam-raw-iob2-223-b-bed-a	IOB2-223/b BED A								latin	unknown	IOB2-223/b BED A	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob2160-b-bed-b-609-5	fam-raw-iob2160-b-bed-b-609-5	iob2160 b bed b 609 5								latin	unknown	IOB2160/b BED B 609-5	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-224-bed-b-624-1	fam-raw-iob3-224-bed-b-624-1	iob3 224 bed b 624 1								latin	unknown	IOB3-224 BED B 624-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-225-bed-b-631-1	fam-raw-iob3-225-bed-b-631-1	iob3 225 bed b 631 1								latin	unknown	IOB3-225 BED B 631-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-226-bed-b-624-1	fam-raw-iob3-226-bed-b-624-1	iob3 226 bed b 624 1								latin	unknown	IOB3-226 BED B 624-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-227-bed-b-622-4	fam-raw-iob3-227-bed-b-622-4	iob3 227 bed b 622 4								latin	unknown	IOB3-227 BED B 622-4	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-227-bed-b-624-1	fam-raw-iob3-227-bed-b-624-1	iob3 227 bed b 624 1								latin	unknown	IOB3-227 BED B 624-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-228-a-bed-b-624-1	fam-raw-iob3-228-a-bed-b-624-1	iob3 228 a bed b 624 1								latin	unknown	IOB3-228/a BED B 624-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-228-b-bed-b-632-1	fam-raw-iob3-228-b-bed-b-632-1	iob3 228 b bed b 632 1								latin	unknown	IOB3-228/b BED B 632-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-229-bed-b-632-2	fam-raw-iob3-229-bed-b-632-2	iob3 229 bed b 632 2								latin	unknown	IOB3-229 BED B 632-2	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-230-bed-b-632-3	fam-raw-iob3-230-bed-b-632-3	iob3 230 bed b 632 3								latin	unknown	IOB3-230 BED B 632-3	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-231-a-bed-b-632-4	fam-raw-iob3-231-a-bed-b-632-4	iob3 231 a bed b 632 4								latin	unknown	IOB3-231/a BED B 632-4	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-231-b-bed-b-633-1	fam-raw-iob3-231-b-bed-b-633-1	iob3 231 b bed b 633 1								latin	unknown	IOB3-231/b BED B 633-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-232-bed-b-633-2	fam-raw-iob3-232-bed-b-633-2	iob3 232 bed b 633 2								latin	unknown	IOB3-232 BED B 633-2	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-233	fam-raw-iob3-233	IOB3-233								latin	unknown	IOB3-233	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-233-bed-b-633-3	fam-raw-iob3-233-bed-b-633-3	iob3 233 bed b 633 3								latin	unknown	IOB3-233 BED B 633-3	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-234-bed-b-624-1	fam-raw-iob3-234-bed-b-624-1	iob3 234 bed b 624 1								latin	unknown	IOB3-234 BED B 624-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-235-bed-b-634-1	fam-raw-iob3-235-bed-b-634-1	iob3 235 bed b 634 1								latin	unknown	IOB3-235 BED B 634-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-236-a-bed-b-624-2	fam-raw-iob3-236-a-bed-b-624-2	iob3 236 a bed b 624 2								latin	unknown	IOB3-236/a BED B 624-2	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-236-b-bed-b-634-3	fam-raw-iob3-236-b-bed-b-634-3	iob3 236 b bed b 634 3								latin	unknown	IOB3-236/b BED B 634-3	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-237-bed-b-634-4	fam-raw-iob3-237-bed-b-634-4	iob3 237 bed b 634 4								latin	unknown	IOB3-237 BED B 634-4	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-238-bed-b-634-5	fam-raw-iob3-238-bed-b-634-5	iob3 238 bed b 634 5								latin	unknown	IOB3-238 BED B 634-5	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-239-bed-b-635-1	fam-raw-iob3-239-bed-b-635-1	iob3 239 bed b 635 1								latin	unknown	IOB3-239 BED B 635-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-240-bed-b-624-2	fam-raw-iob3-240-bed-b-624-2	iob3 240 bed b 624 2								latin	unknown	IOB3-240 BED B 624-2	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-241	fam-raw-iob3-241	IOB3-241								latin	unknown	IOB3-241	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-242-bed-b-635-3	fam-raw-iob3-242-bed-b-635-3	iob3 242 bed b 635 3								latin	unknown	IOB3-242 BED B 635-3	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-243-bed-b-624-3	fam-raw-iob3-243-bed-b-624-3	iob3 243 bed b 624 3								latin	unknown	IOB3-243 BED B 624-3	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-244-bed-b-624-4	fam-raw-iob3-244-bed-b-624-4	iob3 244 bed b 624 4								latin	unknown	IOB3-244 BED B 624-4	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-245-a-bed-b-636-2	fam-raw-iob3-245-a-bed-b-636-2	iob3 245 a bed b 636 2								latin	unknown	IOB3-245/a BED B 636-2	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-245-b-bed-b-622-4	fam-raw-iob3-245-b-bed-b-622-4	iob3 245 b bed b 622 4								latin	unknown	IOB3-245/b BED B 622-4	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-246-bed-b-623-2-b-636-3	fam-raw-iob3-246-bed-b-623-2-b-636-3	iob3 246 bed b 623 2 b 636 3								latin	unknown	IOB3-246 BED B 623-2 & B 636-3	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-247-bed-b-624-4	fam-raw-iob3-247-bed-b-624-4	iob3 247 bed b 624 4								latin	unknown	IOB3-247 BED B 624-4	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-248-bed-b-622-4	fam-raw-iob3-248-bed-b-622-4	iob3 248 bed b 622 4								latin	unknown	IOB3-248 BED B 622-4	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-249-bed-b-622-4	fam-raw-iob3-249-bed-b-622-4	iob3 249 bed b 622 4								latin	unknown	IOB3-249 BED B 622-4	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-250-bed-b-622-4	fam-raw-iob3-250-bed-b-622-4	iob3 250 bed b 622 4								latin	unknown	IOB3-250 BED B 622-4	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-251-bed-b-622-4	fam-raw-iob3-251-bed-b-622-4	iob3 251 bed b 622 4								latin	unknown	IOB3-251 BED B 622-4	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-252-bed-b-622-4	fam-raw-iob3-252-bed-b-622-4	iob3 252 bed b 622 4								latin	unknown	IOB3-252 BED B 622-4	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-253-a-bed-b-622-4	fam-raw-iob3-253-a-bed-b-622-4	iob3 253 a bed b 622 4								latin	unknown	IOB3-253/a BED B 622-4	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-253-b-bed-b-622-4	fam-raw-iob3-253-b-bed-b-622-4	iob3 253 b bed b 622 4								latin	unknown	IOB3-253/b BED B 622-4	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-254-a-bed-b-622-4	fam-raw-iob3-254-a-bed-b-622-4	iob3 254 a bed b 622 4								latin	unknown	IOB3-254/a BED B 622-4	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-254-b-bed-b-622-4	fam-raw-iob3-254-b-bed-b-622-4	iob3 254 b bed b 622 4								latin	unknown	IOB3-254/b BED B 622-4	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-256-bed-b-604-14-b-604-12	fam-raw-iob3-256-bed-b-604-14-b-604-12	iob3 256 bed b 604 14 b 604 12								latin	unknown	IOB3-256 BED B 604-14 & B 604-12	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-257-bed-b-622-4	fam-raw-iob3-257-bed-b-622-4	iob3 257 bed b 622 4								latin	unknown	IOB3-257 BED B 622-4	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-258-bed-b-622-4	fam-raw-iob3-258-bed-b-622-4	iob3 258 bed b 622 4								latin	unknown	IOB3-258 BED B 622-4	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-259-bed-b-622-4	fam-raw-iob3-259-bed-b-622-4	iob3 259 bed b 622 4								latin	unknown	IOB3-259 BED B 622-4	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-260-bed-b-622-4	fam-raw-iob3-260-bed-b-622-4	iob3 260 bed b 622 4								latin	unknown	IOB3-260 BED B 622-4	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-261-bed-b-622-4	fam-raw-iob3-261-bed-b-622-4	iob3 261 bed b 622 4								latin	unknown	IOB3-261 BED B 622-4	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-262-bed-b-622-4	fam-raw-iob3-262-bed-b-622-4	iob3 262 bed b 622 4								latin	unknown	IOB3-262 BED B 622-4	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-263-bed-b-622-4	fam-raw-iob3-263-bed-b-622-4	iob3 263 bed b 622 4								latin	unknown	IOB3-263 BED B 622-4	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-264-bed-b-622-4	fam-raw-iob3-264-bed-b-622-4	iob3 264 bed b 622 4								latin	unknown	IOB3-264 BED B 622-4	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-265-bed-b-622-4	fam-raw-iob3-265-bed-b-622-4	iob3 265 bed b 622 4								latin	unknown	IOB3-265 BED B 622-4	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-266-a-bed-b-622-4	fam-raw-iob3-266-a-bed-b-622-4	iob3 266 a bed b 622 4								latin	unknown	IOB3-266/a BED B 622-4	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-266-b-bed-b-622-4	fam-raw-iob3-266-b-bed-b-622-4	iob3 266 b bed b 622 4								latin	unknown	IOB3-266/b BED B 622-4	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-266-c-bed-b-622-4	fam-raw-iob3-266-c-bed-b-622-4	iob3 266 c bed b 622 4								latin	unknown	IOB3-266/c BED B 622-4	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-267-bed-b-622-4	fam-raw-iob3-267-bed-b-622-4	iob3 267 bed b 622 4								latin	unknown	IOB3-267 BED B 622-4	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-268-bed-b-622-4	fam-raw-iob3-268-bed-b-622-4	iob3 268 bed b 622 4								latin	unknown	IOB3-268 BED B 622-4	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-269-bed-b-622-4	fam-raw-iob3-269-bed-b-622-4	iob3 269 bed b 622 4								latin	unknown	IOB3-269 BED B 622-4	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-270-bed-b-614-4	fam-raw-iob3-270-bed-b-614-4	iob3 270 bed b 614 4								latin	unknown	IOB3-270 BED B 614-4	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-271-bed-b-622-4	fam-raw-iob3-271-bed-b-622-4	iob3 271 bed b 622 4								latin	unknown	IOB3-271 BED B 622-4	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-273-bed-b-622-4	fam-raw-iob3-273-bed-b-622-4	iob3 273 bed b 622 4								latin	unknown	IOB3-273 BED B 622-4	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-274-bed-b-622-4	fam-raw-iob3-274-bed-b-622-4	iob3 274 bed b 622 4								latin	unknown	IOB3-274 BED B 622-4	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-276-a-bed-b-622-4	fam-raw-iob3-276-a-bed-b-622-4	iob3 276 a bed b 622 4								latin	unknown	IOB3-276/a BED B 622-4	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-276-b-bed-b-622-4	fam-raw-iob3-276-b-bed-b-622-4	iob3 276 b bed b 622 4								latin	unknown	IOB3-276/b BED B 622-4	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-279-bed-b-622-4	fam-raw-iob3-279-bed-b-622-4	iob3 279 bed b 622 4								latin	unknown	IOB3-279 BED B 622-4	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-280-a-bed-b-622-4	fam-raw-iob3-280-a-bed-b-622-4	iob3 280 a bed b 622 4								latin	unknown	IOB3-280/a BED B 622-4	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-280-b-bed-b-622-4	fam-raw-iob3-280-b-bed-b-622-4	iob3 280 b bed b 622 4								latin	unknown	IOB3-280/b BED B 622-4	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-281-a-bed-b-622-4	fam-raw-iob3-281-a-bed-b-622-4	iob3 281 a bed b 622 4								latin	unknown	IOB3-281/a BED B 622-4	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-281-b-bed-b-622-4	fam-raw-iob3-281-b-bed-b-622-4	iob3 281 b bed b 622 4								latin	unknown	IOB3-281/b BED B 622-4	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-282-bed-b-622-4	fam-raw-iob3-282-bed-b-622-4	iob3 282 bed b 622 4								latin	unknown	IOB3-282 BED B 622-4	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-283-bed-b-622-4	fam-raw-iob3-283-bed-b-622-4	iob3 283 bed b 622 4								latin	unknown	IOB3-283 BED B 622-4	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-284-a-bed-b-622-4	fam-raw-iob3-284-a-bed-b-622-4	iob3 284 a bed b 622 4								latin	unknown	IOB3-284/a BED B 622-4	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-284-b-bed-b-622-4	fam-raw-iob3-284-b-bed-b-622-4	iob3 284 b bed b 622 4								latin	unknown	IOB3-284/b BED B 622-4	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-285-bed-b-622-4	fam-raw-iob3-285-bed-b-622-4	iob3 285 bed b 622 4								latin	unknown	IOB3-285 BED B 622-4	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-286-bed-b-622-4	fam-raw-iob3-286-bed-b-622-4	iob3 286 bed b 622 4								latin	unknown	IOB3-286 BED B 622-4	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-287-b-bed-b-622-4	fam-raw-iob3-287-b-bed-b-622-4	iob3 287 b bed b 622 4								latin	unknown	IOB3-287/b BED B 622-4	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-288-bed-b-622-4	fam-raw-iob3-288-bed-b-622-4	iob3 288 bed b 622 4								latin	unknown	IOB3-288 BED B 622-4	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-289-bed-b-622-4	fam-raw-iob3-289-bed-b-622-4	iob3 289 bed b 622 4								latin	unknown	IOB3-289 BED B 622-4	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-290-a-bed-b-622-4	fam-raw-iob3-290-a-bed-b-622-4	iob3 290 a bed b 622 4								latin	unknown	IOB3-290/a BED B 622-4	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-290-b-bed-b-622-4	fam-raw-iob3-290-b-bed-b-622-4	iob3 290 b bed b 622 4								latin	unknown	IOB3-290/b BED B 622-4	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-291-bed-b-622-4	fam-raw-iob3-291-bed-b-622-4	iob3 291 bed b 622 4								latin	unknown	IOB3-291 BED B 622-4	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-292-bed-b-622-4	fam-raw-iob3-292-bed-b-622-4	iob3 292 bed b 622 4								latin	unknown	IOB3-292 BED B 622-4	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-293-bed-b-622-4	fam-raw-iob3-293-bed-b-622-4	iob3 293 bed b 622 4								latin	unknown	IOB3-293 BED B 622-4	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-294-bed-b-622-4	fam-raw-iob3-294-bed-b-622-4	iob3 294 bed b 622 4								latin	unknown	IOB3-294 BED B 622-4	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-295-bed-b-622-6	fam-raw-iob3-295-bed-b-622-6	iob3 295 bed b 622 6								latin	unknown	IOB3-295 BED B 622-6	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-296	fam-raw-iob3-296	IOB3-296								latin	unknown	IOB3-296	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-296-297-198-b	fam-raw-iob3-296-297-198-b	IOB3-296-297-198/b								latin	unknown	IOB3-296-297-198/b	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-296-297-298-a	fam-raw-iob3-296-297-298-a	IOB3-296, 297, 298/a								latin	unknown	IOB3-296, 297, 298/a	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-296-298-a-b	fam-raw-iob3-296-298-a-b	IOB3-296 & 298/a-b								latin	unknown	IOB3-296 & 298/a-b	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-297-a-b-bed-b-600-7	fam-raw-iob3-297-a-b-bed-b-600-7	iob3 297 a b bed b 600 7								latin	unknown	IOB3-297/a-b BED B 600-7	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-297-bed-b-622-6	fam-raw-iob3-297-bed-b-622-6	iob3 297 bed b 622 6								latin	unknown	IOB3-297 BED B 622-6	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-298-a-bed-b-622-6	fam-raw-iob3-298-a-bed-b-622-6	iob3 298 a bed b 622 6								latin	unknown	IOB3-298/a BED B 622-6	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-298-b-bed-b-623-1	fam-raw-iob3-298-b-bed-b-623-1	iob3 298 b bed b 623 1								latin	unknown	IOB3-298/b BED B 623-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-299-bed-b-622-4	fam-raw-iob3-299-bed-b-622-4	iob3 299 bed b 622 4								latin	unknown	IOB3-299 BED B 622-4	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-302-bed-b-610-5	fam-raw-iob3-302-bed-b-610-5	iob3 302 bed b 610 5								latin	unknown	IOB3-302 BED B 610-5	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-303-bed-a	fam-raw-iob3-303-bed-a	IOB3-303 BED A								latin	unknown	IOB3-303 BED A	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-304-bed-a	fam-raw-iob3-304-bed-a	IOB3-304 BED A								latin	unknown	IOB3-304 BED A	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-305-a	fam-raw-iob3-305-a	IOB3-305/a								latin	unknown	IOB3-305/a	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-306-a-iob5-586-b-c-bed-b-623-1	fam-raw-iob3-306-a-iob5-586-b-c-bed-b-623-1	iob3 306 a iob5 586 b c bed b 623 1								latin	unknown	IOB3-306/a & IOB5-586/b/c BED B 623-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-306-b-bed-b-623-1	fam-raw-iob3-306-b-bed-b-623-1	iob3 306 b bed b 623 1								latin	unknown	IOB3-306/b BED B 623-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-306-c-bed-b-623-1	fam-raw-iob3-306-c-bed-b-623-1	iob3 306 c bed b 623 1								latin	unknown	IOB3-306/c BED B 623-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-306-d-bed-b-623-1	fam-raw-iob3-306-d-bed-b-623-1	iob3 306 d bed b 623 1								latin	unknown	IOB3-306/d BED B 623-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-308-bed-b-603-1	fam-raw-iob3-308-bed-b-603-1	iob3 308 bed b 603 1								latin	unknown	IOB3-308 BED B 603-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-309	fam-raw-iob3-309	IOB3-309								latin	unknown	IOB3-309	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-310-a	fam-raw-iob3-310-a	IOB3-310/a								latin	unknown	IOB3-310/a	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-310-b	fam-raw-iob3-310-b	IOB3-310/b								latin	unknown	IOB3-310/b	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-311-a-bed-b-603-2	fam-raw-iob3-311-a-bed-b-603-2	iob3 311 a bed b 603 2								latin	unknown	IOB3-311/a BED B 603-2	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-311-b-bed-b-603-2	fam-raw-iob3-311-b-bed-b-603-2	iob3 311 b bed b 603 2								latin	unknown	IOB3-311/b BED B 603-2	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-312-a-bed-a	fam-raw-iob3-312-a-bed-a	IOB3-312/a BED A								latin	unknown	IOB3-312/a BED A	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-312-a-bed-b-600-7	fam-raw-iob3-312-a-bed-b-600-7	iob3 312 a bed b 600 7								latin	unknown	IOB3-312/a BED B 600-7	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-312-b-bed-b-603-2	fam-raw-iob3-312-b-bed-b-603-2	iob3 312 b bed b 603 2								latin	unknown	IOB3-312/b BED B 603-2	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-313-a-bed-b-603-2	fam-raw-iob3-313-a-bed-b-603-2	iob3 313 a bed b 603 2								latin	unknown	IOB3-313/a BED B 603-2	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-313-b-bed-b-603-2	fam-raw-iob3-313-b-bed-b-603-2	iob3 313 b bed b 603 2								latin	unknown	IOB3-313/b BED B 603-2	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-314-a-bed-a	fam-raw-iob3-314-a-bed-a	IOB3-314/a BED A								latin	unknown	IOB3-314/a BED A	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-314-b-bed-a	fam-raw-iob3-314-b-bed-a	IOB3-314/b BED A								latin	unknown	IOB3-314/b BED A	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-314-c-bed-b-603-2	fam-raw-iob3-314-c-bed-b-603-2	iob3 314 c bed b 603 2								latin	unknown	IOB3-314/c BED B 603-2	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-315-a-bed-b-603-2	fam-raw-iob3-315-a-bed-b-603-2	iob3 315 a bed b 603 2								latin	unknown	IOB3-315/a BED B 603-2	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-315-b	fam-raw-iob3-315-b	IOB3-315/b								latin	unknown	IOB3-315/b	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-316-a-bed-b-600-7	fam-raw-iob3-316-a-bed-b-600-7	iob3 316 a bed b 600 7								latin	unknown	IOB3-316/a BED B 600-7	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-316-b	fam-raw-iob3-316-b	IOB3-316/b								latin	unknown	IOB3-316/b	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-317-a-bed-b-603-2	fam-raw-iob3-317-a-bed-b-603-2	iob3 317 a bed b 603 2								latin	unknown	IOB3-317/a & BED B 603-2	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-318-a-bed-b-603-2	fam-raw-iob3-318-a-bed-b-603-2	iob3 318 a bed b 603 2								latin	unknown	IOB3-318/a BED B 603-2	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-318-b	fam-raw-iob3-318-b	IOB3-318/b								latin	unknown	IOB3-318/b	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-319-a-bed-a	fam-raw-iob3-319-a-bed-a	IOB3-319/a BED A								latin	unknown	IOB3-319/a BED A	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-319-c	fam-raw-iob3-319-c	IOB3-319/c								latin	unknown	IOB3-319/c	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-320	fam-raw-iob3-320	IOB3-320								latin	unknown	IOB3-320	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-320-bed-b-600-7	fam-raw-iob3-320-bed-b-600-7	iob3 320 bed b 600 7								latin	unknown	IOB3-320 BED B 600-7	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-321-bed-a	fam-raw-iob3-321-bed-a	IOB3-321 BED A								latin	unknown	IOB3-321 BED A	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-322-bed-a	fam-raw-iob3-322-bed-a	IOB3-322 BED A								latin	unknown	IOB3-322 BED A	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-323-a-b-c-bed-a	fam-raw-iob3-323-a-b-c-bed-a	iob3 323 a b c bed a								latin	unknown	IOB3-323/a-b-c BED A	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-323-a-b-c-bed-b-594-4	fam-raw-iob3-323-a-b-c-bed-b-594-4	iob3 323 a b c bed b 594 4								latin	unknown	IOB3-323/a-b-c BED B 594-4	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-324-a	fam-raw-iob3-324-a	IOB3-324/a								latin	unknown	IOB3-324/a	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-324-b-bed-b-602-5	fam-raw-iob3-324-b-bed-b-602-5	iob3 324 b bed b 602 5								latin	unknown	IOB3-324/b BED B 602-5	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-325-bed-b-551-1	fam-raw-iob3-325-bed-b-551-1	iob3 325 bed b 551 1								latin	unknown	IOB3-325 BED B 551-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-326-bed-b-593-5	fam-raw-iob3-326-bed-b-593-5	iob3 326 bed b 593 5								latin	unknown	IOB3-326 BED B 593-5	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-328-a-bed-b-601-4	fam-raw-iob3-328-a-bed-b-601-4	iob3 328 a bed b 601 4								latin	unknown	IOB3-328/a BED B 601-4	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-329	fam-raw-iob3-329	IOB3-329								latin	unknown	IOB3-329	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-330-bed-a	fam-raw-iob3-330-bed-a	IOB3-330 BED A								latin	unknown	IOB3-330 BED A	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-331-a-bed-a	fam-raw-iob3-331-a-bed-a	IOB3-331/a BED A								latin	unknown	IOB3-331/a BED A	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-332-a-bed-b-603-3	fam-raw-iob3-332-a-bed-b-603-3	iob3 332 a bed b 603 3								latin	unknown	IOB3-332/a BED B 603-3	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-332-b-bed-b-603-3	fam-raw-iob3-332-b-bed-b-603-3	iob3 332 b bed b 603 3								latin	unknown	IOB3-332/b BED B 603-3	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-333-bed-b-608-1-b-626-3	fam-raw-iob3-333-bed-b-608-1-b-626-3	iob3 333 bed b 608 1 b 626 3								latin	unknown	IOB3-333 BED B 608-1 & B 626-3	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-334-a	fam-raw-iob3-334-a	IOB3-334/a								latin	unknown	IOB3-334/a	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-335-a-bed-b-603-3	fam-raw-iob3-335-a-bed-b-603-3	iob3 335 a bed b 603 3								latin	unknown	IOB3-335/a BED B 603-3	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-335-b-bed-b-603-3	fam-raw-iob3-335-b-bed-b-603-3	iob3 335 b bed b 603 3								latin	unknown	IOB3-335/b BED B 603-3	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-336-a-bed-b-603-3	fam-raw-iob3-336-a-bed-b-603-3	iob3 336 a bed b 603 3								latin	unknown	IOB3-336/a BED B 603-3	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-336-b-bed-b-603-3	fam-raw-iob3-336-b-bed-b-603-3	iob3 336 b bed b 603 3								latin	unknown	IOB3-336/b BED B 603-3	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-337-a-bed-b-603-3	fam-raw-iob3-337-a-bed-b-603-3	iob3 337 a bed b 603 3								latin	unknown	IOB3-337/a BED B 603-3	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-337-b-bed-b-603-3	fam-raw-iob3-337-b-bed-b-603-3	iob3 337 b bed b 603 3								latin	unknown	IOB3-337/b BED B 603-3	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-338-bed-b-603-3	fam-raw-iob3-338-bed-b-603-3	iob3 338 bed b 603 3								latin	unknown	IOB3-338 BED B 603-3	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-339-a-b-bed-a	fam-raw-iob3-339-a-b-bed-a	iob3 339 a b bed a								latin	unknown	IOB3-339/a-b BED A	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-341-bed-b-622-4	fam-raw-iob3-341-bed-b-622-4	iob3 341 bed b 622 4								latin	unknown	IOB3-341 BED B 622-4	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-342-b-bed-b-603-3	fam-raw-iob3-342-b-bed-b-603-3	iob3 342 b bed b 603 3								latin	unknown	IOB3-342/b - BED B 603-3	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-343-b-a-4-bed-b-603-3	fam-raw-iob3-343-b-a-4-bed-b-603-3	iob3 343 b a 4 bed b 603 3								latin	unknown	IOB3-343/b/a 4- BED B 603-3	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-344-a-b-bed-b-600-7	fam-raw-iob3-344-a-b-bed-b-600-7	iob3 344 a b bed b 600 7								latin	unknown	IOB3-344/a-b BED B 600-7	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-345-a-bed-b-600-7	fam-raw-iob3-345-a-bed-b-600-7	iob3 345 a bed b 600 7								latin	unknown	IOB3-345/a BED B 600-7	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-345-b	fam-raw-iob3-345-b	IOB3-345/b								latin	unknown	IOB3-345/b	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-389-b-bed-b-622-4	fam-raw-iob3-389-b-bed-b-622-4	iob3 389 b bed b 622 4								latin	unknown	IOB3-389/b BED B 622-4	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-460-a	fam-raw-iob3-460-a	IOB3-460/a								latin	unknown	IOB3-460/a	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob3-bed-b-622-4	fam-raw-iob3-bed-b-622-4	IOB3- BED B 622-4								latin	unknown	IOB3- BED B 622-4	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-361-a	fam-raw-iob4-361-a	IOB4-361/a								latin	unknown	IOB4-361/a	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-361-b	fam-raw-iob4-361-b	IOB4-361/b								latin	unknown	IOB4-361/b	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-364-a	fam-raw-iob4-364-a	IOB4-364/a								latin	unknown	IOB4-364/a	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-364-b	fam-raw-iob4-364-b	IOB4-364/b								latin	unknown	IOB4-364/b	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-365-a-bed-b-533-2	fam-raw-iob4-365-a-bed-b-533-2	iob4 365 a bed b 533 2								latin	unknown	IOB4-365/a BED B 533-2	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-365-b-bed-b-552-3	fam-raw-iob4-365-b-bed-b-552-3	iob4 365 b bed b 552 3								latin	unknown	IOB4-365/b BED B 552-3	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-365-c-bed-b-573-3	fam-raw-iob4-365-c-bed-b-573-3	iob4 365 c bed b 573 3								latin	unknown	IOB4-365/c BED B 573-3	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-370	fam-raw-iob4-370	IOB4-370								latin	unknown	IOB4-370	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-371-a-bed-b-581-4	fam-raw-iob4-371-a-bed-b-581-4	iob4 371 a bed b 581 4								latin	unknown	IOB4-371/a BED B 581-4	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-373-a-bed-b-593-4	fam-raw-iob4-373-a-bed-b-593-4	iob4 373 a bed b 593 4								latin	unknown	IOB4-373/a BED B 593-4	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-375-bed-b-598-3	fam-raw-iob4-375-bed-b-598-3	iob4 375 bed b 598 3								latin	unknown	IOB4-375 BED B 598-3	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-376	fam-raw-iob4-376	IOB4-376								latin	unknown	IOB4-376	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-377-a-bed-b-584-3	fam-raw-iob4-377-a-bed-b-584-3	iob4 377 a bed b 584 3								latin	unknown	IOB4-377/a BED B 584-3	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-378-a-bed-b-609-3	fam-raw-iob4-378-a-bed-b-609-3	iob4 378 a bed b 609 3								latin	unknown	IOB4-378/a BED B 609-3	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-378-b-bed-b-609-4	fam-raw-iob4-378-b-bed-b-609-4	iob4 378 b bed b 609 4								latin	unknown	IOB4-378/b BED B 609-4	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-380-bed-b-611-4	fam-raw-iob4-380-bed-b-611-4	iob4 380 bed b 611 4								latin	unknown	IOB4-380 BED B 611-4	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-381-bed-b-622-4	fam-raw-iob4-381-bed-b-622-4	iob4 381 bed b 622 4								latin	unknown	IOB4-381 BED B 622-4	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-383-a-bed-b-623-1	fam-raw-iob4-383-a-bed-b-623-1	iob4 383 a bed b 623 1								latin	unknown	IOB4-383/a BED B 623-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-383-b-bed-b-623-1	fam-raw-iob4-383-b-bed-b-623-1	iob4 383 b bed b 623 1								latin	unknown	IOB4-383/b BED B 623-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-384-bed-b-634-6	fam-raw-iob4-384-bed-b-634-6	iob4 384 bed b 634 6								latin	unknown	IOB4-384 BED B 634-6	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-385-a-bed-b-624-4	fam-raw-iob4-385-a-bed-b-624-4	iob4 385 a bed b 624 4								latin	unknown	IOB4-385/a BED B 624-4	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-385-b-bed-b-624-4	fam-raw-iob4-385-b-bed-b-624-4	iob4 385 b bed b 624 4								latin	unknown	IOB4-385/b BED B 624-4	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-386-bed-b-637-5	fam-raw-iob4-386-bed-b-637-5	iob4 386 bed b 637 5								latin	unknown	IOB4-386 BED B 637-5	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-387-a-bed-b-623-1	fam-raw-iob4-387-a-bed-b-623-1	iob4 387 a bed b 623 1								latin	unknown	IOB4-387/a BED B 623-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-389-a-bed-b-622-4	fam-raw-iob4-389-a-bed-b-622-4	iob4 389 a bed b 622 4								latin	unknown	IOB4-389/a BED B 622-4	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-389-c-bed-b-622-4	fam-raw-iob4-389-c-bed-b-622-4	iob4 389 c bed b 622 4								latin	unknown	IOB4-389/c BED B 622-4	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-390	fam-raw-iob4-390	IOB4-390								latin	unknown	IOB4-390	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-391	fam-raw-iob4-391	IOB4-391								latin	unknown	IOB4-391	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-392	fam-raw-iob4-392	IOB4-392								latin	unknown	IOB4-392	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-393	fam-raw-iob4-393	IOB4-393								latin	unknown	IOB4-393	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-394-bed-b-622-6	fam-raw-iob4-394-bed-b-622-6	iob4 394 bed b 622 6								latin	unknown	IOB4-394 BED B 622-6	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-395-bed-b-622-6	fam-raw-iob4-395-bed-b-622-6	iob4 395 bed b 622 6								latin	unknown	IOB4-395 BED B 622-6	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-396-a-bed-b-622-6	fam-raw-iob4-396-a-bed-b-622-6	iob4 396 a bed b 622 6								latin	unknown	IOB4-396/a BED B 622-6	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-396-b-bed-b-622-6	fam-raw-iob4-396-b-bed-b-622-6	iob4 396 b bed b 622 6								latin	unknown	IOB4-396/b BED B 622-6	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-397-a-bed-b-622-6	fam-raw-iob4-397-a-bed-b-622-6	iob4 397 a bed b 622 6								latin	unknown	IOB4-397/a BED B 622-6	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-397-b-bed-b-622-6	fam-raw-iob4-397-b-bed-b-622-6	iob4 397 b bed b 622 6								latin	unknown	IOB4-397/b BED B 622-6	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-398-bed-b-622-6	fam-raw-iob4-398-bed-b-622-6	iob4 398 bed b 622 6								latin	unknown	IOB4-398 BED B 622-6	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-399-a-bed-b-622-6	fam-raw-iob4-399-a-bed-b-622-6	iob4 399 a bed b 622 6								latin	unknown	IOB4-399/a BED B 622-6	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-399-b-bed-b-622-6	fam-raw-iob4-399-b-bed-b-622-6	iob4 399 b bed b 622 6								latin	unknown	IOB4-399/b BED B 622-6	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-399-c-bed-b-622-6	fam-raw-iob4-399-c-bed-b-622-6	iob4 399 c bed b 622 6								latin	unknown	IOB4-399/c BED B 622-6	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-399-c-bed-b-666-1a	fam-raw-iob4-399-c-bed-b-666-1a	iob4 399 c bed b 666 1a								latin	unknown	IOB4-399/c BED B 666-1a	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-399-d-bed-b-651-1	fam-raw-iob4-399-d-bed-b-651-1	iob4 399 d bed b 651 1								latin	unknown	IOB4-399/d BED B 651-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-400-a-bed-b-622-6	fam-raw-iob4-400-a-bed-b-622-6	iob4 400 a bed b 622 6								latin	unknown	IOB4-400/a BED B 622-6	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-400-b-bed-b-622-6	fam-raw-iob4-400-b-bed-b-622-6	iob4 400 b bed b 622 6								latin	unknown	IOB4-400/b BED B 622-6	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-401-bed-b-622-6	fam-raw-iob4-401-bed-b-622-6	iob4 401 bed b 622 6								latin	unknown	IOB4-401 BED B 622-6	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-402-a	fam-raw-iob4-402-a	IOB4-402/a								latin	unknown	IOB4-402/a	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-402-b-bed-b-567-7	fam-raw-iob4-402-b-bed-b-567-7	iob4 402 b bed b 567 7								latin	unknown	IOB4-402/b BED B 567-7	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-403-a-bed-b-622-6	fam-raw-iob4-403-a-bed-b-622-6	iob4 403 a bed b 622 6								latin	unknown	IOB4-403/a BED B 622-6	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-403-b-bed-b-622-4	fam-raw-iob4-403-b-bed-b-622-4	iob4 403 b bed b 622 4								latin	unknown	IOB4-403/b BED B 622-4	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-404-bed-b-623-1	fam-raw-iob4-404-bed-b-623-1	iob4 404 bed b 623 1								latin	unknown	IOB4-404 BED B 623-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-405-a-bed-b-622-6	fam-raw-iob4-405-a-bed-b-622-6	iob4 405 a bed b 622 6								latin	unknown	IOB4-405/a BED B 622-6	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-405-b-bed-b-622-6	fam-raw-iob4-405-b-bed-b-622-6	iob4 405 b bed b 622 6								latin	unknown	IOB4-405/b} BED B 622-6	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-405-c-bed-b-622-6	fam-raw-iob4-405-c-bed-b-622-6	iob4 405 c bed b 622 6								latin	unknown	IOB4-405/c} BED B 622-6	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-405-d-bed-b-622-6	fam-raw-iob4-405-d-bed-b-622-6	iob4 405 d bed b 622 6								latin	unknown	IOB4-405/d BED B 622-6	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-406-a-bed-b-622-6	fam-raw-iob4-406-a-bed-b-622-6	iob4 406 a bed b 622 6								latin	unknown	IOB4-406/a BED B 622-6	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-406-b-bed-b-622-6	fam-raw-iob4-406-b-bed-b-622-6	iob4 406 b bed b 622 6								latin	unknown	IOB4-406/b BED B 622-6	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-407-b-bed-b-622-6	fam-raw-iob4-407-b-bed-b-622-6	iob4 407 b bed b 622 6								latin	unknown	IOB4-407/b BED B 622-6	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-408-bed-b-622-6	fam-raw-iob4-408-bed-b-622-6	iob4 408 bed b 622 6								latin	unknown	IOB4-408 BED B 622-6	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-409-a-bed-b-622-6	fam-raw-iob4-409-a-bed-b-622-6	iob4 409 a bed b 622 6								latin	unknown	IOB4-409/a BED B 622-6	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-409-b-bed-b-622-6	fam-raw-iob4-409-b-bed-b-622-6	iob4 409 b bed b 622 6								latin	unknown	IOB4-409/b BED B 622-6	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-411-bed-b-624-6	fam-raw-iob4-411-bed-b-624-6	iob4 411 bed b 624 6								latin	unknown	IOB4-411 BED B 624-6	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-412-a-bed-b-622-6	fam-raw-iob4-412-a-bed-b-622-6	iob4 412 a bed b 622 6								latin	unknown	IOB4-412/a BED B 622-6	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-412-b-bed-b-622-6	fam-raw-iob4-412-b-bed-b-622-6	iob4 412 b bed b 622 6								latin	unknown	IOB4-412/b BED B 622-6	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-413-bed-b-622-6	fam-raw-iob4-413-bed-b-622-6	iob4 413 bed b 622 6								latin	unknown	IOB4-413 BED B 622-6	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-414-a-bed-b-622-6	fam-raw-iob4-414-a-bed-b-622-6	iob4 414 a bed b 622 6								latin	unknown	IOB4-414/a BED B 622-6	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-414-b-bed-b-622-6	fam-raw-iob4-414-b-bed-b-622-6	iob4 414 b bed b 622 6								latin	unknown	IOB4-414/b BED B 622-6	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-415-bed-b-622-6	fam-raw-iob4-415-bed-b-622-6	iob4 415 bed b 622 6								latin	unknown	IOB4-415 BED B 622-6	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-416-a-bed-b-622-6	fam-raw-iob4-416-a-bed-b-622-6	iob4 416 a bed b 622 6								latin	unknown	IOB4-416/a BED B 622-6	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-416-b-bed-b-622-6	fam-raw-iob4-416-b-bed-b-622-6	iob4 416 b bed b 622 6								latin	unknown	IOB4-416/b BED B 622-6	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-416-c-bed-b-622-6	fam-raw-iob4-416-c-bed-b-622-6	iob4 416 c bed b 622 6								latin	unknown	IOB4-416/c BED B 622-6	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-417-bed-b-622-6	fam-raw-iob4-417-bed-b-622-6	iob4 417 bed b 622 6								latin	unknown	IOB4-417 BED B 622-6	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-419-a-bed-b-622-6	fam-raw-iob4-419-a-bed-b-622-6	iob4 419 a bed b 622 6								latin	unknown	IOB4-419/a BED B 622-6	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-419-b-bed-b-622-6	fam-raw-iob4-419-b-bed-b-622-6	iob4 419 b bed b 622 6								latin	unknown	IOB4-419/b BED B 622-6	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-420-a-bed-b-623-1	fam-raw-iob4-420-a-bed-b-623-1	iob4 420 a bed b 623 1								latin	unknown	IOB4-420/a BED B 623-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-420-b-bed-b-623-1	fam-raw-iob4-420-b-bed-b-623-1	iob4 420 b bed b 623 1								latin	unknown	IOB4-420/b BED B 623-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-421-a-bed-b-622-4	fam-raw-iob4-421-a-bed-b-622-4	iob4 421 a bed b 622 4								latin	unknown	IOB4-421/a BED B 622-4	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-423-bed-b-622-6	fam-raw-iob4-423-bed-b-622-6	iob4 423 bed b 622 6								latin	unknown	IOB4-423 BED B 622-6	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-424-bed-b-622-6	fam-raw-iob4-424-bed-b-622-6	iob4 424 bed b 622 6								latin	unknown	IOB4-424 BED B 622-6	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-425-a-bed-b-622-6	fam-raw-iob4-425-a-bed-b-622-6	iob4 425 a bed b 622 6								latin	unknown	IOB4-425/a BED B 622-6	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-425-b-bed-b-622-6	fam-raw-iob4-425-b-bed-b-622-6	iob4 425 b bed b 622 6								latin	unknown	IOB4-425/b BED B 622-6	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-426-bed-b-622-6	fam-raw-iob4-426-bed-b-622-6	iob4 426 bed b 622 6								latin	unknown	IOB4-426 BED B 622-6	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-427-b-bed-b-622-6	fam-raw-iob4-427-b-bed-b-622-6	iob4 427 b bed b 622 6								latin	unknown	IOB4-427/b BED B 622-6	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-428-bed-b-622-6	fam-raw-iob4-428-bed-b-622-6	iob4 428 bed b 622 6								latin	unknown	IOB4-428 BED B 622-6	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-429-bed-b-622-6	fam-raw-iob4-429-bed-b-622-6	iob4 429 bed b 622 6								latin	unknown	IOB4-429 BED B 622-6	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-430-bed-b-622-6	fam-raw-iob4-430-bed-b-622-6	iob4 430 bed b 622 6								latin	unknown	IOB4-430 BED B 622-6	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-431-a-bed-b-622-6	fam-raw-iob4-431-a-bed-b-622-6	iob4 431 a bed b 622 6								latin	unknown	IOB4-431/a BED B 622-6	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-431-b-bed-b-622-6	fam-raw-iob4-431-b-bed-b-622-6	iob4 431 b bed b 622 6								latin	unknown	IOB4-431/b BED B 622-6	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-432-a-bed-b-622-6	fam-raw-iob4-432-a-bed-b-622-6	iob4 432 a bed b 622 6								latin	unknown	IOB4-432/a BED B 622-6	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-432-b-bed-b-622-6	fam-raw-iob4-432-b-bed-b-622-6	iob4 432 b bed b 622 6								latin	unknown	IOB4-432/b BED B 622-6	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-433-a	fam-raw-iob4-433-a	IOB4-433/a								latin	unknown	IOB4-433/a	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-433-b	fam-raw-iob4-433-b	IOB4-433/b								latin	unknown	IOB4-433/b	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-434-b-bed-b-622-6	fam-raw-iob4-434-b-bed-b-622-6	iob4 434 b bed b 622 6								latin	unknown	IOB4-434/b BED B 622-6	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-435-a-bed-b-623-1	fam-raw-iob4-435-a-bed-b-623-1	iob4 435 a bed b 623 1								latin	unknown	IOB4-435/a BED B 623-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-435-b-bed-b-623-1	fam-raw-iob4-435-b-bed-b-623-1	iob4 435 b bed b 623 1								latin	unknown	IOB4-435/b BED B 623-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-436-a-bed-b-623-1	fam-raw-iob4-436-a-bed-b-623-1	iob4 436 a bed b 623 1								latin	unknown	IOB4-436/a BED B 623-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-436-b-bed-b-623-1	fam-raw-iob4-436-b-bed-b-623-1	iob4 436 b bed b 623 1								latin	unknown	IOB4-436/b BED B 623-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-437-b-bed-b-623-1	fam-raw-iob4-437-b-bed-b-623-1	iob4 437 b bed b 623 1								latin	unknown	IOB4-437/b BED B 623-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-438-a-bed-b-623-1	fam-raw-iob4-438-a-bed-b-623-1	iob4 438 a bed b 623 1								latin	unknown	IOB4-438/a BED B 623-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-438-b-bed-b-623-1	fam-raw-iob4-438-b-bed-b-623-1	iob4 438 b bed b 623 1								latin	unknown	IOB4-438/b BED B 623-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-439-a-bed-b-623-1	fam-raw-iob4-439-a-bed-b-623-1	iob4 439 a bed b 623 1								latin	unknown	IOB4-439/a BED B 623-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-439-b-bed-b-623-1	fam-raw-iob4-439-b-bed-b-623-1	iob4 439 b bed b 623 1								latin	unknown	IOB4-439/b BED B 623-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-440-a-bed-b-623-1	fam-raw-iob4-440-a-bed-b-623-1	iob4 440 a bed b 623 1								latin	unknown	IOB4-440/a BED B 623-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-440-b-bed-b-623-1	fam-raw-iob4-440-b-bed-b-623-1	iob4 440 b bed b 623 1								latin	unknown	IOB4-440/b BED B 623-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-440-c-bed-b-623-1	fam-raw-iob4-440-c-bed-b-623-1	iob4 440 c bed b 623 1								latin	unknown	IOB4-440/c BED B 623-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-441-a-bed-b-623-1	fam-raw-iob4-441-a-bed-b-623-1	iob4 441 a bed b 623 1								latin	unknown	IOB4-441/a BED B 623-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-441-b-bed-b-623-1	fam-raw-iob4-441-b-bed-b-623-1	iob4 441 b bed b 623 1								latin	unknown	IOB4-441/b BED B 623-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-442-a-bed-b-623-1	fam-raw-iob4-442-a-bed-b-623-1	iob4 442 a bed b 623 1								latin	unknown	IOB4-442/a BED B 623-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-442-b-bed-b-623-1	fam-raw-iob4-442-b-bed-b-623-1	iob4 442 b bed b 623 1								latin	unknown	IOB4-442/b BED B 623-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-443-bed-b-622-6	fam-raw-iob4-443-bed-b-622-6	iob4 443 bed b 622 6								latin	unknown	IOB4-443 BED B 622-6	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-444-a-bed-b-622-6	fam-raw-iob4-444-a-bed-b-622-6	iob4 444 a bed b 622 6								latin	unknown	IOB4-444/a BED B 622-6	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-444-b-bed-b-623-1	fam-raw-iob4-444-b-bed-b-623-1	iob4 444 b bed b 623 1								latin	unknown	IOB4-444/b BED B 623-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-445-a-bed-b-623-1	fam-raw-iob4-445-a-bed-b-623-1	iob4 445 a bed b 623 1								latin	unknown	IOB4-445/a BED B 623-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-445-b-bed-b-623-1	fam-raw-iob4-445-b-bed-b-623-1	iob4 445 b bed b 623 1								latin	unknown	IOB4-445/b BED B 623-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-445-c-bed-b-623-1	fam-raw-iob4-445-c-bed-b-623-1	iob4 445 c bed b 623 1								latin	unknown	IOB4-445/c BED B 623-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-446-b-bed-b-623-1	fam-raw-iob4-446-b-bed-b-623-1	iob4 446 b bed b 623 1								latin	unknown	IOB4 446/b BED B 623-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-446-c-bed-b-623-1	fam-raw-iob4-446-c-bed-b-623-1	iob4 446 c bed b 623 1								latin	unknown	IOB4-446/c BED B 623-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-447-bed-b-623-1	fam-raw-iob4-447-bed-b-623-1	iob4 447 bed b 623 1								latin	unknown	IOB4-447 BED B 623-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-448-a-bed-b-623-1	fam-raw-iob4-448-a-bed-b-623-1	iob4 448 a bed b 623 1								latin	unknown	IOB4-448/a BED B 623-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-448-b-bed-b-623-1	fam-raw-iob4-448-b-bed-b-623-1	iob4 448 b bed b 623 1								latin	unknown	IOB4-448/b BED B 623-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-448-c-bed-b-623-1	fam-raw-iob4-448-c-bed-b-623-1	iob4 448 c bed b 623 1								latin	unknown	IOB4-448/c BED B 623-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-449-bed-b-623-1	fam-raw-iob4-449-bed-b-623-1	iob4 449 bed b 623 1								latin	unknown	IOB4-449 BED B 623-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-450-a-bed-b-623-1	fam-raw-iob4-450-a-bed-b-623-1	iob4 450 a bed b 623 1								latin	unknown	IOB4-450/a BED B 623-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-450-b-bed-b-623-1	fam-raw-iob4-450-b-bed-b-623-1	iob4 450 b bed b 623 1								latin	unknown	IOB4-450/b BED B 623-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-451-bed-b-623-1	fam-raw-iob4-451-bed-b-623-1	iob4 451 bed b 623 1								latin	unknown	IOB4-451 BED B 623-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-452-a-bed-b-623-1	fam-raw-iob4-452-a-bed-b-623-1	iob4 452 a bed b 623 1								latin	unknown	IOB4-452/a BED B 623-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-452-b-bed-b-623-1	fam-raw-iob4-452-b-bed-b-623-1	iob4 452 b bed b 623 1								latin	unknown	IOB4-452/b BED B 623-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-453-a-bed-b-623-1	fam-raw-iob4-453-a-bed-b-623-1	iob4 453 a bed b 623 1								latin	unknown	IOB4-453/a BED B 623-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-454-a-bed-b-623-1	fam-raw-iob4-454-a-bed-b-623-1	iob4 454 a bed b 623 1								latin	unknown	IOB4-454/a BED B 623-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-454-b-bed-b-623-1	fam-raw-iob4-454-b-bed-b-623-1	iob4 454 b bed b 623 1								latin	unknown	IOB4-454/b BED B 623-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-455-a-bed-b-623-1	fam-raw-iob4-455-a-bed-b-623-1	iob4 455 a bed b 623 1								latin	unknown	IOB4-455/a BED B 623-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-455-b-bed-b-623-1	fam-raw-iob4-455-b-bed-b-623-1	iob4 455 b bed b 623 1								latin	unknown	IOB4-455/b BED B 623-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-456-a	fam-raw-iob4-456-a	IOB4-456/a								latin	unknown	IOB4-456/a	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-456-a-bed-b-623-1	fam-raw-iob4-456-a-bed-b-623-1	iob4 456 a bed b 623 1								latin	unknown	IOB4-456/a BED B 623-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-456-b-bed-b-623-1	fam-raw-iob4-456-b-bed-b-623-1	iob4 456 b bed b 623 1								latin	unknown	IOB4-456/b BED B 623-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-457-a-bed-b-623-1	fam-raw-iob4-457-a-bed-b-623-1	iob4 457 a bed b 623 1								latin	unknown	IOB4-457/a BED B 623-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-457-b	fam-raw-iob4-457-b	IOB4-457/b								latin	unknown	IOB4-457/b	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-458	fam-raw-iob4-458	IOB4-458								latin	unknown	IOB4-458	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-458-bed-b-623-1	fam-raw-iob4-458-bed-b-623-1	iob4 458 bed b 623 1								latin	unknown	IOB4-458 BED B 623-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-459-b	fam-raw-iob4-459-b	IOB4-459/b								latin	unknown	IOB4-459/b	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-460-b	fam-raw-iob4-460-b	IOB4-460/b								latin	unknown	IOB4-460/b	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-461-a	fam-raw-iob4-461-a	IOB4-461/a								latin	unknown	IOB4-461/a	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-461-b	fam-raw-iob4-461-b	IOB4-461/b								latin	unknown	IOB4-461/b	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4-462-a	fam-raw-iob4-462-a	IOB4-462/a								latin	unknown	IOB4-462/a	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob4437-a-bed-b-623-1	fam-raw-iob4437-a-bed-b-623-1	iob4437 a bed b 623 1								latin	unknown	IOB4437/a BED B 623-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob5	fam-raw-iob5	IOB5-								latin	unknown	IOB5-	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob5-302-c-bed-b-600-7	fam-raw-iob5-302-c-bed-b-600-7	iob5 302 c bed b 600 7								latin	unknown	IOB5-302/c BED B 600-7	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob5-463-bed-b-703-1	fam-raw-iob5-463-bed-b-703-1	iob5 463 bed b 703 1								latin	unknown	IOB5-463 BED B 703-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob5-464-a-bed-b-703-2	fam-raw-iob5-464-a-bed-b-703-2	iob5 464 a bed b 703 2								latin	unknown	IOB5-464/a BED B 703-2	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob5-464-b	fam-raw-iob5-464-b	IOB5-464/b								latin	unknown	IOB5-464/b	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob5-465-a-bed-b-645-2	fam-raw-iob5-465-a-bed-b-645-2	iob5 465 a bed b 645 2								latin	unknown	IOB5-465/a BED B 645-2	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob5-465-b	fam-raw-iob5-465-b	IOB5-465/b								latin	unknown	IOB5-465/b	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob5-466-a	fam-raw-iob5-466-a	IOB5-466/a								latin	unknown	IOB5-466/a	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob5-466-b	fam-raw-iob5-466-b	IOB5-466/b								latin	unknown	IOB5-466/b	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob5-467-a	fam-raw-iob5-467-a	IOB5-467/a								latin	unknown	IOB5-467/a	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob5-467-b	fam-raw-iob5-467-b	IOB5-467/b								latin	unknown	IOB5-467/b	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob5-467-c	fam-raw-iob5-467-c	IOB5-467/c								latin	unknown	IOB5-467/c	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob5-467-d	fam-raw-iob5-467-d	IOB5-467/d								latin	unknown	IOB5-467/d	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob5-469-a	fam-raw-iob5-469-a	IOB5-469/a								latin	unknown	IOB5-469/a	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob5-469-b	fam-raw-iob5-469-b	IOB5-469/b								latin	unknown	IOB5-469/b	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob5-470-a	fam-raw-iob5-470-a	IOB5-470/a								latin	unknown	IOB5-470/a	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob5-470-b	fam-raw-iob5-470-b	IOB5-470/b								latin	unknown	IOB5-470/b	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob5-471	fam-raw-iob5-471	IOB5-471								latin	unknown	IOB5-471	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob5-472	fam-raw-iob5-472	IOB5-472								latin	unknown	IOB5-472	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob5-473-a	fam-raw-iob5-473-a	IOB5-473/a								latin	unknown	IOB5-473/a	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob5-473-b	fam-raw-iob5-473-b	IOB5-473/b								latin	unknown	IOB5-473/b	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob5-474	fam-raw-iob5-474	IOB5-474								latin	unknown	IOB5-474	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob5-475	fam-raw-iob5-475	IOB5-475								latin	unknown	IOB5-475	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob5-477-a	fam-raw-iob5-477-a	IOB5-477/a								latin	unknown	IOB5-477/a	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob5-477-b	fam-raw-iob5-477-b	IOB5-477/b								latin	unknown	IOB5-477/b	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob5-478	fam-raw-iob5-478	IOB5-478								latin	unknown	IOB5-478	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob5-479-bed-b-578-5	fam-raw-iob5-479-bed-b-578-5	iob5 479 bed b 578 5								latin	unknown	IOB5-479 BED B 578-5	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob5-480-a-bed-b-565-1	fam-raw-iob5-480-a-bed-b-565-1	iob5 480 a bed b 565 1								latin	unknown	IOB5-480/a BED B 565-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob5-480-c	fam-raw-iob5-480-c	IOB5-480/c								latin	unknown	IOB5-480/c	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob5-481-a-bed-b-635-6	fam-raw-iob5-481-a-bed-b-635-6	iob5 481 a bed b 635 6								latin	unknown	IOB5-481/a BED B 635-6	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob5-482-a	fam-raw-iob5-482-a	IOB5-482/a								latin	unknown	IOB5-482/a	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob5-482-b	fam-raw-iob5-482-b	IOB5-482/b								latin	unknown	IOB5-482/b	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob5-483-b	fam-raw-iob5-483-b	IOB5-483/b								latin	unknown	IOB5-483/b	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob5-485-a	fam-raw-iob5-485-a	IOB5-485/a								latin	unknown	IOB5-485/a	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob5-485-b	fam-raw-iob5-485-b	IOB5-485/b								latin	unknown	IOB5-485/b	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob5-486-b	fam-raw-iob5-486-b	IOB5-486/b								latin	unknown	IOB5-486/b	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob5-488-a	fam-raw-iob5-488-a	IOB5-488/a								latin	unknown	IOB5-488/a	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob5-491	fam-raw-iob5-491	IOB5-491								latin	unknown	IOB5-491	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob5-497	fam-raw-iob5-497	IOB5-497								latin	unknown	IOB5-497	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob5-499-a	fam-raw-iob5-499-a	IOB5-499/a								latin	unknown	IOB5-499/a	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob5-499-b	fam-raw-iob5-499-b	IOB5-499/b								latin	unknown	IOB5-499/b	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob5-499-c	fam-raw-iob5-499-c	IOB5-499/c								latin	unknown	IOB5-499/c	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob5-499-d	fam-raw-iob5-499-d	IOB5-499/d								latin	unknown	IOB5-499/d	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob5-501	fam-raw-iob5-501	IOB5-501								latin	unknown	IOB5-501	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob5-502	fam-raw-iob5-502	IOB5-502								latin	unknown	IOB5-502	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob5-509-bed-b-628-9	fam-raw-iob5-509-bed-b-628-9	iob5 509 bed b 628 9								latin	unknown	IOB5-509 BED B 628-9	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob5-510	fam-raw-iob5-510	IOB5-510								latin	unknown	IOB5-510	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob5-512-b	fam-raw-iob5-512-b	IOB5-512/b								latin	unknown	IOB5-512/b	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob5-514-a	fam-raw-iob5-514-a	IOB5-514/a								latin	unknown	IOB5-514/a	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob5-514-b	fam-raw-iob5-514-b	IOB5-514/b								latin	unknown	IOB5-514/b	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob5-517-a	fam-raw-iob5-517-a	IOB5-517/a								latin	unknown	IOB5-517/a	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob5-524-a	fam-raw-iob5-524-a	IOB5-524/a								latin	unknown	IOB5-524/a	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob5-524-b	fam-raw-iob5-524-b	IOB5-524/b								latin	unknown	IOB5-524/b	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob5-525-a	fam-raw-iob5-525-a	IOB5-525/a								latin	unknown	IOB5-525/a	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob5-525-b	fam-raw-iob5-525-b	IOB5-525/b								latin	unknown	IOB5-525/b	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob5-530	fam-raw-iob5-530	IOB5-530								latin	unknown	IOB5-530	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob5-541-a	fam-raw-iob5-541-a	IOB5-541/a								latin	unknown	IOB5-541/a	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob5-541-b	fam-raw-iob5-541-b	IOB5-541/b								latin	unknown	IOB5-541/b	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob5-541-c	fam-raw-iob5-541-c	IOB5-541/c								latin	unknown	IOB5-541/c	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob5-541-d	fam-raw-iob5-541-d	IOB5-541/d								latin	unknown	IOB5-541/d	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob5-542	fam-raw-iob5-542	IOB5-542								latin	unknown	IOB5-542	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob5-543-a-bed-b-675-1	fam-raw-iob5-543-a-bed-b-675-1	iob5 543 a bed b 675 1								latin	unknown	IOB5-543/a BED B 675-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob5-543-b	fam-raw-iob5-543-b	IOB5-543/b								latin	unknown	IOB5-543/b	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob5-544-a	fam-raw-iob5-544-a	IOB5-544/a								latin	unknown	IOB5-544/a	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob5-544-b	fam-raw-iob5-544-b	IOB5-544/b								latin	unknown	IOB5-544/b	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob5-545-a	fam-raw-iob5-545-a	IOB5-545/a								latin	unknown	IOB5-545/a	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob5-545-b	fam-raw-iob5-545-b	IOB5-545/b								latin	unknown	IOB5-545/b	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob5-546	fam-raw-iob5-546	IOB5-546								latin	unknown	IOB5-546	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob5-547-a	fam-raw-iob5-547-a	IOB5-547/a								latin	unknown	IOB5-547/a	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob5-547-b	fam-raw-iob5-547-b	IOB5-547/b								latin	unknown	IOB5-547/b	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob5-563-a-bed-b-602-4	fam-raw-iob5-563-a-bed-b-602-4	iob5 563 a bed b 602 4								latin	unknown	IOB5-563/a BED B 602-4	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob5-565-a-bed-a	fam-raw-iob5-565-a-bed-a	IOB5-565/a BED A								latin	unknown	IOB5-565/a BED A	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob5-571-a-bed-a	fam-raw-iob5-571-a-bed-a	IOB5-571/a BED A								latin	unknown	IOB5-571/a BED A	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob5-571-b-bed-b-537-2	fam-raw-iob5-571-b-bed-b-537-2	iob5 571 b bed b 537 2								latin	unknown	IOB5-571/b BED B 537-2	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob5-572-a-bed-b-602-4	fam-raw-iob5-572-a-bed-b-602-4	iob5 572 a bed b 602 4								latin	unknown	IOB5-572/a BED B 602-4	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob5-573-a-bed-b-602-4	fam-raw-iob5-573-a-bed-b-602-4	iob5 573 a bed b 602 4								latin	unknown	IOB5-573/a BED B 602-4	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob5-573-b-bed-b-602-5	fam-raw-iob5-573-b-bed-b-602-5	iob5 573 b bed b 602 5								latin	unknown	IOB5-573/b BED B 602-5	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob5-574-a-bed-b-582-4	fam-raw-iob5-574-a-bed-b-582-4	iob5 574 a bed b 582 4								latin	unknown	IOB5-574/a BED B 582-4	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob5-574-b	fam-raw-iob5-574-b	IOB5-574/b								latin	unknown	IOB5-574/b	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob5-575-bed-b-602-5	fam-raw-iob5-575-bed-b-602-5	iob5 575 bed b 602 5								latin	unknown	IOB5-575 BED B 602-5	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob5-576-a-bed-b-602-4	fam-raw-iob5-576-a-bed-b-602-4	iob5 576 a bed b 602 4								latin	unknown	IOB5-576/a BED B 602-4	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob5-576-b-15-bed-b-602-4	fam-raw-iob5-576-b-15-bed-b-602-4	iob5 576 b 15 bed b 602 4								latin	unknown	IOB5-576/b 15 BED B 602-4	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob5-577-bed-b-600-7	fam-raw-iob5-577-bed-b-600-7	iob5 577 bed b 600 7								latin	unknown	IOB5-577 BED B 600-7	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob5-577-bed-b-602-1	fam-raw-iob5-577-bed-b-602-1	iob5 577 bed b 602 1								latin	unknown	IOB5-577 BED B 602-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob5-578-a-bed-b-600-7	fam-raw-iob5-578-a-bed-b-600-7	iob5 578 a bed b 600 7								latin	unknown	IOB5-578/a BED B 600-7	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob5-578-b-bed-b-600-7	fam-raw-iob5-578-b-bed-b-600-7	iob5 578 b bed b 600 7								latin	unknown	IOB5-578/b BED B 600-7	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob5-581-b-bed-b-559-5	fam-raw-iob5-581-b-bed-b-559-5	iob5 581 b bed b 559 5								latin	unknown	IOB5-581/b BED B 559-5	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob5-583-bed-b-622-6	fam-raw-iob5-583-bed-b-622-6	iob5 583 bed b 622 6								latin	unknown	IOB5-583 BED B 622-6	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob5-584-bed-b-622-6	fam-raw-iob5-584-bed-b-622-6	iob5 584 bed b 622 6								latin	unknown	IOB5-584 BED B 622-6	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob5-587-a-bed-b-624-1	fam-raw-iob5-587-a-bed-b-624-1	iob5 587 a bed b 624 1								latin	unknown	IOB5-587/a BED B 624-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob5-587-b	fam-raw-iob5-587-b	IOB5-587/b								latin	unknown	IOB5-587/b	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob5-588	fam-raw-iob5-588	IOB5-588								latin	unknown	IOB5-588	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob5-589	fam-raw-iob5-589	IOB5-589								latin	unknown	IOB5-589	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob5-590	fam-raw-iob5-590	IOB5-590								latin	unknown	IOB5-590	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob5-591-a	fam-raw-iob5-591-a	IOB5-591/a								latin	unknown	IOB5-591/a	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob5-591-b	fam-raw-iob5-591-b	IOB5-591/b								latin	unknown	IOB5-591/b	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob5-592-a	fam-raw-iob5-592-a	IOB5-592/a								latin	unknown	IOB5-592/a	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob5-593-a-bed-b-539-1	fam-raw-iob5-593-a-bed-b-539-1	iob5 593 a bed b 539 1								latin	unknown	IOB5-593/a BED B 539-1	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob5-593-b	fam-raw-iob5-593-b	IOB5-593/b								latin	unknown	IOB5-593/b	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob5-597	fam-raw-iob5-597	IOB5-597/								latin	unknown	IOB5-597/	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob5-597-c	fam-raw-iob5-597-c	IOB5-597/c								latin	unknown	IOB5-597/c	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob5-597-d	fam-raw-iob5-597-d	IOB5-597/d								latin	unknown	IOB5-597/d	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob5-599-d	fam-raw-iob5-599-d	IOB5-599/d +								latin	unknown	IOB5-599/d +	unreviewed	No stronger conservative family signal was detected.
+work-raw-iob5498-9	fam-raw-iob5498-9	IOB5498 9								latin	unknown	IOB5498 9	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub1	fam-raw-iub1	IUB1 p.140								latin	unknown	IUB1 p.140	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub1-103	fam-raw-iub1-103	IUB1-103								latin	unknown	IUB1-103	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub1-106-2-3	fam-raw-iub1-106-2-3	IUB1-106-2-3								latin	unknown	IUB1-106-2-3	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub1-120	fam-raw-iub1-120	IUB1-120								latin	unknown	IUB1-120	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub1-123	fam-raw-iub1-123	IUB1-123								latin	unknown	IUB1-123	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub1-125	fam-raw-iub1-125	IUB1-125,								latin	unknown	IUB1-125,	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub1-126-1002	fam-raw-iub1-126-1002	IUB1-126-1002								latin	unknown	IUB1-126-1002	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub1-13-14	fam-raw-iub1-13-14	IUB1-13-14								latin	unknown	IUB1-13-14	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub1-146	fam-raw-iub1-146	IUB1-146								latin	unknown	IUB1-146	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub1-149	fam-raw-iub1-149	IUB1-149								latin	unknown	IUB1-149	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub1-168	fam-raw-iub1-168	IUB1-168								latin	unknown	IUB1-168	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub1-173	fam-raw-iub1-173	IUB1-173								latin	unknown	IUB1-173	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub1-174	fam-raw-iub1-174	IUB1-174								latin	unknown	IUB1-174	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub1-175	fam-raw-iub1-175	IUB1 175								latin	unknown	IUB1 175	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub1-176	fam-raw-iub1-176	IUB1-176								latin	unknown	IUB1-176	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub1-177	fam-raw-iub1-177	IUB1-177								latin	unknown	IUB1-177	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub1-181	fam-raw-iub1-181	IUB1-181								latin	unknown	IUB1-181	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub1-183	fam-raw-iub1-183	IUB1-183								latin	unknown	IUB1-183	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub1-186	fam-raw-iub1-186	IUB1-186								latin	unknown	IUB1-186	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub1-189	fam-raw-iub1-189	IUB1-189								latin	unknown	IUB1-189	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub1-191-192-bed-b-597-8	fam-raw-iub1-191-192-bed-b-597-8	iub1 191 192 bed b 597 8								latin	unknown	IUB1-191, 192 BED B 597-8	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub1-193-194	fam-raw-iub1-193-194	IUB1-193-194								latin	unknown	IUB1-193-194	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub1-195-196	fam-raw-iub1-195-196	IUB1-195-196								latin	unknown	IUB1-195-196	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub1-197	fam-raw-iub1-197	IUB1-197								latin	unknown	IUB1-197	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub1-198-199	fam-raw-iub1-198-199	IUB1-198, 199								latin	unknown	IUB1-198, 199	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub1-200	fam-raw-iub1-200	IUB1-200								latin	unknown	IUB1-200	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub1-201-202	fam-raw-iub1-201-202	IUB1-201-202								latin	unknown	IUB1-201-202	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub1-203	fam-raw-iub1-203	IUB1-203								latin	unknown	IUB1-203	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub1-204	fam-raw-iub1-204	IUB1-204								latin	unknown	IUB1-204	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub1-205	fam-raw-iub1-205	IUB1-205,								latin	unknown	IUB1-205,	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub1-206	fam-raw-iub1-206	IUB1-206								latin	unknown	IUB1-206	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub1-207	fam-raw-iub1-207	IUB1-207								latin	unknown	IUB1-207	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub1-209-211	fam-raw-iub1-209-211	IUB1-209-211								latin	unknown	IUB1-209-211	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub1-212	fam-raw-iub1-212	IUB1-212								latin	unknown	IUB1-212	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub1-213	fam-raw-iub1-213	IUB1-213								latin	unknown	IUB1-213	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub1-216	fam-raw-iub1-216	IUB1-216								latin	unknown	IUB1-216	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub1-219-220	fam-raw-iub1-219-220	IUB1-219-220								latin	unknown	IUB1-219-220	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub1-222-223	fam-raw-iub1-222-223	IUB1-222-223								latin	unknown	IUB1-222-223	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub1-224	fam-raw-iub1-224	IUB1-224								latin	unknown	IUB1-224	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub1-225-304	fam-raw-iub1-225-304	IUB1-225 & 304								latin	unknown	IUB1-225 & 304	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub1-226-305	fam-raw-iub1-226-305	IUB1-226 & 305								latin	unknown	IUB1-226 & 305	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub1-227-228	fam-raw-iub1-227-228	IUB1-227-228								latin	unknown	IUB1-227-228	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub1-253-254	fam-raw-iub1-253-254	IUB1-253-254								latin	unknown	IUB1-253-254	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub1-255	fam-raw-iub1-255	IUB1-255								latin	unknown	IUB1-255	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub1-257	fam-raw-iub1-257	IUB1-257								latin	unknown	IUB1-257	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub1-258	fam-raw-iub1-258	IUB1-258								latin	unknown	IUB1-258	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub1-269	fam-raw-iub1-269	IUB1-269								latin	unknown	IUB1-269	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub1-271	fam-raw-iub1-271	IUB1-271								latin	unknown	IUB1-271	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub1-287	fam-raw-iub1-287	IUB1-287								latin	unknown	IUB1-287	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub1-288	fam-raw-iub1-288	IUB1-288								latin	unknown	IUB1-288	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub1-291-292	fam-raw-iub1-291-292	IUB1-291-292								latin	unknown	IUB1-291-292	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub1-293	fam-raw-iub1-293	IUB1-293								latin	unknown	IUB1-293	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub1-294	fam-raw-iub1-294	IUB1-294								latin	unknown	IUB1-294	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub1-296	fam-raw-iub1-296	IUB1-296								latin	unknown	IUB1-296	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub1-298	fam-raw-iub1-298	IUB1-298								latin	unknown	IUB1-298	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub1-299	fam-raw-iub1-299	IUB1-299								latin	unknown	IUB1-299	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub1-300	fam-raw-iub1-300	IUB1-300								latin	unknown	IUB1-300	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub1-301	fam-raw-iub1-301	IUB1-301								latin	unknown	IUB1-301	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub1-302-303	fam-raw-iub1-302-303	IUB1-302-303								latin	unknown	IUB1-302-303	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub1-306-307	fam-raw-iub1-306-307	IUB1-306-307								latin	unknown	IUB1-306-307	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub1-308	fam-raw-iub1-308	IUB1-308								latin	unknown	IUB1-308	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub1-309	fam-raw-iub1-309	IUB1-309								latin	unknown	IUB1-309	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub1-32	fam-raw-iub1-32	IUB1-32								latin	unknown	IUB1-32	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub1-33	fam-raw-iub1-33	IUB1-33								latin	unknown	IUB1-33	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub1-34-35	fam-raw-iub1-34-35	IUB1-34-35								latin	unknown	IUB1-34-35	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub1-36	fam-raw-iub1-36	IUB1-36,								latin	unknown	IUB1-36,	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub1-37	fam-raw-iub1-37	IUB1-37,								latin	unknown	IUB1-37,	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub1-38-39	fam-raw-iub1-38-39	IUB1-38-39								latin	unknown	IUB1-38-39	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub1-40	fam-raw-iub1-40	IUB1-40								latin	unknown	IUB1-40	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub1-47	fam-raw-iub1-47	IUB1-47								latin	unknown	IUB1-47	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub1-49	fam-raw-iub1-49	IUB1-49								latin	unknown	IUB1-49	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub1-52	fam-raw-iub1-52	IUB1-52,								latin	unknown	IUB1-52,	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub1-67	fam-raw-iub1-67	IUB1-67,								latin	unknown	IUB1-67,	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub1-68	fam-raw-iub1-68	IUB1-68								latin	unknown	IUB1-68	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub1-75	fam-raw-iub1-75	IUB1-75								latin	unknown	IUB1-75	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub1-78	fam-raw-iub1-78	IUB1-78								latin	unknown	IUB1-78	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub1-80	fam-raw-iub1-80	IUB1-80,								latin	unknown	IUB1-80,	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub1-81	fam-raw-iub1-81	IUB1-81								latin	unknown	IUB1-81	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub1-86	fam-raw-iub1-86	IUB1-86,								latin	unknown	IUB1-86,	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub1-90	fam-raw-iub1-90	IUB1-90								latin	unknown	IUB1-90	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub1-93	fam-raw-iub1-93	IUB1-93,								latin	unknown	IUB1-93,	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub1-94	fam-raw-iub1-94	IUB1-94								latin	unknown	IUB1-94	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub1-98	fam-raw-iub1-98	IUB1-98								latin	unknown	IUB1-98	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub1-bed-b-600-7	fam-raw-iub1-bed-b-600-7	IUB1- BED B 600-7								latin	unknown	IUB1- BED B 600-7	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub1184-185	fam-raw-iub1184-185	IUB1184, 185								latin	unknown	IUB1184, 185	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub1bm1-84	fam-raw-iub1bm1-84	IUB1BM1--84								latin	unknown	IUB1BM1--84	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub2-132	fam-raw-iub2-132	IUB2-132								latin	unknown	IUB2-132	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub2-133	fam-raw-iub2-133	IUB2-133								latin	unknown	IUB2-133	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub2-134	fam-raw-iub2-134	IUB2-134								latin	unknown	IUB2-134	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub2-135	fam-raw-iub2-135	IUB2-135								latin	unknown	IUB2-135	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub2-136	fam-raw-iub2-136	IUB2-136								latin	unknown	IUB2-136	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub2-137	fam-raw-iub2-137	IUB2-137								latin	unknown	IUB2-137	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub2-138	fam-raw-iub2-138	IUB2-138								latin	unknown	IUB2-138	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub2-186-187	fam-raw-iub2-186-187	IUB2-186-187								latin	unknown	IUB2-186-187	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub2-197	fam-raw-iub2-197	IUB2-197								latin	unknown	IUB2-197	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub2-198	fam-raw-iub2-198	IUB2-198								latin	unknown	IUB2-198	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub2-200	fam-raw-iub2-200	IUB2-200								latin	unknown	IUB2-200	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub2-202	fam-raw-iub2-202	IUB2-202								latin	unknown	IUB2-202	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub2-203	fam-raw-iub2-203	IUB2-203								latin	unknown	IUB2-203	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub2-204	fam-raw-iub2-204	IUB2-204								latin	unknown	IUB2-204	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub2-205	fam-raw-iub2-205	IUB2-205								latin	unknown	IUB2-205	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub2-206	fam-raw-iub2-206	IUB2-206								latin	unknown	IUB2-206	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub2-207	fam-raw-iub2-207	IUB2-207								latin	unknown	IUB2-207	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub2-209	fam-raw-iub2-209	IUB2-209								latin	unknown	IUB2-209	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub2-210	fam-raw-iub2-210	IUB2-210								latin	unknown	IUB2-210	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub2-212	fam-raw-iub2-212	IUB2-212								latin	unknown	IUB2-212	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub2-225-226	fam-raw-iub2-225-226	IUB2-225-226								latin	unknown	IUB2-225-226	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub2-229	fam-raw-iub2-229	IUB2-229								latin	unknown	IUB2-229	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub2-231	fam-raw-iub2-231	IUB2-231								latin	unknown	IUB2-231	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub2-232	fam-raw-iub2-232	IUB2-232								latin	unknown	IUB2-232	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub2-233-bed-b-557-4	fam-raw-iub2-233-bed-b-557-4	iub2 233 bed b 557 4								latin	unknown	IUB2-233 BED B 557-4	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub2-250	fam-raw-iub2-250	IUB2-250								latin	unknown	IUB2-250	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub2-254	fam-raw-iub2-254	IUB2-254								latin	unknown	IUB2-254	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub2-259	fam-raw-iub2-259	IUB2-259								latin	unknown	IUB2-259	unreviewed	No stronger conservative family signal was detected.
+work-raw-iub2-260	fam-raw-iub2-260	IUB2-260								latin	unknown	IUB2-260	unreviewed	No stronger conservative family signal was detected.
+work-raw-list-106	fam-raw-list-106	copy List 106								latin	unknown	copy List 106	unreviewed	No stronger conservative family signal was detected.
+work-raw-list-114	fam-raw-list-114	copy List 114								latin	unknown	copy List 114	unreviewed	No stronger conservative family signal was detected.
+work-raw-list-150	fam-raw-list-150	copy List 150								latin	unknown	copy List 150	unreviewed	No stronger conservative family signal was detected.
+work-raw-list-163-162	fam-raw-list-163-162	copy List 163 (162?)								latin	unknown	copy List 163 (162?)	unreviewed	No stronger conservative family signal was detected.
+work-raw-list-221	fam-raw-list-221	copy List 221								latin	unknown	copy List 221	unreviewed	No stronger conservative family signal was detected.
+work-raw-list-28-dated-cs-433-1071	fam-raw-list-28-dated-cs-433-1071	list 28 dated cs 433 1071								latin	unknown	copy List 28 (dated CS 433/ 1071)	unreviewed	No stronger conservative family signal was detected.
+work-raw-list-316-317	fam-raw-list-316-317	copy List 316-317								latin	unknown	copy List 316-317	unreviewed	No stronger conservative family signal was detected.
+work-raw-list-347	fam-raw-list-347	copy List 347								latin	unknown	copy List 347	unreviewed	No stronger conservative family signal was detected.
+work-raw-list-402	fam-raw-list-402	copy List 402								latin	unknown	copy List 402	unreviewed	No stronger conservative family signal was detected.
+work-raw-list-427	fam-raw-list-427	copy List 427								latin	unknown	copy List 427	unreviewed	No stronger conservative family signal was detected.
+work-raw-list-486	fam-raw-list-486	copy List 486								latin	unknown	copy List 486	unreviewed	No stronger conservative family signal was detected.
+work-raw-list-5	fam-raw-list-5	copy List 5								latin	unknown	copy List 5	unreviewed	No stronger conservative family signal was detected.
+work-raw-list-918	fam-raw-list-918	copy List 918								latin	unknown	copy List 918	unreviewed	No stronger conservative family signal was detected.
+work-raw-lubeigt-pagan	fam-raw-lubeigt-pagan	Lubeigt, Pagan, p. 339	Lubeigt	lubeigt		Pagan	pagan			latin	unknown	Lubeigt, Pagan, p. 339	unreviewed	No stronger conservative family signal was detected.
+work-raw-luce-2829	fam-raw-luce-2829	Luce 2829								latin	unknown	Luce 2829	unreviewed	No stronger conservative family signal was detected.
+work-raw-luce-c-570	fam-raw-luce-c-570	Luce C 570								latin	unknown	Luce C 570	unreviewed	No stronger conservative family signal was detected.
+work-raw-luce-d-809	fam-raw-luce-d-809	Luce D 809								latin	unknown	Luce D 809	unreviewed	No stronger conservative family signal was detected.
+work-raw-luce-files-g-1763	fam-raw-luce-files-g-1763	Luce files G 1763								latin	unknown	Luce files G 1763	unreviewed	No stronger conservative family signal was detected.
+work-raw-luce-g-1899	fam-raw-luce-g-1899	Luce G 1899			1899					latin	unknown	Luce G 1899	unreviewed	No stronger conservative family signal was detected.
+work-raw-luce-g-1964	fam-raw-luce-g-1964	Luce G 1964			1964					latin	unknown	Luce G 1964	unreviewed	No stronger conservative family signal was detected.
+work-raw-luce-j-2665	fam-raw-luce-j-2665	Luce J 2665								latin	unknown	Luce J 2665	unreviewed	No stronger conservative family signal was detected.
+work-raw-luce-j-2667	fam-raw-luce-j-2667	Luce J 2667								latin	unknown	Luce J 2667	unreviewed	No stronger conservative family signal was detected.
+work-raw-luce-j-2672	fam-raw-luce-j-2672	Luce J 2672								latin	unknown	Luce J 2672	unreviewed	No stronger conservative family signal was detected.
+work-raw-luce-j-2675	fam-raw-luce-j-2675	Luce J 2675								latin	unknown	Luce J 2675	unreviewed	No stronger conservative family signal was detected.
+work-raw-luce-obep	fam-raw-luce-obep	Luce, OBEP, p. 109	Luce	luce		OBEP	obep			latin	unknown	Luce, OBEP, p. 109	unreviewed	No stronger conservative family signal was detected.
+work-raw-luce-obep-1	fam-raw-luce-obep-1	Luce, OBEP 1, p. 117-25	Luce	luce		OBEP 1	obep 1			latin	unknown	Luce, OBEP 1, p. 117-25	unreviewed	No stronger conservative family signal was detected.
+work-raw-luce-u-tin-htway-15th-century-library	fam-raw-luce-u-tin-htway-15th-century-library	luce u tin htway 15th century library	Luce/U Tin Htway	luce/u tin htway				“15th Century Library”		latin	unknown	Luce/U Tin Htway, “15th Century Library”	unreviewed	No stronger conservative family signal was detected.
+work-raw-mm-3	fam-raw-mm-3	copy MM 3, no. 30, p. 131								latin	unknown	copy MM 3, no. 30, p. 131	unreviewed	No stronger conservative family signal was detected.
+work-raw-mp	fam-raw-mp	MP, p. 107								latin	unknown	MP, p. 107 | MP, p. 13 | MP, p. 151	unreviewed	No stronger conservative family signal was detected.
+work-raw-mp-1	fam-raw-mp-1	MP 1, p. 81								latin	unknown	MP 1, p. 81 | MP 1, no. 1, p. 1 | MP 1, p. 139	unreviewed	No stronger conservative family signal was detected.
+work-raw-mp-2	fam-raw-mp-2	MP 2, p. 159								latin	unknown	MP 2, p. 159 | MP 2, p. 61 | MP 2, p. 65	unreviewed	No stronger conservative family signal was detected.
+work-raw-myaketu-nandhale-hmattan	fam-raw-myaketu-nandhale-hmattan	Myaketu, Nandhale Hmattan, p. 29-30	Myaketu	myaketu		Nandhale Hmattan	nandhale hmattan			latin	unknown	Myaketu, Nandhale Hmattan, p. 29-30	unreviewed	No stronger conservative family signal was detected.
+work-raw-nce-list-216	fam-raw-nce-list-216	NCE List 216								latin	unknown	NCE List 216	unreviewed	No stronger conservative family signal was detected.
+work-raw-not-in-u-min-hswe	fam-raw-not-in-u-min-hswe	(not in U Min Hswe)								latin	unknown	(not in U Min Hswe)	unreviewed	No stronger conservative family signal was detected.
+work-raw-other-copies-are-list-148	fam-raw-other-copies-are-list-148	other copies are List 148								latin	unknown	other copies are List 148	unreviewed	No stronger conservative family signal was detected.
+work-raw-partly-in-list	fam-raw-partly-in-list	partly in List								latin	unknown	partly in List	unreviewed	No stronger conservative family signal was detected.
+work-raw-partly-list-116	fam-raw-partly-list-116	copy (partly): List 116								latin	unknown	copy (partly): List 116	unreviewed	No stronger conservative family signal was detected.
+work-raw-picture-archdept-on-file	fam-raw-picture-archdept-on-file	picture (ArchDept) on file								latin	unknown	picture (ArchDept) on file	unreviewed	No stronger conservative family signal was detected.
+work-raw-ref-pl-i-73	fam-raw-ref-pl-i-73	Ref.: Pl. I 73								latin	unknown	Ref.: Pl. I 73	unreviewed	No stronger conservative family signal was detected.
+work-raw-rsasb-1912	fam-raw-rsasb-1912	RSASB 1912, p. 34			1912					latin	unknown	RSASB 1912, p. 34	unreviewed	No stronger conservative family signal was detected.
+work-raw-rsasb-1915	fam-raw-rsasb-1915	RSASB 1915, p. 57			1915					latin	unknown	RSASB 1915, p. 57	unreviewed	No stronger conservative family signal was detected.
+work-raw-rsasb-1926	fam-raw-rsasb-1926	RSASB 1926, p. 26			1926					latin	unknown	RSASB 1926, p. 26	unreviewed	No stronger conservative family signal was detected.
+work-raw-rsasb-926-and-app-g	fam-raw-rsasb-926-and-app-g	RSASB 926, p. 26 and App. G, no. 13								latin	unknown	RSASB 926, p. 26 and App. G, no. 13	unreviewed	No stronger conservative family signal was detected.
+work-raw-similar-but-incomplete-version-pl-ii-144	fam-raw-similar-but-incomplete-version-pl-ii-144	similar but incomplete version Pl. II 144								latin	likely_translation	similar but incomplete version Pl. II 144	unreviewed	Kept as a narrow title-specific family because the reference may represent a translation-related work.
+work-raw-strachan-pagan	fam-raw-strachan-pagan	Strachan, Pagan, p. 127-8	Strachan	strachan		Pagan	pagan			latin	unknown	Strachan, Pagan, p. 127-8	unreviewed	No stronger conservative family signal was detected.
+work-raw-than-tun-hnaung-dwe	fam-raw-than-tun-hnaung-dwe	Than Tun, Hnaung-dwe, no. 8, p. 18	Than Tun	than tun		Hnaung-dwe, no. 8	hnaung dwe			latin	unknown	Than Tun, Hnaung-dwe, no. 8, p. 18	unreviewed	No stronger conservative family signal was detected.
+work-raw-u-kyaw-bagan-minsa	fam-raw-u-kyaw-bagan-minsa	U Kyaw, “Bagan Minsa”, p. 195	U Kyaw	u kyaw		“Bagan Minsa”	bagan minsa			latin	unknown	U Kyaw, “Bagan Minsa”, p. 195	unreviewed	No stronger conservative family signal was detected.
+work-raw-u-maung-maung-lat-nos-1-2	fam-raw-u-maung-maung-lat-nos-1-2	u maung maung lat nos 1 2	U Maung Maung Lat	u maung maung lat				nos. 1+2		latin	unknown	U Maung Maung Lat, nos. 1+2	unreviewed	No stronger conservative family signal was detected.
+work-raw-u-nyein-maung-s-update-to-obi-5-htupayon	fam-raw-u-nyein-maung-s-update-to-obi-5-htupayon	u nyein maung s update to obi 5 htupayon								latin	unknown	U Nyein Maung’s update to OBI 5 (Htupayon), p. 2	unreviewed	No stronger conservative family signal was detected.
+work-raw-u-nyein-maung-she-haung-pancama-twe-nauk-hset-twe	fam-raw-u-nyein-maung-she-haung-pancama-twe-nauk-hset-twe	u nyein maung she haung pancama twe nauk hset twe	U Nyein Maung	u nyein maung		She-haung … Pancama-twe Nauk-hset-twe	she haung pancama twe nauk hset twe			latin	unknown	U Nyein Maung, She-haung … Pancama-twe Nauk-hset-twe, p. 1	unreviewed	No stronger conservative family signal was detected.
+work-raw-u-pe-maung-tin-the-myazedi-inscription-in-nava-rat-kui-svay-rangoon-1966	fam-raw-u-pe-maung-tin-the-myazedi-inscription-in-nava-rat-kui-svay-rangoon-1966	u pe maung tin the myazedi inscription in nava rat kui svay rangoon 1966	U Pe Maung Tin	u pe maung tin	1966	The Myazedi Inscription	the myazedi inscription			latin	unknown	U Pe Maung Tin, The Myazedi Inscription, in Nava-rat Kui:-s…	unreviewed	No stronger conservative family signal was detected.
+work-raw-u-tha-myat-the-pali-version-of-the-myazedi-inscription-rangoon-1958	fam-raw-u-tha-myat-the-pali-version-of-the-myazedi-inscription-rangoon-1958	U Tha Myat, The Pali Version of the Myazedi Inscription, Rangoon 1958	U Tha Myat	u tha myat	1958			The Pali Version of the Myazedi Inscription, Rangoon 1958		latin	likely_translation	U Tha Myat, The Pali Version of the Myazedi Inscription, Ra…	unreviewed	Kept as a narrow title-specific family because the reference may represent a translation-related work.
+work-raw-u-tin-htway-first-burmese-royal-inscription	fam-raw-u-tin-htway-first-burmese-royal-inscription	u tin htway first burmese royal inscription	U Tin Htway	u tin htway				“First Burmese Royal Inscription”		latin	unknown	U Tin Htway, “First Burmese Royal Inscription”	unreviewed	No stronger conservative family signal was detected.
+work-raw-u-tin-lwin-rajakumar-s-inscription-in-pali-in-takkasuil-yangon-1989	fam-raw-u-tin-lwin-rajakumar-s-inscription-in-pali-in-takkasuil-yangon-1989	U Tin Lwin, Rajakumar's Inscription in Pali, in Takkasuil ... (repr. Yangon 198…	U Tin Lwin	u tin lwin	1989	Rajakumar's Inscription	rajakumar s inscription			latin	likely_translation	U Tin Lwin, Rajakumar's Inscription in Pali, in Takkasuil .…	unreviewed	Kept as a narrow title-specific family because the reference may represent a translation-related work.
+work-raw-ub-1	fam-raw-ub-1	UB 1, p. 297								latin	unknown	UB 1, p. 297 | UB 1, p. 300 | UB 1, p. 191	unreviewed	No stronger conservative family signal was detected.
+work-raw-ub-1-u-min-hswe	fam-raw-ub-1-u-min-hswe	UB 1, p. 219, U Min Hswe, no. 71								latin	unknown	UB 1, p. 219, U Min Hswe, no. 71	unreviewed	No stronger conservative family signal was detected.
+work-raw-ub-2	fam-raw-ub-2	UB 2, p. 203								latin	unknown	UB 2, p. 203 | UB 2 p. 233 | UB 2, p. 133	unreviewed	No stronger conservative family signal was detected.
+work-raw-ub-2-135	fam-raw-ub-2-135	UB 2, 135								latin	unknown	UB 2, 135	unreviewed	No stronger conservative family signal was detected.
+work-raw-ub1	fam-raw-ub1	UB1, p. 287								latin	unknown	UB1, p. 287	unreviewed	No stronger conservative family signal was detected.
+work-raw-unknown	fam-raw-unknown	. .								unknown	unknown	. .	unreviewed	No stronger conservative family signal was detected.
+work-ray-theravada-buddhism	fam-ray-theravada-buddhism	Ray, Theravada Buddhism	Ray	ray		Theravada Buddhism	theravada buddhism			latin	unlikely_translation	Ray, Theravada Buddhism, p. 106 | Ray, Theravada Buddhism, p. 108 | Ray, Theravada Buddhism, p. 164, Frasch, ‘King Nadaungmya's…	unreviewed	Grouped by recurring author/title pair.
+work-rdasb-publication	fam-rdasb-publication	RDASB references			1971					latin	unknown	RDASB 1971 | RDASB 1926, p. 26 and App. G | RDASB 1966	unreviewed	Grouped by recurring publication abbreviation.
+work-sip-catalogue	fam-sip-catalogue	SIP references								latin	unlikely_translation	SIP no. 26, p. 55 | SIP no. 11, p. 19 | SIP no. 12, p. 21	unreviewed	Grouped by recurring leading label.
+work-tn-catalogue	fam-tn-catalogue	TN references								latin	unlikely_translation	TN, p. 26 | TN, p. 91 | TN, p. 71	unreviewed	Grouped by recurring leading label.
+work-u-min-hswe-catalogue	fam-u-min-hswe-catalogue	U Min Hswe references								latin	possible_translation	U Min Hswe, no. 51 | U Min Hswe, no. 18 | U Min Hswe, no. 43	unreviewed	Grouped by recurring leading label.
+work-uem-catalogue	fam-uem-catalogue	UEM references								latin	unlikely_translation	UEM no. 44, p. 117 | UEM no. 41, p. 113 | UEM no. 42, p. 115	unreviewed	Grouped by recurring leading label.

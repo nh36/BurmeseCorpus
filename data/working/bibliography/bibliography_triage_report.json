@@ -1,0 +1,34 @@
+{
+  "input_files": {
+    "raw_references": "data/working/bibliography/raw_references.tsv",
+    "reference_occurrences": "data/working/bibliography/reference_occurrences.tsv",
+    "inscriptions_jsonl": "data/release/corpus_release_v0_3/inscriptions.jsonl"
+  },
+  "raw_reference_count": 872,
+  "reference_occurrence_count": 4737,
+  "family_count": 1091,
+  "work_candidate_count": 1091,
+  "unclustered_reference_count": 1059,
+  "families_by_type": {
+    "article": 2,
+    "book": 4,
+    "internal_reference": 2,
+    "publication": 5,
+    "source_catalogue": 11,
+    "unclear": 1067
+  },
+  "translation_relevance_counts": {
+    "likely_translation": 3,
+    "possible_translation": 6,
+    "unknown": 1069,
+    "unlikely_translation": 13
+  },
+  "records_with_references": 920,
+  "records_without_references": 232,
+  "notes": [
+    "This is a conservative bibliography/source authority triage layer, not final bibliography normalization.",
+    "Structured OBI records provide the raw reference landscape in corpus_release_v0_3.",
+    "Sagaing records currently have no raw references in the release input.",
+    "Recently Found contributes editorial relations rather than independent inscription rows in corpus_release_v0_3, so it contributes no direct raw-reference occurrences here."
+  ]
+}

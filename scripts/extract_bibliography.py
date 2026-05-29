@@ -12,6 +12,13 @@ from corpus_common import REPO_ROOT, read_jsonl, write_jsonl, write_tsv
 SPLIT_PATTERN = re.compile(r"\s*;\s*")
 
 
+def repo_relative_path(path: Path) -> str:
+    try:
+        return str(path.relative_to(REPO_ROOT))
+    except ValueError:
+        return str(path)
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument(
@@ -31,6 +38,8 @@ def main() -> None:
     candidates: dict[str, dict] = {}
     raw_reference_counts: dict[str, int] = defaultdict(int)
     coverage_rows: dict[tuple[str, str], dict] = {}
+    records_with_references = 0
+    records_without_references = 0
 
     for record in records:
         source_deposit = record.get("source_deposit")
@@ -52,8 +61,10 @@ def main() -> None:
         reference_field = record.get("references_original")
         if not reference_field:
             coverage_rows[coverage_key]["records_without_references"] += 1
+            records_without_references += 1
             continue
         coverage_rows[coverage_key]["records_with_references"] += 1
+        records_with_references += 1
         coverage_rows[coverage_key]["distinct_raw_reference_strings"].add(reference_field)
         raw_reference_counts[reference_field] += 1
         for fragment in [part.strip() for part in SPLIT_PATTERN.split(reference_field) if part.strip()]:
@@ -155,10 +166,13 @@ def main() -> None:
     (args.output_dir / "bibliography_summary.json").write_text(
         json.dumps(
             {
+                "input_jsonl": repo_relative_path(args.input_jsonl),
                 "raw_reference_count": len(raw_reference_counts),
                 "occurrence_count": len(occurrence_rows),
                 "candidate_count": len(candidates),
                 "coverage_group_count": len(coverage_rows),
+                "records_with_references": records_with_references,
+                "records_without_references": records_without_references,
             },
             ensure_ascii=False,
             indent=2,
