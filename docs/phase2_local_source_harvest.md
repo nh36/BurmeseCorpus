@@ -1,0 +1,135 @@
+# Phase 2 local bibliography source harvest
+
+The main route to improving the BibTeX authority layer is now **local-source evidence**, not broader fuzzy matching over raw corpus bibliography strings.
+
+This workflow is designed to harvest likely bibliography-bearing local files, cache approved copies in a gitignored project area, extract structured evidence from Frasch materials, and feed that evidence back into `data/working/bibliography/bibtex_authority/`.
+
+It does **not** modify `data/release/corpus_release_v0_3/`.
+
+## Configure local roots
+
+Set whichever of these roots are available on the local machine:
+
+```bash
+export OBI_LIBRARY_ROOT="/Volumes/ExternalDrive/Library"
+export OBI_AUTHOR_ALPHA_ROOT="/Volumes/ExternalDrive/Authors alphabetical"
+export OBI_LOCAL_BIB_ROOT="$HOME/Downloads"
+```
+
+- `OBI_LIBRARY_ROOT`: broad Burma/resource library root.
+- `OBI_AUTHOR_ALPHA_ROOT`: author-alphabetical external-drive folder.
+- `OBI_LOCAL_BIB_ROOT`: optional local bibliography/input folder such as `Downloads` or a staging directory containing `asia 2.bib`.
+
+If one or more variables are unset, the harvester reports that clearly and continues with the available roots.
+
+## What gets copied and what stays local-only
+
+The harvester may copy likely relevant local files into:
+
+- `data/local/bibliography_sources/`
+
+That cache is gitignored. The copied local PDFs, Word files, scans, and similar source files should normally **not** be committed.
+
+Commit the metadata instead:
+
+- `data/working/bibliography/local_sources/frasch_source_candidates.tsv`
+- `data/working/bibliography/local_sources/high_priority_local_candidates.tsv`
+- `data/working/bibliography/local_sources/local_file_manifest.tsv`
+- `data/working/bibliography/local_sources/local_source_harvest_report.json`
+- `data/working/bibliography/local_sources/frasch_reference_entries.tsv`
+- `data/working/bibliography/local_sources/frasch_bibliography.bib`
+- `data/working/bibliography/local_sources/frasch_extraction_report.json`
+
+## Practical run order
+
+```bash
+python3 scripts/harvest_local_bibliography_sources.py --mode frasch
+python3 scripts/extract_frasch_bibliography.py
+python3 scripts/harvest_local_bibliography_sources.py --mode high-priority
+python3 scripts/match_local_bibliography_sources.py
+python3 scripts/build_bibtex_authority.py
+python3 scripts/validate_bibtex_authority.py
+python3 -m unittest tests.test_bibtex_authority
+```
+
+## Frasch-first search
+
+Run:
+
+```bash
+python3 scripts/harvest_local_bibliography_sources.py --mode frasch
+```
+
+The script searches configured roots case-insensitively for `Frasch`, `Frosch`, `Tilman`, and `Tillman`, then writes:
+
+- `frasch_source_candidates.tsv`
+- `local_file_manifest.tsv`
+- `local_source_harvest_report.json`
+
+The priority is bibliography-bearing files such as `.doc`, `.docx`, `.rtf`, `.pdf`, `.txt`, `.bib`, `.ris`, `.enl`, and `.xml`.
+
+## Luce and other high-priority searches
+
+Run:
+
+```bash
+python3 scripts/harvest_local_bibliography_sources.py --mode high-priority
+python3 scripts/match_local_bibliography_sources.py
+```
+
+The high-priority mode searches for Luce and other frequently cited Burma-related names and abbreviations, then records candidate files in:
+
+- `high_priority_local_candidates.tsv`
+- `local_bibliography_match_report.json`
+- `source_library_manifest.tsv`
+
+This is still a reviewable evidence layer. It is intended to guide authority confirmation, not to bulk-ingest entire folders.
+
+## Frasch extraction
+
+Run:
+
+```bash
+python3 scripts/extract_frasch_bibliography.py
+```
+
+The extractor reads copied Frasch files from the local cache and writes:
+
+- `frasch_extracted_text.txt`
+- `frasch_reference_entries.tsv`
+- `frasch_bibliography.bib`
+- `frasch_extraction_report.json`
+
+`frasch_reference_entries.tsv` is the broader evidence layer. `frasch_bibliography.bib` is intentionally conservative and should contain only entries that parsed with reasonable confidence.
+
+## How local evidence flows into BibTeX authority
+
+`scripts/build_bibtex_authority.py` now treats harvested local evidence as higher-value input than generic machine stubs.
+
+Important authority statuses:
+
+- `confirmed_local_source`
+- `provisional_local_source`
+
+Important `source_of_authority` values:
+
+- `frasch_bibliography`
+- `frasch_word_document`
+- `local_luce_folder`
+- `local_burma_folder`
+
+Authority rows backed by local evidence should record:
+
+- `matched_local_source_id`
+- `matched_local_source_file`
+- `matched_local_reference`
+- `match_confidence`
+- `match_reason`
+
+## Reviewing unresolved high-frequency families
+
+After rebuilding the authority layer, review:
+
+- `data/working/bibliography/bibtex_authority/high_frequency_unresolved.tsv`
+
+This file is sorted by descending `occurrence_count` so the highest-value unresolved abbreviation and source families can be reviewed first instead of treating all unresolved references equally.

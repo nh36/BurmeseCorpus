@@ -1,0 +1,1070 @@
+family_id	family_label	family_type	member_count	occurrence_count	sample_raw_references	current_bibtex_key	current_status	suggested_local_search_terms	notes
+fam-plate-references	Plate references	internal_reference	254	545	Pl. II 198 | Pl. II 195b | Pl. II 201b	plateReferenceSystem	provisional_publication	Plate references	Prioritize local library or Frasch-preface evidence review.
+fam-raw-b-2	B 2, p. 815	unclear	30	32	B 2, p. 815 | B 2, p. 830 | B 2 p. 747	work	machine_stub	B 2, p. 815	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ub-1	UB 1, p. 297	unclear	23	30	UB 1, p. 297 | UB 1, p. 300 | UB 1, p. 191	work2	machine_stub	UB 1, p. 297	Prioritize local library or Frasch-preface evidence review.
+fam-raw-mp-1	MP 1, p. 81	unclear	16	17	MP 1, p. 81 | MP 1, no. 1, p. 1 | MP 1, p. 139	work3	machine_stub	MP 1, p. 81	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ub-2	UB 2, p. 203	unclear	12	14	UB 2, p. 203 | UB 2 p. 233 | UB 2, p. 133	work4	machine_stub	UB 2, p. 203	Prioritize local library or Frasch-preface evidence review.
+fam-raw-u-kyaw-bagan-minsa	U Kyaw, “Bagan Minsa”, p. 195	unclear	1	12	U Kyaw, “Bagan Minsa”, p. 195	kyawbagan	machine_stub	U Kyaw, “Bagan Minsa”, p. 195, U Kyaw, “Bagan Minsa”	Prioritize local library or Frasch-preface evidence review.
+fam-raw-mp-2	MP 2, p. 159	unclear	3	7	MP 2, p. 159 | MP 2, p. 61 | MP 2, p. 65	work5	machine_stub	MP 2, p. 159	Prioritize local library or Frasch-preface evidence review.
+fam-anthology	Anthology references	book	5	6	Anthology 5, p. 81 | Anthology 1, p. 39 | Anthology 5, p. 82	anthology	machine_stub	Anthology references, Anthology	Prioritize local library or Frasch-preface evidence review.
+fam-ray-theravada-buddhism	Ray, Theravada Buddhism	book	4	5	Ray, Theravada Buddhism, p. 106 | Ray, Theravada Buddhism, p. 108 | Ray, Theravada Buddhism, p. 164, Frasch, ‘King Na…	raytheravada	machine_stub	Ray, Theravada Buddhism, Ray, Theravada Buddhism	Prioritize local library or Frasch-preface evidence review.
+fam-harvey-history	Harvey, History references	book	2	3	The Myazedi Inscription in Four Languages, ed. by… | Harvey, History, p. 331	harveyhistory	machine_stub	Harvey, History references, Harvey, History of Myanmar	Prioritize local library or Frasch-preface evidence review.
+fam-raw-arasi-1936-37	ARASI 1936-37, p. 114	unclear	3	3	ARASI 1936-37, p. 114 | ARASI 1936-37, p. 115 | ARASI 1936-37, p. 116	1936work	machine_stub	ARASI 1936-37, p. 114	Prioritize local library or Frasch-preface evidence review.
+fam-raw-not-in-u-min-hswe	(not in U Min Hswe)	unclear	1	3	(not in U Min Hswe)	work6	machine_stub	(not in U Min Hswe)	Prioritize local library or Frasch-preface evidence review.
+fam-raw-2	& 2	unclear	2	2	& 2 | -2	work7	machine_stub	& 2	Prioritize local library or Frasch-preface evidence review.
+fam-raw-another-mm-4	another copy MM 4, no. 20, p. 90	unclear	2	2	another copy MM 4, no. 20, p. 90 | another copy MM 4, no. 9, p. 44	work8	machine_stub	another copy MM 4, no. 20, p. 90	Prioritize local library or Frasch-preface evidence review.
+fam-raw-arasi-1930-34	ARASI 1930-34, p. 190	unclear	1	2	ARASI 1930-34, p. 190	1930work	machine_stub	ARASI 1930-34, p. 190	Prioritize local library or Frasch-preface evidence review.
+fam-raw-b-1	B 1, p. 420	unclear	2	2	B 1, p. 420 | B 1, p. 428	work9	machine_stub	B 1, p. 420	Prioritize local library or Frasch-preface evidence review.
+fam-raw-b-2-first-part	B 2, p. 665 (first part)	unclear	1	2	B 2, p. 665 (first part)	work10	machine_stub	B 2, p. 665 (first part)	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-55-56	BA-55 & 56	unclear	1	2	BA-55 & 56	work11	machine_stub	BA-55 & 56	Prioritize local library or Frasch-preface evidence review.
+fam-raw-htupayon-2	Htupayon 2, p. 117	unclear	2	2	Htupayon 2, p. 117 | Htupayon 2, p. 183	work12	machine_stub	Htupayon 2, p. 117	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-319-c	IOB3-319/c	unclear	1	2	IOB3-319/c	work13	machine_stub	IOB3-319/c	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-456-a	IOB4-456/a	unclear	1	2	IOB4-456/a	work14	machine_stub	IOB4-456/a	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob5-542	IOB5-542	unclear	1	2	IOB5-542	work15	machine_stub	IOB5-542	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub1-212	IUB1-212	unclear	1	2	IUB1-212	work16	machine_stub	IUB1-212	Prioritize local library or Frasch-preface evidence review.
+fam-raw-list-918	copy List 918	unclear	1	2	copy List 918	work17	machine_stub	copy List 918	Prioritize local library or Frasch-preface evidence review.
+fam-raw-luce-d-809	Luce D 809	unclear	1	2	Luce D 809	work18	machine_stub	Luce D 809	Prioritize local library or Frasch-preface evidence review.
+fam-raw-luce-j-2667	Luce J 2667	unclear	1	2	Luce J 2667	work19	machine_stub	Luce J 2667	Prioritize local library or Frasch-preface evidence review.
+fam-raw-picture-archdept-on-file	picture (ArchDept) on file	unclear	1	2	picture (ArchDept) on file	work20	machine_stub	picture (ArchDept) on file	Prioritize local library or Frasch-preface evidence review.
+fam-raw-u-tha-myat-the-pali-version-of-the-myazedi-inscription-rangoon-1958	U Tha Myat, The Pali Version of the Myazedi Inscription, Rangoon 1958	article	1	2	U Tha Myat, The Pali Version of the Myazedi Inscr…	myat1958work	machine_stub	U Tha Myat, The Pali Version of the Myazedi Inscription, Rangoon 1958, U Tha Myat	Prioritize local library or Frasch-preface evidence review.
+fam-raw-u-tin-lwin-rajakumar-s-inscription-in-pali-in-takkasuil-yangon-1989	U Tin Lwin, Rajakumar's Inscription in Pali, in Takkasuil ... (repr. Yangon 198…	article	1	2	U Tin Lwin, Rajakumar's Inscription in Pali, in T…	lwin1989rajakumars	machine_stub	U Tin Lwin, Rajakumar's Inscription in Pali, in Takkasuil ... (repr. Yangon 198…, U Tin Lwin, Rajakumar's Inscription	Prioritize local library or Frasch-preface evidence review.
+fam-raw-12	12	unclear	1	1	12	work21	machine_stub	12	Prioritize local library or Frasch-preface evidence review.
+fam-raw-17	17	unclear	1	1	17	work22	machine_stub	17	Prioritize local library or Frasch-preface evidence review.
+fam-raw-184-bed-b-614-2	-184 BED B 614-2	unclear	1	1	-184 BED B 614-2	work23	machine_stub	-184 BED B 614-2	Prioritize local library or Frasch-preface evidence review.
+fam-raw-1936-37-4003-1938-39-4080	1936 37 4003 1938 39 4080	unclear	1	1	-1936-37/ 4003, 1938-39/ 4080	1936work2	machine_stub	1936 37 4003 1938 39 4080	Prioritize local library or Frasch-preface evidence review.
+fam-raw-1958-59	1958-59	unclear	1	1	1958-59	1958work	machine_stub	1958-59	Prioritize local library or Frasch-preface evidence review.
+fam-raw-1960	1960, p. 241	unclear	1	1	1960, p. 241	1960work	machine_stub	1960, p. 241	Prioritize local library or Frasch-preface evidence review.
+fam-raw-1962-63-bed-b-622-6	1962 63 bed b 622 6	unclear	1	1	1962-63 BED B 622-6	1962work	machine_stub	1962 63 bed b 622 6	Prioritize local library or Frasch-preface evidence review.
+fam-raw-1963	1963,	unclear	1	1	1963,	1963work	machine_stub	1963,	Prioritize local library or Frasch-preface evidence review.
+fam-raw-1970-71	1970-71	unclear	1	1	1970-71	1970work	machine_stub	1970-71	Prioritize local library or Frasch-preface evidence review.
+fam-raw-265	---265,	unclear	1	1	---265,	work24	machine_stub	---265,	Prioritize local library or Frasch-preface evidence review.
+fam-raw-3	3 ,	unclear	1	1	3 ,	work25	machine_stub	3 ,	Prioritize local library or Frasch-preface evidence review.
+fam-raw-31-2-3	-31 . . . . . . 2 . . . . . . 3 . . . . . . . . .	unclear	1	1	-31 . . . . . . 2 . . . . . . 3 . . . . . . . . .	work26	machine_stub	-31 . . . . . . 2 . . . . . . 3 . . . . . . . . .	Prioritize local library or Frasch-preface evidence review.
+fam-raw-377	-377	unclear	1	1	-377	work27	machine_stub	-377	Prioritize local library or Frasch-preface evidence review.
+fam-raw-6	-6-,	unclear	1	1	-6-,	work28	machine_stub	-6-,	Prioritize local library or Frasch-preface evidence review.
+fam-raw-617	617	unclear	1	1	617	work29	machine_stub	617	Prioritize local library or Frasch-preface evidence review.
+fam-raw-769	--769	unclear	1	1	--769	work30	machine_stub	--769	Prioritize local library or Frasch-preface evidence review.
+fam-raw-a-and-549	A, p. 97 and 549	unclear	1	1	A, p. 97 and 549	work31	machine_stub	A, p. 97 and 549	Prioritize local library or Frasch-preface evidence review.
+fam-raw-and-mm-4-said-to-come-from-sagaing	and mm 4 said to come from sagaing	unclear	1	1	and MM 4, no. 47, p. 214 (said to come from Sagai…	work32	machine_stub	and mm 4 said to come from sagaing	Prioritize local library or Frasch-preface evidence review.
+fam-raw-another-is-list-401	another copy is List 401	unclear	1	1	another copy is List 401	work33	machine_stub	another copy is List 401	Prioritize local library or Frasch-preface evidence review.
+fam-raw-another-mm-3	another copy MM 3, no. 25, p. 107	unclear	1	1	another copy MM 3, no. 25, p. 107	work34	machine_stub	another copy MM 3, no. 25, p. 107	Prioritize local library or Frasch-preface evidence review.
+fam-raw-arasi-1921-22-and-pl-19a	arasi 1921 22 and pl 19a	unclear	1	1	ARASI 1921-22, p. 35 and pl. 19a	1921work	machine_stub	arasi 1921 22 and pl 19a	Prioritize local library or Frasch-preface evidence review.
+fam-raw-arasi-1936-7-u-min-hswe	arasi 1936 7 u min hswe	unclear	1	1	ARASI 1936-7, p. 114, U Min Hswe, no. 11	1936work3	machine_stub	arasi 1936 7 u min hswe	Prioritize local library or Frasch-preface evidence review.
+fam-raw-aung-thwin-ceylonese-burmese-relations-jss-1976	aung thwin ceylonese burmese relations jss 1976	unclear	1	1	Aung-Thwin, Ceylonese-Burmese Relations, JSS 1976…	aungThwin1976ceylonese	machine_stub	aung thwin ceylonese burmese relations jss 1976, Aung-Thwin, Ceylonese-Burmese Relations, JSS 1976	Prioritize local library or Frasch-preface evidence review.
+fam-raw-b-2-dated-cs-636-1274-and-list-453-second-inscr	b 2 dated cs 636 1274 and list 453 second inscr	unclear	1	1	B 2, p. 819 (dated CS 636/ 1274) and List 453 (se…	work35	machine_stub	b 2 dated cs 636 1274 and list 453 second inscr	Prioritize local library or Frasch-preface evidence review.
+fam-raw-b-2-dated-cs-676-1314	b 2 dated cs 676 1314	unclear	1	1	B 2, p. 827 (dated CS 676/1314)	work36	machine_stub	b 2 dated cs 676 1314	Prioritize local library or Frasch-preface evidence review.
+fam-raw-b-2-first-inscr	B 2, p. 819 (first inscr.)	unclear	1	1	B 2, p. 819 (first inscr.)	work37	machine_stub	B 2, p. 819 (first inscr.)	Prioritize local library or Frasch-preface evidence review.
+fam-raw-b-2-mm	B 2, p. 796 (MM)	unclear	1	1	B 2, p. 796 (MM)	work38	machine_stub	B 2, p. 796 (MM)	Prioritize local library or Frasch-preface evidence review.
+fam-raw-b-28	/b+ 28	unclear	1	1	/b+ 28	work39	machine_stub	/b+ 28	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-1-9	BA 1, 9	unclear	1	1	BA 1, 9	work40	machine_stub	BA 1, 9	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-10	BA-10	unclear	1	1	BA-10	work41	machine_stub	BA-10	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-101	BA-101	unclear	1	1	BA-101	work42	machine_stub	BA-101	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-103	BA-103	unclear	1	1	BA-103	work43	machine_stub	BA-103	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-105	BA-105	unclear	1	1	BA-105	work44	machine_stub	BA-105	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-106	BA-106,	unclear	1	1	BA-106,	work45	machine_stub	BA-106,	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-107	BA 107	unclear	1	1	BA 107	work46	machine_stub	BA 107	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-109-157	BA-109, 157	unclear	1	1	BA-109, 157	work47	machine_stub	BA-109, 157	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-11	BA-11	unclear	1	1	BA-11	work48	machine_stub	BA-11	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-110	BA-110	unclear	1	1	BA-110	work49	machine_stub	BA-110	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-111	BA-111	unclear	1	1	BA-111	work50	machine_stub	BA-111	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-112	BA 112	unclear	1	1	BA 112	work51	machine_stub	BA 112	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-113	BA-113,	unclear	1	1	BA-113,	work52	machine_stub	BA-113,	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-114	BA-114	unclear	1	1	BA-114	work53	machine_stub	BA-114	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-115	BA-115	unclear	1	1	BA-115	work54	machine_stub	BA-115	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-116	BA-116	unclear	1	1	BA-116	work55	machine_stub	BA-116	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-117	BA-117	unclear	1	1	BA-117	work56	machine_stub	BA-117	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-118	BA-118	unclear	1	1	BA-118	work57	machine_stub	BA-118	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-121	BA-121	unclear	1	1	BA-121	work58	machine_stub	BA-121	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-122	BA-122	unclear	1	1	BA-122	work59	machine_stub	BA-122	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-124	BA-124	unclear	1	1	BA-124	work60	machine_stub	BA-124	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-125	BA-125	unclear	1	1	BA-125	work61	machine_stub	BA-125	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-127	BA-127	unclear	1	1	BA-127	work62	machine_stub	BA-127	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-128	BA-128	unclear	1	1	BA-128	work63	machine_stub	BA-128	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-130	BA-130	unclear	1	1	BA-130	work64	machine_stub	BA-130	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-133	BA-133	unclear	1	1	BA-133	work65	machine_stub	BA-133	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-135	BA 135	unclear	1	1	BA 135	work66	machine_stub	BA 135	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-137-138	BA-137-138	unclear	1	1	BA-137-138	work67	machine_stub	BA-137-138	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-139-140	BA-139-140	unclear	1	1	BA-139-140	work68	machine_stub	BA-139-140	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-141	BA-141	unclear	1	1	BA-141	work69	machine_stub	BA-141	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-142	BA-142	unclear	1	1	BA-142	work70	machine_stub	BA-142	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-143-144	BA-143-144	unclear	1	1	BA-143-144	work71	machine_stub	BA-143-144	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-145	BA-145	unclear	1	1	BA-145	work72	machine_stub	BA-145	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-146	BA-146	unclear	1	1	BA-146	work73	machine_stub	BA-146	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-147	BA-147	unclear	1	1	BA-147	work74	machine_stub	BA-147	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-149	BA-149	unclear	1	1	BA-149	work75	machine_stub	BA-149	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-150	BA-150	unclear	1	1	BA-150	work76	machine_stub	BA-150	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-151-152	BA-151-152	unclear	1	1	BA-151-152	work77	machine_stub	BA-151-152	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-153	BA-153	unclear	1	1	BA-153	work78	machine_stub	BA-153	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-154	BA-154	unclear	1	1	BA-154	work79	machine_stub	BA-154	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-156	BA-156	unclear	1	1	BA-156	work80	machine_stub	BA-156	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-16	BA-16	unclear	1	1	BA-16	work81	machine_stub	BA-16	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-162	BA-162	unclear	1	1	BA-162	work82	machine_stub	BA-162	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-164	BA-164	unclear	1	1	BA-164	work83	machine_stub	BA-164	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-165	BA-165	unclear	1	1	BA-165	work84	machine_stub	BA-165	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-166-167	BA-166-167	unclear	1	1	BA-166-167	work85	machine_stub	BA-166-167	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-168	BA-168	unclear	1	1	BA-168	work86	machine_stub	BA-168	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-169	BA-169	unclear	1	1	BA-169	work87	machine_stub	BA-169	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-170	BA-170	unclear	1	1	BA-170	work88	machine_stub	BA-170	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-174	BA-174	unclear	1	1	BA-174	work89	machine_stub	BA-174	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-177	BA-177	unclear	1	1	BA-177	work90	machine_stub	BA-177	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-179	BA-179	unclear	1	1	BA-179	work91	machine_stub	BA-179	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-18	BA-18	unclear	1	1	BA-18	work92	machine_stub	BA-18	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-183	BA-183	unclear	1	1	BA-183	work93	machine_stub	BA-183	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-184	BA-184	unclear	1	1	BA-184	work94	machine_stub	BA-184	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-185	BA-185	unclear	1	1	BA-185	work95	machine_stub	BA-185	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-186	BA-186	unclear	1	1	BA-186	work96	machine_stub	BA-186	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-187	BA-187	unclear	1	1	BA-187	work97	machine_stub	BA-187	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-188	BA-188	unclear	1	1	BA-188	work98	machine_stub	BA-188	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-189	BA-189	unclear	1	1	BA-189	work99	machine_stub	BA-189	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-19	BA-19	unclear	1	1	BA-19	work100	machine_stub	BA-19	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-190	BA-190	unclear	1	1	BA-190	work101	machine_stub	BA-190	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-191	BA-191	unclear	1	1	BA-191	work102	machine_stub	BA-191	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-192	BA-192	unclear	1	1	BA-192	work103	machine_stub	BA-192	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-193	BA-193	unclear	1	1	BA-193	work104	machine_stub	BA-193	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-194	BA-194,	unclear	1	1	BA-194,	work105	machine_stub	BA-194,	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-195	BA-195,	unclear	1	1	BA-195,	work106	machine_stub	BA-195,	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-197	BA-197	unclear	1	1	BA-197	work107	machine_stub	BA-197	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-198-199	BA-198-199	unclear	1	1	BA-198-199	work108	machine_stub	BA-198-199	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-200	BA-200	unclear	1	1	BA-200	work109	machine_stub	BA-200	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-202	BA-202,	unclear	1	1	BA-202,	work110	machine_stub	BA-202,	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-209	BA-209	unclear	1	1	BA-209	work111	machine_stub	BA-209	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-215	BA-215	unclear	1	1	BA-215	work112	machine_stub	BA-215	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-217	BA-217	unclear	1	1	BA-217	work113	machine_stub	BA-217	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-225-226	BA-225-226	unclear	1	1	BA-225-226	work114	machine_stub	BA-225-226	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-228-582	BA-228 & 582	unclear	1	1	BA-228 & 582	work115	machine_stub	BA-228 & 582	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-229	BA-229	unclear	1	1	BA-229	work116	machine_stub	BA-229	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-244	BA-244	unclear	1	1	BA-244	work117	machine_stub	BA-244	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-254	BA-254	unclear	1	1	BA-254	work118	machine_stub	BA-254	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-27	BA-27	unclear	1	1	BA-27	work119	machine_stub	BA-27	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-270	BA-270	unclear	1	1	BA-270	work120	machine_stub	BA-270	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-271-272	BA-271-272	unclear	1	1	BA-271-272	work121	machine_stub	BA-271-272	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-273	BA-273	unclear	1	1	BA-273	work122	machine_stub	BA-273	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-274	BA-274	unclear	1	1	BA-274	work123	machine_stub	BA-274	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-28	BA-28	unclear	1	1	BA-28	work124	machine_stub	BA-28	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-332	BA-332	unclear	1	1	BA-332	work125	machine_stub	BA-332	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-34	BA-34	unclear	1	1	BA-34	work126	machine_stub	BA-34	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-357	BA-357	unclear	1	1	BA-357	work127	machine_stub	BA-357	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-36	BA-36	unclear	1	1	BA-36	work128	machine_stub	BA-36	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-39	BA-39	unclear	1	1	BA-39	work129	machine_stub	BA-39	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-395	BA-395	unclear	1	1	BA-395	work130	machine_stub	BA-395	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-399	BA-399,	unclear	1	1	BA-399,	work131	machine_stub	BA-399,	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-41	BA-41	unclear	1	1	BA-41	work132	machine_stub	BA-41	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-419	BA-419	unclear	1	1	BA-419	work133	machine_stub	BA-419	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-42	BA-42	unclear	1	1	BA-42	work134	machine_stub	BA-42	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-428	BA-428,	unclear	1	1	BA-428,	work135	machine_stub	BA-428,	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-43	BA-43	unclear	1	1	BA-43	work136	machine_stub	BA-43	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-436-1-2-3-4-5	ba 436 1 2 3 4 5	unclear	1	1	BA-436, 1-2-3-4-5-,	work137	machine_stub	ba 436 1 2 3 4 5	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-437	BA-437	unclear	1	1	BA-437	work138	machine_stub	BA-437	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-466	BA-466	unclear	1	1	BA-466	work139	machine_stub	BA-466	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-47	BA-47	unclear	1	1	BA-47	work140	machine_stub	BA-47	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-471	BA-471	unclear	1	1	BA-471	work141	machine_stub	BA-471	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-472	BA-472	unclear	1	1	BA-472	work142	machine_stub	BA-472	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-474	BA-474	unclear	1	1	BA-474	work143	machine_stub	BA-474	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-487	BA-487	unclear	1	1	BA-487	work144	machine_stub	BA-487	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-49	BA-49	unclear	1	1	BA-49	work145	machine_stub	BA-49	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-494	BA-494	unclear	1	1	BA-494	work146	machine_stub	BA-494	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-496	BA-496	unclear	1	1	BA-496	work147	machine_stub	BA-496	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-50	BA-50	unclear	1	1	BA-50	work148	machine_stub	BA-50	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-508	BA-508	unclear	1	1	BA-508	work149	machine_stub	BA-508	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-51	BA-51	unclear	1	1	BA-51	work150	machine_stub	BA-51	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-510	BA-510	unclear	1	1	BA-510	work151	machine_stub	BA-510	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-52	BA-52	unclear	1	1	BA-52	work152	machine_stub	BA-52	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-535	BA-535	unclear	1	1	BA-535	work153	machine_stub	BA-535	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-54	BA-54	unclear	1	1	BA-54	work154	machine_stub	BA-54	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-545	BA-545	unclear	1	1	BA-545	work155	machine_stub	BA-545	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-546	BA-546	unclear	1	1	BA-546	work156	machine_stub	BA-546	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-554	BA-554	unclear	1	1	BA-554	work157	machine_stub	BA-554	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-57-539	BA-57 & 539	unclear	1	1	BA-57 & 539	work158	machine_stub	BA-57 & 539	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-574-227	BA-574-227	unclear	1	1	BA-574-227	work159	machine_stub	BA-574-227	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-58	BA-58	unclear	1	1	BA-58	work160	machine_stub	BA-58	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-583	BA-583	unclear	1	1	BA-583	work161	machine_stub	BA-583	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-59	BA-59	unclear	1	1	BA-59	work162	machine_stub	BA-59	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-595	BA-595	unclear	1	1	BA-595	work163	machine_stub	BA-595	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-60	BA-60	unclear	1	1	BA-60	work164	machine_stub	BA-60	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-61	BA-61	unclear	1	1	BA-61	work165	machine_stub	BA-61	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-62	BA-62	unclear	1	1	BA-62	work166	machine_stub	BA-62	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-63	BA-63	unclear	1	1	BA-63	work167	machine_stub	BA-63	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-66	BA-66,	unclear	1	1	BA-66,	work168	machine_stub	BA-66,	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-67	BA-67	unclear	1	1	BA-67	work169	machine_stub	BA-67	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-68	BA-68	unclear	1	1	BA-68	work170	machine_stub	BA-68	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-69	BA 69	unclear	1	1	BA 69	work171	machine_stub	BA 69	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-7	BA-7	unclear	1	1	BA-7	work172	machine_stub	BA-7	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-70	BA-70	unclear	1	1	BA-70	work173	machine_stub	BA-70	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-71	BA-71	unclear	1	1	BA-71	work174	machine_stub	BA-71	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-72	BA-72	unclear	1	1	BA-72	work175	machine_stub	BA-72	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-75	BA-75	unclear	1	1	BA-75	work176	machine_stub	BA-75	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-79	BA-79	unclear	1	1	BA-79	work177	machine_stub	BA-79	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-80	BA-80	unclear	1	1	BA-80	work178	machine_stub	BA-80	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-81	BA-81	unclear	1	1	BA-81	work179	machine_stub	BA-81	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-82	BA-82	unclear	1	1	BA-82	work180	machine_stub	BA-82	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-83	BA-83	unclear	1	1	BA-83	work181	machine_stub	BA-83	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-85	BA-85	unclear	1	1	BA-85	work182	machine_stub	BA-85	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-86	BA-86	unclear	1	1	BA-86	work183	machine_stub	BA-86	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-88	BA-88	unclear	1	1	BA-88	work184	machine_stub	BA-88	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-89	BA-89	unclear	1	1	BA-89	work185	machine_stub	BA-89	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-90	BA-90	unclear	1	1	BA-90	work186	machine_stub	BA-90	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-93	BA-93	unclear	1	1	BA-93	work187	machine_stub	BA-93	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-97-492	BA-97 & 492	unclear	1	1	BA-97 & 492	work188	machine_stub	BA-97 & 492	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-98	BA-98	unclear	1	1	BA-98	work189	machine_stub	BA-98	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-99	BA-99	unclear	1	1	BA-99	work190	machine_stub	BA-99	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ba-bed-b-635-2	BA BED B 635-2	unclear	1	1	BA BED B 635-2	work191	machine_stub	BA BED B 635-2	Prioritize local library or Frasch-preface evidence review.
+fam-raw-bed-a	BED A	unclear	1	1	BED A	work192	machine_stub	BED A	Prioritize local library or Frasch-preface evidence review.
+fam-raw-bm1-183-184	BM1-183-184	unclear	1	1	BM1-183-184	work193	machine_stub	BM1-183-184	Prioritize local library or Frasch-preface evidence review.
+fam-raw-bm1-184	BM1-184	unclear	1	1	BM1-184	work194	machine_stub	BM1-184	Prioritize local library or Frasch-preface evidence review.
+fam-raw-bm1-245	BM1-245	unclear	1	1	BM1-245	work195	machine_stub	BM1-245	Prioritize local library or Frasch-preface evidence review.
+fam-raw-bm1-250	BM1-250,	unclear	1	1	BM1-250,	work196	machine_stub	BM1-250,	Prioritize local library or Frasch-preface evidence review.
+fam-raw-bm1-262-270	BM1-262+270	unclear	1	1	BM1-262+270	work197	machine_stub	BM1-262+270	Prioritize local library or Frasch-preface evidence review.
+fam-raw-bm1-270-279	BM1-270 + 279	unclear	1	1	BM1-270 + 279	work198	machine_stub	BM1-270 + 279	Prioritize local library or Frasch-preface evidence review.
+fam-raw-bm1-351-352	BM1-351-352	unclear	1	1	BM1-351-352	work199	machine_stub	BM1-351-352	Prioritize local library or Frasch-preface evidence review.
+fam-raw-bm1-380	BM1-380	unclear	1	1	BM1-380	work200	machine_stub	BM1-380	Prioritize local library or Frasch-preface evidence review.
+fam-raw-bm1-381	BM1-381	unclear	1	1	BM1-381	work201	machine_stub	BM1-381	Prioritize local library or Frasch-preface evidence review.
+fam-raw-bm1-420	BM1-420	unclear	1	1	BM1-420	work202	machine_stub	BM1-420	Prioritize local library or Frasch-preface evidence review.
+fam-raw-bm1-72	BM1-72	unclear	1	1	BM1-72	work203	machine_stub	BM1-72	Prioritize local library or Frasch-preface evidence review.
+fam-raw-bm1-80	BM1-80	unclear	1	1	BM1-80	work204	machine_stub	BM1-80	Prioritize local library or Frasch-preface evidence review.
+fam-raw-bm1184	BM1184	unclear	1	1	BM1184	work205	machine_stub	BM1184	Prioritize local library or Frasch-preface evidence review.
+fam-raw-bm2-558	BM2 -558	unclear	1	1	BM2 -558	work206	machine_stub	BM2 -558	Prioritize local library or Frasch-preface evidence review.
+fam-raw-bm2-760	BM2-760	unclear	1	1	BM2-760	work207	machine_stub	BM2-760	Prioritize local library or Frasch-preface evidence review.
+fam-raw-bm2-768	BM2-768	unclear	1	1	BM2-768	work208	machine_stub	BM2-768	Prioritize local library or Frasch-preface evidence review.
+fam-raw-bm2-830-838	BM2-830, 838	unclear	1	1	BM2-830, 838	work209	machine_stub	BM2-830, 838	Prioritize local library or Frasch-preface evidence review.
+fam-raw-co-pies-list-225	co pies List 225	unclear	1	1	co pies List 225	work210	machine_stub	co pies List 225	Prioritize local library or Frasch-preface evidence review.
+fam-raw-copies-list-212	copies: List 212	unclear	1	1	copies: List 212	work211	machine_stub	copies: List 212	Prioritize local library or Frasch-preface evidence review.
+fam-raw-copies-list-217	copies List 217	unclear	1	1	copies List 217	work212	machine_stub	copies List 217	Prioritize local library or Frasch-preface evidence review.
+fam-raw-copies-list-402-second-inscr	copies List 402 (second inscr.)	unclear	1	1	copies List 402 (second inscr.)	work213	machine_stub	copies List 402 (second inscr.)	Prioritize local library or Frasch-preface evidence review.
+fam-raw-cp-a-first-part	cp. A, p. 17 (first part)	unclear	1	1	cp. A, p. 17 (first part)	awork	machine_stub	cp. A, p. 17 (first part), cp. A	Prioritize local library or Frasch-preface evidence review.
+fam-raw-duroiselle-arasi-1912-hledaung-inscr	Duroiselle, ARASI 1912, p. 149-51 (Hledaung inscr.)	unclear	1	1	Duroiselle, ARASI 1912, p. 149-51 (Hledaung inscr…	duroiselle1912arasi	machine_stub	Duroiselle, ARASI 1912, p. 149-51 (Hledaung inscr.), Duroiselle, ARASI 1912	Prioritize local library or Frasch-preface evidence review.
+fam-raw-frasch-coastal-peripheries	Frasch, “Coastal Peripheries”, p. 74	unclear	1	1	Frasch, “Coastal Peripheries”, p. 74	fraschcoastal	machine_stub	Frasch, “Coastal Peripheries”, p. 74, Frasch, “Coastal Peripheries”	Prioritize local library or Frasch-preface evidence review.
+fam-raw-frasch-mhrj-1998	Frasch, MHRJ 1998, p. 23-37	unclear	1	1	Frasch, MHRJ 1998, p. 23-37	frasch1998mhrj	machine_stub	Frasch, MHRJ 1998, p. 23-37, Frasch, MHRJ 1998	Prioritize local library or Frasch-preface evidence review.
+fam-raw-frasch-pagan	Frasch, Pagan, p. 102-103	unclear	1	1	Frasch, Pagan, p. 102-103	fraschpagan	machine_stub	Frasch, Pagan, p. 102-103, Frasch, Pagan	Prioritize local library or Frasch-preface evidence review.
+fam-raw-hla-thamein-bagan-hket	Hla Thamein, Bagan-hket, p. 113	unclear	1	1	Hla Thamein, Bagan-hket, p. 113	thameinbagan	machine_stub	Hla Thamein, Bagan-hket, p. 113, Hla Thamein, Bagan-hket	Prioritize local library or Frasch-preface evidence review.
+fam-raw-htupayon1	Htupayon1 p.249,	unclear	1	1	Htupayon1 p.249,	work214	machine_stub	Htupayon1 p.249,	Prioritize local library or Frasch-preface evidence review.
+fam-raw-in-situ	in situ	unclear	1	1	in situ	work215	machine_stub	in situ	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-1-bed-b-493-1	iob1 1 bed b 493 1	unclear	1	1	IOB1-1 BED B 493-1	work216	machine_stub	iob1 1 bed b 493 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-10-a-bed-b-552-1	iob1 10 a bed b 552 1	unclear	1	1	IOB1-10/a BED B 552-1	work217	machine_stub	iob1 10 a bed b 552 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-10-b	IOB1-10/b	unclear	1	1	IOB1-10/b	work218	machine_stub	IOB1-10/b	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-100-a-bed-b-597-10	iob1 100 a bed b 597 10	unclear	1	1	IOB1-100/a BED B 597-10	work219	machine_stub	iob1 100 a bed b 597 10	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-100-b-bed-b-599-2	iob1 100 b bed b 599 2	unclear	1	1	IOB1-100/b BED B 599-2	work220	machine_stub	iob1 100 b bed b 599 2	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-101-bed-b-599-3	iob1 101 bed b 599 3	unclear	1	1	IOB1-101 BED B 599-3	work221	machine_stub	iob1 101 bed b 599 3	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-102-bed-b-602-1	iob1 102 bed b 602 1	unclear	1	1	IOB1-102 BED B 602-1	work222	machine_stub	iob1 102 bed b 602 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-103-bed-b-600-8	iob1 103 bed b 600 8	unclear	1	1	IOB1-103 BED B 600-8	work223	machine_stub	iob1 103 bed b 600 8	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-104	IOB1-104	unclear	1	1	IOB1-104	work224	machine_stub	IOB1-104	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-105-a-bed-b-599-4	iob1 105 a bed b 599 4	unclear	1	1	IOB1-105/a BED B 599-4	work225	machine_stub	iob1 105 a bed b 599 4	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-106-bed-b-509-1	iob1 106 bed b 509 1	unclear	1	1	IOB1-106 BED B 509-1	work226	machine_stub	iob1 106 bed b 509 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-107	IOB1-107	unclear	1	1	IOB1-107	work227	machine_stub	IOB1-107	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-108-a-bed-b-567-6	iob1 108 a bed b 567 6	unclear	1	1	IOB1-108/a BED B 567-6	work228	machine_stub	iob1 108 a bed b 567 6	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-108-b-bed-b-585-2	iob1 108 b bed b 585 2	unclear	1	1	IOB1-108/b BED B 585-2	work229	machine_stub	iob1 108 b bed b 585 2	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-109-a-bed-b-598-7	iob1 109 a bed b 598 7	unclear	1	1	IOB1-109/a BED B 598-7	work230	machine_stub	iob1 109 a bed b 598 7	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-109-b-bed-b-596-2	iob1 109 b bed b 596 2	unclear	1	1	IOB1-109/b BED B 596-2	work231	machine_stub	iob1 109 b bed b 596 2	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-11-bed-b-553-1	iob1 11 bed b 553 1	unclear	1	1	IOB1-11 BED B 553-1	work232	machine_stub	iob1 11 bed b 553 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-118-b-bed-b-579-1	iob1 118 b bed b 579 1	unclear	1	1	IOB1-118/b BED B 579-1	work233	machine_stub	iob1 118 b bed b 579 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-12-bed-b-554-1	iob1 12 bed b 554 1	unclear	1	1	IOB1-12 BED B 554-1	work234	machine_stub	iob1 12 bed b 554 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-14-bed-b-558-1	iob1 14 bed b 558 1	unclear	1	1	IOB1-14 BED B 558-1	work235	machine_stub	iob1 14 bed b 558 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-15	IOB1-15	unclear	1	1	IOB1-15	work236	machine_stub	IOB1-15	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-16	IOB1-16	unclear	1	1	IOB1-16	work237	machine_stub	IOB1-16	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-17	IOB1-17	unclear	1	1	IOB1-17	work238	machine_stub	IOB1-17	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-18	IOB1-18	unclear	1	1	IOB1-18	work239	machine_stub	IOB1-18	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-19-a-bed-b-560-1	iob1 19 a bed b 560 1	unclear	1	1	IOB1-19/a, BED B 560-1	work240	machine_stub	iob1 19 a bed b 560 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-2	IOB1-2	unclear	1	1	IOB1-2	work241	machine_stub	IOB1-2	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-20-a	IOB1-20/a,	unclear	1	1	IOB1-20/a,	work242	machine_stub	IOB1-20/a,	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-21-bed-b-560-4	iob1 21 bed b 560 4	unclear	1	1	IOB1-21 BED B 560-4	work243	machine_stub	iob1 21 bed b 560 4	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-22-bed-b-563-2	iob1 22 bed b 563 2	unclear	1	1	IOB1-22 BED B 563-2	work244	machine_stub	iob1 22 bed b 563 2	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-23	IOB1-23	unclear	1	1	IOB1-23	work245	machine_stub	IOB1-23	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-24-bed-b-564-1	iob1 24 bed b 564 1	unclear	1	1	IOB1-24 BED B 564-1	work246	machine_stub	iob1 24 bed b 564 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-25-bed-a	IOB1-25 BED A	unclear	1	1	IOB1-25 BED A	work247	machine_stub	IOB1-25 BED A	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-26-bed-b-600-7	iob1 26 bed b 600 7	unclear	1	1	IOB1-26 BED B 600-7	work248	machine_stub	iob1 26 bed b 600 7	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-28-a-bed-b-568-1	iob1 28 a bed b 568 1	unclear	1	1	IOB1-28/a BED B 568-1	work249	machine_stub	iob1 28 a bed b 568 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-28-b	IOB1-28/b	unclear	1	1	IOB1-28/b	work250	machine_stub	IOB1-28/b	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-29-bed-b-568-2	iob1 29 bed b 568 2	unclear	1	1	IOB1-29 BED B 568-2	work251	machine_stub	iob1 29 bed b 568 2	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-3-bed-b-512-2	iob1 3 bed b 512 2	unclear	1	1	IOB1-3 BED B 512-2	work252	machine_stub	iob1 3 bed b 512 2	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-3-bed-b-550-1	iob1 3 bed b 550 1	unclear	1	1	IOB1-3 BED B 550-1	work253	machine_stub	iob1 3 bed b 550 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-31-bed-b-593-1	iob1 31 bed b 593 1	unclear	1	1	IOB1-31 BED B 593-1	work254	machine_stub	iob1 31 bed b 593 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-32-33-bed-b-570-2	iob1 32 33 bed b 570 2	unclear	1	1	IOB1-32, 33 BED B 570-2	work255	machine_stub	iob1 32 33 bed b 570 2	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-32-bed-b-570-1	iob1 32 bed b 570 1	unclear	1	1	IOB1-32 BED B 570-1	work256	machine_stub	iob1 32 bed b 570 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-33	IOB1-33	unclear	1	1	IOB1-33	work257	machine_stub	IOB1-33	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-35	IOB1-35	unclear	1	1	IOB1-35	work258	machine_stub	IOB1-35	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-36-bed-b-574-1	iob1 36 bed b 574 1	unclear	1	1	IOB1-36 BED B 574-1	work259	machine_stub	iob1 36 bed b 574 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-37-bed-574-2	IOB1-37 BED 574-2	unclear	1	1	IOB1-37 BED 574-2	work260	machine_stub	IOB1-37 BED 574-2	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-38-a	IOB1-38/a	unclear	1	1	IOB1-38/a	work261	machine_stub	IOB1-38/a	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-38-b-bed-b-573-4	iob1 38 b bed b 573 4	unclear	1	1	IOB1-38/b BED B 573-4	work262	machine_stub	iob1 38 b bed b 573 4	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-39-bed-b-575-1	iob1 39 bed b 575 1	unclear	1	1	IOB1-39 BED B 575-1	work263	machine_stub	iob1 39 bed b 575 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-4-bed-b-527-1	iob1 4 bed b 527 1	unclear	1	1	IOB1-4 BED B 527-1	work264	machine_stub	iob1 4 bed b 527 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-40	IOB1-40	unclear	1	1	IOB1-40	work265	machine_stub	IOB1-40	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-41-bed-b-578-1	iob1 41 bed b 578 1	unclear	1	1	IOB1-41 BED B 578-1	work266	machine_stub	iob1 41 bed b 578 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-42-bed-b-578-2	iob1 42 bed b 578 2	unclear	1	1	IOB1-42 BED B 578-2	work267	machine_stub	iob1 42 bed b 578 2	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-43	IOB1-43	unclear	1	1	IOB1-43	work268	machine_stub	IOB1-43	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-44-a-bed-b-578-3	iob1 44 a bed b 578 3	unclear	1	1	IOB1-44/a BED B 578-3	work269	machine_stub	iob1 44 a bed b 578 3	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-45-bed-b-581-2	iob1 45 bed b 581 2	unclear	1	1	IOB1-45 BED B 581-2	work270	machine_stub	iob1 45 bed b 581 2	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-46-bed-b-586-6	iob1 46 bed b 586 6	unclear	1	1	IOB1-46 BED B 586-6	work271	machine_stub	iob1 46 bed b 586 6	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-47	IOB1-47	unclear	1	1	IOB1-47	work272	machine_stub	IOB1-47	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-48-bed-b-582-1	iob1 48 bed b 582 1	unclear	1	1	IOB1-48 BED B 582-1	work273	machine_stub	iob1 48 bed b 582 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-49	IOB1-49	unclear	1	1	IOB1-49	work274	machine_stub	IOB1-49	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-5	IOB1-5	unclear	1	1	IOB1-5	work275	machine_stub	IOB1-5	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-50-b	IOB1-50 -b	unclear	1	1	IOB1-50 -b	work276	machine_stub	IOB1-50 -b	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-51-bed-b-585-3	iob1 51 bed b 585 3	unclear	1	1	IOB1-51 BED B 585-3	work277	machine_stub	iob1 51 bed b 585 3	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-53-bed-b-586-5	iob1 53 bed b 586 5	unclear	1	1	IOB1-53 BED B 586-5	work278	machine_stub	iob1 53 bed b 586 5	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-54-587-bed-b-586-10	iob1 54 587 bed b 586 10	unclear	1	1	IOB1-54 587 BED B 586-10	work279	machine_stub	iob1 54 587 bed b 586 10	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-55-a-bed-b-587-5	iob1 55 a bed b 587 5	unclear	1	1	IOB1-55/a BED B 587-5	work280	machine_stub	iob1 55 a bed b 587 5	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-55-b-bed-b-599-1	iob1 55 b bed b 599 1	unclear	1	1	IOB1-55/b BED B 599-1	work281	machine_stub	iob1 55 b bed b 599 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-56-a	IOB1-56/a	unclear	1	1	IOB1-56/a	work282	machine_stub	IOB1-56/a	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-56-b-bed-b-577-2	iob1 56 b bed b 577 2	unclear	1	1	IOB1-56/b BED B 577-2	work283	machine_stub	iob1 56 b bed b 577 2	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-56-b-bed-b-587-6	iob1 56 b bed b 587 6	unclear	1	1	IOB1-56/b BED B 587-6	work284	machine_stub	iob1 56 b bed b 587 6	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-57-a-iob5-563-b-bed-b-588-5	iob1 57 a iob5 563 b bed b 588 5	unclear	1	1	IOB1-57/a & IOB5-563/b BED B 588-5	work285	machine_stub	iob1 57 a iob5 563 b bed b 588 5	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-57-b-bed-b-588-1	iob1 57 b bed b 588 1	unclear	1	1	IOB1-57/b BED B 588-1	work286	machine_stub	iob1 57 b bed b 588 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-58	IOB1-58	unclear	1	1	IOB1-58	work287	machine_stub	IOB1-58	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-59-bed-b-561-1-b-509-2	iob1 59 bed b 561 1 b 509 2	unclear	1	1	IOB1-59 BED B 561-1 & B 509-2	work288	machine_stub	iob1 59 bed b 561 1 b 509 2	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-6-bed-b-541-1	iob1 6 bed b 541 1	unclear	1	1	IOB1-6 BED B 541-1	work289	machine_stub	iob1 6 bed b 541 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-60-a-bed-b-591-2	iob1 60 a bed b 591 2	unclear	1	1	IOB1-60/a BED B 591-2	work290	machine_stub	iob1 60 a bed b 591 2	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-60-b	IOB1-60/b	unclear	1	1	IOB1-60/b	work291	machine_stub	IOB1-60/b	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-61-bed-b-591-3	iob1 61 bed b 591 3	unclear	1	1	IOB1-61 BED B 591-3	work292	machine_stub	iob1 61 bed b 591 3	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-62-bed-b-591-7	iob1 62 bed b 591 7	unclear	1	1	IOB1-62 BED B 591-7	work293	machine_stub	iob1 62 bed b 591 7	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-63-a-b-bed-a	iob1 63 a b bed a	unclear	1	1	IOB1-63/a-b BED A	work294	machine_stub	iob1 63 a b bed a	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-64-bed-b-585-1	iob1 64 bed b 585 1	unclear	1	1	IOB1-64 BED B 585-1	work295	machine_stub	iob1 64 bed b 585 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-65-a-bed-b-592-4	iob1 65 a bed b 592 4	unclear	1	1	IOB1-65/a BED B 592-4	work296	machine_stub	iob1 65 a bed b 592 4	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-65-b	IOB1-65/b	unclear	1	1	IOB1-65/b	work297	machine_stub	IOB1-65/b	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-66	IOB1-66	unclear	1	1	IOB1-66	work298	machine_stub	IOB1-66	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-67-bed-b-577-3	iob1 67 bed b 577 3	unclear	1	1	IOB1-67, BED B 577-3	work299	machine_stub	iob1 67 bed b 577 3	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-68-bed-b-595-1	iob1 68 bed b 595 1	unclear	1	1	IOB1-68 BED B 595-1	work300	machine_stub	iob1 68 bed b 595 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-69-bed-b-593-2	iob1 69 bed b 593 2	unclear	1	1	IOB1-69 BED B 593-2	work301	machine_stub	iob1 69 bed b 593 2	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-7-bed-b-543-1	iob1 7 bed b 543 1	unclear	1	1	IOB1-7 BED B 543-1	work302	machine_stub	iob1 7 bed b 543 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-70-bed-b-595-2	iob1 70 bed b 595 2	unclear	1	1	IOB1-70 BED B 595-2	work303	machine_stub	iob1 70 bed b 595 2	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-71-bed-b-595-6	iob1 71 bed b 595 6	unclear	1	1	IOB1-71 BED B 595-6	work304	machine_stub	iob1 71 bed b 595 6	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-72	IOB1-72	unclear	1	1	IOB1-72	work305	machine_stub	IOB1-72	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-73-bed-b-585-4	iob1 73 bed b 585 4	unclear	1	1	IOB1-73 BED B 585-4	work306	machine_stub	iob1 73 bed b 585 4	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-74-bed-b-585-5	iob1 74 bed b 585 5	unclear	1	1	IOB1-74 BED B 585-5	work307	machine_stub	iob1 74 bed b 585 5	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-75-a-bed-b-587-3	iob1 75 a bed b 587 3	unclear	1	1	IOB1-75/a BED B 587-3	work308	machine_stub	iob1 75 a bed b 587 3	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-75-b-bed-b-586-1	iob1 75 b bed b 586 1	unclear	1	1	IOB1-75/b BED B 586-1	work309	machine_stub	iob1 75 b bed b 586 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-76	IOB1-76	unclear	1	1	IOB1-76	work310	machine_stub	IOB1-76	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-77	IOB1-77	unclear	1	1	IOB1-77	work311	machine_stub	IOB1-77	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-78-a	IOB1 78/a	unclear	1	1	IOB1 78/a	work312	machine_stub	IOB1 78/a	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-78-b-bed-b-595-3	iob1 78 b bed b 595 3	unclear	1	1	IOB1-78/b BED B 595-3	work313	machine_stub	iob1 78 b bed b 595 3	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-79-a	IOB1-79/a	unclear	1	1	IOB1-79/a	work314	machine_stub	IOB1-79/a	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-79-b-bed-b-595-4	iob1 79 b bed b 595 4	unclear	1	1	IOB1-79/b BED B 595-4	work315	machine_stub	iob1 79 b bed b 595 4	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-8-a-bed-b-544-1	iob1 8 a bed b 544 1	unclear	1	1	IOB1-8/a BED B 544-1	work316	machine_stub	iob1 8 a bed b 544 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-8-bed-b-597-9	iob1 8 bed b 597 9	unclear	1	1	IOB1--8 BED B 597-9	work317	machine_stub	iob1 8 bed b 597 9	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-80-bed-b-589-2	iob1 80 bed b 589 2	unclear	1	1	IOB1-80 BED B 589-2	work318	machine_stub	iob1 80 bed b 589 2	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-81	IOB1-81	unclear	1	1	IOB1-81	work319	machine_stub	IOB1-81	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-82-a-bed-b-589-1	iob1 82 a bed b 589 1	unclear	1	1	IOB1-82/a BED B 589-1	work320	machine_stub	iob1 82 a bed b 589 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-82-b	IOB1-82/b	unclear	1	1	IOB1-82/b	work321	machine_stub	IOB1-82/b	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-84-bed-b-571-2	iob1 84 bed b 571 2	unclear	1	1	IOB1-84 BED B 571-2	work322	machine_stub	iob1 84 bed b 571 2	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-86-bed-b-597-5	iob1 86 bed b 597 5	unclear	1	1	IOB1-86 BED B 597-5	work323	machine_stub	iob1 86 bed b 597 5	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-87	IOB1-87	unclear	1	1	IOB1-87	work324	machine_stub	IOB1-87	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-89	IOB1-89	unclear	1	1	IOB1-89	work325	machine_stub	IOB1-89	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-9-a-bed-b-555-1	iob1 9 a bed b 555 1	unclear	1	1	IOB1-9/a BED B 555-1	work326	machine_stub	iob1 9 a bed b 555 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-91-n-48-bed-b-598-2	iob1 91 n 48 bed b 598 2	unclear	1	1	IOB1-91 n°48 BED B 598-2	work327	machine_stub	iob1 91 n 48 bed b 598 2	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-92	IOB1-92	unclear	1	1	IOB1-92	work328	machine_stub	IOB1-92	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-93-bed-b-598-5	iob1 93 bed b 598 5	unclear	1	1	IOB1-93 BED B 598-5	work329	machine_stub	iob1 93 bed b 598 5	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-94-a-bed-b-598-4	iob1 94 a bed b 598 4	unclear	1	1	IOB1-94/a BED B 598-4	work330	machine_stub	iob1 94 a bed b 598 4	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-94-b	IOB1-94/b	unclear	1	1	IOB1-94/b	work331	machine_stub	IOB1-94/b	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-95-a-bed-b-598-8	iob1 95 a bed b 598 8	unclear	1	1	IOB1-95/a BED B 598-8	work332	machine_stub	iob1 95 a bed b 598 8	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-96-bed-b-598-9	iob1 96 bed b 598 9	unclear	1	1	IOB1-96 BED B 598-9	work333	machine_stub	iob1 96 bed b 598 9	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-97	IOB1-97	unclear	1	1	IOB1-97	work334	machine_stub	IOB1-97	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob1-c-b-bed-b-546-1	iob1 c b bed b 546 1	unclear	1	1	IOB1-c/b BED B 546-1	work335	machine_stub	iob1 c b bed b 546 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob183-bed-b-591-5	IOB183 BED B 591-5	unclear	1	1	IOB183 BED B 591-5	work336	machine_stub	IOB183 BED B 591-5	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-110-bed-b-443-1	iob2 110 bed b 443 1	unclear	1	1	IOB2-110 BED B 443-1	work337	machine_stub	iob2 110 bed b 443 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-111-bed-b-482-1	iob2 111 bed b 482 1	unclear	1	1	IOB2-111 BED B 482-1	work338	machine_stub	iob2 111 bed b 482 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-112-bed-b-482-2	iob2 112 bed b 482 2	unclear	1	1	IOB2-112 BED B 482-2	work339	machine_stub	iob2 112 bed b 482 2	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-113-bed-b-537-6	iob2 113 bed b 537 6	unclear	1	1	IOB2-113 BED B 537-6	work340	machine_stub	iob2 113 bed b 537 6	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-114-a-bed-b-537-1	iob2 114 a bed b 537 1	unclear	1	1	IOB2 114/a BED B 537-1	work341	machine_stub	iob2 114 a bed b 537 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-114-b-bed-b-548-1	iob2 114 b bed b 548 1	unclear	1	1	IOB2-114/b BED B 548-1	work342	machine_stub	iob2 114 b bed b 548 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-115-bed-b-549-1	iob2 115 bed b 549 1	unclear	1	1	IOB2-115 BED B 549-1	work343	machine_stub	iob2 115 bed b 549 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-116-bed-b-559-1	iob2 116 bed b 559 1	unclear	1	1	IOB2-116 BED B 559-1	work344	machine_stub	iob2 116 bed b 559 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-117-a	IOB2-117/a	unclear	1	1	IOB2-117/a	work345	machine_stub	IOB2-117/a	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-117-b-bed-b-560-5	iob2 117 b bed b 560 5	unclear	1	1	IOB2-117/b BED B 560-5	work346	machine_stub	iob2 117 b bed b 560 5	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-118-a-bed-b-570-2	iob2 118 a bed b 570 2	unclear	1	1	IOB2-118/a BED B 570-2	work347	machine_stub	iob2 118 a bed b 570 2	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-119-a-bed-b-577-5	iob2 119 a bed b 577 5	unclear	1	1	IOB2-119/a BED B 577-5	work348	machine_stub	iob2 119 a bed b 577 5	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-119-b-bed-b-591-8	iob2 119 b bed b 591 8	unclear	1	1	IOB2-119/b BED B 591-8	work349	machine_stub	iob2 119 b bed b 591 8	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-120-a-bed-b-579-8	iob2 120 a bed b 579 8	unclear	1	1	IOB2-120/a BED B 579-8	work350	machine_stub	iob2 120 a bed b 579 8	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-120-b	IOB2-120/b	unclear	1	1	IOB2-120/b	work351	machine_stub	IOB2-120/b	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-121-a-bed-b-581-1	iob2 121 a bed b 581 1	unclear	1	1	IOB2-121/a BED B 581-1	work352	machine_stub	iob2 121 a bed b 581 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-121-b-bed-b-586-2	iob2 121 b bed b 586 2	unclear	1	1	IOB2-121/b BED B 586-2	work353	machine_stub	iob2 121 b bed b 586 2	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-122-a-bed-b-587-1	iob2 122 a bed b 587 1	unclear	1	1	IOB2-122/a BED B 587-1	work354	machine_stub	iob2 122 a bed b 587 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-122-b-bed-b-587-8	iob2 122 b bed b 587 8	unclear	1	1	IOB2-122/b BED B 587-8	work355	machine_stub	iob2 122 b bed b 587 8	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-123-bed-b-587-4	iob2 123 bed b 587 4	unclear	1	1	IOB2-123 BED B 587-4	work356	machine_stub	iob2 123 bed b 587 4	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-125-a-bed-b-591-1	iob2 125 a bed b 591 1	unclear	1	1	IOB2-125/a BED B 591-1	work357	machine_stub	iob2 125 a bed b 591 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-125-b-bed-b-580-1	iob2 125 b bed b 580 1	unclear	1	1	IOB2-125/b BED B 580-1	work358	machine_stub	iob2 125 b bed b 580 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-126-a-bed-b-592-1	iob2 126 a bed b 592 1	unclear	1	1	IOB2-126/a BED B 592-1	work359	machine_stub	iob2 126 a bed b 592 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-126-b-bed-b-592-2	iob2 126 b bed b 592 2	unclear	1	1	IOB2-126/b BED B 592-2	work360	machine_stub	iob2 126 b bed b 592 2	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-127-a-bed-b-597-2	iob2 127 a bed b 597 2	unclear	1	1	IOB2-127/a BED B 597-2	work361	machine_stub	iob2 127 a bed b 597 2	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-127-b-bed-b-597-1	iob2 127 b bed b 597 1	unclear	1	1	IOB2-127/b BED B 597-1	work362	machine_stub	iob2 127 b bed b 597 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-128-bed-b-597-6	iob2 128 bed b 597 6	unclear	1	1	IOB2-128 BED B 597-6	work363	machine_stub	iob2 128 bed b 597 6	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-128-bed-b-597-7	iob2 128 bed b 597 7	unclear	1	1	IOB2-128 BED B 597-7	work364	machine_stub	iob2 128 bed b 597 7	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-128-bed-b-597-8	iob2 128 bed b 597 8	unclear	1	1	IOB2-128 BED B 597-8	work365	machine_stub	iob2 128 bed b 597 8	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-129-bed-b-600-9	iob2 129 bed b 600 9	unclear	1	1	IOB2-129 BED B 600-9	work366	machine_stub	iob2 129 bed b 600 9	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-130-bed-b-600-3	iob2 130 bed b 600 3	unclear	1	1	IOB2-130 BED B 600-3	work367	machine_stub	iob2 130 bed b 600 3	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-131-a-bed-b-600-4	iob2 131 a bed b 600 4	unclear	1	1	IOB2-131/a BED B 600-4	work368	machine_stub	iob2 131 a bed b 600 4	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-131-b-bed-b-600-5	iob2 131 b bed b 600 5	unclear	1	1	IOB2-131/b BED B 600-5	work369	machine_stub	iob2 131 b bed b 600 5	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-132-a-bed-b-600-6	iob2 132 a bed b 600 6	unclear	1	1	IOB2-132/a BED B 600-6	work370	machine_stub	iob2 132 a bed b 600 6	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-132-b-bed-b-601-2	iob2 132 b bed b 601 2	unclear	1	1	IOB2 132/b BED B 601-2	work371	machine_stub	iob2 132 b bed b 601 2	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-133-bed-b-601-4	iob2 133 bed b 601 4	unclear	1	1	IOB2-133 BED B 601-4	work372	machine_stub	iob2 133 bed b 601 4	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-134-a	IOB2-134/a	unclear	1	1	IOB2-134/a	work373	machine_stub	IOB2-134/a	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-134-b-bed-b-593-5	iob2 134 b bed b 593 5	unclear	1	1	IOB2-134/b BED B 593-5	work374	machine_stub	iob2 134 b bed b 593 5	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-135-a-bed-b-600-7	iob2 135 a bed b 600 7	unclear	1	1	IOB2-135/a BED B 600-7	work375	machine_stub	iob2 135 a bed b 600 7	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-135-b-bed-b-600-7	iob2 135 b bed b 600 7	unclear	1	1	IOB2-135/b BED B 600-7	work376	machine_stub	iob2 135 b bed b 600 7	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-137-bed-b-600-7	iob2 137 bed b 600 7	unclear	1	1	IOB2-137 BED B 600-7	work377	machine_stub	iob2 137 bed b 600 7	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-138-bed-b-603-3	iob2 138 bed b 603 3	unclear	1	1	IOB2-138 BED B 603-3	work378	machine_stub	iob2 138 bed b 603 3	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-139-bed-b-603-5	iob2 139 bed b 603 5	unclear	1	1	IOB2-139 BED B 603-5	work379	machine_stub	iob2 139 bed b 603 5	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-140-a-bed-b-604-1	iob2 140 a bed b 604 1	unclear	1	1	IOB2 140/a BED B 604-1	work380	machine_stub	iob2 140 a bed b 604 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-140-b-bed-b-571-2	iob2 140 b bed b 571 2	unclear	1	1	IOB2-140/b BED B 571-2	work381	machine_stub	iob2 140 b bed b 571 2	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-141-bed-b-604-7	iob2 141 bed b 604 7	unclear	1	1	IOB2 141/ BED B 604-7	work382	machine_stub	iob2 141 bed b 604 7	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-141-bed-b-604-8	iob2 141 bed b 604 8	unclear	1	1	IOB2 141/ BED B 604-8	work383	machine_stub	iob2 141 bed b 604 8	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-143-a-bed-b-571-2	iob2 143 a bed b 571 2	unclear	1	1	IOB2-143/a BED B 571-2	work384	machine_stub	iob2 143 a bed b 571 2	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-143-b-bed-b-571-2	iob2 143 b bed b 571 2	unclear	1	1	IOB2-143/b BED B 571-2	work385	machine_stub	iob2 143 b bed b 571 2	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-144-bed-b-571-2	iob2 144 bed b 571 2	unclear	1	1	IOB2-144 BED B 571-2	work386	machine_stub	iob2 144 bed b 571 2	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-145-bed-b-604-3	iob2 145 bed b 604 3	unclear	1	1	IOB2-145 BED B 604-3	work387	machine_stub	iob2 145 bed b 604 3	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-146-bed-b-604-4	iob2 146 bed b 604 4	unclear	1	1	IOB2-146 BED B 604-4	work388	machine_stub	iob2 146 bed b 604 4	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-147-a-bed-b-604-5	iob2 147 a bed b 604 5	unclear	1	1	IOB2-147/a BED B 604-5	work389	machine_stub	iob2 147 a bed b 604 5	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-147-bed-b-601-2	iob2 147 bed b 601 2	unclear	1	1	IOB2-147/ BED B 601-2	work390	machine_stub	iob2 147 bed b 601 2	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-149-bed-b-604-10	iob2 149 bed b 604 10	unclear	1	1	IOB2-149 BED B 604-10	work391	machine_stub	iob2 149 bed b 604 10	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-150-bed-b-601-4	iob2 150 bed b 601 4	unclear	1	1	IOB2-150 BED B 601-4	work392	machine_stub	iob2 150 bed b 601 4	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-151-bed-b-601-4	iob2 151 bed b 601 4	unclear	1	1	IOB2-151 BED B 601-4	work393	machine_stub	iob2 151 bed b 601 4	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-152-bed-b-601-4	iob2 152 bed b 601 4	unclear	1	1	IOB2-152 BED B 601-4	work394	machine_stub	iob2 152 bed b 601 4	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-153-a-bed-b-601-4	iob2 153 a bed b 601 4	unclear	1	1	IOB2-153/a BED B 601-4	work395	machine_stub	iob2 153 a bed b 601 4	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-153-b-bed-b-601-4	iob2 153 b bed b 601 4	unclear	1	1	IOB2-153/b BED B 601-4	work396	machine_stub	iob2 153 b bed b 601 4	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-154-iob3-340-bed-b-601-4	iob2 154 iob3 340 bed b 601 4	unclear	1	1	IOB2-154 & IOB3-340 BED B 601-4	work397	machine_stub	iob2 154 iob3 340 bed b 601 4	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-155-bed-b-601-4	iob2 155 bed b 601 4	unclear	1	1	IOB2-155 BED B 601-4	work398	machine_stub	iob2 155 bed b 601 4	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-156-bed-b-607-1	iob2 156 bed b 607 1	unclear	1	1	IOB2-156 BED B 607-1	work399	machine_stub	iob2 156 bed b 607 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-157-bed-b-607-2	iob2 157 bed b 607 2	unclear	1	1	IOB2-157 BED B 607-2	work400	machine_stub	iob2 157 bed b 607 2	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-158-bed-b-607-6	iob2 158 bed b 607 6	unclear	1	1	IOB2-158 BED B 607-6	work401	machine_stub	iob2 158 bed b 607 6	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-159	IOB2-159	unclear	1	1	IOB2-159	work402	machine_stub	IOB2-159	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-160-a-bed-b-609-1	iob2 160 a bed b 609 1	unclear	1	1	IOB2-160/a BED B 609-1	work403	machine_stub	iob2 160 a bed b 609 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-161-a-bed-b-622-4	iob2 161 a bed b 622 4	unclear	1	1	IOB2-161/a BED B 622-4	work404	machine_stub	iob2 161 a bed b 622 4	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-161-b-bed-b-593-5	iob2 161 b bed b 593 5	unclear	1	1	IOB2-161/b BED B 593-5	work405	machine_stub	iob2 161 b bed b 593 5	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-162-bed-b-610-2	iob2 162 bed b 610 2	unclear	1	1	IOB2-162 BED B 610-2	work406	machine_stub	iob2 162 bed b 610 2	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-163-bed-b-593-5	iob2 163 bed b 593 5	unclear	1	1	IOB2-163 BED B 593-5	work407	machine_stub	iob2 163 bed b 593 5	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-164-bed-b-593-5	iob2 164 bed b 593 5	unclear	1	1	IOB2-164 BED B 593-5	work408	machine_stub	iob2 164 bed b 593 5	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-165-a-bed-b-600-7	iob2 165 a bed b 600 7	unclear	1	1	IOB2-165/a BED B 600-7	work409	machine_stub	iob2 165 a bed b 600 7	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-165-b-bed-b-600-7	iob2 165 b bed b 600 7	unclear	1	1	IOB2-165/b BED B 600-7	work410	machine_stub	iob2 165 b bed b 600 7	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-166-a-bed-b-600-7	iob2 166 a bed b 600 7	unclear	1	1	IOB2-166/a BED B 600-7	work411	machine_stub	iob2 166 a bed b 600 7	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-166-b-bed-b-600-7	iob2 166 b bed b 600 7	unclear	1	1	IOB2-166/b BED B 600-7	work412	machine_stub	iob2 166 b bed b 600 7	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-167-bed-b-600-7	iob2 167 bed b 600 7	unclear	1	1	IOB2 167 BED B 600-7	work413	machine_stub	iob2 167 bed b 600 7	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-168-bed-b-600-7	iob2 168 bed b 600 7	unclear	1	1	IOB2-168 BED B 600-7	work414	machine_stub	iob2 168 bed b 600 7	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-169-bed-b-600-7	iob2 169 bed b 600 7	unclear	1	1	IOB2-169 BED B 600-7	work415	machine_stub	iob2 169 bed b 600 7	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-170-bed-b-600-7	iob2 170 bed b 600 7	unclear	1	1	IOB2-170 BED B 600-7	work416	machine_stub	iob2 170 bed b 600 7	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-171-bed-b-600-7	iob2 171 bed b 600 7	unclear	1	1	IOB2-171 BED B 600-7	work417	machine_stub	iob2 171 bed b 600 7	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-172-bed-b-600-7	iob2 172 bed b 600 7	unclear	1	1	IOB2-172 BED B 600-7	work418	machine_stub	iob2 172 bed b 600 7	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-173-bed-b-604-2	iob2 173 bed b 604 2	unclear	1	1	IOB2-173 BED B 604-2	work419	machine_stub	iob2 173 bed b 604 2	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-174-bed-b-600-7	iob2 174 bed b 600 7	unclear	1	1	IOB2-174 BED B 600-7	work420	machine_stub	iob2 174 bed b 600 7	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-175-bed-b-600-7	iob2 175 bed b 600 7	unclear	1	1	IOB2-175 BED B 600-7	work421	machine_stub	iob2 175 bed b 600 7	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-176-a-bed-b-600-7	iob2 176 a bed b 600 7	unclear	1	1	IOB2-176/a BED B 600-7	work422	machine_stub	iob2 176 a bed b 600 7	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-176-b-bed-b-602-1	iob2 176 b bed b 602 1	unclear	1	1	IOB2-176/b BED B 602-1	work423	machine_stub	iob2 176 b bed b 602 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-177-a-bed-b-613-2	iob2 177 a bed b 613 2	unclear	1	1	IOB2-177/a BED B 613-2	work424	machine_stub	iob2 177 a bed b 613 2	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-177-b-bed-b-602-1	iob2 177 b bed b 602 1	unclear	1	1	IOB2 177/b BED B 602-1	work425	machine_stub	iob2 177 b bed b 602 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-178-bed-b-513-1	iob2 178 bed b 513 1	unclear	1	1	IOB2-178 BED B 513-1	work426	machine_stub	iob2 178 bed b 513 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-180-bed-b-622-6	iob2 180 bed b 622 6	unclear	1	1	IOB2-180 BED B 622-6	work427	machine_stub	iob2 180 bed b 622 6	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-181-bed-b-600-7	iob2 181 bed b 600 7	unclear	1	1	IOB2-181 BED B 600-7	work428	machine_stub	iob2 181 bed b 600 7	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-182-a-bed-b-615-4	iob2 182 a bed b 615 4	unclear	1	1	IOB2-182/a BED B 615-4	work429	machine_stub	iob2 182 a bed b 615 4	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-182-b	IOB2-182/b	unclear	1	1	IOB2-182/b	work430	machine_stub	IOB2-182/b	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-183-a-bed-b-615-6	iob2 183 a bed b 615 6	unclear	1	1	IOB2-183/a BED B 615-6	work431	machine_stub	iob2 183 a bed b 615 6	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-183-b-bed-b-600-7	iob2 183 b bed b 600 7	unclear	1	1	IOB2-183/b BED B 600-7	work432	machine_stub	iob2 183 b bed b 600 7	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-185-bed-b-617-1	iob2 185 bed b 617 1	unclear	1	1	IOB2-185 BED B 617-1	work433	machine_stub	iob2 185 bed b 617 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-186-bed-b-600-7	iob2 186 bed b 600 7	unclear	1	1	IOB2-186 BED B 600-7	work434	machine_stub	iob2 186 bed b 600 7	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-187-bed-b-616-4	iob2 187 bed b 616 4	unclear	1	1	IOB2-187 BED B 616-4	work435	machine_stub	iob2 187 bed b 616 4	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-188-bed-b-617-3	iob2 188 bed b 617 3	unclear	1	1	IOB2-188 BED B 617-3	work436	machine_stub	iob2 188 bed b 617 3	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-189-bed-b-600-7	iob2 189 bed b 600 7	unclear	1	1	IOB2-189 BED B 600-7	work437	machine_stub	iob2 189 bed b 600 7	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-190-a-bed-b-586-3	iob2 190 a bed b 586 3	unclear	1	1	IOB2-190/a BED B 586-3	work438	machine_stub	iob2 190 a bed b 586 3	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-190-b-bed-b-600-7	iob2 190 b bed b 600 7	unclear	1	1	IOB2-190/b BED B 600-7	work439	machine_stub	iob2 190 b bed b 600 7	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-191-a-bed-b-620-1	iob2 191 a bed b 620 1	unclear	1	1	IOB2-191/a BED B 620-1	work440	machine_stub	iob2 191 a bed b 620 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-191-b-bed-b-600-7	iob2 191 b bed b 600 7	unclear	1	1	IOB2-191/b BED B 600-7	work441	machine_stub	iob2 191 b bed b 600 7	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-193-bed-b-600-7	iob2 193 bed b 600 7	unclear	1	1	IOB2-193 BED B 600-7	work442	machine_stub	iob2 193 bed b 600 7	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-194-bed-b-600-7	iob2 194 bed b 600 7	unclear	1	1	IOB2-194 BED B 600-7	work443	machine_stub	iob2 194 bed b 600 7	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-195-a-bed-b-622-3	iob2 195 a bed b 622 3	unclear	1	1	IOB2-195/a BED B 622-3	work444	machine_stub	iob2 195 a bed b 622 3	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-195-b-bed-b-622-4	iob2 195 b bed b 622 4	unclear	1	1	IOB2-195/b BED B 622-4	work445	machine_stub	iob2 195 b bed b 622 4	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-196-bed-b-622-4	iob2 196 bed b 622 4	unclear	1	1	IOB2-196 BED B 622-4	work446	machine_stub	iob2 196 bed b 622 4	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-197-bed-b-600-7	iob2 197 bed b 600 7	unclear	1	1	IOB2-197 BED B 600-7	work447	machine_stub	iob2 197 bed b 600 7	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-198-bed-b-622-6	iob2 198 bed b 622 6	unclear	1	1	IOB2-198 BED B 622-6	work448	machine_stub	iob2 198 bed b 622 6	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-199-bed-b-600-7	iob2 199 bed b 600 7	unclear	1	1	IOB2-199 BED B 600-7	work449	machine_stub	iob2 199 bed b 600 7	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-200-bed-b-631-6	iob2 200 bed b 631 6	unclear	1	1	IOB2-200 BED B 631-6	work450	machine_stub	iob2 200 bed b 631 6	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-201-a	IOB2-201/a	unclear	1	1	IOB2-201/a	work451	machine_stub	IOB2-201/a	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-201-b-bed-b-623-1	iob2 201 b bed b 623 1	unclear	1	1	IOB2-201/b BED B 623-1	work452	machine_stub	iob2 201 b bed b 623 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-202-bed-b-624-1	iob2 202 bed b 624 1	unclear	1	1	IOB2-202 BED B 624-1	work453	machine_stub	iob2 202 bed b 624 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-203-bed-b-624-2	iob2 203 bed b 624 2	unclear	1	1	IOB2-203 BED B 624-2	work454	machine_stub	iob2 203 bed b 624 2	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-204-a-bed-b-624-3	iob2 204 a bed b 624 3	unclear	1	1	IOB2-204/a BED B 624-3	work455	machine_stub	iob2 204 a bed b 624 3	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-204-b-bed-b-624-3	iob2 204 b bed b 624 3	unclear	1	1	IOB2-204/b BED B 624-3	work456	machine_stub	iob2 204 b bed b 624 3	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-205-bed-b-624-4	iob2 205 bed b 624 4	unclear	1	1	IOB2 205 BED B 624-4	work457	machine_stub	iob2 205 bed b 624 4	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-206-bed-b-622-4	iob2 206 bed b 622 4	unclear	1	1	IOB2-206 BED B 622-4	work458	machine_stub	iob2 206 bed b 622 4	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-207-bed-b-622-6	iob2 207 bed b 622 6	unclear	1	1	IOB2-207 BED B 622-6	work459	machine_stub	iob2 207 bed b 622 6	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-208-bed-b-622-4	iob2 208 bed b 622 4	unclear	1	1	IOB2-208 BED B 622-4	work460	machine_stub	iob2 208 bed b 622 4	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-209-bed-b-622-4	iob2 209 bed b 622 4	unclear	1	1	IOB2-209 BED B 622-4	work461	machine_stub	iob2 209 bed b 622 4	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-210-a-bed-b-600-2	iob2 210 a bed b 600 2	unclear	1	1	IOB2-210/a BED B 600-2	work462	machine_stub	iob2 210 a bed b 600 2	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-210-b-bed-b-622-6	iob2 210 b bed b 622 6	unclear	1	1	IOB2-210/b BED B 622-6	work463	machine_stub	iob2 210 b bed b 622 6	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-211-bed-b-622-6	iob2 211 bed b 622 6	unclear	1	1	IOB2-211 BED B 622-6	work464	machine_stub	iob2 211 bed b 622 6	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-212-bed-b-622-8	iob2 212 bed b 622 8	unclear	1	1	IOB2-212 BED B 622-8	work465	machine_stub	iob2 212 bed b 622 8	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-213-a-bed-b-622-6	iob2 213 a bed b 622 6	unclear	1	1	IOB2-213/a BED B 622-6	work466	machine_stub	iob2 213 a bed b 622 6	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-213-b-bed-b-622-6	iob2 213 b bed b 622 6	unclear	1	1	IOB2-213/b BED B 622-6	work467	machine_stub	iob2 213 b bed b 622 6	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-214-a-iob5-579-bed-b-622-6	iob2 214 a iob5 579 bed b 622 6	unclear	1	1	IOB2-214/a & IOB5-579 BED B 622-6	work468	machine_stub	iob2 214 a iob5 579 bed b 622 6	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-214-b-bed-b-622-6	iob2 214 b bed b 622 6	unclear	1	1	IOB2 214/b BED B 622-6	work469	machine_stub	iob2 214 b bed b 622 6	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-215-a-bed-b-622-6	iob2 215 a bed b 622 6	unclear	1	1	IOB2-215/a BED B 622-6	work470	machine_stub	iob2 215 a bed b 622 6	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-215-b-bed-b-622-6	iob2 215 b bed b 622 6	unclear	1	1	IOB2-215/b BED B 622-6	work471	machine_stub	iob2 215 b bed b 622 6	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-216-bed-b-622-6	iob2 216 bed b 622 6	unclear	1	1	IOB2-216 BED B 622-6	work472	machine_stub	iob2 216 bed b 622 6	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-217-bed-b-623-1	iob2 217 bed b 623 1	unclear	1	1	IOB2-217 BED B 623-1	work473	machine_stub	iob2 217 bed b 623 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-218-a-bed-b-623-1	iob2 218 a bed b 623 1	unclear	1	1	IOB2-218/a BED B 623-1	work474	machine_stub	iob2 218 a bed b 623 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-218-b-bed-b-623-1	iob2 218 b bed b 623 1	unclear	1	1	IOB2-218/b BED B 623-1	work475	machine_stub	iob2 218 b bed b 623 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-218-b-bed-b-628-6b	iob2 218 b bed b 628 6b	unclear	1	1	IOB2-218/b BED B 628-6b	work476	machine_stub	iob2 218 b bed b 628 6b	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-219-a-bed-b-629-1	iob2 219 a bed b 629 1	unclear	1	1	IOB2-219/a BED B 629-1	work477	machine_stub	iob2 219 a bed b 629 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-219-b-bed-b-623-1	iob2 219 b bed b 623 1	unclear	1	1	IOB2-219/b BED B 623-1	work478	machine_stub	iob2 219 b bed b 623 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-220-bed-b-623-1	iob2 220 bed b 623 1	unclear	1	1	IOB2-220 BED B 623-1	work479	machine_stub	iob2 220 bed b 623 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-221-bed-a	IOB2-221 BED A	unclear	1	1	IOB2-221 BED A	work480	machine_stub	IOB2-221 BED A	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-222-a-bed-b-630-1	iob2 222 a bed b 630 1	unclear	1	1	IOB2-222/a BED B 630-1	work481	machine_stub	iob2 222 a bed b 630 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-222-b-bed-a	IOB2-222/b BED A	unclear	1	1	IOB2-222/b BED A	work482	machine_stub	IOB2-222/b BED A	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-223-a-bed-a	IOB2-223/a BED A	unclear	1	1	IOB2-223/a BED A	work483	machine_stub	IOB2-223/a BED A	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2-223-b-bed-a	IOB2-223/b BED A	unclear	1	1	IOB2-223/b BED A	work484	machine_stub	IOB2-223/b BED A	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob2160-b-bed-b-609-5	iob2160 b bed b 609 5	unclear	1	1	IOB2160/b BED B 609-5	work485	machine_stub	iob2160 b bed b 609 5	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-224-bed-b-624-1	iob3 224 bed b 624 1	unclear	1	1	IOB3-224 BED B 624-1	work486	machine_stub	iob3 224 bed b 624 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-225-bed-b-631-1	iob3 225 bed b 631 1	unclear	1	1	IOB3-225 BED B 631-1	work487	machine_stub	iob3 225 bed b 631 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-226-bed-b-624-1	iob3 226 bed b 624 1	unclear	1	1	IOB3-226 BED B 624-1	work488	machine_stub	iob3 226 bed b 624 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-227-bed-b-622-4	iob3 227 bed b 622 4	unclear	1	1	IOB3-227 BED B 622-4	work489	machine_stub	iob3 227 bed b 622 4	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-227-bed-b-624-1	iob3 227 bed b 624 1	unclear	1	1	IOB3-227 BED B 624-1	work490	machine_stub	iob3 227 bed b 624 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-228-a-bed-b-624-1	iob3 228 a bed b 624 1	unclear	1	1	IOB3-228/a BED B 624-1	work491	machine_stub	iob3 228 a bed b 624 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-228-b-bed-b-632-1	iob3 228 b bed b 632 1	unclear	1	1	IOB3-228/b BED B 632-1	work492	machine_stub	iob3 228 b bed b 632 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-229-bed-b-632-2	iob3 229 bed b 632 2	unclear	1	1	IOB3-229 BED B 632-2	work493	machine_stub	iob3 229 bed b 632 2	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-230-bed-b-632-3	iob3 230 bed b 632 3	unclear	1	1	IOB3-230 BED B 632-3	work494	machine_stub	iob3 230 bed b 632 3	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-231-a-bed-b-632-4	iob3 231 a bed b 632 4	unclear	1	1	IOB3-231/a BED B 632-4	work495	machine_stub	iob3 231 a bed b 632 4	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-231-b-bed-b-633-1	iob3 231 b bed b 633 1	unclear	1	1	IOB3-231/b BED B 633-1	work496	machine_stub	iob3 231 b bed b 633 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-232-bed-b-633-2	iob3 232 bed b 633 2	unclear	1	1	IOB3-232 BED B 633-2	work497	machine_stub	iob3 232 bed b 633 2	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-233	IOB3-233	unclear	1	1	IOB3-233	work498	machine_stub	IOB3-233	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-233-bed-b-633-3	iob3 233 bed b 633 3	unclear	1	1	IOB3-233 BED B 633-3	work499	machine_stub	iob3 233 bed b 633 3	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-234-bed-b-624-1	iob3 234 bed b 624 1	unclear	1	1	IOB3-234 BED B 624-1	work500	machine_stub	iob3 234 bed b 624 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-235-bed-b-634-1	iob3 235 bed b 634 1	unclear	1	1	IOB3-235 BED B 634-1	work501	machine_stub	iob3 235 bed b 634 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-236-a-bed-b-624-2	iob3 236 a bed b 624 2	unclear	1	1	IOB3-236/a BED B 624-2	work502	machine_stub	iob3 236 a bed b 624 2	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-236-b-bed-b-634-3	iob3 236 b bed b 634 3	unclear	1	1	IOB3-236/b BED B 634-3	work503	machine_stub	iob3 236 b bed b 634 3	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-237-bed-b-634-4	iob3 237 bed b 634 4	unclear	1	1	IOB3-237 BED B 634-4	work504	machine_stub	iob3 237 bed b 634 4	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-238-bed-b-634-5	iob3 238 bed b 634 5	unclear	1	1	IOB3-238 BED B 634-5	work505	machine_stub	iob3 238 bed b 634 5	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-239-bed-b-635-1	iob3 239 bed b 635 1	unclear	1	1	IOB3-239 BED B 635-1	work506	machine_stub	iob3 239 bed b 635 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-240-bed-b-624-2	iob3 240 bed b 624 2	unclear	1	1	IOB3-240 BED B 624-2	work507	machine_stub	iob3 240 bed b 624 2	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-241	IOB3-241	unclear	1	1	IOB3-241	work508	machine_stub	IOB3-241	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-242-bed-b-635-3	iob3 242 bed b 635 3	unclear	1	1	IOB3-242 BED B 635-3	work509	machine_stub	iob3 242 bed b 635 3	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-243-bed-b-624-3	iob3 243 bed b 624 3	unclear	1	1	IOB3-243 BED B 624-3	work510	machine_stub	iob3 243 bed b 624 3	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-244-bed-b-624-4	iob3 244 bed b 624 4	unclear	1	1	IOB3-244 BED B 624-4	work511	machine_stub	iob3 244 bed b 624 4	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-245-a-bed-b-636-2	iob3 245 a bed b 636 2	unclear	1	1	IOB3-245/a BED B 636-2	work512	machine_stub	iob3 245 a bed b 636 2	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-245-b-bed-b-622-4	iob3 245 b bed b 622 4	unclear	1	1	IOB3-245/b BED B 622-4	work513	machine_stub	iob3 245 b bed b 622 4	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-246-bed-b-623-2-b-636-3	iob3 246 bed b 623 2 b 636 3	unclear	1	1	IOB3-246 BED B 623-2 & B 636-3	work514	machine_stub	iob3 246 bed b 623 2 b 636 3	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-247-bed-b-624-4	iob3 247 bed b 624 4	unclear	1	1	IOB3-247 BED B 624-4	work515	machine_stub	iob3 247 bed b 624 4	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-248-bed-b-622-4	iob3 248 bed b 622 4	unclear	1	1	IOB3-248 BED B 622-4	work516	machine_stub	iob3 248 bed b 622 4	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-249-bed-b-622-4	iob3 249 bed b 622 4	unclear	1	1	IOB3-249 BED B 622-4	work517	machine_stub	iob3 249 bed b 622 4	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-250-bed-b-622-4	iob3 250 bed b 622 4	unclear	1	1	IOB3-250 BED B 622-4	work518	machine_stub	iob3 250 bed b 622 4	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-251-bed-b-622-4	iob3 251 bed b 622 4	unclear	1	1	IOB3-251 BED B 622-4	work519	machine_stub	iob3 251 bed b 622 4	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-252-bed-b-622-4	iob3 252 bed b 622 4	unclear	1	1	IOB3-252 BED B 622-4	work520	machine_stub	iob3 252 bed b 622 4	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-253-a-bed-b-622-4	iob3 253 a bed b 622 4	unclear	1	1	IOB3-253/a BED B 622-4	work521	machine_stub	iob3 253 a bed b 622 4	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-253-b-bed-b-622-4	iob3 253 b bed b 622 4	unclear	1	1	IOB3-253/b BED B 622-4	work522	machine_stub	iob3 253 b bed b 622 4	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-254-a-bed-b-622-4	iob3 254 a bed b 622 4	unclear	1	1	IOB3-254/a BED B 622-4	work523	machine_stub	iob3 254 a bed b 622 4	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-254-b-bed-b-622-4	iob3 254 b bed b 622 4	unclear	1	1	IOB3-254/b BED B 622-4	work524	machine_stub	iob3 254 b bed b 622 4	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-256-bed-b-604-14-b-604-12	iob3 256 bed b 604 14 b 604 12	unclear	1	1	IOB3-256 BED B 604-14 & B 604-12	work525	machine_stub	iob3 256 bed b 604 14 b 604 12	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-257-bed-b-622-4	iob3 257 bed b 622 4	unclear	1	1	IOB3-257 BED B 622-4	work526	machine_stub	iob3 257 bed b 622 4	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-258-bed-b-622-4	iob3 258 bed b 622 4	unclear	1	1	IOB3-258 BED B 622-4	work527	machine_stub	iob3 258 bed b 622 4	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-259-bed-b-622-4	iob3 259 bed b 622 4	unclear	1	1	IOB3-259 BED B 622-4	work528	machine_stub	iob3 259 bed b 622 4	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-260-bed-b-622-4	iob3 260 bed b 622 4	unclear	1	1	IOB3-260 BED B 622-4	work529	machine_stub	iob3 260 bed b 622 4	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-261-bed-b-622-4	iob3 261 bed b 622 4	unclear	1	1	IOB3-261 BED B 622-4	work530	machine_stub	iob3 261 bed b 622 4	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-262-bed-b-622-4	iob3 262 bed b 622 4	unclear	1	1	IOB3-262 BED B 622-4	work531	machine_stub	iob3 262 bed b 622 4	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-263-bed-b-622-4	iob3 263 bed b 622 4	unclear	1	1	IOB3-263 BED B 622-4	work532	machine_stub	iob3 263 bed b 622 4	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-264-bed-b-622-4	iob3 264 bed b 622 4	unclear	1	1	IOB3-264 BED B 622-4	work533	machine_stub	iob3 264 bed b 622 4	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-265-bed-b-622-4	iob3 265 bed b 622 4	unclear	1	1	IOB3-265 BED B 622-4	work534	machine_stub	iob3 265 bed b 622 4	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-266-a-bed-b-622-4	iob3 266 a bed b 622 4	unclear	1	1	IOB3-266/a BED B 622-4	work535	machine_stub	iob3 266 a bed b 622 4	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-266-b-bed-b-622-4	iob3 266 b bed b 622 4	unclear	1	1	IOB3-266/b BED B 622-4	work536	machine_stub	iob3 266 b bed b 622 4	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-266-c-bed-b-622-4	iob3 266 c bed b 622 4	unclear	1	1	IOB3-266/c BED B 622-4	work537	machine_stub	iob3 266 c bed b 622 4	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-267-bed-b-622-4	iob3 267 bed b 622 4	unclear	1	1	IOB3-267 BED B 622-4	work538	machine_stub	iob3 267 bed b 622 4	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-268-bed-b-622-4	iob3 268 bed b 622 4	unclear	1	1	IOB3-268 BED B 622-4	work539	machine_stub	iob3 268 bed b 622 4	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-269-bed-b-622-4	iob3 269 bed b 622 4	unclear	1	1	IOB3-269 BED B 622-4	work540	machine_stub	iob3 269 bed b 622 4	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-270-bed-b-614-4	iob3 270 bed b 614 4	unclear	1	1	IOB3-270 BED B 614-4	work541	machine_stub	iob3 270 bed b 614 4	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-271-bed-b-622-4	iob3 271 bed b 622 4	unclear	1	1	IOB3-271 BED B 622-4	work542	machine_stub	iob3 271 bed b 622 4	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-273-bed-b-622-4	iob3 273 bed b 622 4	unclear	1	1	IOB3-273 BED B 622-4	work543	machine_stub	iob3 273 bed b 622 4	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-274-bed-b-622-4	iob3 274 bed b 622 4	unclear	1	1	IOB3-274 BED B 622-4	work544	machine_stub	iob3 274 bed b 622 4	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-276-a-bed-b-622-4	iob3 276 a bed b 622 4	unclear	1	1	IOB3-276/a BED B 622-4	work545	machine_stub	iob3 276 a bed b 622 4	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-276-b-bed-b-622-4	iob3 276 b bed b 622 4	unclear	1	1	IOB3-276/b BED B 622-4	work546	machine_stub	iob3 276 b bed b 622 4	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-279-bed-b-622-4	iob3 279 bed b 622 4	unclear	1	1	IOB3-279 BED B 622-4	work547	machine_stub	iob3 279 bed b 622 4	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-280-a-bed-b-622-4	iob3 280 a bed b 622 4	unclear	1	1	IOB3-280/a BED B 622-4	work548	machine_stub	iob3 280 a bed b 622 4	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-280-b-bed-b-622-4	iob3 280 b bed b 622 4	unclear	1	1	IOB3-280/b BED B 622-4	work549	machine_stub	iob3 280 b bed b 622 4	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-281-a-bed-b-622-4	iob3 281 a bed b 622 4	unclear	1	1	IOB3-281/a BED B 622-4	work550	machine_stub	iob3 281 a bed b 622 4	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-281-b-bed-b-622-4	iob3 281 b bed b 622 4	unclear	1	1	IOB3-281/b BED B 622-4	work551	machine_stub	iob3 281 b bed b 622 4	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-282-bed-b-622-4	iob3 282 bed b 622 4	unclear	1	1	IOB3-282 BED B 622-4	work552	machine_stub	iob3 282 bed b 622 4	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-283-bed-b-622-4	iob3 283 bed b 622 4	unclear	1	1	IOB3-283 BED B 622-4	work553	machine_stub	iob3 283 bed b 622 4	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-284-a-bed-b-622-4	iob3 284 a bed b 622 4	unclear	1	1	IOB3-284/a BED B 622-4	work554	machine_stub	iob3 284 a bed b 622 4	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-284-b-bed-b-622-4	iob3 284 b bed b 622 4	unclear	1	1	IOB3-284/b BED B 622-4	work555	machine_stub	iob3 284 b bed b 622 4	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-285-bed-b-622-4	iob3 285 bed b 622 4	unclear	1	1	IOB3-285 BED B 622-4	work556	machine_stub	iob3 285 bed b 622 4	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-286-bed-b-622-4	iob3 286 bed b 622 4	unclear	1	1	IOB3-286 BED B 622-4	work557	machine_stub	iob3 286 bed b 622 4	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-287-b-bed-b-622-4	iob3 287 b bed b 622 4	unclear	1	1	IOB3-287/b BED B 622-4	work558	machine_stub	iob3 287 b bed b 622 4	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-288-bed-b-622-4	iob3 288 bed b 622 4	unclear	1	1	IOB3-288 BED B 622-4	work559	machine_stub	iob3 288 bed b 622 4	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-289-bed-b-622-4	iob3 289 bed b 622 4	unclear	1	1	IOB3-289 BED B 622-4	work560	machine_stub	iob3 289 bed b 622 4	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-290-a-bed-b-622-4	iob3 290 a bed b 622 4	unclear	1	1	IOB3-290/a BED B 622-4	work561	machine_stub	iob3 290 a bed b 622 4	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-290-b-bed-b-622-4	iob3 290 b bed b 622 4	unclear	1	1	IOB3-290/b BED B 622-4	work562	machine_stub	iob3 290 b bed b 622 4	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-291-bed-b-622-4	iob3 291 bed b 622 4	unclear	1	1	IOB3-291 BED B 622-4	work563	machine_stub	iob3 291 bed b 622 4	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-292-bed-b-622-4	iob3 292 bed b 622 4	unclear	1	1	IOB3-292 BED B 622-4	work564	machine_stub	iob3 292 bed b 622 4	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-293-bed-b-622-4	iob3 293 bed b 622 4	unclear	1	1	IOB3-293 BED B 622-4	work565	machine_stub	iob3 293 bed b 622 4	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-294-bed-b-622-4	iob3 294 bed b 622 4	unclear	1	1	IOB3-294 BED B 622-4	work566	machine_stub	iob3 294 bed b 622 4	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-295-bed-b-622-6	iob3 295 bed b 622 6	unclear	1	1	IOB3-295 BED B 622-6	work567	machine_stub	iob3 295 bed b 622 6	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-296	IOB3-296	unclear	1	1	IOB3-296	work568	machine_stub	IOB3-296	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-296-297-198-b	IOB3-296-297-198/b	unclear	1	1	IOB3-296-297-198/b	work569	machine_stub	IOB3-296-297-198/b	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-296-297-298-a	IOB3-296, 297, 298/a	unclear	1	1	IOB3-296, 297, 298/a	work570	machine_stub	IOB3-296, 297, 298/a	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-296-298-a-b	IOB3-296 & 298/a-b	unclear	1	1	IOB3-296 & 298/a-b	work571	machine_stub	IOB3-296 & 298/a-b	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-297-a-b-bed-b-600-7	iob3 297 a b bed b 600 7	unclear	1	1	IOB3-297/a-b BED B 600-7	work572	machine_stub	iob3 297 a b bed b 600 7	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-297-bed-b-622-6	iob3 297 bed b 622 6	unclear	1	1	IOB3-297 BED B 622-6	work573	machine_stub	iob3 297 bed b 622 6	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-298-a-bed-b-622-6	iob3 298 a bed b 622 6	unclear	1	1	IOB3-298/a BED B 622-6	work574	machine_stub	iob3 298 a bed b 622 6	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-298-b-bed-b-623-1	iob3 298 b bed b 623 1	unclear	1	1	IOB3-298/b BED B 623-1	work575	machine_stub	iob3 298 b bed b 623 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-299-bed-b-622-4	iob3 299 bed b 622 4	unclear	1	1	IOB3-299 BED B 622-4	work576	machine_stub	iob3 299 bed b 622 4	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-302-bed-b-610-5	iob3 302 bed b 610 5	unclear	1	1	IOB3-302 BED B 610-5	work577	machine_stub	iob3 302 bed b 610 5	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-303-bed-a	IOB3-303 BED A	unclear	1	1	IOB3-303 BED A	work578	machine_stub	IOB3-303 BED A	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-304-bed-a	IOB3-304 BED A	unclear	1	1	IOB3-304 BED A	work579	machine_stub	IOB3-304 BED A	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-305-a	IOB3-305/a	unclear	1	1	IOB3-305/a	work580	machine_stub	IOB3-305/a	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-306-a-iob5-586-b-c-bed-b-623-1	iob3 306 a iob5 586 b c bed b 623 1	unclear	1	1	IOB3-306/a & IOB5-586/b/c BED B 623-1	work581	machine_stub	iob3 306 a iob5 586 b c bed b 623 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-306-b-bed-b-623-1	iob3 306 b bed b 623 1	unclear	1	1	IOB3-306/b BED B 623-1	work582	machine_stub	iob3 306 b bed b 623 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-306-c-bed-b-623-1	iob3 306 c bed b 623 1	unclear	1	1	IOB3-306/c BED B 623-1	work583	machine_stub	iob3 306 c bed b 623 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-306-d-bed-b-623-1	iob3 306 d bed b 623 1	unclear	1	1	IOB3-306/d BED B 623-1	work584	machine_stub	iob3 306 d bed b 623 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-308-bed-b-603-1	iob3 308 bed b 603 1	unclear	1	1	IOB3-308 BED B 603-1	work585	machine_stub	iob3 308 bed b 603 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-309	IOB3-309	unclear	1	1	IOB3-309	work586	machine_stub	IOB3-309	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-310-a	IOB3-310/a	unclear	1	1	IOB3-310/a	work587	machine_stub	IOB3-310/a	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-310-b	IOB3-310/b	unclear	1	1	IOB3-310/b	work588	machine_stub	IOB3-310/b	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-311-a-bed-b-603-2	iob3 311 a bed b 603 2	unclear	1	1	IOB3-311/a BED B 603-2	work589	machine_stub	iob3 311 a bed b 603 2	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-311-b-bed-b-603-2	iob3 311 b bed b 603 2	unclear	1	1	IOB3-311/b BED B 603-2	work590	machine_stub	iob3 311 b bed b 603 2	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-312-a-bed-a	IOB3-312/a BED A	unclear	1	1	IOB3-312/a BED A	work591	machine_stub	IOB3-312/a BED A	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-312-a-bed-b-600-7	iob3 312 a bed b 600 7	unclear	1	1	IOB3-312/a BED B 600-7	work592	machine_stub	iob3 312 a bed b 600 7	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-312-b-bed-b-603-2	iob3 312 b bed b 603 2	unclear	1	1	IOB3-312/b BED B 603-2	work593	machine_stub	iob3 312 b bed b 603 2	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-313-a-bed-b-603-2	iob3 313 a bed b 603 2	unclear	1	1	IOB3-313/a BED B 603-2	work594	machine_stub	iob3 313 a bed b 603 2	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-313-b-bed-b-603-2	iob3 313 b bed b 603 2	unclear	1	1	IOB3-313/b BED B 603-2	work595	machine_stub	iob3 313 b bed b 603 2	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-314-a-bed-a	IOB3-314/a BED A	unclear	1	1	IOB3-314/a BED A	work596	machine_stub	IOB3-314/a BED A	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-314-b-bed-a	IOB3-314/b BED A	unclear	1	1	IOB3-314/b BED A	work597	machine_stub	IOB3-314/b BED A	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-314-c-bed-b-603-2	iob3 314 c bed b 603 2	unclear	1	1	IOB3-314/c BED B 603-2	work598	machine_stub	iob3 314 c bed b 603 2	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-315-a-bed-b-603-2	iob3 315 a bed b 603 2	unclear	1	1	IOB3-315/a BED B 603-2	work599	machine_stub	iob3 315 a bed b 603 2	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-315-b	IOB3-315/b	unclear	1	1	IOB3-315/b	work600	machine_stub	IOB3-315/b	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-316-a-bed-b-600-7	iob3 316 a bed b 600 7	unclear	1	1	IOB3-316/a BED B 600-7	work601	machine_stub	iob3 316 a bed b 600 7	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-316-b	IOB3-316/b	unclear	1	1	IOB3-316/b	work602	machine_stub	IOB3-316/b	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-317-a-bed-b-603-2	iob3 317 a bed b 603 2	unclear	1	1	IOB3-317/a & BED B 603-2	work603	machine_stub	iob3 317 a bed b 603 2	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-318-a-bed-b-603-2	iob3 318 a bed b 603 2	unclear	1	1	IOB3-318/a BED B 603-2	work604	machine_stub	iob3 318 a bed b 603 2	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-318-b	IOB3-318/b	unclear	1	1	IOB3-318/b	work605	machine_stub	IOB3-318/b	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-319-a-bed-a	IOB3-319/a BED A	unclear	1	1	IOB3-319/a BED A	work606	machine_stub	IOB3-319/a BED A	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-320	IOB3-320	unclear	1	1	IOB3-320	work607	machine_stub	IOB3-320	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-320-bed-b-600-7	iob3 320 bed b 600 7	unclear	1	1	IOB3-320 BED B 600-7	work608	machine_stub	iob3 320 bed b 600 7	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-321-bed-a	IOB3-321 BED A	unclear	1	1	IOB3-321 BED A	work609	machine_stub	IOB3-321 BED A	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-322-bed-a	IOB3-322 BED A	unclear	1	1	IOB3-322 BED A	work610	machine_stub	IOB3-322 BED A	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-323-a-b-c-bed-a	iob3 323 a b c bed a	unclear	1	1	IOB3-323/a-b-c BED A	work611	machine_stub	iob3 323 a b c bed a	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-323-a-b-c-bed-b-594-4	iob3 323 a b c bed b 594 4	unclear	1	1	IOB3-323/a-b-c BED B 594-4	work612	machine_stub	iob3 323 a b c bed b 594 4	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-324-a	IOB3-324/a	unclear	1	1	IOB3-324/a	work613	machine_stub	IOB3-324/a	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-324-b-bed-b-602-5	iob3 324 b bed b 602 5	unclear	1	1	IOB3-324/b BED B 602-5	work614	machine_stub	iob3 324 b bed b 602 5	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-325-bed-b-551-1	iob3 325 bed b 551 1	unclear	1	1	IOB3-325 BED B 551-1	work615	machine_stub	iob3 325 bed b 551 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-326-bed-b-593-5	iob3 326 bed b 593 5	unclear	1	1	IOB3-326 BED B 593-5	work616	machine_stub	iob3 326 bed b 593 5	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-328-a-bed-b-601-4	iob3 328 a bed b 601 4	unclear	1	1	IOB3-328/a BED B 601-4	work617	machine_stub	iob3 328 a bed b 601 4	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-329	IOB3-329	unclear	1	1	IOB3-329	work618	machine_stub	IOB3-329	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-330-bed-a	IOB3-330 BED A	unclear	1	1	IOB3-330 BED A	work619	machine_stub	IOB3-330 BED A	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-331-a-bed-a	IOB3-331/a BED A	unclear	1	1	IOB3-331/a BED A	work620	machine_stub	IOB3-331/a BED A	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-332-a-bed-b-603-3	iob3 332 a bed b 603 3	unclear	1	1	IOB3-332/a BED B 603-3	work621	machine_stub	iob3 332 a bed b 603 3	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-332-b-bed-b-603-3	iob3 332 b bed b 603 3	unclear	1	1	IOB3-332/b BED B 603-3	work622	machine_stub	iob3 332 b bed b 603 3	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-333-bed-b-608-1-b-626-3	iob3 333 bed b 608 1 b 626 3	unclear	1	1	IOB3-333 BED B 608-1 & B 626-3	work623	machine_stub	iob3 333 bed b 608 1 b 626 3	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-334-a	IOB3-334/a	unclear	1	1	IOB3-334/a	work624	machine_stub	IOB3-334/a	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-335-a-bed-b-603-3	iob3 335 a bed b 603 3	unclear	1	1	IOB3-335/a BED B 603-3	work625	machine_stub	iob3 335 a bed b 603 3	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-335-b-bed-b-603-3	iob3 335 b bed b 603 3	unclear	1	1	IOB3-335/b BED B 603-3	work626	machine_stub	iob3 335 b bed b 603 3	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-336-a-bed-b-603-3	iob3 336 a bed b 603 3	unclear	1	1	IOB3-336/a BED B 603-3	work627	machine_stub	iob3 336 a bed b 603 3	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-336-b-bed-b-603-3	iob3 336 b bed b 603 3	unclear	1	1	IOB3-336/b BED B 603-3	work628	machine_stub	iob3 336 b bed b 603 3	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-337-a-bed-b-603-3	iob3 337 a bed b 603 3	unclear	1	1	IOB3-337/a BED B 603-3	work629	machine_stub	iob3 337 a bed b 603 3	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-337-b-bed-b-603-3	iob3 337 b bed b 603 3	unclear	1	1	IOB3-337/b BED B 603-3	work630	machine_stub	iob3 337 b bed b 603 3	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-338-bed-b-603-3	iob3 338 bed b 603 3	unclear	1	1	IOB3-338 BED B 603-3	work631	machine_stub	iob3 338 bed b 603 3	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-339-a-b-bed-a	iob3 339 a b bed a	unclear	1	1	IOB3-339/a-b BED A	work632	machine_stub	iob3 339 a b bed a	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-341-bed-b-622-4	iob3 341 bed b 622 4	unclear	1	1	IOB3-341 BED B 622-4	work633	machine_stub	iob3 341 bed b 622 4	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-342-b-bed-b-603-3	iob3 342 b bed b 603 3	unclear	1	1	IOB3-342/b - BED B 603-3	work634	machine_stub	iob3 342 b bed b 603 3	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-343-b-a-4-bed-b-603-3	iob3 343 b a 4 bed b 603 3	unclear	1	1	IOB3-343/b/a 4- BED B 603-3	work635	machine_stub	iob3 343 b a 4 bed b 603 3	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-344-a-b-bed-b-600-7	iob3 344 a b bed b 600 7	unclear	1	1	IOB3-344/a-b BED B 600-7	work636	machine_stub	iob3 344 a b bed b 600 7	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-345-a-bed-b-600-7	iob3 345 a bed b 600 7	unclear	1	1	IOB3-345/a BED B 600-7	work637	machine_stub	iob3 345 a bed b 600 7	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-345-b	IOB3-345/b	unclear	1	1	IOB3-345/b	work638	machine_stub	IOB3-345/b	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-389-b-bed-b-622-4	iob3 389 b bed b 622 4	unclear	1	1	IOB3-389/b BED B 622-4	work639	machine_stub	iob3 389 b bed b 622 4	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-460-a	IOB3-460/a	unclear	1	1	IOB3-460/a	work640	machine_stub	IOB3-460/a	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob3-bed-b-622-4	IOB3- BED B 622-4	unclear	1	1	IOB3- BED B 622-4	work641	machine_stub	IOB3- BED B 622-4	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-361-a	IOB4-361/a	unclear	1	1	IOB4-361/a	work642	machine_stub	IOB4-361/a	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-361-b	IOB4-361/b	unclear	1	1	IOB4-361/b	work643	machine_stub	IOB4-361/b	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-364-a	IOB4-364/a	unclear	1	1	IOB4-364/a	work644	machine_stub	IOB4-364/a	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-364-b	IOB4-364/b	unclear	1	1	IOB4-364/b	work645	machine_stub	IOB4-364/b	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-365-a-bed-b-533-2	iob4 365 a bed b 533 2	unclear	1	1	IOB4-365/a BED B 533-2	work646	machine_stub	iob4 365 a bed b 533 2	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-365-b-bed-b-552-3	iob4 365 b bed b 552 3	unclear	1	1	IOB4-365/b BED B 552-3	work647	machine_stub	iob4 365 b bed b 552 3	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-365-c-bed-b-573-3	iob4 365 c bed b 573 3	unclear	1	1	IOB4-365/c BED B 573-3	work648	machine_stub	iob4 365 c bed b 573 3	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-370	IOB4-370	unclear	1	1	IOB4-370	work649	machine_stub	IOB4-370	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-371-a-bed-b-581-4	iob4 371 a bed b 581 4	unclear	1	1	IOB4-371/a BED B 581-4	work650	machine_stub	iob4 371 a bed b 581 4	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-373-a-bed-b-593-4	iob4 373 a bed b 593 4	unclear	1	1	IOB4-373/a BED B 593-4	work651	machine_stub	iob4 373 a bed b 593 4	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-375-bed-b-598-3	iob4 375 bed b 598 3	unclear	1	1	IOB4-375 BED B 598-3	work652	machine_stub	iob4 375 bed b 598 3	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-376	IOB4-376	unclear	1	1	IOB4-376	work653	machine_stub	IOB4-376	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-377-a-bed-b-584-3	iob4 377 a bed b 584 3	unclear	1	1	IOB4-377/a BED B 584-3	work654	machine_stub	iob4 377 a bed b 584 3	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-378-a-bed-b-609-3	iob4 378 a bed b 609 3	unclear	1	1	IOB4-378/a BED B 609-3	work655	machine_stub	iob4 378 a bed b 609 3	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-378-b-bed-b-609-4	iob4 378 b bed b 609 4	unclear	1	1	IOB4-378/b BED B 609-4	work656	machine_stub	iob4 378 b bed b 609 4	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-380-bed-b-611-4	iob4 380 bed b 611 4	unclear	1	1	IOB4-380 BED B 611-4	work657	machine_stub	iob4 380 bed b 611 4	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-381-bed-b-622-4	iob4 381 bed b 622 4	unclear	1	1	IOB4-381 BED B 622-4	work658	machine_stub	iob4 381 bed b 622 4	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-383-a-bed-b-623-1	iob4 383 a bed b 623 1	unclear	1	1	IOB4-383/a BED B 623-1	work659	machine_stub	iob4 383 a bed b 623 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-383-b-bed-b-623-1	iob4 383 b bed b 623 1	unclear	1	1	IOB4-383/b BED B 623-1	work660	machine_stub	iob4 383 b bed b 623 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-384-bed-b-634-6	iob4 384 bed b 634 6	unclear	1	1	IOB4-384 BED B 634-6	work661	machine_stub	iob4 384 bed b 634 6	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-385-a-bed-b-624-4	iob4 385 a bed b 624 4	unclear	1	1	IOB4-385/a BED B 624-4	work662	machine_stub	iob4 385 a bed b 624 4	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-385-b-bed-b-624-4	iob4 385 b bed b 624 4	unclear	1	1	IOB4-385/b BED B 624-4	work663	machine_stub	iob4 385 b bed b 624 4	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-386-bed-b-637-5	iob4 386 bed b 637 5	unclear	1	1	IOB4-386 BED B 637-5	work664	machine_stub	iob4 386 bed b 637 5	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-387-a-bed-b-623-1	iob4 387 a bed b 623 1	unclear	1	1	IOB4-387/a BED B 623-1	work665	machine_stub	iob4 387 a bed b 623 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-389-a-bed-b-622-4	iob4 389 a bed b 622 4	unclear	1	1	IOB4-389/a BED B 622-4	work666	machine_stub	iob4 389 a bed b 622 4	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-389-c-bed-b-622-4	iob4 389 c bed b 622 4	unclear	1	1	IOB4-389/c BED B 622-4	work667	machine_stub	iob4 389 c bed b 622 4	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-390	IOB4-390	unclear	1	1	IOB4-390	work668	machine_stub	IOB4-390	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-391	IOB4-391	unclear	1	1	IOB4-391	work669	machine_stub	IOB4-391	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-392	IOB4-392	unclear	1	1	IOB4-392	work670	machine_stub	IOB4-392	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-393	IOB4-393	unclear	1	1	IOB4-393	work671	machine_stub	IOB4-393	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-394-bed-b-622-6	iob4 394 bed b 622 6	unclear	1	1	IOB4-394 BED B 622-6	work672	machine_stub	iob4 394 bed b 622 6	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-395-bed-b-622-6	iob4 395 bed b 622 6	unclear	1	1	IOB4-395 BED B 622-6	work673	machine_stub	iob4 395 bed b 622 6	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-396-a-bed-b-622-6	iob4 396 a bed b 622 6	unclear	1	1	IOB4-396/a BED B 622-6	work674	machine_stub	iob4 396 a bed b 622 6	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-396-b-bed-b-622-6	iob4 396 b bed b 622 6	unclear	1	1	IOB4-396/b BED B 622-6	work675	machine_stub	iob4 396 b bed b 622 6	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-397-a-bed-b-622-6	iob4 397 a bed b 622 6	unclear	1	1	IOB4-397/a BED B 622-6	work676	machine_stub	iob4 397 a bed b 622 6	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-397-b-bed-b-622-6	iob4 397 b bed b 622 6	unclear	1	1	IOB4-397/b BED B 622-6	work677	machine_stub	iob4 397 b bed b 622 6	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-398-bed-b-622-6	iob4 398 bed b 622 6	unclear	1	1	IOB4-398 BED B 622-6	work678	machine_stub	iob4 398 bed b 622 6	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-399-a-bed-b-622-6	iob4 399 a bed b 622 6	unclear	1	1	IOB4-399/a BED B 622-6	work679	machine_stub	iob4 399 a bed b 622 6	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-399-b-bed-b-622-6	iob4 399 b bed b 622 6	unclear	1	1	IOB4-399/b BED B 622-6	work680	machine_stub	iob4 399 b bed b 622 6	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-399-c-bed-b-622-6	iob4 399 c bed b 622 6	unclear	1	1	IOB4-399/c BED B 622-6	work681	machine_stub	iob4 399 c bed b 622 6	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-399-c-bed-b-666-1a	iob4 399 c bed b 666 1a	unclear	1	1	IOB4-399/c BED B 666-1a	work682	machine_stub	iob4 399 c bed b 666 1a	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-399-d-bed-b-651-1	iob4 399 d bed b 651 1	unclear	1	1	IOB4-399/d BED B 651-1	work683	machine_stub	iob4 399 d bed b 651 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-400-a-bed-b-622-6	iob4 400 a bed b 622 6	unclear	1	1	IOB4-400/a BED B 622-6	work684	machine_stub	iob4 400 a bed b 622 6	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-400-b-bed-b-622-6	iob4 400 b bed b 622 6	unclear	1	1	IOB4-400/b BED B 622-6	work685	machine_stub	iob4 400 b bed b 622 6	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-401-bed-b-622-6	iob4 401 bed b 622 6	unclear	1	1	IOB4-401 BED B 622-6	work686	machine_stub	iob4 401 bed b 622 6	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-402-a	IOB4-402/a	unclear	1	1	IOB4-402/a	work687	machine_stub	IOB4-402/a	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-402-b-bed-b-567-7	iob4 402 b bed b 567 7	unclear	1	1	IOB4-402/b BED B 567-7	work688	machine_stub	iob4 402 b bed b 567 7	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-403-a-bed-b-622-6	iob4 403 a bed b 622 6	unclear	1	1	IOB4-403/a BED B 622-6	work689	machine_stub	iob4 403 a bed b 622 6	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-403-b-bed-b-622-4	iob4 403 b bed b 622 4	unclear	1	1	IOB4-403/b BED B 622-4	work690	machine_stub	iob4 403 b bed b 622 4	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-404-bed-b-623-1	iob4 404 bed b 623 1	unclear	1	1	IOB4-404 BED B 623-1	work691	machine_stub	iob4 404 bed b 623 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-405-a-bed-b-622-6	iob4 405 a bed b 622 6	unclear	1	1	IOB4-405/a BED B 622-6	work692	machine_stub	iob4 405 a bed b 622 6	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-405-b-bed-b-622-6	iob4 405 b bed b 622 6	unclear	1	1	IOB4-405/b} BED B 622-6	work693	machine_stub	iob4 405 b bed b 622 6	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-405-c-bed-b-622-6	iob4 405 c bed b 622 6	unclear	1	1	IOB4-405/c} BED B 622-6	work694	machine_stub	iob4 405 c bed b 622 6	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-405-d-bed-b-622-6	iob4 405 d bed b 622 6	unclear	1	1	IOB4-405/d BED B 622-6	work695	machine_stub	iob4 405 d bed b 622 6	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-406-a-bed-b-622-6	iob4 406 a bed b 622 6	unclear	1	1	IOB4-406/a BED B 622-6	work696	machine_stub	iob4 406 a bed b 622 6	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-406-b-bed-b-622-6	iob4 406 b bed b 622 6	unclear	1	1	IOB4-406/b BED B 622-6	work697	machine_stub	iob4 406 b bed b 622 6	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-407-b-bed-b-622-6	iob4 407 b bed b 622 6	unclear	1	1	IOB4-407/b BED B 622-6	work698	machine_stub	iob4 407 b bed b 622 6	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-408-bed-b-622-6	iob4 408 bed b 622 6	unclear	1	1	IOB4-408 BED B 622-6	work699	machine_stub	iob4 408 bed b 622 6	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-409-a-bed-b-622-6	iob4 409 a bed b 622 6	unclear	1	1	IOB4-409/a BED B 622-6	work700	machine_stub	iob4 409 a bed b 622 6	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-409-b-bed-b-622-6	iob4 409 b bed b 622 6	unclear	1	1	IOB4-409/b BED B 622-6	work701	machine_stub	iob4 409 b bed b 622 6	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-411-bed-b-624-6	iob4 411 bed b 624 6	unclear	1	1	IOB4-411 BED B 624-6	work702	machine_stub	iob4 411 bed b 624 6	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-412-a-bed-b-622-6	iob4 412 a bed b 622 6	unclear	1	1	IOB4-412/a BED B 622-6	work703	machine_stub	iob4 412 a bed b 622 6	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-412-b-bed-b-622-6	iob4 412 b bed b 622 6	unclear	1	1	IOB4-412/b BED B 622-6	work704	machine_stub	iob4 412 b bed b 622 6	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-413-bed-b-622-6	iob4 413 bed b 622 6	unclear	1	1	IOB4-413 BED B 622-6	work705	machine_stub	iob4 413 bed b 622 6	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-414-a-bed-b-622-6	iob4 414 a bed b 622 6	unclear	1	1	IOB4-414/a BED B 622-6	work706	machine_stub	iob4 414 a bed b 622 6	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-414-b-bed-b-622-6	iob4 414 b bed b 622 6	unclear	1	1	IOB4-414/b BED B 622-6	work707	machine_stub	iob4 414 b bed b 622 6	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-415-bed-b-622-6	iob4 415 bed b 622 6	unclear	1	1	IOB4-415 BED B 622-6	work708	machine_stub	iob4 415 bed b 622 6	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-416-a-bed-b-622-6	iob4 416 a bed b 622 6	unclear	1	1	IOB4-416/a BED B 622-6	work709	machine_stub	iob4 416 a bed b 622 6	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-416-b-bed-b-622-6	iob4 416 b bed b 622 6	unclear	1	1	IOB4-416/b BED B 622-6	work710	machine_stub	iob4 416 b bed b 622 6	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-416-c-bed-b-622-6	iob4 416 c bed b 622 6	unclear	1	1	IOB4-416/c BED B 622-6	work711	machine_stub	iob4 416 c bed b 622 6	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-417-bed-b-622-6	iob4 417 bed b 622 6	unclear	1	1	IOB4-417 BED B 622-6	work712	machine_stub	iob4 417 bed b 622 6	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-419-a-bed-b-622-6	iob4 419 a bed b 622 6	unclear	1	1	IOB4-419/a BED B 622-6	work713	machine_stub	iob4 419 a bed b 622 6	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-419-b-bed-b-622-6	iob4 419 b bed b 622 6	unclear	1	1	IOB4-419/b BED B 622-6	work714	machine_stub	iob4 419 b bed b 622 6	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-420-a-bed-b-623-1	iob4 420 a bed b 623 1	unclear	1	1	IOB4-420/a BED B 623-1	work715	machine_stub	iob4 420 a bed b 623 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-420-b-bed-b-623-1	iob4 420 b bed b 623 1	unclear	1	1	IOB4-420/b BED B 623-1	work716	machine_stub	iob4 420 b bed b 623 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-421-a-bed-b-622-4	iob4 421 a bed b 622 4	unclear	1	1	IOB4-421/a BED B 622-4	work717	machine_stub	iob4 421 a bed b 622 4	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-423-bed-b-622-6	iob4 423 bed b 622 6	unclear	1	1	IOB4-423 BED B 622-6	work718	machine_stub	iob4 423 bed b 622 6	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-424-bed-b-622-6	iob4 424 bed b 622 6	unclear	1	1	IOB4-424 BED B 622-6	work719	machine_stub	iob4 424 bed b 622 6	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-425-a-bed-b-622-6	iob4 425 a bed b 622 6	unclear	1	1	IOB4-425/a BED B 622-6	work720	machine_stub	iob4 425 a bed b 622 6	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-425-b-bed-b-622-6	iob4 425 b bed b 622 6	unclear	1	1	IOB4-425/b BED B 622-6	work721	machine_stub	iob4 425 b bed b 622 6	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-426-bed-b-622-6	iob4 426 bed b 622 6	unclear	1	1	IOB4-426 BED B 622-6	work722	machine_stub	iob4 426 bed b 622 6	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-427-b-bed-b-622-6	iob4 427 b bed b 622 6	unclear	1	1	IOB4-427/b BED B 622-6	work723	machine_stub	iob4 427 b bed b 622 6	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-428-bed-b-622-6	iob4 428 bed b 622 6	unclear	1	1	IOB4-428 BED B 622-6	work724	machine_stub	iob4 428 bed b 622 6	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-429-bed-b-622-6	iob4 429 bed b 622 6	unclear	1	1	IOB4-429 BED B 622-6	work725	machine_stub	iob4 429 bed b 622 6	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-430-bed-b-622-6	iob4 430 bed b 622 6	unclear	1	1	IOB4-430 BED B 622-6	work726	machine_stub	iob4 430 bed b 622 6	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-431-a-bed-b-622-6	iob4 431 a bed b 622 6	unclear	1	1	IOB4-431/a BED B 622-6	work727	machine_stub	iob4 431 a bed b 622 6	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-431-b-bed-b-622-6	iob4 431 b bed b 622 6	unclear	1	1	IOB4-431/b BED B 622-6	work728	machine_stub	iob4 431 b bed b 622 6	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-432-a-bed-b-622-6	iob4 432 a bed b 622 6	unclear	1	1	IOB4-432/a BED B 622-6	work729	machine_stub	iob4 432 a bed b 622 6	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-432-b-bed-b-622-6	iob4 432 b bed b 622 6	unclear	1	1	IOB4-432/b BED B 622-6	work730	machine_stub	iob4 432 b bed b 622 6	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-433-a	IOB4-433/a	unclear	1	1	IOB4-433/a	work731	machine_stub	IOB4-433/a	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-433-b	IOB4-433/b	unclear	1	1	IOB4-433/b	work732	machine_stub	IOB4-433/b	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-434-b-bed-b-622-6	iob4 434 b bed b 622 6	unclear	1	1	IOB4-434/b BED B 622-6	work733	machine_stub	iob4 434 b bed b 622 6	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-435-a-bed-b-623-1	iob4 435 a bed b 623 1	unclear	1	1	IOB4-435/a BED B 623-1	work734	machine_stub	iob4 435 a bed b 623 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-435-b-bed-b-623-1	iob4 435 b bed b 623 1	unclear	1	1	IOB4-435/b BED B 623-1	work735	machine_stub	iob4 435 b bed b 623 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-436-a-bed-b-623-1	iob4 436 a bed b 623 1	unclear	1	1	IOB4-436/a BED B 623-1	work736	machine_stub	iob4 436 a bed b 623 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-436-b-bed-b-623-1	iob4 436 b bed b 623 1	unclear	1	1	IOB4-436/b BED B 623-1	work737	machine_stub	iob4 436 b bed b 623 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-437-b-bed-b-623-1	iob4 437 b bed b 623 1	unclear	1	1	IOB4-437/b BED B 623-1	work738	machine_stub	iob4 437 b bed b 623 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-438-a-bed-b-623-1	iob4 438 a bed b 623 1	unclear	1	1	IOB4-438/a BED B 623-1	work739	machine_stub	iob4 438 a bed b 623 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-438-b-bed-b-623-1	iob4 438 b bed b 623 1	unclear	1	1	IOB4-438/b BED B 623-1	work740	machine_stub	iob4 438 b bed b 623 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-439-a-bed-b-623-1	iob4 439 a bed b 623 1	unclear	1	1	IOB4-439/a BED B 623-1	work741	machine_stub	iob4 439 a bed b 623 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-439-b-bed-b-623-1	iob4 439 b bed b 623 1	unclear	1	1	IOB4-439/b BED B 623-1	work742	machine_stub	iob4 439 b bed b 623 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-440-a-bed-b-623-1	iob4 440 a bed b 623 1	unclear	1	1	IOB4-440/a BED B 623-1	work743	machine_stub	iob4 440 a bed b 623 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-440-b-bed-b-623-1	iob4 440 b bed b 623 1	unclear	1	1	IOB4-440/b BED B 623-1	work744	machine_stub	iob4 440 b bed b 623 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-440-c-bed-b-623-1	iob4 440 c bed b 623 1	unclear	1	1	IOB4-440/c BED B 623-1	work745	machine_stub	iob4 440 c bed b 623 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-441-a-bed-b-623-1	iob4 441 a bed b 623 1	unclear	1	1	IOB4-441/a BED B 623-1	work746	machine_stub	iob4 441 a bed b 623 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-441-b-bed-b-623-1	iob4 441 b bed b 623 1	unclear	1	1	IOB4-441/b BED B 623-1	work747	machine_stub	iob4 441 b bed b 623 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-442-a-bed-b-623-1	iob4 442 a bed b 623 1	unclear	1	1	IOB4-442/a BED B 623-1	work748	machine_stub	iob4 442 a bed b 623 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-442-b-bed-b-623-1	iob4 442 b bed b 623 1	unclear	1	1	IOB4-442/b BED B 623-1	work749	machine_stub	iob4 442 b bed b 623 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-443-bed-b-622-6	iob4 443 bed b 622 6	unclear	1	1	IOB4-443 BED B 622-6	work750	machine_stub	iob4 443 bed b 622 6	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-444-a-bed-b-622-6	iob4 444 a bed b 622 6	unclear	1	1	IOB4-444/a BED B 622-6	work751	machine_stub	iob4 444 a bed b 622 6	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-444-b-bed-b-623-1	iob4 444 b bed b 623 1	unclear	1	1	IOB4-444/b BED B 623-1	work752	machine_stub	iob4 444 b bed b 623 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-445-a-bed-b-623-1	iob4 445 a bed b 623 1	unclear	1	1	IOB4-445/a BED B 623-1	work753	machine_stub	iob4 445 a bed b 623 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-445-b-bed-b-623-1	iob4 445 b bed b 623 1	unclear	1	1	IOB4-445/b BED B 623-1	work754	machine_stub	iob4 445 b bed b 623 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-445-c-bed-b-623-1	iob4 445 c bed b 623 1	unclear	1	1	IOB4-445/c BED B 623-1	work755	machine_stub	iob4 445 c bed b 623 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-446-b-bed-b-623-1	iob4 446 b bed b 623 1	unclear	1	1	IOB4 446/b BED B 623-1	work756	machine_stub	iob4 446 b bed b 623 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-446-c-bed-b-623-1	iob4 446 c bed b 623 1	unclear	1	1	IOB4-446/c BED B 623-1	work757	machine_stub	iob4 446 c bed b 623 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-447-bed-b-623-1	iob4 447 bed b 623 1	unclear	1	1	IOB4-447 BED B 623-1	work758	machine_stub	iob4 447 bed b 623 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-448-a-bed-b-623-1	iob4 448 a bed b 623 1	unclear	1	1	IOB4-448/a BED B 623-1	work759	machine_stub	iob4 448 a bed b 623 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-448-b-bed-b-623-1	iob4 448 b bed b 623 1	unclear	1	1	IOB4-448/b BED B 623-1	work760	machine_stub	iob4 448 b bed b 623 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-448-c-bed-b-623-1	iob4 448 c bed b 623 1	unclear	1	1	IOB4-448/c BED B 623-1	work761	machine_stub	iob4 448 c bed b 623 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-449-bed-b-623-1	iob4 449 bed b 623 1	unclear	1	1	IOB4-449 BED B 623-1	work762	machine_stub	iob4 449 bed b 623 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-450-a-bed-b-623-1	iob4 450 a bed b 623 1	unclear	1	1	IOB4-450/a BED B 623-1	work763	machine_stub	iob4 450 a bed b 623 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-450-b-bed-b-623-1	iob4 450 b bed b 623 1	unclear	1	1	IOB4-450/b BED B 623-1	work764	machine_stub	iob4 450 b bed b 623 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-451-bed-b-623-1	iob4 451 bed b 623 1	unclear	1	1	IOB4-451 BED B 623-1	work765	machine_stub	iob4 451 bed b 623 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-452-a-bed-b-623-1	iob4 452 a bed b 623 1	unclear	1	1	IOB4-452/a BED B 623-1	work766	machine_stub	iob4 452 a bed b 623 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-452-b-bed-b-623-1	iob4 452 b bed b 623 1	unclear	1	1	IOB4-452/b BED B 623-1	work767	machine_stub	iob4 452 b bed b 623 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-453-a-bed-b-623-1	iob4 453 a bed b 623 1	unclear	1	1	IOB4-453/a BED B 623-1	work768	machine_stub	iob4 453 a bed b 623 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-454-a-bed-b-623-1	iob4 454 a bed b 623 1	unclear	1	1	IOB4-454/a BED B 623-1	work769	machine_stub	iob4 454 a bed b 623 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-454-b-bed-b-623-1	iob4 454 b bed b 623 1	unclear	1	1	IOB4-454/b BED B 623-1	work770	machine_stub	iob4 454 b bed b 623 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-455-a-bed-b-623-1	iob4 455 a bed b 623 1	unclear	1	1	IOB4-455/a BED B 623-1	work771	machine_stub	iob4 455 a bed b 623 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-455-b-bed-b-623-1	iob4 455 b bed b 623 1	unclear	1	1	IOB4-455/b BED B 623-1	work772	machine_stub	iob4 455 b bed b 623 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-456-a-bed-b-623-1	iob4 456 a bed b 623 1	unclear	1	1	IOB4-456/a BED B 623-1	work773	machine_stub	iob4 456 a bed b 623 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-456-b-bed-b-623-1	iob4 456 b bed b 623 1	unclear	1	1	IOB4-456/b BED B 623-1	work774	machine_stub	iob4 456 b bed b 623 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-457-a-bed-b-623-1	iob4 457 a bed b 623 1	unclear	1	1	IOB4-457/a BED B 623-1	work775	machine_stub	iob4 457 a bed b 623 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-457-b	IOB4-457/b	unclear	1	1	IOB4-457/b	work776	machine_stub	IOB4-457/b	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-458	IOB4-458	unclear	1	1	IOB4-458	work777	machine_stub	IOB4-458	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-458-bed-b-623-1	iob4 458 bed b 623 1	unclear	1	1	IOB4-458 BED B 623-1	work778	machine_stub	iob4 458 bed b 623 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-459-b	IOB4-459/b	unclear	1	1	IOB4-459/b	work779	machine_stub	IOB4-459/b	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-460-b	IOB4-460/b	unclear	1	1	IOB4-460/b	work780	machine_stub	IOB4-460/b	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-461-a	IOB4-461/a	unclear	1	1	IOB4-461/a	work781	machine_stub	IOB4-461/a	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-461-b	IOB4-461/b	unclear	1	1	IOB4-461/b	work782	machine_stub	IOB4-461/b	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4-462-a	IOB4-462/a	unclear	1	1	IOB4-462/a	work783	machine_stub	IOB4-462/a	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob4437-a-bed-b-623-1	iob4437 a bed b 623 1	unclear	1	1	IOB4437/a BED B 623-1	work784	machine_stub	iob4437 a bed b 623 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob5	IOB5-	unclear	1	1	IOB5-	work785	machine_stub	IOB5-	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob5-302-c-bed-b-600-7	iob5 302 c bed b 600 7	unclear	1	1	IOB5-302/c BED B 600-7	work786	machine_stub	iob5 302 c bed b 600 7	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob5-463-bed-b-703-1	iob5 463 bed b 703 1	unclear	1	1	IOB5-463 BED B 703-1	work787	machine_stub	iob5 463 bed b 703 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob5-464-a-bed-b-703-2	iob5 464 a bed b 703 2	unclear	1	1	IOB5-464/a BED B 703-2	work788	machine_stub	iob5 464 a bed b 703 2	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob5-464-b	IOB5-464/b	unclear	1	1	IOB5-464/b	work789	machine_stub	IOB5-464/b	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob5-465-a-bed-b-645-2	iob5 465 a bed b 645 2	unclear	1	1	IOB5-465/a BED B 645-2	work790	machine_stub	iob5 465 a bed b 645 2	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob5-465-b	IOB5-465/b	unclear	1	1	IOB5-465/b	work791	machine_stub	IOB5-465/b	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob5-466-a	IOB5-466/a	unclear	1	1	IOB5-466/a	work792	machine_stub	IOB5-466/a	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob5-466-b	IOB5-466/b	unclear	1	1	IOB5-466/b	work793	machine_stub	IOB5-466/b	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob5-467-a	IOB5-467/a	unclear	1	1	IOB5-467/a	work794	machine_stub	IOB5-467/a	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob5-467-b	IOB5-467/b	unclear	1	1	IOB5-467/b	work795	machine_stub	IOB5-467/b	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob5-467-c	IOB5-467/c	unclear	1	1	IOB5-467/c	work796	machine_stub	IOB5-467/c	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob5-467-d	IOB5-467/d	unclear	1	1	IOB5-467/d	work797	machine_stub	IOB5-467/d	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob5-469-a	IOB5-469/a	unclear	1	1	IOB5-469/a	work798	machine_stub	IOB5-469/a	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob5-469-b	IOB5-469/b	unclear	1	1	IOB5-469/b	work799	machine_stub	IOB5-469/b	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob5-470-a	IOB5-470/a	unclear	1	1	IOB5-470/a	work800	machine_stub	IOB5-470/a	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob5-470-b	IOB5-470/b	unclear	1	1	IOB5-470/b	work801	machine_stub	IOB5-470/b	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob5-471	IOB5-471	unclear	1	1	IOB5-471	work802	machine_stub	IOB5-471	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob5-472	IOB5-472	unclear	1	1	IOB5-472	work803	machine_stub	IOB5-472	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob5-473-a	IOB5-473/a	unclear	1	1	IOB5-473/a	work804	machine_stub	IOB5-473/a	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob5-473-b	IOB5-473/b	unclear	1	1	IOB5-473/b	work805	machine_stub	IOB5-473/b	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob5-474	IOB5-474	unclear	1	1	IOB5-474	work806	machine_stub	IOB5-474	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob5-475	IOB5-475	unclear	1	1	IOB5-475	work807	machine_stub	IOB5-475	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob5-477-a	IOB5-477/a	unclear	1	1	IOB5-477/a	work808	machine_stub	IOB5-477/a	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob5-477-b	IOB5-477/b	unclear	1	1	IOB5-477/b	work809	machine_stub	IOB5-477/b	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob5-478	IOB5-478	unclear	1	1	IOB5-478	work810	machine_stub	IOB5-478	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob5-479-bed-b-578-5	iob5 479 bed b 578 5	unclear	1	1	IOB5-479 BED B 578-5	work811	machine_stub	iob5 479 bed b 578 5	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob5-480-a-bed-b-565-1	iob5 480 a bed b 565 1	unclear	1	1	IOB5-480/a BED B 565-1	work812	machine_stub	iob5 480 a bed b 565 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob5-480-c	IOB5-480/c	unclear	1	1	IOB5-480/c	work813	machine_stub	IOB5-480/c	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob5-481-a-bed-b-635-6	iob5 481 a bed b 635 6	unclear	1	1	IOB5-481/a BED B 635-6	work814	machine_stub	iob5 481 a bed b 635 6	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob5-482-a	IOB5-482/a	unclear	1	1	IOB5-482/a	work815	machine_stub	IOB5-482/a	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob5-482-b	IOB5-482/b	unclear	1	1	IOB5-482/b	work816	machine_stub	IOB5-482/b	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob5-483-b	IOB5-483/b	unclear	1	1	IOB5-483/b	work817	machine_stub	IOB5-483/b	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob5-485-a	IOB5-485/a	unclear	1	1	IOB5-485/a	work818	machine_stub	IOB5-485/a	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob5-485-b	IOB5-485/b	unclear	1	1	IOB5-485/b	work819	machine_stub	IOB5-485/b	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob5-486-b	IOB5-486/b	unclear	1	1	IOB5-486/b	work820	machine_stub	IOB5-486/b	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob5-488-a	IOB5-488/a	unclear	1	1	IOB5-488/a	work821	machine_stub	IOB5-488/a	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob5-491	IOB5-491	unclear	1	1	IOB5-491	work822	machine_stub	IOB5-491	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob5-497	IOB5-497	unclear	1	1	IOB5-497	work823	machine_stub	IOB5-497	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob5-499-a	IOB5-499/a	unclear	1	1	IOB5-499/a	work824	machine_stub	IOB5-499/a	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob5-499-b	IOB5-499/b	unclear	1	1	IOB5-499/b	work825	machine_stub	IOB5-499/b	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob5-499-c	IOB5-499/c	unclear	1	1	IOB5-499/c	work826	machine_stub	IOB5-499/c	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob5-499-d	IOB5-499/d	unclear	1	1	IOB5-499/d	work827	machine_stub	IOB5-499/d	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob5-501	IOB5-501	unclear	1	1	IOB5-501	work828	machine_stub	IOB5-501	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob5-502	IOB5-502	unclear	1	1	IOB5-502	work829	machine_stub	IOB5-502	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob5-509-bed-b-628-9	iob5 509 bed b 628 9	unclear	1	1	IOB5-509 BED B 628-9	work830	machine_stub	iob5 509 bed b 628 9	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob5-510	IOB5-510	unclear	1	1	IOB5-510	work831	machine_stub	IOB5-510	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob5-512-b	IOB5-512/b	unclear	1	1	IOB5-512/b	work832	machine_stub	IOB5-512/b	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob5-514-a	IOB5-514/a	unclear	1	1	IOB5-514/a	work833	machine_stub	IOB5-514/a	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob5-514-b	IOB5-514/b	unclear	1	1	IOB5-514/b	work834	machine_stub	IOB5-514/b	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob5-517-a	IOB5-517/a	unclear	1	1	IOB5-517/a	work835	machine_stub	IOB5-517/a	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob5-524-a	IOB5-524/a	unclear	1	1	IOB5-524/a	work836	machine_stub	IOB5-524/a	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob5-524-b	IOB5-524/b	unclear	1	1	IOB5-524/b	work837	machine_stub	IOB5-524/b	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob5-525-a	IOB5-525/a	unclear	1	1	IOB5-525/a	work838	machine_stub	IOB5-525/a	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob5-525-b	IOB5-525/b	unclear	1	1	IOB5-525/b	work839	machine_stub	IOB5-525/b	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob5-530	IOB5-530	unclear	1	1	IOB5-530	work840	machine_stub	IOB5-530	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob5-541-a	IOB5-541/a	unclear	1	1	IOB5-541/a	work841	machine_stub	IOB5-541/a	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob5-541-b	IOB5-541/b	unclear	1	1	IOB5-541/b	work842	machine_stub	IOB5-541/b	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob5-541-c	IOB5-541/c	unclear	1	1	IOB5-541/c	work843	machine_stub	IOB5-541/c	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob5-541-d	IOB5-541/d	unclear	1	1	IOB5-541/d	work844	machine_stub	IOB5-541/d	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob5-543-a-bed-b-675-1	iob5 543 a bed b 675 1	unclear	1	1	IOB5-543/a BED B 675-1	work845	machine_stub	iob5 543 a bed b 675 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob5-543-b	IOB5-543/b	unclear	1	1	IOB5-543/b	work846	machine_stub	IOB5-543/b	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob5-544-a	IOB5-544/a	unclear	1	1	IOB5-544/a	work847	machine_stub	IOB5-544/a	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob5-544-b	IOB5-544/b	unclear	1	1	IOB5-544/b	work848	machine_stub	IOB5-544/b	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob5-545-a	IOB5-545/a	unclear	1	1	IOB5-545/a	work849	machine_stub	IOB5-545/a	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob5-545-b	IOB5-545/b	unclear	1	1	IOB5-545/b	work850	machine_stub	IOB5-545/b	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob5-546	IOB5-546	unclear	1	1	IOB5-546	work851	machine_stub	IOB5-546	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob5-547-a	IOB5-547/a	unclear	1	1	IOB5-547/a	work852	machine_stub	IOB5-547/a	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob5-547-b	IOB5-547/b	unclear	1	1	IOB5-547/b	work853	machine_stub	IOB5-547/b	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob5-563-a-bed-b-602-4	iob5 563 a bed b 602 4	unclear	1	1	IOB5-563/a BED B 602-4	work854	machine_stub	iob5 563 a bed b 602 4	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob5-565-a-bed-a	IOB5-565/a BED A	unclear	1	1	IOB5-565/a BED A	work855	machine_stub	IOB5-565/a BED A	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob5-571-a-bed-a	IOB5-571/a BED A	unclear	1	1	IOB5-571/a BED A	work856	machine_stub	IOB5-571/a BED A	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob5-571-b-bed-b-537-2	iob5 571 b bed b 537 2	unclear	1	1	IOB5-571/b BED B 537-2	work857	machine_stub	iob5 571 b bed b 537 2	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob5-572-a-bed-b-602-4	iob5 572 a bed b 602 4	unclear	1	1	IOB5-572/a BED B 602-4	work858	machine_stub	iob5 572 a bed b 602 4	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob5-573-a-bed-b-602-4	iob5 573 a bed b 602 4	unclear	1	1	IOB5-573/a BED B 602-4	work859	machine_stub	iob5 573 a bed b 602 4	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob5-573-b-bed-b-602-5	iob5 573 b bed b 602 5	unclear	1	1	IOB5-573/b BED B 602-5	work860	machine_stub	iob5 573 b bed b 602 5	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob5-574-a-bed-b-582-4	iob5 574 a bed b 582 4	unclear	1	1	IOB5-574/a BED B 582-4	work861	machine_stub	iob5 574 a bed b 582 4	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob5-574-b	IOB5-574/b	unclear	1	1	IOB5-574/b	work862	machine_stub	IOB5-574/b	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob5-575-bed-b-602-5	iob5 575 bed b 602 5	unclear	1	1	IOB5-575 BED B 602-5	work863	machine_stub	iob5 575 bed b 602 5	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob5-576-a-bed-b-602-4	iob5 576 a bed b 602 4	unclear	1	1	IOB5-576/a BED B 602-4	work864	machine_stub	iob5 576 a bed b 602 4	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob5-576-b-15-bed-b-602-4	iob5 576 b 15 bed b 602 4	unclear	1	1	IOB5-576/b 15 BED B 602-4	work865	machine_stub	iob5 576 b 15 bed b 602 4	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob5-577-bed-b-600-7	iob5 577 bed b 600 7	unclear	1	1	IOB5-577 BED B 600-7	work866	machine_stub	iob5 577 bed b 600 7	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob5-577-bed-b-602-1	iob5 577 bed b 602 1	unclear	1	1	IOB5-577 BED B 602-1	work867	machine_stub	iob5 577 bed b 602 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob5-578-a-bed-b-600-7	iob5 578 a bed b 600 7	unclear	1	1	IOB5-578/a BED B 600-7	work868	machine_stub	iob5 578 a bed b 600 7	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob5-578-b-bed-b-600-7	iob5 578 b bed b 600 7	unclear	1	1	IOB5-578/b BED B 600-7	work869	machine_stub	iob5 578 b bed b 600 7	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob5-581-b-bed-b-559-5	iob5 581 b bed b 559 5	unclear	1	1	IOB5-581/b BED B 559-5	work870	machine_stub	iob5 581 b bed b 559 5	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob5-583-bed-b-622-6	iob5 583 bed b 622 6	unclear	1	1	IOB5-583 BED B 622-6	work871	machine_stub	iob5 583 bed b 622 6	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob5-584-bed-b-622-6	iob5 584 bed b 622 6	unclear	1	1	IOB5-584 BED B 622-6	work872	machine_stub	iob5 584 bed b 622 6	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob5-587-a-bed-b-624-1	iob5 587 a bed b 624 1	unclear	1	1	IOB5-587/a BED B 624-1	work873	machine_stub	iob5 587 a bed b 624 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob5-587-b	IOB5-587/b	unclear	1	1	IOB5-587/b	work874	machine_stub	IOB5-587/b	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob5-588	IOB5-588	unclear	1	1	IOB5-588	work875	machine_stub	IOB5-588	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob5-589	IOB5-589	unclear	1	1	IOB5-589	work876	machine_stub	IOB5-589	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob5-590	IOB5-590	unclear	1	1	IOB5-590	work877	machine_stub	IOB5-590	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob5-591-a	IOB5-591/a	unclear	1	1	IOB5-591/a	work878	machine_stub	IOB5-591/a	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob5-591-b	IOB5-591/b	unclear	1	1	IOB5-591/b	work879	machine_stub	IOB5-591/b	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob5-592-a	IOB5-592/a	unclear	1	1	IOB5-592/a	work880	machine_stub	IOB5-592/a	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob5-593-a-bed-b-539-1	iob5 593 a bed b 539 1	unclear	1	1	IOB5-593/a BED B 539-1	work881	machine_stub	iob5 593 a bed b 539 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob5-593-b	IOB5-593/b	unclear	1	1	IOB5-593/b	work882	machine_stub	IOB5-593/b	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob5-597	IOB5-597/	unclear	1	1	IOB5-597/	work883	machine_stub	IOB5-597/	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob5-597-c	IOB5-597/c	unclear	1	1	IOB5-597/c	work884	machine_stub	IOB5-597/c	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob5-597-d	IOB5-597/d	unclear	1	1	IOB5-597/d	work885	machine_stub	IOB5-597/d	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob5-599-d	IOB5-599/d +	unclear	1	1	IOB5-599/d +	work886	machine_stub	IOB5-599/d +	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iob5498-9	IOB5498 9	unclear	1	1	IOB5498 9	work887	machine_stub	IOB5498 9	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub1	IUB1 p.140	unclear	1	1	IUB1 p.140	work888	machine_stub	IUB1 p.140	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub1-103	IUB1-103	unclear	1	1	IUB1-103	work889	machine_stub	IUB1-103	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub1-106-2-3	IUB1-106-2-3	unclear	1	1	IUB1-106-2-3	work890	machine_stub	IUB1-106-2-3	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub1-120	IUB1-120	unclear	1	1	IUB1-120	work891	machine_stub	IUB1-120	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub1-123	IUB1-123	unclear	1	1	IUB1-123	work892	machine_stub	IUB1-123	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub1-125	IUB1-125,	unclear	1	1	IUB1-125,	work893	machine_stub	IUB1-125,	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub1-126-1002	IUB1-126-1002	unclear	1	1	IUB1-126-1002	work894	machine_stub	IUB1-126-1002	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub1-13-14	IUB1-13-14	unclear	1	1	IUB1-13-14	work895	machine_stub	IUB1-13-14	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub1-146	IUB1-146	unclear	1	1	IUB1-146	work896	machine_stub	IUB1-146	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub1-149	IUB1-149	unclear	1	1	IUB1-149	work897	machine_stub	IUB1-149	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub1-168	IUB1-168	unclear	1	1	IUB1-168	work898	machine_stub	IUB1-168	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub1-173	IUB1-173	unclear	1	1	IUB1-173	work899	machine_stub	IUB1-173	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub1-174	IUB1-174	unclear	1	1	IUB1-174	work900	machine_stub	IUB1-174	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub1-175	IUB1 175	unclear	1	1	IUB1 175	work901	machine_stub	IUB1 175	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub1-176	IUB1-176	unclear	1	1	IUB1-176	work902	machine_stub	IUB1-176	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub1-177	IUB1-177	unclear	1	1	IUB1-177	work903	machine_stub	IUB1-177	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub1-181	IUB1-181	unclear	1	1	IUB1-181	work904	machine_stub	IUB1-181	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub1-183	IUB1-183	unclear	1	1	IUB1-183	work905	machine_stub	IUB1-183	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub1-186	IUB1-186	unclear	1	1	IUB1-186	work906	machine_stub	IUB1-186	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub1-189	IUB1-189	unclear	1	1	IUB1-189	work907	machine_stub	IUB1-189	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub1-191-192-bed-b-597-8	iub1 191 192 bed b 597 8	unclear	1	1	IUB1-191, 192 BED B 597-8	work908	machine_stub	iub1 191 192 bed b 597 8	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub1-193-194	IUB1-193-194	unclear	1	1	IUB1-193-194	work909	machine_stub	IUB1-193-194	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub1-195-196	IUB1-195-196	unclear	1	1	IUB1-195-196	work910	machine_stub	IUB1-195-196	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub1-197	IUB1-197	unclear	1	1	IUB1-197	work911	machine_stub	IUB1-197	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub1-198-199	IUB1-198, 199	unclear	1	1	IUB1-198, 199	work912	machine_stub	IUB1-198, 199	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub1-200	IUB1-200	unclear	1	1	IUB1-200	work913	machine_stub	IUB1-200	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub1-201-202	IUB1-201-202	unclear	1	1	IUB1-201-202	work914	machine_stub	IUB1-201-202	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub1-203	IUB1-203	unclear	1	1	IUB1-203	work915	machine_stub	IUB1-203	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub1-204	IUB1-204	unclear	1	1	IUB1-204	work916	machine_stub	IUB1-204	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub1-205	IUB1-205,	unclear	1	1	IUB1-205,	work917	machine_stub	IUB1-205,	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub1-206	IUB1-206	unclear	1	1	IUB1-206	work918	machine_stub	IUB1-206	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub1-207	IUB1-207	unclear	1	1	IUB1-207	work919	machine_stub	IUB1-207	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub1-209-211	IUB1-209-211	unclear	1	1	IUB1-209-211	work920	machine_stub	IUB1-209-211	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub1-213	IUB1-213	unclear	1	1	IUB1-213	work921	machine_stub	IUB1-213	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub1-216	IUB1-216	unclear	1	1	IUB1-216	work922	machine_stub	IUB1-216	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub1-219-220	IUB1-219-220	unclear	1	1	IUB1-219-220	work923	machine_stub	IUB1-219-220	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub1-222-223	IUB1-222-223	unclear	1	1	IUB1-222-223	work924	machine_stub	IUB1-222-223	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub1-224	IUB1-224	unclear	1	1	IUB1-224	work925	machine_stub	IUB1-224	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub1-225-304	IUB1-225 & 304	unclear	1	1	IUB1-225 & 304	work926	machine_stub	IUB1-225 & 304	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub1-226-305	IUB1-226 & 305	unclear	1	1	IUB1-226 & 305	work927	machine_stub	IUB1-226 & 305	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub1-227-228	IUB1-227-228	unclear	1	1	IUB1-227-228	work928	machine_stub	IUB1-227-228	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub1-253-254	IUB1-253-254	unclear	1	1	IUB1-253-254	work929	machine_stub	IUB1-253-254	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub1-255	IUB1-255	unclear	1	1	IUB1-255	work930	machine_stub	IUB1-255	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub1-257	IUB1-257	unclear	1	1	IUB1-257	work931	machine_stub	IUB1-257	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub1-258	IUB1-258	unclear	1	1	IUB1-258	work932	machine_stub	IUB1-258	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub1-269	IUB1-269	unclear	1	1	IUB1-269	work933	machine_stub	IUB1-269	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub1-271	IUB1-271	unclear	1	1	IUB1-271	work934	machine_stub	IUB1-271	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub1-287	IUB1-287	unclear	1	1	IUB1-287	work935	machine_stub	IUB1-287	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub1-288	IUB1-288	unclear	1	1	IUB1-288	work936	machine_stub	IUB1-288	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub1-291-292	IUB1-291-292	unclear	1	1	IUB1-291-292	work937	machine_stub	IUB1-291-292	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub1-293	IUB1-293	unclear	1	1	IUB1-293	work938	machine_stub	IUB1-293	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub1-294	IUB1-294	unclear	1	1	IUB1-294	work939	machine_stub	IUB1-294	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub1-296	IUB1-296	unclear	1	1	IUB1-296	work940	machine_stub	IUB1-296	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub1-298	IUB1-298	unclear	1	1	IUB1-298	work941	machine_stub	IUB1-298	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub1-299	IUB1-299	unclear	1	1	IUB1-299	work942	machine_stub	IUB1-299	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub1-300	IUB1-300	unclear	1	1	IUB1-300	work943	machine_stub	IUB1-300	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub1-301	IUB1-301	unclear	1	1	IUB1-301	work944	machine_stub	IUB1-301	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub1-302-303	IUB1-302-303	unclear	1	1	IUB1-302-303	work945	machine_stub	IUB1-302-303	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub1-306-307	IUB1-306-307	unclear	1	1	IUB1-306-307	work946	machine_stub	IUB1-306-307	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub1-308	IUB1-308	unclear	1	1	IUB1-308	work947	machine_stub	IUB1-308	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub1-309	IUB1-309	unclear	1	1	IUB1-309	work948	machine_stub	IUB1-309	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub1-32	IUB1-32	unclear	1	1	IUB1-32	work949	machine_stub	IUB1-32	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub1-33	IUB1-33	unclear	1	1	IUB1-33	work950	machine_stub	IUB1-33	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub1-34-35	IUB1-34-35	unclear	1	1	IUB1-34-35	work951	machine_stub	IUB1-34-35	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub1-36	IUB1-36,	unclear	1	1	IUB1-36,	work952	machine_stub	IUB1-36,	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub1-37	IUB1-37,	unclear	1	1	IUB1-37,	work953	machine_stub	IUB1-37,	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub1-38-39	IUB1-38-39	unclear	1	1	IUB1-38-39	work954	machine_stub	IUB1-38-39	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub1-40	IUB1-40	unclear	1	1	IUB1-40	work955	machine_stub	IUB1-40	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub1-47	IUB1-47	unclear	1	1	IUB1-47	work956	machine_stub	IUB1-47	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub1-49	IUB1-49	unclear	1	1	IUB1-49	work957	machine_stub	IUB1-49	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub1-52	IUB1-52,	unclear	1	1	IUB1-52,	work958	machine_stub	IUB1-52,	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub1-67	IUB1-67,	unclear	1	1	IUB1-67,	work959	machine_stub	IUB1-67,	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub1-68	IUB1-68	unclear	1	1	IUB1-68	work960	machine_stub	IUB1-68	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub1-75	IUB1-75	unclear	1	1	IUB1-75	work961	machine_stub	IUB1-75	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub1-78	IUB1-78	unclear	1	1	IUB1-78	work962	machine_stub	IUB1-78	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub1-80	IUB1-80,	unclear	1	1	IUB1-80,	work963	machine_stub	IUB1-80,	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub1-81	IUB1-81	unclear	1	1	IUB1-81	work964	machine_stub	IUB1-81	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub1-86	IUB1-86,	unclear	1	1	IUB1-86,	work965	machine_stub	IUB1-86,	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub1-90	IUB1-90	unclear	1	1	IUB1-90	work966	machine_stub	IUB1-90	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub1-93	IUB1-93,	unclear	1	1	IUB1-93,	work967	machine_stub	IUB1-93,	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub1-94	IUB1-94	unclear	1	1	IUB1-94	work968	machine_stub	IUB1-94	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub1-98	IUB1-98	unclear	1	1	IUB1-98	work969	machine_stub	IUB1-98	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub1-bed-b-600-7	IUB1- BED B 600-7	unclear	1	1	IUB1- BED B 600-7	work970	machine_stub	IUB1- BED B 600-7	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub1184-185	IUB1184, 185	unclear	1	1	IUB1184, 185	work971	machine_stub	IUB1184, 185	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub1bm1-84	IUB1BM1--84	unclear	1	1	IUB1BM1--84	work972	machine_stub	IUB1BM1--84	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub2-132	IUB2-132	unclear	1	1	IUB2-132	work973	machine_stub	IUB2-132	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub2-133	IUB2-133	unclear	1	1	IUB2-133	work974	machine_stub	IUB2-133	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub2-134	IUB2-134	unclear	1	1	IUB2-134	work975	machine_stub	IUB2-134	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub2-135	IUB2-135	unclear	1	1	IUB2-135	work976	machine_stub	IUB2-135	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub2-136	IUB2-136	unclear	1	1	IUB2-136	work977	machine_stub	IUB2-136	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub2-137	IUB2-137	unclear	1	1	IUB2-137	work978	machine_stub	IUB2-137	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub2-138	IUB2-138	unclear	1	1	IUB2-138	work979	machine_stub	IUB2-138	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub2-186-187	IUB2-186-187	unclear	1	1	IUB2-186-187	work980	machine_stub	IUB2-186-187	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub2-197	IUB2-197	unclear	1	1	IUB2-197	work981	machine_stub	IUB2-197	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub2-198	IUB2-198	unclear	1	1	IUB2-198	work982	machine_stub	IUB2-198	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub2-200	IUB2-200	unclear	1	1	IUB2-200	work983	machine_stub	IUB2-200	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub2-202	IUB2-202	unclear	1	1	IUB2-202	work984	machine_stub	IUB2-202	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub2-203	IUB2-203	unclear	1	1	IUB2-203	work985	machine_stub	IUB2-203	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub2-204	IUB2-204	unclear	1	1	IUB2-204	work986	machine_stub	IUB2-204	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub2-205	IUB2-205	unclear	1	1	IUB2-205	work987	machine_stub	IUB2-205	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub2-206	IUB2-206	unclear	1	1	IUB2-206	work988	machine_stub	IUB2-206	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub2-207	IUB2-207	unclear	1	1	IUB2-207	work989	machine_stub	IUB2-207	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub2-209	IUB2-209	unclear	1	1	IUB2-209	work990	machine_stub	IUB2-209	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub2-210	IUB2-210	unclear	1	1	IUB2-210	work991	machine_stub	IUB2-210	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub2-212	IUB2-212	unclear	1	1	IUB2-212	work992	machine_stub	IUB2-212	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub2-225-226	IUB2-225-226	unclear	1	1	IUB2-225-226	work993	machine_stub	IUB2-225-226	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub2-229	IUB2-229	unclear	1	1	IUB2-229	work994	machine_stub	IUB2-229	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub2-231	IUB2-231	unclear	1	1	IUB2-231	work995	machine_stub	IUB2-231	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub2-232	IUB2-232	unclear	1	1	IUB2-232	work996	machine_stub	IUB2-232	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub2-233-bed-b-557-4	iub2 233 bed b 557 4	unclear	1	1	IUB2-233 BED B 557-4	work997	machine_stub	iub2 233 bed b 557 4	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub2-250	IUB2-250	unclear	1	1	IUB2-250	work998	machine_stub	IUB2-250	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub2-254	IUB2-254	unclear	1	1	IUB2-254	work999	machine_stub	IUB2-254	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub2-259	IUB2-259	unclear	1	1	IUB2-259	work1000	machine_stub	IUB2-259	Prioritize local library or Frasch-preface evidence review.
+fam-raw-iub2-260	IUB2-260	unclear	1	1	IUB2-260	work1001	machine_stub	IUB2-260	Prioritize local library or Frasch-preface evidence review.
+fam-raw-list-106	copy List 106	unclear	1	1	copy List 106	work1002	machine_stub	copy List 106	Prioritize local library or Frasch-preface evidence review.
+fam-raw-list-114	copy List 114	unclear	1	1	copy List 114	work1003	machine_stub	copy List 114	Prioritize local library or Frasch-preface evidence review.
+fam-raw-list-150	copy List 150	unclear	1	1	copy List 150	work1004	machine_stub	copy List 150	Prioritize local library or Frasch-preface evidence review.
+fam-raw-list-163-162	copy List 163 (162?)	unclear	1	1	copy List 163 (162?)	work1005	machine_stub	copy List 163 (162?)	Prioritize local library or Frasch-preface evidence review.
+fam-raw-list-221	copy List 221	unclear	1	1	copy List 221	work1006	machine_stub	copy List 221	Prioritize local library or Frasch-preface evidence review.
+fam-raw-list-28-dated-cs-433-1071	list 28 dated cs 433 1071	unclear	1	1	copy List 28 (dated CS 433/ 1071)	work1007	machine_stub	list 28 dated cs 433 1071	Prioritize local library or Frasch-preface evidence review.
+fam-raw-list-316-317	copy List 316-317	unclear	1	1	copy List 316-317	work1008	machine_stub	copy List 316-317	Prioritize local library or Frasch-preface evidence review.
+fam-raw-list-347	copy List 347	unclear	1	1	copy List 347	work1009	machine_stub	copy List 347	Prioritize local library or Frasch-preface evidence review.
+fam-raw-list-402	copy List 402	unclear	1	1	copy List 402	work1010	machine_stub	copy List 402	Prioritize local library or Frasch-preface evidence review.
+fam-raw-list-427	copy List 427	unclear	1	1	copy List 427	work1011	machine_stub	copy List 427	Prioritize local library or Frasch-preface evidence review.
+fam-raw-list-486	copy List 486	unclear	1	1	copy List 486	work1012	machine_stub	copy List 486	Prioritize local library or Frasch-preface evidence review.
+fam-raw-list-5	copy List 5	unclear	1	1	copy List 5	work1013	machine_stub	copy List 5	Prioritize local library or Frasch-preface evidence review.
+fam-raw-lubeigt-pagan	Lubeigt, Pagan, p. 339	unclear	1	1	Lubeigt, Pagan, p. 339	lubeigtpagan	machine_stub	Lubeigt, Pagan, p. 339, Lubeigt, Pagan	Prioritize local library or Frasch-preface evidence review.
+fam-raw-luce-2829	Luce 2829	unclear	1	1	Luce 2829	work1014	machine_stub	Luce 2829	Prioritize local library or Frasch-preface evidence review.
+fam-raw-luce-c-570	Luce C 570	unclear	1	1	Luce C 570	work1015	machine_stub	Luce C 570	Prioritize local library or Frasch-preface evidence review.
+fam-raw-luce-files-g-1763	Luce files G 1763	unclear	1	1	Luce files G 1763	work1016	machine_stub	Luce files G 1763	Prioritize local library or Frasch-preface evidence review.
+fam-raw-luce-g-1899	Luce G 1899	unclear	1	1	Luce G 1899	1899work	machine_stub	Luce G 1899	Prioritize local library or Frasch-preface evidence review.
+fam-raw-luce-g-1964	Luce G 1964	unclear	1	1	Luce G 1964	1964work	machine_stub	Luce G 1964	Prioritize local library or Frasch-preface evidence review.
+fam-raw-luce-j-2665	Luce J 2665	unclear	1	1	Luce J 2665	work1017	machine_stub	Luce J 2665	Prioritize local library or Frasch-preface evidence review.
+fam-raw-luce-j-2672	Luce J 2672	unclear	1	1	Luce J 2672	work1018	machine_stub	Luce J 2672	Prioritize local library or Frasch-preface evidence review.
+fam-raw-luce-j-2675	Luce J 2675	unclear	1	1	Luce J 2675	work1019	machine_stub	Luce J 2675	Prioritize local library or Frasch-preface evidence review.
+fam-raw-luce-obep	Luce, OBEP, p. 109	unclear	1	1	Luce, OBEP, p. 109	luceobep	machine_stub	Luce, OBEP, p. 109, Luce, OBEP	Prioritize local library or Frasch-preface evidence review.
+fam-raw-luce-obep-1	Luce, OBEP 1, p. 117-25	unclear	1	1	Luce, OBEP 1, p. 117-25	luceobep2	machine_stub	Luce, OBEP 1, p. 117-25, Luce, OBEP 1	Prioritize local library or Frasch-preface evidence review.
+fam-raw-mm-3	copy MM 3, no. 30, p. 131	unclear	1	1	copy MM 3, no. 30, p. 131	work1020	machine_stub	copy MM 3, no. 30, p. 131	Prioritize local library or Frasch-preface evidence review.
+fam-raw-myaketu-nandhale-hmattan	Myaketu, Nandhale Hmattan, p. 29-30	unclear	1	1	Myaketu, Nandhale Hmattan, p. 29-30	myaketunandhale	machine_stub	Myaketu, Nandhale Hmattan, p. 29-30, Myaketu, Nandhale Hmattan	Prioritize local library or Frasch-preface evidence review.
+fam-raw-nce-list-216	NCE List 216	unclear	1	1	NCE List 216	work1021	machine_stub	NCE List 216	Prioritize local library or Frasch-preface evidence review.
+fam-raw-other-copies-are-list-148	other copies are List 148	unclear	1	1	other copies are List 148	work1022	machine_stub	other copies are List 148	Prioritize local library or Frasch-preface evidence review.
+fam-raw-partly-in-list	partly in List	unclear	1	1	partly in List	work1023	machine_stub	partly in List	Prioritize local library or Frasch-preface evidence review.
+fam-raw-partly-list-116	copy (partly): List 116	unclear	1	1	copy (partly): List 116	work1024	machine_stub	copy (partly): List 116	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ref-pl-i-73	Ref.: Pl. I 73	unclear	1	1	Ref.: Pl. I 73	work1025	machine_stub	Ref.: Pl. I 73	Prioritize local library or Frasch-preface evidence review.
+fam-raw-rsasb-1912	RSASB 1912, p. 34	unclear	1	1	RSASB 1912, p. 34	1912work	machine_stub	RSASB 1912, p. 34	Prioritize local library or Frasch-preface evidence review.
+fam-raw-rsasb-1915	RSASB 1915, p. 57	unclear	1	1	RSASB 1915, p. 57	1915work	machine_stub	RSASB 1915, p. 57	Prioritize local library or Frasch-preface evidence review.
+fam-raw-rsasb-1926	RSASB 1926, p. 26	unclear	1	1	RSASB 1926, p. 26	1926work	machine_stub	RSASB 1926, p. 26	Prioritize local library or Frasch-preface evidence review.
+fam-raw-rsasb-926-and-app-g	RSASB 926, p. 26 and App. G, no. 13	unclear	1	1	RSASB 926, p. 26 and App. G, no. 13	work1026	machine_stub	RSASB 926, p. 26 and App. G, no. 13	Prioritize local library or Frasch-preface evidence review.
+fam-raw-similar-but-incomplete-version-pl-ii-144	similar but incomplete version Pl. II 144	book	1	1	similar but incomplete version Pl. II 144	work1027	machine_stub	similar but incomplete version Pl. II 144	Prioritize local library or Frasch-preface evidence review.
+fam-raw-strachan-pagan	Strachan, Pagan, p. 127-8	unclear	1	1	Strachan, Pagan, p. 127-8	strachanpagan	machine_stub	Strachan, Pagan, p. 127-8, Strachan, Pagan	Prioritize local library or Frasch-preface evidence review.
+fam-raw-than-tun-hnaung-dwe	Than Tun, Hnaung-dwe, no. 8, p. 18	unclear	1	1	Than Tun, Hnaung-dwe, no. 8, p. 18	tunhnaung	machine_stub	Than Tun, Hnaung-dwe, no. 8, p. 18, Than Tun, Hnaung-dwe, no. 8	Prioritize local library or Frasch-preface evidence review.
+fam-raw-u-maung-maung-lat-nos-1-2	u maung maung lat nos 1 2	unclear	1	1	U Maung Maung Lat, nos. 1+2	latwork	machine_stub	u maung maung lat nos 1 2, U Maung Maung Lat	Prioritize local library or Frasch-preface evidence review.
+fam-raw-u-nyein-maung-s-update-to-obi-5-htupayon	u nyein maung s update to obi 5 htupayon	unclear	1	1	U Nyein Maung’s update to OBI 5 (Htupayon), p. 2	work1028	machine_stub	u nyein maung s update to obi 5 htupayon	Prioritize local library or Frasch-preface evidence review.
+fam-raw-u-nyein-maung-she-haung-pancama-twe-nauk-hset-twe	u nyein maung she haung pancama twe nauk hset twe	unclear	1	1	U Nyein Maung, She-haung … Pancama-twe Nauk-hset-…	maungshe	machine_stub	u nyein maung she haung pancama twe nauk hset twe, U Nyein Maung, She-haung … Pancama-twe Nauk-hset-twe	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ub-1-u-min-hswe	UB 1, p. 219, U Min Hswe, no. 71	unclear	1	1	UB 1, p. 219, U Min Hswe, no. 71	work1029	machine_stub	UB 1, p. 219, U Min Hswe, no. 71	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ub-2-135	UB 2, 135	unclear	1	1	UB 2, 135	work1030	machine_stub	UB 2, 135	Prioritize local library or Frasch-preface evidence review.
+fam-raw-ub1	UB1, p. 287	unclear	1	1	UB1, p. 287	work1031	machine_stub	UB1, p. 287	Prioritize local library or Frasch-preface evidence review.
+fam-raw-unknown	. .	unclear	1	1	. .	work1032	machine_stub	. .	Prioritize local library or Frasch-preface evidence review.

@@ -5,6 +5,7 @@ __pycache__/
 *.pdf
 *.odt
 data/local/
+data/working/bibliography/local_sources/frasch_extracted_text.txt
 data/working/bibliography/external_bibtex/*.bib
 *.zip
 

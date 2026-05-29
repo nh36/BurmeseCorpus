@@ -1,0 +1,20 @@
+{
+  "mode": "high-priority",
+  "available_roots": [
+    "OBI_LIBRARY_ROOT:Library",
+    "OBI_AUTHOR_ALPHA_ROOT:Authors alphabetical",
+    "OBI_LOCAL_BIB_ROOT:Downloads"
+  ],
+  "candidate_count": 2649,
+  "copied_file_count": 2649,
+  "file_type_counts": {
+    "pdf": 2538,
+    "txt": 13,
+    "doc": 12,
+    "xml": 76,
+    "djvu": 4,
+    "docx": 6
+  },
+  "manifest_row_count": 3112,
+  "output_file": "data/working/bibliography/local_sources/high_priority_local_candidates.tsv"
+}

@@ -159,7 +159,16 @@ def split_top_level(value: str, delimiter: str = ",") -> list[str]:
     current: list[str] = []
     brace_level = 0
     quote_open = False
+    escaped = False
     for char in value:
+        if escaped:
+            current.append(char)
+            escaped = False
+            continue
+        if char == "\\":
+            current.append(char)
+            escaped = True
+            continue
         if char == '"' and brace_level == 0:
             quote_open = not quote_open
         elif not quote_open:
@@ -286,6 +295,9 @@ def parse_bibtex_text(text: str, *, source_label: str = "") -> tuple[list[dict],
 
 
 def serialize_bibtex_entry(entry: dict) -> str:
+    def escape_bibtex_value(value: str) -> str:
+        return value.replace("\\", "\\\\").replace("{", "\\{").replace("}", "\\}")
+
     entry_type = entry["entry_type"]
     bibtex_key = entry["bibtex_key"]
     fields: dict[str, str] = entry["fields"]
@@ -293,7 +305,7 @@ def serialize_bibtex_entry(entry: dict) -> str:
     ordered_fields.extend(sorted(field for field in fields if fields.get(field) and field not in FIELD_ORDER))
     lines = [f"@{entry_type}{{{bibtex_key},"]
     for field in ordered_fields:
-        value = fields[field]
+        value = escape_bibtex_value(fields[field])
         lines.append(f"  {field} = {{{value}}},")
     lines.append("}")
     return "\n".join(lines)

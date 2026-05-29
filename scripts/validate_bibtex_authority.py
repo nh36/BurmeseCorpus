@@ -24,6 +24,10 @@ def validate_bibtex_authority(
     crosswalk_path: Path,
     families_path: Path,
     external_entries_path: Path | None = None,
+    seed_path: Path | None = None,
+    high_frequency_path: Path | None = None,
+    frasch_references_path: Path | None = None,
+    local_manifest_path: Path | None = None,
 ) -> dict:
     errors: list[str] = []
     authority_entries, authority_warnings = parse_bibtex_text(authority_bib_path.read_text(encoding="utf-8"), source_label=authority_bib_path.name)
@@ -32,6 +36,10 @@ def validate_bibtex_authority(
     crosswalk_rows = read_tsv(crosswalk_path)
     family_rows = read_tsv(families_path)
     external_rows = read_tsv(external_entries_path) if external_entries_path and external_entries_path.exists() else []
+    seed_rows = read_tsv(seed_path) if seed_path and seed_path.exists() else []
+    high_frequency_rows = read_tsv(high_frequency_path) if high_frequency_path and high_frequency_path.exists() else []
+    frasch_rows = read_tsv(frasch_references_path) if frasch_references_path and frasch_references_path.exists() else []
+    manifest_rows = read_tsv(local_manifest_path) if local_manifest_path and local_manifest_path.exists() else []
 
     authority_keys = {entry["bibtex_key"] for entry in authority_entries}
     candidate_keys = {entry["bibtex_key"] for entry in candidate_entries}
@@ -60,6 +68,7 @@ def validate_bibtex_authority(
     allowed_statuses = {
         "confirmed_external_bibtex",
         "confirmed_local_source",
+        "provisional_local_source",
         "provisional_catalogue",
         "provisional_publication",
         "machine_stub",
@@ -72,15 +81,53 @@ def validate_bibtex_authority(
             errors.append(f"bibtex_authority[{index}] references missing matched_external_key {row['matched_external_key']}")
         if row["family_id"] and row["family_id"] not in family_ids:
             errors.append(f"bibtex_authority[{index}] references unknown family_id {row['family_id']}")
-        if row["authority_status"] in {"machine_stub", "provisional_catalogue", "provisional_publication", "needs_human_review"}:
+        if row["authority_status"] in {"machine_stub", "provisional_catalogue", "provisional_publication", "provisional_local_source", "needs_human_review"}:
             if not row["review_status"]:
                 errors.append(f"bibtex_authority[{index}] is provisional but missing review_status")
             if not row["evidence"] and not row["notes"]:
                 errors.append(f"bibtex_authority[{index}] is provisional but missing evidence or notes")
+        if row["authority_status"] == "confirmed_local_source":
+            if not row.get("matched_local_source_id") or not row.get("matched_local_source_file"):
+                errors.append(f"bibtex_authority[{index}] is confirmed_local_source but missing local evidence fields")
+        if row["authority_status"] in {"confirmed_local_source", "provisional_local_source"}:
+            if row["source_of_authority"] in {"frasch_bibliography", "frasch_word_document"} and not row.get("matched_local_source_id"):
+                errors.append(f"bibtex_authority[{index}] is Frasch-derived but missing matched_local_source_id")
+            if row["source_of_authority"] == "frasch_bibliography" and row.get("matched_local_source_id") and frasch_rows:
+                frasch_ids = {frasch_row["frasch_ref_id"] for frasch_row in frasch_rows}
+                if row["matched_local_source_id"] not in frasch_ids:
+                    errors.append(f"bibtex_authority[{index}] references missing Frasch ref ID {row['matched_local_source_id']}")
         for value in row.values():
             if has_absolute_path(value):
                 errors.append(f"bibtex_authority[{index}] contains an absolute local path")
                 break
+
+    if high_frequency_path:
+        if not high_frequency_path.exists():
+            errors.append("high_frequency_unresolved.tsv is missing")
+        else:
+            counts = [int(row.get("occurrence_count", "0") or 0) for row in high_frequency_rows]
+            if counts != sorted(counts, reverse=True):
+                errors.append("high_frequency_unresolved.tsv is not sorted by descending occurrence_count")
+
+    if seed_rows:
+        allowed_confidence = {"low", "medium", "high"}
+        allowed_flags = {"true", "false"}
+        for index, row in enumerate(seed_rows, start=1):
+            if row.get("confidence") not in allowed_confidence:
+                errors.append(f"source_abbreviation_seeds[{index}] has invalid confidence {row.get('confidence')}")
+            if row.get("needs_human_review") not in allowed_flags:
+                errors.append(f"source_abbreviation_seeds[{index}] has invalid needs_human_review {row.get('needs_human_review')}")
+            for value in row.values():
+                if has_absolute_path(value):
+                    errors.append(f"source_abbreviation_seeds[{index}] contains an absolute local path")
+                    break
+
+    for index, row in enumerate(manifest_rows, start=1):
+        copied_path = row.get("copied_path", "")
+        if copied_path and not (copied_path.startswith("data/local/") or copied_path.startswith(".local/")):
+            errors.append(f"local_file_manifest[{index}] copied_path is not under a gitignored local cache")
+        if has_absolute_path(row.get("original_path", "")) or has_absolute_path(copied_path):
+            errors.append(f"local_file_manifest[{index}] contains an absolute local path")
 
     return {
         "ok": not errors,
@@ -125,6 +172,26 @@ def main() -> None:
         type=Path,
         default=Path("data/working/bibliography/external_bibtex/asia_2_entries.tsv"),
     )
+    parser.add_argument(
+        "--seed-path",
+        type=Path,
+        default=Path("data/working/bibliography/bibtex_authority/source_abbreviation_seeds.tsv"),
+    )
+    parser.add_argument(
+        "--high-frequency",
+        type=Path,
+        default=Path("data/working/bibliography/bibtex_authority/high_frequency_unresolved.tsv"),
+    )
+    parser.add_argument(
+        "--frasch-references",
+        type=Path,
+        default=Path("data/working/bibliography/local_sources/frasch_reference_entries.tsv"),
+    )
+    parser.add_argument(
+        "--local-manifest",
+        type=Path,
+        default=Path("data/working/bibliography/local_sources/local_file_manifest.tsv"),
+    )
     args = parser.parse_args()
 
     result = validate_bibtex_authority(
@@ -134,6 +201,10 @@ def main() -> None:
         crosswalk_path=args.crosswalk,
         families_path=args.families,
         external_entries_path=args.external_entries,
+        seed_path=args.seed_path,
+        high_frequency_path=args.high_frequency,
+        frasch_references_path=args.frasch_references,
+        local_manifest_path=args.local_manifest,
     )
     print(json.dumps(result, indent=2, ensure_ascii=False))
     if not result["ok"]:

@@ -7,11 +7,14 @@ After `corpus_release_v0_3` has been regenerated and the bibliography triage fil
 1. `python3 scripts/triage_bibliography.py`
 2. `python3 scripts/validate_bibliography_triage.py`
 3. `python3 scripts/import_external_bibtex.py --input-bibtex "$HOME/Downloads/asia 2.bib" --source-label "asia 2.bib" --output-dir data/working/bibliography/external_bibtex`
-4. `python3 scripts/build_bibtex_authority.py`
-5. `python3 scripts/validate_bibtex_authority.py`
-6. `OBI_LIBRARY_ROOT=/path/to/local/library python3 scripts/match_local_bibliography_sources.py` *(optional local-library evidence step)*
+4. `python3 scripts/harvest_local_bibliography_sources.py --mode frasch`
+5. `python3 scripts/extract_frasch_bibliography.py`
+6. `python3 scripts/harvest_local_bibliography_sources.py --mode high-priority`
+7. `python3 scripts/match_local_bibliography_sources.py`
+8. `python3 scripts/build_bibtex_authority.py`
+9. `python3 scripts/validate_bibtex_authority.py`
 
-These steps build working bibliography authority artifacts under `data/working/bibliography/`. They do **not** modify `data/release/corpus_release_v0_3/`.
+These steps build working bibliography authority artifacts under `data/working/bibliography/`. They do **not** modify `data/release/corpus_release_v0_3/`. The copied local source cache lives under gitignored `data/local/bibliography_sources/`; commit only manifests, checksums, extracted metadata, and review tables.
 
 This repository builds the current release layer through a small set of Python scripts. The workflow is deliberately linear at the release level even though some source-specific parsing steps are independent.
 
@@ -51,7 +54,7 @@ python3 scripts/validate_corpus.py
 
 - `review_recently_found_exceptions.py` is **diagnostic**, not a release-builder prerequisite in the narrow technical sense. It is still part of the documented workflow because the accepted override and release-policy files for entries `12`, `21`, and `37` are grounded in that review artifact.
 - `parse_sagaing.py` is independent of the Recently Found audit path, but `build_corpus_release.py` needs its `sagaing_v0_1/` outputs, so it must run before the whole-corpus release is rebuilt.
-- `extract_bibliography.py`, `triage_bibliography.py`, `validate_bibliography_triage.py`, `extract_places.py`, and `init_translation_scaffold.py` are **post-release working-layer steps**. They do not redefine `corpus_release_v0_3/`; they build Phase 2 authority scaffolds on top of that stable release baseline.
+- `extract_bibliography.py`, `triage_bibliography.py`, `validate_bibliography_triage.py`, the local bibliography harvest/extraction scripts, `extract_places.py`, and `init_translation_scaffold.py` are **post-release working-layer steps**. They do not redefine `corpus_release_v0_3/`; they build Phase 2 authority scaffolds on top of that stable release baseline.
 
 ## What each script produces
 

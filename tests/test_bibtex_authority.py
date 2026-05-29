@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import os
 import sys
 import tempfile
 import unittest
@@ -14,6 +15,8 @@ if str(SCRIPTS_DIR) not in sys.path:
 from bibtex_common import parse_bibtex_text
 from build_bibtex_authority import build_authority, parse_locator
 from corpus_common import write_tsv
+from extract_frasch_bibliography import run_extraction
+from harvest_local_bibliography_sources import run_harvest
 from import_external_bibtex import import_external_bibtex
 from validate_bibtex_authority import validate_bibtex_authority
 
@@ -65,6 +68,37 @@ SEED_FIELDS = [
     "confidence",
     "evidence",
     "needs_human_review",
+    "notes",
+]
+
+LOCAL_CANDIDATE_FIELDS = [
+    "candidate_id",
+    "search_term",
+    "name",
+    "original_path",
+    "file_type",
+    "file_size",
+    "sha256",
+    "probable_work_label",
+    "probable_author",
+    "probable_year",
+    "match_confidence",
+    "copy_status",
+    "copied_path",
+    "notes",
+]
+
+LOCAL_MANIFEST_FIELDS = [
+    "source_file_id",
+    "original_path",
+    "copied_path",
+    "file_name",
+    "file_type",
+    "file_size",
+    "sha256",
+    "source_folder_hint",
+    "copy_date",
+    "copy_status",
     "notes",
 ]
 
@@ -298,6 +332,17 @@ class BibtexAuthorityTests(unittest.TestCase):
             seeds_path,
             [
                 {
+                    "abbreviation": "OBI",
+                    "family_id": "fam-obi-internal",
+                    "provisional_label": "Old Burmese Inscriptions corpus source set",
+                    "probable_bibtex_key": "obiCorpusSource",
+                    "source_type": "source_catalogue",
+                    "confidence": "high",
+                    "evidence": "fixture seed",
+                    "needs_human_review": "false",
+                    "notes": "",
+                },
+                {
                     "abbreviation": "List",
                     "family_id": "fam-list-catalogue",
                     "provisional_label": "List catalogue",
@@ -354,7 +399,7 @@ class BibtexAuthorityTests(unittest.TestCase):
         )
         return families_path, members_path, candidates_path, seeds_path, external_entries_path
 
-    def test_build_authority_matches_external_and_generates_stub(self) -> None:
+    def test_build_authority_generates_seed_authority_and_stub(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:
             temp_path = Path(temp_dir)
             families_path, members_path, candidates_path, seeds_path, external_entries_path = self.write_fixture_tables(temp_path)
@@ -367,6 +412,9 @@ class BibtexAuthorityTests(unittest.TestCase):
                 seed_path=seeds_path,
                 external_entries_path=external_entries_path,
                 output_dir=output_dir,
+                frasch_references_path=temp_path / "missing_frasch.tsv",
+                local_candidates_path=temp_path / "missing_local_candidates.tsv",
+                local_manifest_path=temp_path / "missing_local_manifest.tsv",
             )
 
             authority_bib = (output_dir / "bibliography_authority.bib").read_text(encoding="utf-8")
@@ -374,16 +422,250 @@ class BibtexAuthorityTests(unittest.TestCase):
             authority_tsv = (output_dir / "bibtex_authority.tsv").read_text(encoding="utf-8")
             crosswalk_tsv = (output_dir / "raw_reference_to_bibtex.tsv").read_text(encoding="utf-8")
 
-            self.assertIn("harvey1925history", authority_bib)
-            self.assertIn("matchedexternalkey = {harveyExt}", authority_bib)
+            self.assertIn("obiCorpusSource", authority_bib)
+            self.assertIn("duroiselle1921list", authority_bib)
             self.assertIn("Provisional entry generated from corpus reference triage; requires human review", candidates_bib)
             self.assertIn("obiCorpusSource", crosswalk_tsv)
             self.assertIn("abbreviation_catalogue_match", crosswalk_tsv)
-            self.assertIn("harvey1925history", crosswalk_tsv)
-            self.assertIn("@misc{mystery,", candidates_bib)
+            self.assertIn("familyid = {fam-unresolved}", candidates_bib)
+            self.assertIn("Mystery Source", candidates_bib)
             self.assertGreater(report["authority_entry_count"], 0)
             self.assertGreater(report["candidate_entry_count"], 0)
             self.assertIn("matched_external_key", authority_tsv)
+
+    def test_harvest_local_bibliography_sources_finds_frasch_and_frosch_and_copies(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            temp_path = Path(temp_dir)
+            author_root = temp_path / "Authors alphabetical"
+            frasch_dir = author_root / "Frasch, Tilmans"
+            frosch_dir = author_root / "Frosch"
+            frasch_dir.mkdir(parents=True)
+            frosch_dir.mkdir(parents=True)
+            (frasch_dir / "Bagan Epig Database.doc").write_text("dummy", encoding="utf-8")
+            (frosch_dir / "Tilman bibliography.rtf").write_text("dummy", encoding="utf-8")
+            downloads = temp_path / "Downloads"
+            downloads.mkdir()
+
+            previous = {key: os.environ.get(key) for key in ("OBI_AUTHOR_ALPHA_ROOT", "OBI_LIBRARY_ROOT", "OBI_LOCAL_BIB_ROOT")}
+            os.environ["OBI_AUTHOR_ALPHA_ROOT"] = str(author_root)
+            os.environ["OBI_LIBRARY_ROOT"] = str(temp_path)
+            os.environ["OBI_LOCAL_BIB_ROOT"] = str(downloads)
+            try:
+                output_dir = temp_path / "output"
+                report = run_harvest("frasch", output_dir)
+            finally:
+                for key, value in previous.items():
+                    if value is None:
+                        os.environ.pop(key, None)
+                    else:
+                        os.environ[key] = value
+
+            self.assertGreaterEqual(report["candidate_count"], 2)
+            candidates = (output_dir / "frasch_source_candidates.tsv").read_text(encoding="utf-8")
+            self.assertIn("Bagan Epig Database.doc", candidates)
+            self.assertIn("Tilman bibliography.rtf", candidates)
+            manifest = (output_dir / "local_file_manifest.tsv").read_text(encoding="utf-8")
+            self.assertIn("data/local/bibliography_sources", manifest)
+
+    def test_extract_frasch_bibliography_from_docx(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            temp_path = Path(temp_dir)
+            document_path = temp_path / "frasch.docx"
+            from docx import Document
+
+            document = Document()
+            document.add_paragraph("Number: 1")
+            document.add_paragraph("References: U Tha Myat, The Pali Version of the Myazedi Inscription, Rangoon 1958; List 90")
+            document.save(document_path)
+
+            manifest_path = temp_path / "manifest.tsv"
+            write_tsv(
+                manifest_path,
+                [
+                    {
+                        "source_file_id": "frasch-docx",
+                        "original_path": "OBI_AUTHOR_ALPHA_ROOT:Frasch/frasch.docx",
+                        "copied_path": document_path.as_posix(),
+                        "file_name": "frasch.docx",
+                        "file_type": "docx",
+                        "file_size": "1",
+                        "sha256": "abc",
+                        "source_folder_hint": "Frasch",
+                        "copy_date": "2024-01-01T00:00:00Z",
+                        "copy_status": "copied",
+                        "notes": "",
+                    }
+                ],
+                LOCAL_MANIFEST_FIELDS,
+            )
+            output_dir = temp_path / "output"
+            report = run_extraction(manifest_path, output_dir)
+            rows = (output_dir / "frasch_reference_entries.tsv").read_text(encoding="utf-8")
+            self.assertEqual(report["source_file_count"], 1)
+            self.assertIn("The Pali Version of the Myazedi Inscription", rows)
+            self.assertIn("List 90", rows)
+            self.assertIn("\tlow\t", rows)
+            self.assertIn("\tmedium\t", rows)
+            bibliography = (output_dir / "frasch_bibliography.bib").read_text(encoding="utf-8")
+            self.assertEqual(bibliography.strip(), "")
+
+    def test_build_authority_promotes_manual_local_match(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            temp_path = Path(temp_dir)
+            families_path = temp_path / "families.tsv"
+            members_path = temp_path / "members.tsv"
+            candidates_path = temp_path / "candidates.tsv"
+            seeds_path = temp_path / "seeds.tsv"
+            local_candidates_path = temp_path / "local_candidates.tsv"
+            local_manifest_path = temp_path / "manifest.tsv"
+            output_dir = temp_path / "authority"
+
+            write_tsv(
+                families_path,
+                [
+                    {
+                        "family_id": "fam-raw-u-tin-htway-first-burmese-royal-inscription",
+                        "family_label": "u tin htway first burmese royal inscription",
+                        "family_type": "article",
+                        "member_count": "1",
+                        "occurrence_count": "2",
+                        "sample_raw_references": "U Tin Htway, First Burmese Royal Inscription",
+                        "likely_contains_translation": "unknown",
+                        "review_status": "needs_human_review",
+                        "notes": "",
+                    }
+                ],
+                FAMILY_FIELDS,
+            )
+            write_tsv(
+                members_path,
+                [
+                    {
+                        "family_id": "fam-raw-u-tin-htway-first-burmese-royal-inscription",
+                        "raw_reference_string": "U Tin Htway, First Burmese Royal Inscription",
+                        "occurrence_count": "2",
+                        "example_record_ids": "obi-1",
+                        "notes": "",
+                    }
+                ],
+                MEMBER_FIELDS,
+            )
+            write_tsv(
+                candidates_path,
+                [
+                    {
+                        "work_candidate_id": "wc-tin-htway",
+                        "family_id": "fam-raw-u-tin-htway-first-burmese-royal-inscription",
+                        "provisional_short_label": "First Burmese Royal Inscription",
+                        "author_original": "U Tin Htway",
+                        "author_normalized": "u tin htway",
+                        "year": "",
+                        "title_original": "First Burmese Royal Inscription",
+                        "title_normalized": "first burmese royal inscription",
+                        "publication_details": "",
+                        "language": "",
+                        "script": "",
+                        "translation_relevance": "unknown",
+                        "evidence_raw_references": "U Tin Htway, First Burmese Royal Inscription",
+                        "review_status": "needs_human_review",
+                        "notes": "",
+                    }
+                ],
+                CANDIDATE_FIELDS,
+            )
+            write_tsv(seeds_path, [], SEED_FIELDS)
+            write_tsv(
+                local_candidates_path,
+                [
+                    {
+                        "candidate_id": "tinhtway1974",
+                        "search_term": "u tin htswe",
+                        "name": "Tin Htway 1974 Oldest Burmese Inscription.pdf",
+                        "original_path": "OBI_LIBRARY_ROOT:Thematic/Pyu/Tin Htway 1974 Oldest Burmese Inscription.pdf",
+                        "file_type": "pdf",
+                        "file_size": "100",
+                        "sha256": "abc",
+                        "probable_work_label": "Oldest Burmese Inscription",
+                        "probable_author": "Tin Htway",
+                        "probable_year": "1974",
+                        "match_confidence": "high",
+                        "copy_status": "copied",
+                        "copied_path": "data/local/bibliography_sources/tinhtway1974/Tin Htway 1974 Oldest Burmese Inscription.pdf",
+                        "notes": "",
+                    }
+                ],
+                LOCAL_CANDIDATE_FIELDS,
+            )
+            write_tsv(
+                local_manifest_path,
+                [
+                    {
+                        "source_file_id": "tinhtway1974",
+                        "original_path": "OBI_LIBRARY_ROOT:Thematic/Pyu/Tin Htway 1974 Oldest Burmese Inscription.pdf",
+                        "copied_path": "data/local/bibliography_sources/tinhtway1974/Tin Htway 1974 Oldest Burmese Inscription.pdf",
+                        "file_name": "Tin Htway 1974 Oldest Burmese Inscription.pdf",
+                        "file_type": "pdf",
+                        "file_size": "100",
+                        "sha256": "abc",
+                        "source_folder_hint": "Pyu",
+                        "copy_date": "2024-01-01T00:00:00Z",
+                        "copy_status": "copied",
+                        "notes": "",
+                    }
+                ],
+                LOCAL_MANIFEST_FIELDS,
+            )
+
+            report = build_authority(
+                reference_families_path=families_path,
+                reference_members_path=members_path,
+                work_candidates_path=candidates_path,
+                seed_path=seeds_path,
+                output_dir=output_dir,
+                local_candidates_path=local_candidates_path,
+                local_manifest_path=local_manifest_path,
+            )
+
+            authority = (output_dir / "bibtex_authority.tsv").read_text(encoding="utf-8")
+            self.assertIn("confirmed_local_source", authority)
+            self.assertIn("Oldest Burmese Inscription", authority)
+            self.assertEqual(report["confirmed_local_source_count"], 1)
+
+    def test_validate_bibtex_authority_rejects_unsorted_high_frequency_output(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            temp_path = Path(temp_dir)
+            families_path, members_path, candidates_path, seeds_path, external_entries_path = self.write_fixture_tables(temp_path)
+            output_dir = temp_path / "authority"
+            build_authority(
+                reference_families_path=families_path,
+                reference_members_path=members_path,
+                work_candidates_path=candidates_path,
+                seed_path=seeds_path,
+                external_entries_path=external_entries_path,
+                output_dir=output_dir,
+                frasch_references_path=temp_path / "missing_frasch.tsv",
+                local_candidates_path=temp_path / "missing_local_candidates.tsv",
+                local_manifest_path=temp_path / "missing_local_manifest.tsv",
+            )
+            high_frequency_path = output_dir / "high_frequency_unresolved.tsv"
+            high_frequency_path.write_text(
+                "family_id\tfamily_label\tfamily_type\tmember_count\toccurrence_count\tsample_raw_references\tcurrent_bibtex_key\tcurrent_status\tsuggested_local_search_terms\tnotes\n"
+                "fam-a\tA\tunclear\t1\t1\tA 1\tkey-a\tmachine_stub\tA\t\n"
+                "fam-b\tB\tunclear\t1\t10\tB 1\tkey-b\tmachine_stub\tB\t\n",
+                encoding="utf-8",
+            )
+            result = validate_bibtex_authority(
+                authority_bib_path=output_dir / "bibliography_authority.bib",
+                candidates_bib_path=output_dir / "bibliography_candidates.bib",
+                authority_tsv_path=output_dir / "bibtex_authority.tsv",
+                crosswalk_path=output_dir / "raw_reference_to_bibtex.tsv",
+                families_path=families_path,
+                external_entries_path=external_entries_path,
+                seed_path=seeds_path,
+                high_frequency_path=high_frequency_path,
+            )
+            self.assertFalse(result["ok"])
+            self.assertTrue(any("not sorted" in error for error in result["errors"]))
 
     def test_validate_bibtex_authority_passes_for_valid_fixture(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:
@@ -397,6 +679,9 @@ class BibtexAuthorityTests(unittest.TestCase):
                 seed_path=seeds_path,
                 external_entries_path=external_entries_path,
                 output_dir=output_dir,
+                frasch_references_path=temp_path / "missing_frasch.tsv",
+                local_candidates_path=temp_path / "missing_local_candidates.tsv",
+                local_manifest_path=temp_path / "missing_local_manifest.tsv",
             )
             result = validate_bibtex_authority(
                 authority_bib_path=output_dir / "bibliography_authority.bib",

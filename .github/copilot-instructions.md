@@ -6,12 +6,17 @@
   - `python3 scripts/triage_bibliography.py`
   - `python3 scripts/validate_bibliography_triage.py`
   - `python3 scripts/import_external_bibtex.py --input-bibtex "$HOME/Downloads/asia 2.bib" --source-label "asia 2.bib" --output-dir data/working/bibliography/external_bibtex`
+  - `python3 scripts/harvest_local_bibliography_sources.py --mode frasch`
+  - `python3 scripts/extract_frasch_bibliography.py`
+  - `python3 scripts/harvest_local_bibliography_sources.py --mode high-priority`
+  - `python3 scripts/match_local_bibliography_sources.py`
   - `python3 scripts/build_bibtex_authority.py`
   - `python3 scripts/validate_bibtex_authority.py`
-  - `OBI_LIBRARY_ROOT=/path/to/local/library python3 scripts/match_local_bibliography_sources.py`
 
 - `data/release/corpus_release_v0_3/` remains the stable Phase 1 release baseline. Phase 2 work should build authority layers on top of it rather than redesigning the release layer.
 - `data/working/bibliography/bibtex_authority/` is the first BibTeX authority scaffold. It is provisional and should preserve uncertainty explicitly.
+- Local-source harvesting is now the main route to improving the bibliography authority layer. Prefer evidence from Frasch materials, Luce folders, and other local Burma bibliography sources over creating new machine stubs.
+- Copy local bibliography sources only into gitignored `data/local/bibliography_sources/`; commit manifests, checksums, extracted metadata, and review tables, not the copied local PDFs/Word files.
 - Do not treat every raw bibliography locator string as a separate work. Prefer source-family or work-level matches plus locators when evidence supports that split.
 
 - The repository now uses small Python scripts with no third-party dependency layer or build system.

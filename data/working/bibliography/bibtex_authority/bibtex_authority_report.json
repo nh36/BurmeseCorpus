@@ -1,25 +1,65 @@
 {
-  "authority_entry_count": 21,
-  "candidate_entry_count": 1071,
-  "crosswalk_row_count": 2938,
-  "matched_external_entry_count": 0,
-  "external_entries_available": true,
-  "manual_seed_family_count": 18,
-  "authority_status_counts": {
-    "provisional_publication": 12,
-    "provisional_catalogue": 11,
-    "confirmed_local_source": 1,
-    "needs_human_review": 1,
-    "machine_stub": 1067
-  },
-  "match_type_counts": {
-    "machine_stub_match": 1215,
-    "abbreviation_catalogue_match": 1716,
-    "title_author_year_match": 7
-  },
-  "external_entries_path": "data/working/bibliography/external_bibtex/asia_2_entries.tsv",
-  "notes": [
-    "bibliography_authority.bib is conservative and combines repository-backed source-family seeds with any matched external BibTeX entries when available.",
-    "bibliography_candidates.bib contains provisional stubs for unresolved families and requires human review."
+  "authority_entry_count": 23,
+  "candidate_entry_count": 1068,
+  "machine_stub_count": 1068,
+  "confirmed_external_bibtex_count": 0,
+  "confirmed_local_source_count": 11,
+  "provisional_local_source_count": 11,
+  "frasch_reference_count": 5788,
+  "frasch_matched_count": 12,
+  "luce_candidate_count": 79,
+  "local_file_count": 2210,
+  "unresolved_high_frequency_family_count": 1069,
+  "top_unresolved_families": [
+    {
+      "family_id": "fam-plate-references",
+      "family_label": "Plate references",
+      "occurrence_count": 545
+    },
+    {
+      "family_id": "fam-raw-b-2",
+      "family_label": "B 2, p. 815",
+      "occurrence_count": 32
+    },
+    {
+      "family_id": "fam-raw-ub-1",
+      "family_label": "UB 1, p. 297",
+      "occurrence_count": 30
+    },
+    {
+      "family_id": "fam-raw-mp-1",
+      "family_label": "MP 1, p. 81",
+      "occurrence_count": 17
+    },
+    {
+      "family_id": "fam-raw-ub-2",
+      "family_label": "UB 2, p. 203",
+      "occurrence_count": 14
+    },
+    {
+      "family_id": "fam-raw-u-kyaw-bagan-minsa",
+      "family_label": "U Kyaw, “Bagan Minsa”, p. 195",
+      "occurrence_count": 12
+    },
+    {
+      "family_id": "fam-raw-mp-2",
+      "family_label": "MP 2, p. 159",
+      "occurrence_count": 7
+    },
+    {
+      "family_id": "fam-anthology",
+      "family_label": "Anthology references",
+      "occurrence_count": 6
+    },
+    {
+      "family_id": "fam-ray-theravada-buddhism",
+      "family_label": "Ray, Theravada Buddhism",
+      "occurrence_count": 5
+    },
+    {
+      "family_id": "fam-harvey-history",
+      "family_label": "Harvey, History references",
+      "occurrence_count": 3
+    }
   ]
 }

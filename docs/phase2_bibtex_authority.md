@@ -5,7 +5,7 @@ Phase 2 now has two linked bibliography layers:
 1. **triage files** under `data/working/bibliography/`, which cluster raw reference strings conservatively;
 2. **BibTeX authority files** under `data/working/bibliography/bibtex_authority/`, which turn confirmed or plausibly identified works into reusable BibTeX records.
 
-This layer is still provisional. It is meant to separate **works**, **source abbreviations**, and **locators** so later bibliography authority review and published-translation discovery can proceed on cleaner data.
+This layer is still provisional, but it is no longer meant to depend mainly on fuzzy matching. The main route to improvement is now **evidence-backed local-source harvesting**, especially Frasch materials and other Burma bibliography folders. The layer is meant to separate **works**, **source abbreviations**, and **locators** so later bibliography authority review and published-translation discovery can proceed on cleaner data.
 
 ## Distinctions
 
@@ -37,22 +37,41 @@ The script:
 
 The copied `.bib` file is gitignored by default. Commit the import report and TSV metadata, not the raw local BibTeX copy, unless there is a clear reason and explicit approval to track it.
 
-## Local library matching
+## Local-source harvest and matching
 
-`scripts/match_local_bibliography_sources.py` uses `OBI_LIBRARY_ROOT` to scan a local Burma bibliography tree for likely matches:
+Use the local-source harvest workflow first:
 
 ```bash
-OBI_LIBRARY_ROOT=/path/to/local/library python3 scripts/match_local_bibliography_sources.py
+export OBI_AUTHOR_ALPHA_ROOT="/path/to/Authors alphabetical"
+export OBI_LIBRARY_ROOT="/path/to/Library"
+export OBI_LOCAL_BIB_ROOT="$HOME/Downloads"
+
+python3 scripts/harvest_local_bibliography_sources.py --mode frasch
+python3 scripts/extract_frasch_bibliography.py
+python3 scripts/harvest_local_bibliography_sources.py --mode high-priority
+python3 scripts/match_local_bibliography_sources.py
 ```
 
-The script never modifies the external library. It records filename-based matches, checksums, and relative paths under the library root in a manifest. If `OBI_LIBRARY_ROOT` is unset, it exits cleanly with a report explaining how to enable the step.
+This workflow:
+
+- searches local roots for likely Frasch/Luce/Burma bibliography material;
+- copies approved files into gitignored `data/local/bibliography_sources/`;
+- commits manifests, checksums, extracted reference tables, and reports rather than the copied source files themselves;
+- feeds Frasch-derived and other local evidence into the authority builder.
+
+See `docs/phase2_local_source_harvest.md` for the full workflow and path conventions.
 
 ## Authority vs candidate BibTeX
 
-- `bibliography_authority.bib` holds conservative authority entries supported by imported external BibTeX, repository-backed source identification, or strong manual/source-family seeds.
+- `bibliography_authority.bib` holds conservative authority entries supported by imported external BibTeX, Frasch/local-source evidence, repository-backed source identification, or strong manual/source-family seeds.
 - `bibliography_candidates.bib` holds provisional stubs for unresolved families and weakly inferred candidates.
 
 Every provisional or machine-generated candidate should carry an explicit note that it still requires human review.
+
+Rows backed by local evidence should prefer:
+
+- `confirmed_local_source` when the local match is strong;
+- `provisional_local_source` when the evidence is promising but still uncertain.
 
 ## Why this matters for translation discovery
 
