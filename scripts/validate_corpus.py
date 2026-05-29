@@ -94,8 +94,10 @@ def main() -> None:
 
     datasets = args.dataset or [
         REPO_ROOT / "data" / "extracted" / "structured_corpus_current",
+        REPO_ROOT / "data" / "extracted" / "supplementary_1302525",
         REPO_ROOT / "data" / "extracted" / "supplementary_1203709",
         REPO_ROOT / "data" / "release" / "sagaing_v0_1",
+        REPO_ROOT / "data" / "release" / "unified_release_v0_1",
     ]
 
     report = {"datasets": [validate_dataset(dataset) for dataset in datasets]}

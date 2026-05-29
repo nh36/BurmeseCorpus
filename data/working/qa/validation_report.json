@@ -9,6 +9,14 @@
       }
     },
     {
+      "dataset": "/Users/nathanhill/Code/BurmeseCorpus/data/extracted/supplementary_1302525",
+      "errors": [],
+      "record_counts": {
+        "inscriptions": 51,
+        "lines": 1067
+      }
+    },
+    {
       "dataset": "/Users/nathanhill/Code/BurmeseCorpus/data/extracted/supplementary_1203709",
       "errors": [],
       "record_counts": {
@@ -22,6 +30,14 @@
       "record_counts": {
         "inscriptions": 31,
         "lines": 603
+      }
+    },
+    {
+      "dataset": "/Users/nathanhill/Code/BurmeseCorpus/data/release/unified_release_v0_1",
+      "errors": [],
+      "record_counts": {
+        "inscriptions": 1123,
+        "lines": 23722
       }
     }
   ],

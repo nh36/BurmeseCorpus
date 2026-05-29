@@ -123,9 +123,19 @@ def normalize_face(value: str | None) -> tuple[str | None, str]:
     if not value:
         return None, "tx"
     lowered = normalize_whitespace(value).casefold()
-    if "obverse" in lowered or "မျက်နှာဘက်" in value:
+    if (
+        "obverse" in lowered
+        or "မျက်နှာဘက်" in value
+        or "က မျက်နှာ" in value
+        or "(က" in value
+    ):
         return "obverse", "ob"
-    if "reverse" in lowered or "ကျောဘက်" in value:
+    if (
+        "reverse" in lowered
+        or "ကျောဘက်" in value
+        or "ခ မျက်နှာ" in value
+        or "(ခ" in value
+    ):
         return "reverse", "re"
     if "တစ်မျက်နှာ" in value or "single" in lowered:
         return "single_face", "sf"
@@ -141,6 +151,12 @@ def build_obi_record_id(volume: str | None, inscription_number: str | None, face
 def build_sagaing_record_id(block_index: int, face: str | None, page: str | None) -> str:
     _, face_code = normalize_face(face)
     return f"sagaing-z1203709-b{block_index:04d}-{face_code}-{format_page_token(page)}"
+
+
+def build_recently_found_record_id(source_number: str, face: str | None, page: str | int | None) -> str:
+    _, face_code = normalize_face(face)
+    page_value = str(page) if page is not None else None
+    return f"rfi-z1302525-{parse_number_token(source_number, 'n')}-{face_code}-{format_page_token(page_value)}"
 
 
 def ensure_parent(path: Path) -> None:

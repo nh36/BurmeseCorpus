@@ -1,51 +1,52 @@
-source_entry_number	source_title	source_page	vol7_record_id	vol7_inscription_number	vol7_title	match_status	match_confidence	notes
-1	စည်သူမင်းကျောက်စာ	1	obi-v07-n0001-tx-p0001	1	စည်သူမင်းကျောက်စာ	matched	high	Matched by source entry number and title
-2	သင်ပုတ်ကျောင်းကျောက်စာ	4	obi-v07-n0002-tx-p0004	2	သင်ပုတ်ကျောင်းကျောက်စာ	matched	high	Matched by source entry number and title
-3	သရပိုလ် သ္ခိင်ကျောင်းကျောက်စာ	6	obi-v07-n0003a-ob-p0006	3a	သရပိုလ် သ္ခိင်ကျောင်းကျောက်စာ	matched_split_face	high	Matched by source entry number and title; multiple face records in volume 7
-3	သရပိုလ် သ္ခိင်ကျောင်းကျောက်စာ	6	obi-v07-n0003b-re-p0007	3b	သရပိုလ် သ္ခိင်ကျောင်းကျောက်စာ	matched_split_face	high	Matched by source entry number and title; multiple face records in volume 7
-4	စည်သူမင်းကြီး ဂူလျောင်းဂူပြောက်ကျောက်စာ	10	obi-v07-n0004-tx-p0010	4	စည်သူမင်းကြီး ဂူလျောင်းဂူပြောက်ကျောက်စာ	matched	high	Matched by source entry number and title
-5	ငဦသင်ကျောက်စာ	12	obi-v07-n0005-tx-p0012	5	ငဦသင်ကျောက်စာ	matched	high	Matched by source entry number and title
-6	လက်ဆောင်ဘုရားကျောက်စာ	14	obi-v07-n0006-tx-p0014	6	လက်ဆောင်ဘုရားကျောက်စာ	matched	high	Matched by source entry number and title
-7	တောကျောင်းသခင်ကျောက်စာ	16	obi-v07-n0007-tx-p0016	7	တောကျောင်းသခင်ကျောက်စာ	matched	high	Matched by source entry number and title
-8	ညာနရင်သီဘုရားကျောက်စာ	18	obi-v07-n0008-tx-p0018	8	ညာနရင်သီဘုရားကျောက်စာ	matched	high	Matched by source entry number and title
-9	သိင်္ဃဝီရ်သုဇ္ဇ်ဗိုလ်ကျောက်စာ	21	obi-v07-n0009a-ob-p0021	9a	သိင်္ဃဝီရ်သုဇ္ဇ်ဗိုလ်ကျောက်စာ	matched_split_face	high	Matched by source entry number and title; multiple face records in volume 7
-9	သိင်္ဃဝီရ်သုဇ္ဇ်ဗိုလ်ကျောက်စာ	21	obi-v07-n0009b-re-p0023	9b	သိင်္ဃဝီရ်သုဇ္ဇ်ဗိုလ်ကျောက်စာ	matched_split_face	high	Matched by source entry number and title; multiple face records in volume 7
-10	ကန်ကျက်ကလိည်သူကြီးကျောက်စာ	26	obi-v07-n0010a-ob-p0026	10a	ကန်ကျက်ကလိည်သူကြီးကျောက်စာ	matched_split_face	high	Matched by source entry number and title; multiple face records in volume 7
-10	ကန်ကျက်ကလိည်သူကြီးကျောက်စာ	26	obi-v07-n0010b-re-p0028	10b	ကန်ကျက်ကလိည်သူကြီးကျောက်စာ	matched_split_face	high	Matched by source entry number and title; multiple face records in volume 7
-11	နက္ကာပြံကြီးမယားကျောက်စာ	31	obi-v07-n0011-tx-p0030	11	နက္ကာပြံကြီးမယားကျောက်စာ	matched	high	Matched by source entry number and title
-13	သ္ခိင်မဟာထီမြေကျွန်ကျောက်စာ	36	obi-v07-n0013-tx-p0036	13	သ္ခိင်မဟာထီမြေကျွန်ကျောက်စာ	matched	high	Matched by source entry number and title
-15	ဓမ္မသူဌေးလင်မယားကျောက်စာ	41	obi-v07-n0015-tx-p0041	15	ဓမ္မသူဌေးလင်မယားကျောက်စာ	matched	high	Matched by source entry number and title
-16	သူကြွယ်ငခင်ပွန်သင်ကျောက်စာ	44	obi-v07-n0016a-ob-p0044	16a	သူကြွယ်ငခင်ပွန်သင်ကျောက်စာ	matched_split_face	high	Matched by source entry number and title; multiple face records in volume 7
-16	သူကြွယ်ငခင်ပွန်သင်ကျောက်စာ	44	obi-v07-n0016b-re-p0045	16b	သူကြွယ်ငခင်ပွန်သင်ကျောက်စာ	matched_split_face	high	Matched by source entry number and title; multiple face records in volume 7
-17	သံပျင်ပတုန်မလောက်သွာဘုရားကျောက်စာ	48	obi-v07-n0017a-ob-p0048	17a	သံပျင်ပတုန်မလောက်သွာဘုရားကျောက်စာ	matched_split_face	high	Matched by source entry number and title; multiple face records in volume 7
-17	သံပျင်ပတုန်မလောက်သွာဘုရားကျောက်စာ	48	obi-v07-n0017b-re-p0049	17b	သံပျင်ပတုန်မလောက်သွာဘုရားကျောက်စာ	matched_split_face	high	Matched by source entry number and title; multiple face records in volume 7
-18	သင်ကြီသီလဗင်ကျောက်စာ	53	obi-v07-n0018-tx-p0052	18	သင်ကြီသီလဗင်ကျောက်စာ	matched	high	Matched by source entry number and title
-19	မင်္ဂလာဒေဝီကျောင်းကျောက်စာ	55	obi-v07-n0019a-ob-p0055	19a	မင်္ဂလာဒေဝီကျောင်းကျောက်စာ	matched_split_face	high	Matched by source entry number and title; multiple face records in volume 7
-19	မင်္ဂလာဒေဝီကျောင်းကျောက်စာ	55	obi-v07-n0019b-re-p0059	19b	မင်္ဂလာဒေဝီကျောင်းကျောက်စာ	matched_split_face	high	Matched by source entry number and title; multiple face records in volume 7
-20	မင်မတ်စတုရင်ကပတိလင်မယားကျောင်းကျောက်စာ	62	obi-v07-n0020-tx-p0061	20	မင်မတ်စတုရင်ကပတိလင်မယားကျောင်းကျောက်စာ	matched	high	Matched by source entry number and title
-22	အမတ်ကြီးကျောက်စာ	68	obi-v07-n0022-tx-p0068	22	အမတ်ကြီးကျောက်စာ	matched	high	Matched by source entry number and title
-23	စလင်တပိုဝ်ကျောက်စာ	70	obi-v07-n0023-tx-p0070	23	စလင်တပိုဝ်ကျောက်စာ	matched	high	Matched by source entry number and title
-24	တိုင်းချစ်ဘုရားသင်ပုတ်လဲလှူကျောက်စာ	72	obi-v07-n0024-tx-p0072	24	တိုင်းချစ်ဘုရားသင်ပုတ်လဲလှူကျောက်စာ	matched	high	Matched by source entry number and title
-26	စစ်လျင်သူကြီးအနန္တသူကျောက်စာ	80	obi-v07-n0026-tx-p0079	26	စစ်လျင်သူကြီးအနန္တသူကျောက်စာ	matched	high	Matched by source entry number and title
-27	အမတ်ကြီးရာဇသင်င်္ကြံကျောက်စာ	83	obi-v07-n0027-tx-p0083	27	အမတ်ကြီးရာဇသင်င်္ကြံကျောက်စာ	matched	high	Matched by source entry number and title
-28	ဥစ္စနာမင်းကြီးကျောက်စာ	86	obi-v07-n0028-tx-p0086	28	ဥစ္စနာမင်းကြီးကျောက်စာ	matched	high	Matched by source entry number and title
-29	ဧကရစ်မင်းကြီးကျောက်စာ	89	obi-v07-n0029-tx-p0089	29	ဧကရစ်မင်းကြီးကျောက်စာ	matched	high	Matched by source entry number and title
-30	အမတ်ကြီးစလေမင်းမောင်နံကျောက်စာ	91	obi-v07-n0030a-ob-p0091	30a	အမတ်ကြီးစလေမင်းမောင်နံကျောက်စာ	matched_split_face	high	Matched by source entry number and title; multiple face records in volume 7
-30	အမတ်ကြီးစလေမင်းမောင်နံကျောက်စာ	91	obi-v07-n0030b-re-p0092	30b	အမတ်ကြီးစလေမင်းမောင်နံကျောက်စာ	matched_split_face	high	Matched by source entry number and title; multiple face records in volume 7
-31	ထနောင်းကန်သူကြီးသမီးမောင်နှံကျောက်စာ	97	obi-v07-n0031a-ob-p0097	31a	ထနောင်းကန်သူကြီးသမီးမောင်နှံကျောက်စာ	matched_split_face	high	Matched by source entry number and title; multiple face records in volume 7
-31	ထနောင်းကန်သူကြီးသမီးမောင်နှံကျောက်စာ	97	obi-v07-n0031b-re-p0098	31b	ထနောင်းကန်သူကြီးသမီးမောင်နှံကျောက်စာ	matched_split_face	high	Matched by source entry number and title; multiple face records in volume 7
-32	ဝါရာရွာသူကြွယ်ကျောက်စာ	102	obi-v07-n0032a-ob-p0102	32a	ဝါရာရွာသူကြွယ်ကျောက်စာ	matched_split_face	high	Matched by source entry number and title; multiple face records in volume 7
-32	ဝါရာရွာသူကြွယ်ကျောက်စာ	102	obi-v07-n0032b-re-p0103	32b	ဝါရာရွာသူကြွယ်ကျောက်စာ	matched_split_face	high	Matched by source entry number and title; multiple face records in volume 7
-33	အကောက်ခွန်ကျောက်စာ	106	obi-v07-n0033-tx-p0106	33	အကောက်ခွန်ကျောက်စာ	matched	high	Matched by source entry number and title
-34	ရာဇသင်္ကြံသမီးကျောက်စာ	108	obi-v07-n0034-tx-p0108	34	ရာဇသင်္ကြံသမီးကျောက်စာ	matched	high	Matched by source entry number and title
-35	မိဖုရားကြီးသီရိမဟာဓမ္မဒေဝီကျောက်စာ	110	obi-v07-n0035a-ob-p0110	35a	မိဖုရားကြီးသီရိမဟာဓမ္မဒေဝီကျောက်စာ	matched_split_face	high	Matched by source entry number and title; multiple face records in volume 7
-35	မိဖုရားကြီးသီရိမဟာဓမ္မဒေဝီကျောက်စာ	110	obi-v07-n0035b-re-p0115	35b	မိဖုရားကြီးသီရိမဟာဓမ္မဒေဝီကျောက်စာ	matched_split_face	high	Matched by source entry number and title; multiple face records in volume 7
-36	သူကြွယ်ငကုလားသင်သိမ်ကျောက်စာ	121	obi-v07-n0036-tx-p0121	36	သူကြွယ်ငကုလားသင်သိမ်ကျောက်စာ	matched	high	Matched by source entry number and title
-37	စူလာပိကြံသမီးကျောက်စာ	123				missing_from_vol7	low	No title or number match in OBI volume 7
-38	နွားထိန်းအလိုတော်ပြည့်စလင်းအသင်္ခရာကျောက်စာ	124	obi-v07-n0038-tx-p0124	38	နွားထိန်းအလိုတော်ပြည့်စလင်းအသင်္ခရာကျောက်စာ	matched	high	Matched by source entry number and title
-39	ပုရန်ငါယန်ကျောက်စာ	126	obi-v07-n0039-tx-p0126	39	ပုရန်ငါယန်ကျောက်စာ	matched	high	Matched by source entry number and title
-40	ပုကံမဟာဓိဓမ္မကျွန်လှူကျောက်စာ	128	obi-v07-n0040-tx-p0128	40	ပုကံမဟာဓိဓမ္မကျွန်လှူကျောက်စာ	matched	high	Matched by source entry number and title
-			obi-v07-n0014-tx-p0038	14	ဂုဏပတိမယားကျောက်စာ	extra_in_vol7	low	No source entry matched this volume 7 record
-			obi-v07-n0021-tx-p0064	21	ဆင်ပြူ့သိခင်ကျောက်စာ	extra_in_vol7	low	No source entry matched this volume 7 record
-			obi-v07-n0025a-tx-p0074	25a	သခင်ခင်ဥန်နှင့်သင်ကြီကုံကယ်ကျောက်စာ	extra_in_vol7	low	No source entry matched this volume 7 record
-			obi-v07-n0025b-tx-p0075	25b	ရာဇသင်ကြံမြေလှူကျောက်စာ	extra_in_vol7	low	No source entry matched this volume 7 record
+source_entry_key	source_entry_number	source_title	source_page	vol7_record_id	vol7_inscription_number	vol7_title	match_status	match_confidence	review_decision	evidence	notes
+1	1	စည်သူမင်းကျောက်စာ	1	obi-v07-n0001-tx-p0001	1	စည်သူမင်းကျောက်စာ	matched	high	matched	Matched by source entry number and normalized title	Matched by source entry number and title
+2	2	သင်ပုတ်ကျောင်းကျောက်စာ	4	obi-v07-n0002-tx-p0004	2	သင်ပုတ်ကျောင်းကျောက်စာ	matched	high	matched	Matched by source entry number and normalized title	Matched by source entry number and title
+3	3	သရပိုလ် သ္ခိင်ကျောင်းကျောက်စာ	6	obi-v07-n0003a-ob-p0006	3a	သရပိုလ် သ္ခိင်ကျောင်းကျောက်စာ	matched_split_face	high	matched_split_face	Matched by source entry number; multiple face records in volume 7	Matched by source entry number and title; multiple face records in volume 7
+3	3	သရပိုလ် သ္ခိင်ကျောင်းကျောက်စာ	6	obi-v07-n0003b-re-p0007	3b	သရပိုလ် သ္ခိင်ကျောင်းကျောက်စာ	matched_split_face	high	matched_split_face	Matched by source entry number; multiple face records in volume 7	Matched by source entry number and title; multiple face records in volume 7
+4	4	စည်သူမင်းကြီး ဂူလျောင်းဂူပြောက်ကျောက်စာ	10	obi-v07-n0004-tx-p0010	4	စည်သူမင်းကြီး ဂူလျောင်းဂူပြောက်ကျောက်စာ	matched	high	matched	Matched by source entry number and normalized title	Matched by source entry number and title
+5	5	ငဦသင်ကျောက်စာ	12	obi-v07-n0005-tx-p0012	5	ငဦသင်ကျောက်စာ	matched	high	matched	Matched by source entry number and normalized title	Matched by source entry number and title
+6	6	လက်ဆောင်ဘုရားကျောက်စာ	14	obi-v07-n0006-tx-p0014	6	လက်ဆောင်ဘုရားကျောက်စာ	matched	high	matched	Matched by source entry number and normalized title	Matched by source entry number and title
+7	7	တောကျောင်းသခင်ကျောက်စာ	16	obi-v07-n0007-tx-p0016	7	တောကျောင်းသခင်ကျောက်စာ	matched	high	matched	Matched by source entry number and normalized title	Matched by source entry number and title
+8	8	ညာနရင်သီဘုရားကျောက်စာ	18	obi-v07-n0008-tx-p0018	8	ညာနရင်သီဘုရားကျောက်စာ	matched	high	matched	Matched by source entry number and normalized title	Matched by source entry number and title
+9	9	သိင်္ဃဝီရ်သုဇ္ဇ်ဗိုလ်ကျောက်စာ	21	obi-v07-n0009a-ob-p0021	9a	သိင်္ဃဝီရ်သုဇ္ဇ်ဗိုလ်ကျောက်စာ	matched_split_face	high	matched_split_face	Matched by source entry number; multiple face records in volume 7	Matched by source entry number and title; multiple face records in volume 7
+9	9	သိင်္ဃဝီရ်သုဇ္ဇ်ဗိုလ်ကျောက်စာ	21	obi-v07-n0009b-re-p0023	9b	သိင်္ဃဝီရ်သုဇ္ဇ်ဗိုလ်ကျောက်စာ	matched_split_face	high	matched_split_face	Matched by source entry number; multiple face records in volume 7	Matched by source entry number and title; multiple face records in volume 7
+10	10	ကန်ကျက်ကလိည်သူကြီးကျောက်စာ	26	obi-v07-n0010a-ob-p0026	10a	ကန်ကျက်ကလိည်သူကြီးကျောက်စာ	matched_split_face	high	matched_split_face	Matched by source entry number; multiple face records in volume 7	Matched by source entry number and title; multiple face records in volume 7
+10	10	ကန်ကျက်ကလိည်သူကြီးကျောက်စာ	26	obi-v07-n0010b-re-p0028	10b	ကန်ကျက်ကလိည်သူကြီးကျောက်စာ	matched_split_face	high	matched_split_face	Matched by source entry number; multiple face records in volume 7	Matched by source entry number and title; multiple face records in volume 7
+11	11	နက္ကာပြံကြီးမယားကျောက်စာ	31	obi-v07-n0011-tx-p0030	11	နက္ကာပြံကြီးမယားကျောက်စာ	matched	high	matched	Matched by source entry number and normalized title	Matched by source entry number and title
+12	12	ကန်သင်ဘုရားမြေကျောက်စာ	34				missing_from_vol7	low	omission_in_volume7	No volume 7 record with matching number or normalized title	No title or number match in OBI volume 7
+13	13	သ္ခိင်မဟာထီမြေကျွန်ကျောက်စာ	36	obi-v07-n0013-tx-p0036	13	သ္ခိင်မဟာထီမြေကျွန်ကျောက်စာ	matched	high	matched	Matched by source entry number and normalized title	Matched by source entry number and title
+14	14	ဂုဏပတိမယားကျောက်စာ	38	obi-v07-n0014-tx-p0038	14	ဂုဏပတိမယားကျောက်စာ	matched	high	matched	Matched by source entry number and normalized title	Matched by source entry number and title
+15	15	ဓမ္မသူဌေးလင်မယားကျောက်စာ	41	obi-v07-n0015-tx-p0041	15	ဓမ္မသူဌေးလင်မယားကျောက်စာ	matched	high	matched	Matched by source entry number and normalized title	Matched by source entry number and title
+16	16	သူကြွယ်ငခင်ပွန်သင်ကျောက်စာ	44	obi-v07-n0016a-ob-p0044	16a	သူကြွယ်ငခင်ပွန်သင်ကျောက်စာ	matched_split_face	high	matched_split_face	Matched by source entry number; multiple face records in volume 7	Matched by source entry number and title; multiple face records in volume 7
+16	16	သူကြွယ်ငခင်ပွန်သင်ကျောက်စာ	44	obi-v07-n0016b-re-p0045	16b	သူကြွယ်ငခင်ပွန်သင်ကျောက်စာ	matched_split_face	high	matched_split_face	Matched by source entry number; multiple face records in volume 7	Matched by source entry number and title; multiple face records in volume 7
+17	17	သံပျင်ပတုန်မလောက်သွာဘုရားကျောက်စာ	48	obi-v07-n0017a-ob-p0048	17a	သံပျင်ပတုန်မလောက်သွာဘုရားကျောက်စာ	matched_split_face	high	matched_split_face	Matched by source entry number; multiple face records in volume 7	Matched by source entry number and title; multiple face records in volume 7
+17	17	သံပျင်ပတုန်မလောက်သွာဘုရားကျောက်စာ	48	obi-v07-n0017b-re-p0049	17b	သံပျင်ပတုန်မလောက်သွာဘုရားကျောက်စာ	matched_split_face	high	matched_split_face	Matched by source entry number; multiple face records in volume 7	Matched by source entry number and title; multiple face records in volume 7
+18	18	သင်ကြီသီလဗင်ကျောက်စာ	53	obi-v07-n0018-tx-p0052	18	သင်ကြီသီလဗင်ကျောက်စာ	matched	high	matched	Matched by source entry number and normalized title	Matched by source entry number and title
+19	19	မင်္ဂလာဒေဝီကျောင်းကျောက်စာ	55	obi-v07-n0019a-ob-p0055	19a	မင်္ဂလာဒေဝီကျောင်းကျောက်စာ	matched_split_face	high	matched_split_face	Matched by source entry number; multiple face records in volume 7	Matched by source entry number and title; multiple face records in volume 7
+19	19	မင်္ဂလာဒေဝီကျောင်းကျောက်စာ	55	obi-v07-n0019b-re-p0059	19b	မင်္ဂလာဒေဝီကျောင်းကျောက်စာ	matched_split_face	high	matched_split_face	Matched by source entry number; multiple face records in volume 7	Matched by source entry number and title; multiple face records in volume 7
+20	20	မင်မတ်စတုရင်ကပတိလင်မယားကျောင်းကျောက်စာ	62	obi-v07-n0020-tx-p0061	20	မင်မတ်စတုရင်ကပတိလင်မယားကျောင်းကျောက်စာ	matched	high	matched	Matched by source entry number and normalized title	Matched by source entry number and title
+21	21	ဆင်ဖြူသိခင်ကျောက်စာ	64	obi-v07-n0021-tx-p0064	21	ဆင်ပြူ့သိခင်ကျောက်စာ	matched	medium	title_mismatch	Matched by source entry number, but source and volume 7 titles differ	Matched by source entry number; title differs between source and volume 7
+22	22	အမတ်ကြီးကျောက်စာ	68	obi-v07-n0022-tx-p0068	22	အမတ်ကြီးကျောက်စာ	matched	high	matched	Matched by source entry number and normalized title	Matched by source entry number and title
+23	23	စလင်တပိုဝ်ကျောက်စာ	70	obi-v07-n0023-tx-p0070	23	စလင်တပိုဝ်ကျောက်စာ	matched	high	matched	Matched by source entry number and normalized title	Matched by source entry number and title
+24	24	တိုင်းချစ်ဘုရားသင်ပုတ်လဲလှူကျောက်စာ	72	obi-v07-n0024-tx-p0072	24	တိုင်းချစ်ဘုရားသင်ပုတ်လဲလှူကျောက်စာ	matched	high	matched	Matched by source entry number and normalized title	Matched by source entry number and title
+25a	25	သခင်ခင်ဥန်နှင့်သင်ကြီကုံကယ်ကျောက်စာ	74	obi-v07-n0025a-tx-p0074	25a	သခင်ခင်ဥန်နှင့်သင်ကြီကုံကယ်ကျောက်စာ	matched	high	matched	Matched by source entry number and normalized title	Matched by source entry number and title
+25b	25	ရာဇသင်ကြံမြေလှူကျောက်စာ	75	obi-v07-n0025b-tx-p0075	25b	ရာဇသင်ကြံမြေလှူကျောက်စာ	matched	high	matched	Matched by source entry number and normalized title	Matched by source entry number and title
+26	26	စစ်လျင်သူကြီးအနန္တသူကျောက်စာ	80	obi-v07-n0026-tx-p0079	26	စစ်လျင်သူကြီးအနန္တသူကျောက်စာ	matched	high	matched	Matched by source entry number and normalized title	Matched by source entry number and title
+27	27	အမတ်ကြီးရာဇသင်င်္ကြံကျောက်စာ	83	obi-v07-n0027-tx-p0083	27	အမတ်ကြီးရာဇသင်င်္ကြံကျောက်စာ	matched	high	matched	Matched by source entry number and normalized title	Matched by source entry number and title
+28	28	ဥစ္စနာမင်းကြီးကျောက်စာ	86	obi-v07-n0028-tx-p0086	28	ဥစ္စနာမင်းကြီးကျောက်စာ	matched	high	matched	Matched by source entry number and normalized title	Matched by source entry number and title
+29	29	ဧကရစ်မင်းကြီးကျောက်စာ	89	obi-v07-n0029-tx-p0089	29	ဧကရစ်မင်းကြီးကျောက်စာ	matched	high	matched	Matched by source entry number and normalized title	Matched by source entry number and title
+30	30	အမတ်ကြီးစလေမင်းမောင်နံကျောက်စာ	91	obi-v07-n0030a-ob-p0091	30a	အမတ်ကြီးစလေမင်းမောင်နံကျောက်စာ	matched_split_face	high	matched_split_face	Matched by source entry number; multiple face records in volume 7	Matched by source entry number and title; multiple face records in volume 7
+30	30	အမတ်ကြီးစလေမင်းမောင်နံကျောက်စာ	91	obi-v07-n0030b-re-p0092	30b	အမတ်ကြီးစလေမင်းမောင်နံကျောက်စာ	matched_split_face	high	matched_split_face	Matched by source entry number; multiple face records in volume 7	Matched by source entry number and title; multiple face records in volume 7
+31	31	ထနောင်းကန်သူကြီးသမီးမောင်နှံကျောက်စာ	97	obi-v07-n0031a-ob-p0097	31a	ထနောင်းကန်သူကြီးသမီးမောင်နှံကျောက်စာ	matched_split_face	high	matched_split_face	Matched by source entry number; multiple face records in volume 7	Matched by source entry number and title; multiple face records in volume 7
+31	31	ထနောင်းကန်သူကြီးသမီးမောင်နှံကျောက်စာ	97	obi-v07-n0031b-re-p0098	31b	ထနောင်းကန်သူကြီးသမီးမောင်နှံကျောက်စာ	matched_split_face	high	matched_split_face	Matched by source entry number; multiple face records in volume 7	Matched by source entry number and title; multiple face records in volume 7
+32	32	ဝါရာရွာသူကြွယ်ကျောက်စာ	102	obi-v07-n0032a-ob-p0102	32a	ဝါရာရွာသူကြွယ်ကျောက်စာ	matched_split_face	high	matched_split_face	Matched by source entry number; multiple face records in volume 7	Matched by source entry number and title; multiple face records in volume 7
+32	32	ဝါရာရွာသူကြွယ်ကျောက်စာ	102	obi-v07-n0032b-re-p0103	32b	ဝါရာရွာသူကြွယ်ကျောက်စာ	matched_split_face	high	matched_split_face	Matched by source entry number; multiple face records in volume 7	Matched by source entry number and title; multiple face records in volume 7
+33	33	အကောက်ခွန်ကျောက်စာ	106	obi-v07-n0033-tx-p0106	33	အကောက်ခွန်ကျောက်စာ	matched	high	matched	Matched by source entry number and normalized title	Matched by source entry number and title
+34	34	ရာဇသင်္ကြံသမီးကျောက်စာ	108	obi-v07-n0034-tx-p0108	34	ရာဇသင်္ကြံသမီးကျောက်စာ	matched	high	matched	Matched by source entry number and normalized title	Matched by source entry number and title
+35	35	မိဖုရားကြီးသီရိမဟာဓမ္မဒေဝီကျောက်စာ	110	obi-v07-n0035a-ob-p0110	35a	မိဖုရားကြီးသီရိမဟာဓမ္မဒေဝီကျောက်စာ	matched_split_face	high	matched_split_face	Matched by source entry number; multiple face records in volume 7	Matched by source entry number and title; multiple face records in volume 7
+35	35	မိဖုရားကြီးသီရိမဟာဓမ္မဒေဝီကျောက်စာ	110	obi-v07-n0035b-re-p0115	35b	မိဖုရားကြီးသီရိမဟာဓမ္မဒေဝီကျောက်စာ	matched_split_face	high	matched_split_face	Matched by source entry number; multiple face records in volume 7	Matched by source entry number and title; multiple face records in volume 7
+36	36	သူကြွယ်ငကုလားသင်သိမ်ကျောက်စာ	121	obi-v07-n0036-tx-p0121	36	သူကြွယ်ငကုလားသင်သိမ်ကျောက်စာ	matched	high	matched	Matched by source entry number and normalized title	Matched by source entry number and title
+37	37	စူလာပိကြံသမီးကျောက်စာ	123				missing_from_vol7	low	omission_in_volume7	No volume 7 record with matching number or normalized title	No title or number match in OBI volume 7
+38	38	နွားထိန်းအလိုတော်ပြည့်စလင်းအသင်္ခရာကျောက်စာ	124	obi-v07-n0038-tx-p0124	38	နွားထိန်းအလိုတော်ပြည့်စလင်းအသင်္ခရာကျောက်စာ	matched	high	matched	Matched by source entry number and normalized title	Matched by source entry number and title
+39	39	ပုရန်ငါယန်ကျောက်စာ	126	obi-v07-n0039-tx-p0126	39	ပုရန်ငါယန်ကျောက်စာ	matched	high	matched	Matched by source entry number and normalized title	Matched by source entry number and title
+40	40	ပုကံမဟာဓိဓမ္မကျွန်လှူကျောက်စာ	128	obi-v07-n0040-tx-p0128	40	ပုကံမဟာဓိဓမ္မကျွန်လှူကျောက်စာ	matched	high	matched	Matched by source entry number and normalized title	Matched by source entry number and title

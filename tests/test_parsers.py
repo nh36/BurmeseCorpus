@@ -8,7 +8,9 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 
 from corpus_common import parse_structured_corpus_text
 from parse_recently_found import parse_recently_found_entries
+from parse_recently_found_records import build_inscriptions_and_lines
 from parse_sagaing import parse_sagaing_block, split_blocks
+from recently_found_common import build_source_entries
 
 
 FIXTURES = Path(__file__).resolve().parent / "fixtures"
@@ -69,6 +71,43 @@ class RecentlyFoundParserTests(unittest.TestCase):
         self.assertEqual(entries[0]["source_title"], "ကန်ကျက်ကလိည်သူကြီးကျောက်စာ")
         self.assertEqual(entries[0]["face_markers"], ["မျက်နှာဘက်"])
         self.assertEqual(entries[1]["source_page"], 31)
+
+    def test_recently_found_inventory_handles_suffix_and_inferred_heading(self) -> None:
+        sample = (FIXTURES / "recently_found_inferred_sample.txt").read_text(encoding="utf-8")
+        entries = build_source_entries(sample)
+        self.assertEqual([entry["source_entry_key"] for entry in entries], ["20", "21", "22", "25a", "25b"])
+        self.assertTrue(entries[1]["inferred_heading"])
+        self.assertEqual(entries[1]["source_title"], "ဆင်ဖြူသိခင်ကျောက်စာ")
+        self.assertEqual(entries[3]["source_title"], "သခင်ခင်ဥန်နှင့်သင်ကြီကုံကယ်ကျောက်စာ")
+
+    def test_recently_found_inventory_ignores_line_text_that_looks_like_heading(self) -> None:
+        sample = (FIXTURES / "recently_found_false_heading_sample.txt").read_text(encoding="utf-8")
+        entries = build_source_entries(sample)
+        self.assertEqual([entry["source_entry_key"] for entry in entries], ["11", "12"])
+
+    def test_recently_found_inventory_allows_heading_after_face_marker(self) -> None:
+        sample = """၇၄
+၂၅-က။ သခင်ခင်ဥန်နှင့်သင်ကြီကုံကယ်ကျောက်စာ58
+(က မျက်နှာ)
+၁\tက
+
+၇၅
+(ခ မျက်နှာ)
+၂၅-ခ။ ရာဇသင်ကြံမြေလှူကျောက်စာ
+၁\tခ
+"""
+        entries = build_source_entries(sample)
+        self.assertEqual([entry["source_entry_key"] for entry in entries], ["25a", "25b"])
+
+    def test_recently_found_full_parser_builds_records_and_lines(self) -> None:
+        sample = (FIXTURES / "recently_found_sample.txt").read_text(encoding="utf-8")
+        entries = build_source_entries(sample)
+        inscriptions, lines = build_inscriptions_and_lines(entries)
+        self.assertEqual(len(inscriptions), 2)
+        self.assertEqual(inscriptions[0]["canonical_record_id"], "obi-v07-n0010-ob-p0026")
+        self.assertEqual(inscriptions[0]["face"], "obverse")
+        self.assertGreaterEqual(len(lines), 4)
+        self.assertEqual(lines[0]["record_id"], inscriptions[0]["record_id"])
 
 
 class SagaingParserTests(unittest.TestCase):

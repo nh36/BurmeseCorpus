@@ -28,6 +28,7 @@ def audit_recently_found_vs_vol7(source_entries: list[dict], vol7_entries: list[
     crosswalk_rows: list[dict] = []
     matched_record_ids: set[str] = set()
     status_counter: Counter[str] = Counter()
+    decision_counter: Counter[str] = Counter()
 
     for source in source_entries:
         source_number = str(source["source_entry_number"])
@@ -43,6 +44,7 @@ def audit_recently_found_vs_vol7(source_entries: list[dict], vol7_entries: list[
         candidates = exact_candidates or number_candidates or title_only_candidates
         if not candidates:
             row = {
+                "source_entry_key": source.get("source_entry_key", source["source_entry_number"]),
                 "source_entry_number": source["source_entry_number"],
                 "source_title": source["source_title"],
                 "source_page": source["source_page"],
@@ -51,33 +53,51 @@ def audit_recently_found_vs_vol7(source_entries: list[dict], vol7_entries: list[
                 "vol7_title": "",
                 "match_status": "missing_from_vol7",
                 "match_confidence": "low",
+                "review_decision": "omission_in_volume7",
+                "evidence": "No volume 7 record with matching number or normalized title",
                 "notes": "No title or number match in OBI volume 7",
             }
             crosswalk_rows.append(row)
             status_counter[row["match_status"]] += 1
+            decision_counter[row["review_decision"]] += 1
             continue
 
         faces = {record.get("face") for record in candidates}
         if exact_candidates and len(candidates) > 1 and {"obverse", "reverse"} & faces:
             match_status = "matched_split_face"
             match_confidence = "high"
+            review_decision = "matched_split_face"
+            evidence = "Matched by source entry number; multiple face records in volume 7"
             notes = "Matched by source entry number and title; multiple face records in volume 7"
         elif exact_candidates and len(candidates) == 1:
             match_status = "matched"
             match_confidence = "high"
+            review_decision = "matched"
+            evidence = "Matched by source entry number and normalized title"
             notes = "Matched by source entry number and title"
+        elif number_candidates:
+            match_status = "matched"
+            match_confidence = "medium"
+            review_decision = "title_mismatch"
+            evidence = "Matched by source entry number, but source and volume 7 titles differ"
+            notes = "Matched by source entry number; title differs between source and volume 7"
         elif len(candidates) > 1:
             match_status = "possible_match"
             match_confidence = "medium"
+            review_decision = "needs_manual_review"
+            evidence = "Multiple candidate matches found"
             notes = "Multiple candidate matches found; review title and page span manually"
         else:
             match_status = "possible_match"
             match_confidence = "medium"
+            review_decision = "needs_manual_review"
+            evidence = "Only a title-based candidate was found"
             notes = "Matched by source entry number or normalized title only"
 
         for candidate in candidates:
             matched_record_ids.add(candidate["record_id"])
             row = {
+                "source_entry_key": source.get("source_entry_key", source["source_entry_number"]),
                 "source_entry_number": source["source_entry_number"],
                 "source_title": source["source_title"],
                 "source_page": source["source_page"],
@@ -86,13 +106,17 @@ def audit_recently_found_vs_vol7(source_entries: list[dict], vol7_entries: list[
                 "vol7_title": candidate["title_original"],
                 "match_status": match_status,
                 "match_confidence": match_confidence,
+                "review_decision": review_decision,
+                "evidence": evidence,
                 "notes": notes,
             }
             crosswalk_rows.append(row)
             status_counter[match_status] += 1
+            decision_counter[review_decision] += 1
 
     duplicate_rows = [
         {
+            "source_entry_key": "",
             "source_entry_number": "",
             "source_title": "",
             "source_page": "",
@@ -101,6 +125,8 @@ def audit_recently_found_vs_vol7(source_entries: list[dict], vol7_entries: list[
             "vol7_title": candidate["title_original"],
             "match_status": "extra_in_vol7",
             "match_confidence": "low",
+            "review_decision": "unexplained_extra_in_volume7",
+            "evidence": "No source entry matched this volume 7 record",
             "notes": "No source entry matched this volume 7 record",
         }
         for candidate in vol7_entries
@@ -108,6 +134,7 @@ def audit_recently_found_vs_vol7(source_entries: list[dict], vol7_entries: list[
     ]
     for row in duplicate_rows:
         status_counter[row["match_status"]] += 1
+        decision_counter[row["review_decision"]] += 1
     crosswalk_rows.extend(duplicate_rows)
 
     source_duplicate_titles = {
@@ -125,6 +152,7 @@ def audit_recently_found_vs_vol7(source_entries: list[dict], vol7_entries: list[
         "source_entry_count": len(source_entries),
         "vol7_record_count": len(vol7_entries),
         "status_counts": dict(status_counter),
+        "review_decisions": dict(decision_counter),
         "source_duplicate_title_keys": source_duplicate_titles,
         "vol7_duplicate_title_keys": vol7_duplicate_titles,
         "recommendation": (
@@ -191,6 +219,7 @@ def main() -> None:
         args.inventory_dir / "recently_found_to_vol7_crosswalk.tsv",
         crosswalk_rows,
         [
+            "source_entry_key",
             "source_entry_number",
             "source_title",
             "source_page",
@@ -199,6 +228,8 @@ def main() -> None:
             "vol7_title",
             "match_status",
             "match_confidence",
+            "review_decision",
+            "evidence",
             "notes",
         ],
     )
