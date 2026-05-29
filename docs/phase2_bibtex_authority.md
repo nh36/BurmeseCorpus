@@ -1,9 +1,10 @@
 # Phase 2 BibTeX authority layer
 
-Phase 2 now has two linked bibliography layers:
+Phase 2 now has three linked bibliography layers:
 
 1. **triage files** under `data/working/bibliography/`, which cluster raw reference strings conservatively;
-2. **BibTeX authority files** under `data/working/bibliography/bibtex_authority/`, which turn confirmed or plausibly identified works into reusable BibTeX records.
+2. **source-family authority files** under `data/working/bibliography/bibtex_authority/`, which normalize abbreviations, series, and internal reference systems without pretending they are all ordinary works;
+3. **BibTeX authority files** under `data/working/bibliography/bibtex_authority/`, which turn confirmed or plausibly identified works into reusable BibTeX records.
 
 This layer is still provisional, but it is no longer meant to depend mainly on fuzzy matching. The main route to improvement is now **evidence-backed local-source harvesting**, especially Frasch materials and other Burma bibliography folders. The layer is meant to separate **works**, **source abbreviations**, and **locators** so later bibliography authority review and published-translation discovery can proceed on cleaner data.
 
@@ -12,10 +13,21 @@ This layer is still provisional, but it is no longer meant to depend mainly on f
 - **Raw reference string**: the literal string extracted from a corpus record, such as `OBI 3, p. 2` or `Luce, Myanmar's Debt, JBRS 1932, p. 125`.
 - **Locator**: the part of the raw string that points into a work or source family, such as `3, p. 2`, `90`, or `Pl. II 198`.
 - **Reference family**: a conservative triage cluster of related raw strings, often based on an abbreviation, author/title pattern, or recurring source label.
+- **Source-family authority**: a normalized abbreviation, catalogue family, periodical family, or internal reference system such as `List`, `OBI`, `Pl.`, `RDASB`, or `JBRS`.
 - **Work candidate**: a provisional bibliographic candidate inferred from a family.
 - **BibTeX authority record**: a reusable BibTeX entry in either `bibliography_authority.bib` or `bibliography_candidates.bib`.
 
 Not every raw string should become its own BibTeX work. `OBI 3, p. 2`, `List 90`, and `Pl. II 198` are usually better treated as a source-family match plus a locator.
+
+The central review tables are now:
+
+- `source_family_authority.tsv`
+- `raw_reference_to_bibtex.tsv`
+- `bibtex_authority.tsv`
+- `high_frequency_resolution_plan.tsv`
+- `bibtex_authority_report.json`
+
+`raw_reference_to_bibtex.tsv` keeps `source_family_id`, `bibtex_key`, `locator`, `locator_type`, `resolution_status`, and `resolution_level` separate so a raw corpus string can point to a family, a work, both, or neither.
 
 ## External BibTeX import
 
@@ -61,12 +73,28 @@ This workflow:
 
 See `docs/phase2_local_source_harvest.md` for the full workflow and path conventions.
 
+## Resolution semantics
+
+The authority layer now uses explicit resolution language:
+
+- `resolution_status`: `unresolved`, `alias_resolved`, `source_family_resolved`, `series_level_resolved`, `work_level_resolved`, `confirmed_work`, `provisional_work`, `needs_human_review`
+- `resolution_level`: `raw_locator`, `abbreviation`, `source_family`, `series`, `work`, `article`, `book`, `internal_reference`, `unknown`
+
+This prevents source-family placeholders from being counted as fully confirmed works. For example:
+
+- `RDASB 1971` is a **series-level** resolution with a year locator;
+- `Pl. II 198` is an **internal-reference** resolution with a plate locator;
+- `List 90` is a **confirmed work** plus a catalogue-number locator;
+- `PPA, p. 55` or `UB 1, p. 297` can be **source-family-resolved** without being fully confirmed publications.
+
 ## Authority vs candidate BibTeX
 
 - `bibliography_authority.bib` holds conservative authority entries supported by imported external BibTeX, Frasch/local-source evidence, repository-backed source identification, or strong manual/source-family seeds.
-- `bibliography_candidates.bib` holds provisional stubs for unresolved families and weakly inferred candidates.
+- `bibliography_candidates.bib` holds provisional stubs only for plausible standalone works, articles, or books.
 
 Every provisional or machine-generated candidate should carry an explicit note that it still requires human review.
+
+Locator-only families should not generate separate machine-stub works. The builder now suppresses those rows and records the drop in `suppressed_locator_stub_count`.
 
 Rows backed by local evidence should prefer:
 
@@ -89,7 +117,7 @@ Each row links a `bibtex_key` to a short excerpt, evidence ID, source file, sour
 
 ## Reviewing source abbreviations
 
-`data/working/bibliography/bibtex_authority/source_abbreviation_seeds.tsv` is now both a seed table and a review worksheet.
+`data/working/bibliography/bibtex_authority/source_abbreviation_seeds.tsv` remains the seed worksheet, but the main review target is now `source_family_authority.tsv`.
 
 Important review columns:
 
@@ -99,7 +127,7 @@ Important review columns:
 - `confidence`
 - `needs_human_review`
 
-Use these rows to confirm or keep provisional expansions for abbreviations such as `A`, `B`, `MP`, `UB`, `PPA`, `TN`, `IPPA`, `UEM`, `SIP`, `MM`, `OR`, `Pl.`, `ARASI`, `Luce D`, and `Luce J`.
+Use these rows to confirm or keep provisional expansions for abbreviations such as `A`, `B`, `MP`, `UB`, `PPA`, `TN`, `IPPA`, `UEM`, `SIP`, `MM`, `OR`, `Pl.`, `ARASI`, `Luce D`, `Luce J`, `JBRS`, and `JRAS`.
 
 If an expansion is still uncertain, keep the seed row but leave `needs_human_review = true`.
 
@@ -114,12 +142,12 @@ The first is the remaining unresolved queue, sorted by descending `occurrence_co
 
 The second is the explicit review sheet for the top families first. It records:
 
-- the suspected work or source;
-- the shared or candidate BibTeX key;
+- the current `resolution_status` and `resolution_level`;
+- the shared source-family or BibTeX authority key;
 - the evidence source and confidence;
 - the next action required before final confirmation.
 
-This is the main mechanism for improving the authority layer without creating more machine stubs for low-value tail cases.
+This is the main mechanism for improving the authority layer without creating more machine stubs for low-value tail cases. The goal is not to maximize BibTeX entries. The goal is to produce a correct crosswalk from raw corpus references to source families, works, and locators.
 
 ## Why this matters for translation discovery
 

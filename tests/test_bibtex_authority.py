@@ -13,8 +13,8 @@ if str(SCRIPTS_DIR) not in sys.path:
     sys.path.insert(0, str(SCRIPTS_DIR))
 
 from bibtex_common import parse_bibtex_text
-from build_bibtex_authority import AUTHORITY_FIELDS, build_authority, parse_locator
-from corpus_common import write_tsv
+from build_bibtex_authority import AUTHORITY_FIELDS, CROSSWALK_FIELDS, SOURCE_FAMILY_FIELDS, build_authority, parse_locator
+from corpus_common import read_tsv, write_tsv
 from extract_frasch_bibliography import run_extraction
 from harvest_local_bibliography_sources import run_harvest
 from import_external_bibtex import import_external_bibtex
@@ -144,7 +144,7 @@ class BibtexAuthorityTests(unittest.TestCase):
         self.assertEqual(parse_locator("OBI 3, p. 2", "fam-obi-internal", "OBI"), ("3, p. 2", "volume_page"))
         self.assertEqual(parse_locator("Pl. II 198", "fam-plate-references", "Pl."), ("II 198", "plate"))
         self.assertEqual(parse_locator("List 90", "fam-list-catalogue", "List"), ("90", "catalogue_number"))
-        self.assertEqual(parse_locator("RDASB 1971", "fam-rdasb-publication", "RDASB"), ("1971", "volume_page"))
+        self.assertEqual(parse_locator("RDASB 1971", "fam-rdasb-publication", "RDASB"), ("1971", "year"))
 
     def write_fixture_tables(self, base: Path) -> tuple[Path, Path, Path, Path, Path]:
         families_path = base / "reference_families.tsv"
@@ -214,7 +214,7 @@ class BibtexAuthorityTests(unittest.TestCase):
                 {
                     "family_id": "fam-unresolved",
                     "family_label": "Mystery Source",
-                    "family_type": "unclear",
+                    "family_type": "book",
                     "member_count": "1",
                     "occurrence_count": "1",
                     "sample_raw_references": "Mystery Source 12",
@@ -312,11 +312,11 @@ class BibtexAuthorityTests(unittest.TestCase):
                     "work_candidate_id": "wc-unresolved",
                     "family_id": "fam-unresolved",
                     "provisional_short_label": "Mystery Source",
-                    "author_original": "",
+                    "author_original": "Anon.",
                     "author_normalized": "",
                     "year": "",
-                    "title_original": "",
-                    "title_normalized": "",
+                    "title_original": "Mystery Chronicle of Bagan",
+                    "title_normalized": "mystery chronicle of bagan",
                     "publication_details": "",
                     "language": "",
                     "script": "",
@@ -426,12 +426,13 @@ class BibtexAuthorityTests(unittest.TestCase):
             self.assertIn("duroiselle1921list", authority_bib)
             self.assertIn("Provisional entry generated from corpus reference triage; requires human review", candidates_bib)
             self.assertIn("obiCorpusSource", crosswalk_tsv)
-            self.assertIn("abbreviation_catalogue_match", crosswalk_tsv)
+            self.assertIn("source_family_match", crosswalk_tsv)
             self.assertIn("familyid = {fam-unresolved}", candidates_bib)
             self.assertIn("Mystery Source", candidates_bib)
             self.assertGreater(report["authority_entry_count"], 0)
             self.assertGreater(report["candidate_entry_count"], 0)
             self.assertIn("matched_external_key", authority_tsv)
+            self.assertTrue((output_dir / "source_family_authority.tsv").exists())
 
     def test_harvest_local_bibliography_sources_finds_frasch_and_frosch_and_copies(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:
@@ -847,6 +848,9 @@ class BibtexAuthorityTests(unittest.TestCase):
                         "evidence_id": "local-1",
                         "short_evidence_note": "fixture",
                         "human_review_flag": "false",
+                        "resolution_status": "source_family_resolved",
+                        "resolution_level": "internal_reference",
+                        "source_family_id": "sf-obi",
                         "family_id": "fam-1",
                         "family_label": "OBI",
                         "family_type": "source_catalogue",
@@ -882,7 +886,72 @@ class BibtexAuthorityTests(unittest.TestCase):
                 encoding="utf-8",
             )
             candidate_bib_path.write_text("", encoding="utf-8")
-            write_tsv(crosswalk_path, [{"raw_reference_string": "OBI 1", "family_id": "fam-1", "work_candidate_id": "", "bibtex_key": "obiCorpusSource", "match_type": "fixture", "match_confidence": "high", "locator": "", "locator_type": "", "evidence": "fixture", "needs_human_review": "false", "notes": ""}], ["raw_reference_string", "family_id", "work_candidate_id", "bibtex_key", "match_type", "match_confidence", "locator", "locator_type", "evidence", "needs_human_review", "notes"])
+            write_tsv(
+                crosswalk_path,
+                [
+                    {
+                        "raw_reference_string": "OBI 1",
+                        "family_id": "fam-1",
+                        "source_family_id": "sf-obi",
+                        "work_candidate_id": "",
+                        "bibtex_key": "obiCorpusSource",
+                        "locator": "",
+                        "locator_type": "number",
+                        "resolution_status": "source_family_resolved",
+                        "resolution_level": "internal_reference",
+                        "match_type": "fixture",
+                        "match_confidence": "high",
+                        "evidence": "fixture",
+                        "needs_human_review": "false",
+                        "notes": "",
+                    }
+                ],
+                CROSSWALK_FIELDS,
+            )
+            write_tsv(
+                temp_path / "source_family_authority.tsv",
+                [
+                    {
+                        "source_family_id": "sf-obi",
+                        "abbreviation": "OBI",
+                        "family_id": "fam-1",
+                        "authority_key": "obiCorpusSource",
+                        "source_family_type": "corpus_internal",
+                        "resolution_status": "source_family_resolved",
+                        "resolution_level": "internal_reference",
+                        "canonical_label": "OBI",
+                        "expanded_label": "Old Burmese Inscriptions",
+                        "related_bibtex_key": "obiCorpusSource",
+                        "locator_pattern": "number",
+                        "example_raw_references": "OBI 1",
+                        "evidence_id": "local-1",
+                        "evidence_source": "local_burma_folder",
+                        "confidence": "high",
+                        "needs_human_review": "false",
+                        "notes": "",
+                    }
+                ],
+                SOURCE_FAMILY_FIELDS,
+            )
+            write_tsv(
+                temp_path / "bibtex_authority_evidence.tsv",
+                [
+                    {
+                        "source_family_id": "sf-obi",
+                        "bibtex_key": "obiCorpusSource",
+                        "evidence_id": "local-1",
+                        "evidence_type": "local_burma_folder",
+                        "source_file_id": "local-1",
+                        "source_file_label": "source.pdf",
+                        "source_ref_id": "local-1",
+                        "short_evidence": "fixture",
+                        "full_evidence_hash": "abc",
+                        "confidence": "high",
+                        "notes": "",
+                    }
+                ],
+                ["source_family_id", "bibtex_key", "evidence_id", "evidence_type", "source_file_id", "source_file_label", "source_ref_id", "short_evidence", "full_evidence_hash", "confidence", "notes"],
+            )
             write_tsv(external_entries_path, [], ["bibtex_key"])
             result = validate_bibtex_authority(
                 authority_bib_path=authority_bib_path,
@@ -891,6 +960,8 @@ class BibtexAuthorityTests(unittest.TestCase):
                 crosswalk_path=crosswalk_path,
                 families_path=families_path,
                 external_entries_path=external_entries_path,
+                source_family_path=temp_path / "source_family_authority.tsv",
+                evidence_path=temp_path / "bibtex_authority_evidence.tsv",
             )
             self.assertFalse(result["ok"])
             self.assertTrue(any("matchedlocalreference" in error or "matched_local_reference" in error for error in result["errors"]))
@@ -951,12 +1022,103 @@ class BibtexAuthorityTests(unittest.TestCase):
                 local_candidates_path=temp_path / "missing_local_candidates.tsv",
                 local_manifest_path=temp_path / "missing_local_manifest.tsv",
             )
-            crosswalk = (output_dir / "raw_reference_to_bibtex.tsv").read_text(encoding="utf-8")
-            resolution_plan = (output_dir / "high_frequency_resolution_plan.tsv").read_text(encoding="utf-8")
+            crosswalk_rows = read_tsv(output_dir / "raw_reference_to_bibtex.tsv")
+            resolution_rows = read_tsv(output_dir / "high_frequency_resolution_plan.tsv")
             unresolved = (output_dir / "high_frequency_unresolved.tsv").read_text(encoding="utf-8")
-            self.assertIn("B 2, p. 815\tfam-raw-b-2", crosswalk.replace("\r\n", "\n"))
-            self.assertIn("fam-raw-b-2\tB 2, p. 815\t4\tresolved:provisional_catalogue\tBagan Epigraphic Database, Part B", resolution_plan)
+            b2_row = next(row for row in crosswalk_rows if row["family_id"] == "fam-raw-b-2")
+            self.assertEqual(b2_row["source_family_id"], "sf-b")
+            self.assertEqual(b2_row["resolution_status"], "alias_resolved")
+            self.assertEqual(b2_row["locator_type"], "volume_page")
+            plan_row = next(row for row in resolution_rows if row["family_id"] == "fam-raw-b-2")
+            self.assertEqual(plan_row["resolution_status"], "alias_resolved")
+            self.assertEqual(plan_row["authority_key"], "fraschBaganEpigraphicDatabasePartBShort")
             self.assertNotIn("fam-raw-b-2", unresolved)
+
+    def test_build_authority_models_source_family_locators_without_machine_stubs(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            temp_path = Path(temp_dir)
+            families_path = temp_path / "families.tsv"
+            members_path = temp_path / "members.tsv"
+            candidates_path = temp_path / "candidates.tsv"
+            seeds_path = temp_path / "seeds.tsv"
+            output_dir = temp_path / "authority"
+
+            write_tsv(
+                families_path,
+                [
+                    {"family_id": "fam-rdasb-publication", "family_label": "RDASB", "family_type": "publication", "member_count": "1", "occurrence_count": "9", "sample_raw_references": "RDASB 1971", "likely_contains_translation": "no", "review_status": "needs_human_review", "notes": ""},
+                    {"family_id": "fam-plate-references", "family_label": "Pl.", "family_type": "internal_reference", "member_count": "1", "occurrence_count": "8", "sample_raw_references": "Pl. II 198", "likely_contains_translation": "no", "review_status": "needs_human_review", "notes": ""},
+                    {"family_id": "fam-list-catalogue", "family_label": "List", "family_type": "source_catalogue", "member_count": "1", "occurrence_count": "7", "sample_raw_references": "List 90", "likely_contains_translation": "no", "review_status": "needs_human_review", "notes": ""},
+                    {"family_id": "fam-raw-ub", "family_label": "UB", "family_type": "source_catalogue", "member_count": "1", "occurrence_count": "6", "sample_raw_references": "UB 1, p. 297", "likely_contains_translation": "no", "review_status": "needs_human_review", "notes": ""},
+                    {"family_id": "fam-raw-mp", "family_label": "MP", "family_type": "source_catalogue", "member_count": "1", "occurrence_count": "5", "sample_raw_references": "MP 1, p. 81", "likely_contains_translation": "no", "review_status": "needs_human_review", "notes": ""},
+                    {"family_id": "fam-ppa-catalogue", "family_label": "PPA", "family_type": "source_catalogue", "member_count": "1", "occurrence_count": "4", "sample_raw_references": "PPA, p. 55", "likely_contains_translation": "no", "review_status": "needs_human_review", "notes": ""},
+                    {"family_id": "fam-raw-a", "family_label": "A", "family_type": "source_catalogue", "member_count": "1", "occurrence_count": "3", "sample_raw_references": "A, p. 79", "likely_contains_translation": "no", "review_status": "needs_human_review", "notes": ""},
+                    {"family_id": "fam-raw-b", "family_label": "B", "family_type": "source_catalogue", "member_count": "1", "occurrence_count": "2", "sample_raw_references": "B 2, p. 815", "likely_contains_translation": "no", "review_status": "needs_human_review", "notes": ""},
+                ],
+                FAMILY_FIELDS,
+            )
+            write_tsv(
+                members_path,
+                [
+                    {"family_id": "fam-rdasb-publication", "raw_reference_string": "RDASB 1971", "occurrence_count": "9", "example_record_ids": "obi-1", "notes": ""},
+                    {"family_id": "fam-plate-references", "raw_reference_string": "Pl. II 198", "occurrence_count": "8", "example_record_ids": "obi-2", "notes": ""},
+                    {"family_id": "fam-list-catalogue", "raw_reference_string": "List 90", "occurrence_count": "7", "example_record_ids": "obi-3", "notes": ""},
+                    {"family_id": "fam-raw-ub", "raw_reference_string": "UB 1, p. 297", "occurrence_count": "6", "example_record_ids": "obi-4", "notes": ""},
+                    {"family_id": "fam-raw-mp", "raw_reference_string": "MP 1, p. 81", "occurrence_count": "5", "example_record_ids": "obi-5", "notes": ""},
+                    {"family_id": "fam-ppa-catalogue", "raw_reference_string": "PPA, p. 55", "occurrence_count": "4", "example_record_ids": "obi-6", "notes": ""},
+                    {"family_id": "fam-raw-a", "raw_reference_string": "A, p. 79", "occurrence_count": "3", "example_record_ids": "obi-7", "notes": ""},
+                    {"family_id": "fam-raw-b", "raw_reference_string": "B 2, p. 815", "occurrence_count": "2", "example_record_ids": "obi-8", "notes": ""},
+                ],
+                MEMBER_FIELDS,
+            )
+            write_tsv(candidates_path, [], CANDIDATE_FIELDS)
+            write_tsv(
+                seeds_path,
+                [
+                    {"abbreviation": "List", "family_id": "fam-list-catalogue", "provisional_label": "List of Inscriptions Found in Burma", "probable_bibtex_key": "duroiselle1921list", "source_type": "source_catalogue", "confidence": "high", "evidence": "List 90", "needs_human_review": "false", "notes": ""},
+                    {"abbreviation": "RDASB", "family_id": "fam-rdasb-publication", "provisional_label": "Report of the Director, Archaeological Survey of Burma", "probable_bibtex_key": "reportDirectorArchaeologicalSurveyBurma", "source_type": "publication", "confidence": "high", "evidence": "RDASB 1971", "needs_human_review": "false", "notes": ""},
+                    {"abbreviation": "UB", "family_id": "fam-raw-ub", "provisional_label": "UB source family", "probable_bibtex_key": "ubSourceFamily", "source_type": "source_catalogue", "confidence": "medium", "evidence": "UB 1, p. 297", "needs_human_review": "true", "notes": ""},
+                    {"abbreviation": "MP", "family_id": "fam-raw-mp", "provisional_label": "MP source family", "probable_bibtex_key": "mpSourceFamily", "source_type": "source_catalogue", "confidence": "medium", "evidence": "MP 1, p. 81", "needs_human_review": "true", "notes": ""},
+                    {"abbreviation": "PPA", "family_id": "fam-ppa-catalogue", "provisional_label": "PPA source family", "probable_bibtex_key": "ppaCatalogueFamily", "source_type": "source_catalogue", "confidence": "medium", "evidence": "PPA, p. 55", "needs_human_review": "true", "notes": ""},
+                    {"abbreviation": "A", "family_id": "fam-raw-a", "provisional_label": "Bagan Epigraphic Database, Part A", "probable_bibtex_key": "fraschBaganEpigraphicDatabasePartA", "source_type": "source_catalogue", "confidence": "medium", "evidence": "A, p. 79", "needs_human_review": "true", "notes": ""},
+                    {"abbreviation": "B", "family_id": "fam-raw-b", "provisional_label": "Bagan Epigraphic Database, Part B", "probable_bibtex_key": "fraschBaganEpigraphicDatabasePartB", "source_type": "source_catalogue", "confidence": "medium", "evidence": "B 2, p. 815", "needs_human_review": "true", "notes": ""},
+                ],
+                SEED_FIELDS,
+            )
+
+            report = build_authority(
+                reference_families_path=families_path,
+                reference_members_path=members_path,
+                work_candidates_path=candidates_path,
+                seed_path=seeds_path,
+                output_dir=output_dir,
+                frasch_references_path=temp_path / "missing_frasch.tsv",
+                local_candidates_path=temp_path / "missing_local_candidates.tsv",
+                local_manifest_path=temp_path / "missing_local_manifest.tsv",
+            )
+
+            crosswalk_rows = read_tsv(output_dir / "raw_reference_to_bibtex.tsv")
+            source_family_rows = {row["source_family_id"]: row for row in read_tsv(output_dir / "source_family_authority.tsv")}
+            candidate_bib = (output_dir / "bibliography_candidates.bib").read_text(encoding="utf-8")
+
+            by_family = {row["family_id"]: row for row in crosswalk_rows}
+            self.assertEqual(by_family["fam-rdasb-publication"]["resolution_status"], "series_level_resolved")
+            self.assertEqual(by_family["fam-rdasb-publication"]["locator_type"], "year")
+            self.assertEqual(by_family["fam-plate-references"]["resolution_level"], "internal_reference")
+            self.assertEqual(by_family["fam-plate-references"]["locator_type"], "plate")
+            self.assertEqual(by_family["fam-list-catalogue"]["bibtex_key"], "duroiselle1921list")
+            self.assertEqual(by_family["fam-list-catalogue"]["locator_type"], "catalogue_number")
+            self.assertEqual(by_family["fam-raw-ub"]["source_family_id"], "sf-ub")
+            self.assertEqual(by_family["fam-raw-ub"]["locator_type"], "volume_page")
+            self.assertEqual(by_family["fam-raw-mp"]["source_family_id"], "sf-mp")
+            self.assertEqual(by_family["fam-ppa-catalogue"]["source_family_id"], "sf-ppa")
+            self.assertEqual(by_family["fam-raw-a"]["source_family_id"], "sf-a")
+            self.assertEqual(by_family["fam-raw-b"]["source_family_id"], "sf-b")
+            self.assertIn("sf-rdasb", source_family_rows)
+            self.assertIn("sf-ub", source_family_rows)
+            self.assertNotIn("workUnresolved", candidate_bib)
+            self.assertNotIn("RDASB", [row["family_label"] for row in report["top_unresolved_families"]])
+            self.assertNotIn("PPA", [row["family_label"] for row in report["top_unresolved_families"]])
 
     def test_validate_bibtex_authority_detects_duplicate_key(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:
@@ -978,6 +1140,9 @@ class BibtexAuthorityTests(unittest.TestCase):
                         "authority_status": "machine_stub",
                         "source_of_authority": "corpus_reference",
                         "matched_external_key": "",
+                        "resolution_status": "needs_human_review",
+                        "resolution_level": "unknown",
+                        "source_family_id": "",
                         "family_id": "fam-1",
                         "family_label": "OBI",
                         "family_type": "source_catalogue",
@@ -1004,39 +1169,30 @@ class BibtexAuthorityTests(unittest.TestCase):
                         "notes": "test",
                     }
                 ],
-                [
-                    "bibtex_key",
-                    "entry_type",
-                    "authority_status",
-                    "source_of_authority",
-                    "matched_external_key",
-                    "family_id",
-                    "family_label",
-                    "family_type",
-                    "author",
-                    "editor",
-                    "year",
-                    "title",
-                    "shorttitle",
-                    "journal",
-                    "booktitle",
-                    "publisher",
-                    "address",
-                    "volume",
-                    "number",
-                    "pages",
-                    "doi",
-                    "url",
-                    "isbn",
-                    "language",
-                    "script",
-                    "translation_relevance",
-                    "review_status",
-                    "evidence",
-                    "notes",
-                ],
+                AUTHORITY_FIELDS,
             )
-            write_tsv(crosswalk_path, [{"raw_reference_string": "OBI 1", "family_id": "fam-1", "work_candidate_id": "wc-1", "bibtex_key": "dupKey", "match_type": "machine_stub_match", "match_confidence": "low", "locator": "1", "locator_type": "number", "evidence": "test", "needs_human_review": "true", "notes": ""}], ["raw_reference_string", "family_id", "work_candidate_id", "bibtex_key", "match_type", "match_confidence", "locator", "locator_type", "evidence", "needs_human_review", "notes"])
+            write_tsv(
+                crosswalk_path,
+                [
+                    {
+                        "raw_reference_string": "OBI 1",
+                        "family_id": "fam-1",
+                        "source_family_id": "",
+                        "work_candidate_id": "wc-1",
+                        "bibtex_key": "dupKey",
+                        "locator": "1",
+                        "locator_type": "number",
+                        "resolution_status": "needs_human_review",
+                        "resolution_level": "unknown",
+                        "match_type": "machine_stub_match",
+                        "match_confidence": "low",
+                        "evidence": "test",
+                        "needs_human_review": "true",
+                        "notes": "",
+                    }
+                ],
+                CROSSWALK_FIELDS,
+            )
             write_tsv(external_entries_path, [], ["bibtex_key"])
             authority_bib_path.write_text("@misc{dupKey,\n  title = {One},\n}\n", encoding="utf-8")
             candidate_bib_path.write_text("@misc{dupKey,\n  title = {Two},\n}\n", encoding="utf-8")

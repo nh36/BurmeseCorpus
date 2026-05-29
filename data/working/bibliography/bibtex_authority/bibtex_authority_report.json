@@ -1,31 +1,107 @@
 {
-  "authority_entry_count": 30,
-  "candidate_entry_count": 1053,
-  "machine_stub_count": 1053,
+  "authority_entry_count": 32,
+  "candidate_entry_count": 3,
+  "total_family_count": 1091,
+  "machine_stub_count": 3,
+  "suppressed_locator_stub_count": 737,
+  "unresolved_family_count": 346,
+  "alias_resolved_family_count": 712,
+  "source_family_resolved_count": 15,
+  "series_level_resolved_count": 6,
+  "work_level_resolved_count": 9,
+  "confirmed_work_count": 4,
+  "provisional_work_count": 5,
+  "needs_human_review_count": 3,
   "confirmed_external_bibtex_count": 0,
-  "confirmed_local_source_count": 12,
-  "provisional_local_source_count": 12,
+  "confirmed_local_source_count": 9,
+  "provisional_local_source_count": 13,
   "frasch_reference_count": 2926,
   "frasch_usable_reference_count": 202,
   "frasch_excluded_body_text_count": 0,
-  "frasch_matched_count": 13,
+  "frasch_matched_count": 14,
   "luce_candidate_count": 49,
   "local_file_count": 1809,
   "duplicate_local_files_collapsed_count": 90,
   "long_bibtex_evidence_fields_count": 0,
-  "high_frequency_families_resolved_count": 24,
-  "high_frequency_families_remaining_count": 1,
-  "unresolved_high_frequency_family_count": 1047,
+  "high_frequency_reviewed_count": 25,
+  "high_frequency_still_unresolved_count": 0,
   "top_unresolved_families": [
+    {
+      "family_id": "fam-raw-not-in-u-min-hswe",
+      "family_label": "(not in U Min Hswe)",
+      "occurrence_count": 3
+    },
+    {
+      "family_id": "fam-raw-2",
+      "family_label": "& 2",
+      "occurrence_count": 2
+    },
+    {
+      "family_id": "fam-raw-ba-55-56",
+      "family_label": "BA-55 & 56",
+      "occurrence_count": 2
+    },
+    {
+      "family_id": "fam-raw-htupayon-2",
+      "family_label": "Htupayon 2, p. 117",
+      "occurrence_count": 2
+    },
+    {
+      "family_id": "fam-raw-iub1-212",
+      "family_label": "IUB1-212",
+      "occurrence_count": 2
+    },
+    {
+      "family_id": "fam-raw-picture-archdept-on-file",
+      "family_label": "picture (ArchDept) on file",
+      "occurrence_count": 2
+    },
+    {
+      "family_id": "fam-raw-12",
+      "family_label": "12",
+      "occurrence_count": 1
+    },
+    {
+      "family_id": "fam-raw-17",
+      "family_label": "17",
+      "occurrence_count": 1
+    },
+    {
+      "family_id": "fam-raw-184-bed-b-614-2",
+      "family_label": "-184 BED B 614-2",
+      "occurrence_count": 1
+    },
+    {
+      "family_id": "fam-raw-1936-37-4003-1938-39-4080",
+      "family_label": "1936 37 4003 1938 39 4080",
+      "occurrence_count": 1
+    }
+  ],
+  "top_provisional_source_families": [
+    {
+      "family_id": "fam-plate-references",
+      "family_label": "Plate references",
+      "occurrence_count": 545
+    },
     {
       "family_id": "fam-ppa-catalogue",
       "family_label": "PPA references",
       "occurrence_count": 241
     },
     {
+      "family_id": "fam-tn-catalogue",
+      "family_label": "TN references",
+      "occurrence_count": 233
+    },
+    {
       "family_id": "fam-rdasb-publication",
       "family_label": "RDASB references",
       "occurrence_count": 228
+    },
+    {
+      "family_id": "fam-u-min-hswe-catalogue",
+      "family_label": "U Min Hswe references",
+      "occurrence_count": 211
     },
     {
       "family_id": "fam-ippa-catalogue",
@@ -43,29 +119,31 @@
       "occurrence_count": 38
     },
     {
-      "family_id": "fam-bbhc-publication",
-      "family_label": "BBHC references",
-      "occurrence_count": 13
+      "family_id": "fam-mm-catalogue",
+      "family_label": "MM references",
+      "occurrence_count": 23
     },
+    {
+      "family_id": "fam-or-catalogue",
+      "family_label": "OR references",
+      "occurrence_count": 21
+    }
+  ],
+  "top_needs_human_review_families": [
     {
       "family_id": "fam-anthology",
       "family_label": "Anthology references",
       "occurrence_count": 6
     },
     {
-      "family_id": "fam-raw-not-in-u-min-hswe",
-      "family_label": "(not in U Min Hswe)",
-      "occurrence_count": 3
-    },
-    {
-      "family_id": "fam-raw-2",
-      "family_label": "& 2",
+      "family_id": "fam-raw-u-tin-lwin-rajakumar-s-inscription-in-pali-in-takkasuil-yangon-1989",
+      "family_label": "U Tin Lwin, Rajakumar's Inscription in Pali, in Takkasuil ... (repr. Yangon 198…",
       "occurrence_count": 2
     },
     {
-      "family_id": "fam-raw-another-mm-4",
-      "family_label": "another copy MM 4, no. 20, p. 90",
-      "occurrence_count": 2
+      "family_id": "fam-raw-similar-but-incomplete-version-pl-ii-144",
+      "family_label": "similar but incomplete version Pl. II 144",
+      "occurrence_count": 1
     }
   ]
 }

@@ -6,6 +6,7 @@ import re
 import subprocess
 from pathlib import Path
 
+from build_bibtex_authority import RESOLUTION_LEVELS, RESOLUTION_STATUSES
 from bibtex_common import duplicate_keys, parse_bibtex_text
 from corpus_common import read_tsv
 
@@ -32,6 +33,8 @@ def validate_bibtex_authority(
     high_frequency_path: Path | None = None,
     evidence_path: Path | None = None,
     resolution_plan_path: Path | None = None,
+    source_family_path: Path | None = None,
+    report_path: Path | None = None,
     frasch_references_path: Path | None = None,
     local_manifest_path: Path | None = None,
 ) -> dict:
@@ -46,17 +49,21 @@ def validate_bibtex_authority(
     high_frequency_rows = read_tsv(high_frequency_path) if high_frequency_path and high_frequency_path.exists() else []
     evidence_rows = read_tsv(evidence_path) if evidence_path and evidence_path.exists() else []
     resolution_plan_rows = read_tsv(resolution_plan_path) if resolution_plan_path and resolution_plan_path.exists() else []
+    source_family_rows = read_tsv(source_family_path) if source_family_path and source_family_path.exists() else []
     frasch_rows = read_tsv(frasch_references_path) if frasch_references_path and frasch_references_path.exists() else []
     manifest_rows = read_tsv(local_manifest_path) if local_manifest_path and local_manifest_path.exists() else []
+    report = json.loads(report_path.read_text(encoding="utf-8")) if report_path and report_path.exists() else {}
 
     authority_keys = {entry["bibtex_key"] for entry in authority_entries}
     candidate_keys = {entry["bibtex_key"] for entry in candidate_entries}
     valid_keys = authority_keys | candidate_keys
     family_ids = {row["family_id"] for row in family_rows}
+    source_family_ids = {row["source_family_id"] for row in source_family_rows if row.get("source_family_id")}
     external_keys = {row["bibtex_key"] for row in external_rows}
     frasch_ids = {row.get("frasch_ref_id", "") for row in frasch_rows if row.get("frasch_ref_id")}
     manifest_ids = {row.get("canonical_local_file_id", "") for row in manifest_rows if row.get("canonical_local_file_id")}
     evidence_by_key = {row.get("bibtex_key", ""): row for row in evidence_rows if row.get("bibtex_key")}
+    evidence_by_source_family = {row.get("source_family_id", ""): row for row in evidence_rows if row.get("source_family_id")}
 
     duplicate_all = sorted(set(duplicate_keys(authority_entries) + duplicate_keys(candidate_entries) + list(authority_keys & candidate_keys)))
     if duplicate_all:
@@ -75,10 +82,18 @@ def validate_bibtex_authority(
                 errors.append(f"authority BibTeX matchedlocalreference on {entry['bibtex_key']} exceeds {MAX_MATCHED_LOCAL_REFERENCE_LENGTH} characters")
 
     for index, row in enumerate(crosswalk_rows, start=1):
-        if row["match_type"] != "no_match" and row["bibtex_key"] not in valid_keys:
+        if row["match_type"] != "no_match" and row["bibtex_key"] and row["bibtex_key"] not in valid_keys:
             errors.append(f"raw_reference_to_bibtex[{index}] references missing bibtex_key {row['bibtex_key']}")
         if row["family_id"] not in family_ids:
             errors.append(f"raw_reference_to_bibtex[{index}] references unknown family_id {row['family_id']}")
+        if source_family_rows and row.get("source_family_id") and row["source_family_id"] not in source_family_ids:
+            errors.append(f"raw_reference_to_bibtex[{index}] references unknown source_family_id {row['source_family_id']}")
+        if row.get("resolution_status") not in RESOLUTION_STATUSES:
+            errors.append(f"raw_reference_to_bibtex[{index}] has invalid resolution_status {row.get('resolution_status')}")
+        if row.get("resolution_level") not in RESOLUTION_LEVELS:
+            errors.append(f"raw_reference_to_bibtex[{index}] has invalid resolution_level {row.get('resolution_level')}")
+        if row.get("source_family_id") and row.get("bibtex_key") in candidate_keys:
+            errors.append(f"raw_reference_to_bibtex[{index}] maps a resolved source family to machine-stub candidate {row['bibtex_key']}")
         for value in row.values():
             if has_absolute_path(value):
                 errors.append(f"raw_reference_to_bibtex[{index}] contains an absolute local path")
@@ -102,11 +117,19 @@ def validate_bibtex_authority(
             errors.append(f"bibtex_authority[{index}] references missing matched_external_key {row['matched_external_key']}")
         if row["family_id"] and row["family_id"] not in family_ids:
             errors.append(f"bibtex_authority[{index}] references unknown family_id {row['family_id']}")
+        if source_family_rows and row.get("source_family_id") and row["source_family_id"] not in source_family_ids:
+            errors.append(f"bibtex_authority[{index}] references unknown source_family_id {row['source_family_id']}")
+        if row.get("resolution_status") not in RESOLUTION_STATUSES:
+            errors.append(f"bibtex_authority[{index}] has invalid resolution_status {row.get('resolution_status')}")
+        if row.get("resolution_level") not in RESOLUTION_LEVELS:
+            errors.append(f"bibtex_authority[{index}] has invalid resolution_level {row.get('resolution_level')}")
         if row["authority_status"] in {"machine_stub", "provisional_catalogue", "provisional_publication", "provisional_local_source", "needs_human_review"}:
             if not row["review_status"]:
                 errors.append(f"bibtex_authority[{index}] is provisional but missing review_status")
             if not row["evidence"] and not row["notes"]:
                 errors.append(f"bibtex_authority[{index}] is provisional but missing evidence or notes")
+        if row["authority_status"] == "machine_stub" and row["bibtex_key"] in authority_keys:
+            errors.append(f"bibtex_authority[{index}] contains machine_stub key {row['bibtex_key']} in authority bibliography")
         if row["authority_status"] == "confirmed_local_source":
             if not row.get("matched_local_source_id") or not row.get("matched_local_source_file"):
                 errors.append(f"bibtex_authority[{index}] is confirmed_local_source but missing local evidence fields")
@@ -119,6 +142,8 @@ def validate_bibtex_authority(
                 errors.append(f"bibtex_authority[{index}] references missing local manifest ID {row['matched_local_source_id']}")
             if row["bibtex_key"] not in evidence_by_key:
                 errors.append(f"bibtex_authority[{index}] is evidence-backed but missing bibtex_authority_evidence.tsv row")
+        if source_family_rows and row.get("source_family_id") and row["source_family_id"] not in evidence_by_source_family:
+            errors.append(f"bibtex_authority[{index}] source family {row['source_family_id']} lacks evidence row")
         if len(row.get("matched_local_reference", "")) > MAX_MATCHED_LOCAL_REFERENCE_LENGTH:
             errors.append(f"bibtex_authority[{index}] has long matched_local_reference")
         for value in row.values():
@@ -140,8 +165,42 @@ def validate_bibtex_authority(
             errors.append("high_frequency_resolution_plan.tsv is missing")
         else:
             for index, row in enumerate(resolution_plan_rows, start=1):
-                if row.get("current_status", "").startswith("resolved:") and (not row.get("evidence_source") or not row.get("notes")):
-                    errors.append(f"high_frequency_resolution_plan[{index}] is resolved but missing evidence_source or notes")
+                if row.get("resolution_status") not in RESOLUTION_STATUSES:
+                    errors.append(f"high_frequency_resolution_plan[{index}] has invalid resolution_status {row.get('resolution_status')}")
+                if row.get("resolution_level") not in RESOLUTION_LEVELS:
+                    errors.append(f"high_frequency_resolution_plan[{index}] has invalid resolution_level {row.get('resolution_level')}")
+                if row.get("resolution_status") != "unresolved" and not row.get("evidence_source"):
+                    errors.append(f"high_frequency_resolution_plan[{index}] is resolved but missing evidence_source")
+
+    if source_family_path:
+        if not source_family_path.exists():
+            errors.append("source_family_authority.tsv is missing")
+        else:
+            allowed_flags = {"true", "false"}
+            for index, row in enumerate(source_family_rows, start=1):
+                if row.get("resolution_status") not in RESOLUTION_STATUSES:
+                    errors.append(f"source_family_authority[{index}] has invalid resolution_status {row.get('resolution_status')}")
+                if row.get("resolution_level") not in RESOLUTION_LEVELS:
+                    errors.append(f"source_family_authority[{index}] has invalid resolution_level {row.get('resolution_level')}")
+                if row.get("needs_human_review") not in allowed_flags:
+                    errors.append(f"source_family_authority[{index}] has invalid needs_human_review {row.get('needs_human_review')}")
+                if row.get("family_id") and row["family_id"] not in family_ids:
+                    errors.append(f"source_family_authority[{index}] references unknown family_id {row['family_id']}")
+                if row.get("needs_human_review") == "true" and row.get("resolution_status") in {"source_family_resolved", "series_level_resolved"}:
+                    if row["source_family_id"] not in evidence_by_source_family:
+                        errors.append(f"source_family_authority[{index}] provisional source family lacks evidence row")
+                for value in row.values():
+                    if has_absolute_path(value):
+                        errors.append(f"source_family_authority[{index}] contains an absolute local path")
+                        break
+
+    if report:
+        plan_family_ids = {row["family_id"] for row in resolution_plan_rows}
+        unresolved_ids = {row["family_id"] for row in resolution_plan_rows if row.get("resolution_status") == "unresolved"}
+        for row in report.get("top_unresolved_families", []):
+            if row.get("family_id") in plan_family_ids and row.get("family_id") not in unresolved_ids:
+                errors.append(f"report top_unresolved_families includes resolved family {row.get('family_id')}")
+                break
 
     if seed_rows:
         allowed_confidence = {"low", "medium", "high"}
@@ -240,6 +299,16 @@ def main() -> None:
         default=Path("data/working/bibliography/bibtex_authority/high_frequency_resolution_plan.tsv"),
     )
     parser.add_argument(
+        "--source-family-path",
+        type=Path,
+        default=Path("data/working/bibliography/bibtex_authority/source_family_authority.tsv"),
+    )
+    parser.add_argument(
+        "--report-path",
+        type=Path,
+        default=Path("data/working/bibliography/bibtex_authority/bibtex_authority_report.json"),
+    )
+    parser.add_argument(
         "--frasch-references",
         type=Path,
         default=Path("data/working/bibliography/local_sources/frasch_reference_entries.tsv"),
@@ -262,6 +331,8 @@ def main() -> None:
         high_frequency_path=args.high_frequency,
         evidence_path=args.evidence_path,
         resolution_plan_path=args.resolution_plan,
+        source_family_path=args.source_family_path,
+        report_path=args.report_path,
         frasch_references_path=args.frasch_references,
         local_manifest_path=args.local_manifest,
     )

@@ -31,6 +31,9 @@ AUTHORITY_FIELDS = [
     "evidence_id",
     "short_evidence_note",
     "human_review_flag",
+    "resolution_status",
+    "resolution_level",
+    "source_family_id",
     "family_id",
     "family_label",
     "family_type",
@@ -60,12 +63,15 @@ AUTHORITY_FIELDS = [
 CROSSWALK_FIELDS = [
     "raw_reference_string",
     "family_id",
+    "source_family_id",
     "work_candidate_id",
     "bibtex_key",
-    "match_type",
-    "match_confidence",
     "locator",
     "locator_type",
+    "resolution_status",
+    "resolution_level",
+    "match_type",
+    "match_confidence",
     "evidence",
     "needs_human_review",
     "notes",
@@ -85,6 +91,7 @@ HIGH_FREQUENCY_FIELDS = [
 ]
 
 EVIDENCE_FIELDS = [
+    "source_family_id",
     "bibtex_key",
     "evidence_id",
     "evidence_type",
@@ -100,14 +107,37 @@ EVIDENCE_FIELDS = [
 RESOLUTION_PLAN_FIELDS = [
     "family_id",
     "family_label",
+    "family_type",
     "occurrence_count",
-    "current_status",
-    "suspected_work_or_source",
-    "suspected_bibtex_key",
+    "sample_raw_references",
+    "resolution_status",
+    "resolution_level",
+    "authority_key",
+    "needs_human_review",
+    "evidence_id",
     "evidence_source",
     "evidence_confidence",
     "next_action",
-    "assigned_priority",
+    "notes",
+]
+
+SOURCE_FAMILY_FIELDS = [
+    "source_family_id",
+    "abbreviation",
+    "family_id",
+    "authority_key",
+    "source_family_type",
+    "resolution_status",
+    "resolution_level",
+    "canonical_label",
+    "expanded_label",
+    "related_bibtex_key",
+    "locator_pattern",
+    "example_raw_references",
+    "evidence_id",
+    "evidence_source",
+    "confidence",
+    "needs_human_review",
     "notes",
 ]
 
@@ -138,6 +168,29 @@ STATUS_RANK = {
 TOP_FAMILY_REVIEW_COUNT = 25
 MAX_BIBTEX_EVIDENCE_LENGTH = 180
 MAX_MATCHED_REFERENCE_LENGTH = 140
+
+RESOLUTION_STATUSES = {
+    "unresolved",
+    "alias_resolved",
+    "source_family_resolved",
+    "series_level_resolved",
+    "work_level_resolved",
+    "confirmed_work",
+    "provisional_work",
+    "needs_human_review",
+}
+
+RESOLUTION_LEVELS = {
+    "raw_locator",
+    "abbreviation",
+    "source_family",
+    "series",
+    "work",
+    "article",
+    "book",
+    "internal_reference",
+    "unknown",
+}
 
 GENERIC_MATCH_TOKENS = {
     "burma",
@@ -317,6 +370,409 @@ SOURCE_FAMILY_LIBRARY = {
         "local_search_terms": ["epigraphia birmanica"],
         "frasch_search_terms": ["eb", "epigraphia birmanica"],
     },
+    "pl": {
+        "author": "",
+        "year": "",
+        "title": "OBI plate reference system",
+        "shorttitle": "Pl.",
+        "entry_type": "misc",
+        "preferred_key": "obiPlateReferenceSystem",
+        "local_search_terms": [],
+        "frasch_search_terms": ["pl."],
+    },
+    "u min hswe": {
+        "author": "U Min Hswe",
+        "year": "",
+        "title": "U Min Hswe source family",
+        "shorttitle": "U Min Hswe",
+        "entry_type": "misc",
+        "preferred_key": "uMinHsweSourceFamily",
+        "local_search_terms": ["u min hswe"],
+        "frasch_search_terms": ["u min hswe"],
+    },
+    "ippa": {
+        "author": "",
+        "year": "",
+        "title": "IPPA source family",
+        "shorttitle": "IPPA",
+        "entry_type": "misc",
+        "preferred_key": "ippaSourceFamily",
+        "local_search_terms": [],
+        "frasch_search_terms": ["ippa"],
+    },
+    "sip": {
+        "author": "",
+        "year": "",
+        "title": "SIP source family",
+        "shorttitle": "SIP",
+        "entry_type": "misc",
+        "preferred_key": "sipSourceFamily",
+        "local_search_terms": [],
+        "frasch_search_terms": ["sip"],
+    },
+    "mm": {
+        "author": "",
+        "year": "",
+        "title": "MM source family",
+        "shorttitle": "MM",
+        "entry_type": "misc",
+        "preferred_key": "mmSourceFamily",
+        "local_search_terms": [],
+        "frasch_search_terms": ["mm"],
+    },
+    "or": {
+        "author": "",
+        "year": "",
+        "title": "OR source family",
+        "shorttitle": "OR",
+        "entry_type": "misc",
+        "preferred_key": "orSourceFamily",
+        "local_search_terms": [],
+        "frasch_search_terms": ["or"],
+    },
+    "arasi": {
+        "author": "",
+        "year": "",
+        "title": "Annual Report of the Archaeological Survey of India",
+        "shorttitle": "ARASI",
+        "entry_type": "periodical",
+        "preferred_key": "annualReportArchaeologicalSurveyIndia",
+        "local_search_terms": ["archaeological survey of india"],
+        "frasch_search_terms": ["arasi"],
+    },
+    "luce d": {
+        "author": "G. H. Luce",
+        "year": "",
+        "title": "Luce D source family",
+        "shorttitle": "Luce D",
+        "entry_type": "misc",
+        "preferred_key": "luceDictionarySourceFamily",
+        "local_search_terms": ["luce"],
+        "frasch_search_terms": ["luce d"],
+    },
+    "luce j": {
+        "author": "G. H. Luce",
+        "year": "",
+        "title": "Luce J source family",
+        "shorttitle": "Luce J",
+        "entry_type": "misc",
+        "preferred_key": "luceJournalSourceFamily",
+        "local_search_terms": ["luce"],
+        "frasch_search_terms": ["luce j"],
+    },
+}
+
+SOURCE_FAMILY_SEMANTICS = {
+    "list": {
+        "source_family_id": "sf-list",
+        "abbreviation": "List",
+        "canonical_family_id": "fam-list-catalogue",
+        "family_prefixes": ["fam-raw-list-"],
+        "source_family_type": "catalogue",
+        "resolution_status": "confirmed_work",
+        "resolution_level": "book",
+        "locator_pattern": "catalogue_number",
+        "confidence": "high",
+        "needs_human_review": "false",
+        "notes": "List references resolve directly to Duroiselle 1921 plus a catalogue-number locator.",
+    },
+    "iob": {
+        "source_family_id": "sf-iob",
+        "abbreviation": "IOB",
+        "canonical_family_id": "fam-iob-catalogue",
+        "family_prefixes": ["fam-raw-iob"],
+        "source_family_type": "catalogue",
+        "resolution_status": "confirmed_work",
+        "resolution_level": "book",
+        "locator_pattern": "catalogue_number",
+        "confidence": "medium",
+        "needs_human_review": "true",
+        "notes": "IOB behaves as a known work family with number-based locators.",
+    },
+    "obi": {
+        "source_family_id": "sf-obi",
+        "abbreviation": "OBI",
+        "canonical_family_id": "fam-obi-internal",
+        "source_family_type": "corpus_internal",
+        "resolution_status": "source_family_resolved",
+        "resolution_level": "internal_reference",
+        "locator_pattern": "volume_page",
+        "confidence": "high",
+        "needs_human_review": "false",
+        "notes": "OBI is an internal corpus citation system, not an external bibliographic work.",
+    },
+    "bed b": {
+        "source_family_id": "sf-bed-b",
+        "abbreviation": "BED B",
+        "canonical_family_id": "fam-bed-b-catalogue",
+        "source_family_type": "catalogue",
+        "resolution_status": "source_family_resolved",
+        "resolution_level": "source_family",
+        "locator_pattern": "volume_page",
+        "confidence": "medium",
+        "needs_human_review": "true",
+        "notes": "Bagan Epigraphic Database part B references are stable source-family citations pending fuller work-level normalization.",
+    },
+    "a": {
+        "source_family_id": "sf-a",
+        "abbreviation": "A",
+        "canonical_family_id": "fam-raw-a",
+        "family_prefixes": ["fam-raw-a-"],
+        "source_family_type": "catalogue",
+        "resolution_status": "source_family_resolved",
+        "resolution_level": "abbreviation",
+        "locator_pattern": "page",
+        "confidence": "medium",
+        "needs_human_review": "true",
+        "notes": "A is a stable abbreviation family for Bagan Epigraphic Database part A style references.",
+    },
+    "b": {
+        "source_family_id": "sf-b",
+        "abbreviation": "B",
+        "canonical_family_id": "fam-raw-b",
+        "family_prefixes": ["fam-raw-b-"],
+        "source_family_type": "catalogue",
+        "resolution_status": "source_family_resolved",
+        "resolution_level": "abbreviation",
+        "locator_pattern": "volume_page",
+        "confidence": "medium",
+        "needs_human_review": "true",
+        "notes": "B is kept as a stable abbreviation family rather than an ordinary work-level citation.",
+    },
+    "mp": {
+        "source_family_id": "sf-mp",
+        "abbreviation": "MP",
+        "canonical_family_id": "fam-raw-mp",
+        "family_prefixes": ["fam-raw-mp-"],
+        "source_family_type": "catalogue",
+        "resolution_status": "source_family_resolved",
+        "resolution_level": "abbreviation",
+        "locator_pattern": "volume_page",
+        "confidence": "medium",
+        "needs_human_review": "true",
+        "notes": "MP references are stable enough to keep as a source-family abbreviation with locators.",
+    },
+    "ub": {
+        "source_family_id": "sf-ub",
+        "abbreviation": "UB",
+        "canonical_family_id": "fam-raw-ub",
+        "family_prefixes": ["fam-raw-ub-"],
+        "source_family_type": "catalogue",
+        "resolution_status": "source_family_resolved",
+        "resolution_level": "abbreviation",
+        "locator_pattern": "volume_page",
+        "confidence": "medium",
+        "needs_human_review": "true",
+        "notes": "UB references are preserved as a stable source-family abbreviation with locators.",
+    },
+    "uem": {
+        "source_family_id": "sf-uem",
+        "abbreviation": "UEM",
+        "canonical_family_id": "fam-uem-catalogue",
+        "source_family_type": "catalogue",
+        "resolution_status": "source_family_resolved",
+        "resolution_level": "source_family",
+        "locator_pattern": "page",
+        "confidence": "medium",
+        "needs_human_review": "true",
+        "notes": "UEM is stable enough to model as a source family even though the full expansion remains provisional.",
+    },
+    "ppa": {
+        "source_family_id": "sf-ppa",
+        "abbreviation": "PPA",
+        "canonical_family_id": "fam-ppa-catalogue",
+        "source_family_type": "catalogue",
+        "resolution_status": "source_family_resolved",
+        "resolution_level": "source_family",
+        "locator_pattern": "page",
+        "confidence": "medium",
+        "needs_human_review": "true",
+        "notes": "Stable abbreviation family with page locators; exact work expansion remains provisional.",
+    },
+    "tn": {
+        "source_family_id": "sf-tn",
+        "abbreviation": "TN",
+        "canonical_family_id": "fam-tn-catalogue",
+        "source_family_type": "catalogue",
+        "resolution_status": "source_family_resolved",
+        "resolution_level": "source_family",
+        "locator_pattern": "page",
+        "confidence": "medium",
+        "needs_human_review": "true",
+        "notes": "TN behaves as a stable catalogue/source-family shorthand with locators.",
+    },
+    "u min hswe": {
+        "source_family_id": "sf-u-min-hswe",
+        "abbreviation": "U Min Hswe",
+        "canonical_family_id": "fam-u-min-hswe-catalogue",
+        "source_family_type": "catalogue",
+        "resolution_status": "source_family_resolved",
+        "resolution_level": "source_family",
+        "locator_pattern": "page",
+        "confidence": "medium",
+        "needs_human_review": "true",
+        "notes": "References identify a stable U Min Hswe source family, but the exact work boundary still needs confirmation.",
+    },
+    "jbrs": {
+        "source_family_id": "sf-jbrs",
+        "abbreviation": "JBRS",
+        "canonical_family_id": "fam-jbrs-publication",
+        "source_family_type": "periodical",
+        "resolution_status": "series_level_resolved",
+        "resolution_level": "series",
+        "locator_pattern": "series_year_page",
+        "confidence": "high",
+        "needs_human_review": "false",
+        "notes": "Journal of the Burma Research Society is resolved at the series level; article-level normalization is deferred.",
+    },
+    "bbhc": {
+        "source_family_id": "sf-bbhc",
+        "abbreviation": "BBHC",
+        "canonical_family_id": "fam-bbhc-publication",
+        "source_family_type": "periodical",
+        "resolution_status": "series_level_resolved",
+        "resolution_level": "series",
+        "locator_pattern": "series_year_page",
+        "confidence": "medium",
+        "needs_human_review": "true",
+        "notes": "Treat BBHC as a series-level source family until article-level normalization is added.",
+    },
+    "jras": {
+        "source_family_id": "sf-jras",
+        "abbreviation": "JRAS",
+        "canonical_family_id": "fam-jras-publication",
+        "source_family_type": "periodical",
+        "resolution_status": "series_level_resolved",
+        "resolution_level": "series",
+        "locator_pattern": "series_year_page",
+        "confidence": "high",
+        "needs_human_review": "false",
+        "notes": "Journal of the Royal Asiatic Society is resolved at the series level; article-level normalization is deferred.",
+    },
+    "rdasb": {
+        "source_family_id": "sf-rdasb",
+        "abbreviation": "RDASB",
+        "canonical_family_id": "fam-rdasb-publication",
+        "source_family_type": "periodical",
+        "resolution_status": "series_level_resolved",
+        "resolution_level": "series",
+        "locator_pattern": "year",
+        "confidence": "high",
+        "needs_human_review": "false",
+        "notes": "RDASB references are resolved to the report/journal series; issue-year article normalization remains future work.",
+    },
+    "eb": {
+        "source_family_id": "sf-eb",
+        "abbreviation": "EB",
+        "canonical_family_id": "fam-eb-publication",
+        "source_family_type": "periodical",
+        "resolution_status": "series_level_resolved",
+        "resolution_level": "series",
+        "locator_pattern": "series_year_page",
+        "confidence": "medium",
+        "needs_human_review": "true",
+        "notes": "EB is treated as a publication/series family rather than a standalone work.",
+    },
+    "pl": {
+        "source_family_id": "sf-pl",
+        "abbreviation": "Pl.",
+        "canonical_family_id": "fam-plate-references",
+        "source_family_type": "internal_reference",
+        "resolution_status": "source_family_resolved",
+        "resolution_level": "internal_reference",
+        "locator_pattern": "plate",
+        "confidence": "high",
+        "needs_human_review": "false",
+        "notes": "Plate references are internal locators and should stay separate from bibliographic works.",
+    },
+    "ippa": {
+        "source_family_id": "sf-ippa",
+        "abbreviation": "IPPA",
+        "canonical_family_id": "fam-ippa-catalogue",
+        "source_family_type": "catalogue",
+        "resolution_status": "source_family_resolved",
+        "resolution_level": "source_family",
+        "locator_pattern": "page",
+        "confidence": "medium",
+        "needs_human_review": "true",
+        "notes": "Treat IPPA as a source-family placeholder until the expansion is confirmed.",
+    },
+    "sip": {
+        "source_family_id": "sf-sip",
+        "abbreviation": "SIP",
+        "canonical_family_id": "fam-sip-catalogue",
+        "source_family_type": "catalogue",
+        "resolution_status": "source_family_resolved",
+        "resolution_level": "source_family",
+        "locator_pattern": "page",
+        "confidence": "medium",
+        "needs_human_review": "true",
+        "notes": "SIP is retained as a provisional source-family placeholder with locators.",
+    },
+    "mm": {
+        "source_family_id": "sf-mm",
+        "abbreviation": "MM",
+        "canonical_family_id": "fam-mm-catalogue",
+        "family_prefixes": ["fam-raw-another-mm-", "fam-raw-and-mm-"],
+        "source_family_type": "catalogue",
+        "resolution_status": "source_family_resolved",
+        "resolution_level": "source_family",
+        "locator_pattern": "page",
+        "confidence": "medium",
+        "needs_human_review": "true",
+        "notes": "MM behaves as a source-family abbreviation with page-style locators.",
+    },
+    "or": {
+        "source_family_id": "sf-or",
+        "abbreviation": "OR",
+        "canonical_family_id": "fam-or-catalogue",
+        "source_family_type": "catalogue",
+        "resolution_status": "source_family_resolved",
+        "resolution_level": "source_family",
+        "locator_pattern": "folio",
+        "confidence": "medium",
+        "needs_human_review": "true",
+        "notes": "OR citations are modeled as a source family with folio-like locators.",
+    },
+    "arasi": {
+        "source_family_id": "sf-arasi",
+        "abbreviation": "ARASI",
+        "canonical_family_id": "",
+        "family_prefixes": ["fam-raw-arasi-"],
+        "source_family_type": "periodical",
+        "resolution_status": "series_level_resolved",
+        "resolution_level": "series",
+        "locator_pattern": "year",
+        "confidence": "medium",
+        "needs_human_review": "true",
+        "notes": "ARASI references are stable series citations with year-style locators.",
+    },
+    "luce d": {
+        "source_family_id": "sf-luce-d",
+        "abbreviation": "Luce D",
+        "canonical_family_id": "",
+        "family_prefixes": ["fam-raw-luce-d-"],
+        "source_family_type": "catalogue",
+        "resolution_status": "source_family_resolved",
+        "resolution_level": "source_family",
+        "locator_pattern": "page",
+        "confidence": "low",
+        "needs_human_review": "true",
+        "notes": "Luce D is kept as a provisional Luce source-family shorthand pending exact work confirmation.",
+    },
+    "luce j": {
+        "source_family_id": "sf-luce-j",
+        "abbreviation": "Luce J",
+        "canonical_family_id": "",
+        "family_prefixes": ["fam-raw-luce-j-"],
+        "source_family_type": "catalogue",
+        "resolution_status": "source_family_resolved",
+        "resolution_level": "source_family",
+        "locator_pattern": "page",
+        "confidence": "low",
+        "needs_human_review": "true",
+        "notes": "Luce J is kept as a provisional Luce source-family shorthand pending exact work confirmation.",
+    },
 }
 
 MANUAL_LOCAL_MATCHES = {
@@ -455,17 +911,48 @@ SUPPLEMENTAL_AUTHORITIES = {
 def parse_locator(raw_reference: str, family_id: str, family_label: str) -> tuple[str, str]:
     text = raw_reference.strip()
     if not text:
-        return "", "none"
+        return "", "unclear"
+
     if family_label.startswith("Pl"):
-        return text.replace("Pl.", "").strip(), "plate"
+        locator = re.sub(r"^Pl\.?\s*", "", text, flags=re.IGNORECASE).strip(" ,")
+        return locator or text, "plate"
+
     if family_label and text.casefold().startswith(family_label.casefold()):
         locator = text[len(family_label) :].strip(" ,")
         if locator:
+            lowered_locator = locator.casefold()
+            if re.search(r"\bfol\.?\b", lowered_locator):
+                return locator, "folio"
             if "catalogue" in family_id and re.fullmatch(r"[0-9A-Za-z.-]+", locator):
                 return locator, "catalogue_number"
+            if family_id in {"fam-list-catalogue", "fam-iob-catalogue"} and re.fullmatch(r"[0-9A-Za-z.-]+", locator):
+                return locator, "catalogue_number"
+            if re.fullmatch(r"(?:vol\.?\s*)?[IVXLC0-9]+[, ]+p+\.\s*[0-9-]+", locator, flags=re.IGNORECASE):
+                return locator, "volume_page"
+            if re.fullmatch(r"[IVXLC0-9]+\s*,?\s*p+\.\s*[0-9-]+", locator, flags=re.IGNORECASE):
+                return locator, "volume_page"
+            if re.fullmatch(r"(?:19|20)\d{2}(?:\s*[,;]\s*p+\.\s*[0-9-]+)?", locator, flags=re.IGNORECASE):
+                if "p." in lowered_locator:
+                    return locator, "series_year_page"
+                return locator, "year"
+            if re.fullmatch(r"[0-9A-Za-z.-]+", locator):
+                return locator, "number"
             if any(char.isdigit() for char in locator):
                 return locator, "volume_page"
-            return locator, "text"
+            return locator, "unclear"
+
+    folio_match = re.search(r"\bfol\.?\s*([0-9A-Za-zĀāĪīŪūṅñṭḍṇśṣḥṃ\- ]+)", text, flags=re.IGNORECASE)
+    if folio_match:
+        return folio_match.group(1).strip(), "folio"
+    plate_match = re.search(r"\bpl\.?\s*([IVXLC0-9A-Za-z.-]+(?:\s+[0-9A-Za-z.-]+)?)", text, flags=re.IGNORECASE)
+    if plate_match:
+        return plate_match.group(1).strip(), "plate"
+    volume_page_match = re.search(r"\b([IVXLC0-9]+)\s*,?\s*p+\.\s*([0-9-]+)", text, flags=re.IGNORECASE)
+    if volume_page_match:
+        return f"{volume_page_match.group(1)}, p. {volume_page_match.group(2)}", "volume_page"
+    series_year_page_match = re.search(r"\b((?:19|20)\d{2}[^,;]*[,;]\s*p+\.\s*[0-9-]+)\b", text, flags=re.IGNORECASE)
+    if series_year_page_match:
+        return series_year_page_match.group(1).strip(), "series_year_page"
     page_match = re.search(r"\bp+\.\s*([0-9-]+)", text, flags=re.IGNORECASE)
     if page_match:
         return page_match.group(1), "page"
@@ -475,7 +962,10 @@ def parse_locator(raw_reference: str, family_id: str, family_label: str) -> tupl
     year_match = re.search(r"\b(1[0-9]{3}|20[0-9]{2})\b", text)
     if year_match:
         return year_match.group(1), "year"
-    return text, "text"
+    standalone_number_match = re.fullmatch(r"[0-9A-Za-z.-]+", text)
+    if standalone_number_match:
+        return text, "number"
+    return text, "unclear"
 
 
 def normalize_title(value: str) -> str:
@@ -515,6 +1005,121 @@ def needs_human_review(status: str, review_status: str) -> str:
     if review_status.startswith("reviewed_") and status in {"confirmed_external_bibtex", "confirmed_local_source"}:
         return "false"
     return "true"
+
+
+def normalize_source_family_key(value: str) -> str:
+    normalized = re.sub(r"[.\s]+", " ", (value or "").strip().casefold())
+    return normalized.strip()
+
+
+def infer_source_family_key(family_id: str, family_label: str, sample_raw_references: str = "") -> str | None:
+    normalized_label = normalize_source_family_key(family_label)
+    for key, metadata in SOURCE_FAMILY_SEMANTICS.items():
+        if family_id == metadata.get("canonical_family_id"):
+            return key
+        if any(family_id.startswith(prefix) for prefix in metadata.get("family_prefixes", [])):
+            return key
+        abbreviation = normalize_source_family_key(metadata.get("abbreviation", key))
+        if normalized_label == abbreviation:
+            return key
+    return None
+
+
+def resolution_from_authority_row(row: dict) -> tuple[str, str]:
+    authority_status = row.get("authority_status", "")
+    entry_type = row.get("entry_type", "")
+    if authority_status in {"confirmed_external_bibtex", "confirmed_local_source"}:
+        if entry_type == "article":
+            return "confirmed_work", "article"
+        if entry_type == "book":
+            return "confirmed_work", "book"
+        return "confirmed_work", "work"
+    if authority_status in {"provisional_local_source", "provisional_catalogue", "provisional_publication"}:
+        if entry_type == "article":
+            return "provisional_work", "article"
+        if entry_type == "book":
+            return "provisional_work", "book"
+        return "provisional_work", "work"
+    return "needs_human_review", "unknown"
+
+
+def source_family_match_type(resolution_status: str, resolution_level: str) -> str:
+    if resolution_status == "alias_resolved":
+        return "alias_source_family_match"
+    if resolution_status == "series_level_resolved":
+        return "series_level_match"
+    if resolution_status in {"source_family_resolved", "confirmed_work"} and resolution_level == "internal_reference":
+        return "internal_reference_match"
+    if resolution_status in {"source_family_resolved", "confirmed_work"}:
+        return "source_family_match"
+    return "source_family_match"
+
+
+def build_source_family_lookup(family_rows: list[dict]) -> tuple[dict[str, dict], dict[str, dict]]:
+    families_by_id = {row["family_id"]: row for row in family_rows}
+    matched_family_ids: dict[str, list[str]] = defaultdict(list)
+    family_to_source_family: dict[str, str] = {}
+
+    for row in family_rows:
+        key = infer_source_family_key(row["family_id"], row.get("family_label", ""), row.get("sample_raw_references", ""))
+        if not key:
+            continue
+        family_to_source_family[row["family_id"]] = key
+        matched_family_ids[key].append(row["family_id"])
+
+    source_family_rows: dict[str, dict] = {}
+    for key, family_ids in matched_family_ids.items():
+        metadata = SOURCE_FAMILY_SEMANTICS[key]
+        primary_family_id = metadata.get("canonical_family_id")
+        if not primary_family_id or primary_family_id not in families_by_id:
+            primary_family_id = max(
+                family_ids,
+                key=lambda family_id: int(families_by_id[family_id].get("occurrence_count", "0") or "0"),
+            )
+        primary_row = families_by_id[primary_family_id]
+        matched_rows = [families_by_id[family_id] for family_id in family_ids]
+        source_family_rows[metadata["source_family_id"]] = {
+            "source_family_id": metadata["source_family_id"],
+            "source_family_key": key,
+            "abbreviation": metadata["abbreviation"],
+            "family_id": primary_family_id,
+            "source_family_type": metadata["source_family_type"],
+            "resolution_status": metadata["resolution_status"],
+            "resolution_level": metadata["resolution_level"],
+            "canonical_label": SOURCE_FAMILY_LIBRARY.get(key, {}).get("title", metadata["abbreviation"]),
+            "expanded_label": SOURCE_FAMILY_LIBRARY.get(key, {}).get("title", metadata["abbreviation"]),
+            "locator_pattern": metadata["locator_pattern"],
+            "confidence": metadata["confidence"],
+            "needs_human_review": metadata["needs_human_review"],
+            "notes": metadata["notes"],
+            "matched_family_ids": family_ids,
+            "matched_rows": matched_rows,
+            "occurrence_count": sum(int(row.get("occurrence_count", "0") or "0") for row in matched_rows),
+            "example_raw_references": " | ".join(
+                row.get("sample_raw_references", "")
+                for row in matched_rows[:3]
+                if row.get("sample_raw_references")
+            ),
+        }
+    return source_family_rows, family_to_source_family
+
+
+def candidate_is_plausible_standalone(family_row: dict, candidate: dict | None) -> bool:
+    family_type = family_row.get("family_type", "")
+    if family_type in {"book", "article"}:
+        return True
+    if family_type in {"source_catalogue", "publication", "internal_reference"}:
+        return False
+    if not candidate:
+        return False
+    author = (candidate.get("author", "") or "").strip()
+    title = (candidate.get("title", "") or "").strip()
+    raw_text = f"{author} {title}".strip()
+    if not raw_text or len(raw_text) < 8:
+        return False
+    if title and title.casefold() == family_row.get("family_label", "").casefold():
+        return False
+    return bool(author or len(title.split()) >= 3)
 
 
 def usable_frasch_rows(rows: list[dict]) -> list[dict]:
@@ -600,6 +1205,9 @@ def row_to_bibtex_entry(row: dict) -> dict:
         "evidenceid": row.get("evidence_id", ""),
         "sourceofauthority": row.get("source_of_authority", ""),
         "matchedexternalkey": row.get("matched_external_key", ""),
+        "sourcefamilyid": row.get("source_family_id", ""),
+        "resolutionstatus": row.get("resolution_status", ""),
+        "resolutionlevel": row.get("resolution_level", ""),
         "familyid": row.get("family_id", ""),
         "note": row.get("notes", ""),
         "matchedlocalsourceid": row.get("matched_local_source_id", ""),
@@ -707,7 +1315,7 @@ def build_seed_authority(
     existing_keys: set[str],
 ) -> dict:
     abbreviation = seed_row.get("abbreviation", "")
-    normalized_abbreviation = abbreviation.casefold()
+    normalized_abbreviation = normalize_source_family_key(abbreviation)
     defaults = SOURCE_FAMILY_LIBRARY.get(normalized_abbreviation, {})
     frasch_search_terms = defaults.get("frasch_search_terms", [abbreviation.casefold(), seed_row.get("provisional_label", "").casefold()])
     local_search_terms = defaults.get("local_search_terms", frasch_search_terms)
@@ -1088,12 +1696,16 @@ def build_machine_stub(family_row: dict, candidate_row: dict | None, existing_ke
 def build_evidence_rows(authority_rows: list[dict], manifest_by_id: dict[str, dict], manifest_by_name: dict[str, dict]) -> list[dict]:
     evidence_rows = []
     for row in authority_rows:
-        if row["authority_status"] not in {"confirmed_external_bibtex", "confirmed_local_source", "provisional_local_source"}:
+        if not row.get("source_family_id") and row["authority_status"] not in {
+            "confirmed_external_bibtex",
+            "confirmed_local_source",
+            "provisional_local_source",
+        }:
             continue
         source_file_id = ""
         source_file_label = ""
         source_ref_id = ""
-        evidence_type = row["source_of_authority"] or "authority"
+        evidence_type = row["source_of_authority"] or ("source_family_authority" if row.get("source_family_id") else "authority")
         if row["source_of_authority"] == "external_bibtex":
             source_file_id = "external_bibtex"
             source_file_label = "Imported external BibTeX"
@@ -1109,6 +1721,7 @@ def build_evidence_rows(authority_rows: list[dict], manifest_by_id: dict[str, di
             source_ref_id = row.get("matched_local_source_id", "")
         evidence_rows.append(
             {
+                "source_family_id": row.get("source_family_id", ""),
                 "bibtex_key": row["bibtex_key"],
                 "evidence_id": row.get("evidence_id", "") or row["bibtex_key"],
                 "evidence_type": evidence_type,
@@ -1126,7 +1739,7 @@ def build_evidence_rows(authority_rows: list[dict], manifest_by_id: dict[str, di
                 "notes": row.get("notes", ""),
             }
         )
-    evidence_rows.sort(key=lambda item: (item["bibtex_key"], item["evidence_id"]))
+    evidence_rows.sort(key=lambda item: (item["source_family_id"], item["bibtex_key"], item["evidence_id"]))
     return evidence_rows
 
 
@@ -1188,58 +1801,183 @@ def build_seed_output_rows(seed_rows: list[dict], authority_rows: list[dict]) ->
 
 def build_resolution_plan_rows(
     family_rows: list[dict],
-    resolved_lookup: dict[str, dict],
-    unresolved_rows: list[dict],
+    family_resolution: dict[str, dict],
     members_by_family: dict[str, list[dict]],
 ) -> list[dict]:
-    unresolved_by_id = {row["family_id"]: row for row in unresolved_rows}
     ranked = sorted(family_rows, key=lambda row: int(row.get("occurrence_count") or 0), reverse=True)[:TOP_FAMILY_REVIEW_COUNT]
     plan_rows = []
     for family_row in ranked:
         family_id = family_row["family_id"]
-        resolved = resolved_lookup.get(family_id)
-        unresolved = unresolved_by_id.get(family_id)
-        alias_target = resolve_alias_target(family_id)
-        if resolved is not None and resolved["authority_status"] != "machine_stub":
-            current_status = f"resolved:{resolved['authority_status']}"
-            suspected_work_or_source = resolved.get("title", "") or family_row.get("family_label", "")
-            suspected_bibtex_key = resolved["bibtex_key"]
-            evidence_source = resolved.get("matched_local_source_file", "") or resolved.get("source_of_authority", "")
-            evidence_confidence = resolved.get("match_confidence", "")
-            next_action = "Confirm publication details and keep shared authority mapping stable." if resolved.get("human_review_flag") == "true" else "No immediate action."
-            notes = resolved.get("notes", "")
-        elif alias_target is not None:
-            current_status = "resolved:alias"
-            suspected_work_or_source = alias_target[2]
-            suspected_bibtex_key = alias_target[1]
-            evidence_source = "Bagan Epig Database / Frasch shorthand citations"
-            evidence_confidence = "medium"
-            next_action = "Confirm exact expansion in local Bagan Epig Database abbreviations or preface material."
-            notes = "Resolved by mapping the family to a shared authority entry instead of creating another stub."
+        resolution = family_resolution[family_id]
+        resolution_status = resolution["resolution_status"]
+        resolution_level = resolution["resolution_level"]
+        evidence_source = resolution.get("evidence_source", "")
+        evidence_confidence = resolution.get("match_confidence", "")
+        notes = resolution.get("notes", "")
+        if resolution_status in {"source_family_resolved", "alias_resolved", "series_level_resolved"}:
+            next_action = "Retain the source-family or series mapping and defer issue/article normalization."
+        elif resolution_status in {"confirmed_work", "provisional_work"}:
+            next_action = "Confirm work-level publication details and keep the authority key stable."
+        elif resolution_status == "needs_human_review":
+            next_action = "Review local or Frasch evidence before promoting the provisional work/source-family mapping."
         else:
-            current_status = unresolved.get("current_status", "needs_human_review") if unresolved else "needs_human_review"
-            suspected_work_or_source = family_row.get("family_label", "")
-            suspected_bibtex_key = unresolved.get("current_bibtex_key", "") if unresolved else ""
-            evidence_source = " / ".join(filter(None, [family_row.get("family_label", ""), members_by_family.get(family_id, [{}])[0].get("raw_reference_string", "")]))
-            evidence_confidence = "low"
-            next_action = "Review local file hits or Frasch preface evidence before promoting this family."
-            notes = "Top unresolved family retained in manual review queue."
+            next_action = "Resolve the raw family before promoting any work-level authority."
+            if not evidence_source:
+                evidence_source = members_by_family.get(family_id, [{}])[0].get("raw_reference_string", "")
+        authority_key = resolution.get("bibtex_key", "")
         plan_rows.append(
             {
                 "family_id": family_id,
                 "family_label": family_row.get("family_label", ""),
+                "family_type": family_row.get("family_type", ""),
                 "occurrence_count": family_row.get("occurrence_count", "0"),
-                "current_status": current_status,
-                "suspected_work_or_source": suspected_work_or_source,
-                "suspected_bibtex_key": suspected_bibtex_key,
+                "sample_raw_references": family_row.get("sample_raw_references", ""),
+                "resolution_status": resolution_status,
+                "resolution_level": resolution_level,
+                "authority_key": authority_key,
+                "needs_human_review": resolution.get("needs_human_review", "true"),
+                "evidence_id": resolution.get("evidence_id", ""),
                 "evidence_source": evidence_source,
                 "evidence_confidence": evidence_confidence,
                 "next_action": next_action,
-                "assigned_priority": "high",
                 "notes": notes,
             }
         )
     return plan_rows
+
+
+def build_source_family_output_rows(
+    source_family_rows: dict[str, dict],
+    authority_by_key: dict[str, dict],
+    authority_by_family: dict[str, dict],
+) -> list[dict]:
+    output_rows = []
+    for row in source_family_rows.values():
+        family_key = row["source_family_key"]
+        library_defaults = SOURCE_FAMILY_LIBRARY.get(family_key, {})
+        authority_key = ""
+        preferred_key = library_defaults.get("preferred_key", "")
+        authority_row = authority_by_key.get(preferred_key)
+        if authority_row is None and preferred_key.lower() != preferred_key:
+            authority_row = authority_by_key.get(preferred_key.lower())
+        if authority_row is None:
+            authority_row = authority_by_family.get(row["family_id"])
+        if authority_row is not None:
+            authority_key = authority_row["bibtex_key"]
+        elif preferred_key:
+            authority_key = preferred_key
+        output_rows.append(
+            {
+                "source_family_id": row["source_family_id"],
+                "abbreviation": row["abbreviation"],
+                "family_id": row["family_id"],
+                "authority_key": authority_key,
+                "source_family_type": row["source_family_type"],
+                "resolution_status": row["resolution_status"],
+                "resolution_level": row["resolution_level"],
+                "canonical_label": row["canonical_label"],
+                "expanded_label": row["expanded_label"],
+                "related_bibtex_key": authority_key,
+                "locator_pattern": row["locator_pattern"],
+                "example_raw_references": row["example_raw_references"],
+                "evidence_id": authority_row.get("evidence_id", row["family_id"]) if authority_row else row["family_id"],
+                "evidence_source": authority_row.get("source_of_authority", "corpus_reference") if authority_row else "corpus_reference",
+                "confidence": authority_row.get("match_confidence", row["confidence"]) if authority_row else row["confidence"],
+                "needs_human_review": authority_row.get("human_review_flag", row["needs_human_review"]) if authority_row else row["needs_human_review"],
+                "notes": authority_row.get("notes", row["notes"]) if authority_row else row["notes"],
+            }
+        )
+    output_rows.sort(key=lambda item: item["abbreviation"])
+    return output_rows
+
+
+def build_family_resolution(
+    *,
+    family_rows: list[dict],
+    source_family_rows: dict[str, dict],
+    family_to_source_family: dict[str, str],
+    authority_by_family: dict[str, dict],
+    candidate_rows_by_family: dict[str, dict],
+) -> dict[str, dict]:
+    source_family_by_id = {row["source_family_id"]: row for row in source_family_rows.values()}
+    family_resolution: dict[str, dict] = {}
+
+    for family_row in family_rows:
+        family_id = family_row["family_id"]
+        source_family_key = family_to_source_family.get(family_id)
+        if source_family_key:
+            semantic = SOURCE_FAMILY_SEMANTICS[source_family_key]
+            source_family_row = source_family_by_id[semantic["source_family_id"]]
+            direct_family_id = semantic.get("canonical_family_id")
+            is_direct = bool(direct_family_id and family_id == direct_family_id) or (
+                not direct_family_id and family_id == source_family_row["family_id"]
+            )
+            resolution_status = source_family_row["resolution_status"] if is_direct else "alias_resolved"
+            resolution_level = source_family_row["resolution_level"] if is_direct else "abbreviation"
+            family_resolution[family_id] = {
+                "source_family_id": source_family_row["source_family_id"],
+                "bibtex_key": source_family_row.get("authority_key", "") or source_family_row.get("related_bibtex_key", ""),
+                "resolution_status": resolution_status,
+                "resolution_level": resolution_level,
+                "match_type": source_family_match_type(resolution_status, resolution_level),
+                "match_confidence": source_family_row["confidence"],
+                "needs_human_review": source_family_row["needs_human_review"],
+                "evidence_id": source_family_row["evidence_id"],
+                "evidence_source": source_family_row["evidence_source"],
+                "notes": source_family_row["notes"],
+                "authority_status": "",
+            }
+            continue
+
+        authority_row = authority_by_family.get(family_id)
+        if authority_row is not None:
+            resolution_status, resolution_level = resolution_from_authority_row(authority_row)
+            family_resolution[family_id] = {
+                "source_family_id": authority_row.get("source_family_id", ""),
+                "bibtex_key": authority_row["bibtex_key"],
+                "resolution_status": resolution_status,
+                "resolution_level": resolution_level,
+                "match_type": "confirmed_work_match" if resolution_status == "confirmed_work" else "provisional_work_match",
+                "match_confidence": authority_row.get("match_confidence", "low"),
+                "needs_human_review": authority_row.get("human_review_flag", "true"),
+                "evidence_id": authority_row.get("evidence_id", ""),
+                "evidence_source": authority_row.get("source_of_authority", ""),
+                "notes": authority_row.get("notes", ""),
+                "authority_status": authority_row.get("authority_status", ""),
+            }
+            continue
+
+        candidate_row = candidate_rows_by_family.get(family_id)
+        if candidate_row is not None:
+            family_resolution[family_id] = {
+                "source_family_id": "",
+                "bibtex_key": candidate_row["bibtex_key"],
+                "resolution_status": "needs_human_review",
+                "resolution_level": "unknown",
+                "match_type": "machine_stub_match",
+                "match_confidence": "low",
+                "needs_human_review": "true",
+                "evidence_id": candidate_row.get("evidence_id", family_id),
+                "evidence_source": candidate_row.get("source_of_authority", "corpus_reference"),
+                "notes": candidate_row.get("notes", ""),
+                "authority_status": candidate_row.get("authority_status", ""),
+            }
+            continue
+
+        family_resolution[family_id] = {
+            "source_family_id": "",
+            "bibtex_key": "",
+            "resolution_status": "unresolved",
+            "resolution_level": "unknown",
+            "match_type": "no_match",
+            "match_confidence": "low",
+            "needs_human_review": "true",
+            "evidence_id": family_id,
+            "evidence_source": "corpus_reference",
+            "notes": "No stable source-family or plausible standalone work authority has been assigned.",
+            "authority_status": "",
+        }
+    return family_resolution
 
 
 def build_authority(
@@ -1285,21 +2023,22 @@ def build_authority(
     authority_by_key: dict[str, dict] = {}
     candidate_rows_by_family: dict[str, dict] = {}
     existing_keys: set[str] = set()
+    source_family_rows_raw, family_to_source_family_key = build_source_family_lookup(family_rows)
 
     for family_id, seed_row in seed_by_family.items():
         family_row = family_by_id.get(family_id)
         if family_row is None:
             continue
         authority_row = build_seed_authority(seed_row, family_row, frasch_rows, local_candidate_rows, existing_keys)
-        authority_by_family[family_id] = choose_better_row(authority_by_family.get(family_id), authority_row)
-        authority_by_key[authority_row["bibtex_key"]] = authority_by_family[family_id]
+        existing_keys.add(authority_row["bibtex_key"])
+        chosen_row = choose_better_row(authority_by_family.get(family_id), authority_row)
+        authority_by_family[family_id] = chosen_row
+        authority_by_key[chosen_row["bibtex_key"]] = chosen_row
 
     needed_supplemental_keys = {
-        target_id
-        for family_row in family_rows
-        for alias_target in [resolve_alias_target(family_row["family_id"])]
-        if alias_target is not None and alias_target[0] == "key"
-        for target_id in [alias_target[1]]
+        SOURCE_FAMILY_LIBRARY.get(row["source_family_key"], {}).get("preferred_key", "")
+        for row in source_family_rows_raw.values()
+        if SOURCE_FAMILY_LIBRARY.get(row["source_family_key"], {}).get("preferred_key", "") in SUPPLEMENTAL_AUTHORITIES
     }
     for bibtex_key, metadata in SUPPLEMENTAL_AUTHORITIES.items():
         if bibtex_key not in needed_supplemental_keys:
@@ -1346,12 +2085,52 @@ def build_authority(
             local_row=local_row,
             existing_keys=existing_keys,
         )
-        authority_by_family[family_id] = choose_better_row(authority_by_family.get(family_id), authority_row)
-        authority_by_key[authority_row["bibtex_key"]] = authority_by_family[family_id]
+        existing_keys.add(authority_row["bibtex_key"])
+        chosen_row = choose_better_row(authority_by_family.get(family_id), authority_row)
+        authority_by_family[family_id] = chosen_row
+        authority_by_key[chosen_row["bibtex_key"]] = chosen_row
+
+    for source_family_row in source_family_rows_raw.values():
+        family_key = source_family_row["source_family_key"]
+        defaults = SOURCE_FAMILY_LIBRARY.get(family_key, {})
+        preferred_key = defaults.get("preferred_key", "")
+        if not preferred_key or preferred_key in authority_by_key:
+            continue
+        family_row = family_by_id.get(source_family_row["family_id"])
+        frasch_row = find_frasch_match(frasch_rows, defaults.get("frasch_search_terms", [])) if defaults.get("frasch_search_terms") else None
+        local_row = find_local_match(local_candidate_rows, defaults.get("local_search_terms", [])) if defaults.get("local_search_terms") else None
+        authority_row = build_curated_authority(
+            metadata={
+                "author": defaults.get("author", ""),
+                "year": defaults.get("year", ""),
+                "title": defaults.get("title", source_family_row["expanded_label"]),
+                "shorttitle": defaults.get("shorttitle", source_family_row["abbreviation"]),
+                "entry_type": defaults.get("entry_type", "misc"),
+                "preferred_key": preferred_key,
+                "status": "provisional_publication"
+                if source_family_row["source_family_type"] == "periodical"
+                else "provisional_catalogue",
+                "source_of_authority": "source_abbreviation_seed",
+                "review_status": "needs_human_review",
+                "match_confidence": source_family_row["confidence"],
+                "match_reason": source_family_row["notes"],
+                "notes": source_family_row["notes"],
+            },
+            family_row=family_row,
+            candidate_row=candidates_by_family.get(source_family_row["family_id"], [{}])[0] if family_row else None,
+            frasch_row=frasch_row,
+            local_row=local_row,
+            existing_keys=existing_keys,
+            bibtex_key_override=preferred_key,
+        )
+        existing_keys.add(authority_row["bibtex_key"])
+        authority_by_key[authority_row["bibtex_key"]] = authority_row
+        if family_row is not None and family_row["family_id"] not in authority_by_family:
+            authority_by_family[family_row["family_id"]] = authority_row
 
     for family_row in family_rows:
         family_id = family_row["family_id"]
-        if family_id in seed_by_family or family_id in authority_by_family or resolve_alias_target(family_id) is not None:
+        if family_id in seed_by_family or family_id in authority_by_family or family_id in family_to_source_family_key:
             continue
         best_candidate = candidates_by_family.get(family_id, [{}])[0]
         manual_match = MANUAL_LOCAL_MATCHES.get(family_id)
@@ -1369,9 +2148,11 @@ def build_authority(
                 None,
             )
             if manual_local is not None:
+                authority_row = build_specific_authority(best_candidate, family_row, manual_local, None, existing_keys)
+                existing_keys.add(authority_row["bibtex_key"])
                 authority_by_family[family_id] = choose_better_row(
                     authority_by_family.get(family_id),
-                    build_specific_authority(best_candidate, family_row, manual_local, None, existing_keys),
+                    authority_row,
                 )
                 authority_by_key[authority_by_family[family_id]["bibtex_key"]] = authority_by_family[family_id]
                 continue
@@ -1384,40 +2165,70 @@ def build_authority(
                 best_score = score
                 best_local = {**local_row, "_match_reason": reason, "_match_confidence": "high" if score >= 6 else "medium"}
         if external_match is not None:
+            authority_row = build_specific_authority(best_candidate, family_row, None, external_match, existing_keys)
+            existing_keys.add(authority_row["bibtex_key"])
             authority_by_family[family_id] = choose_better_row(
                 authority_by_family.get(family_id),
-                build_specific_authority(best_candidate, family_row, None, external_match, existing_keys),
+                authority_row,
             )
             authority_by_key[authority_by_family[family_id]["bibtex_key"]] = authority_by_family[family_id]
             continue
         if best_local is not None and best_score >= 6:
+            authority_row = build_specific_authority(best_candidate, family_row, best_local, None, existing_keys)
+            existing_keys.add(authority_row["bibtex_key"])
             authority_by_family[family_id] = choose_better_row(
                 authority_by_family.get(family_id),
-                build_specific_authority(best_candidate, family_row, best_local, None, existing_keys),
+                authority_row,
             )
             authority_by_key[authority_by_family[family_id]["bibtex_key"]] = authority_by_family[family_id]
 
-    resolved_lookup = dict(authority_by_family)
+    source_family_output_rows = build_source_family_output_rows(source_family_rows_raw, authority_by_key, authority_by_family)
+    source_family_by_id = {row["source_family_id"]: row for row in source_family_output_rows}
+    source_family_by_authority_key = {row["authority_key"]: row for row in source_family_output_rows if row.get("authority_key")}
+
+    authority_rows = []
+    for row in authority_by_key.values():
+        authority_row = dict(row)
+        source_family_row = None
+        if authority_row.get("family_id") and authority_row["family_id"] in family_to_source_family_key:
+            semantic_key = family_to_source_family_key[authority_row["family_id"]]
+            source_family_row = source_family_by_id[SOURCE_FAMILY_SEMANTICS[semantic_key]["source_family_id"]]
+        elif authority_row["bibtex_key"] in source_family_by_authority_key:
+            source_family_row = source_family_by_authority_key[authority_row["bibtex_key"]]
+        if source_family_row is not None:
+            authority_row["source_family_id"] = source_family_row["source_family_id"]
+            authority_row["resolution_status"] = source_family_row["resolution_status"]
+            authority_row["resolution_level"] = source_family_row["resolution_level"]
+        else:
+            resolution_status, resolution_level = resolution_from_authority_row(authority_row)
+            authority_row["source_family_id"] = ""
+            authority_row["resolution_status"] = resolution_status
+            authority_row["resolution_level"] = resolution_level
+        authority_rows.append(authority_row)
+    authority_rows.sort(key=lambda row: (row.get("family_label", ""), row["bibtex_key"]))
+
     for family_row in family_rows:
         family_id = family_row["family_id"]
-        alias_target = resolve_alias_target(family_id)
-        if alias_target is None:
-            continue
-        target_kind, target_id, _ = alias_target
-        target_row = authority_by_family.get(target_id) if target_kind == "family" else authority_by_key.get(target_id)
-        if target_row is not None:
-            resolved_lookup[family_id] = target_row
-
-    authority_rows = sorted(authority_by_key.values(), key=lambda row: (row["family_label"], row["bibtex_key"]))
-
-    for family_row in family_rows:
-        family_id = family_row["family_id"]
-        if family_id in resolved_lookup:
+        if family_id in authority_by_family or family_id in family_to_source_family_key:
             continue
         best_candidate = candidates_by_family.get(family_id, [{}])[0]
-        candidate_rows_by_family[family_id] = build_machine_stub(family_row, best_candidate, existing_keys)
+        if not candidate_is_plausible_standalone(family_row, best_candidate):
+            continue
+        candidate_row = build_machine_stub(family_row, best_candidate, existing_keys)
+        candidate_row["resolution_status"] = "needs_human_review"
+        candidate_row["resolution_level"] = "unknown"
+        candidate_row["source_family_id"] = ""
+        existing_keys.add(candidate_row["bibtex_key"])
+        candidate_rows_by_family[family_id] = candidate_row
 
     candidate_rows = sorted(candidate_rows_by_family.values(), key=lambda row: (row["family_label"], row["bibtex_key"]))
+    family_resolution = build_family_resolution(
+        family_rows=family_rows,
+        source_family_rows={row["source_family_id"]: row for row in source_family_output_rows},
+        family_to_source_family=family_to_source_family_key,
+        authority_by_family=authority_by_family,
+        candidate_rows_by_family=candidate_rows_by_family,
+    )
 
     authority_bib_entries = [row_to_bibtex_entry(row) for row in authority_rows]
     candidate_bib_entries = [row_to_bibtex_entry(row) for row in candidate_rows]
@@ -1425,6 +2236,7 @@ def build_authority(
     write_bibtex(output_dir / "bibliography_candidates.bib", candidate_bib_entries)
     write_tsv(output_dir / "bibtex_authority.tsv", authority_rows + candidate_rows, AUTHORITY_FIELDS)
     write_tsv(seed_path, build_seed_output_rows(seed_rows, authority_rows), SEED_FIELDS)
+    write_tsv(output_dir / "source_family_authority.tsv", source_family_output_rows, SOURCE_FAMILY_FIELDS)
     evidence_rows = build_evidence_rows(authority_rows, manifest_by_id, manifest_by_name)
     write_tsv(output_dir / "bibtex_authority_evidence.tsv", evidence_rows, EVIDENCE_FIELDS)
 
@@ -1432,7 +2244,6 @@ def build_authority(
     unresolved_rows = []
     for family_row in family_rows:
         family_id = family_row["family_id"]
-        resolved = resolved_lookup.get(family_id) or candidate_rows_by_family.get(family_id)
         members = members_by_family.get(family_id, []) or [
             {
                 "raw_reference_string": family_row.get("sample_raw_references", ""),
@@ -1442,32 +2253,27 @@ def build_authority(
         ]
         for member in members:
             locator, locator_type = parse_locator(member.get("raw_reference_string", ""), family_id, family_row["family_label"])
-            if resolved["authority_status"] == "confirmed_external_bibtex":
-                match_type = "external_title_author_year_match"
-            elif resolved["authority_status"] == "confirmed_local_source":
-                match_type = "local_source_family_match" if family_id in seed_by_family else "local_title_author_year_match"
-            elif resolved["authority_status"] == "provisional_local_source":
-                match_type = "frasch_source_match" if resolved["source_of_authority"].startswith("frasch") else "provisional_local_source_match"
-            elif family_id in seed_by_family:
-                match_type = "abbreviation_catalogue_match"
-            else:
-                match_type = "machine_stub_match"
+            resolution = family_resolution[family_id]
             crosswalk_rows.append(
                 {
                     "raw_reference_string": member.get("raw_reference_string", ""),
                     "family_id": family_id,
+                    "source_family_id": resolution.get("source_family_id", ""),
                     "work_candidate_id": candidates_by_family.get(family_id, [{}])[0].get("work_candidate_id", ""),
-                    "bibtex_key": resolved["bibtex_key"],
-                    "match_type": match_type,
-                    "match_confidence": resolved.get("match_confidence", "low"),
+                    "bibtex_key": resolution.get("bibtex_key", ""),
                     "locator": locator,
                     "locator_type": locator_type,
-                    "evidence": evidence_excerpt(resolved.get("match_reason", "")),
-                    "needs_human_review": "false" if resolved["authority_status"] in {"confirmed_external_bibtex", "confirmed_local_source"} else "true",
+                    "resolution_status": resolution["resolution_status"],
+                    "resolution_level": resolution["resolution_level"],
+                    "match_type": resolution["match_type"],
+                    "match_confidence": resolution.get("match_confidence", "low"),
+                    "evidence": evidence_excerpt(resolution.get("notes", "") or resolution.get("evidence_source", "")),
+                    "needs_human_review": resolution.get("needs_human_review", "true"),
                     "notes": member.get("notes", ""),
                 }
             )
-        if resolve_alias_target(family_id) is None and resolved["authority_status"] in {"machine_stub", "provisional_catalogue", "provisional_publication", "needs_human_review"}:
+        resolution = family_resolution[family_id]
+        if resolution["resolution_status"] == "unresolved":
             unresolved_rows.append(
                 {
                     "family_id": family_id,
@@ -1476,8 +2282,8 @@ def build_authority(
                     "member_count": family_row.get("member_count", ""),
                     "occurrence_count": family_row.get("occurrence_count", "0"),
                     "sample_raw_references": family_row.get("sample_raw_references", ""),
-                    "current_bibtex_key": resolved["bibtex_key"],
-                    "current_status": resolved["authority_status"],
+                    "current_bibtex_key": resolution.get("bibtex_key", ""),
+                    "current_status": resolution["resolution_status"],
                     "suggested_local_search_terms": ", ".join(
                         token
                         for token in [
@@ -1496,7 +2302,7 @@ def build_authority(
 
     unresolved_rows.sort(key=lambda row: int(row["occurrence_count"] or 0), reverse=True)
     write_tsv(output_dir / "high_frequency_unresolved.tsv", unresolved_rows, HIGH_FREQUENCY_FIELDS)
-    resolution_plan_rows = build_resolution_plan_rows(family_rows, resolved_lookup, unresolved_rows, members_by_family)
+    resolution_plan_rows = build_resolution_plan_rows(family_rows, family_resolution, members_by_family)
     write_tsv(output_dir / "high_frequency_resolution_plan.tsv", resolution_plan_rows, RESOLUTION_PLAN_FIELDS)
 
     duplicate_local_files_collapsed_count = sum(max(int(row.get("duplicate_count", "1") or 1) - 1, 0) for row in local_manifest_rows)
@@ -1506,10 +2312,61 @@ def build_authority(
         for value in entry["fields"].values()
         if len(value) > MAX_BIBTEX_EVIDENCE_LENGTH and entry["entry_type"] != "misc"
     )
+    high_frequency_reviewed_count = sum(1 for row in resolution_plan_rows if row["resolution_status"] != "unresolved")
+    high_frequency_still_unresolved_count = sum(1 for row in resolution_plan_rows if row["resolution_status"] == "unresolved")
+    sorted_resolutions = sorted(
+        family_rows,
+        key=lambda row: int(row.get("occurrence_count", "0") or "0"),
+        reverse=True,
+    )
+
+    def top_families(statuses: set[str], *, provisional_only: bool = False) -> list[dict]:
+        rows = []
+        for family_row in sorted_resolutions:
+            resolution = family_resolution[family_row["family_id"]]
+            if resolution["resolution_status"] not in statuses:
+                continue
+            if provisional_only and resolution.get("needs_human_review") != "true":
+                continue
+            rows.append(
+                {
+                    "family_id": family_row["family_id"],
+                    "family_label": family_row["family_label"],
+                    "occurrence_count": int(family_row.get("occurrence_count", "0") or "0"),
+                }
+            )
+            if len(rows) == 10:
+                break
+        return rows
+
     report = {
         "authority_entry_count": len(authority_rows),
         "candidate_entry_count": len(candidate_rows),
+        "total_family_count": len(family_rows),
         "machine_stub_count": sum(1 for row in candidate_rows if row["authority_status"] == "machine_stub"),
+        "suppressed_locator_stub_count": sum(
+            1
+            for resolution in family_resolution.values()
+            if resolution["resolution_status"] in {"alias_resolved", "source_family_resolved", "series_level_resolved", "confirmed_work"}
+        ),
+        "unresolved_family_count": sum(1 for resolution in family_resolution.values() if resolution["resolution_status"] == "unresolved"),
+        "alias_resolved_family_count": sum(1 for resolution in family_resolution.values() if resolution["resolution_status"] == "alias_resolved"),
+        "source_family_resolved_count": sum(
+            1 for resolution in family_resolution.values() if resolution["resolution_status"] == "source_family_resolved"
+        ),
+        "series_level_resolved_count": sum(
+            1 for resolution in family_resolution.values() if resolution["resolution_status"] == "series_level_resolved"
+        ),
+        "work_level_resolved_count": sum(
+            1 for resolution in family_resolution.values() if resolution["resolution_status"] in {"confirmed_work", "provisional_work"}
+        ),
+        "confirmed_work_count": sum(1 for resolution in family_resolution.values() if resolution["resolution_status"] == "confirmed_work"),
+        "provisional_work_count": sum(
+            1 for resolution in family_resolution.values() if resolution["resolution_status"] == "provisional_work"
+        ),
+        "needs_human_review_count": sum(
+            1 for resolution in family_resolution.values() if resolution["resolution_status"] == "needs_human_review"
+        ),
         "confirmed_external_bibtex_count": sum(1 for row in authority_rows if row["authority_status"] == "confirmed_external_bibtex"),
         "confirmed_local_source_count": sum(1 for row in authority_rows if row["authority_status"] == "confirmed_local_source"),
         "provisional_local_source_count": sum(1 for row in authority_rows if row["authority_status"] == "provisional_local_source"),
@@ -1521,13 +2378,11 @@ def build_authority(
         "local_file_count": len({row.get("source_file_id", row.get("sha256", "")) for row in local_manifest_rows}),
         "duplicate_local_files_collapsed_count": duplicate_local_files_collapsed_count,
         "long_bibtex_evidence_fields_count": long_bibtex_evidence_fields_count,
-        "high_frequency_families_resolved_count": sum(1 for row in resolution_plan_rows if row["current_status"].startswith("resolved:")),
-        "high_frequency_families_remaining_count": sum(1 for row in resolution_plan_rows if not row["current_status"].startswith("resolved:")),
-        "unresolved_high_frequency_family_count": len(unresolved_rows),
-        "top_unresolved_families": [
-            {"family_id": row["family_id"], "family_label": row["family_label"], "occurrence_count": int(row["occurrence_count"] or 0)}
-            for row in unresolved_rows[:10]
-        ],
+        "high_frequency_reviewed_count": high_frequency_reviewed_count,
+        "high_frequency_still_unresolved_count": high_frequency_still_unresolved_count,
+        "top_unresolved_families": top_families({"unresolved"}),
+        "top_provisional_source_families": top_families({"source_family_resolved", "series_level_resolved"}, provisional_only=True),
+        "top_needs_human_review_families": top_families({"needs_human_review"}),
     }
     (output_dir / "bibtex_authority_report.json").write_text(json.dumps(report, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     return report

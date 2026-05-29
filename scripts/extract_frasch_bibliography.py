@@ -66,6 +66,7 @@ BAGAN_ABBREVIATION_FIELDS = [
     "expansion",
     "raw_definition",
     "source_location_hint",
+    "evidence_type",
     "confidence",
     "notes",
 ]
@@ -96,6 +97,7 @@ KNOWN_JOURNALS = {
 KNOWN_PUBLICATIONS = {
     "list": "List of Inscriptions Found in Burma",
     "obi": "Old Burmese Inscriptions",
+    "ippa": "IPPA source family",
     "uem": "UEM catalogue family",
     "ppa": "PPA catalogue family",
     "tn": "Than Tun catalogue family",
@@ -108,6 +110,7 @@ KNOWN_PUBLICATIONS = {
     "bed b": "Bagan Epigraphic Database, Part B",
     "iob": "Inscriptions of Burma",
     "pl": "Plate reference family",
+    "u min hswe": "U Min Hswe source family",
     "luce d": "Luce D source family",
     "luce j": "Luce J source family",
 }
@@ -449,42 +452,58 @@ def extract_bagan_outputs(source_file_id: str, text: str, rows: list[dict], outp
     abbreviation_rows: list[dict] = []
     bibliography_rows: list[dict] = []
 
-    if "Bagan Epig Database" in text:
+    def add_abbreviation(
+        abbreviation: str,
+        expansion: str,
+        raw_definition: str,
+        source_location_hint: str,
+        evidence_type: str,
+        confidence: str,
+        notes: str = "",
+    ) -> None:
         abbreviation_rows.append(
             {
-                "abbreviation": "BED",
-                "expansion": "Bagan Epigraphic Database",
-                "raw_definition": "Bagan Epig Database.doc",
-                "source_location_hint": "Document title",
-                "confidence": "high",
-                "notes": "Document title from the local Frasch source.",
+                "abbreviation": abbreviation,
+                "expansion": expansion,
+                "raw_definition": raw_definition,
+                "source_location_hint": source_location_hint,
+                "evidence_type": evidence_type,
+                "confidence": confidence,
+                "notes": notes,
             }
+        )
+
+    if "Bagan Epig Database" in text:
+        add_abbreviation(
+            "BED",
+            "Bagan Epigraphic Database",
+            "Bagan Epig Database.doc",
+            "Document title",
+            "explicit_definition",
+            "high",
+            "Document title from the local Frasch source.",
         )
 
     for match in PART_HEADING.finditer(text):
         letter = match.group(1).strip()
         part_title = match.group(2).strip()
         expansion = f"Bagan Epigraphic Database, Part {letter}: {part_title}"
-        abbreviation_rows.append(
-            {
-                "abbreviation": letter,
-                "expansion": expansion,
-                "raw_definition": match.group(0),
-                "source_location_hint": "Part heading",
-                "confidence": "high" if letter in {"A", "B"} else "medium",
-                "notes": "",
-            }
+        add_abbreviation(
+            letter,
+            expansion,
+            match.group(0),
+            "Part heading",
+            "explicit_definition",
+            "high" if letter in {"A", "B"} else "medium",
         )
         if letter == "B":
-            abbreviation_rows.append(
-                {
-                    "abbreviation": "BED B",
-                    "expansion": "Bagan Epigraphic Database, Part B",
-                    "raw_definition": match.group(0),
-                    "source_location_hint": "Part heading",
-                    "confidence": "high",
-                    "notes": "",
-                }
+            add_abbreviation(
+                "BED B",
+                "Bagan Epigraphic Database, Part B",
+                match.group(0),
+                "Part heading",
+                "explicit_definition",
+                "high",
             )
 
     bagan_rows = [row for row in rows if row["extraction_source_file"] == "Bagan Epig Database.doc"]
@@ -519,21 +538,70 @@ def extract_bagan_outputs(source_file_id: str, text: str, rows: list[dict], outp
     known_text = " ".join(row["raw_reference"] for row in bagan_rows).casefold()
     for abbreviation, expansion in title_backed.items():
         if expansion.casefold() in known_text or abbreviation.casefold() in known_text:
-            abbreviation_rows.append(
-                {
-                    "abbreviation": abbreviation,
-                    "expansion": expansion,
-                    "raw_definition": expansion,
-                    "source_location_hint": "Bagan bibliography/references",
-                    "confidence": "medium",
-                    "notes": "",
-                }
+            add_abbreviation(
+                abbreviation,
+                expansion,
+                expansion,
+                "Bagan bibliography/references",
+                "contextual_usage",
+                "medium",
             )
+
+    contextual_targets = {
+        "A": "Bagan Epigraphic Database, Part A",
+        "B": "Bagan Epigraphic Database, Part B",
+        "BED B": "Bagan Epigraphic Database, Part B",
+        "MP": KNOWN_PUBLICATIONS["mp"],
+        "UB": KNOWN_PUBLICATIONS["ub"],
+        "PPA": KNOWN_PUBLICATIONS["ppa"],
+        "IPPA": KNOWN_PUBLICATIONS["ippa"],
+        "UEM": KNOWN_PUBLICATIONS["uem"],
+        "SIP": KNOWN_PUBLICATIONS["sip"],
+        "TN": KNOWN_PUBLICATIONS["tn"],
+        "U Min Hswe": KNOWN_PUBLICATIONS["u min hswe"],
+        "Luce D": KNOWN_PUBLICATIONS["luce d"],
+        "Luce J": KNOWN_PUBLICATIONS["luce j"],
+        "Pl.": KNOWN_PUBLICATIONS["pl"],
+        "IOB": KNOWN_PUBLICATIONS["iob"],
+        "List": KNOWN_PUBLICATIONS["list"],
+        "MM": KNOWN_PUBLICATIONS["mm"],
+        "OR": KNOWN_PUBLICATIONS["or"],
+        "ARASI": KNOWN_JOURNALS["arasi"],
+        "JBRS": KNOWN_JOURNALS["jbrs"],
+        "JRAS": KNOWN_JOURNALS["jras"],
+        "BBHC": KNOWN_JOURNALS["bbhc"],
+        "RDASB": KNOWN_JOURNALS["rdasb"],
+        "EB": KNOWN_JOURNALS["eb"],
+    }
+    for abbreviation, expansion in contextual_targets.items():
+        pattern = re.compile(rf"(^|[\\s,(;]){re.escape(abbreviation)}(?=[\\s,.;:]|$)", flags=re.IGNORECASE)
+        match_row = next((row for row in bagan_rows if pattern.search(row["raw_reference"])), None)
+        if match_row is None:
+            continue
+        confidence = "high" if abbreviation in {"List", "IOB", "JBRS", "JRAS", "RDASB"} else "medium"
+        note = ""
+        if abbreviation in {"MP", "UB", "PPA", "IPPA", "UEM", "SIP", "TN", "U Min Hswe", "Luce D", "Luce J", "MM", "OR"}:
+            note = "Contextual usage only; expansion remains provisional."
+        add_abbreviation(
+            abbreviation,
+            expansion,
+            match_row["raw_reference"],
+            match_row["source_location_hint"],
+            "contextual_usage",
+            confidence,
+            note,
+        )
 
     deduped_abbreviations: dict[str, dict] = {}
     for row in abbreviation_rows:
         existing = deduped_abbreviations.get(row["abbreviation"])
-        if existing is None or row["confidence"] == "high":
+        if existing is None:
+            deduped_abbreviations[row["abbreviation"]] = row
+            continue
+        if row["evidence_type"] == "explicit_definition" and existing["evidence_type"] != "explicit_definition":
+            deduped_abbreviations[row["abbreviation"]] = row
+            continue
+        if row["confidence"] == "high" and existing["confidence"] != "high":
             deduped_abbreviations[row["abbreviation"]] = row
 
     abbreviation_path = output_dir / "frasch_bagan_epig_database_abbreviations.tsv"

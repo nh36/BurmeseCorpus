@@ -141,6 +141,7 @@ Entries over a few hundred characters should almost always stay in the QA layer 
 Review:
 
 - `frasch_bagan_epig_database_abbreviations.tsv` for explicit abbreviation definitions and source hints;
+- `frasch_bagan_epig_database_abbreviations.tsv` also records `evidence_type`, distinguishing `explicit_definition`, `contextual_usage`, `inferred_from_repeated_pattern`, and `manual_review_needed`;
 - `frasch_bagan_epig_database_bibliography.tsv` for full bibliography-style rows extracted from the same document;
 - `frasch_bagan_epig_database_report.json` for counts and parse warnings.
 
@@ -151,6 +152,13 @@ This material is especially important for abbreviation families such as `ARASI`,
 ## How local evidence flows into BibTeX authority
 
 `scripts/build_bibtex_authority.py` now treats harvested local evidence as higher-value input than generic machine stubs.
+
+The immediate target is now a correct authority crosswalk, not maximum BibTeX output. Local evidence can support several distinct outcomes:
+
+- a **source-family authority** row in `source_family_authority.tsv`;
+- a **series-level** authority such as `JBRS`, `JRAS`, `RDASB`, `BBHC`, or `EB`;
+- a **confirmed or provisional work** in `bibtex_authority.tsv`;
+- or a **needs_human_review** placeholder when the abbreviation is still real but not yet bibliographically pinned down.
 
 Important authority statuses:
 
@@ -178,6 +186,14 @@ The BibTeX layer now keeps those fields short and citation-like. Longer evidence
 
 That evidence table stores a short excerpt plus a stable evidence ID and hash, while the full raw text remains in the local-source TSV extracts.
 
+For source-family mappings, the same evidence should also support:
+
+- `source_family_authority.tsv`
+- `raw_reference_to_bibtex.tsv`
+- `high_frequency_resolution_plan.tsv`
+
+This is how rows like `List 90`, `Pl. II 198`, `PPA, p. 55`, `RDASB 1971`, `UB 1, p. 297`, and `MP 1, p. 81` stay modeled as source-family or series references with locators instead of turning into meaningless machine-stub works.
+
 ## Reviewing unresolved high-frequency families
 
 After rebuilding the authority layer, review:
@@ -190,5 +206,6 @@ After rebuilding the authority layer, review:
 `high_frequency_resolution_plan.tsv` is the working review sheet for the top families first. Use it to:
 
 - confirm which high-frequency families already map to a shared authority;
+- confirm whether that mapping is source-family, series-level, work-level, or still unresolved;
 - see which ones have only a suspected work/source and still need human confirmation;
 - record next actions before spending time on low-frequency tail items.
