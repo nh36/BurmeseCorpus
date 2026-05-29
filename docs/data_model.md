@@ -14,6 +14,7 @@ One record per inscription text unit or face. The current scripts populate this 
 - `data/release/sagaing_v0_1/`
 - `data/release/unified_release_v0_1/`
 - `data/release/unified_release_v0_2/`
+- `data/release/corpus_release_v0_3/`
 
 Key fields:
 
@@ -73,6 +74,7 @@ Those files establish the minimum field contracts for later bibliography and tra
 - `data/release/sagaing_v0_1/`
 - `data/release/unified_release_v0_1/`
 - `data/release/unified_release_v0_2/`
+- `data/release/corpus_release_v0_3/`
 
 The unified releases currently have two distinct semantics:
 
@@ -98,3 +100,31 @@ The target inscription rows in `unified_release_v0_2/inscriptions.jsonl` carry c
 - `data/release/sagaing_v0_1/`
 - `data/release/unified_release_v0_1/`
 - `data/release/unified_release_v0_2/`
+- `data/release/corpus_release_v0_3/`
+
+## Whole-corpus release: `corpus_release_v0_3`
+
+`data/release/corpus_release_v0_3/` is the first whole-corpus release candidate. It is built by `scripts/build_corpus_release.py` from:
+
+- `data/release/unified_release_v0_2/`
+- `data/release/sagaing_v0_1/`
+- the current Recently Found working-layer review files under `data/working/inventory/`
+
+This release contains:
+
+- `inscriptions.jsonl`
+- `lines.jsonl`
+- `editorial_relations.jsonl`
+- `sources.jsonl`
+- `release_manifest.json`
+- `release_notes.md`
+- `corpus_release.sqlite`
+- `validation_report.json`
+
+In this release:
+
+- **JSONL remains the canonical release format.** The SQLite database is a derived convenience export for research use and must be regenerable from the JSONL files.
+- **Structured OBI records** keep their existing `obi-...` identifiers and remain the canonical base.
+- **Recently Found embedded cases** are still represented through `editorial_relations.jsonl` plus compact `editorial_relation_ids` on target inscription rows, not as duplicate canonical OBI inscription records.
+- **Sagaing records** are included as supplementary structured data and retain their `sagaing-...` identifiers. They are not yet reconciled to OBI numbering or any external inscription catalogue in this release.
+- **Translation and bibliography normalization** remain later layers. Empty or missing translation fields should not be treated as a defect in this release candidate, and bibliography identifiers are still working normalization outputs rather than final authority data.

@@ -2,9 +2,25 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
+import sqlite3
 from pathlib import Path
 
 from corpus_common import REPO_ROOT, read_jsonl
+
+
+CORPUS_RELEASE_REQUIRED_FILES = [
+    "inscriptions.jsonl",
+    "lines.jsonl",
+    "editorial_relations.jsonl",
+    "sources.jsonl",
+    "release_manifest.json",
+    "release_notes.md",
+    "corpus_release.sqlite",
+    "validation_report.json",
+]
+
+ABSOLUTE_PATH_PATTERN = re.compile(r"(^/|^[A-Za-z]:\\\\|/Users/|/home/)")
 
 
 def repo_relative_path(path: Path) -> str:
@@ -66,6 +82,19 @@ def validate_lines(records: list[dict], inscription_ids: set[str]) -> list[str]:
     return errors
 
 
+def scan_for_absolute_paths(value: object, *, context: str) -> list[str]:
+    errors: list[str] = []
+    if isinstance(value, dict):
+        for key, nested_value in value.items():
+            errors.extend(scan_for_absolute_paths(nested_value, context=f"{context}.{key}"))
+    elif isinstance(value, list):
+        for index, nested_value in enumerate(value, start=1):
+            errors.extend(scan_for_absolute_paths(nested_value, context=f"{context}[{index}]"))
+    elif isinstance(value, str) and ABSOLUTE_PATH_PATTERN.search(value):
+        errors.append(f"{context} contains an absolute local path: {value}")
+    return errors
+
+
 def validate_editorial_relations(records: list[dict], inscription_ids: set[str]) -> list[str]:
     errors: list[str] = []
     seen_ids: set[str] = set()
@@ -99,7 +128,122 @@ def validate_editorial_relations(records: list[dict], inscription_ids: set[str])
     return errors
 
 
-def validate_dataset(dataset_dir: Path) -> dict:
+def validate_sources(records: list[dict]) -> list[str]:
+    errors: list[str] = []
+    seen_ids: set[str] = set()
+    required_fields = {
+        "source_id": str,
+        "source_type": str,
+        "title_original": str,
+        "title_english": str,
+        "zenodo_doi": str,
+        "local_source_path": str,
+        "release_role": str,
+        "record_count": int,
+        "line_count": int,
+        "parser_script": str,
+        "source_status": str,
+        "notes": str,
+    }
+    for index, record in enumerate(records, start=1):
+        for field, expected_type in required_fields.items():
+            if field not in record:
+                errors.append(f"sources[{index}] missing field {field}")
+                continue
+            if not isinstance(record[field], expected_type):
+                errors.append(f"sources[{index}] field {field} has wrong type")
+        source_id = record.get("source_id")
+        if source_id in seen_ids:
+            errors.append(f"duplicate source_id {source_id}")
+        else:
+            seen_ids.add(source_id)
+        errors.extend(scan_for_absolute_paths(record, context=f"sources[{index}]"))
+    return errors
+
+
+def validate_manifest(
+    manifest: dict,
+    *,
+    inscriptions: list[dict],
+    lines: list[dict],
+    editorial_relations: list[dict],
+    sources: list[dict],
+) -> list[str]:
+    errors: list[str] = []
+    required_fields = {
+        "release_id": str,
+        "release_date": str,
+        "created_by_script": str,
+        "input_releases": list,
+        "input_working_files": list,
+        "record_counts_by_source": dict,
+        "line_counts_by_source": dict,
+        "total_inscription_count": int,
+        "total_line_count": int,
+        "editorial_relation_count": int,
+        "source_count": int,
+        "validation_status": str,
+        "known_limitations": list,
+        "recommended_next_steps": list,
+    }
+    for field, expected_type in required_fields.items():
+        if field not in manifest:
+            errors.append(f"release_manifest missing field {field}")
+            continue
+        if not isinstance(manifest[field], expected_type):
+            errors.append(f"release_manifest field {field} has wrong type")
+
+    expected_record_counts = {record["source_id"]: record["record_count"] for record in sources}
+    expected_line_counts = {record["source_id"]: record["line_count"] for record in sources}
+    if manifest.get("record_counts_by_source") != expected_record_counts:
+        errors.append("release_manifest record_counts_by_source does not match sources.jsonl")
+    if manifest.get("line_counts_by_source") != expected_line_counts:
+        errors.append("release_manifest line_counts_by_source does not match sources.jsonl")
+    if manifest.get("total_inscription_count") != len(inscriptions):
+        errors.append("release_manifest total_inscription_count does not match inscriptions.jsonl")
+    if manifest.get("total_line_count") != len(lines):
+        errors.append("release_manifest total_line_count does not match lines.jsonl")
+    if manifest.get("editorial_relation_count") != len(editorial_relations):
+        errors.append("release_manifest editorial_relation_count does not match editorial_relations.jsonl")
+    if manifest.get("source_count") != len(sources):
+        errors.append("release_manifest source_count does not match sources.jsonl")
+    errors.extend(scan_for_absolute_paths(manifest, context="release_manifest"))
+    return errors
+
+
+def validate_sqlite_export(
+    sqlite_path: Path,
+    *,
+    inscriptions: list[dict],
+    lines: list[dict],
+    editorial_relations: list[dict],
+    sources: list[dict],
+) -> list[str]:
+    errors: list[str] = []
+    if not sqlite_path.exists():
+        return [f"missing SQLite export {repo_relative_path(sqlite_path)}"]
+    with sqlite3.connect(sqlite_path) as conn:
+        expected_counts = {
+            "inscriptions": len(inscriptions),
+            "lines": len(lines),
+            "editorial_relations": len(editorial_relations),
+            "sources": len(sources),
+        }
+        for table_name, expected_count in expected_counts.items():
+            cursor = conn.execute(
+                "SELECT COUNT(*) FROM sqlite_master WHERE type = 'table' AND name = ?",
+                (table_name,),
+            )
+            if cursor.fetchone()[0] == 0:
+                errors.append(f"SQLite export missing table {table_name}")
+                continue
+            actual_count = conn.execute(f'SELECT COUNT(*) FROM "{table_name}"').fetchone()[0]
+            if actual_count != expected_count:
+                errors.append(f"SQLite export table {table_name} count mismatch: expected {expected_count}, found {actual_count}")
+    return errors
+
+
+def validate_dataset(dataset_dir: Path, *, allow_missing_dataset_validation_report: bool = False) -> dict:
     result = {"dataset": repo_relative_path(dataset_dir), "errors": [], "record_counts": {}}
     inscriptions_path = dataset_dir / "inscriptions.jsonl"
     lines_path = dataset_dir / "lines.jsonl"
@@ -123,6 +267,63 @@ def validate_dataset(dataset_dir: Path) -> dict:
         editorial_relations = read_jsonl(editorial_relations_path)
         result["errors"].extend(validate_editorial_relations(editorial_relations, inscription_ids))
         result["record_counts"]["editorial_relations"] = len(editorial_relations)
+    elif dataset_dir.name == "corpus_release_v0_3":
+        required_files = set(CORPUS_RELEASE_REQUIRED_FILES)
+        if allow_missing_dataset_validation_report:
+            required_files.remove("validation_report.json")
+        missing_files = [name for name in sorted(required_files) if not (dataset_dir / name).exists()]
+        if missing_files:
+            result["errors"].append("missing required corpus release files: " + ", ".join(missing_files))
+            return result
+        if not editorial_relations_path.exists():
+            result["errors"].append("missing editorial_relations.jsonl")
+            return result
+        editorial_relations = read_jsonl(editorial_relations_path)
+        result["errors"].extend(validate_editorial_relations(editorial_relations, inscription_ids))
+        result["record_counts"]["editorial_relations"] = len(editorial_relations)
+
+        sources = read_jsonl(dataset_dir / "sources.jsonl")
+        result["errors"].extend(validate_sources(sources))
+        result["record_counts"]["sources"] = len(sources)
+        source_ids = {record["source_id"] for record in sources if "source_id" in record}
+        for record in inscriptions:
+            if record.get("source_deposit") not in source_ids:
+                result["errors"].append(
+                    f"inscription {record.get('record_id')} uses unknown source_deposit {record.get('source_deposit')}"
+                )
+
+        manifest = json.loads((dataset_dir / "release_manifest.json").read_text(encoding="utf-8"))
+        result["errors"].extend(
+            validate_manifest(
+                manifest,
+                inscriptions=inscriptions,
+                lines=lines,
+                editorial_relations=editorial_relations,
+                sources=sources,
+            )
+        )
+        for record in inscriptions:
+            if record.get("source_layer") is None:
+                result["errors"].append(f"inscription {record.get('record_id')} missing source_layer")
+            if record.get("release_status") is None:
+                result["errors"].append(f"inscription {record.get('record_id')} missing release_status")
+        validation_report_path = dataset_dir / "validation_report.json"
+        if validation_report_path.exists():
+            result["errors"].extend(
+                scan_for_absolute_paths(
+                    json.loads(validation_report_path.read_text(encoding="utf-8")),
+                    context="validation_report",
+                )
+            )
+        result["errors"].extend(
+            validate_sqlite_export(
+                dataset_dir / "corpus_release.sqlite",
+                inscriptions=inscriptions,
+                lines=lines,
+                editorial_relations=editorial_relations,
+                sources=sources,
+            )
+        )
     elif editorial_relations_path.exists():
         editorial_relations = read_jsonl(editorial_relations_path)
         result["errors"].extend(validate_editorial_relations(editorial_relations, inscription_ids))
@@ -152,6 +353,7 @@ def main() -> None:
         REPO_ROOT / "data" / "release" / "sagaing_v0_1",
         REPO_ROOT / "data" / "release" / "unified_release_v0_1",
         REPO_ROOT / "data" / "release" / "unified_release_v0_2",
+        REPO_ROOT / "data" / "release" / "corpus_release_v0_3",
     ]
 
     report = {"datasets": [validate_dataset(dataset) for dataset in datasets]}

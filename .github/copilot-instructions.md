@@ -10,11 +10,12 @@
   - `python3 scripts/audit_inventory.py`
   - `python3 scripts/parse_sagaing.py`
   - `python3 scripts/merge_unified_release.py`
+  - `python3 scripts/build_corpus_release.py`
   - `python3 scripts/extract_bibliography.py`
   - `python3 scripts/extract_places.py`
   - `python3 scripts/init_translation_scaffold.py`
   - `python3 scripts/validate_corpus.py`
-- Full test suite: `python3 -m unittest tests.test_parsers tests.test_recently_found_overrides tests.test_merge_unified_release`
+- Full test suite: `python3 -m unittest tests.test_parsers tests.test_recently_found_overrides tests.test_merge_unified_release tests.test_corpus_release`
 - Single test: `python3 -m unittest tests.test_parsers.RecentlyFoundParserTests.test_recently_found_parser_finds_entries_and_pages`
 - There is still no dedicated lint configuration checked in.
 
@@ -33,6 +34,7 @@
   - `data/release/sagaing_v0_1/` for the validated Sagaing release candidate.
   - `data/release/unified_release_v0_1/` for the first merged structured-plus-1302525 release candidate.
   - `data/release/unified_release_v0_2/` for the override-aware merged release candidate with explicit editorial relations.
+  - `data/release/corpus_release_v0_3/` for the main whole-corpus release candidate, combining override-aware OBI plus Sagaing with manifest, source registry, validation report, and SQLite export.
 - `obi_next_phase_project_init.md` is the project brief for the next phase. It describes the intended future normalized layout (`data/raw`, `data/extracted`, `data/working`, `data/release`) and the workflow expectations for derived data. Treat that layout as the target state, not the current on-disk structure.
 - `scripts/` contains the current repository workflow:
   - `extract_structured_corpus.py` parses the structured OBI ZIP files into JSONL plus inventory TSV.
@@ -42,8 +44,9 @@
   - `review_recently_found_exceptions.py` creates an exploratory case file for the remaining 1302525 versus volume 7 exception cases without changing parser or merge logic.
   - `parse_sagaing.py` converts the Sagaing source into per-record JSONL plus corpus-style text files and writes the `sagaing_v0_1` release candidate.
   - `merge_unified_release.py` now defaults to `data/release/unified_release_v0_2/`, reads `data/working/inventory/recently_found_release_policy.tsv`, suppresses duplicate-like source-only emission where policy says `annotate_target_only`, and writes `editorial_relations.jsonl`.
-  - `extract_bibliography.py`, `extract_places.py`, and `init_translation_scaffold.py` initialize the normalization layer under `data/working/`.
-  - `validate_corpus.py` checks generated JSONL datasets for ID, shape, and linkage errors, including editorial relation validation for `unified_release_v0_2`.
+  - `build_corpus_release.py` assembles `data/release/corpus_release_v0_3/` from `unified_release_v0_2` and `sagaing_v0_1`, writes the release manifest, source registry, release notes, validation report, and derived SQLite export.
+  - `extract_bibliography.py`, `extract_places.py`, and `init_translation_scaffold.py` now default to `data/release/corpus_release_v0_3/inscriptions.jsonl` and initialize the normalization layer under `data/working/`.
+  - `validate_corpus.py` checks generated JSONL datasets for ID, shape, linkage, source-registry, manifest, SQLite-export, and editorial-relation errors, including full release validation for `corpus_release_v0_3`.
 - `schemas/` defines the first release contracts for `inscription`, `line`, `bibliography`, `translation`, and `place`, and `docs/data_model.md` describes how those records fit together.
 - `4321314/OBI_Corpus_Vol1.zip` through `4321314/OBI_Corpus_Vol7.zip` are the canonical structured corpus archives. Each archive contains one `.txt` file per inscription face or text unit, with filenames such as `OBI_Vol1_No100__ob_p167.txt` and `OBI_Vol7_No10b__re_p28.txt`.
 - Structured corpus `.txt` files use a fixed record shape with uppercase metadata headers such as `OBI CORPUS REF`, `INFORMATION SOURCE`, `INSCRIPTION NUMBER`, `FACE`, `INSCRIPTION`, and `FULL TRANSLITERATION`. Inside `INSCRIPTION`, numbered Burmese source lines are interleaved with `¤` transliteration lines, and page boundaries can appear as `<pg>` markers.
@@ -63,6 +66,7 @@
 - Treat `data/working/inventory/recently_found_release_policy.tsv` as the release-policy layer, separate from the audit override file. It currently suppresses standalone canonical emission for embedded entries `12` and `37`, while preserving them as editorial relations, and marks `21` as a title-variant relation on the structured target record.
 - Treat `data/working/inventory/recently_found_exception_review.{json,tsv}` as the exploratory evidence layer behind those overrides.
 - Treat `data/release/unified_release_v0_2/` as the current default unified release. In this release, embedded Recently Found entries are represented through `editorial_relations.jsonl` plus compact `editorial_relation_ids` on target inscriptions rather than as duplicate canonical records.
+- Treat `data/release/corpus_release_v0_3/` as the current whole-corpus release candidate. JSONL files remain authoritative; `corpus_release.sqlite` is a derived convenience export. Sagaing is included as supplementary structured data with `sagaing-` identifiers retained and no implied reconciliation to OBI numbering.
 - Translation is a new layer, not a correction pass over the current corpus. The structured `.txt` entries include inscription text and transliteration fields but no `TRANSLATION:` field, so any translation workflow should preserve the existing transcription/transliteration data and record provenance separately.
 - Preserve exact source strings and provenance when transforming data. The project brief distinguishes diplomatic transcription, normalized forms, transliteration, translation, and editorial notes; future scripts should keep those layers separate instead of collapsing them into one cleaned text field.
 - Keep generated IDs stable and collision-safe. `record_id` and `line_id` are the join keys across extracted and release datasets; repeated line numbers or duplicated structured keys are handled with suffixes rather than by altering source content.

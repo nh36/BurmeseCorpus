@@ -1,0 +1,3 @@
+source_deposit	source_layer	inscription_count	records_with_references	records_without_references	distinct_raw_reference_strings	notes
+zenodo_1203709	sagaing_supplementary	31	0	31	0	No raw references present in current release input.
+zenodo_4321314	structured_obi	1121	920	201	872	

@@ -1,0 +1,42 @@
+{
+  "release_id": "corpus_release_v0_3",
+  "release_date": "2026-05-29",
+  "created_by_script": "scripts/build_corpus_release.py",
+  "input_releases": [
+    "data/release/unified_release_v0_2",
+    "data/release/sagaing_v0_1"
+  ],
+  "input_working_files": [
+    "data/working/inventory/recently_found_editorial_overrides.tsv",
+    "data/working/inventory/recently_found_release_policy.tsv",
+    "data/working/inventory/recently_found_exception_review.json"
+  ],
+  "record_counts_by_source": {
+    "zenodo_4321314": 1121,
+    "zenodo_1302525": 0,
+    "zenodo_1203709": 31
+  },
+  "line_counts_by_source": {
+    "zenodo_4321314": 23696,
+    "zenodo_1302525": 0,
+    "zenodo_1203709": 603
+  },
+  "total_inscription_count": 1152,
+  "total_line_count": 24299,
+  "editorial_relation_count": 3,
+  "source_count": 3,
+  "sqlite_export": "data/release/corpus_release_v0_3/corpus_release.sqlite",
+  "validation_status": "valid",
+  "known_limitations": [
+    "Sagaing has been parsed into structured form but not yet reconciled against the main OBI numbering or other inscription catalogues.",
+    "Recently Found entries 12 and 37 are represented as embedded editorial relations, not split as separate canonical OBI records.",
+    "Translation fields remain empty or absent; translation is a later layer.",
+    "Bibliography normalization remains preliminary."
+  ],
+  "recommended_next_steps": [
+    "Build bibliography and place authority tables on top of corpus_release_v0_3.",
+    "Review source-specific reference coverage before full bibliography normalization.",
+    "Start published-translation discovery only after source and bibliography normalization stabilize.",
+    "Add lexical and search-oriented exports after the release baseline is stable."
+  ]
+}

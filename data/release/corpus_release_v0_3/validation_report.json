@@ -1,0 +1,15 @@
+{
+  "datasets": [
+    {
+      "dataset": "data/release/corpus_release_v0_3",
+      "errors": [],
+      "record_counts": {
+        "inscriptions": 1152,
+        "lines": 24299,
+        "editorial_relations": 3,
+        "sources": 3
+      }
+    }
+  ],
+  "ok": true
+}
