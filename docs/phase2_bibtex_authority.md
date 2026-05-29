@@ -73,6 +73,54 @@ Rows backed by local evidence should prefer:
 - `confirmed_local_source` when the local match is strong;
 - `provisional_local_source` when the evidence is promising but still uncertain.
 
+## Keep BibTeX concise; keep raw evidence elsewhere
+
+The authority layer now separates **authority metadata** from **full evidence text**.
+
+- `bibliography_authority.bib` and `bibliography_candidates.bib` should contain short citation-like fields only.
+- Long Frasch passages, catalogue notes, or descriptive prose should stay in TSV/JSON evidence files.
+- `matchedlocalreference`, `evidence`, and `note` must stay short enough to be readable as citation support, not as document excerpts.
+
+The main supporting table is:
+
+- `data/working/bibliography/bibtex_authority/bibtex_authority_evidence.tsv`
+
+Each row links a `bibtex_key` to a short excerpt, evidence ID, source file, source ref ID, confidence, and a hash of the full evidence context. The full long-form text remains in the local-source extraction layer.
+
+## Reviewing source abbreviations
+
+`data/working/bibliography/bibtex_authority/source_abbreviation_seeds.tsv` is now both a seed table and a review worksheet.
+
+Important review columns:
+
+- `evidence_source_file`
+- `evidence_ref_id`
+- `evidence_quote_short`
+- `confidence`
+- `needs_human_review`
+
+Use these rows to confirm or keep provisional expansions for abbreviations such as `A`, `B`, `MP`, `UB`, `PPA`, `TN`, `IPPA`, `UEM`, `SIP`, `MM`, `OR`, `Pl.`, `ARASI`, `Luce D`, and `Luce J`.
+
+If an expansion is still uncertain, keep the seed row but leave `needs_human_review = true`.
+
+## Reviewing high-frequency families first
+
+Two files now work together:
+
+- `high_frequency_unresolved.tsv`
+- `high_frequency_resolution_plan.tsv`
+
+The first is the remaining unresolved queue, sorted by descending `occurrence_count`.
+
+The second is the explicit review sheet for the top families first. It records:
+
+- the suspected work or source;
+- the shared or candidate BibTeX key;
+- the evidence source and confidence;
+- the next action required before final confirmation.
+
+This is the main mechanism for improving the authority layer without creating more machine stubs for low-value tail cases.
+
 ## Why this matters for translation discovery
 
 Published translations are often tied to identifiable works, not to raw locator strings. By separating:

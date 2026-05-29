@@ -1,6 +1,13 @@
 {
-  "source_file_count": 21,
-  "reference_entry_count": 5788,
-  "bibtex_entry_count": 56,
-  "parse_warnings": []
+  "source_file_count": 8,
+  "reference_entry_count": 2926,
+  "usable_reference_count": 202,
+  "excluded_body_text_count": 0,
+  "bibtex_entry_count": 33,
+  "parse_warnings": [],
+  "counts_by_type": {
+    "catalogue_note": 2373,
+    "unclear": 351,
+    "bibliographic_reference": 202
+  }
 }

@@ -177,34 +177,51 @@ def filename_metadata(path: Path) -> dict[str, str]:
     }
 
 
-def source_file_id(path: Path, root: ConfiguredRoot) -> str:
+def source_file_id(path: Path, root: ConfiguredRoot | None = None, sha256: str | None = None) -> str:
     safe = slugify(path.stem)[:40]
-    digest = sha256_file(path)[:12]
+    digest = (sha256 or sha256_file(path))[:12]
     return f"{safe}-{digest}"
 
 
-def copy_to_local_cache(path: Path, root: ConfiguredRoot, *, source_folder_hint: str = "") -> dict[str, str]:
+def copy_to_local_cache(
+    path: Path,
+    *,
+    canonical_file_id: str | None = None,
+    sha256: str | None = None,
+    existing_copied_path: str = "",
+    source_folder_hint: str = "",
+) -> dict[str, str]:
     SOURCE_CACHE_ROOT.mkdir(parents=True, exist_ok=True)
-    file_id = source_file_id(path, root)
+    digest = sha256 or sha256_file(path)
+    file_id = canonical_file_id or source_file_id(path, None, digest)
     destination_dir = SOURCE_CACHE_ROOT / file_id
     destination_dir.mkdir(parents=True, exist_ok=True)
     destination = destination_dir / path.name
-    if destination.exists():
-        destination.unlink()
-    shutil.copyfile(path, destination)
-    source_stat = path.stat()
-    os.utime(destination, (source_stat.st_atime, source_stat.st_mtime))
+    existing_destination = REPO_ROOT / existing_copied_path if existing_copied_path else None
+    copy_status = "copied"
+
+    if existing_destination and existing_destination.exists():
+        destination = existing_destination
+        copy_status = "reused_existing"
+    elif destination.exists() and sha256_file(destination) == digest:
+        copy_status = "reused_existing"
+    else:
+        if destination.exists():
+            destination.unlink()
+        shutil.copyfile(path, destination)
+        source_stat = path.stat()
+        os.utime(destination, (source_stat.st_atime, source_stat.st_mtime))
+
     return {
-        "source_file_id": file_id,
-        "original_path": safe_source_path(path, root),
+        "canonical_local_file_id": file_id,
         "copied_path": repo_relative_or_none(destination) or destination.name,
         "file_name": path.name,
         "file_type": path.suffix.casefold().lstrip("."),
         "file_size": str(path.stat().st_size),
-        "sha256": sha256_file(path),
+        "sha256": digest,
         "source_folder_hint": source_folder_hint or path.parent.name,
         "copy_date": datetime.now(timezone.utc).isoformat(),
-        "copy_status": "copied",
+        "copy_status": copy_status,
         "notes": "",
     }
 

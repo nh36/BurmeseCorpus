@@ -13,7 +13,7 @@ if str(SCRIPTS_DIR) not in sys.path:
     sys.path.insert(0, str(SCRIPTS_DIR))
 
 from bibtex_common import parse_bibtex_text
-from build_bibtex_authority import build_authority, parse_locator
+from build_bibtex_authority import AUTHORITY_FIELDS, build_authority, parse_locator
 from corpus_common import write_tsv
 from extract_frasch_bibliography import run_extraction
 from harvest_local_bibliography_sources import run_harvest
@@ -441,8 +441,8 @@ class BibtexAuthorityTests(unittest.TestCase):
             frosch_dir = author_root / "Frosch"
             frasch_dir.mkdir(parents=True)
             frosch_dir.mkdir(parents=True)
-            (frasch_dir / "Bagan Epig Database.doc").write_text("dummy", encoding="utf-8")
-            (frosch_dir / "Tilman bibliography.rtf").write_text("dummy", encoding="utf-8")
+            (frasch_dir / "Bagan Epig Database.doc").write_text("frasch dummy", encoding="utf-8")
+            (frosch_dir / "Tilman bibliography.rtf").write_text("frosch dummy", encoding="utf-8")
             downloads = temp_path / "Downloads"
             downloads.mkdir()
 
@@ -460,7 +460,7 @@ class BibtexAuthorityTests(unittest.TestCase):
                     else:
                         os.environ[key] = value
 
-            self.assertGreaterEqual(report["candidate_count"], 2)
+            self.assertGreaterEqual(report["raw_candidate_count"], 2)
             candidates = (output_dir / "frasch_source_candidates.tsv").read_text(encoding="utf-8")
             self.assertIn("Bagan Epig Database.doc", candidates)
             self.assertIn("Tilman bibliography.rtf", candidates)
@@ -505,9 +505,9 @@ class BibtexAuthorityTests(unittest.TestCase):
             self.assertIn("The Pali Version of the Myazedi Inscription", rows)
             self.assertIn("List 90", rows)
             self.assertIn("\tlow\t", rows)
-            self.assertIn("\tmedium\t", rows)
+            self.assertIn("\thigh\t", rows)
             bibliography = (output_dir / "frasch_bibliography.bib").read_text(encoding="utf-8")
-            self.assertEqual(bibliography.strip(), "")
+            self.assertIn("U Tha Myat", bibliography)
 
     def test_build_authority_promotes_manual_local_match(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:
@@ -692,6 +692,271 @@ class BibtexAuthorityTests(unittest.TestCase):
                 external_entries_path=external_entries_path,
             )
             self.assertTrue(result["ok"], result["errors"])
+
+    def test_harvest_local_bibliography_sources_collapses_duplicates_by_sha(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            temp_path = Path(temp_dir)
+            author_root = temp_path / "Authors alphabetical"
+            frasch_dir = author_root / "Frasch, Tilmans"
+            library_dir = temp_path / "Library" / "Frasch"
+            frasch_dir.mkdir(parents=True)
+            library_dir.mkdir(parents=True)
+            duplicate_text = "same content"
+            (frasch_dir / "Bagan Epig Database.doc").write_text(duplicate_text, encoding="utf-8")
+            (library_dir / "Bagan Epig Database copy.doc").write_text(duplicate_text, encoding="utf-8")
+            downloads = temp_path / "Downloads"
+            downloads.mkdir()
+
+            previous = {key: os.environ.get(key) for key in ("OBI_AUTHOR_ALPHA_ROOT", "OBI_LIBRARY_ROOT", "OBI_LOCAL_BIB_ROOT")}
+            os.environ["OBI_AUTHOR_ALPHA_ROOT"] = str(author_root)
+            os.environ["OBI_LIBRARY_ROOT"] = str(temp_path / "Library")
+            os.environ["OBI_LOCAL_BIB_ROOT"] = str(downloads)
+            try:
+                output_dir = temp_path / "output"
+                report = run_harvest("frasch", output_dir)
+            finally:
+                for key, value in previous.items():
+                    if value is None:
+                        os.environ.pop(key, None)
+                    else:
+                        os.environ[key] = value
+
+            self.assertEqual(report["raw_candidate_count"], 2)
+            self.assertEqual(report["unique_file_count"], 1)
+            self.assertEqual(report["duplicate_file_count"], 1)
+            manifest = (output_dir / "local_file_manifest.tsv").read_text(encoding="utf-8")
+            self.assertIn("Bagan Epig Database copy.doc", manifest)
+
+    def test_build_authority_writes_evidence_rows_and_clips_bibtex_evidence(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            temp_path = Path(temp_dir)
+            families_path, members_path, candidates_path, seeds_path, external_entries_path = self.write_fixture_tables(temp_path)
+            frasch_path = temp_path / "frasch.tsv"
+            long_reference = "Harvey, History of Burma, " + ("very long evidence " * 20)
+            write_tsv(
+                frasch_path,
+                [
+                    {
+                        "frasch_ref_id": "frasch-ref-1",
+                        "raw_reference": long_reference,
+                        "author": "Harvey",
+                        "editor": "",
+                        "year": "1925",
+                        "title": "History of Burma",
+                        "publication": "",
+                        "journal": "",
+                        "volume": "",
+                        "number": "",
+                        "pages": "",
+                        "publisher": "",
+                        "place": "",
+                        "language": "latin",
+                        "script": "Latn",
+                        "confidence": "high",
+                        "detected_entry_type": "bibliographic_reference",
+                        "looks_like_bibliographic_reference": "true",
+                        "looks_like_catalogue_note": "false",
+                        "looks_like_body_text": "false",
+                        "has_author_signal": "true",
+                        "has_year_signal": "true",
+                        "has_title_signal": "true",
+                        "has_publication_signal": "true",
+                        "length": str(len(long_reference)),
+                        "recommended_action": "use_for_bibliography",
+                        "source_location_hint": "fixture",
+                        "extraction_source_file": "frasch.doc",
+                        "notes": "",
+                    }
+                ],
+                [
+                    "frasch_ref_id",
+                    "raw_reference",
+                    "author",
+                    "editor",
+                    "year",
+                    "title",
+                    "publication",
+                    "journal",
+                    "volume",
+                    "number",
+                    "pages",
+                    "publisher",
+                    "place",
+                    "language",
+                    "script",
+                    "confidence",
+                    "detected_entry_type",
+                    "looks_like_bibliographic_reference",
+                    "looks_like_catalogue_note",
+                    "looks_like_body_text",
+                    "has_author_signal",
+                    "has_year_signal",
+                    "has_title_signal",
+                    "has_publication_signal",
+                    "length",
+                    "recommended_action",
+                    "source_location_hint",
+                    "extraction_source_file",
+                    "notes",
+                ],
+            )
+            output_dir = temp_path / "authority"
+            build_authority(
+                reference_families_path=families_path,
+                reference_members_path=members_path,
+                work_candidates_path=candidates_path,
+                seed_path=seeds_path,
+                external_entries_path=external_entries_path,
+                frasch_references_path=frasch_path,
+                output_dir=output_dir,
+                local_candidates_path=temp_path / "missing_local_candidates.tsv",
+                local_manifest_path=temp_path / "missing_local_manifest.tsv",
+            )
+            evidence_tsv = (output_dir / "bibtex_authority_evidence.tsv").read_text(encoding="utf-8")
+            authority_bib = (output_dir / "bibliography_authority.bib").read_text(encoding="utf-8")
+            self.assertIn("frasch-ref-1", evidence_tsv)
+            self.assertNotIn(long_reference, authority_bib)
+            self.assertIn("harvey1925historyBurma", authority_bib)
+
+    def test_validate_bibtex_authority_rejects_long_matched_local_reference(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            temp_path = Path(temp_dir)
+            families_path = temp_path / "reference_families.tsv"
+            crosswalk_path = temp_path / "raw_reference_to_bibtex.tsv"
+            authority_tsv_path = temp_path / "bibtex_authority.tsv"
+            authority_bib_path = temp_path / "bibliography_authority.bib"
+            candidate_bib_path = temp_path / "bibliography_candidates.bib"
+            external_entries_path = temp_path / "external.tsv"
+            long_reference = "x" * 200
+
+            write_tsv(families_path, [{"family_id": "fam-1", "family_label": "OBI", "family_type": "source_catalogue", "member_count": "1", "occurrence_count": "1", "sample_raw_references": "OBI 1", "likely_contains_translation": "no", "review_status": "unreviewed", "notes": ""}], FAMILY_FIELDS)
+            write_tsv(
+                authority_tsv_path,
+                [
+                    {
+                        "bibtex_key": "obiCorpusSource",
+                        "entry_type": "misc",
+                        "authority_status": "confirmed_local_source",
+                        "source_of_authority": "local_burma_folder",
+                        "matched_external_key": "",
+                        "matched_local_source_id": "local-1",
+                        "matched_local_source_file": "source.pdf",
+                        "matched_local_reference": long_reference,
+                        "match_confidence": "high",
+                        "match_reason": "fixture",
+                        "evidence_id": "local-1",
+                        "short_evidence_note": "fixture",
+                        "human_review_flag": "false",
+                        "family_id": "fam-1",
+                        "family_label": "OBI",
+                        "family_type": "source_catalogue",
+                        "author": "",
+                        "editor": "",
+                        "year": "",
+                        "title": "OBI",
+                        "shorttitle": "OBI",
+                        "journal": "",
+                        "booktitle": "",
+                        "publisher": "",
+                        "address": "",
+                        "volume": "",
+                        "number": "",
+                        "pages": "",
+                        "doi": "",
+                        "url": "",
+                        "isbn": "",
+                        "language": "",
+                        "script": "",
+                        "translation_relevance": "unknown",
+                        "review_status": "reviewed_confirmed",
+                        "evidence": "fixture",
+                        "notes": "",
+                    }
+                ],
+                AUTHORITY_FIELDS,
+            )
+            authority_bib_path.write_text(
+                "@misc{obiCorpusSource,\n"
+                f"  matchedlocalreference = {{{long_reference}}}\n"
+                "}\n",
+                encoding="utf-8",
+            )
+            candidate_bib_path.write_text("", encoding="utf-8")
+            write_tsv(crosswalk_path, [{"raw_reference_string": "OBI 1", "family_id": "fam-1", "work_candidate_id": "", "bibtex_key": "obiCorpusSource", "match_type": "fixture", "match_confidence": "high", "locator": "", "locator_type": "", "evidence": "fixture", "needs_human_review": "false", "notes": ""}], ["raw_reference_string", "family_id", "work_candidate_id", "bibtex_key", "match_type", "match_confidence", "locator", "locator_type", "evidence", "needs_human_review", "notes"])
+            write_tsv(external_entries_path, [], ["bibtex_key"])
+            result = validate_bibtex_authority(
+                authority_bib_path=authority_bib_path,
+                candidates_bib_path=candidate_bib_path,
+                authority_tsv_path=authority_tsv_path,
+                crosswalk_path=crosswalk_path,
+                families_path=families_path,
+                external_entries_path=external_entries_path,
+            )
+            self.assertFalse(result["ok"])
+            self.assertTrue(any("matchedlocalreference" in error or "matched_local_reference" in error for error in result["errors"]))
+
+    def test_build_authority_resolves_b2_family_to_shared_seed_key(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            temp_path = Path(temp_dir)
+            families_path = temp_path / "families.tsv"
+            members_path = temp_path / "members.tsv"
+            candidates_path = temp_path / "candidates.tsv"
+            seeds_path = temp_path / "seeds.tsv"
+            output_dir = temp_path / "authority"
+
+            write_tsv(
+                families_path,
+                [
+                    {"family_id": "fam-raw-b", "family_label": "B", "family_type": "source_catalogue", "member_count": "1", "occurrence_count": "5", "sample_raw_references": "B 1", "likely_contains_translation": "no", "review_status": "needs_human_review", "notes": ""},
+                    {"family_id": "fam-raw-b-2", "family_label": "B 2, p. 815", "family_type": "source_catalogue", "member_count": "1", "occurrence_count": "4", "sample_raw_references": "B 2, p. 815", "likely_contains_translation": "no", "review_status": "needs_human_review", "notes": ""},
+                ],
+                FAMILY_FIELDS,
+            )
+            write_tsv(
+                members_path,
+                [
+                    {"family_id": "fam-raw-b", "raw_reference_string": "B 1", "occurrence_count": "5", "example_record_ids": "obi-1", "notes": ""},
+                    {"family_id": "fam-raw-b-2", "raw_reference_string": "B 2, p. 815", "occurrence_count": "4", "example_record_ids": "obi-2", "notes": ""},
+                ],
+                MEMBER_FIELDS,
+            )
+            write_tsv(candidates_path, [], CANDIDATE_FIELDS)
+            write_tsv(
+                seeds_path,
+                [
+                    {
+                        "abbreviation": "B",
+                        "family_id": "fam-raw-b",
+                        "family_type": "source_catalogue",
+                        "provisional_label": "Bagan Epigraphic Database, Part B",
+                        "probable_bibtex_key": "fraschBaganEpigraphicDatabasePartB",
+                        "source_type": "source_catalogue",
+                        "evidence_source_file": "Bagan Epig Database.doc",
+                        "evidence_ref_id": "",
+                        "evidence_quote_short": "B",
+                        "confidence": "medium",
+                        "needs_human_review": "true",
+                        "notes": "",
+                    }
+                ],
+                SEED_FIELDS,
+            )
+            build_authority(
+                reference_families_path=families_path,
+                reference_members_path=members_path,
+                work_candidates_path=candidates_path,
+                seed_path=seeds_path,
+                output_dir=output_dir,
+                frasch_references_path=temp_path / "missing_frasch.tsv",
+                local_candidates_path=temp_path / "missing_local_candidates.tsv",
+                local_manifest_path=temp_path / "missing_local_manifest.tsv",
+            )
+            crosswalk = (output_dir / "raw_reference_to_bibtex.tsv").read_text(encoding="utf-8")
+            resolution_plan = (output_dir / "high_frequency_resolution_plan.tsv").read_text(encoding="utf-8")
+            unresolved = (output_dir / "high_frequency_unresolved.tsv").read_text(encoding="utf-8")
+            self.assertIn("B 2, p. 815\tfam-raw-b-2", crosswalk.replace("\r\n", "\n"))
+            self.assertIn("fam-raw-b-2\tB 2, p. 815\t4\tresolved:provisional_catalogue\tBagan Epigraphic Database, Part B", resolution_plan)
+            self.assertNotIn("fam-raw-b-2", unresolved)
 
     def test_validate_bibtex_authority_detects_duplicate_key(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:

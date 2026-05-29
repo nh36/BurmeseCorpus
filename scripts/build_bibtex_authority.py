@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import re
 from collections import defaultdict
@@ -27,6 +28,9 @@ AUTHORITY_FIELDS = [
     "matched_local_reference",
     "match_confidence",
     "match_reason",
+    "evidence_id",
+    "short_evidence_note",
+    "human_review_flag",
     "family_id",
     "family_label",
     "family_type",
@@ -80,6 +84,48 @@ HIGH_FREQUENCY_FIELDS = [
     "notes",
 ]
 
+EVIDENCE_FIELDS = [
+    "bibtex_key",
+    "evidence_id",
+    "evidence_type",
+    "source_file_id",
+    "source_file_label",
+    "source_ref_id",
+    "short_evidence",
+    "full_evidence_hash",
+    "confidence",
+    "notes",
+]
+
+RESOLUTION_PLAN_FIELDS = [
+    "family_id",
+    "family_label",
+    "occurrence_count",
+    "current_status",
+    "suspected_work_or_source",
+    "suspected_bibtex_key",
+    "evidence_source",
+    "evidence_confidence",
+    "next_action",
+    "assigned_priority",
+    "notes",
+]
+
+SEED_FIELDS = [
+    "abbreviation",
+    "family_id",
+    "family_type",
+    "provisional_label",
+    "probable_bibtex_key",
+    "source_type",
+    "evidence_source_file",
+    "evidence_ref_id",
+    "evidence_quote_short",
+    "confidence",
+    "needs_human_review",
+    "notes",
+]
+
 STATUS_RANK = {
     "confirmed_external_bibtex": 5,
     "confirmed_local_source": 4,
@@ -88,6 +134,10 @@ STATUS_RANK = {
     "provisional_publication": 2,
     "needs_human_review": 1,
 }
+
+TOP_FAMILY_REVIEW_COUNT = 25
+MAX_BIBTEX_EVIDENCE_LENGTH = 180
+MAX_MATCHED_REFERENCE_LENGTH = 140
 
 GENERIC_MATCH_TOKENS = {
     "burma",
@@ -288,6 +338,119 @@ MANUAL_LOCAL_MATCHES = {
     },
 }
 
+CURATED_FAMILY_LIBRARY = {
+    "fam-harvey-history": {
+        "author": "G. E. Harvey",
+        "year": "1925",
+        "title": "History of Burma",
+        "shorttitle": "History of Burma",
+        "entry_type": "book",
+        "preferred_key": "harvey1925historyBurma",
+        "frasch_search_terms": ["harvey, history of burma", "history of burma"],
+        "status": "provisional_local_source",
+        "source_of_authority": "frasch_bibliography",
+        "review_status": "needs_human_review",
+        "notes": "Promoted from repeated Frasch shorthand citations; precise edition details still need confirmation.",
+    },
+    "fam-ray-theravada-buddhism": {
+        "author": "Ray",
+        "year": "",
+        "title": "Theravada Buddhism",
+        "shorttitle": "Theravada Buddhism",
+        "entry_type": "book",
+        "preferred_key": "rayTheravadaBuddhism",
+        "frasch_search_terms": ["ray, theravada buddhism", "theravada buddhism"],
+        "status": "provisional_local_source",
+        "source_of_authority": "frasch_bibliography",
+        "review_status": "needs_human_review",
+        "notes": "Shorthand Frasch citations identify the work, but fuller publication metadata still needs local confirmation.",
+    },
+    "fam-raw-u-kyaw-bagan-minsa": {
+        "author": "U Kyaw",
+        "year": "",
+        "title": "Bagan Minsa",
+        "shorttitle": "Bagan Minsa",
+        "entry_type": "article",
+        "preferred_key": "uKyawBaganMinsa",
+        "frasch_search_terms": ["u kyaw, bagan minsa", "bagan minsa"],
+        "status": "provisional_local_source",
+        "source_of_authority": "frasch_bibliography",
+        "review_status": "needs_human_review",
+        "notes": "Promoted from repeated Frasch shorthand citations pending fuller publication details.",
+    },
+    "fam-raw-u-tha-myat-the-pali-version-of-the-myazedi-inscription-rangoon-1958": {
+        "author": "U Tha Myat",
+        "year": "1958",
+        "title": "The Pali Version of the Myazedi Inscription",
+        "shorttitle": "Myazedi Inscription",
+        "entry_type": "book",
+        "preferred_key": "uThaMyat1958paliVersionMyazedi",
+        "frasch_search_terms": ["u tha myat", "pali version of the myazedi inscription"],
+        "status": "provisional_local_source",
+        "source_of_authority": "frasch_bibliography",
+        "review_status": "needs_human_review",
+        "notes": "Attested as a full citation in Frasch bibliography evidence; local file confirmation is still pending.",
+    },
+    "fam-raw-u-pe-maung-tin-the-myazedi-inscription-in-nava-rat-kui-svay-rangoon-1966": {
+        "author": "U Pe Maung Tin",
+        "year": "1966",
+        "title": "The Myazedi Inscription",
+        "shorttitle": "Myazedi Inscription",
+        "entry_type": "article",
+        "preferred_key": "uPeMaungTin1966myazediInscription",
+        "local_search_terms": ["pemaungtin 1974 myazediinscription", "myazediinscription"],
+        "status": "provisional_local_source",
+        "source_of_authority": "local_burma_folder",
+        "review_status": "needs_human_review",
+        "notes": "Matched to a likely local witness; edition details still need confirmation.",
+    },
+}
+
+SUPPLEMENTAL_AUTHORITIES = {
+    "annualReportArchaeologicalSurveyIndia": {
+        "author": "",
+        "year": "",
+        "title": "Annual Report of the Archaeological Survey of India",
+        "shorttitle": "ARASI",
+        "entry_type": "periodical",
+        "source_of_authority": "frasch_bibliography",
+        "authority_status": "provisional_local_source",
+        "review_status": "needs_human_review",
+        "match_confidence": "medium",
+        "match_reason": "Explicitly defined as ARASI in the extracted Bagan Epig Database abbreviations.",
+        "evidence_terms": ["arasi"],
+        "notes": "Used as the shared authority target for year-specific ARASI citation families.",
+    },
+    "luceDSourceFamily": {
+        "author": "G. H. Luce",
+        "year": "",
+        "title": "Luce D source family",
+        "shorttitle": "Luce D",
+        "entry_type": "misc",
+        "source_of_authority": "frasch_bibliography",
+        "authority_status": "provisional_local_source",
+        "review_status": "needs_human_review",
+        "match_confidence": "low",
+        "match_reason": "Abbreviation family attested in Frasch citations but not yet fully expanded.",
+        "evidence_terms": ["luce d"],
+        "notes": "Shared holding entry for Luce D shorthand references pending fuller identification.",
+    },
+    "luceJSourceFamily": {
+        "author": "G. H. Luce",
+        "year": "",
+        "title": "Luce J source family",
+        "shorttitle": "Luce J",
+        "entry_type": "misc",
+        "source_of_authority": "frasch_bibliography",
+        "authority_status": "provisional_local_source",
+        "review_status": "needs_human_review",
+        "match_confidence": "low",
+        "match_reason": "Abbreviation family attested in Frasch citations but not yet fully expanded.",
+        "evidence_terms": ["luce j"],
+        "notes": "Shared holding entry for Luce J shorthand references pending fuller identification.",
+    },
+}
+
 
 def parse_locator(raw_reference: str, family_id: str, family_label: str) -> tuple[str, str]:
     text = raw_reference.strip()
@@ -328,6 +491,90 @@ def local_source_kind(row: dict) -> str:
     return "local_burma_folder"
 
 
+def shorten_text(value: str, max_length: int = MAX_BIBTEX_EVIDENCE_LENGTH) -> str:
+    text = re.sub(r"\s+", " ", (value or "").strip())
+    if len(text) <= max_length:
+        return text
+    return text[: max_length - 1].rstrip() + "…"
+
+
+def evidence_excerpt(value: str) -> str:
+    return shorten_text(value, MAX_BIBTEX_EVIDENCE_LENGTH)
+
+
+def short_reference(value: str) -> str:
+    return shorten_text(value, MAX_MATCHED_REFERENCE_LENGTH)
+
+
+def text_hash(*parts: str) -> str:
+    blob = " || ".join(part for part in parts if part)
+    return hashlib.sha256(blob.encode("utf-8")).hexdigest() if blob else ""
+
+
+def needs_human_review(status: str, review_status: str) -> str:
+    if review_status.startswith("reviewed_") and status in {"confirmed_external_bibtex", "confirmed_local_source"}:
+        return "false"
+    return "true"
+
+
+def usable_frasch_rows(rows: list[dict]) -> list[dict]:
+    return [
+        row
+        for row in rows
+        if row.get("detected_entry_type") == "bibliographic_reference"
+        and row.get("recommended_action") in {"use_for_bibliography", "manual_review"}
+    ]
+
+
+def find_frasch_match(rows: list[dict], search_terms: list[str]) -> dict | None:
+    normalized_terms = [normalize_title(term) for term in search_terms if term]
+    matches = [
+        row
+        for row in rows
+        if any(
+            term and term in normalize_title(
+                f"{row.get('raw_reference', '')} {row.get('publication', '')} {row.get('title', '')} {row.get('author', '')}"
+            )
+            for term in normalized_terms
+        )
+    ]
+    if not matches:
+        return None
+    matches.sort(key=lambda row: (0 if row.get("recommended_action") == "use_for_bibliography" else 1, len(row.get("raw_reference", ""))))
+    return matches[0]
+
+
+def find_local_match(rows: list[dict], search_terms: list[str]) -> dict | None:
+    normalized_terms = [normalize_title(term) for term in search_terms if term]
+    matches = [
+        row
+        for row in rows
+        if any(
+            term and term in normalize_title(
+                f"{row.get('probable_work_label', '')} {row.get('name', '')} {row.get('original_path', '')}"
+            )
+            for term in normalized_terms
+        )
+    ]
+    return matches[0] if matches else None
+
+
+def resolve_alias_target(family_id: str) -> tuple[str, str, str] | None:
+    if family_id.startswith("fam-raw-b-"):
+        return ("family", "fam-raw-b", "Bagan Epigraphic Database, Part B")
+    if family_id.startswith("fam-raw-ub-"):
+        return ("family", "fam-raw-ub", "UB source family")
+    if family_id.startswith("fam-raw-mp-"):
+        return ("family", "fam-raw-mp", "MP source family")
+    if family_id.startswith("fam-raw-arasi-"):
+        return ("key", "annualReportArchaeologicalSurveyIndia", "Annual Report of the Archaeological Survey of India")
+    if family_id.startswith("fam-raw-luce-d-"):
+        return ("key", "luceDSourceFamily", "Luce D source family")
+    if family_id.startswith("fam-raw-luce-j-"):
+        return ("key", "luceJSourceFamily", "Luce J source family")
+    return None
+
+
 def row_to_bibtex_entry(row: dict) -> dict:
     fields = {
         "author": row.get("author", ""),
@@ -349,14 +596,15 @@ def row_to_bibtex_entry(row: dict) -> dict:
         "script": row.get("script", ""),
         "reviewstatus": row.get("review_status", ""),
         "translationrelevance": row.get("translation_relevance", ""),
-        "evidence": row.get("evidence", ""),
+        "evidence": evidence_excerpt(row.get("short_evidence_note", "") or row.get("evidence", "")),
+        "evidenceid": row.get("evidence_id", ""),
         "sourceofauthority": row.get("source_of_authority", ""),
         "matchedexternalkey": row.get("matched_external_key", ""),
         "familyid": row.get("family_id", ""),
         "note": row.get("notes", ""),
         "matchedlocalsourceid": row.get("matched_local_source_id", ""),
         "matchedlocalsourcefile": row.get("matched_local_source_file", ""),
-        "matchedlocalreference": row.get("matched_local_reference", ""),
+        "matchedlocalreference": short_reference(row.get("matched_local_reference", "")),
     }
     return {
         "entry_type": row["entry_type"],
@@ -463,46 +711,45 @@ def build_seed_authority(
     defaults = SOURCE_FAMILY_LIBRARY.get(normalized_abbreviation, {})
     frasch_search_terms = defaults.get("frasch_search_terms", [abbreviation.casefold(), seed_row.get("provisional_label", "").casefold()])
     local_search_terms = defaults.get("local_search_terms", frasch_search_terms)
-    frasch_matches = [
-        row
-        for row in frasch_rows
-        if any(term and term in normalize_title(f"{row.get('raw_reference', '')} {row.get('publication', '')} {row.get('title', '')}") for term in frasch_search_terms)
-    ]
-    local_matches = [
-        row
-        for row in local_candidate_rows
-        if local_search_terms
-        and any(term and term in normalize_title(f"{row.get('probable_work_label', '')} {row.get('name', '')} {row.get('original_path', '')}") for term in local_search_terms)
-    ]
+    frasch_match = find_frasch_match(frasch_rows, frasch_search_terms)
+    local_match = find_local_match(local_candidate_rows, local_search_terms)
     source_of_authority = ""
     matched_local_source_id = ""
     matched_local_source_file = ""
     matched_local_reference = ""
     match_reason = ""
     match_confidence = "low"
+    evidence_id = ""
+    short_evidence_note = ""
 
-    if local_matches:
-        match = local_matches[0]
+    if local_match:
+        match = local_match
         source_of_authority = local_source_kind(match)
-        matched_local_source_id = match.get("candidate_id", "")
-        matched_local_source_file = match.get("original_path", "")
-        matched_local_reference = match.get("probable_work_label", "") or match.get("name", "")
+        matched_local_source_id = match.get("canonical_local_file_id", "") or match.get("candidate_id", "")
+        matched_local_source_file = match.get("file_name", "") or match.get("name", "")
+        matched_local_reference = short_reference(match.get("probable_work_label", "") or match.get("name", ""))
         match_reason = f"Matched harvested local file for {abbreviation or family_row['family_label']}."
         match_confidence = "high"
         authority_status = "confirmed_local_source"
-    elif frasch_matches:
-        match = frasch_matches[0]
+        evidence_id = matched_local_source_id or matched_local_source_file or abbreviation
+        short_evidence_note = evidence_excerpt(match.get("probable_work_label", "") or match.get("name", ""))
+    elif frasch_match:
+        match = frasch_match
         source_of_authority = "frasch_bibliography"
         matched_local_source_id = match.get("frasch_ref_id", "")
         matched_local_source_file = match.get("extraction_source_file", "")
-        matched_local_reference = match.get("raw_reference", "")
+        matched_local_reference = short_reference(match.get("raw_reference", ""))
         match_reason = f"Attested in extracted Frasch bibliography evidence for {abbreviation or family_row['family_label']}."
         match_confidence = "medium"
         authority_status = "provisional_local_source"
+        evidence_id = matched_local_source_id or abbreviation
+        short_evidence_note = evidence_excerpt(match.get("raw_reference", ""))
     else:
         source_of_authority = "corpus_reference"
         authority_status = "provisional_catalogue" if family_row.get("family_type") == "source_catalogue" else "provisional_publication"
         match_reason = "Seeded from bibliography abbreviation table; local evidence not yet confirmed."
+        evidence_id = family_row["family_id"]
+        short_evidence_note = evidence_excerpt(seed_row.get("evidence_quote_short", "") or seed_row.get("evidence", "") or family_row.get("sample_raw_references", ""))
 
     title = defaults.get("title") or seed_row.get("provisional_label") or family_row.get("family_label")
     shorttitle = defaults.get("shorttitle") or abbreviation or family_row.get("family_label")
@@ -528,6 +775,12 @@ def build_seed_authority(
         "matched_local_reference": matched_local_reference,
         "match_confidence": match_confidence,
         "match_reason": match_reason,
+        "evidence_id": evidence_id,
+        "short_evidence_note": short_evidence_note or evidence_excerpt(match_reason),
+        "human_review_flag": needs_human_review(
+            authority_status,
+            "reviewed_provisional" if authority_status == "confirmed_local_source" else "needs_human_review",
+        ),
         "family_id": family_row["family_id"],
         "family_label": family_row["family_label"],
         "family_type": family_row["family_type"],
@@ -550,7 +803,7 @@ def build_seed_authority(
         "script": "Latn",
         "translation_relevance": "unknown",
         "review_status": "reviewed_provisional" if authority_status == "confirmed_local_source" else "needs_human_review",
-        "evidence": seed_row.get("evidence", ""),
+        "evidence": evidence_excerpt(seed_row.get("evidence_quote_short", "") or seed_row.get("evidence", "")),
         "notes": seed_row.get("notes", ""),
     }
 
@@ -563,6 +816,97 @@ def choose_better_row(existing: dict | None, candidate: dict) -> dict:
     if candidate_rank > existing_rank:
         return candidate
     return existing
+
+
+def build_curated_authority(
+    *,
+    metadata: dict,
+    family_row: dict | None,
+    candidate_row: dict | None,
+    frasch_row: dict | None,
+    local_row: dict | None,
+    existing_keys: set[str],
+    bibtex_key_override: str | None = None,
+) -> dict:
+    title = metadata.get("title") or (candidate_row or {}).get("title_original", "") or (family_row or {}).get("family_label", "")
+    author = metadata.get("author", "") or (candidate_row or {}).get("author_original", "")
+    year = metadata.get("year", "") or (candidate_row or {}).get("year", "")
+    bibtex_key = bibtex_key_override or make_bibtex_key(
+        author=author,
+        year=year,
+        title=title,
+        preferred=metadata.get("preferred_key"),
+        fallback_prefix="authorityResolved",
+        existing_keys=existing_keys,
+    )
+    matched_local_source_id = ""
+    matched_local_source_file = ""
+    matched_local_reference = ""
+    evidence_id = family_row["family_id"] if family_row else bibtex_key
+    short_note = metadata.get("notes", "")
+    if local_row is not None:
+        matched_local_source_id = local_row.get("canonical_local_file_id", "") or local_row.get("candidate_id", "")
+        matched_local_source_file = local_row.get("file_name", "") or local_row.get("name", "")
+        matched_local_reference = short_reference(local_row.get("probable_work_label", "") or local_row.get("name", ""))
+        evidence_id = matched_local_source_id or evidence_id
+        short_note = local_row.get("probable_work_label", "") or local_row.get("name", "") or short_note
+    elif frasch_row is not None:
+        matched_local_source_id = frasch_row.get("frasch_ref_id", "")
+        matched_local_source_file = frasch_row.get("extraction_source_file", "")
+        matched_local_reference = short_reference(frasch_row.get("raw_reference", ""))
+        evidence_id = matched_local_source_id or evidence_id
+        short_note = frasch_row.get("raw_reference", "") or short_note
+
+    authority_status = metadata.get("status") or metadata.get("authority_status", "provisional_local_source")
+    review_status = metadata.get("review_status", "needs_human_review")
+    source_of_authority = metadata.get("source_of_authority", "corpus_reference")
+    match_reason = local_row.get("_match_reason", metadata.get("match_reason", metadata.get("notes", ""))) if local_row is not None else metadata.get("match_reason", metadata.get("notes", ""))
+    match_confidence = local_row.get("_match_confidence", metadata.get("match_confidence", "medium")) if local_row is not None else metadata.get("match_confidence", "medium")
+    if local_row is None and frasch_row is None and authority_status in {"confirmed_local_source", "provisional_local_source"}:
+        authority_status = "provisional_publication"
+        source_of_authority = "corpus_reference"
+        review_status = "needs_human_review"
+        match_reason = "Named during high-frequency family review; local evidence still needs confirmation."
+        match_confidence = "low"
+    return {
+        "bibtex_key": bibtex_key,
+        "entry_type": metadata.get("entry_type", "misc"),
+        "authority_status": authority_status,
+        "source_of_authority": source_of_authority,
+        "matched_external_key": "",
+        "matched_local_source_id": matched_local_source_id,
+        "matched_local_source_file": matched_local_source_file,
+        "matched_local_reference": matched_local_reference,
+        "match_confidence": match_confidence,
+        "match_reason": match_reason,
+        "evidence_id": evidence_id,
+        "short_evidence_note": evidence_excerpt(short_note),
+        "human_review_flag": metadata.get("human_review_flag", needs_human_review(authority_status, review_status)),
+        "family_id": family_row.get("family_id", "") if family_row else "",
+        "family_label": family_row.get("family_label", "") if family_row else metadata.get("shorttitle", title),
+        "family_type": family_row.get("family_type", "") if family_row else metadata.get("family_type", ""),
+        "author": author,
+        "editor": metadata.get("editor", ""),
+        "year": year,
+        "title": title,
+        "shorttitle": metadata.get("shorttitle", title),
+        "journal": metadata.get("journal", title if metadata.get("entry_type") == "periodical" else ""),
+        "booktitle": metadata.get("booktitle", ""),
+        "publisher": metadata.get("publisher", ""),
+        "address": metadata.get("address", ""),
+        "volume": metadata.get("volume", ""),
+        "number": metadata.get("number", ""),
+        "pages": metadata.get("pages", ""),
+        "doi": metadata.get("doi", ""),
+        "url": metadata.get("url", ""),
+        "isbn": metadata.get("isbn", ""),
+        "language": metadata.get("language", (candidate_row or {}).get("language", "")),
+        "script": metadata.get("script", (candidate_row or {}).get("script", "Latn")),
+        "translation_relevance": metadata.get("translation_relevance", (candidate_row or {}).get("translation_relevance", "unknown")),
+        "review_status": review_status,
+        "evidence": evidence_excerpt(short_note),
+        "notes": metadata.get("notes", ""),
+    }
 
 
 def build_specific_authority(
@@ -592,6 +936,9 @@ def build_specific_authority(
             "matched_local_reference": "",
             "match_confidence": "high",
             "match_reason": "Matched imported external BibTeX metadata by normalized title, author, and year.",
+            "evidence_id": external_row.get("bibtex_key", ""),
+            "short_evidence_note": evidence_excerpt(candidate_row.get("evidence_raw_references", "") or external_row.get("title", "")),
+            "human_review_flag": "false",
             "family_id": family_row["family_id"],
             "family_label": family_row["family_label"],
             "family_type": family_row["family_type"],
@@ -614,7 +961,7 @@ def build_specific_authority(
             "script": candidate_row.get("script", ""),
             "translation_relevance": candidate_row.get("translation_relevance", "unknown"),
             "review_status": "reviewed_confirmed",
-            "evidence": candidate_row.get("evidence_raw_references", ""),
+            "evidence": evidence_excerpt(candidate_row.get("evidence_raw_references", "")),
             "notes": candidate_row.get("notes", ""),
         }
 
@@ -645,11 +992,21 @@ def build_specific_authority(
         "authority_status": authority_status,
         "source_of_authority": source_of_authority,
         "matched_external_key": "",
-        "matched_local_source_id": local_row.get("candidate_id", "") if local_row else "",
-        "matched_local_source_file": local_row.get("original_path", "") if local_row else "",
-        "matched_local_reference": local_row.get("probable_work_label", "") if local_row else "",
+        "matched_local_source_id": (local_row.get("canonical_local_file_id", "") or local_row.get("candidate_id", "")) if local_row else "",
+        "matched_local_source_file": (local_row.get("file_name", "") or local_row.get("name", "")) if local_row else "",
+        "matched_local_reference": short_reference(local_row.get("probable_work_label", "") if local_row else ""),
         "match_confidence": confidence,
         "match_reason": match_reason,
+        "evidence_id": (
+            (local_row.get("canonical_local_file_id", "") or local_row.get("candidate_id", "")) if local_row else family_row["family_id"]
+        ),
+        "short_evidence_note": evidence_excerpt(
+            local_row.get("probable_work_label", "") if local_row else candidate_row.get("evidence_raw_references", "")
+        ),
+        "human_review_flag": needs_human_review(
+            authority_status,
+            "reviewed_confirmed" if authority_status == "confirmed_local_source" else "needs_human_review",
+        ),
         "family_id": family_row["family_id"],
         "family_label": family_row["family_label"],
         "family_type": family_row["family_type"],
@@ -672,7 +1029,7 @@ def build_specific_authority(
         "script": candidate_row.get("script", ""),
         "translation_relevance": candidate_row.get("translation_relevance", "unknown"),
         "review_status": "reviewed_confirmed" if authority_status == "confirmed_local_source" else "needs_human_review",
-        "evidence": candidate_row.get("evidence_raw_references", ""),
+        "evidence": evidence_excerpt(candidate_row.get("evidence_raw_references", "")),
         "notes": candidate_row.get("notes", ""),
     }
 
@@ -698,6 +1055,9 @@ def build_machine_stub(family_row: dict, candidate_row: dict | None, existing_ke
         "matched_local_reference": "",
         "match_confidence": "low",
         "match_reason": "Machine-generated fallback stub from bibliography triage.",
+        "evidence_id": family_row["family_id"],
+        "short_evidence_note": evidence_excerpt(candidate_row.get("evidence_raw_references", "") if candidate_row else family_row.get("sample_raw_references", "")),
+        "human_review_flag": "true",
         "family_id": family_row["family_id"],
         "family_label": family_row["family_label"],
         "family_type": family_row["family_type"],
@@ -720,9 +1080,166 @@ def build_machine_stub(family_row: dict, candidate_row: dict | None, existing_ke
         "script": candidate_row.get("script", "") if candidate_row else "",
         "translation_relevance": candidate_row.get("translation_relevance", "unknown") if candidate_row else "unknown",
         "review_status": candidate_row.get("review_status", "unreviewed") if candidate_row else family_row.get("review_status", "unreviewed"),
-        "evidence": candidate_row.get("evidence_raw_references", "") if candidate_row else family_row.get("sample_raw_references", ""),
+        "evidence": evidence_excerpt(candidate_row.get("evidence_raw_references", "") if candidate_row else family_row.get("sample_raw_references", "")),
         "notes": "Provisional entry generated from corpus reference triage; requires human review.",
     }
+
+
+def build_evidence_rows(authority_rows: list[dict], manifest_by_id: dict[str, dict], manifest_by_name: dict[str, dict]) -> list[dict]:
+    evidence_rows = []
+    for row in authority_rows:
+        if row["authority_status"] not in {"confirmed_external_bibtex", "confirmed_local_source", "provisional_local_source"}:
+            continue
+        source_file_id = ""
+        source_file_label = ""
+        source_ref_id = ""
+        evidence_type = row["source_of_authority"] or "authority"
+        if row["source_of_authority"] == "external_bibtex":
+            source_file_id = "external_bibtex"
+            source_file_label = "Imported external BibTeX"
+            source_ref_id = row.get("matched_external_key", "")
+        elif row.get("matched_local_source_id"):
+            manifest_row = manifest_by_id.get(row["matched_local_source_id"]) or manifest_by_name.get(row.get("matched_local_source_file", ""))
+            if manifest_row:
+                source_file_id = manifest_row.get("canonical_local_file_id", "")
+                source_file_label = manifest_row.get("file_name", "")
+            else:
+                source_file_id = row.get("matched_local_source_id", "")
+                source_file_label = row.get("matched_local_source_file", "")
+            source_ref_id = row.get("matched_local_source_id", "")
+        evidence_rows.append(
+            {
+                "bibtex_key": row["bibtex_key"],
+                "evidence_id": row.get("evidence_id", "") or row["bibtex_key"],
+                "evidence_type": evidence_type,
+                "source_file_id": source_file_id,
+                "source_file_label": source_file_label,
+                "source_ref_id": source_ref_id,
+                "short_evidence": evidence_excerpt(row.get("short_evidence_note", "") or row.get("match_reason", "")),
+                "full_evidence_hash": text_hash(
+                    row.get("matched_local_reference", ""),
+                    row.get("matched_local_source_id", ""),
+                    row.get("match_reason", ""),
+                    row.get("notes", ""),
+                ),
+                "confidence": row.get("match_confidence", "low"),
+                "notes": row.get("notes", ""),
+            }
+        )
+    evidence_rows.sort(key=lambda item: (item["bibtex_key"], item["evidence_id"]))
+    return evidence_rows
+
+
+def build_seed_output_rows(seed_rows: list[dict], authority_rows: list[dict]) -> list[dict]:
+    seed_output = {}
+    for row in seed_rows:
+        seed_output[row["abbreviation"]] = {
+            "abbreviation": row.get("abbreviation", ""),
+            "family_id": row.get("family_id", ""),
+            "family_type": row.get("family_type", ""),
+            "provisional_label": row.get("provisional_label", ""),
+            "probable_bibtex_key": row.get("probable_bibtex_key", ""),
+            "source_type": row.get("source_type", ""),
+            "evidence_source_file": row.get("evidence_source_file", ""),
+            "evidence_ref_id": row.get("evidence_ref_id", ""),
+            "evidence_quote_short": short_reference(row.get("evidence_quote_short", "") or row.get("evidence", "")),
+            "confidence": row.get("confidence", ""),
+            "needs_human_review": row.get("needs_human_review", "true"),
+            "notes": row.get("notes", ""),
+        }
+    supplemental_seed_rows = [
+        {"abbreviation": "ARASI", "provisional_label": "Annual Report of the Archaeological Survey of India", "probable_bibtex_key": "annualReportArchaeologicalSurveyIndia", "source_type": "periodical"},
+        {"abbreviation": "Luce D", "provisional_label": "Luce D source family", "probable_bibtex_key": "luceDSourceFamily", "source_type": "misc"},
+        {"abbreviation": "Luce J", "provisional_label": "Luce J source family", "probable_bibtex_key": "luceJSourceFamily", "source_type": "misc"},
+    ]
+    for row in supplemental_seed_rows:
+        seed_output.setdefault(
+            row["abbreviation"],
+            {
+                "abbreviation": row["abbreviation"],
+                "family_id": "",
+                "family_type": "",
+                "provisional_label": row["provisional_label"],
+                "probable_bibtex_key": row["probable_bibtex_key"],
+                "source_type": row["source_type"],
+                "evidence_source_file": "",
+                "evidence_ref_id": "",
+                "evidence_quote_short": "",
+                "confidence": "low",
+                "needs_human_review": "true",
+                "notes": "",
+            },
+        )
+    for authority in authority_rows:
+        shorttitle = authority.get("shorttitle", "")
+        if shorttitle not in seed_output:
+            continue
+        row = seed_output[shorttitle]
+        row["probable_bibtex_key"] = authority["bibtex_key"]
+        row["evidence_source_file"] = authority.get("matched_local_source_file", "")
+        row["evidence_ref_id"] = authority.get("matched_local_source_id", "") or authority.get("matched_external_key", "")
+        row["evidence_quote_short"] = short_reference(authority.get("short_evidence_note", "") or authority.get("matched_local_reference", ""))
+        row["confidence"] = authority.get("match_confidence", "")
+        row["needs_human_review"] = authority.get("human_review_flag", "true")
+        if authority.get("notes"):
+            row["notes"] = authority["notes"]
+    return sorted(seed_output.values(), key=lambda row: row["abbreviation"])
+
+
+def build_resolution_plan_rows(
+    family_rows: list[dict],
+    resolved_lookup: dict[str, dict],
+    unresolved_rows: list[dict],
+    members_by_family: dict[str, list[dict]],
+) -> list[dict]:
+    unresolved_by_id = {row["family_id"]: row for row in unresolved_rows}
+    ranked = sorted(family_rows, key=lambda row: int(row.get("occurrence_count") or 0), reverse=True)[:TOP_FAMILY_REVIEW_COUNT]
+    plan_rows = []
+    for family_row in ranked:
+        family_id = family_row["family_id"]
+        resolved = resolved_lookup.get(family_id)
+        unresolved = unresolved_by_id.get(family_id)
+        alias_target = resolve_alias_target(family_id)
+        if resolved is not None and resolved["authority_status"] != "machine_stub":
+            current_status = f"resolved:{resolved['authority_status']}"
+            suspected_work_or_source = resolved.get("title", "") or family_row.get("family_label", "")
+            suspected_bibtex_key = resolved["bibtex_key"]
+            evidence_source = resolved.get("matched_local_source_file", "") or resolved.get("source_of_authority", "")
+            evidence_confidence = resolved.get("match_confidence", "")
+            next_action = "Confirm publication details and keep shared authority mapping stable." if resolved.get("human_review_flag") == "true" else "No immediate action."
+            notes = resolved.get("notes", "")
+        elif alias_target is not None:
+            current_status = "resolved:alias"
+            suspected_work_or_source = alias_target[2]
+            suspected_bibtex_key = alias_target[1]
+            evidence_source = "Bagan Epig Database / Frasch shorthand citations"
+            evidence_confidence = "medium"
+            next_action = "Confirm exact expansion in local Bagan Epig Database abbreviations or preface material."
+            notes = "Resolved by mapping the family to a shared authority entry instead of creating another stub."
+        else:
+            current_status = unresolved.get("current_status", "needs_human_review") if unresolved else "needs_human_review"
+            suspected_work_or_source = family_row.get("family_label", "")
+            suspected_bibtex_key = unresolved.get("current_bibtex_key", "") if unresolved else ""
+            evidence_source = " / ".join(filter(None, [family_row.get("family_label", ""), members_by_family.get(family_id, [{}])[0].get("raw_reference_string", "")]))
+            evidence_confidence = "low"
+            next_action = "Review local file hits or Frasch preface evidence before promoting this family."
+            notes = "Top unresolved family retained in manual review queue."
+        plan_rows.append(
+            {
+                "family_id": family_id,
+                "family_label": family_row.get("family_label", ""),
+                "occurrence_count": family_row.get("occurrence_count", "0"),
+                "current_status": current_status,
+                "suspected_work_or_source": suspected_work_or_source,
+                "suspected_bibtex_key": suspected_bibtex_key,
+                "evidence_source": evidence_source,
+                "evidence_confidence": evidence_confidence,
+                "next_action": next_action,
+                "assigned_priority": "high",
+                "notes": notes,
+            }
+        )
+    return plan_rows
 
 
 def build_authority(
@@ -747,9 +1264,12 @@ def build_authority(
     work_candidate_rows = read_tsv(work_candidates_path)
     seed_rows = read_tsv(seed_path)
     external_rows = read_tsv(external_entries_path) if external_entries_path and external_entries_path.exists() else []
-    frasch_rows = read_tsv(frasch_references_path) if frasch_references_path.exists() else []
+    frasch_rows_all = read_tsv(frasch_references_path) if frasch_references_path.exists() else []
+    frasch_rows = usable_frasch_rows(frasch_rows_all)
     local_candidate_rows = dedupe_local_candidates(read_tsv(local_candidates_path)) if local_candidates_path.exists() else []
     local_manifest_rows = read_tsv(local_manifest_path) if local_manifest_path.exists() else []
+    manifest_by_id = {row.get("canonical_local_file_id", ""): row for row in local_manifest_rows if row.get("canonical_local_file_id")}
+    manifest_by_name = {row.get("file_name", ""): row for row in local_manifest_rows if row.get("file_name")}
 
     family_by_id = {row["family_id"]: row for row in family_rows}
     members_by_family: dict[str, list[dict]] = defaultdict(list)
@@ -762,6 +1282,7 @@ def build_authority(
     external_index = build_external_index(external_rows)
 
     authority_by_family: dict[str, dict] = {}
+    authority_by_key: dict[str, dict] = {}
     candidate_rows_by_family: dict[str, dict] = {}
     existing_keys: set[str] = set()
 
@@ -769,14 +1290,68 @@ def build_authority(
         family_row = family_by_id.get(family_id)
         if family_row is None:
             continue
-        authority_by_family[family_id] = choose_better_row(
-            authority_by_family.get(family_id),
-            build_seed_authority(seed_row, family_row, frasch_rows, local_candidate_rows, existing_keys),
+        authority_row = build_seed_authority(seed_row, family_row, frasch_rows, local_candidate_rows, existing_keys)
+        authority_by_family[family_id] = choose_better_row(authority_by_family.get(family_id), authority_row)
+        authority_by_key[authority_row["bibtex_key"]] = authority_by_family[family_id]
+
+    needed_supplemental_keys = {
+        target_id
+        for family_row in family_rows
+        for alias_target in [resolve_alias_target(family_row["family_id"])]
+        if alias_target is not None and alias_target[0] == "key"
+        for target_id in [alias_target[1]]
+    }
+    for bibtex_key, metadata in SUPPLEMENTAL_AUTHORITIES.items():
+        if bibtex_key not in needed_supplemental_keys:
+            continue
+        evidence_row = find_frasch_match(frasch_rows_all, metadata.get("evidence_terms", []))
+        authority_row = build_curated_authority(
+            metadata=metadata,
+            family_row=None,
+            candidate_row=None,
+            frasch_row=evidence_row,
+            local_row=None,
+            existing_keys=existing_keys,
+            bibtex_key_override=bibtex_key,
         )
+        existing_keys.add(authority_row["bibtex_key"])
+        authority_by_key[authority_row["bibtex_key"]] = authority_row
+
+    for family_id, metadata in CURATED_FAMILY_LIBRARY.items():
+        family_row = family_by_id.get(family_id)
+        if family_row is None:
+            continue
+        candidate_row = candidates_by_family.get(family_id, [{}])[0]
+        local_row = find_local_match(local_candidate_rows, metadata.get("local_search_terms", [])) if metadata.get("local_search_terms") else None
+        manual_match = MANUAL_LOCAL_MATCHES.get(family_id)
+        if local_row is None and manual_match:
+            local_row = next(
+                (
+                    {
+                        **row,
+                        "_match_reason": "Matched explicit local file rule for a high-priority bibliography work.",
+                        "_match_confidence": manual_match["confidence"],
+                    }
+                    for row in local_candidate_rows
+                    if any(term in normalize_title(f"{row.get('probable_work_label', '')} {row.get('name', '')} {row.get('original_path', '')}") for term in manual_match["filename_terms"])
+                ),
+                None,
+            )
+        frasch_row = find_frasch_match(frasch_rows, metadata.get("frasch_search_terms", [])) if metadata.get("frasch_search_terms") else None
+        authority_row = build_curated_authority(
+            metadata=metadata,
+            family_row=family_row,
+            candidate_row=candidate_row,
+            frasch_row=frasch_row,
+            local_row=local_row,
+            existing_keys=existing_keys,
+        )
+        authority_by_family[family_id] = choose_better_row(authority_by_family.get(family_id), authority_row)
+        authority_by_key[authority_row["bibtex_key"]] = authority_by_family[family_id]
 
     for family_row in family_rows:
         family_id = family_row["family_id"]
-        if family_id in seed_by_family:
+        if family_id in seed_by_family or family_id in authority_by_family or resolve_alias_target(family_id) is not None:
             continue
         best_candidate = candidates_by_family.get(family_id, [{}])[0]
         manual_match = MANUAL_LOCAL_MATCHES.get(family_id)
@@ -798,6 +1373,7 @@ def build_authority(
                     authority_by_family.get(family_id),
                     build_specific_authority(best_candidate, family_row, manual_local, None, existing_keys),
                 )
+                authority_by_key[authority_by_family[family_id]["bibtex_key"]] = authority_by_family[family_id]
                 continue
         external_match = find_external_match(best_candidate, external_index) if best_candidate else None
         best_local: dict | None = None
@@ -812,18 +1388,31 @@ def build_authority(
                 authority_by_family.get(family_id),
                 build_specific_authority(best_candidate, family_row, None, external_match, existing_keys),
             )
+            authority_by_key[authority_by_family[family_id]["bibtex_key"]] = authority_by_family[family_id]
             continue
         if best_local is not None and best_score >= 6:
             authority_by_family[family_id] = choose_better_row(
                 authority_by_family.get(family_id),
                 build_specific_authority(best_candidate, family_row, best_local, None, existing_keys),
             )
+            authority_by_key[authority_by_family[family_id]["bibtex_key"]] = authority_by_family[family_id]
 
-    authority_rows = sorted(authority_by_family.values(), key=lambda row: (row["family_label"], row["bibtex_key"]))
+    resolved_lookup = dict(authority_by_family)
+    for family_row in family_rows:
+        family_id = family_row["family_id"]
+        alias_target = resolve_alias_target(family_id)
+        if alias_target is None:
+            continue
+        target_kind, target_id, _ = alias_target
+        target_row = authority_by_family.get(target_id) if target_kind == "family" else authority_by_key.get(target_id)
+        if target_row is not None:
+            resolved_lookup[family_id] = target_row
+
+    authority_rows = sorted(authority_by_key.values(), key=lambda row: (row["family_label"], row["bibtex_key"]))
 
     for family_row in family_rows:
         family_id = family_row["family_id"]
-        if family_id in authority_by_family:
+        if family_id in resolved_lookup:
             continue
         best_candidate = candidates_by_family.get(family_id, [{}])[0]
         candidate_rows_by_family[family_id] = build_machine_stub(family_row, best_candidate, existing_keys)
@@ -835,12 +1424,15 @@ def build_authority(
     write_bibtex(output_dir / "bibliography_authority.bib", authority_bib_entries)
     write_bibtex(output_dir / "bibliography_candidates.bib", candidate_bib_entries)
     write_tsv(output_dir / "bibtex_authority.tsv", authority_rows + candidate_rows, AUTHORITY_FIELDS)
+    write_tsv(seed_path, build_seed_output_rows(seed_rows, authority_rows), SEED_FIELDS)
+    evidence_rows = build_evidence_rows(authority_rows, manifest_by_id, manifest_by_name)
+    write_tsv(output_dir / "bibtex_authority_evidence.tsv", evidence_rows, EVIDENCE_FIELDS)
 
     crosswalk_rows = []
     unresolved_rows = []
     for family_row in family_rows:
         family_id = family_row["family_id"]
-        resolved = authority_by_family.get(family_id) or candidate_rows_by_family.get(family_id)
+        resolved = resolved_lookup.get(family_id) or candidate_rows_by_family.get(family_id)
         members = members_by_family.get(family_id, []) or [
             {
                 "raw_reference_string": family_row.get("sample_raw_references", ""),
@@ -870,12 +1462,12 @@ def build_authority(
                     "match_confidence": resolved.get("match_confidence", "low"),
                     "locator": locator,
                     "locator_type": locator_type,
-                    "evidence": resolved.get("match_reason", ""),
+                    "evidence": evidence_excerpt(resolved.get("match_reason", "")),
                     "needs_human_review": "false" if resolved["authority_status"] in {"confirmed_external_bibtex", "confirmed_local_source"} else "true",
                     "notes": member.get("notes", ""),
                 }
             )
-        if resolved["authority_status"] in {"machine_stub", "provisional_catalogue", "provisional_publication", "needs_human_review"}:
+        if resolve_alias_target(family_id) is None and resolved["authority_status"] in {"machine_stub", "provisional_catalogue", "provisional_publication", "needs_human_review"}:
             unresolved_rows.append(
                 {
                     "family_id": family_id,
@@ -904,7 +1496,16 @@ def build_authority(
 
     unresolved_rows.sort(key=lambda row: int(row["occurrence_count"] or 0), reverse=True)
     write_tsv(output_dir / "high_frequency_unresolved.tsv", unresolved_rows, HIGH_FREQUENCY_FIELDS)
+    resolution_plan_rows = build_resolution_plan_rows(family_rows, resolved_lookup, unresolved_rows, members_by_family)
+    write_tsv(output_dir / "high_frequency_resolution_plan.tsv", resolution_plan_rows, RESOLUTION_PLAN_FIELDS)
 
+    duplicate_local_files_collapsed_count = sum(max(int(row.get("duplicate_count", "1") or 1) - 1, 0) for row in local_manifest_rows)
+    long_bibtex_evidence_fields_count = sum(
+        1
+        for entry in authority_bib_entries
+        for value in entry["fields"].values()
+        if len(value) > MAX_BIBTEX_EVIDENCE_LENGTH and entry["entry_type"] != "misc"
+    )
     report = {
         "authority_entry_count": len(authority_rows),
         "candidate_entry_count": len(candidate_rows),
@@ -912,10 +1513,16 @@ def build_authority(
         "confirmed_external_bibtex_count": sum(1 for row in authority_rows if row["authority_status"] == "confirmed_external_bibtex"),
         "confirmed_local_source_count": sum(1 for row in authority_rows if row["authority_status"] == "confirmed_local_source"),
         "provisional_local_source_count": sum(1 for row in authority_rows if row["authority_status"] == "provisional_local_source"),
-        "frasch_reference_count": len(frasch_rows),
+        "frasch_reference_count": len(frasch_rows_all),
+        "frasch_usable_reference_count": len(frasch_rows),
+        "frasch_excluded_body_text_count": sum(1 for row in frasch_rows_all if row.get("detected_entry_type") == "body_text"),
         "frasch_matched_count": sum(1 for row in authority_rows if row["source_of_authority"].startswith("frasch")),
         "luce_candidate_count": sum(1 for row in local_candidate_rows if "luce" in row.get("original_path", "").casefold()),
         "local_file_count": len({row.get("source_file_id", row.get("sha256", "")) for row in local_manifest_rows}),
+        "duplicate_local_files_collapsed_count": duplicate_local_files_collapsed_count,
+        "long_bibtex_evidence_fields_count": long_bibtex_evidence_fields_count,
+        "high_frequency_families_resolved_count": sum(1 for row in resolution_plan_rows if row["current_status"].startswith("resolved:")),
+        "high_frequency_families_remaining_count": sum(1 for row in resolution_plan_rows if not row["current_status"].startswith("resolved:")),
         "unresolved_high_frequency_family_count": len(unresolved_rows),
         "top_unresolved_families": [
             {"family_id": row["family_id"], "family_label": row["family_label"], "occurrence_count": int(row["occurrence_count"] or 0)}

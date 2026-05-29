@@ -1,50 +1,51 @@
 {
-  "authority_entry_count": 23,
-  "candidate_entry_count": 1068,
-  "machine_stub_count": 1068,
+  "authority_entry_count": 30,
+  "candidate_entry_count": 1053,
+  "machine_stub_count": 1053,
   "confirmed_external_bibtex_count": 0,
-  "confirmed_local_source_count": 11,
-  "provisional_local_source_count": 11,
-  "frasch_reference_count": 5788,
-  "frasch_matched_count": 12,
-  "luce_candidate_count": 79,
-  "local_file_count": 2210,
-  "unresolved_high_frequency_family_count": 1069,
+  "confirmed_local_source_count": 12,
+  "provisional_local_source_count": 12,
+  "frasch_reference_count": 2926,
+  "frasch_usable_reference_count": 202,
+  "frasch_excluded_body_text_count": 0,
+  "frasch_matched_count": 13,
+  "luce_candidate_count": 49,
+  "local_file_count": 1809,
+  "duplicate_local_files_collapsed_count": 90,
+  "long_bibtex_evidence_fields_count": 0,
+  "high_frequency_families_resolved_count": 24,
+  "high_frequency_families_remaining_count": 1,
+  "unresolved_high_frequency_family_count": 1047,
   "top_unresolved_families": [
     {
-      "family_id": "fam-plate-references",
-      "family_label": "Plate references",
-      "occurrence_count": 545
+      "family_id": "fam-ppa-catalogue",
+      "family_label": "PPA references",
+      "occurrence_count": 241
     },
     {
-      "family_id": "fam-raw-b-2",
-      "family_label": "B 2, p. 815",
-      "occurrence_count": 32
+      "family_id": "fam-rdasb-publication",
+      "family_label": "RDASB references",
+      "occurrence_count": 228
     },
     {
-      "family_id": "fam-raw-ub-1",
-      "family_label": "UB 1, p. 297",
-      "occurrence_count": 30
+      "family_id": "fam-ippa-catalogue",
+      "family_label": "IPPA references",
+      "occurrence_count": 117
     },
     {
-      "family_id": "fam-raw-mp-1",
-      "family_label": "MP 1, p. 81",
-      "occurrence_count": 17
+      "family_id": "fam-uem-catalogue",
+      "family_label": "UEM references",
+      "occurrence_count": 84
     },
     {
-      "family_id": "fam-raw-ub-2",
-      "family_label": "UB 2, p. 203",
-      "occurrence_count": 14
+      "family_id": "fam-sip-catalogue",
+      "family_label": "SIP references",
+      "occurrence_count": 38
     },
     {
-      "family_id": "fam-raw-u-kyaw-bagan-minsa",
-      "family_label": "U Kyaw, “Bagan Minsa”, p. 195",
-      "occurrence_count": 12
-    },
-    {
-      "family_id": "fam-raw-mp-2",
-      "family_label": "MP 2, p. 159",
-      "occurrence_count": 7
+      "family_id": "fam-bbhc-publication",
+      "family_label": "BBHC references",
+      "occurrence_count": 13
     },
     {
       "family_id": "fam-anthology",
@@ -52,14 +53,19 @@
       "occurrence_count": 6
     },
     {
-      "family_id": "fam-ray-theravada-buddhism",
-      "family_label": "Ray, Theravada Buddhism",
-      "occurrence_count": 5
+      "family_id": "fam-raw-not-in-u-min-hswe",
+      "family_label": "(not in U Min Hswe)",
+      "occurrence_count": 3
     },
     {
-      "family_id": "fam-harvey-history",
-      "family_label": "Harvey, History references",
-      "occurrence_count": 3
+      "family_id": "fam-raw-2",
+      "family_label": "& 2",
+      "occurrence_count": 2
+    },
+    {
+      "family_id": "fam-raw-another-mm-4",
+      "family_label": "another copy MM 4, no. 20, p. 90",
+      "occurrence_count": 2
     }
   ]
 }

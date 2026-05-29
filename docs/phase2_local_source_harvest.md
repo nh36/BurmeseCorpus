@@ -37,8 +37,13 @@ Commit the metadata instead:
 - `data/working/bibliography/local_sources/local_file_manifest.tsv`
 - `data/working/bibliography/local_sources/local_source_harvest_report.json`
 - `data/working/bibliography/local_sources/frasch_reference_entries.tsv`
+- `data/working/bibliography/local_sources/frasch_reference_quality.tsv`
 - `data/working/bibliography/local_sources/frasch_bibliography.bib`
 - `data/working/bibliography/local_sources/frasch_extraction_report.json`
+- `data/working/bibliography/local_sources/frasch_extraction_qa_report.json`
+- `data/working/bibliography/local_sources/frasch_bagan_epig_database_abbreviations.tsv`
+- `data/working/bibliography/local_sources/frasch_bagan_epig_database_bibliography.tsv`
+- `data/working/bibliography/local_sources/frasch_bagan_epig_database_report.json`
 
 ## Practical run order
 
@@ -97,8 +102,49 @@ The extractor reads copied Frasch files from the local cache and writes:
 
 - `frasch_extracted_text.txt`
 - `frasch_reference_entries.tsv`
+- `frasch_reference_quality.tsv`
 - `frasch_bibliography.bib`
 - `frasch_extraction_report.json`
+- `frasch_extraction_qa_report.json`
+
+### Bibliography evidence vs body or catalogue text
+
+The Frasch QA layer now separates several kinds of extracted material:
+
+- `bibliographic_reference`: short citation-like rows with usable author/title/year/publication signals;
+- `catalogue_note`: shorthand source locators such as `List 90`, `Pl. II`, `UB 1`, `MP 2`, or similar catalogue-style references;
+- `body_text`: long descriptive prose, transcription fragments, or other non-bibliographic passages;
+- `unclear`: rows kept for review but not trusted as authority evidence.
+
+The important review file is `frasch_reference_quality.tsv`. It records the row type, signal flags, confidence, and `recommended_action`. Long prose should stay in the QA TSV and reports, not in BibTeX fields.
+
+### Reviewing `frasch_reference_quality.tsv`
+
+Use this file to answer two different questions:
+
+1. is this row safe to use as bibliography evidence?
+2. if not, is it still useful as catalogue/source-family evidence?
+
+In practice:
+
+- rows marked `use_for_bibliography` can feed concise authority evidence directly;
+- rows marked `use_for_catalogue_evidence` can still support abbreviation/source-family review;
+- rows marked `manual_review` should stay in the work queue until a human confirms them;
+- rows marked `exclude_from_bibtex` should not feed the BibTeX layer.
+
+Entries over a few hundred characters should almost always stay in the QA layer rather than in `.bib`.
+
+### Bagan Epig Database special handling
+
+`Bagan Epig Database.doc` now has a dedicated extraction path because it is the best local witness for Frasch abbreviation usage.
+
+Review:
+
+- `frasch_bagan_epig_database_abbreviations.tsv` for explicit abbreviation definitions and source hints;
+- `frasch_bagan_epig_database_bibliography.tsv` for full bibliography-style rows extracted from the same document;
+- `frasch_bagan_epig_database_report.json` for counts and parse warnings.
+
+This material is especially important for abbreviation families such as `ARASI`, `A`, `B`, `UB`, `MP`, `Luce D`, and `Luce J`.
 
 `frasch_reference_entries.tsv` is the broader evidence layer. `frasch_bibliography.bib` is intentionally conservative and should contain only entries that parsed with reasonable confidence.
 
@@ -126,10 +172,23 @@ Authority rows backed by local evidence should record:
 - `match_confidence`
 - `match_reason`
 
+The BibTeX layer now keeps those fields short and citation-like. Longer evidence stays in:
+
+- `data/working/bibliography/bibtex_authority/bibtex_authority_evidence.tsv`
+
+That evidence table stores a short excerpt plus a stable evidence ID and hash, while the full raw text remains in the local-source TSV extracts.
+
 ## Reviewing unresolved high-frequency families
 
 After rebuilding the authority layer, review:
 
 - `data/working/bibliography/bibtex_authority/high_frequency_unresolved.tsv`
+- `data/working/bibliography/bibtex_authority/high_frequency_resolution_plan.tsv`
 
-This file is sorted by descending `occurrence_count` so the highest-value unresolved abbreviation and source families can be reviewed first instead of treating all unresolved references equally.
+`high_frequency_unresolved.tsv` stays sorted by descending `occurrence_count` so the remaining unresolved queue is explicit.
+
+`high_frequency_resolution_plan.tsv` is the working review sheet for the top families first. Use it to:
+
+- confirm which high-frequency families already map to a shared authority;
+- see which ones have only a suspected work/source and still need human confirmation;
+- record next actions before spending time on low-frequency tail items.
