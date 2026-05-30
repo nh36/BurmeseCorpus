@@ -1,3 +1,1 @@
 bibtex_key	field_name	field_value_short	issue_type	severity	recommended_fix	notes
-journalBurmaResearchSociety	evidence	JBRS = Journal of the Burma Research Society	article_like_series_evidence	medium	Use a concise series-definition quote rather than an article-specific citation fragment.	Series-level BibTeX authorities should cite the series definition, not a sample article reference.
-journalRoyalAsiaticSociety	evidence	JRAS = Journal of the Royal Asiatic Society	article_like_series_evidence	medium	Use a concise series-definition quote rather than an article-specific citation fragment.	Series-level BibTeX authorities should cite the series definition, not a sample article reference.

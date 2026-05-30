@@ -11,6 +11,7 @@ from build_bibtex_authority import (
     REMAINING_ACRONYMS,
     RESOLUTION_LEVELS,
     RESOLUTION_STATUSES,
+    looks_like_series_definition_evidence,
     looks_like_ocr_garbage,
     normalized_expansion_match,
     normalize_script_value,
@@ -673,6 +674,22 @@ def validate_bibtex_authority(
             errors.append("source_work_authority_audit.tsv is missing")
         elif not source_work_authority_audit_rows:
             errors.append("source_work_authority_audit.tsv must review duplicate or overlapping source-work authorities")
+        else:
+            for index, row in enumerate(source_work_authority_audit_rows, start=1):
+                if row.get("status") not in {"reviewed_normalized", "resolved", "open", "informational"}:
+                    errors.append(f"source_work_authority_audit[{index}] has invalid status {row.get('status')}")
+                if row.get("open_issue") not in {"true", "false"}:
+                    errors.append(f"source_work_authority_audit[{index}] has invalid open_issue {row.get('open_issue')}")
+                if row.get("resolved_by_key_normalization") not in {"true", "false"}:
+                    errors.append(
+                        f"source_work_authority_audit[{index}] has invalid resolved_by_key_normalization {row.get('resolved_by_key_normalization')}"
+                    )
+                if row.get("status") == "reviewed_normalized" and (
+                    row.get("open_issue") != "false" or row.get("resolved_by_key_normalization") != "true"
+                ):
+                    errors.append(
+                        f"source_work_authority_audit[{index}] reviewed_normalized rows must be closed and normalization-backed"
+                    )
     if source_work_to_bibtex_reconciliation_path:
         if not source_work_to_bibtex_reconciliation_path.exists():
             errors.append("source_work_to_bibtex_reconciliation.tsv is missing")
@@ -710,6 +727,12 @@ def validate_bibtex_authority(
             for index, row in enumerate(bibtex_field_quality_audit_rows, start=1):
                 if row.get("status") and row.get("status") != "open":
                     errors.append(f"bibtex_field_quality_audit[{index}] should contain only open issues in the active audit")
+                if row.get("issue_type") == "article_like_series_evidence" and looks_like_series_definition_evidence(
+                    row.get("field_value_short", "")
+                ):
+                    errors.append(
+                        f"bibtex_field_quality_audit[{index}] incorrectly flags concise acronym-to-title series evidence"
+                    )
     if bibtex_field_quality_audit_history_path and bibtex_field_quality_audit_history_path.exists():
         for index, row in enumerate(bibtex_field_quality_audit_history_rows, start=1):
             if row.get("status") and row.get("status") not in {"open", "resolved", "suppressed", "needs_human_review"}:
@@ -728,6 +751,8 @@ def validate_bibtex_authority(
             if any(row.get("severity") == "high" for row in raw_reference_crosswalk_audit_rows):
                 errors.append("raw_reference_crosswalk_audit.tsv must not contain high-severity issues at closeout")
             for index, row in enumerate(raw_reference_crosswalk_audit_rows, start=1):
+                if row.get("status") not in {"open", "documented_residue", "resolved"}:
+                    errors.append(f"raw_reference_crosswalk_audit[{index}] has invalid status {row.get('status')}")
                 if row.get("severity") not in {"high", "medium", "low"}:
                     errors.append(f"raw_reference_crosswalk_audit[{index}] has invalid severity {row.get('severity')}")
                 if row.get("auto_fixable") not in {"true", "false"}:
@@ -739,6 +764,8 @@ def validate_bibtex_authority(
                 if row.get("raw_reference_string") == "TN, p.":
                     if row.get("issue_type") != "incomplete_raw_reference" or row.get("severity") != "low":
                         errors.append("TN, p. must be documented as a low-severity incomplete raw reference")
+                    if row.get("status") != "documented_residue":
+                        errors.append("TN, p. residue must be marked as documented_residue")
                     if row.get("human_review_required") != "true":
                         errors.append("TN, p. residue must keep human_review_required=true")
     if candidate_stub_review_path:
@@ -1017,13 +1044,21 @@ def validate_bibtex_authority(
             errors.append("report source_work_authority_count does not match source_work_authority.tsv")
         if source_work_authority_audit_path and report.get("source_work_authority_audit_count") != len(source_work_authority_audit_rows):
             errors.append("report source_work_authority_audit_count does not match source_work_authority_audit.tsv")
-        if source_work_authority_audit_path and report.get("source_work_duplicate_issue_count") != len(source_work_authority_audit_rows):
-            errors.append("report source_work_duplicate_issue_count does not match source_work_authority_audit.tsv")
+        if source_work_authority_audit_path and report.get("source_work_open_duplicate_issue_count") != sum(
+            1 for row in source_work_authority_audit_rows if row.get("open_issue") == "true"
+        ):
+            errors.append("report source_work_open_duplicate_issue_count does not match source_work_authority_audit.tsv")
+        if source_work_authority_audit_path and report.get("source_work_normalized_overlap_count") != sum(
+            1 for row in source_work_authority_audit_rows if row.get("status") == "reviewed_normalized"
+        ):
+            errors.append("report source_work_normalized_overlap_count does not match source_work_authority_audit.tsv")
         if source_work_to_bibtex_reconciliation_path and report.get("source_work_to_bibtex_reconciliation_count") != len(source_work_to_bibtex_reconciliation_rows):
             errors.append("report source_work_to_bibtex_reconciliation_count does not match source_work_to_bibtex_reconciliation.tsv")
         if report.get("raw_reference_crosswalk_audit_count") != len(raw_reference_crosswalk_audit_rows):
             errors.append("report raw_reference_crosswalk_audit_count does not match raw_reference_crosswalk_audit.tsv")
-        if report.get("open_raw_crosswalk_issue_count") != len(raw_reference_crosswalk_audit_rows):
+        if report.get("open_raw_crosswalk_issue_count") != sum(
+            1 for row in raw_reference_crosswalk_audit_rows if row.get("status", "open") == "open"
+        ):
             errors.append("report open_raw_crosswalk_issue_count does not match raw_reference_crosswalk_audit.tsv")
         if report.get("high_severity_crosswalk_issue_count") != sum(1 for row in raw_reference_crosswalk_audit_rows if row.get("severity") == "high"):
             errors.append("report high_severity_crosswalk_issue_count does not match raw_reference_crosswalk_audit.tsv")
@@ -1045,10 +1080,10 @@ def validate_bibtex_authority(
             1 for row in source_work_to_bibtex_reconciliation_rows if row.get("bibtex_status") == "suppressed_locator_system"
         ):
             errors.append("report bibtex_entries_suppressed_locator_count does not match source_work_to_bibtex_reconciliation.tsv")
-        if source_work_to_bibtex_reconciliation_path and report.get("bibtex_entries_candidate_only_count") != sum(
-            1 for row in source_work_to_bibtex_reconciliation_rows if row.get("bibtex_status") == "candidate_only"
+        if report.get("candidate_entries_promoted_to_authority_count") != sum(
+            1 for row in candidate_stub_review_rows if row.get("review_decision") == "promote"
         ):
-            errors.append("report bibtex_entries_candidate_only_count does not match source_work_to_bibtex_reconciliation.tsv")
+            errors.append("report candidate_entries_promoted_to_authority_count does not match candidate_stub_review.tsv")
         if report.get("candidate_stub_review_count") != len(candidate_stub_review_rows):
             errors.append("report candidate_stub_review_count does not match candidate_stub_review.tsv")
         if report.get("candidate_stubs_promoted_count") != sum(1 for row in candidate_stub_review_rows if row.get("review_decision") == "promote"):

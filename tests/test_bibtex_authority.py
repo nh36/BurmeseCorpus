@@ -1108,6 +1108,105 @@ class BibtexAuthorityTests(unittest.TestCase):
             self.assertIn("source_work_authority_audit_count", report)
             self.assertIn("bibtex_field_quality_issue_count", report)
             self.assertIn("authority_key_normalization_count", report)
+            self.assertIn("source_work_open_duplicate_issue_count", report)
+            self.assertIn("source_work_normalized_overlap_count", report)
+            self.assertIn("candidate_entries_promoted_to_authority_count", report)
+
+    def test_series_definition_evidence_is_not_an_open_field_quality_issue(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            temp_path = Path(temp_dir)
+            families_path, members_path, candidates_path, seeds_path, external_entries_path = self.write_fixture_tables(temp_path)
+            acronym_candidates_path, acronym_report_path = self.write_fixture_acronym_files(temp_path)
+            output_dir = temp_path / "authority"
+            build_authority(
+                reference_families_path=families_path,
+                reference_members_path=members_path,
+                work_candidates_path=candidates_path,
+                seed_path=seeds_path,
+                external_entries_path=external_entries_path,
+                output_dir=output_dir,
+                frasch_references_path=temp_path / "missing_frasch.tsv",
+                local_candidates_path=temp_path / "missing_local_candidates.tsv",
+                local_manifest_path=temp_path / "missing_local_manifest.tsv",
+                acronym_candidates_path=acronym_candidates_path,
+                acronym_report_path=acronym_report_path,
+            )
+
+            active_audit_rows = read_tsv(output_dir / "bibtex_field_quality_audit.tsv")
+            consistency_report = json.loads((output_dir / "bibtex_consistency_report.json").read_text(encoding="utf-8"))
+
+            self.assertEqual(active_audit_rows, [])
+            self.assertEqual(consistency_report["open_field_quality_issue_count"], 0)
+            self.assertEqual(consistency_report["resolved_field_quality_issue_count"], 0)
+
+    def test_source_work_normalized_overlaps_are_not_reported_as_open_duplicates(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            temp_path = Path(temp_dir)
+            families_path, members_path, candidates_path, seeds_path, external_entries_path = self.write_fixture_tables(temp_path)
+            acronym_candidates_path, acronym_report_path = self.write_fixture_acronym_files(temp_path)
+            output_dir = temp_path / "authority"
+            build_authority(
+                reference_families_path=families_path,
+                reference_members_path=members_path,
+                work_candidates_path=candidates_path,
+                seed_path=seeds_path,
+                external_entries_path=external_entries_path,
+                output_dir=output_dir,
+                frasch_references_path=temp_path / "missing_frasch.tsv",
+                local_candidates_path=temp_path / "missing_local_candidates.tsv",
+                local_manifest_path=temp_path / "missing_local_manifest.tsv",
+                acronym_candidates_path=acronym_candidates_path,
+                acronym_report_path=acronym_report_path,
+            )
+
+            audit_rows = read_tsv(output_dir / "source_work_authority_audit.tsv")
+            report = json.loads((output_dir / "bibtex_authority_report.json").read_text(encoding="utf-8"))
+
+            self.assertTrue(audit_rows)
+            self.assertTrue(all(row["status"] == "reviewed_normalized" for row in audit_rows))
+            self.assertTrue(all(row["open_issue"] == "false" for row in audit_rows))
+            self.assertTrue(all(row["resolved_by_key_normalization"] == "true" for row in audit_rows))
+            self.assertEqual(report["source_work_authority_audit_count"], len(audit_rows))
+            self.assertEqual(report["source_work_open_duplicate_issue_count"], 0)
+            self.assertEqual(report["source_work_normalized_overlap_count"], len(audit_rows))
+
+    def test_candidate_report_counts_are_semantically_consistent(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            temp_path = Path(temp_dir)
+            families_path, members_path, candidates_path, seeds_path, external_entries_path = self.write_fixture_tables(temp_path)
+            acronym_candidates_path, acronym_report_path = self.write_fixture_acronym_files(temp_path)
+            output_dir = temp_path / "authority"
+            build_authority(
+                reference_families_path=families_path,
+                reference_members_path=members_path,
+                work_candidates_path=candidates_path,
+                seed_path=seeds_path,
+                external_entries_path=external_entries_path,
+                output_dir=output_dir,
+                frasch_references_path=temp_path / "missing_frasch.tsv",
+                local_candidates_path=temp_path / "missing_local_candidates.tsv",
+                local_manifest_path=temp_path / "missing_local_manifest.tsv",
+                acronym_candidates_path=acronym_candidates_path,
+                acronym_report_path=acronym_report_path,
+            )
+
+            candidate_entries, _warnings = parse_bibtex_text(
+                (output_dir / "bibliography_candidates.bib").read_text(encoding="utf-8")
+            )
+            candidate_review_rows = read_tsv(output_dir / "candidate_stub_review.tsv")
+            report = json.loads((output_dir / "bibtex_authority_report.json").read_text(encoding="utf-8"))
+
+            self.assertEqual(report["candidate_entry_count"], len(candidate_entries))
+            self.assertEqual(report["candidate_entries_promoted_to_authority_count"], 0)
+            self.assertEqual(report["candidate_stub_review_count"], len(candidate_review_rows))
+            self.assertEqual(
+                report["candidate_stubs_retained_count"],
+                sum(1 for row in candidate_review_rows if row["review_decision"] == "retain"),
+            )
+            self.assertEqual(
+                report["candidate_stubs_suppressed_count"],
+                sum(1 for row in candidate_review_rows if row["review_decision"] == "suppress"),
+            )
 
     def test_validate_bibtex_authority_rejects_missing_source_work_qc_artifacts(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:
@@ -1192,6 +1291,7 @@ class BibtexAuthorityTests(unittest.TestCase):
                         "locator_type": "unclear",
                         "issue_type": "incomplete_raw_reference",
                         "issue_category": "incomplete_reference",
+                        "status": "documented_residue",
                         "severity": "low",
                         "auto_fixable": "false",
                         "human_review_required": "true",
@@ -1209,6 +1309,7 @@ class BibtexAuthorityTests(unittest.TestCase):
                     "locator_type",
                     "issue_type",
                     "issue_category",
+                    "status",
                     "severity",
                     "auto_fixable",
                     "human_review_required",
@@ -1278,6 +1379,7 @@ class BibtexAuthorityTests(unittest.TestCase):
                         "locator_type": "unclear",
                         "issue_type": "unparsed_locator",
                         "issue_category": "locator_parse",
+                        "status": "open",
                         "severity": "medium",
                         "auto_fixable": "false",
                         "human_review_required": "true",
@@ -1295,6 +1397,7 @@ class BibtexAuthorityTests(unittest.TestCase):
                     "locator_type",
                     "issue_type",
                     "issue_category",
+                    "status",
                     "severity",
                     "auto_fixable",
                     "human_review_required",

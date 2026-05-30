@@ -241,6 +241,10 @@ The source-authority QC pass closes with `source_work_authority.tsv` as the cent
 - `source_work_locator_systems.tsv` carries locator semantics for systems such as `IOB`, `Pl.`, `IPPA`, `MP`, `OR`, `Luce D`, and `Luce J` instead of treating those systems as ordinary publications.
 - `bibliography_candidates.bib` remains separate for retained candidate stubs such as *Anthology* and *Rajakumar's Inscription*.
 - `raw_reference_crosswalk_audit.tsv` is intentionally conservative: any remaining residues are documented explicitly instead of being hidden.
+- source-family and acronym resolution is complete for current authority work; the priority acronym set no longer has unresolved items.
+- `IPPA` is treated as a `PPA` alias/variant while preserving the raw `IPPA` strings in `raw_reference_to_bibtex.tsv`.
+- active BibTeX field-quality issues should now be zero unless a genuinely open issue is recorded explicitly.
+- the remaining `TN, p.` crosswalk row is a documented low-severity residue, not a parser failure or a blocker for the next phase.
 
 At this point the authority model is ready for the next phase. The follow-on work should be **bibliography normalization** and **translation-source discovery**, not another redesign of the source-authority layer.
 

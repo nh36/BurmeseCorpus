@@ -283,6 +283,7 @@ RAW_REFERENCE_CROSSWALK_AUDIT_FIELDS = [
     "locator_type",
     "issue_type",
     "issue_category",
+    "status",
     "severity",
     "auto_fixable",
     "human_review_required",
@@ -294,6 +295,9 @@ SOURCE_WORK_AUTHORITY_AUDIT_FIELDS = [
     "canonical_title",
     "related_source_family_ids",
     "issue_type",
+    "status",
+    "open_issue",
+    "resolved_by_key_normalization",
     "severity",
     "recommended_action",
     "merge_target_key",
@@ -3614,6 +3618,9 @@ def build_source_work_authority_audit_rows(source_work_authority_rows: list[dict
                 "canonical_title": merge_target.get("canonical_title", ""),
                 "related_source_family_ids": merge_target.get("related_source_family_ids", ""),
                 "issue_type": "normalized_overlap_review",
+                "status": "reviewed_normalized",
+                "open_issue": "false",
+                "resolved_by_key_normalization": "true",
                 "severity": "high" if normalization_row["old_key"] in {"obiCorpusSource", "fraschBaganEpigraphicDatabasePartBShort"} else "medium",
                 "recommended_action": normalization_row["migration_action"],
                 "merge_target_key": normalization_row["new_key"],
@@ -3680,6 +3687,24 @@ def build_source_work_to_bibtex_reconciliation_rows(
     return rows
 
 
+def looks_like_series_definition_evidence(value: str) -> bool:
+    compact = re.sub(r"\s+", " ", (value or "").strip())
+    if not compact or compact.count("=") != 1:
+        return False
+    if re.search(r"\bp\.\s*\d|\bpp\.\s*\d|\bvol\.?\s*\d|\bno\.?\s*\d", compact, flags=re.IGNORECASE):
+        return False
+    left, right = [part.strip() for part in compact.split("=", 1)]
+    if not left or not right:
+        return False
+    if len(left) > 24 or len(right) > 160:
+        return False
+    if not re.fullmatch(r"[A-Z][A-Z0-9 .&/-]{1,23}", left):
+        return False
+    if not re.match(r"[A-Z]", right):
+        return False
+    return True
+
+
 def build_bibtex_field_quality_audit_rows(
     *,
     authority_rows: list[dict],
@@ -3715,7 +3740,12 @@ def build_bibtex_field_quality_audit_rows(
                 "Replace the BibTeX evidence field with a concise authority quote and keep raw OCR evidence only in bibtex_authority_evidence.tsv.",
                 "BibTeX authority rows should not expose noisy OCR fragments.",
             )
-        if authority_level in {"periodical", "series"} and re.search(r"\bJBRS\b|\bJRAS\b|\bp\.\s*\d", row.get("evidence", "")):
+        evidence = row.get("evidence", "")
+        if authority_level in {"periodical", "series"} and not looks_like_series_definition_evidence(evidence) and re.search(
+            r"\bp\.\s*\d|\bpp\.\s*\d|\bvol\.?\s*\d|\bno\.?\s*\d|\b\d{4}\b|\bJBRS\b.*[,;]|\bJRAS\b.*[,;]",
+            evidence,
+            flags=re.IGNORECASE,
+        ):
             append_issue(
                 row,
                 "evidence",
@@ -3976,6 +4006,7 @@ def build_raw_reference_crosswalk_audit_rows(
         notes: str,
         *,
         issue_category: str,
+        status: str,
         auto_fixable: str,
         human_review_required: str,
     ) -> None:
@@ -3990,6 +4021,7 @@ def build_raw_reference_crosswalk_audit_rows(
                 "locator_type": row.get("locator_type", ""),
                 "issue_type": issue_type,
                 "issue_category": issue_category,
+                "status": status,
                 "severity": severity,
                 "auto_fixable": auto_fixable,
                 "human_review_required": human_review_required,
@@ -4003,11 +4035,11 @@ def build_raw_reference_crosswalk_audit_rows(
         family_occurrence_count = int(family_by_id.get(family_id, {}).get("occurrence_count", "0") or "0")
         source_work_row = source_work_authority_by_key.get(row.get("source_work_key", ""), {})
         if row.get("source_family_id") in locator_expected_families and not row.get("source_work_key"):
-            append_issue(row, "missing_source_work_key", "high", "Add the expected source_work_key for this locator-aware family.", "Locator-aware family is missing a source work target.", issue_category="authority_linkage", auto_fixable="true", human_review_required="false")
+            append_issue(row, "missing_source_work_key", "high", "Add the expected source_work_key for this locator-aware family.", "Locator-aware family is missing a source work target.", issue_category="authority_linkage", status="open", auto_fixable="true", human_review_required="false")
         if row.get("source_work_key") and row["source_work_key"] not in source_work_authority_by_key:
-            append_issue(row, "invalid_source_work_key", "high", "Map the row to a documented source_work_authority entry.", "Crosswalk points to a source_work_key that is not present in source_work_authority.tsv.", issue_category="authority_linkage", auto_fixable="true", human_review_required="false")
+            append_issue(row, "invalid_source_work_key", "high", "Map the row to a documented source_work_authority entry.", "Crosswalk points to a source_work_key that is not present in source_work_authority.tsv.", issue_category="authority_linkage", status="open", auto_fixable="true", human_review_required="false")
         if source_work_row.get("bibtex_key") and not row.get("bibtex_key"):
-            append_issue(row, "missing_bibtex_key", "medium", "Populate bibtex_key from source_work_authority.tsv.", "This source work already has a BibTeX authority key.", issue_category="bibtex_linkage", auto_fixable="true", human_review_required="false")
+            append_issue(row, "missing_bibtex_key", "medium", "Populate bibtex_key from source_work_authority.tsv.", "This source work already has a BibTeX authority key.", issue_category="bibtex_linkage", status="open", auto_fixable="true", human_review_required="false")
         if row.get("source_family_id") == "sf-tn" and re.fullmatch(r"TN,?\s*p\.\s*", row.get("raw_reference_string", ""), flags=re.IGNORECASE):
             append_issue(
                 row,
@@ -4016,6 +4048,7 @@ def build_raw_reference_crosswalk_audit_rows(
                 "check source record manually if this record becomes important",
                 "The structured corpus record preserves a truncated TN page citation with no recoverable page number.",
                 issue_category="incomplete_reference",
+                status="documented_residue",
                 auto_fixable="false",
                 human_review_required="true",
             )
@@ -4028,18 +4061,19 @@ def build_raw_reference_crosswalk_audit_rows(
                 "Improve locator parsing or document the irregular locator form.",
                 "High-occurrence locator family still has an unclear locator parse.",
                 issue_category="locator_parse",
+                status="open",
                 auto_fixable="true" if row.get("source_family_id") in {"sf-list", "sf-ippa", "sf-or"} else "false",
                 human_review_required="true" if row.get("source_family_id") not in {"sf-list", "sf-ippa", "sf-or"} else "false",
             )
         if row.get("source_family_id") == "sf-ippa":
             if not row.get("raw_reference_string", "").startswith("IPPA"):
-                append_issue(row, "ippa_raw_string_not_preserved", "high", "Preserve the raw IPPA string in raw_reference_to_bibtex.tsv.", "IPPA alias rows should keep the original IPPA spelling.", issue_category="ippa_alias_integrity", auto_fixable="true", human_review_required="false")
+                append_issue(row, "ippa_raw_string_not_preserved", "high", "Preserve the raw IPPA string in raw_reference_to_bibtex.tsv.", "IPPA alias rows should keep the original IPPA spelling.", issue_category="ippa_alias_integrity", status="open", auto_fixable="true", human_review_required="false")
             if row.get("source_work_key") != "ppaCatalogue":
-                append_issue(row, "ippa_wrong_source_work", "high", "Map IPPA rows to ppaCatalogue while preserving the raw string.", "IPPA should route to the PPA source work.", issue_category="ippa_alias_integrity", auto_fixable="true", human_review_required="false")
+                append_issue(row, "ippa_wrong_source_work", "high", "Map IPPA rows to ppaCatalogue while preserving the raw string.", "IPPA should route to the PPA source work.", issue_category="ippa_alias_integrity", status="open", auto_fixable="true", human_review_required="false")
             if row.get("resolution_status") != "alias_or_variant_of_PPA":
-                append_issue(row, "ippa_wrong_resolution_status", "high", "Mark IPPA crosswalk rows as alias_or_variant_of_PPA.", "IPPA should not look unresolved or generically alias_resolved in the crosswalk audit layer.", issue_category="ippa_alias_integrity", auto_fixable="true", human_review_required="false")
+                append_issue(row, "ippa_wrong_resolution_status", "high", "Mark IPPA crosswalk rows as alias_or_variant_of_PPA.", "IPPA should not look unresolved or generically alias_resolved in the crosswalk audit layer.", issue_category="ippa_alias_integrity", status="open", auto_fixable="true", human_review_required="false")
         if row.get("source_family_id") in {"sf-mp", "sf-or", "sf-luce-d", "sf-luce-j"} and row.get("bibtex_key"):
-            append_issue(row, "locator_system_mapped_as_bibtex_work", "high", "Leave bibtex_key blank for locator systems that have no standalone BibTeX work.", "Locator-only source works should not masquerade as standalone bibliography entries.", issue_category="locator_emission", auto_fixable="true", human_review_required="false")
+            append_issue(row, "locator_system_mapped_as_bibtex_work", "high", "Leave bibtex_key blank for locator systems that have no standalone BibTeX work.", "Locator-only source works should not masquerade as standalone bibliography entries.", issue_category="locator_emission", status="open", auto_fixable="true", human_review_required="false")
 
     audit_rows = list({
         (row["raw_reference_string"], row["issue_type"]): row
@@ -6009,11 +6043,12 @@ def build_authority(
         "ippa_final_decision": ippa_review["decision_row"].get("decision", ""),
         "source_work_authority_count": len(source_work_authority_rows),
         "source_work_authority_audit_count": len(source_work_authority_audit_rows),
-        "source_work_duplicate_issue_count": len(source_work_authority_audit_rows),
+        "source_work_open_duplicate_issue_count": sum(1 for row in source_work_authority_audit_rows if row.get("open_issue") == "true"),
+        "source_work_normalized_overlap_count": sum(1 for row in source_work_authority_audit_rows if row.get("status") == "reviewed_normalized"),
         "source_work_to_bibtex_reconciliation_count": len(source_work_to_bibtex_reconciliation_rows),
         "source_work_locator_system_count": len(source_work_locator_rows),
         "raw_reference_crosswalk_audit_count": len(raw_reference_crosswalk_audit_rows),
-        "open_raw_crosswalk_issue_count": len(raw_reference_crosswalk_audit_rows),
+        "open_raw_crosswalk_issue_count": sum(1 for row in raw_reference_crosswalk_audit_rows if row.get("status", "open") == "open"),
         "high_severity_crosswalk_issue_count": sum(1 for row in raw_reference_crosswalk_audit_rows if row.get("severity") == "high"),
         "medium_severity_crosswalk_issue_count": sum(1 for row in raw_reference_crosswalk_audit_rows if row.get("severity") == "medium"),
         "low_severity_crosswalk_issue_count": sum(1 for row in raw_reference_crosswalk_audit_rows if row.get("severity") == "low"),
@@ -6031,8 +6066,8 @@ def build_authority(
         "bibtex_entries_suppressed_locator_count": sum(
             1 for row in source_work_to_bibtex_reconciliation_rows if row.get("bibtex_status") == "suppressed_locator_system"
         ),
-        "bibtex_entries_candidate_only_count": sum(
-            1 for row in source_work_to_bibtex_reconciliation_rows if row.get("bibtex_status") == "candidate_only"
+        "candidate_entries_promoted_to_authority_count": sum(
+            1 for row in candidate_stub_review_rows if row.get("review_decision") == "promote"
         ),
         "pl_locator_semantics_checked": True,
         "iob_relationship_checked": True,
