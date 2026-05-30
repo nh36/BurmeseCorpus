@@ -1477,6 +1477,8 @@ class BibtexAuthorityTests(unittest.TestCase):
             acronym_rows = {row["acronym"]: row for row in read_tsv(output_dir / "acronym_resolution_status.tsv")}
             locator_rows = read_tsv(output_dir / "source_work_locator_systems.tsv")
             remaining_worklist_rows = read_tsv(output_dir / "remaining_acronym_worklist.tsv")
+            final_sprint_rows = {row["acronym"]: row for row in read_tsv(output_dir / "final_acronym_resolution_sprint.tsv")}
+            unresolved_dossier_rows = read_tsv(output_dir / "unresolved_acronym_dossier.tsv")
             candidate_bib = (output_dir / "bibliography_candidates.bib").read_text(encoding="utf-8")
 
             by_family = {row["family_id"]: row for row in crosswalk_rows}
@@ -1491,6 +1493,7 @@ class BibtexAuthorityTests(unittest.TestCase):
             self.assertEqual(by_family["fam-raw-ub"]["source_family_id"], "sf-ub")
             self.assertEqual(by_family["fam-raw-ub"]["locator_type"], "volume_page")
             self.assertEqual(by_family["fam-raw-mp"]["source_family_id"], "sf-mp")
+            self.assertEqual(by_family["fam-raw-mp"]["source_work_key"], "mandalayPalaceStoneCollection")
             self.assertEqual(by_family["fam-ppa-catalogue"]["source_family_id"], "sf-ppa")
             self.assertEqual(by_family["fam-ppa-catalogue"]["locator_type"], "page")
             self.assertEqual(by_family["fam-raw-a"]["source_family_id"], "sf-a")
@@ -1506,15 +1509,24 @@ class BibtexAuthorityTests(unittest.TestCase):
                 "Pe Maung Tin and G. H. Luce, Selections from the Inscriptions of Pagan",
             )
             self.assertEqual(acronym_rows["UB"]["resolution_status"], "confirmed_expansion")
-            self.assertEqual(acronym_rows["RDASB"]["resolution_status"], "unresolved_after_targeted_search")
+            self.assertEqual(acronym_rows["RDASB"]["resolution_status"], "probable_expansion")
+            self.assertEqual(acronym_rows["MP"]["resolution_status"], "probable_locator_system")
+            self.assertEqual(acronym_rows["OR"]["resolution_status"], "probable_locator_system")
+            self.assertEqual(acronym_rows["Luce D"]["resolution_status"], "probable_private_luce_locator_system")
+            self.assertEqual(acronym_rows["Luce J"]["resolution_status"], "probable_private_luce_locator_system")
+            self.assertEqual(acronym_rows["IPPA"]["resolution_status"], "unresolved_after_exhaustive_search")
             self.assertTrue(set(PRIORITY_ACRONYMS).issubset(acronym_rows))
             self.assertEqual(source_family_rows["sf-ppa"]["expanded_label"], "Inscriptions of Pagan, Pinya and Ava")
-            self.assertEqual(source_family_rows["sf-mp"]["expanded_label"], "MP source family [unexpanded]")
+            self.assertEqual(source_family_rows["sf-mp"]["expanded_label"], "Mandalay Palace stone collection locator system")
             self.assertEqual(source_family_rows["sf-pl"]["expanded_label"], "Plate reference into Inscriptions of Burma")
             self.assertEqual(source_family_rows["sf-pl"]["locator_type"], "plate")
             self.assertEqual(source_family_rows["sf-pl"]["source_work_key"], "lucePeMaungTinInscriptionsOfBurma")
             self.assertEqual(len(remaining_worklist_rows), len(REMAINING_ACRONYMS))
             self.assertTrue(any(row["source_work_key"] == "lucePeMaungTinInscriptionsOfBurma" for row in locator_rows))
+            self.assertTrue(any(row["source_work_key"] == "mandalayPalaceStoneCollection" for row in locator_rows))
+            self.assertEqual(len(final_sprint_rows), 6)
+            self.assertEqual(final_sprint_rows["RDASB"]["recommended_status"], "probable_expansion")
+            self.assertEqual([row["acronym"] for row in unresolved_dossier_rows], ["IPPA"])
             self.assertNotIn("workUnresolved", candidate_bib)
             self.assertNotIn("RDASB", [row["family_label"] for row in report["top_unresolved_families"]])
 
@@ -1534,6 +1546,14 @@ class BibtexAuthorityTests(unittest.TestCase):
         locator, locator_type = parse_locator("PPA, p. 55", "fam-ppa-catalogue", "PPA")
         self.assertEqual(locator, "p. 55")
         self.assertEqual(locator_type, "page")
+
+        locator, locator_type = parse_locator("OR 3434, fol. gha verso", "fam-raw-or", "OR")
+        self.assertEqual(locator, "3434, fol. gha verso")
+        self.assertEqual(locator_type, "folio")
+
+        locator, locator_type = parse_locator("Luce D 825", "fam-raw-luce-d", "Luce D")
+        self.assertEqual(locator, "825")
+        self.assertEqual(locator_type, "number")
 
     def test_build_authority_applies_manual_acronym_seeds(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:
@@ -1612,10 +1632,83 @@ class BibtexAuthorityTests(unittest.TestCase):
                 acronym_report_path=acronym_report_path,
                 manual_acronym_seeds_path=manual_seed_path,
                 manual_review_packet_path=output_dir / "acronym_manual_review_packet.tsv",
+                remaining_acronym_worklist_path=output_dir / "remaining_acronym_worklist.tsv",
+                remaining_acronym_evidence_path=output_dir / "remaining_acronym_evidence.tsv",
+                source_work_locator_systems_path=output_dir / "source_work_locator_systems.tsv",
+                final_acronym_resolution_sprint_path=output_dir / "final_acronym_resolution_sprint.tsv",
+                final_acronym_local_file_hits_path=output_dir / "final_acronym_local_file_hits.tsv",
+                final_acronym_web_searches_path=output_dir / "final_acronym_web_searches.tsv",
+                frasch_abbreviation_list_review_path=output_dir / "frasch_abbreviation_list_review.tsv",
+                unresolved_acronym_dossier_path=output_dir / "unresolved_acronym_dossier.tsv",
             )
             self.assertTrue(result["ok"], result["errors"])
 
-    def test_build_authority_marks_missing_remaining_acronyms_as_unresolved_after_targeted_search(self) -> None:
+    def test_validate_bibtex_authority_rejects_missing_final_web_search_record(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            temp_path = Path(temp_dir)
+            families_path, members_path, candidates_path, seeds_path, external_entries_path = self.write_fixture_tables(temp_path)
+            acronym_candidates_path, acronym_report_path = self.write_fixture_acronym_files(temp_path)
+            output_dir = temp_path / "authority"
+
+            build_authority(
+                reference_families_path=families_path,
+                reference_members_path=members_path,
+                work_candidates_path=candidates_path,
+                seed_path=seeds_path,
+                external_entries_path=external_entries_path,
+                output_dir=output_dir,
+                frasch_references_path=temp_path / "missing_frasch.tsv",
+                local_candidates_path=temp_path / "missing_local_candidates.tsv",
+                local_manifest_path=temp_path / "missing_local_manifest.tsv",
+                acronym_candidates_path=acronym_candidates_path,
+                acronym_report_path=acronym_report_path,
+            )
+
+            web_search_path = output_dir / "final_acronym_web_searches.tsv"
+            web_rows = [row for row in read_tsv(web_search_path) if row["acronym"] != "IPPA"]
+            write_tsv(web_search_path, web_rows, [
+                "acronym",
+                "query",
+                "result_title",
+                "result_url_or_domain",
+                "short_result_summary",
+                "supports_candidate_expansion",
+                "confidence",
+                "notes",
+            ])
+
+            result = validate_bibtex_authority(
+                authority_bib_path=output_dir / "bibliography_authority.bib",
+                candidates_bib_path=output_dir / "bibliography_candidates.bib",
+                authority_tsv_path=output_dir / "bibtex_authority.tsv",
+                crosswalk_path=output_dir / "raw_reference_to_bibtex.tsv",
+                families_path=families_path,
+                external_entries_path=external_entries_path,
+                seed_path=seeds_path,
+                high_frequency_path=output_dir / "high_frequency_unresolved.tsv",
+                evidence_path=output_dir / "bibtex_authority_evidence.tsv",
+                resolution_plan_path=output_dir / "high_frequency_resolution_plan.tsv",
+                source_family_path=output_dir / "source_family_authority.tsv",
+                report_path=output_dir / "bibtex_authority_report.json",
+                frasch_references_path=temp_path / "missing_frasch.tsv",
+                local_manifest_path=temp_path / "missing_local_manifest.tsv",
+                acronym_status_path=output_dir / "acronym_resolution_status.tsv",
+                acronym_candidates_path=acronym_candidates_path,
+                acronym_report_path=acronym_report_path,
+                manual_review_packet_path=output_dir / "acronym_manual_review_packet.tsv",
+                remaining_acronym_worklist_path=output_dir / "remaining_acronym_worklist.tsv",
+                remaining_acronym_evidence_path=output_dir / "remaining_acronym_evidence.tsv",
+                source_work_locator_systems_path=output_dir / "source_work_locator_systems.tsv",
+                final_acronym_resolution_sprint_path=output_dir / "final_acronym_resolution_sprint.tsv",
+                final_acronym_local_file_hits_path=output_dir / "final_acronym_local_file_hits.tsv",
+                final_acronym_web_searches_path=web_search_path,
+                frasch_abbreviation_list_review_path=output_dir / "frasch_abbreviation_list_review.tsv",
+                unresolved_acronym_dossier_path=output_dir / "unresolved_acronym_dossier.tsv",
+            )
+            self.assertFalse(result["ok"])
+            self.assertTrue(any("final_acronym_web_searches.tsv is missing web-search rows for IPPA" in error for error in result["errors"]))
+
+    def test_build_authority_marks_final_sprint_acronyms_with_precise_statuses(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:
             temp_path = Path(temp_dir)
             families_path, members_path, candidates_path, seeds_path, external_entries_path = self.write_fixture_tables(temp_path)
@@ -1637,9 +1730,12 @@ class BibtexAuthorityTests(unittest.TestCase):
             )
 
             acronym_rows = {row["acronym"]: row for row in read_tsv(output_dir / "acronym_resolution_status.tsv")}
-            self.assertEqual(acronym_rows["IPPA"]["resolution_status"], "unresolved_after_targeted_search")
-            self.assertEqual(acronym_rows["Luce D"]["resolution_status"], "unresolved_after_targeted_search")
-            self.assertEqual(acronym_rows["OR"]["resolution_status"], "unresolved_after_targeted_search")
+            self.assertEqual(acronym_rows["IPPA"]["resolution_status"], "unresolved_after_exhaustive_search")
+            self.assertEqual(acronym_rows["RDASB"]["resolution_status"], "probable_expansion")
+            self.assertEqual(acronym_rows["MP"]["resolution_status"], "probable_locator_system")
+            self.assertEqual(acronym_rows["OR"]["resolution_status"], "probable_locator_system")
+            self.assertEqual(acronym_rows["Luce D"]["resolution_status"], "probable_private_luce_locator_system")
+            self.assertEqual(acronym_rows["Luce J"]["resolution_status"], "probable_private_luce_locator_system")
             self.assertEqual(acronym_rows["TN"]["resolution_status"], "confirmed_expansion")
             self.assertEqual(acronym_rows["UEM"]["resolution_status"], "confirmed_expansion")
 

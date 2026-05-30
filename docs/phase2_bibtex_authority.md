@@ -25,6 +25,11 @@ The central review tables are now:
 - `acronym_resolution_status.tsv`
 - `remaining_acronym_worklist.tsv`
 - `remaining_acronym_evidence.tsv`
+- `final_acronym_resolution_sprint.tsv`
+- `final_acronym_local_file_hits.tsv`
+- `final_acronym_web_searches.tsv`
+- `frasch_abbreviation_list_review.tsv`
+- `unresolved_acronym_dossier.tsv`
 - `source_work_locator_systems.tsv`
 - `raw_reference_to_bibtex.tsv`
 - `bibtex_authority.tsv`
@@ -38,7 +43,7 @@ The central review tables are now:
 `source_family_resolved` is **not** the same thing as knowing what an acronym expands to. The acronym layer now keeps those questions separate:
 
 - `source_family_authority.tsv` records the stable source-family or series mapping;
-- `acronym_resolution_status.tsv` records whether the abbreviation itself is a `confirmed_expansion`, `probable_expansion`, `source_family_only`, `contextual_usage_only`, `internal_locator`, `not_an_acronym`, `unresolved_after_targeted_search`, or still `unresolved`;
+- `acronym_resolution_status.tsv` records whether the abbreviation itself is a `confirmed_expansion`, `probable_expansion`, `probable_locator_system`, `probable_private_luce_locator_system`, `source_family_only`, `contextual_usage_only`, `internal_locator`, `not_an_acronym`, `unresolved_after_targeted_search`, `unresolved_after_exhaustive_search`, or still `unresolved`;
 - `remaining_acronym_worklist.tsv` is the focused queue for the last weak source acronyms, including files checked, search terms used, and the recommended conservative action;
 - `remaining_acronym_evidence.tsv` records one short targeted-evidence row per remaining acronym, including negative-search rows where nothing documentary was found;
 - `acronym_definition_candidates.tsv` records quote-level evidence from corpus documentation, Frasch's *Pagan: Stadt und Staat* materials, and `Bagan Epig Database.doc`.
@@ -47,9 +52,14 @@ The central review tables are now:
 
 Only strong evidence types such as abbreviation lists, explicit parenthetical definitions, bibliography headings, or source-list entries should count as actual expansions. Contextual usage such as `PPA, p. 55` or `MP 1, p. 81` is still useful for source-family stability, but it should remain visibly weaker than a real definition.
 
-For weak cases, keep the source family visible but keep the expansion visibly unconfirmed, e.g. `MP source family [unexpanded]`.
+For weak cases, keep the source family visible but keep the expansion visibly unconfirmed unless the evidence is strong enough to classify a **locator system** or **private archival family** conservatively.
 
-`unresolved_after_targeted_search` is the end-state for acronyms that were checked in the targeted OCR/extracted-text pass but still lack a documentary definition. Use it instead of leaving a weak case as a generic `source_family_only` without any record of what was checked.
+`unresolved_after_targeted_search` is useful for the first focused pass, but the final-six sprint now prefers more specific outcomes:
+
+- `probable_expansion` when the publication title is well supported but the exact abbreviation line is still inferred, as with `RDASB`;
+- `probable_locator_system` for references such as `MP` or `OR` that behave like collection or shelfmark systems;
+- `probable_private_luce_locator_system` for numbered Luce notebook references such as `Luce D 825` or `Luce J 2507`;
+- `unresolved_after_exhaustive_search` only when local and targeted web searches still fail to recover a distinct definition, as with `IPPA`.
 
 Treat parenthetical remarks, note labels, and ordinary English words as false-positive territory, not as expansions. `spelling of inscription (OBI)`, `Date ... (List)`, or lowercase `or:` are usage/noise patterns; they belong in the false-positive audit, not in `acronym_resolution_status.tsv`.
 
@@ -127,13 +137,45 @@ The current pass makes the locator/work split explicit for high-frequency source
 
 - `Pl.` is a **plate locator system**, not a bibliographic title;
 - `IOB` is treated as a **locator-style reference into the same underlying work** as `Pl.`;
-- `List`, `PPA`, and `UB` are source works with stable locator patterns rather than standalone expansions of every raw string.
+- `List`, `PPA`, and `UB` are source works with stable locator patterns rather than standalone expansions of every raw string;
+- `MP` is treated as a Mandalay Palace stone-collection locator system, not a stand-alone publication;
+- `OR` is treated as a British Library Oriental manuscript shelfmark system;
+- `Luce D` and `Luce J` are treated as unpublished Luce notebook locator families unless later publication evidence appears.
 
 Use these files together:
 
 - `source_family_authority.tsv` for the source-family row and its `source_work_key` / `related_source_work_key`;
 - `source_work_locator_systems.tsv` for the consolidated locator-system summary;
 - `raw_reference_to_bibtex.tsv` for per-reference locator parsing.
+
+The key practical reading rules are now:
+
+- `Pl. II 198` = a **plate locator** into *Inscriptions of Burma*;
+- `IOB--278` = an **IOB catalogue-style locator** into the same underlying Luce and Pe Maung Tin work;
+- `List 90` = a **catalogue-number locator** into Duroiselle's *List*;
+- `PPA, p. 55` = a **page locator** into *Inscriptions of Pagan, Pinya and Ava*;
+- `UB 1, p. 297` = a **volume/page locator** into *Inscriptions Collected in Upper Burma*;
+- `MP 1, p. 21` or `MP stone 507` = a **Mandalay Palace stone collection locator**, not a bibliographic title;
+- `OR 3434, fol. gha verso` = a **British Library Oriental manuscript shelfmark plus folio locator**.
+
+## Final acronym resolution sprint
+
+The last six hard cases (`IPPA`, `Luce D`, `Luce J`, `MP`, `OR`, `RDASB`) received one more targeted pass before the acronym phase closed.
+
+That sprint now records:
+
+- `final_acronym_resolution_sprint.tsv` for the hypothesis, search strategy, and recommended status per acronym;
+- `final_acronym_local_file_hits.tsv` for cache/manifest hits and negative local searches;
+- `final_acronym_web_searches.tsv` for targeted web searches kept separate from local primary evidence;
+- `frasch_abbreviation_list_review.tsv` for the explicit re-check of the key Frasch abbreviation-list slices;
+- `unresolved_acronym_dossier.tsv` for the residue that stayed unresolved even after the final sprint.
+
+The operating rule is conservative:
+
+- use a **probable expansion** only when the publication title is well supported, even if the exact abbreviation line is still missing;
+- use **locator-system** statuses for holding, collection, or archival numbering systems;
+- do **not** turn private or local locator systems into ordinary BibTeX works;
+- keep the irreducible residue explicit instead of hiding it behind source-family placeholders.
 
 ## Authority vs candidate BibTeX
 

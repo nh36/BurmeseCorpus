@@ -27,7 +27,7 @@
   "high_frequency_still_unresolved_count": 0,
   "priority_acronym_count": 25,
   "confirmed_acronym_expansion_count": 13,
-  "probable_acronym_expansion_count": 3,
+  "probable_acronym_expansion_count": 4,
   "source_family_only_count": 0,
   "contextual_usage_only_count": 0,
   "unresolved_acronym_count": 0,
@@ -49,30 +49,28 @@
   ],
   "priority_acronyms_still_source_family_only": 0,
   "priority_acronyms_still_source_family_only_list": [],
-  "priority_acronyms_still_unresolved": 6,
+  "priority_acronyms_still_unresolved": 1,
   "priority_acronyms_still_unresolved_list": [
-    "IPPA",
-    "Luce D",
-    "Luce J",
-    "MP",
-    "OR",
-    "RDASB"
+    "IPPA"
   ],
   "manual_review_packet_rows": 25,
   "remaining_acronym_count": 9,
   "remaining_acronyms_confirmed_count": 2,
-  "remaining_acronyms_probable_count": 0,
-  "remaining_acronyms_unresolved_after_targeted_search_count": 6,
-  "source_work_locator_system_count": 4,
+  "remaining_acronyms_probable_count": 1,
+  "remaining_acronyms_probable_locator_system_count": 2,
+  "remaining_acronyms_probable_private_luce_locator_system_count": 2,
+  "remaining_acronyms_unresolved_after_targeted_search_count": 0,
+  "remaining_acronyms_unresolved_after_exhaustive_search_count": 1,
+  "final_acronym_resolution_sprint_count": 6,
+  "final_acronym_local_file_hit_count": 11,
+  "final_acronym_web_search_count": 6,
+  "frasch_abbreviation_list_review_count": 2,
+  "final_unresolved_acronym_dossier_count": 1,
+  "source_work_locator_system_count": 8,
   "pl_locator_semantics_checked": true,
   "iob_relationship_checked": true,
   "unresolved_priority_acronyms": [
-    "IPPA",
-    "Luce D",
-    "Luce J",
-    "MP",
-    "OR",
-    "RDASB"
+    "IPPA"
   ],
   "weakly_resolved_priority_acronyms": [
     "A",
@@ -157,11 +155,6 @@
   ],
   "top_provisional_source_families": [
     {
-      "family_id": "fam-plate-references",
-      "family_label": "Plate references",
-      "occurrence_count": 545
-    },
-    {
       "family_id": "fam-ppa-catalogue",
       "family_label": "PPA references",
       "occurrence_count": 241
@@ -205,6 +198,11 @@
       "family_id": "fam-sip-catalogue",
       "family_label": "SIP references",
       "occurrence_count": 38
+    },
+    {
+      "family_id": "fam-mm-catalogue",
+      "family_label": "MM references",
+      "occurrence_count": 23
     }
   ],
   "top_needs_human_review_families": [

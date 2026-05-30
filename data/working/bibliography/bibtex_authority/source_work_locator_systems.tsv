@@ -1,5 +1,9 @@
 source_work_key	source_work_title	source_family_ids	locator_system	locator_prefixes	example_references	notes
 lucePeMaungTinInscriptionsOfBurma	Inscriptions of Burma	sf-iob; sf-pl	IOB/plate references	IOB; Pl.	IOB--278 BED B 622-4 | Pl. I 1+2	Clarifies that IOB and Pl. are separate locator systems into the same Luce and Pe Maung Tin source work.
-duroiselle1921list	A List of Inscriptions Found in Burma	sf-list	catalogue number	List	List 105 | List 106	List references behave as catalogue numbers into Duroiselle's source work.
-ppaCatalogue	Inscriptions of Pagan, Pinya and Ava	sf-ppa	page	PPA	PPA p. 239 | PPA p. 255	PPA references are page locators into the source work.
-ubSourceFamily	Inscriptions Collected in Upper Burma	sf-ub	volume/page	UB	UB 1, p. 147 | UB 1, p. 173	UB references preserve the source-family edition with volume/page locators.
+duroiselle1921list	A List of Inscriptions Found in Burma	sf-list	catalogue number	List	List 105 | List 106	Duroiselle's List is a source work with catalogue-number locators.
+ppaCatalogue	Inscriptions of Pagan, Pinya and Ava	sf-ppa	page	PPA	PPA p. 239 | PPA p. 255	PPA references use page locators into the Pagan, Pinya and Ava source work.
+ubSourceFamily	Inscriptions Collected in Upper Burma	sf-ub	volume/page	UB	UB 1, p. 147 | UB 1, p. 173	UB references carry volume/page locators into the Arch. Survey of Burma edition.
+mandalayPalaceStoneCollection	Mandalay Palace stone collection	sf-mp	stone/page references	MP	MP, p. 107 | MP, p. 13	MP behaves as a Mandalay Palace stone-collection locator family rather than as a standalone bibliographic work.
+britishLibraryOrientalManuscripts	British Library Oriental Manuscripts	sf-or	shelfmark/folio	OR	OR 3434 (gā: verso) | OR 3434 fol. ghā verso (with further dates)	OR references are treated as British Library Oriental manuscript shelfmarks rather than as a published title.
+gHLuceNotebookD	G. H. Luce Notebook D	sf-luce-d	notebook entry/page	Luce D	Luce D 809	Archive descriptions support treating Luce D citations as references into an unpublished Luce notebook sequence.
+gHLuceNotebookJ	G. H. Luce Notebook J	sf-luce-j	notebook entry/page	Luce J	Luce J 2665 | Luce J 2667	Archive descriptions support treating Luce J citations as references into an unpublished Luce notebook sequence.

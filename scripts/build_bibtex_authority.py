@@ -248,6 +248,63 @@ SOURCE_WORK_LOCATOR_SYSTEM_FIELDS = [
     "example_references",
     "notes",
 ]
+FINAL_ACRONYM_RESOLUTION_SPRINT_FIELDS = [
+    "acronym",
+    "current_status",
+    "current_examples",
+    "working_hypothesis",
+    "hypothesis_source",
+    "search_strategy",
+    "local_files_searched",
+    "internet_queries_run",
+    "best_evidence_found",
+    "candidate_expansion",
+    "recommended_status",
+    "confidence",
+    "needs_human_review",
+    "notes",
+]
+FINAL_ACRONYM_LOCAL_FILE_HITS_FIELDS = [
+    "acronym",
+    "search_term",
+    "file_or_folder_name",
+    "path_or_redacted_path",
+    "file_type",
+    "sha256_if_available",
+    "match_reason",
+    "copied_or_existing_cache_path",
+    "extraction_status",
+    "notes",
+]
+FINAL_ACRONYM_WEB_SEARCHES_FIELDS = [
+    "acronym",
+    "query",
+    "result_title",
+    "result_url_or_domain",
+    "short_result_summary",
+    "supports_candidate_expansion",
+    "confidence",
+    "notes",
+]
+FRASCH_ABBREVIATION_LIST_REVIEW_FIELDS = [
+    "line_range",
+    "acronyms_found",
+    "raw_excerpt_short",
+    "possible_missing_acronyms",
+    "notes",
+]
+UNRESOLVED_ACRONYM_DOSSIER_FIELDS = [
+    "acronym",
+    "final_status",
+    "best_hypothesis",
+    "hypothesis_confidence",
+    "evidence_summary",
+    "files_checked",
+    "web_queries_checked",
+    "why_not_confirmed",
+    "recommended_human_action",
+    "notes",
+]
 
 STATUS_RANK = {
     "confirmed_external_bibtex": 5,
@@ -262,6 +319,7 @@ TOP_FAMILY_REVIEW_COUNT = 25
 MAX_BIBTEX_EVIDENCE_LENGTH = 180
 MAX_MATCHED_REFERENCE_LENGTH = 140
 REMAINING_ACRONYMS = ["IOB", "TN", "UEM", "RDASB", "MP", "OR", "Luce J", "Luce D", "IPPA"]
+FINAL_SPRINT_ACRONYMS = ["RDASB", "MP", "OR", "Luce J", "Luce D", "IPPA"]
 PLACEHOLDER_EXPANSION_PATTERN = re.compile(
     r"\b(source family|catalogue family|publication family|series family|source family attested|unexpanded)\b",
     re.IGNORECASE,
@@ -371,7 +429,7 @@ SOURCE_FAMILY_LIBRARY = {
     "mp": {
         "author": "",
         "year": "",
-        "title": "MP source family attested in Frasch bibliography evidence",
+        "title": "Mandalay Palace stone collection locator system",
         "shorttitle": "MP",
         "entry_type": "misc",
         "preferred_key": "mpSourceFamily",
@@ -451,7 +509,7 @@ SOURCE_FAMILY_LIBRARY = {
     "rdasb": {
         "author": "",
         "year": "",
-        "title": "RDASB source family",
+        "title": "Report of the Director, Archaeological Survey of Burma",
         "shorttitle": "RDASB",
         "entry_type": "misc",
         "preferred_key": "rdasbSourceFamily",
@@ -521,7 +579,7 @@ SOURCE_FAMILY_LIBRARY = {
     "or": {
         "author": "",
         "year": "",
-        "title": "OR source family",
+        "title": "British Library Oriental manuscript shelfmark system",
         "shorttitle": "OR",
         "entry_type": "misc",
         "preferred_key": "orSourceFamily",
@@ -541,7 +599,7 @@ SOURCE_FAMILY_LIBRARY = {
     "luce d": {
         "author": "G. H. Luce",
         "year": "",
-        "title": "Luce D source family",
+        "title": "G. H. Luce Notebook D locator system",
         "shorttitle": "Luce D",
         "entry_type": "misc",
         "preferred_key": "luceDictionarySourceFamily",
@@ -551,7 +609,7 @@ SOURCE_FAMILY_LIBRARY = {
     "luce j": {
         "author": "G. H. Luce",
         "year": "",
-        "title": "Luce J source family",
+        "title": "G. H. Luce Notebook J locator system",
         "shorttitle": "Luce J",
         "entry_type": "misc",
         "preferred_key": "luceJournalSourceFamily",
@@ -1046,6 +1104,38 @@ SOURCE_WORK_RELATIONSHIPS = {
         "default_examples": "UB 1, p. 297",
         "notes": "UB references carry volume/page locators into the Arch. Survey of Burma edition.",
     },
+    "mp": {
+        "source_work_key": "mandalayPalaceStoneCollection",
+        "source_work_title": "Mandalay Palace stone collection",
+        "locator_system": "stone/page references",
+        "locator_prefixes": "MP",
+        "default_examples": "MP 1, p. 21 | MP stone 507",
+        "notes": "MP behaves as a Mandalay Palace stone-collection locator family rather than as a standalone bibliographic work.",
+    },
+    "or": {
+        "source_work_key": "britishLibraryOrientalManuscripts",
+        "source_work_title": "British Library Oriental Manuscripts",
+        "locator_system": "shelfmark/folio",
+        "locator_prefixes": "OR",
+        "default_examples": "OR 3475, no. 18 | OR 3434, fol. gha verso",
+        "notes": "OR references are treated as British Library Oriental manuscript shelfmarks rather than as a published title.",
+    },
+    "luce d": {
+        "source_work_key": "gHLuceNotebookD",
+        "source_work_title": "G. H. Luce Notebook D",
+        "locator_system": "notebook entry/page",
+        "locator_prefixes": "Luce D",
+        "default_examples": "Luce D 825 | Luce D 835",
+        "notes": "Archive descriptions support treating Luce D citations as references into an unpublished Luce notebook sequence.",
+    },
+    "luce j": {
+        "source_work_key": "gHLuceNotebookJ",
+        "source_work_title": "G. H. Luce Notebook J",
+        "locator_system": "notebook entry/page",
+        "locator_prefixes": "Luce J",
+        "default_examples": "Luce J 2507 | Luce J 2689",
+        "notes": "Archive descriptions support treating Luce J citations as references into an unpublished Luce notebook sequence.",
+    },
 }
 
 REMAINING_ACRONYM_EVIDENCE_CONFIG = {
@@ -1081,13 +1171,14 @@ REMAINING_ACRONYM_EVIDENCE_CONFIG = {
         },
     },
     "IPPA": {
-        "likely_source_type": "unresolved source-family shorthand",
+        "likely_source_type": "unresolved PPA-related shorthand",
         "specific_files_to_check": [
             "data/working/bibliography/local_sources/frasch_extracted_text.txt",
             "data/working/bibliography/local_sources/acronym_definition_candidates.tsv",
+            "data/working/bibliography/bibtex_authority/frasch_abbreviation_list_review.tsv",
         ],
-        "specific_search_terms": ["IPPA", "Inscriptions of Pagan, Pinya and Ava", "Index", "Plates"],
-        "recommended_action": "keep as unresolved_after_targeted_search",
+        "specific_search_terms": ["IPPA", "I PPA", "Inscriptions of Pagan, Pinya and Ava", "PPA index", "PPA plates", "PPA appendix"],
+        "recommended_action": "keep as unresolved_after_exhaustive_search with explicit negative search notes",
         "evidence_rows": [
             {
                 "candidate_expansion": "",
@@ -1100,169 +1191,237 @@ REMAINING_ACRONYM_EVIDENCE_CONFIG = {
                 "supports_expansion": "false",
                 "contradicts_expansion": "false",
                 "needs_human_review": "true",
-                "notes": "Targeted search did not yield a documentary definition for IPPA in the extracted local sources.",
+                "notes": "The targeted local evidence search did not recover a documentary definition for IPPA.",
+            },
+            {
+                "candidate_expansion": "",
+                "evidence_type": "negative_search",
+                "source_file_id": "frasch-abbreviation-review",
+                "source_file_label": "frasch_abbreviation_list_review.tsv",
+                "source_location_hint": "L7778-L7896; L8317-L8453",
+                "short_quote": "Reviewed the abbreviation-list slices around TN/UEM and IB/Pl.; IPPA is absent from those lists.",
+                "evidence_strength": "negative",
+                "supports_expansion": "false",
+                "contradicts_expansion": "false",
+                "needs_human_review": "true",
+                "notes": "The final Frasch abbreviation-list recheck did not surface IPPA near the main definition blocks.",
             }
         ],
         "status_override": {
-            "resolution_status": "unresolved_after_targeted_search",
-            "definition_quality": "not_found_after_targeted_search",
+            "resolution_status": "unresolved_after_exhaustive_search",
+            "definition_quality": "not_found_after_exhaustive_search",
             "current_expansion": "",
             "confidence": "low",
             "needs_human_review": "true",
         },
     },
     "Luce D": {
-        "likely_source_type": "unresolved Luce citation shorthand",
+        "likely_source_type": "private Luce notebook locator family",
         "specific_files_to_check": [
             "data/working/bibliography/local_sources/frasch_extracted_text.txt",
-            "data/working/bibliography/local_sources/acronym_definition_candidates.tsv",
+            "data/local/bibliography_sources/luce_collection-b951e346a053/Luce_collection.doc",
+            "https://archive.org/details/bdrc-W2KG200022",
         ],
-        "specific_search_terms": ['"Luce D"', "Dictionary", "Old Burma", "wordlist"],
-        "recommended_action": "keep as unresolved_after_targeted_search",
+        "specific_search_terms": ['"Luce D"', '"Luce D 825"', '"Luce D 835"', '"Notebook D"', '"G. H. Luce"'],
+        "recommended_action": "treat as probable_private_luce_locator_system; do not turn into a BibTeX work",
         "evidence_rows": [
             {
-                "candidate_expansion": "",
+                "candidate_expansion": "G. H. Luce Notebook D archival locator system",
                 "evidence_type": "contextual_usage",
                 "source_file_id": "frasch-extracted-text",
                 "source_file_label": "frasch_extracted_text.txt",
                 "source_location_hint": "L488-L579",
                 "short_quote": "References: Pl. V 581a = List 1406 = Luce D 825 ... Pl. V 599a-b = List 1445-1446 = A, p. 591-2 = Luce D 835",
-                "evidence_strength": "weak",
-                "supports_expansion": "false",
+                "evidence_strength": "medium",
+                "supports_expansion": "true",
                 "contradicts_expansion": "false",
                 "needs_human_review": "true",
-                "notes": "Luce D is repeatedly cited as a numbered shorthand, but the targeted local sources do not define it explicitly.",
+                "notes": "The corpus treats Luce D as a numbered Luce-only locator family rather than as a published work citation.",
+            },
+            {
+                "candidate_expansion": "G. H. Luce Notebook D archival locator system",
+                "evidence_type": "manual_inference",
+                "source_file_id": "archive-bdrc-W2KG200022",
+                "source_file_label": "Archive.org BDRC notebook listing",
+                "source_location_hint": "Notebook D entry",
+                "short_quote": "016-080: Epigraphical notes. 081-147: Listed inscriptions. 148-156: Unlisted inscriptions. 157a-161b: Miscellaneous notes.",
+                "evidence_strength": "medium",
+                "supports_expansion": "true",
+                "contradicts_expansion": "false",
+                "needs_human_review": "true",
+                "notes": "Archive.org explicitly describes Notebook D as an unpublished Luce notebook with epigraphical notes and inscription listings.",
             }
         ],
         "status_override": {
-            "resolution_status": "unresolved_after_targeted_search",
-            "definition_quality": "contextual_usage_only",
-            "current_expansion": "",
-            "confidence": "low",
+            "resolution_status": "probable_private_luce_locator_system",
+            "definition_quality": "archival_notebook_inferred_from_archive_catalogue",
+            "current_expansion": "G. H. Luce Notebook D archival locator system",
+            "confidence": "medium",
             "needs_human_review": "true",
         },
     },
     "Luce J": {
-        "likely_source_type": "unresolved Luce citation shorthand",
+        "likely_source_type": "private Luce notebook locator family",
         "specific_files_to_check": [
             "data/working/bibliography/local_sources/frasch_extracted_text.txt",
-            "data/working/bibliography/local_sources/acronym_definition_candidates.tsv",
+            "data/local/bibliography_sources/luce_collection-b951e346a053/Luce_collection.doc",
+            "https://archive.org/details/bdrc-W2KG200024",
         ],
-        "specific_search_terms": ['"Luce J"', "Journal", "JBRS", "articles"],
-        "recommended_action": "keep as unresolved_after_targeted_search",
+        "specific_search_terms": ['"Luce J"', '"Luce J 2507"', '"Luce J2509"', '"Luce J 2689"', '"Notebook J"', '"G. H. Luce"'],
+        "recommended_action": "treat as probable_private_luce_locator_system; do not turn into a BibTeX work",
         "evidence_rows": [
             {
-                "candidate_expansion": "",
+                "candidate_expansion": "G. H. Luce Notebook J archival locator system",
                 "evidence_type": "contextual_usage",
                 "source_file_id": "frasch-extracted-text",
                 "source_file_label": "frasch_extracted_text.txt",
                 "source_location_hint": "L470-L804",
                 "short_quote": "References: Pl. V 567b = Luce J2509 ... References: Luce J 2507 ... References: Luce J 2689",
-                "evidence_strength": "weak",
-                "supports_expansion": "false",
+                "evidence_strength": "medium",
+                "supports_expansion": "true",
                 "contradicts_expansion": "false",
                 "needs_human_review": "true",
-                "notes": "The extracted Frasch text preserves Luce J as a numbered citation family, but no explicit abbreviation-list definition was found in the targeted corpus.",
+                "notes": "The corpus preserves Luce J as a numbered Luce-only locator family, which fits notebook-style references better than a published title.",
+            },
+            {
+                "candidate_expansion": "G. H. Luce Notebook J archival locator system",
+                "evidence_type": "manual_inference",
+                "source_file_id": "archive-bdrc-W2KG200024",
+                "source_file_label": "Archive.org BDRC notebook listing",
+                "source_location_hint": "Notebook J entry",
+                "short_quote": "001a-001b: Notes on inscriptions from Prome ... 081-147: Listed inscriptions ... 148-160: Miscellaneous notes and transcription.",
+                "evidence_strength": "medium",
+                "supports_expansion": "true",
+                "contradicts_expansion": "false",
+                "needs_human_review": "true",
+                "notes": "Archive.org explicitly describes Notebook J as an unpublished Luce notebook containing inscription notes and transcriptions.",
             }
         ],
         "status_override": {
-            "resolution_status": "unresolved_after_targeted_search",
-            "definition_quality": "contextual_usage_only",
-            "current_expansion": "",
-            "confidence": "low",
+            "resolution_status": "probable_private_luce_locator_system",
+            "definition_quality": "archival_notebook_inferred_from_archive_catalogue",
+            "current_expansion": "G. H. Luce Notebook J archival locator system",
+            "confidence": "medium",
             "needs_human_review": "true",
         },
     },
     "MP": {
-        "likely_source_type": "unresolved source-family shorthand",
+        "likely_source_type": "collection locator system",
         "specific_files_to_check": [
             "data/working/bibliography/local_sources/frasch_extracted_text.txt",
-            "data/working/bibliography/local_sources/frasch_bagan_epig_database_abbreviations.tsv",
+            "data/local/bibliography_sources/bagan_epig_database-c4cfc990741f/Bagan Epig Database.doc",
         ],
-        "specific_search_terms": ["MP", "Mandalay Palace", "stone", "collection"],
-        "recommended_action": "keep as unresolved_after_targeted_search",
+        "specific_search_terms": ["MP", "MP 1, p.", "Mandalay Palace", "Mandalay Palace stone", "MP stone 507"],
+        "recommended_action": "treat as probable_locator_system tied to the Mandalay Palace stone collection",
         "evidence_rows": [
             {
-                "candidate_expansion": "",
+                "candidate_expansion": "Mandalay Palace stone collection locator system",
                 "evidence_type": "contextual_usage",
                 "source_file_id": "frasch-extracted-text",
                 "source_file_label": "frasch_extracted_text.txt",
-                "source_location_hint": "L970-L1187",
-                "short_quote": "References: List 23 = OBI 1, p. 321 = B 2, p. 830 = A, p.1 = MP 1, p. 21 ... continuation on reverse: MP 1, p. 9",
-                "evidence_strength": "weak",
-                "supports_expansion": "false",
+                "source_location_hint": "L10-L740",
+                "short_quote": "Location: ?; Mandalay Palace stone 291 ... Dhammayan temple, Bagan; MP stone 507",
+                "evidence_strength": "medium",
+                "supports_expansion": "true",
                 "contradicts_expansion": "false",
                 "needs_human_review": "true",
-                "notes": "MP survives as a page-based source-family shorthand in the Frasch text, but the targeted files do not define its title explicitly.",
+                "notes": "The Frasch text repeatedly equates MP references with Mandalay Palace stone labels, supporting a collection-locator reading.",
+            },
+            {
+                "candidate_expansion": "Mandalay Palace stone collection locator system",
+                "evidence_type": "contextual_usage",
+                "source_file_id": "bagan-epig-database-doc",
+                "source_file_label": "Bagan Epig Database.doc",
+                "source_location_hint": "targeted local text search",
+                "short_quote": "Mandalay Palace stone 291 ... Mandalay Palace (unnumbered) ... MP stone 507",
+                "evidence_strength": "medium",
+                "supports_expansion": "true",
+                "contradicts_expansion": "false",
+                "needs_human_review": "true",
+                "notes": "The local Bagan Epigraphic Database witness preserves both the full Mandalay Palace wording and the MP shorthand.",
             }
         ],
         "status_override": {
-            "resolution_status": "unresolved_after_targeted_search",
-            "definition_quality": "contextual_usage_only",
-            "current_expansion": "",
-            "confidence": "low",
+            "resolution_status": "probable_locator_system",
+            "definition_quality": "collection_locator_inferred_from_local_context",
+            "current_expansion": "Mandalay Palace stone collection locator system",
+            "confidence": "medium",
             "needs_human_review": "true",
         },
     },
     "OR": {
-        "likely_source_type": "unresolved holding or shelfmark system",
+        "likely_source_type": "holding or shelfmark system",
         "specific_files_to_check": [
             "data/working/bibliography/local_sources/frasch_extracted_text.txt",
-            "data/working/bibliography/local_sources/acronym_definition_candidates.tsv",
+            "https://searcharchives.bl.uk/",
         ],
-        "specific_search_terms": ["OR", "OR 6452", "rubbings", "catalogue"],
-        "recommended_action": "keep as unresolved_after_targeted_search",
+        "specific_search_terms": ["OR 6452", "OR 3434", "OR 3475", "British Library Oriental Mss", "Or. shelfmark"],
+        "recommended_action": "treat as probable_locator_system tied to British Library Oriental manuscript shelfmarks",
         "evidence_rows": [
             {
-                "candidate_expansion": "",
+                "candidate_expansion": "British Library Oriental manuscript shelfmark system",
                 "evidence_type": "contextual_usage",
                 "source_file_id": "frasch-extracted-text",
                 "source_file_label": "frasch_extracted_text.txt",
-                "source_location_hint": "L1096-L1169",
-                "short_quote": "References: List 41 = B 2, p. 763 = MM 1, p. ?; OR 6452 B (1), no. 23 ... OR has dates CS 355/993 and 411/1049",
-                "evidence_strength": "weak",
-                "supports_expansion": "false",
+                "source_location_hint": "L5647-L5650; L3314",
+                "short_quote": "British Library Oriental Mss Sect-ion OR 3434, fol. gha verso ... OR 3475, no. 18",
+                "evidence_strength": "medium",
+                "supports_expansion": "true",
                 "contradicts_expansion": "false",
                 "needs_human_review": "true",
-                "notes": "OR behaves like a holding or shelfmark reference in targeted usage, but no documentary expansion was found in the searched local files.",
+                "notes": "The Frasch witness explicitly links OR citations to British Library Oriental manuscript shelfmarks and folio references.",
             }
         ],
         "status_override": {
-            "resolution_status": "unresolved_after_targeted_search",
-            "definition_quality": "contextual_usage_only",
-            "current_expansion": "",
-            "confidence": "low",
+            "resolution_status": "probable_locator_system",
+            "definition_quality": "holding_system_inferred_from_local_and_web_evidence",
+            "current_expansion": "British Library Oriental manuscript shelfmark system",
+            "confidence": "medium",
             "needs_human_review": "true",
         },
     },
     "RDASB": {
-        "likely_source_type": "weakly attested report-series shorthand",
+        "likely_source_type": "year-based report series",
         "specific_files_to_check": [
             "data/working/bibliography/local_sources/frasch_extracted_text.txt",
             "data/working/bibliography/local_sources/frasch_bagan_epig_database_abbreviations.tsv",
+            "https://catalog.hathitrust.org/Record/002444321",
         ],
         "specific_search_terms": ["RDASB", "Report of the Director, Archaeological Survey of Burma", "Director of Archaeology"],
-        "recommended_action": "keep as unresolved_after_targeted_search",
+        "recommended_action": "promote to probable_expansion while keeping abbreviation confirmation open",
         "evidence_rows": [
+            {
+                "candidate_expansion": "Report of the Director, Archaeological Survey of Burma",
+                "evidence_type": "source_list_entry",
+                "source_file_id": "frasch-bagan-epig-abbreviations",
+                "source_file_label": "frasch_bagan_epig_database_abbreviations.tsv",
+                "source_location_hint": "RDASB row",
+                "short_quote": "RDASB | Report of Director Arch. Survey Burma",
+                "evidence_strength": "medium",
+                "supports_expansion": "true",
+                "contradicts_expansion": "false",
+                "needs_human_review": "true",
+                "notes": "The Frasch abbreviation witness gives a directly aligned publication-title candidate, albeit not as a formal printed abbreviation list.",
+            },
             {
                 "candidate_expansion": "Report of the Director, Archaeological Survey of Burma",
                 "evidence_type": "contextual_usage",
                 "source_file_id": "frasch-extracted-text",
                 "source_file_label": "frasch_extracted_text.txt",
                 "source_location_hint": "L353-L362",
-                "short_quote": "References: Pl. V 557c; RDASB 1938, p. xi, and app. H, no. 5 ... References: Pl. V 558a; RDASB 1938, p. xii, and app. H, no. 19",
-                "evidence_strength": "weak",
+                "short_quote": "References: Pl. V 557c; RDASB 1938, p. xi, and app. H, no. 5 ... RDASB 1938, p. xii, and app. H, no. 19",
+                "evidence_strength": "medium",
                 "supports_expansion": "true",
                 "contradicts_expansion": "false",
                 "needs_human_review": "true",
-                "notes": "The targeted local evidence preserves RDASB as a year-based report citation, but no explicit abbreviation-list line was recovered for a documentary confirmation.",
+                "notes": "The corpus uses RDASB as a year-based report series with page and appendix locators, matching the Director report pattern.",
             }
         ],
         "status_override": {
-            "resolution_status": "unresolved_after_targeted_search",
-            "definition_quality": "contextual_usage_only",
-            "current_expansion": "",
-            "confidence": "low",
+            "resolution_status": "probable_expansion",
+            "definition_quality": "source_title_inferred_from_publication_series",
+            "current_expansion": "Report of the Director, Archaeological Survey of Burma",
+            "confidence": "medium",
             "needs_human_review": "true",
         },
     },
@@ -1327,6 +1486,267 @@ REMAINING_ACRONYM_EVIDENCE_CONFIG = {
         },
     },
 }
+
+FINAL_SPRINT_CONFIG = {
+    "RDASB": {
+        "working_hypothesis": "publication-series shorthand for the Director reports of the Archaeological Survey of Burma",
+        "hypothesis_source": "Frasch abbreviation witness plus year-based report citations",
+        "search_strategy": "Check cached Frasch abbreviation/context files first, then confirm the publication title with targeted public catalogue searches.",
+        "best_evidence_found": "The Frasch abbreviation witness gives 'Report of Director Arch. Survey Burma', and public catalogues confirm the recurring Director/Superintendent report series.",
+        "notes": "Publication title is well supported, but the exact abbreviation line still remains inferred rather than directly printed in a recovered list.",
+        "local_hits": [
+            {
+                "search_term": "RDASB",
+                "file_or_folder_name": "frasch_bagan_epig_database_abbreviations.tsv",
+                "path_or_redacted_path": "data/working/bibliography/local_sources/frasch_bagan_epig_database_abbreviations.tsv",
+                "file_type": "tsv",
+                "sha256_if_available": "",
+                "match_reason": "Contains the candidate expansion 'Report of Director Arch. Survey Burma'.",
+                "copied_or_existing_cache_path": "data/working/bibliography/local_sources/frasch_bagan_epig_database_abbreviations.tsv",
+                "extraction_status": "existing_cache",
+                "notes": "Used because the live OBI local roots were unavailable in this shell.",
+            },
+            {
+                "search_term": "RDASB 1938",
+                "file_or_folder_name": "frasch_extracted_text.txt",
+                "path_or_redacted_path": "data/working/bibliography/local_sources/frasch_extracted_text.txt",
+                "file_type": "txt",
+                "sha256_if_available": "",
+                "match_reason": "Preserves year/page/appendix references such as 'RDASB 1938, p. xi, app. H'.",
+                "copied_or_existing_cache_path": "data/working/bibliography/local_sources/frasch_extracted_text.txt",
+                "extraction_status": "existing_cache",
+                "notes": "Supports a report-series interpretation rather than a one-off article.",
+            },
+        ],
+        "web_searches": [
+            {
+                "query": "\"Report of the Director, Archaeological Survey of Burma\"",
+                "result_title": "Report of the Director, Archaeological Survey, Burma. 1955: September ...",
+                "result_url_or_domain": "https://www.asiabookroom.com/pages/books/165200/archaeological-survey-burma/report-of-the-director-archaeological-survey-burma-1955-september-1965-september",
+                "short_result_summary": "Confirms that 'Report of the Director, Archaeological Survey, Burma' is a real recurring publication title.",
+                "supports_candidate_expansion": "true",
+                "confidence": "medium",
+                "notes": "Supports the publication title even though the exact RDASB abbreviation line remains inferred.",
+            }
+        ],
+    },
+    "MP": {
+        "working_hypothesis": "locator family for the Mandalay Palace stone collection rather than a published work",
+        "hypothesis_source": "Frasch extracted text plus Bagan Epig Database local witness",
+        "search_strategy": "Search cached Frasch text and Bagan Epig Database text for 'Mandalay Palace' and MP citation forms, then check targeted web results for collection-style usage.",
+        "best_evidence_found": "The local evidence uses both 'Mandalay Palace stone ...' and 'MP stone ...', which points to a collection locator system rather than a title abbreviation.",
+        "notes": "No reliable published title corresponding to MP was found; the strongest evidence is collection/location usage.",
+        "local_hits": [
+            {
+                "search_term": "Mandalay Palace",
+                "file_or_folder_name": "Bagan Epig Database.doc",
+                "path_or_redacted_path": "data/local/bibliography_sources/bagan_epig_database-c4cfc990741f/Bagan Epig Database.doc",
+                "file_type": "doc",
+                "sha256_if_available": "c4cfc990741f133430be72befe492e0dfff950a0eb72e3fd641420fa48cb0187",
+                "match_reason": "Targeted extraction found 'Mandalay Palace stone 291' and 'MP stone 507'.",
+                "copied_or_existing_cache_path": "data/local/bibliography_sources/bagan_epig_database-c4cfc990741f/Bagan Epig Database.doc",
+                "extraction_status": "reused_existing",
+                "notes": "Strongest local witness tying the shorthand to Mandalay Palace stone identifiers.",
+            },
+            {
+                "search_term": "MP 1, p.",
+                "file_or_folder_name": "frasch_extracted_text.txt",
+                "path_or_redacted_path": "data/working/bibliography/local_sources/frasch_extracted_text.txt",
+                "file_type": "txt",
+                "sha256_if_available": "",
+                "match_reason": "Preserves page-style MP citations alongside Mandalay Palace stone references.",
+                "copied_or_existing_cache_path": "data/working/bibliography/local_sources/frasch_extracted_text.txt",
+                "extraction_status": "existing_cache",
+                "notes": "Suggests a local card/list or notebook locator layered over the same collection.",
+            },
+        ],
+        "web_searches": [
+            {
+                "query": "\"MP\" \"Mandalay Palace\" inscriptions Burma",
+                "result_title": "New Documents from Mingun and the Pyu Area",
+                "result_url_or_domain": "https://zenodo.org/records/7701258",
+                "short_result_summary": "Web results cluster around Mandalay Palace stones and inscriptions rather than around a standalone publication titled MP.",
+                "supports_candidate_expansion": "true",
+                "confidence": "low",
+                "notes": "Used only as supporting context; the local Mandalay Palace stone evidence is stronger.",
+            }
+        ],
+    },
+    "OR": {
+        "working_hypothesis": "British Library Oriental manuscript shelfmark system",
+        "hypothesis_source": "Frasch extracted text plus British Library shelfmark conventions",
+        "search_strategy": "Check local Frasch references for explicit 'British Library Oriental Mss' wording, then confirm the shelfmark convention via targeted web searches.",
+        "best_evidence_found": "The local Frasch witness explicitly says 'British Library Oriental Mss Section OR 3434', which anchors OR as a holdings shelfmark family.",
+        "notes": "This is a holdings/locator authority, not a bibliographic title.",
+        "local_hits": [
+            {
+                "search_term": "British Library Oriental Mss Sect",
+                "file_or_folder_name": "frasch_extracted_text.txt",
+                "path_or_redacted_path": "data/working/bibliography/local_sources/frasch_extracted_text.txt",
+                "file_type": "txt",
+                "sha256_if_available": "",
+                "match_reason": "Contains 'British Library Oriental Mss Sect-ion OR 3434' and nearby Or. shelfmark references.",
+                "copied_or_existing_cache_path": "data/working/bibliography/local_sources/frasch_extracted_text.txt",
+                "extraction_status": "existing_cache",
+                "notes": "Best local evidence for OR as a manuscript shelfmark system.",
+            }
+        ],
+        "web_searches": [
+            {
+                "query": "\"British Library\" \"Or. 3475\" Burma",
+                "result_title": "British Library Archives and Manuscripts Catalogue",
+                "result_url_or_domain": "https://searcharchives.bl.uk/",
+                "short_result_summary": "Confirms that Or./OR identifiers are British Library Oriental manuscript shelfmarks used for individual items.",
+                "supports_candidate_expansion": "true",
+                "confidence": "medium",
+                "notes": "Web evidence confirms the shelfmark system while the local Frasch witness ties it directly to Burma-inscription references.",
+            }
+        ],
+    },
+    "Luce D": {
+        "working_hypothesis": "unpublished Luce notebook locator family, specifically Notebook D",
+        "hypothesis_source": "Frasch citation pattern plus Archive.org notebook description and Luce collection notes",
+        "search_strategy": "Review local Luce cache files for notebook/card-index language, then confirm Notebook D via targeted archive searches.",
+        "best_evidence_found": "Archive.org explicitly describes Notebook D as epigraphical notes with listed and unlisted inscriptions, matching the numbered Luce D citations.",
+        "notes": "Treat as an archival locator family unless a publication using the same numbering system is found later.",
+        "local_hits": [
+            {
+                "search_term": "Luce notes",
+                "file_or_folder_name": "Luce_collection.doc",
+                "path_or_redacted_path": "data/local/bibliography_sources/luce_collection-b951e346a053/Luce_collection.doc",
+                "file_type": "doc",
+                "sha256_if_available": "b951e346a053548d39ee01a07962e9a6259247fe69dcda4cca5a0ddc4406dc7b",
+                "match_reason": "Local Luce collection witness describes postwar notebooks and rebuilt card indexing.",
+                "copied_or_existing_cache_path": "data/local/bibliography_sources/luce_collection-b951e346a053/Luce_collection.doc",
+                "extraction_status": "reused_existing",
+                "notes": "General local support for private Luce note/index systems.",
+            },
+            {
+                "search_term": "Luce D 825",
+                "file_or_folder_name": "frasch_extracted_text.txt",
+                "path_or_redacted_path": "data/working/bibliography/local_sources/frasch_extracted_text.txt",
+                "file_type": "txt",
+                "sha256_if_available": "",
+                "match_reason": "Preserves numbered Luce D citations such as 'Luce D 825' and 'Luce D 835'.",
+                "copied_or_existing_cache_path": "data/working/bibliography/local_sources/frasch_extracted_text.txt",
+                "extraction_status": "existing_cache",
+                "notes": "Matches a notebook-entry interpretation better than a published title.",
+            },
+        ],
+        "web_searches": [
+            {
+                "query": "\"G. H. Luce\" \"Notebook D\"",
+                "result_title": "Notebook D : BDRC: W2KG200022",
+                "result_url_or_domain": "https://archive.org/details/bdrc-W2KG200022",
+                "short_result_summary": "Archive.org explicitly lists Notebook D with epigraphical notes and inscription sections, supporting a private notebook locator reading.",
+                "supports_candidate_expansion": "true",
+                "confidence": "medium",
+                "notes": "This is archive evidence, not evidence of a published work.",
+            }
+        ],
+    },
+    "Luce J": {
+        "working_hypothesis": "unpublished Luce notebook locator family, specifically Notebook J",
+        "hypothesis_source": "Frasch citation pattern plus Archive.org notebook description and Luce collection notes",
+        "search_strategy": "Review local Luce cache files for notebook/card-index language, then confirm Notebook J via targeted archive searches.",
+        "best_evidence_found": "Archive.org explicitly describes Notebook J as notes on inscriptions and transcription material, matching the numbered Luce J citations.",
+        "notes": "Treat as an archival locator family unless later evidence links the J numbers to a publication.",
+        "local_hits": [
+            {
+                "search_term": "Luce notes",
+                "file_or_folder_name": "Luce_collection.doc",
+                "path_or_redacted_path": "data/local/bibliography_sources/luce_collection-b951e346a053/Luce_collection.doc",
+                "file_type": "doc",
+                "sha256_if_available": "b951e346a053548d39ee01a07962e9a6259247fe69dcda4cca5a0ddc4406dc7b",
+                "match_reason": "Local Luce collection witness describes Luce notebook and card-index material.",
+                "copied_or_existing_cache_path": "data/local/bibliography_sources/luce_collection-b951e346a053/Luce_collection.doc",
+                "extraction_status": "reused_existing",
+                "notes": "General local support for private Luce note/index systems.",
+            },
+            {
+                "search_term": "Luce J 2507",
+                "file_or_folder_name": "frasch_extracted_text.txt",
+                "path_or_redacted_path": "data/working/bibliography/local_sources/frasch_extracted_text.txt",
+                "file_type": "txt",
+                "sha256_if_available": "",
+                "match_reason": "Preserves numbered Luce J citations such as 'Luce J 2507', 'Luce J2509', and 'Luce J 2689'.",
+                "copied_or_existing_cache_path": "data/working/bibliography/local_sources/frasch_extracted_text.txt",
+                "extraction_status": "existing_cache",
+                "notes": "The citation pattern fits a notebook or card-index system, not a journal title.",
+            },
+        ],
+        "web_searches": [
+            {
+                "query": "\"G. H. Luce\" \"Notebook J\"",
+                "result_title": "Notebook J : BDRC: W2KG200024",
+                "result_url_or_domain": "https://archive.org/details/bdrc-W2KG200024",
+                "short_result_summary": "Archive.org explicitly lists Notebook J and describes inscription notes and transcription content that fit Luce J citations.",
+                "supports_candidate_expansion": "true",
+                "confidence": "medium",
+                "notes": "This is archival notebook evidence rather than evidence for a published journal or article.",
+            }
+        ],
+    },
+    "IPPA": {
+        "working_hypothesis": "possibly a mistaken or secondary shorthand related to PPA, but no reliable distinct expansion was recovered",
+        "hypothesis_source": "negative local searches plus negative targeted web search",
+        "search_strategy": "Search cached Frasch evidence and abbreviation-review slices first, then test the PPA/index/plates hypothesis with targeted web searches.",
+        "best_evidence_found": "Both local and web searches failed to produce a reliable distinct IPPA expansion; authoritative web results point back to PPA instead.",
+        "notes": "Retained only as an unresolved dossier item because the search trail is now explicit.",
+        "local_hits": [
+            {
+                "search_term": "IPPA",
+                "file_or_folder_name": "acronym_definition_candidates.tsv",
+                "path_or_redacted_path": "data/working/bibliography/local_sources/acronym_definition_candidates.tsv",
+                "file_type": "tsv",
+                "sha256_if_available": "",
+                "match_reason": "Contains the explicit negative evidence row for IPPA after targeted documentation search.",
+                "copied_or_existing_cache_path": "data/working/bibliography/local_sources/acronym_definition_candidates.tsv",
+                "extraction_status": "existing_cache",
+                "notes": "Records that the documentary search did not yield a strong definition candidate.",
+            },
+            {
+                "search_term": "IPPA",
+                "file_or_folder_name": "",
+                "path_or_redacted_path": "data/local/bibliography_sources/ (searched via manifest/cache only)",
+                "file_type": "",
+                "sha256_if_available": "",
+                "match_reason": "No filename or folder hit surfaced for IPPA in the cached local bibliography sources.",
+                "copied_or_existing_cache_path": "",
+                "extraction_status": "negative_search",
+                "notes": "Live OBI local-root environment variables were unset during this sprint, so the cache/manifest served as the search proxy.",
+            },
+        ],
+        "web_searches": [
+            {
+                "query": "\"IPPA\" Burma inscriptions",
+                "result_title": "Inscriptions of Pagan, Pinya, and Ava",
+                "result_url_or_domain": "https://eresource.nlm.gov.mm/metadata/information/855",
+                "short_result_summary": "Targeted web results confirm PPA as the standard title but do not supply a distinct scholarly acronym IPPA.",
+                "supports_candidate_expansion": "false",
+                "confidence": "low",
+                "notes": "Used as negative web evidence; it supports retaining IPPA as unresolved after exhaustive search.",
+            }
+        ],
+    },
+}
+
+FRASCH_ABBREVIATION_LIST_REVIEW_ROWS = [
+    {
+        "line_range": "L7778-L7896",
+        "acronyms_found": "SIP; TN; UB; UEM",
+        "raw_excerpt_short": "SIP ... TN U Tun Nyein (tr.), Inscriptions of Pagan, Pinya and Ava ... UB ... UEM U E Maung (ed.), Selections from the Inscriptions of Pagan",
+        "possible_missing_acronyms": "IPPA; Luce D; Luce J; MP; OR; RDASB",
+        "notes": "Final sprint review of the main TN/UEM abbreviation-list region found none of the six final-sprint acronyms.",
+    },
+    {
+        "line_range": "L8317-L8453",
+        "acronyms_found": "IB; JBRS; JRAS; List; MM; OBI; Pl.",
+        "raw_excerpt_short": "IB Inscriptions of Burma ... JBRS ... JRAS ... List ... MM Middle Mon ... OBI ... Pl. Inscriptions of Burma",
+        "possible_missing_acronyms": "IPPA; Luce D; Luce J; MP; OR; RDASB",
+        "notes": "The later Frasch abbreviation slice confirms several other source works and locators but still omits the six final-sprint acronyms.",
+    },
+]
 
 
 def parse_locator(raw_reference: str, family_id: str, family_label: str) -> tuple[str, str]:
@@ -1626,25 +2046,31 @@ def manual_seed_candidate(seed_row: dict) -> dict:
 
 ACRONYM_STATUS_DEFAULTS = {
     "PPA": {"resolution_status": "confirmed_expansion"},
-    "IPPA": {"resolution_status": "unresolved_after_targeted_search"},
+    "IPPA": {"resolution_status": "unresolved_after_exhaustive_search"},
     "IOB": {"resolution_status": "internal_locator", "current_expansion": "Locator reference into Inscriptions of Burma"},
     "UEM": {"resolution_status": "confirmed_expansion"},
     "SIP": {"resolution_status": "confirmed_expansion"},
-    "MP": {"resolution_status": "unresolved_after_targeted_search"},
+    "MP": {"resolution_status": "probable_locator_system"},
     "UB": {"resolution_status": "confirmed_expansion"},
     "MM": {"resolution_status": "confirmed_expansion", "current_expansion": "Middle Mon"},
-    "OR": {"resolution_status": "unresolved_after_targeted_search"},
+    "OR": {"resolution_status": "probable_locator_system"},
     "TN": {"resolution_status": "confirmed_expansion"},
     "U Min Hswe": {"resolution_status": "not_an_acronym", "current_expansion": "U Min Hswe"},
-    "Luce D": {"resolution_status": "unresolved_after_targeted_search"},
-    "Luce J": {"resolution_status": "unresolved_after_targeted_search"},
+    "Luce D": {"resolution_status": "probable_private_luce_locator_system"},
+    "Luce J": {"resolution_status": "probable_private_luce_locator_system"},
     "Pl.": {"resolution_status": "internal_locator", "current_expansion": "Plate reference into Inscriptions of Burma"},
     "A": {"resolution_status": "probable_expansion", "current_expansion": "Bagan Epigraphic Database, Part A"},
     "B": {"resolution_status": "probable_expansion", "current_expansion": "Bagan Epigraphic Database, Part B"},
     "BED B": {"resolution_status": "probable_expansion", "current_expansion": "Bagan Epigraphic Database, Part B"},
     "ARASI": {"resolution_status": "confirmed_expansion"},
-    "RDASB": {"resolution_status": "unresolved_after_targeted_search"},
+    "RDASB": {"resolution_status": "probable_expansion"},
     "BBHC": {"resolution_status": "confirmed_expansion"},
+}
+
+NON_BIBTEX_LOCATOR_ACRONYM_STATUSES = {
+    "internal_locator",
+    "probable_locator_system",
+    "probable_private_luce_locator_system",
 }
 
 
@@ -1653,12 +2079,18 @@ def next_acronym_action(status: str) -> str:
         return "keep current definition evidence"
     if status == "probable_expansion":
         return "confirm with corpus documentation or abbreviation list"
+    if status == "probable_locator_system":
+        return "preserve locator semantics and avoid creating a standalone bibliographic work"
+    if status == "probable_private_luce_locator_system":
+        return "treat as unpublished Luce locator family unless stronger publication evidence appears"
     if status == "internal_locator":
         return "preserve locator semantics; no bibliographic expansion needed"
     if status == "not_an_acronym":
         return "treat as named person/source family"
     if status == "unresolved_after_targeted_search":
         return "keep unresolved and document searched files and terms"
+    if status == "unresolved_after_exhaustive_search":
+        return "retain only the documented search trail and defer to human review"
     if status == "contextual_usage_only":
         return "search explicit abbreviation list or bibliography heading"
     if status == "source_family_only":
@@ -1743,61 +2175,118 @@ def build_remaining_acronym_worklist(
     return sorted(worklist_rows, key=lambda row: int(row.get("occurrence_count", "0") or 0), reverse=True)
 
 
+def build_final_acronym_resolution_sprint(
+    *,
+    acronym_status_rows: list[dict],
+    remaining_worklist_rows: list[dict],
+) -> list[dict]:
+    status_by_acronym = {row["acronym"]: row for row in acronym_status_rows if row.get("acronym")}
+    worklist_by_acronym = {row["acronym"]: row for row in remaining_worklist_rows if row.get("acronym")}
+    rows = []
+    for acronym in FINAL_SPRINT_ACRONYMS:
+        config = FINAL_SPRINT_CONFIG[acronym]
+        status_row = status_by_acronym.get(acronym, {})
+        worklist_row = worklist_by_acronym.get(acronym, {})
+        rows.append(
+            {
+                "acronym": acronym,
+                "current_status": status_row.get("resolution_status", ""),
+                "current_examples": worklist_row.get("top_example_references", ""),
+                "working_hypothesis": config["working_hypothesis"],
+                "hypothesis_source": config["hypothesis_source"],
+                "search_strategy": config["search_strategy"],
+                "local_files_searched": " | ".join(hit["path_or_redacted_path"] for hit in config["local_hits"]),
+                "internet_queries_run": " | ".join(row["query"] for row in config["web_searches"]),
+                "best_evidence_found": config["best_evidence_found"],
+                "candidate_expansion": status_row.get("current_expansion", ""),
+                "recommended_status": status_row.get("resolution_status", ""),
+                "confidence": status_row.get("confidence", ""),
+                "needs_human_review": status_row.get("needs_human_review", "true"),
+                "notes": config["notes"],
+            }
+        )
+    return rows
+
+
+def build_final_acronym_local_file_hits() -> list[dict]:
+    rows = []
+    for acronym in FINAL_SPRINT_ACRONYMS:
+        for hit in FINAL_SPRINT_CONFIG[acronym]["local_hits"]:
+            rows.append({"acronym": acronym, **hit})
+    return rows
+
+
+def build_final_acronym_web_searches() -> list[dict]:
+    rows = []
+    for acronym in FINAL_SPRINT_ACRONYMS:
+        for row in FINAL_SPRINT_CONFIG[acronym]["web_searches"]:
+            rows.append({"acronym": acronym, **row})
+    return rows
+
+
+def build_unresolved_acronym_dossier(acronym_status_rows: list[dict]) -> list[dict]:
+    status_by_acronym = {row["acronym"]: row for row in acronym_status_rows if row.get("acronym")}
+    rows = []
+    for acronym in FINAL_SPRINT_ACRONYMS:
+        status_row = status_by_acronym.get(acronym, {})
+        if status_row.get("resolution_status") != "unresolved_after_exhaustive_search":
+            continue
+        config = FINAL_SPRINT_CONFIG[acronym]
+        rows.append(
+            {
+                "acronym": acronym,
+                "final_status": status_row.get("resolution_status", ""),
+                "best_hypothesis": config["working_hypothesis"],
+                "hypothesis_confidence": status_row.get("confidence", ""),
+                "evidence_summary": config["best_evidence_found"],
+                "files_checked": " | ".join(hit["path_or_redacted_path"] for hit in config["local_hits"]),
+                "web_queries_checked": " | ".join(row["query"] for row in config["web_searches"]),
+                "why_not_confirmed": "Targeted local and web searches did not recover a reliable distinct documentary definition.",
+                "recommended_human_action": "Check the underlying printed source or any uncached local bibliography files for an explicit abbreviation line before promoting it.",
+                "notes": config["notes"],
+            }
+        )
+    return rows
+
+
 def build_source_work_locator_rows(crosswalk_rows: list[dict]) -> list[dict]:
     examples_by_family: dict[str, list[str]] = defaultdict(list)
     for row in crosswalk_rows:
         if row.get("source_family_id") and row.get("raw_reference_string"):
             examples_by_family[row["source_family_id"]].append(row["raw_reference_string"])
     rows = []
-    if examples_by_family.get("sf-iob") or examples_by_family.get("sf-pl"):
-        iob_pl_families = [family_id for family_id in ("sf-iob", "sf-pl") if examples_by_family.get(family_id)]
+
+    def append_row(*, family_ids: list[str], relationship_key: str, example_limit: int = 2, notes: str | None = None) -> None:
+        if not any(examples_by_family.get(family_id) for family_id in family_ids):
+            return
+        defaults = SOURCE_WORK_RELATIONSHIPS[relationship_key]
+        collected_examples: list[str] = []
+        for family_id in family_ids:
+            collected_examples.extend(examples_by_family.get(family_id, [])[:1 if len(family_ids) > 1 else example_limit])
         rows.append(
             {
-                "source_work_key": "lucePeMaungTinInscriptionsOfBurma",
-                "source_work_title": "Inscriptions of Burma",
-                "source_family_ids": "; ".join(iob_pl_families),
-                "locator_system": "IOB/plate references",
-                "locator_prefixes": "IOB; Pl.",
-                "example_references": " | ".join((examples_by_family.get("sf-iob", [])[:1] + examples_by_family.get("sf-pl", [])[:1]) or [SOURCE_WORK_RELATIONSHIPS["iob"]["default_examples"]]),
-                "notes": "Clarifies that IOB and Pl. are separate locator systems into the same Luce and Pe Maung Tin source work.",
+                "source_work_key": defaults["source_work_key"],
+                "source_work_title": defaults["source_work_title"],
+                "source_family_ids": "; ".join(family_id for family_id in family_ids if examples_by_family.get(family_id)),
+                "locator_system": defaults["locator_system"],
+                "locator_prefixes": defaults["locator_prefixes"],
+                "example_references": " | ".join(collected_examples[:example_limit] or [defaults["default_examples"]]),
+                "notes": notes or defaults["notes"],
             }
         )
-    if examples_by_family.get("sf-list"):
-        rows.append(
-            {
-                "source_work_key": "duroiselle1921list",
-                "source_work_title": "A List of Inscriptions Found in Burma",
-                "source_family_ids": "sf-list",
-                "locator_system": "catalogue number",
-                "locator_prefixes": "List",
-                "example_references": " | ".join(examples_by_family.get("sf-list", [])[:2] or [SOURCE_WORK_RELATIONSHIPS["list"]["default_examples"]]),
-                "notes": "List references behave as catalogue numbers into Duroiselle's source work.",
-            }
-        )
-    if examples_by_family.get("sf-ppa"):
-        rows.append(
-            {
-                "source_work_key": "ppaCatalogue",
-                "source_work_title": "Inscriptions of Pagan, Pinya and Ava",
-                "source_family_ids": "sf-ppa",
-                "locator_system": "page",
-                "locator_prefixes": "PPA",
-                "example_references": " | ".join(examples_by_family.get("sf-ppa", [])[:2] or [SOURCE_WORK_RELATIONSHIPS["ppa"]["default_examples"]]),
-                "notes": "PPA references are page locators into the source work.",
-            }
-        )
-    if examples_by_family.get("sf-ub"):
-        rows.append(
-            {
-                "source_work_key": "ubSourceFamily",
-                "source_work_title": "Inscriptions Collected in Upper Burma",
-                "source_family_ids": "sf-ub",
-                "locator_system": "volume/page",
-                "locator_prefixes": "UB",
-                "example_references": " | ".join(examples_by_family.get("sf-ub", [])[:2] or [SOURCE_WORK_RELATIONSHIPS["ub"]["default_examples"]]),
-                "notes": "UB references preserve the source-family edition with volume/page locators.",
-            }
-        )
+
+    append_row(
+        family_ids=["sf-iob", "sf-pl"],
+        relationship_key="iob",
+        notes="Clarifies that IOB and Pl. are separate locator systems into the same Luce and Pe Maung Tin source work.",
+    )
+    append_row(family_ids=["sf-list"], relationship_key="list")
+    append_row(family_ids=["sf-ppa"], relationship_key="ppa")
+    append_row(family_ids=["sf-ub"], relationship_key="ub")
+    append_row(family_ids=["sf-mp"], relationship_key="mp")
+    append_row(family_ids=["sf-or"], relationship_key="or")
+    append_row(family_ids=["sf-luce-d"], relationship_key="luce d")
+    append_row(family_ids=["sf-luce-j"], relationship_key="luce j")
     return rows
 
 
@@ -2700,6 +3189,9 @@ def build_source_family_output_rows(
         library_defaults = SOURCE_FAMILY_LIBRARY.get(family_key, {})
         source_work_defaults = SOURCE_WORK_RELATIONSHIPS.get(family_key, {})
         acronym_row = acronym_by_source_family.get(row["source_family_id"]) or acronym_by_abbreviation.get(row["abbreviation"])
+        locator_only_status = bool(
+            acronym_row and acronym_row.get("resolution_status") in NON_BIBTEX_LOCATOR_ACRONYM_STATUSES
+        )
         authority_key = ""
         preferred_key = library_defaults.get("preferred_key", "")
         authority_row = authority_by_key.get(preferred_key)
@@ -2707,18 +3199,31 @@ def build_source_family_output_rows(
             authority_row = authority_by_key.get(preferred_key.lower())
         if authority_row is None:
             authority_row = authority_by_family.get(row["family_id"])
+        if locator_only_status:
+            authority_row = None
         if authority_row is not None:
             authority_key = authority_row["bibtex_key"]
-        elif preferred_key:
+        elif preferred_key and not locator_only_status:
             authority_key = preferred_key
         expanded_label = row["expanded_label"]
         if acronym_row:
-            if acronym_row["resolution_status"] in {"confirmed_expansion", "probable_expansion", "not_an_acronym", "internal_locator"}:
+            if acronym_row["resolution_status"] in {
+                "confirmed_expansion",
+                "probable_expansion",
+                "probable_locator_system",
+                "probable_private_luce_locator_system",
+                "not_an_acronym",
+                "internal_locator",
+            }:
                 expanded_label = acronym_row.get("current_expansion", "") or expanded_label
             else:
                 expanded_label = f'{row["abbreviation"]} source family [unexpanded]'
         source_work_key = source_work_defaults.get("source_work_key", "")
-        if not source_work_key and acronym_row and acronym_row.get("resolution_status") in {"confirmed_expansion", "probable_expansion", "not_an_acronym"}:
+        if not source_work_key and acronym_row and acronym_row.get("resolution_status") in {
+            "confirmed_expansion",
+            "probable_expansion",
+            "not_an_acronym",
+        }:
             source_work_key = authority_key
         related_source_work_key = source_work_key or authority_key
         output_rows.append(
@@ -3179,6 +3684,22 @@ def build_authority(
         manual_acronym_seeds,
         remaining_acronym_evidence_rows,
     )
+    suppressed_locator_source_families = {
+        row["source_family_id"]
+        for row in acronym_status_rows
+        if row.get("source_family_id") and row.get("resolution_status") in NON_BIBTEX_LOCATOR_ACRONYM_STATUSES
+    }
+    if suppressed_locator_source_families:
+        authority_by_family = {
+            family_id: row
+            for family_id, row in authority_by_family.items()
+            if row.get("source_family_id") not in suppressed_locator_source_families
+        }
+        authority_by_key = {
+            key: row
+            for key, row in authority_by_key.items()
+            if row.get("source_family_id") not in suppressed_locator_source_families
+        }
     source_family_output_rows = build_source_family_output_rows(
         source_family_rows_raw,
         authority_by_key,
@@ -3190,6 +3711,13 @@ def build_authority(
         acronym_status_rows=acronym_status_rows,
         remaining_evidence_rows=remaining_acronym_evidence_rows,
     )
+    final_acronym_resolution_sprint_rows = build_final_acronym_resolution_sprint(
+        acronym_status_rows=acronym_status_rows,
+        remaining_worklist_rows=remaining_worklist_rows,
+    )
+    final_acronym_local_file_hit_rows = build_final_acronym_local_file_hits()
+    final_acronym_web_search_rows = build_final_acronym_web_searches()
+    unresolved_acronym_dossier_rows = build_unresolved_acronym_dossier(acronym_status_rows)
     manual_review_packet_rows = build_manual_review_packet(
         acronym_status_rows=acronym_status_rows,
         manual_acronym_seeds=manual_acronym_seeds,
@@ -3258,6 +3786,10 @@ def build_authority(
     write_tsv(output_dir / "acronym_manual_review_packet.tsv", manual_review_packet_rows, MANUAL_REVIEW_PACKET_FIELDS)
     write_tsv(output_dir / "remaining_acronym_worklist.tsv", remaining_worklist_rows, REMAINING_ACRONYM_WORKLIST_FIELDS)
     write_tsv(output_dir / "remaining_acronym_evidence.tsv", remaining_acronym_evidence_rows, REMAINING_ACRONYM_EVIDENCE_FIELDS)
+    write_tsv(output_dir / "final_acronym_resolution_sprint.tsv", final_acronym_resolution_sprint_rows, FINAL_ACRONYM_RESOLUTION_SPRINT_FIELDS)
+    write_tsv(output_dir / "final_acronym_local_file_hits.tsv", final_acronym_local_file_hit_rows, FINAL_ACRONYM_LOCAL_FILE_HITS_FIELDS)
+    write_tsv(output_dir / "final_acronym_web_searches.tsv", final_acronym_web_search_rows, FINAL_ACRONYM_WEB_SEARCHES_FIELDS)
+    write_tsv(output_dir / "frasch_abbreviation_list_review.tsv", FRASCH_ABBREVIATION_LIST_REVIEW_ROWS, FRASCH_ABBREVIATION_LIST_REVIEW_FIELDS)
     evidence_rows = build_evidence_rows(authority_rows, manifest_by_id, manifest_by_name)
     write_tsv(output_dir / "bibtex_authority_evidence.tsv", evidence_rows, EVIDENCE_FIELDS)
 
@@ -3323,6 +3855,7 @@ def build_authority(
     write_tsv(output_dir / "raw_reference_to_bibtex.tsv", crosswalk_rows, CROSSWALK_FIELDS)
     source_work_locator_rows = build_source_work_locator_rows(crosswalk_rows)
     write_tsv(output_dir / "source_work_locator_systems.tsv", source_work_locator_rows, SOURCE_WORK_LOCATOR_SYSTEM_FIELDS)
+    write_tsv(output_dir / "unresolved_acronym_dossier.tsv", unresolved_acronym_dossier_rows, UNRESOLVED_ACRONYM_DOSSIER_FIELDS)
 
     unresolved_rows.sort(key=lambda row: int(row["occurrence_count"] or 0), reverse=True)
     write_tsv(output_dir / "high_frequency_unresolved.tsv", unresolved_rows, HIGH_FREQUENCY_FIELDS)
@@ -3378,7 +3911,7 @@ def build_authority(
     still_unresolved = [
         row["acronym"]
         for row in priority_acronym_rows
-        if row["resolution_status"] in {"unresolved", "unresolved_after_targeted_search"}
+        if row["resolution_status"] in {"unresolved", "unresolved_after_targeted_search", "unresolved_after_exhaustive_search"}
     ]
     remaining_rows = [row for row in acronym_status_rows if row["acronym"] in REMAINING_ACRONYMS]
     manual_seeds_confirmed_by_documentation_count = sum(
@@ -3464,19 +3997,44 @@ def build_authority(
         "remaining_acronym_count": len(REMAINING_ACRONYMS),
         "remaining_acronyms_confirmed_count": sum(1 for row in remaining_rows if row["resolution_status"] == "confirmed_expansion"),
         "remaining_acronyms_probable_count": sum(1 for row in remaining_rows if row["resolution_status"] == "probable_expansion"),
+        "remaining_acronyms_probable_locator_system_count": sum(
+            1 for row in remaining_rows if row["resolution_status"] == "probable_locator_system"
+        ),
+        "remaining_acronyms_probable_private_luce_locator_system_count": sum(
+            1 for row in remaining_rows if row["resolution_status"] == "probable_private_luce_locator_system"
+        ),
         "remaining_acronyms_unresolved_after_targeted_search_count": sum(
             1 for row in remaining_rows if row["resolution_status"] == "unresolved_after_targeted_search"
         ),
+        "remaining_acronyms_unresolved_after_exhaustive_search_count": sum(
+            1 for row in remaining_rows if row["resolution_status"] == "unresolved_after_exhaustive_search"
+        ),
+        "final_acronym_resolution_sprint_count": len(final_acronym_resolution_sprint_rows),
+        "final_acronym_local_file_hit_count": len(final_acronym_local_file_hit_rows),
+        "final_acronym_web_search_count": len(final_acronym_web_search_rows),
+        "frasch_abbreviation_list_review_count": len(FRASCH_ABBREVIATION_LIST_REVIEW_ROWS),
+        "final_unresolved_acronym_dossier_count": len(unresolved_acronym_dossier_rows),
         "source_work_locator_system_count": len(source_work_locator_rows),
         "pl_locator_semantics_checked": True,
         "iob_relationship_checked": True,
         "unresolved_priority_acronyms": [
-            row["acronym"] for row in priority_acronym_rows if row["resolution_status"] in {"unresolved", "unresolved_after_targeted_search"}
+            row["acronym"]
+            for row in priority_acronym_rows
+            if row["resolution_status"] in {"unresolved", "unresolved_after_targeted_search", "unresolved_after_exhaustive_search"}
         ],
         "weakly_resolved_priority_acronyms": [
             row["acronym"]
             for row in priority_acronym_rows
-            if row["resolution_status"] in {"probable_expansion", "source_family_only", "contextual_usage_only", "unresolved_after_targeted_search"}
+            if row["resolution_status"]
+            in {
+                "probable_expansion",
+                "probable_locator_system",
+                "probable_private_luce_locator_system",
+                "source_family_only",
+                "contextual_usage_only",
+                "unresolved_after_targeted_search",
+                "unresolved_after_exhaustive_search",
+            }
         ],
         "confirmed_priority_acronyms": [
             row["acronym"]
