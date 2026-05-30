@@ -23,6 +23,7 @@ from validate_translation_source_discovery import validate_translation_source_di
 from verify_translation_witnesses import (
     CORE_DIRECT_WITNESS_SEARCH_FIELDS,
     DIRECT_WITNESS_SEARCH_FIELDS,
+    EPIGRAPHIA_BIRMANICA_FASCICLE_COVERAGE_FIELDS,
     EPIGRAPHIA_BIRMANICA_REVIEW_FIELDS,
     MISSING_DIRECT_SEARCH_FIELDS,
     RESCUE_CANDIDATE_REVIEW_FIELDS,
@@ -502,8 +503,10 @@ class TranslationSourceDiscoveryTests(unittest.TestCase):
         sip_inspection_rows: list[dict] | None = None,
         uem_search_rows: list[dict] | None = None,
         core_search_rows: list[dict] | None = None,
+        iob_text_search_rows: list[dict] | None = None,
         rescue_review_rows: list[dict] | None = None,
         epigraphia_review_rows: list[dict] | None = None,
+        epigraphia_fascicle_coverage_rows: list[dict] | None = None,
         report_overrides: dict | None = None,
     ) -> None:
         source_rows = source_rows or [base_source_row()]
@@ -517,6 +520,7 @@ class TranslationSourceDiscoveryTests(unittest.TestCase):
         sip_inspection_rows = sip_inspection_rows or []
         uem_search_rows = uem_search_rows or []
         core_search_rows = core_search_rows or []
+        iob_text_search_rows = iob_text_search_rows or []
         rescue_review_rows = rescue_review_rows or [
             {
                 "candidate_file_id": "111029.pdf",
@@ -560,6 +564,7 @@ class TranslationSourceDiscoveryTests(unittest.TestCase):
                 "notes": "",
             }
         ]
+        epigraphia_fascicle_coverage_rows = epigraphia_fascicle_coverage_rows or []
         write_tsv(root / "source_work_authority.tsv", source_rows, SOURCE_WORK_FIELDS)
         write_tsv(root / "translation_source_discovery_plan.tsv", plan_rows, PLAN_FIELDS)
         write_tsv(root / "witness_candidates.tsv", candidate_rows, WITNESS_CANDIDATE_FIELDS)
@@ -571,8 +576,10 @@ class TranslationSourceDiscoveryTests(unittest.TestCase):
         write_tsv(root / "sip_witness_inspection.tsv", sip_inspection_rows, SIP_WITNESS_INSPECTION_FIELDS)
         write_tsv(root / "uem_direct_witness_search.tsv", uem_search_rows, DIRECT_WITNESS_SEARCH_FIELDS)
         write_tsv(root / "core_source_direct_witness_search.tsv", core_search_rows, CORE_DIRECT_WITNESS_SEARCH_FIELDS)
+        write_tsv(root / "inscriptions_of_burma_text_witness_search.tsv", iob_text_search_rows, DIRECT_WITNESS_SEARCH_FIELDS)
         write_tsv(root / "rescue_candidate_review.tsv", rescue_review_rows, RESCUE_CANDIDATE_REVIEW_FIELDS)
         write_tsv(root / "epigraphia_birmanica_witness_review.tsv", epigraphia_review_rows, EPIGRAPHIA_BIRMANICA_REVIEW_FIELDS)
+        write_tsv(root / "epigraphia_birmanica_fascicle_coverage.tsv", epigraphia_fascicle_coverage_rows, EPIGRAPHIA_BIRMANICA_FASCICLE_COVERAGE_FIELDS)
         periodical_rows = [
             {
                 "series_source_work_key": key,
@@ -626,10 +633,23 @@ class TranslationSourceDiscoveryTests(unittest.TestCase):
             "source_works_with_verified_direct_witness": len({row["source_work_key"] for row in verification_rows if row.get("verification_status") in {"verified_direct_witness", "verified_catalogue_witness"}}),
             "source_works_still_needing_direct_witness": sum(row.get("gap_type") in {"needs_direct_witness", "needs_title_page_review", "has_verified_plate_but_needs_text"} for row in gap_rows),
             "sip_inspection_completed": bool(sip_inspection_rows),
+            "sip_sample_entry_inspected": any(row.get("inspection_area") == "sample_entry" for row in sip_inspection_rows),
+            "sip_contains_translation_status": next((row.get("contains_translation") for row in sip_inspection_rows if row.get("inspection_area") == "sample_entry"), "unknown"),
             "uem_direct_search_count": sum(bool(row.get("matched_file_label")) for row in uem_search_rows),
             "core_source_direct_search_count": sum(bool(row.get("matched_file_label")) for row in core_search_rows),
+            "inscriptions_of_burma_text_witness_search_count": len(iob_text_search_rows),
+            "inscriptions_of_burma_text_witness_found": sum(row.get("search_result_status") == "direct_witness_found" for row in iob_text_search_rows),
             "rescue_candidate_review_count": len(rescue_review_rows),
             "epigraphia_birmanica_review_count": len(epigraphia_review_rows),
+            "eb_verified_fascicle_count": len(epigraphia_fascicle_coverage_rows),
+            "eb_fascicle_coverage_count": len(epigraphia_fascicle_coverage_rows),
+            "direct_witness_search_result_counts": {
+                "direct_witness_found": sum(row.get("search_result_status") == "direct_witness_found" for row in (uem_search_rows + core_search_rows + iob_text_search_rows)),
+                "candidate_found": sum(row.get("search_result_status") == "candidate_found" for row in (uem_search_rows + core_search_rows + iob_text_search_rows)),
+                "bibliographic_clue_found": sum(row.get("search_result_status") == "bibliographic_clue_found" for row in (uem_search_rows + core_search_rows + iob_text_search_rows)),
+                "not_found": sum(row.get("search_result_status") == "not_found" for row in (uem_search_rows + core_search_rows + iob_text_search_rows)),
+                "blocked_by_missing_local_index": sum(row.get("search_result_status") == "blocked_by_missing_local_index" for row in (uem_search_rows + core_search_rows + iob_text_search_rows)),
+            },
             "verified_translation_after_inspection_count": sum(row.get("contains_translation_verified") == "confirmed" for row in verification_rows),
             "verified_edition_after_inspection_count": sum(row.get("contains_edition_verified") == "confirmed" for row in verification_rows),
             "notes": ["fixture"],
@@ -653,10 +673,23 @@ class TranslationSourceDiscoveryTests(unittest.TestCase):
             "source_works_with_verified_direct_witness": len({row["source_work_key"] for row in verification_rows if row.get("verification_status") in {"verified_direct_witness", "verified_catalogue_witness"}}),
             "source_works_still_needing_direct_witness": sum(row.get("gap_type") in {"needs_direct_witness", "needs_title_page_review", "has_verified_plate_but_needs_text"} for row in gap_rows),
             "sip_inspection_completed": bool(sip_inspection_rows),
+            "sip_sample_entry_inspected": any(row.get("inspection_area") == "sample_entry" for row in sip_inspection_rows),
+            "sip_contains_translation_status": next((row.get("contains_translation") for row in sip_inspection_rows if row.get("inspection_area") == "sample_entry"), "unknown"),
             "uem_direct_search_count": sum(bool(row.get("matched_file_label")) for row in uem_search_rows),
             "core_source_direct_search_count": sum(bool(row.get("matched_file_label")) for row in core_search_rows),
+            "inscriptions_of_burma_text_witness_search_count": len(iob_text_search_rows),
+            "inscriptions_of_burma_text_witness_found": sum(row.get("search_result_status") == "direct_witness_found" for row in iob_text_search_rows),
             "rescue_candidate_review_count": len(rescue_review_rows),
             "epigraphia_birmanica_review_count": len(epigraphia_review_rows),
+            "eb_verified_fascicle_count": len(epigraphia_fascicle_coverage_rows),
+            "eb_fascicle_coverage_count": len(epigraphia_fascicle_coverage_rows),
+            "direct_witness_search_result_counts": {
+                "direct_witness_found": sum(row.get("search_result_status") == "direct_witness_found" for row in (uem_search_rows + core_search_rows + iob_text_search_rows)),
+                "candidate_found": sum(row.get("search_result_status") == "candidate_found" for row in (uem_search_rows + core_search_rows + iob_text_search_rows)),
+                "bibliographic_clue_found": sum(row.get("search_result_status") == "bibliographic_clue_found" for row in (uem_search_rows + core_search_rows + iob_text_search_rows)),
+                "not_found": sum(row.get("search_result_status") == "not_found" for row in (uem_search_rows + core_search_rows + iob_text_search_rows)),
+                "blocked_by_missing_local_index": sum(row.get("search_result_status") == "blocked_by_missing_local_index" for row in (uem_search_rows + core_search_rows + iob_text_search_rows)),
+            },
             "verified_translation_after_inspection_count": sum(row.get("contains_translation_verified") == "confirmed" for row in verification_rows),
             "verified_edition_after_inspection_count": sum(row.get("contains_edition_verified") == "confirmed" for row in verification_rows),
             "notes": ["fixture"],
@@ -676,8 +709,10 @@ class TranslationSourceDiscoveryTests(unittest.TestCase):
             sip_witness_inspection_path=root / "sip_witness_inspection.tsv",
             uem_direct_search_path=root / "uem_direct_witness_search.tsv",
             core_source_direct_search_path=root / "core_source_direct_witness_search.tsv",
+            inscriptions_of_burma_text_search_path=root / "inscriptions_of_burma_text_witness_search.tsv",
             rescue_candidate_review_path=root / "rescue_candidate_review.tsv",
             epigraphia_birmanica_review_path=root / "epigraphia_birmanica_witness_review.tsv",
+            epigraphia_birmanica_fascicle_coverage_path=root / "epigraphia_birmanica_fascicle_coverage.tsv",
             periodical_article_plan_path=root / "periodical_article_discovery_plan.tsv",
             report_path=root / "translation_source_discovery_report.json",
             witness_verification_report_path=root / "witness_verification_report.json",

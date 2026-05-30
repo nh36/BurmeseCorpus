@@ -86,8 +86,10 @@ and writes:
 - `data/working/bibliography/translation_source_discovery/sip_witness_inspection.tsv`
 - `data/working/bibliography/translation_source_discovery/uem_direct_witness_search.tsv`
 - `data/working/bibliography/translation_source_discovery/core_source_direct_witness_search.tsv`
+- `data/working/bibliography/translation_source_discovery/inscriptions_of_burma_text_witness_search.tsv`
 - `data/working/bibliography/translation_source_discovery/rescue_candidate_review.tsv`
 - `data/working/bibliography/translation_source_discovery/epigraphia_birmanica_witness_review.tsv`
+- `data/working/bibliography/translation_source_discovery/epigraphia_birmanica_fascicle_coverage.tsv`
 - `data/working/bibliography/translation_source_discovery/periodical_article_discovery_plan.tsv`
 - `data/working/bibliography/translation_source_discovery/translation_source_discovery_report.json`
 
@@ -131,6 +133,7 @@ Use the new gap and inspection tables to keep that distinction explicit:
 - `sip_witness_inspection.tsv` records the short inspected evidence for the verified SIP witness. SIP now has a verified direct witness, but translation coverage must still come from explicit inspected evidence rather than title-family inheritance.
 - `uem_direct_witness_search.tsv` keeps UEM separate from SIP. A shared `Selections ...` title family is not enough: the Luce/Pe Maung Tin SIP witness must remain excluded from UEM unless author/editor evidence supports UEM directly.
 - `core_source_direct_witness_search.tsv` records targeted local-file search results for TN, PPA, and UB.
+- `inscriptions_of_burma_text_witness_search.tsv` keeps the Inscriptions of Burma text-volume search separate from already verified plate/facsimile witnesses.
 - `rescue_candidate_review.tsv` and `epigraphia_birmanica_witness_review.tsv` keep ambiguous rescue files and numbered PDFs visible as reviewed evidence instead of auto-mapping them.
 
 In practice:
@@ -138,6 +141,16 @@ In practice:
 - SIP can be a verified direct witness and still remain translation-unknown.
 - works without a verified direct witness should stay in the gap table rather than being silently inferred from related filenames;
 - rescue candidates such as numbered PDFs or broad title-family matches must be reviewed before they count toward any direct-witness totals.
+
+## Promoting direct witnesses
+
+Promotion should stay conservative, but strong local evidence can justify a provisional verified layer when the file/path identity is already explicit.
+
+- direct-looking file/path evidence can justify promotion to `verified_direct_witness` when the witness still carries `needs_human_review = true`;
+- title-page or contents snippets are preferred and should be added whenever short extractable evidence is available;
+- `Epigraphia Birmanica` fascicles should be handled as source-edition witnesses, not translation witnesses, unless explicit translation evidence appears in the fascicle itself;
+- SIP now has a verified edition witness with extended inspection rows, but it still needs deeper sample-entry/content review before any translation claim can be made;
+- `Inscriptions of Burma` plate volumes remain plate witnesses only and do not replace the missing text witness.
 
 ## Periodicals and series
 

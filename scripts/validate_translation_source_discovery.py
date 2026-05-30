@@ -18,9 +18,12 @@ from discover_translation_sources import (
 )
 from verify_translation_witnesses import (
     CORE_SOURCE_DIRECT_SEARCH_PATH,
+    DIRECT_SEARCH_RESULT_STATUSES,
     DIRECTNESS_VALUES,
     EVIDENCE_QUALITY_VALUES,
+    EPIGRAPHIA_BIRMANICA_FASCICLE_COVERAGE_PATH,
     EPIGRAPHIA_BIRMANICA_REVIEW_PATH,
+    INSCRIPTIONS_OF_BURMA_TEXT_SEARCH_PATH,
     MISSING_DIRECT_SEARCH_PATH,
     RESCUE_CANDIDATE_REVIEW_PATH,
     SIP_WITNESS_ID,
@@ -52,8 +55,10 @@ def validate_translation_source_discovery(
     sip_witness_inspection_path: Path = SIP_WITNESS_INSPECTION_PATH,
     uem_direct_search_path: Path = UEM_DIRECT_SEARCH_PATH,
     core_source_direct_search_path: Path = CORE_SOURCE_DIRECT_SEARCH_PATH,
+    inscriptions_of_burma_text_search_path: Path = INSCRIPTIONS_OF_BURMA_TEXT_SEARCH_PATH,
     rescue_candidate_review_path: Path = RESCUE_CANDIDATE_REVIEW_PATH,
     epigraphia_birmanica_review_path: Path = EPIGRAPHIA_BIRMANICA_REVIEW_PATH,
+    epigraphia_birmanica_fascicle_coverage_path: Path = EPIGRAPHIA_BIRMANICA_FASCICLE_COVERAGE_PATH,
     periodical_article_plan_path: Path = DISCOVERY_DIRECTORY / "periodical_article_discovery_plan.tsv",
     report_path: Path = DISCOVERY_DIRECTORY / "translation_source_discovery_report.json",
     witness_verification_report_path: Path = WITNESS_VERIFICATION_REPORT_PATH,
@@ -71,8 +76,10 @@ def validate_translation_source_discovery(
         sip_witness_inspection_path,
         uem_direct_search_path,
         core_source_direct_search_path,
+        inscriptions_of_burma_text_search_path,
         rescue_candidate_review_path,
         epigraphia_birmanica_review_path,
+        epigraphia_birmanica_fascicle_coverage_path,
         periodical_article_plan_path,
         report_path,
         witness_verification_report_path,
@@ -93,8 +100,10 @@ def validate_translation_source_discovery(
     sip_inspection_rows = read_tsv(sip_witness_inspection_path)
     uem_search_rows = read_tsv(uem_direct_search_path)
     core_search_rows = read_tsv(core_source_direct_search_path)
+    iob_text_search_rows = read_tsv(inscriptions_of_burma_text_search_path)
     rescue_review_rows = read_tsv(rescue_candidate_review_path)
     epigraphia_review_rows = read_tsv(epigraphia_birmanica_review_path)
+    epigraphia_fascicle_coverage_rows = read_tsv(epigraphia_birmanica_fascicle_coverage_path)
     periodical_plan_rows = read_tsv(periodical_article_plan_path)
     report = json.loads(report_path.read_text(encoding="utf-8"))
     verification_report = json.loads(witness_verification_report_path.read_text(encoding="utf-8"))
@@ -162,7 +171,7 @@ def validate_translation_source_discovery(
             errors.append(f"Witness classification {witness_id} gives direct translation status to a periodical container")
         if source_key in source_by_key:
             source_row = source_by_key[source_key]
-            if source_row.get("authority_level") in {"series", "periodical"} and row.get("witness_type") in {
+            if source_key != "epigraphiaBirmanica" and source_row.get("authority_level") in {"series", "periodical"} and row.get("witness_type") in {
                 "translation_source",
                 "edition_and_translation",
                 "source_edition",
@@ -227,12 +236,18 @@ def validate_translation_source_discovery(
             errors.append(f"Witness verification {witness_id} should use weak_related_match directness for weak false positives")
         if row.get("verification_status") == "verified_plate_witness" and row.get("contains_plate_or_image_verified") != "confirmed":
             errors.append(f"Witness verification {witness_id} marks a plate witness without confirmed plate evidence")
-        if source_key in PERIODICAL_PLAN_KEYS and row.get("verification_status") in DIRECT_VERIFICATION_STATUSES:
+        if source_key in PERIODICAL_PLAN_KEYS and source_key != "epigraphiaBirmanica" and row.get("verification_status") in DIRECT_VERIFICATION_STATUSES:
             errors.append(f"Witness verification {witness_id} promotes periodical container {source_key} to a direct witness")
         if row.get("verification_status") == "verified_article_candidate" and row.get("directness") not in {"article_about_source", "series_container"}:
             errors.append(f"Witness verification {witness_id} uses invalid directness for an article candidate")
         if row.get("verification_status") in {"verified_direct_witness", "verified_catalogue_witness", "verified_plate_witness"} and snippet_count_by_witness.get(witness_id, 0) == 0 and row.get("evidence_quality") not in {"moderate", "strong", "explicit"}:
             errors.append(f"Witness verification {witness_id} lacks supporting snippet or adequate evidence quality")
+        if (
+            source_key == "lucePeMaungTinInscriptionsOfBurma"
+            and "plate" in row.get("candidate_file_label", "").casefold()
+            and row.get("verification_status") in DIRECT_VERIFICATION_STATUSES
+        ):
+            errors.append(f"Witness verification {witness_id} incorrectly counts an Inscriptions of Burma plate file as a direct text witness")
 
     sip_verification = verification_by_id.get(SIP_WITNESS_ID)
     if sip_verification and sip_verification.get("contains_edition_verified") == "confirmed":
@@ -249,6 +264,11 @@ def validate_translation_source_discovery(
             errors.append(f"SIP inspection row {row.get('witness_id')} has no matching witness candidate row")
         if len(row.get("evidence_snippet", "")) > SHORT_EVIDENCE_LIMIT or "\n" in row.get("evidence_snippet", ""):
             errors.append(f"SIP inspection row {row.get('witness_id')} stores more than a short evidence snippet")
+    if sip_inspection_rows and not any(
+        row.get("inspection_area") in {"contents", "preface", "sample_entry", "headings", "notes_or_commentary"}
+        for row in sip_inspection_rows
+    ):
+        errors.append("SIP inspection remains title-page only; sample-entry or other follow-on inspection rows are required")
 
     for row in missing_search_rows:
         source_key = row.get("source_work_key", "")
@@ -258,11 +278,25 @@ def validate_translation_source_discovery(
             errors.append(f"Missing-direct search row for {source_key} stores an absolute path")
 
     for collection_name, rows in [
+        ("UEM direct search", uem_search_rows),
+        ("core direct search", core_search_rows),
+        ("Inscriptions of Burma text search", iob_text_search_rows),
+    ]:
+        for row in rows:
+            for field in ["searched_sources", "search_scope", "search_date_or_run_id", "search_result_status"]:
+                if not row.get(field):
+                    errors.append(f"{collection_name} row for {row.get('query', '') or row.get('source_work_key', '')} is missing {field}")
+            if row.get("search_result_status") not in DIRECT_SEARCH_RESULT_STATUSES:
+                errors.append(f"{collection_name} row uses invalid search_result_status {row.get('search_result_status')}")
+
+    for collection_name, rows in [
         ("source-work witness gaps", gap_rows),
         ("UEM direct search", uem_search_rows),
         ("core direct search", core_search_rows),
+        ("Inscriptions of Burma text search", iob_text_search_rows),
         ("rescue candidate review", rescue_review_rows),
         ("epigraphia birmanica review", epigraphia_review_rows),
+        ("epigraphia birmanica fascicle coverage", epigraphia_fascicle_coverage_rows),
     ]:
         for row in rows:
             for key, value in row.items():
@@ -283,6 +317,23 @@ def validate_translation_source_discovery(
     if not uem_sip_false_positive:
         errors.append("UEM does not retain the reviewed SIP false-positive row")
 
+    direct_eb_review_rows = [row for row in epigraphia_review_rows if row.get("classification") == "actual_eb_fascicle"]
+    direct_eb_verifications = {
+        row.get("candidate_file_label", "")
+        for row in verification_rows
+        if row.get("source_work_key") == "epigraphiaBirmanica" and row.get("verification_status") in DIRECT_VERIFICATION_STATUSES
+    }
+    for row in direct_eb_review_rows:
+        if row.get("confidence") == "high" and row.get("file_label", "") not in direct_eb_verifications:
+            errors.append(f"Direct-looking EB fascicle {row.get('file_label')} is not promoted or explicitly blocked")
+    if direct_eb_review_rows and not epigraphia_fascicle_coverage_rows:
+        errors.append("Epigraphia Birmanica fascicle coverage is missing despite direct-looking EB fascicles")
+    if epigraphia_fascicle_coverage_rows:
+        coverage_ids = {row.get("witness_id", "") for row in epigraphia_fascicle_coverage_rows}
+        promoted_ids = {row.get("witness_id", "") for row in direct_eb_review_rows if row.get("confidence") == "high"}
+        if not promoted_ids.issubset(coverage_ids):
+            errors.append("Epigraphia Birmanica fascicle coverage is missing promoted EB fascicle rows")
+
     for row in plan_rows:
         source_key = row.get("source_work_key", "")
         if row.get("discovery_status") == "verified_direct_witness_found" and verified_direct_counts.get(source_key, 0) == 0:
@@ -298,8 +349,19 @@ def validate_translation_source_discovery(
         } and source_key not in gap_by_source:
             errors.append(f"Discovery plan row {source_key} needs a matching source_work_witness_gaps.tsv row")
 
-    required_rescue_labels = {"111029.pdf", "Taw Sein Ko 1899 Inscriptions of Pagan.pdf"}
-    rescue_labels = {row.get("candidate_file_label", "") for row in rescue_review_rows}
+    rescue_required_by_search = {
+        row.get("matched_file_id", "") or row.get("matched_file_label", "")
+        for row in missing_search_rows
+        if row.get("matched_file_id") in {"111029.pdf", "Taw Sein Ko 1899 Inscriptions of Pagan.pdf"}
+        or row.get("matched_file_label") in {"111029.pdf", "Taw Sein Ko 1899 Inscriptions of Pagan.pdf"}
+    }
+    required_rescue_labels = rescue_required_by_search or {"111029.pdf", "Taw Sein Ko 1899 Inscriptions of Pagan.pdf"}
+    rescue_labels = {
+        value
+        for row in rescue_review_rows
+        for value in (row.get("candidate_file_label", ""), row.get("candidate_file_id", ""))
+        if value
+    }
     if required_rescue_labels - rescue_labels:
         errors.append("Rescue candidate review is missing required 111029/Taw Sein Ko review rows")
 
@@ -393,10 +455,32 @@ def validate_translation_source_discovery(
         errors.append("translation_source_discovery_report.json has inconsistent uem_direct_search_count")
     if report.get("core_source_direct_search_count") != sum(bool(row.get("matched_file_label")) for row in core_search_rows):
         errors.append("translation_source_discovery_report.json has inconsistent core_source_direct_search_count")
+    if report.get("inscriptions_of_burma_text_witness_search_count") != len(iob_text_search_rows):
+        errors.append("translation_source_discovery_report.json has inconsistent inscriptions_of_burma_text_witness_search_count")
+    if report.get("inscriptions_of_burma_text_witness_found") != sum(row.get("search_result_status") == "direct_witness_found" for row in iob_text_search_rows):
+        errors.append("translation_source_discovery_report.json has inconsistent inscriptions_of_burma_text_witness_found")
     if report.get("rescue_candidate_review_count") != len(rescue_review_rows):
         errors.append("translation_source_discovery_report.json has inconsistent rescue_candidate_review_count")
     if report.get("epigraphia_birmanica_review_count") != len(epigraphia_review_rows):
         errors.append("translation_source_discovery_report.json has inconsistent epigraphia_birmanica_review_count")
+    if report.get("eb_verified_fascicle_count") != len(epigraphia_fascicle_coverage_rows):
+        errors.append("translation_source_discovery_report.json has inconsistent eb_verified_fascicle_count")
+    if report.get("eb_fascicle_coverage_count") != len(epigraphia_fascicle_coverage_rows):
+        errors.append("translation_source_discovery_report.json has inconsistent eb_fascicle_coverage_count")
+    if report.get("sip_sample_entry_inspected") != any(row.get("inspection_area") == "sample_entry" for row in sip_inspection_rows):
+        errors.append("translation_source_discovery_report.json has inconsistent sip_sample_entry_inspected")
+    expected_sip_translation_status = next(
+        (row.get("contains_translation") for row in sip_inspection_rows if row.get("inspection_area") == "sample_entry"),
+        "unknown",
+    )
+    if report.get("sip_contains_translation_status") != expected_sip_translation_status:
+        errors.append("translation_source_discovery_report.json has inconsistent sip_contains_translation_status")
+    expected_search_result_counts = {
+        status: sum(row.get("search_result_status") == status for row in (uem_search_rows + core_search_rows + iob_text_search_rows))
+        for status in DIRECT_SEARCH_RESULT_STATUSES
+    }
+    if report.get("direct_witness_search_result_counts") != expected_search_result_counts:
+        errors.append("translation_source_discovery_report.json has inconsistent direct_witness_search_result_counts")
     if not isinstance(report.get("notes"), list):
         errors.append("translation_source_discovery_report.json notes must be a list")
     if verification_report.get("verified_witness_count") != len(verification_rows):
@@ -407,6 +491,12 @@ def validate_translation_source_discovery(
         errors.append("witness_verification_report.json has inconsistent titlepage_toc_snippet_count")
     if verification_report.get("source_work_witness_gap_count") != len(gap_rows):
         errors.append("witness_verification_report.json has inconsistent source_work_witness_gap_count")
+    if verification_report.get("inscriptions_of_burma_text_witness_search_count") != len(iob_text_search_rows):
+        errors.append("witness_verification_report.json has inconsistent inscriptions_of_burma_text_witness_search_count")
+    if verification_report.get("eb_fascicle_coverage_count") != len(epigraphia_fascicle_coverage_rows):
+        errors.append("witness_verification_report.json has inconsistent eb_fascicle_coverage_count")
+    if verification_report.get("direct_witness_search_result_counts") != expected_search_result_counts:
+        errors.append("witness_verification_report.json has inconsistent direct_witness_search_result_counts")
     if not isinstance(verification_report.get("notes"), list):
         errors.append("witness_verification_report.json notes must be a list")
 
@@ -426,8 +516,10 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--sip-witness-inspection", type=Path, default=SIP_WITNESS_INSPECTION_PATH)
     parser.add_argument("--uem-direct-search", type=Path, default=UEM_DIRECT_SEARCH_PATH)
     parser.add_argument("--core-source-direct-search", type=Path, default=CORE_SOURCE_DIRECT_SEARCH_PATH)
+    parser.add_argument("--inscriptions-of-burma-text-search", type=Path, default=INSCRIPTIONS_OF_BURMA_TEXT_SEARCH_PATH)
     parser.add_argument("--rescue-candidate-review", type=Path, default=RESCUE_CANDIDATE_REVIEW_PATH)
     parser.add_argument("--epigraphia-birmanica-review", type=Path, default=EPIGRAPHIA_BIRMANICA_REVIEW_PATH)
+    parser.add_argument("--epigraphia-birmanica-fascicle-coverage", type=Path, default=EPIGRAPHIA_BIRMANICA_FASCICLE_COVERAGE_PATH)
     parser.add_argument("--periodical-article-plan", type=Path, default=DISCOVERY_DIRECTORY / "periodical_article_discovery_plan.tsv")
     parser.add_argument("--report", type=Path, default=DISCOVERY_DIRECTORY / "translation_source_discovery_report.json")
     parser.add_argument("--witness-verification-report", type=Path, default=WITNESS_VERIFICATION_REPORT_PATH)
@@ -448,8 +540,10 @@ def main() -> None:
         sip_witness_inspection_path=args.sip_witness_inspection,
         uem_direct_search_path=args.uem_direct_search,
         core_source_direct_search_path=args.core_source_direct_search,
+        inscriptions_of_burma_text_search_path=args.inscriptions_of_burma_text_search,
         rescue_candidate_review_path=args.rescue_candidate_review,
         epigraphia_birmanica_review_path=args.epigraphia_birmanica_review,
+        epigraphia_birmanica_fascicle_coverage_path=args.epigraphia_birmanica_fascicle_coverage,
         periodical_article_plan_path=args.periodical_article_plan,
         report_path=args.report,
         witness_verification_report_path=args.witness_verification_report,

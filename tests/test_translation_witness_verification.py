@@ -12,11 +12,15 @@ if str(SCRIPTS_DIR) not in sys.path:
 
 from verify_translation_witnesses import (
     SIP_WITNESS_ID,
+    build_direct_query_search_rows,
+    build_epigraphia_fascicle_coverage_rows,
+    build_epigraphia_promoted_verification_rows,
     build_epigraphia_birmanica_review_rows,
     build_rescue_candidate_review_rows,
     build_sip_witness_inspection_rows,
     build_source_work_gap_rows,
     build_verification_report,
+    ensure_epigraphia_candidate_and_classification_rows,
     update_plan_rows,
     verify_candidate_witness,
 )
@@ -202,7 +206,7 @@ class TranslationWitnessVerificationTests(unittest.TestCase):
             [
                 {
                     "source_work_key": "sipSelectionsPagan",
-                    "gap_type": "needs_translation_check",
+                    "gap_type": "has_verified_edition_but_translation_unknown",
                     "next_action": "Inspect sample entries.",
                 }
             ],
@@ -269,7 +273,7 @@ class TranslationWitnessVerificationTests(unittest.TestCase):
 
         self.assertEqual(updated[0]["discovery_status"], "needs_direct_witness_search")
 
-    def test_gap_row_marks_verified_sip_as_needs_translation_check(self) -> None:
+    def test_gap_row_marks_verified_sip_as_verified_edition_translation_unknown(self) -> None:
         gap_rows = build_source_work_gap_rows(
             [source_row()],
             [candidate_row(witness_id=SIP_WITNESS_ID)],
@@ -285,9 +289,10 @@ class TranslationWitnessVerificationTests(unittest.TestCase):
             [],
             [],
             [],
+            [],
         )
 
-        self.assertEqual(gap_rows[0]["gap_type"], "needs_translation_check")
+        self.assertEqual(gap_rows[0]["gap_type"], "has_verified_edition_but_translation_unknown")
         self.assertEqual(gap_rows[0]["current_status"], "verified_direct_witness_found")
 
     def test_sip_inspection_does_not_confirm_translation_without_explicit_evidence(self) -> None:
@@ -314,6 +319,7 @@ class TranslationWitnessVerificationTests(unittest.TestCase):
         self.assertTrue(rows)
         self.assertTrue(all(row["contains_translation"] == "false" for row in rows))
         self.assertTrue(any(row["contains_edition_or_transliteration"] == "true" for row in rows))
+        self.assertTrue(any(row["inspection_area"] == "sample_entry" for row in rows))
 
     def test_rescue_candidate_review_marks_chronicle_file_secondary(self) -> None:
         rows = build_rescue_candidate_review_rows(
@@ -345,6 +351,75 @@ class TranslationWitnessVerificationTests(unittest.TestCase):
         self.assertEqual(row["classification"], "unrelated_numbered_pdf")
         self.assertIn("title page", row["next_action"].lower())
 
+    def test_epigraphia_fascicle_can_be_promoted_to_verified_direct_witness(self) -> None:
+        review_rows = [
+            {
+                "witness_id": "epigraphiaBirmanica--vol1",
+                "file_label": "Duroiselle - Epigraphica Birmanica1.pdf",
+                "source_work_key": "epigraphiaBirmanica",
+                "probable_volume_or_fascicle": "Vol. 1",
+                "title_page_snippet": "Epigraphica Birmanica Vol. I",
+                "contents_snippet": "Preface and plates",
+                "contains_translation": "false",
+                "contains_edition_or_transliteration": "true",
+                "contains_plate_or_image": "false",
+                "classification": "actual_eb_fascicle",
+                "confidence": "high",
+                "next_action": "Promote after title-page confirmation.",
+                "notes": "Local file label identifies an Epigraphica Birmanica fascicle directly.",
+            }
+        ]
+        candidates, classifications = ensure_epigraphia_candidate_and_classification_rows(
+            [],
+            [],
+            source_row(source_work_key="epigraphiaBirmanica", canonical_title="Epigraphia Birmanica", short_title="EB"),
+            review_rows,
+            {
+                "eb-vol1": file_record(
+                    candidate_file_id="eb-vol1",
+                    candidate_file_label="Duroiselle - Epigraphica Birmanica1.pdf",
+                    all_original_paths="OBI_LIBRARY_ROOT:Epigraphica Birmanica1.pdf",
+                )
+            },
+        )
+        promoted_rows, _ = build_epigraphia_promoted_verification_rows(
+            review_rows,
+            source_row(source_work_key="epigraphiaBirmanica", canonical_title="Epigraphia Birmanica", short_title="EB"),
+            candidates,
+        )
+        coverage_rows = build_epigraphia_fascicle_coverage_rows(review_rows)
+
+        self.assertEqual(len(candidates), 1)
+        self.assertEqual(classifications[0]["witness_type"], "source_edition")
+        self.assertEqual(promoted_rows[0]["verification_status"], "verified_direct_witness")
+        self.assertEqual(promoted_rows[0]["contains_edition_verified"], "confirmed")
+        self.assertEqual(coverage_rows[0]["contains_translation"], "unknown")
+
+    def test_direct_search_rows_include_search_status_metadata(self) -> None:
+        rows = build_direct_query_search_rows(
+            ["U E Maung"],
+            {
+                "uem-clue": file_record(
+                    candidate_file_id="uem-clue",
+                    candidate_file_label="Frasch bibliography note.pdf",
+                    ocr_snippets=[{"matched_heading": "bibliography", "snippet_text": "U E Maung, Selections from the Inscriptions of Pagan, Rangoon 1958"}],
+                )
+            },
+            clue_source_work_key="uemSelectionsPagan",
+            raw_reference_rows=[
+                {
+                    "source_work_key": "uemSelectionsPagan",
+                    "raw_reference_string": "UEM, p. 4",
+                    "source_family_id": "sf-uem",
+                }
+            ],
+        )
+
+        self.assertEqual(rows[0]["search_result_status"], "bibliographic_clue_found")
+        self.assertTrue(rows[0]["searched_sources"])
+        self.assertTrue(rows[0]["search_scope"])
+        self.assertTrue(rows[0]["search_date_or_run_id"])
+
     def test_report_counts_match_verification_rows(self) -> None:
         verification_rows = [
             {
@@ -374,8 +449,10 @@ class TranslationWitnessVerificationTests(unittest.TestCase):
             [{"witness_id": SIP_WITNESS_ID}],
             [{"matched_file_label": "ue-maung-clue.pdf"}],
             [{"matched_file_label": "tn-clue.pdf"}],
+            [{"matched_file_label": "iob-text.pdf", "search_result_status": "candidate_found"}],
             [{"candidate_file_label": "111029.pdf"}],
             [{"file_label": "011041.pdf"}],
+            [{"witness_id": "eb1"}],
         )
 
         self.assertEqual(report["verified_witness_count"], 2)
@@ -383,6 +460,7 @@ class TranslationWitnessVerificationTests(unittest.TestCase):
         self.assertEqual(report["verified_plate_witness_count"], 1)
         self.assertEqual(report["source_works_needing_direct_witness_count"], 1)
         self.assertEqual(report["source_work_witness_gap_count"], 1)
+        self.assertEqual(report["eb_fascicle_coverage_count"], 1)
 
 
 if __name__ == "__main__":

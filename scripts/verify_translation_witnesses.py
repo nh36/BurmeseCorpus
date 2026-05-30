@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import argparse
+from datetime import datetime, timezone
 import json
 import os
 import re
@@ -27,6 +28,7 @@ from discover_translation_sources import (
     RAW_REFERENCE_CROSSWALK_PATH,
     SOURCE_LIBRARY_MANIFEST_PATH,
     SOURCE_WORK_AUTHORITY_PATH,
+    WITNESS_CANDIDATE_FIELDS,
     WITNESS_CLASSIFICATION_FIELDS,
     WITNESS_TYPES,
     build_file_records,
@@ -50,6 +52,8 @@ UEM_DIRECT_SEARCH_PATH = DISCOVERY_DIRECTORY / "uem_direct_witness_search.tsv"
 CORE_SOURCE_DIRECT_SEARCH_PATH = DISCOVERY_DIRECTORY / "core_source_direct_witness_search.tsv"
 RESCUE_CANDIDATE_REVIEW_PATH = DISCOVERY_DIRECTORY / "rescue_candidate_review.tsv"
 EPIGRAPHIA_BIRMANICA_REVIEW_PATH = DISCOVERY_DIRECTORY / "epigraphia_birmanica_witness_review.tsv"
+EPIGRAPHIA_BIRMANICA_FASCICLE_COVERAGE_PATH = DISCOVERY_DIRECTORY / "epigraphia_birmanica_fascicle_coverage.tsv"
+INSCRIPTIONS_OF_BURMA_TEXT_SEARCH_PATH = DISCOVERY_DIRECTORY / "inscriptions_of_burma_text_witness_search.tsv"
 
 VERIFICATION_FIELDS = [
     "witness_id",
@@ -138,6 +142,10 @@ DIRECT_WITNESS_SEARCH_FIELDS = [
     "match_type",
     "match_confidence",
     "short_evidence",
+    "searched_sources",
+    "search_scope",
+    "search_date_or_run_id",
+    "search_result_status",
     "recommended_action",
     "notes",
 ]
@@ -150,6 +158,10 @@ CORE_DIRECT_WITNESS_SEARCH_FIELDS = [
     "match_type",
     "match_confidence",
     "short_evidence",
+    "searched_sources",
+    "search_scope",
+    "search_date_or_run_id",
+    "search_result_status",
     "recommended_action",
     "notes",
 ]
@@ -183,6 +195,21 @@ EPIGRAPHIA_BIRMANICA_REVIEW_FIELDS = [
     "notes",
 ]
 
+EPIGRAPHIA_BIRMANICA_FASCICLE_COVERAGE_FIELDS = [
+    "witness_id",
+    "file_label",
+    "probable_volume_or_fascicle",
+    "title_or_path_evidence",
+    "contains_edition_or_transliteration",
+    "contains_translation",
+    "contains_plate_or_image",
+    "coverage_scope",
+    "confidence",
+    "needs_human_review",
+    "next_action",
+    "notes",
+]
+
 VERIFICATION_STATUSES = {
     "verified_direct_witness",
     "verified_plate_witness",
@@ -207,6 +234,13 @@ DIRECTNESS_VALUES = {
 }
 
 EVIDENCE_QUALITY_VALUES = {"explicit", "strong", "moderate", "weak", "none"}
+DIRECT_SEARCH_RESULT_STATUSES = {
+    "direct_witness_found",
+    "candidate_found",
+    "bibliographic_clue_found",
+    "not_found",
+    "blocked_by_missing_local_index",
+}
 MAX_SNIPPET_LENGTH = 220
 MAX_STORED_SNIPPET_LENGTH = 260
 
@@ -286,6 +320,18 @@ CORE_SOURCE_DIRECT_SEARCH_QUERIES = {
     ],
 }
 
+INSCRIPTIONS_OF_BURMA_TEXT_QUERIES = [
+    "Inscriptions of Burma text",
+    "Inscriptions of Burma portfolio text",
+    "Inscriptions of Burma volume text",
+    "Luce Pe Maung Tin Inscriptions of Burma text",
+    "Inscriptions of Burma 1933",
+    "Inscriptions of Burma 1956",
+    "Luce Pe Maung Tin Inscriptions Burma Portfolio",
+    "Inscriptions of Burma transliteration",
+    "Inscriptions of Burma plates text",
+]
+
 SEARCH_TERMS_BY_SOURCE = {
     "sipSelectionsPagan": [
         "Selections from the Inscriptions of Pagan",
@@ -360,6 +406,81 @@ def confidence_label(score: float) -> str:
     if score >= 0.7:
         return "medium"
     return "low"
+
+
+def current_search_run_id() -> str:
+    return datetime.now(timezone.utc).date().isoformat()
+
+
+def search_scope_label() -> str:
+    return "targeted author/title/abbreviation search across local manifests, OCR index, and bibliography crosswalk"
+
+
+def searched_sources_label(*, include_raw_references: bool = True) -> str:
+    sources = [
+        "local_file_manifest",
+        "source_library_manifest",
+        "ocr_text_index",
+    ]
+    if include_raw_references:
+        sources.append("raw_reference_to_bibtex")
+    return ";".join(sources)
+
+
+def direct_search_status(*, match_type: str, has_match: bool, verification_status: str = "", has_bibliographic_clue: bool = False, indexes_available: bool = True) -> str:
+    if not indexes_available:
+        return "blocked_by_missing_local_index"
+    if verification_status in {"verified_direct_witness", "verified_catalogue_witness"}:
+        return "direct_witness_found"
+    if has_match and match_type in {"exact_title_filename", "normalized_title_filename", "source_family_match"}:
+        return "candidate_found"
+    if has_match or has_bibliographic_clue:
+        return "bibliographic_clue_found"
+    return "not_found"
+
+
+def source_clue_tokens(source_key: str, query: str) -> list[str]:
+    tokens = title_keyword_tokens(query)
+    if source_key == "uemSelectionsPagan":
+        tokens.extend(["uem", "ue maung"])
+    elif source_key == "tnInscriptionsPaganPinyaAva":
+        tokens.extend(["tn", "tun nyein", "pinya ava"])
+    elif source_key == "ppaCatalogue":
+        tokens.extend(["ppa", "ippa", "pinya ava"])
+    elif source_key == "ubSourceFamily":
+        tokens.extend(["ub", "upper burma"])
+    elif source_key == "lucePeMaungTinInscriptionsOfBurma":
+        tokens.extend(["inscriptions of burma", "burma plates", "luce", "pe maung tin"])
+    deduped: list[str] = []
+    seen: set[str] = set()
+    for token in tokens:
+        token = normalize_for_match(token)
+        if token and token not in seen:
+            seen.add(token)
+            deduped.append(token)
+    return deduped
+
+
+def raw_reference_clue(source_key: str, query: str, raw_reference_rows: list[dict]) -> str:
+    tokens = source_clue_tokens(source_key, query)
+    best_match = ""
+    best_score = 0
+    for row in raw_reference_rows:
+        ref = row.get("raw_reference", "")
+        bib_key = row.get("matched_bibtex_key", "")
+        source_id = row.get("matched_source_work_key", "")
+        blob = f"{ref} {bib_key} {source_id}"
+        normalized = normalize_for_match(blob)
+        score = 0
+        if source_id == source_key:
+            score += 3
+        for token in tokens:
+            if token and token in normalized:
+                score += 1
+        if score > best_score:
+            best_score = score
+            best_match = ref
+    return truncate_snippet(best_match, limit=MAX_STORED_SNIPPET_LENGTH)
 
 
 def slugify_fragment(value: str) -> str:
@@ -449,16 +570,17 @@ def probe_pdf_text(file_record: dict, *, first_page: int = 1, last_page: int = 4
 
     if command_available("pdftoppm") and command_available("tesseract"):
         snippets: list[str] = []
+        max_last_page = min(last_page, first_page + 3)
         with tempfile.TemporaryDirectory() as tmp_dir:
             prefix = os.path.join(tmp_dir, "page")
             result = subprocess.run(
-                ["pdftoppm", "-f", str(first_page), "-l", str(min(last_page, first_page + 1)), "-gray", "-r", "200", str(path), prefix],
+                ["pdftoppm", "-f", str(first_page), "-l", str(max_last_page), "-gray", "-r", "200", str(path), prefix],
                 check=False,
                 capture_output=True,
                 text=True,
             )
             if result.returncode == 0:
-                for page in range(first_page, min(last_page, first_page + 1) + 1):
+                for page in range(first_page, max_last_page + 1):
                     image = Path(f"{prefix}-{page}.pgm")
                     if not image.exists():
                         continue
@@ -936,6 +1058,156 @@ def find_file_record(file_records: dict[str, dict], file_id_or_label: str) -> di
     return None
 
 
+def epigraphia_promoted_review_rows(epigraphia_review_rows: list[dict]) -> list[dict]:
+    return [
+        row
+        for row in epigraphia_review_rows
+        if row.get("classification") == "actual_eb_fascicle" and row.get("confidence") == "high"
+    ]
+
+
+def ensure_epigraphia_candidate_and_classification_rows(
+    candidate_rows: list[dict],
+    classification_rows: list[dict],
+    source_row: dict,
+    promoted_review_rows: list[dict],
+    file_records: dict[str, dict],
+) -> tuple[list[dict], list[dict]]:
+    candidate_by_id = {row["witness_id"]: row for row in candidate_rows}
+    classification_by_id = {row["witness_id"]: row for row in classification_rows}
+    for review_row in promoted_review_rows:
+        witness_id = review_row["witness_id"]
+        file_record = find_file_record(file_records, review_row["file_label"])
+        if not file_record:
+            continue
+        if witness_id not in candidate_by_id:
+            candidate_by_id[witness_id] = {
+                "witness_id": witness_id,
+                "source_work_key": "epigraphiaBirmanica",
+                "canonical_title": source_row.get("canonical_title", ""),
+                "candidate_file_label": file_record.get("candidate_file_label", review_row["file_label"]),
+                "candidate_file_id": file_record.get("candidate_file_id", ""),
+                "candidate_path_or_redacted_path": file_record.get("candidate_path_or_redacted_path", ""),
+                "file_type": "pdf",
+                "match_type": "reviewed_local_fascicle",
+                "match_confidence": "high",
+                "match_reason": truncate_snippet(review_row.get("notes", "") or review_row.get("title_page_snippet", ""), limit=MAX_STORED_SNIPPET_LENGTH),
+                "sha256_if_available": file_record.get("sha256_if_available", ""),
+                "local_cache_status": file_record.get("local_cache_status", "available"),
+                "needs_human_review": "true",
+                "notes": "Promoted from Epigraphia Birmanica fascicle review.",
+            }
+        if witness_id not in classification_by_id:
+            classification_by_id[witness_id] = {
+                "witness_id": witness_id,
+                "source_work_key": "epigraphiaBirmanica",
+                "canonical_title": source_row.get("canonical_title", ""),
+                "candidate_file_label": file_record.get("candidate_file_label", review_row["file_label"]),
+                "witness_type": "source_edition",
+                "contains_translation": "unknown",
+                "contains_edition_or_transliteration": "possible",
+                "contains_plate_or_image": "possible" if review_row.get("contains_plate_or_image") == "true" else "unknown",
+                "contains_catalogue_metadata": "unknown",
+                "contains_secondary_discussion": "no",
+                "coverage_scope": review_row.get("probable_volume_or_fascicle", ""),
+                "confidence": "high",
+                "evidence_source": "epigraphia_birmanica_witness_review",
+                "evidence_snippet": review_row.get("title_page_snippet", "") or review_row.get("file_label", ""),
+                "needs_human_review": "true",
+                "next_action": "Inspect sample fascicle contents before making any translation claim.",
+                "notes": "Direct-looking EB fascicle promoted from title/path evidence.",
+                "verification_status": "",
+                "directness": "",
+                "verified_by": "verify_translation_witnesses",
+                "verified_evidence_id": witness_id,
+            }
+    return list(candidate_by_id.values()), list(classification_by_id.values())
+
+
+def build_epigraphia_promoted_verification_rows(
+    promoted_review_rows: list[dict],
+    source_row: dict,
+    candidate_rows: list[dict],
+) -> tuple[list[dict], list[dict]]:
+    candidate_by_id = {row["witness_id"]: row for row in candidate_rows}
+    verification_rows: list[dict] = []
+    snippet_rows: list[dict] = []
+    for review_row in promoted_review_rows:
+        candidate_row = candidate_by_id.get(review_row["witness_id"])
+        if not candidate_row:
+            continue
+        title_snippet = truncate_snippet(review_row.get("title_page_snippet", "") or review_row.get("file_label", ""), limit=MAX_STORED_SNIPPET_LENGTH)
+        contents_snippet = truncate_snippet(review_row.get("contents_snippet", ""), limit=MAX_STORED_SNIPPET_LENGTH)
+        contains_plate = review_row.get("contains_plate_or_image") == "true"
+        verification_rows.append(
+            {
+                "witness_id": candidate_row["witness_id"],
+                "source_work_key": "epigraphiaBirmanica",
+                "canonical_title": source_row.get("canonical_title", ""),
+                "candidate_file_label": candidate_row.get("candidate_file_label", ""),
+                "current_witness_type": "source_edition",
+                "verified_witness_type": "source_edition",
+                "verification_status": "verified_direct_witness",
+                "directness": "direct_source",
+                "contains_translation_verified": "unknown",
+                "contains_edition_verified": "confirmed",
+                "contains_plate_or_image_verified": "confirmed" if contains_plate else "no",
+                "contains_catalogue_metadata_verified": "no",
+                "contains_secondary_discussion_verified": "no",
+                "title_page_evidence": title_snippet,
+                "toc_evidence": contents_snippet,
+                "ocr_or_text_snippet": title_snippet or contents_snippet,
+                "evidence_quality": "explicit" if text_has_keyword(title_snippet, ["epigraphia birmanica", "epigraphica birmanica"]) else "strong",
+                "confidence": "high",
+                "recommended_action": "Use as a verified direct EB fascicle; inspect fascicle contents before making any translation claim.",
+                "notes": "Promoted from direct-looking local EB fascicle evidence. Keep human review for deeper content coverage.",
+            }
+        )
+        if title_snippet:
+            snippet_rows.append(
+                {
+                    "witness_id": candidate_row["witness_id"],
+                    "source_work_key": "epigraphiaBirmanica",
+                    "candidate_file_label": candidate_row.get("candidate_file_label", ""),
+                    "snippet_type": "title_page",
+                    "snippet": title_snippet,
+                    "source_method": "epigraphia-review",
+                    "confidence": "high",
+                    "notes": review_row.get("notes", ""),
+                }
+            )
+        if contents_snippet:
+            snippet_rows.append(
+                {
+                    "witness_id": candidate_row["witness_id"],
+                    "source_work_key": "epigraphiaBirmanica",
+                    "candidate_file_label": candidate_row.get("candidate_file_label", ""),
+                    "snippet_type": "contents",
+                    "snippet": contents_snippet,
+                    "source_method": "epigraphia-review",
+                    "confidence": "medium",
+                    "notes": review_row.get("notes", ""),
+                }
+            )
+    return verification_rows, snippet_rows
+
+
+def apply_verification_overrides(
+    verification_rows: list[dict],
+    snippet_rows: list[dict],
+    *,
+    replacement_rows: list[dict],
+    replacement_snippet_rows: list[dict],
+) -> tuple[list[dict], list[dict]]:
+    verification_by_id = {row["witness_id"]: row for row in verification_rows}
+    for row in replacement_rows:
+        verification_by_id[row["witness_id"]] = row
+    replacement_ids = {row["witness_id"] for row in replacement_rows}
+    filtered_snippets = [row for row in snippet_rows if row["witness_id"] not in replacement_ids]
+    filtered_snippets.extend(replacement_snippet_rows)
+    return list(verification_by_id.values()), filtered_snippets
+
+
 def query_support_snippet(query: str, file_record: dict) -> str:
     query_norm = normalize_for_match(query)
     best_snippet = ""
@@ -966,11 +1238,20 @@ def build_direct_query_search_rows(
     file_records: dict[str, dict],
     *,
     source_work_key: str | None = None,
+    clue_source_work_key: str | None = None,
+    raw_reference_rows: list[dict] | None = None,
+    verification_rows: list[dict] | None = None,
     exclude_file_ids: set[str] | None = None,
     exclusion_note: str = "",
 ) -> list[dict]:
     rows: list[dict] = []
     exclude_file_ids = exclude_file_ids or set()
+    raw_reference_rows = raw_reference_rows or []
+    verification_by_label: dict[str, str] = {}
+    for row in verification_rows or []:
+        verification_by_label[row.get("candidate_file_label", "")] = row.get("verification_status", "")
+    run_id = current_search_run_id()
+    indexes_available = bool(file_records)
     for query in queries:
         best_match: tuple[str, dict, float, str] | None = None
         for file_record in file_records.values():
@@ -982,22 +1263,44 @@ def build_direct_query_search_rows(
             match_type, score, reason = match
             if best_match is None or score > best_match[2]:
                 best_match = (match_type, file_record, score, reason)
+        clue_key = clue_source_work_key or source_work_key or ""
+        clue = raw_reference_clue(clue_key, query, raw_reference_rows) if clue_key else ""
         if best_match is None:
+            result_status = direct_search_status(
+                match_type="",
+                has_match=False,
+                has_bibliographic_clue=bool(clue),
+                indexes_available=indexes_available,
+            )
             row = {
                 "query": query,
                 "matched_file_label": "",
                 "matched_file_id": "",
                 "match_type": "not_found",
                 "match_confidence": "low",
-                "short_evidence": "",
+                "short_evidence": clue,
+                "searched_sources": searched_sources_label(),
+                "search_scope": search_scope_label(),
+                "search_date_or_run_id": run_id,
+                "search_result_status": result_status,
                 "recommended_action": "Continue targeted local-file search for a direct witness.",
-                "notes": exclusion_note or "No local direct witness or bibliographic clue matched this query.",
+                "notes": exclusion_note or (
+                    "No local direct witness matched this query." if clue else "No local direct witness or bibliographic clue matched this query."
+                ),
             }
             if source_work_key:
                 row = {"source_work_key": source_work_key, **row}
             rows.append(row)
             continue
         match_type, file_record, score, reason = best_match
+        verification_status = verification_by_label.get(file_record.get("candidate_file_label", ""), "")
+        result_status = direct_search_status(
+            match_type=match_type,
+            has_match=True,
+            verification_status=verification_status,
+            has_bibliographic_clue=bool(clue),
+            indexes_available=indexes_available,
+        )
         recommended_action = "Inspect title page before promoting this as a direct witness."
         if match_type == "ocr_bibliographic_mention":
             recommended_action = "Treat this as a bibliographic clue only; locate the direct local file."
@@ -1009,7 +1312,11 @@ def build_direct_query_search_rows(
             "matched_file_id": file_record.get("candidate_file_id", ""),
             "match_type": match_type,
             "match_confidence": confidence_label(score),
-            "short_evidence": query_support_snippet(query, file_record),
+            "short_evidence": query_support_snippet(query, file_record) or clue,
+            "searched_sources": searched_sources_label(),
+            "search_scope": search_scope_label(),
+            "search_date_or_run_id": run_id,
+            "search_result_status": result_status,
             "recommended_action": recommended_action,
             "notes": truncate_snippet(reason if not exclusion_note else f"{reason}. {exclusion_note}", limit=MAX_STORED_SNIPPET_LENGTH),
         }
@@ -1064,70 +1371,97 @@ def build_sip_witness_inspection_rows(
         return []
     source_row = source_by_key.get("sipSelectionsPagan")
     title_snippet, contents_snippet = review_title_and_contents_snippets(source_row, file_record)
+    preface_probe, _ = probe_pdf_text(file_record, first_page=2, last_page=5)
+    sample_probe, _ = probe_pdf_text(file_record, first_page=9, last_page=12)
     support_snippet = truncate_snippet(
         verification_row.get("ocr_or_text_snippet")
         or verification_row.get("title_page_evidence")
         or query_support_snippet(source_row.get("canonical_title", ""), file_record),
         limit=MAX_STORED_SNIPPET_LENGTH,
     )
-    translation_found = text_has_keyword(" ".join([title_snippet, contents_snippet, support_snippet]), TRANSLATION_KEYWORDS)
-    notes_found = text_has_keyword(" ".join([title_snippet, contents_snippet, support_snippet]), NOTES_KEYWORDS)
-    rows = [
-        {
-            "source_work_key": "sipSelectionsPagan",
-            "witness_id": verification_row["witness_id"],
-            "file_label": file_record.get("candidate_file_label", ""),
-            "inspection_area": "title_page",
-            "evidence_snippet": title_snippet,
-            "contains_translation": bool_string(translation_found),
-            "contains_edition_or_transliteration": "true",
-            "contains_notes_or_commentary": bool_string(notes_found),
-            "contains_catalogue_metadata": "false",
-            "contains_plate_or_image": "false",
-            "coverage_scope": "selected_inscriptions_only",
-            "confidence": "high",
-            "needs_human_review": "false" if translation_found else "true",
-            "notes": "Title-page OCR confirms Selections from the Inscriptions of Pagan by Pe Maung Tin and G.H. Luce.",
-        }
-    ]
-    if contents_snippet:
+    combined = " ".join([title_snippet, contents_snippet, preface_probe, sample_probe, support_snippet])
+    translation_found = text_has_keyword(combined, TRANSLATION_KEYWORDS)
+    notes_found = text_has_keyword(combined, NOTES_KEYWORDS)
+    sample_entry_numbered = bool(re.search(r"\b\d+\b", sample_probe))
+    rows = []
+
+    def add_row(area: str, snippet: str, *, confidence: str, notes: str, contains_notes: bool = False, contains_catalogue: bool = False) -> None:
         rows.append(
             {
                 "source_work_key": "sipSelectionsPagan",
                 "witness_id": verification_row["witness_id"],
                 "file_label": file_record.get("candidate_file_label", ""),
-                "inspection_area": "contents",
-                "evidence_snippet": contents_snippet,
+                "inspection_area": area,
+                "evidence_snippet": truncate_snippet(snippet, limit=MAX_STORED_SNIPPET_LENGTH),
                 "contains_translation": bool_string(translation_found),
                 "contains_edition_or_transliteration": "true",
-                "contains_notes_or_commentary": bool_string(notes_found),
-                "contains_catalogue_metadata": "false",
+                "contains_notes_or_commentary": bool_string(contains_notes),
+                "contains_catalogue_metadata": bool_string(contains_catalogue),
                 "contains_plate_or_image": "false",
                 "coverage_scope": "selected_inscriptions_only",
-                "confidence": "medium",
-                "needs_human_review": "true",
-                "notes": "Contents/preface-style snippet reviewed for translation or commentary clues.",
+                "confidence": confidence,
+                "needs_human_review": "true" if not translation_found else "false",
+                "notes": notes,
             }
         )
-    if support_snippet and support_snippet != title_snippet and support_snippet != contents_snippet:
-        rows.append(
-            {
-                "source_work_key": "sipSelectionsPagan",
-                "witness_id": verification_row["witness_id"],
-                "file_label": file_record.get("candidate_file_label", ""),
-                "inspection_area": "headings",
-                "evidence_snippet": support_snippet,
-                "contains_translation": bool_string(translation_found),
-                "contains_edition_or_transliteration": "true",
-                "contains_notes_or_commentary": bool_string(notes_found),
-                "contains_catalogue_metadata": "false",
-                "contains_plate_or_image": "false",
-                "coverage_scope": "selected_inscriptions_only",
-                "confidence": "medium",
-                "needs_human_review": "true",
-                "notes": "Supporting OCR heading reviewed; no translation claim is promoted without explicit evidence.",
-            }
-        )
+
+    add_row(
+        "title_page",
+        title_snippet,
+        confidence="high",
+        notes="Title-page OCR confirms Selections from the Inscriptions of Pagan by Pe Maung Tin and G.H. Luce.",
+    )
+    add_row(
+        "contents",
+        contents_snippet or preface_probe,
+        confidence="medium" if contents_snippet else "low",
+        notes=(
+            "Contents-style pages were reviewed for translation or locator structure."
+            if contents_snippet
+            else "Targeted OCR of the early pages remained too noisy to isolate a contents heading."
+        ),
+        contains_catalogue=bool(text_has_keyword(contents_snippet or preface_probe, ["index", "contents", "table of contents"])),
+    )
+    add_row(
+        "preface",
+        preface_probe or title_snippet,
+        confidence="medium" if preface_probe else "low",
+        notes=(
+            "Early prefatory pages were reviewed for commentary and translation clues."
+            if preface_probe
+            else "No recoverable preface snippet was isolated beyond the title-page region."
+        ),
+        contains_notes=notes_found,
+    )
+    add_row(
+        "sample_entry",
+        sample_probe or support_snippet,
+        confidence="medium" if sample_probe else "low",
+        notes=(
+            "Sample entry pages were OCR-probed; the witness still needs human review to determine whether English translation accompanies the edited text."
+            if sample_probe
+            else "No recoverable sample-entry OCR was isolated; targeted OCR/text extraction is still needed."
+        ),
+        contains_catalogue=sample_entry_numbered,
+    )
+    add_row(
+        "headings",
+        support_snippet,
+        confidence="medium",
+        notes="Supporting OCR headings were reviewed; no translation claim is promoted without explicit witness evidence.",
+        contains_notes=notes_found,
+    )
+    add_row(
+        "notes_or_commentary",
+        preface_probe or support_snippet,
+        confidence="low" if not notes_found else "medium",
+        notes=(
+            "No explicit notes/commentary heading was confirmed from the stored snippets."
+            if not notes_found
+            else "The stored snippets suggest prefatory or commentary material alongside the edition."
+        ),
+        contains_notes=notes_found,
+    )
     return rows
 
 
@@ -1169,6 +1503,7 @@ def build_source_work_gap_rows(
     uem_search_rows: list[dict],
     core_search_rows: list[dict],
     epigraphia_review_rows: list[dict],
+    iob_text_search_rows: list[dict],
 ) -> list[dict]:
     candidate_by_source: dict[str, list[dict]] = defaultdict(list)
     verification_by_source: dict[str, list[dict]] = defaultdict(list)
@@ -1199,8 +1534,16 @@ def build_source_work_gap_rows(
             )
             return preferred_verifications[0].get("witness_id", ""), preferred_verifications[0].get("candidate_file_label", "")
         for row in core_search_rows:
-            if row.get("source_work_key") == source_key and row["matched_file_label"] and row.get("match_type") in {"exact_title_filename", "normalized_title_filename", "source_family_match"}:
+            if (
+                row.get("source_work_key") == source_key
+                and row["matched_file_label"]
+                and row.get("search_result_status") in {"candidate_found", "direct_witness_found"}
+            ):
                 return "", row["matched_file_label"]
+        if source_key == "lucePeMaungTinInscriptionsOfBurma":
+            for row in iob_text_search_rows:
+                if row["matched_file_label"] and row.get("search_result_status") in {"candidate_found", "direct_witness_found"}:
+                    return "", row["matched_file_label"]
         return "", ""
 
     gap_rows: list[dict] = []
@@ -1222,14 +1565,19 @@ def build_source_work_gap_rows(
 
         if source_key == "sipSelectionsPagan":
             current_status = "verified_direct_witness_found"
-            gap_type = "needs_translation_check"
+            gap_type = "has_verified_edition_but_translation_unknown"
             next_action = "Inspect sample entries or contents before making any translation claim."
-            notes = "Verified SIP witness exists; translation remains unconfirmed from the stored snippets."
+            notes = "Verified SIP witness exists with edition evidence; translation remains unconfirmed after targeted OCR review."
         elif source_key == "uemSelectionsPagan":
             current_status = "needs_direct_witness"
             gap_type = "needs_direct_witness"
             next_action = "Keep SIP excluded and continue targeted U E Maung witness search."
             notes = "The Luce/Pe Maung Tin 1928 SIP file remains a reviewed UEM false positive."
+        elif source_key == "epigraphiaBirmanica" and verified_direct_count > 0:
+            current_status = "verified_direct_witness_found_needs_content_inspection"
+            gap_type = "has_verified_edition_but_translation_unknown"
+            next_action = "Inspect promoted EB fascicles for contents and any translation-bearing sections."
+            notes = "Direct-looking EB fascicles are now promoted as verified direct witnesses, but translation coverage remains unconfirmed."
         elif source_key == "epigraphiaBirmanica" and best_candidate_file_label:
             current_status = "needs_title_page_review"
             gap_type = "needs_title_page_review"
@@ -1239,7 +1587,7 @@ def build_source_work_gap_rows(
             current_status = "verification_in_progress"
             gap_type = "has_verified_plate_but_needs_text"
             next_action = "Find the companion text volume before treating Inscriptions of Burma as text-covered."
-            notes = "Plate/facsimile witnesses are verified; a text witness is still missing."
+            notes = "Plate/facsimile witnesses are verified; the text-witness search should not count them as text coverage."
         elif source_key in {"tnInscriptionsPaganPinyaAva", "ppaCatalogue", "ubSourceFamily"} and best_candidate_file_label:
             current_status = "needs_title_page_review"
             gap_type = "needs_title_page_review"
@@ -1436,6 +1784,31 @@ def build_epigraphia_birmanica_review_rows(
     return rows
 
 
+def build_epigraphia_fascicle_coverage_rows(
+    promoted_review_rows: list[dict],
+) -> list[dict]:
+    rows: list[dict] = []
+    for review_row in promoted_review_rows:
+        contains_plate = review_row.get("contains_plate_or_image") == "true"
+        rows.append(
+            {
+                "witness_id": review_row["witness_id"],
+                "file_label": review_row["file_label"],
+                "probable_volume_or_fascicle": review_row.get("probable_volume_or_fascicle", ""),
+                "title_or_path_evidence": review_row.get("title_page_snippet", "") or review_row["file_label"],
+                "contains_edition_or_transliteration": "confirmed",
+                "contains_translation": "unknown",
+                "contains_plate_or_image": "confirmed" if contains_plate else "no",
+                "coverage_scope": review_row.get("probable_volume_or_fascicle", "") or "identified fascicle",
+                "confidence": review_row.get("confidence", "medium"),
+                "needs_human_review": "true",
+                "next_action": "Inspect sample fascicle contents before claiming translation coverage.",
+                "notes": "Promoted from direct-looking local EB fascicle evidence.",
+            }
+        )
+    return rows
+
+
 def update_classification_rows(
     classification_rows: list[dict],
     verification_rows: list[dict],
@@ -1552,9 +1925,11 @@ def update_plan_rows(
     verification_rows: list[dict],
     missing_search_rows: list[dict],
     gap_rows: list[dict],
+    classification_rows: list[dict] | None = None,
 ) -> list[dict]:
     candidate_counts: dict[str, int] = defaultdict(int)
     verification_by_source: dict[str, list[dict]] = defaultdict(list)
+    classification_by_source: dict[str, list[dict]] = defaultdict(list)
     search_hits_by_source: dict[str, int] = defaultdict(int)
     source_by_key = {row["source_work_key"]: row for row in source_rows}
     gap_by_source = {row["source_work_key"]: row for row in gap_rows}
@@ -1563,6 +1938,8 @@ def update_plan_rows(
         candidate_counts[row["source_work_key"]] += 1
     for row in verification_rows:
         verification_by_source[row["source_work_key"]].append(row)
+    for row in classification_rows or []:
+        classification_by_source[row["source_work_key"]].append(row)
     for row in missing_search_rows:
         if row["matched_file_label"]:
             search_hits_by_source[row["source_work_key"]] += 1
@@ -1572,6 +1949,22 @@ def update_plan_rows(
         source_key = row["source_work_key"]
         source_row = source_by_key.get(source_key, {})
         verifications = verification_by_source.get(source_key, [])
+        classifications = classification_by_source.get(source_key, [])
+        confirmed_translation_count = (
+            sum(item.get("contains_translation") == "confirmed" for item in classifications)
+            if classifications
+            else sum(v["contains_translation_verified"] == "confirmed" for v in verifications)
+        )
+        confirmed_edition_count = (
+            sum(item.get("contains_edition_or_transliteration") == "confirmed" for item in classifications)
+            if classifications
+            else sum(v["contains_edition_verified"] == "confirmed" for v in verifications)
+        )
+        confirmed_plate_count = (
+            sum(item.get("contains_plate_or_image") == "confirmed" for item in classifications)
+            if classifications
+            else sum(v["verification_status"] == "verified_plate_witness" for v in verifications)
+        )
         verified_direct_count = sum(v["verification_status"] in {"verified_direct_witness", "verified_catalogue_witness"} for v in verifications)
         verified_translation_count = sum(v["contains_translation_verified"] == "confirmed" for v in verifications)
         verified_edition_count = sum(v["contains_edition_verified"] == "confirmed" for v in verifications)
@@ -1579,7 +1972,7 @@ def update_plan_rows(
         weak_false_positive_count = sum(v["verification_status"] == "weak_false_positive" for v in verifications)
         gap_row = gap_by_source.get(source_key, {})
 
-        if source_key in PERIODICAL_PLAN_KEYS:
+        if source_key in PERIODICAL_PLAN_KEYS and source_key != "epigraphiaBirmanica":
             discovery_status = "needs_article_level_discovery"
             next_action = "Inspect article-level witnesses; do not promote the series/container itself."
         elif verified_direct_count > 0:
@@ -1604,9 +1997,9 @@ def update_plan_rows(
                 "discovery_status": discovery_status,
                 "candidate_witness_count": str(candidate_counts.get(source_key, 0)),
                 "classified_witness_count": str(len(verifications)),
-                "confirmed_translation_witness_count": str(verified_translation_count),
-                "confirmed_edition_witness_count": str(verified_edition_count),
-                "confirmed_plate_witness_count": str(verified_plate_count),
+                "confirmed_translation_witness_count": str(confirmed_translation_count),
+                "confirmed_edition_witness_count": str(confirmed_edition_count),
+                "confirmed_plate_witness_count": str(confirmed_plate_count),
                 "verified_direct_witness_count": str(verified_direct_count),
                 "verified_translation_witness_count": str(verified_translation_count),
                 "verified_edition_witness_count": str(verified_edition_count),
@@ -1627,9 +2020,21 @@ def build_verification_report(
     sip_inspection_rows: list[dict],
     uem_search_rows: list[dict],
     core_search_rows: list[dict],
+    iob_text_search_rows: list[dict],
     rescue_review_rows: list[dict],
     epigraphia_review_rows: list[dict],
+    epigraphia_fascicle_coverage_rows: list[dict],
 ) -> dict:
+    direct_search_rows = uem_search_rows + core_search_rows + iob_text_search_rows
+    sip_sample_entry_inspected = any(row.get("inspection_area") == "sample_entry" for row in sip_inspection_rows)
+    sip_translation_status = next(
+        (row.get("contains_translation") for row in sip_inspection_rows if row.get("inspection_area") == "sample_entry"),
+        "unknown",
+    )
+    direct_witness_search_result_counts = {
+        status: sum(row.get("search_result_status") == status for row in direct_search_rows)
+        for status in DIRECT_SEARCH_RESULT_STATUSES
+    }
     return {
         "verified_witness_count": len(verification_rows),
         "verified_direct_witness_count": sum(row["verification_status"] in {"verified_direct_witness", "verified_catalogue_witness"} for row in verification_rows),
@@ -1655,10 +2060,19 @@ def build_verification_report(
             for row in gap_rows
         ),
         "sip_inspection_completed": bool(sip_inspection_rows),
+        "sip_sample_entry_inspected": sip_sample_entry_inspected,
+        "sip_contains_translation_status": sip_translation_status,
         "uem_direct_search_count": sum(bool(row["matched_file_label"]) for row in uem_search_rows),
         "core_source_direct_search_count": sum(bool(row["matched_file_label"]) for row in core_search_rows),
+        "inscriptions_of_burma_text_witness_search_count": len(iob_text_search_rows),
+        "inscriptions_of_burma_text_witness_found": sum(
+            row.get("search_result_status") == "direct_witness_found" for row in iob_text_search_rows
+        ),
         "rescue_candidate_review_count": len(rescue_review_rows),
         "epigraphia_birmanica_review_count": len(epigraphia_review_rows),
+        "eb_verified_fascicle_count": len(epigraphia_fascicle_coverage_rows),
+        "eb_fascicle_coverage_count": len(epigraphia_fascicle_coverage_rows),
+        "direct_witness_search_result_counts": direct_witness_search_result_counts,
         "verified_translation_after_inspection_count": sum(row["contains_translation_verified"] == "confirmed" for row in verification_rows),
         "verified_edition_after_inspection_count": sum(row["contains_edition_verified"] == "confirmed" for row in verification_rows),
         "notes": [
@@ -1668,9 +2082,23 @@ def build_verification_report(
     }
 
 
-def update_discovery_report(existing_report: dict, verification_report: dict) -> dict:
+def update_discovery_report(
+    existing_report: dict,
+    verification_report: dict,
+    candidate_rows: list[dict],
+    classification_rows: list[dict],
+) -> dict:
     updated = dict(existing_report)
     updated.update(verification_report)
+    updated["source_works_with_candidate_witnesses"] = len({row["source_work_key"] for row in candidate_rows})
+    updated["candidate_witness_count"] = len(candidate_rows)
+    updated["classified_witness_count"] = len(classification_rows)
+    updated["confirmed_translation_witness_count"] = sum(row.get("contains_translation") == "confirmed" for row in classification_rows)
+    updated["possible_translation_witness_count"] = sum(row.get("contains_translation") == "possible" for row in classification_rows)
+    updated["confirmed_edition_witness_count"] = sum(row.get("contains_edition_or_transliteration") == "confirmed" for row in classification_rows)
+    updated["possible_edition_witness_count"] = sum(row.get("contains_edition_or_transliteration") == "possible" for row in classification_rows)
+    updated["plate_or_image_witness_count"] = sum(row.get("contains_plate_or_image") in {"possible", "confirmed"} for row in classification_rows)
+    updated["periodical_container_count"] = sum(row.get("witness_type") == "periodical_container" for row in classification_rows)
     return updated
 
 
@@ -1697,6 +2125,8 @@ def verify_translation_witnesses(
     core_source_direct_search_path: Path = CORE_SOURCE_DIRECT_SEARCH_PATH,
     rescue_candidate_review_path: Path = RESCUE_CANDIDATE_REVIEW_PATH,
     epigraphia_birmanica_review_path: Path = EPIGRAPHIA_BIRMANICA_REVIEW_PATH,
+    epigraphia_birmanica_fascicle_coverage_path: Path = EPIGRAPHIA_BIRMANICA_FASCICLE_COVERAGE_PATH,
+    inscriptions_of_burma_text_search_path: Path = INSCRIPTIONS_OF_BURMA_TEXT_SEARCH_PATH,
     witness_verification_report_path: Path = WITNESS_VERIFICATION_REPORT_PATH,
 ) -> dict:
     plan_rows = read_tsv(plan_path)
@@ -1713,6 +2143,15 @@ def verify_translation_witnesses(
     file_records = build_file_records(local_file_rows, source_library_rows, ocr_manifest_rows, ocr_index_rows)
     source_rows = build_source_rows(plan_rows, source_work_rows, bibtex_entries)
     source_by_key = {row["source_work_key"]: row for row in source_rows}
+    epigraphia_review_rows = build_epigraphia_birmanica_review_rows(candidate_rows, file_records)
+    promoted_epigraphia_rows = epigraphia_promoted_review_rows(epigraphia_review_rows)
+    candidate_rows, classification_rows = ensure_epigraphia_candidate_and_classification_rows(
+        candidate_rows,
+        classification_rows,
+        source_by_key["epigraphiaBirmanica"],
+        promoted_epigraphia_rows,
+        file_records,
+    )
     classification_by_id = {row["witness_id"]: row for row in classification_rows}
 
     verification_rows: list[dict] = []
@@ -1758,6 +2197,19 @@ def verify_translation_witnesses(
         verification_rows.append(verification_row)
         snippet_rows.extend(candidate_snippet_rows)
 
+    if promoted_epigraphia_rows:
+        epigraphia_promoted_rows, epigraphia_promoted_snippets = build_epigraphia_promoted_verification_rows(
+            promoted_epigraphia_rows,
+            source_by_key["epigraphiaBirmanica"],
+            candidate_rows,
+        )
+        verification_rows, snippet_rows = apply_verification_overrides(
+            verification_rows,
+            snippet_rows,
+            replacement_rows=epigraphia_promoted_rows,
+            replacement_snippet_rows=epigraphia_promoted_snippets,
+        )
+
     missing_search_rows = build_missing_direct_search_rows(
         [row for row in source_rows if row["source_work_key"] in HIGH_PRIORITY_SOURCE_KEYS],
         file_records,
@@ -1789,16 +2241,32 @@ def verify_translation_witnesses(
     uem_search_rows = build_direct_query_search_rows(
         UEM_DIRECT_SEARCH_QUERIES,
         file_records,
+        clue_source_work_key="uemSelectionsPagan",
+        raw_reference_rows=raw_reference_rows,
+        verification_rows=verification_rows,
         exclude_file_ids={sip_candidate_row["candidate_file_id"]} if sip_candidate_row else set(),
         exclusion_note="The verified Luce/Pe Maung Tin 1928 SIP witness is excluded from UEM direct-witness search results.",
     )
     core_search_rows = [
         row
         for source_key, queries in CORE_SOURCE_DIRECT_SEARCH_QUERIES.items()
-        for row in build_direct_query_search_rows(queries, file_records, source_work_key=source_key)
+        for row in build_direct_query_search_rows(
+            queries,
+            file_records,
+            source_work_key=source_key,
+            raw_reference_rows=raw_reference_rows,
+            verification_rows=verification_rows,
+        )
     ]
+    iob_text_search_rows = build_direct_query_search_rows(
+        INSCRIPTIONS_OF_BURMA_TEXT_QUERIES,
+        file_records,
+        clue_source_work_key="lucePeMaungTinInscriptionsOfBurma",
+        raw_reference_rows=raw_reference_rows,
+        verification_rows=verification_rows,
+    )
     rescue_review_rows = build_rescue_candidate_review_rows(file_records, missing_search_rows)
-    epigraphia_review_rows = build_epigraphia_birmanica_review_rows(candidate_rows, file_records)
+    epigraphia_fascicle_coverage_rows = build_epigraphia_fascicle_coverage_rows(promoted_epigraphia_rows)
     gap_rows = build_source_work_gap_rows(
         source_rows,
         candidate_rows,
@@ -1806,6 +2274,7 @@ def verify_translation_witnesses(
         uem_search_rows,
         core_search_rows,
         epigraphia_review_rows,
+        iob_text_search_rows,
     )
 
     updated_classification_rows = update_classification_rows(classification_rows, verification_rows)
@@ -1816,6 +2285,7 @@ def verify_translation_witnesses(
         verification_rows,
         missing_search_rows,
         gap_rows,
+        updated_classification_rows,
     )
     periodical_fields, updated_periodical_plan_rows = update_periodical_plan_rows(
         plan_rows,
@@ -1834,12 +2304,20 @@ def verify_translation_witnesses(
         sip_inspection_rows,
         uem_search_rows,
         core_search_rows,
+        iob_text_search_rows,
         rescue_review_rows,
         epigraphia_review_rows,
+        epigraphia_fascicle_coverage_rows,
     )
-    updated_report = update_discovery_report(existing_report, verification_report)
+    updated_report = update_discovery_report(
+        existing_report,
+        verification_report,
+        candidate_rows,
+        updated_classification_rows,
+    )
 
     witness_verification_path.parent.mkdir(parents=True, exist_ok=True)
+    write_tsv(witness_candidates_path, candidate_rows, WITNESS_CANDIDATE_FIELDS)
     write_tsv(witness_verification_path, verification_rows, VERIFICATION_FIELDS)
     write_tsv(witness_snippets_path, snippet_rows, SNIPPET_FIELDS)
     write_tsv(missing_direct_search_path, missing_search_rows, MISSING_DIRECT_SEARCH_FIELDS)
@@ -1847,8 +2325,10 @@ def verify_translation_witnesses(
     write_tsv(sip_witness_inspection_path, sip_inspection_rows, SIP_WITNESS_INSPECTION_FIELDS)
     write_tsv(uem_direct_search_path, uem_search_rows, DIRECT_WITNESS_SEARCH_FIELDS)
     write_tsv(core_source_direct_search_path, core_search_rows, CORE_DIRECT_WITNESS_SEARCH_FIELDS)
+    write_tsv(inscriptions_of_burma_text_search_path, iob_text_search_rows, DIRECT_WITNESS_SEARCH_FIELDS)
     write_tsv(rescue_candidate_review_path, rescue_review_rows, RESCUE_CANDIDATE_REVIEW_FIELDS)
     write_tsv(epigraphia_birmanica_review_path, epigraphia_review_rows, EPIGRAPHIA_BIRMANICA_REVIEW_FIELDS)
+    write_tsv(epigraphia_birmanica_fascicle_coverage_path, epigraphia_fascicle_coverage_rows, EPIGRAPHIA_BIRMANICA_FASCICLE_COVERAGE_FIELDS)
     write_tsv(witness_classification_path, updated_classification_rows, WITNESS_CLASSIFICATION_FIELDS)
     plan_fields = list(plan_rows[0].keys()) + [field for field in PLAN_DISCOVERY_FIELDS if field not in plan_rows[0]]
     write_tsv(plan_path, updated_plan_rows, plan_fields)
@@ -1881,6 +2361,8 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--core-source-direct-search", type=Path, default=CORE_SOURCE_DIRECT_SEARCH_PATH)
     parser.add_argument("--rescue-candidate-review", type=Path, default=RESCUE_CANDIDATE_REVIEW_PATH)
     parser.add_argument("--epigraphia-birmanica-review", type=Path, default=EPIGRAPHIA_BIRMANICA_REVIEW_PATH)
+    parser.add_argument("--epigraphia-birmanica-fascicle-coverage", type=Path, default=EPIGRAPHIA_BIRMANICA_FASCICLE_COVERAGE_PATH)
+    parser.add_argument("--inscriptions-of-burma-text-search", type=Path, default=INSCRIPTIONS_OF_BURMA_TEXT_SEARCH_PATH)
     parser.add_argument("--witness-verification-report", type=Path, default=WITNESS_VERIFICATION_REPORT_PATH)
     return parser.parse_args()
 
@@ -1909,6 +2391,8 @@ def main() -> None:
         core_source_direct_search_path=args.core_source_direct_search,
         rescue_candidate_review_path=args.rescue_candidate_review,
         epigraphia_birmanica_review_path=args.epigraphia_birmanica_review,
+        epigraphia_birmanica_fascicle_coverage_path=args.epigraphia_birmanica_fascicle_coverage,
+        inscriptions_of_burma_text_search_path=args.inscriptions_of_burma_text_search,
         witness_verification_report_path=args.witness_verification_report,
     )
     print(json.dumps(report, ensure_ascii=False, indent=2))
