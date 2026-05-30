@@ -1,0 +1,17 @@
+{
+  "source_work_count": 12,
+  "source_works_with_candidate_witnesses": 7,
+  "candidate_witness_count": 28,
+  "classified_witness_count": 28,
+  "confirmed_translation_witness_count": 0,
+  "possible_translation_witness_count": 1,
+  "confirmed_edition_witness_count": 0,
+  "possible_edition_witness_count": 3,
+  "plate_or_image_witness_count": 5,
+  "periodical_container_count": 2,
+  "article_discovery_needed_count": 5,
+  "blocked_source_work_count": 0,
+  "notes": [
+    "Discovery output is conservative: titles and short OCR snippets guide witness classification, but they do not prove full translation coverage."
+  ]
+}

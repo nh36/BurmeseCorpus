@@ -56,3 +56,71 @@ It should remain conservative:
 - distinguish catalogue/edition relevance from translation relevance;
 - note when a series or periodical will require later article-level discovery;
 - avoid inventing publication metadata or implying that a translation is already confirmed.
+
+## Current discovery workflow
+
+Run the first-pass discovery and validation with:
+
+```bash
+python3 scripts/discover_translation_sources.py
+python3 scripts/validate_translation_source_discovery.py
+```
+
+The discovery pass reads:
+
+- `data/working/bibliography/translation_source_discovery_plan.tsv`
+- `data/working/bibliography/bibtex_authority/source_work_authority.tsv`
+- `data/working/bibliography/bibtex_authority/source_work_locator_systems.tsv`
+- `data/working/bibliography/bibtex_authority/bibliography_authority.bib`
+- optional local-source manifests under `data/working/bibliography/local_sources/`
+
+and writes:
+
+- `data/working/bibliography/translation_source_discovery/witness_candidates.tsv`
+- `data/working/bibliography/translation_source_discovery/witness_classification.tsv`
+- `data/working/bibliography/translation_source_discovery/periodical_article_discovery_plan.tsv`
+- `data/working/bibliography/translation_source_discovery/translation_source_discovery_report.json`
+
+## How to read the outputs
+
+`witness_candidates.tsv` is a conservative match layer. It records which local files look plausibly related to each high-priority source work, why they matched, and whether the match still needs human review.
+
+`witness_classification.tsv` is the first interpretation layer. It separates:
+
+- direct source editions from weaker secondary leads;
+- plate/image witnesses from text witnesses;
+- catalogue-style works from possible translation witnesses;
+- series/periodical containers from article-level candidates.
+
+Confirmed translation or edition claims should come only from short inspectable evidence such as OCR snippets or clearly explicit file labels. Filename-only matches should stay provisional.
+
+## Periodicals and series
+
+`JBRS`, `JRAS`, `BBHC`, `ARASI`, and currently `EB` should remain containers unless article-level evidence is identified.
+
+Use `periodical_article_discovery_plan.tsv` to queue that next step:
+
+1. start from normalized raw reference examples;
+2. map those examples to local issue/article files where possible;
+3. inspect the article-level witness before promoting any translation or edition claim.
+
+Do not treat a periodical container row as proof that the whole series is a translation source.
+
+## Editions, translations, plates, and references
+
+Keep the distinctions explicit:
+
+- a file with `Plates` in the title may be a plate witness without being a translation witness;
+- a catalogue may provide stable metadata and locators without giving a translation;
+- an article that mentions inscriptions may still be only secondary discussion;
+- a work titled `Inscriptions ...` is only a **possible** edition witness until the contents are inspected.
+
+## Out of scope
+
+AI translation generation is still out of scope for this phase.
+
+The point of this pass is to identify existing published witnesses first, so later translation work can distinguish between:
+
+- inscriptions that already have a published translation witness;
+- inscriptions that only have edition/transliteration witnesses;
+- inscriptions for which no translation witness has yet been found.
