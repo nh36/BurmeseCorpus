@@ -1,0 +1,5 @@
+source_work_key	source_work_title	source_family_ids	locator_system	locator_prefixes	example_references	notes
+lucePeMaungTinInscriptionsOfBurma	Inscriptions of Burma	sf-iob; sf-pl	IOB/plate references	IOB; Pl.	IOB--278 BED B 622-4 | Pl. I 1+2	Clarifies that IOB and Pl. are separate locator systems into the same Luce and Pe Maung Tin source work.
+duroiselle1921list	A List of Inscriptions Found in Burma	sf-list	catalogue number	List	List 105 | List 106	List references behave as catalogue numbers into Duroiselle's source work.
+ppaCatalogue	Inscriptions of Pagan, Pinya and Ava	sf-ppa	page	PPA	PPA p. 239 | PPA p. 255	PPA references are page locators into the source work.
+ubSourceFamily	Inscriptions Collected in Upper Burma	sf-ub	volume/page	UB	UB 1, p. 147 | UB 1, p. 173	UB references preserve the source-family edition with volume/page locators.

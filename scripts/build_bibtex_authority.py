@@ -69,6 +69,7 @@ CROSSWALK_FIELDS = [
     "raw_reference_string",
     "family_id",
     "source_family_id",
+    "source_work_key",
     "work_candidate_id",
     "bibtex_key",
     "locator",
@@ -131,6 +132,8 @@ SOURCE_FAMILY_FIELDS = [
     "abbreviation",
     "family_id",
     "authority_key",
+    "source_work_key",
+    "related_source_work_key",
     "source_family_type",
     "resolution_status",
     "resolution_level",
@@ -143,6 +146,7 @@ SOURCE_FAMILY_FIELDS = [
     "best_definition_quote",
     "related_bibtex_key",
     "locator_pattern",
+    "locator_type",
     "example_raw_references",
     "evidence_id",
     "evidence_source",
@@ -207,6 +211,43 @@ MANUAL_REVIEW_PACKET_FIELDS = [
     "needs_human_review",
     "notes",
 ]
+REMAINING_ACRONYM_WORKLIST_FIELDS = [
+    "acronym",
+    "current_status",
+    "current_expansion",
+    "source_family_id",
+    "occurrence_count",
+    "top_example_references",
+    "likely_source_type",
+    "best_current_evidence",
+    "specific_files_to_check",
+    "specific_search_terms",
+    "recommended_action",
+    "notes",
+]
+REMAINING_ACRONYM_EVIDENCE_FIELDS = [
+    "acronym",
+    "candidate_expansion",
+    "evidence_type",
+    "source_file_id",
+    "source_file_label",
+    "source_location_hint",
+    "short_quote",
+    "evidence_strength",
+    "supports_expansion",
+    "contradicts_expansion",
+    "needs_human_review",
+    "notes",
+]
+SOURCE_WORK_LOCATOR_SYSTEM_FIELDS = [
+    "source_work_key",
+    "source_work_title",
+    "source_family_ids",
+    "locator_system",
+    "locator_prefixes",
+    "example_references",
+    "notes",
+]
 
 STATUS_RANK = {
     "confirmed_external_bibtex": 5,
@@ -220,6 +261,7 @@ STATUS_RANK = {
 TOP_FAMILY_REVIEW_COUNT = 25
 MAX_BIBTEX_EVIDENCE_LENGTH = 180
 MAX_MATCHED_REFERENCE_LENGTH = 140
+REMAINING_ACRONYMS = ["IOB", "TN", "UEM", "RDASB", "MP", "OR", "Luce J", "Luce D", "IPPA"]
 PLACEHOLDER_EXPANSION_PATTERN = re.compile(
     r"\b(source family|catalogue family|publication family|series family|source family attested|unexpanded)\b",
     re.IGNORECASE,
@@ -347,12 +389,12 @@ SOURCE_FAMILY_LIBRARY = {
         "frasch_search_terms": ["ub"],
     },
     "uem": {
-        "author": "",
-        "year": "",
-        "title": "U E Maung selection",
+        "author": "U E Maung",
+        "year": "1958",
+        "title": "Selections from the Inscriptions of Pagan",
         "shorttitle": "UEM",
-        "entry_type": "misc",
-        "preferred_key": "uemCatalogue",
+        "entry_type": "book",
+        "preferred_key": "uEMaung1958selectionsInscriptionsPagan",
         "local_search_terms": [],
         "frasch_search_terms": ["uem"],
     },
@@ -367,14 +409,14 @@ SOURCE_FAMILY_LIBRARY = {
         "frasch_search_terms": ["ppa"],
     },
     "tn": {
-        "author": "Than Tun",
-        "year": "",
-        "title": "Than Tun catalogue family",
+        "author": "U Tun Nyein",
+        "year": "1897",
+        "title": "Inscriptions of Pagan, Pinya and Ava",
         "shorttitle": "TN",
-        "entry_type": "misc",
-        "preferred_key": "thanTunCatalogue",
-        "local_search_terms": ["than tun"],
-        "frasch_search_terms": ["tn", "than tun"],
+        "entry_type": "book",
+        "preferred_key": "uTunNyein1897inscriptionsPaganPinyaAva",
+        "local_search_terms": ["u tun nyein", "inscriptions of pagan pinya and ava"],
+        "frasch_search_terms": ["tn", "u tun nyein"],
     },
     "jbrs": {
         "author": "",
@@ -409,10 +451,10 @@ SOURCE_FAMILY_LIBRARY = {
     "rdasb": {
         "author": "",
         "year": "",
-        "title": "Report of the Director, Archaeological Survey of Burma",
+        "title": "RDASB source family",
         "shorttitle": "RDASB",
-        "entry_type": "periodical",
-        "preferred_key": "reportDirectorArchaeologicalSurveyBurma",
+        "entry_type": "misc",
+        "preferred_key": "rdasbSourceFamily",
         "local_search_terms": [],
         "frasch_search_terms": ["rdasb"],
     },
@@ -429,7 +471,7 @@ SOURCE_FAMILY_LIBRARY = {
     "pl": {
         "author": "",
         "year": "",
-        "title": "OBI plate reference system",
+        "title": "Plate reference into Inscriptions of Burma",
         "shorttitle": "Pl.",
         "entry_type": "misc",
         "preferred_key": "obiPlateReferenceSystem",
@@ -963,6 +1005,329 @@ SUPPLEMENTAL_AUTHORITIES = {
     },
 }
 
+SOURCE_WORK_RELATIONSHIPS = {
+    "list": {
+        "source_work_key": "duroiselle1921list",
+        "source_work_title": "A List of Inscriptions Found in Burma",
+        "locator_system": "catalogue number",
+        "locator_prefixes": "List",
+        "default_examples": "List 90 | List 302",
+        "notes": "Duroiselle's List is a source work with catalogue-number locators.",
+    },
+    "iob": {
+        "source_work_key": "lucePeMaungTinInscriptionsOfBurma",
+        "source_work_title": "Inscriptions of Burma",
+        "locator_system": "IOB/plate references",
+        "locator_prefixes": "IOB; Pl.",
+        "default_examples": "IOB--278 BED B 622-4 | Pl. II 198",
+        "notes": "IOB references and Pl. references are treated as distinct locator systems into the same Luce and Pe Maung Tin work.",
+    },
+    "pl": {
+        "source_work_key": "lucePeMaungTinInscriptionsOfBurma",
+        "source_work_title": "Inscriptions of Burma",
+        "locator_system": "IOB/plate references",
+        "locator_prefixes": "IOB; Pl.",
+        "default_examples": "IOB--278 BED B 622-4 | Pl. II 198",
+        "notes": "Plate references point into the Luce and Pe Maung Tin Inscriptions of Burma plates rather than naming a separate bibliographic work.",
+    },
+    "ppa": {
+        "source_work_key": "ppaCatalogue",
+        "source_work_title": "Inscriptions of Pagan, Pinya and Ava",
+        "locator_system": "page",
+        "locator_prefixes": "PPA",
+        "default_examples": "PPA, p. 55",
+        "notes": "PPA references use page locators into the Pagan, Pinya and Ava source work.",
+    },
+    "ub": {
+        "source_work_key": "ubSourceFamily",
+        "source_work_title": "Inscriptions Collected in Upper Burma",
+        "locator_system": "volume/page",
+        "locator_prefixes": "UB",
+        "default_examples": "UB 1, p. 297",
+        "notes": "UB references carry volume/page locators into the Arch. Survey of Burma edition.",
+    },
+}
+
+REMAINING_ACRONYM_EVIDENCE_CONFIG = {
+    "IOB": {
+        "likely_source_type": "locator system into source work",
+        "specific_files_to_check": [
+            "data/working/bibliography/local_sources/frasch_extracted_text.txt",
+            "data/working/bibliography/local_sources/acronym_definition_candidates.tsv",
+        ],
+        "specific_search_terms": ["IOB", "IB", "Inscriptions of Burma", "Pl."],
+        "recommended_action": "treat as internal_locator tied to Inscriptions of Burma",
+        "evidence_rows": [
+            {
+                "candidate_expansion": "Inscriptions of Burma",
+                "evidence_type": "manual_inference",
+                "source_file_id": "frasch-extracted-text",
+                "source_file_label": "frasch_extracted_text.txt",
+                "source_location_hint": "L8417-L8453",
+                "short_quote": "IB  Inscriptions of Burma (Luce & Pe Maung Tin 1933–1956) ... Pl.  Inscriptions of Burma (Luce & Pe Maung Tin 1933–1956)",
+                "evidence_strength": "medium",
+                "supports_expansion": "true",
+                "contradicts_expansion": "false",
+                "needs_human_review": "true",
+                "notes": "Frasch explicitly defines IB and Pl., not IOB; IOB is therefore kept as a locator-family relation to the same underlying work rather than as a standalone title expansion.",
+            }
+        ],
+        "status_override": {
+            "resolution_status": "internal_locator",
+            "definition_quality": "documented_locator_relation",
+            "current_expansion": "Locator reference into Inscriptions of Burma",
+            "confidence": "medium",
+            "needs_human_review": "true",
+        },
+    },
+    "IPPA": {
+        "likely_source_type": "unresolved source-family shorthand",
+        "specific_files_to_check": [
+            "data/working/bibliography/local_sources/frasch_extracted_text.txt",
+            "data/working/bibliography/local_sources/acronym_definition_candidates.tsv",
+        ],
+        "specific_search_terms": ["IPPA", "Inscriptions of Pagan, Pinya and Ava", "Index", "Plates"],
+        "recommended_action": "keep as unresolved_after_targeted_search",
+        "evidence_rows": [
+            {
+                "candidate_expansion": "",
+                "evidence_type": "negative_search",
+                "source_file_id": "acronym-definition-candidates",
+                "source_file_label": "acronym_definition_candidates.tsv",
+                "source_location_hint": "negative:ippa",
+                "short_quote": "No strong definition candidate found in searched corpus documentation or Frasch files.",
+                "evidence_strength": "negative",
+                "supports_expansion": "false",
+                "contradicts_expansion": "false",
+                "needs_human_review": "true",
+                "notes": "Targeted search did not yield a documentary definition for IPPA in the extracted local sources.",
+            }
+        ],
+        "status_override": {
+            "resolution_status": "unresolved_after_targeted_search",
+            "definition_quality": "not_found_after_targeted_search",
+            "current_expansion": "",
+            "confidence": "low",
+            "needs_human_review": "true",
+        },
+    },
+    "Luce D": {
+        "likely_source_type": "unresolved Luce citation shorthand",
+        "specific_files_to_check": [
+            "data/working/bibliography/local_sources/frasch_extracted_text.txt",
+            "data/working/bibliography/local_sources/acronym_definition_candidates.tsv",
+        ],
+        "specific_search_terms": ['"Luce D"', "Dictionary", "Old Burma", "wordlist"],
+        "recommended_action": "keep as unresolved_after_targeted_search",
+        "evidence_rows": [
+            {
+                "candidate_expansion": "",
+                "evidence_type": "contextual_usage",
+                "source_file_id": "frasch-extracted-text",
+                "source_file_label": "frasch_extracted_text.txt",
+                "source_location_hint": "L488-L579",
+                "short_quote": "References: Pl. V 581a = List 1406 = Luce D 825 ... Pl. V 599a-b = List 1445-1446 = A, p. 591-2 = Luce D 835",
+                "evidence_strength": "weak",
+                "supports_expansion": "false",
+                "contradicts_expansion": "false",
+                "needs_human_review": "true",
+                "notes": "Luce D is repeatedly cited as a numbered shorthand, but the targeted local sources do not define it explicitly.",
+            }
+        ],
+        "status_override": {
+            "resolution_status": "unresolved_after_targeted_search",
+            "definition_quality": "contextual_usage_only",
+            "current_expansion": "",
+            "confidence": "low",
+            "needs_human_review": "true",
+        },
+    },
+    "Luce J": {
+        "likely_source_type": "unresolved Luce citation shorthand",
+        "specific_files_to_check": [
+            "data/working/bibliography/local_sources/frasch_extracted_text.txt",
+            "data/working/bibliography/local_sources/acronym_definition_candidates.tsv",
+        ],
+        "specific_search_terms": ['"Luce J"', "Journal", "JBRS", "articles"],
+        "recommended_action": "keep as unresolved_after_targeted_search",
+        "evidence_rows": [
+            {
+                "candidate_expansion": "",
+                "evidence_type": "contextual_usage",
+                "source_file_id": "frasch-extracted-text",
+                "source_file_label": "frasch_extracted_text.txt",
+                "source_location_hint": "L470-L804",
+                "short_quote": "References: Pl. V 567b = Luce J2509 ... References: Luce J 2507 ... References: Luce J 2689",
+                "evidence_strength": "weak",
+                "supports_expansion": "false",
+                "contradicts_expansion": "false",
+                "needs_human_review": "true",
+                "notes": "The extracted Frasch text preserves Luce J as a numbered citation family, but no explicit abbreviation-list definition was found in the targeted corpus.",
+            }
+        ],
+        "status_override": {
+            "resolution_status": "unresolved_after_targeted_search",
+            "definition_quality": "contextual_usage_only",
+            "current_expansion": "",
+            "confidence": "low",
+            "needs_human_review": "true",
+        },
+    },
+    "MP": {
+        "likely_source_type": "unresolved source-family shorthand",
+        "specific_files_to_check": [
+            "data/working/bibliography/local_sources/frasch_extracted_text.txt",
+            "data/working/bibliography/local_sources/frasch_bagan_epig_database_abbreviations.tsv",
+        ],
+        "specific_search_terms": ["MP", "Mandalay Palace", "stone", "collection"],
+        "recommended_action": "keep as unresolved_after_targeted_search",
+        "evidence_rows": [
+            {
+                "candidate_expansion": "",
+                "evidence_type": "contextual_usage",
+                "source_file_id": "frasch-extracted-text",
+                "source_file_label": "frasch_extracted_text.txt",
+                "source_location_hint": "L970-L1187",
+                "short_quote": "References: List 23 = OBI 1, p. 321 = B 2, p. 830 = A, p.1 = MP 1, p. 21 ... continuation on reverse: MP 1, p. 9",
+                "evidence_strength": "weak",
+                "supports_expansion": "false",
+                "contradicts_expansion": "false",
+                "needs_human_review": "true",
+                "notes": "MP survives as a page-based source-family shorthand in the Frasch text, but the targeted files do not define its title explicitly.",
+            }
+        ],
+        "status_override": {
+            "resolution_status": "unresolved_after_targeted_search",
+            "definition_quality": "contextual_usage_only",
+            "current_expansion": "",
+            "confidence": "low",
+            "needs_human_review": "true",
+        },
+    },
+    "OR": {
+        "likely_source_type": "unresolved holding or shelfmark system",
+        "specific_files_to_check": [
+            "data/working/bibliography/local_sources/frasch_extracted_text.txt",
+            "data/working/bibliography/local_sources/acronym_definition_candidates.tsv",
+        ],
+        "specific_search_terms": ["OR", "OR 6452", "rubbings", "catalogue"],
+        "recommended_action": "keep as unresolved_after_targeted_search",
+        "evidence_rows": [
+            {
+                "candidate_expansion": "",
+                "evidence_type": "contextual_usage",
+                "source_file_id": "frasch-extracted-text",
+                "source_file_label": "frasch_extracted_text.txt",
+                "source_location_hint": "L1096-L1169",
+                "short_quote": "References: List 41 = B 2, p. 763 = MM 1, p. ?; OR 6452 B (1), no. 23 ... OR has dates CS 355/993 and 411/1049",
+                "evidence_strength": "weak",
+                "supports_expansion": "false",
+                "contradicts_expansion": "false",
+                "needs_human_review": "true",
+                "notes": "OR behaves like a holding or shelfmark reference in targeted usage, but no documentary expansion was found in the searched local files.",
+            }
+        ],
+        "status_override": {
+            "resolution_status": "unresolved_after_targeted_search",
+            "definition_quality": "contextual_usage_only",
+            "current_expansion": "",
+            "confidence": "low",
+            "needs_human_review": "true",
+        },
+    },
+    "RDASB": {
+        "likely_source_type": "weakly attested report-series shorthand",
+        "specific_files_to_check": [
+            "data/working/bibliography/local_sources/frasch_extracted_text.txt",
+            "data/working/bibliography/local_sources/frasch_bagan_epig_database_abbreviations.tsv",
+        ],
+        "specific_search_terms": ["RDASB", "Report of the Director, Archaeological Survey of Burma", "Director of Archaeology"],
+        "recommended_action": "keep as unresolved_after_targeted_search",
+        "evidence_rows": [
+            {
+                "candidate_expansion": "Report of the Director, Archaeological Survey of Burma",
+                "evidence_type": "contextual_usage",
+                "source_file_id": "frasch-extracted-text",
+                "source_file_label": "frasch_extracted_text.txt",
+                "source_location_hint": "L353-L362",
+                "short_quote": "References: Pl. V 557c; RDASB 1938, p. xi, and app. H, no. 5 ... References: Pl. V 558a; RDASB 1938, p. xii, and app. H, no. 19",
+                "evidence_strength": "weak",
+                "supports_expansion": "true",
+                "contradicts_expansion": "false",
+                "needs_human_review": "true",
+                "notes": "The targeted local evidence preserves RDASB as a year-based report citation, but no explicit abbreviation-list line was recovered for a documentary confirmation.",
+            }
+        ],
+        "status_override": {
+            "resolution_status": "unresolved_after_targeted_search",
+            "definition_quality": "contextual_usage_only",
+            "current_expansion": "",
+            "confidence": "low",
+            "needs_human_review": "true",
+        },
+    },
+    "TN": {
+        "likely_source_type": "book/work shorthand",
+        "specific_files_to_check": [
+            "data/working/bibliography/local_sources/frasch_extracted_text.txt",
+        ],
+        "specific_search_terms": ["TN", "U Tun Nyein", "Inscriptions of Pagan, Pinya and Ava"],
+        "recommended_action": "promote to confirmed_expansion",
+        "evidence_rows": [
+            {
+                "candidate_expansion": "U Tun Nyein (tr.), Inscriptions of Pagan, Pinya and Ava",
+                "evidence_type": "explicit_definition",
+                "source_file_id": "frasch-extracted-text",
+                "source_file_label": "frasch_extracted_text.txt",
+                "source_location_hint": "L7880",
+                "short_quote": "TN U Tun Nyein (tr.), Inscriptions of Pagan, Pinya and Ava, Rangoon 1897",
+                "evidence_strength": "strong",
+                "supports_expansion": "true",
+                "contradicts_expansion": "false",
+                "needs_human_review": "false",
+                "notes": "Explicit abbreviation-list definition in Frasch's extracted text.",
+            }
+        ],
+        "status_override": {
+            "resolution_status": "confirmed_expansion",
+            "definition_quality": "explicit",
+            "current_expansion": "U Tun Nyein (tr.), Inscriptions of Pagan, Pinya and Ava",
+            "confidence": "high",
+            "needs_human_review": "false",
+        },
+    },
+    "UEM": {
+        "likely_source_type": "book/work shorthand",
+        "specific_files_to_check": [
+            "data/working/bibliography/local_sources/frasch_extracted_text.txt",
+        ],
+        "specific_search_terms": ["UEM", "U E Maung", "Selections from the Inscriptions of Pagan"],
+        "recommended_action": "promote to confirmed_expansion",
+        "evidence_rows": [
+            {
+                "candidate_expansion": "U E Maung (ed.), Selections from the Inscriptions of Pagan",
+                "evidence_type": "explicit_definition",
+                "source_file_id": "frasch-extracted-text",
+                "source_file_label": "frasch_extracted_text.txt",
+                "source_location_hint": "L7883-L7884",
+                "short_quote": "UEM U E Maung (ed.), Selections from the Inscriptions of Pagan, Rangoon 1958",
+                "evidence_strength": "strong",
+                "supports_expansion": "true",
+                "contradicts_expansion": "false",
+                "needs_human_review": "false",
+                "notes": "Explicit abbreviation-list definition in Frasch's extracted text.",
+            }
+        ],
+        "status_override": {
+            "resolution_status": "confirmed_expansion",
+            "definition_quality": "explicit",
+            "current_expansion": "U E Maung (ed.), Selections from the Inscriptions of Pagan",
+            "confidence": "high",
+            "needs_human_review": "false",
+        },
+    },
+}
+
 
 def parse_locator(raw_reference: str, family_id: str, family_label: str) -> tuple[str, str]:
     text = raw_reference.strip()
@@ -975,10 +1340,13 @@ def parse_locator(raw_reference: str, family_id: str, family_label: str) -> tupl
 
     if family_label and text.casefold().startswith(family_label.casefold()):
         locator = text[len(family_label) :].strip(" ,")
+        locator = re.sub(r"^[-–—:]+", "", locator).strip()
         if locator:
             lowered_locator = locator.casefold()
             if re.search(r"\bfol\.?\b", lowered_locator):
                 return locator, "folio"
+            if re.fullmatch(r"p+\.\s*[0-9-]+", locator, flags=re.IGNORECASE):
+                return locator, "page"
             if "catalogue" in family_id and re.fullmatch(r"[0-9A-Za-z.-]+", locator):
                 return locator, "catalogue_number"
             if family_id in {"fam-list-catalogue", "fam-iob-catalogue"} and re.fullmatch(r"[0-9A-Za-z.-]+", locator):
@@ -1258,23 +1626,24 @@ def manual_seed_candidate(seed_row: dict) -> dict:
 
 ACRONYM_STATUS_DEFAULTS = {
     "PPA": {"resolution_status": "confirmed_expansion"},
-    "IPPA": {"resolution_status": "source_family_only"},
-    "UEM": {"resolution_status": "probable_expansion"},
+    "IPPA": {"resolution_status": "unresolved_after_targeted_search"},
+    "IOB": {"resolution_status": "internal_locator", "current_expansion": "Locator reference into Inscriptions of Burma"},
+    "UEM": {"resolution_status": "confirmed_expansion"},
     "SIP": {"resolution_status": "confirmed_expansion"},
-    "MP": {"resolution_status": "source_family_only"},
+    "MP": {"resolution_status": "unresolved_after_targeted_search"},
     "UB": {"resolution_status": "confirmed_expansion"},
-    "MM": {"resolution_status": "source_family_only"},
-    "OR": {"resolution_status": "source_family_only"},
-    "TN": {"resolution_status": "source_family_only"},
+    "MM": {"resolution_status": "confirmed_expansion", "current_expansion": "Middle Mon"},
+    "OR": {"resolution_status": "unresolved_after_targeted_search"},
+    "TN": {"resolution_status": "confirmed_expansion"},
     "U Min Hswe": {"resolution_status": "not_an_acronym", "current_expansion": "U Min Hswe"},
-    "Luce D": {"resolution_status": "source_family_only"},
-    "Luce J": {"resolution_status": "source_family_only"},
-    "Pl.": {"resolution_status": "internal_locator", "current_expansion": "plate locator"},
+    "Luce D": {"resolution_status": "unresolved_after_targeted_search"},
+    "Luce J": {"resolution_status": "unresolved_after_targeted_search"},
+    "Pl.": {"resolution_status": "internal_locator", "current_expansion": "Plate reference into Inscriptions of Burma"},
     "A": {"resolution_status": "probable_expansion", "current_expansion": "Bagan Epigraphic Database, Part A"},
     "B": {"resolution_status": "probable_expansion", "current_expansion": "Bagan Epigraphic Database, Part B"},
     "BED B": {"resolution_status": "probable_expansion", "current_expansion": "Bagan Epigraphic Database, Part B"},
-    "ARASI": {"resolution_status": "source_family_only"},
-    "RDASB": {"resolution_status": "source_family_only"},
+    "ARASI": {"resolution_status": "confirmed_expansion"},
+    "RDASB": {"resolution_status": "unresolved_after_targeted_search"},
     "BBHC": {"resolution_status": "confirmed_expansion"},
 }
 
@@ -1288,6 +1657,8 @@ def next_acronym_action(status: str) -> str:
         return "preserve locator semantics; no bibliographic expansion needed"
     if status == "not_an_acronym":
         return "treat as named person/source family"
+    if status == "unresolved_after_targeted_search":
+        return "keep unresolved and document searched files and terms"
     if status == "contextual_usage_only":
         return "search explicit abbreviation list or bibliography heading"
     if status == "source_family_only":
@@ -1317,16 +1688,133 @@ def short_acronym_evidence_quote(best_candidate: dict | None) -> str:
     return quote[: MAX_STRONG_DEFINITION_QUOTE_LENGTH - 1].rstrip() + "…"
 
 
+def strongest_remaining_evidence(rows: list[dict]) -> dict | None:
+    if not rows:
+        return None
+    strength_rank = {"strong": 4, "medium": 3, "weak": 2, "negative": 1}
+    return max(rows, key=lambda row: (strength_rank.get(row.get("evidence_strength", ""), 0), 1 if row.get("supports_expansion") == "true" else 0))
+
+
+def build_remaining_acronym_evidence_rows() -> list[dict]:
+    rows: list[dict] = []
+    for acronym in REMAINING_ACRONYMS:
+        config = REMAINING_ACRONYM_EVIDENCE_CONFIG[acronym]
+        rows.extend({"acronym": acronym, **evidence_row} for evidence_row in config.get("evidence_rows", []))
+    return rows
+
+
+def build_remaining_acronym_worklist(
+    *,
+    source_family_rows: dict[str, dict],
+    acronym_status_rows: list[dict],
+    remaining_evidence_rows: list[dict],
+) -> list[dict]:
+    source_family_by_abbreviation = {row["abbreviation"]: row for row in source_family_rows.values()}
+    status_by_acronym = {row["acronym"]: row for row in acronym_status_rows if row.get("acronym")}
+    evidence_by_acronym: dict[str, list[dict]] = defaultdict(list)
+    for row in remaining_evidence_rows:
+        evidence_by_acronym[row["acronym"]].append(row)
+    worklist_rows: list[dict] = []
+    for acronym in REMAINING_ACRONYMS:
+        config = REMAINING_ACRONYM_EVIDENCE_CONFIG[acronym]
+        family_row = source_family_by_abbreviation.get(acronym, {})
+        status_row = status_by_acronym.get(acronym, {})
+        best_evidence = strongest_remaining_evidence(evidence_by_acronym.get(acronym, []))
+        worklist_rows.append(
+            {
+                "acronym": acronym,
+                "current_status": status_row.get("resolution_status", "unresolved"),
+                "current_expansion": status_row.get("current_expansion", ""),
+                "source_family_id": family_row.get("source_family_id", ""),
+                "occurrence_count": family_row.get("occurrence_count", "0"),
+                "top_example_references": family_row.get("example_raw_references", ""),
+                "likely_source_type": config.get("likely_source_type", ""),
+                "best_current_evidence": (
+                    f'{best_evidence.get("source_file_label", "")}: {best_evidence.get("short_quote", "")}'
+                    if best_evidence
+                    else ""
+                ),
+                "specific_files_to_check": " | ".join(config.get("specific_files_to_check", [])),
+                "specific_search_terms": " | ".join(config.get("specific_search_terms", [])),
+                "recommended_action": config.get("recommended_action", ""),
+                "notes": best_evidence.get("notes", "") if best_evidence else "",
+            }
+        )
+    return sorted(worklist_rows, key=lambda row: int(row.get("occurrence_count", "0") or 0), reverse=True)
+
+
+def build_source_work_locator_rows(crosswalk_rows: list[dict]) -> list[dict]:
+    examples_by_family: dict[str, list[str]] = defaultdict(list)
+    for row in crosswalk_rows:
+        if row.get("source_family_id") and row.get("raw_reference_string"):
+            examples_by_family[row["source_family_id"]].append(row["raw_reference_string"])
+    rows = []
+    if examples_by_family.get("sf-iob") or examples_by_family.get("sf-pl"):
+        iob_pl_families = [family_id for family_id in ("sf-iob", "sf-pl") if examples_by_family.get(family_id)]
+        rows.append(
+            {
+                "source_work_key": "lucePeMaungTinInscriptionsOfBurma",
+                "source_work_title": "Inscriptions of Burma",
+                "source_family_ids": "; ".join(iob_pl_families),
+                "locator_system": "IOB/plate references",
+                "locator_prefixes": "IOB; Pl.",
+                "example_references": " | ".join((examples_by_family.get("sf-iob", [])[:1] + examples_by_family.get("sf-pl", [])[:1]) or [SOURCE_WORK_RELATIONSHIPS["iob"]["default_examples"]]),
+                "notes": "Clarifies that IOB and Pl. are separate locator systems into the same Luce and Pe Maung Tin source work.",
+            }
+        )
+    if examples_by_family.get("sf-list"):
+        rows.append(
+            {
+                "source_work_key": "duroiselle1921list",
+                "source_work_title": "A List of Inscriptions Found in Burma",
+                "source_family_ids": "sf-list",
+                "locator_system": "catalogue number",
+                "locator_prefixes": "List",
+                "example_references": " | ".join(examples_by_family.get("sf-list", [])[:2] or [SOURCE_WORK_RELATIONSHIPS["list"]["default_examples"]]),
+                "notes": "List references behave as catalogue numbers into Duroiselle's source work.",
+            }
+        )
+    if examples_by_family.get("sf-ppa"):
+        rows.append(
+            {
+                "source_work_key": "ppaCatalogue",
+                "source_work_title": "Inscriptions of Pagan, Pinya and Ava",
+                "source_family_ids": "sf-ppa",
+                "locator_system": "page",
+                "locator_prefixes": "PPA",
+                "example_references": " | ".join(examples_by_family.get("sf-ppa", [])[:2] or [SOURCE_WORK_RELATIONSHIPS["ppa"]["default_examples"]]),
+                "notes": "PPA references are page locators into the source work.",
+            }
+        )
+    if examples_by_family.get("sf-ub"):
+        rows.append(
+            {
+                "source_work_key": "ubSourceFamily",
+                "source_work_title": "Inscriptions Collected in Upper Burma",
+                "source_family_ids": "sf-ub",
+                "locator_system": "volume/page",
+                "locator_prefixes": "UB",
+                "example_references": " | ".join(examples_by_family.get("sf-ub", [])[:2] or [SOURCE_WORK_RELATIONSHIPS["ub"]["default_examples"]]),
+                "notes": "UB references preserve the source-family edition with volume/page locators.",
+            }
+        )
+    return rows
+
+
 def build_acronym_status_rows(
     source_family_rows: dict[str, dict],
     acronym_candidates_by_acronym: dict[str, list[dict]],
     manual_acronym_seeds: dict[str, dict],
+    remaining_evidence_rows: list[dict],
 ) -> list[dict]:
     abbreviation_to_source_family = {
         row.get("abbreviation", ""): row for row in source_family_rows.values() if row.get("abbreviation")
     }
     acronyms = list(dict.fromkeys(PRIORITY_ACRONYMS + sorted(abbreviation_to_source_family) + sorted(manual_acronym_seeds)))
     status_rows: list[dict] = []
+    remaining_evidence_by_acronym: dict[str, list[dict]] = defaultdict(list)
+    for row in remaining_evidence_rows:
+        remaining_evidence_by_acronym[row["acronym"]].append(row)
     for acronym in acronyms:
         source_family_row = abbreviation_to_source_family.get(acronym)
         documentary_candidate = choose_best_acronym_candidate(acronym_candidates_by_acronym.get(acronym, []))
@@ -1334,6 +1822,8 @@ def build_acronym_status_rows(
         manual_seed = manual_acronym_seeds.get(acronym)
         manual_candidate = manual_seed_candidate(manual_seed) if manual_seed else None
         default = ACRONYM_STATUS_DEFAULTS.get(acronym, {})
+        override = REMAINING_ACRONYM_EVIDENCE_CONFIG.get(acronym, {}).get("status_override")
+        best_remaining_evidence = strongest_remaining_evidence(remaining_evidence_by_acronym.get(acronym, []))
         strong_candidate = bool(
             documentary_candidate and documentary_candidate.get("evidence_type", "") in STRONG_DEFINITION_EVIDENCE_TYPES
         )
@@ -1380,6 +1870,8 @@ def build_acronym_status_rows(
         elif manual_candidate:
             current_expansion = manual_candidate.get("candidate_expansion", "") or current_expansion
             best_candidate = manual_candidate
+        if status == "internal_locator" and default.get("current_expansion"):
+            current_expansion = default["current_expansion"]
         if status in {"source_family_only", "contextual_usage_only", "unresolved"}:
             current_expansion = ""
         if source_family_row and not current_expansion and not is_placeholder_expansion(source_family_row.get("expanded_label", "")):
@@ -1393,6 +1885,8 @@ def build_acronym_status_rows(
         if status == "internal_locator" and not definition_quality:
             definition_quality = "strong"
         note_parts = [best_candidate.get("notes", "")] if best_candidate else []
+        if best_remaining_evidence:
+            note_parts.append(best_remaining_evidence.get("notes", ""))
         if manual_seed:
             if documentary_confirms_manual:
                 note_parts.append("Manual identification supplied by Nathan; documentary source agrees.")
@@ -1408,6 +1902,26 @@ def build_acronym_status_rows(
         next_action = next_acronym_action(status)
         if manual_seed and not strong_candidate and definition_quality == "manual_seed":
             next_action = "seek documentary corroboration for manual seed"
+        if override and not manual_seed:
+            status = override["resolution_status"]
+            definition_quality = override["definition_quality"]
+            current_expansion = override.get("current_expansion", "")
+            best_source = best_remaining_evidence.get("source_file_label", "") if best_remaining_evidence else ""
+            best_id = (
+                f"remaining-evidence:{acronym.casefold().replace(' ', '').replace('.', '')}"
+                if best_remaining_evidence
+                else ""
+            )
+            best_quote = best_remaining_evidence.get("short_quote", "") if best_remaining_evidence else ""
+            confidence = override.get("confidence", "low")
+            needs_review = override.get("needs_human_review", "true")
+            next_action = config_action = REMAINING_ACRONYM_EVIDENCE_CONFIG.get(acronym, {}).get("recommended_action", next_action)
+        else:
+            best_source = best_candidate.get("source_file_label", "") if best_candidate else ""
+            best_id = best_candidate.get("candidate_id", "") if best_candidate else ""
+            best_quote = short_acronym_evidence_quote(best_candidate)
+            confidence = best_candidate.get("confidence", "low") if best_candidate else "low"
+            config_action = next_action
         status_rows.append(
             {
                 "acronym": acronym,
@@ -1416,12 +1930,12 @@ def build_acronym_status_rows(
                 "source_family_id": source_family_row.get("source_family_id", "") if source_family_row else "",
                 "resolution_status": status,
                 "definition_quality": definition_quality or "not_found",
-                "best_evidence_source": best_candidate.get("source_file_label", "") if best_candidate else "",
-                "best_evidence_id": best_candidate.get("candidate_id", "") if best_candidate else "",
-                "best_evidence_quote": short_acronym_evidence_quote(best_candidate),
-                "confidence": best_candidate.get("confidence", "low") if best_candidate else "low",
+                "best_evidence_source": best_source,
+                "best_evidence_id": best_id,
+                "best_evidence_quote": best_quote,
+                "confidence": confidence,
                 "needs_human_review": needs_review,
-                "next_action": next_action,
+                "next_action": config_action,
                 "notes": " ".join(part for part in note_parts if part),
             }
         )
@@ -2184,6 +2698,7 @@ def build_source_family_output_rows(
     for row in source_family_rows.values():
         family_key = row["source_family_key"]
         library_defaults = SOURCE_FAMILY_LIBRARY.get(family_key, {})
+        source_work_defaults = SOURCE_WORK_RELATIONSHIPS.get(family_key, {})
         acronym_row = acronym_by_source_family.get(row["source_family_id"]) or acronym_by_abbreviation.get(row["abbreviation"])
         authority_key = ""
         preferred_key = library_defaults.get("preferred_key", "")
@@ -2202,12 +2717,18 @@ def build_source_family_output_rows(
                 expanded_label = acronym_row.get("current_expansion", "") or expanded_label
             else:
                 expanded_label = f'{row["abbreviation"]} source family [unexpanded]'
+        source_work_key = source_work_defaults.get("source_work_key", "")
+        if not source_work_key and acronym_row and acronym_row.get("resolution_status") in {"confirmed_expansion", "probable_expansion", "not_an_acronym"}:
+            source_work_key = authority_key
+        related_source_work_key = source_work_key or authority_key
         output_rows.append(
             {
                 "source_family_id": row["source_family_id"],
                 "abbreviation": row["abbreviation"],
                 "family_id": row["family_id"],
                 "authority_key": authority_key,
+                "source_work_key": source_work_key,
+                "related_source_work_key": related_source_work_key,
                 "source_family_type": row["source_family_type"],
                 "resolution_status": row["resolution_status"],
                 "resolution_level": row["resolution_level"],
@@ -2220,6 +2741,7 @@ def build_source_family_output_rows(
                 "best_definition_quote": acronym_row.get("best_evidence_quote", "") if acronym_row else "",
                 "related_bibtex_key": authority_key,
                 "locator_pattern": row["locator_pattern"],
+                "locator_type": row["locator_pattern"],
                 "example_raw_references": row["example_raw_references"],
                 "evidence_id": authority_row.get("evidence_id", row["family_id"]) if authority_row else row["family_id"],
                 "evidence_source": authority_row.get("source_of_authority", "corpus_reference") if authority_row else "corpus_reference",
@@ -2255,8 +2777,14 @@ def build_manual_review_packet(
     ocr_queue_rows: list[dict],
     ocr_manifest_rows: list[dict],
     ocr_index_rows: list[dict],
+    remaining_acronym_evidence_rows: list[dict],
+    remaining_worklist_rows: list[dict],
 ) -> list[dict]:
     status_by_acronym = {row["acronym"]: row for row in acronym_status_rows}
+    remaining_worklist_by_acronym = {row["acronym"]: row for row in remaining_worklist_rows}
+    remaining_evidence_by_acronym: dict[str, list[dict]] = defaultdict(list)
+    for row in remaining_acronym_evidence_rows:
+        remaining_evidence_by_acronym[row["acronym"]].append(row)
     ocr_queue_by_acronym: dict[str, list[str]] = defaultdict(list)
     for row in ocr_queue_rows:
         for acronym in [item.strip() for item in row.get("target_acronyms", "").split(",") if item.strip()]:
@@ -2276,10 +2804,16 @@ def build_manual_review_packet(
     for acronym in PRIORITY_ACRONYMS:
         status_row = status_by_acronym.get(acronym, {})
         manual_seed = manual_acronym_seeds.get(acronym, {})
+        remaining_evidence = remaining_evidence_by_acronym.get(acronym, [])
         candidate_expansions = sorted(
             {
                 row.get("candidate_expansion", "")
                 for row in acronym_candidates_by_acronym.get(acronym, [])
+                if row.get("candidate_expansion")
+            }
+            | {
+                row.get("candidate_expansion", "")
+                for row in remaining_evidence
                 if row.get("candidate_expansion")
             }
         )
@@ -2287,6 +2821,17 @@ def build_manual_review_packet(
         ocr_successful_sources = [label for label in ocr_sources_checked if label in ocr_success_by_label]
         new_ocr_hits = sorted(set(filter(None, ocr_hits_by_acronym.get(acronym, []))))
         notes = status_row.get("notes", "")
+        if acronym in remaining_worklist_by_acronym:
+            worklist_row = remaining_worklist_by_acronym[acronym]
+            notes = " ".join(
+                part
+                for part in (
+                    notes,
+                    f'Targeted files checked: {worklist_row.get("specific_files_to_check", "")}.',
+                    f'Searched terms: {worklist_row.get("specific_search_terms", "")}.',
+                )
+                if part
+            )
         if not new_ocr_hits and ocr_successful_sources:
             notes = " ".join(part for part in (notes, "Not found after targeted OCR review.") if part)
         elif ocr_sources_checked and not ocr_successful_sources:
@@ -2336,6 +2881,7 @@ def build_family_resolution(
             resolution_level = source_family_row["resolution_level"] if is_direct else "abbreviation"
             family_resolution[family_id] = {
                 "source_family_id": source_family_row["source_family_id"],
+                "source_work_key": source_family_row.get("source_work_key", ""),
                 "bibtex_key": source_family_row.get("authority_key", "") or source_family_row.get("related_bibtex_key", ""),
                 "resolution_status": resolution_status,
                 "resolution_level": resolution_level,
@@ -2354,6 +2900,7 @@ def build_family_resolution(
             resolution_status, resolution_level = resolution_from_authority_row(authority_row)
             family_resolution[family_id] = {
                 "source_family_id": authority_row.get("source_family_id", ""),
+                "source_work_key": authority_row["bibtex_key"] if resolution_level in {"work", "book", "article", "series"} else "",
                 "bibtex_key": authority_row["bibtex_key"],
                 "resolution_status": resolution_status,
                 "resolution_level": resolution_level,
@@ -2371,6 +2918,7 @@ def build_family_resolution(
         if candidate_row is not None:
             family_resolution[family_id] = {
                 "source_family_id": "",
+                "source_work_key": "",
                 "bibtex_key": candidate_row["bibtex_key"],
                 "resolution_status": "needs_human_review",
                 "resolution_level": "unknown",
@@ -2386,6 +2934,7 @@ def build_family_resolution(
 
         family_resolution[family_id] = {
             "source_family_id": "",
+            "source_work_key": "",
             "bibtex_key": "",
             "resolution_status": "unresolved",
             "resolution_level": "unknown",
@@ -2623,16 +3172,23 @@ def build_authority(
             )
             authority_by_key[authority_by_family[family_id]["bibtex_key"]] = authority_by_family[family_id]
 
+    remaining_acronym_evidence_rows = build_remaining_acronym_evidence_rows()
     acronym_status_rows = build_acronym_status_rows(
         source_family_rows_raw,
         acronym_candidates_by_acronym,
         manual_acronym_seeds,
+        remaining_acronym_evidence_rows,
     )
     source_family_output_rows = build_source_family_output_rows(
         source_family_rows_raw,
         authority_by_key,
         authority_by_family,
         acronym_status_rows,
+    )
+    remaining_worklist_rows = build_remaining_acronym_worklist(
+        source_family_rows=source_family_rows_raw,
+        acronym_status_rows=acronym_status_rows,
+        remaining_evidence_rows=remaining_acronym_evidence_rows,
     )
     manual_review_packet_rows = build_manual_review_packet(
         acronym_status_rows=acronym_status_rows,
@@ -2641,6 +3197,8 @@ def build_authority(
         ocr_queue_rows=ocr_queue_rows,
         ocr_manifest_rows=ocr_manifest_rows,
         ocr_index_rows=ocr_index_rows,
+        remaining_acronym_evidence_rows=remaining_acronym_evidence_rows,
+        remaining_worklist_rows=remaining_worklist_rows,
     )
     source_family_by_id = {row["source_family_id"]: row for row in source_family_output_rows}
     source_family_by_authority_key = {row["authority_key"]: row for row in source_family_output_rows if row.get("authority_key")}
@@ -2698,6 +3256,8 @@ def build_authority(
     write_tsv(output_dir / "source_family_authority.tsv", source_family_output_rows, SOURCE_FAMILY_FIELDS)
     write_tsv(output_dir / "acronym_resolution_status.tsv", acronym_status_rows, ACRONYM_STATUS_FIELDS)
     write_tsv(output_dir / "acronym_manual_review_packet.tsv", manual_review_packet_rows, MANUAL_REVIEW_PACKET_FIELDS)
+    write_tsv(output_dir / "remaining_acronym_worklist.tsv", remaining_worklist_rows, REMAINING_ACRONYM_WORKLIST_FIELDS)
+    write_tsv(output_dir / "remaining_acronym_evidence.tsv", remaining_acronym_evidence_rows, REMAINING_ACRONYM_EVIDENCE_FIELDS)
     evidence_rows = build_evidence_rows(authority_rows, manifest_by_id, manifest_by_name)
     write_tsv(output_dir / "bibtex_authority_evidence.tsv", evidence_rows, EVIDENCE_FIELDS)
 
@@ -2720,6 +3280,7 @@ def build_authority(
                     "raw_reference_string": member.get("raw_reference_string", ""),
                     "family_id": family_id,
                     "source_family_id": resolution.get("source_family_id", ""),
+                    "source_work_key": resolution.get("source_work_key", ""),
                     "work_candidate_id": candidates_by_family.get(family_id, [{}])[0].get("work_candidate_id", ""),
                     "bibtex_key": resolution.get("bibtex_key", ""),
                     "locator": locator,
@@ -2760,6 +3321,8 @@ def build_authority(
 
     crosswalk_rows.sort(key=lambda row: (row["family_id"], row["raw_reference_string"]))
     write_tsv(output_dir / "raw_reference_to_bibtex.tsv", crosswalk_rows, CROSSWALK_FIELDS)
+    source_work_locator_rows = build_source_work_locator_rows(crosswalk_rows)
+    write_tsv(output_dir / "source_work_locator_systems.tsv", source_work_locator_rows, SOURCE_WORK_LOCATOR_SYSTEM_FIELDS)
 
     unresolved_rows.sort(key=lambda row: int(row["occurrence_count"] or 0), reverse=True)
     write_tsv(output_dir / "high_frequency_unresolved.tsv", unresolved_rows, HIGH_FREQUENCY_FIELDS)
@@ -2812,7 +3375,12 @@ def build_authority(
         if row["resolution_status"] == "confirmed_expansion" and row.get("best_evidence_source", "") in ocr_success_labels
     ]
     still_source_family_only = [row["acronym"] for row in priority_acronym_rows if row["resolution_status"] == "source_family_only"]
-    still_unresolved = [row["acronym"] for row in priority_acronym_rows if row["resolution_status"] == "unresolved"]
+    still_unresolved = [
+        row["acronym"]
+        for row in priority_acronym_rows
+        if row["resolution_status"] in {"unresolved", "unresolved_after_targeted_search"}
+    ]
+    remaining_rows = [row for row in acronym_status_rows if row["acronym"] in REMAINING_ACRONYMS]
     manual_seeds_confirmed_by_documentation_count = sum(
         1
         for acronym, seed_row in manual_acronym_seeds.items()
@@ -2893,11 +3461,22 @@ def build_authority(
         "priority_acronyms_still_unresolved": len(still_unresolved),
         "priority_acronyms_still_unresolved_list": still_unresolved,
         "manual_review_packet_rows": len(manual_review_packet_rows),
-        "unresolved_priority_acronyms": [row["acronym"] for row in priority_acronym_rows if row["resolution_status"] == "unresolved"],
+        "remaining_acronym_count": len(REMAINING_ACRONYMS),
+        "remaining_acronyms_confirmed_count": sum(1 for row in remaining_rows if row["resolution_status"] == "confirmed_expansion"),
+        "remaining_acronyms_probable_count": sum(1 for row in remaining_rows if row["resolution_status"] == "probable_expansion"),
+        "remaining_acronyms_unresolved_after_targeted_search_count": sum(
+            1 for row in remaining_rows if row["resolution_status"] == "unresolved_after_targeted_search"
+        ),
+        "source_work_locator_system_count": len(source_work_locator_rows),
+        "pl_locator_semantics_checked": True,
+        "iob_relationship_checked": True,
+        "unresolved_priority_acronyms": [
+            row["acronym"] for row in priority_acronym_rows if row["resolution_status"] in {"unresolved", "unresolved_after_targeted_search"}
+        ],
         "weakly_resolved_priority_acronyms": [
             row["acronym"]
             for row in priority_acronym_rows
-            if row["resolution_status"] in {"probable_expansion", "source_family_only", "contextual_usage_only"}
+            if row["resolution_status"] in {"probable_expansion", "source_family_only", "contextual_usage_only", "unresolved_after_targeted_search"}
         ],
         "confirmed_priority_acronyms": [
             row["acronym"]

@@ -14,7 +14,15 @@ if str(SCRIPTS_DIR) not in sys.path:
     sys.path.insert(0, str(SCRIPTS_DIR))
 
 from bibtex_common import parse_bibtex_text
-from build_bibtex_authority import ACRONYM_STATUS_FIELDS, AUTHORITY_FIELDS, CROSSWALK_FIELDS, SOURCE_FAMILY_FIELDS, build_authority, parse_locator
+from build_bibtex_authority import (
+    ACRONYM_STATUS_FIELDS,
+    AUTHORITY_FIELDS,
+    CROSSWALK_FIELDS,
+    REMAINING_ACRONYMS,
+    SOURCE_FAMILY_FIELDS,
+    build_authority,
+    parse_locator,
+)
 from corpus_common import read_tsv, write_tsv
 from extract_bibliography_acronyms import PRIORITY_ACRONYMS, extract_documentation_sections, extract_explicit_definition_candidates
 from extract_frasch_bibliography import run_extraction
@@ -955,11 +963,16 @@ class BibtexAuthorityTests(unittest.TestCase):
                 crosswalk_path=output_dir / "raw_reference_to_bibtex.tsv",
                 families_path=families_path,
                 external_entries_path=external_entries_path,
+                evidence_path=output_dir / "bibtex_authority_evidence.tsv",
                 acronym_status_path=output_dir / "acronym_resolution_status.tsv",
                 acronym_candidates_path=acronym_candidates_path,
                 acronym_report_path=acronym_report_path,
                 manual_acronym_seeds_path=manual_seed_path,
+                source_family_path=output_dir / "source_family_authority.tsv",
                 manual_review_packet_path=output_dir / "acronym_manual_review_packet.tsv",
+                remaining_acronym_worklist_path=output_dir / "remaining_acronym_worklist.tsv",
+                remaining_acronym_evidence_path=output_dir / "remaining_acronym_evidence.tsv",
+                source_work_locator_systems_path=output_dir / "source_work_locator_systems.tsv",
             )
             self.assertTrue(result["ok"], result["errors"])
 
@@ -1462,6 +1475,8 @@ class BibtexAuthorityTests(unittest.TestCase):
             crosswalk_rows = read_tsv(output_dir / "raw_reference_to_bibtex.tsv")
             source_family_rows = {row["source_family_id"]: row for row in read_tsv(output_dir / "source_family_authority.tsv")}
             acronym_rows = {row["acronym"]: row for row in read_tsv(output_dir / "acronym_resolution_status.tsv")}
+            locator_rows = read_tsv(output_dir / "source_work_locator_systems.tsv")
+            remaining_worklist_rows = read_tsv(output_dir / "remaining_acronym_worklist.tsv")
             candidate_bib = (output_dir / "bibliography_candidates.bib").read_text(encoding="utf-8")
 
             by_family = {row["family_id"]: row for row in crosswalk_rows}
@@ -1469,17 +1484,21 @@ class BibtexAuthorityTests(unittest.TestCase):
             self.assertEqual(by_family["fam-rdasb-publication"]["locator_type"], "year")
             self.assertEqual(by_family["fam-plate-references"]["resolution_level"], "internal_reference")
             self.assertEqual(by_family["fam-plate-references"]["locator_type"], "plate")
+            self.assertEqual(by_family["fam-plate-references"]["source_work_key"], "lucePeMaungTinInscriptionsOfBurma")
             self.assertEqual(by_family["fam-list-catalogue"]["bibtex_key"], "duroiselle1921list")
             self.assertEqual(by_family["fam-list-catalogue"]["locator_type"], "catalogue_number")
+            self.assertEqual(by_family["fam-list-catalogue"]["source_work_key"], "duroiselle1921list")
             self.assertEqual(by_family["fam-raw-ub"]["source_family_id"], "sf-ub")
             self.assertEqual(by_family["fam-raw-ub"]["locator_type"], "volume_page")
             self.assertEqual(by_family["fam-raw-mp"]["source_family_id"], "sf-mp")
             self.assertEqual(by_family["fam-ppa-catalogue"]["source_family_id"], "sf-ppa")
+            self.assertEqual(by_family["fam-ppa-catalogue"]["locator_type"], "page")
             self.assertEqual(by_family["fam-raw-a"]["source_family_id"], "sf-a")
             self.assertEqual(by_family["fam-raw-b"]["source_family_id"], "sf-b")
             self.assertIn("sf-rdasb", source_family_rows)
             self.assertIn("sf-ub", source_family_rows)
             self.assertEqual(acronym_rows["Pl."]["resolution_status"], "internal_locator")
+            self.assertEqual(acronym_rows["IOB"]["resolution_status"], "internal_locator")
             self.assertEqual(acronym_rows["PPA"]["resolution_status"], "confirmed_expansion")
             self.assertEqual(acronym_rows["SIP"]["resolution_status"], "confirmed_expansion")
             self.assertEqual(
@@ -1487,13 +1506,34 @@ class BibtexAuthorityTests(unittest.TestCase):
                 "Pe Maung Tin and G. H. Luce, Selections from the Inscriptions of Pagan",
             )
             self.assertEqual(acronym_rows["UB"]["resolution_status"], "confirmed_expansion")
-            self.assertEqual(acronym_rows["RDASB"]["resolution_status"], "source_family_only")
+            self.assertEqual(acronym_rows["RDASB"]["resolution_status"], "unresolved_after_targeted_search")
             self.assertTrue(set(PRIORITY_ACRONYMS).issubset(acronym_rows))
             self.assertEqual(source_family_rows["sf-ppa"]["expanded_label"], "Inscriptions of Pagan, Pinya and Ava")
             self.assertEqual(source_family_rows["sf-mp"]["expanded_label"], "MP source family [unexpanded]")
+            self.assertEqual(source_family_rows["sf-pl"]["expanded_label"], "Plate reference into Inscriptions of Burma")
+            self.assertEqual(source_family_rows["sf-pl"]["locator_type"], "plate")
+            self.assertEqual(source_family_rows["sf-pl"]["source_work_key"], "lucePeMaungTinInscriptionsOfBurma")
+            self.assertEqual(len(remaining_worklist_rows), len(REMAINING_ACRONYMS))
+            self.assertTrue(any(row["source_work_key"] == "lucePeMaungTinInscriptionsOfBurma" for row in locator_rows))
             self.assertNotIn("workUnresolved", candidate_bib)
             self.assertNotIn("RDASB", [row["family_label"] for row in report["top_unresolved_families"]])
-            self.assertNotIn("PPA", [row["family_label"] for row in report["top_unresolved_families"]])
+
+    def test_parse_locator_handles_plate_iob_list_and_ppa_patterns(self) -> None:
+        locator, locator_type = parse_locator("Pl. II 198", "fam-plate-references", "Pl.")
+        self.assertEqual(locator, "II 198")
+        self.assertEqual(locator_type, "plate")
+
+        locator, locator_type = parse_locator("IOB--278", "fam-iob-catalogue", "IOB")
+        self.assertEqual(locator, "278")
+        self.assertEqual(locator_type, "catalogue_number")
+
+        locator, locator_type = parse_locator("List 90", "fam-list-catalogue", "List")
+        self.assertEqual(locator, "90")
+        self.assertEqual(locator_type, "catalogue_number")
+
+        locator, locator_type = parse_locator("PPA, p. 55", "fam-ppa-catalogue", "PPA")
+        self.assertEqual(locator, "p. 55")
+        self.assertEqual(locator_type, "page")
 
     def test_build_authority_applies_manual_acronym_seeds(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:
@@ -1574,6 +1614,34 @@ class BibtexAuthorityTests(unittest.TestCase):
                 manual_review_packet_path=output_dir / "acronym_manual_review_packet.tsv",
             )
             self.assertTrue(result["ok"], result["errors"])
+
+    def test_build_authority_marks_missing_remaining_acronyms_as_unresolved_after_targeted_search(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            temp_path = Path(temp_dir)
+            families_path, members_path, candidates_path, seeds_path, external_entries_path = self.write_fixture_tables(temp_path)
+            acronym_candidates_path, acronym_report_path = self.write_fixture_acronym_files(temp_path)
+            output_dir = temp_path / "authority"
+
+            build_authority(
+                reference_families_path=families_path,
+                reference_members_path=members_path,
+                work_candidates_path=candidates_path,
+                seed_path=seeds_path,
+                external_entries_path=external_entries_path,
+                output_dir=output_dir,
+                frasch_references_path=temp_path / "missing_frasch.tsv",
+                local_candidates_path=temp_path / "missing_local_candidates.tsv",
+                local_manifest_path=temp_path / "missing_local_manifest.tsv",
+                acronym_candidates_path=acronym_candidates_path,
+                acronym_report_path=acronym_report_path,
+            )
+
+            acronym_rows = {row["acronym"]: row for row in read_tsv(output_dir / "acronym_resolution_status.tsv")}
+            self.assertEqual(acronym_rows["IPPA"]["resolution_status"], "unresolved_after_targeted_search")
+            self.assertEqual(acronym_rows["Luce D"]["resolution_status"], "unresolved_after_targeted_search")
+            self.assertEqual(acronym_rows["OR"]["resolution_status"], "unresolved_after_targeted_search")
+            self.assertEqual(acronym_rows["TN"]["resolution_status"], "confirmed_expansion")
+            self.assertEqual(acronym_rows["UEM"]["resolution_status"], "confirmed_expansion")
 
     def test_extract_documentation_sections_rejects_generic_and_irrelevant_bibliography(self) -> None:
         generic_rows = extract_documentation_sections(

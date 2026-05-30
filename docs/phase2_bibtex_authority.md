@@ -23,19 +23,24 @@ The central review tables are now:
 
 - `source_family_authority.tsv`
 - `acronym_resolution_status.tsv`
+- `remaining_acronym_worklist.tsv`
+- `remaining_acronym_evidence.tsv`
+- `source_work_locator_systems.tsv`
 - `raw_reference_to_bibtex.tsv`
 - `bibtex_authority.tsv`
 - `high_frequency_resolution_plan.tsv`
 - `bibtex_authority_report.json`
 
-`raw_reference_to_bibtex.tsv` keeps `source_family_id`, `bibtex_key`, `locator`, `locator_type`, `resolution_status`, and `resolution_level` separate so a raw corpus string can point to a family, a work, both, or neither.
+`raw_reference_to_bibtex.tsv` now keeps `source_family_id`, `source_work_key`, `bibtex_key`, `locator`, `locator_type`, `resolution_status`, and `resolution_level` separate so a raw corpus string can point to a family, a work, both, or neither.
 
 ## Acronym resolution
 
 `source_family_resolved` is **not** the same thing as knowing what an acronym expands to. The acronym layer now keeps those questions separate:
 
 - `source_family_authority.tsv` records the stable source-family or series mapping;
-- `acronym_resolution_status.tsv` records whether the abbreviation itself is a `confirmed_expansion`, `probable_expansion`, `source_family_only`, `contextual_usage_only`, `internal_locator`, `not_an_acronym`, or still `unresolved`;
+- `acronym_resolution_status.tsv` records whether the abbreviation itself is a `confirmed_expansion`, `probable_expansion`, `source_family_only`, `contextual_usage_only`, `internal_locator`, `not_an_acronym`, `unresolved_after_targeted_search`, or still `unresolved`;
+- `remaining_acronym_worklist.tsv` is the focused queue for the last weak source acronyms, including files checked, search terms used, and the recommended conservative action;
+- `remaining_acronym_evidence.tsv` records one short targeted-evidence row per remaining acronym, including negative-search rows where nothing documentary was found;
 - `acronym_definition_candidates.tsv` records quote-level evidence from corpus documentation, Frasch's *Pagan: Stadt und Staat* materials, and `Bagan Epig Database.doc`.
 
 `source_family_only` is still useful, but it is **not** an expansion. Keep that distinction explicit in both `source_family_authority.tsv` and `acronym_resolution_status.tsv`.
@@ -44,11 +49,19 @@ Only strong evidence types such as abbreviation lists, explicit parenthetical de
 
 For weak cases, keep the source family visible but keep the expansion visibly unconfirmed, e.g. `MP source family [unexpanded]`.
 
+`unresolved_after_targeted_search` is the end-state for acronyms that were checked in the targeted OCR/extracted-text pass but still lack a documentary definition. Use it instead of leaving a weak case as a generic `source_family_only` without any record of what was checked.
+
 Treat parenthetical remarks, note labels, and ordinary English words as false-positive territory, not as expansions. `spelling of inscription (OBI)`, `Date ... (List)`, or lowercase `or:` are usage/noise patterns; they belong in the false-positive audit, not in `acronym_resolution_status.tsv`.
 
 Keep acronym evidence quotes short and documentary. Long catalogue prose should stay in the extraction context tables, while `best_evidence_quote` should remain a concise abbreviation-list row, heading, or source-list phrase.
 
 Manual acronym seeds now live in `manual_acronym_seeds.tsv`. They record expert identifications such as `EB`, `JBRS`, `JRAS`, and `OBI` without pretending that a documentary source has already been found. In `acronym_resolution_status.tsv`, these appear as high-confidence `manual_seed` evidence and should keep a note that documentary corroboration is still desirable.
+
+The manual seed table and the documentary evidence tables are intentionally separate:
+
+- `manual_acronym_seeds.tsv` records Nathan's expert identifications directly;
+- `acronym_resolution_status.tsv` carries the currently chosen expansion and the best available evidence source;
+- `remaining_acronym_evidence.tsv` and `acronym_definition_candidates.tsv` record documentary confirmation or the lack of it.
 
 ## External BibTeX import
 
@@ -108,6 +121,20 @@ This prevents source-family placeholders from being counted as fully confirmed w
 - `List 90` is a **confirmed work** plus a catalogue-number locator;
 - `PPA, p. 55` or `UB 1, p. 297` can be **source-family-resolved** without being fully confirmed publications.
 
+## Source works versus locator systems
+
+The current pass makes the locator/work split explicit for high-frequency source references:
+
+- `Pl.` is a **plate locator system**, not a bibliographic title;
+- `IOB` is treated as a **locator-style reference into the same underlying work** as `Pl.`;
+- `List`, `PPA`, and `UB` are source works with stable locator patterns rather than standalone expansions of every raw string.
+
+Use these files together:
+
+- `source_family_authority.tsv` for the source-family row and its `source_work_key` / `related_source_work_key`;
+- `source_work_locator_systems.tsv` for the consolidated locator-system summary;
+- `raw_reference_to_bibtex.tsv` for per-reference locator parsing.
+
 ## Authority vs candidate BibTeX
 
 - `bibliography_authority.bib` holds conservative authority entries supported by imported external BibTeX, Frasch/local-source evidence, repository-backed source identification, or strong manual/source-family seeds.
@@ -160,7 +187,8 @@ Targeted OCR is now part of that review loop:
 - run `python3 scripts/ocr_priority_sources.py`;
 - keep full OCR text only under gitignored `data/local/ocr_text/`;
 - commit only `ocr_manifest.tsv`, `ocr_text_index.tsv`, and `ocr_report.json`;
-- review `acronym_manual_review_packet.tsv` after rebuilding to see which priority acronyms moved to confirmed/probable, which are still source-family-only, and which still need human work.
+- review `acronym_manual_review_packet.tsv` after rebuilding to see which priority acronyms moved to confirmed/probable, which are still unresolved after targeted search, and which still need human work;
+- use `remaining_acronym_worklist.tsv` and `remaining_acronym_evidence.tsv` as the explicit handoff packet for the few weak acronyms that still need human judgment.
 
 ## Reviewing high-frequency families first
 

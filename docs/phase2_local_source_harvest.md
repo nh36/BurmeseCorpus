@@ -57,6 +57,9 @@ Commit the metadata instead:
 - `data/working/bibliography/local_sources/ocr_outputs/ocr_report.json`
 - `data/working/bibliography/bibtex_authority/manual_acronym_seeds.tsv`
 - `data/working/bibliography/bibtex_authority/acronym_manual_review_packet.tsv`
+- `data/working/bibliography/bibtex_authority/remaining_acronym_worklist.tsv`
+- `data/working/bibliography/bibtex_authority/remaining_acronym_evidence.tsv`
+- `data/working/bibliography/bibtex_authority/source_work_locator_systems.tsv`
 
 ## Practical run order
 
@@ -212,6 +215,13 @@ The full extracted or OCR text stays local-only under gitignored `data/local/ocr
 
 `ocr_text_index.tsv` should contain short snippets around abbreviation headings or explicit definition-like rows, not the full document text.
 
+After OCR and acronym extraction, rebuild the authority layer and review:
+
+- `manual_acronym_seeds.tsv` for expert-supplied identifications;
+- `remaining_acronym_worklist.tsv` for the focused unresolved queue;
+- `remaining_acronym_evidence.tsv` for the short targeted evidence quotes or negative-search rows;
+- `acronym_manual_review_packet.tsv` for the final per-acronym handoff summary.
+
 ## How local evidence flows into BibTeX authority
 
 `scripts/build_bibtex_authority.py` now treats harvested local evidence as higher-value input than generic machine stubs.
@@ -256,6 +266,12 @@ For source-family mappings, the same evidence should also support:
 - `high_frequency_resolution_plan.tsv`
 
 This is how rows like `List 90`, `Pl. II 198`, `PPA, p. 55`, `RDASB 1971`, `UB 1, p. 297`, and `MP 1, p. 81` stay modeled as source-family or series references with locators instead of turning into meaningless machine-stub works.
+
+The latest pass also keeps **source works** distinct from **locator systems**. In practice:
+
+- `Pl.` is a plate locator into *Inscriptions of Burma*;
+- `IOB` is treated as a locator-style reference to the same underlying work;
+- `source_work_locator_systems.tsv` records that relationship explicitly so the crosswalk can keep `source_work_key`, `source_family_id`, and locator values separate.
 
 ## Reviewing unresolved high-frequency families
 
