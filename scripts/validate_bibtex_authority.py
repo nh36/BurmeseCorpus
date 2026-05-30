@@ -6,13 +6,15 @@ import re
 import subprocess
 from pathlib import Path
 
-from build_bibtex_authority import RESOLUTION_LEVELS, RESOLUTION_STATUSES
+from build_bibtex_authority import RESOLUTION_LEVELS, RESOLUTION_STATUSES, normalized_expansion_match
 from bibtex_common import duplicate_keys, parse_bibtex_text
 from corpus_common import read_tsv
 from extract_bibliography_acronyms import (
+    GENERIC_BIBLIOGRAPHY_HEADINGS,
     MAX_STRONG_DEFINITION_QUOTE_LENGTH,
     PRIORITY_ACRONYMS,
     STRONG_DEFINITION_EVIDENCE_TYPES,
+    line_has_definition_pattern,
 )
 
 
@@ -48,9 +50,22 @@ def has_lowercase_or_false_positive(value: str) -> bool:
 def candidate_supports_strong_expansion(candidate_row: dict | None) -> bool:
     if not candidate_row:
         return False
+    if candidate_row.get("definition_quality") == "manual_seed":
+        return True
     if candidate_row.get("evidence_type") not in STRONG_DEFINITION_EVIDENCE_TYPES:
         return False
     return candidate_row.get("definition_quality") in {"explicit", "strong"}
+
+
+def has_explicit_definition_pattern(text: str) -> bool:
+    return any(line_has_definition_pattern((line or "").strip(), acronym) for line in text.splitlines() for acronym in PRIORITY_ACRONYMS)
+
+
+def looks_like_irrelevant_tibetan_material(text: str) -> bool:
+    lowered = (text or "").casefold()
+    if not any(token in lowered for token in ("tibet", "tibetan", "richardson")):
+        return False
+    return not any(token in lowered for token in ("burma", "burmese", "bagan", "pagan", "obi"))
 
 
 def validate_bibtex_authority(
@@ -72,6 +87,12 @@ def validate_bibtex_authority(
     acronym_status_path: Path | None = None,
     acronym_candidates_path: Path | None = None,
     acronym_report_path: Path | None = None,
+    manual_acronym_seeds_path: Path | None = None,
+    ocr_queue_path: Path | None = None,
+    ocr_manifest_path: Path | None = None,
+    ocr_index_path: Path | None = None,
+    documentation_sections_path: Path | None = None,
+    manual_review_packet_path: Path | None = None,
 ) -> dict:
     errors: list[str] = []
     authority_entries, authority_warnings = parse_bibtex_text(authority_bib_path.read_text(encoding="utf-8"), source_label=authority_bib_path.name)
@@ -89,6 +110,12 @@ def validate_bibtex_authority(
     manifest_rows = read_tsv(local_manifest_path) if local_manifest_path and local_manifest_path.exists() else []
     acronym_status_rows = read_tsv(acronym_status_path) if acronym_status_path and acronym_status_path.exists() else []
     acronym_candidate_rows = read_tsv(acronym_candidates_path) if acronym_candidates_path and acronym_candidates_path.exists() else []
+    manual_seed_rows = read_tsv(manual_acronym_seeds_path) if manual_acronym_seeds_path and manual_acronym_seeds_path.exists() else []
+    ocr_queue_rows = read_tsv(ocr_queue_path) if ocr_queue_path and ocr_queue_path.exists() else []
+    ocr_manifest_rows = read_tsv(ocr_manifest_path) if ocr_manifest_path and ocr_manifest_path.exists() else []
+    ocr_index_rows = read_tsv(ocr_index_path) if ocr_index_path and ocr_index_path.exists() else []
+    documentation_section_rows = read_tsv(documentation_sections_path) if documentation_sections_path and documentation_sections_path.exists() else []
+    manual_review_packet_rows = read_tsv(manual_review_packet_path) if manual_review_packet_path and manual_review_packet_path.exists() else []
     report = json.loads(report_path.read_text(encoding="utf-8")) if report_path and report_path.exists() else {}
     acronym_report = json.loads(acronym_report_path.read_text(encoding="utf-8")) if acronym_report_path and acronym_report_path.exists() else {}
 
@@ -104,6 +131,7 @@ def validate_bibtex_authority(
     evidence_by_source_family = {row.get("source_family_id", ""): row for row in evidence_rows if row.get("source_family_id")}
     acronym_status_by_acronym = {row.get("acronym", ""): row for row in acronym_status_rows if row.get("acronym")}
     acronym_candidate_by_id = {row.get("candidate_id", ""): row for row in acronym_candidate_rows if row.get("candidate_id")}
+    manual_seed_by_acronym = {row.get("acronym", ""): row for row in manual_seed_rows if row.get("acronym")}
 
     duplicate_all = sorted(set(duplicate_keys(authority_entries) + duplicate_keys(candidate_entries) + list(authority_keys & candidate_keys)))
     if duplicate_all:
@@ -264,9 +292,11 @@ def validate_bibtex_authority(
                     if candidate_row and candidate_row.get("evidence_type") in STRONG_DEFINITION_EVIDENCE_TYPES:
                         errors.append(f"acronym_resolution_status[{index}] marks strong evidence as contextual usage only")
                 if status in strong_statuses:
-                    if not candidate_row or candidate_row.get("evidence_type") not in STRONG_DEFINITION_EVIDENCE_TYPES:
+                    if not candidate_row and not evidence_id.startswith("manual-seed:"):
                         errors.append(f"acronym_resolution_status[{index}] requires strong evidence for {status}")
-                    if not candidate_supports_strong_expansion(candidate_row):
+                    if candidate_row and candidate_row.get("evidence_type") not in STRONG_DEFINITION_EVIDENCE_TYPES and candidate_row.get("definition_quality") != "manual_seed":
+                        errors.append(f"acronym_resolution_status[{index}] requires strong evidence for {status}")
+                    if not candidate_supports_strong_expansion(candidate_row) and not evidence_id.startswith("manual-seed:"):
                         errors.append(f"acronym_resolution_status[{index}] lacks explicit or strong definition evidence for {status}")
                     if len(row.get("best_evidence_quote", "")) > MAX_STRONG_DEFINITION_QUOTE_LENGTH:
                         errors.append(f"acronym_resolution_status[{index}] best_evidence_quote exceeds {MAX_STRONG_DEFINITION_QUOTE_LENGTH} characters")
@@ -274,6 +304,14 @@ def validate_bibtex_authority(
                     errors.append(f"acronym_resolution_status[{index}] confirmed expansion is missing current_expansion")
                 if row.get("definition_quality") == "explicit" and row.get("acronym") in PRIORITY_ACRONYMS and not row.get("current_expansion"):
                     errors.append(f"acronym_resolution_status[{index}] explicit priority acronym is missing current_expansion")
+                if row.get("definition_quality") == "manual_seed":
+                    seed_row = manual_seed_by_acronym.get(row.get("acronym", ""))
+                    if not seed_row:
+                        errors.append(f"acronym_resolution_status[{index}] uses manual_seed without manual_acronym_seeds.tsv row")
+                    elif not normalized_expansion_match(row.get("current_expansion", ""), seed_row.get("expansion", "")):
+                        errors.append(f"acronym_resolution_status[{index}] manual_seed expansion does not match manual_acronym_seeds.tsv")
+                    if row.get("confidence") != "high":
+                        errors.append(f"acronym_resolution_status[{index}] manual_seed rows must keep confidence=high")
                 if row.get("acronym") == "List" and (
                     has_list_date_false_positive(row.get("current_expansion", ""))
                     or has_list_date_false_positive(row.get("best_evidence_quote", ""))
@@ -305,6 +343,56 @@ def validate_bibtex_authority(
                     errors.append(f"acronym_definition_candidates[{index}] contains an absolute local path")
                     break
 
+    if manual_acronym_seeds_path:
+        if not manual_acronym_seeds_path.exists():
+            errors.append("manual_acronym_seeds.tsv is missing")
+        else:
+            for acronym, seed_row in manual_seed_by_acronym.items():
+                status_row = acronym_status_by_acronym.get(acronym)
+                if not status_row:
+                    errors.append(f"manual seed {acronym} is missing from acronym_resolution_status.tsv")
+                    continue
+                if not status_row.get("current_expansion"):
+                    errors.append(f"manual seed {acronym} was downgraded to a blank expansion")
+                if status_row.get("resolution_status") == "source_family_only":
+                    errors.append(f"manual seed {acronym} was downgraded to source_family_only")
+                if status_row.get("confidence") != "high":
+                    errors.append(f"manual seed {acronym} must keep confidence=high")
+                if not normalized_expansion_match(status_row.get("current_expansion", ""), seed_row.get("expansion", "")):
+                    errors.append(f"manual seed {acronym} expansion does not match the manual seed table")
+
+    if ocr_queue_rows and ocr_manifest_path and not ocr_manifest_path.exists():
+        errors.append("ocr_manifest.tsv is missing")
+    if ocr_queue_rows and ocr_index_path and not ocr_index_path.exists():
+        errors.append("ocr_text_index.tsv is missing")
+    ocr_success_labels = {
+        row.get("source_file_label", "")
+        for row in ocr_manifest_rows
+        if row.get("extraction_status") == "success" and row.get("source_file_label")
+    }
+    for index, row in enumerate(acronym_status_rows, start=1):
+        if row.get("resolution_status") in {"confirmed_expansion", "probable_expansion"} and row.get("best_evidence_source", "") in ocr_success_labels:
+            if not row.get("best_evidence_source") or not row.get("best_evidence_quote"):
+                errors.append(f"acronym_resolution_status[{index}] OCR-backed expansion is missing evidence source or quote")
+            if len(row.get("best_evidence_quote", "")) > MAX_STRONG_DEFINITION_QUOTE_LENGTH:
+                errors.append(f"acronym_resolution_status[{index}] OCR-backed evidence quote exceeds {MAX_STRONG_DEFINITION_QUOTE_LENGTH} characters")
+    if manual_review_packet_path:
+        if not manual_review_packet_path.exists():
+            errors.append("acronym_manual_review_packet.tsv is missing")
+        else:
+            packet_by_acronym = {row.get("acronym", ""): row for row in manual_review_packet_rows if row.get("acronym")}
+            for acronym in PRIORITY_ACRONYMS:
+                if acronym not in packet_by_acronym:
+                    errors.append(f"acronym_manual_review_packet.tsv is missing priority acronym {acronym}")
+
+    for index, row in enumerate(documentation_section_rows, start=1):
+        heading = (row.get("section_heading", "") or "").casefold()
+        excerpt = row.get("section_text_excerpt", "")
+        if heading in GENERIC_BIBLIOGRAPHY_HEADINGS and row.get("contains_priority_acronyms") == "true" and not has_explicit_definition_pattern(excerpt):
+            errors.append(f"documentation_abbreviation_sections[{index}] treats generic bibliography text as abbreviation evidence")
+        if looks_like_irrelevant_tibetan_material(f"{row.get('source_file_label', '')} {excerpt}") and row.get("contains_priority_acronyms") == "true":
+            errors.append(f"documentation_abbreviation_sections[{index}] treats irrelevant Tibetan material as Burmese acronym evidence")
+
     sip_explicit_candidates = [
         row
         for row in acronym_candidate_rows
@@ -324,7 +412,9 @@ def validate_bibtex_authority(
                 errors.append(f"source_family_authority[{index}] exposes an unverified expansion for {row.get('abbreviation')}")
             if acronym_status in {"confirmed_expansion", "probable_expansion"} and row.get("best_definition_evidence_id"):
                 candidate_row = acronym_candidate_by_id.get(row["best_definition_evidence_id"])
-                if not candidate_row or candidate_row.get("evidence_type") not in STRONG_DEFINITION_EVIDENCE_TYPES:
+                if row["best_definition_evidence_id"].startswith("manual-seed:"):
+                    pass
+                elif not candidate_row or candidate_row.get("evidence_type") not in STRONG_DEFINITION_EVIDENCE_TYPES:
                     errors.append(f"source_family_authority[{index}] has non-strong definition evidence")
             if acronym_status in {"source_family_only", "contextual_usage_only", "unresolved"} and row.get("needs_human_review") != "true":
                 errors.append(f"source_family_authority[{index}] must keep needs_human_review=true for unresolved acronym state")
@@ -342,6 +432,10 @@ def validate_bibtex_authority(
         expected_weak = sorted(row["acronym"] for row in acronym_status_rows if row.get("acronym") in PRIORITY_ACRONYMS and row.get("resolution_status") in weak_statuses)
         if sorted(report.get("weakly_resolved_priority_acronyms", [])) != expected_weak:
             errors.append("report weakly_resolved_priority_acronyms does not match acronym_resolution_status.tsv")
+        if report.get("manual_acronym_seed_count") != len(manual_seed_rows):
+            errors.append("report manual_acronym_seed_count does not match manual_acronym_seeds.tsv")
+        if report.get("manual_review_packet_rows") != len(manual_review_packet_rows):
+            errors.append("report manual_review_packet_rows does not match acronym_manual_review_packet.tsv")
 
     if seed_rows:
         allowed_confidence = {"low", "medium", "high"}
@@ -373,8 +467,22 @@ def validate_bibtex_authority(
     except (subprocess.CalledProcessError, FileNotFoundError):
         tracked_local = []
     for path in tracked_local:
-        if path.casefold().endswith((".pdf", ".doc", ".docx", ".djvu")):
+        if path.casefold().endswith((".pdf", ".doc", ".docx", ".djvu", ".tif", ".tiff", ".png", ".jpg", ".jpeg")):
             errors.append(f"tracked local source binary found in git: {path}")
+        if path.startswith("data/local/ocr_text/") and path.casefold().endswith(".txt"):
+            errors.append(f"tracked OCR text found in git: {path}")
+    try:
+        tracked_ocr_outputs = subprocess.run(
+            ["git", "ls-files", "data/working/bibliography/local_sources/ocr_outputs"],
+            check=True,
+            capture_output=True,
+            text=True,
+        ).stdout.splitlines()
+    except (subprocess.CalledProcessError, FileNotFoundError):
+        tracked_ocr_outputs = []
+    for path in tracked_ocr_outputs:
+        if path.casefold().endswith(".txt"):
+            errors.append(f"tracked OCR output text file found in git: {path}")
 
     return {
         "ok": not errors,
@@ -474,6 +582,36 @@ def main() -> None:
         type=Path,
         default=Path("data/working/bibliography/local_sources/acronym_definition_report.json"),
     )
+    parser.add_argument(
+        "--manual-acronym-seeds",
+        type=Path,
+        default=Path("data/working/bibliography/bibtex_authority/manual_acronym_seeds.tsv"),
+    )
+    parser.add_argument(
+        "--ocr-queue",
+        type=Path,
+        default=Path("data/working/bibliography/local_sources/ocr_priority_queue.tsv"),
+    )
+    parser.add_argument(
+        "--ocr-manifest",
+        type=Path,
+        default=Path("data/working/bibliography/local_sources/ocr_outputs/ocr_manifest.tsv"),
+    )
+    parser.add_argument(
+        "--ocr-index",
+        type=Path,
+        default=Path("data/working/bibliography/local_sources/ocr_outputs/ocr_text_index.tsv"),
+    )
+    parser.add_argument(
+        "--documentation-sections",
+        type=Path,
+        default=Path("data/working/bibliography/local_sources/documentation_abbreviation_sections.tsv"),
+    )
+    parser.add_argument(
+        "--manual-review-packet",
+        type=Path,
+        default=Path("data/working/bibliography/bibtex_authority/acronym_manual_review_packet.tsv"),
+    )
     args = parser.parse_args()
 
     result = validate_bibtex_authority(
@@ -494,6 +632,12 @@ def main() -> None:
         acronym_status_path=args.acronym_status,
         acronym_candidates_path=args.acronym_candidates,
         acronym_report_path=args.acronym_report,
+        manual_acronym_seeds_path=args.manual_acronym_seeds,
+        ocr_queue_path=args.ocr_queue,
+        ocr_manifest_path=args.ocr_manifest,
+        ocr_index_path=args.ocr_index,
+        documentation_sections_path=args.documentation_sections,
+        manual_review_packet_path=args.manual_review_packet,
     )
     print(json.dumps(result, indent=2, ensure_ascii=False))
     if not result["ok"]:

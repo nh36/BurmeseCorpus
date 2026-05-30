@@ -1,0 +1,5 @@
+acronym	expansion	authority_key	source_family_id	confidence	supplied_by	date_added	needs_documentary_confirmation	notes
+EB	Epigraphia Birmanica	epigraphiaBirmanica	sf-eb	high	Nathan Hill	2026-05-30	true	Manual seed; seek confirmation in local abbreviation lists.
+JBRS	Journal of the Burma Research Society	journalBurmaResearchSociety	sf-jbrs	high	Nathan Hill	2026-05-30	true	Manual seed; seek confirmation in local abbreviation lists.
+JRAS	Journal of the Royal Asiatic Society	journalRoyalAsiaticSociety	sf-jras	high	Nathan Hill	2026-05-30	true	Manual seed; seek confirmation in local abbreviation lists.
+OBI	Old Burmese Inscriptions	obiCorpusSource	sf-obi	high	Nathan Hill	2026-05-30	true	Manual seed; seek confirmation in corpus documentation.

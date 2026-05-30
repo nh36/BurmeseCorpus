@@ -181,6 +181,32 @@ SEED_FIELDS = [
     "needs_human_review",
     "notes",
 ]
+MANUAL_ACRONYM_SEED_FIELDS = [
+    "acronym",
+    "expansion",
+    "authority_key",
+    "source_family_id",
+    "confidence",
+    "supplied_by",
+    "date_added",
+    "needs_documentary_confirmation",
+    "notes",
+]
+MANUAL_REVIEW_PACKET_FIELDS = [
+    "acronym",
+    "current_status",
+    "current_expansion",
+    "best_evidence_source",
+    "best_evidence_quote",
+    "manual_seed",
+    "ocr_sources_checked",
+    "new_ocr_hits",
+    "candidate_expansions",
+    "recommended_resolution",
+    "confidence",
+    "needs_human_review",
+    "notes",
+]
 
 STATUS_RANK = {
     "confirmed_external_bibtex": 5,
@@ -1145,6 +1171,7 @@ def is_placeholder_expansion(value: str) -> bool:
 
 def acronym_quality_rank(value: str) -> int:
     return {
+        "manual_seed": 6,
         "explicit": 5,
         "strong": 4,
         "medium": 3,
@@ -1184,6 +1211,51 @@ def load_json_report(path: Path) -> dict:
     return json.loads(path.read_text(encoding="utf-8"))
 
 
+def load_manual_acronym_seeds(path: Path) -> dict[str, dict]:
+    if not path.exists():
+        return {}
+    return {
+        row.get("acronym", ""): row
+        for row in read_tsv(path)
+        if row.get("acronym")
+    }
+
+
+def normalized_expansion_match(left: str, right: str) -> bool:
+    return normalize_source_family_key(left) == normalize_source_family_key(right)
+
+
+def normalized_seed_match(seed_expansion: str, documentary_expansion: str) -> bool:
+    def simplify(value: str) -> str:
+        without_parens = re.sub(r"\([^)]*\)", "", value or "")
+        without_years = re.sub(r"\b[12][0-9]{3}(?:[–-][12][0-9]{3})?\b", "", without_parens)
+        return normalize_source_family_key(without_years)
+
+    seed_simple = simplify(seed_expansion)
+    documentary_simple = simplify(documentary_expansion)
+    return bool(seed_simple and documentary_simple and (seed_simple == documentary_simple or seed_simple in documentary_simple or documentary_simple in seed_simple))
+
+
+def manual_seed_candidate(seed_row: dict) -> dict:
+    acronym = seed_row.get("acronym", "")
+    expansion = seed_row.get("expansion", "")
+    return {
+        "candidate_id": f"manual-seed:{normalize_source_family_key(acronym).replace(' ', '-')}",
+        "acronym": acronym,
+        "candidate_expansion": expansion,
+        "raw_definition": expansion,
+        "definition_context": expansion,
+        "source_file_id": "",
+        "source_file_label": seed_row.get("supplied_by", "Nathan Hill"),
+        "source_location_hint": "manual acronym seed",
+        "evidence_type": "manual_scholarly_identification",
+        "confidence": seed_row.get("confidence", "high") or "high",
+        "definition_quality": "manual_seed",
+        "needs_human_review": "false",
+        "notes": seed_row.get("notes", ""),
+    }
+
+
 ACRONYM_STATUS_DEFAULTS = {
     "PPA": {"resolution_status": "confirmed_expansion"},
     "IPPA": {"resolution_status": "source_family_only"},
@@ -1204,8 +1276,6 @@ ACRONYM_STATUS_DEFAULTS = {
     "ARASI": {"resolution_status": "source_family_only"},
     "RDASB": {"resolution_status": "source_family_only"},
     "BBHC": {"resolution_status": "confirmed_expansion"},
-    "JBRS": {"resolution_status": "confirmed_expansion", "current_expansion": "Journal of the Burma Research Society"},
-    "JRAS": {"resolution_status": "confirmed_expansion", "current_expansion": "Journal of the Royal Asiatic Society"},
 }
 
 
@@ -1250,37 +1320,66 @@ def short_acronym_evidence_quote(best_candidate: dict | None) -> str:
 def build_acronym_status_rows(
     source_family_rows: dict[str, dict],
     acronym_candidates_by_acronym: dict[str, list[dict]],
+    manual_acronym_seeds: dict[str, dict],
 ) -> list[dict]:
     abbreviation_to_source_family = {
         row.get("abbreviation", ""): row for row in source_family_rows.values() if row.get("abbreviation")
     }
-    acronyms = list(dict.fromkeys(PRIORITY_ACRONYMS + sorted(abbreviation_to_source_family)))
+    acronyms = list(dict.fromkeys(PRIORITY_ACRONYMS + sorted(abbreviation_to_source_family) + sorted(manual_acronym_seeds)))
     status_rows: list[dict] = []
     for acronym in acronyms:
         source_family_row = abbreviation_to_source_family.get(acronym)
-        best_candidate = choose_best_acronym_candidate(acronym_candidates_by_acronym.get(acronym, []))
+        documentary_candidate = choose_best_acronym_candidate(acronym_candidates_by_acronym.get(acronym, []))
+        best_candidate = documentary_candidate
+        manual_seed = manual_acronym_seeds.get(acronym)
+        manual_candidate = manual_seed_candidate(manual_seed) if manual_seed else None
         default = ACRONYM_STATUS_DEFAULTS.get(acronym, {})
         strong_candidate = bool(
-            best_candidate and best_candidate.get("evidence_type", "") in STRONG_DEFINITION_EVIDENCE_TYPES
+            documentary_candidate and documentary_candidate.get("evidence_type", "") in STRONG_DEFINITION_EVIDENCE_TYPES
         )
-        contextual_candidate = bool(best_candidate and best_candidate.get("evidence_type") == "contextual_usage")
+        contextual_candidate = bool(documentary_candidate and documentary_candidate.get("evidence_type") == "contextual_usage")
+        documentary_confirms_manual = bool(
+            manual_seed
+            and documentary_candidate
+            and strong_candidate
+            and normalized_seed_match(manual_seed.get("expansion", ""), documentary_candidate.get("candidate_expansion", ""))
+        )
+        documentary_conflicts_manual = bool(manual_seed and documentary_candidate and strong_candidate and not documentary_confirms_manual)
         status = default.get("resolution_status", "")
         if not status:
-            if strong_candidate:
-                status = inferred_acronym_status(best_candidate)
+            if documentary_confirms_manual:
+                status = inferred_acronym_status(documentary_candidate)
+                best_candidate = documentary_candidate
+            elif manual_candidate:
+                status = "confirmed_expansion"
+                best_candidate = manual_candidate
+            elif strong_candidate:
+                status = inferred_acronym_status(documentary_candidate)
             elif contextual_candidate:
                 status = "contextual_usage_only"
             elif source_family_row:
                 status = "source_family_only"
             else:
                 status = "unresolved"
+        elif documentary_confirms_manual and status in {"source_family_only", "contextual_usage_only", "unresolved", "confirmed_expansion"}:
+            status = inferred_acronym_status(documentary_candidate)
+        elif manual_candidate and status in {"source_family_only", "contextual_usage_only", "unresolved", "confirmed_expansion"}:
+            status = "confirmed_expansion"
+            best_candidate = manual_candidate
         elif strong_candidate and status in {"source_family_only", "contextual_usage_only", "unresolved"}:
-            status = inferred_acronym_status(best_candidate)
-        if status in {"confirmed_expansion", "probable_expansion"} and not strong_candidate:
+            status = inferred_acronym_status(documentary_candidate)
+        if status in {"confirmed_expansion", "probable_expansion"} and not documentary_confirms_manual and not manual_candidate and not strong_candidate:
             status = "source_family_only" if source_family_row else "unresolved"
         current_expansion = default.get("current_expansion", "")
-        if strong_candidate:
-            current_expansion = best_candidate.get("candidate_expansion", "") or current_expansion
+        if documentary_confirms_manual and manual_seed:
+            current_expansion = manual_seed.get("expansion", "") or current_expansion
+            best_candidate = documentary_candidate
+        elif strong_candidate:
+            current_expansion = documentary_candidate.get("candidate_expansion", "") or current_expansion
+            best_candidate = documentary_candidate
+        elif manual_candidate:
+            current_expansion = manual_candidate.get("candidate_expansion", "") or current_expansion
+            best_candidate = manual_candidate
         if status in {"source_family_only", "contextual_usage_only", "unresolved"}:
             current_expansion = ""
         if source_family_row and not current_expansion and not is_placeholder_expansion(source_family_row.get("expanded_label", "")):
@@ -1293,9 +1392,22 @@ def build_acronym_status_rows(
         )
         if status == "internal_locator" and not definition_quality:
             definition_quality = "strong"
+        note_parts = [best_candidate.get("notes", "")] if best_candidate else []
+        if manual_seed:
+            if documentary_confirms_manual:
+                note_parts.append("Manual identification supplied by Nathan; documentary source agrees.")
+            elif documentary_conflicts_manual:
+                note_parts.append("Manual identification supplied by Nathan; documentary wording differs, so the manual seed remains canonical.")
+            else:
+                note_parts.append("Manual identification supplied by Nathan; seek documentary corroboration.")
         needs_review = "true" if status in {"probable_expansion", "source_family_only", "contextual_usage_only", "unresolved"} else "false"
+        if status in {"confirmed_expansion", "not_an_acronym"} and definition_quality == "manual_seed":
+            needs_review = "false"
         if status == "not_an_acronym":
             needs_review = "false"
+        next_action = next_acronym_action(status)
+        if manual_seed and not strong_candidate and definition_quality == "manual_seed":
+            next_action = "seek documentary corroboration for manual seed"
         status_rows.append(
             {
                 "acronym": acronym,
@@ -1309,8 +1421,8 @@ def build_acronym_status_rows(
                 "best_evidence_quote": short_acronym_evidence_quote(best_candidate),
                 "confidence": best_candidate.get("confidence", "low") if best_candidate else "low",
                 "needs_human_review": needs_review,
-                "next_action": next_acronym_action(status),
-                "notes": best_candidate.get("notes", "") if best_candidate else "",
+                "next_action": next_action,
+                "notes": " ".join(part for part in note_parts if part),
             }
         )
     return sorted(status_rows, key=lambda row: row["acronym"].casefold())
@@ -2111,17 +2223,92 @@ def build_source_family_output_rows(
                 "example_raw_references": row["example_raw_references"],
                 "evidence_id": authority_row.get("evidence_id", row["family_id"]) if authority_row else row["family_id"],
                 "evidence_source": authority_row.get("source_of_authority", "corpus_reference") if authority_row else "corpus_reference",
-                "confidence": authority_row.get("match_confidence", row["confidence"]) if authority_row else row["confidence"],
+                "confidence": (
+                    acronym_row.get("confidence", "")
+                    if acronym_row and acronym_row.get("definition_quality") == "manual_seed"
+                    else authority_row.get("match_confidence", row["confidence"]) if authority_row else row["confidence"]
+                ),
                 "needs_human_review": (
                     "true"
                     if acronym_row and truthy(acronym_row.get("needs_human_review", ""))
                     else authority_row.get("human_review_flag", row["needs_human_review"]) if authority_row else row["needs_human_review"]
                 ),
-                "notes": authority_row.get("notes", row["notes"]) if authority_row else row["notes"],
+                "notes": " ".join(
+                    part
+                    for part in (
+                        authority_row.get("notes", row["notes"]) if authority_row else row["notes"],
+                        acronym_row.get("notes", "") if acronym_row else "",
+                    )
+                    if part
+                ),
             }
         )
     output_rows.sort(key=lambda item: item["abbreviation"])
     return output_rows
+
+
+def build_manual_review_packet(
+    *,
+    acronym_status_rows: list[dict],
+    manual_acronym_seeds: dict[str, dict],
+    acronym_candidates_by_acronym: dict[str, list[dict]],
+    ocr_queue_rows: list[dict],
+    ocr_manifest_rows: list[dict],
+    ocr_index_rows: list[dict],
+) -> list[dict]:
+    status_by_acronym = {row["acronym"]: row for row in acronym_status_rows}
+    ocr_queue_by_acronym: dict[str, list[str]] = defaultdict(list)
+    for row in ocr_queue_rows:
+        for acronym in [item.strip() for item in row.get("target_acronyms", "").split(",") if item.strip()]:
+            ocr_queue_by_acronym[acronym].append(row.get("source_file_label", ""))
+    ocr_hits_by_acronym: dict[str, list[str]] = defaultdict(list)
+    ocr_success_by_label = {
+        row.get("source_file_label", "")
+        for row in ocr_manifest_rows
+        if row.get("extraction_status") == "success" and row.get("source_file_label")
+    }
+    for row in ocr_index_rows:
+        acronyms = [item.strip() for item in row.get("acronyms_found", "").split(",") if item.strip()]
+        for acronym in acronyms:
+            ocr_hits_by_acronym[acronym].append(row.get("source_file_label", ""))
+
+    packet_rows: list[dict] = []
+    for acronym in PRIORITY_ACRONYMS:
+        status_row = status_by_acronym.get(acronym, {})
+        manual_seed = manual_acronym_seeds.get(acronym, {})
+        candidate_expansions = sorted(
+            {
+                row.get("candidate_expansion", "")
+                for row in acronym_candidates_by_acronym.get(acronym, [])
+                if row.get("candidate_expansion")
+            }
+        )
+        ocr_sources_checked = sorted(set(filter(None, ocr_queue_by_acronym.get(acronym, []))))
+        ocr_successful_sources = [label for label in ocr_sources_checked if label in ocr_success_by_label]
+        new_ocr_hits = sorted(set(filter(None, ocr_hits_by_acronym.get(acronym, []))))
+        notes = status_row.get("notes", "")
+        if not new_ocr_hits and ocr_successful_sources:
+            notes = " ".join(part for part in (notes, "Not found after targeted OCR review.") if part)
+        elif ocr_sources_checked and not ocr_successful_sources:
+            notes = " ".join(part for part in (notes, "Targeted OCR was attempted, but no queued source produced usable OCR text.") if part)
+        packet_rows.append(
+            {
+                "acronym": acronym,
+                "current_status": status_row.get("resolution_status", "unresolved"),
+                "current_expansion": status_row.get("current_expansion", ""),
+                "best_evidence_source": status_row.get("best_evidence_source", ""),
+                "best_evidence_quote": status_row.get("best_evidence_quote", ""),
+                "manual_seed": manual_seed.get("expansion", ""),
+                "ocr_sources_checked": " | ".join(ocr_sources_checked),
+                "new_ocr_hits": " | ".join(new_ocr_hits),
+                "candidate_expansions": " | ".join(candidate_expansions),
+                "recommended_resolution": status_row.get("resolution_status", "unresolved"),
+                "confidence": status_row.get("confidence", "low"),
+                "needs_human_review": status_row.get("needs_human_review", "true"),
+                "notes": notes,
+            }
+        )
+    return packet_rows
 
 
 def build_family_resolution(
@@ -2226,6 +2413,11 @@ def build_authority(
     local_manifest_path: Path | None = None,
     acronym_candidates_path: Path | None = None,
     acronym_report_path: Path | None = None,
+    manual_acronym_seeds_path: Path | None = None,
+    ocr_queue_path: Path | None = None,
+    ocr_manifest_path: Path | None = None,
+    ocr_index_path: Path | None = None,
+    ocr_report_path: Path | None = None,
 ) -> dict:
     output_dir.mkdir(parents=True, exist_ok=True)
     frasch_references_path = frasch_references_path or Path("data/working/bibliography/local_sources/frasch_reference_entries.tsv")
@@ -2233,6 +2425,11 @@ def build_authority(
     local_manifest_path = local_manifest_path or Path("data/working/bibliography/local_sources/local_file_manifest.tsv")
     acronym_candidates_path = acronym_candidates_path or Path("data/working/bibliography/local_sources/acronym_definition_candidates.tsv")
     acronym_report_path = acronym_report_path or Path("data/working/bibliography/local_sources/acronym_definition_report.json")
+    manual_acronym_seeds_path = manual_acronym_seeds_path or Path("data/working/bibliography/bibtex_authority/manual_acronym_seeds.tsv")
+    ocr_queue_path = ocr_queue_path or Path("data/working/bibliography/local_sources/ocr_priority_queue.tsv")
+    ocr_manifest_path = ocr_manifest_path or Path("data/working/bibliography/local_sources/ocr_outputs/ocr_manifest.tsv")
+    ocr_index_path = ocr_index_path or Path("data/working/bibliography/local_sources/ocr_outputs/ocr_text_index.tsv")
+    ocr_report_path = ocr_report_path or Path("data/working/bibliography/local_sources/ocr_outputs/ocr_report.json")
 
     family_rows = read_tsv(reference_families_path)
     member_rows = read_tsv(reference_members_path)
@@ -2245,6 +2442,11 @@ def build_authority(
     local_manifest_rows = read_tsv(local_manifest_path) if local_manifest_path.exists() else []
     acronym_candidates_by_acronym = load_acronym_candidates(acronym_candidates_path)
     acronym_report = load_json_report(acronym_report_path)
+    manual_acronym_seeds = load_manual_acronym_seeds(manual_acronym_seeds_path)
+    ocr_queue_rows = read_tsv(ocr_queue_path) if ocr_queue_path.exists() else []
+    ocr_manifest_rows = read_tsv(ocr_manifest_path) if ocr_manifest_path.exists() else []
+    ocr_index_rows = read_tsv(ocr_index_path) if ocr_index_path.exists() else []
+    ocr_report = load_json_report(ocr_report_path)
     manifest_by_id = {row.get("canonical_local_file_id", ""): row for row in local_manifest_rows if row.get("canonical_local_file_id")}
     manifest_by_name = {row.get("file_name", ""): row for row in local_manifest_rows if row.get("file_name")}
 
@@ -2421,12 +2623,24 @@ def build_authority(
             )
             authority_by_key[authority_by_family[family_id]["bibtex_key"]] = authority_by_family[family_id]
 
-    acronym_status_rows = build_acronym_status_rows(source_family_rows_raw, acronym_candidates_by_acronym)
+    acronym_status_rows = build_acronym_status_rows(
+        source_family_rows_raw,
+        acronym_candidates_by_acronym,
+        manual_acronym_seeds,
+    )
     source_family_output_rows = build_source_family_output_rows(
         source_family_rows_raw,
         authority_by_key,
         authority_by_family,
         acronym_status_rows,
+    )
+    manual_review_packet_rows = build_manual_review_packet(
+        acronym_status_rows=acronym_status_rows,
+        manual_acronym_seeds=manual_acronym_seeds,
+        acronym_candidates_by_acronym=acronym_candidates_by_acronym,
+        ocr_queue_rows=ocr_queue_rows,
+        ocr_manifest_rows=ocr_manifest_rows,
+        ocr_index_rows=ocr_index_rows,
     )
     source_family_by_id = {row["source_family_id"]: row for row in source_family_output_rows}
     source_family_by_authority_key = {row["authority_key"]: row for row in source_family_output_rows if row.get("authority_key")}
@@ -2483,6 +2697,7 @@ def build_authority(
     write_tsv(seed_path, build_seed_output_rows(seed_rows, authority_rows), SEED_FIELDS)
     write_tsv(output_dir / "source_family_authority.tsv", source_family_output_rows, SOURCE_FAMILY_FIELDS)
     write_tsv(output_dir / "acronym_resolution_status.tsv", acronym_status_rows, ACRONYM_STATUS_FIELDS)
+    write_tsv(output_dir / "acronym_manual_review_packet.tsv", manual_review_packet_rows, MANUAL_REVIEW_PACKET_FIELDS)
     evidence_rows = build_evidence_rows(authority_rows, manifest_by_id, manifest_by_name)
     write_tsv(output_dir / "bibtex_authority_evidence.tsv", evidence_rows, EVIDENCE_FIELDS)
 
@@ -2586,6 +2801,29 @@ def build_authority(
         return rows
 
     priority_acronym_rows = [row for row in acronym_status_rows if row["acronym"] in PRIORITY_ACRONYMS]
+    ocr_success_labels = {
+        row.get("source_file_label", "")
+        for row in ocr_manifest_rows
+        if row.get("extraction_status") == "success" and row.get("source_file_label")
+    }
+    confirmed_after_ocr = [
+        row["acronym"]
+        for row in priority_acronym_rows
+        if row["resolution_status"] == "confirmed_expansion" and row.get("best_evidence_source", "") in ocr_success_labels
+    ]
+    still_source_family_only = [row["acronym"] for row in priority_acronym_rows if row["resolution_status"] == "source_family_only"]
+    still_unresolved = [row["acronym"] for row in priority_acronym_rows if row["resolution_status"] == "unresolved"]
+    manual_seeds_confirmed_by_documentation_count = sum(
+        1
+        for acronym, seed_row in manual_acronym_seeds.items()
+        if any(
+            row["acronym"] == acronym
+            and row["best_evidence_id"]
+            and not row["best_evidence_id"].startswith("manual-seed:")
+            and normalized_expansion_match(row.get("current_expansion", ""), seed_row.get("expansion", ""))
+            for row in acronym_status_rows
+        )
+    )
     report = {
         "authority_entry_count": len(authority_rows),
         "candidate_entry_count": len(candidate_rows),
@@ -2639,6 +2877,22 @@ def build_authority(
         "fratsch_stadt_staat_files_searched_count": acronym_report.get("fratsch_stadt_staat_files_searched_count", 0),
         "bagan_database_context_matches": acronym_report.get("bagan_database_context_matches", 0),
         "ocr_needed_count": acronym_report.get("ocr_needed_count", 0),
+        "manual_acronym_seed_count": len(manual_acronym_seeds),
+        "manual_seeds_confirmed_by_documentation_count": manual_seeds_confirmed_by_documentation_count,
+        "ocr_files_attempted": ocr_report.get("files_attempted", len(ocr_manifest_rows)),
+        "ocr_files_successful": ocr_report.get("files_successful", sum(1 for row in ocr_manifest_rows if row.get("extraction_status") == "success")),
+        "ocr_files_failed": ocr_report.get("files_failed", sum(1 for row in ocr_manifest_rows if row.get("extraction_status") != "success")),
+        "abbreviation_sections_from_ocr_count": acronym_report.get(
+            "abbreviation_sections_from_ocr_count",
+            sum(1 for row in ocr_index_rows if row.get("matched_heading")),
+        ),
+        "priority_acronyms_confirmed_after_ocr": len(confirmed_after_ocr),
+        "priority_acronyms_confirmed_after_ocr_list": confirmed_after_ocr,
+        "priority_acronyms_still_source_family_only": len(still_source_family_only),
+        "priority_acronyms_still_source_family_only_list": still_source_family_only,
+        "priority_acronyms_still_unresolved": len(still_unresolved),
+        "priority_acronyms_still_unresolved_list": still_unresolved,
+        "manual_review_packet_rows": len(manual_review_packet_rows),
         "unresolved_priority_acronyms": [row["acronym"] for row in priority_acronym_rows if row["resolution_status"] == "unresolved"],
         "weakly_resolved_priority_acronyms": [
             row["acronym"]
@@ -2670,6 +2924,11 @@ def main() -> None:
     parser.add_argument("--local-manifest", type=Path, default=Path("data/working/bibliography/local_sources/local_file_manifest.tsv"))
     parser.add_argument("--acronym-candidates", type=Path, default=Path("data/working/bibliography/local_sources/acronym_definition_candidates.tsv"))
     parser.add_argument("--acronym-report", type=Path, default=Path("data/working/bibliography/local_sources/acronym_definition_report.json"))
+    parser.add_argument("--manual-acronym-seeds", type=Path, default=Path("data/working/bibliography/bibtex_authority/manual_acronym_seeds.tsv"))
+    parser.add_argument("--ocr-queue", type=Path, default=Path("data/working/bibliography/local_sources/ocr_priority_queue.tsv"))
+    parser.add_argument("--ocr-manifest", type=Path, default=Path("data/working/bibliography/local_sources/ocr_outputs/ocr_manifest.tsv"))
+    parser.add_argument("--ocr-index", type=Path, default=Path("data/working/bibliography/local_sources/ocr_outputs/ocr_text_index.tsv"))
+    parser.add_argument("--ocr-report", type=Path, default=Path("data/working/bibliography/local_sources/ocr_outputs/ocr_report.json"))
     parser.add_argument("--output-dir", type=Path, default=Path("data/working/bibliography/bibtex_authority"))
     args = parser.parse_args()
 
@@ -2684,6 +2943,11 @@ def main() -> None:
         local_manifest_path=args.local_manifest,
         acronym_candidates_path=args.acronym_candidates,
         acronym_report_path=args.acronym_report,
+        manual_acronym_seeds_path=args.manual_acronym_seeds,
+        ocr_queue_path=args.ocr_queue,
+        ocr_manifest_path=args.ocr_manifest,
+        ocr_index_path=args.ocr_index,
+        ocr_report_path=args.ocr_report,
         output_dir=args.output_dir,
     )
     print(json.dumps(report, indent=2, ensure_ascii=False))

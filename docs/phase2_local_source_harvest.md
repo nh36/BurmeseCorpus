@@ -52,6 +52,11 @@ Commit the metadata instead:
 - `data/working/bibliography/local_sources/documentation_abbreviation_sections.tsv`
 - `data/working/bibliography/local_sources/acronym_false_positive_audit.tsv`
 - `data/working/bibliography/local_sources/ocr_priority_queue.tsv`
+- `data/working/bibliography/local_sources/ocr_outputs/ocr_manifest.tsv`
+- `data/working/bibliography/local_sources/ocr_outputs/ocr_text_index.tsv`
+- `data/working/bibliography/local_sources/ocr_outputs/ocr_report.json`
+- `data/working/bibliography/bibtex_authority/manual_acronym_seeds.tsv`
+- `data/working/bibliography/bibtex_authority/acronym_manual_review_packet.tsv`
 
 ## Practical run order
 
@@ -60,6 +65,7 @@ python3 scripts/harvest_local_bibliography_sources.py --mode frasch
 python3 scripts/extract_frasch_bibliography.py
 python3 scripts/harvest_local_bibliography_sources.py --mode high-priority
 python3 scripts/match_local_bibliography_sources.py
+python3 scripts/ocr_priority_sources.py
 python3 scripts/extract_bibliography_acronyms.py
 python3 scripts/build_bibtex_authority.py
 python3 scripts/validate_bibtex_authority.py
@@ -179,6 +185,32 @@ This script inventories likely corpus documentation and Frasch witnesses, then s
 The rule is conservative: contextual usage can stabilize a source family, but it should **not** be promoted to a confirmed acronym expansion. Parenthetical remarks, note labels, date strings, and ordinary English words are false positives unless a real abbreviation-list or bibliography pattern defines them. The next goal is a correct crosswalk from raw references to source families, locators, and only then to confirmed works.
 
 Target OCR only when the documentation inventory shows that a scanned file is likely to contain abbreviation lists, bibliography headings, or source-list definitions. Do not OCR the whole local cache just to widen recall.
+
+### Manual seeds vs documentary evidence
+
+`manual_acronym_seeds.tsv` records expert identifications supplied outside the local-source extraction pass. These seeds are useful immediately, but they are still distinct from documentary confirmation:
+
+- a manual seed can support a high-confidence `manual_seed` row in `acronym_resolution_status.tsv`;
+- it should keep a note that documentary corroboration is still being sought;
+- if a local source or targeted OCR later confirms the same expansion, the status row should prefer the documentary evidence while preserving the note that the manual seed agreed.
+
+### Targeted OCR workflow
+
+Run:
+
+```bash
+python3 scripts/ocr_priority_sources.py
+```
+
+This script reads `ocr_priority_queue.tsv`, tries direct text extraction first, and only then uses OCR or DJVU conversion where the local toolchain supports it. The committed outputs are:
+
+- `ocr_manifest.tsv`
+- `ocr_text_index.tsv`
+- `ocr_report.json`
+
+The full extracted or OCR text stays local-only under gitignored `data/local/ocr_text/`. Do **not** commit raw OCR text, scanned page images, or the original local PDFs/Word files.
+
+`ocr_text_index.tsv` should contain short snippets around abbreviation headings or explicit definition-like rows, not the full document text.
 
 ## How local evidence flows into BibTeX authority
 

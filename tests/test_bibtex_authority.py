@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import json
 import os
+import subprocess
 import sys
 import tempfile
 import unittest
@@ -15,7 +16,7 @@ if str(SCRIPTS_DIR) not in sys.path:
 from bibtex_common import parse_bibtex_text
 from build_bibtex_authority import ACRONYM_STATUS_FIELDS, AUTHORITY_FIELDS, CROSSWALK_FIELDS, SOURCE_FAMILY_FIELDS, build_authority, parse_locator
 from corpus_common import read_tsv, write_tsv
-from extract_bibliography_acronyms import PRIORITY_ACRONYMS, extract_explicit_definition_candidates
+from extract_bibliography_acronyms import PRIORITY_ACRONYMS, extract_documentation_sections, extract_explicit_definition_candidates
 from extract_frasch_bibliography import run_extraction
 from harvest_local_bibliography_sources import run_harvest
 from import_external_bibtex import import_external_bibtex
@@ -579,11 +580,76 @@ class BibtexAuthorityTests(unittest.TestCase):
         )
         return candidates_path, report_path
 
+    def write_manual_seed_file(self, base: Path) -> Path:
+        manual_seed_path = base / "manual_acronym_seeds.tsv"
+        write_tsv(
+            manual_seed_path,
+            [
+                {
+                    "acronym": "EB",
+                    "expansion": "Epigraphia Birmanica",
+                    "authority_key": "epigraphiaBirmanica",
+                    "source_family_id": "sf-eb",
+                    "confidence": "high",
+                    "supplied_by": "Nathan Hill",
+                    "date_added": "2026-05-30",
+                    "needs_documentary_confirmation": "true",
+                    "notes": "Manual seed; seek confirmation in local abbreviation lists.",
+                },
+                {
+                    "acronym": "JBRS",
+                    "expansion": "Journal of the Burma Research Society",
+                    "authority_key": "journalBurmaResearchSociety",
+                    "source_family_id": "sf-jbrs",
+                    "confidence": "high",
+                    "supplied_by": "Nathan Hill",
+                    "date_added": "2026-05-30",
+                    "needs_documentary_confirmation": "true",
+                    "notes": "Manual seed; seek confirmation in local abbreviation lists.",
+                },
+                {
+                    "acronym": "JRAS",
+                    "expansion": "Journal of the Royal Asiatic Society",
+                    "authority_key": "journalRoyalAsiaticSociety",
+                    "source_family_id": "sf-jras",
+                    "confidence": "high",
+                    "supplied_by": "Nathan Hill",
+                    "date_added": "2026-05-30",
+                    "needs_documentary_confirmation": "true",
+                    "notes": "Manual seed; seek confirmation in local abbreviation lists.",
+                },
+                {
+                    "acronym": "OBI",
+                    "expansion": "Old Burmese Inscriptions",
+                    "authority_key": "obiCorpusSource",
+                    "source_family_id": "sf-obi",
+                    "confidence": "high",
+                    "supplied_by": "Nathan Hill",
+                    "date_added": "2026-05-30",
+                    "needs_documentary_confirmation": "true",
+                    "notes": "Manual seed; seek confirmation in corpus documentation.",
+                },
+            ],
+            [
+                "acronym",
+                "expansion",
+                "authority_key",
+                "source_family_id",
+                "confidence",
+                "supplied_by",
+                "date_added",
+                "needs_documentary_confirmation",
+                "notes",
+            ],
+        )
+        return manual_seed_path
+
     def test_build_authority_generates_seed_authority_and_stub(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:
             temp_path = Path(temp_dir)
             families_path, members_path, candidates_path, seeds_path, external_entries_path = self.write_fixture_tables(temp_path)
             acronym_candidates_path, acronym_report_path = self.write_fixture_acronym_files(temp_path)
+            manual_seed_path = self.write_manual_seed_file(temp_path)
             output_dir = temp_path / "authority"
 
             report = build_authority(
@@ -823,6 +889,7 @@ class BibtexAuthorityTests(unittest.TestCase):
             temp_path = Path(temp_dir)
             families_path, members_path, candidates_path, seeds_path, external_entries_path = self.write_fixture_tables(temp_path)
             acronym_candidates_path, acronym_report_path = self.write_fixture_acronym_files(temp_path)
+            manual_seed_path = self.write_manual_seed_file(temp_path)
             output_dir = temp_path / "authority"
             build_authority(
                 reference_families_path=families_path,
@@ -865,6 +932,7 @@ class BibtexAuthorityTests(unittest.TestCase):
             temp_path = Path(temp_dir)
             families_path, members_path, candidates_path, seeds_path, external_entries_path = self.write_fixture_tables(temp_path)
             acronym_candidates_path, acronym_report_path = self.write_fixture_acronym_files(temp_path)
+            manual_seed_path = self.write_manual_seed_file(temp_path)
             output_dir = temp_path / "authority"
             build_authority(
                 reference_families_path=families_path,
@@ -878,6 +946,7 @@ class BibtexAuthorityTests(unittest.TestCase):
                 local_manifest_path=temp_path / "missing_local_manifest.tsv",
                 acronym_candidates_path=acronym_candidates_path,
                 acronym_report_path=acronym_report_path,
+                manual_acronym_seeds_path=manual_seed_path,
             )
             result = validate_bibtex_authority(
                 authority_bib_path=output_dir / "bibliography_authority.bib",
@@ -889,6 +958,8 @@ class BibtexAuthorityTests(unittest.TestCase):
                 acronym_status_path=output_dir / "acronym_resolution_status.tsv",
                 acronym_candidates_path=acronym_candidates_path,
                 acronym_report_path=acronym_report_path,
+                manual_acronym_seeds_path=manual_seed_path,
+                manual_review_packet_path=output_dir / "acronym_manual_review_packet.tsv",
             )
             self.assertTrue(result["ok"], result["errors"])
 
@@ -1423,6 +1494,161 @@ class BibtexAuthorityTests(unittest.TestCase):
             self.assertNotIn("workUnresolved", candidate_bib)
             self.assertNotIn("RDASB", [row["family_label"] for row in report["top_unresolved_families"]])
             self.assertNotIn("PPA", [row["family_label"] for row in report["top_unresolved_families"]])
+
+    def test_build_authority_applies_manual_acronym_seeds(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            temp_path = Path(temp_dir)
+            families_path, members_path, candidates_path, seeds_path, external_entries_path = self.write_fixture_tables(temp_path)
+            acronym_candidates_path, acronym_report_path = self.write_fixture_acronym_files(temp_path)
+            manual_seed_path = self.write_manual_seed_file(temp_path)
+            output_dir = temp_path / "authority"
+
+            report = build_authority(
+                reference_families_path=families_path,
+                reference_members_path=members_path,
+                work_candidates_path=candidates_path,
+                seed_path=seeds_path,
+                external_entries_path=external_entries_path,
+                output_dir=output_dir,
+                frasch_references_path=temp_path / "missing_frasch.tsv",
+                local_candidates_path=temp_path / "missing_local_candidates.tsv",
+                local_manifest_path=temp_path / "missing_local_manifest.tsv",
+                acronym_candidates_path=acronym_candidates_path,
+                acronym_report_path=acronym_report_path,
+                manual_acronym_seeds_path=manual_seed_path,
+            )
+
+            acronym_rows = {row["acronym"]: row for row in read_tsv(output_dir / "acronym_resolution_status.tsv")}
+            self.assertEqual(acronym_rows["EB"]["current_expansion"], "Epigraphia Birmanica")
+            self.assertEqual(acronym_rows["JBRS"]["current_expansion"], "Journal of the Burma Research Society")
+            self.assertEqual(acronym_rows["JRAS"]["current_expansion"], "Journal of the Royal Asiatic Society")
+            self.assertEqual(acronym_rows["OBI"]["current_expansion"], "Old Burmese Inscriptions")
+            self.assertEqual(acronym_rows["JBRS"]["definition_quality"], "manual_seed")
+            self.assertEqual(acronym_rows["OBI"]["confidence"], "high")
+            self.assertIn("Nathan", acronym_rows["OBI"]["notes"])
+            self.assertEqual(report["manual_acronym_seed_count"], 4)
+            self.assertEqual(report["manual_review_packet_rows"], len(PRIORITY_ACRONYMS))
+
+    def test_validate_bibtex_authority_accepts_manual_seed_outputs(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            temp_path = Path(temp_dir)
+            families_path, members_path, candidates_path, seeds_path, external_entries_path = self.write_fixture_tables(temp_path)
+            acronym_candidates_path, acronym_report_path = self.write_fixture_acronym_files(temp_path)
+            manual_seed_path = self.write_manual_seed_file(temp_path)
+            output_dir = temp_path / "authority"
+
+            build_authority(
+                reference_families_path=families_path,
+                reference_members_path=members_path,
+                work_candidates_path=candidates_path,
+                seed_path=seeds_path,
+                external_entries_path=external_entries_path,
+                output_dir=output_dir,
+                frasch_references_path=temp_path / "missing_frasch.tsv",
+                local_candidates_path=temp_path / "missing_local_candidates.tsv",
+                local_manifest_path=temp_path / "missing_local_manifest.tsv",
+                acronym_candidates_path=acronym_candidates_path,
+                acronym_report_path=acronym_report_path,
+                manual_acronym_seeds_path=manual_seed_path,
+            )
+
+            result = validate_bibtex_authority(
+                authority_bib_path=output_dir / "bibliography_authority.bib",
+                candidates_bib_path=output_dir / "bibliography_candidates.bib",
+                authority_tsv_path=output_dir / "bibtex_authority.tsv",
+                crosswalk_path=output_dir / "raw_reference_to_bibtex.tsv",
+                families_path=families_path,
+                external_entries_path=external_entries_path,
+                seed_path=seeds_path,
+                high_frequency_path=output_dir / "high_frequency_unresolved.tsv",
+                evidence_path=output_dir / "bibtex_authority_evidence.tsv",
+                resolution_plan_path=output_dir / "high_frequency_resolution_plan.tsv",
+                source_family_path=output_dir / "source_family_authority.tsv",
+                report_path=output_dir / "bibtex_authority_report.json",
+                frasch_references_path=temp_path / "missing_frasch.tsv",
+                local_manifest_path=temp_path / "missing_local_manifest.tsv",
+                acronym_status_path=output_dir / "acronym_resolution_status.tsv",
+                acronym_candidates_path=acronym_candidates_path,
+                acronym_report_path=acronym_report_path,
+                manual_acronym_seeds_path=manual_seed_path,
+                manual_review_packet_path=output_dir / "acronym_manual_review_packet.tsv",
+            )
+            self.assertTrue(result["ok"], result["errors"])
+
+    def test_extract_documentation_sections_rejects_generic_and_irrelevant_bibliography(self) -> None:
+        generic_rows = extract_documentation_sections(
+            "Bibliography\nA. Author, Some Book.\nB. Author, Another Book.\n",
+            source_file_id="doc-1",
+            source_file_label="generic bibliography.txt",
+        )
+        tibetan_rows = extract_documentation_sections(
+            "Bibliography\nRichardson, Tibetan Inscriptions. OBI appears only as a parenthetical note.\n",
+            source_file_id="doc-2",
+            source_file_label="Richardson Tibetan corpus bibliography.pdf",
+        )
+        self.assertEqual(generic_rows, [])
+        self.assertEqual(tibetan_rows, [])
+
+    def test_ocr_priority_sources_writes_manifest_and_snippet_index_for_mock_text(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            temp_path = Path(temp_dir)
+            source_root = temp_path / "sources"
+            source_dir = source_root / "mock-source-123"
+            source_dir.mkdir(parents=True)
+            source_path = source_dir / "mock-source.txt"
+            full_text = (
+                "Introductory material about Burmese epigraphy and corpus notes.\n"
+                "Abbreviations\n"
+                "SIP = Pe Maung Tin and G. H. Luce, Selections from the Inscriptions of Pagan\n"
+                "JBRS = Journal of the Burma Research Society\n"
+                "More explanatory notes.\n"
+            ) * 6
+            source_path.write_text(full_text, encoding="utf-8")
+
+            queue_path = temp_path / "ocr_priority_queue.tsv"
+            write_tsv(
+                queue_path,
+                [
+                    {
+                        "source_file_id": "mock-source-123",
+                        "source_file_label": "mock-source.txt",
+                        "reason_ocr_needed": "mock test",
+                        "priority": "high",
+                        "priority_reason": "test",
+                        "target_acronyms": "SIP, JBRS",
+                        "expected_value": "abbreviation definitions",
+                        "notes": "",
+                    }
+                ],
+                ["source_file_id", "source_file_label", "reason_ocr_needed", "priority", "priority_reason", "target_acronyms", "expected_value", "notes"],
+            )
+            output_dir = temp_path / "ocr_outputs"
+            local_text_root = temp_path / "local_ocr_text"
+
+            subprocess.run(
+                [
+                    sys.executable,
+                    str(SCRIPTS_DIR / "ocr_priority_sources.py"),
+                    "--queue",
+                    str(queue_path),
+                    "--source-root",
+                    str(source_root),
+                    "--manifest",
+                    str(temp_path / "missing_manifest.tsv"),
+                    "--output-dir",
+                    str(output_dir),
+                    "--local-text-root",
+                    str(local_text_root),
+                ],
+                check=True,
+            )
+
+            manifest_rows = read_tsv(output_dir / "ocr_manifest.tsv")
+            index_rows = read_tsv(output_dir / "ocr_text_index.tsv")
+            self.assertEqual(manifest_rows[0]["extraction_status"], "success")
+            self.assertTrue((local_text_root / "mock-source-123.txt").exists())
+            self.assertTrue(any("SIP" in row["snippet_text"] for row in index_rows))
+            self.assertFalse(any(path.suffix == ".txt" for path in output_dir.iterdir()))
 
     def test_validate_bibtex_authority_detects_duplicate_key(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:

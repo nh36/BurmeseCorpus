@@ -25,29 +25,52 @@
   "long_bibtex_evidence_fields_count": 0,
   "high_frequency_reviewed_count": 25,
   "high_frequency_still_unresolved_count": 0,
-  "priority_acronym_count": 19,
-  "confirmed_acronym_expansion_count": 3,
+  "priority_acronym_count": 25,
+  "confirmed_acronym_expansion_count": 11,
   "probable_acronym_expansion_count": 3,
-  "source_family_only_count": 11,
+  "source_family_only_count": 9,
   "contextual_usage_only_count": 0,
   "unresolved_acronym_count": 0,
   "internal_locator_count": 1,
   "documentation_files_searched_count": 4,
-  "frasch_stadt_staat_files_searched_count": 7,
-  "fratsch_stadt_staat_files_searched_count": 7,
+  "frasch_stadt_staat_files_searched_count": 10,
+  "fratsch_stadt_staat_files_searched_count": 10,
   "bagan_database_context_matches": 86,
-  "ocr_needed_count": 22,
-  "unresolved_priority_acronyms": [],
-  "weakly_resolved_priority_acronyms": [
-    "A",
-    "ARASI",
-    "B",
-    "BBHC",
-    "BED B",
+  "ocr_needed_count": 0,
+  "manual_acronym_seed_count": 4,
+  "manual_seeds_confirmed_by_documentation_count": 4,
+  "ocr_files_attempted": 22,
+  "ocr_files_successful": 22,
+  "ocr_files_failed": 0,
+  "abbreviation_sections_from_ocr_count": 6,
+  "priority_acronyms_confirmed_after_ocr": 1,
+  "priority_acronyms_confirmed_after_ocr_list": [
+    "OBI"
+  ],
+  "priority_acronyms_still_source_family_only": 9,
+  "priority_acronyms_still_source_family_only_list": [
+    "IOB",
     "IPPA",
     "Luce D",
     "Luce J",
-    "MM",
+    "MP",
+    "OR",
+    "RDASB",
+    "TN",
+    "UEM"
+  ],
+  "priority_acronyms_still_unresolved": 0,
+  "priority_acronyms_still_unresolved_list": [],
+  "manual_review_packet_rows": 25,
+  "unresolved_priority_acronyms": [],
+  "weakly_resolved_priority_acronyms": [
+    "A",
+    "B",
+    "BED B",
+    "IOB",
+    "IPPA",
+    "Luce D",
+    "Luce J",
     "MP",
     "OR",
     "RDASB",
@@ -55,6 +78,14 @@
     "UEM"
   ],
   "confirmed_priority_acronyms": [
+    "ARASI",
+    "BBHC",
+    "EB",
+    "JBRS",
+    "JRAS",
+    "List",
+    "MM",
+    "OBI",
     "Pl.",
     "PPA",
     "SIP",
@@ -115,11 +146,6 @@
   ],
   "top_provisional_source_families": [
     {
-      "family_id": "fam-obi-internal",
-      "family_label": "OBI internal references",
-      "occurrence_count": 701
-    },
-    {
       "family_id": "fam-plate-references",
       "family_label": "Plate references",
       "occurrence_count": 545
@@ -163,6 +189,11 @@
       "family_id": "fam-bed-b-catalogue",
       "family_label": "BED B references",
       "occurrence_count": 66
+    },
+    {
+      "family_id": "fam-sip-catalogue",
+      "family_label": "SIP references",
+      "occurrence_count": 38
     }
   ],
   "top_needs_human_review_families": [

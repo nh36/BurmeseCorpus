@@ -38,6 +38,8 @@ The central review tables are now:
 - `acronym_resolution_status.tsv` records whether the abbreviation itself is a `confirmed_expansion`, `probable_expansion`, `source_family_only`, `contextual_usage_only`, `internal_locator`, `not_an_acronym`, or still `unresolved`;
 - `acronym_definition_candidates.tsv` records quote-level evidence from corpus documentation, Frasch's *Pagan: Stadt und Staat* materials, and `Bagan Epig Database.doc`.
 
+`source_family_only` is still useful, but it is **not** an expansion. Keep that distinction explicit in both `source_family_authority.tsv` and `acronym_resolution_status.tsv`.
+
 Only strong evidence types such as abbreviation lists, explicit parenthetical definitions, bibliography headings, or source-list entries should count as actual expansions. Contextual usage such as `PPA, p. 55` or `MP 1, p. 81` is still useful for source-family stability, but it should remain visibly weaker than a real definition.
 
 For weak cases, keep the source family visible but keep the expansion visibly unconfirmed, e.g. `MP source family [unexpanded]`.
@@ -45,6 +47,8 @@ For weak cases, keep the source family visible but keep the expansion visibly un
 Treat parenthetical remarks, note labels, and ordinary English words as false-positive territory, not as expansions. `spelling of inscription (OBI)`, `Date ... (List)`, or lowercase `or:` are usage/noise patterns; they belong in the false-positive audit, not in `acronym_resolution_status.tsv`.
 
 Keep acronym evidence quotes short and documentary. Long catalogue prose should stay in the extraction context tables, while `best_evidence_quote` should remain a concise abbreviation-list row, heading, or source-list phrase.
+
+Manual acronym seeds now live in `manual_acronym_seeds.tsv`. They record expert identifications such as `EB`, `JBRS`, `JRAS`, and `OBI` without pretending that a documentary source has already been found. In `acronym_resolution_status.tsv`, these appear as high-confidence `manual_seed` evidence and should keep a note that documentary corroboration is still desirable.
 
 ## External BibTeX import
 
@@ -149,6 +153,14 @@ Use these rows to confirm or keep provisional expansions for abbreviations such 
 If an expansion is still uncertain, keep the seed row but leave `needs_human_review = true`.
 
 The current best documentary targets for acronym review are the original corpus bibliographic-information files, Frasch's *Pagan: Stadt und Staat* witnesses and translations, `Bagan Epig Database.doc`, and nearby Luce/Frasch local files. If those files do not yield an explicit definition, keep the acronym visibly weak rather than hiding it behind a family placeholder.
+
+Targeted OCR is now part of that review loop:
+
+- use `ocr_priority_queue.tsv` to decide which files justify OCR;
+- run `python3 scripts/ocr_priority_sources.py`;
+- keep full OCR text only under gitignored `data/local/ocr_text/`;
+- commit only `ocr_manifest.tsv`, `ocr_text_index.tsv`, and `ocr_report.json`;
+- review `acronym_manual_review_packet.tsv` after rebuilding to see which priority acronyms moved to confirmed/probable, which are still source-family-only, and which still need human work.
 
 ## Reviewing high-frequency families first
 

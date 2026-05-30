@@ -11,28 +11,34 @@ from corpus_common import REPO_ROOT, read_tsv, write_tsv
 from local_bibliography_common import extract_text_from_path, repo_relative_or_none, sha256_file, source_file_id
 
 PRIORITY_ACRONYMS = [
-    "PPA",
+    "A",
+    "ARASI",
+    "B",
+    "BBHC",
+    "BED B",
+    "EB",
+    "IOB",
     "IPPA",
-    "UEM",
-    "SIP",
-    "MP",
-    "UB",
-    "MM",
-    "OR",
-    "TN",
-    "U Min Hswe",
+    "JBRS",
+    "JRAS",
+    "List",
     "Luce D",
     "Luce J",
+    "MM",
+    "MP",
+    "OBI",
+    "OR",
+    "PPA",
     "Pl.",
-    "A",
-    "B",
-    "BED B",
-    "ARASI",
     "RDASB",
-    "BBHC",
+    "SIP",
+    "TN",
+    "UB",
+    "UEM",
+    "U Min Hswe",
 ]
 
-SUPPLEMENTAL_ACRONYMS = ["List", "IOB", "OBI", "JBRS", "JRAS", "EB"]
+SUPPLEMENTAL_ACRONYMS: list[str] = []
 
 STRONG_DEFINITION_EVIDENCE_TYPES = {
     "explicit_abbreviation_list",
@@ -55,7 +61,26 @@ SECTION_HEADINGS = [
     "Verzeichnis",
     "List of abbreviations",
     "Bibliographic information",
+    "Source abbreviations",
+    "Works cited",
 ]
+ABBREVIATION_SECTION_HEADINGS = {
+    "abbreviations",
+    "abkürzungen",
+    "sigla",
+    "list of abbreviations",
+    "bibliographic information",
+    "source abbreviations",
+}
+GENERIC_BIBLIOGRAPHY_HEADINGS = {
+    "bibliography",
+    "references",
+    "sources",
+    "quellen",
+    "literatur",
+    "verzeichnis",
+    "works cited",
+}
 
 CANDIDATE_FIELDS = [
     "candidate_id",
@@ -116,10 +141,16 @@ BAGAN_CONTEXT_FIELDS = [
 DOCUMENTATION_SECTION_FIELDS = [
     "source_file_id",
     "source_file_label",
+    "source_origin",
+    "ocr_source",
     "section_heading",
+    "page_hint",
+    "section_start_hint",
+    "section_end_hint",
     "section_text_excerpt",
     "contains_priority_acronyms",
     "acronyms_found",
+    "section_confidence",
     "extraction_confidence",
     "notes",
 ]
@@ -143,6 +174,33 @@ OCR_QUEUE_FIELDS = [
     "priority_reason",
     "target_acronyms",
     "expected_value",
+    "notes",
+]
+OCR_MANIFEST_FIELDS = [
+    "source_file_id",
+    "source_file_label",
+    "source_path",
+    "local_text_path",
+    "file_type",
+    "extraction_method",
+    "tool_used",
+    "extraction_status",
+    "text_sha256",
+    "text_length",
+    "page_scope",
+    "notes",
+]
+OCR_INDEX_FIELDS = [
+    "source_file_id",
+    "source_file_label",
+    "ocr_source",
+    "page_hint",
+    "section_start_hint",
+    "section_end_hint",
+    "matched_heading",
+    "snippet_text",
+    "acronyms_found",
+    "extraction_confidence",
     "notes",
 ]
 
@@ -334,7 +392,9 @@ def starts_definition_entry(line: str) -> bool:
     stripped = line.strip()
     if not stripped:
         return False
-    return bool(re.match(r"^[A-Z][A-Za-z. ]{0,24}\s*[:=–—-]\s+", stripped))
+    return bool(
+        re.match(r"^[A-Z][A-Za-z. ]{0,24}(?:\s*[:=–—-]\s+|\s{2,}\S+|\t+\S+)", stripped)
+    )
 
 
 def looks_like_section_heading(line: str) -> str | None:
@@ -351,6 +411,78 @@ def looks_like_section_heading(line: str) -> str | None:
             if remainder and len(remainder) <= 24 and not re.search(r"[=;]|\d", remainder):
                 return heading
     return None
+
+
+def section_heading_kind(heading: str) -> str:
+    lowered = heading.casefold()
+    if lowered in ABBREVIATION_SECTION_HEADINGS:
+        return "abbreviation"
+    if lowered in GENERIC_BIBLIOGRAPHY_HEADINGS:
+        return "bibliography"
+    return "other"
+
+
+def line_has_definition_pattern(line: str, acronym: str) -> bool:
+    escaped = re.escape(acronym)
+    return any(
+        pattern.search(line)
+        for pattern in (
+            re.compile(rf"^\s*{escaped}\s*[:=–—-]\s+\S+"),
+            re.compile(rf"^\s*{escaped}(?:\t+|\s{{2,}})\S+"),
+            re.compile(rf"\(\s*{escaped}\s*\)"),
+        )
+    )
+
+
+def section_definition_hits(excerpt: str) -> list[str]:
+    lines = [compact_text(line) for line in excerpt.splitlines() if compact_text(line)]
+    hits: list[str] = []
+    for acronym in PRIORITY_ACRONYMS:
+        letters_only = re.sub(r"[^A-Za-z]+", "", acronym)
+        if len(letters_only) < 2:
+            if not any(line_has_definition_pattern(line, acronym) for line in lines):
+                continue
+        elif not any(line_has_definition_pattern(line, acronym) for line in lines):
+            continue
+        hits.append(acronym)
+    return sorted(dict.fromkeys(hits), key=lambda value: value.casefold())
+
+
+def looks_like_irrelevant_tibetan_material(source_file_label: str, excerpt: str) -> bool:
+    lowered = f"{source_file_label} {excerpt}".casefold()
+    if not any(token in lowered for token in ("tibet", "tibetan", "richardson")):
+        return False
+    return not any(token in lowered for token in ("burma", "burmese", "bagan", "pagan", "obi"))
+
+
+def evaluate_documentation_section(
+    *,
+    source_file_label: str,
+    heading: str,
+    excerpt_lines: list[str],
+) -> tuple[bool, list[str], str, str]:
+    excerpt = "\n".join(excerpt_lines)
+    if looks_like_irrelevant_tibetan_material(source_file_label, excerpt):
+        return False, [], "low", "irrelevant Tibetan bibliography material"
+
+    explicit_hits = section_definition_hits(excerpt)
+    heading_kind = section_heading_kind(heading)
+    if heading_kind == "bibliography" and not explicit_hits:
+        return False, [], "low", "ordinary bibliography section without explicit abbreviation patterns"
+
+    if explicit_hits:
+        confidence = "high" if heading_kind == "abbreviation" else "medium"
+        return True, explicit_hits, confidence, ""
+
+    contextual_hits = [
+        acronym
+        for acronym in PRIORITY_ACRONYMS
+        if len(re.sub(r"[^A-Za-z]+", "", acronym)) >= 2 and acronym in excerpt
+    ]
+    contextual_hits = sorted(dict.fromkeys(contextual_hits), key=lambda value: value.casefold())
+    if heading_kind == "abbreviation" and contextual_hits:
+        return True, contextual_hits, "medium", "section heading suggests abbreviation list; explicit row not yet isolated"
+    return False, [], "low", "no explicit abbreviation evidence in inspected section"
 
 
 def should_continue_definition(expansion: str) -> bool:
@@ -459,6 +591,8 @@ def extract_documentation_sections(
     *,
     source_file_id: str,
     source_file_label: str,
+    source_origin: str = "direct_text",
+    ocr_source: str = "",
 ) -> list[dict[str, str]]:
     rows: list[dict[str, str]] = []
     lines = [line.rstrip() for line in text.splitlines()]
@@ -478,21 +612,72 @@ def extract_documentation_sections(
             excerpt_lines.append(next_compact)
             if len(" ".join(excerpt_lines)) >= 600 or len(excerpt_lines) >= 14:
                 break
+        include_row, acronyms_found, section_confidence, notes = evaluate_documentation_section(
+            source_file_label=source_file_label,
+            heading=heading,
+            excerpt_lines=excerpt_lines,
+        )
+        if not include_row:
+            continue
         excerpt = compact_text(" ".join(excerpt_lines))
-        acronyms_found = [acronym for acronym in PRIORITY_ACRONYMS if acronym in excerpt]
         rows.append(
             {
                 "source_file_id": source_file_id,
                 "source_file_label": source_file_label,
+                "source_origin": source_origin,
+                "ocr_source": ocr_source,
                 "section_heading": heading,
+                "page_hint": "",
+                "section_start_hint": f"line {index + 1}",
+                "section_end_hint": f"line {index + len(excerpt_lines)}",
                 "section_text_excerpt": excerpt[:600],
                 "contains_priority_acronyms": "true" if acronyms_found else "false",
                 "acronyms_found": ", ".join(acronyms_found),
+                "section_confidence": section_confidence,
                 "extraction_confidence": "high" if compact_text(line).casefold() == heading.casefold() else "medium",
-                "notes": "",
+                "notes": notes,
             }
         )
     return rows
+
+
+def documentation_sections_from_ocr_index(index_rows: list[dict[str, str]]) -> list[dict[str, str]]:
+    rows: list[dict[str, str]] = []
+    for index_row in index_rows:
+        heading = index_row.get("matched_heading", "").strip()
+        excerpt_lines = [heading, index_row.get("snippet_text", "")]
+        include_row, acronyms_found, section_confidence, notes = evaluate_documentation_section(
+            source_file_label=index_row.get("source_file_label", ""),
+            heading=heading,
+            excerpt_lines=[compact_text(line) for line in excerpt_lines if compact_text(line)],
+        )
+        if not include_row:
+            continue
+        rows.append(
+            {
+                "source_file_id": index_row.get("source_file_id", ""),
+                "source_file_label": index_row.get("source_file_label", ""),
+                "source_origin": "targeted_ocr",
+                "ocr_source": index_row.get("ocr_source", ""),
+                "section_heading": heading,
+                "page_hint": index_row.get("page_hint", ""),
+                "section_start_hint": index_row.get("section_start_hint", ""),
+                "section_end_hint": index_row.get("section_end_hint", ""),
+                "section_text_excerpt": compact_text(index_row.get("snippet_text", ""))[:600],
+                "contains_priority_acronyms": "true" if acronyms_found else "false",
+                "acronyms_found": ", ".join(acronyms_found),
+                "section_confidence": section_confidence,
+                "extraction_confidence": index_row.get("extraction_confidence", section_confidence),
+                "notes": notes or index_row.get("notes", ""),
+            }
+        )
+    deduped: dict[tuple[str, str, str], dict[str, str]] = {}
+    for row in rows:
+        deduped.setdefault(
+            (row["source_file_id"], row["section_heading"], row["section_text_excerpt"]),
+            row,
+        )
+    return sorted(deduped.values(), key=lambda row: (row["source_file_label"].casefold(), row["section_heading"].casefold()))
 
 
 def build_ocr_priority_queue(candidates: list[dict[str, str]]) -> list[dict[str, str]]:
@@ -505,7 +690,7 @@ def build_ocr_priority_queue(candidates: list[dict[str, str]]) -> list[dict[str,
         lowered = file_name.casefold()
         priority = "low"
         priority_reason = "supporting source may contain contextual references"
-        target_acronyms = "PPA, IPPA, UEM, SIP, MP, UB, MM, OR, TN, RDASB, BBHC"
+        target_acronyms = "A, ARASI, B, BBHC, EB, IOB, IPPA, JBRS, JRAS, List, Luce D, Luce J, MM, MP, OBI, OR, PPA, Pl., RDASB, SIP, TN, UB, UEM"
         expected_value = "possible abbreviation list or bibliography evidence"
         if role in {"corpus_documentation", "frasch_stadt_und_staat"}:
             priority = "high"
@@ -514,7 +699,7 @@ def build_ocr_priority_queue(candidates: list[dict[str, str]]) -> list[dict[str,
         elif role == "luce_local_source" and any(token in lowered for token in ("luce", "pe maung tin", "comparative", "inscriptions")):
             priority = "high"
             priority_reason = "likely to define Luce or SIP-style source abbreviations"
-            target_acronyms = "SIP, Luce D, Luce J, PPA, UB"
+            target_acronyms = "A, B, ARASI, EB, IOB, JBRS, JRAS, Luce D, Luce J, OBI, PPA, Pl., RDASB, SIP, UB"
             expected_value = "abbreviation definitions or source-list titles"
         elif role == "bagan_epig_database":
             priority = "medium"
@@ -553,6 +738,7 @@ def extract_explicit_definition_candidates(
             continue
         escaped = re.escape(acronym)
         line_pattern = re.compile(rf"^\s*{escaped}\s*[:=–—-]\s*(?P<expansion>.+?)\s*$")
+        list_pattern = re.compile(rf"^\s*{escaped}(?:\t+|\s{{2,}})(?P<expansion>.+?)\s*$")
         reverse_pattern = re.compile(rf"^(?P<expansion>.+?)\s*\(\s*{escaped}\s*\)\s*$")
         for line_index, line in enumerate(lines):
             line_number = line_index + 1
@@ -572,6 +758,8 @@ def extract_explicit_definition_candidates(
                 continue
             match = line_pattern.match(line)
             evidence_type = "explicit_abbreviation_list"
+            if not match:
+                match = list_pattern.match(line)
             if not match:
                 match = reverse_pattern.match(line)
                 evidence_type = "explicit_parenthetical_definition"
@@ -801,6 +989,34 @@ def extract_frasch_rows(text: str, *, source_file_id: str, source_file_label: st
     return rows
 
 
+def load_json(path: Path) -> dict[str, object]:
+    if not path.exists():
+        return {}
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
+def load_ocr_manifest(path: Path) -> dict[str, dict[str, str]]:
+    if not path.exists():
+        return {}
+    return {
+        row["source_file_id"]: row
+        for row in read_tsv(path)
+        if row.get("source_file_id")
+    }
+
+
+def load_ocr_index(path: Path) -> dict[str, list[dict[str, str]]]:
+    if not path.exists():
+        return {}
+    rows_by_source: dict[str, list[dict[str, str]]] = {}
+    for row in read_tsv(path):
+        source_id = row.get("source_file_id", "")
+        if not source_id:
+            continue
+        rows_by_source.setdefault(source_id, []).append(row)
+    return rows_by_source
+
+
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Extract bibliography acronym evidence from local documentation sources.")
     parser.add_argument(
@@ -809,6 +1025,24 @@ def parse_args() -> argparse.Namespace:
         default=REPO_ROOT / "data/working/bibliography/local_sources",
         help="Directory for acronym evidence outputs.",
     )
+    parser.add_argument(
+        "--ocr-manifest",
+        type=Path,
+        default=REPO_ROOT / "data/working/bibliography/local_sources/ocr_outputs/ocr_manifest.tsv",
+        help="Targeted OCR manifest TSV.",
+    )
+    parser.add_argument(
+        "--ocr-index",
+        type=Path,
+        default=REPO_ROOT / "data/working/bibliography/local_sources/ocr_outputs/ocr_text_index.tsv",
+        help="Targeted OCR snippet index TSV.",
+    )
+    parser.add_argument(
+        "--ocr-report",
+        type=Path,
+        default=REPO_ROOT / "data/working/bibliography/local_sources/ocr_outputs/ocr_report.json",
+        help="Targeted OCR report JSON.",
+    )
     return parser.parse_args()
 
 
@@ -816,6 +1050,9 @@ def main() -> None:
     args = parse_args()
     output_dir = args.output_dir
     output_dir.mkdir(parents=True, exist_ok=True)
+    ocr_manifest_by_source = load_ocr_manifest(args.ocr_manifest)
+    ocr_index_by_source = load_ocr_index(args.ocr_index)
+    ocr_report = load_json(args.ocr_report)
 
     documentation_candidates = discover_candidate_files()
     definition_rows: list[dict[str, str]] = []
@@ -831,21 +1068,45 @@ def main() -> None:
             candidate["extraction_status"] = "missing"
             candidate["notes"] = "candidate path not found"
             continue
-        text, _method, warnings = extract_text_from_path(candidate_path)
+        text, extraction_method, warnings = extract_text_from_path(candidate_path)
+        source_origin = "direct_text"
+        ocr_source = ""
+        ocr_manifest_row = ocr_manifest_by_source.get(candidate["candidate_id"])
+        if not text.strip() and ocr_manifest_row and ocr_manifest_row.get("extraction_status") in {"success", "extracted", "ocr_complete"}:
+            local_text_path = REPO_ROOT / ocr_manifest_row["local_text_path"]
+            if local_text_path.exists():
+                text = local_text_path.read_text(encoding="utf-8")
+                source_origin = "targeted_ocr"
+                ocr_source = ocr_manifest_row.get("tool_used", "")
+                warnings = [warning for warning in warnings if warning]
+                if ocr_manifest_row.get("notes"):
+                    warnings.append(ocr_manifest_row["notes"])
         if not text.strip():
             candidate["extraction_status"] = "ocr_needed"
             candidate["notes"] = "; ".join(warnings) or "text extraction returned no content"
             ocr_needed.append(candidate)
             continue
-        candidate["extraction_status"] = "extracted"
-        candidate["notes"] = "; ".join(warnings)
-        documentation_sections.extend(
-            extract_documentation_sections(
-                text,
-                source_file_id=candidate["candidate_id"],
-                source_file_label=candidate["file_name"],
+        candidate["extraction_status"] = "ocr_extracted" if source_origin == "targeted_ocr" else "extracted"
+        candidate_notes = [warning for warning in warnings if warning]
+        if source_origin == "targeted_ocr":
+            candidate_notes.append(f"targeted OCR via {ocr_source or 'local OCR manifest'}")
+        elif extraction_method:
+            candidate_notes.append(f"text extraction via {extraction_method}")
+        candidate["notes"] = "; ".join(dict.fromkeys(candidate_notes))
+        if source_origin == "targeted_ocr" and candidate["candidate_id"] in ocr_index_by_source:
+            documentation_sections.extend(
+                documentation_sections_from_ocr_index(ocr_index_by_source[candidate["candidate_id"]])
             )
-        )
+        else:
+            documentation_sections.extend(
+                extract_documentation_sections(
+                    text,
+                    source_file_id=candidate["candidate_id"],
+                    source_file_label=candidate["file_name"],
+                    source_origin=source_origin,
+                    ocr_source=ocr_source,
+                )
+            )
         candidate_rows, candidate_rejections = extract_definition_candidates_from_text(
             text,
             source_file_id=candidate["candidate_id"],
@@ -871,6 +1132,16 @@ def main() -> None:
             )
 
     found_by_acronym = {row["acronym"] for row in definition_rows if classify_definition_candidate_row(row)[1]}
+    deduped_sections: dict[tuple[str, str, str], dict[str, str]] = {}
+    for row in documentation_sections:
+        deduped_sections.setdefault(
+            (row["source_file_id"], row["section_heading"], row["section_text_excerpt"]),
+            row,
+        )
+    documentation_sections = sorted(
+        deduped_sections.values(),
+        key=lambda row: (row["source_file_label"].casefold(), row["section_heading"].casefold(), row["section_text_excerpt"].casefold()),
+    )
     for acronym in PRIORITY_ACRONYMS:
         if acronym not in found_by_acronym:
             definition_rows.append(
@@ -892,9 +1163,21 @@ def main() -> None:
             )
 
     report = {
-        "documentation_files_searched_count": sum(1 for row in documentation_candidates if row["probable_role"] == "corpus_documentation" and row["extraction_status"] == "extracted"),
-        "frasch_stadt_staat_files_searched_count": sum(1 for row in documentation_candidates if row["probable_role"] == "frasch_stadt_und_staat" and row["extraction_status"] == "extracted"),
-        "fratsch_stadt_staat_files_searched_count": sum(1 for row in documentation_candidates if row["probable_role"] == "frasch_stadt_und_staat" and row["extraction_status"] == "extracted"),
+        "documentation_files_searched_count": sum(
+            1
+            for row in documentation_candidates
+            if row["probable_role"] == "corpus_documentation" and row["extraction_status"] in {"extracted", "ocr_extracted"}
+        ),
+        "frasch_stadt_staat_files_searched_count": sum(
+            1
+            for row in documentation_candidates
+            if row["probable_role"] == "frasch_stadt_und_staat" and row["extraction_status"] in {"extracted", "ocr_extracted"}
+        ),
+        "fratsch_stadt_staat_files_searched_count": sum(
+            1
+            for row in documentation_candidates
+            if row["probable_role"] == "frasch_stadt_und_staat" and row["extraction_status"] in {"extracted", "ocr_extracted"}
+        ),
         "bagan_database_context_matches": len(bagan_rows),
         "ocr_needed_count": len(ocr_needed),
         "ocr_priority_queue_count": len(build_ocr_priority_queue(documentation_candidates)),
@@ -903,6 +1186,10 @@ def main() -> None:
         "strong_definition_count": sum(1 for row in definition_rows if classify_definition_candidate_row(row)[1]),
         "false_positive_audit_count": len(false_positive_rows),
         "documentation_abbreviation_sections_count": len(documentation_sections),
+        "abbreviation_sections_from_ocr_count": sum(1 for row in documentation_sections if row["source_origin"] == "targeted_ocr"),
+        "ocr_files_attempted": ocr_report.get("files_attempted", 0),
+        "ocr_files_successful": ocr_report.get("files_successful", 0),
+        "ocr_files_failed": ocr_report.get("files_failed", 0),
         "priority_acronyms_without_strong_definition": [
             acronym for acronym in PRIORITY_ACRONYMS if acronym not in found_by_acronym
         ],

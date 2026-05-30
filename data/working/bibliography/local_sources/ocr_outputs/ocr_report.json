@@ -1,0 +1,20 @@
+{
+  "available_tools": [
+    "curl",
+    "ddjvu",
+    "djvutxt",
+    "gcloud",
+    "ocrmypdf",
+    "pdfinfo",
+    "pdftoppm",
+    "pdftotext",
+    "tesseract"
+  ],
+  "google_vision_configured": true,
+  "queue_rows": 22,
+  "files_attempted": 22,
+  "files_successful": 22,
+  "files_failed": 0,
+  "failed_source_ids": [],
+  "abbreviation_section_hits": 8
+}
