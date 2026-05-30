@@ -9,12 +9,17 @@ from pathlib import Path
 from build_bibtex_authority import RESOLUTION_LEVELS, RESOLUTION_STATUSES
 from bibtex_common import duplicate_keys, parse_bibtex_text
 from corpus_common import read_tsv
+from extract_bibliography_acronyms import PRIORITY_ACRONYMS, STRONG_DEFINITION_EVIDENCE_TYPES
 
 
 ABSOLUTE_PATH_PATTERN = re.compile(r"(^/(?:Users|home|var|private|tmp|opt|Volumes)\b|^[A-Za-z]:\\\\)")
 GENERIC_KEY_PATTERN = re.compile(r"^(?:work|sourceunresolved)\d+$", flags=re.IGNORECASE)
 MAX_BIBTEX_FIELD_LENGTH = 280
 MAX_MATCHED_LOCAL_REFERENCE_LENGTH = 140
+PLACEHOLDER_EXPANSION_PATTERN = re.compile(
+    r"\b(source family|catalogue family|publication family|series family|source family attested|unexpanded)\b",
+    re.IGNORECASE,
+)
 
 
 def has_absolute_path(value: str) -> bool:
@@ -37,6 +42,9 @@ def validate_bibtex_authority(
     report_path: Path | None = None,
     frasch_references_path: Path | None = None,
     local_manifest_path: Path | None = None,
+    acronym_status_path: Path | None = None,
+    acronym_candidates_path: Path | None = None,
+    acronym_report_path: Path | None = None,
 ) -> dict:
     errors: list[str] = []
     authority_entries, authority_warnings = parse_bibtex_text(authority_bib_path.read_text(encoding="utf-8"), source_label=authority_bib_path.name)
@@ -52,7 +60,10 @@ def validate_bibtex_authority(
     source_family_rows = read_tsv(source_family_path) if source_family_path and source_family_path.exists() else []
     frasch_rows = read_tsv(frasch_references_path) if frasch_references_path and frasch_references_path.exists() else []
     manifest_rows = read_tsv(local_manifest_path) if local_manifest_path and local_manifest_path.exists() else []
+    acronym_status_rows = read_tsv(acronym_status_path) if acronym_status_path and acronym_status_path.exists() else []
+    acronym_candidate_rows = read_tsv(acronym_candidates_path) if acronym_candidates_path and acronym_candidates_path.exists() else []
     report = json.loads(report_path.read_text(encoding="utf-8")) if report_path and report_path.exists() else {}
+    acronym_report = json.loads(acronym_report_path.read_text(encoding="utf-8")) if acronym_report_path and acronym_report_path.exists() else {}
 
     authority_keys = {entry["bibtex_key"] for entry in authority_entries}
     candidate_keys = {entry["bibtex_key"] for entry in candidate_entries}
@@ -64,6 +75,8 @@ def validate_bibtex_authority(
     manifest_ids = {row.get("canonical_local_file_id", "") for row in manifest_rows if row.get("canonical_local_file_id")}
     evidence_by_key = {row.get("bibtex_key", ""): row for row in evidence_rows if row.get("bibtex_key")}
     evidence_by_source_family = {row.get("source_family_id", ""): row for row in evidence_rows if row.get("source_family_id")}
+    acronym_status_by_acronym = {row.get("acronym", ""): row for row in acronym_status_rows if row.get("acronym")}
+    acronym_candidate_by_id = {row.get("candidate_id", ""): row for row in acronym_candidate_rows if row.get("candidate_id")}
 
     duplicate_all = sorted(set(duplicate_keys(authority_entries) + duplicate_keys(candidate_entries) + list(authority_keys & candidate_keys)))
     if duplicate_all:
@@ -194,6 +207,64 @@ def validate_bibtex_authority(
                         errors.append(f"source_family_authority[{index}] contains an absolute local path")
                         break
 
+    if acronym_status_path:
+        if not acronym_status_path.exists():
+            errors.append("acronym_resolution_status.tsv is missing")
+        else:
+            allowed_acronym_statuses = {
+                "confirmed_expansion",
+                "probable_expansion",
+                "source_family_only",
+                "contextual_usage_only",
+                "unresolved",
+                "not_an_acronym",
+                "internal_locator",
+            }
+            strong_statuses = {"confirmed_expansion", "probable_expansion"}
+            review_required = {"source_family_only", "contextual_usage_only", "unresolved"}
+            for acronym in PRIORITY_ACRONYMS:
+                if acronym not in acronym_status_by_acronym:
+                    errors.append(f"acronym_resolution_status.tsv is missing priority acronym {acronym}")
+            for index, row in enumerate(acronym_status_rows, start=1):
+                status = row.get("resolution_status", "")
+                if status not in allowed_acronym_statuses:
+                    errors.append(f"acronym_resolution_status[{index}] has invalid resolution_status {status}")
+                if status in review_required and row.get("needs_human_review") != "true":
+                    errors.append(f"acronym_resolution_status[{index}] should require human review for {status}")
+                if status == "contextual_usage_only" and row.get("best_evidence_id"):
+                    candidate_row = acronym_candidate_by_id.get(row["best_evidence_id"])
+                    if candidate_row and candidate_row.get("evidence_type") in STRONG_DEFINITION_EVIDENCE_TYPES:
+                        errors.append(f"acronym_resolution_status[{index}] marks strong evidence as contextual usage only")
+                if status in strong_statuses:
+                    evidence_id = row.get("best_evidence_id", "")
+                    candidate_row = acronym_candidate_by_id.get(evidence_id)
+                    if not candidate_row or candidate_row.get("evidence_type") not in STRONG_DEFINITION_EVIDENCE_TYPES:
+                        errors.append(f"acronym_resolution_status[{index}] requires strong evidence for {status}")
+                if status == "confirmed_expansion" and not row.get("current_expansion"):
+                    errors.append(f"acronym_resolution_status[{index}] confirmed expansion is missing current_expansion")
+
+    if acronym_candidates_path and acronym_candidates_path.exists():
+        for index, row in enumerate(acronym_candidate_rows, start=1):
+            if row.get("definition_quality") == "explicit" and row.get("evidence_type") == "contextual_usage":
+                errors.append(f"acronym_definition_candidates[{index}] cannot mark contextual usage as explicit")
+            for value in row.values():
+                if has_absolute_path(value):
+                    errors.append(f"acronym_definition_candidates[{index}] contains an absolute local path")
+                    break
+
+    if source_family_rows:
+        for index, row in enumerate(source_family_rows, start=1):
+            acronym_status = row.get("acronym_resolution_status", "")
+            expanded_label = row.get("expanded_label", "")
+            if acronym_status in {"source_family_only", "contextual_usage_only", "unresolved"} and expanded_label and not PLACEHOLDER_EXPANSION_PATTERN.search(expanded_label):
+                errors.append(f"source_family_authority[{index}] exposes an unverified expansion for {row.get('abbreviation')}")
+            if acronym_status in {"confirmed_expansion", "probable_expansion"} and row.get("best_definition_evidence_id"):
+                candidate_row = acronym_candidate_by_id.get(row["best_definition_evidence_id"])
+                if not candidate_row or candidate_row.get("evidence_type") not in STRONG_DEFINITION_EVIDENCE_TYPES:
+                    errors.append(f"source_family_authority[{index}] has non-strong definition evidence")
+            if acronym_status in {"source_family_only", "contextual_usage_only", "unresolved"} and row.get("needs_human_review") != "true":
+                errors.append(f"source_family_authority[{index}] must keep needs_human_review=true for unresolved acronym state")
+
     if report:
         plan_family_ids = {row["family_id"] for row in resolution_plan_rows}
         unresolved_ids = {row["family_id"] for row in resolution_plan_rows if row.get("resolution_status") == "unresolved"}
@@ -201,6 +272,12 @@ def validate_bibtex_authority(
             if row.get("family_id") in plan_family_ids and row.get("family_id") not in unresolved_ids:
                 errors.append(f"report top_unresolved_families includes resolved family {row.get('family_id')}")
                 break
+        if report.get("priority_acronym_count") and report.get("priority_acronym_count") != len(PRIORITY_ACRONYMS):
+            errors.append("report priority_acronym_count does not match configured priority acronym list")
+        weak_statuses = {"probable_expansion", "source_family_only", "contextual_usage_only"}
+        expected_weak = sorted(row["acronym"] for row in acronym_status_rows if row.get("acronym") in PRIORITY_ACRONYMS and row.get("resolution_status") in weak_statuses)
+        if sorted(report.get("weakly_resolved_priority_acronyms", [])) != expected_weak:
+            errors.append("report weakly_resolved_priority_acronyms does not match acronym_resolution_status.tsv")
 
     if seed_rows:
         allowed_confidence = {"low", "medium", "high"}
@@ -318,6 +395,21 @@ def main() -> None:
         type=Path,
         default=Path("data/working/bibliography/local_sources/local_file_manifest.tsv"),
     )
+    parser.add_argument(
+        "--acronym-status",
+        type=Path,
+        default=Path("data/working/bibliography/bibtex_authority/acronym_resolution_status.tsv"),
+    )
+    parser.add_argument(
+        "--acronym-candidates",
+        type=Path,
+        default=Path("data/working/bibliography/local_sources/acronym_definition_candidates.tsv"),
+    )
+    parser.add_argument(
+        "--acronym-report",
+        type=Path,
+        default=Path("data/working/bibliography/local_sources/acronym_definition_report.json"),
+    )
     args = parser.parse_args()
 
     result = validate_bibtex_authority(
@@ -335,6 +427,9 @@ def main() -> None:
         report_path=args.report_path,
         frasch_references_path=args.frasch_references,
         local_manifest_path=args.local_manifest,
+        acronym_status_path=args.acronym_status,
+        acronym_candidates_path=args.acronym_candidates,
+        acronym_report_path=args.acronym_report,
     )
     print(json.dumps(result, indent=2, ensure_ascii=False))
     if not result["ok"]:

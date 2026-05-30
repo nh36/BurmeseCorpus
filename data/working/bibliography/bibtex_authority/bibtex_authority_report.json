@@ -25,6 +25,42 @@
   "long_bibtex_evidence_fields_count": 0,
   "high_frequency_reviewed_count": 25,
   "high_frequency_still_unresolved_count": 0,
+  "priority_acronym_count": 19,
+  "confirmed_acronym_expansion_count": 2,
+  "probable_acronym_expansion_count": 3,
+  "source_family_only_count": 12,
+  "contextual_usage_only_count": 0,
+  "unresolved_acronym_count": 0,
+  "internal_locator_count": 1,
+  "documentation_files_searched_count": 4,
+  "frasch_stadt_staat_files_searched_count": 7,
+  "fratsch_stadt_staat_files_searched_count": 7,
+  "bagan_database_context_matches": 86,
+  "ocr_needed_count": 22,
+  "unresolved_priority_acronyms": [],
+  "weakly_resolved_priority_acronyms": [
+    "A",
+    "ARASI",
+    "B",
+    "BBHC",
+    "BED B",
+    "IPPA",
+    "Luce D",
+    "Luce J",
+    "MM",
+    "MP",
+    "OR",
+    "RDASB",
+    "SIP",
+    "TN",
+    "UEM"
+  ],
+  "confirmed_priority_acronyms": [
+    "Pl.",
+    "PPA",
+    "U Min Hswe",
+    "UB"
+  ],
   "top_unresolved_families": [
     {
       "family_id": "fam-raw-not-in-u-min-hswe",
@@ -79,6 +115,11 @@
   ],
   "top_provisional_source_families": [
     {
+      "family_id": "fam-obi-internal",
+      "family_label": "OBI internal references",
+      "occurrence_count": 701
+    },
+    {
       "family_id": "fam-plate-references",
       "family_label": "Plate references",
       "occurrence_count": 545
@@ -104,6 +145,11 @@
       "occurrence_count": 211
     },
     {
+      "family_id": "fam-raw-a",
+      "family_label": "A, p. 79",
+      "occurrence_count": 131
+    },
+    {
       "family_id": "fam-ippa-catalogue",
       "family_label": "IPPA references",
       "occurrence_count": 117
@@ -114,19 +160,9 @@
       "occurrence_count": 84
     },
     {
-      "family_id": "fam-sip-catalogue",
-      "family_label": "SIP references",
-      "occurrence_count": 38
-    },
-    {
-      "family_id": "fam-mm-catalogue",
-      "family_label": "MM references",
-      "occurrence_count": 23
-    },
-    {
-      "family_id": "fam-or-catalogue",
-      "family_label": "OR references",
-      "occurrence_count": 21
+      "family_id": "fam-bed-b-catalogue",
+      "family_label": "BED B references",
+      "occurrence_count": 66
     }
   ],
   "top_needs_human_review_families": [

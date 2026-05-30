@@ -15,6 +15,7 @@ from bibtex_common import (
     write_bibtex,
 )
 from corpus_common import read_tsv, write_tsv
+from extract_bibliography_acronyms import PRIORITY_ACRONYMS, STRONG_DEFINITION_EVIDENCE_TYPES
 
 
 AUTHORITY_FIELDS = [
@@ -131,6 +132,11 @@ SOURCE_FAMILY_FIELDS = [
     "resolution_level",
     "canonical_label",
     "expanded_label",
+    "acronym_resolution_status",
+    "definition_quality",
+    "best_definition_evidence_id",
+    "best_definition_source",
+    "best_definition_quote",
     "related_bibtex_key",
     "locator_pattern",
     "example_raw_references",
@@ -138,6 +144,22 @@ SOURCE_FAMILY_FIELDS = [
     "evidence_source",
     "confidence",
     "needs_human_review",
+    "notes",
+]
+
+ACRONYM_STATUS_FIELDS = [
+    "acronym",
+    "current_expansion",
+    "current_authority_key",
+    "source_family_id",
+    "resolution_status",
+    "definition_quality",
+    "best_evidence_source",
+    "best_evidence_id",
+    "best_evidence_quote",
+    "confidence",
+    "needs_human_review",
+    "next_action",
     "notes",
 ]
 
@@ -168,6 +190,10 @@ STATUS_RANK = {
 TOP_FAMILY_REVIEW_COUNT = 25
 MAX_BIBTEX_EVIDENCE_LENGTH = 180
 MAX_MATCHED_REFERENCE_LENGTH = 140
+PLACEHOLDER_EXPANSION_PATTERN = re.compile(
+    r"\b(source family|catalogue family|publication family|series family|source family attested|unexpanded)\b",
+    re.IGNORECASE,
+)
 
 RESOLUTION_STATUSES = {
     "unresolved",
@@ -283,7 +309,7 @@ SOURCE_FAMILY_LIBRARY = {
     "ub": {
         "author": "",
         "year": "",
-        "title": "UB source family attested in Frasch bibliography evidence",
+        "title": "Inscriptions Collected in Upper Burma",
         "shorttitle": "UB",
         "entry_type": "misc",
         "preferred_key": "ubSourceFamily",
@@ -293,7 +319,7 @@ SOURCE_FAMILY_LIBRARY = {
     "uem": {
         "author": "",
         "year": "",
-        "title": "UEM catalogue family",
+        "title": "U E Maung selection",
         "shorttitle": "UEM",
         "entry_type": "misc",
         "preferred_key": "uemCatalogue",
@@ -303,7 +329,7 @@ SOURCE_FAMILY_LIBRARY = {
     "ppa": {
         "author": "",
         "year": "",
-        "title": "PPA catalogue family",
+        "title": "Inscriptions of Pagan, Pinya and Ava",
         "shorttitle": "PPA",
         "entry_type": "misc",
         "preferred_key": "ppaCatalogue",
@@ -333,7 +359,7 @@ SOURCE_FAMILY_LIBRARY = {
     "bbhc": {
         "author": "",
         "year": "",
-        "title": "Burma Historical Commission bulletin",
+        "title": "Bulletin of the Burma Historical Commission",
         "shorttitle": "BBHC",
         "entry_type": "periodical",
         "preferred_key": "burmaHistoricalCommissionBulletin",
@@ -1104,6 +1130,163 @@ def build_source_family_lookup(family_rows: list[dict]) -> tuple[dict[str, dict]
     return source_family_rows, family_to_source_family
 
 
+def truthy(value: str) -> bool:
+    return (value or "").strip().casefold() in {"1", "true", "yes", "y"}
+
+
+def is_placeholder_expansion(value: str) -> bool:
+    text = (value or "").strip()
+    return not text or bool(PLACEHOLDER_EXPANSION_PATTERN.search(text))
+
+
+def acronym_quality_rank(value: str) -> int:
+    return {
+        "explicit": 5,
+        "strong": 4,
+        "medium": 3,
+        "weak": 2,
+        "context_only": 1,
+        "not_found": 0,
+    }.get(value or "", 0)
+
+
+def choose_best_acronym_candidate(rows: list[dict]) -> dict | None:
+    if not rows:
+        return None
+    return max(
+        rows,
+        key=lambda row: (
+            1 if row.get("evidence_type", "") in STRONG_DEFINITION_EVIDENCE_TYPES else 0,
+            acronym_quality_rank(row.get("definition_quality", "")),
+            1 if not truthy(row.get("needs_human_review", "")) else 0,
+            row.get("confidence", ""),
+        ),
+    )
+
+
+def load_acronym_candidates(path: Path) -> dict[str, list[dict]]:
+    if not path.exists():
+        return {}
+    rows_by_acronym: dict[str, list[dict]] = defaultdict(list)
+    for row in read_tsv(path):
+        rows_by_acronym[row.get("acronym", "")].append(row)
+    return rows_by_acronym
+
+
+def load_json_report(path: Path) -> dict:
+    if not path.exists():
+        return {}
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
+ACRONYM_STATUS_DEFAULTS = {
+    "PPA": {"resolution_status": "confirmed_expansion"},
+    "IPPA": {"resolution_status": "source_family_only"},
+    "UEM": {"resolution_status": "probable_expansion"},
+    "SIP": {"resolution_status": "source_family_only"},
+    "MP": {"resolution_status": "source_family_only"},
+    "UB": {"resolution_status": "confirmed_expansion"},
+    "MM": {"resolution_status": "source_family_only"},
+    "OR": {"resolution_status": "source_family_only"},
+    "TN": {"resolution_status": "source_family_only"},
+    "U Min Hswe": {"resolution_status": "not_an_acronym", "current_expansion": "U Min Hswe"},
+    "Luce D": {"resolution_status": "source_family_only"},
+    "Luce J": {"resolution_status": "source_family_only"},
+    "Pl.": {"resolution_status": "internal_locator", "current_expansion": "plate locator"},
+    "A": {"resolution_status": "probable_expansion", "current_expansion": "Bagan Epigraphic Database, Part A"},
+    "B": {"resolution_status": "probable_expansion", "current_expansion": "Bagan Epigraphic Database, Part B"},
+    "BED B": {"resolution_status": "probable_expansion", "current_expansion": "Bagan Epigraphic Database, Part B"},
+    "ARASI": {"resolution_status": "source_family_only"},
+    "RDASB": {"resolution_status": "source_family_only"},
+    "BBHC": {"resolution_status": "confirmed_expansion"},
+    "JBRS": {"resolution_status": "confirmed_expansion", "current_expansion": "Journal of the Burma Research Society"},
+    "JRAS": {"resolution_status": "confirmed_expansion", "current_expansion": "Journal of the Royal Asiatic Society"},
+}
+
+
+def next_acronym_action(status: str) -> str:
+    if status == "confirmed_expansion":
+        return "keep current definition evidence"
+    if status == "probable_expansion":
+        return "confirm with corpus documentation or abbreviation list"
+    if status == "internal_locator":
+        return "preserve locator semantics; no bibliographic expansion needed"
+    if status == "not_an_acronym":
+        return "treat as named person/source family"
+    if status == "contextual_usage_only":
+        return "search explicit abbreviation list or bibliography heading"
+    if status == "source_family_only":
+        return "retain source-family mapping and keep acronym visibly unexpanded"
+    return "search corpus documentation and Frasch materials again"
+
+
+def build_acronym_status_rows(
+    source_family_rows: dict[str, dict],
+    acronym_candidates_by_acronym: dict[str, list[dict]],
+) -> list[dict]:
+    abbreviation_to_source_family = {
+        row.get("abbreviation", ""): row for row in source_family_rows.values() if row.get("abbreviation")
+    }
+    acronyms = list(dict.fromkeys(PRIORITY_ACRONYMS + sorted(abbreviation_to_source_family)))
+    status_rows: list[dict] = []
+    for acronym in acronyms:
+        source_family_row = abbreviation_to_source_family.get(acronym)
+        best_candidate = choose_best_acronym_candidate(acronym_candidates_by_acronym.get(acronym, []))
+        default = ACRONYM_STATUS_DEFAULTS.get(acronym, {})
+        strong_candidate = bool(
+            best_candidate and best_candidate.get("evidence_type", "") in STRONG_DEFINITION_EVIDENCE_TYPES
+        )
+        contextual_candidate = bool(best_candidate and best_candidate.get("evidence_type") == "contextual_usage")
+        status = default.get("resolution_status", "")
+        if not status:
+            if strong_candidate:
+                status = "probable_expansion"
+            elif contextual_candidate:
+                status = "contextual_usage_only"
+            elif source_family_row:
+                status = "source_family_only"
+            else:
+                status = "unresolved"
+        if status in {"confirmed_expansion", "probable_expansion"} and not strong_candidate:
+            status = "source_family_only" if source_family_row else "unresolved"
+        current_expansion = default.get("current_expansion", "")
+        if strong_candidate:
+            current_expansion = best_candidate.get("candidate_expansion", "") or current_expansion
+        if status in {"source_family_only", "contextual_usage_only", "unresolved"}:
+            current_expansion = ""
+        if source_family_row and not current_expansion and not is_placeholder_expansion(source_family_row.get("expanded_label", "")):
+            if status in {"confirmed_expansion", "probable_expansion", "not_an_acronym", "internal_locator"}:
+                current_expansion = source_family_row.get("expanded_label", "")
+        definition_quality = (
+            best_candidate.get("definition_quality", "")
+            if best_candidate
+            else ("context_only" if contextual_candidate else "not_found")
+        )
+        if status == "internal_locator" and not definition_quality:
+            definition_quality = "strong"
+        needs_review = "true" if status in {"probable_expansion", "source_family_only", "contextual_usage_only", "unresolved"} else "false"
+        if status == "not_an_acronym":
+            needs_review = "false"
+        status_rows.append(
+            {
+                "acronym": acronym,
+                "current_expansion": current_expansion,
+                "current_authority_key": source_family_row.get("authority_key", "") if source_family_row else "",
+                "source_family_id": source_family_row.get("source_family_id", "") if source_family_row else "",
+                "resolution_status": status,
+                "definition_quality": definition_quality or "not_found",
+                "best_evidence_source": best_candidate.get("source_file_label", "") if best_candidate else "",
+                "best_evidence_id": best_candidate.get("candidate_id", "") if best_candidate else "",
+                "best_evidence_quote": best_candidate.get("raw_definition", "") if best_candidate else "",
+                "confidence": best_candidate.get("confidence", "low") if best_candidate else "low",
+                "needs_human_review": needs_review,
+                "next_action": next_acronym_action(status),
+                "notes": best_candidate.get("notes", "") if best_candidate else "",
+            }
+        )
+    return sorted(status_rows, key=lambda row: row["acronym"].casefold())
+
+
 def candidate_is_plausible_standalone(family_row: dict, candidate: dict | None) -> bool:
     family_type = family_row.get("family_type", "")
     if family_type in {"book", "article"}:
@@ -1850,11 +2033,17 @@ def build_source_family_output_rows(
     source_family_rows: dict[str, dict],
     authority_by_key: dict[str, dict],
     authority_by_family: dict[str, dict],
+    acronym_status_rows: list[dict],
 ) -> list[dict]:
     output_rows = []
+    acronym_by_source_family = {
+        row["source_family_id"]: row for row in acronym_status_rows if row.get("source_family_id")
+    }
+    acronym_by_abbreviation = {row["acronym"]: row for row in acronym_status_rows if row.get("acronym")}
     for row in source_family_rows.values():
         family_key = row["source_family_key"]
         library_defaults = SOURCE_FAMILY_LIBRARY.get(family_key, {})
+        acronym_row = acronym_by_source_family.get(row["source_family_id"]) or acronym_by_abbreviation.get(row["abbreviation"])
         authority_key = ""
         preferred_key = library_defaults.get("preferred_key", "")
         authority_row = authority_by_key.get(preferred_key)
@@ -1866,6 +2055,12 @@ def build_source_family_output_rows(
             authority_key = authority_row["bibtex_key"]
         elif preferred_key:
             authority_key = preferred_key
+        expanded_label = row["expanded_label"]
+        if acronym_row:
+            if acronym_row["resolution_status"] in {"confirmed_expansion", "probable_expansion", "not_an_acronym", "internal_locator"}:
+                expanded_label = acronym_row.get("current_expansion", "") or expanded_label
+            else:
+                expanded_label = f'{row["abbreviation"]} source family [unexpanded]'
         output_rows.append(
             {
                 "source_family_id": row["source_family_id"],
@@ -1876,14 +2071,23 @@ def build_source_family_output_rows(
                 "resolution_status": row["resolution_status"],
                 "resolution_level": row["resolution_level"],
                 "canonical_label": row["canonical_label"],
-                "expanded_label": row["expanded_label"],
+                "expanded_label": expanded_label,
+                "acronym_resolution_status": acronym_row.get("resolution_status", "") if acronym_row else "",
+                "definition_quality": acronym_row.get("definition_quality", "") if acronym_row else "",
+                "best_definition_evidence_id": acronym_row.get("best_evidence_id", "") if acronym_row else "",
+                "best_definition_source": acronym_row.get("best_evidence_source", "") if acronym_row else "",
+                "best_definition_quote": acronym_row.get("best_evidence_quote", "") if acronym_row else "",
                 "related_bibtex_key": authority_key,
                 "locator_pattern": row["locator_pattern"],
                 "example_raw_references": row["example_raw_references"],
                 "evidence_id": authority_row.get("evidence_id", row["family_id"]) if authority_row else row["family_id"],
                 "evidence_source": authority_row.get("source_of_authority", "corpus_reference") if authority_row else "corpus_reference",
                 "confidence": authority_row.get("match_confidence", row["confidence"]) if authority_row else row["confidence"],
-                "needs_human_review": authority_row.get("human_review_flag", row["needs_human_review"]) if authority_row else row["needs_human_review"],
+                "needs_human_review": (
+                    "true"
+                    if acronym_row and truthy(acronym_row.get("needs_human_review", ""))
+                    else authority_row.get("human_review_flag", row["needs_human_review"]) if authority_row else row["needs_human_review"]
+                ),
                 "notes": authority_row.get("notes", row["notes"]) if authority_row else row["notes"],
             }
         )
@@ -1991,11 +2195,15 @@ def build_authority(
     frasch_references_path: Path | None = None,
     local_candidates_path: Path | None = None,
     local_manifest_path: Path | None = None,
+    acronym_candidates_path: Path | None = None,
+    acronym_report_path: Path | None = None,
 ) -> dict:
     output_dir.mkdir(parents=True, exist_ok=True)
     frasch_references_path = frasch_references_path or Path("data/working/bibliography/local_sources/frasch_reference_entries.tsv")
     local_candidates_path = local_candidates_path or Path("data/working/bibliography/local_sources/high_priority_local_candidates.tsv")
     local_manifest_path = local_manifest_path or Path("data/working/bibliography/local_sources/local_file_manifest.tsv")
+    acronym_candidates_path = acronym_candidates_path or Path("data/working/bibliography/local_sources/acronym_definition_candidates.tsv")
+    acronym_report_path = acronym_report_path or Path("data/working/bibliography/local_sources/acronym_definition_report.json")
 
     family_rows = read_tsv(reference_families_path)
     member_rows = read_tsv(reference_members_path)
@@ -2006,6 +2214,8 @@ def build_authority(
     frasch_rows = usable_frasch_rows(frasch_rows_all)
     local_candidate_rows = dedupe_local_candidates(read_tsv(local_candidates_path)) if local_candidates_path.exists() else []
     local_manifest_rows = read_tsv(local_manifest_path) if local_manifest_path.exists() else []
+    acronym_candidates_by_acronym = load_acronym_candidates(acronym_candidates_path)
+    acronym_report = load_json_report(acronym_report_path)
     manifest_by_id = {row.get("canonical_local_file_id", ""): row for row in local_manifest_rows if row.get("canonical_local_file_id")}
     manifest_by_name = {row.get("file_name", ""): row for row in local_manifest_rows if row.get("file_name")}
 
@@ -2182,7 +2392,13 @@ def build_authority(
             )
             authority_by_key[authority_by_family[family_id]["bibtex_key"]] = authority_by_family[family_id]
 
-    source_family_output_rows = build_source_family_output_rows(source_family_rows_raw, authority_by_key, authority_by_family)
+    acronym_status_rows = build_acronym_status_rows(source_family_rows_raw, acronym_candidates_by_acronym)
+    source_family_output_rows = build_source_family_output_rows(
+        source_family_rows_raw,
+        authority_by_key,
+        authority_by_family,
+        acronym_status_rows,
+    )
     source_family_by_id = {row["source_family_id"]: row for row in source_family_output_rows}
     source_family_by_authority_key = {row["authority_key"]: row for row in source_family_output_rows if row.get("authority_key")}
 
@@ -2237,6 +2453,7 @@ def build_authority(
     write_tsv(output_dir / "bibtex_authority.tsv", authority_rows + candidate_rows, AUTHORITY_FIELDS)
     write_tsv(seed_path, build_seed_output_rows(seed_rows, authority_rows), SEED_FIELDS)
     write_tsv(output_dir / "source_family_authority.tsv", source_family_output_rows, SOURCE_FAMILY_FIELDS)
+    write_tsv(output_dir / "acronym_resolution_status.tsv", acronym_status_rows, ACRONYM_STATUS_FIELDS)
     evidence_rows = build_evidence_rows(authority_rows, manifest_by_id, manifest_by_name)
     write_tsv(output_dir / "bibtex_authority_evidence.tsv", evidence_rows, EVIDENCE_FIELDS)
 
@@ -2339,6 +2556,7 @@ def build_authority(
                 break
         return rows
 
+    priority_acronym_rows = [row for row in acronym_status_rows if row["acronym"] in PRIORITY_ACRONYMS]
     report = {
         "authority_entry_count": len(authority_rows),
         "candidate_entry_count": len(candidate_rows),
@@ -2380,6 +2598,29 @@ def build_authority(
         "long_bibtex_evidence_fields_count": long_bibtex_evidence_fields_count,
         "high_frequency_reviewed_count": high_frequency_reviewed_count,
         "high_frequency_still_unresolved_count": high_frequency_still_unresolved_count,
+        "priority_acronym_count": len(PRIORITY_ACRONYMS),
+        "confirmed_acronym_expansion_count": sum(1 for row in priority_acronym_rows if row["resolution_status"] == "confirmed_expansion"),
+        "probable_acronym_expansion_count": sum(1 for row in priority_acronym_rows if row["resolution_status"] == "probable_expansion"),
+        "source_family_only_count": sum(1 for row in priority_acronym_rows if row["resolution_status"] == "source_family_only"),
+        "contextual_usage_only_count": sum(1 for row in priority_acronym_rows if row["resolution_status"] == "contextual_usage_only"),
+        "unresolved_acronym_count": sum(1 for row in priority_acronym_rows if row["resolution_status"] == "unresolved"),
+        "internal_locator_count": sum(1 for row in priority_acronym_rows if row["resolution_status"] == "internal_locator"),
+        "documentation_files_searched_count": acronym_report.get("documentation_files_searched_count", 0),
+        "frasch_stadt_staat_files_searched_count": acronym_report.get("frasch_stadt_staat_files_searched_count", 0),
+        "fratsch_stadt_staat_files_searched_count": acronym_report.get("fratsch_stadt_staat_files_searched_count", 0),
+        "bagan_database_context_matches": acronym_report.get("bagan_database_context_matches", 0),
+        "ocr_needed_count": acronym_report.get("ocr_needed_count", 0),
+        "unresolved_priority_acronyms": [row["acronym"] for row in priority_acronym_rows if row["resolution_status"] == "unresolved"],
+        "weakly_resolved_priority_acronyms": [
+            row["acronym"]
+            for row in priority_acronym_rows
+            if row["resolution_status"] in {"probable_expansion", "source_family_only", "contextual_usage_only"}
+        ],
+        "confirmed_priority_acronyms": [
+            row["acronym"]
+            for row in priority_acronym_rows
+            if row["resolution_status"] in {"confirmed_expansion", "not_an_acronym", "internal_locator"}
+        ],
         "top_unresolved_families": top_families({"unresolved"}),
         "top_provisional_source_families": top_families({"source_family_resolved", "series_level_resolved"}, provisional_only=True),
         "top_needs_human_review_families": top_families({"needs_human_review"}),
@@ -2398,6 +2639,8 @@ def main() -> None:
     parser.add_argument("--frasch-references", type=Path, default=Path("data/working/bibliography/local_sources/frasch_reference_entries.tsv"))
     parser.add_argument("--local-candidates", type=Path, default=Path("data/working/bibliography/local_sources/high_priority_local_candidates.tsv"))
     parser.add_argument("--local-manifest", type=Path, default=Path("data/working/bibliography/local_sources/local_file_manifest.tsv"))
+    parser.add_argument("--acronym-candidates", type=Path, default=Path("data/working/bibliography/local_sources/acronym_definition_candidates.tsv"))
+    parser.add_argument("--acronym-report", type=Path, default=Path("data/working/bibliography/local_sources/acronym_definition_report.json"))
     parser.add_argument("--output-dir", type=Path, default=Path("data/working/bibliography/bibtex_authority"))
     args = parser.parse_args()
 
@@ -2410,6 +2653,8 @@ def main() -> None:
         frasch_references_path=args.frasch_references,
         local_candidates_path=args.local_candidates,
         local_manifest_path=args.local_manifest,
+        acronym_candidates_path=args.acronym_candidates,
+        acronym_report_path=args.acronym_report,
         output_dir=args.output_dir,
     )
     print(json.dumps(report, indent=2, ensure_ascii=False))

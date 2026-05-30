@@ -1,15 +1,15 @@
-abbreviation	expansion	raw_definition	source_location_hint	evidence_type	confidence	notes
-A	Bagan Epigraphic Database, Part A	A, p. 56	References line 28	contextual_usage	medium	
-ARASI	Annual Report of the Archaeological Survey of India	Annual Report of the Archaeological Survey of India	Bagan bibliography/references	contextual_usage	medium	
-BBHC	Burma Historical Commission Bulletin	Burma Historical Commission Bulletin	Bagan bibliography/references	contextual_usage	medium	
-EB	Epigraphia Birmanica	Epigraphia Birmanica	Bagan bibliography/references	contextual_usage	medium	
-JBRS	Journal of the Burma Research Society	Journal of the Burma Research Society	Bagan bibliography/references	contextual_usage	medium	
-JRAS	Journal of the Royal Asiatic Society	Journal of the Royal Asiatic Society	Bagan bibliography/references	contextual_usage	medium	
-List	List of Inscriptions Found in Burma	List	References line 7215	contextual_usage	high	
-MP	MP source family	MP, p. 13	References line 1176	contextual_usage	medium	Contextual usage only; expansion remains provisional.
-PPA	PPA catalogue family	PPA, p. 212	References line 37	contextual_usage	medium	Contextual usage only; expansion remains provisional.
-RDASB	Report of the Director, Archaeological Survey of Burma	Report of the Director, Archaeological Survey of Burma	Bagan bibliography/references	contextual_usage	medium	
-SIP	SIP catalogue family	SIP, no. , p.	References line 6944	contextual_usage	medium	Contextual usage only; expansion remains provisional.
-TN	Than Tun catalogue family	TN, p. 98	References line 37	contextual_usage	medium	Contextual usage only; expansion remains provisional.
-U Min Hswe	U Min Hswe source family	U Min Hswe, no. cc	References line 1302	contextual_usage	medium	Contextual usage only; expansion remains provisional.
-UEM	UEM catalogue family	UEM, no. 1, p. 1	References line 73	contextual_usage	medium	Contextual usage only; expansion remains provisional.
+abbreviation	expansion	raw_definition	source_location_hint	evidence_type	definition_quality	confidence	notes
+A	Bagan Epigraphic Database, Part A	A, p. 56	References line 28	contextual_usage	contextual_usage_only	medium	
+ARASI	Annual Report of the Archaeological Survey of India	Annual Report of the Archaeological Survey of India	Bagan bibliography/references	contextual_usage	contextual_usage_only	medium	
+BBHC	Burma Historical Commission Bulletin	Burma Historical Commission Bulletin	Bagan bibliography/references	contextual_usage	contextual_usage_only	medium	
+EB	Epigraphia Birmanica	Epigraphia Birmanica	Bagan bibliography/references	contextual_usage	contextual_usage_only	medium	
+JBRS	Journal of the Burma Research Society	Journal of the Burma Research Society	Bagan bibliography/references	contextual_usage	contextual_usage_only	medium	
+JRAS	Journal of the Royal Asiatic Society	Journal of the Royal Asiatic Society	Bagan bibliography/references	contextual_usage	contextual_usage_only	medium	
+List	List of Inscriptions Found in Burma	List	References line 7215	contextual_usage	contextual_usage_only	high	
+MP	MP source family	MP, p. 13	References line 1176	contextual_usage	contextual_usage_only	medium	Contextual usage only; expansion remains provisional.
+PPA	PPA catalogue family	PPA, p. 212	References line 37	contextual_usage	contextual_usage_only	medium	Contextual usage only; expansion remains provisional.
+RDASB	Report of the Director, Archaeological Survey of Burma	Report of the Director, Archaeological Survey of Burma	Bagan bibliography/references	contextual_usage	contextual_usage_only	medium	
+SIP	SIP catalogue family	SIP, no. , p.	References line 6944	contextual_usage	contextual_usage_only	medium	Contextual usage only; expansion remains provisional.
+TN	Than Tun catalogue family	TN, p. 98	References line 37	contextual_usage	contextual_usage_only	medium	Contextual usage only; expansion remains provisional.
+U Min Hswe	U Min Hswe source family	U Min Hswe, no. cc	References line 1302	contextual_usage	contextual_usage_only	medium	Contextual usage only; expansion remains provisional.
+UEM	UEM catalogue family	UEM, no. 1, p. 1	References line 73	contextual_usage	contextual_usage_only	medium	Contextual usage only; expansion remains provisional.

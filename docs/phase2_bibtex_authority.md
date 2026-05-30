@@ -22,12 +22,25 @@ Not every raw string should become its own BibTeX work. `OBI 3, p. 2`, `List 90`
 The central review tables are now:
 
 - `source_family_authority.tsv`
+- `acronym_resolution_status.tsv`
 - `raw_reference_to_bibtex.tsv`
 - `bibtex_authority.tsv`
 - `high_frequency_resolution_plan.tsv`
 - `bibtex_authority_report.json`
 
 `raw_reference_to_bibtex.tsv` keeps `source_family_id`, `bibtex_key`, `locator`, `locator_type`, `resolution_status`, and `resolution_level` separate so a raw corpus string can point to a family, a work, both, or neither.
+
+## Acronym resolution
+
+`source_family_resolved` is **not** the same thing as knowing what an acronym expands to. The acronym layer now keeps those questions separate:
+
+- `source_family_authority.tsv` records the stable source-family or series mapping;
+- `acronym_resolution_status.tsv` records whether the abbreviation itself is a `confirmed_expansion`, `probable_expansion`, `source_family_only`, `contextual_usage_only`, `internal_locator`, `not_an_acronym`, or still `unresolved`;
+- `acronym_definition_candidates.tsv` records quote-level evidence from corpus documentation, Frasch's *Pagan: Stadt und Staat* materials, and `Bagan Epig Database.doc`.
+
+Only strong evidence types such as abbreviation lists, explicit parenthetical definitions, bibliography headings, or source-list entries should count as actual expansions. Contextual usage such as `PPA, p. 55` or `MP 1, p. 81` is still useful for source-family stability, but it should remain visibly weaker than a real definition.
+
+For weak cases, keep the source family visible but keep the expansion visibly unconfirmed, e.g. `MP source family [unexpanded]`.
 
 ## External BibTeX import
 

@@ -44,6 +44,11 @@ Commit the metadata instead:
 - `data/working/bibliography/local_sources/frasch_bagan_epig_database_abbreviations.tsv`
 - `data/working/bibliography/local_sources/frasch_bagan_epig_database_bibliography.tsv`
 - `data/working/bibliography/local_sources/frasch_bagan_epig_database_report.json`
+- `data/working/bibliography/local_sources/corpus_documentation_candidates.tsv`
+- `data/working/bibliography/local_sources/acronym_definition_candidates.tsv`
+- `data/working/bibliography/local_sources/acronym_definition_report.json`
+- `data/working/bibliography/local_sources/frasch_stadt_staat_acronyms.tsv`
+- `data/working/bibliography/local_sources/bagan_epig_database_acronym_contexts.tsv`
 
 ## Practical run order
 
@@ -52,6 +57,7 @@ python3 scripts/harvest_local_bibliography_sources.py --mode frasch
 python3 scripts/extract_frasch_bibliography.py
 python3 scripts/harvest_local_bibliography_sources.py --mode high-priority
 python3 scripts/match_local_bibliography_sources.py
+python3 scripts/extract_bibliography_acronyms.py
 python3 scripts/build_bibtex_authority.py
 python3 scripts/validate_bibtex_authority.py
 python3 -m unittest tests.test_bibtex_authority
@@ -148,6 +154,23 @@ Review:
 This material is especially important for abbreviation families such as `ARASI`, `A`, `B`, `UB`, `MP`, `Luce D`, and `Luce J`.
 
 `frasch_reference_entries.tsv` is the broader evidence layer. `frasch_bibliography.bib` is intentionally conservative and should contain only entries that parsed with reasonable confidence.
+
+## Acronym resolution workflow
+
+Run:
+
+```bash
+python3 scripts/extract_bibliography_acronyms.py
+```
+
+This script inventories likely corpus documentation and Frasch witnesses, then separates:
+
+- **definition evidence** in `acronym_definition_candidates.tsv`;
+- **Frasch-specific acronym contexts** in `frasch_stadt_staat_acronyms.tsv`;
+- **Bagan Epig Database usage contexts** in `bagan_epig_database_acronym_contexts.tsv`;
+- and the search inventory/report in `corpus_documentation_candidates.tsv` and `acronym_definition_report.json`.
+
+The rule is conservative: contextual usage can stabilize a source family, but it should **not** be promoted to a confirmed acronym expansion. The next goal is a correct crosswalk from raw references to source families, locators, and only then to confirmed works.
 
 ## How local evidence flows into BibTeX authority
 

@@ -13,8 +13,9 @@ if str(SCRIPTS_DIR) not in sys.path:
     sys.path.insert(0, str(SCRIPTS_DIR))
 
 from bibtex_common import parse_bibtex_text
-from build_bibtex_authority import AUTHORITY_FIELDS, CROSSWALK_FIELDS, SOURCE_FAMILY_FIELDS, build_authority, parse_locator
+from build_bibtex_authority import ACRONYM_STATUS_FIELDS, AUTHORITY_FIELDS, CROSSWALK_FIELDS, SOURCE_FAMILY_FIELDS, build_authority, parse_locator
 from corpus_common import read_tsv, write_tsv
+from extract_bibliography_acronyms import extract_explicit_definition_candidates
 from extract_frasch_bibliography import run_extraction
 from harvest_local_bibliography_sources import run_harvest
 from import_external_bibtex import import_external_bibtex
@@ -145,6 +146,27 @@ class BibtexAuthorityTests(unittest.TestCase):
         self.assertEqual(parse_locator("Pl. II 198", "fam-plate-references", "Pl."), ("II 198", "plate"))
         self.assertEqual(parse_locator("List 90", "fam-list-catalogue", "List"), ("90", "catalogue_number"))
         self.assertEqual(parse_locator("RDASB 1971", "fam-rdasb-publication", "RDASB"), ("1971", "year"))
+
+    def test_extract_explicit_definition_candidates_reads_abbreviation_list(self) -> None:
+        rows = extract_explicit_definition_candidates(
+            "PPA = Inscriptions of Pagan, Pinya and Ava\nRDASB = Report of the Director, Archaeological Survey of Burma\n",
+            source_file_id="doc-1",
+            source_file_label="mock list",
+            acronyms=["PPA", "RDASB"],
+        )
+        by_acronym = {row["acronym"]: row for row in rows}
+        self.assertEqual(by_acronym["PPA"]["candidate_expansion"], "Inscriptions of Pagan, Pinya and Ava")
+        self.assertEqual(by_acronym["PPA"]["evidence_type"], "explicit_abbreviation_list")
+        self.assertEqual(by_acronym["RDASB"]["definition_quality"], "explicit")
+
+    def test_extract_explicit_definition_candidates_ignores_contextual_usage(self) -> None:
+        rows = extract_explicit_definition_candidates(
+            "PPA, p. 55\nPl. II 198\n",
+            source_file_id="doc-2",
+            source_file_label="mock contexts",
+            acronyms=["PPA", "Pl."],
+        )
+        self.assertEqual(rows, [])
 
     def write_fixture_tables(self, base: Path) -> tuple[Path, Path, Path, Path, Path]:
         families_path = base / "reference_families.tsv"
@@ -399,10 +421,124 @@ class BibtexAuthorityTests(unittest.TestCase):
         )
         return families_path, members_path, candidates_path, seeds_path, external_entries_path
 
+    def write_fixture_acronym_files(self, base: Path) -> tuple[Path, Path]:
+        candidates_path = base / "acronym_definition_candidates.tsv"
+        report_path = base / "acronym_definition_report.json"
+        write_tsv(
+            candidates_path,
+            [
+                {
+                    "candidate_id": "doc:ppa",
+                    "acronym": "PPA",
+                    "candidate_expansion": "Inscriptions of Pagan, Pinya and Ava",
+                    "raw_definition": "Inscriptions of Pagan, Pinya and Ava (PPA)",
+                    "definition_context": "Inscriptions of Pagan, Pinya and Ava (PPA) was the first volume.",
+                    "source_file_id": "doc-1",
+                    "source_file_label": "Frasch translation",
+                    "source_location_hint": "pattern hit",
+                    "evidence_type": "explicit_parenthetical_definition",
+                    "confidence": "high",
+                    "definition_quality": "explicit",
+                    "needs_human_review": "false",
+                    "notes": "",
+                },
+                {
+                    "candidate_id": "doc:ub",
+                    "acronym": "UB",
+                    "candidate_expansion": "Inscriptions Collected in Upper Burma",
+                    "raw_definition": "Inscriptions collected in Upper Burma (UB 1, UB 2)",
+                    "definition_context": "Inscriptions collected in Upper Burma (UB 1, UB 2).",
+                    "source_file_id": "doc-1",
+                    "source_file_label": "Frasch translation",
+                    "source_location_hint": "pattern hit",
+                    "evidence_type": "explicit_parenthetical_definition",
+                    "confidence": "high",
+                    "definition_quality": "explicit",
+                    "needs_human_review": "false",
+                    "notes": "",
+                },
+                {
+                    "candidate_id": "doc:bbhc",
+                    "acronym": "BBHC",
+                    "candidate_expansion": "Bulletin of the Burma Historical Commission",
+                    "raw_definition": "Bulletin of the Burma Historical Commission (BBHC)",
+                    "definition_context": "shortened summary in the Bulletin of the Burma Historical Commission (BBHC).",
+                    "source_file_id": "doc-1",
+                    "source_file_label": "Frasch translation",
+                    "source_location_hint": "pattern hit",
+                    "evidence_type": "explicit_parenthetical_definition",
+                    "confidence": "high",
+                    "definition_quality": "explicit",
+                    "needs_human_review": "false",
+                    "notes": "",
+                },
+                {
+                    "candidate_id": "doc:pl",
+                    "acronym": "Pl.",
+                    "candidate_expansion": "",
+                    "raw_definition": "Pl. II 198",
+                    "definition_context": "Pl. II 198 remains a plate locator.",
+                    "source_file_id": "doc-2",
+                    "source_file_label": "Bagan database",
+                    "source_location_hint": "context",
+                    "evidence_type": "contextual_usage",
+                    "confidence": "low",
+                    "definition_quality": "context_only",
+                    "needs_human_review": "true",
+                    "notes": "",
+                },
+                {
+                    "candidate_id": "doc:rdasb",
+                    "acronym": "RDASB",
+                    "candidate_expansion": "",
+                    "raw_definition": "",
+                    "definition_context": "",
+                    "source_file_id": "",
+                    "source_file_label": "",
+                    "source_location_hint": "searched corpus docs",
+                    "evidence_type": "negative_evidence",
+                    "confidence": "low",
+                    "definition_quality": "not_found",
+                    "needs_human_review": "true",
+                    "notes": "",
+                },
+            ],
+            [
+                "candidate_id",
+                "acronym",
+                "candidate_expansion",
+                "raw_definition",
+                "definition_context",
+                "source_file_id",
+                "source_file_label",
+                "source_location_hint",
+                "evidence_type",
+                "confidence",
+                "definition_quality",
+                "needs_human_review",
+                "notes",
+            ],
+        )
+        report_path.write_text(
+            json.dumps(
+                {
+                    "documentation_files_searched_count": 2,
+                    "frasch_stadt_staat_files_searched_count": 1,
+                    "fratsch_stadt_staat_files_searched_count": 1,
+                    "bagan_database_context_matches": 1,
+                    "ocr_needed_count": 0,
+                }
+            )
+            + "\n",
+            encoding="utf-8",
+        )
+        return candidates_path, report_path
+
     def test_build_authority_generates_seed_authority_and_stub(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:
             temp_path = Path(temp_dir)
             families_path, members_path, candidates_path, seeds_path, external_entries_path = self.write_fixture_tables(temp_path)
+            acronym_candidates_path, acronym_report_path = self.write_fixture_acronym_files(temp_path)
             output_dir = temp_path / "authority"
 
             report = build_authority(
@@ -415,6 +551,8 @@ class BibtexAuthorityTests(unittest.TestCase):
                 frasch_references_path=temp_path / "missing_frasch.tsv",
                 local_candidates_path=temp_path / "missing_local_candidates.tsv",
                 local_manifest_path=temp_path / "missing_local_manifest.tsv",
+                acronym_candidates_path=acronym_candidates_path,
+                acronym_report_path=acronym_report_path,
             )
 
             authority_bib = (output_dir / "bibliography_authority.bib").read_text(encoding="utf-8")
@@ -597,6 +735,7 @@ class BibtexAuthorityTests(unittest.TestCase):
                 ],
                 LOCAL_CANDIDATE_FIELDS,
             )
+            acronym_candidates_path, acronym_report_path = self.write_fixture_acronym_files(temp_path)
             write_tsv(
                 local_manifest_path,
                 [
@@ -625,6 +764,8 @@ class BibtexAuthorityTests(unittest.TestCase):
                 output_dir=output_dir,
                 local_candidates_path=local_candidates_path,
                 local_manifest_path=local_manifest_path,
+                acronym_candidates_path=acronym_candidates_path,
+                acronym_report_path=acronym_report_path,
             )
 
             authority = (output_dir / "bibtex_authority.tsv").read_text(encoding="utf-8")
@@ -636,6 +777,7 @@ class BibtexAuthorityTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as temp_dir:
             temp_path = Path(temp_dir)
             families_path, members_path, candidates_path, seeds_path, external_entries_path = self.write_fixture_tables(temp_path)
+            acronym_candidates_path, acronym_report_path = self.write_fixture_acronym_files(temp_path)
             output_dir = temp_path / "authority"
             build_authority(
                 reference_families_path=families_path,
@@ -647,6 +789,8 @@ class BibtexAuthorityTests(unittest.TestCase):
                 frasch_references_path=temp_path / "missing_frasch.tsv",
                 local_candidates_path=temp_path / "missing_local_candidates.tsv",
                 local_manifest_path=temp_path / "missing_local_manifest.tsv",
+                acronym_candidates_path=acronym_candidates_path,
+                acronym_report_path=acronym_report_path,
             )
             high_frequency_path = output_dir / "high_frequency_unresolved.tsv"
             high_frequency_path.write_text(
@@ -664,6 +808,9 @@ class BibtexAuthorityTests(unittest.TestCase):
                 external_entries_path=external_entries_path,
                 seed_path=seeds_path,
                 high_frequency_path=high_frequency_path,
+                acronym_status_path=output_dir / "acronym_resolution_status.tsv",
+                acronym_candidates_path=acronym_candidates_path,
+                acronym_report_path=acronym_report_path,
             )
             self.assertFalse(result["ok"])
             self.assertTrue(any("not sorted" in error for error in result["errors"]))
@@ -672,6 +819,7 @@ class BibtexAuthorityTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as temp_dir:
             temp_path = Path(temp_dir)
             families_path, members_path, candidates_path, seeds_path, external_entries_path = self.write_fixture_tables(temp_path)
+            acronym_candidates_path, acronym_report_path = self.write_fixture_acronym_files(temp_path)
             output_dir = temp_path / "authority"
             build_authority(
                 reference_families_path=families_path,
@@ -683,6 +831,8 @@ class BibtexAuthorityTests(unittest.TestCase):
                 frasch_references_path=temp_path / "missing_frasch.tsv",
                 local_candidates_path=temp_path / "missing_local_candidates.tsv",
                 local_manifest_path=temp_path / "missing_local_manifest.tsv",
+                acronym_candidates_path=acronym_candidates_path,
+                acronym_report_path=acronym_report_path,
             )
             result = validate_bibtex_authority(
                 authority_bib_path=output_dir / "bibliography_authority.bib",
@@ -691,8 +841,54 @@ class BibtexAuthorityTests(unittest.TestCase):
                 crosswalk_path=output_dir / "raw_reference_to_bibtex.tsv",
                 families_path=families_path,
                 external_entries_path=external_entries_path,
+                acronym_status_path=output_dir / "acronym_resolution_status.tsv",
+                acronym_candidates_path=acronym_candidates_path,
+                acronym_report_path=acronym_report_path,
             )
             self.assertTrue(result["ok"], result["errors"])
+
+    def test_validate_bibtex_authority_requires_strong_acronym_evidence(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            temp_path = Path(temp_dir)
+            families_path, members_path, candidates_path, seeds_path, external_entries_path = self.write_fixture_tables(temp_path)
+            acronym_candidates_path, acronym_report_path = self.write_fixture_acronym_files(temp_path)
+            output_dir = temp_path / "authority"
+            build_authority(
+                reference_families_path=families_path,
+                reference_members_path=members_path,
+                work_candidates_path=candidates_path,
+                seed_path=seeds_path,
+                external_entries_path=external_entries_path,
+                output_dir=output_dir,
+                frasch_references_path=temp_path / "missing_frasch.tsv",
+                local_candidates_path=temp_path / "missing_local_candidates.tsv",
+                local_manifest_path=temp_path / "missing_local_manifest.tsv",
+                acronym_candidates_path=acronym_candidates_path,
+                acronym_report_path=acronym_report_path,
+            )
+            acronym_status_path = output_dir / "acronym_resolution_status.tsv"
+            rows = read_tsv(acronym_status_path)
+            ppa_row = next(row for row in rows if row["acronym"] == "PPA")
+            ppa_row["resolution_status"] = "confirmed_expansion"
+            ppa_row["best_evidence_id"] = "doc:pl"
+            ppa_row["best_evidence_quote"] = "Pl. II 198"
+            write_tsv(acronym_status_path, rows, ACRONYM_STATUS_FIELDS)
+            result = validate_bibtex_authority(
+                authority_bib_path=output_dir / "bibliography_authority.bib",
+                candidates_bib_path=output_dir / "bibliography_candidates.bib",
+                authority_tsv_path=output_dir / "bibtex_authority.tsv",
+                crosswalk_path=output_dir / "raw_reference_to_bibtex.tsv",
+                families_path=families_path,
+                external_entries_path=external_entries_path,
+                source_family_path=output_dir / "source_family_authority.tsv",
+                evidence_path=output_dir / "bibtex_authority_evidence.tsv",
+                report_path=output_dir / "bibtex_authority_report.json",
+                acronym_status_path=acronym_status_path,
+                acronym_candidates_path=acronym_candidates_path,
+                acronym_report_path=acronym_report_path,
+            )
+            self.assertFalse(result["ok"])
+            self.assertTrue(any("requires strong evidence" in error for error in result["errors"]))
 
     def test_harvest_local_bibliography_sources_collapses_duplicates_by_sha(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:
@@ -802,6 +998,7 @@ class BibtexAuthorityTests(unittest.TestCase):
                 ],
             )
             output_dir = temp_path / "authority"
+            acronym_candidates_path, acronym_report_path = self.write_fixture_acronym_files(temp_path)
             build_authority(
                 reference_families_path=families_path,
                 reference_members_path=members_path,
@@ -812,6 +1009,8 @@ class BibtexAuthorityTests(unittest.TestCase):
                 output_dir=output_dir,
                 local_candidates_path=temp_path / "missing_local_candidates.tsv",
                 local_manifest_path=temp_path / "missing_local_manifest.tsv",
+                acronym_candidates_path=acronym_candidates_path,
+                acronym_report_path=acronym_report_path,
             )
             evidence_tsv = (output_dir / "bibtex_authority_evidence.tsv").read_text(encoding="utf-8")
             authority_bib = (output_dir / "bibliography_authority.bib").read_text(encoding="utf-8")
@@ -1012,6 +1211,7 @@ class BibtexAuthorityTests(unittest.TestCase):
                 ],
                 SEED_FIELDS,
             )
+            acronym_candidates_path, acronym_report_path = self.write_fixture_acronym_files(temp_path)
             build_authority(
                 reference_families_path=families_path,
                 reference_members_path=members_path,
@@ -1021,6 +1221,8 @@ class BibtexAuthorityTests(unittest.TestCase):
                 frasch_references_path=temp_path / "missing_frasch.tsv",
                 local_candidates_path=temp_path / "missing_local_candidates.tsv",
                 local_manifest_path=temp_path / "missing_local_manifest.tsv",
+                acronym_candidates_path=acronym_candidates_path,
+                acronym_report_path=acronym_report_path,
             )
             crosswalk_rows = read_tsv(output_dir / "raw_reference_to_bibtex.tsv")
             resolution_rows = read_tsv(output_dir / "high_frequency_resolution_plan.tsv")
@@ -1085,6 +1287,7 @@ class BibtexAuthorityTests(unittest.TestCase):
                 ],
                 SEED_FIELDS,
             )
+            acronym_candidates_path, acronym_report_path = self.write_fixture_acronym_files(temp_path)
 
             report = build_authority(
                 reference_families_path=families_path,
@@ -1095,10 +1298,13 @@ class BibtexAuthorityTests(unittest.TestCase):
                 frasch_references_path=temp_path / "missing_frasch.tsv",
                 local_candidates_path=temp_path / "missing_local_candidates.tsv",
                 local_manifest_path=temp_path / "missing_local_manifest.tsv",
+                acronym_candidates_path=acronym_candidates_path,
+                acronym_report_path=acronym_report_path,
             )
 
             crosswalk_rows = read_tsv(output_dir / "raw_reference_to_bibtex.tsv")
             source_family_rows = {row["source_family_id"]: row for row in read_tsv(output_dir / "source_family_authority.tsv")}
+            acronym_rows = {row["acronym"]: row for row in read_tsv(output_dir / "acronym_resolution_status.tsv")}
             candidate_bib = (output_dir / "bibliography_candidates.bib").read_text(encoding="utf-8")
 
             by_family = {row["family_id"]: row for row in crosswalk_rows}
@@ -1116,6 +1322,12 @@ class BibtexAuthorityTests(unittest.TestCase):
             self.assertEqual(by_family["fam-raw-b"]["source_family_id"], "sf-b")
             self.assertIn("sf-rdasb", source_family_rows)
             self.assertIn("sf-ub", source_family_rows)
+            self.assertEqual(acronym_rows["Pl."]["resolution_status"], "internal_locator")
+            self.assertEqual(acronym_rows["PPA"]["resolution_status"], "confirmed_expansion")
+            self.assertEqual(acronym_rows["UB"]["resolution_status"], "confirmed_expansion")
+            self.assertEqual(acronym_rows["RDASB"]["resolution_status"], "source_family_only")
+            self.assertEqual(source_family_rows["sf-ppa"]["expanded_label"], "Inscriptions of Pagan, Pinya and Ava")
+            self.assertEqual(source_family_rows["sf-mp"]["expanded_label"], "MP source family [unexpanded]")
             self.assertNotIn("workUnresolved", candidate_bib)
             self.assertNotIn("RDASB", [row["family_label"] for row in report["top_unresolved_families"]])
             self.assertNotIn("PPA", [row["family_label"] for row in report["top_unresolved_families"]])

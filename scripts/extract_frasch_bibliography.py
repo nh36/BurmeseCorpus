@@ -67,6 +67,7 @@ BAGAN_ABBREVIATION_FIELDS = [
     "raw_definition",
     "source_location_hint",
     "evidence_type",
+    "definition_quality",
     "confidence",
     "notes",
 ]
@@ -458,6 +459,7 @@ def extract_bagan_outputs(source_file_id: str, text: str, rows: list[dict], outp
         raw_definition: str,
         source_location_hint: str,
         evidence_type: str,
+        definition_quality: str,
         confidence: str,
         notes: str = "",
     ) -> None:
@@ -468,6 +470,7 @@ def extract_bagan_outputs(source_file_id: str, text: str, rows: list[dict], outp
                 "raw_definition": raw_definition,
                 "source_location_hint": source_location_hint,
                 "evidence_type": evidence_type,
+                "definition_quality": definition_quality,
                 "confidence": confidence,
                 "notes": notes,
             }
@@ -479,6 +482,7 @@ def extract_bagan_outputs(source_file_id: str, text: str, rows: list[dict], outp
             "Bagan Epigraphic Database",
             "Bagan Epig Database.doc",
             "Document title",
+            "explicit_definition",
             "explicit_definition",
             "high",
             "Document title from the local Frasch source.",
@@ -494,6 +498,7 @@ def extract_bagan_outputs(source_file_id: str, text: str, rows: list[dict], outp
             match.group(0),
             "Part heading",
             "explicit_definition",
+            "explicit_definition",
             "high" if letter in {"A", "B"} else "medium",
         )
         if letter == "B":
@@ -502,6 +507,7 @@ def extract_bagan_outputs(source_file_id: str, text: str, rows: list[dict], outp
                 "Bagan Epigraphic Database, Part B",
                 match.group(0),
                 "Part heading",
+                "explicit_definition",
                 "explicit_definition",
                 "high",
             )
@@ -544,6 +550,7 @@ def extract_bagan_outputs(source_file_id: str, text: str, rows: list[dict], outp
                 expansion,
                 "Bagan bibliography/references",
                 "contextual_usage",
+                "probable_definition" if expansion.casefold() in known_text else "contextual_usage_only",
                 "medium",
             )
 
@@ -588,17 +595,22 @@ def extract_bagan_outputs(source_file_id: str, text: str, rows: list[dict], outp
             match_row["raw_reference"],
             match_row["source_location_hint"],
             "contextual_usage",
+            "contextual_usage_only",
             confidence,
             note,
         )
 
     deduped_abbreviations: dict[str, dict] = {}
+    definition_rank = {"explicit_definition": 3, "probable_definition": 2, "contextual_usage_only": 1, "unresolved": 0}
     for row in abbreviation_rows:
         existing = deduped_abbreviations.get(row["abbreviation"])
         if existing is None:
             deduped_abbreviations[row["abbreviation"]] = row
             continue
         if row["evidence_type"] == "explicit_definition" and existing["evidence_type"] != "explicit_definition":
+            deduped_abbreviations[row["abbreviation"]] = row
+            continue
+        if definition_rank.get(row["definition_quality"], 0) > definition_rank.get(existing.get("definition_quality", ""), 0):
             deduped_abbreviations[row["abbreviation"]] = row
             continue
         if row["confidence"] == "high" and existing["confidence"] != "high":
