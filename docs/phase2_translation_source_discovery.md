@@ -82,6 +82,12 @@ and writes:
 - `data/working/bibliography/translation_source_discovery/witness_verification.tsv`
 - `data/working/bibliography/translation_source_discovery/witness_titlepage_toc_snippets.tsv`
 - `data/working/bibliography/translation_source_discovery/missing_direct_witness_search.tsv`
+- `data/working/bibliography/translation_source_discovery/source_work_witness_gaps.tsv`
+- `data/working/bibliography/translation_source_discovery/sip_witness_inspection.tsv`
+- `data/working/bibliography/translation_source_discovery/uem_direct_witness_search.tsv`
+- `data/working/bibliography/translation_source_discovery/core_source_direct_witness_search.tsv`
+- `data/working/bibliography/translation_source_discovery/rescue_candidate_review.tsv`
+- `data/working/bibliography/translation_source_discovery/epigraphia_birmanica_witness_review.tsv`
 - `data/working/bibliography/translation_source_discovery/periodical_article_discovery_plan.tsv`
 - `data/working/bibliography/translation_source_discovery/translation_source_discovery_report.json`
 
@@ -115,9 +121,27 @@ Use the verification pass to keep these distinctions explicit:
 
 `missing_direct_witness_search.tsv` documents targeted direct-witness searches for high-priority works that still need a better local witness.
 
+## Direct witness gaps and witness inspection
+
+Witness verification identifies reviewed leads. It does **not** by itself prove translation coverage.
+
+Use the new gap and inspection tables to keep that distinction explicit:
+
+- `source_work_witness_gaps.tsv` tracks which high-priority works still need a direct witness, a title-page review, or a translation-specific inspection pass.
+- `sip_witness_inspection.tsv` records the short inspected evidence for the verified SIP witness. SIP now has a verified direct witness, but translation coverage must still come from explicit inspected evidence rather than title-family inheritance.
+- `uem_direct_witness_search.tsv` keeps UEM separate from SIP. A shared `Selections ...` title family is not enough: the Luce/Pe Maung Tin SIP witness must remain excluded from UEM unless author/editor evidence supports UEM directly.
+- `core_source_direct_witness_search.tsv` records targeted local-file search results for TN, PPA, and UB.
+- `rescue_candidate_review.tsv` and `epigraphia_birmanica_witness_review.tsv` keep ambiguous rescue files and numbered PDFs visible as reviewed evidence instead of auto-mapping them.
+
+In practice:
+
+- SIP can be a verified direct witness and still remain translation-unknown.
+- works without a verified direct witness should stay in the gap table rather than being silently inferred from related filenames;
+- rescue candidates such as numbered PDFs or broad title-family matches must be reviewed before they count toward any direct-witness totals.
+
 ## Periodicals and series
 
-`JBRS`, `JRAS`, `BBHC`, `ARASI`, and currently `EB` should remain containers unless article-level evidence is identified.
+`JBRS`, `JRAS`, `BBHC`, and `ARASI` should remain containers unless article-level evidence is identified. `EB` needs direct fascicle review; do not treat unrelated numbered PDFs or periodical-style matches as EB witnesses automatically.
 
 Use `periodical_article_discovery_plan.tsv` to queue that next step:
 

@@ -2,7 +2,11 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import re
+import shutil
+import subprocess
+import tempfile
 from collections import defaultdict
 from pathlib import Path
 
@@ -40,6 +44,12 @@ WITNESS_VERIFICATION_PATH = DISCOVERY_DIRECTORY / "witness_verification.tsv"
 WITNESS_VERIFICATION_REPORT_PATH = DISCOVERY_DIRECTORY / "witness_verification_report.json"
 WITNESS_SNIPPETS_PATH = DISCOVERY_DIRECTORY / "witness_titlepage_toc_snippets.tsv"
 MISSING_DIRECT_SEARCH_PATH = DISCOVERY_DIRECTORY / "missing_direct_witness_search.tsv"
+SOURCE_WORK_GAPS_PATH = DISCOVERY_DIRECTORY / "source_work_witness_gaps.tsv"
+SIP_WITNESS_INSPECTION_PATH = DISCOVERY_DIRECTORY / "sip_witness_inspection.tsv"
+UEM_DIRECT_SEARCH_PATH = DISCOVERY_DIRECTORY / "uem_direct_witness_search.tsv"
+CORE_SOURCE_DIRECT_SEARCH_PATH = DISCOVERY_DIRECTORY / "core_source_direct_witness_search.tsv"
+RESCUE_CANDIDATE_REVIEW_PATH = DISCOVERY_DIRECTORY / "rescue_candidate_review.tsv"
+EPIGRAPHIA_BIRMANICA_REVIEW_PATH = DISCOVERY_DIRECTORY / "epigraphia_birmanica_witness_review.tsv"
 
 VERIFICATION_FIELDS = [
     "witness_id",
@@ -83,6 +93,92 @@ MISSING_DIRECT_SEARCH_FIELDS = [
     "match_type",
     "match_confidence",
     "reason",
+    "next_action",
+    "notes",
+]
+
+SOURCE_WORK_GAP_FIELDS = [
+    "source_work_key",
+    "canonical_title",
+    "current_status",
+    "verified_direct_witness_count",
+    "verified_translation_witness_count",
+    "verified_edition_witness_count",
+    "verified_plate_witness_count",
+    "candidate_count",
+    "best_candidate_witness_id",
+    "best_candidate_file_label",
+    "gap_type",
+    "priority",
+    "next_action",
+    "notes",
+]
+
+SIP_WITNESS_INSPECTION_FIELDS = [
+    "source_work_key",
+    "witness_id",
+    "file_label",
+    "inspection_area",
+    "evidence_snippet",
+    "contains_translation",
+    "contains_edition_or_transliteration",
+    "contains_notes_or_commentary",
+    "contains_catalogue_metadata",
+    "contains_plate_or_image",
+    "coverage_scope",
+    "confidence",
+    "needs_human_review",
+    "notes",
+]
+
+DIRECT_WITNESS_SEARCH_FIELDS = [
+    "query",
+    "matched_file_label",
+    "matched_file_id",
+    "match_type",
+    "match_confidence",
+    "short_evidence",
+    "recommended_action",
+    "notes",
+]
+
+CORE_DIRECT_WITNESS_SEARCH_FIELDS = [
+    "source_work_key",
+    "query",
+    "matched_file_label",
+    "matched_file_id",
+    "match_type",
+    "match_confidence",
+    "short_evidence",
+    "recommended_action",
+    "notes",
+]
+
+RESCUE_CANDIDATE_REVIEW_FIELDS = [
+    "candidate_file_id",
+    "candidate_file_label",
+    "matched_query",
+    "possible_source_work_keys",
+    "title_page_snippet",
+    "contents_snippet",
+    "classification",
+    "confidence",
+    "recommended_mapping",
+    "notes",
+]
+
+EPIGRAPHIA_BIRMANICA_REVIEW_FIELDS = [
+    "witness_id",
+    "file_label",
+    "source_work_key",
+    "probable_volume_or_fascicle",
+    "title_page_snippet",
+    "contents_snippet",
+    "contains_translation",
+    "contains_edition_or_transliteration",
+    "contains_plate_or_image",
+    "classification",
+    "confidence",
     "next_action",
     "notes",
 ]
@@ -142,6 +238,53 @@ SECONDARY_HINTS = [
     "century of progress",
 ]
 CONTENTS_PATTERNS = ["table of contents", "contents", "content"]
+NOTES_KEYWORDS = ["notes", "note", "commentary", "appendix", "appendices", "introduction", "preface"]
+
+SIP_WITNESS_ID = "sipSelectionsPagan--luce-pemaungtin-1928-inscriptions-of-pag-da9f6d6d89b3"
+TARGET_GAP_SOURCE_KEYS = [
+    "sipSelectionsPagan",
+    "uemSelectionsPagan",
+    "tnInscriptionsPaganPinyaAva",
+    "ppaCatalogue",
+    "ubSourceFamily",
+    "epigraphiaBirmanica",
+    "lucePeMaungTinInscriptionsOfBurma",
+]
+
+UEM_DIRECT_SEARCH_QUERIES = [
+    "U E Maung",
+    "U E. Maung",
+    "U Maung",
+    "Selections from the Inscriptions of Pagan",
+    "UEM",
+    "Rangoon 1958",
+    "1958 Selections",
+    "U E Maung Selections",
+    "Maung Selections Inscriptions Pagan",
+]
+
+CORE_SOURCE_DIRECT_SEARCH_QUERIES = {
+    "tnInscriptionsPaganPinyaAva": [
+        "U Tun Nyein",
+        "Tun Nyein",
+        "Inscriptions of Pagan Pinya and Ava",
+        "Pagan Pinya Ava Rangoon 1897",
+        "TN inscriptions",
+    ],
+    "ppaCatalogue": [
+        "Pagan Pinya Ava",
+        "Inscriptions of Pagan, Pinya and Ava",
+        "PPA",
+        "Pagan Pinya Ava inscriptions",
+    ],
+    "ubSourceFamily": [
+        "Inscriptions Collected in Upper Burma",
+        "Upper Burma inscriptions",
+        "UB 1",
+        "UB 2",
+        "Archaeological Survey of Burma Upper Burma",
+    ],
+}
 
 SEARCH_TERMS_BY_SOURCE = {
     "sipSelectionsPagan": [
@@ -268,6 +411,70 @@ def load_ocr_text(file_record: dict) -> str:
     if not path.exists():
         return ""
     return path.read_text(encoding="utf-8")
+
+
+def command_available(name: str) -> bool:
+    return shutil.which(name) is not None
+
+
+def local_pdf_path(file_record: dict) -> Path | None:
+    relative = file_record.get("candidate_path_or_redacted_path", "")
+    if not relative:
+        return None
+    path = REPO_ROOT / relative
+    if path.exists() and path.suffix.casefold() == ".pdf":
+        return path
+    return None
+
+
+def normalize_probe_text(text: str) -> str:
+    return re.sub(r"\s+", " ", text or "").strip()
+
+
+def probe_pdf_text(file_record: dict, *, first_page: int = 1, last_page: int = 4) -> tuple[str, str]:
+    path = local_pdf_path(file_record)
+    if not path:
+        return "", ""
+
+    if command_available("pdftotext"):
+        result = subprocess.run(
+            ["pdftotext", "-f", str(first_page), "-l", str(last_page), str(path), "-"],
+            check=False,
+            capture_output=True,
+            text=True,
+        )
+        text = normalize_probe_text(result.stdout)
+        if text:
+            return truncate_snippet(text, limit=MAX_STORED_SNIPPET_LENGTH), "pdftotext"
+
+    if command_available("pdftoppm") and command_available("tesseract"):
+        snippets: list[str] = []
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            prefix = os.path.join(tmp_dir, "page")
+            result = subprocess.run(
+                ["pdftoppm", "-f", str(first_page), "-l", str(min(last_page, first_page + 1)), "-gray", "-r", "200", str(path), prefix],
+                check=False,
+                capture_output=True,
+                text=True,
+            )
+            if result.returncode == 0:
+                for page in range(first_page, min(last_page, first_page + 1) + 1):
+                    image = Path(f"{prefix}-{page}.pgm")
+                    if not image.exists():
+                        continue
+                    ocr = subprocess.run(
+                        ["tesseract", str(image), "stdout", "--psm", "6"],
+                        check=False,
+                        capture_output=True,
+                        text=True,
+                    )
+                    text = normalize_probe_text(ocr.stdout)
+                    if text:
+                        snippets.append(text)
+        if snippets:
+            return truncate_snippet(" ".join(snippets), limit=MAX_STORED_SNIPPET_LENGTH), "pdftoppm+tesseract"
+
+    return "", ""
 
 
 def title_token_overlap_ratio(source_title: str, text: str) -> float:
@@ -633,7 +840,7 @@ def verify_candidate_witness(source_row: dict, candidate_row: dict, classificati
     return row, snippet_rows
 
 
-def search_term_match(term: str, file_record: dict) -> tuple[str, float, str] | None:
+def search_term_match(term: str, file_record: dict, *, include_ocr: bool = False) -> tuple[str, float, str] | None:
     term_norm = normalize_for_match(term)
     if not term_norm:
         return None
@@ -646,17 +853,29 @@ def search_term_match(term: str, file_record: dict) -> tuple[str, float, str] | 
         ]
     )
     blob_norm = normalize_for_match(blob)
+    ocr_blob = " ".join(
+        f"{row.get('matched_heading', '')} {row.get('snippet_text', '')}".strip()
+        for row in file_record.get("ocr_snippets", [])
+    )
+    ocr_blob_norm = normalize_for_match(ocr_blob)
     term_tokens = title_keyword_tokens(term)
     if len(term_tokens) <= 1 and len(term_norm) <= 4:
         raw_blob = blob
         if re.search(rf"\b{re.escape(term)}\b", raw_blob, flags=re.IGNORECASE):
             return ("source_family_match", 0.72, f"Acronym-style search-term match for {term}")
+        if include_ocr and re.search(rf"\b{re.escape(term)}\b", ocr_blob, flags=re.IGNORECASE):
+            return ("ocr_bibliographic_mention", 0.66, f"OCR/index mention for acronym-style search term {term}")
         return None
     if term_norm in blob_norm:
         return ("exact_title_filename", 0.96, f"Exact or near-exact search-term match for {term}")
     overlap = sum(1 for token in term_tokens if token in blob_norm)
     if term_tokens and overlap >= 2 and overlap / len(term_tokens) >= 0.75:
         return ("normalized_title_filename", 0.82, f"Normalized token overlap {overlap}/{len(term_tokens)} for {term}")
+    if include_ocr and term_norm in ocr_blob_norm:
+        return ("ocr_bibliographic_mention", 0.68, f"OCR/index mention for {term}")
+    ocr_overlap = sum(1 for token in term_tokens if token in ocr_blob_norm)
+    if include_ocr and term_tokens and ocr_overlap >= 2 and ocr_overlap / len(term_tokens) >= 0.75:
+        return ("ocr_bibliographic_mention", 0.64, f"OCR/index token overlap {ocr_overlap}/{len(term_tokens)} for {term}")
     return None
 
 
@@ -704,6 +923,516 @@ def build_missing_direct_search_rows(source_rows: list[dict], file_records: dict
                     "notes": truncate_snippet(file_record.get("candidate_path_or_redacted_path", "")),
                 }
             )
+    return rows
+
+
+def find_file_record(file_records: dict[str, dict], file_id_or_label: str) -> dict | None:
+    if file_id_or_label in file_records:
+        return file_records[file_id_or_label]
+    target = normalize_for_match(file_id_or_label)
+    for file_record in file_records.values():
+        if normalize_for_match(file_record.get("candidate_file_label", "")) == target:
+            return file_record
+    return None
+
+
+def query_support_snippet(query: str, file_record: dict) -> str:
+    query_norm = normalize_for_match(query)
+    best_snippet = ""
+    best_score = -1
+    for row in file_record.get("ocr_snippets", []):
+        snippet = " ".join([row.get("matched_heading", ""), row.get("snippet_text", "")]).strip()
+        normalized = normalize_for_match(snippet)
+        score = 0
+        if query_norm and query_norm in normalized:
+            score += 3
+        overlap = title_token_overlap_ratio(query, snippet)
+        if overlap >= 0.6:
+            score += 2
+        if score > best_score and snippet:
+            best_score = score
+            best_snippet = snippet
+    if best_snippet:
+        return truncate_snippet(best_snippet, limit=MAX_STORED_SNIPPET_LENGTH)
+    for key in ["all_original_paths", "candidate_path_or_redacted_path", "candidate_file_label"]:
+        value = file_record.get(key, "")
+        if value:
+            return truncate_snippet(value, limit=MAX_STORED_SNIPPET_LENGTH)
+    return ""
+
+
+def build_direct_query_search_rows(
+    queries: list[str],
+    file_records: dict[str, dict],
+    *,
+    source_work_key: str | None = None,
+    exclude_file_ids: set[str] | None = None,
+    exclusion_note: str = "",
+) -> list[dict]:
+    rows: list[dict] = []
+    exclude_file_ids = exclude_file_ids or set()
+    for query in queries:
+        best_match: tuple[str, dict, float, str] | None = None
+        for file_record in file_records.values():
+            if file_record.get("candidate_file_id", "") in exclude_file_ids:
+                continue
+            match = search_term_match(query, file_record, include_ocr=True)
+            if not match:
+                continue
+            match_type, score, reason = match
+            if best_match is None or score > best_match[2]:
+                best_match = (match_type, file_record, score, reason)
+        if best_match is None:
+            row = {
+                "query": query,
+                "matched_file_label": "",
+                "matched_file_id": "",
+                "match_type": "not_found",
+                "match_confidence": "low",
+                "short_evidence": "",
+                "recommended_action": "Continue targeted local-file search for a direct witness.",
+                "notes": exclusion_note or "No local direct witness or bibliographic clue matched this query.",
+            }
+            if source_work_key:
+                row = {"source_work_key": source_work_key, **row}
+            rows.append(row)
+            continue
+        match_type, file_record, score, reason = best_match
+        recommended_action = "Inspect title page before promoting this as a direct witness."
+        if match_type == "ocr_bibliographic_mention":
+            recommended_action = "Treat this as a bibliographic clue only; locate the direct local file."
+        elif match_type == "source_family_match":
+            recommended_action = "Review manually; acronym/path evidence alone is too weak for direct-witness status."
+        row = {
+            "query": query,
+            "matched_file_label": file_record.get("candidate_file_label", ""),
+            "matched_file_id": file_record.get("candidate_file_id", ""),
+            "match_type": match_type,
+            "match_confidence": confidence_label(score),
+            "short_evidence": query_support_snippet(query, file_record),
+            "recommended_action": recommended_action,
+            "notes": truncate_snippet(reason if not exclusion_note else f"{reason}. {exclusion_note}", limit=MAX_STORED_SNIPPET_LENGTH),
+        }
+        if source_work_key:
+            row = {"source_work_key": source_work_key, **row}
+        rows.append(row)
+    return rows
+
+
+def review_title_and_contents_snippets(source_row: dict | None, file_record: dict) -> tuple[str, str]:
+    ocr_text = load_ocr_text(file_record)
+    title_snippet = ""
+    contents_snippet = ""
+    if source_row:
+        title_snippet, _ = extract_title_page_snippet(source_row, file_record, ocr_text)
+    if not title_snippet:
+        title_snippet = query_support_snippet(file_record.get("candidate_file_label", ""), file_record)
+    if not title_snippet:
+        probe_text, _ = probe_pdf_text(file_record, first_page=1, last_page=3)
+        title_snippet = probe_text
+    if not title_snippet:
+        title_snippet = truncate_snippet(
+            file_record.get("all_original_paths", "")
+            or file_record.get("candidate_path_or_redacted_path", "")
+            or file_record.get("candidate_file_label", ""),
+            limit=MAX_STORED_SNIPPET_LENGTH,
+        )
+
+    contents_snippet, _ = extract_contents_snippet(file_record, ocr_text)
+    if not contents_snippet:
+        probe_text, _ = probe_pdf_text(file_record, first_page=2, last_page=6)
+        if text_has_keyword(probe_text, CONTENTS_PATTERNS + NOTES_KEYWORDS + ["index"]):
+            contents_snippet = probe_text
+    return (
+        truncate_snippet(title_snippet, limit=MAX_STORED_SNIPPET_LENGTH),
+        truncate_snippet(contents_snippet, limit=MAX_STORED_SNIPPET_LENGTH),
+    )
+
+
+def build_sip_witness_inspection_rows(
+    source_rows: list[dict],
+    verification_rows: list[dict],
+    file_records: dict[str, dict],
+) -> list[dict]:
+    source_by_key = {row["source_work_key"]: row for row in source_rows}
+    verification_by_id = {row["witness_id"]: row for row in verification_rows}
+    verification_row = verification_by_id.get(SIP_WITNESS_ID)
+    if not verification_row:
+        return []
+    file_record = find_file_record(file_records, verification_row["candidate_file_label"])
+    if not file_record:
+        return []
+    source_row = source_by_key.get("sipSelectionsPagan")
+    title_snippet, contents_snippet = review_title_and_contents_snippets(source_row, file_record)
+    support_snippet = truncate_snippet(
+        verification_row.get("ocr_or_text_snippet")
+        or verification_row.get("title_page_evidence")
+        or query_support_snippet(source_row.get("canonical_title", ""), file_record),
+        limit=MAX_STORED_SNIPPET_LENGTH,
+    )
+    translation_found = text_has_keyword(" ".join([title_snippet, contents_snippet, support_snippet]), TRANSLATION_KEYWORDS)
+    notes_found = text_has_keyword(" ".join([title_snippet, contents_snippet, support_snippet]), NOTES_KEYWORDS)
+    rows = [
+        {
+            "source_work_key": "sipSelectionsPagan",
+            "witness_id": verification_row["witness_id"],
+            "file_label": file_record.get("candidate_file_label", ""),
+            "inspection_area": "title_page",
+            "evidence_snippet": title_snippet,
+            "contains_translation": bool_string(translation_found),
+            "contains_edition_or_transliteration": "true",
+            "contains_notes_or_commentary": bool_string(notes_found),
+            "contains_catalogue_metadata": "false",
+            "contains_plate_or_image": "false",
+            "coverage_scope": "selected_inscriptions_only",
+            "confidence": "high",
+            "needs_human_review": "false" if translation_found else "true",
+            "notes": "Title-page OCR confirms Selections from the Inscriptions of Pagan by Pe Maung Tin and G.H. Luce.",
+        }
+    ]
+    if contents_snippet:
+        rows.append(
+            {
+                "source_work_key": "sipSelectionsPagan",
+                "witness_id": verification_row["witness_id"],
+                "file_label": file_record.get("candidate_file_label", ""),
+                "inspection_area": "contents",
+                "evidence_snippet": contents_snippet,
+                "contains_translation": bool_string(translation_found),
+                "contains_edition_or_transliteration": "true",
+                "contains_notes_or_commentary": bool_string(notes_found),
+                "contains_catalogue_metadata": "false",
+                "contains_plate_or_image": "false",
+                "coverage_scope": "selected_inscriptions_only",
+                "confidence": "medium",
+                "needs_human_review": "true",
+                "notes": "Contents/preface-style snippet reviewed for translation or commentary clues.",
+            }
+        )
+    if support_snippet and support_snippet != title_snippet and support_snippet != contents_snippet:
+        rows.append(
+            {
+                "source_work_key": "sipSelectionsPagan",
+                "witness_id": verification_row["witness_id"],
+                "file_label": file_record.get("candidate_file_label", ""),
+                "inspection_area": "headings",
+                "evidence_snippet": support_snippet,
+                "contains_translation": bool_string(translation_found),
+                "contains_edition_or_transliteration": "true",
+                "contains_notes_or_commentary": bool_string(notes_found),
+                "contains_catalogue_metadata": "false",
+                "contains_plate_or_image": "false",
+                "coverage_scope": "selected_inscriptions_only",
+                "confidence": "medium",
+                "needs_human_review": "true",
+                "notes": "Supporting OCR heading reviewed; no translation claim is promoted without explicit evidence.",
+            }
+        )
+    return rows
+
+
+def apply_sip_inspection(verification_rows: list[dict], inspection_rows: list[dict]) -> list[dict]:
+    if not inspection_rows:
+        return verification_rows
+    by_id = {row["witness_id"]: row for row in verification_rows}
+    first_row = inspection_rows[0]
+    target = by_id.get(first_row["witness_id"])
+    if not target:
+        return verification_rows
+    translation_confirmed = any(row["contains_translation"] == "true" for row in inspection_rows)
+    notes_found = any(row["contains_notes_or_commentary"] == "true" for row in inspection_rows)
+    target["contains_translation_verified"] = "confirmed" if translation_confirmed else "unknown"
+    target["contains_edition_verified"] = "confirmed"
+    target["contains_plate_or_image_verified"] = "no"
+    target["contains_catalogue_metadata_verified"] = "no"
+    target["contains_secondary_discussion_verified"] = "possible" if notes_found else "no"
+    target["evidence_quality"] = "explicit"
+    target["confidence"] = "high"
+    target["recommended_action"] = (
+        "Use as a verified direct source edition; translation remains unconfirmed until deeper content review."
+        if not translation_confirmed
+        else "Use as a verified direct edition-and-translation witness."
+    )
+    notes = ["SIP title-page inspection completed."]
+    if not translation_confirmed:
+        notes.append("No explicit translation heading was verified from the stored snippets.")
+    if notes_found:
+        notes.append("The inspected snippets suggest accompanying notes or commentary.")
+    target["notes"] = compact_join([target.get("notes", "")] + notes, limit=4)
+    return list(by_id.values())
+
+
+def build_source_work_gap_rows(
+    source_rows: list[dict],
+    candidate_rows: list[dict],
+    verification_rows: list[dict],
+    uem_search_rows: list[dict],
+    core_search_rows: list[dict],
+    epigraphia_review_rows: list[dict],
+) -> list[dict]:
+    candidate_by_source: dict[str, list[dict]] = defaultdict(list)
+    verification_by_source: dict[str, list[dict]] = defaultdict(list)
+    source_by_key = {row["source_work_key"]: row for row in source_rows}
+    for row in candidate_rows:
+        candidate_by_source[row["source_work_key"]].append(row)
+    for row in verification_rows:
+        verification_by_source[row["source_work_key"]].append(row)
+
+    def best_candidate_for_source(source_key: str) -> tuple[str, str]:
+        if source_key == "epigraphiaBirmanica":
+            for row in epigraphia_review_rows:
+                if row["classification"] == "actual_eb_fascicle":
+                    return "", row["file_label"]
+        preferred_verifications = [
+            row
+            for row in verification_by_source.get(source_key, [])
+            if row.get("verification_status") in {"verified_direct_witness", "verified_catalogue_witness", "verified_plate_witness", "needs_title_page_review"}
+        ]
+        if preferred_verifications:
+            preferred_verifications.sort(
+                key=lambda row: (
+                    row.get("witness_id") == SIP_WITNESS_ID,
+                    row.get("verification_status") in {"verified_direct_witness", "verified_catalogue_witness"},
+                    row.get("candidate_file_label", "").casefold(),
+                ),
+                reverse=True,
+            )
+            return preferred_verifications[0].get("witness_id", ""), preferred_verifications[0].get("candidate_file_label", "")
+        for row in core_search_rows:
+            if row.get("source_work_key") == source_key and row["matched_file_label"] and row.get("match_type") in {"exact_title_filename", "normalized_title_filename", "source_family_match"}:
+                return "", row["matched_file_label"]
+        return "", ""
+
+    gap_rows: list[dict] = []
+    for source_key in TARGET_GAP_SOURCE_KEYS:
+        source_row = source_by_key.get(source_key, {})
+        verifications = verification_by_source.get(source_key, [])
+        verified_direct_count = sum(v["verification_status"] in {"verified_direct_witness", "verified_catalogue_witness"} for v in verifications)
+        verified_translation_count = sum(v["contains_translation_verified"] == "confirmed" for v in verifications)
+        verified_edition_count = sum(v["contains_edition_verified"] == "confirmed" for v in verifications)
+        verified_plate_count = sum(v["verification_status"] == "verified_plate_witness" for v in verifications)
+        candidate_count = len(candidate_by_source.get(source_key, []))
+        best_candidate_witness_id, best_candidate_file_label = best_candidate_for_source(source_key)
+
+        current_status = "needs_direct_witness"
+        gap_type = "needs_direct_witness"
+        priority = "high"
+        next_action = "Continue targeted local-file search."
+        notes = ""
+
+        if source_key == "sipSelectionsPagan":
+            current_status = "verified_direct_witness_found"
+            gap_type = "needs_translation_check"
+            next_action = "Inspect sample entries or contents before making any translation claim."
+            notes = "Verified SIP witness exists; translation remains unconfirmed from the stored snippets."
+        elif source_key == "uemSelectionsPagan":
+            current_status = "needs_direct_witness"
+            gap_type = "needs_direct_witness"
+            next_action = "Keep SIP excluded and continue targeted U E Maung witness search."
+            notes = "The Luce/Pe Maung Tin 1928 SIP file remains a reviewed UEM false positive."
+        elif source_key == "epigraphiaBirmanica" and best_candidate_file_label:
+            current_status = "needs_title_page_review"
+            gap_type = "needs_title_page_review"
+            next_action = "Review the direct-looking Epigraphia Birmanica fascicle files before promotion."
+            notes = "Direct-looking local EB fascicles exist, but they are not yet promoted into verified direct-witness counts."
+        elif source_key == "lucePeMaungTinInscriptionsOfBurma" and verified_plate_count > 0:
+            current_status = "verification_in_progress"
+            gap_type = "has_verified_plate_but_needs_text"
+            next_action = "Find the companion text volume before treating Inscriptions of Burma as text-covered."
+            notes = "Plate/facsimile witnesses are verified; a text witness is still missing."
+        elif source_key in {"tnInscriptionsPaganPinyaAva", "ppaCatalogue", "ubSourceFamily"} and best_candidate_file_label:
+            current_status = "needs_title_page_review"
+            gap_type = "needs_title_page_review"
+            next_action = "Review the best local candidate before mapping it as a direct witness."
+            notes = "A plausible local candidate exists, but it has not been confirmed as the direct source witness."
+
+        gap_rows.append(
+            {
+                "source_work_key": source_key,
+                "canonical_title": source_row.get("canonical_title", ""),
+                "current_status": current_status,
+                "verified_direct_witness_count": str(verified_direct_count),
+                "verified_translation_witness_count": str(verified_translation_count),
+                "verified_edition_witness_count": str(verified_edition_count),
+                "verified_plate_witness_count": str(verified_plate_count),
+                "candidate_count": str(candidate_count),
+                "best_candidate_witness_id": best_candidate_witness_id,
+                "best_candidate_file_label": best_candidate_file_label,
+                "gap_type": gap_type,
+                "priority": priority,
+                "next_action": next_action,
+                "notes": notes,
+            }
+        )
+    return gap_rows
+
+
+def build_rescue_candidate_review_rows(
+    file_records: dict[str, dict],
+    missing_search_rows: list[dict],
+) -> list[dict]:
+    query_by_file_id = {row["matched_file_id"]: row["search_term"] for row in missing_search_rows if row["matched_file_id"]}
+    review_targets = [
+        ("111029.pdf", query_by_file_id.get("111029.pdf", "Luce Pe Maung Tin Selections"), ["sipSelectionsPagan", "uemSelectionsPagan"]),
+        ("Taw Sein Ko 1899 Inscriptions of Pagan.pdf", "Taw Sein Ko 1899 Inscriptions of Pagan", ["tnInscriptionsPaganPinyaAva", "ppaCatalogue", "epigraphiaBirmanica"]),
+    ]
+    rows: list[dict] = []
+    for target, matched_query, source_keys in review_targets:
+        file_record = find_file_record(file_records, target)
+        if not file_record:
+            rows.append(
+                {
+                    "candidate_file_id": target,
+                    "candidate_file_label": target,
+                    "matched_query": matched_query,
+                    "possible_source_work_keys": ";".join(source_keys),
+                    "title_page_snippet": "",
+                    "contents_snippet": "",
+                    "classification": "needs_local_file",
+                    "confidence": "low",
+                    "recommended_mapping": "Locate the local file before mapping it to any direct witness layer.",
+                    "notes": "Requested rescue candidate was not present in the local manifest snapshot.",
+                }
+            )
+            continue
+        title_snippet, contents_snippet = review_title_and_contents_snippets(None, file_record)
+        normalized_title = normalize_for_match(title_snippet)
+        if "chroniclle tagaung" in normalized_title or "chroniclletagaung" in normalized_title or "pe maung tin luce 1921" in normalized_title:
+            classification = "secondary_article"
+            recommended_mapping = "Retain as reviewed secondary evidence; do not map as SIP/UEM/TN/PPA/UB direct witness."
+            confidence = "high"
+            notes = "Original-path evidence identifies a Chronicle of Tagaung article rather than a Selections witness."
+        elif "inscriptions of pagan" in normalized_title:
+            classification = "needs_title_page_review"
+            recommended_mapping = "Keep as an ambiguous source-edition candidate until the title page is reviewed."
+            confidence = "medium"
+            notes = "Title-family overlap is real, but the exact source-work mapping remains unresolved."
+        else:
+            classification = "unresolved_candidate"
+            recommended_mapping = "Retain as a rescue lead only; more evidence is required before mapping."
+            confidence = "low"
+            notes = "Filename/path evidence is still too weak for source-work mapping."
+        rows.append(
+            {
+                "candidate_file_id": file_record.get("candidate_file_id", target),
+                "candidate_file_label": file_record.get("candidate_file_label", target),
+                "matched_query": matched_query,
+                "possible_source_work_keys": ";".join(source_keys),
+                "title_page_snippet": title_snippet,
+                "contents_snippet": contents_snippet,
+                "classification": classification,
+                "confidence": confidence,
+                "recommended_mapping": recommended_mapping,
+                "notes": notes,
+            }
+        )
+    return rows
+
+
+def build_epigraphia_birmanica_review_rows(
+    candidate_rows: list[dict],
+    file_records: dict[str, dict],
+) -> list[dict]:
+    candidate_by_file_id = {row.get("candidate_file_id", ""): row for row in candidate_rows}
+    review_targets = [
+        "Duroiselle - Epigraphica Birmanica1.pdf",
+        "Duroiselle - Epigraphica Birmanica3.pdf",
+        "Duroiselle - Epigraphica Birmanica Talaing Plaques on Ananda Plates.pdf",
+        "011041.pdf",
+        "011098.pdf",
+        "011131.pdf",
+        "Taw Sein Ko 1899 Inscriptions of Pagan.pdf",
+        "Luce 1937 Ancient Pyu.pdf",
+        "PeMaungTin 1936 BuddhismInTheInscriptionsOfPagan.pdf",
+    ]
+    rows: list[dict] = []
+    for target in review_targets:
+        file_record = find_file_record(file_records, target)
+        if not file_record:
+            rows.append(
+                {
+                    "witness_id": f"epigraphiaBirmanica--{slugify_fragment(target)}",
+                    "file_label": target,
+                    "source_work_key": "epigraphiaBirmanica",
+                    "probable_volume_or_fascicle": "",
+                    "title_page_snippet": "",
+                    "contents_snippet": "",
+                    "contains_translation": "false",
+                    "contains_edition_or_transliteration": "false",
+                    "contains_plate_or_image": "false",
+                    "classification": "needs_local_file",
+                    "confidence": "low",
+                    "next_action": "Locate the local file before trying to classify it as an EB witness.",
+                    "notes": "Requested EB review target was not present in the local manifest snapshot.",
+                }
+            )
+            continue
+        title_snippet, contents_snippet = review_title_and_contents_snippets(None, file_record)
+        file_label = file_record.get("candidate_file_label", target)
+        file_label_norm = normalize_for_match(file_label)
+        probable_volume = ""
+        classification = "needs_title_page_review"
+        contains_edition = "false"
+        contains_plate = "false"
+        confidence = "medium"
+        next_action = "Inspect title page before promoting."
+        notes = "Ambiguous EB-related lead."
+        if "epigraphica birmanica1" in file_label_norm:
+            probable_volume = "Vol. 1"
+            classification = "actual_eb_fascicle"
+            contains_edition = "true"
+            next_action = "Promote after title-page confirmation."
+            confidence = "high"
+            notes = "Local file label identifies an Epigraphica Birmanica fascicle directly."
+        elif "epigraphica birmanica3" in file_label_norm:
+            probable_volume = "Vol. 3"
+            classification = "actual_eb_fascicle"
+            contains_edition = "true"
+            next_action = "Promote after title-page confirmation."
+            confidence = "high"
+            notes = "Local file label identifies an Epigraphica Birmanica fascicle directly."
+        elif "talaing plaques" in file_label_norm:
+            probable_volume = "Talaing Plaques on Ananda Plates"
+            classification = "actual_eb_fascicle"
+            contains_edition = "true"
+            contains_plate = "true"
+            next_action = "Promote as EB plate/fascicle evidence after title-page confirmation."
+            confidence = "high"
+            notes = "Label suggests an EB fascicle focused on plate material."
+        elif file_label_looks_numeric(file_label):
+            classification = "unrelated_numbered_pdf"
+            next_action = "Keep out of EB direct-witness counts unless a title page proves otherwise."
+            confidence = "medium"
+            notes = "Numbered PDF lacks reliable series identification in the stored evidence."
+        elif "ancient pyu" in file_label_norm or "buddhism in the inscriptions of pagan" in file_label_norm:
+            classification = "secondary_article"
+            next_action = "Retain as secondary evidence only."
+            confidence = "high"
+            notes = "Article-level title indicates secondary discussion, not an EB fascicle."
+        elif "inscriptions of pagan" in file_label_norm:
+            classification = "source_edition_candidate"
+            next_action = "Review title page before deciding whether this predates or relates to EB."
+            confidence = "medium"
+            notes = "This is a source-edition candidate, but not automatically an EB fascicle."
+        candidate_row = candidate_by_file_id.get(file_record.get("candidate_file_id", ""))
+        witness_id = candidate_row.get("witness_id") if candidate_row else f"epigraphiaBirmanica--{slugify_fragment(file_label)}"
+        rows.append(
+            {
+                "witness_id": witness_id,
+                "file_label": file_label,
+                "source_work_key": "epigraphiaBirmanica",
+                "probable_volume_or_fascicle": probable_volume,
+                "title_page_snippet": title_snippet,
+                "contents_snippet": contents_snippet,
+                "contains_translation": "false",
+                "contains_edition_or_transliteration": contains_edition,
+                "contains_plate_or_image": contains_plate,
+                "classification": classification,
+                "confidence": confidence,
+                "next_action": next_action,
+                "notes": notes,
+            }
+        )
     return rows
 
 
@@ -822,11 +1551,13 @@ def update_plan_rows(
     candidate_rows: list[dict],
     verification_rows: list[dict],
     missing_search_rows: list[dict],
+    gap_rows: list[dict],
 ) -> list[dict]:
     candidate_counts: dict[str, int] = defaultdict(int)
     verification_by_source: dict[str, list[dict]] = defaultdict(list)
     search_hits_by_source: dict[str, int] = defaultdict(int)
     source_by_key = {row["source_work_key"]: row for row in source_rows}
+    gap_by_source = {row["source_work_key"]: row for row in gap_rows}
 
     for row in candidate_rows:
         candidate_counts[row["source_work_key"]] += 1
@@ -846,22 +1577,26 @@ def update_plan_rows(
         verified_edition_count = sum(v["contains_edition_verified"] == "confirmed" for v in verifications)
         verified_plate_count = sum(v["verification_status"] == "verified_plate_witness" for v in verifications)
         weak_false_positive_count = sum(v["verification_status"] == "weak_false_positive" for v in verifications)
+        gap_row = gap_by_source.get(source_key, {})
 
         if source_key in PERIODICAL_PLAN_KEYS:
             discovery_status = "needs_article_level_discovery"
             next_action = "Inspect article-level witnesses; do not promote the series/container itself."
         elif verified_direct_count > 0:
             discovery_status = "verified_direct_witness_found"
-            next_action = "Use the verified direct witness set for the next focused inspection pass."
+            next_action = gap_row.get("next_action") or "Use the verified direct witness set for the next focused inspection pass."
         elif verified_plate_count > 0:
             discovery_status = "verification_in_progress"
-            next_action = "Find and inspect the companion text witness before treating plate evidence as full source coverage."
+            next_action = gap_row.get("next_action") or "Find and inspect the companion text witness before treating plate evidence as full source coverage."
+        elif gap_row.get("gap_type") in {"needs_title_page_review", "has_verified_plate_but_needs_text"}:
+            discovery_status = "verification_in_progress"
+            next_action = gap_row.get("next_action") or "Inspect the strongest local candidate before promotion."
         elif search_hits_by_source.get(source_key, 0) > 0 or candidate_counts.get(source_key, 0) > 0:
             discovery_status = "needs_direct_witness_search"
-            next_action = "Inspect the searched local-file hits and promote only true direct witnesses."
+            next_action = gap_row.get("next_action") or "Inspect the searched local-file hits and promote only true direct witnesses."
         else:
             discovery_status = "needs_direct_witness_search"
-            next_action = "Continue targeted local-file search for a direct witness."
+            next_action = gap_row.get("next_action") or "Continue targeted local-file search for a direct witness."
 
         updated_rows.append(
             {
@@ -888,6 +1623,12 @@ def build_verification_report(
     snippet_rows: list[dict],
     missing_search_rows: list[dict],
     updated_plan_rows: list[dict],
+    gap_rows: list[dict],
+    sip_inspection_rows: list[dict],
+    uem_search_rows: list[dict],
+    core_search_rows: list[dict],
+    rescue_review_rows: list[dict],
+    epigraphia_review_rows: list[dict],
 ) -> dict:
     return {
         "verified_witness_count": len(verification_rows),
@@ -901,6 +1642,25 @@ def build_verification_report(
         "missing_direct_witness_search_count": sum(bool(row["matched_file_label"]) for row in missing_search_rows),
         "titlepage_toc_snippet_count": len(snippet_rows),
         "source_works_needing_direct_witness_count": sum(row["discovery_status"] == "needs_direct_witness_search" for row in updated_plan_rows),
+        "source_work_witness_gap_count": len(gap_rows),
+        "source_works_with_verified_direct_witness": len(
+            {
+                row["source_work_key"]
+                for row in verification_rows
+                if row["verification_status"] in {"verified_direct_witness", "verified_catalogue_witness"}
+            }
+        ),
+        "source_works_still_needing_direct_witness": sum(
+            row["gap_type"] in {"needs_direct_witness", "needs_title_page_review", "has_verified_plate_but_needs_text"}
+            for row in gap_rows
+        ),
+        "sip_inspection_completed": bool(sip_inspection_rows),
+        "uem_direct_search_count": sum(bool(row["matched_file_label"]) for row in uem_search_rows),
+        "core_source_direct_search_count": sum(bool(row["matched_file_label"]) for row in core_search_rows),
+        "rescue_candidate_review_count": len(rescue_review_rows),
+        "epigraphia_birmanica_review_count": len(epigraphia_review_rows),
+        "verified_translation_after_inspection_count": sum(row["contains_translation_verified"] == "confirmed" for row in verification_rows),
+        "verified_edition_after_inspection_count": sum(row["contains_edition_verified"] == "confirmed" for row in verification_rows),
         "notes": [
             "Verification is stricter than candidate discovery: exact title-page, contents, or OCR-heading evidence is required before promoting translation or edition claims.",
             "Weak filename matches are retained as reviewed evidence rather than silently deleted.",
@@ -931,6 +1691,12 @@ def verify_translation_witnesses(
     witness_verification_path: Path = WITNESS_VERIFICATION_PATH,
     witness_snippets_path: Path = WITNESS_SNIPPETS_PATH,
     missing_direct_search_path: Path = MISSING_DIRECT_SEARCH_PATH,
+    source_work_gaps_path: Path = SOURCE_WORK_GAPS_PATH,
+    sip_witness_inspection_path: Path = SIP_WITNESS_INSPECTION_PATH,
+    uem_direct_search_path: Path = UEM_DIRECT_SEARCH_PATH,
+    core_source_direct_search_path: Path = CORE_SOURCE_DIRECT_SEARCH_PATH,
+    rescue_candidate_review_path: Path = RESCUE_CANDIDATE_REVIEW_PATH,
+    epigraphia_birmanica_review_path: Path = EPIGRAPHIA_BIRMANICA_REVIEW_PATH,
     witness_verification_report_path: Path = WITNESS_VERIFICATION_REPORT_PATH,
 ) -> dict:
     plan_rows = read_tsv(plan_path)
@@ -996,8 +1762,61 @@ def verify_translation_witnesses(
         [row for row in source_rows if row["source_work_key"] in HIGH_PRIORITY_SOURCE_KEYS],
         file_records,
     )
+    sip_inspection_rows = build_sip_witness_inspection_rows(source_rows, verification_rows, file_records)
+    verification_rows = apply_sip_inspection(verification_rows, sip_inspection_rows)
+    snippet_rows.extend(
+        {
+            "witness_id": row["witness_id"],
+            "source_work_key": row["source_work_key"],
+            "candidate_file_label": row["file_label"],
+            "snippet_type": (
+                "title_page"
+                if row["inspection_area"] == "title_page"
+                else "contents"
+                if row["inspection_area"] == "contents"
+                else "ocr_heading"
+            ),
+            "snippet": row["evidence_snippet"],
+            "source_method": "inspection",
+            "confidence": row["confidence"],
+            "notes": row["notes"],
+        }
+        for row in sip_inspection_rows
+        if row["evidence_snippet"]
+    )
+
+    sip_candidate_row = next((row for row in candidate_rows if row["witness_id"] == SIP_WITNESS_ID), None)
+    uem_search_rows = build_direct_query_search_rows(
+        UEM_DIRECT_SEARCH_QUERIES,
+        file_records,
+        exclude_file_ids={sip_candidate_row["candidate_file_id"]} if sip_candidate_row else set(),
+        exclusion_note="The verified Luce/Pe Maung Tin 1928 SIP witness is excluded from UEM direct-witness search results.",
+    )
+    core_search_rows = [
+        row
+        for source_key, queries in CORE_SOURCE_DIRECT_SEARCH_QUERIES.items()
+        for row in build_direct_query_search_rows(queries, file_records, source_work_key=source_key)
+    ]
+    rescue_review_rows = build_rescue_candidate_review_rows(file_records, missing_search_rows)
+    epigraphia_review_rows = build_epigraphia_birmanica_review_rows(candidate_rows, file_records)
+    gap_rows = build_source_work_gap_rows(
+        source_rows,
+        candidate_rows,
+        verification_rows,
+        uem_search_rows,
+        core_search_rows,
+        epigraphia_review_rows,
+    )
+
     updated_classification_rows = update_classification_rows(classification_rows, verification_rows)
-    updated_plan_rows = update_plan_rows(plan_rows, source_rows, candidate_rows, verification_rows, missing_search_rows)
+    updated_plan_rows = update_plan_rows(
+        plan_rows,
+        source_rows,
+        candidate_rows,
+        verification_rows,
+        missing_search_rows,
+        gap_rows,
+    )
     periodical_fields, updated_periodical_plan_rows = update_periodical_plan_rows(
         plan_rows,
         source_rows,
@@ -1006,13 +1825,30 @@ def verify_translation_witnesses(
         raw_reference_rows,
     )
     existing_report = json.loads(discovery_report_path.read_text(encoding="utf-8")) if discovery_report_path.exists() else {}
-    verification_report = build_verification_report(verification_rows, snippet_rows, missing_search_rows, updated_plan_rows)
+    verification_report = build_verification_report(
+        verification_rows,
+        snippet_rows,
+        missing_search_rows,
+        updated_plan_rows,
+        gap_rows,
+        sip_inspection_rows,
+        uem_search_rows,
+        core_search_rows,
+        rescue_review_rows,
+        epigraphia_review_rows,
+    )
     updated_report = update_discovery_report(existing_report, verification_report)
 
     witness_verification_path.parent.mkdir(parents=True, exist_ok=True)
     write_tsv(witness_verification_path, verification_rows, VERIFICATION_FIELDS)
     write_tsv(witness_snippets_path, snippet_rows, SNIPPET_FIELDS)
     write_tsv(missing_direct_search_path, missing_search_rows, MISSING_DIRECT_SEARCH_FIELDS)
+    write_tsv(source_work_gaps_path, gap_rows, SOURCE_WORK_GAP_FIELDS)
+    write_tsv(sip_witness_inspection_path, sip_inspection_rows, SIP_WITNESS_INSPECTION_FIELDS)
+    write_tsv(uem_direct_search_path, uem_search_rows, DIRECT_WITNESS_SEARCH_FIELDS)
+    write_tsv(core_source_direct_search_path, core_search_rows, CORE_DIRECT_WITNESS_SEARCH_FIELDS)
+    write_tsv(rescue_candidate_review_path, rescue_review_rows, RESCUE_CANDIDATE_REVIEW_FIELDS)
+    write_tsv(epigraphia_birmanica_review_path, epigraphia_review_rows, EPIGRAPHIA_BIRMANICA_REVIEW_FIELDS)
     write_tsv(witness_classification_path, updated_classification_rows, WITNESS_CLASSIFICATION_FIELDS)
     plan_fields = list(plan_rows[0].keys()) + [field for field in PLAN_DISCOVERY_FIELDS if field not in plan_rows[0]]
     write_tsv(plan_path, updated_plan_rows, plan_fields)
@@ -1039,6 +1875,12 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--witness-verification", type=Path, default=WITNESS_VERIFICATION_PATH)
     parser.add_argument("--witness-snippets", type=Path, default=WITNESS_SNIPPETS_PATH)
     parser.add_argument("--missing-direct-search", type=Path, default=MISSING_DIRECT_SEARCH_PATH)
+    parser.add_argument("--source-work-gaps", type=Path, default=SOURCE_WORK_GAPS_PATH)
+    parser.add_argument("--sip-witness-inspection", type=Path, default=SIP_WITNESS_INSPECTION_PATH)
+    parser.add_argument("--uem-direct-search", type=Path, default=UEM_DIRECT_SEARCH_PATH)
+    parser.add_argument("--core-source-direct-search", type=Path, default=CORE_SOURCE_DIRECT_SEARCH_PATH)
+    parser.add_argument("--rescue-candidate-review", type=Path, default=RESCUE_CANDIDATE_REVIEW_PATH)
+    parser.add_argument("--epigraphia-birmanica-review", type=Path, default=EPIGRAPHIA_BIRMANICA_REVIEW_PATH)
     parser.add_argument("--witness-verification-report", type=Path, default=WITNESS_VERIFICATION_REPORT_PATH)
     return parser.parse_args()
 
@@ -1061,6 +1903,12 @@ def main() -> None:
         witness_verification_path=args.witness_verification,
         witness_snippets_path=args.witness_snippets,
         missing_direct_search_path=args.missing_direct_search,
+        source_work_gaps_path=args.source_work_gaps,
+        sip_witness_inspection_path=args.sip_witness_inspection,
+        uem_direct_search_path=args.uem_direct_search,
+        core_source_direct_search_path=args.core_source_direct_search,
+        rescue_candidate_review_path=args.rescue_candidate_review,
+        epigraphia_birmanica_review_path=args.epigraphia_birmanica_review,
         witness_verification_report_path=args.witness_verification_report,
     )
     print(json.dumps(report, ensure_ascii=False, indent=2))

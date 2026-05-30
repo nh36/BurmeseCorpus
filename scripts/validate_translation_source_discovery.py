@@ -17,9 +17,16 @@ from discover_translation_sources import (
     WITNESS_TYPES,
 )
 from verify_translation_witnesses import (
+    CORE_SOURCE_DIRECT_SEARCH_PATH,
     DIRECTNESS_VALUES,
     EVIDENCE_QUALITY_VALUES,
+    EPIGRAPHIA_BIRMANICA_REVIEW_PATH,
     MISSING_DIRECT_SEARCH_PATH,
+    RESCUE_CANDIDATE_REVIEW_PATH,
+    SIP_WITNESS_ID,
+    SIP_WITNESS_INSPECTION_PATH,
+    SOURCE_WORK_GAPS_PATH,
+    UEM_DIRECT_SEARCH_PATH,
     VERIFICATION_STATUSES,
     WITNESS_SNIPPETS_PATH,
     WITNESS_VERIFICATION_PATH,
@@ -41,6 +48,12 @@ def validate_translation_source_discovery(
     witness_verification_path: Path = WITNESS_VERIFICATION_PATH,
     witness_snippets_path: Path = WITNESS_SNIPPETS_PATH,
     missing_direct_search_path: Path = MISSING_DIRECT_SEARCH_PATH,
+    source_work_gaps_path: Path = SOURCE_WORK_GAPS_PATH,
+    sip_witness_inspection_path: Path = SIP_WITNESS_INSPECTION_PATH,
+    uem_direct_search_path: Path = UEM_DIRECT_SEARCH_PATH,
+    core_source_direct_search_path: Path = CORE_SOURCE_DIRECT_SEARCH_PATH,
+    rescue_candidate_review_path: Path = RESCUE_CANDIDATE_REVIEW_PATH,
+    epigraphia_birmanica_review_path: Path = EPIGRAPHIA_BIRMANICA_REVIEW_PATH,
     periodical_article_plan_path: Path = DISCOVERY_DIRECTORY / "periodical_article_discovery_plan.tsv",
     report_path: Path = DISCOVERY_DIRECTORY / "translation_source_discovery_report.json",
     witness_verification_report_path: Path = WITNESS_VERIFICATION_REPORT_PATH,
@@ -54,6 +67,12 @@ def validate_translation_source_discovery(
         witness_verification_path,
         witness_snippets_path,
         missing_direct_search_path,
+        source_work_gaps_path,
+        sip_witness_inspection_path,
+        uem_direct_search_path,
+        core_source_direct_search_path,
+        rescue_candidate_review_path,
+        epigraphia_birmanica_review_path,
         periodical_article_plan_path,
         report_path,
         witness_verification_report_path,
@@ -70,6 +89,12 @@ def validate_translation_source_discovery(
     verification_rows = read_tsv(witness_verification_path)
     snippet_rows = read_tsv(witness_snippets_path)
     missing_search_rows = read_tsv(missing_direct_search_path)
+    gap_rows = read_tsv(source_work_gaps_path)
+    sip_inspection_rows = read_tsv(sip_witness_inspection_path)
+    uem_search_rows = read_tsv(uem_direct_search_path)
+    core_search_rows = read_tsv(core_source_direct_search_path)
+    rescue_review_rows = read_tsv(rescue_candidate_review_path)
+    epigraphia_review_rows = read_tsv(epigraphia_birmanica_review_path)
     periodical_plan_rows = read_tsv(periodical_article_plan_path)
     report = json.loads(report_path.read_text(encoding="utf-8"))
     verification_report = json.loads(witness_verification_report_path.read_text(encoding="utf-8"))
@@ -77,6 +102,7 @@ def validate_translation_source_discovery(
     source_by_key = {row["source_work_key"]: row for row in source_rows}
     candidate_by_id = {row["witness_id"]: row for row in candidate_rows}
     verification_by_id = {row["witness_id"]: row for row in verification_rows}
+    gap_by_source = {row["source_work_key"]: row for row in gap_rows}
     candidate_counts: dict[str, int] = {}
     classification_counts: dict[str, int] = {}
     confirmed_translation_counts: dict[str, int] = {}
@@ -208,12 +234,78 @@ def validate_translation_source_discovery(
         if row.get("verification_status") in {"verified_direct_witness", "verified_catalogue_witness", "verified_plate_witness"} and snippet_count_by_witness.get(witness_id, 0) == 0 and row.get("evidence_quality") not in {"moderate", "strong", "explicit"}:
             errors.append(f"Witness verification {witness_id} lacks supporting snippet or adequate evidence quality")
 
+    sip_verification = verification_by_id.get(SIP_WITNESS_ID)
+    if sip_verification and sip_verification.get("contains_edition_verified") == "confirmed":
+        supporting_sip_rows = [row for row in sip_inspection_rows if row.get("witness_id") == SIP_WITNESS_ID and row.get("contains_edition_or_transliteration") == "true" and row.get("evidence_snippet")]
+        if not supporting_sip_rows:
+            errors.append("SIP edition confirmation lacks supporting sip_witness_inspection evidence")
+    if sip_verification and sip_verification.get("contains_translation_verified") == "confirmed":
+        supporting_translation_rows = [row for row in sip_inspection_rows if row.get("witness_id") == SIP_WITNESS_ID and row.get("contains_translation") == "true" and row.get("evidence_snippet")]
+        if not supporting_translation_rows:
+            errors.append("SIP translation confirmation lacks supporting sip_witness_inspection evidence")
+
+    for row in sip_inspection_rows:
+        if row.get("witness_id") not in candidate_by_id:
+            errors.append(f"SIP inspection row {row.get('witness_id')} has no matching witness candidate row")
+        if len(row.get("evidence_snippet", "")) > SHORT_EVIDENCE_LIMIT or "\n" in row.get("evidence_snippet", ""):
+            errors.append(f"SIP inspection row {row.get('witness_id')} stores more than a short evidence snippet")
+
     for row in missing_search_rows:
         source_key = row.get("source_work_key", "")
         if source_key not in source_by_key:
             errors.append(f"Missing-direct search row references unknown source_work_key {source_key}")
         if row.get("matched_file_label") and ABSOLUTE_PATH_PATTERN.search(row.get("notes", "")):
             errors.append(f"Missing-direct search row for {source_key} stores an absolute path")
+
+    for collection_name, rows in [
+        ("source-work witness gaps", gap_rows),
+        ("UEM direct search", uem_search_rows),
+        ("core direct search", core_search_rows),
+        ("rescue candidate review", rescue_review_rows),
+        ("epigraphia birmanica review", epigraphia_review_rows),
+    ]:
+        for row in rows:
+            for key, value in row.items():
+                if isinstance(value, str) and (len(value) > SHORT_EVIDENCE_LIMIT or "\n" in value) and key not in {"notes", "recommended_action", "next_action"}:
+                    errors.append(f"{collection_name} row stores more than a short value in {key}")
+
+    uem_direct_rows = [row for row in verification_rows if row.get("source_work_key") == "uemSelectionsPagan" and row.get("verification_status") in DIRECT_VERIFICATION_STATUSES]
+    if uem_direct_rows:
+        errors.append("UEM incorrectly has a verified direct witness; the SIP witness must stay excluded")
+    sip_candidate_label = candidate_by_id.get(SIP_WITNESS_ID, {}).get("candidate_file_label", "")
+    uem_sip_false_positive = [
+        row
+        for row in verification_rows
+        if row.get("source_work_key") == "uemSelectionsPagan"
+        and row.get("candidate_file_label") == sip_candidate_label
+        and row.get("verification_status") == "weak_false_positive"
+    ]
+    if not uem_sip_false_positive:
+        errors.append("UEM does not retain the reviewed SIP false-positive row")
+
+    for row in plan_rows:
+        source_key = row.get("source_work_key", "")
+        if row.get("discovery_status") == "verified_direct_witness_found" and verified_direct_counts.get(source_key, 0) == 0:
+            errors.append(f"Discovery plan row {source_key} is marked verified_direct_witness_found without a verified direct witness")
+        if row.get("discovery_status") == "needs_direct_witness_search" and source_key in {
+            "sipSelectionsPagan",
+            "uemSelectionsPagan",
+            "tnInscriptionsPaganPinyaAva",
+            "ppaCatalogue",
+            "ubSourceFamily",
+            "epigraphiaBirmanica",
+            "lucePeMaungTinInscriptionsOfBurma",
+        } and source_key not in gap_by_source:
+            errors.append(f"Discovery plan row {source_key} needs a matching source_work_witness_gaps.tsv row")
+
+    required_rescue_labels = {"111029.pdf", "Taw Sein Ko 1899 Inscriptions of Pagan.pdf"}
+    rescue_labels = {row.get("candidate_file_label", "") for row in rescue_review_rows}
+    if required_rescue_labels - rescue_labels:
+        errors.append("Rescue candidate review is missing required 111029/Taw Sein Ko review rows")
+
+    numbered_epigraphia_rows = [row for row in epigraphia_review_rows if re.fullmatch(r"\d+\.pdf", row.get("file_label", ""), flags=re.IGNORECASE)]
+    if not numbered_epigraphia_rows:
+        errors.append("Epigraphia Birmanica review is missing the numbered-PDF review rows")
 
     if any(field not in plan_rows[0] for field in PLAN_DISCOVERY_FIELDS):
         missing = [field for field in PLAN_DISCOVERY_FIELDS if field not in plan_rows[0]]
@@ -293,6 +385,18 @@ def validate_translation_source_discovery(
         errors.append("translation_source_discovery_report.json has inconsistent missing_direct_witness_search_count")
     if report.get("titlepage_toc_snippet_count") != len(snippet_rows):
         errors.append("translation_source_discovery_report.json has inconsistent titlepage_toc_snippet_count")
+    if report.get("source_work_witness_gap_count") != len(gap_rows):
+        errors.append("translation_source_discovery_report.json has inconsistent source_work_witness_gap_count")
+    if report.get("sip_inspection_completed") != bool(sip_inspection_rows):
+        errors.append("translation_source_discovery_report.json has inconsistent sip_inspection_completed")
+    if report.get("uem_direct_search_count") != sum(bool(row.get("matched_file_label")) for row in uem_search_rows):
+        errors.append("translation_source_discovery_report.json has inconsistent uem_direct_search_count")
+    if report.get("core_source_direct_search_count") != sum(bool(row.get("matched_file_label")) for row in core_search_rows):
+        errors.append("translation_source_discovery_report.json has inconsistent core_source_direct_search_count")
+    if report.get("rescue_candidate_review_count") != len(rescue_review_rows):
+        errors.append("translation_source_discovery_report.json has inconsistent rescue_candidate_review_count")
+    if report.get("epigraphia_birmanica_review_count") != len(epigraphia_review_rows):
+        errors.append("translation_source_discovery_report.json has inconsistent epigraphia_birmanica_review_count")
     if not isinstance(report.get("notes"), list):
         errors.append("translation_source_discovery_report.json notes must be a list")
     if verification_report.get("verified_witness_count") != len(verification_rows):
@@ -301,6 +405,8 @@ def validate_translation_source_discovery(
         errors.append("witness_verification_report.json has inconsistent verified_direct_witness_count")
     if verification_report.get("titlepage_toc_snippet_count") != len(snippet_rows):
         errors.append("witness_verification_report.json has inconsistent titlepage_toc_snippet_count")
+    if verification_report.get("source_work_witness_gap_count") != len(gap_rows):
+        errors.append("witness_verification_report.json has inconsistent source_work_witness_gap_count")
     if not isinstance(verification_report.get("notes"), list):
         errors.append("witness_verification_report.json notes must be a list")
 
@@ -316,6 +422,12 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--witness-verification", type=Path, default=WITNESS_VERIFICATION_PATH)
     parser.add_argument("--witness-snippets", type=Path, default=WITNESS_SNIPPETS_PATH)
     parser.add_argument("--missing-direct-search", type=Path, default=MISSING_DIRECT_SEARCH_PATH)
+    parser.add_argument("--source-work-gaps", type=Path, default=SOURCE_WORK_GAPS_PATH)
+    parser.add_argument("--sip-witness-inspection", type=Path, default=SIP_WITNESS_INSPECTION_PATH)
+    parser.add_argument("--uem-direct-search", type=Path, default=UEM_DIRECT_SEARCH_PATH)
+    parser.add_argument("--core-source-direct-search", type=Path, default=CORE_SOURCE_DIRECT_SEARCH_PATH)
+    parser.add_argument("--rescue-candidate-review", type=Path, default=RESCUE_CANDIDATE_REVIEW_PATH)
+    parser.add_argument("--epigraphia-birmanica-review", type=Path, default=EPIGRAPHIA_BIRMANICA_REVIEW_PATH)
     parser.add_argument("--periodical-article-plan", type=Path, default=DISCOVERY_DIRECTORY / "periodical_article_discovery_plan.tsv")
     parser.add_argument("--report", type=Path, default=DISCOVERY_DIRECTORY / "translation_source_discovery_report.json")
     parser.add_argument("--witness-verification-report", type=Path, default=WITNESS_VERIFICATION_REPORT_PATH)
@@ -332,6 +444,12 @@ def main() -> None:
         witness_verification_path=args.witness_verification,
         witness_snippets_path=args.witness_snippets,
         missing_direct_search_path=args.missing_direct_search,
+        source_work_gaps_path=args.source_work_gaps,
+        sip_witness_inspection_path=args.sip_witness_inspection,
+        uem_direct_search_path=args.uem_direct_search,
+        core_source_direct_search_path=args.core_source_direct_search,
+        rescue_candidate_review_path=args.rescue_candidate_review,
+        epigraphia_birmanica_review_path=args.epigraphia_birmanica_review,
         periodical_article_plan_path=args.periodical_article_plan,
         report_path=args.report,
         witness_verification_report_path=args.witness_verification_report,

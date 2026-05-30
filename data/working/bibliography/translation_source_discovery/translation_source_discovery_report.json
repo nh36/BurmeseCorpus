@@ -24,6 +24,16 @@
   "verified_secondary_work_count": 9,
   "weak_false_positive_count": 1,
   "missing_direct_witness_search_count": 4,
-  "titlepage_toc_snippet_count": 11,
-  "source_works_needing_direct_witness_count": 5
+  "titlepage_toc_snippet_count": 12,
+  "source_works_needing_direct_witness_count": 5,
+  "source_work_witness_gap_count": 7,
+  "source_works_with_verified_direct_witness": 1,
+  "source_works_still_needing_direct_witness": 6,
+  "sip_inspection_completed": true,
+  "uem_direct_search_count": 5,
+  "core_source_direct_search_count": 2,
+  "rescue_candidate_review_count": 2,
+  "epigraphia_birmanica_review_count": 9,
+  "verified_translation_after_inspection_count": 0,
+  "verified_edition_after_inspection_count": 1
 }

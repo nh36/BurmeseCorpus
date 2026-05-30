@@ -10,7 +10,16 @@ SCRIPTS_DIR = ROOT / "scripts"
 if str(SCRIPTS_DIR) not in sys.path:
     sys.path.insert(0, str(SCRIPTS_DIR))
 
-from verify_translation_witnesses import build_verification_report, update_plan_rows, verify_candidate_witness
+from verify_translation_witnesses import (
+    SIP_WITNESS_ID,
+    build_epigraphia_birmanica_review_rows,
+    build_rescue_candidate_review_rows,
+    build_sip_witness_inspection_rows,
+    build_source_work_gap_rows,
+    build_verification_report,
+    update_plan_rows,
+    verify_candidate_witness,
+)
 
 
 def source_row(**overrides: str) -> dict:
@@ -190,6 +199,13 @@ class TranslationWitnessVerificationTests(unittest.TestCase):
                 }
             ],
             [],
+            [
+                {
+                    "source_work_key": "sipSelectionsPagan",
+                    "gap_type": "needs_translation_check",
+                    "next_action": "Inspect sample entries.",
+                }
+            ],
         )
 
         self.assertEqual(updated[0]["discovery_status"], "verified_direct_witness_found")
@@ -242,9 +258,92 @@ class TranslationWitnessVerificationTests(unittest.TestCase):
                     "matched_file_label": "Selections from the Inscriptions of Pagan - Luce and Pe Maung Tin.pdf",
                 }
             ],
+            [
+                {
+                    "source_work_key": "uemSelectionsPagan",
+                    "gap_type": "needs_direct_witness",
+                    "next_action": "Keep SIP excluded and continue targeted U E Maung search.",
+                }
+            ],
         )
 
         self.assertEqual(updated[0]["discovery_status"], "needs_direct_witness_search")
+
+    def test_gap_row_marks_verified_sip_as_needs_translation_check(self) -> None:
+        gap_rows = build_source_work_gap_rows(
+            [source_row()],
+            [candidate_row(witness_id=SIP_WITNESS_ID)],
+            [
+                {
+                    "witness_id": SIP_WITNESS_ID,
+                    "source_work_key": "sipSelectionsPagan",
+                    "verification_status": "verified_direct_witness",
+                    "contains_translation_verified": "unknown",
+                    "contains_edition_verified": "confirmed",
+                }
+            ],
+            [],
+            [],
+            [],
+        )
+
+        self.assertEqual(gap_rows[0]["gap_type"], "needs_translation_check")
+        self.assertEqual(gap_rows[0]["current_status"], "verified_direct_witness_found")
+
+    def test_sip_inspection_does_not_confirm_translation_without_explicit_evidence(self) -> None:
+        verification_rows = [
+            {
+                "witness_id": SIP_WITNESS_ID,
+                "source_work_key": "sipSelectionsPagan",
+                "candidate_file_label": "Selections from the Inscriptions of Pagan.pdf",
+                "title_page_evidence": "Selections from the Inscriptions of Pagan by Pe Maung Tin and G. H. Luce",
+                "ocr_or_text_snippet": "Selections from the Inscriptions of Pagan",
+            }
+        ]
+        rows = build_sip_witness_inspection_rows(
+            [source_row()],
+            verification_rows,
+            {
+                "sip-pdf": file_record(
+                    candidate_file_label="Selections from the Inscriptions of Pagan.pdf",
+                    ocr_snippets=[{"matched_heading": "title", "snippet_text": "Selections from the Inscriptions of Pagan by Pe Maung Tin and G. H. Luce"}],
+                )
+            },
+        )
+
+        self.assertTrue(rows)
+        self.assertTrue(all(row["contains_translation"] == "false" for row in rows))
+        self.assertTrue(any(row["contains_edition_or_transliteration"] == "true" for row in rows))
+
+    def test_rescue_candidate_review_marks_chronicle_file_secondary(self) -> None:
+        rows = build_rescue_candidate_review_rows(
+            {
+                "111029.pdf": file_record(
+                    candidate_file_id="111029.pdf",
+                    candidate_file_label="111029.pdf",
+                    all_original_paths="OBI_LIBRARY_ROOT:ChroniclleTagaung_PeMaungTinLuce1921.pdf",
+                )
+            },
+            [{"matched_file_id": "111029.pdf", "search_term": "Luce Pe Maung Tin Selections"}],
+        )
+
+        self.assertEqual(rows[0]["classification"], "secondary_article")
+
+    def test_epigraphia_numbered_pdf_stays_review_only(self) -> None:
+        rows = build_epigraphia_birmanica_review_rows(
+            [],
+            {
+                "011041.pdf": file_record(
+                    candidate_file_id="011041.pdf",
+                    candidate_file_label="011041.pdf",
+                    all_original_paths="OBI_LIBRARY_ROOT:ElementaryLahooAkaWa_Antisdel-1911.pdf",
+                )
+            },
+        )
+
+        row = next(row for row in rows if row["file_label"] == "011041.pdf")
+        self.assertEqual(row["classification"], "unrelated_numbered_pdf")
+        self.assertIn("title page", row["next_action"].lower())
 
     def test_report_counts_match_verification_rows(self) -> None:
         verification_rows = [
@@ -271,12 +370,19 @@ class TranslationWitnessVerificationTests(unittest.TestCase):
                 {"source_work_key": "sipSelectionsPagan", "discovery_status": "verified_direct_witness_found"},
                 {"source_work_key": "uemSelectionsPagan", "discovery_status": "needs_direct_witness_search"},
             ],
+            [{"source_work_key": "uemSelectionsPagan", "gap_type": "needs_direct_witness"}],
+            [{"witness_id": SIP_WITNESS_ID}],
+            [{"matched_file_label": "ue-maung-clue.pdf"}],
+            [{"matched_file_label": "tn-clue.pdf"}],
+            [{"candidate_file_label": "111029.pdf"}],
+            [{"file_label": "011041.pdf"}],
         )
 
         self.assertEqual(report["verified_witness_count"], 2)
         self.assertEqual(report["verified_direct_witness_count"], 1)
         self.assertEqual(report["verified_plate_witness_count"], 1)
         self.assertEqual(report["source_works_needing_direct_witness_count"], 1)
+        self.assertEqual(report["source_work_witness_gap_count"], 1)
 
 
 if __name__ == "__main__":

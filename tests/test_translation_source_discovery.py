@@ -20,7 +20,17 @@ from discover_translation_sources import (
     match_source_work_to_file,
 )
 from validate_translation_source_discovery import validate_translation_source_discovery
-from verify_translation_witnesses import MISSING_DIRECT_SEARCH_FIELDS, SNIPPET_FIELDS, VERIFICATION_FIELDS
+from verify_translation_witnesses import (
+    CORE_DIRECT_WITNESS_SEARCH_FIELDS,
+    DIRECT_WITNESS_SEARCH_FIELDS,
+    EPIGRAPHIA_BIRMANICA_REVIEW_FIELDS,
+    MISSING_DIRECT_SEARCH_FIELDS,
+    RESCUE_CANDIDATE_REVIEW_FIELDS,
+    SIP_WITNESS_INSPECTION_FIELDS,
+    SNIPPET_FIELDS,
+    SOURCE_WORK_GAP_FIELDS,
+    VERIFICATION_FIELDS,
+)
 
 
 PLAN_FIELDS = [
@@ -332,6 +342,53 @@ class TranslationSourceDiscoveryTests(unittest.TestCase):
 
             self.assertTrue(any("short evidence snippet" in error for error in errors))
 
+    def test_validator_rejects_uem_inheriting_sip_direct_witness(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            tmp = Path(tmp_dir)
+            self._write_validation_fixture(
+                tmp,
+                source_rows=[
+                    {
+                        **base_source_row(),
+                        "source_work_key": "uemSelectionsPagan",
+                        "canonical_title": "Selections from the Inscriptions of Pagan",
+                        "short_title": "UEM",
+                        "authors_editors": "U E Maung (ed.)",
+                        "related_source_family_ids": "sf-uem",
+                        "related_acronyms": "UEM",
+                    }
+                ],
+                plan_rows=[self._plan_row(source_work_key="uemSelectionsPagan", canonical_title="Selections from the Inscriptions of Pagan", discovery_status="verified_direct_witness_found", verified_direct_witness_count="1", verified_edition_witness_count="1")],
+                candidate_rows=[self._candidate_row(source_work_key="uemSelectionsPagan", canonical_title="Selections from the Inscriptions of Pagan", candidate_file_label="Luce&PeMaungTin 1928 inscriptions of Pagan.pdf")],
+                classification_rows=[self._classification_row(source_work_key="uemSelectionsPagan", canonical_title="Selections from the Inscriptions of Pagan")],
+                verification_rows=[
+                    self._verification_row(
+                        source_work_key="uemSelectionsPagan",
+                        canonical_title="Selections from the Inscriptions of Pagan",
+                        candidate_file_label="Luce&PeMaungTin 1928 inscriptions of Pagan.pdf",
+                    )
+                ],
+                report_overrides={"candidate_witness_count": 1, "classified_witness_count": 1},
+            )
+
+            errors = self._run_validation(tmp)
+
+            self.assertTrue(any("UEM incorrectly has a verified direct witness" in error for error in errors))
+
+    def test_validator_requires_gap_row_for_needs_direct_witness_source(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            tmp = Path(tmp_dir)
+            self._write_validation_fixture(
+                tmp,
+                source_rows=[{**base_source_row(), "source_work_key": "uemSelectionsPagan", "canonical_title": "Selections from the Inscriptions of Pagan", "short_title": "UEM", "authors_editors": "U E Maung (ed.)", "related_source_family_ids": "sf-uem", "related_acronyms": "UEM"}],
+                plan_rows=[self._plan_row(source_work_key="uemSelectionsPagan", canonical_title="Selections from the Inscriptions of Pagan", discovery_status="needs_direct_witness_search")],
+                gap_rows=[],
+            )
+
+            errors = self._run_validation(tmp)
+
+            self.assertTrue(any("needs a matching source_work_witness_gaps.tsv row" in error for error in errors))
+
     def _plan_row(self, **overrides: str) -> dict:
         row = {
             "source_work_key": "lucePeMaungTinInscriptionsOfBurma",
@@ -441,6 +498,12 @@ class TranslationSourceDiscoveryTests(unittest.TestCase):
         verification_rows: list[dict] | None = None,
         snippet_rows: list[dict] | None = None,
         missing_search_rows: list[dict] | None = None,
+        gap_rows: list[dict] | None = None,
+        sip_inspection_rows: list[dict] | None = None,
+        uem_search_rows: list[dict] | None = None,
+        core_search_rows: list[dict] | None = None,
+        rescue_review_rows: list[dict] | None = None,
+        epigraphia_review_rows: list[dict] | None = None,
         report_overrides: dict | None = None,
     ) -> None:
         source_rows = source_rows or [base_source_row()]
@@ -450,6 +513,53 @@ class TranslationSourceDiscoveryTests(unittest.TestCase):
         verification_rows = verification_rows or []
         snippet_rows = snippet_rows or []
         missing_search_rows = missing_search_rows or []
+        gap_rows = gap_rows or []
+        sip_inspection_rows = sip_inspection_rows or []
+        uem_search_rows = uem_search_rows or []
+        core_search_rows = core_search_rows or []
+        rescue_review_rows = rescue_review_rows or [
+            {
+                "candidate_file_id": "111029.pdf",
+                "candidate_file_label": "111029.pdf",
+                "matched_query": "Luce Pe Maung Tin Selections",
+                "possible_source_work_keys": "sipSelectionsPagan;uemSelectionsPagan",
+                "title_page_snippet": "ChroniclleTagaung_PeMaungTinLuce1921.pdf",
+                "contents_snippet": "",
+                "classification": "secondary_article",
+                "confidence": "high",
+                "recommended_mapping": "Do not promote as a direct witness.",
+                "notes": "",
+            },
+            {
+                "candidate_file_id": "taw-sein-ko",
+                "candidate_file_label": "Taw Sein Ko 1899 Inscriptions of Pagan.pdf",
+                "matched_query": "Taw Sein Ko 1899 Inscriptions of Pagan",
+                "possible_source_work_keys": "tnInscriptionsPaganPinyaAva;ppaCatalogue;epigraphiaBirmanica",
+                "title_page_snippet": "Inscriptions of Pagan",
+                "contents_snippet": "",
+                "classification": "needs_title_page_review",
+                "confidence": "medium",
+                "recommended_mapping": "Review title page before mapping.",
+                "notes": "",
+            },
+        ]
+        epigraphia_review_rows = epigraphia_review_rows or [
+            {
+                "witness_id": "epigraphiaBirmanica--011041",
+                "file_label": "011041.pdf",
+                "source_work_key": "epigraphiaBirmanica",
+                "probable_volume_or_fascicle": "",
+                "title_page_snippet": "ElementaryLahooAkaWa_Antisdel-1911.pdf",
+                "contents_snippet": "",
+                "contains_translation": "false",
+                "contains_edition_or_transliteration": "false",
+                "contains_plate_or_image": "false",
+                "classification": "unrelated_numbered_pdf",
+                "confidence": "medium",
+                "next_action": "Keep out unless a title page proves otherwise.",
+                "notes": "",
+            }
+        ]
         write_tsv(root / "source_work_authority.tsv", source_rows, SOURCE_WORK_FIELDS)
         write_tsv(root / "translation_source_discovery_plan.tsv", plan_rows, PLAN_FIELDS)
         write_tsv(root / "witness_candidates.tsv", candidate_rows, WITNESS_CANDIDATE_FIELDS)
@@ -457,6 +567,12 @@ class TranslationSourceDiscoveryTests(unittest.TestCase):
         write_tsv(root / "witness_verification.tsv", verification_rows, VERIFICATION_FIELDS)
         write_tsv(root / "witness_titlepage_toc_snippets.tsv", snippet_rows, SNIPPET_FIELDS)
         write_tsv(root / "missing_direct_witness_search.tsv", missing_search_rows, MISSING_DIRECT_SEARCH_FIELDS)
+        write_tsv(root / "source_work_witness_gaps.tsv", gap_rows, SOURCE_WORK_GAP_FIELDS)
+        write_tsv(root / "sip_witness_inspection.tsv", sip_inspection_rows, SIP_WITNESS_INSPECTION_FIELDS)
+        write_tsv(root / "uem_direct_witness_search.tsv", uem_search_rows, DIRECT_WITNESS_SEARCH_FIELDS)
+        write_tsv(root / "core_source_direct_witness_search.tsv", core_search_rows, CORE_DIRECT_WITNESS_SEARCH_FIELDS)
+        write_tsv(root / "rescue_candidate_review.tsv", rescue_review_rows, RESCUE_CANDIDATE_REVIEW_FIELDS)
+        write_tsv(root / "epigraphia_birmanica_witness_review.tsv", epigraphia_review_rows, EPIGRAPHIA_BIRMANICA_REVIEW_FIELDS)
         periodical_rows = [
             {
                 "series_source_work_key": key,
@@ -506,6 +622,16 @@ class TranslationSourceDiscoveryTests(unittest.TestCase):
             "missing_direct_witness_search_count": sum(bool(row.get("matched_file_label")) for row in missing_search_rows),
             "titlepage_toc_snippet_count": len(snippet_rows),
             "source_works_needing_direct_witness_count": sum(row.get("discovery_status") == "needs_direct_witness_search" for row in plan_rows),
+            "source_work_witness_gap_count": len(gap_rows),
+            "source_works_with_verified_direct_witness": len({row["source_work_key"] for row in verification_rows if row.get("verification_status") in {"verified_direct_witness", "verified_catalogue_witness"}}),
+            "source_works_still_needing_direct_witness": sum(row.get("gap_type") in {"needs_direct_witness", "needs_title_page_review", "has_verified_plate_but_needs_text"} for row in gap_rows),
+            "sip_inspection_completed": bool(sip_inspection_rows),
+            "uem_direct_search_count": sum(bool(row.get("matched_file_label")) for row in uem_search_rows),
+            "core_source_direct_search_count": sum(bool(row.get("matched_file_label")) for row in core_search_rows),
+            "rescue_candidate_review_count": len(rescue_review_rows),
+            "epigraphia_birmanica_review_count": len(epigraphia_review_rows),
+            "verified_translation_after_inspection_count": sum(row.get("contains_translation_verified") == "confirmed" for row in verification_rows),
+            "verified_edition_after_inspection_count": sum(row.get("contains_edition_verified") == "confirmed" for row in verification_rows),
             "notes": ["fixture"],
         }
         if report_overrides:
@@ -523,6 +649,16 @@ class TranslationSourceDiscoveryTests(unittest.TestCase):
             "missing_direct_witness_search_count": sum(bool(row.get("matched_file_label")) for row in missing_search_rows),
             "titlepage_toc_snippet_count": len(snippet_rows),
             "source_works_needing_direct_witness_count": sum(row.get("discovery_status") == "needs_direct_witness_search" for row in plan_rows),
+            "source_work_witness_gap_count": len(gap_rows),
+            "source_works_with_verified_direct_witness": len({row["source_work_key"] for row in verification_rows if row.get("verification_status") in {"verified_direct_witness", "verified_catalogue_witness"}}),
+            "source_works_still_needing_direct_witness": sum(row.get("gap_type") in {"needs_direct_witness", "needs_title_page_review", "has_verified_plate_but_needs_text"} for row in gap_rows),
+            "sip_inspection_completed": bool(sip_inspection_rows),
+            "uem_direct_search_count": sum(bool(row.get("matched_file_label")) for row in uem_search_rows),
+            "core_source_direct_search_count": sum(bool(row.get("matched_file_label")) for row in core_search_rows),
+            "rescue_candidate_review_count": len(rescue_review_rows),
+            "epigraphia_birmanica_review_count": len(epigraphia_review_rows),
+            "verified_translation_after_inspection_count": sum(row.get("contains_translation_verified") == "confirmed" for row in verification_rows),
+            "verified_edition_after_inspection_count": sum(row.get("contains_edition_verified") == "confirmed" for row in verification_rows),
             "notes": ["fixture"],
         }
         (root / "witness_verification_report.json").write_text(json.dumps(verification_report, indent=2) + "\n", encoding="utf-8")
@@ -536,6 +672,12 @@ class TranslationSourceDiscoveryTests(unittest.TestCase):
             witness_verification_path=root / "witness_verification.tsv",
             witness_snippets_path=root / "witness_titlepage_toc_snippets.tsv",
             missing_direct_search_path=root / "missing_direct_witness_search.tsv",
+            source_work_gaps_path=root / "source_work_witness_gaps.tsv",
+            sip_witness_inspection_path=root / "sip_witness_inspection.tsv",
+            uem_direct_search_path=root / "uem_direct_witness_search.tsv",
+            core_source_direct_search_path=root / "core_source_direct_witness_search.tsv",
+            rescue_candidate_review_path=root / "rescue_candidate_review.tsv",
+            epigraphia_birmanica_review_path=root / "epigraphia_birmanica_witness_review.tsv",
             periodical_article_plan_path=root / "periodical_article_discovery_plan.tsv",
             report_path=root / "translation_source_discovery_report.json",
             witness_verification_report_path=root / "witness_verification_report.json",
