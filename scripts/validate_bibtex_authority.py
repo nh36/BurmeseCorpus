@@ -101,6 +101,9 @@ def validate_bibtex_authority(
     final_acronym_web_searches_path: Path | None = None,
     frasch_abbreviation_list_review_path: Path | None = None,
     unresolved_acronym_dossier_path: Path | None = None,
+    source_work_authority_path: Path | None = None,
+    raw_reference_crosswalk_audit_path: Path | None = None,
+    candidate_stub_review_path: Path | None = None,
     ippa_occurrence_contexts_path: Path | None = None,
     ippa_ppa_comparison_path: Path | None = None,
     ippa_local_context_search_path: Path | None = None,
@@ -140,6 +143,9 @@ def validate_bibtex_authority(
     final_acronym_web_search_rows = read_tsv(final_acronym_web_searches_path) if final_acronym_web_searches_path and final_acronym_web_searches_path.exists() else []
     frasch_abbreviation_list_review_rows = read_tsv(frasch_abbreviation_list_review_path) if frasch_abbreviation_list_review_path and frasch_abbreviation_list_review_path.exists() else []
     unresolved_acronym_dossier_rows = read_tsv(unresolved_acronym_dossier_path) if unresolved_acronym_dossier_path and unresolved_acronym_dossier_path.exists() else []
+    source_work_authority_rows = read_tsv(source_work_authority_path) if source_work_authority_path and source_work_authority_path.exists() else []
+    raw_reference_crosswalk_audit_rows = read_tsv(raw_reference_crosswalk_audit_path) if raw_reference_crosswalk_audit_path and raw_reference_crosswalk_audit_path.exists() else []
+    candidate_stub_review_rows = read_tsv(candidate_stub_review_path) if candidate_stub_review_path and candidate_stub_review_path.exists() else []
     ippa_occurrence_context_rows = read_tsv(ippa_occurrence_contexts_path) if ippa_occurrence_contexts_path and ippa_occurrence_contexts_path.exists() else []
     ippa_ppa_comparison_rows = read_tsv(ippa_ppa_comparison_path) if ippa_ppa_comparison_path and ippa_ppa_comparison_path.exists() else []
     ippa_local_context_search_rows = read_tsv(ippa_local_context_search_path) if ippa_local_context_search_path and ippa_local_context_search_path.exists() else []
@@ -158,11 +164,13 @@ def validate_bibtex_authority(
     authority_keys = {entry["bibtex_key"] for entry in authority_entries}
     candidate_keys = {entry["bibtex_key"] for entry in candidate_entries}
     valid_keys = authority_keys | candidate_keys
-    locator_source_work_keys = {
-        row.get("source_work_key", "")
-        for row in source_family_rows
-        if row.get("source_work_key") and not row.get("authority_key")
+    source_work_keys = {row.get("source_work_key", "") for row in source_work_authority_rows if row.get("source_work_key")}
+    source_work_bibtex_by_key = {
+        row.get("source_work_key", ""): row.get("bibtex_key", "")
+        for row in source_work_authority_rows
+        if row.get("source_work_key")
     }
+    source_work_keys_with_bibtex = {row.get("bibtex_key", "") for row in source_work_authority_rows if row.get("bibtex_key")}
     family_ids = {row["family_id"] for row in family_rows}
     source_family_ids = {row["source_family_id"] for row in source_family_rows if row.get("source_family_id")}
     external_keys = {row["bibtex_key"] for row in external_rows}
@@ -200,7 +208,7 @@ def validate_bibtex_authority(
             row["match_type"] != "no_match"
             and row["bibtex_key"]
             and row["bibtex_key"] not in valid_keys
-            and row["bibtex_key"] not in locator_source_work_keys
+            and row["bibtex_key"] not in source_work_keys_with_bibtex
         ):
             errors.append(f"raw_reference_to_bibtex[{index}] references missing bibtex_key {row['bibtex_key']}")
         if row["family_id"] not in family_ids:
@@ -213,11 +221,26 @@ def validate_bibtex_authority(
             errors.append(f"raw_reference_to_bibtex[{index}] has invalid resolution_level {row.get('resolution_level')}")
         if row.get("source_family_id") and row.get("bibtex_key") in candidate_keys:
             errors.append(f"raw_reference_to_bibtex[{index}] maps a resolved source family to machine-stub candidate {row['bibtex_key']}")
+        if row.get("source_work_key") and row["source_work_key"] not in source_work_keys:
+            errors.append(f"raw_reference_to_bibtex[{index}] references unknown source_work_key {row['source_work_key']}")
+        if row.get("source_work_key") and source_work_bibtex_by_key.get(row["source_work_key"]) and row.get("bibtex_key") != source_work_bibtex_by_key[row["source_work_key"]]:
+            errors.append(
+                f"raw_reference_to_bibtex[{index}] should use bibtex_key {source_work_bibtex_by_key[row['source_work_key']]} for source_work_key {row['source_work_key']}"
+            )
         if row.get("source_family_id") in {"sf-pl", "sf-iob", "sf-list", "sf-ppa", "sf-ippa", "sf-ub", "sf-mp", "sf-or", "sf-luce-d", "sf-luce-j"}:
             if not row.get("source_work_key"):
                 errors.append(f"raw_reference_to_bibtex[{index}] is missing source_work_key for locator-aware source family {row['source_family_id']}")
             if not row.get("locator"):
                 errors.append(f"raw_reference_to_bibtex[{index}] is missing locator for locator-aware source family {row['source_family_id']}")
+        if row.get("source_family_id") == "sf-ippa":
+            if not row.get("raw_reference_string", "").startswith("IPPA"):
+                errors.append(f"raw_reference_to_bibtex[{index}] must preserve the raw IPPA string")
+            if row.get("source_work_key") != "ppaCatalogue":
+                errors.append(f"raw_reference_to_bibtex[{index}] must map IPPA rows to ppaCatalogue")
+            if row.get("resolution_status") != "alias_or_variant_of_PPA":
+                errors.append(f"raw_reference_to_bibtex[{index}] must classify IPPA rows as alias_or_variant_of_PPA")
+        if row.get("source_family_id") in {"sf-mp", "sf-or", "sf-luce-d", "sf-luce-j"} and row.get("bibtex_key"):
+            errors.append(f"raw_reference_to_bibtex[{index}] should not assign standalone bibtex_key to locator-only family {row['source_family_id']}")
         for value in row.values():
             if has_absolute_path(value):
                 errors.append(f"raw_reference_to_bibtex[{index}] contains an absolute local path")
@@ -311,7 +334,11 @@ def validate_bibtex_authority(
                 if row.get("family_id") and row["family_id"] not in family_ids:
                     errors.append(f"source_family_authority[{index}] references unknown family_id {row['family_id']}")
                 if row.get("needs_human_review") == "true" and row.get("resolution_status") in {"source_family_resolved", "series_level_resolved"}:
-                    if row["source_family_id"] not in evidence_by_source_family:
+                    has_inline_evidence = any(
+                        row.get(field, "")
+                        for field in ("best_definition_source", "best_definition_quote", "evidence_source", "evidence_id")
+                    )
+                    if row["source_family_id"] not in evidence_by_source_family and not has_inline_evidence:
                         errors.append(f"source_family_authority[{index}] provisional source family lacks evidence row")
                 for value in row.values():
                     if has_absolute_path(value):
@@ -518,9 +545,14 @@ def validate_bibtex_authority(
         else:
             source_family_by_id = {row.get("source_family_id", ""): row for row in source_family_rows if row.get("source_family_id")}
             for index, row in enumerate(source_work_locator_rows, start=1):
+                if row.get("source_work_key") and row["source_work_key"] not in source_work_keys:
+                    errors.append(f"source_work_locator_systems[{index}] references unknown source_work_key {row['source_work_key']}")
                 for source_family_id in [item.strip() for item in row.get("source_family_ids", "").split(";") if item.strip()]:
                     if source_family_id not in source_family_by_id:
                         errors.append(f"source_work_locator_systems[{index}] references unknown source_family_id {source_family_id}")
+                expected_bibtex_key = source_work_bibtex_by_key.get(row.get("source_work_key", ""), "")
+                if expected_bibtex_key != row.get("bibtex_key", ""):
+                    errors.append(f"source_work_locator_systems[{index}] has bibtex_key mismatch for {row.get('source_work_key', '')}")
             iob_pl_rows = [row for row in source_work_locator_rows if row.get("source_work_key") == "lucePeMaungTinInscriptionsOfBurma"]
             if not iob_pl_rows:
                 errors.append("source_work_locator_systems.tsv must describe lucePeMaungTinInscriptionsOfBurma")
@@ -532,6 +564,47 @@ def validate_bibtex_authority(
                 errors.append("source_work_locator_systems.tsv must describe the Luce D locator system")
             if "sf-luce-j" in source_family_by_id and not any(row.get("source_work_key") == "gHLuceNotebookJ" for row in source_work_locator_rows):
                 errors.append("source_work_locator_systems.tsv must describe the Luce J locator system")
+            if "sf-ippa" in source_family_by_id and not any(
+                row.get("source_work_key") == "ppaCatalogue" and "sf-ippa" in row.get("source_family_ids", "") for row in source_work_locator_rows
+            ):
+                errors.append("source_work_locator_systems.tsv must describe IPPA as an alias/variant locator into ppaCatalogue")
+            if "sf-sip" in source_family_by_id and not any(row.get("source_work_key") == "sipSelectionsPagan" for row in source_work_locator_rows):
+                errors.append("source_work_locator_systems.tsv must describe SIP locator semantics")
+            if "sf-uem" in source_family_by_id and not any(row.get("source_work_key") == "uemSelectionsPagan" for row in source_work_locator_rows):
+                errors.append("source_work_locator_systems.tsv must describe UEM locator semantics")
+            if "sf-tn" in source_family_by_id and not any(row.get("source_work_key") == "tnInscriptionsPaganPinyaAva" for row in source_work_locator_rows):
+                errors.append("source_work_locator_systems.tsv must describe TN locator semantics")
+    if source_work_authority_path:
+        if not source_work_authority_path.exists():
+            errors.append("source_work_authority.tsv is missing")
+        else:
+            if len(source_work_keys) != len(source_work_authority_rows):
+                errors.append("source_work_authority.tsv must not contain duplicate source_work_key rows")
+            for index, row in enumerate(source_work_authority_rows, start=1):
+                if not row.get("canonical_title"):
+                    errors.append(f"source_work_authority[{index}] is missing canonical_title")
+                if row.get("bibtex_key") and row["bibtex_key"] not in authority_keys:
+                    errors.append(f"source_work_authority[{index}] references missing authority bibtex_key {row['bibtex_key']}")
+                for source_family_id in [item.strip() for item in row.get("related_source_family_ids", "").split(";") if item.strip()]:
+                    if source_family_rows and source_family_id not in {sf.get("source_family_id", "") for sf in source_family_rows}:
+                        errors.append(f"source_work_authority[{index}] references unknown source_family_id {source_family_id}")
+            for row in crosswalk_rows:
+                if row.get("source_work_key") and row["source_work_key"] not in source_work_keys:
+                    errors.append(f"crosswalk source_work_key {row['source_work_key']} is missing from source_work_authority.tsv")
+    if raw_reference_crosswalk_audit_path:
+        if not raw_reference_crosswalk_audit_path.exists():
+            errors.append("raw_reference_crosswalk_audit.tsv is missing")
+    if candidate_stub_review_path:
+        if not candidate_stub_review_path.exists():
+            errors.append("candidate_stub_review.tsv is missing")
+        else:
+            review_by_key = {row.get("candidate_key", ""): row for row in candidate_stub_review_rows if row.get("candidate_key")}
+            reviewed_keys = set(review_by_key)
+            current_candidate_keys = candidate_keys | {
+                row.get("candidate_key", "") for row in candidate_stub_review_rows if row.get("review_decision") == "suppress"
+            }
+            if reviewed_keys != current_candidate_keys:
+                errors.append("candidate_stub_review.tsv must review every retained or suppressed candidate stub")
     if final_acronym_resolution_sprint_path:
         if not final_acronym_resolution_sprint_path.exists():
             errors.append("final_acronym_resolution_sprint.tsv is missing")
@@ -641,6 +714,15 @@ def validate_bibtex_authority(
             if ippa_decision_row.get("decision") in {"alias_or_variant_of_PPA", "probable_expansion"} and not ippa_decision_row.get("recommended_authority_update"):
                 errors.append("ippa_resolution_decision.tsv must include a recommended_authority_update for resolved IPPA")
 
+    unresolved_priority = [
+        row.get("acronym", "")
+        for row in acronym_status_rows
+        if row.get("acronym") in PRIORITY_ACRONYMS
+        and row.get("resolution_status") in {"unresolved", "unresolved_after_targeted_search", "unresolved_after_exhaustive_search", "genuinely_unresolved_after_occurrence_level_review"}
+    ]
+    if unresolved_priority:
+        errors.append(f"priority acronyms remain unresolved: {', '.join(unresolved_priority)}")
+
     for index, row in enumerate(documentation_section_rows, start=1):
         heading = (row.get("section_heading", "") or "").casefold()
         excerpt = row.get("section_text_excerpt", "")
@@ -722,22 +804,44 @@ def validate_bibtex_authority(
                 break
         if report.get("priority_acronym_count") and report.get("priority_acronym_count") != len(PRIORITY_ACRONYMS):
             errors.append("report priority_acronym_count does not match configured priority acronym list")
-        weak_statuses = {
-            "alias_or_variant_of_PPA",
-            "probable_expansion",
-            "probable_locator_system",
-            "probable_private_luce_locator_system",
-            "probable_typo_for_PPA",
-            "source_family_only",
-            "source_family_with_unknown_expansion_but_known_function",
-            "contextual_usage_only",
-            "genuinely_unresolved_after_occurrence_level_review",
-            "unresolved_after_targeted_search",
-            "unresolved_after_exhaustive_search",
+        category_expectations = {
+            "confirmed_acronym_expansions": sorted(
+                row["acronym"] for row in acronym_status_rows if row.get("acronym") in PRIORITY_ACRONYMS and row.get("resolution_status") == "confirmed_expansion"
+            ),
+            "probable_acronym_expansions": sorted(
+                row["acronym"] for row in acronym_status_rows if row.get("acronym") in PRIORITY_ACRONYMS and row.get("resolution_status") == "probable_expansion"
+            ),
+            "alias_or_variant_families": sorted(
+                row["acronym"] for row in acronym_status_rows if row.get("acronym") in PRIORITY_ACRONYMS and row.get("resolution_status") == "alias_or_variant_of_PPA"
+            ),
+            "internal_locator_systems": sorted(
+                row["acronym"]
+                for row in acronym_status_rows
+                if row.get("acronym") in PRIORITY_ACRONYMS and row.get("resolution_status") in {"internal_locator", "internal_locator_system"}
+            ),
+            "probable_locator_systems": sorted(
+                row["acronym"] for row in acronym_status_rows if row.get("acronym") in PRIORITY_ACRONYMS and row.get("resolution_status") == "probable_locator_system"
+            ),
+            "probable_private_locator_systems": sorted(
+                row["acronym"]
+                for row in acronym_status_rows
+                if row.get("acronym") in PRIORITY_ACRONYMS and row.get("resolution_status") == "probable_private_luce_locator_system"
+            ),
+            "not_acronyms": sorted(
+                row["acronym"] for row in acronym_status_rows if row.get("acronym") in PRIORITY_ACRONYMS and row.get("resolution_status") == "not_an_acronym"
+            ),
+            "unresolved_after_exhaustive_search": sorted(
+                row["acronym"]
+                for row in acronym_status_rows
+                if row.get("acronym") in PRIORITY_ACRONYMS
+                and row.get("resolution_status") in {"genuinely_unresolved_after_occurrence_level_review", "unresolved_after_exhaustive_search"}
+            ),
         }
-        expected_weak = sorted(row["acronym"] for row in acronym_status_rows if row.get("acronym") in PRIORITY_ACRONYMS and row.get("resolution_status") in weak_statuses)
-        if sorted(report.get("weakly_resolved_priority_acronyms", [])) != expected_weak:
-            errors.append("report weakly_resolved_priority_acronyms does not match acronym_resolution_status.tsv")
+        for key, expected in category_expectations.items():
+            if sorted(report.get(key, [])) != expected:
+                errors.append(f"report {key} does not match acronym_resolution_status.tsv")
+        if any(acronym in report.get("confirmed_acronym_expansions", []) for acronym in ["IOB", "Pl.", "IPPA", "U Min Hswe"]):
+            errors.append("report confirmed_acronym_expansions must not include locator, alias, or non-acronym families")
         if report.get("manual_acronym_seed_count") != len(manual_seed_rows):
             errors.append("report manual_acronym_seed_count does not match manual_acronym_seeds.tsv")
         if report.get("manual_review_packet_rows") != len(manual_review_packet_rows):
@@ -752,6 +856,18 @@ def validate_bibtex_authority(
             1 for row in acronym_status_rows if row.get("acronym") in REMAINING_ACRONYMS and row.get("resolution_status") == "unresolved_after_exhaustive_search"
         ):
             errors.append("report remaining_acronyms_unresolved_after_exhaustive_search_count is inconsistent")
+        if report.get("source_work_authority_count") != len(source_work_authority_rows):
+            errors.append("report source_work_authority_count does not match source_work_authority.tsv")
+        if report.get("raw_reference_crosswalk_audit_count") != len(raw_reference_crosswalk_audit_rows):
+            errors.append("report raw_reference_crosswalk_audit_count does not match raw_reference_crosswalk_audit.tsv")
+        if report.get("candidate_stub_review_count") != len(candidate_stub_review_rows):
+            errors.append("report candidate_stub_review_count does not match candidate_stub_review.tsv")
+        if report.get("candidate_stubs_promoted_count") != sum(1 for row in candidate_stub_review_rows if row.get("review_decision") == "promote"):
+            errors.append("report candidate_stubs_promoted_count does not match candidate_stub_review.tsv")
+        if report.get("candidate_stubs_suppressed_count") != sum(1 for row in candidate_stub_review_rows if row.get("review_decision") == "suppress"):
+            errors.append("report candidate_stubs_suppressed_count does not match candidate_stub_review.tsv")
+        if report.get("candidate_stubs_retained_count") != sum(1 for row in candidate_stub_review_rows if row.get("review_decision") == "retain"):
+            errors.append("report candidate_stubs_retained_count does not match candidate_stub_review.tsv")
 
     if seed_rows:
         allowed_confidence = {"low", "medium", "high"}
@@ -969,6 +1085,21 @@ def main() -> None:
         default=Path("data/working/bibliography/bibtex_authority/unresolved_acronym_dossier.tsv"),
     )
     parser.add_argument(
+        "--source-work-authority",
+        type=Path,
+        default=Path("data/working/bibliography/bibtex_authority/source_work_authority.tsv"),
+    )
+    parser.add_argument(
+        "--raw-reference-crosswalk-audit",
+        type=Path,
+        default=Path("data/working/bibliography/bibtex_authority/raw_reference_crosswalk_audit.tsv"),
+    )
+    parser.add_argument(
+        "--candidate-stub-review",
+        type=Path,
+        default=Path("data/working/bibliography/bibtex_authority/candidate_stub_review.tsv"),
+    )
+    parser.add_argument(
         "--ippa-occurrence-contexts",
         type=Path,
         default=Path("data/working/bibliography/bibtex_authority/ippa_occurrence_contexts.tsv"),
@@ -1042,6 +1173,9 @@ def main() -> None:
         final_acronym_web_searches_path=args.final_acronym_web_searches,
         frasch_abbreviation_list_review_path=args.frasch_abbreviation_list_review,
         unresolved_acronym_dossier_path=args.unresolved_acronym_dossier,
+        source_work_authority_path=args.source_work_authority,
+        raw_reference_crosswalk_audit_path=args.raw_reference_crosswalk_audit,
+        candidate_stub_review_path=args.candidate_stub_review,
         ippa_occurrence_contexts_path=args.ippa_occurrence_contexts,
         ippa_ppa_comparison_path=args.ippa_ppa_comparison,
         ippa_local_context_search_path=args.ippa_local_context_search,

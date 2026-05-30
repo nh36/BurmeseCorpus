@@ -1,24 +1,24 @@
 {
-  "authority_entry_count": 32,
-  "candidate_entry_count": 3,
+  "authority_entry_count": 26,
+  "candidate_entry_count": 2,
   "total_family_count": 1091,
-  "machine_stub_count": 3,
+  "machine_stub_count": 2,
   "suppressed_locator_stub_count": 737,
-  "unresolved_family_count": 346,
+  "unresolved_family_count": 347,
   "alias_resolved_family_count": 713,
   "source_family_resolved_count": 14,
   "series_level_resolved_count": 6,
   "work_level_resolved_count": 9,
   "confirmed_work_count": 4,
   "provisional_work_count": 5,
-  "needs_human_review_count": 3,
+  "needs_human_review_count": 2,
   "confirmed_external_bibtex_count": 0,
   "confirmed_local_source_count": 9,
-  "provisional_local_source_count": 12,
+  "provisional_local_source_count": 9,
   "frasch_reference_count": 2926,
   "frasch_usable_reference_count": 202,
   "frasch_excluded_body_text_count": 0,
-  "frasch_matched_count": 13,
+  "frasch_matched_count": 10,
   "luce_candidate_count": 49,
   "local_file_count": 1809,
   "duplicate_local_files_collapsed_count": 90,
@@ -27,7 +27,53 @@
   "high_frequency_still_unresolved_count": 0,
   "priority_acronym_count": 25,
   "confirmed_acronym_expansion_count": 13,
+  "confirmed_acronym_expansions": [
+    "ARASI",
+    "BBHC",
+    "EB",
+    "JBRS",
+    "JRAS",
+    "List",
+    "MM",
+    "OBI",
+    "PPA",
+    "SIP",
+    "TN",
+    "UB",
+    "UEM"
+  ],
   "probable_acronym_expansion_count": 4,
+  "probable_acronym_expansions": [
+    "A",
+    "B",
+    "BED B",
+    "RDASB"
+  ],
+  "alias_or_variant_family_count": 1,
+  "alias_or_variant_families": [
+    "IPPA"
+  ],
+  "internal_locator_system_count": 2,
+  "internal_locator_systems": [
+    "IOB",
+    "Pl."
+  ],
+  "probable_locator_system_count": 2,
+  "probable_locator_systems": [
+    "MP",
+    "OR"
+  ],
+  "probable_private_locator_system_count": 2,
+  "probable_private_locator_systems": [
+    "Luce D",
+    "Luce J"
+  ],
+  "not_acronym_count": 1,
+  "not_acronyms": [
+    "U Min Hswe"
+  ],
+  "unresolved_after_exhaustive_search_count": 0,
+  "unresolved_after_exhaustive_search": [],
   "source_family_only_count": 0,
   "contextual_usage_only_count": 0,
   "unresolved_acronym_count": 0,
@@ -69,39 +115,16 @@
   "ippa_local_context_search_count": 130,
   "ippa_web_query_count": 3,
   "ippa_final_decision": "alias_or_variant_of_PPA",
-  "source_work_locator_system_count": 8,
+  "source_work_authority_count": 33,
+  "source_work_locator_system_count": 11,
+  "raw_reference_crosswalk_audit_count": 344,
+  "candidate_stub_review_count": 3,
+  "candidate_stubs_promoted_count": 0,
+  "candidate_stubs_suppressed_count": 1,
+  "candidate_stubs_retained_count": 2,
   "pl_locator_semantics_checked": true,
   "iob_relationship_checked": true,
   "unresolved_priority_acronyms": [],
-  "weakly_resolved_priority_acronyms": [
-    "A",
-    "B",
-    "BED B",
-    "IPPA",
-    "Luce D",
-    "Luce J",
-    "MP",
-    "OR",
-    "RDASB"
-  ],
-  "confirmed_priority_acronyms": [
-    "ARASI",
-    "BBHC",
-    "EB",
-    "IOB",
-    "JBRS",
-    "JRAS",
-    "List",
-    "MM",
-    "OBI",
-    "Pl.",
-    "PPA",
-    "SIP",
-    "TN",
-    "U Min Hswe",
-    "UB",
-    "UEM"
-  ],
   "top_unresolved_families": [
     {
       "family_id": "fam-raw-not-in-u-min-hswe",
@@ -216,11 +239,6 @@
       "family_id": "fam-raw-u-tin-lwin-rajakumar-s-inscription-in-pali-in-takkasuil-yangon-1989",
       "family_label": "U Tin Lwin, Rajakumar's Inscription in Pali, in Takkasuil ... (repr. Yangon 198…",
       "occurrence_count": 2
-    },
-    {
-      "family_id": "fam-raw-similar-but-incomplete-version-pl-ii-144",
-      "family_label": "similar but incomplete version Pl. II 144",
-      "occurrence_count": 1
     }
   ]
 }

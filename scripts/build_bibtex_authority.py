@@ -246,7 +246,53 @@ SOURCE_WORK_LOCATOR_SYSTEM_FIELDS = [
     "source_family_ids",
     "locator_system",
     "locator_prefixes",
+    "locator_type",
     "example_references",
+    "bibtex_key",
+    "authority_status",
+    "needs_human_review",
+    "alias_or_variant_notes",
+    "notes",
+]
+SOURCE_WORK_AUTHORITY_FIELDS = [
+    "source_work_key",
+    "canonical_title",
+    "short_title",
+    "work_type",
+    "authors_editors",
+    "date_or_date_range",
+    "publisher_or_institution",
+    "place",
+    "related_source_family_ids",
+    "related_acronyms",
+    "authority_status",
+    "evidence_source",
+    "evidence_quote",
+    "bibtex_key",
+    "needs_human_review",
+    "notes",
+]
+RAW_REFERENCE_CROSSWALK_AUDIT_FIELDS = [
+    "raw_reference_string",
+    "family_id",
+    "source_family_id",
+    "source_work_key",
+    "bibtex_key",
+    "locator",
+    "locator_type",
+    "issue_type",
+    "severity",
+    "recommended_fix",
+    "notes",
+]
+CANDIDATE_STUB_REVIEW_FIELDS = [
+    "candidate_key",
+    "candidate_label",
+    "occurrence_count",
+    "current_status",
+    "review_decision",
+    "reason",
+    "next_action",
     "notes",
 ]
 FINAL_ACRONYM_RESOLUTION_SPRINT_FIELDS = [
@@ -424,6 +470,7 @@ PLACEHOLDER_EXPANSION_PATTERN = re.compile(
 RESOLUTION_STATUSES = {
     "unresolved",
     "alias_resolved",
+    "alias_or_variant_of_PPA",
     "source_family_resolved",
     "series_level_resolved",
     "work_level_resolved",
@@ -1165,6 +1212,7 @@ SOURCE_WORK_RELATIONSHIPS = {
         "source_work_title": "A List of Inscriptions Found in Burma",
         "locator_system": "catalogue number",
         "locator_prefixes": "List",
+        "locator_type": "catalogue_number",
         "default_examples": "List 90 | List 302",
         "notes": "Duroiselle's List is a source work with catalogue-number locators.",
     },
@@ -1173,6 +1221,7 @@ SOURCE_WORK_RELATIONSHIPS = {
         "source_work_title": "Inscriptions of Burma",
         "locator_system": "IOB/plate references",
         "locator_prefixes": "IOB; Pl.",
+        "locator_type": "catalogue_number; plate",
         "default_examples": "IOB--278 BED B 622-4 | Pl. II 198",
         "notes": "IOB references and Pl. references are treated as distinct locator systems into the same Luce and Pe Maung Tin work.",
     },
@@ -1181,39 +1230,82 @@ SOURCE_WORK_RELATIONSHIPS = {
         "source_work_title": "Inscriptions of Burma",
         "locator_system": "IOB/plate references",
         "locator_prefixes": "IOB; Pl.",
+        "locator_type": "catalogue_number; plate",
         "default_examples": "IOB--278 BED B 622-4 | Pl. II 198",
         "notes": "Plate references point into the Luce and Pe Maung Tin Inscriptions of Burma plates rather than naming a separate bibliographic work.",
+    },
+    "obi": {
+        "source_work_key": "oldBurmeseInscriptions",
+        "source_work_title": "Old Burmese Inscriptions",
+        "locator_system": "volume/page reference",
+        "locator_prefixes": "OBI",
+        "locator_type": "volume_page",
+        "default_examples": "OBI 3, p. 2",
+        "notes": "OBI references point into the structured Old Burmese Inscriptions corpus rather than a separate printed bibliography item.",
     },
     "ppa": {
         "source_work_key": "ppaCatalogue",
         "source_work_title": "Inscriptions of Pagan, Pinya and Ava",
         "locator_system": "page and IPPA-variant references",
         "locator_prefixes": "PPA; IPPA",
+        "locator_type": "page; number",
         "default_examples": "PPA, p. 55 | IPPA-159",
         "notes": "PPA references use page locators into the Pagan, Pinya and Ava source work, while IPPA preserves a related variant locator family in the structured OBI source.",
+        "alias_or_variant_notes": "IPPA is preserved as a raw variant locator family into the same underlying PPA source work.",
     },
     "ippa": {
         "source_work_key": "ppaCatalogue",
         "source_work_title": "Inscriptions of Pagan, Pinya and Ava",
         "locator_system": "page and IPPA-variant references",
         "locator_prefixes": "PPA; IPPA",
+        "locator_type": "page; number",
         "default_examples": "IPPA-159 | PPA, p. 159",
         "notes": "IPPA is retained as a distinct raw reference family, but it routes to the same underlying Pagan, Pinya and Ava source work as PPA.",
         "alias_of_source_family_id": "sf-ppa",
+        "alias_or_variant_notes": "Raw IPPA strings are preserved in the crosswalk while the family routes to ppaCatalogue.",
     },
     "ub": {
         "source_work_key": "ubSourceFamily",
         "source_work_title": "Inscriptions Collected in Upper Burma",
         "locator_system": "volume/page",
         "locator_prefixes": "UB",
+        "locator_type": "volume_page",
         "default_examples": "UB 1, p. 297",
         "notes": "UB references carry volume/page locators into the Arch. Survey of Burma edition.",
+    },
+    "sip": {
+        "source_work_key": "sipSelectionsPagan",
+        "source_work_title": "Selections from the Inscriptions of Pagan",
+        "locator_system": "inscription number/page",
+        "locator_prefixes": "SIP",
+        "locator_type": "catalogue_number; page",
+        "default_examples": "SIP no. 26, p. 55",
+        "notes": "SIP references point to Pe Maung Tin and G. H. Luce's Selections from the Inscriptions of Pagan with inscription-number and page locators.",
+    },
+    "uem": {
+        "source_work_key": "uemSelectionsPagan",
+        "source_work_title": "Selections from the Inscriptions of Pagan",
+        "locator_system": "inscription number/page",
+        "locator_prefixes": "UEM",
+        "locator_type": "catalogue_number; page",
+        "default_examples": "UEM no. 44, p. 117",
+        "notes": "UEM references point to U E Maung's Selections from the Inscriptions of Pagan with inscription-number and page locators.",
+    },
+    "tn": {
+        "source_work_key": "tnInscriptionsPaganPinyaAva",
+        "source_work_title": "Inscriptions of Pagan, Pinya and Ava",
+        "locator_system": "page",
+        "locator_prefixes": "TN",
+        "locator_type": "page",
+        "default_examples": "TN, p. 91",
+        "notes": "TN references point to U Tun Nyein's Inscriptions of Pagan, Pinya and Ava with page locators.",
     },
     "mp": {
         "source_work_key": "mandalayPalaceStoneCollection",
         "source_work_title": "Mandalay Palace stone collection",
         "locator_system": "stone/page references",
         "locator_prefixes": "MP",
+        "locator_type": "volume_page; number",
         "default_examples": "MP 1, p. 21 | MP stone 507",
         "notes": "MP behaves as a Mandalay Palace stone-collection locator family rather than as a standalone bibliographic work.",
     },
@@ -1222,6 +1314,7 @@ SOURCE_WORK_RELATIONSHIPS = {
         "source_work_title": "British Library Oriental Manuscripts",
         "locator_system": "shelfmark/folio",
         "locator_prefixes": "OR",
+        "locator_type": "folio",
         "default_examples": "OR 3475, no. 18 | OR 3434, fol. gha verso",
         "notes": "OR references are treated as British Library Oriental manuscript shelfmarks rather than as a published title.",
     },
@@ -1230,6 +1323,7 @@ SOURCE_WORK_RELATIONSHIPS = {
         "source_work_title": "G. H. Luce Notebook D",
         "locator_system": "notebook entry/page",
         "locator_prefixes": "Luce D",
+        "locator_type": "number",
         "default_examples": "Luce D 825 | Luce D 835",
         "notes": "Archive descriptions support treating Luce D citations as references into an unpublished Luce notebook sequence.",
     },
@@ -1238,8 +1332,316 @@ SOURCE_WORK_RELATIONSHIPS = {
         "source_work_title": "G. H. Luce Notebook J",
         "locator_system": "notebook entry/page",
         "locator_prefixes": "Luce J",
+        "locator_type": "number",
         "default_examples": "Luce J 2507 | Luce J 2689",
         "notes": "Archive descriptions support treating Luce J citations as references into an unpublished Luce notebook sequence.",
+    },
+    "jbrs": {
+        "source_work_key": "journalBurmaResearchSociety",
+        "source_work_title": "Journal of the Burma Research Society",
+        "locator_system": "series/year/page",
+        "locator_prefixes": "JBRS",
+        "locator_type": "series_year_page",
+        "default_examples": "JBRS 48 (2), 1965, p. 67",
+        "notes": "JBRS references point to the journal series rather than to a single pre-resolved article.",
+    },
+    "jras": {
+        "source_work_key": "journalRoyalAsiaticSociety",
+        "source_work_title": "Journal of the Royal Asiatic Society",
+        "locator_system": "series/year/page",
+        "locator_prefixes": "JRAS",
+        "locator_type": "series_year_page",
+        "default_examples": "JRAS 1909, p. 10",
+        "notes": "JRAS references point to the journal series unless an article-level match is known.",
+    },
+    "bbhc": {
+        "source_work_key": "bulletinBurmaHistoricalCommission",
+        "source_work_title": "Bulletin of the Burma Historical Commission",
+        "locator_system": "series/year/page",
+        "locator_prefixes": "BBHC",
+        "locator_type": "series_year_page",
+        "default_examples": "BBHC 3, 1963, p. 96",
+        "notes": "BBHC references point to the bulletin series rather than to a distinct standalone work.",
+    },
+    "arasi": {
+        "source_work_key": "annualReportsArchaeologicalSurveyIndia",
+        "source_work_title": "Annual Reports of the Archaeological Survey of India",
+        "locator_system": "year/page",
+        "locator_prefixes": "ARASI",
+        "locator_type": "year; series_year_page",
+        "default_examples": "ARASI 1936-37, p. 114",
+        "notes": "ARASI references point to the Archaeological Survey of India annual-report series.",
+    },
+    "eb": {
+        "source_work_key": "epigraphiaBirmanica",
+        "source_work_title": "Epigraphia Birmanica",
+        "locator_system": "series/year/page",
+        "locator_prefixes": "EB",
+        "locator_type": "series_year_page",
+        "default_examples": "EB 1 (1), 1919, p. 1",
+        "notes": "EB references point to the Epigraphia Birmanica series rather than a single resolved volume.",
+    },
+}
+
+SOURCE_WORK_AUTHORITY_LIBRARY = {
+    "lucePeMaungTinInscriptionsOfBurma": {
+        "canonical_title": "Inscriptions of Burma",
+        "short_title": "Inscriptions of Burma",
+        "work_type": "book",
+        "authors_editors": "G. H. Luce and U Pe Maung Tin",
+        "date_or_date_range": "1933-1956",
+        "publisher_or_institution": "",
+        "place": "",
+        "authority_status": "confirmed_source_work",
+        "primary_source_family_id": "sf-iob",
+        "bibtex_key": "lucePeMaungTinInscriptionsOfBurma",
+        "needs_human_review": "false",
+        "notes": "Shared source work for IOB catalogue locators and Pl. plate locators.",
+    },
+    "duroiselle1921list": {
+        "canonical_title": "List of Inscriptions Found in Burma",
+        "short_title": "List",
+        "work_type": "book",
+        "authors_editors": "Charles Duroiselle",
+        "date_or_date_range": "1921",
+        "publisher_or_institution": "",
+        "place": "",
+        "authority_status": "confirmed_source_work",
+        "primary_source_family_id": "sf-list",
+        "bibtex_key": "duroiselle1921list",
+        "needs_human_review": "false",
+        "notes": "Stable catalogue-style source work used for List locators.",
+    },
+    "ppaCatalogue": {
+        "canonical_title": "Inscriptions of Pagan, Pinya and Ava",
+        "short_title": "PPA",
+        "work_type": "source_catalogue",
+        "authors_editors": "Archaeological Survey of Burma (ed.)",
+        "date_or_date_range": "",
+        "publisher_or_institution": "Archaeological Survey of Burma",
+        "place": "Rangoon",
+        "authority_status": "provisional_source_work",
+        "primary_source_family_id": "sf-ppa",
+        "bibtex_key": "ppaCatalogue",
+        "needs_human_review": "true",
+        "notes": "Canonical PPA work; IPPA is treated only as an alias/variant locator family into this source work.",
+    },
+    "ubSourceFamily": {
+        "canonical_title": "Inscriptions Collected in Upper Burma",
+        "short_title": "UB",
+        "work_type": "source_catalogue",
+        "authors_editors": "",
+        "date_or_date_range": "",
+        "publisher_or_institution": "Archaeological Survey of Burma",
+        "place": "",
+        "authority_status": "provisional_source_work",
+        "primary_source_family_id": "sf-ub",
+        "bibtex_key": "ubSourceFamily",
+        "needs_human_review": "true",
+        "notes": "Stable source-work layer for UB volume/page locators.",
+    },
+    "sipSelectionsPagan": {
+        "canonical_title": "Selections from the Inscriptions of Pagan",
+        "short_title": "SIP",
+        "work_type": "book",
+        "authors_editors": "Pe Maung Tin and G. H. Luce",
+        "date_or_date_range": "",
+        "publisher_or_institution": "",
+        "place": "",
+        "authority_status": "provisional_source_work",
+        "primary_source_family_id": "sf-sip",
+        "bibtex_key": "sipSourceFamily",
+        "needs_human_review": "true",
+        "notes": "SIP is a named source work with locator semantics rather than a standalone raw-string expansion target.",
+    },
+    "uemSelectionsPagan": {
+        "canonical_title": "Selections from the Inscriptions of Pagan",
+        "short_title": "UEM",
+        "work_type": "book",
+        "authors_editors": "U E Maung (ed.)",
+        "date_or_date_range": "1958",
+        "publisher_or_institution": "",
+        "place": "Rangoon",
+        "authority_status": "provisional_source_work",
+        "primary_source_family_id": "sf-uem",
+        "bibtex_key": "uEMaung1958selectionsInscriptionsPagan",
+        "needs_human_review": "true",
+        "notes": "UEM is modeled as a source work with inscription-number and page locators.",
+    },
+    "tnInscriptionsPaganPinyaAva": {
+        "canonical_title": "Inscriptions of Pagan, Pinya and Ava",
+        "short_title": "TN",
+        "work_type": "book",
+        "authors_editors": "U Tun Nyein (tr.)",
+        "date_or_date_range": "1897",
+        "publisher_or_institution": "",
+        "place": "Rangoon",
+        "authority_status": "provisional_source_work",
+        "primary_source_family_id": "sf-tn",
+        "bibtex_key": "uTunNyein1897inscriptionsPaganPinyaAva",
+        "needs_human_review": "true",
+        "notes": "TN is modeled as a source work with page locators.",
+    },
+    "epigraphiaBirmanica": {
+        "canonical_title": "Epigraphia Birmanica",
+        "short_title": "EB",
+        "work_type": "series",
+        "authors_editors": "",
+        "date_or_date_range": "1919-1936",
+        "publisher_or_institution": "",
+        "place": "",
+        "authority_status": "series_authority",
+        "primary_source_family_id": "sf-eb",
+        "bibtex_key": "epigraphiaBirmanica",
+        "needs_human_review": "true",
+        "notes": "Series-level authority only unless a specific EB fascicle/article is identified.",
+    },
+    "journalBurmaResearchSociety": {
+        "canonical_title": "Journal of the Burma Research Society",
+        "short_title": "JBRS",
+        "work_type": "periodical",
+        "authors_editors": "",
+        "date_or_date_range": "",
+        "publisher_or_institution": "",
+        "place": "",
+        "authority_status": "series_authority",
+        "primary_source_family_id": "sf-jbrs",
+        "bibtex_key": "journalBurmaResearchSociety",
+        "needs_human_review": "false",
+        "notes": "Series-level authority only unless article-level evidence is available.",
+    },
+    "journalRoyalAsiaticSociety": {
+        "canonical_title": "Journal of the Royal Asiatic Society",
+        "short_title": "JRAS",
+        "work_type": "periodical",
+        "authors_editors": "",
+        "date_or_date_range": "",
+        "publisher_or_institution": "",
+        "place": "",
+        "authority_status": "series_authority",
+        "primary_source_family_id": "sf-jras",
+        "bibtex_key": "journalRoyalAsiaticSociety",
+        "needs_human_review": "false",
+        "notes": "Series-level authority only unless article-level evidence is available.",
+    },
+    "bulletinBurmaHistoricalCommission": {
+        "canonical_title": "Bulletin of the Burma Historical Commission",
+        "short_title": "BBHC",
+        "work_type": "periodical",
+        "authors_editors": "",
+        "date_or_date_range": "",
+        "publisher_or_institution": "Burma Historical Commission",
+        "place": "",
+        "authority_status": "series_authority",
+        "primary_source_family_id": "sf-bbhc",
+        "bibtex_key": "burmaHistoricalCommissionBulletin",
+        "needs_human_review": "true",
+        "notes": "Series-level authority for BBHC citations.",
+    },
+    "annualReportsArchaeologicalSurveyIndia": {
+        "canonical_title": "Annual Reports of the Archaeological Survey of India",
+        "short_title": "ARASI",
+        "work_type": "periodical",
+        "authors_editors": "",
+        "date_or_date_range": "",
+        "publisher_or_institution": "Archaeological Survey of India",
+        "place": "",
+        "authority_status": "series_authority",
+        "primary_source_family_id": "sf-arasi",
+        "bibtex_key": "annualReportArchaeologicalSurveyIndia",
+        "needs_human_review": "true",
+        "notes": "Series-level authority for ARASI citations.",
+    },
+    "oldBurmeseInscriptions": {
+        "canonical_title": "Old Burmese Inscriptions",
+        "short_title": "OBI",
+        "work_type": "corpus_source",
+        "authors_editors": "Tilman Frasch",
+        "date_or_date_range": "",
+        "publisher_or_institution": "",
+        "place": "",
+        "authority_status": "internal_corpus_source",
+        "primary_source_family_id": "sf-obi",
+        "bibtex_key": "obiCorpusSource",
+        "needs_human_review": "false",
+        "notes": "Structured corpus authority for OBI internal references.",
+    },
+    "mandalayPalaceStoneCollection": {
+        "canonical_title": "Mandalay Palace stone collection",
+        "short_title": "MP",
+        "work_type": "locator_collection",
+        "authors_editors": "",
+        "date_or_date_range": "",
+        "publisher_or_institution": "",
+        "place": "Mandalay",
+        "authority_status": "locator_system",
+        "primary_source_family_id": "sf-mp",
+        "bibtex_key": "",
+        "needs_human_review": "true",
+        "notes": "Locator collection authority only; do not emit a standalone BibTeX publication.",
+    },
+    "britishLibraryOrientalManuscripts": {
+        "canonical_title": "British Library Oriental manuscripts",
+        "short_title": "OR",
+        "work_type": "manuscript_collection",
+        "authors_editors": "",
+        "date_or_date_range": "",
+        "publisher_or_institution": "British Library",
+        "place": "London",
+        "authority_status": "locator_system",
+        "primary_source_family_id": "sf-or",
+        "bibtex_key": "",
+        "needs_human_review": "true",
+        "notes": "Shelfmark/folio holding authority only; do not emit a standalone BibTeX publication.",
+    },
+    "gHLuceNotebookD": {
+        "canonical_title": "G. H. Luce Notebook D",
+        "short_title": "Luce D",
+        "work_type": "archival_notebook",
+        "authors_editors": "G. H. Luce",
+        "date_or_date_range": "",
+        "publisher_or_institution": "",
+        "place": "",
+        "authority_status": "probable_private_locator_system",
+        "primary_source_family_id": "sf-luce-d",
+        "bibtex_key": "",
+        "needs_human_review": "true",
+        "notes": "Probable private Luce notebook authority only; do not emit a standalone BibTeX publication.",
+    },
+    "gHLuceNotebookJ": {
+        "canonical_title": "G. H. Luce Notebook J",
+        "short_title": "Luce J",
+        "work_type": "archival_notebook",
+        "authors_editors": "G. H. Luce",
+        "date_or_date_range": "",
+        "publisher_or_institution": "",
+        "place": "",
+        "authority_status": "probable_private_locator_system",
+        "primary_source_family_id": "sf-luce-j",
+        "bibtex_key": "",
+        "needs_human_review": "true",
+        "notes": "Probable private Luce notebook authority only; do not emit a standalone BibTeX publication.",
+    },
+}
+
+CANDIDATE_STUB_REVIEW_DECISIONS = {
+    "anthology": {
+        "review_decision": "retain",
+        "reason": "The citation family is generic, but repeated anthology-style locators suggest a real source rather than a pure parsing artifact.",
+        "next_action": "Retain for later bibliography normalization once a fuller title or editor witness is found.",
+        "notes": "Do not promote until a stable title beyond the generic label is documented.",
+    },
+    "lwin1989rajakumars": {
+        "review_decision": "retain",
+        "reason": "The title and year identify a plausible real work, but the current evidence is still corpus-triage level rather than a confirmed bibliographic witness.",
+        "next_action": "Retain as a human-review candidate until a stronger bibliographic witness is harvested locally.",
+        "notes": "The current metadata is plausible enough to keep, but not yet strong enough to promote automatically.",
+    },
+    "work": {
+        "review_decision": "suppress",
+        "reason": "This row is a malformed residue about an incomplete plate witness, not a standalone bibliography item.",
+        "next_action": "Suppress the stub and rely on source-family and locator handling instead.",
+        "notes": "The generic key comes from a note-like fragment rather than a real work title.",
     },
 }
 
@@ -1890,8 +2292,16 @@ def parse_locator(raw_reference: str, family_id: str, family_label: str) -> tupl
                 return locator, "folio"
             if re.fullmatch(r"p+\.\s*[0-9-]+", locator, flags=re.IGNORECASE):
                 return locator, "page"
-            if family_id == "fam-ippa-catalogue" and re.fullmatch(r"[0-9,\- ]+", locator):
-                return locator, "number"
+            if family_id == "fam-ippa-catalogue":
+                ippa_match = re.match(r"([0-9][0-9,\- ]*[0-9])", locator)
+                if ippa_match:
+                    return ippa_match.group(1).strip(), "number"
+                if re.fullmatch(r"[0-9,\- ]+", locator):
+                    return locator, "number"
+            if family_id == "fam-iob-catalogue":
+                iob_match = re.match(r"([0-9A-Za-z.-]+)", locator)
+                if iob_match:
+                    return iob_match.group(1).strip(), "catalogue_number"
             if "catalogue" in family_id and re.fullmatch(r"[0-9A-Za-z.-]+", locator):
                 return locator, "catalogue_number"
             if family_id in {"fam-list-catalogue", "fam-iob-catalogue"} and re.fullmatch(r"[0-9A-Za-z.-]+", locator):
@@ -2787,17 +3197,167 @@ def build_unresolved_acronym_dossier(acronym_status_rows: list[dict]) -> list[di
     return rows
 
 
-def build_source_work_locator_rows(crosswalk_rows: list[dict]) -> list[dict]:
+def build_source_work_authority_rows(
+    *,
+    authority_rows: list[dict],
+    source_family_rows: list[dict],
+    crosswalk_rows: list[dict],
+) -> list[dict]:
+    authority_by_key = {row.get("bibtex_key", ""): row for row in authority_rows if row.get("bibtex_key")}
+    related_families_by_work: dict[str, list[dict]] = defaultdict(list)
+    for row in source_family_rows:
+        if row.get("source_work_key"):
+            related_families_by_work[row["source_work_key"]].append(row)
+
+    keys: set[str] = {
+        row.get("source_work_key", "")
+        for row in source_family_rows + crosswalk_rows
+        if row.get("source_work_key")
+    }
+    keys.update(
+        row.get("bibtex_key", "")
+        for row in authority_rows
+        if row.get("bibtex_key") and row.get("resolution_level") in {"series", "work", "book", "article", "internal_reference"}
+    )
+    keys.update(SOURCE_WORK_AUTHORITY_LIBRARY)
+
+    def fallback_work_type(authority_row: dict | None, related_rows: list[dict]) -> str:
+        if authority_row:
+            entry_type = authority_row.get("entry_type", "")
+            if entry_type == "book":
+                return "book"
+            if entry_type == "article":
+                return "article"
+            if related_rows and related_rows[0].get("source_family_type") == "periodical":
+                return "periodical"
+        if related_rows:
+            source_family_type = related_rows[0].get("source_family_type", "")
+            return {
+                "periodical": "periodical",
+                "catalogue": "source_catalogue",
+                "corpus_internal": "corpus_source",
+            }.get(source_family_type, "source_work")
+        return "source_work"
+
+    rows = []
+    for source_work_key in sorted(keys):
+        if not source_work_key:
+            continue
+        library = SOURCE_WORK_AUTHORITY_LIBRARY.get(source_work_key, {})
+        preferred_bibtex_key = library.get("bibtex_key", "")
+        authority_row = authority_by_key.get(preferred_bibtex_key) or authority_by_key.get(source_work_key)
+        bibtex_key = authority_row.get("bibtex_key", "") if authority_row else ""
+        related_rows = sorted(
+            related_families_by_work.get(source_work_key, []),
+            key=lambda row: (
+                0 if row.get("source_family_id") == library.get("primary_source_family_id") else 1,
+                row.get("abbreviation", ""),
+            ),
+        )
+        primary_row = related_rows[0] if related_rows else None
+        related_source_family_ids = "; ".join(row["source_family_id"] for row in related_rows)
+        related_acronyms = "; ".join(row["abbreviation"] for row in related_rows)
+        evidence_source = (
+            library.get("evidence_source")
+            or (primary_row.get("best_definition_source", "") if primary_row else "")
+            or (authority_row.get("source_of_authority", "") if authority_row else "")
+        )
+        evidence_quote = (
+            library.get("evidence_quote")
+            or (primary_row.get("best_definition_quote", "") if primary_row else "")
+            or (authority_row.get("matched_local_reference", "") if authority_row else "")
+            or (authority_row.get("evidence", "") if authority_row else "")
+        )
+        notes = " ".join(
+            part
+            for part in (
+                library.get("notes", ""),
+                authority_row.get("notes", "") if authority_row else "",
+            )
+            if part
+        )
+        rows.append(
+            {
+                "source_work_key": source_work_key,
+                "canonical_title": (
+                    library.get("canonical_title")
+                    or (authority_row.get("title", "") if authority_row else "")
+                    or (primary_row.get("expanded_label", "") if primary_row else source_work_key)
+                ),
+                "short_title": (
+                    library.get("short_title")
+                    or (authority_row.get("shorttitle", "") if authority_row else "")
+                    or (primary_row.get("abbreviation", "") if primary_row else source_work_key)
+                ),
+                "work_type": library.get("work_type") or fallback_work_type(authority_row, related_rows),
+                "authors_editors": library.get("authors_editors") or (authority_row.get("author", "") if authority_row else ""),
+                "date_or_date_range": library.get("date_or_date_range") or (authority_row.get("year", "") if authority_row else ""),
+                "publisher_or_institution": library.get("publisher_or_institution") or (authority_row.get("publisher", "") if authority_row else ""),
+                "place": library.get("place") or (authority_row.get("address", "") if authority_row else ""),
+                "related_source_family_ids": related_source_family_ids,
+                "related_acronyms": related_acronyms,
+                "authority_status": library.get("authority_status") or (authority_row.get("authority_status", "") if authority_row else "documented_source_work"),
+                "evidence_source": evidence_source,
+                "evidence_quote": evidence_quote,
+                "bibtex_key": bibtex_key,
+                "needs_human_review": (
+                    library.get("needs_human_review")
+                    or (authority_row.get("human_review_flag", "") if authority_row else "")
+                    or ("true" if any(truthy(row.get("needs_human_review", "")) for row in related_rows) else "false")
+                ),
+                "notes": notes,
+            }
+        )
+    return rows
+
+
+def build_candidate_stub_review_rows(candidate_rows: list[dict], family_by_id: dict[str, dict]) -> list[dict]:
+    rows = []
+    for row in candidate_rows:
+        decision = CANDIDATE_STUB_REVIEW_DECISIONS.get(
+            row.get("bibtex_key", ""),
+            {
+                "review_decision": "retain",
+                "reason": "No automatic consolidation rule suppressed or promoted this candidate stub.",
+                "next_action": "Retain for human review.",
+                "notes": "",
+            },
+        )
+        family_row = family_by_id.get(row.get("family_id", ""), {})
+        rows.append(
+            {
+                "candidate_key": row.get("bibtex_key", ""),
+                "candidate_label": row.get("title", "") or row.get("family_label", ""),
+                "occurrence_count": family_row.get("occurrence_count", row.get("occurrence_count", "")),
+                "current_status": row.get("authority_status", ""),
+                "review_decision": decision["review_decision"],
+                "reason": decision["reason"],
+                "next_action": decision["next_action"],
+                "notes": decision.get("notes", ""),
+            }
+        )
+    rows.sort(key=lambda row: row["candidate_key"])
+    return rows
+
+
+def build_source_work_locator_rows(
+    crosswalk_rows: list[dict],
+    source_work_authority_rows: list[dict],
+) -> list[dict]:
     examples_by_family: dict[str, list[str]] = defaultdict(list)
     for row in crosswalk_rows:
         if row.get("source_family_id") and row.get("raw_reference_string"):
             examples_by_family[row["source_family_id"]].append(row["raw_reference_string"])
+    source_work_authority_by_key = {
+        row.get("source_work_key", ""): row for row in source_work_authority_rows if row.get("source_work_key")
+    }
     rows = []
 
     def append_row(*, family_ids: list[str], relationship_key: str, example_limit: int = 2, notes: str | None = None) -> None:
         if not any(examples_by_family.get(family_id) for family_id in family_ids):
             return
         defaults = SOURCE_WORK_RELATIONSHIPS[relationship_key]
+        authority_row = source_work_authority_by_key.get(defaults["source_work_key"], {})
         collected_examples: list[str] = []
         for family_id in family_ids:
             collected_examples.extend(examples_by_family.get(family_id, [])[:1 if len(family_ids) > 1 else example_limit])
@@ -2808,7 +3368,12 @@ def build_source_work_locator_rows(crosswalk_rows: list[dict]) -> list[dict]:
                 "source_family_ids": "; ".join(family_id for family_id in family_ids if examples_by_family.get(family_id)),
                 "locator_system": defaults["locator_system"],
                 "locator_prefixes": defaults["locator_prefixes"],
+                "locator_type": defaults.get("locator_type", ""),
                 "example_references": " | ".join(collected_examples[:example_limit] or [defaults["default_examples"]]),
+                "bibtex_key": authority_row.get("bibtex_key", ""),
+                "authority_status": authority_row.get("authority_status", ""),
+                "needs_human_review": authority_row.get("needs_human_review", "true"),
+                "alias_or_variant_notes": defaults.get("alias_or_variant_notes", ""),
                 "notes": notes or defaults["notes"],
             }
         )
@@ -2825,11 +3390,88 @@ def build_source_work_locator_rows(crosswalk_rows: list[dict]) -> list[dict]:
         notes="Clarifies that PPA page citations and IPPA variant locators point into the same Pagan, Pinya and Ava source work.",
     )
     append_row(family_ids=["sf-ub"], relationship_key="ub")
+    append_row(family_ids=["sf-sip"], relationship_key="sip")
+    append_row(family_ids=["sf-uem"], relationship_key="uem")
+    append_row(family_ids=["sf-tn"], relationship_key="tn")
     append_row(family_ids=["sf-mp"], relationship_key="mp")
     append_row(family_ids=["sf-or"], relationship_key="or")
     append_row(family_ids=["sf-luce-d"], relationship_key="luce d")
     append_row(family_ids=["sf-luce-j"], relationship_key="luce j")
     return rows
+
+
+def build_raw_reference_crosswalk_audit_rows(
+    *,
+    crosswalk_rows: list[dict],
+    source_work_authority_rows: list[dict],
+    family_by_id: dict[str, dict],
+) -> list[dict]:
+    source_work_authority_by_key = {
+        row.get("source_work_key", ""): row for row in source_work_authority_rows if row.get("source_work_key")
+    }
+    locator_expected_families = {"sf-iob", "sf-pl", "sf-ippa", "sf-ppa", "sf-list", "sf-ub", "sf-sip", "sf-uem", "sf-tn", "sf-mp", "sf-or", "sf-luce-d", "sf-luce-j"}
+    audit_rows: list[dict] = []
+
+    def append_issue(row: dict, issue_type: str, severity: str, recommended_fix: str, notes: str) -> None:
+        audit_rows.append(
+            {
+                "raw_reference_string": row.get("raw_reference_string", ""),
+                "family_id": row.get("family_id", ""),
+                "source_family_id": row.get("source_family_id", ""),
+                "source_work_key": row.get("source_work_key", ""),
+                "bibtex_key": row.get("bibtex_key", ""),
+                "locator": row.get("locator", ""),
+                "locator_type": row.get("locator_type", ""),
+                "issue_type": issue_type,
+                "severity": severity,
+                "recommended_fix": recommended_fix,
+                "notes": notes,
+            }
+        )
+
+    for row in crosswalk_rows:
+        family_id = row.get("family_id", "")
+        family_occurrence_count = int(family_by_id.get(family_id, {}).get("occurrence_count", "0") or "0")
+        source_work_row = source_work_authority_by_key.get(row.get("source_work_key", ""), {})
+        if row.get("source_family_id") in locator_expected_families and not row.get("source_work_key"):
+            append_issue(row, "missing_source_work_key", "high", "Add the expected source_work_key for this locator-aware family.", "Locator-aware family is missing a source work target.")
+        if row.get("source_work_key") and row["source_work_key"] not in source_work_authority_by_key:
+            append_issue(row, "invalid_source_work_key", "high", "Map the row to a documented source_work_authority entry.", "Crosswalk points to a source_work_key that is not present in source_work_authority.tsv.")
+        if source_work_row.get("bibtex_key") and not row.get("bibtex_key"):
+            append_issue(row, "missing_bibtex_key", "medium", "Populate bibtex_key from source_work_authority.tsv.", "This source work already has a BibTeX authority key.")
+        if row.get("source_family_id") in locator_expected_families and (not row.get("locator") or row.get("locator_type") == "unclear") and family_occurrence_count >= 10:
+            append_issue(row, "unparsed_locator", "medium", "Improve locator parsing or document the irregular locator form.", "High-occurrence locator family still has an unclear locator parse.")
+        if row.get("source_family_id") == "sf-ippa":
+            if not row.get("raw_reference_string", "").startswith("IPPA"):
+                append_issue(row, "ippa_raw_string_not_preserved", "high", "Preserve the raw IPPA string in raw_reference_to_bibtex.tsv.", "IPPA alias rows should keep the original IPPA spelling.")
+            if row.get("source_work_key") != "ppaCatalogue":
+                append_issue(row, "ippa_wrong_source_work", "high", "Map IPPA rows to ppaCatalogue while preserving the raw string.", "IPPA should route to the PPA source work.")
+            if row.get("resolution_status") != "alias_or_variant_of_PPA":
+                append_issue(row, "ippa_wrong_resolution_status", "high", "Mark IPPA crosswalk rows as alias_or_variant_of_PPA.", "IPPA should not look unresolved or generically alias_resolved in the crosswalk audit layer.")
+        if row.get("source_family_id") in {"sf-mp", "sf-or", "sf-luce-d", "sf-luce-j"} and row.get("bibtex_key"):
+            append_issue(row, "locator_system_mapped_as_bibtex_work", "medium", "Leave bibtex_key blank for locator systems that have no standalone BibTeX work.", "Locator-only source works should not masquerade as standalone bibliography entries.")
+
+    audit_rows = list({
+        (row["raw_reference_string"], row["issue_type"]): row
+        for row in sorted(
+            audit_rows,
+            key=lambda row: (
+                {"high": 0, "medium": 1, "low": 2}.get(row["severity"], 3),
+                -int(family_by_id.get(row["family_id"], {}).get("occurrence_count", "0") or "0"),
+                row["raw_reference_string"],
+                row["issue_type"],
+            ),
+        )
+    }.values())
+    audit_rows.sort(
+        key=lambda row: (
+            {"high": 0, "medium": 1, "low": 2}.get(row["severity"], 3),
+            -int(family_by_id.get(row["family_id"], {}).get("occurrence_count", "0") or "0"),
+            row["raw_reference_string"],
+            row["issue_type"],
+        )
+    )
+    return audit_rows
 
 
 def build_acronym_status_rows(
@@ -3796,7 +4438,13 @@ def build_source_family_output_rows(
         }:
             source_work_key = authority_key
         related_source_work_key = source_work_key or authority_key
-        related_bibtex_key = authority_key or source_work_key
+        source_work_bibtex_key = ""
+        if source_work_key:
+            preferred_source_work_key = SOURCE_WORK_AUTHORITY_LIBRARY.get(source_work_key, {}).get("bibtex_key", "")
+            source_work_authority_row = authority_by_key.get(preferred_source_work_key) or authority_by_key.get(source_work_key)
+            if source_work_authority_row is not None:
+                source_work_bibtex_key = source_work_authority_row.get("bibtex_key", "")
+        related_bibtex_key = authority_key or source_work_bibtex_key or ""
         output_rows.append(
             {
                 "source_family_id": row["source_family_id"],
@@ -4275,6 +4923,17 @@ def build_authority(
         if row.get("source_family_id") and row.get("resolution_status") in NON_BIBTEX_LOCATOR_ACRONYM_STATUSES
     }
     if suppressed_locator_source_families:
+        suppressed_bibtex_keys = set()
+        for source_family_id in suppressed_locator_source_families:
+            source_family_row = source_family_rows_raw.get(source_family_id)
+            if not source_family_row:
+                continue
+            family_key = source_family_row["source_family_key"]
+            preferred_key = SOURCE_FAMILY_LIBRARY.get(family_key, {}).get("preferred_key", "")
+            source_work_key = SOURCE_WORK_RELATIONSHIPS.get(family_key, {}).get("source_work_key", "")
+            source_work_bibtex_key = SOURCE_WORK_AUTHORITY_LIBRARY.get(source_work_key, {}).get("bibtex_key", "") if source_work_key else ""
+            if preferred_key and preferred_key != source_work_bibtex_key:
+                suppressed_bibtex_keys.add(preferred_key)
         authority_by_family = {
             family_id: row
             for family_id, row in authority_by_family.items()
@@ -4283,7 +4942,7 @@ def build_authority(
         authority_by_key = {
             key: row
             for key, row in authority_by_key.items()
-            if row.get("source_family_id") not in suppressed_locator_source_families
+            if row.get("source_family_id") not in suppressed_locator_source_families and key not in suppressed_bibtex_keys
         }
     source_family_output_rows = build_source_family_output_rows(
         source_family_rows_raw,
@@ -4352,6 +5011,14 @@ def build_authority(
         candidate_rows_by_family[family_id] = candidate_row
 
     candidate_rows = sorted(candidate_rows_by_family.values(), key=lambda row: (row["family_label"], row["bibtex_key"]))
+    candidate_stub_review_rows = build_candidate_stub_review_rows(candidate_rows, family_by_id)
+    retained_candidate_keys = {
+        row["candidate_key"] for row in candidate_stub_review_rows if row["review_decision"] == "retain"
+    }
+    candidate_rows = [row for row in candidate_rows if row["bibtex_key"] in retained_candidate_keys]
+    candidate_rows_by_family = {
+        family_id: row for family_id, row in candidate_rows_by_family.items() if row["bibtex_key"] in retained_candidate_keys
+    }
     family_resolution = build_family_resolution(
         family_rows=family_rows,
         source_family_rows={row["source_family_id"]: row for row in source_family_output_rows},
@@ -4392,6 +5059,18 @@ def build_authority(
         for member in members:
             locator, locator_type = parse_locator(member.get("raw_reference_string", ""), family_id, family_row["family_label"])
             resolution = family_resolution[family_id]
+            resolution_status = resolution["resolution_status"]
+            notes = member.get("notes", "")
+            if resolution.get("source_family_id") == "sf-ippa":
+                resolution_status = "alias_or_variant_of_PPA"
+                notes = " ".join(
+                    part
+                    for part in (
+                        notes,
+                        "raw IPPA preserved; mapped to PPA-related source work",
+                    )
+                    if part
+                )
             crosswalk_rows.append(
                 {
                     "raw_reference_string": member.get("raw_reference_string", ""),
@@ -4402,13 +5081,13 @@ def build_authority(
                     "bibtex_key": resolution.get("bibtex_key", ""),
                     "locator": locator,
                     "locator_type": locator_type,
-                    "resolution_status": resolution["resolution_status"],
+                    "resolution_status": resolution_status,
                     "resolution_level": resolution["resolution_level"],
                     "match_type": resolution["match_type"],
                     "match_confidence": resolution.get("match_confidence", "low"),
                     "evidence": evidence_excerpt(resolution.get("notes", "") or resolution.get("evidence_source", "")),
                     "needs_human_review": resolution.get("needs_human_review", "true"),
-                    "notes": member.get("notes", ""),
+                    "notes": notes,
                 }
             )
         resolution = family_resolution[family_id]
@@ -4438,8 +5117,21 @@ def build_authority(
 
     crosswalk_rows.sort(key=lambda row: (row["family_id"], row["raw_reference_string"]))
     write_tsv(output_dir / "raw_reference_to_bibtex.tsv", crosswalk_rows, CROSSWALK_FIELDS)
-    source_work_locator_rows = build_source_work_locator_rows(crosswalk_rows)
+    source_work_authority_rows = build_source_work_authority_rows(
+        authority_rows=authority_rows,
+        source_family_rows=source_family_output_rows,
+        crosswalk_rows=crosswalk_rows,
+    )
+    write_tsv(output_dir / "source_work_authority.tsv", source_work_authority_rows, SOURCE_WORK_AUTHORITY_FIELDS)
+    source_work_locator_rows = build_source_work_locator_rows(crosswalk_rows, source_work_authority_rows)
     write_tsv(output_dir / "source_work_locator_systems.tsv", source_work_locator_rows, SOURCE_WORK_LOCATOR_SYSTEM_FIELDS)
+    raw_reference_crosswalk_audit_rows = build_raw_reference_crosswalk_audit_rows(
+        crosswalk_rows=crosswalk_rows,
+        source_work_authority_rows=source_work_authority_rows,
+        family_by_id=family_by_id,
+    )
+    write_tsv(output_dir / "raw_reference_crosswalk_audit.tsv", raw_reference_crosswalk_audit_rows, RAW_REFERENCE_CROSSWALK_AUDIT_FIELDS)
+    write_tsv(output_dir / "candidate_stub_review.tsv", candidate_stub_review_rows, CANDIDATE_STUB_REVIEW_FIELDS)
     write_tsv(output_dir / "ippa_occurrence_contexts.tsv", ippa_review["occurrence_rows"], IPPA_OCCURRENCE_CONTEXT_FIELDS)
     write_tsv(output_dir / "ippa_ppa_comparison.tsv", ippa_review["comparison_rows"], IPPA_PPA_COMPARISON_FIELDS)
     write_tsv(output_dir / "ippa_local_context_search.tsv", ippa_review["local_context_rows"], IPPA_LOCAL_CONTEXT_SEARCH_FIELDS)
@@ -4510,6 +5202,30 @@ def build_authority(
         if row["resolution_status"] in {"unresolved", "unresolved_after_targeted_search", "unresolved_after_exhaustive_search"}
     ]
     remaining_rows = [row for row in acronym_status_rows if row["acronym"] in REMAINING_ACRONYMS]
+    confirmed_acronym_expansions = [
+        row["acronym"] for row in priority_acronym_rows if row["resolution_status"] == "confirmed_expansion"
+    ]
+    probable_acronym_expansions = [
+        row["acronym"] for row in priority_acronym_rows if row["resolution_status"] == "probable_expansion"
+    ]
+    alias_or_variant_families = [
+        row["acronym"] for row in priority_acronym_rows if row["resolution_status"] == "alias_or_variant_of_PPA"
+    ]
+    internal_locator_systems = [
+        row["acronym"] for row in priority_acronym_rows if row["resolution_status"] in {"internal_locator", "internal_locator_system"}
+    ]
+    probable_locator_systems = [
+        row["acronym"] for row in priority_acronym_rows if row["resolution_status"] == "probable_locator_system"
+    ]
+    probable_private_locator_systems = [
+        row["acronym"] for row in priority_acronym_rows if row["resolution_status"] == "probable_private_luce_locator_system"
+    ]
+    not_acronyms = [row["acronym"] for row in priority_acronym_rows if row["resolution_status"] == "not_an_acronym"]
+    unresolved_after_exhaustive_search = [
+        row["acronym"]
+        for row in priority_acronym_rows
+        if row["resolution_status"] in {"genuinely_unresolved_after_occurrence_level_review", "unresolved_after_exhaustive_search"}
+    ]
     manual_seeds_confirmed_by_documentation_count = sum(
         1
         for acronym, seed_row in manual_acronym_seeds.items()
@@ -4563,8 +5279,22 @@ def build_authority(
         "high_frequency_reviewed_count": high_frequency_reviewed_count,
         "high_frequency_still_unresolved_count": high_frequency_still_unresolved_count,
         "priority_acronym_count": len(PRIORITY_ACRONYMS),
-        "confirmed_acronym_expansion_count": sum(1 for row in priority_acronym_rows if row["resolution_status"] == "confirmed_expansion"),
-        "probable_acronym_expansion_count": sum(1 for row in priority_acronym_rows if row["resolution_status"] == "probable_expansion"),
+        "confirmed_acronym_expansion_count": len(confirmed_acronym_expansions),
+        "confirmed_acronym_expansions": confirmed_acronym_expansions,
+        "probable_acronym_expansion_count": len(probable_acronym_expansions),
+        "probable_acronym_expansions": probable_acronym_expansions,
+        "alias_or_variant_family_count": len(alias_or_variant_families),
+        "alias_or_variant_families": alias_or_variant_families,
+        "internal_locator_system_count": len(internal_locator_systems),
+        "internal_locator_systems": internal_locator_systems,
+        "probable_locator_system_count": len(probable_locator_systems),
+        "probable_locator_systems": probable_locator_systems,
+        "probable_private_locator_system_count": len(probable_private_locator_systems),
+        "probable_private_locator_systems": probable_private_locator_systems,
+        "not_acronym_count": len(not_acronyms),
+        "not_acronyms": not_acronyms,
+        "unresolved_after_exhaustive_search_count": len(unresolved_after_exhaustive_search),
+        "unresolved_after_exhaustive_search": unresolved_after_exhaustive_search,
         "source_family_only_count": sum(1 for row in priority_acronym_rows if row["resolution_status"] == "source_family_only"),
         "contextual_usage_only_count": sum(1 for row in priority_acronym_rows if row["resolution_status"] == "contextual_usage_only"),
         "unresolved_acronym_count": sum(1 for row in priority_acronym_rows if row["resolution_status"] == "unresolved"),
@@ -4615,36 +5345,16 @@ def build_authority(
         "ippa_local_context_search_count": len(ippa_review["local_context_rows"]),
         "ippa_web_query_count": int(ippa_review["decision_row"].get("web_queries_reviewed", "0") or "0"),
         "ippa_final_decision": ippa_review["decision_row"].get("decision", ""),
+        "source_work_authority_count": len(source_work_authority_rows),
         "source_work_locator_system_count": len(source_work_locator_rows),
+        "raw_reference_crosswalk_audit_count": len(raw_reference_crosswalk_audit_rows),
+        "candidate_stub_review_count": len(candidate_stub_review_rows),
+        "candidate_stubs_promoted_count": sum(1 for row in candidate_stub_review_rows if row["review_decision"] == "promote"),
+        "candidate_stubs_suppressed_count": sum(1 for row in candidate_stub_review_rows if row["review_decision"] == "suppress"),
+        "candidate_stubs_retained_count": sum(1 for row in candidate_stub_review_rows if row["review_decision"] == "retain"),
         "pl_locator_semantics_checked": True,
         "iob_relationship_checked": True,
-        "unresolved_priority_acronyms": [
-            row["acronym"]
-            for row in priority_acronym_rows
-            if row["resolution_status"] in {"unresolved", "unresolved_after_targeted_search", "unresolved_after_exhaustive_search"}
-        ],
-        "weakly_resolved_priority_acronyms": [
-            row["acronym"]
-            for row in priority_acronym_rows
-            if row["resolution_status"]
-            in {
-                "alias_or_variant_of_PPA",
-                "probable_expansion",
-                "probable_locator_system",
-                "probable_private_luce_locator_system",
-                "probable_typo_for_PPA",
-                "source_family_only",
-                "source_family_with_unknown_expansion_but_known_function",
-                "contextual_usage_only",
-                "unresolved_after_targeted_search",
-                "unresolved_after_exhaustive_search",
-            }
-        ],
-        "confirmed_priority_acronyms": [
-            row["acronym"]
-            for row in priority_acronym_rows
-            if row["resolution_status"] in {"confirmed_expansion", "not_an_acronym", "internal_locator"}
-        ],
+        "unresolved_priority_acronyms": unresolved_after_exhaustive_search,
         "top_unresolved_families": top_families({"unresolved"}),
         "top_provisional_source_families": top_families({"source_family_resolved", "series_level_resolved"}, provisional_only=True),
         "top_needs_human_review_families": top_families({"needs_human_review"}),

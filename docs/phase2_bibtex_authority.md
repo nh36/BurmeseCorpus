@@ -30,7 +30,10 @@ The central review tables are now:
 - `final_acronym_web_searches.tsv`
 - `frasch_abbreviation_list_review.tsv`
 - `unresolved_acronym_dossier.tsv`
+- `source_work_authority.tsv`
 - `source_work_locator_systems.tsv`
+- `raw_reference_crosswalk_audit.tsv`
+- `candidate_stub_review.tsv`
 - `raw_reference_to_bibtex.tsv`
 - `bibtex_authority.tsv`
 - `high_frequency_resolution_plan.tsv`
@@ -43,7 +46,7 @@ The central review tables are now:
 `source_family_resolved` is **not** the same thing as knowing what an acronym expands to. The acronym layer now keeps those questions separate:
 
 - `source_family_authority.tsv` records the stable source-family or series mapping;
-- `acronym_resolution_status.tsv` records whether the abbreviation itself is a `confirmed_expansion`, `probable_expansion`, `probable_locator_system`, `probable_private_luce_locator_system`, `source_family_only`, `contextual_usage_only`, `internal_locator`, `not_an_acronym`, `unresolved_after_targeted_search`, `unresolved_after_exhaustive_search`, or still `unresolved`;
+- `acronym_resolution_status.tsv` records whether the abbreviation itself is a `confirmed_expansion`, `probable_expansion`, `alias_or_variant_of_PPA`, `probable_locator_system`, `probable_private_luce_locator_system`, `source_family_only`, `contextual_usage_only`, `internal_locator`, `not_an_acronym`, `unresolved_after_targeted_search`, `unresolved_after_exhaustive_search`, or still `unresolved`;
 - `remaining_acronym_worklist.tsv` is the focused queue for the last weak source acronyms, including files checked, search terms used, and the recommended conservative action;
 - `remaining_acronym_evidence.tsv` records one short targeted-evidence row per remaining acronym, including negative-search rows where nothing documentary was found;
 - `acronym_definition_candidates.tsv` records quote-level evidence from corpus documentation, Frasch's *Pagan: Stadt und Staat* materials, and `Bagan Epig Database.doc`.
@@ -59,7 +62,7 @@ For weak cases, keep the source family visible but keep the expansion visibly un
 - `probable_expansion` when the publication title is well supported but the exact abbreviation line is still inferred, as with `RDASB`;
 - `probable_locator_system` for references such as `MP` or `OR` that behave like collection or shelfmark systems;
 - `probable_private_luce_locator_system` for numbered Luce notebook references such as `Luce D 825` or `Luce J 2507`;
-- `unresolved_after_exhaustive_search` only when local and targeted web searches still fail to recover a distinct definition, as with `IPPA`.
+- `unresolved_after_exhaustive_search` only when local and targeted web searches plus occurrence-level review still fail to recover a distinct definition.
 
 Treat parenthetical remarks, note labels, and ordinary English words as false-positive territory, not as expansions. `spelling of inscription (OBI)`, `Date ... (List)`, or lowercase `or:` are usage/noise patterns; they belong in the false-positive audit, not in `acronym_resolution_status.tsv`.
 
@@ -144,9 +147,11 @@ The current pass makes the locator/work split explicit for high-frequency source
 
 Use these files together:
 
+- `source_work_authority.tsv` for the stable source-work layer that downstream normalization should target;
 - `source_family_authority.tsv` for the source-family row and its `source_work_key` / `related_source_work_key`;
 - `source_work_locator_systems.tsv` for the consolidated locator-system summary;
-- `raw_reference_to_bibtex.tsv` for per-reference locator parsing.
+- `raw_reference_to_bibtex.tsv` for per-reference locator parsing and raw-string preservation;
+- `raw_reference_crosswalk_audit.tsv` for high-occurrence crosswalk gaps or semantic mismatches.
 
 The key practical reading rules are now:
 
@@ -192,6 +197,18 @@ That review now writes:
 - `ippa_resolution_decision.tsv`
 
 The current classification is **alias_or_variant_of_PPA**: the raw structured OBI source preserves `IPPA` strings, but the occurrence pattern and Frasch abbreviation evidence tie that family to the same underlying work as `PPA`, *Inscriptions of Pagan, Pinya and Ava*. The builder therefore preserves raw `IPPA` strings in `raw_reference_to_bibtex.tsv`, links `sf-ippa` to `sf-ppa`, and routes both families to the same underlying `ppaCatalogue` work without inventing a separate BibTeX publication.
+
+## Acronym and source-family resolution status
+
+The acronym-resolution phase is now closed for the priority set. No priority acronym remains unresolved.
+
+- `IPPA` is treated as an **alias/variant locator family** into `PPA`, not as a separate bibliographic work.
+- Raw `IPPA` strings are preserved in `raw_reference_to_bibtex.tsv` even when they map to the shared `ppaCatalogue` source work.
+- `MP`, `OR`, `Luce D`, `Luce J`, `IOB`, and `Pl.` are treated as locator systems or private locator systems, not ordinary bibliography items.
+- `source_work_authority.tsv` is now the stable source-work layer, while `source_work_locator_systems.tsv` records how families such as `Pl.`, `IOB`, `PPA`/`IPPA`, `UB`, `SIP`, `UEM`, `TN`, `MP`, and `OR` point into those works or collections.
+- `candidate_stub_review.tsv` and `raw_reference_crosswalk_audit.tsv` are now the closing cleanup layer for suppressing non-work residue and surfacing remaining crosswalk issues without reopening the acronym hunt.
+
+The next phase should build on this consolidation for **bibliography/source-work normalization** and **translation-source discovery**, not by reopening broad acronym chasing.
 
 ## Authority vs candidate BibTeX
 
