@@ -101,6 +101,14 @@ def validate_bibtex_authority(
     final_acronym_web_searches_path: Path | None = None,
     frasch_abbreviation_list_review_path: Path | None = None,
     unresolved_acronym_dossier_path: Path | None = None,
+    ippa_occurrence_contexts_path: Path | None = None,
+    ippa_ppa_comparison_path: Path | None = None,
+    ippa_local_context_search_path: Path | None = None,
+    ippa_frasch_abbrev_neighbourhood_path: Path | None = None,
+    ippa_record_review_path: Path | None = None,
+    ippa_targeted_ocr_notes_path: Path | None = None,
+    ippa_resolution_decision_path: Path | None = None,
+    reference_occurrences_path: Path | None = None,
 ) -> dict:
     errors: list[str] = []
     authority_entries, authority_warnings = parse_bibtex_text(authority_bib_path.read_text(encoding="utf-8"), source_label=authority_bib_path.name)
@@ -132,12 +140,29 @@ def validate_bibtex_authority(
     final_acronym_web_search_rows = read_tsv(final_acronym_web_searches_path) if final_acronym_web_searches_path and final_acronym_web_searches_path.exists() else []
     frasch_abbreviation_list_review_rows = read_tsv(frasch_abbreviation_list_review_path) if frasch_abbreviation_list_review_path and frasch_abbreviation_list_review_path.exists() else []
     unresolved_acronym_dossier_rows = read_tsv(unresolved_acronym_dossier_path) if unresolved_acronym_dossier_path and unresolved_acronym_dossier_path.exists() else []
+    ippa_occurrence_context_rows = read_tsv(ippa_occurrence_contexts_path) if ippa_occurrence_contexts_path and ippa_occurrence_contexts_path.exists() else []
+    ippa_ppa_comparison_rows = read_tsv(ippa_ppa_comparison_path) if ippa_ppa_comparison_path and ippa_ppa_comparison_path.exists() else []
+    ippa_local_context_search_rows = read_tsv(ippa_local_context_search_path) if ippa_local_context_search_path and ippa_local_context_search_path.exists() else []
+    ippa_frasch_abbrev_neighbourhood_rows = (
+        read_tsv(ippa_frasch_abbrev_neighbourhood_path)
+        if ippa_frasch_abbrev_neighbourhood_path and ippa_frasch_abbrev_neighbourhood_path.exists()
+        else []
+    )
+    ippa_record_review_rows = read_tsv(ippa_record_review_path) if ippa_record_review_path and ippa_record_review_path.exists() else []
+    ippa_targeted_ocr_rows = read_tsv(ippa_targeted_ocr_notes_path) if ippa_targeted_ocr_notes_path and ippa_targeted_ocr_notes_path.exists() else []
+    ippa_resolution_decision_rows = read_tsv(ippa_resolution_decision_path) if ippa_resolution_decision_path and ippa_resolution_decision_path.exists() else []
+    reference_occurrence_rows = read_tsv(reference_occurrences_path) if reference_occurrences_path and reference_occurrences_path.exists() else []
     report = json.loads(report_path.read_text(encoding="utf-8")) if report_path and report_path.exists() else {}
     acronym_report = json.loads(acronym_report_path.read_text(encoding="utf-8")) if acronym_report_path and acronym_report_path.exists() else {}
 
     authority_keys = {entry["bibtex_key"] for entry in authority_entries}
     candidate_keys = {entry["bibtex_key"] for entry in candidate_entries}
     valid_keys = authority_keys | candidate_keys
+    locator_source_work_keys = {
+        row.get("source_work_key", "")
+        for row in source_family_rows
+        if row.get("source_work_key") and not row.get("authority_key")
+    }
     family_ids = {row["family_id"] for row in family_rows}
     source_family_ids = {row["source_family_id"] for row in source_family_rows if row.get("source_family_id")}
     external_keys = {row["bibtex_key"] for row in external_rows}
@@ -152,6 +177,7 @@ def validate_bibtex_authority(
     for row in remaining_acronym_evidence_rows:
         remaining_evidence_by_acronym.setdefault(row.get("acronym", ""), []).append(row)
     final_sprint_by_acronym = {row.get("acronym", ""): row for row in final_acronym_resolution_sprint_rows if row.get("acronym")}
+    ippa_decision_row = ippa_resolution_decision_rows[0] if ippa_resolution_decision_rows else {}
 
     duplicate_all = sorted(set(duplicate_keys(authority_entries) + duplicate_keys(candidate_entries) + list(authority_keys & candidate_keys)))
     if duplicate_all:
@@ -170,7 +196,12 @@ def validate_bibtex_authority(
                 errors.append(f"authority BibTeX matchedlocalreference on {entry['bibtex_key']} exceeds {MAX_MATCHED_LOCAL_REFERENCE_LENGTH} characters")
 
     for index, row in enumerate(crosswalk_rows, start=1):
-        if row["match_type"] != "no_match" and row["bibtex_key"] and row["bibtex_key"] not in valid_keys:
+        if (
+            row["match_type"] != "no_match"
+            and row["bibtex_key"]
+            and row["bibtex_key"] not in valid_keys
+            and row["bibtex_key"] not in locator_source_work_keys
+        ):
             errors.append(f"raw_reference_to_bibtex[{index}] references missing bibtex_key {row['bibtex_key']}")
         if row["family_id"] not in family_ids:
             errors.append(f"raw_reference_to_bibtex[{index}] references unknown family_id {row['family_id']}")
@@ -182,7 +213,7 @@ def validate_bibtex_authority(
             errors.append(f"raw_reference_to_bibtex[{index}] has invalid resolution_level {row.get('resolution_level')}")
         if row.get("source_family_id") and row.get("bibtex_key") in candidate_keys:
             errors.append(f"raw_reference_to_bibtex[{index}] maps a resolved source family to machine-stub candidate {row['bibtex_key']}")
-        if row.get("source_family_id") in {"sf-pl", "sf-iob", "sf-list", "sf-ppa", "sf-ub", "sf-mp", "sf-or", "sf-luce-d", "sf-luce-j"}:
+        if row.get("source_family_id") in {"sf-pl", "sf-iob", "sf-list", "sf-ppa", "sf-ippa", "sf-ub", "sf-mp", "sf-or", "sf-luce-d", "sf-luce-j"}:
             if not row.get("source_work_key"):
                 errors.append(f"raw_reference_to_bibtex[{index}] is missing source_work_key for locator-aware source family {row['source_family_id']}")
             if not row.get("locator"):
@@ -292,11 +323,16 @@ def validate_bibtex_authority(
             errors.append("acronym_resolution_status.tsv is missing")
         else:
             allowed_acronym_statuses = {
+                "alias_or_variant_of_PPA",
                 "confirmed_expansion",
+                "genuinely_unresolved_after_occurrence_level_review",
+                "internal_locator_system",
+                "probable_typo_for_PPA",
                 "probable_expansion",
                 "probable_locator_system",
                 "probable_private_luce_locator_system",
                 "source_family_only",
+                "source_family_with_unknown_expansion_but_known_function",
                 "contextual_usage_only",
                 "unresolved",
                 "unresolved_after_targeted_search",
@@ -306,9 +342,14 @@ def validate_bibtex_authority(
             }
             strong_statuses = {"confirmed_expansion", "probable_expansion"}
             review_required = {
+                "alias_or_variant_of_PPA",
+                "genuinely_unresolved_after_occurrence_level_review",
+                "internal_locator_system",
+                "probable_typo_for_PPA",
                 "probable_locator_system",
                 "probable_private_luce_locator_system",
                 "source_family_only",
+                "source_family_with_unknown_expansion_but_known_function",
                 "contextual_usage_only",
                 "unresolved",
                 "unresolved_after_targeted_search",
@@ -343,7 +384,16 @@ def validate_bibtex_authority(
                         errors.append(f"acronym_resolution_status[{index}] lacks explicit or strong definition evidence for {status}")
                     if len(row.get("best_evidence_quote", "")) > MAX_STRONG_DEFINITION_QUOTE_LENGTH:
                         errors.append(f"acronym_resolution_status[{index}] best_evidence_quote exceeds {MAX_STRONG_DEFINITION_QUOTE_LENGTH} characters")
-                if status in {"confirmed_expansion", "probable_expansion", "probable_locator_system", "probable_private_luce_locator_system"} and not row.get("current_expansion"):
+                if status in {
+                    "alias_or_variant_of_PPA",
+                    "confirmed_expansion",
+                    "internal_locator_system",
+                    "probable_expansion",
+                    "probable_locator_system",
+                    "probable_private_luce_locator_system",
+                    "probable_typo_for_PPA",
+                    "source_family_with_unknown_expansion_but_known_function",
+                } and not row.get("current_expansion"):
                     errors.append(f"acronym_resolution_status[{index}] {status} is missing current_expansion")
                 if row.get("definition_quality") == "explicit" and row.get("acronym") in PRIORITY_ACRONYMS and not row.get("current_expansion"):
                     errors.append(f"acronym_resolution_status[{index}] explicit priority acronym is missing current_expansion")
@@ -373,6 +423,9 @@ def validate_bibtex_authority(
                 if status in {"unresolved_after_targeted_search", "unresolved_after_exhaustive_search", "probable_locator_system", "probable_private_luce_locator_system"}:
                     if row.get("best_evidence_id") and not row.get("best_evidence_id").startswith("remaining-evidence:"):
                         errors.append(f"acronym_resolution_status[{index}] {status} must cite remaining targeted evidence")
+                if status in {"alias_or_variant_of_PPA", "probable_typo_for_PPA", "source_family_with_unknown_expansion_but_known_function"}:
+                    if row.get("best_evidence_id") and not row.get("best_evidence_id").startswith("remaining-evidence:"):
+                        errors.append(f"acronym_resolution_status[{index}] {status} must cite targeted remaining evidence")
                 if row.get("acronym") == "RDASB" and status == "unresolved_after_exhaustive_search":
                     errors.append("RDASB should not remain unresolved_after_exhaustive_search when publication-title evidence exists")
 
@@ -521,6 +574,72 @@ def validate_bibtex_authority(
             dossier_acronyms = {row.get("acronym", "") for row in unresolved_acronym_dossier_rows if row.get("acronym")}
             if dossier_acronyms != unresolved_status_acronyms:
                 errors.append("unresolved_acronym_dossier.tsv must contain exactly the unresolved_after_exhaustive_search final-sprint acronyms")
+            if "IPPA" in dossier_acronyms:
+                errors.append("unresolved_acronym_dossier.tsv should not include IPPA after alias/variant resolution")
+
+    check_ippa_artifacts = any(
+        path is not None
+        for path in (
+            ippa_occurrence_contexts_path,
+            ippa_ppa_comparison_path,
+            ippa_local_context_search_path,
+            ippa_frasch_abbrev_neighbourhood_path,
+            ippa_record_review_path,
+            ippa_targeted_ocr_notes_path,
+            ippa_resolution_decision_path,
+            reference_occurrences_path,
+        )
+    )
+    ippa_status_row = acronym_status_by_acronym.get("IPPA")
+    if ippa_status_row and check_ippa_artifacts:
+        if ippa_occurrence_contexts_path and not ippa_occurrence_contexts_path.exists():
+            errors.append("ippa_occurrence_contexts.tsv is missing")
+        if ippa_ppa_comparison_path and not ippa_ppa_comparison_path.exists():
+            errors.append("ippa_ppa_comparison.tsv is missing")
+        if ippa_local_context_search_path and not ippa_local_context_search_path.exists():
+            errors.append("ippa_local_context_search.tsv is missing")
+        if ippa_frasch_abbrev_neighbourhood_path and not ippa_frasch_abbrev_neighbourhood_path.exists():
+            errors.append("ippa_frasch_abbrev_neighbourhood.tsv is missing")
+        if ippa_record_review_path and not ippa_record_review_path.exists():
+            errors.append("ippa_record_review.tsv is missing")
+        if ippa_targeted_ocr_notes_path and not ippa_targeted_ocr_notes_path.exists():
+            errors.append("ippa_targeted_ocr_notes.tsv is missing")
+        if ippa_resolution_decision_path and not ippa_resolution_decision_path.exists():
+            errors.append("ippa_resolution_decision.tsv is missing")
+        if ippa_resolution_decision_rows and len(ippa_resolution_decision_rows) != 1:
+            errors.append("ippa_resolution_decision.tsv must contain exactly one decision row")
+        if ippa_occurrence_context_rows and reference_occurrence_rows:
+            expected_ippa_occurrences = sum(
+                1 for row in reference_occurrence_rows if (row.get("raw_reference_string", "") or "").strip().casefold().startswith("ippa")
+            )
+            if len(ippa_occurrence_context_rows) != expected_ippa_occurrences:
+                errors.append("ippa_occurrence_contexts.tsv must list every IPPA occurrence from reference_occurrences.tsv")
+        has_ippa_family_rows = any(row.get("source_family_id") == "sf-ippa" for row in source_family_rows) or any(
+            row.get("source_family_id") == "sf-ippa" for row in crosswalk_rows
+        )
+        if ippa_status_row.get("resolution_status") == "alias_or_variant_of_PPA":
+            if not ippa_decision_row or ippa_decision_row.get("decision") != "alias_or_variant_of_PPA":
+                errors.append("IPPA alias/variant status requires matching ippa_resolution_decision.tsv evidence")
+            if has_ippa_family_rows and not any(
+                row.get("source_family_id") == "sf-ippa" and row.get("raw_reference_string", "").startswith("IPPA")
+                for row in crosswalk_rows
+            ):
+                errors.append("raw_reference_to_bibtex.tsv must preserve raw IPPA strings when routing IPPA to PPA")
+            if has_ippa_family_rows and not any(
+                row.get("source_family_id") == "sf-ippa"
+                and row.get("source_work_key") == "ppaCatalogue"
+                and row.get("bibtex_key") == "ppaCatalogue"
+                for row in crosswalk_rows
+            ):
+                errors.append("IPPA alias routing must map sf-ippa references to ppaCatalogue in raw_reference_to_bibtex.tsv")
+        if ippa_status_row.get("resolution_status") == "genuinely_unresolved_after_occurrence_level_review":
+            if not ippa_occurrence_context_rows or not ippa_resolution_decision_rows:
+                errors.append("IPPA cannot remain unresolved without occurrence-level review artifacts")
+        if ippa_decision_row:
+            if not ippa_decision_row.get("evidence_summary"):
+                errors.append("ippa_resolution_decision.tsv must include an evidence_summary")
+            if ippa_decision_row.get("decision") in {"alias_or_variant_of_PPA", "probable_expansion"} and not ippa_decision_row.get("recommended_authority_update"):
+                errors.append("ippa_resolution_decision.tsv must include a recommended_authority_update for resolved IPPA")
 
     for index, row in enumerate(documentation_section_rows, start=1):
         heading = (row.get("section_heading", "") or "").casefold()
@@ -564,15 +683,26 @@ def validate_bibtex_authority(
                 elif not candidate_row or candidate_row.get("evidence_type") not in STRONG_DEFINITION_EVIDENCE_TYPES:
                     errors.append(f"source_family_authority[{index}] has non-strong definition evidence")
             if acronym_status in {
+                "alias_or_variant_of_PPA",
+                "internal_locator_system",
+                "probable_typo_for_PPA",
                 "probable_locator_system",
                 "probable_private_luce_locator_system",
                 "source_family_only",
+                "source_family_with_unknown_expansion_but_known_function",
                 "contextual_usage_only",
                 "unresolved",
                 "unresolved_after_targeted_search",
                 "unresolved_after_exhaustive_search",
             } and row.get("needs_human_review") != "true":
                 errors.append(f"source_family_authority[{index}] must keep needs_human_review=true for unresolved acronym state")
+            if row.get("abbreviation") == "IPPA":
+                if row.get("alias_of_source_family_id") != "sf-ppa":
+                    errors.append("source_family_authority must link IPPA to sf-ppa as an alias family")
+                if row.get("source_work_key") != "ppaCatalogue":
+                    errors.append("source_family_authority must link IPPA to ppaCatalogue")
+                if row.get("authority_key"):
+                    errors.append("source_family_authority should not create a standalone BibTeX authority for IPPA")
             if row.get("abbreviation") == "Pl.":
                 if row.get("locator_type") != "plate":
                     errors.append("source_family_authority must treat Pl. as locator_type=plate")
@@ -593,11 +723,15 @@ def validate_bibtex_authority(
         if report.get("priority_acronym_count") and report.get("priority_acronym_count") != len(PRIORITY_ACRONYMS):
             errors.append("report priority_acronym_count does not match configured priority acronym list")
         weak_statuses = {
+            "alias_or_variant_of_PPA",
             "probable_expansion",
             "probable_locator_system",
             "probable_private_luce_locator_system",
+            "probable_typo_for_PPA",
             "source_family_only",
+            "source_family_with_unknown_expansion_but_known_function",
             "contextual_usage_only",
+            "genuinely_unresolved_after_occurrence_level_review",
             "unresolved_after_targeted_search",
             "unresolved_after_exhaustive_search",
         }
@@ -834,6 +968,46 @@ def main() -> None:
         type=Path,
         default=Path("data/working/bibliography/bibtex_authority/unresolved_acronym_dossier.tsv"),
     )
+    parser.add_argument(
+        "--ippa-occurrence-contexts",
+        type=Path,
+        default=Path("data/working/bibliography/bibtex_authority/ippa_occurrence_contexts.tsv"),
+    )
+    parser.add_argument(
+        "--ippa-ppa-comparison",
+        type=Path,
+        default=Path("data/working/bibliography/bibtex_authority/ippa_ppa_comparison.tsv"),
+    )
+    parser.add_argument(
+        "--ippa-local-context-search",
+        type=Path,
+        default=Path("data/working/bibliography/bibtex_authority/ippa_local_context_search.tsv"),
+    )
+    parser.add_argument(
+        "--ippa-frasch-abbrev-neighbourhood",
+        type=Path,
+        default=Path("data/working/bibliography/bibtex_authority/ippa_frasch_abbrev_neighbourhood.tsv"),
+    )
+    parser.add_argument(
+        "--ippa-record-review",
+        type=Path,
+        default=Path("data/working/bibliography/bibtex_authority/ippa_record_review.tsv"),
+    )
+    parser.add_argument(
+        "--ippa-targeted-ocr-notes",
+        type=Path,
+        default=Path("data/working/bibliography/bibtex_authority/ippa_targeted_ocr_notes.tsv"),
+    )
+    parser.add_argument(
+        "--ippa-resolution-decision",
+        type=Path,
+        default=Path("data/working/bibliography/bibtex_authority/ippa_resolution_decision.tsv"),
+    )
+    parser.add_argument(
+        "--reference-occurrences",
+        type=Path,
+        default=Path("data/working/bibliography/reference_occurrences.tsv"),
+    )
     args = parser.parse_args()
 
     result = validate_bibtex_authority(
@@ -868,6 +1042,14 @@ def main() -> None:
         final_acronym_web_searches_path=args.final_acronym_web_searches,
         frasch_abbreviation_list_review_path=args.frasch_abbreviation_list_review,
         unresolved_acronym_dossier_path=args.unresolved_acronym_dossier,
+        ippa_occurrence_contexts_path=args.ippa_occurrence_contexts,
+        ippa_ppa_comparison_path=args.ippa_ppa_comparison,
+        ippa_local_context_search_path=args.ippa_local_context_search,
+        ippa_frasch_abbrev_neighbourhood_path=args.ippa_frasch_abbrev_neighbourhood,
+        ippa_record_review_path=args.ippa_record_review,
+        ippa_targeted_ocr_notes_path=args.ippa_targeted_ocr_notes,
+        ippa_resolution_decision_path=args.ippa_resolution_decision,
+        reference_occurrences_path=args.reference_occurrences,
     )
     print(json.dumps(result, indent=2, ensure_ascii=False))
     if not result["ok"]:

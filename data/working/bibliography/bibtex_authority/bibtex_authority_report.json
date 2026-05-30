@@ -5,8 +5,8 @@
   "machine_stub_count": 3,
   "suppressed_locator_stub_count": 737,
   "unresolved_family_count": 346,
-  "alias_resolved_family_count": 712,
-  "source_family_resolved_count": 15,
+  "alias_resolved_family_count": 713,
+  "source_family_resolved_count": 14,
   "series_level_resolved_count": 6,
   "work_level_resolved_count": 9,
   "confirmed_work_count": 4,
@@ -49,10 +49,8 @@
   ],
   "priority_acronyms_still_source_family_only": 0,
   "priority_acronyms_still_source_family_only_list": [],
-  "priority_acronyms_still_unresolved": 1,
-  "priority_acronyms_still_unresolved_list": [
-    "IPPA"
-  ],
+  "priority_acronyms_still_unresolved": 0,
+  "priority_acronyms_still_unresolved_list": [],
   "manual_review_packet_rows": 25,
   "remaining_acronym_count": 9,
   "remaining_acronyms_confirmed_count": 2,
@@ -60,18 +58,21 @@
   "remaining_acronyms_probable_locator_system_count": 2,
   "remaining_acronyms_probable_private_luce_locator_system_count": 2,
   "remaining_acronyms_unresolved_after_targeted_search_count": 0,
-  "remaining_acronyms_unresolved_after_exhaustive_search_count": 1,
+  "remaining_acronyms_unresolved_after_exhaustive_search_count": 0,
   "final_acronym_resolution_sprint_count": 6,
   "final_acronym_local_file_hit_count": 11,
-  "final_acronym_web_search_count": 6,
+  "final_acronym_web_search_count": 8,
   "frasch_abbreviation_list_review_count": 2,
-  "final_unresolved_acronym_dossier_count": 1,
+  "final_unresolved_acronym_dossier_count": 0,
+  "ippa_occurrence_count": 117,
+  "ippa_record_review_count": 116,
+  "ippa_local_context_search_count": 130,
+  "ippa_web_query_count": 3,
+  "ippa_final_decision": "alias_or_variant_of_PPA",
   "source_work_locator_system_count": 8,
   "pl_locator_semantics_checked": true,
   "iob_relationship_checked": true,
-  "unresolved_priority_acronyms": [
-    "IPPA"
-  ],
+  "unresolved_priority_acronyms": [],
   "weakly_resolved_priority_acronyms": [
     "A",
     "B",
@@ -180,11 +181,6 @@
       "occurrence_count": 131
     },
     {
-      "family_id": "fam-ippa-catalogue",
-      "family_label": "IPPA references",
-      "occurrence_count": 117
-    },
-    {
       "family_id": "fam-uem-catalogue",
       "family_label": "UEM references",
       "occurrence_count": 84
@@ -203,6 +199,11 @@
       "family_id": "fam-mm-catalogue",
       "family_label": "MM references",
       "occurrence_count": 23
+    },
+    {
+      "family_id": "fam-or-catalogue",
+      "family_label": "OR references",
+      "occurrence_count": 21
     }
   ],
   "top_needs_human_review_families": [

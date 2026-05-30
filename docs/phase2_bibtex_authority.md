@@ -177,6 +177,22 @@ The operating rule is conservative:
 - do **not** turn private or local locator systems into ordinary BibTeX works;
 - keep the irreducible residue explicit instead of hiding it behind source-family placeholders.
 
+## IPPA resolution
+
+`IPPA` was the final priority acronym kept open after the sprint, so it received an occurrence-level review rather than another acronym-only search.
+
+That review now writes:
+
+- `ippa_occurrence_contexts.tsv`
+- `ippa_ppa_comparison.tsv`
+- `ippa_local_context_search.tsv`
+- `ippa_frasch_abbrev_neighbourhood.tsv`
+- `ippa_record_review.tsv`
+- `ippa_targeted_ocr_notes.tsv`
+- `ippa_resolution_decision.tsv`
+
+The current classification is **alias_or_variant_of_PPA**: the raw structured OBI source preserves `IPPA` strings, but the occurrence pattern and Frasch abbreviation evidence tie that family to the same underlying work as `PPA`, *Inscriptions of Pagan, Pinya and Ava*. The builder therefore preserves raw `IPPA` strings in `raw_reference_to_bibtex.tsv`, links `sf-ippa` to `sf-ppa`, and routes both families to the same underlying `ppaCatalogue` work without inventing a separate BibTeX publication.
+
 ## Authority vs candidate BibTeX
 
 - `bibliography_authority.bib` holds conservative authority entries supported by imported external BibTeX, Frasch/local-source evidence, repository-backed source identification, or strong manual/source-family seeds.

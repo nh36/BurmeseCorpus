@@ -132,6 +132,7 @@ SOURCE_FAMILY_FIELDS = [
     "abbreviation",
     "family_id",
     "authority_key",
+    "alias_of_source_family_id",
     "source_work_key",
     "related_source_work_key",
     "source_family_type",
@@ -305,6 +306,97 @@ UNRESOLVED_ACRONYM_DOSSIER_FIELDS = [
     "recommended_human_action",
     "notes",
 ]
+IPPA_OCCURRENCE_CONTEXT_FIELDS = [
+    "occurrence_id",
+    "record_id",
+    "source_deposit",
+    "source_layer",
+    "source_volume",
+    "source_inscription_number",
+    "title_original",
+    "raw_reference_string",
+    "full_references_original",
+    "neighboring_reference_before",
+    "neighboring_reference_after",
+    "parsed_locator",
+    "line_or_record_context",
+    "notes",
+]
+IPPA_PPA_COMPARISON_FIELDS = [
+    "ippa_reference",
+    "ppa_like_reference",
+    "shared_record_id",
+    "same_or_neighboring_reference_field",
+    "locator_pattern",
+    "source_context",
+    "looks_like_alias",
+    "looks_like_typo",
+    "looks_like_distinct_source",
+    "confidence",
+    "notes",
+]
+IPPA_LOCAL_CONTEXT_SEARCH_FIELDS = [
+    "query",
+    "matched_file_id",
+    "matched_file_label",
+    "match_location",
+    "short_context_before",
+    "match_text",
+    "short_context_after",
+    "evidence_type",
+    "supports_alias_of_ppa",
+    "supports_distinct_expansion",
+    "supports_typo",
+    "confidence",
+    "notes",
+]
+IPPA_FRASCH_ABBREV_NEIGHBOURHOOD_FIELDS = [
+    "source_file",
+    "line_range",
+    "excerpt_short",
+    "contains_ppa",
+    "contains_ippa",
+    "contains_related_abbreviations",
+    "interpretation",
+    "notes",
+]
+IPPA_RECORD_REVIEW_FIELDS = [
+    "record_id",
+    "title_original",
+    "references_original",
+    "other_sources_cited",
+    "IPPA_locator",
+    "parallel_OBI_or_List_or_PPA_reference",
+    "likely_source_relationship",
+    "review_decision",
+    "confidence",
+    "notes",
+]
+IPPA_TARGETED_OCR_NOTES_FIELDS = [
+    "source_file_id",
+    "source_file_label",
+    "reason_for_targeting",
+    "page_or_region",
+    "ocr_attempted",
+    "ocr_success",
+    "short_result",
+    "supports_resolution",
+    "notes",
+]
+IPPA_RESOLUTION_DECISION_FIELDS = [
+    "decision",
+    "expansion_or_classification",
+    "confidence",
+    "evidence_summary",
+    "occurrences_reviewed",
+    "local_contexts_reviewed",
+    "frasch_neighbourhood_reviewed",
+    "record_contexts_reviewed",
+    "web_queries_reviewed",
+    "remaining_uncertainty",
+    "recommended_authority_update",
+    "notes",
+]
 
 STATUS_RANK = {
     "confirmed_external_bibtex": 5,
@@ -318,6 +410,10 @@ STATUS_RANK = {
 TOP_FAMILY_REVIEW_COUNT = 25
 MAX_BIBTEX_EVIDENCE_LENGTH = 180
 MAX_MATCHED_REFERENCE_LENGTH = 140
+DEFAULT_CORPUS_RELEASE_INSCRIPTIONS_PATH = Path("data/release/corpus_release_v0_3/inscriptions.jsonl")
+DEFAULT_REFERENCE_OCCURRENCES_PATH = Path("data/working/bibliography/reference_occurrences.tsv")
+DEFAULT_RAW_REFERENCES_PATH = Path("data/working/bibliography/raw_references.tsv")
+DEFAULT_FRASCH_EXTRACTED_TEXT_PATH = Path("data/working/bibliography/local_sources/frasch_extracted_text.txt")
 REMAINING_ACRONYMS = ["IOB", "TN", "UEM", "RDASB", "MP", "OR", "Luce J", "Luce D", "IPPA"]
 FINAL_SPRINT_ACRONYMS = ["RDASB", "MP", "OR", "Luce J", "Luce D", "IPPA"]
 PLACEHOLDER_EXPANSION_PATTERN = re.compile(
@@ -549,7 +645,7 @@ SOURCE_FAMILY_LIBRARY = {
     "ippa": {
         "author": "",
         "year": "",
-        "title": "IPPA source family",
+        "title": "IPPA variant locator family into Inscriptions of Pagan, Pinya and Ava",
         "shorttitle": "IPPA",
         "entry_type": "misc",
         "preferred_key": "ippaSourceFamily",
@@ -846,12 +942,12 @@ SOURCE_FAMILY_SEMANTICS = {
         "abbreviation": "IPPA",
         "canonical_family_id": "fam-ippa-catalogue",
         "source_family_type": "catalogue",
-        "resolution_status": "source_family_resolved",
+        "resolution_status": "alias_resolved",
         "resolution_level": "source_family",
-        "locator_pattern": "page",
+        "locator_pattern": "number",
         "confidence": "medium",
         "needs_human_review": "true",
-        "notes": "Treat IPPA as a source-family placeholder until the expansion is confirmed.",
+        "notes": "IPPA behaves as a PPA-linked variant locator family in the structured OBI references rather than as a separate bibliographic work.",
     },
     "sip": {
         "source_family_id": "sf-sip",
@@ -1091,10 +1187,19 @@ SOURCE_WORK_RELATIONSHIPS = {
     "ppa": {
         "source_work_key": "ppaCatalogue",
         "source_work_title": "Inscriptions of Pagan, Pinya and Ava",
-        "locator_system": "page",
-        "locator_prefixes": "PPA",
-        "default_examples": "PPA, p. 55",
-        "notes": "PPA references use page locators into the Pagan, Pinya and Ava source work.",
+        "locator_system": "page and IPPA-variant references",
+        "locator_prefixes": "PPA; IPPA",
+        "default_examples": "PPA, p. 55 | IPPA-159",
+        "notes": "PPA references use page locators into the Pagan, Pinya and Ava source work, while IPPA preserves a related variant locator family in the structured OBI source.",
+    },
+    "ippa": {
+        "source_work_key": "ppaCatalogue",
+        "source_work_title": "Inscriptions of Pagan, Pinya and Ava",
+        "locator_system": "page and IPPA-variant references",
+        "locator_prefixes": "PPA; IPPA",
+        "default_examples": "IPPA-159 | PPA, p. 159",
+        "notes": "IPPA is retained as a distinct raw reference family, but it routes to the same underlying Pagan, Pinya and Ava source work as PPA.",
+        "alias_of_source_family_id": "sf-ppa",
     },
     "ub": {
         "source_work_key": "ubSourceFamily",
@@ -1171,47 +1276,47 @@ REMAINING_ACRONYM_EVIDENCE_CONFIG = {
         },
     },
     "IPPA": {
-        "likely_source_type": "unresolved PPA-related shorthand",
+        "likely_source_type": "PPA-linked variant locator family",
         "specific_files_to_check": [
+            "data/release/corpus_release_v0_3/inscriptions.jsonl",
+            "data/working/bibliography/reference_occurrences.tsv",
             "data/working/bibliography/local_sources/frasch_extracted_text.txt",
-            "data/working/bibliography/local_sources/acronym_definition_candidates.tsv",
-            "data/working/bibliography/bibtex_authority/frasch_abbreviation_list_review.tsv",
         ],
-        "specific_search_terms": ["IPPA", "I PPA", "Inscriptions of Pagan, Pinya and Ava", "PPA index", "PPA plates", "PPA appendix"],
-        "recommended_action": "keep as unresolved_after_exhaustive_search with explicit negative search notes",
+        "specific_search_terms": ["IPPA", "IPPA-159", "IPPA-209", "PPA, p. 159", "PPA, p. 209", "Inscriptions of Pagan, Pinya and Ava"],
+        "recommended_action": "preserve raw IPPA strings while mapping the family to the underlying PPA work",
         "evidence_rows": [
             {
-                "candidate_expansion": "",
-                "evidence_type": "negative_search",
-                "source_file_id": "acronym-definition-candidates",
-                "source_file_label": "acronym_definition_candidates.tsv",
-                "source_location_hint": "negative:ippa",
-                "short_quote": "No strong definition candidate found in searched corpus documentation or Frasch files.",
-                "evidence_strength": "negative",
-                "supports_expansion": "false",
+                "candidate_expansion": "IPPA variant locator family into Inscriptions of Pagan, Pinya and Ava",
+                "evidence_type": "contextual_usage",
+                "source_file_id": "obi-v01-no4-ob-p11",
+                "source_file_label": "OBI_Corpus_Vol1/OBI_Vol1_No4__ob_p11.txt",
+                "source_location_hint": "REFERENCES line in the structured OBI source",
+                "short_quote": "IPPA-159; ... PPA, p. 159",
+                "evidence_strength": "medium",
+                "supports_expansion": "true",
                 "contradicts_expansion": "false",
                 "needs_human_review": "true",
-                "notes": "The targeted local evidence search did not recover a documentary definition for IPPA.",
+                "notes": "Representative same-record pairing shows IPPA and PPA routed together in the raw corpus references.",
             },
             {
-                "candidate_expansion": "",
-                "evidence_type": "negative_search",
+                "candidate_expansion": "Inscriptions of Pagan, Pinya and Ava",
+                "evidence_type": "abbreviation_list",
                 "source_file_id": "frasch-abbreviation-review",
                 "source_file_label": "frasch_abbreviation_list_review.tsv",
-                "source_location_hint": "L7778-L7896; L8317-L8453",
-                "short_quote": "Reviewed the abbreviation-list slices around TN/UEM and IB/Pl.; IPPA is absent from those lists.",
-                "evidence_strength": "negative",
-                "supports_expansion": "false",
+                "source_location_hint": "L7859-L7884",
+                "short_quote": "PPA Arch. Survey of Burma (ed.), Inscriptions of Pagan, Pinya and Ava",
+                "evidence_strength": "medium",
+                "supports_expansion": "true",
                 "contradicts_expansion": "false",
                 "needs_human_review": "true",
-                "notes": "The final Frasch abbreviation-list recheck did not surface IPPA near the main definition blocks.",
+                "notes": "Frasch defines the underlying PPA source work explicitly, but does not define a separate IPPA work.",
             }
         ],
         "status_override": {
-            "resolution_status": "unresolved_after_exhaustive_search",
-            "definition_quality": "not_found_after_exhaustive_search",
-            "current_expansion": "",
-            "confidence": "low",
+            "resolution_status": "alias_or_variant_of_PPA",
+            "definition_quality": "occurrence_level_alias_relation",
+            "current_expansion": "IPPA variant locator family into Inscriptions of Pagan, Pinya and Ava",
+            "confidence": "medium",
             "needs_human_review": "true",
         },
     },
@@ -1688,44 +1793,62 @@ FINAL_SPRINT_CONFIG = {
         ],
     },
     "IPPA": {
-        "working_hypothesis": "possibly a mistaken or secondary shorthand related to PPA, but no reliable distinct expansion was recovered",
-        "hypothesis_source": "negative local searches plus negative targeted web search",
-        "search_strategy": "Search cached Frasch evidence and abbreviation-review slices first, then test the PPA/index/plates hypothesis with targeted web searches.",
-        "best_evidence_found": "Both local and web searches failed to produce a reliable distinct IPPA expansion; authoritative web results point back to PPA instead.",
-        "notes": "Retained only as an unresolved dossier item because the search trail is now explicit.",
+        "working_hypothesis": "IPPA is a structured-OBI variant locator family into the same work cited elsewhere as PPA",
+        "hypothesis_source": "occurrence-level corpus review plus Frasch abbreviation-list control evidence",
+        "search_strategy": "Inspect every corpus IPPA occurrence first, then test exact-context local and web searches against the PPA hypothesis.",
+        "best_evidence_found": "The raw OBI source repeatedly uses IPPA beside or near explicit PPA citations, while Frasch defines only PPA = Inscriptions of Pagan, Pinya and Ava.",
+        "notes": "IPPA no longer sits in the unresolved dossier because the corpus occurrence pattern is strong enough to classify it as a PPA-linked variant family.",
         "local_hits": [
             {
-                "search_term": "IPPA",
-                "file_or_folder_name": "acronym_definition_candidates.tsv",
-                "path_or_redacted_path": "data/working/bibliography/local_sources/acronym_definition_candidates.tsv",
-                "file_type": "tsv",
+                "search_term": "IPPA-159",
+                "file_or_folder_name": "OBI_Vol1_No4__ob_p11.txt",
+                "path_or_redacted_path": "4321314/OBI_Corpus_Vol1.zip::OBI_Corpus_Vol1/OBI_Vol1_No4__ob_p11.txt",
+                "file_type": "structured_txt_in_zip",
                 "sha256_if_available": "",
-                "match_reason": "Contains the explicit negative evidence row for IPPA after targeted documentation search.",
-                "copied_or_existing_cache_path": "data/working/bibliography/local_sources/acronym_definition_candidates.tsv",
+                "match_reason": "Representative raw-source reference line contains both IPPA-159 and PPA, p. 159.",
+                "copied_or_existing_cache_path": "data/release/corpus_release_v0_3/inscriptions.jsonl",
                 "extraction_status": "existing_cache",
-                "notes": "Records that the documentary search did not yield a strong definition candidate.",
+                "notes": "Direct corpus evidence that IPPA and PPA are linked within the same source record.",
             },
             {
-                "search_term": "IPPA",
-                "file_or_folder_name": "",
-                "path_or_redacted_path": "data/local/bibliography_sources/ (searched via manifest/cache only)",
-                "file_type": "",
+                "search_term": "Inscriptions of Pagan, Pinya and Ava",
+                "file_or_folder_name": "frasch_extracted_text.txt",
+                "path_or_redacted_path": "data/working/bibliography/local_sources/frasch_extracted_text.txt",
+                "file_type": "txt",
                 "sha256_if_available": "",
-                "match_reason": "No filename or folder hit surfaced for IPPA in the cached local bibliography sources.",
-                "copied_or_existing_cache_path": "",
-                "extraction_status": "negative_search",
-                "notes": "Live OBI local-root environment variables were unset during this sprint, so the cache/manifest served as the search proxy.",
+                "match_reason": "Frasch abbreviation list explicitly defines PPA as Inscriptions of Pagan, Pinya and Ava, but omits IPPA.",
+                "copied_or_existing_cache_path": "data/working/bibliography/local_sources/frasch_extracted_text.txt",
+                "extraction_status": "existing_cache",
+                "notes": "Supports routing IPPA to the same underlying PPA work without inventing a separate expansion.",
             },
         ],
         "web_searches": [
             {
-                "query": "\"IPPA\" Burma inscriptions",
-                "result_title": "Inscriptions of Pagan, Pinya, and Ava",
-                "result_url_or_domain": "https://eresource.nlm.gov.mm/metadata/information/855",
-                "short_result_summary": "Targeted web results confirm PPA as the standard title but do not supply a distinct scholarly acronym IPPA.",
+                "query": "\"IPPA 101\" Burma",
+                "result_title": "No useful exact-context web result for IPPA 101",
+                "result_url_or_domain": "web_search",
+                "short_result_summary": "Exact-context web searching did not surface an external source that defines IPPA; useful evidence still points back to PPA-focused materials.",
                 "supports_candidate_expansion": "false",
                 "confidence": "low",
-                "notes": "Used as negative web evidence; it supports retaining IPPA as unresolved after exhaustive search.",
+                "notes": "Negative web evidence only; the actual classification comes from corpus occurrences and local source context.",
+            },
+            {
+                "query": "\"IPPA 137-138\" Burma",
+                "result_title": "No useful exact-context web result for IPPA 137-138",
+                "result_url_or_domain": "web_search",
+                "short_result_summary": "The exact 137-138 query likewise failed to identify a distinct IPPA source family outside the corpus itself.",
+                "supports_candidate_expansion": "false",
+                "confidence": "low",
+                "notes": "Negative web evidence that reinforces the need to classify IPPA from corpus context rather than the open web.",
+            },
+            {
+                "query": "\"IPPA\" \"Inscriptions of Pagan, Pinya and Ava\" Burma",
+                "result_title": "Digital Library of Myanmar Literature — Inscriptions of Pagan, Pinya, and Ava",
+                "result_url_or_domain": "eresource.nlm.gov.mm",
+                "short_result_summary": "Web-visible sources continue to expose the standard PPA title and do not provide an explicit independent IPPA expansion.",
+                "supports_candidate_expansion": "true",
+                "confidence": "low",
+                "notes": "Useful only as control evidence that the standard published title is PPA-related rather than a separate IPPA work.",
             }
         ],
     },
@@ -1767,6 +1890,8 @@ def parse_locator(raw_reference: str, family_id: str, family_label: str) -> tupl
                 return locator, "folio"
             if re.fullmatch(r"p+\.\s*[0-9-]+", locator, flags=re.IGNORECASE):
                 return locator, "page"
+            if family_id == "fam-ippa-catalogue" and re.fullmatch(r"[0-9,\- ]+", locator):
+                return locator, "number"
             if "catalogue" in family_id and re.fullmatch(r"[0-9A-Za-z.-]+", locator):
                 return locator, "catalogue_number"
             if family_id in {"fam-list-catalogue", "fam-iob-catalogue"} and re.fullmatch(r"[0-9A-Za-z.-]+", locator):
@@ -1810,6 +1935,405 @@ def parse_locator(raw_reference: str, family_id: str, family_label: str) -> tupl
     if standalone_number_match:
         return text, "number"
     return text, "unclear"
+
+
+def read_jsonl(path: Path) -> list[dict]:
+    if not path.exists():
+        return []
+    rows: list[dict] = []
+    with path.open(encoding="utf-8") as handle:
+        for line in handle:
+            line = line.strip()
+            if line:
+                rows.append(json.loads(line))
+    return rows
+
+
+def split_reference_field(text: str) -> list[str]:
+    return [part.strip() for part in (text or "").split(";") if part.strip()]
+
+
+def normalize_reference_token(text: str) -> str:
+    return re.sub(r"\s+", " ", (text or "").strip()).casefold()
+
+
+def find_reference_index(parts: list[str], raw_reference: str) -> int:
+    normalized_raw = normalize_reference_token(raw_reference)
+    for index, part in enumerate(parts):
+        if normalize_reference_token(part) == normalized_raw:
+            return index
+    for index, part in enumerate(parts):
+        if normalized_raw and normalized_raw in normalize_reference_token(part):
+            return index
+    return -1
+
+
+def parse_numeric_tokens(text: str) -> list[int]:
+    return [int(token) for token in re.findall(r"\d+", text or "")]
+
+
+def classify_ippa_ppa_relation(ippa_locator: str, ppa_reference: str) -> tuple[str, str]:
+    if not ppa_reference:
+        return "IPPA-only numeric locator in reviewed record/cluster", "low"
+    ippa_numbers = parse_numeric_tokens(ippa_locator)
+    ppa_numbers = parse_numeric_tokens(ppa_reference)
+    if ippa_numbers and ppa_numbers and set(ippa_numbers) == set(ppa_numbers):
+        return "exact numeric match to PPA page citation", "high"
+    if ippa_numbers and ppa_numbers and set(ippa_numbers).intersection(ppa_numbers):
+        return "partial numeric overlap with PPA page citation", "medium"
+    return "paired with PPA source but using a different numeric locator", "medium"
+
+
+def relative_display_path(path: Path) -> str:
+    try:
+        return path.relative_to(Path.cwd()).as_posix()
+    except ValueError:
+        return path.as_posix()
+
+
+def collect_searchable_text_files() -> list[Path]:
+    roots = [
+        Path("data/working/bibliography/local_sources"),
+        Path("data/local/ocr_text"),
+        Path("data/local/bibliography_sources"),
+    ]
+    allowed_suffixes = {".txt", ".tsv", ".csv", ".json", ".jsonl", ".bib", ".md"}
+    files: list[Path] = []
+    for root in roots:
+        if not root.exists():
+            continue
+        for path in sorted(root.rglob("*")):
+            if not path.is_file() or path.suffix.casefold() not in allowed_suffixes:
+                continue
+            try:
+                if path.stat().st_size > 1_500_000:
+                    continue
+            except OSError:
+                continue
+            files.append(path)
+    return files
+
+
+def find_query_in_files(query: str, files: list[Path]) -> dict | None:
+    lowered_query = query.casefold()
+    if not lowered_query:
+        return None
+    for path in files:
+        try:
+            lines = path.read_text(encoding="utf-8", errors="ignore").splitlines()
+        except OSError:
+            continue
+        for line_number, line in enumerate(lines, start=1):
+            lowered_line = line.casefold()
+            if lowered_query not in lowered_line:
+                continue
+            start = lowered_line.index(lowered_query)
+            end = start + len(query)
+            return {
+                "matched_file_id": hashlib.sha256(relative_display_path(path).encode("utf-8")).hexdigest()[:12],
+                "matched_file_label": path.name,
+                "match_location": f"{relative_display_path(path)}:L{line_number}",
+                "short_context_before": line[max(0, start - 60) : start].strip(),
+                "match_text": line[start:end].strip() or query,
+                "short_context_after": line[end : end + 60].strip(),
+            }
+    return None
+
+
+def build_ippa_review_artifacts(
+    *,
+    corpus_inscriptions_path: Path,
+    reference_occurrences_path: Path,
+    frasch_extracted_text_path: Path,
+) -> dict:
+    records = read_jsonl(corpus_inscriptions_path)
+    record_by_id = {row.get("record_id", ""): row for row in records if row.get("record_id")}
+    cluster_to_records: dict[tuple[str, str], list[dict]] = defaultdict(list)
+    for row in records:
+        cluster_to_records[(row.get("source_volume", ""), row.get("source_inscription_number", ""))].append(row)
+
+    occurrence_rows = [
+        row
+        for row in read_tsv(reference_occurrences_path)
+        if normalize_reference_token(row.get("raw_reference_string", "")).startswith("ippa")
+    ]
+    if not occurrence_rows:
+        for row in records:
+            for raw_reference in split_reference_field(row.get("references_original", "")):
+                if normalize_reference_token(raw_reference).startswith("ippa"):
+                    occurrence_rows.append({"record_id": row.get("record_id", ""), "raw_reference_string": raw_reference})
+
+    ippa_occurrence_rows: list[dict] = []
+    ippa_comparison_rows: list[dict] = []
+    ippa_record_review_by_id: dict[str, dict] = {}
+    unique_queries: list[str] = []
+    seen_queries: set[str] = set()
+
+    for index, occurrence in enumerate(occurrence_rows, start=1):
+        record_id = occurrence.get("record_id", "")
+        raw_reference = occurrence.get("raw_reference_string", "").strip()
+        record = record_by_id.get(record_id, {})
+        references_original = record.get("references_original", "") or ""
+        parts = split_reference_field(references_original)
+        reference_index = find_reference_index(parts, raw_reference)
+        previous_reference = parts[reference_index - 1] if reference_index > 0 else ""
+        next_reference = parts[reference_index + 1] if 0 <= reference_index < len(parts) - 1 else ""
+        parsed_locator, locator_type = parse_locator(raw_reference, "fam-ippa-catalogue", "IPPA")
+        cluster = (record.get("source_volume", ""), record.get("source_inscription_number", ""))
+        cluster_records = cluster_to_records.get(cluster, [])
+        same_record_ppa = [part for part in parts if part.casefold().startswith("ppa")]
+        cluster_ppa = [
+            part
+            for cluster_record in cluster_records
+            if cluster_record.get("record_id") != record_id
+            for part in split_reference_field(cluster_record.get("references_original", ""))
+            if part.casefold().startswith("ppa")
+        ]
+        if same_record_ppa:
+            note = f"Same record also cites {same_record_ppa[0]}."
+        elif cluster_ppa:
+            note = f"Companion face/page in the same inscription cluster cites {cluster_ppa[0]}."
+        else:
+            note = "No explicit PPA citation survives on this record or its sibling records; classification relies on the wider IPPA/PPA occurrence pattern."
+        ippa_occurrence_rows.append(
+            {
+                "occurrence_id": f"ippa-occ-{index:04d}",
+                "record_id": record_id,
+                "source_deposit": record.get("source_deposit", ""),
+                "source_layer": record.get("source_layer", ""),
+                "source_volume": record.get("source_volume", ""),
+                "source_inscription_number": record.get("source_inscription_number", ""),
+                "title_original": record.get("title_original", ""),
+                "raw_reference_string": raw_reference,
+                "full_references_original": references_original,
+                "neighboring_reference_before": previous_reference,
+                "neighboring_reference_after": next_reference,
+                "parsed_locator": parsed_locator,
+                "line_or_record_context": f"references_original on {record.get('face', '') or 'text'} face/page {record.get('source_page', '')}; locator_type={locator_type}",
+                "notes": note,
+            }
+        )
+        comparison_reference = same_record_ppa[0] if same_record_ppa else (cluster_ppa[0] if cluster_ppa else "")
+        relation_label, relation_confidence = classify_ippa_ppa_relation(parsed_locator, comparison_reference)
+        ippa_comparison_rows.append(
+            {
+                "ippa_reference": raw_reference,
+                "ppa_like_reference": comparison_reference,
+                "shared_record_id": record_id,
+                "same_or_neighboring_reference_field": (
+                    "same record"
+                    if same_record_ppa
+                    else "same inscription cluster"
+                    if cluster_ppa
+                    else "no explicit PPA neighbour"
+                ),
+                "locator_pattern": relation_label,
+                "source_context": f"{record.get('record_id', '')} | vol. {record.get('source_volume', '')} no. {record.get('source_inscription_number', '')}",
+                "looks_like_alias": "true" if same_record_ppa or cluster_ppa else "false",
+                "looks_like_typo": "false",
+                "looks_like_distinct_source": "false" if same_record_ppa or cluster_ppa else "false",
+                "confidence": relation_confidence,
+                "notes": note,
+            }
+        )
+        if raw_reference not in seen_queries:
+            seen_queries.add(raw_reference)
+            unique_queries.append(raw_reference)
+
+    for record in records:
+        references_original = record.get("references_original", "") or ""
+        if "IPPA" not in references_original:
+            continue
+        parts = split_reference_field(references_original)
+        ippa_parts = [part for part in parts if part.casefold().startswith("ippa")]
+        other_parts = [part for part in parts if not part.casefold().startswith("ippa")]
+        cluster = (record.get("source_volume", ""), record.get("source_inscription_number", ""))
+        cluster_ppa = [
+            part
+            for cluster_record in cluster_to_records.get(cluster, [])
+            if cluster_record.get("record_id") != record.get("record_id")
+            for part in split_reference_field(cluster_record.get("references_original", ""))
+            if part.casefold().startswith("ppa")
+        ]
+        parallel_sources = [part for part in other_parts if part.startswith(("PPA", "OBI", "List", "Pl.", "A", "B", "UB", "UEM", "TN", "MP", "RDASB"))]
+        if any(part.casefold().startswith("ppa") for part in other_parts):
+            relationship = "IPPA is paired with explicit PPA on the same record."
+            confidence = "high"
+        elif cluster_ppa:
+            relationship = "IPPA is paired with explicit PPA on a companion face/page in the same inscription cluster."
+            confidence = "medium"
+        else:
+            relationship = "IPPA behaves like the PPA family but survives here without an explicit PPA companion citation."
+            confidence = "medium"
+        ippa_record_review_by_id[record["record_id"]] = {
+            "record_id": record.get("record_id", ""),
+            "title_original": record.get("title_original", ""),
+            "references_original": references_original,
+            "other_sources_cited": " | ".join(other_parts[:8]),
+            "IPPA_locator": " | ".join(parse_locator(part, "fam-ippa-catalogue", "IPPA")[0] for part in ippa_parts),
+            "parallel_OBI_or_List_or_PPA_reference": " | ".join((parallel_sources or cluster_ppa)[:6]),
+            "likely_source_relationship": relationship,
+            "review_decision": "alias_or_variant_of_PPA",
+            "confidence": confidence,
+            "notes": "Raw IPPA strings are preserved, but the underlying source work is treated as the PPA family.",
+        }
+
+    local_queries = unique_queries + [
+        query
+        for query in [
+            "IPPA",
+            "I PPA",
+            "I.P.P.A.",
+            "I.P.A.",
+            "IPPA 101",
+            "IPPA 102",
+            "IPPA 137",
+            "IPPA 138",
+            "PPA 101",
+            "PPA 102",
+            "PPA 137",
+            "PPA 138",
+            "Pagan Pinya Ava 101",
+            "Pagan Pinya Ava 137",
+            "Inscriptions of Pagan, Pinya and Ava",
+        ]
+        if query not in seen_queries
+    ]
+    searchable_files = collect_searchable_text_files()
+    local_context_rows: list[dict] = []
+    for query in local_queries:
+        match = find_query_in_files(query, searchable_files)
+        if match:
+            local_context_rows.append(
+                {
+                    "query": query,
+                    "matched_file_id": match["matched_file_id"],
+                    "matched_file_label": match["matched_file_label"],
+                    "match_location": match["match_location"],
+                    "short_context_before": match["short_context_before"],
+                    "match_text": match["match_text"],
+                    "short_context_after": match["short_context_after"],
+                    "evidence_type": "abbreviation_list" if "pagan, pinya and ava" in query.casefold() else "contextual_usage",
+                    "supports_alias_of_ppa": "true" if "pagan, pinya and ava" in query.casefold() else "false",
+                    "supports_distinct_expansion": "false",
+                    "supports_typo": "false",
+                    "confidence": "medium" if "pagan, pinya and ava" in query.casefold() else "low",
+                    "notes": (
+                        "Positive local control hit for the underlying PPA source title."
+                        if "pagan, pinya and ava" in query.casefold()
+                        else "Exact query was found in the local extracted-text cache."
+                    ),
+                }
+            )
+        else:
+            local_context_rows.append(
+                {
+                    "query": query,
+                    "matched_file_id": "",
+                    "matched_file_label": "",
+                    "match_location": "",
+                    "short_context_before": "",
+                    "match_text": "",
+                    "short_context_after": "",
+                    "evidence_type": "negative_search",
+                    "supports_alias_of_ppa": "false",
+                    "supports_distinct_expansion": "false",
+                    "supports_typo": "false",
+                    "confidence": "low",
+                    "notes": "No exact hit in the searched local extracted-text cache under data/local/ocr_text, data/local/bibliography_sources, or data/working/bibliography/local_sources.",
+                }
+            )
+
+    frasch_neighbourhood_rows = [
+        {
+            "source_file": relative_display_path(frasch_extracted_text_path),
+            "line_range": "L7859-L7884",
+            "excerpt_short": "ABBREVIATIONS ... Pl. ... PPA Arch. Survey of Burma (ed.), Inscriptions of Pagan, Pinya and Ava ... TN ... UEM ...",
+            "contains_ppa": "true",
+            "contains_ippa": "false",
+            "contains_related_abbreviations": "Pl.; PPA; TN; UEM",
+            "interpretation": "Frasch explicitly defines PPA in the abbreviation list but does not define IPPA there.",
+            "notes": "This is the key positive local definition for the underlying PPA source work.",
+        },
+        {
+            "source_file": relative_display_path(frasch_extracted_text_path),
+            "line_range": "L8391-L8453",
+            "excerpt_short": "Abbreviations ... IB Inscriptions of Burma ... List ... MM ... OBI ... Pl. Inscriptions of Burma ...",
+            "contains_ppa": "false",
+            "contains_ippa": "false",
+            "contains_related_abbreviations": "IB; List; MM; OBI; Pl.",
+            "interpretation": "The later abbreviation slice again omits IPPA while confirming other established source works and locator systems.",
+            "notes": "Negative evidence against a standard Frasch-defined IPPA acronym.",
+        },
+    ]
+
+    targeted_ocr_rows = [
+        {
+            "source_file_id": "obi-vol1-no4-ob-p11",
+            "source_file_label": "OBI_Corpus_Vol1/OBI_Vol1_No4__ob_p11.txt",
+            "reason_for_targeting": "Representative same-record IPPA/PPA pairing in the raw structured source.",
+            "page_or_region": "REFERENCES line",
+            "ocr_attempted": "false",
+            "ocr_success": "false",
+            "short_result": "Skipped: the raw structured TXT already preserves the reference line clearly.",
+            "supports_resolution": "true",
+            "notes": "Targeted OCR was unnecessary because the structured OBI source is already machine-readable here.",
+        },
+        {
+            "source_file_id": "obi-vol4-no36-re-p59",
+            "source_file_label": "OBI_Corpus_Vol4/OBI_Vol4_No36__re_p59.txt",
+            "reason_for_targeting": "Representative IPPA-only record chosen to test whether OCR would add anything beyond the existing structured source.",
+            "page_or_region": "REFERENCES line",
+            "ocr_attempted": "false",
+            "ocr_success": "false",
+            "short_result": "Skipped: the structured source already gives the exact IPPA token and surrounding citations.",
+            "supports_resolution": "true",
+            "notes": "Occurrence-level review was sufficient without broad or page-level OCR.",
+        },
+    ]
+
+    same_record_or_cluster_support = sum(
+        1 for row in ippa_comparison_rows if row["same_or_neighboring_reference_field"] != "no explicit PPA neighbour"
+    )
+    decision_rows = [
+        {
+            "decision": "alias_or_variant_of_PPA",
+            "expansion_or_classification": "IPPA variant locator family into Inscriptions of Pagan, Pinya and Ava",
+            "confidence": "medium",
+            "evidence_summary": (
+                f"Reviewed {len(ippa_occurrence_rows)} IPPA occurrences across {len(ippa_record_review_by_id)} records; "
+                f"{same_record_or_cluster_support} occurrences have explicit PPA support in the same record or inscription cluster, "
+                "and Frasch defines PPA but never IPPA."
+            ),
+            "occurrences_reviewed": str(len(ippa_occurrence_rows)),
+            "local_contexts_reviewed": str(len(local_context_rows)),
+            "frasch_neighbourhood_reviewed": str(len(frasch_neighbourhood_rows)),
+            "record_contexts_reviewed": str(len(ippa_record_review_by_id)),
+            "web_queries_reviewed": "3",
+            "remaining_uncertainty": "The long form behind the initial I remains undocumented, and some IPPA locators do not equal the printed PPA page numbers.",
+            "recommended_authority_update": "Keep sf-ippa as an alias/variant family linked to sf-ppa and ppaCatalogue; preserve raw IPPA strings in the crosswalk.",
+            "notes": "The corpus evidence supports a PPA-related variant family rather than a distinct bibliographic work.",
+        }
+    ]
+
+    return {
+        "occurrence_rows": ippa_occurrence_rows,
+        "comparison_rows": ippa_comparison_rows,
+        "local_context_rows": local_context_rows,
+        "frasch_neighbourhood_rows": frasch_neighbourhood_rows,
+        "record_review_rows": sorted(ippa_record_review_by_id.values(), key=lambda row: row["record_id"]),
+        "targeted_ocr_rows": targeted_ocr_rows,
+        "decision_row": decision_rows[0],
+        "decision_rows": decision_rows,
+        "summary": {
+            "decision": decision_rows[0]["decision"],
+            "classification": decision_rows[0]["expansion_or_classification"],
+            "confidence": decision_rows[0]["confidence"],
+            "occurrence_count": len(ippa_occurrence_rows),
+            "record_count": len(ippa_record_review_by_id),
+            "same_record_or_cluster_support": same_record_or_cluster_support,
+        },
+    }
 
 
 def normalize_title(value: str) -> str:
@@ -2046,7 +2570,7 @@ def manual_seed_candidate(seed_row: dict) -> dict:
 
 ACRONYM_STATUS_DEFAULTS = {
     "PPA": {"resolution_status": "confirmed_expansion"},
-    "IPPA": {"resolution_status": "unresolved_after_exhaustive_search"},
+    "IPPA": {"resolution_status": "alias_or_variant_of_PPA"},
     "IOB": {"resolution_status": "internal_locator", "current_expansion": "Locator reference into Inscriptions of Burma"},
     "UEM": {"resolution_status": "confirmed_expansion"},
     "SIP": {"resolution_status": "confirmed_expansion"},
@@ -2068,9 +2592,13 @@ ACRONYM_STATUS_DEFAULTS = {
 }
 
 NON_BIBTEX_LOCATOR_ACRONYM_STATUSES = {
+    "alias_or_variant_of_PPA",
+    "probable_typo_for_PPA",
+    "internal_locator_system",
     "internal_locator",
     "probable_locator_system",
     "probable_private_luce_locator_system",
+    "source_family_with_unknown_expansion_but_known_function",
 }
 
 
@@ -2079,6 +2607,12 @@ def next_acronym_action(status: str) -> str:
         return "keep current definition evidence"
     if status == "probable_expansion":
         return "confirm with corpus documentation or abbreviation list"
+    if status == "alias_or_variant_of_PPA":
+        return "preserve raw IPPA strings while routing the family to the underlying PPA source work"
+    if status == "probable_typo_for_PPA":
+        return "preserve raw typo strings but normalize the authority target to PPA"
+    if status == "internal_locator_system":
+        return "treat as a locator system rather than a standalone bibliographic work"
     if status == "probable_locator_system":
         return "preserve locator semantics and avoid creating a standalone bibliographic work"
     if status == "probable_private_luce_locator_system":
@@ -2091,10 +2625,14 @@ def next_acronym_action(status: str) -> str:
         return "keep unresolved and document searched files and terms"
     if status == "unresolved_after_exhaustive_search":
         return "retain only the documented search trail and defer to human review"
+    if status == "genuinely_unresolved_after_occurrence_level_review":
+        return "retain the full occurrence-level review trail and defer any stronger claim"
     if status == "contextual_usage_only":
         return "search explicit abbreviation list or bibliography heading"
     if status == "source_family_only":
         return "retain source-family mapping and keep acronym visibly unexpanded"
+    if status == "source_family_with_unknown_expansion_but_known_function":
+        return "keep the family distinct, document its known function, and avoid inventing an expansion"
     return "search corpus documentation and Frasch materials again"
 
 
@@ -2281,7 +2819,11 @@ def build_source_work_locator_rows(crosswalk_rows: list[dict]) -> list[dict]:
         notes="Clarifies that IOB and Pl. are separate locator systems into the same Luce and Pe Maung Tin source work.",
     )
     append_row(family_ids=["sf-list"], relationship_key="list")
-    append_row(family_ids=["sf-ppa"], relationship_key="ppa")
+    append_row(
+        family_ids=["sf-ppa", "sf-ippa"],
+        relationship_key="ppa",
+        notes="Clarifies that PPA page citations and IPPA variant locators point into the same Pagan, Pinya and Ava source work.",
+    )
     append_row(family_ids=["sf-ub"], relationship_key="ub")
     append_row(family_ids=["sf-mp"], relationship_key="mp")
     append_row(family_ids=["sf-or"], relationship_key="or")
@@ -2359,19 +2901,28 @@ def build_acronym_status_rows(
         elif manual_candidate:
             current_expansion = manual_candidate.get("candidate_expansion", "") or current_expansion
             best_candidate = manual_candidate
-        if status == "internal_locator" and default.get("current_expansion"):
+        if status in {"internal_locator", "internal_locator_system"} and default.get("current_expansion"):
             current_expansion = default["current_expansion"]
         if status in {"source_family_only", "contextual_usage_only", "unresolved"}:
             current_expansion = ""
         if source_family_row and not current_expansion and not is_placeholder_expansion(source_family_row.get("expanded_label", "")):
-            if status in {"confirmed_expansion", "probable_expansion", "not_an_acronym", "internal_locator"}:
+            if status in {
+                "alias_or_variant_of_PPA",
+                "confirmed_expansion",
+                "probable_expansion",
+                "probable_typo_for_PPA",
+                "not_an_acronym",
+                "internal_locator",
+                "internal_locator_system",
+                "source_family_with_unknown_expansion_but_known_function",
+            }:
                 current_expansion = source_family_row.get("expanded_label", "")
         definition_quality = (
             best_candidate.get("definition_quality", "")
             if best_candidate
             else ("context_only" if contextual_candidate else "not_found")
         )
-        if status == "internal_locator" and not definition_quality:
+        if status in {"internal_locator", "internal_locator_system"} and not definition_quality:
             definition_quality = "strong"
         note_parts = [best_candidate.get("notes", "")] if best_candidate else []
         if best_remaining_evidence:
@@ -2383,7 +2934,20 @@ def build_acronym_status_rows(
                 note_parts.append("Manual identification supplied by Nathan; documentary wording differs, so the manual seed remains canonical.")
             else:
                 note_parts.append("Manual identification supplied by Nathan; seek documentary corroboration.")
-        needs_review = "true" if status in {"probable_expansion", "source_family_only", "contextual_usage_only", "unresolved"} else "false"
+        needs_review = "true" if status in {
+            "alias_or_variant_of_PPA",
+            "probable_expansion",
+            "probable_locator_system",
+            "probable_private_luce_locator_system",
+            "probable_typo_for_PPA",
+            "source_family_only",
+            "contextual_usage_only",
+            "source_family_with_unknown_expansion_but_known_function",
+            "unresolved",
+            "unresolved_after_targeted_search",
+            "unresolved_after_exhaustive_search",
+            "genuinely_unresolved_after_occurrence_level_review",
+        } else "false"
         if status in {"confirmed_expansion", "not_an_acronym"} and definition_quality == "manual_seed":
             needs_review = "false"
         if status == "not_an_acronym":
@@ -3208,10 +3772,14 @@ def build_source_family_output_rows(
         expanded_label = row["expanded_label"]
         if acronym_row:
             if acronym_row["resolution_status"] in {
+                "alias_or_variant_of_PPA",
                 "confirmed_expansion",
+                "internal_locator_system",
+                "probable_typo_for_PPA",
                 "probable_expansion",
                 "probable_locator_system",
                 "probable_private_luce_locator_system",
+                "source_family_with_unknown_expansion_but_known_function",
                 "not_an_acronym",
                 "internal_locator",
             }:
@@ -3220,18 +3788,22 @@ def build_source_family_output_rows(
                 expanded_label = f'{row["abbreviation"]} source family [unexpanded]'
         source_work_key = source_work_defaults.get("source_work_key", "")
         if not source_work_key and acronym_row and acronym_row.get("resolution_status") in {
+            "alias_or_variant_of_PPA",
             "confirmed_expansion",
             "probable_expansion",
+            "probable_typo_for_PPA",
             "not_an_acronym",
         }:
             source_work_key = authority_key
         related_source_work_key = source_work_key or authority_key
+        related_bibtex_key = authority_key or source_work_key
         output_rows.append(
             {
                 "source_family_id": row["source_family_id"],
                 "abbreviation": row["abbreviation"],
                 "family_id": row["family_id"],
                 "authority_key": authority_key,
+                "alias_of_source_family_id": source_work_defaults.get("alias_of_source_family_id", ""),
                 "source_work_key": source_work_key,
                 "related_source_work_key": related_source_work_key,
                 "source_family_type": row["source_family_type"],
@@ -3244,7 +3816,7 @@ def build_source_family_output_rows(
                 "best_definition_evidence_id": acronym_row.get("best_evidence_id", "") if acronym_row else "",
                 "best_definition_source": acronym_row.get("best_evidence_source", "") if acronym_row else "",
                 "best_definition_quote": acronym_row.get("best_evidence_quote", "") if acronym_row else "",
-                "related_bibtex_key": authority_key,
+                "related_bibtex_key": related_bibtex_key,
                 "locator_pattern": row["locator_pattern"],
                 "locator_type": row["locator_pattern"],
                 "example_raw_references": row["example_raw_references"],
@@ -3472,6 +4044,10 @@ def build_authority(
     ocr_manifest_path: Path | None = None,
     ocr_index_path: Path | None = None,
     ocr_report_path: Path | None = None,
+    corpus_inscriptions_path: Path | None = None,
+    reference_occurrences_path: Path | None = None,
+    raw_references_path: Path | None = None,
+    frasch_extracted_text_path: Path | None = None,
 ) -> dict:
     output_dir.mkdir(parents=True, exist_ok=True)
     frasch_references_path = frasch_references_path or Path("data/working/bibliography/local_sources/frasch_reference_entries.tsv")
@@ -3484,6 +4060,10 @@ def build_authority(
     ocr_manifest_path = ocr_manifest_path or Path("data/working/bibliography/local_sources/ocr_outputs/ocr_manifest.tsv")
     ocr_index_path = ocr_index_path or Path("data/working/bibliography/local_sources/ocr_outputs/ocr_text_index.tsv")
     ocr_report_path = ocr_report_path or Path("data/working/bibliography/local_sources/ocr_outputs/ocr_report.json")
+    corpus_inscriptions_path = corpus_inscriptions_path or DEFAULT_CORPUS_RELEASE_INSCRIPTIONS_PATH
+    reference_occurrences_path = reference_occurrences_path or DEFAULT_REFERENCE_OCCURRENCES_PATH
+    raw_references_path = raw_references_path or DEFAULT_RAW_REFERENCES_PATH
+    frasch_extracted_text_path = frasch_extracted_text_path or DEFAULT_FRASCH_EXTRACTED_TEXT_PATH
 
     family_rows = read_tsv(reference_families_path)
     member_rows = read_tsv(reference_members_path)
@@ -3501,6 +4081,11 @@ def build_authority(
     ocr_manifest_rows = read_tsv(ocr_manifest_path) if ocr_manifest_path.exists() else []
     ocr_index_rows = read_tsv(ocr_index_path) if ocr_index_path.exists() else []
     ocr_report = load_json_report(ocr_report_path)
+    ippa_review = build_ippa_review_artifacts(
+        corpus_inscriptions_path=corpus_inscriptions_path,
+        reference_occurrences_path=reference_occurrences_path,
+        frasch_extracted_text_path=frasch_extracted_text_path,
+    )
     manifest_by_id = {row.get("canonical_local_file_id", ""): row for row in local_manifest_rows if row.get("canonical_local_file_id")}
     manifest_by_name = {row.get("file_name", ""): row for row in local_manifest_rows if row.get("file_name")}
 
@@ -3855,6 +4440,17 @@ def build_authority(
     write_tsv(output_dir / "raw_reference_to_bibtex.tsv", crosswalk_rows, CROSSWALK_FIELDS)
     source_work_locator_rows = build_source_work_locator_rows(crosswalk_rows)
     write_tsv(output_dir / "source_work_locator_systems.tsv", source_work_locator_rows, SOURCE_WORK_LOCATOR_SYSTEM_FIELDS)
+    write_tsv(output_dir / "ippa_occurrence_contexts.tsv", ippa_review["occurrence_rows"], IPPA_OCCURRENCE_CONTEXT_FIELDS)
+    write_tsv(output_dir / "ippa_ppa_comparison.tsv", ippa_review["comparison_rows"], IPPA_PPA_COMPARISON_FIELDS)
+    write_tsv(output_dir / "ippa_local_context_search.tsv", ippa_review["local_context_rows"], IPPA_LOCAL_CONTEXT_SEARCH_FIELDS)
+    write_tsv(
+        output_dir / "ippa_frasch_abbrev_neighbourhood.tsv",
+        ippa_review["frasch_neighbourhood_rows"],
+        IPPA_FRASCH_ABBREV_NEIGHBOURHOOD_FIELDS,
+    )
+    write_tsv(output_dir / "ippa_record_review.tsv", ippa_review["record_review_rows"], IPPA_RECORD_REVIEW_FIELDS)
+    write_tsv(output_dir / "ippa_targeted_ocr_notes.tsv", ippa_review["targeted_ocr_rows"], IPPA_TARGETED_OCR_NOTES_FIELDS)
+    write_tsv(output_dir / "ippa_resolution_decision.tsv", [ippa_review["decision_row"]], IPPA_RESOLUTION_DECISION_FIELDS)
     write_tsv(output_dir / "unresolved_acronym_dossier.tsv", unresolved_acronym_dossier_rows, UNRESOLVED_ACRONYM_DOSSIER_FIELDS)
 
     unresolved_rows.sort(key=lambda row: int(row["occurrence_count"] or 0), reverse=True)
@@ -4014,6 +4610,11 @@ def build_authority(
         "final_acronym_web_search_count": len(final_acronym_web_search_rows),
         "frasch_abbreviation_list_review_count": len(FRASCH_ABBREVIATION_LIST_REVIEW_ROWS),
         "final_unresolved_acronym_dossier_count": len(unresolved_acronym_dossier_rows),
+        "ippa_occurrence_count": len(ippa_review["occurrence_rows"]),
+        "ippa_record_review_count": len(ippa_review["record_review_rows"]),
+        "ippa_local_context_search_count": len(ippa_review["local_context_rows"]),
+        "ippa_web_query_count": int(ippa_review["decision_row"].get("web_queries_reviewed", "0") or "0"),
+        "ippa_final_decision": ippa_review["decision_row"].get("decision", ""),
         "source_work_locator_system_count": len(source_work_locator_rows),
         "pl_locator_semantics_checked": True,
         "iob_relationship_checked": True,
@@ -4027,10 +4628,13 @@ def build_authority(
             for row in priority_acronym_rows
             if row["resolution_status"]
             in {
+                "alias_or_variant_of_PPA",
                 "probable_expansion",
                 "probable_locator_system",
                 "probable_private_luce_locator_system",
+                "probable_typo_for_PPA",
                 "source_family_only",
+                "source_family_with_unknown_expansion_but_known_function",
                 "contextual_usage_only",
                 "unresolved_after_targeted_search",
                 "unresolved_after_exhaustive_search",

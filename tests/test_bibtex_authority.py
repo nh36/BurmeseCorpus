@@ -20,6 +20,7 @@ from build_bibtex_authority import (
     CROSSWALK_FIELDS,
     REMAINING_ACRONYMS,
     SOURCE_FAMILY_FIELDS,
+    build_ippa_review_artifacts,
     build_authority,
     parse_locator,
 )
@@ -1514,7 +1515,7 @@ class BibtexAuthorityTests(unittest.TestCase):
             self.assertEqual(acronym_rows["OR"]["resolution_status"], "probable_locator_system")
             self.assertEqual(acronym_rows["Luce D"]["resolution_status"], "probable_private_luce_locator_system")
             self.assertEqual(acronym_rows["Luce J"]["resolution_status"], "probable_private_luce_locator_system")
-            self.assertEqual(acronym_rows["IPPA"]["resolution_status"], "unresolved_after_exhaustive_search")
+            self.assertEqual(acronym_rows["IPPA"]["resolution_status"], "alias_or_variant_of_PPA")
             self.assertTrue(set(PRIORITY_ACRONYMS).issubset(acronym_rows))
             self.assertEqual(source_family_rows["sf-ppa"]["expanded_label"], "Inscriptions of Pagan, Pinya and Ava")
             self.assertEqual(source_family_rows["sf-mp"]["expanded_label"], "Mandalay Palace stone collection locator system")
@@ -1526,7 +1527,15 @@ class BibtexAuthorityTests(unittest.TestCase):
             self.assertTrue(any(row["source_work_key"] == "mandalayPalaceStoneCollection" for row in locator_rows))
             self.assertEqual(len(final_sprint_rows), 6)
             self.assertEqual(final_sprint_rows["RDASB"]["recommended_status"], "probable_expansion")
-            self.assertEqual([row["acronym"] for row in unresolved_dossier_rows], ["IPPA"])
+            self.assertEqual(final_sprint_rows["IPPA"]["recommended_status"], "alias_or_variant_of_PPA")
+            self.assertEqual(unresolved_dossier_rows, [])
+            self.assertTrue((output_dir / "ippa_occurrence_contexts.tsv").exists())
+            self.assertTrue((output_dir / "ippa_ppa_comparison.tsv").exists())
+            self.assertTrue((output_dir / "ippa_local_context_search.tsv").exists())
+            self.assertTrue((output_dir / "ippa_frasch_abbrev_neighbourhood.tsv").exists())
+            self.assertTrue((output_dir / "ippa_record_review.tsv").exists())
+            self.assertTrue((output_dir / "ippa_targeted_ocr_notes.tsv").exists())
+            self.assertTrue((output_dir / "ippa_resolution_decision.tsv").exists())
             self.assertNotIn("workUnresolved", candidate_bib)
             self.assertNotIn("RDASB", [row["family_label"] for row in report["top_unresolved_families"]])
 
@@ -1542,6 +1551,209 @@ class BibtexAuthorityTests(unittest.TestCase):
         locator, locator_type = parse_locator("List 90", "fam-list-catalogue", "List")
         self.assertEqual(locator, "90")
         self.assertEqual(locator_type, "catalogue_number")
+
+    def test_build_ippa_review_artifacts_extracts_all_occurrences_from_synthetic_corpus(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            temp_path = Path(temp_dir)
+            corpus_path = temp_path / "inscriptions.jsonl"
+            corpus_path.write_text(
+                "".join(
+                    json.dumps(row, ensure_ascii=False) + "\n"
+                    for row in [
+                        {
+                            "record_id": "r1",
+                            "source_deposit": "zenodo_4321314",
+                            "source_layer": "structured_corpus",
+                            "source_volume": "1",
+                            "source_inscription_number": "4",
+                            "source_page": "11",
+                            "face": "ob",
+                            "title_original": "Test one",
+                            "references_original": "IPPA-159; PPA, p. 159; OBI 1, p. 11",
+                        },
+                        {
+                            "record_id": "r2",
+                            "source_deposit": "zenodo_4321314",
+                            "source_layer": "structured_corpus",
+                            "source_volume": "1",
+                            "source_inscription_number": "5",
+                            "source_page": "12",
+                            "face": "ob",
+                            "title_original": "Test two",
+                            "references_original": "IPPA 137-138; List 90",
+                        },
+                    ]
+                ),
+                encoding="utf-8",
+            )
+            reference_occurrences_path = temp_path / "reference_occurrences.tsv"
+            write_tsv(
+                reference_occurrences_path,
+                [
+                    {"record_id": "r1", "raw_reference_string": "IPPA-159"},
+                    {"record_id": "r2", "raw_reference_string": "IPPA 137-138"},
+                ],
+                ["record_id", "raw_reference_string"],
+            )
+            frasch_path = temp_path / "frasch_extracted_text.txt"
+            frasch_path.write_text("PPA Arch. Survey of Burma (ed.), Inscriptions of Pagan, Pinya and Ava\n", encoding="utf-8")
+
+            review = build_ippa_review_artifacts(
+                corpus_inscriptions_path=corpus_path,
+                reference_occurrences_path=reference_occurrences_path,
+                frasch_extracted_text_path=frasch_path,
+            )
+
+            self.assertEqual(len(review["occurrence_rows"]), 2)
+            self.assertEqual(review["occurrence_rows"][0]["record_id"], "r1")
+            self.assertEqual(review["comparison_rows"][0]["looks_like_alias"], "true")
+            self.assertEqual(review["decision_row"]["decision"], "alias_or_variant_of_PPA")
+            self.assertEqual(review["decision_row"]["occurrences_reviewed"], "2")
+
+    def test_build_authority_preserves_raw_ippa_strings_while_mapping_to_ppa(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            temp_path = Path(temp_dir)
+            families_path, members_path, candidates_path, seeds_path, external_entries_path = self.write_fixture_tables(temp_path)
+            acronym_candidates_path, acronym_report_path = self.write_fixture_acronym_files(temp_path)
+            output_dir = temp_path / "authority"
+
+            family_rows = read_tsv(families_path)
+            family_rows.extend(
+                [
+                    {
+                        "family_id": "fam-ippa-catalogue",
+                        "family_label": "IPPA references",
+                        "family_type": "source_catalogue",
+                        "member_count": "1",
+                        "occurrence_count": "1",
+                        "sample_raw_references": "IPPA-159",
+                        "likely_contains_translation": "no",
+                        "review_status": "needs_human_review",
+                        "notes": "",
+                    },
+                    {
+                        "family_id": "fam-ppa-catalogue",
+                        "family_label": "PPA references",
+                        "family_type": "source_catalogue",
+                        "member_count": "1",
+                        "occurrence_count": "1",
+                        "sample_raw_references": "PPA, p. 159",
+                        "likely_contains_translation": "no",
+                        "review_status": "needs_human_review",
+                        "notes": "",
+                    },
+                ]
+            )
+            write_tsv(families_path, family_rows, FAMILY_FIELDS)
+
+            member_rows = read_tsv(members_path)
+            member_rows.extend(
+                [
+                    {
+                        "family_id": "fam-ippa-catalogue",
+                        "raw_reference_string": "IPPA-159",
+                        "occurrence_count": "1",
+                        "example_record_ids": "r1",
+                        "notes": "",
+                    },
+                    {
+                        "family_id": "fam-ppa-catalogue",
+                        "raw_reference_string": "PPA, p. 159",
+                        "occurrence_count": "1",
+                        "example_record_ids": "r1",
+                        "notes": "",
+                    },
+                ]
+            )
+            write_tsv(members_path, member_rows, MEMBER_FIELDS)
+
+            build_authority(
+                reference_families_path=families_path,
+                reference_members_path=members_path,
+                work_candidates_path=candidates_path,
+                seed_path=seeds_path,
+                external_entries_path=external_entries_path,
+                output_dir=output_dir,
+                frasch_references_path=temp_path / "missing_frasch.tsv",
+                local_candidates_path=temp_path / "missing_local_candidates.tsv",
+                local_manifest_path=temp_path / "missing_local_manifest.tsv",
+                acronym_candidates_path=acronym_candidates_path,
+                acronym_report_path=acronym_report_path,
+            )
+
+            crosswalk_rows = read_tsv(output_dir / "raw_reference_to_bibtex.tsv")
+            ippa_rows = [row for row in crosswalk_rows if row["family_id"] == "fam-ippa-catalogue"]
+            source_family_rows = {row["source_family_id"]: row for row in read_tsv(output_dir / "source_family_authority.tsv")}
+
+            self.assertEqual(len(ippa_rows), 1)
+            self.assertEqual(ippa_rows[0]["raw_reference_string"], "IPPA-159")
+            self.assertEqual(ippa_rows[0]["source_family_id"], "sf-ippa")
+            self.assertEqual(ippa_rows[0]["source_work_key"], "ppaCatalogue")
+            self.assertEqual(ippa_rows[0]["bibtex_key"], "ppaCatalogue")
+            self.assertEqual(source_family_rows["sf-ippa"]["alias_of_source_family_id"], "sf-ppa")
+
+    def test_validate_bibtex_authority_requires_ippa_decision_artifact(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            temp_path = Path(temp_dir)
+            families_path, members_path, candidates_path, seeds_path, external_entries_path = self.write_fixture_tables(temp_path)
+            acronym_candidates_path, acronym_report_path = self.write_fixture_acronym_files(temp_path)
+            output_dir = temp_path / "authority"
+
+            build_authority(
+                reference_families_path=families_path,
+                reference_members_path=members_path,
+                work_candidates_path=candidates_path,
+                seed_path=seeds_path,
+                external_entries_path=external_entries_path,
+                output_dir=output_dir,
+                frasch_references_path=temp_path / "missing_frasch.tsv",
+                local_candidates_path=temp_path / "missing_local_candidates.tsv",
+                local_manifest_path=temp_path / "missing_local_manifest.tsv",
+                acronym_candidates_path=acronym_candidates_path,
+                acronym_report_path=acronym_report_path,
+            )
+
+            (output_dir / "ippa_resolution_decision.tsv").unlink()
+
+            result = validate_bibtex_authority(
+                authority_bib_path=output_dir / "bibliography_authority.bib",
+                candidates_bib_path=output_dir / "bibliography_candidates.bib",
+                authority_tsv_path=output_dir / "bibtex_authority.tsv",
+                crosswalk_path=output_dir / "raw_reference_to_bibtex.tsv",
+                families_path=families_path,
+                external_entries_path=external_entries_path,
+                seed_path=seeds_path,
+                high_frequency_path=output_dir / "high_frequency_unresolved.tsv",
+                evidence_path=output_dir / "bibtex_authority_evidence.tsv",
+                resolution_plan_path=output_dir / "high_frequency_resolution_plan.tsv",
+                source_family_path=output_dir / "source_family_authority.tsv",
+                report_path=output_dir / "bibtex_authority_report.json",
+                frasch_references_path=temp_path / "missing_frasch.tsv",
+                local_manifest_path=temp_path / "missing_local_manifest.tsv",
+                acronym_status_path=output_dir / "acronym_resolution_status.tsv",
+                acronym_candidates_path=acronym_candidates_path,
+                acronym_report_path=acronym_report_path,
+                manual_review_packet_path=output_dir / "acronym_manual_review_packet.tsv",
+                remaining_acronym_worklist_path=output_dir / "remaining_acronym_worklist.tsv",
+                remaining_acronym_evidence_path=output_dir / "remaining_acronym_evidence.tsv",
+                source_work_locator_systems_path=output_dir / "source_work_locator_systems.tsv",
+                final_acronym_resolution_sprint_path=output_dir / "final_acronym_resolution_sprint.tsv",
+                final_acronym_local_file_hits_path=output_dir / "final_acronym_local_file_hits.tsv",
+                final_acronym_web_searches_path=output_dir / "final_acronym_web_searches.tsv",
+                frasch_abbreviation_list_review_path=output_dir / "frasch_abbreviation_list_review.tsv",
+                unresolved_acronym_dossier_path=output_dir / "unresolved_acronym_dossier.tsv",
+                ippa_occurrence_contexts_path=output_dir / "ippa_occurrence_contexts.tsv",
+                ippa_ppa_comparison_path=output_dir / "ippa_ppa_comparison.tsv",
+                ippa_local_context_search_path=output_dir / "ippa_local_context_search.tsv",
+                ippa_frasch_abbrev_neighbourhood_path=output_dir / "ippa_frasch_abbrev_neighbourhood.tsv",
+                ippa_record_review_path=output_dir / "ippa_record_review.tsv",
+                ippa_targeted_ocr_notes_path=output_dir / "ippa_targeted_ocr_notes.tsv",
+                ippa_resolution_decision_path=output_dir / "ippa_resolution_decision.tsv",
+                reference_occurrences_path=ROOT / "data/working/bibliography/reference_occurrences.tsv",
+            )
+
+            self.assertFalse(result["ok"])
+            self.assertTrue(any("ippa_resolution_decision.tsv is missing" in error for error in result["errors"]))
 
         locator, locator_type = parse_locator("PPA, p. 55", "fam-ppa-catalogue", "PPA")
         self.assertEqual(locator, "p. 55")
@@ -1730,7 +1942,7 @@ class BibtexAuthorityTests(unittest.TestCase):
             )
 
             acronym_rows = {row["acronym"]: row for row in read_tsv(output_dir / "acronym_resolution_status.tsv")}
-            self.assertEqual(acronym_rows["IPPA"]["resolution_status"], "unresolved_after_exhaustive_search")
+            self.assertEqual(acronym_rows["IPPA"]["resolution_status"], "alias_or_variant_of_PPA")
             self.assertEqual(acronym_rows["RDASB"]["resolution_status"], "probable_expansion")
             self.assertEqual(acronym_rows["MP"]["resolution_status"], "probable_locator_system")
             self.assertEqual(acronym_rows["OR"]["resolution_status"], "probable_locator_system")
