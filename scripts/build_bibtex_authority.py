@@ -319,6 +319,18 @@ BIBTEX_FIELD_QUALITY_AUDIT_FIELDS = [
     "recommended_fix",
     "notes",
 ]
+BIBTEX_FIELD_QUALITY_AUDIT_HISTORY_FIELDS = [
+    "bibtex_key",
+    "field_name",
+    "field_value_short",
+    "issue_type",
+    "severity",
+    "status",
+    "resolved_in_commit",
+    "remaining_issue",
+    "recommended_fix",
+    "notes",
+]
 AUTHORITY_KEY_NORMALIZATION_FIELDS = [
     "old_key",
     "new_key",
@@ -3726,6 +3738,91 @@ def build_bibtex_field_quality_audit_rows(
     return audit_rows
 
 
+def build_bibtex_field_quality_audit_history_rows(
+    *,
+    raw_audit_rows: list[dict],
+    active_audit_rows: list[dict],
+) -> list[dict]:
+    active_issue_keys = {
+        (row.get("bibtex_key", ""), row.get("field_name", ""), row.get("issue_type", "")) for row in active_audit_rows
+    }
+    history_rows: list[dict] = []
+    for row in raw_audit_rows:
+        issue_key = (row.get("bibtex_key", ""), row.get("field_name", ""), row.get("issue_type", ""))
+        status = "open" if issue_key in active_issue_keys else "resolved"
+        history_rows.append(
+            {
+                "bibtex_key": row.get("bibtex_key", ""),
+                "field_name": row.get("field_name", ""),
+                "field_value_short": row.get("field_value_short", ""),
+                "issue_type": row.get("issue_type", ""),
+                "severity": row.get("severity", ""),
+                "status": status,
+                "resolved_in_commit": "" if status == "open" else "current_worktree",
+                "remaining_issue": row.get("issue_type", "") if status == "open" else "",
+                "recommended_fix": row.get("recommended_fix", ""),
+                "notes": row.get("notes", ""),
+            }
+        )
+    history_rows.sort(
+        key=lambda item: (
+            {"open": 0, "needs_human_review": 1, "suppressed": 2, "resolved": 3}.get(item["status"], 4),
+            {"high": 0, "medium": 1, "low": 2}.get(item["severity"], 3),
+            item["bibtex_key"],
+            item["field_name"],
+        )
+    )
+    return history_rows
+
+
+def build_bibtex_consistency_report(
+    *,
+    authority_rows: list[dict],
+    active_audit_rows: list[dict],
+    audit_history_rows: list[dict],
+    reconciliation_rows: list[dict],
+) -> dict:
+    emitted_keys = {row.get("bibtex_key", "") for row in authority_rows if row.get("bibtex_key")}
+    reconciliation_by_key = {
+        row.get("current_bibtex_key", ""): row
+        for row in reconciliation_rows
+        if row.get("current_bibtex_key")
+    }
+    non_normalized_script_count = sum(
+        1
+        for row in authority_rows
+        if row.get("script", "") != normalize_script_value(row.get("script", ""), fallback_title=row.get("title", ""))
+    )
+    ocr_like_evidence_count = sum(
+        1
+        for row in authority_rows
+        if looks_like_ocr_garbage(row.get("evidence", "")) or looks_like_ocr_garbage(row.get("matched_local_reference", ""))
+    )
+    locator_publication_leak_count = sum(
+        1
+        for row in reconciliation_rows
+        if row.get("authority_level") in {"locator_collection", "manuscript_collection", "archival_notebook"}
+        and row.get("current_bibtex_key")
+        and row.get("bibtex_status") != "suppressed_locator_system"
+    )
+    ippa_duplicate_bibtex_count = sum(1 for key in emitted_keys if "ippa" in key.casefold())
+    intentional_emitted_keys = {
+        row.get("current_bibtex_key", "")
+        for row in reconciliation_rows
+        if row.get("current_bibtex_key") and row.get("bibtex_status") in {"present", "needs_human_review"}
+    }
+    return {
+        "bibtex_entry_count": len(authority_rows),
+        "open_field_quality_issue_count": len(active_audit_rows),
+        "resolved_field_quality_issue_count": sum(1 for row in audit_history_rows if row.get("status") == "resolved"),
+        "non_normalized_script_count": non_normalized_script_count,
+        "ocr_like_evidence_count": ocr_like_evidence_count,
+        "locator_publication_leak_count": locator_publication_leak_count,
+        "ippa_duplicate_bibtex_count": ippa_duplicate_bibtex_count,
+        "unexpected_emitted_bibtex_key_count": len(emitted_keys - intentional_emitted_keys),
+    }
+
+
 def curate_authority_rows_for_emission(
     *,
     authority_rows: list[dict],
@@ -3911,6 +4008,18 @@ def build_raw_reference_crosswalk_audit_rows(
             append_issue(row, "invalid_source_work_key", "high", "Map the row to a documented source_work_authority entry.", "Crosswalk points to a source_work_key that is not present in source_work_authority.tsv.", issue_category="authority_linkage", auto_fixable="true", human_review_required="false")
         if source_work_row.get("bibtex_key") and not row.get("bibtex_key"):
             append_issue(row, "missing_bibtex_key", "medium", "Populate bibtex_key from source_work_authority.tsv.", "This source work already has a BibTeX authority key.", issue_category="bibtex_linkage", auto_fixable="true", human_review_required="false")
+        if row.get("source_family_id") == "sf-tn" and re.fullmatch(r"TN,?\s*p\.\s*", row.get("raw_reference_string", ""), flags=re.IGNORECASE):
+            append_issue(
+                row,
+                "incomplete_raw_reference",
+                "low",
+                "check source record manually if this record becomes important",
+                "The structured corpus record preserves a truncated TN page citation with no recoverable page number.",
+                issue_category="incomplete_reference",
+                auto_fixable="false",
+                human_review_required="true",
+            )
+            continue
         if row.get("source_family_id") in locator_expected_families and (not row.get("locator") or row.get("locator_type") == "unclear") and family_occurrence_count >= 10:
             append_issue(
                 row,
@@ -5611,7 +5720,7 @@ def build_authority(
         authority_rows=authority_rows_raw,
         candidate_rows=candidate_rows,
     )
-    bibtex_field_quality_audit_rows = build_bibtex_field_quality_audit_rows(
+    raw_bibtex_field_quality_audit_rows = build_bibtex_field_quality_audit_rows(
         authority_rows=authority_rows_raw,
         source_work_authority_rows=source_work_authority_rows,
     )
@@ -5631,11 +5740,25 @@ def build_authority(
         authority_rows=authority_rows,
         candidate_rows=candidate_rows,
     )
+    bibtex_field_quality_audit_rows = build_bibtex_field_quality_audit_rows(
+        authority_rows=authority_rows,
+        source_work_authority_rows=source_work_authority_rows,
+    )
+    bibtex_field_quality_audit_history_rows = build_bibtex_field_quality_audit_history_rows(
+        raw_audit_rows=raw_bibtex_field_quality_audit_rows,
+        active_audit_rows=bibtex_field_quality_audit_rows,
+    )
     source_work_locator_rows = build_source_work_locator_rows(crosswalk_rows, source_work_authority_rows)
     raw_reference_crosswalk_audit_rows = build_raw_reference_crosswalk_audit_rows(
         crosswalk_rows=crosswalk_rows,
         source_work_authority_rows=source_work_authority_rows,
         family_by_id=family_by_id,
+    )
+    bibtex_consistency_report = build_bibtex_consistency_report(
+        authority_rows=authority_rows,
+        active_audit_rows=bibtex_field_quality_audit_rows,
+        audit_history_rows=bibtex_field_quality_audit_history_rows,
+        reconciliation_rows=source_work_to_bibtex_reconciliation_rows,
     )
     authority_bib_entries = [row_to_bibtex_entry(row) for row in authority_rows]
     candidate_bib_entries = [row_to_bibtex_entry(row) for row in candidate_rows]
@@ -5649,6 +5772,11 @@ def build_authority(
     write_tsv(output_dir / "source_work_to_bibtex_reconciliation.tsv", source_work_to_bibtex_reconciliation_rows, SOURCE_WORK_TO_BIBTEX_RECONCILIATION_FIELDS)
     write_tsv(output_dir / "authority_key_normalization.tsv", AUTHORITY_KEY_NORMALIZATION_ROWS, AUTHORITY_KEY_NORMALIZATION_FIELDS)
     write_tsv(output_dir / "bibtex_field_quality_audit.tsv", bibtex_field_quality_audit_rows, BIBTEX_FIELD_QUALITY_AUDIT_FIELDS)
+    write_tsv(
+        output_dir / "bibtex_field_quality_audit_history.tsv",
+        bibtex_field_quality_audit_history_rows,
+        BIBTEX_FIELD_QUALITY_AUDIT_HISTORY_FIELDS,
+    )
     write_tsv(output_dir / "source_work_locator_systems.tsv", source_work_locator_rows, SOURCE_WORK_LOCATOR_SYSTEM_FIELDS)
     write_tsv(output_dir / "raw_reference_to_bibtex.tsv", crosswalk_rows, CROSSWALK_FIELDS)
     write_tsv(output_dir / "raw_reference_crosswalk_audit.tsv", raw_reference_crosswalk_audit_rows, RAW_REFERENCE_CROSSWALK_AUDIT_FIELDS)
@@ -5674,6 +5802,10 @@ def build_authority(
     write_tsv(output_dir / "ippa_targeted_ocr_notes.tsv", ippa_review["targeted_ocr_rows"], IPPA_TARGETED_OCR_NOTES_FIELDS)
     write_tsv(output_dir / "ippa_resolution_decision.tsv", [ippa_review["decision_row"]], IPPA_RESOLUTION_DECISION_FIELDS)
     write_tsv(output_dir / "unresolved_acronym_dossier.tsv", unresolved_acronym_dossier_rows, UNRESOLVED_ACRONYM_DOSSIER_FIELDS)
+    (output_dir / "bibtex_consistency_report.json").write_text(
+        json.dumps(bibtex_consistency_report, indent=2, ensure_ascii=False) + "\n",
+        encoding="utf-8",
+    )
 
     unresolved_rows.sort(key=lambda row: int(row["occurrence_count"] or 0), reverse=True)
     write_tsv(output_dir / "high_frequency_unresolved.tsv", unresolved_rows, HIGH_FREQUENCY_FIELDS)
@@ -5881,6 +6013,7 @@ def build_authority(
         "source_work_to_bibtex_reconciliation_count": len(source_work_to_bibtex_reconciliation_rows),
         "source_work_locator_system_count": len(source_work_locator_rows),
         "raw_reference_crosswalk_audit_count": len(raw_reference_crosswalk_audit_rows),
+        "open_raw_crosswalk_issue_count": len(raw_reference_crosswalk_audit_rows),
         "high_severity_crosswalk_issue_count": sum(1 for row in raw_reference_crosswalk_audit_rows if row.get("severity") == "high"),
         "medium_severity_crosswalk_issue_count": sum(1 for row in raw_reference_crosswalk_audit_rows if row.get("severity") == "medium"),
         "low_severity_crosswalk_issue_count": sum(1 for row in raw_reference_crosswalk_audit_rows if row.get("severity") == "low"),
@@ -5891,6 +6024,7 @@ def build_authority(
         "candidate_stubs_suppressed_count": sum(1 for row in candidate_stub_review_rows if row["review_decision"] == "suppress"),
         "candidate_stubs_retained_count": sum(1 for row in candidate_stub_review_rows if row["review_decision"] == "retain"),
         "bibtex_field_quality_issue_count": len(bibtex_field_quality_audit_rows),
+        "open_bibtex_field_quality_issue_count": len(bibtex_field_quality_audit_rows),
         "bad_ocr_bibtex_field_count": sum(1 for row in bibtex_field_quality_audit_rows if row.get("issue_type") == "ocr_like_evidence_fragment"),
         "authority_key_normalization_count": len(AUTHORITY_KEY_NORMALIZATION_ROWS),
         "bibtex_entries_emitted_count": len(authority_rows),

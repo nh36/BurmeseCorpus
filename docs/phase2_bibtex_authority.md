@@ -232,6 +232,18 @@ This means:
 
 Messy OCR evidence is still preserved, but it no longer belongs in clean BibTeX fields. The QC pass keeps raw or noisy evidence in TSV audit/evidence tables, while emitted BibTeX rows use short, citation-like summaries and normalized script values.
 
+## Source-authority QC closeout
+
+The source-authority QC pass closes with `source_work_authority.tsv` as the central source-work table.
+
+- `source_work_authority.tsv` is the authority layer for source works, series, periodicals, corpus sources, locator collections, manuscript collections, and notebook-style authorities.
+- `bibliography_authority.bib` is generated only for publication-like authority objects that the reconciliation layer says should emit BibTeX.
+- `source_work_locator_systems.tsv` carries locator semantics for systems such as `IOB`, `Pl.`, `IPPA`, `MP`, `OR`, `Luce D`, and `Luce J` instead of treating those systems as ordinary publications.
+- `bibliography_candidates.bib` remains separate for retained candidate stubs such as *Anthology* and *Rajakumar's Inscription*.
+- `raw_reference_crosswalk_audit.tsv` is intentionally conservative: any remaining residues are documented explicitly instead of being hidden.
+
+At this point the authority model is ready for the next phase. The follow-on work should be **bibliography normalization** and **translation-source discovery**, not another redesign of the source-authority layer.
+
 ## Authority vs candidate BibTeX
 
 - `bibliography_authority.bib` holds conservative authority entries supported by imported external BibTeX, Frasch/local-source evidence, repository-backed source identification, or strong manual/source-family seeds.

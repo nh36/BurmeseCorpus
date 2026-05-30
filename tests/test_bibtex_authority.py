@@ -772,6 +772,8 @@ class BibtexAuthorityTests(unittest.TestCase):
             self.assertTrue((output_dir / "source_work_authority_audit.tsv").exists())
             self.assertTrue((output_dir / "source_work_to_bibtex_reconciliation.tsv").exists())
             self.assertTrue((output_dir / "bibtex_field_quality_audit.tsv").exists())
+            self.assertTrue((output_dir / "bibtex_field_quality_audit_history.tsv").exists())
+            self.assertTrue((output_dir / "bibtex_consistency_report.json").exists())
             self.assertTrue((output_dir / "authority_key_normalization.tsv").exists())
 
     def test_harvest_local_bibliography_sources_finds_frasch_and_frosch_and_copies(self) -> None:
@@ -1060,6 +1062,8 @@ class BibtexAuthorityTests(unittest.TestCase):
                 source_work_authority_audit_path=output_dir / "source_work_authority_audit.tsv",
                 source_work_to_bibtex_reconciliation_path=output_dir / "source_work_to_bibtex_reconciliation.tsv",
                 bibtex_field_quality_audit_path=output_dir / "bibtex_field_quality_audit.tsv",
+                bibtex_field_quality_audit_history_path=output_dir / "bibtex_field_quality_audit_history.tsv",
+                bibtex_consistency_report_path=output_dir / "bibtex_consistency_report.json",
                 authority_key_normalization_path=output_dir / "authority_key_normalization.tsv",
                 raw_reference_crosswalk_audit_path=output_dir / "raw_reference_crosswalk_audit.tsv",
                 candidate_stub_review_path=output_dir / "candidate_stub_review.tsv",
@@ -1089,6 +1093,8 @@ class BibtexAuthorityTests(unittest.TestCase):
             source_work_rows = {row["source_work_key"]: row for row in read_tsv(output_dir / "source_work_authority.tsv")}
             reconciliation_rows = {row["source_work_key"]: row for row in read_tsv(output_dir / "source_work_to_bibtex_reconciliation.tsv")}
             normalization_rows = read_tsv(output_dir / "authority_key_normalization.tsv")
+            audit_history_rows = read_tsv(output_dir / "bibtex_field_quality_audit_history.tsv")
+            consistency_report = json.loads((output_dir / "bibtex_consistency_report.json").read_text(encoding="utf-8"))
             report = json.loads((output_dir / "bibtex_authority_report.json").read_text(encoding="utf-8"))
 
             self.assertIn("oldBurmeseInscriptions", source_work_rows)
@@ -1096,6 +1102,9 @@ class BibtexAuthorityTests(unittest.TestCase):
             self.assertIn("duroiselle1921list", reconciliation_rows)
             self.assertEqual(reconciliation_rows["duroiselle1921list"]["bibtex_status"], "present")
             self.assertTrue(any(row["old_key"] == "obiCorpusSource" and row["new_key"] == "oldBurmeseInscriptions" for row in normalization_rows))
+            self.assertTrue(all(row["status"] in {"open", "resolved", "suppressed", "needs_human_review"} for row in audit_history_rows))
+            self.assertIn("open_field_quality_issue_count", consistency_report)
+            self.assertIn("resolved_field_quality_issue_count", consistency_report)
             self.assertIn("source_work_authority_audit_count", report)
             self.assertIn("bibtex_field_quality_issue_count", report)
             self.assertIn("authority_key_normalization_count", report)
@@ -1141,12 +1150,187 @@ class BibtexAuthorityTests(unittest.TestCase):
                 source_work_authority_audit_path=output_dir / "source_work_authority_audit.tsv",
                 source_work_to_bibtex_reconciliation_path=output_dir / "source_work_to_bibtex_reconciliation.tsv",
                 bibtex_field_quality_audit_path=output_dir / "bibtex_field_quality_audit.tsv",
+                bibtex_field_quality_audit_history_path=output_dir / "bibtex_field_quality_audit_history.tsv",
+                bibtex_consistency_report_path=output_dir / "bibtex_consistency_report.json",
                 authority_key_normalization_path=output_dir / "authority_key_normalization.tsv",
                 raw_reference_crosswalk_audit_path=output_dir / "raw_reference_crosswalk_audit.tsv",
                 candidate_stub_review_path=output_dir / "candidate_stub_review.tsv",
             )
             self.assertFalse(result["ok"])
             self.assertTrue(any("source_work_authority_audit.tsv is missing" in error for error in result["errors"]))
+
+    def test_validate_bibtex_authority_accepts_documented_tn_residue(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            temp_path = Path(temp_dir)
+            families_path, members_path, candidates_path, seeds_path, external_entries_path = self.write_fixture_tables(temp_path)
+            acronym_candidates_path, acronym_report_path = self.write_fixture_acronym_files(temp_path)
+            manual_seed_path = self.write_manual_seed_file(temp_path)
+            output_dir = temp_path / "authority"
+            build_authority(
+                reference_families_path=families_path,
+                reference_members_path=members_path,
+                work_candidates_path=candidates_path,
+                seed_path=seeds_path,
+                external_entries_path=external_entries_path,
+                output_dir=output_dir,
+                frasch_references_path=temp_path / "missing_frasch.tsv",
+                local_candidates_path=temp_path / "missing_local_candidates.tsv",
+                local_manifest_path=temp_path / "missing_local_manifest.tsv",
+                acronym_candidates_path=acronym_candidates_path,
+                acronym_report_path=acronym_report_path,
+            )
+            write_tsv(
+                output_dir / "raw_reference_crosswalk_audit.tsv",
+                [
+                    {
+                        "raw_reference_string": "TN, p.",
+                        "family_id": "fam-tn-catalogue",
+                        "source_family_id": "sf-tn",
+                        "source_work_key": "tnInscriptionsPaganPinyaAva",
+                        "bibtex_key": "uTunNyein1897inscriptionsPaganPinyaAva",
+                        "locator": "TN, p.",
+                        "locator_type": "unclear",
+                        "issue_type": "incomplete_raw_reference",
+                        "issue_category": "incomplete_reference",
+                        "severity": "low",
+                        "auto_fixable": "false",
+                        "human_review_required": "true",
+                        "recommended_fix": "check source record manually if this record becomes important",
+                        "notes": "The structured corpus record preserves a truncated TN page citation with no recoverable page number.",
+                    }
+                ],
+                [
+                    "raw_reference_string",
+                    "family_id",
+                    "source_family_id",
+                    "source_work_key",
+                    "bibtex_key",
+                    "locator",
+                    "locator_type",
+                    "issue_type",
+                    "issue_category",
+                    "severity",
+                    "auto_fixable",
+                    "human_review_required",
+                    "recommended_fix",
+                    "notes",
+                ],
+            )
+            result = validate_bibtex_authority(
+                authority_bib_path=output_dir / "bibliography_authority.bib",
+                candidates_bib_path=output_dir / "bibliography_candidates.bib",
+                authority_tsv_path=output_dir / "bibtex_authority.tsv",
+                crosswalk_path=output_dir / "raw_reference_to_bibtex.tsv",
+                families_path=families_path,
+                external_entries_path=external_entries_path,
+                evidence_path=output_dir / "bibtex_authority_evidence.tsv",
+                acronym_status_path=output_dir / "acronym_resolution_status.tsv",
+                acronym_candidates_path=acronym_candidates_path,
+                acronym_report_path=acronym_report_path,
+                manual_acronym_seeds_path=manual_seed_path,
+                source_family_path=output_dir / "source_family_authority.tsv",
+                manual_review_packet_path=output_dir / "acronym_manual_review_packet.tsv",
+                remaining_acronym_worklist_path=output_dir / "remaining_acronym_worklist.tsv",
+                remaining_acronym_evidence_path=output_dir / "remaining_acronym_evidence.tsv",
+                source_work_locator_systems_path=output_dir / "source_work_locator_systems.tsv",
+                source_work_authority_path=output_dir / "source_work_authority.tsv",
+                source_work_authority_audit_path=output_dir / "source_work_authority_audit.tsv",
+                source_work_to_bibtex_reconciliation_path=output_dir / "source_work_to_bibtex_reconciliation.tsv",
+                bibtex_field_quality_audit_path=output_dir / "bibtex_field_quality_audit.tsv",
+                bibtex_field_quality_audit_history_path=output_dir / "bibtex_field_quality_audit_history.tsv",
+                bibtex_consistency_report_path=output_dir / "bibtex_consistency_report.json",
+                authority_key_normalization_path=output_dir / "authority_key_normalization.tsv",
+                raw_reference_crosswalk_audit_path=output_dir / "raw_reference_crosswalk_audit.tsv",
+                candidate_stub_review_path=output_dir / "candidate_stub_review.tsv",
+            )
+            self.assertTrue(result["ok"], result["errors"])
+
+    def test_validate_bibtex_authority_rejects_bad_tn_residue(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            temp_path = Path(temp_dir)
+            families_path, members_path, candidates_path, seeds_path, external_entries_path = self.write_fixture_tables(temp_path)
+            acronym_candidates_path, acronym_report_path = self.write_fixture_acronym_files(temp_path)
+            manual_seed_path = self.write_manual_seed_file(temp_path)
+            output_dir = temp_path / "authority"
+            build_authority(
+                reference_families_path=families_path,
+                reference_members_path=members_path,
+                work_candidates_path=candidates_path,
+                seed_path=seeds_path,
+                external_entries_path=external_entries_path,
+                output_dir=output_dir,
+                frasch_references_path=temp_path / "missing_frasch.tsv",
+                local_candidates_path=temp_path / "missing_local_candidates.tsv",
+                local_manifest_path=temp_path / "missing_local_manifest.tsv",
+                acronym_candidates_path=acronym_candidates_path,
+                acronym_report_path=acronym_report_path,
+            )
+            write_tsv(
+                output_dir / "raw_reference_crosswalk_audit.tsv",
+                [
+                    {
+                        "raw_reference_string": "TN, p.",
+                        "family_id": "fam-tn-catalogue",
+                        "source_family_id": "sf-tn",
+                        "source_work_key": "tnInscriptionsPaganPinyaAva",
+                        "bibtex_key": "uTunNyein1897inscriptionsPaganPinyaAva",
+                        "locator": "TN, p.",
+                        "locator_type": "unclear",
+                        "issue_type": "unparsed_locator",
+                        "issue_category": "locator_parse",
+                        "severity": "medium",
+                        "auto_fixable": "false",
+                        "human_review_required": "true",
+                        "recommended_fix": "Improve locator parsing or document the irregular locator form.",
+                        "notes": "High-occurrence locator family still has an unclear locator parse.",
+                    }
+                ],
+                [
+                    "raw_reference_string",
+                    "family_id",
+                    "source_family_id",
+                    "source_work_key",
+                    "bibtex_key",
+                    "locator",
+                    "locator_type",
+                    "issue_type",
+                    "issue_category",
+                    "severity",
+                    "auto_fixable",
+                    "human_review_required",
+                    "recommended_fix",
+                    "notes",
+                ],
+            )
+            result = validate_bibtex_authority(
+                authority_bib_path=output_dir / "bibliography_authority.bib",
+                candidates_bib_path=output_dir / "bibliography_candidates.bib",
+                authority_tsv_path=output_dir / "bibtex_authority.tsv",
+                crosswalk_path=output_dir / "raw_reference_to_bibtex.tsv",
+                families_path=families_path,
+                external_entries_path=external_entries_path,
+                evidence_path=output_dir / "bibtex_authority_evidence.tsv",
+                acronym_status_path=output_dir / "acronym_resolution_status.tsv",
+                acronym_candidates_path=acronym_candidates_path,
+                acronym_report_path=acronym_report_path,
+                manual_acronym_seeds_path=manual_seed_path,
+                source_family_path=output_dir / "source_family_authority.tsv",
+                manual_review_packet_path=output_dir / "acronym_manual_review_packet.tsv",
+                remaining_acronym_worklist_path=output_dir / "remaining_acronym_worklist.tsv",
+                remaining_acronym_evidence_path=output_dir / "remaining_acronym_evidence.tsv",
+                source_work_locator_systems_path=output_dir / "source_work_locator_systems.tsv",
+                source_work_authority_path=output_dir / "source_work_authority.tsv",
+                source_work_authority_audit_path=output_dir / "source_work_authority_audit.tsv",
+                source_work_to_bibtex_reconciliation_path=output_dir / "source_work_to_bibtex_reconciliation.tsv",
+                bibtex_field_quality_audit_path=output_dir / "bibtex_field_quality_audit.tsv",
+                bibtex_field_quality_audit_history_path=output_dir / "bibtex_field_quality_audit_history.tsv",
+                bibtex_consistency_report_path=output_dir / "bibtex_consistency_report.json",
+                authority_key_normalization_path=output_dir / "authority_key_normalization.tsv",
+                raw_reference_crosswalk_audit_path=output_dir / "raw_reference_crosswalk_audit.tsv",
+                candidate_stub_review_path=output_dir / "candidate_stub_review.tsv",
+            )
+            self.assertFalse(result["ok"])
+            self.assertTrue(any("TN, p. must be documented as a low-severity incomplete raw reference" in error for error in result["errors"]))
 
     def test_validate_bibtex_authority_requires_strong_acronym_evidence(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:

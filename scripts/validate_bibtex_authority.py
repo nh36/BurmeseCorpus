@@ -126,6 +126,8 @@ def validate_bibtex_authority(
     source_work_authority_audit_path: Path | None = None,
     source_work_to_bibtex_reconciliation_path: Path | None = None,
     bibtex_field_quality_audit_path: Path | None = None,
+    bibtex_field_quality_audit_history_path: Path | None = None,
+    bibtex_consistency_report_path: Path | None = None,
     authority_key_normalization_path: Path | None = None,
     raw_reference_crosswalk_audit_path: Path | None = None,
     candidate_stub_review_path: Path | None = None,
@@ -180,6 +182,11 @@ def validate_bibtex_authority(
     bibtex_field_quality_audit_rows = (
         read_tsv(bibtex_field_quality_audit_path) if bibtex_field_quality_audit_path and bibtex_field_quality_audit_path.exists() else []
     )
+    bibtex_field_quality_audit_history_rows = (
+        read_tsv(bibtex_field_quality_audit_history_path)
+        if bibtex_field_quality_audit_history_path and bibtex_field_quality_audit_history_path.exists()
+        else []
+    )
     authority_key_normalization_rows = (
         read_tsv(authority_key_normalization_path) if authority_key_normalization_path and authority_key_normalization_path.exists() else []
     )
@@ -198,6 +205,11 @@ def validate_bibtex_authority(
     ippa_resolution_decision_rows = read_tsv(ippa_resolution_decision_path) if ippa_resolution_decision_path and ippa_resolution_decision_path.exists() else []
     reference_occurrence_rows = read_tsv(reference_occurrences_path) if reference_occurrences_path and reference_occurrences_path.exists() else []
     report = json.loads(report_path.read_text(encoding="utf-8")) if report_path and report_path.exists() else {}
+    bibtex_consistency_report = (
+        json.loads(bibtex_consistency_report_path.read_text(encoding="utf-8"))
+        if bibtex_consistency_report_path and bibtex_consistency_report_path.exists()
+        else {}
+    )
     acronym_report = json.loads(acronym_report_path.read_text(encoding="utf-8")) if acronym_report_path and acronym_report_path.exists() else {}
 
     authority_keys = {entry["bibtex_key"] for entry in authority_entries}
@@ -250,6 +262,12 @@ def validate_bibtex_authority(
                 normalized_script = normalize_script_value(value, fallback_title=entry["fields"].get("title", ""))
                 if value != normalized_script:
                     errors.append(f"authority BibTeX script on {entry['bibtex_key']} must be normalized to {normalized_script}")
+    if any("ippa" in entry["bibtex_key"].casefold() for entry in authority_entries):
+        errors.append("bibliography_authority.bib must not emit a standalone IPPA BibTeX work")
+
+    for entry in candidate_entries:
+        if entry["bibtex_key"] in authority_keys:
+            errors.append(f"candidate BibTeX key {entry['bibtex_key']} must not also appear in bibliography_authority.bib")
 
     for index, row in enumerate(crosswalk_rows, start=1):
         if (
@@ -670,9 +688,34 @@ def validate_bibtex_authority(
                     errors.append(
                         f"source_work_to_bibtex_reconciliation[{index}] suppresses locator BibTeX emission but still points at {row['current_bibtex_key']}"
                     )
+                if row.get("bibtex_status") in {"present", "needs_human_review"} and row.get("current_bibtex_key") not in authority_keys:
+                    errors.append(
+                        f"source_work_to_bibtex_reconciliation[{index}] expects emitted authority key {row.get('current_bibtex_key')} in bibliography_authority.bib"
+                    )
+                if row.get("bibtex_status") == "candidate_only" and row.get("current_bibtex_key") not in candidate_keys:
+                    errors.append(
+                        f"source_work_to_bibtex_reconciliation[{index}] candidate-only key {row.get('current_bibtex_key')} is missing from bibliography_candidates.bib"
+                    )
+            expected_emitted_keys = {
+                row.get("current_bibtex_key", "")
+                for row in source_work_to_bibtex_reconciliation_rows
+                if row.get("current_bibtex_key") and row.get("bibtex_status") in {"present", "needs_human_review"}
+            }
+            if authority_keys != expected_emitted_keys:
+                errors.append("source_work_to_bibtex_reconciliation.tsv must agree with the emitted bibliography_authority.bib keys")
     if bibtex_field_quality_audit_path:
         if not bibtex_field_quality_audit_path.exists():
             errors.append("bibtex_field_quality_audit.tsv is missing")
+        else:
+            for index, row in enumerate(bibtex_field_quality_audit_rows, start=1):
+                if row.get("status") and row.get("status") != "open":
+                    errors.append(f"bibtex_field_quality_audit[{index}] should contain only open issues in the active audit")
+    if bibtex_field_quality_audit_history_path and bibtex_field_quality_audit_history_path.exists():
+        for index, row in enumerate(bibtex_field_quality_audit_history_rows, start=1):
+            if row.get("status") and row.get("status") not in {"open", "resolved", "suppressed", "needs_human_review"}:
+                errors.append(f"bibtex_field_quality_audit_history[{index}] has invalid status {row.get('status')}")
+    if bibtex_consistency_report_path and not bibtex_consistency_report_path.exists():
+        errors.append("bibtex_consistency_report.json is missing")
     if authority_key_normalization_path:
         if not authority_key_normalization_path.exists():
             errors.append("authority_key_normalization.tsv is missing")
@@ -682,6 +725,8 @@ def validate_bibtex_authority(
         if not raw_reference_crosswalk_audit_path.exists():
             errors.append("raw_reference_crosswalk_audit.tsv is missing")
         else:
+            if any(row.get("severity") == "high" for row in raw_reference_crosswalk_audit_rows):
+                errors.append("raw_reference_crosswalk_audit.tsv must not contain high-severity issues at closeout")
             for index, row in enumerate(raw_reference_crosswalk_audit_rows, start=1):
                 if row.get("severity") not in {"high", "medium", "low"}:
                     errors.append(f"raw_reference_crosswalk_audit[{index}] has invalid severity {row.get('severity')}")
@@ -689,6 +734,13 @@ def validate_bibtex_authority(
                     errors.append(f"raw_reference_crosswalk_audit[{index}] has invalid auto_fixable {row.get('auto_fixable')}")
                 if row.get("human_review_required") not in {"true", "false"}:
                     errors.append(f"raw_reference_crosswalk_audit[{index}] has invalid human_review_required {row.get('human_review_required')}")
+                if row.get("severity") == "medium" and not row.get("recommended_fix"):
+                    errors.append(f"raw_reference_crosswalk_audit[{index}] medium-severity issues must include a recommended_fix")
+                if row.get("raw_reference_string") == "TN, p.":
+                    if row.get("issue_type") != "incomplete_raw_reference" or row.get("severity") != "low":
+                        errors.append("TN, p. must be documented as a low-severity incomplete raw reference")
+                    if row.get("human_review_required") != "true":
+                        errors.append("TN, p. residue must keep human_review_required=true")
     if candidate_stub_review_path:
         if not candidate_stub_review_path.exists():
             errors.append("candidate_stub_review.tsv is missing")
@@ -700,6 +752,11 @@ def validate_bibtex_authority(
             }
             if reviewed_keys != current_candidate_keys:
                 errors.append("candidate_stub_review.tsv must review every retained or suppressed candidate stub")
+            retained_candidate_keys = {
+                row.get("candidate_key", "") for row in candidate_stub_review_rows if row.get("review_decision") == "retain"
+            }
+            if candidate_keys != retained_candidate_keys:
+                errors.append("bibliography_candidates.bib must contain only reviewed retained candidates")
             for row in candidate_stub_review_rows:
                 if row.get("review_decision") == "retain" and not row.get("next_action"):
                     errors.append(f"candidate_stub_review.tsv must record next_action for retained candidate {row.get('candidate_key')}")
@@ -966,6 +1023,8 @@ def validate_bibtex_authority(
             errors.append("report source_work_to_bibtex_reconciliation_count does not match source_work_to_bibtex_reconciliation.tsv")
         if report.get("raw_reference_crosswalk_audit_count") != len(raw_reference_crosswalk_audit_rows):
             errors.append("report raw_reference_crosswalk_audit_count does not match raw_reference_crosswalk_audit.tsv")
+        if report.get("open_raw_crosswalk_issue_count") != len(raw_reference_crosswalk_audit_rows):
+            errors.append("report open_raw_crosswalk_issue_count does not match raw_reference_crosswalk_audit.tsv")
         if report.get("high_severity_crosswalk_issue_count") != sum(1 for row in raw_reference_crosswalk_audit_rows if row.get("severity") == "high"):
             errors.append("report high_severity_crosswalk_issue_count does not match raw_reference_crosswalk_audit.tsv")
         if report.get("medium_severity_crosswalk_issue_count") != sum(1 for row in raw_reference_crosswalk_audit_rows if row.get("severity") == "medium"):
@@ -974,6 +1033,8 @@ def validate_bibtex_authority(
             errors.append("report low_severity_crosswalk_issue_count does not match raw_reference_crosswalk_audit.tsv")
         if bibtex_field_quality_audit_path and report.get("bibtex_field_quality_issue_count") != len(bibtex_field_quality_audit_rows):
             errors.append("report bibtex_field_quality_issue_count does not match bibtex_field_quality_audit.tsv")
+        if bibtex_field_quality_audit_path and report.get("open_bibtex_field_quality_issue_count") != len(bibtex_field_quality_audit_rows):
+            errors.append("report open_bibtex_field_quality_issue_count does not match bibtex_field_quality_audit.tsv")
         if bibtex_field_quality_audit_path and report.get("bad_ocr_bibtex_field_count") != sum(1 for row in bibtex_field_quality_audit_rows if row.get("issue_type") == "ocr_like_evidence_fragment"):
             errors.append("report bad_ocr_bibtex_field_count does not match bibtex_field_quality_audit.tsv")
         if authority_key_normalization_path and report.get("authority_key_normalization_count") != len(authority_key_normalization_rows):
@@ -996,6 +1057,28 @@ def validate_bibtex_authority(
             errors.append("report candidate_stubs_suppressed_count does not match candidate_stub_review.tsv")
         if report.get("candidate_stubs_retained_count") != sum(1 for row in candidate_stub_review_rows if row.get("review_decision") == "retain"):
             errors.append("report candidate_stubs_retained_count does not match candidate_stub_review.tsv")
+        if report.get("candidate_entry_count") != len(candidate_entries):
+            errors.append("report candidate_entry_count does not match bibliography_candidates.bib")
+
+    if bibtex_consistency_report:
+        if bibtex_consistency_report.get("bibtex_entry_count") != len(authority_entries):
+            errors.append("bibtex_consistency_report.json bibtex_entry_count does not match bibliography_authority.bib")
+        if bibtex_consistency_report.get("open_field_quality_issue_count") != len(bibtex_field_quality_audit_rows):
+            errors.append("bibtex_consistency_report.json open_field_quality_issue_count does not match bibtex_field_quality_audit.tsv")
+        if bibtex_consistency_report.get("resolved_field_quality_issue_count") != sum(
+            1 for row in bibtex_field_quality_audit_history_rows if row.get("status") == "resolved"
+        ):
+            errors.append("bibtex_consistency_report.json resolved_field_quality_issue_count does not match bibtex_field_quality_audit_history.tsv")
+        if bibtex_consistency_report.get("non_normalized_script_count") != 0:
+            errors.append("bibtex_consistency_report.json non_normalized_script_count must be zero")
+        if bibtex_consistency_report.get("ocr_like_evidence_count") != 0:
+            errors.append("bibtex_consistency_report.json ocr_like_evidence_count must be zero")
+        if bibtex_consistency_report.get("locator_publication_leak_count") != 0:
+            errors.append("bibtex_consistency_report.json locator_publication_leak_count must be zero")
+        if bibtex_consistency_report.get("ippa_duplicate_bibtex_count") != 0:
+            errors.append("bibtex_consistency_report.json ippa_duplicate_bibtex_count must be zero")
+        if bibtex_consistency_report.get("unexpected_emitted_bibtex_key_count") != 0:
+            errors.append("bibtex_consistency_report.json unexpected_emitted_bibtex_key_count must be zero")
 
     if seed_rows:
         allowed_confidence = {"low", "medium", "high"}
@@ -1233,6 +1316,16 @@ def main() -> None:
         default=Path("data/working/bibliography/bibtex_authority/bibtex_field_quality_audit.tsv"),
     )
     parser.add_argument(
+        "--bibtex-field-quality-audit-history",
+        type=Path,
+        default=Path("data/working/bibliography/bibtex_authority/bibtex_field_quality_audit_history.tsv"),
+    )
+    parser.add_argument(
+        "--bibtex-consistency-report",
+        type=Path,
+        default=Path("data/working/bibliography/bibtex_authority/bibtex_consistency_report.json"),
+    )
+    parser.add_argument(
         "--authority-key-normalization",
         type=Path,
         default=Path("data/working/bibliography/bibtex_authority/authority_key_normalization.tsv"),
@@ -1325,6 +1418,8 @@ def main() -> None:
         source_work_authority_audit_path=args.source_work_authority_audit,
         source_work_to_bibtex_reconciliation_path=args.source_work_to_bibtex_reconciliation,
         bibtex_field_quality_audit_path=args.bibtex_field_quality_audit,
+        bibtex_field_quality_audit_history_path=args.bibtex_field_quality_audit_history,
+        bibtex_consistency_report_path=args.bibtex_consistency_report,
         authority_key_normalization_path=args.authority_key_normalization,
         raw_reference_crosswalk_audit_path=args.raw_reference_crosswalk_audit,
         candidate_stub_review_path=args.candidate_stub_review,
