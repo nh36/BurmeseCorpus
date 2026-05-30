@@ -12,6 +12,18 @@
   "article_discovery_needed_count": 5,
   "blocked_source_work_count": 0,
   "notes": [
-    "Discovery output is conservative: titles and short OCR snippets guide witness classification, but they do not prove full translation coverage."
-  ]
+    "Verification is stricter than candidate discovery: exact title-page, contents, or OCR-heading evidence is required before promoting translation or edition claims.",
+    "Weak filename matches are retained as reviewed evidence rather than silently deleted."
+  ],
+  "verified_witness_count": 28,
+  "verified_direct_witness_count": 1,
+  "verified_translation_witness_count": 0,
+  "verified_edition_witness_count": 1,
+  "verified_plate_witness_count": 2,
+  "verified_catalogue_witness_count": 0,
+  "verified_secondary_work_count": 9,
+  "weak_false_positive_count": 1,
+  "missing_direct_witness_search_count": 4,
+  "titlepage_toc_snippet_count": 11,
+  "source_works_needing_direct_witness_count": 5
 }

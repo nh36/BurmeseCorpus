@@ -63,6 +63,7 @@ Run the first-pass discovery and validation with:
 
 ```bash
 python3 scripts/discover_translation_sources.py
+python3 scripts/verify_translation_witnesses.py
 python3 scripts/validate_translation_source_discovery.py
 ```
 
@@ -78,6 +79,9 @@ and writes:
 
 - `data/working/bibliography/translation_source_discovery/witness_candidates.tsv`
 - `data/working/bibliography/translation_source_discovery/witness_classification.tsv`
+- `data/working/bibliography/translation_source_discovery/witness_verification.tsv`
+- `data/working/bibliography/translation_source_discovery/witness_titlepage_toc_snippets.tsv`
+- `data/working/bibliography/translation_source_discovery/missing_direct_witness_search.tsv`
 - `data/working/bibliography/translation_source_discovery/periodical_article_discovery_plan.tsv`
 - `data/working/bibliography/translation_source_discovery/translation_source_discovery_report.json`
 
@@ -93,6 +97,23 @@ and writes:
 - series/periodical containers from article-level candidates.
 
 Confirmed translation or edition claims should come only from short inspectable evidence such as OCR snippets or clearly explicit file labels. Filename-only matches should stay provisional.
+
+## Witness verification
+
+Candidate discovery is not the same thing as witness verification.
+
+`witness_candidates.tsv` records leads. `witness_verification.tsv` records the stricter reviewed layer after title-page, contents, OCR-heading, or other short inspectable evidence has been checked.
+
+Use the verification pass to keep these distinctions explicit:
+
+- filename matches are leads, not proof;
+- title page, contents, preface, or OCR-heading evidence is needed before confirming a translation or edition witness;
+- periodical containers and secondary articles must remain distinct from direct source witnesses;
+- weak false positives should stay in the data as reviewed outcomes rather than being silently deleted.
+
+`witness_titlepage_toc_snippets.tsv` stores only short snippets that justify the verification status. Do not commit full OCR text, scans, or page images.
+
+`missing_direct_witness_search.tsv` documents targeted direct-witness searches for high-priority works that still need a better local witness.
 
 ## Periodicals and series
 

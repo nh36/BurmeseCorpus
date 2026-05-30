@@ -20,6 +20,7 @@ from discover_translation_sources import (
     match_source_work_to_file,
 )
 from validate_translation_source_discovery import validate_translation_source_discovery
+from verify_translation_witnesses import MISSING_DIRECT_SEARCH_FIELDS, SNIPPET_FIELDS, VERIFICATION_FIELDS
 
 
 PLAN_FIELDS = [
@@ -40,6 +41,11 @@ PLAN_FIELDS = [
     "confirmed_translation_witness_count",
     "confirmed_edition_witness_count",
     "confirmed_plate_witness_count",
+    "verified_direct_witness_count",
+    "verified_translation_witness_count",
+    "verified_edition_witness_count",
+    "verified_plate_witness_count",
+    "weak_false_positive_count",
     "next_review_action",
 ]
 
@@ -345,6 +351,11 @@ class TranslationSourceDiscoveryTests(unittest.TestCase):
             "confirmed_translation_witness_count": "0",
             "confirmed_edition_witness_count": "0",
             "confirmed_plate_witness_count": "0",
+            "verified_direct_witness_count": "0",
+            "verified_translation_witness_count": "0",
+            "verified_edition_witness_count": "0",
+            "verified_plate_witness_count": "0",
+            "weak_false_positive_count": "0",
             "next_review_action": "",
         }
         row.update(overrides)
@@ -393,6 +404,32 @@ class TranslationSourceDiscoveryTests(unittest.TestCase):
         row.update(overrides)
         return row
 
+    def _verification_row(self, **overrides: str) -> dict:
+        row = {
+            "witness_id": "w1",
+            "source_work_key": "lucePeMaungTinInscriptionsOfBurma",
+            "canonical_title": "Inscriptions of Burma",
+            "candidate_file_label": "Inscriptions of Burma.pdf",
+            "current_witness_type": "source_edition",
+            "verified_witness_type": "source_edition",
+            "verification_status": "verified_direct_witness",
+            "directness": "direct_source",
+            "contains_translation_verified": "unknown",
+            "contains_edition_verified": "confirmed",
+            "contains_plate_or_image_verified": "unknown",
+            "contains_catalogue_metadata_verified": "unknown",
+            "contains_secondary_discussion_verified": "unknown",
+            "title_page_evidence": "Inscriptions of Burma",
+            "toc_evidence": "",
+            "ocr_or_text_snippet": "",
+            "evidence_quality": "strong",
+            "confidence": "high",
+            "recommended_action": "Use verified direct witness.",
+            "notes": "",
+        }
+        row.update(overrides)
+        return row
+
     def _write_validation_fixture(
         self,
         root: Path,
@@ -401,16 +438,25 @@ class TranslationSourceDiscoveryTests(unittest.TestCase):
         plan_rows: list[dict] | None = None,
         candidate_rows: list[dict] | None = None,
         classification_rows: list[dict] | None = None,
+        verification_rows: list[dict] | None = None,
+        snippet_rows: list[dict] | None = None,
+        missing_search_rows: list[dict] | None = None,
         report_overrides: dict | None = None,
     ) -> None:
         source_rows = source_rows or [base_source_row()]
         plan_rows = plan_rows or [self._plan_row()]
         candidate_rows = candidate_rows or []
         classification_rows = classification_rows or []
+        verification_rows = verification_rows or []
+        snippet_rows = snippet_rows or []
+        missing_search_rows = missing_search_rows or []
         write_tsv(root / "source_work_authority.tsv", source_rows, SOURCE_WORK_FIELDS)
         write_tsv(root / "translation_source_discovery_plan.tsv", plan_rows, PLAN_FIELDS)
         write_tsv(root / "witness_candidates.tsv", candidate_rows, WITNESS_CANDIDATE_FIELDS)
         write_tsv(root / "witness_classification.tsv", classification_rows, WITNESS_CLASSIFICATION_FIELDS)
+        write_tsv(root / "witness_verification.tsv", verification_rows, VERIFICATION_FIELDS)
+        write_tsv(root / "witness_titlepage_toc_snippets.tsv", snippet_rows, SNIPPET_FIELDS)
+        write_tsv(root / "missing_direct_witness_search.tsv", missing_search_rows, MISSING_DIRECT_SEARCH_FIELDS)
         periodical_rows = [
             {
                 "series_source_work_key": key,
@@ -422,6 +468,10 @@ class TranslationSourceDiscoveryTests(unittest.TestCase):
                 "priority": "medium",
                 "next_action": "",
                 "notes": "",
+                "article_candidate_count": "0",
+                "high_priority_article_count": "0",
+                "needs_article_title_normalization": "false",
+                "needs_local_file_search": "true",
             }
             for key in [
                 "journalBurmaResearchSociety",
@@ -445,11 +495,37 @@ class TranslationSourceDiscoveryTests(unittest.TestCase):
             "periodical_container_count": sum(row.get("witness_type") == "periodical_container" for row in classification_rows),
             "article_discovery_needed_count": 5,
             "blocked_source_work_count": 0,
+            "verified_witness_count": len(verification_rows),
+            "verified_direct_witness_count": sum(row.get("verification_status") in {"verified_direct_witness", "verified_catalogue_witness"} for row in verification_rows),
+            "verified_translation_witness_count": sum(row.get("contains_translation_verified") == "confirmed" for row in verification_rows),
+            "verified_edition_witness_count": sum(row.get("contains_edition_verified") == "confirmed" for row in verification_rows),
+            "verified_plate_witness_count": sum(row.get("verification_status") == "verified_plate_witness" for row in verification_rows),
+            "verified_catalogue_witness_count": sum(row.get("verification_status") == "verified_catalogue_witness" for row in verification_rows),
+            "verified_secondary_work_count": sum(row.get("verification_status") == "verified_secondary_work" for row in verification_rows),
+            "weak_false_positive_count": sum(row.get("verification_status") == "weak_false_positive" for row in verification_rows),
+            "missing_direct_witness_search_count": sum(bool(row.get("matched_file_label")) for row in missing_search_rows),
+            "titlepage_toc_snippet_count": len(snippet_rows),
+            "source_works_needing_direct_witness_count": sum(row.get("discovery_status") == "needs_direct_witness_search" for row in plan_rows),
             "notes": ["fixture"],
         }
         if report_overrides:
             report.update(report_overrides)
         (root / "translation_source_discovery_report.json").write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
+        verification_report = {
+            "verified_witness_count": len(verification_rows),
+            "verified_direct_witness_count": sum(row.get("verification_status") in {"verified_direct_witness", "verified_catalogue_witness"} for row in verification_rows),
+            "verified_translation_witness_count": sum(row.get("contains_translation_verified") == "confirmed" for row in verification_rows),
+            "verified_edition_witness_count": sum(row.get("contains_edition_verified") == "confirmed" for row in verification_rows),
+            "verified_plate_witness_count": sum(row.get("verification_status") == "verified_plate_witness" for row in verification_rows),
+            "verified_catalogue_witness_count": sum(row.get("verification_status") == "verified_catalogue_witness" for row in verification_rows),
+            "verified_secondary_work_count": sum(row.get("verification_status") == "verified_secondary_work" for row in verification_rows),
+            "weak_false_positive_count": sum(row.get("verification_status") == "weak_false_positive" for row in verification_rows),
+            "missing_direct_witness_search_count": sum(bool(row.get("matched_file_label")) for row in missing_search_rows),
+            "titlepage_toc_snippet_count": len(snippet_rows),
+            "source_works_needing_direct_witness_count": sum(row.get("discovery_status") == "needs_direct_witness_search" for row in plan_rows),
+            "notes": ["fixture"],
+        }
+        (root / "witness_verification_report.json").write_text(json.dumps(verification_report, indent=2) + "\n", encoding="utf-8")
 
     def _run_validation(self, root: Path) -> list[str]:
         return validate_translation_source_discovery(
@@ -457,8 +533,12 @@ class TranslationSourceDiscoveryTests(unittest.TestCase):
             source_work_authority_path=root / "source_work_authority.tsv",
             witness_candidates_path=root / "witness_candidates.tsv",
             witness_classification_path=root / "witness_classification.tsv",
+            witness_verification_path=root / "witness_verification.tsv",
+            witness_snippets_path=root / "witness_titlepage_toc_snippets.tsv",
+            missing_direct_search_path=root / "missing_direct_witness_search.tsv",
             periodical_article_plan_path=root / "periodical_article_discovery_plan.tsv",
             report_path=root / "translation_source_discovery_report.json",
+            witness_verification_report_path=root / "witness_verification_report.json",
         )
 
 

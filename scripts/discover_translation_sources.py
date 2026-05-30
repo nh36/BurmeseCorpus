@@ -56,6 +56,10 @@ WITNESS_CLASSIFICATION_FIELDS = [
     "needs_human_review",
     "next_action",
     "notes",
+    "verification_status",
+    "directness",
+    "verified_by",
+    "verified_evidence_id",
 ]
 
 PERIODICAL_ARTICLE_DISCOVERY_FIELDS = [
@@ -77,6 +81,11 @@ PLAN_DISCOVERY_FIELDS = [
     "confirmed_translation_witness_count",
     "confirmed_edition_witness_count",
     "confirmed_plate_witness_count",
+    "verified_direct_witness_count",
+    "verified_translation_witness_count",
+    "verified_edition_witness_count",
+    "verified_plate_witness_count",
+    "weak_false_positive_count",
     "next_review_action",
 ]
 
@@ -84,7 +93,10 @@ DISCOVERY_STATUSES = {
     "not_started",
     "candidate_witnesses_found",
     "classified_provisional",
+    "verification_in_progress",
+    "verified_direct_witness_found",
     "needs_local_file",
+    "needs_direct_witness_search",
     "needs_article_level_discovery",
     "blocked",
 }
