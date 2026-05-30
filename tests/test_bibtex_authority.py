@@ -155,6 +155,8 @@ class BibtexAuthorityTests(unittest.TestCase):
         self.assertEqual(parse_locator("OBI 3, p. 2", "fam-obi-internal", "OBI"), ("3, p. 2", "volume_page"))
         self.assertEqual(parse_locator("Pl. II 198", "fam-plate-references", "Pl."), ("II 198", "plate"))
         self.assertEqual(parse_locator("List 90", "fam-list-catalogue", "List"), ("90", "catalogue_number"))
+        self.assertEqual(parse_locator("IPPA 101-102", "fam-ippa-catalogue", "IPPA references"), ("101-102", "number"))
+        self.assertEqual(parse_locator("OR folio 12 verso", "fam-or-catalogue", "OR references"), ("folio 12 verso", "folio"))
         self.assertEqual(parse_locator("RDASB 1971", "fam-rdasb-publication", "RDASB"), ("1971", "year"))
 
     def test_extract_explicit_definition_candidates_reads_abbreviation_list(self) -> None:
@@ -766,6 +768,11 @@ class BibtexAuthorityTests(unittest.TestCase):
             self.assertGreater(report["candidate_entry_count"], 0)
             self.assertIn("matched_external_key", authority_tsv)
             self.assertTrue((output_dir / "source_family_authority.tsv").exists())
+            self.assertTrue((output_dir / "source_work_authority.tsv").exists())
+            self.assertTrue((output_dir / "source_work_authority_audit.tsv").exists())
+            self.assertTrue((output_dir / "source_work_to_bibtex_reconciliation.tsv").exists())
+            self.assertTrue((output_dir / "bibtex_field_quality_audit.tsv").exists())
+            self.assertTrue((output_dir / "authority_key_normalization.tsv").exists())
 
     def test_harvest_local_bibliography_sources_finds_frasch_and_frosch_and_copies(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:
@@ -1050,10 +1057,96 @@ class BibtexAuthorityTests(unittest.TestCase):
                 remaining_acronym_evidence_path=output_dir / "remaining_acronym_evidence.tsv",
                 source_work_locator_systems_path=output_dir / "source_work_locator_systems.tsv",
                 source_work_authority_path=output_dir / "source_work_authority.tsv",
+                source_work_authority_audit_path=output_dir / "source_work_authority_audit.tsv",
+                source_work_to_bibtex_reconciliation_path=output_dir / "source_work_to_bibtex_reconciliation.tsv",
+                bibtex_field_quality_audit_path=output_dir / "bibtex_field_quality_audit.tsv",
+                authority_key_normalization_path=output_dir / "authority_key_normalization.tsv",
                 raw_reference_crosswalk_audit_path=output_dir / "raw_reference_crosswalk_audit.tsv",
                 candidate_stub_review_path=output_dir / "candidate_stub_review.tsv",
             )
             self.assertTrue(result["ok"], result["errors"])
+
+    def test_build_authority_emits_source_work_qc_tables(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            temp_path = Path(temp_dir)
+            families_path, members_path, candidates_path, seeds_path, external_entries_path = self.write_fixture_tables(temp_path)
+            acronym_candidates_path, acronym_report_path = self.write_fixture_acronym_files(temp_path)
+            output_dir = temp_path / "authority"
+            build_authority(
+                reference_families_path=families_path,
+                reference_members_path=members_path,
+                work_candidates_path=candidates_path,
+                seed_path=seeds_path,
+                external_entries_path=external_entries_path,
+                output_dir=output_dir,
+                frasch_references_path=temp_path / "missing_frasch.tsv",
+                local_candidates_path=temp_path / "missing_local_candidates.tsv",
+                local_manifest_path=temp_path / "missing_local_manifest.tsv",
+                acronym_candidates_path=acronym_candidates_path,
+                acronym_report_path=acronym_report_path,
+            )
+
+            source_work_rows = {row["source_work_key"]: row for row in read_tsv(output_dir / "source_work_authority.tsv")}
+            reconciliation_rows = {row["source_work_key"]: row for row in read_tsv(output_dir / "source_work_to_bibtex_reconciliation.tsv")}
+            normalization_rows = read_tsv(output_dir / "authority_key_normalization.tsv")
+            report = json.loads((output_dir / "bibtex_authority_report.json").read_text(encoding="utf-8"))
+
+            self.assertIn("oldBurmeseInscriptions", source_work_rows)
+            self.assertTrue(source_work_rows["oldBurmeseInscriptions"]["authority_level"])
+            self.assertIn("duroiselle1921list", reconciliation_rows)
+            self.assertEqual(reconciliation_rows["duroiselle1921list"]["bibtex_status"], "present")
+            self.assertTrue(any(row["old_key"] == "obiCorpusSource" and row["new_key"] == "oldBurmeseInscriptions" for row in normalization_rows))
+            self.assertIn("source_work_authority_audit_count", report)
+            self.assertIn("bibtex_field_quality_issue_count", report)
+            self.assertIn("authority_key_normalization_count", report)
+
+    def test_validate_bibtex_authority_rejects_missing_source_work_qc_artifacts(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            temp_path = Path(temp_dir)
+            families_path, members_path, candidates_path, seeds_path, external_entries_path = self.write_fixture_tables(temp_path)
+            acronym_candidates_path, acronym_report_path = self.write_fixture_acronym_files(temp_path)
+            output_dir = temp_path / "authority"
+            build_authority(
+                reference_families_path=families_path,
+                reference_members_path=members_path,
+                work_candidates_path=candidates_path,
+                seed_path=seeds_path,
+                external_entries_path=external_entries_path,
+                output_dir=output_dir,
+                frasch_references_path=temp_path / "missing_frasch.tsv",
+                local_candidates_path=temp_path / "missing_local_candidates.tsv",
+                local_manifest_path=temp_path / "missing_local_manifest.tsv",
+                acronym_candidates_path=acronym_candidates_path,
+                acronym_report_path=acronym_report_path,
+            )
+            (output_dir / "source_work_authority_audit.tsv").unlink()
+
+            result = validate_bibtex_authority(
+                authority_bib_path=output_dir / "bibliography_authority.bib",
+                candidates_bib_path=output_dir / "bibliography_candidates.bib",
+                authority_tsv_path=output_dir / "bibtex_authority.tsv",
+                crosswalk_path=output_dir / "raw_reference_to_bibtex.tsv",
+                families_path=families_path,
+                external_entries_path=external_entries_path,
+                evidence_path=output_dir / "bibtex_authority_evidence.tsv",
+                acronym_status_path=output_dir / "acronym_resolution_status.tsv",
+                acronym_candidates_path=acronym_candidates_path,
+                acronym_report_path=acronym_report_path,
+                source_family_path=output_dir / "source_family_authority.tsv",
+                manual_review_packet_path=output_dir / "acronym_manual_review_packet.tsv",
+                remaining_acronym_worklist_path=output_dir / "remaining_acronym_worklist.tsv",
+                remaining_acronym_evidence_path=output_dir / "remaining_acronym_evidence.tsv",
+                source_work_locator_systems_path=output_dir / "source_work_locator_systems.tsv",
+                source_work_authority_path=output_dir / "source_work_authority.tsv",
+                source_work_authority_audit_path=output_dir / "source_work_authority_audit.tsv",
+                source_work_to_bibtex_reconciliation_path=output_dir / "source_work_to_bibtex_reconciliation.tsv",
+                bibtex_field_quality_audit_path=output_dir / "bibtex_field_quality_audit.tsv",
+                authority_key_normalization_path=output_dir / "authority_key_normalization.tsv",
+                raw_reference_crosswalk_audit_path=output_dir / "raw_reference_crosswalk_audit.tsv",
+                candidate_stub_review_path=output_dir / "candidate_stub_review.tsv",
+            )
+            self.assertFalse(result["ok"])
+            self.assertTrue(any("source_work_authority_audit.tsv is missing" in error for error in result["errors"]))
 
     def test_validate_bibtex_authority_requires_strong_acronym_evidence(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:
@@ -1482,7 +1575,7 @@ class BibtexAuthorityTests(unittest.TestCase):
             self.assertEqual(b2_row["locator_type"], "volume_page")
             plan_row = next(row for row in resolution_rows if row["family_id"] == "fam-raw-b-2")
             self.assertEqual(plan_row["resolution_status"], "alias_resolved")
-            self.assertEqual(plan_row["authority_key"], "fraschBaganEpigraphicDatabasePartBShort")
+            self.assertEqual(plan_row["authority_key"], "fraschBaganEpigraphicDatabasePartB")
             self.assertNotIn("fam-raw-b-2", unresolved)
 
     def test_build_authority_models_source_family_locators_without_machine_stubs(self) -> None:

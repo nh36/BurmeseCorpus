@@ -210,6 +210,28 @@ The acronym-resolution phase is now closed for the priority set. No priority acr
 
 The next phase should build on this consolidation for **bibliography/source-work normalization** and **translation-source discovery**, not by reopening broad acronym chasing.
 
+## Source-work authority and BibTeX emission
+
+`source_work_authority.tsv` is intentionally broader than `bibliography_authority.bib`.
+
+- It includes publication-like source works, periodicals, series, corpus/source authorities, locator collections, manuscript collections, and private notebook authorities.
+- Not every authority object should become an ordinary BibTeX publication.
+- Locator systems and alias families remain authority objects even when they should not emit standalone `@book`-style records.
+
+The current QC layer makes that distinction explicit:
+
+- `source_work_authority.tsv` carries the canonical `source_work_key`, `authority_level`, and evidence-backed source-work metadata.
+- `source_work_locator_systems.tsv` records how families such as `Pl.`, `IOB`, `IPPA`, `MP`, `OR`, `Luce D`, and `Luce J` point into works or collections without turning those locator systems into ordinary publications.
+- `source_work_to_bibtex_reconciliation.tsv` records whether a source-work authority should emit a BibTeX row, remain candidate-only, or be intentionally suppressed from publication-style emission.
+
+This means:
+
+- series- and periodical-level authorities such as `JBRS`, `JRAS`, `BBHC`, `ARASI`, and `Epigraphia Birmanica` can remain publication-like authorities without pretending to be article-level records;
+- source-work authorities such as `PPA`, `UB`, `SIP`, `UEM`, `TN`, `List`, and *Inscriptions of Burma* can emit BibTeX rows when the bibliographic witness is strong enough;
+- locator collections, manuscript collections, and private Luce notebook systems should remain structural authorities unless there is explicit reason to emit them as `@misc` or `@unpublished`.
+
+Messy OCR evidence is still preserved, but it no longer belongs in clean BibTeX fields. The QC pass keeps raw or noisy evidence in TSV audit/evidence tables, while emitted BibTeX rows use short, citation-like summaries and normalized script values.
+
 ## Authority vs candidate BibTeX
 
 - `bibliography_authority.bib` holds conservative authority entries supported by imported external BibTeX, Frasch/local-source evidence, repository-backed source identification, or strong manual/source-family seeds.

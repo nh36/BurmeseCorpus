@@ -258,6 +258,7 @@ SOURCE_WORK_AUTHORITY_FIELDS = [
     "source_work_key",
     "canonical_title",
     "short_title",
+    "authority_level",
     "work_type",
     "authors_editors",
     "date_or_date_range",
@@ -281,8 +282,49 @@ RAW_REFERENCE_CROSSWALK_AUDIT_FIELDS = [
     "locator",
     "locator_type",
     "issue_type",
+    "issue_category",
+    "severity",
+    "auto_fixable",
+    "human_review_required",
+    "recommended_fix",
+    "notes",
+]
+SOURCE_WORK_AUTHORITY_AUDIT_FIELDS = [
+    "source_work_key",
+    "canonical_title",
+    "related_source_family_ids",
+    "issue_type",
+    "severity",
+    "recommended_action",
+    "merge_target_key",
+    "notes",
+]
+SOURCE_WORK_TO_BIBTEX_RECONCILIATION_FIELDS = [
+    "source_work_key",
+    "canonical_title",
+    "authority_level",
+    "should_have_bibtex",
+    "current_bibtex_key",
+    "bibtex_status",
+    "reason",
+    "recommended_action",
+    "notes",
+]
+BIBTEX_FIELD_QUALITY_AUDIT_FIELDS = [
+    "bibtex_key",
+    "field_name",
+    "field_value_short",
+    "issue_type",
     "severity",
     "recommended_fix",
+    "notes",
+]
+AUTHORITY_KEY_NORMALIZATION_FIELDS = [
+    "old_key",
+    "new_key",
+    "object_type",
+    "reason",
+    "migration_action",
     "notes",
 ]
 CANDIDATE_STUB_REVIEW_FIELDS = [
@@ -1216,6 +1258,33 @@ SOURCE_WORK_RELATIONSHIPS = {
         "default_examples": "List 90 | List 302",
         "notes": "Duroiselle's List is a source work with catalogue-number locators.",
     },
+    "a": {
+        "source_work_key": "fraschBaganEpigraphicDatabasePartA",
+        "source_work_title": "Bagan Epigraphic Database, Part A",
+        "locator_system": "page",
+        "locator_prefixes": "A",
+        "locator_type": "page",
+        "default_examples": "A, p. 79",
+        "notes": "A references point to the Part A witness set of Frasch's Bagan Epigraphic Database.",
+    },
+    "b": {
+        "source_work_key": "fraschBaganEpigraphicDatabasePartB",
+        "source_work_title": "Bagan Epigraphic Database, Part B",
+        "locator_system": "volume/page",
+        "locator_prefixes": "B; BED B",
+        "locator_type": "volume_page",
+        "default_examples": "B 2, p. 815 | BED B 645-2",
+        "notes": "B and BED B are treated as shorthand variants for the same Part B source work rather than separate works.",
+    },
+    "bed b": {
+        "source_work_key": "fraschBaganEpigraphicDatabasePartB",
+        "source_work_title": "Bagan Epigraphic Database, Part B",
+        "locator_system": "volume/page",
+        "locator_prefixes": "B; BED B",
+        "locator_type": "volume_page",
+        "default_examples": "B 2, p. 815 | BED B 645-2",
+        "notes": "BED B is kept as the explicit Part B family label, but it shares the same source work as shorthand B references.",
+    },
     "iob": {
         "source_work_key": "lucePeMaungTinInscriptionsOfBurma",
         "source_work_title": "Inscriptions of Burma",
@@ -1387,6 +1456,7 @@ SOURCE_WORK_AUTHORITY_LIBRARY = {
     "lucePeMaungTinInscriptionsOfBurma": {
         "canonical_title": "Inscriptions of Burma",
         "short_title": "Inscriptions of Burma",
+        "authority_level": "book",
         "work_type": "book",
         "authors_editors": "G. H. Luce and U Pe Maung Tin",
         "date_or_date_range": "1933-1956",
@@ -1401,6 +1471,7 @@ SOURCE_WORK_AUTHORITY_LIBRARY = {
     "duroiselle1921list": {
         "canonical_title": "List of Inscriptions Found in Burma",
         "short_title": "List",
+        "authority_level": "book",
         "work_type": "book",
         "authors_editors": "Charles Duroiselle",
         "date_or_date_range": "1921",
@@ -1412,9 +1483,40 @@ SOURCE_WORK_AUTHORITY_LIBRARY = {
         "needs_human_review": "false",
         "notes": "Stable catalogue-style source work used for List locators.",
     },
+    "fraschBaganEpigraphicDatabasePartA": {
+        "canonical_title": "Bagan Epigraphic Database, Part A",
+        "short_title": "A",
+        "authority_level": "source_catalogue",
+        "work_type": "source_catalogue",
+        "authors_editors": "Tilman Frasch",
+        "date_or_date_range": "",
+        "publisher_or_institution": "",
+        "place": "",
+        "authority_status": "provisional_source_work",
+        "primary_source_family_id": "sf-a",
+        "bibtex_key": "fraschBaganEpigraphicDatabasePartA",
+        "needs_human_review": "true",
+        "notes": "Part A source-work authority for the Bagan Epigraphic Database abbreviations.",
+    },
+    "fraschBaganEpigraphicDatabasePartB": {
+        "canonical_title": "Bagan Epigraphic Database, Part B",
+        "short_title": "BED B",
+        "authority_level": "source_catalogue",
+        "work_type": "source_catalogue",
+        "authors_editors": "Tilman Frasch",
+        "date_or_date_range": "",
+        "publisher_or_institution": "",
+        "place": "",
+        "authority_status": "provisional_source_work",
+        "primary_source_family_id": "sf-bed-b",
+        "bibtex_key": "fraschBaganEpigraphicDatabasePartB",
+        "needs_human_review": "true",
+        "notes": "Canonical Part B source-work authority shared by BED B and shorthand B references.",
+    },
     "ppaCatalogue": {
         "canonical_title": "Inscriptions of Pagan, Pinya and Ava",
         "short_title": "PPA",
+        "authority_level": "source_catalogue",
         "work_type": "source_catalogue",
         "authors_editors": "Archaeological Survey of Burma (ed.)",
         "date_or_date_range": "",
@@ -1429,6 +1531,7 @@ SOURCE_WORK_AUTHORITY_LIBRARY = {
     "ubSourceFamily": {
         "canonical_title": "Inscriptions Collected in Upper Burma",
         "short_title": "UB",
+        "authority_level": "source_catalogue",
         "work_type": "source_catalogue",
         "authors_editors": "",
         "date_or_date_range": "",
@@ -1443,6 +1546,7 @@ SOURCE_WORK_AUTHORITY_LIBRARY = {
     "sipSelectionsPagan": {
         "canonical_title": "Selections from the Inscriptions of Pagan",
         "short_title": "SIP",
+        "authority_level": "book",
         "work_type": "book",
         "authors_editors": "Pe Maung Tin and G. H. Luce",
         "date_or_date_range": "",
@@ -1457,6 +1561,7 @@ SOURCE_WORK_AUTHORITY_LIBRARY = {
     "uemSelectionsPagan": {
         "canonical_title": "Selections from the Inscriptions of Pagan",
         "short_title": "UEM",
+        "authority_level": "book",
         "work_type": "book",
         "authors_editors": "U E Maung (ed.)",
         "date_or_date_range": "1958",
@@ -1471,6 +1576,7 @@ SOURCE_WORK_AUTHORITY_LIBRARY = {
     "tnInscriptionsPaganPinyaAva": {
         "canonical_title": "Inscriptions of Pagan, Pinya and Ava",
         "short_title": "TN",
+        "authority_level": "book",
         "work_type": "book",
         "authors_editors": "U Tun Nyein (tr.)",
         "date_or_date_range": "1897",
@@ -1485,6 +1591,7 @@ SOURCE_WORK_AUTHORITY_LIBRARY = {
     "epigraphiaBirmanica": {
         "canonical_title": "Epigraphia Birmanica",
         "short_title": "EB",
+        "authority_level": "series",
         "work_type": "series",
         "authors_editors": "",
         "date_or_date_range": "1919-1936",
@@ -1499,6 +1606,7 @@ SOURCE_WORK_AUTHORITY_LIBRARY = {
     "journalBurmaResearchSociety": {
         "canonical_title": "Journal of the Burma Research Society",
         "short_title": "JBRS",
+        "authority_level": "periodical",
         "work_type": "periodical",
         "authors_editors": "",
         "date_or_date_range": "",
@@ -1513,6 +1621,7 @@ SOURCE_WORK_AUTHORITY_LIBRARY = {
     "journalRoyalAsiaticSociety": {
         "canonical_title": "Journal of the Royal Asiatic Society",
         "short_title": "JRAS",
+        "authority_level": "periodical",
         "work_type": "periodical",
         "authors_editors": "",
         "date_or_date_range": "",
@@ -1527,6 +1636,7 @@ SOURCE_WORK_AUTHORITY_LIBRARY = {
     "bulletinBurmaHistoricalCommission": {
         "canonical_title": "Bulletin of the Burma Historical Commission",
         "short_title": "BBHC",
+        "authority_level": "periodical",
         "work_type": "periodical",
         "authors_editors": "",
         "date_or_date_range": "",
@@ -1541,6 +1651,7 @@ SOURCE_WORK_AUTHORITY_LIBRARY = {
     "annualReportsArchaeologicalSurveyIndia": {
         "canonical_title": "Annual Reports of the Archaeological Survey of India",
         "short_title": "ARASI",
+        "authority_level": "series",
         "work_type": "periodical",
         "authors_editors": "",
         "date_or_date_range": "",
@@ -1555,6 +1666,7 @@ SOURCE_WORK_AUTHORITY_LIBRARY = {
     "oldBurmeseInscriptions": {
         "canonical_title": "Old Burmese Inscriptions",
         "short_title": "OBI",
+        "authority_level": "corpus_source",
         "work_type": "corpus_source",
         "authors_editors": "Tilman Frasch",
         "date_or_date_range": "",
@@ -1566,9 +1678,40 @@ SOURCE_WORK_AUTHORITY_LIBRARY = {
         "needs_human_review": "false",
         "notes": "Structured corpus authority for OBI internal references.",
     },
+    "rdasbSourceFamily": {
+        "canonical_title": "Report of the Director, Archaeological Survey of Burma",
+        "short_title": "RDASB",
+        "authority_level": "series",
+        "work_type": "series",
+        "authors_editors": "",
+        "date_or_date_range": "",
+        "publisher_or_institution": "Archaeological Survey of Burma",
+        "place": "",
+        "authority_status": "provisional_source_work",
+        "primary_source_family_id": "sf-rdasb",
+        "bibtex_key": "rdasbSourceFamily",
+        "needs_human_review": "true",
+        "notes": "Series-level authority pending issue-level confirmation.",
+    },
+    "uMinHsweSourceFamily": {
+        "canonical_title": "U Min Hswe",
+        "short_title": "U Min Hswe",
+        "authority_level": "source_catalogue",
+        "work_type": "source_catalogue",
+        "authors_editors": "U Min Hswe",
+        "date_or_date_range": "",
+        "publisher_or_institution": "",
+        "place": "",
+        "authority_status": "provisional_source_work",
+        "primary_source_family_id": "sf-u-min-hswe",
+        "bibtex_key": "uMinHsweSourceFamily",
+        "needs_human_review": "true",
+        "notes": "Named source authority retained for bibliography normalization even though the exact title boundary remains uncertain.",
+    },
     "mandalayPalaceStoneCollection": {
         "canonical_title": "Mandalay Palace stone collection",
         "short_title": "MP",
+        "authority_level": "locator_collection",
         "work_type": "locator_collection",
         "authors_editors": "",
         "date_or_date_range": "",
@@ -1583,6 +1726,7 @@ SOURCE_WORK_AUTHORITY_LIBRARY = {
     "britishLibraryOrientalManuscripts": {
         "canonical_title": "British Library Oriental manuscripts",
         "short_title": "OR",
+        "authority_level": "manuscript_collection",
         "work_type": "manuscript_collection",
         "authors_editors": "",
         "date_or_date_range": "",
@@ -1597,6 +1741,7 @@ SOURCE_WORK_AUTHORITY_LIBRARY = {
     "gHLuceNotebookD": {
         "canonical_title": "G. H. Luce Notebook D",
         "short_title": "Luce D",
+        "authority_level": "archival_notebook",
         "work_type": "archival_notebook",
         "authors_editors": "G. H. Luce",
         "date_or_date_range": "",
@@ -1611,6 +1756,7 @@ SOURCE_WORK_AUTHORITY_LIBRARY = {
     "gHLuceNotebookJ": {
         "canonical_title": "G. H. Luce Notebook J",
         "short_title": "Luce J",
+        "authority_level": "archival_notebook",
         "work_type": "archival_notebook",
         "authors_editors": "G. H. Luce",
         "date_or_date_range": "",
@@ -1624,18 +1770,89 @@ SOURCE_WORK_AUTHORITY_LIBRARY = {
     },
 }
 
+AUTHORITY_KEY_NORMALIZATION_ROWS = [
+    {
+        "old_key": "annualReportArchaeologicalSurveyIndia",
+        "new_key": "annualReportsArchaeologicalSurveyIndia",
+        "object_type": "source_work",
+        "reason": "Prefer the pluralized series title for the ARASI source-work authority.",
+        "migration_action": "Map source_work_key references to annualReportsArchaeologicalSurveyIndia while keeping the legacy BibTeX key only where already emitted.",
+        "notes": "The singular form survives only as a BibTeX key; the source-work layer should use the series title.",
+    },
+    {
+        "old_key": "burmaHistoricalCommissionBulletin",
+        "new_key": "bulletinBurmaHistoricalCommission",
+        "object_type": "source_work",
+        "reason": "Prefer the title-forward source-work key for BBHC.",
+        "migration_action": "Map source_work_key references to bulletinBurmaHistoricalCommission and keep the older BibTeX key only if needed for continuity.",
+        "notes": "This avoids carrying both key orders through the source-work layer.",
+    },
+    {
+        "old_key": "obiCorpusSource",
+        "new_key": "oldBurmeseInscriptions",
+        "object_type": "source_work",
+        "reason": "Use the title of the corpus/source authority rather than a mixed corpus/object label.",
+        "migration_action": "Normalize source_work_key references to oldBurmeseInscriptions.",
+        "notes": "The corpus-facing source-work layer should be keyed by the work/corpus title rather than the legacy BibTeX key.",
+    },
+    {
+        "old_key": "fraschBaganEpigraphicDatabasePartBShort",
+        "new_key": "fraschBaganEpigraphicDatabasePartB",
+        "object_type": "source_work",
+        "reason": "Shorthand B references and explicit BED B references point to the same Part B source work.",
+        "migration_action": "Map shorthand B rows to fraschBaganEpigraphicDatabasePartB and suppress the duplicate short-form source-work key.",
+        "notes": "The distinction belongs in source-family semantics, not in duplicate source-work rows.",
+    },
+    {
+        "old_key": "sipSourceFamily",
+        "new_key": "sipSelectionsPagan",
+        "object_type": "source_work",
+        "reason": "Use the named source-work title rather than the older source-family-style key.",
+        "migration_action": "Normalize crosswalk source_work_key values to sipSelectionsPagan.",
+        "notes": "The BibTeX key may stay stable while the source-work key uses the publication-like title.",
+    },
+    {
+        "old_key": "uEMaung1958selectionsInscriptionsPagan",
+        "new_key": "uemSelectionsPagan",
+        "object_type": "source_work",
+        "reason": "Use the canonical source-work key for UEM rather than the legacy BibTeX key.",
+        "migration_action": "Normalize crosswalk source_work_key values to uemSelectionsPagan.",
+        "notes": "This keeps source-work identifiers independent from emitted BibTeX keys.",
+    },
+    {
+        "old_key": "uTunNyein1897inscriptionsPaganPinyaAva",
+        "new_key": "tnInscriptionsPaganPinyaAva",
+        "object_type": "source_work",
+        "reason": "Use the TN source-work key rather than the longer legacy BibTeX key in the authority layer.",
+        "migration_action": "Normalize crosswalk source_work_key values to tnInscriptionsPaganPinyaAva.",
+        "notes": "Source-work keys should reflect the authority object, not the exact emitted BibTeX label.",
+    },
+]
+SOURCE_WORK_KEY_NORMALIZATION_MAP = {
+    row["old_key"]: row["new_key"] for row in AUTHORITY_KEY_NORMALIZATION_ROWS
+}
+SOURCE_WORK_KEY_BY_BIBTEX_KEY = {
+    metadata.get("bibtex_key", ""): source_work_key
+    for source_work_key, metadata in SOURCE_WORK_AUTHORITY_LIBRARY.items()
+    if metadata.get("bibtex_key")
+}
+SCRIPT_NORMALIZATION_MAP = {
+    "latin": "Latn",
+    "latn": "Latn",
+}
+
 CANDIDATE_STUB_REVIEW_DECISIONS = {
     "anthology": {
         "review_decision": "retain",
         "reason": "The citation family is generic, but repeated anthology-style locators suggest a real source rather than a pure parsing artifact.",
-        "next_action": "Retain for later bibliography normalization once a fuller title or editor witness is found.",
-        "notes": "Do not promote until a stable title beyond the generic label is documented.",
+        "next_action": "Search local bibliography caches and Frasch-derived text for anthology, selections, collected inscriptions, or edited-volume language tied to the same raw references.",
+        "notes": "Check data/working/bibliography/local_sources/, data/local/bibliography_sources/, and Frasch extracted text for anthology-like titles or editors before promoting.",
     },
     "lwin1989rajakumars": {
         "review_decision": "retain",
         "reason": "The title and year identify a plausible real work, but the current evidence is still corpus-triage level rather than a confirmed bibliographic witness.",
-        "next_action": "Retain as a human-review candidate until a stronger bibliographic witness is harvested locally.",
-        "notes": "The current metadata is plausible enough to keep, but not yet strong enough to promote automatically.",
+        "next_action": "Search local files for U Tin Lwin, Rajakumar's Inscription in Pali, Takkasuil, Yangon 1989, Myazedi, and Rajakumar before promoting.",
+        "notes": "Retain until a stronger local bibliographic witness is found; do not promote from the corpus citation string alone.",
     },
     "work": {
         "review_decision": "suppress",
@@ -2279,6 +2496,21 @@ def parse_locator(raw_reference: str, family_id: str, family_label: str) -> tupl
     if not text:
         return "", "unclear"
 
+    if family_id == "fam-list-catalogue":
+        locator = re.sub(r"^List\b[\s,:-]*", "", text, flags=re.IGNORECASE).strip()
+        if locator:
+            return locator, "catalogue_number"
+
+    if family_id == "fam-ippa-catalogue":
+        locator = re.sub(r"^IPPA\b[\s,:-]*", "", text, flags=re.IGNORECASE).strip()
+        if locator:
+            return locator, "number"
+
+    if family_id == "fam-or-catalogue":
+        locator = re.sub(r"^OR\b[\s,:-]*", "", text, flags=re.IGNORECASE).strip()
+        if locator:
+            return locator, "folio" if "verso" in locator.casefold() or "folio" in locator.casefold() else "number"
+
     if family_label.startswith("Pl"):
         locator = re.sub(r"^Pl\.?\s*", "", text, flags=re.IGNORECASE).strip(" ,")
         return locator or text, "plate"
@@ -2886,6 +3118,48 @@ def truthy(value: str) -> bool:
     return (value or "").strip().casefold() in {"1", "true", "yes", "y"}
 
 
+def canonical_source_work_key(source_work_key: str) -> str:
+    return SOURCE_WORK_KEY_NORMALIZATION_MAP.get(source_work_key, source_work_key)
+
+
+def normalize_script_value(value: str, *, fallback_title: str = "") -> str:
+    normalized = SCRIPT_NORMALIZATION_MAP.get((value or "").strip().casefold(), value or "")
+    if normalized:
+        return normalized
+    if fallback_title and re.search(r"[A-Za-z]", fallback_title):
+        return "Latn"
+    return value or ""
+
+
+def clean_bibtex_summary_text(text: str) -> str:
+    cleaned = re.sub(r"\s+", " ", (text or "").strip())
+    cleaned = cleaned.replace(" ... ", "; ")
+    if len(cleaned) > 180:
+        cleaned = evidence_excerpt(cleaned)
+    return cleaned
+
+
+def looks_like_ocr_garbage(text: str) -> bool:
+    cleaned = (text or "").strip()
+    if not cleaned:
+        return False
+    if re.search(r"[\u1000-\u109F]", cleaned):
+        return True
+    return len(re.findall(r"\b[A-Za-z]\b", cleaned)) >= 6
+
+
+def authority_level_requires_bibtex(authority_level: str) -> bool:
+    return authority_level in {
+        "series",
+        "periodical",
+        "source_work",
+        "source_catalogue",
+        "corpus_source",
+        "article",
+        "book",
+    }
+
+
 def is_placeholder_expansion(value: str) -> bool:
     text = (value or "").strip()
     return not text or bool(PLACEHOLDER_EXPANSION_PATTERN.search(text))
@@ -3206,16 +3480,17 @@ def build_source_work_authority_rows(
     authority_by_key = {row.get("bibtex_key", ""): row for row in authority_rows if row.get("bibtex_key")}
     related_families_by_work: dict[str, list[dict]] = defaultdict(list)
     for row in source_family_rows:
-        if row.get("source_work_key"):
-            related_families_by_work[row["source_work_key"]].append(row)
+        source_work_key = canonical_source_work_key(row.get("source_work_key", ""))
+        if source_work_key:
+            related_families_by_work[source_work_key].append({**row, "source_work_key": source_work_key})
 
     keys: set[str] = {
-        row.get("source_work_key", "")
+        canonical_source_work_key(row.get("source_work_key", ""))
         for row in source_family_rows + crosswalk_rows
         if row.get("source_work_key")
     }
     keys.update(
-        row.get("bibtex_key", "")
+        canonical_source_work_key(SOURCE_WORK_KEY_BY_BIBTEX_KEY.get(row.get("bibtex_key", ""), row.get("bibtex_key", "")))
         for row in authority_rows
         if row.get("bibtex_key") and row.get("resolution_level") in {"series", "work", "book", "article", "internal_reference"}
     )
@@ -3289,6 +3564,7 @@ def build_source_work_authority_rows(
                     or (authority_row.get("shorttitle", "") if authority_row else "")
                     or (primary_row.get("abbreviation", "") if primary_row else source_work_key)
                 ),
+                "authority_level": library.get("authority_level") or library.get("work_type") or fallback_work_type(authority_row, related_rows),
                 "work_type": library.get("work_type") or fallback_work_type(authority_row, related_rows),
                 "authors_editors": library.get("authors_editors") or (authority_row.get("author", "") if authority_row else ""),
                 "date_or_date_range": library.get("date_or_date_range") or (authority_row.get("year", "") if authority_row else ""),
@@ -3309,6 +3585,189 @@ def build_source_work_authority_rows(
             }
         )
     return rows
+
+
+def build_source_work_authority_audit_rows(source_work_authority_rows: list[dict]) -> list[dict]:
+    source_work_by_key = {
+        row.get("source_work_key", ""): row for row in source_work_authority_rows if row.get("source_work_key")
+    }
+    rows = []
+    for normalization_row in AUTHORITY_KEY_NORMALIZATION_ROWS:
+        merge_target = source_work_by_key.get(normalization_row["new_key"])
+        if merge_target is None:
+            continue
+        rows.append(
+            {
+                "source_work_key": merge_target["source_work_key"],
+                "canonical_title": merge_target.get("canonical_title", ""),
+                "related_source_family_ids": merge_target.get("related_source_family_ids", ""),
+                "issue_type": "normalized_overlap_review",
+                "severity": "high" if normalization_row["old_key"] in {"obiCorpusSource", "fraschBaganEpigraphicDatabasePartBShort"} else "medium",
+                "recommended_action": normalization_row["migration_action"],
+                "merge_target_key": normalization_row["new_key"],
+                "notes": normalization_row["notes"],
+            }
+        )
+    return rows
+
+
+def build_source_work_to_bibtex_reconciliation_rows(
+    *,
+    source_work_authority_rows: list[dict],
+    authority_rows: list[dict],
+    candidate_rows: list[dict],
+) -> list[dict]:
+    authority_by_key = {row.get("bibtex_key", ""): row for row in authority_rows if row.get("bibtex_key")}
+    candidate_keys = {row.get("bibtex_key", "") for row in candidate_rows if row.get("bibtex_key")}
+    rows = []
+    for row in sorted(source_work_authority_rows, key=lambda item: item.get("source_work_key", "")):
+        authority_level = row.get("authority_level", "") or row.get("work_type", "")
+        current_bibtex_key = row.get("bibtex_key", "")
+        should_have_bibtex = "true" if authority_level_requires_bibtex(authority_level) else "false"
+        if current_bibtex_key in candidate_keys:
+            bibtex_status = "candidate_only"
+        elif authority_level in {"locator_collection", "manuscript_collection", "archival_notebook"}:
+            bibtex_status = "suppressed_locator_system" if not current_bibtex_key else "present"
+        elif should_have_bibtex == "true" and current_bibtex_key in authority_by_key:
+            bibtex_status = "present"
+        elif should_have_bibtex == "true":
+            bibtex_status = "missing_expected"
+        elif row.get("needs_human_review") == "true":
+            bibtex_status = "needs_human_review"
+        else:
+            bibtex_status = "intentionally_no_bibtex"
+        reason = {
+            "present": "Publication-like source authority is represented in bibliography_authority.bib.",
+            "missing_expected": "Publication-like source authority lacks an emitted BibTeX row.",
+            "candidate_only": "Only a candidate stub exists, so the work should not be treated as resolved authority yet.",
+            "suppressed_locator_system": "Locator, manuscript, or notebook authority should not be emitted as an ordinary publication.",
+            "needs_human_review": "Authority remains too weak for publication-style emission.",
+            "intentionally_no_bibtex": "This authority object is tracked structurally but should not emit a normal BibTeX publication.",
+        }[bibtex_status]
+        recommended_action = {
+            "present": "Keep the BibTeX row aligned with the curated source-work metadata.",
+            "missing_expected": "Emit or restore a bibliography_authority.bib row from source_work_authority.tsv.",
+            "candidate_only": "Keep the work in bibliography_candidates.bib until stronger evidence is found.",
+            "suppressed_locator_system": "Keep the source-work row but suppress ordinary publication-style BibTeX emission.",
+            "needs_human_review": "Retain the source-work row and revisit emission only after stronger bibliographic witnesses are found.",
+            "intentionally_no_bibtex": "Keep it in source_work_authority.tsv without emitting bibliography_authority.bib.",
+        }[bibtex_status]
+        rows.append(
+            {
+                "source_work_key": row.get("source_work_key", ""),
+                "canonical_title": row.get("canonical_title", ""),
+                "authority_level": authority_level,
+                "should_have_bibtex": should_have_bibtex,
+                "current_bibtex_key": current_bibtex_key,
+                "bibtex_status": bibtex_status,
+                "reason": reason,
+                "recommended_action": recommended_action,
+                "notes": row.get("notes", ""),
+            }
+        )
+    return rows
+
+
+def build_bibtex_field_quality_audit_rows(
+    *,
+    authority_rows: list[dict],
+    source_work_authority_rows: list[dict],
+) -> list[dict]:
+    source_work_by_bibtex = {
+        row.get("bibtex_key", ""): row for row in source_work_authority_rows if row.get("bibtex_key")
+    }
+    audit_rows: list[dict] = []
+
+    def append_issue(row: dict, field_name: str, issue_type: str, severity: str, recommended_fix: str, notes: str) -> None:
+        audit_rows.append(
+            {
+                "bibtex_key": row.get("bibtex_key", ""),
+                "field_name": field_name,
+                "field_value_short": short_reference(row.get(field_name, "")),
+                "issue_type": issue_type,
+                "severity": severity,
+                "recommended_fix": recommended_fix,
+                "notes": notes,
+            }
+        )
+
+    for row in authority_rows:
+        source_work_row = source_work_by_bibtex.get(row.get("bibtex_key", ""))
+        authority_level = source_work_row.get("authority_level", "") if source_work_row else ""
+        if looks_like_ocr_garbage(row.get("evidence", "")) or looks_like_ocr_garbage(row.get("matched_local_reference", "")):
+            append_issue(
+                row,
+                "evidence",
+                "ocr_like_evidence_fragment",
+                "high",
+                "Replace the BibTeX evidence field with a concise authority quote and keep raw OCR evidence only in bibtex_authority_evidence.tsv.",
+                "BibTeX authority rows should not expose noisy OCR fragments.",
+            )
+        if authority_level in {"periodical", "series"} and re.search(r"\bJBRS\b|\bJRAS\b|\bp\.\s*\d", row.get("evidence", "")):
+            append_issue(
+                row,
+                "evidence",
+                "article_like_series_evidence",
+                "medium",
+                "Use a concise series-definition quote rather than an article-specific citation fragment.",
+                "Series-level BibTeX authorities should cite the series definition, not a sample article reference.",
+            )
+        normalized_script = normalize_script_value(row.get("script", ""), fallback_title=row.get("title", ""))
+        if row.get("script", "") and row.get("script", "") != normalized_script:
+            append_issue(
+                row,
+                "script",
+                "non_normalized_script_value",
+                "low",
+                "Normalize Latin-script bibliographic rows to Latn.",
+                "Script values should be normalized across the authority layer.",
+            )
+    audit_rows.sort(key=lambda item: ({"high": 0, "medium": 1, "low": 2}.get(item["severity"], 3), item["bibtex_key"], item["field_name"]))
+    return audit_rows
+
+
+def curate_authority_rows_for_emission(
+    *,
+    authority_rows: list[dict],
+    source_work_authority_rows: list[dict],
+    reconciliation_rows: list[dict],
+) -> list[dict]:
+    allowed_bibtex_keys = {
+        row.get("current_bibtex_key", "")
+        for row in reconciliation_rows
+        if row.get("current_bibtex_key") and row.get("bibtex_status") in {"present", "needs_human_review"}
+    }
+    source_work_by_bibtex = {
+        row.get("bibtex_key", ""): row for row in source_work_authority_rows if row.get("bibtex_key")
+    }
+    curated_rows: list[dict] = []
+    for row in authority_rows:
+        if row.get("bibtex_key", "") not in allowed_bibtex_keys:
+            continue
+        curated_row = dict(row)
+        source_work_row = source_work_by_bibtex.get(curated_row.get("bibtex_key", ""))
+        if source_work_row:
+            authority_level = source_work_row.get("authority_level", "")
+            curated_row["title"] = source_work_row.get("canonical_title", "") or curated_row.get("title", "")
+            curated_row["shorttitle"] = source_work_row.get("short_title", "") or curated_row.get("shorttitle", "")
+            curated_row["source_of_authority"] = source_work_row.get("evidence_source", "") or curated_row.get("source_of_authority", "")
+            if source_work_row.get("evidence_quote"):
+                clean_quote = clean_bibtex_summary_text(source_work_row["evidence_quote"])
+                curated_row["short_evidence_note"] = clean_quote
+                curated_row["evidence"] = clean_quote
+                curated_row["matched_local_reference"] = ""
+            if authority_level in {"periodical", "series"}:
+                curated_row["entry_type"] = "periodical"
+            elif authority_level == "book":
+                curated_row["entry_type"] = "book"
+            elif authority_level == "article":
+                curated_row["entry_type"] = "article"
+            elif authority_level in {"source_catalogue", "source_work", "corpus_source"} and curated_row.get("entry_type") not in {"book", "article", "periodical"}:
+                curated_row["entry_type"] = "misc"
+        curated_row["script"] = normalize_script_value(curated_row.get("script", ""), fallback_title=curated_row.get("title", ""))
+        curated_rows.append(curated_row)
+    curated_rows.sort(key=lambda row: (row.get("family_label", ""), row.get("bibtex_key", "")))
+    return curated_rows
 
 
 def build_candidate_stub_review_rows(candidate_rows: list[dict], family_by_id: dict[str, dict]) -> list[dict]:
@@ -3412,7 +3871,17 @@ def build_raw_reference_crosswalk_audit_rows(
     locator_expected_families = {"sf-iob", "sf-pl", "sf-ippa", "sf-ppa", "sf-list", "sf-ub", "sf-sip", "sf-uem", "sf-tn", "sf-mp", "sf-or", "sf-luce-d", "sf-luce-j"}
     audit_rows: list[dict] = []
 
-    def append_issue(row: dict, issue_type: str, severity: str, recommended_fix: str, notes: str) -> None:
+    def append_issue(
+        row: dict,
+        issue_type: str,
+        severity: str,
+        recommended_fix: str,
+        notes: str,
+        *,
+        issue_category: str,
+        auto_fixable: str,
+        human_review_required: str,
+    ) -> None:
         audit_rows.append(
             {
                 "raw_reference_string": row.get("raw_reference_string", ""),
@@ -3423,7 +3892,10 @@ def build_raw_reference_crosswalk_audit_rows(
                 "locator": row.get("locator", ""),
                 "locator_type": row.get("locator_type", ""),
                 "issue_type": issue_type,
+                "issue_category": issue_category,
                 "severity": severity,
+                "auto_fixable": auto_fixable,
+                "human_review_required": human_review_required,
                 "recommended_fix": recommended_fix,
                 "notes": notes,
             }
@@ -3434,22 +3906,31 @@ def build_raw_reference_crosswalk_audit_rows(
         family_occurrence_count = int(family_by_id.get(family_id, {}).get("occurrence_count", "0") or "0")
         source_work_row = source_work_authority_by_key.get(row.get("source_work_key", ""), {})
         if row.get("source_family_id") in locator_expected_families and not row.get("source_work_key"):
-            append_issue(row, "missing_source_work_key", "high", "Add the expected source_work_key for this locator-aware family.", "Locator-aware family is missing a source work target.")
+            append_issue(row, "missing_source_work_key", "high", "Add the expected source_work_key for this locator-aware family.", "Locator-aware family is missing a source work target.", issue_category="authority_linkage", auto_fixable="true", human_review_required="false")
         if row.get("source_work_key") and row["source_work_key"] not in source_work_authority_by_key:
-            append_issue(row, "invalid_source_work_key", "high", "Map the row to a documented source_work_authority entry.", "Crosswalk points to a source_work_key that is not present in source_work_authority.tsv.")
+            append_issue(row, "invalid_source_work_key", "high", "Map the row to a documented source_work_authority entry.", "Crosswalk points to a source_work_key that is not present in source_work_authority.tsv.", issue_category="authority_linkage", auto_fixable="true", human_review_required="false")
         if source_work_row.get("bibtex_key") and not row.get("bibtex_key"):
-            append_issue(row, "missing_bibtex_key", "medium", "Populate bibtex_key from source_work_authority.tsv.", "This source work already has a BibTeX authority key.")
+            append_issue(row, "missing_bibtex_key", "medium", "Populate bibtex_key from source_work_authority.tsv.", "This source work already has a BibTeX authority key.", issue_category="bibtex_linkage", auto_fixable="true", human_review_required="false")
         if row.get("source_family_id") in locator_expected_families and (not row.get("locator") or row.get("locator_type") == "unclear") and family_occurrence_count >= 10:
-            append_issue(row, "unparsed_locator", "medium", "Improve locator parsing or document the irregular locator form.", "High-occurrence locator family still has an unclear locator parse.")
+            append_issue(
+                row,
+                "unparsed_locator",
+                "medium" if family_occurrence_count >= 25 else "low",
+                "Improve locator parsing or document the irregular locator form.",
+                "High-occurrence locator family still has an unclear locator parse.",
+                issue_category="locator_parse",
+                auto_fixable="true" if row.get("source_family_id") in {"sf-list", "sf-ippa", "sf-or"} else "false",
+                human_review_required="true" if row.get("source_family_id") not in {"sf-list", "sf-ippa", "sf-or"} else "false",
+            )
         if row.get("source_family_id") == "sf-ippa":
             if not row.get("raw_reference_string", "").startswith("IPPA"):
-                append_issue(row, "ippa_raw_string_not_preserved", "high", "Preserve the raw IPPA string in raw_reference_to_bibtex.tsv.", "IPPA alias rows should keep the original IPPA spelling.")
+                append_issue(row, "ippa_raw_string_not_preserved", "high", "Preserve the raw IPPA string in raw_reference_to_bibtex.tsv.", "IPPA alias rows should keep the original IPPA spelling.", issue_category="ippa_alias_integrity", auto_fixable="true", human_review_required="false")
             if row.get("source_work_key") != "ppaCatalogue":
-                append_issue(row, "ippa_wrong_source_work", "high", "Map IPPA rows to ppaCatalogue while preserving the raw string.", "IPPA should route to the PPA source work.")
+                append_issue(row, "ippa_wrong_source_work", "high", "Map IPPA rows to ppaCatalogue while preserving the raw string.", "IPPA should route to the PPA source work.", issue_category="ippa_alias_integrity", auto_fixable="true", human_review_required="false")
             if row.get("resolution_status") != "alias_or_variant_of_PPA":
-                append_issue(row, "ippa_wrong_resolution_status", "high", "Mark IPPA crosswalk rows as alias_or_variant_of_PPA.", "IPPA should not look unresolved or generically alias_resolved in the crosswalk audit layer.")
+                append_issue(row, "ippa_wrong_resolution_status", "high", "Mark IPPA crosswalk rows as alias_or_variant_of_PPA.", "IPPA should not look unresolved or generically alias_resolved in the crosswalk audit layer.", issue_category="ippa_alias_integrity", auto_fixable="true", human_review_required="false")
         if row.get("source_family_id") in {"sf-mp", "sf-or", "sf-luce-d", "sf-luce-j"} and row.get("bibtex_key"):
-            append_issue(row, "locator_system_mapped_as_bibtex_work", "medium", "Leave bibtex_key blank for locator systems that have no standalone BibTeX work.", "Locator-only source works should not masquerade as standalone bibliography entries.")
+            append_issue(row, "locator_system_mapped_as_bibtex_work", "high", "Leave bibtex_key blank for locator systems that have no standalone BibTeX work.", "Locator-only source works should not masquerade as standalone bibliography entries.", issue_category="locator_emission", auto_fixable="true", human_review_required="false")
 
     audit_rows = list({
         (row["raw_reference_string"], row["issue_type"]): row
@@ -4604,10 +5085,18 @@ def build_family_resolution(
             )
             resolution_status = source_family_row["resolution_status"] if is_direct else "alias_resolved"
             resolution_level = source_family_row["resolution_level"] if is_direct else "abbreviation"
+            source_work_key = canonical_source_work_key(source_family_row.get("source_work_key", ""))
+            bibtex_key = source_family_row.get("authority_key", "") or source_family_row.get("related_bibtex_key", "")
+            if bibtex_key:
+                canonical_bibtex_work_key = canonical_source_work_key(
+                    SOURCE_WORK_KEY_BY_BIBTEX_KEY.get(bibtex_key, bibtex_key)
+                )
+                if canonical_bibtex_work_key in SOURCE_WORK_AUTHORITY_LIBRARY:
+                    bibtex_key = SOURCE_WORK_AUTHORITY_LIBRARY[canonical_bibtex_work_key].get("bibtex_key", "") or bibtex_key
             family_resolution[family_id] = {
                 "source_family_id": source_family_row["source_family_id"],
-                "source_work_key": source_family_row.get("source_work_key", ""),
-                "bibtex_key": source_family_row.get("authority_key", "") or source_family_row.get("related_bibtex_key", ""),
+                "source_work_key": source_work_key,
+                "bibtex_key": bibtex_key,
                 "resolution_status": resolution_status,
                 "resolution_level": resolution_level,
                 "match_type": source_family_match_type(resolution_status, resolution_level),
@@ -4625,7 +5114,7 @@ def build_family_resolution(
             resolution_status, resolution_level = resolution_from_authority_row(authority_row)
             family_resolution[family_id] = {
                 "source_family_id": authority_row.get("source_family_id", ""),
-                "source_work_key": authority_row["bibtex_key"] if resolution_level in {"work", "book", "article", "series"} else "",
+                "source_work_key": canonical_source_work_key(authority_row["bibtex_key"]) if resolution_level in {"work", "book", "article", "series"} else "",
                 "bibtex_key": authority_row["bibtex_key"],
                 "resolution_status": resolution_status,
                 "resolution_level": resolution_level,
@@ -4995,6 +5484,7 @@ def build_authority(
             authority_row["resolution_level"] = resolution_level
         authority_rows.append(authority_row)
     authority_rows.sort(key=lambda row: (row.get("family_label", ""), row["bibtex_key"]))
+    authority_rows_raw = [dict(row) for row in authority_rows]
 
     for family_row in family_rows:
         family_id = family_row["family_id"]
@@ -5016,6 +5506,13 @@ def build_authority(
         row["candidate_key"] for row in candidate_stub_review_rows if row["review_decision"] == "retain"
     }
     candidate_rows = [row for row in candidate_rows if row["bibtex_key"] in retained_candidate_keys]
+    candidate_rows = [
+        {
+            **row,
+            "script": normalize_script_value(row.get("script", ""), fallback_title=row.get("title", "")),
+        }
+        for row in candidate_rows
+    ]
     candidate_rows_by_family = {
         family_id: row for family_id, row in candidate_rows_by_family.items() if row["bibtex_key"] in retained_candidate_keys
     }
@@ -5027,23 +5524,7 @@ def build_authority(
         candidate_rows_by_family=candidate_rows_by_family,
     )
 
-    authority_bib_entries = [row_to_bibtex_entry(row) for row in authority_rows]
-    candidate_bib_entries = [row_to_bibtex_entry(row) for row in candidate_rows]
-    write_bibtex(output_dir / "bibliography_authority.bib", authority_bib_entries)
-    write_bibtex(output_dir / "bibliography_candidates.bib", candidate_bib_entries)
-    write_tsv(output_dir / "bibtex_authority.tsv", authority_rows + candidate_rows, AUTHORITY_FIELDS)
-    write_tsv(seed_path, build_seed_output_rows(seed_rows, authority_rows), SEED_FIELDS)
-    write_tsv(output_dir / "source_family_authority.tsv", source_family_output_rows, SOURCE_FAMILY_FIELDS)
-    write_tsv(output_dir / "acronym_resolution_status.tsv", acronym_status_rows, ACRONYM_STATUS_FIELDS)
-    write_tsv(output_dir / "acronym_manual_review_packet.tsv", manual_review_packet_rows, MANUAL_REVIEW_PACKET_FIELDS)
-    write_tsv(output_dir / "remaining_acronym_worklist.tsv", remaining_worklist_rows, REMAINING_ACRONYM_WORKLIST_FIELDS)
-    write_tsv(output_dir / "remaining_acronym_evidence.tsv", remaining_acronym_evidence_rows, REMAINING_ACRONYM_EVIDENCE_FIELDS)
-    write_tsv(output_dir / "final_acronym_resolution_sprint.tsv", final_acronym_resolution_sprint_rows, FINAL_ACRONYM_RESOLUTION_SPRINT_FIELDS)
-    write_tsv(output_dir / "final_acronym_local_file_hits.tsv", final_acronym_local_file_hit_rows, FINAL_ACRONYM_LOCAL_FILE_HITS_FIELDS)
-    write_tsv(output_dir / "final_acronym_web_searches.tsv", final_acronym_web_search_rows, FINAL_ACRONYM_WEB_SEARCHES_FIELDS)
-    write_tsv(output_dir / "frasch_abbreviation_list_review.tsv", FRASCH_ABBREVIATION_LIST_REVIEW_ROWS, FRASCH_ABBREVIATION_LIST_REVIEW_FIELDS)
-    evidence_rows = build_evidence_rows(authority_rows, manifest_by_id, manifest_by_name)
-    write_tsv(output_dir / "bibtex_authority_evidence.tsv", evidence_rows, EVIDENCE_FIELDS)
+    evidence_rows = build_evidence_rows(authority_rows_raw, manifest_by_id, manifest_by_name)
 
     crosswalk_rows = []
     unresolved_rows = []
@@ -5059,6 +5540,10 @@ def build_authority(
         for member in members:
             locator, locator_type = parse_locator(member.get("raw_reference_string", ""), family_id, family_row["family_label"])
             resolution = family_resolution[family_id]
+            source_work_key = canonical_source_work_key(resolution.get("source_work_key", ""))
+            bibtex_key = resolution.get("bibtex_key", "")
+            if bibtex_key and source_work_key and source_work_key in SOURCE_WORK_AUTHORITY_LIBRARY:
+                bibtex_key = SOURCE_WORK_AUTHORITY_LIBRARY[source_work_key].get("bibtex_key", "") or bibtex_key
             resolution_status = resolution["resolution_status"]
             notes = member.get("notes", "")
             if resolution.get("source_family_id") == "sf-ippa":
@@ -5076,9 +5561,9 @@ def build_authority(
                     "raw_reference_string": member.get("raw_reference_string", ""),
                     "family_id": family_id,
                     "source_family_id": resolution.get("source_family_id", ""),
-                    "source_work_key": resolution.get("source_work_key", ""),
+                    "source_work_key": source_work_key,
                     "work_candidate_id": candidates_by_family.get(family_id, [{}])[0].get("work_candidate_id", ""),
-                    "bibtex_key": resolution.get("bibtex_key", ""),
+                    "bibtex_key": bibtex_key,
                     "locator": locator,
                     "locator_type": locator_type,
                     "resolution_status": resolution_status,
@@ -5116,21 +5601,66 @@ def build_authority(
             )
 
     crosswalk_rows.sort(key=lambda row: (row["family_id"], row["raw_reference_string"]))
-    write_tsv(output_dir / "raw_reference_to_bibtex.tsv", crosswalk_rows, CROSSWALK_FIELDS)
+    source_work_authority_rows = build_source_work_authority_rows(
+        authority_rows=authority_rows_raw,
+        source_family_rows=source_family_output_rows,
+        crosswalk_rows=crosswalk_rows,
+    )
+    source_work_to_bibtex_reconciliation_rows = build_source_work_to_bibtex_reconciliation_rows(
+        source_work_authority_rows=source_work_authority_rows,
+        authority_rows=authority_rows_raw,
+        candidate_rows=candidate_rows,
+    )
+    bibtex_field_quality_audit_rows = build_bibtex_field_quality_audit_rows(
+        authority_rows=authority_rows_raw,
+        source_work_authority_rows=source_work_authority_rows,
+    )
+    authority_rows = curate_authority_rows_for_emission(
+        authority_rows=authority_rows_raw,
+        source_work_authority_rows=source_work_authority_rows,
+        reconciliation_rows=source_work_to_bibtex_reconciliation_rows,
+    )
     source_work_authority_rows = build_source_work_authority_rows(
         authority_rows=authority_rows,
         source_family_rows=source_family_output_rows,
         crosswalk_rows=crosswalk_rows,
     )
-    write_tsv(output_dir / "source_work_authority.tsv", source_work_authority_rows, SOURCE_WORK_AUTHORITY_FIELDS)
+    source_work_authority_audit_rows = build_source_work_authority_audit_rows(source_work_authority_rows)
+    source_work_to_bibtex_reconciliation_rows = build_source_work_to_bibtex_reconciliation_rows(
+        source_work_authority_rows=source_work_authority_rows,
+        authority_rows=authority_rows,
+        candidate_rows=candidate_rows,
+    )
     source_work_locator_rows = build_source_work_locator_rows(crosswalk_rows, source_work_authority_rows)
-    write_tsv(output_dir / "source_work_locator_systems.tsv", source_work_locator_rows, SOURCE_WORK_LOCATOR_SYSTEM_FIELDS)
     raw_reference_crosswalk_audit_rows = build_raw_reference_crosswalk_audit_rows(
         crosswalk_rows=crosswalk_rows,
         source_work_authority_rows=source_work_authority_rows,
         family_by_id=family_by_id,
     )
+    authority_bib_entries = [row_to_bibtex_entry(row) for row in authority_rows]
+    candidate_bib_entries = [row_to_bibtex_entry(row) for row in candidate_rows]
+    write_bibtex(output_dir / "bibliography_authority.bib", authority_bib_entries)
+    write_bibtex(output_dir / "bibliography_candidates.bib", candidate_bib_entries)
+    write_tsv(output_dir / "bibtex_authority.tsv", authority_rows + candidate_rows, AUTHORITY_FIELDS)
+    write_tsv(seed_path, build_seed_output_rows(seed_rows, authority_rows), SEED_FIELDS)
+    write_tsv(output_dir / "source_family_authority.tsv", source_family_output_rows, SOURCE_FAMILY_FIELDS)
+    write_tsv(output_dir / "source_work_authority.tsv", source_work_authority_rows, SOURCE_WORK_AUTHORITY_FIELDS)
+    write_tsv(output_dir / "source_work_authority_audit.tsv", source_work_authority_audit_rows, SOURCE_WORK_AUTHORITY_AUDIT_FIELDS)
+    write_tsv(output_dir / "source_work_to_bibtex_reconciliation.tsv", source_work_to_bibtex_reconciliation_rows, SOURCE_WORK_TO_BIBTEX_RECONCILIATION_FIELDS)
+    write_tsv(output_dir / "authority_key_normalization.tsv", AUTHORITY_KEY_NORMALIZATION_ROWS, AUTHORITY_KEY_NORMALIZATION_FIELDS)
+    write_tsv(output_dir / "bibtex_field_quality_audit.tsv", bibtex_field_quality_audit_rows, BIBTEX_FIELD_QUALITY_AUDIT_FIELDS)
+    write_tsv(output_dir / "source_work_locator_systems.tsv", source_work_locator_rows, SOURCE_WORK_LOCATOR_SYSTEM_FIELDS)
+    write_tsv(output_dir / "raw_reference_to_bibtex.tsv", crosswalk_rows, CROSSWALK_FIELDS)
     write_tsv(output_dir / "raw_reference_crosswalk_audit.tsv", raw_reference_crosswalk_audit_rows, RAW_REFERENCE_CROSSWALK_AUDIT_FIELDS)
+    write_tsv(output_dir / "acronym_resolution_status.tsv", acronym_status_rows, ACRONYM_STATUS_FIELDS)
+    write_tsv(output_dir / "acronym_manual_review_packet.tsv", manual_review_packet_rows, MANUAL_REVIEW_PACKET_FIELDS)
+    write_tsv(output_dir / "remaining_acronym_worklist.tsv", remaining_worklist_rows, REMAINING_ACRONYM_WORKLIST_FIELDS)
+    write_tsv(output_dir / "remaining_acronym_evidence.tsv", remaining_acronym_evidence_rows, REMAINING_ACRONYM_EVIDENCE_FIELDS)
+    write_tsv(output_dir / "final_acronym_resolution_sprint.tsv", final_acronym_resolution_sprint_rows, FINAL_ACRONYM_RESOLUTION_SPRINT_FIELDS)
+    write_tsv(output_dir / "final_acronym_local_file_hits.tsv", final_acronym_local_file_hit_rows, FINAL_ACRONYM_LOCAL_FILE_HITS_FIELDS)
+    write_tsv(output_dir / "final_acronym_web_searches.tsv", final_acronym_web_search_rows, FINAL_ACRONYM_WEB_SEARCHES_FIELDS)
+    write_tsv(output_dir / "frasch_abbreviation_list_review.tsv", FRASCH_ABBREVIATION_LIST_REVIEW_ROWS, FRASCH_ABBREVIATION_LIST_REVIEW_FIELDS)
+    write_tsv(output_dir / "bibtex_authority_evidence.tsv", evidence_rows, EVIDENCE_FIELDS)
     write_tsv(output_dir / "candidate_stub_review.tsv", candidate_stub_review_rows, CANDIDATE_STUB_REVIEW_FIELDS)
     write_tsv(output_dir / "ippa_occurrence_contexts.tsv", ippa_review["occurrence_rows"], IPPA_OCCURRENCE_CONTEXT_FIELDS)
     write_tsv(output_dir / "ippa_ppa_comparison.tsv", ippa_review["comparison_rows"], IPPA_PPA_COMPARISON_FIELDS)
@@ -5346,12 +5876,30 @@ def build_authority(
         "ippa_web_query_count": int(ippa_review["decision_row"].get("web_queries_reviewed", "0") or "0"),
         "ippa_final_decision": ippa_review["decision_row"].get("decision", ""),
         "source_work_authority_count": len(source_work_authority_rows),
+        "source_work_authority_audit_count": len(source_work_authority_audit_rows),
+        "source_work_duplicate_issue_count": len(source_work_authority_audit_rows),
+        "source_work_to_bibtex_reconciliation_count": len(source_work_to_bibtex_reconciliation_rows),
         "source_work_locator_system_count": len(source_work_locator_rows),
         "raw_reference_crosswalk_audit_count": len(raw_reference_crosswalk_audit_rows),
+        "high_severity_crosswalk_issue_count": sum(1 for row in raw_reference_crosswalk_audit_rows if row.get("severity") == "high"),
+        "medium_severity_crosswalk_issue_count": sum(1 for row in raw_reference_crosswalk_audit_rows if row.get("severity") == "medium"),
+        "low_severity_crosswalk_issue_count": sum(1 for row in raw_reference_crosswalk_audit_rows if row.get("severity") == "low"),
+        "auto_fixable_crosswalk_issue_count": sum(1 for row in raw_reference_crosswalk_audit_rows if row.get("auto_fixable") == "true"),
+        "human_review_crosswalk_issue_count": sum(1 for row in raw_reference_crosswalk_audit_rows if row.get("human_review_required") == "true"),
         "candidate_stub_review_count": len(candidate_stub_review_rows),
         "candidate_stubs_promoted_count": sum(1 for row in candidate_stub_review_rows if row["review_decision"] == "promote"),
         "candidate_stubs_suppressed_count": sum(1 for row in candidate_stub_review_rows if row["review_decision"] == "suppress"),
         "candidate_stubs_retained_count": sum(1 for row in candidate_stub_review_rows if row["review_decision"] == "retain"),
+        "bibtex_field_quality_issue_count": len(bibtex_field_quality_audit_rows),
+        "bad_ocr_bibtex_field_count": sum(1 for row in bibtex_field_quality_audit_rows if row.get("issue_type") == "ocr_like_evidence_fragment"),
+        "authority_key_normalization_count": len(AUTHORITY_KEY_NORMALIZATION_ROWS),
+        "bibtex_entries_emitted_count": len(authority_rows),
+        "bibtex_entries_suppressed_locator_count": sum(
+            1 for row in source_work_to_bibtex_reconciliation_rows if row.get("bibtex_status") == "suppressed_locator_system"
+        ),
+        "bibtex_entries_candidate_only_count": sum(
+            1 for row in source_work_to_bibtex_reconciliation_rows if row.get("bibtex_status") == "candidate_only"
+        ),
         "pl_locator_semantics_checked": True,
         "iob_relationship_checked": True,
         "unresolved_priority_acronyms": unresolved_after_exhaustive_search,

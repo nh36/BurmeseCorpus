@@ -6,7 +6,15 @@ import re
 import subprocess
 from pathlib import Path
 
-from build_bibtex_authority import FINAL_SPRINT_ACRONYMS, REMAINING_ACRONYMS, RESOLUTION_LEVELS, RESOLUTION_STATUSES, normalized_expansion_match
+from build_bibtex_authority import (
+    FINAL_SPRINT_ACRONYMS,
+    REMAINING_ACRONYMS,
+    RESOLUTION_LEVELS,
+    RESOLUTION_STATUSES,
+    looks_like_ocr_garbage,
+    normalized_expansion_match,
+    normalize_script_value,
+)
 from bibtex_common import duplicate_keys, parse_bibtex_text
 from corpus_common import read_tsv
 from extract_bibliography_acronyms import (
@@ -26,6 +34,19 @@ PLACEHOLDER_EXPANSION_PATTERN = re.compile(
     r"\b(source family|catalogue family|publication family|series family|source family attested|unexpanded)\b",
     re.IGNORECASE,
 )
+VALID_AUTHORITY_LEVELS = {
+    "series",
+    "periodical",
+    "source_work",
+    "source_catalogue",
+    "corpus_source",
+    "locator_collection",
+    "manuscript_collection",
+    "archival_notebook",
+    "article",
+    "book",
+    "candidate_work",
+}
 
 
 def has_absolute_path(value: str) -> bool:
@@ -102,6 +123,10 @@ def validate_bibtex_authority(
     frasch_abbreviation_list_review_path: Path | None = None,
     unresolved_acronym_dossier_path: Path | None = None,
     source_work_authority_path: Path | None = None,
+    source_work_authority_audit_path: Path | None = None,
+    source_work_to_bibtex_reconciliation_path: Path | None = None,
+    bibtex_field_quality_audit_path: Path | None = None,
+    authority_key_normalization_path: Path | None = None,
     raw_reference_crosswalk_audit_path: Path | None = None,
     candidate_stub_review_path: Path | None = None,
     ippa_occurrence_contexts_path: Path | None = None,
@@ -144,6 +169,20 @@ def validate_bibtex_authority(
     frasch_abbreviation_list_review_rows = read_tsv(frasch_abbreviation_list_review_path) if frasch_abbreviation_list_review_path and frasch_abbreviation_list_review_path.exists() else []
     unresolved_acronym_dossier_rows = read_tsv(unresolved_acronym_dossier_path) if unresolved_acronym_dossier_path and unresolved_acronym_dossier_path.exists() else []
     source_work_authority_rows = read_tsv(source_work_authority_path) if source_work_authority_path and source_work_authority_path.exists() else []
+    source_work_authority_audit_rows = (
+        read_tsv(source_work_authority_audit_path) if source_work_authority_audit_path and source_work_authority_audit_path.exists() else []
+    )
+    source_work_to_bibtex_reconciliation_rows = (
+        read_tsv(source_work_to_bibtex_reconciliation_path)
+        if source_work_to_bibtex_reconciliation_path and source_work_to_bibtex_reconciliation_path.exists()
+        else []
+    )
+    bibtex_field_quality_audit_rows = (
+        read_tsv(bibtex_field_quality_audit_path) if bibtex_field_quality_audit_path and bibtex_field_quality_audit_path.exists() else []
+    )
+    authority_key_normalization_rows = (
+        read_tsv(authority_key_normalization_path) if authority_key_normalization_path and authority_key_normalization_path.exists() else []
+    )
     raw_reference_crosswalk_audit_rows = read_tsv(raw_reference_crosswalk_audit_path) if raw_reference_crosswalk_audit_path and raw_reference_crosswalk_audit_path.exists() else []
     candidate_stub_review_rows = read_tsv(candidate_stub_review_path) if candidate_stub_review_path and candidate_stub_review_path.exists() else []
     ippa_occurrence_context_rows = read_tsv(ippa_occurrence_contexts_path) if ippa_occurrence_contexts_path and ippa_occurrence_contexts_path.exists() else []
@@ -171,6 +210,9 @@ def validate_bibtex_authority(
         if row.get("source_work_key")
     }
     source_work_keys_with_bibtex = {row.get("bibtex_key", "") for row in source_work_authority_rows if row.get("bibtex_key")}
+    reconciliation_by_work_key = {
+        row.get("source_work_key", ""): row for row in source_work_to_bibtex_reconciliation_rows if row.get("source_work_key")
+    }
     family_ids = {row["family_id"] for row in family_rows}
     source_family_ids = {row["source_family_id"] for row in source_family_rows if row.get("source_family_id")}
     external_keys = {row["bibtex_key"] for row in external_rows}
@@ -202,6 +244,12 @@ def validate_bibtex_authority(
                 errors.append(f"authority BibTeX field {field_name} on {entry['bibtex_key']} exceeds {MAX_BIBTEX_FIELD_LENGTH} characters")
             if field_name == "matchedlocalreference" and len(value) > MAX_MATCHED_LOCAL_REFERENCE_LENGTH:
                 errors.append(f"authority BibTeX matchedlocalreference on {entry['bibtex_key']} exceeds {MAX_MATCHED_LOCAL_REFERENCE_LENGTH} characters")
+            if field_name in {"evidence", "matchedlocalreference"} and looks_like_ocr_garbage(value):
+                errors.append(f"authority BibTeX field {field_name} on {entry['bibtex_key']} contains OCR-like garbage")
+            if field_name == "script":
+                normalized_script = normalize_script_value(value, fallback_title=entry["fields"].get("title", ""))
+                if value != normalized_script:
+                    errors.append(f"authority BibTeX script on {entry['bibtex_key']} must be normalized to {normalized_script}")
 
     for index, row in enumerate(crosswalk_rows, start=1):
         if (
@@ -283,16 +331,21 @@ def validate_bibtex_authority(
         if row["authority_status"] in {"confirmed_local_source", "provisional_local_source"}:
             if row["source_of_authority"] in {"frasch_bibliography", "frasch_word_document"} and not row.get("matched_local_source_id"):
                 errors.append(f"bibtex_authority[{index}] is Frasch-derived but missing matched_local_source_id")
-            if row["source_of_authority"] == "frasch_bibliography" and row.get("matched_local_source_id") and row["matched_local_source_id"] not in frasch_ids:
-                errors.append(f"bibtex_authority[{index}] references missing Frasch ref ID {row['matched_local_source_id']}")
-            if row["source_of_authority"] != "frasch_bibliography" and row.get("matched_local_source_id") and row["matched_local_source_id"] not in manifest_ids and row["source_of_authority"] != "external_bibtex":
-                errors.append(f"bibtex_authority[{index}] references missing local manifest ID {row['matched_local_source_id']}")
+            if row.get("matched_local_source_id"):
+                if row["matched_local_source_id"].startswith("frasch-ref-"):
+                    if row["matched_local_source_id"] not in frasch_ids:
+                        errors.append(f"bibtex_authority[{index}] references missing Frasch ref ID {row['matched_local_source_id']}")
+                elif row["source_of_authority"] != "external_bibtex" and row["matched_local_source_id"] not in manifest_ids:
+                    errors.append(f"bibtex_authority[{index}] references missing local manifest ID {row['matched_local_source_id']}")
             if row["bibtex_key"] not in evidence_by_key:
                 errors.append(f"bibtex_authority[{index}] is evidence-backed but missing bibtex_authority_evidence.tsv row")
         if source_family_rows and row.get("source_family_id") and row["source_family_id"] not in evidence_by_source_family:
             errors.append(f"bibtex_authority[{index}] source family {row['source_family_id']} lacks evidence row")
         if len(row.get("matched_local_reference", "")) > MAX_MATCHED_LOCAL_REFERENCE_LENGTH:
             errors.append(f"bibtex_authority[{index}] has long matched_local_reference")
+        normalized_script = normalize_script_value(row.get("script", ""), fallback_title=row.get("title", ""))
+        if row.get("script", "") != normalized_script:
+            errors.append(f"bibtex_authority[{index}] has non-normalized script value {row.get('script', '')}")
         for value in row.values():
             if has_absolute_path(value):
                 errors.append(f"bibtex_authority[{index}] contains an absolute local path")
@@ -583,17 +636,59 @@ def validate_bibtex_authority(
             for index, row in enumerate(source_work_authority_rows, start=1):
                 if not row.get("canonical_title"):
                     errors.append(f"source_work_authority[{index}] is missing canonical_title")
+                if row.get("authority_level") not in VALID_AUTHORITY_LEVELS:
+                    errors.append(f"source_work_authority[{index}] has invalid authority_level {row.get('authority_level')}")
                 if row.get("bibtex_key") and row["bibtex_key"] not in authority_keys:
                     errors.append(f"source_work_authority[{index}] references missing authority bibtex_key {row['bibtex_key']}")
+                if row.get("authority_level") in {"locator_collection", "manuscript_collection", "archival_notebook"} and row.get("bibtex_key"):
+                    errors.append(
+                        f"source_work_authority[{index}] should not emit ordinary BibTeX publication key for locator or notebook authority {row['source_work_key']}"
+                    )
                 for source_family_id in [item.strip() for item in row.get("related_source_family_ids", "").split(";") if item.strip()]:
                     if source_family_rows and source_family_id not in {sf.get("source_family_id", "") for sf in source_family_rows}:
                         errors.append(f"source_work_authority[{index}] references unknown source_family_id {source_family_id}")
             for row in crosswalk_rows:
                 if row.get("source_work_key") and row["source_work_key"] not in source_work_keys:
                     errors.append(f"crosswalk source_work_key {row['source_work_key']} is missing from source_work_authority.tsv")
+    if source_work_authority_audit_path:
+        if not source_work_authority_audit_path.exists():
+            errors.append("source_work_authority_audit.tsv is missing")
+        elif not source_work_authority_audit_rows:
+            errors.append("source_work_authority_audit.tsv must review duplicate or overlapping source-work authorities")
+    if source_work_to_bibtex_reconciliation_path:
+        if not source_work_to_bibtex_reconciliation_path.exists():
+            errors.append("source_work_to_bibtex_reconciliation.tsv is missing")
+        else:
+            if set(reconciliation_by_work_key) != source_work_keys:
+                errors.append("source_work_to_bibtex_reconciliation.tsv must cover every source_work_key")
+            for index, row in enumerate(source_work_to_bibtex_reconciliation_rows, start=1):
+                if row.get("source_work_key") not in source_work_keys:
+                    errors.append(f"source_work_to_bibtex_reconciliation[{index}] references unknown source_work_key {row.get('source_work_key')}")
+                if row.get("current_bibtex_key") and row["current_bibtex_key"] not in valid_keys:
+                    errors.append(f"source_work_to_bibtex_reconciliation[{index}] references missing BibTeX key {row['current_bibtex_key']}")
+                if row.get("bibtex_status") == "suppressed_locator_system" and row.get("current_bibtex_key"):
+                    errors.append(
+                        f"source_work_to_bibtex_reconciliation[{index}] suppresses locator BibTeX emission but still points at {row['current_bibtex_key']}"
+                    )
+    if bibtex_field_quality_audit_path:
+        if not bibtex_field_quality_audit_path.exists():
+            errors.append("bibtex_field_quality_audit.tsv is missing")
+    if authority_key_normalization_path:
+        if not authority_key_normalization_path.exists():
+            errors.append("authority_key_normalization.tsv is missing")
+        elif not authority_key_normalization_rows:
+            errors.append("authority_key_normalization.tsv must document reviewed key normalization decisions")
     if raw_reference_crosswalk_audit_path:
         if not raw_reference_crosswalk_audit_path.exists():
             errors.append("raw_reference_crosswalk_audit.tsv is missing")
+        else:
+            for index, row in enumerate(raw_reference_crosswalk_audit_rows, start=1):
+                if row.get("severity") not in {"high", "medium", "low"}:
+                    errors.append(f"raw_reference_crosswalk_audit[{index}] has invalid severity {row.get('severity')}")
+                if row.get("auto_fixable") not in {"true", "false"}:
+                    errors.append(f"raw_reference_crosswalk_audit[{index}] has invalid auto_fixable {row.get('auto_fixable')}")
+                if row.get("human_review_required") not in {"true", "false"}:
+                    errors.append(f"raw_reference_crosswalk_audit[{index}] has invalid human_review_required {row.get('human_review_required')}")
     if candidate_stub_review_path:
         if not candidate_stub_review_path.exists():
             errors.append("candidate_stub_review.tsv is missing")
@@ -605,6 +700,11 @@ def validate_bibtex_authority(
             }
             if reviewed_keys != current_candidate_keys:
                 errors.append("candidate_stub_review.tsv must review every retained or suppressed candidate stub")
+            for row in candidate_stub_review_rows:
+                if row.get("review_decision") == "retain" and not row.get("next_action"):
+                    errors.append(f"candidate_stub_review.tsv must record next_action for retained candidate {row.get('candidate_key')}")
+                if row.get("candidate_key") in authority_keys and row.get("review_decision") != "promote":
+                    errors.append(f"candidate_stub_review.tsv silently promoted {row.get('candidate_key')} without review_decision=promote")
     if final_acronym_resolution_sprint_path:
         if not final_acronym_resolution_sprint_path.exists():
             errors.append("final_acronym_resolution_sprint.tsv is missing")
@@ -858,8 +958,36 @@ def validate_bibtex_authority(
             errors.append("report remaining_acronyms_unresolved_after_exhaustive_search_count is inconsistent")
         if report.get("source_work_authority_count") != len(source_work_authority_rows):
             errors.append("report source_work_authority_count does not match source_work_authority.tsv")
+        if source_work_authority_audit_path and report.get("source_work_authority_audit_count") != len(source_work_authority_audit_rows):
+            errors.append("report source_work_authority_audit_count does not match source_work_authority_audit.tsv")
+        if source_work_authority_audit_path and report.get("source_work_duplicate_issue_count") != len(source_work_authority_audit_rows):
+            errors.append("report source_work_duplicate_issue_count does not match source_work_authority_audit.tsv")
+        if source_work_to_bibtex_reconciliation_path and report.get("source_work_to_bibtex_reconciliation_count") != len(source_work_to_bibtex_reconciliation_rows):
+            errors.append("report source_work_to_bibtex_reconciliation_count does not match source_work_to_bibtex_reconciliation.tsv")
         if report.get("raw_reference_crosswalk_audit_count") != len(raw_reference_crosswalk_audit_rows):
             errors.append("report raw_reference_crosswalk_audit_count does not match raw_reference_crosswalk_audit.tsv")
+        if report.get("high_severity_crosswalk_issue_count") != sum(1 for row in raw_reference_crosswalk_audit_rows if row.get("severity") == "high"):
+            errors.append("report high_severity_crosswalk_issue_count does not match raw_reference_crosswalk_audit.tsv")
+        if report.get("medium_severity_crosswalk_issue_count") != sum(1 for row in raw_reference_crosswalk_audit_rows if row.get("severity") == "medium"):
+            errors.append("report medium_severity_crosswalk_issue_count does not match raw_reference_crosswalk_audit.tsv")
+        if report.get("low_severity_crosswalk_issue_count") != sum(1 for row in raw_reference_crosswalk_audit_rows if row.get("severity") == "low"):
+            errors.append("report low_severity_crosswalk_issue_count does not match raw_reference_crosswalk_audit.tsv")
+        if bibtex_field_quality_audit_path and report.get("bibtex_field_quality_issue_count") != len(bibtex_field_quality_audit_rows):
+            errors.append("report bibtex_field_quality_issue_count does not match bibtex_field_quality_audit.tsv")
+        if bibtex_field_quality_audit_path and report.get("bad_ocr_bibtex_field_count") != sum(1 for row in bibtex_field_quality_audit_rows if row.get("issue_type") == "ocr_like_evidence_fragment"):
+            errors.append("report bad_ocr_bibtex_field_count does not match bibtex_field_quality_audit.tsv")
+        if authority_key_normalization_path and report.get("authority_key_normalization_count") != len(authority_key_normalization_rows):
+            errors.append("report authority_key_normalization_count does not match authority_key_normalization.tsv")
+        if report.get("bibtex_entries_emitted_count") != len(authority_entries):
+            errors.append("report bibtex_entries_emitted_count does not match bibliography_authority.bib")
+        if source_work_to_bibtex_reconciliation_path and report.get("bibtex_entries_suppressed_locator_count") != sum(
+            1 for row in source_work_to_bibtex_reconciliation_rows if row.get("bibtex_status") == "suppressed_locator_system"
+        ):
+            errors.append("report bibtex_entries_suppressed_locator_count does not match source_work_to_bibtex_reconciliation.tsv")
+        if source_work_to_bibtex_reconciliation_path and report.get("bibtex_entries_candidate_only_count") != sum(
+            1 for row in source_work_to_bibtex_reconciliation_rows if row.get("bibtex_status") == "candidate_only"
+        ):
+            errors.append("report bibtex_entries_candidate_only_count does not match source_work_to_bibtex_reconciliation.tsv")
         if report.get("candidate_stub_review_count") != len(candidate_stub_review_rows):
             errors.append("report candidate_stub_review_count does not match candidate_stub_review.tsv")
         if report.get("candidate_stubs_promoted_count") != sum(1 for row in candidate_stub_review_rows if row.get("review_decision") == "promote"):
@@ -1090,6 +1218,26 @@ def main() -> None:
         default=Path("data/working/bibliography/bibtex_authority/source_work_authority.tsv"),
     )
     parser.add_argument(
+        "--source-work-authority-audit",
+        type=Path,
+        default=Path("data/working/bibliography/bibtex_authority/source_work_authority_audit.tsv"),
+    )
+    parser.add_argument(
+        "--source-work-to-bibtex-reconciliation",
+        type=Path,
+        default=Path("data/working/bibliography/bibtex_authority/source_work_to_bibtex_reconciliation.tsv"),
+    )
+    parser.add_argument(
+        "--bibtex-field-quality-audit",
+        type=Path,
+        default=Path("data/working/bibliography/bibtex_authority/bibtex_field_quality_audit.tsv"),
+    )
+    parser.add_argument(
+        "--authority-key-normalization",
+        type=Path,
+        default=Path("data/working/bibliography/bibtex_authority/authority_key_normalization.tsv"),
+    )
+    parser.add_argument(
         "--raw-reference-crosswalk-audit",
         type=Path,
         default=Path("data/working/bibliography/bibtex_authority/raw_reference_crosswalk_audit.tsv"),
@@ -1174,6 +1322,10 @@ def main() -> None:
         frasch_abbreviation_list_review_path=args.frasch_abbreviation_list_review,
         unresolved_acronym_dossier_path=args.unresolved_acronym_dossier,
         source_work_authority_path=args.source_work_authority,
+        source_work_authority_audit_path=args.source_work_authority_audit,
+        source_work_to_bibtex_reconciliation_path=args.source_work_to_bibtex_reconciliation,
+        bibtex_field_quality_audit_path=args.bibtex_field_quality_audit,
+        authority_key_normalization_path=args.authority_key_normalization,
         raw_reference_crosswalk_audit_path=args.raw_reference_crosswalk_audit,
         candidate_stub_review_path=args.candidate_stub_review,
         ippa_occurrence_contexts_path=args.ippa_occurrence_contexts,
