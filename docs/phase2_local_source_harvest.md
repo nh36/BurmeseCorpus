@@ -49,6 +49,9 @@ Commit the metadata instead:
 - `data/working/bibliography/local_sources/acronym_definition_report.json`
 - `data/working/bibliography/local_sources/frasch_stadt_staat_acronyms.tsv`
 - `data/working/bibliography/local_sources/bagan_epig_database_acronym_contexts.tsv`
+- `data/working/bibliography/local_sources/documentation_abbreviation_sections.tsv`
+- `data/working/bibliography/local_sources/acronym_false_positive_audit.tsv`
+- `data/working/bibliography/local_sources/ocr_priority_queue.tsv`
 
 ## Practical run order
 
@@ -168,9 +171,14 @@ This script inventories likely corpus documentation and Frasch witnesses, then s
 - **definition evidence** in `acronym_definition_candidates.tsv`;
 - **Frasch-specific acronym contexts** in `frasch_stadt_staat_acronyms.tsv`;
 - **Bagan Epig Database usage contexts** in `bagan_epig_database_acronym_contexts.tsv`;
+- **targeted abbreviation/bibliography sections** in `documentation_abbreviation_sections.tsv`;
+- **known false positives** in `acronym_false_positive_audit.tsv`;
+- **OCR triage only** in `ocr_priority_queue.tsv`;
 - and the search inventory/report in `corpus_documentation_candidates.tsv` and `acronym_definition_report.json`.
 
-The rule is conservative: contextual usage can stabilize a source family, but it should **not** be promoted to a confirmed acronym expansion. The next goal is a correct crosswalk from raw references to source families, locators, and only then to confirmed works.
+The rule is conservative: contextual usage can stabilize a source family, but it should **not** be promoted to a confirmed acronym expansion. Parenthetical remarks, note labels, date strings, and ordinary English words are false positives unless a real abbreviation-list or bibliography pattern defines them. The next goal is a correct crosswalk from raw references to source families, locators, and only then to confirmed works.
+
+Target OCR only when the documentation inventory shows that a scanned file is likely to contain abbreviation lists, bibliography headings, or source-list definitions. Do not OCR the whole local cache just to widen recall.
 
 ## How local evidence flows into BibTeX authority
 

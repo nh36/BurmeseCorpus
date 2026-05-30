@@ -4,6 +4,7 @@
   "fratsch_stadt_staat_files_searched_count": 7,
   "bagan_database_context_matches": 86,
   "ocr_needed_count": 22,
+  "ocr_priority_queue_count": 22,
   "files_requiring_ocr": [
     "Frasch 1994 dhammasats.pdf",
     "Frasch 2004 Measuring Burmese Soil.pdf",
@@ -28,13 +29,16 @@
     "Luce&PeMaungTin_InscriptionsOfBurma(Plates6-20)_1963.pdf",
     "luce_phases-burma1985.pdf"
   ],
-  "definition_candidate_count": 26,
-  "strong_definition_count": 14,
+  "definition_candidate_count": 19,
+  "strong_definition_count": 6,
+  "false_positive_audit_count": 6,
+  "documentation_abbreviation_sections_count": 21,
   "priority_acronyms_without_strong_definition": [
     "IPPA",
     "UEM",
     "MP",
     "MM",
+    "OR",
     "TN",
     "U Min Hswe",
     "Luce D",

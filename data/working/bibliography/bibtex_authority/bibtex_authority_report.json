@@ -26,9 +26,9 @@
   "high_frequency_reviewed_count": 25,
   "high_frequency_still_unresolved_count": 0,
   "priority_acronym_count": 19,
-  "confirmed_acronym_expansion_count": 2,
+  "confirmed_acronym_expansion_count": 3,
   "probable_acronym_expansion_count": 3,
-  "source_family_only_count": 12,
+  "source_family_only_count": 11,
   "contextual_usage_only_count": 0,
   "unresolved_acronym_count": 0,
   "internal_locator_count": 1,
@@ -51,13 +51,13 @@
     "MP",
     "OR",
     "RDASB",
-    "SIP",
     "TN",
     "UEM"
   ],
   "confirmed_priority_acronyms": [
     "Pl.",
     "PPA",
+    "SIP",
     "U Min Hswe",
     "UB"
   ],

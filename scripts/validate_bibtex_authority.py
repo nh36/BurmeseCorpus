@@ -9,7 +9,11 @@ from pathlib import Path
 from build_bibtex_authority import RESOLUTION_LEVELS, RESOLUTION_STATUSES
 from bibtex_common import duplicate_keys, parse_bibtex_text
 from corpus_common import read_tsv
-from extract_bibliography_acronyms import PRIORITY_ACRONYMS, STRONG_DEFINITION_EVIDENCE_TYPES
+from extract_bibliography_acronyms import (
+    MAX_STRONG_DEFINITION_QUOTE_LENGTH,
+    PRIORITY_ACRONYMS,
+    STRONG_DEFINITION_EVIDENCE_TYPES,
+)
 
 
 ABSOLUTE_PATH_PATTERN = re.compile(r"(^/(?:Users|home|var|private|tmp|opt|Volumes)\b|^[A-Za-z]:\\\\)")
@@ -24,6 +28,29 @@ PLACEHOLDER_EXPANSION_PATTERN = re.compile(
 
 def has_absolute_path(value: str) -> bool:
     return bool(value and ABSOLUTE_PATH_PATTERN.search(value))
+
+
+def has_list_date_false_positive(value: str) -> bool:
+    compact = (value or "").strip().casefold()
+    return "date" in compact and ("cs" in compact or bool(re.search(r"\b\d{3,4}\b", compact)))
+
+
+def has_obi_remark_false_positive(value: str) -> bool:
+    compact = (value or "").strip().casefold()
+    return "spelling of inscription" in compact or compact.startswith("remark")
+
+
+def has_lowercase_or_false_positive(value: str) -> bool:
+    compact = (value or "").strip()
+    return compact.casefold() == "or" or compact.startswith("or:")
+
+
+def candidate_supports_strong_expansion(candidate_row: dict | None) -> bool:
+    if not candidate_row:
+        return False
+    if candidate_row.get("evidence_type") not in STRONG_DEFINITION_EVIDENCE_TYPES:
+        return False
+    return candidate_row.get("definition_quality") in {"explicit", "strong"}
 
 
 def validate_bibtex_authority(
@@ -227,30 +254,67 @@ def validate_bibtex_authority(
                     errors.append(f"acronym_resolution_status.tsv is missing priority acronym {acronym}")
             for index, row in enumerate(acronym_status_rows, start=1):
                 status = row.get("resolution_status", "")
+                evidence_id = row.get("best_evidence_id", "")
+                candidate_row = acronym_candidate_by_id.get(evidence_id)
                 if status not in allowed_acronym_statuses:
                     errors.append(f"acronym_resolution_status[{index}] has invalid resolution_status {status}")
                 if status in review_required and row.get("needs_human_review") != "true":
                     errors.append(f"acronym_resolution_status[{index}] should require human review for {status}")
                 if status == "contextual_usage_only" and row.get("best_evidence_id"):
-                    candidate_row = acronym_candidate_by_id.get(row["best_evidence_id"])
                     if candidate_row and candidate_row.get("evidence_type") in STRONG_DEFINITION_EVIDENCE_TYPES:
                         errors.append(f"acronym_resolution_status[{index}] marks strong evidence as contextual usage only")
                 if status in strong_statuses:
-                    evidence_id = row.get("best_evidence_id", "")
-                    candidate_row = acronym_candidate_by_id.get(evidence_id)
                     if not candidate_row or candidate_row.get("evidence_type") not in STRONG_DEFINITION_EVIDENCE_TYPES:
                         errors.append(f"acronym_resolution_status[{index}] requires strong evidence for {status}")
+                    if not candidate_supports_strong_expansion(candidate_row):
+                        errors.append(f"acronym_resolution_status[{index}] lacks explicit or strong definition evidence for {status}")
+                    if len(row.get("best_evidence_quote", "")) > MAX_STRONG_DEFINITION_QUOTE_LENGTH:
+                        errors.append(f"acronym_resolution_status[{index}] best_evidence_quote exceeds {MAX_STRONG_DEFINITION_QUOTE_LENGTH} characters")
                 if status == "confirmed_expansion" and not row.get("current_expansion"):
                     errors.append(f"acronym_resolution_status[{index}] confirmed expansion is missing current_expansion")
+                if row.get("definition_quality") == "explicit" and row.get("acronym") in PRIORITY_ACRONYMS and not row.get("current_expansion"):
+                    errors.append(f"acronym_resolution_status[{index}] explicit priority acronym is missing current_expansion")
+                if row.get("acronym") == "List" and (
+                    has_list_date_false_positive(row.get("current_expansion", ""))
+                    or has_list_date_false_positive(row.get("best_evidence_quote", ""))
+                ):
+                    errors.append("acronym_resolution_status contains the known List date-string false positive")
+                if row.get("acronym") == "OBI" and (
+                    has_obi_remark_false_positive(row.get("current_expansion", ""))
+                    or has_obi_remark_false_positive(row.get("best_evidence_quote", ""))
+                ):
+                    errors.append("acronym_resolution_status contains the known OBI remark false positive")
+                if row.get("acronym") == "OR" and (
+                    has_lowercase_or_false_positive(row.get("current_expansion", ""))
+                    or has_lowercase_or_false_positive(row.get("best_evidence_quote", ""))
+                ):
+                    errors.append("acronym_resolution_status contains the known lowercase 'or' false positive")
 
     if acronym_candidates_path and acronym_candidates_path.exists():
         for index, row in enumerate(acronym_candidate_rows, start=1):
             if row.get("definition_quality") == "explicit" and row.get("evidence_type") == "contextual_usage":
                 errors.append(f"acronym_definition_candidates[{index}] cannot mark contextual usage as explicit")
+            if row.get("acronym") == "OR" and has_lowercase_or_false_positive(row.get("raw_definition", "")):
+                errors.append("acronym_definition_candidates.tsv still contains lowercase 'or' as a definition")
+            if row.get("acronym") == "List" and has_list_date_false_positive(row.get("raw_definition", "")):
+                errors.append("acronym_definition_candidates.tsv still contains the List date-string false positive")
+            if row.get("acronym") == "OBI" and has_obi_remark_false_positive(row.get("raw_definition", "")):
+                errors.append("acronym_definition_candidates.tsv still contains the OBI remark false positive")
             for value in row.values():
                 if has_absolute_path(value):
                     errors.append(f"acronym_definition_candidates[{index}] contains an absolute local path")
                     break
+
+    sip_explicit_candidates = [
+        row
+        for row in acronym_candidate_rows
+        if row.get("acronym") == "SIP"
+        and row.get("evidence_type") in STRONG_DEFINITION_EVIDENCE_TYPES
+        and row.get("definition_quality") == "explicit"
+    ]
+    sip_status_row = acronym_status_by_acronym.get("SIP")
+    if sip_explicit_candidates and sip_status_row and not sip_status_row.get("current_expansion"):
+        errors.append("SIP has explicit definition evidence but remains blank in acronym_resolution_status.tsv")
 
     if source_family_rows:
         for index, row in enumerate(source_family_rows, start=1):

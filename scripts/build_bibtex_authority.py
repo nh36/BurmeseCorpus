@@ -15,7 +15,11 @@ from bibtex_common import (
     write_bibtex,
 )
 from corpus_common import read_tsv, write_tsv
-from extract_bibliography_acronyms import PRIORITY_ACRONYMS, STRONG_DEFINITION_EVIDENCE_TYPES
+from extract_bibliography_acronyms import (
+    MAX_STRONG_DEFINITION_QUOTE_LENGTH,
+    PRIORITY_ACRONYMS,
+    STRONG_DEFINITION_EVIDENCE_TYPES,
+)
 
 
 AUTHORITY_FIELDS = [
@@ -1160,6 +1164,7 @@ def choose_best_acronym_candidate(rows: list[dict]) -> dict | None:
             acronym_quality_rank(row.get("definition_quality", "")),
             1 if not truthy(row.get("needs_human_review", "")) else 0,
             row.get("confidence", ""),
+            -(len((row.get("raw_definition", "") or "").strip()) or 999),
         ),
     )
 
@@ -1183,7 +1188,7 @@ ACRONYM_STATUS_DEFAULTS = {
     "PPA": {"resolution_status": "confirmed_expansion"},
     "IPPA": {"resolution_status": "source_family_only"},
     "UEM": {"resolution_status": "probable_expansion"},
-    "SIP": {"resolution_status": "source_family_only"},
+    "SIP": {"resolution_status": "confirmed_expansion"},
     "MP": {"resolution_status": "source_family_only"},
     "UB": {"resolution_status": "confirmed_expansion"},
     "MM": {"resolution_status": "source_family_only"},
@@ -1220,6 +1225,28 @@ def next_acronym_action(status: str) -> str:
     return "search corpus documentation and Frasch materials again"
 
 
+def inferred_acronym_status(best_candidate: dict | None) -> str:
+    if not best_candidate:
+        return "unresolved"
+    if best_candidate.get("evidence_type", "") not in STRONG_DEFINITION_EVIDENCE_TYPES:
+        return "contextual_usage_only"
+    if (
+        best_candidate.get("definition_quality") == "explicit"
+        and best_candidate.get("confidence") == "high"
+    ):
+        return "confirmed_expansion"
+    return "probable_expansion"
+
+
+def short_acronym_evidence_quote(best_candidate: dict | None) -> str:
+    if not best_candidate:
+        return ""
+    quote = (best_candidate.get("raw_definition", "") or "").strip()
+    if len(quote) <= MAX_STRONG_DEFINITION_QUOTE_LENGTH:
+        return quote
+    return quote[: MAX_STRONG_DEFINITION_QUOTE_LENGTH - 1].rstrip() + "…"
+
+
 def build_acronym_status_rows(
     source_family_rows: dict[str, dict],
     acronym_candidates_by_acronym: dict[str, list[dict]],
@@ -1240,13 +1267,15 @@ def build_acronym_status_rows(
         status = default.get("resolution_status", "")
         if not status:
             if strong_candidate:
-                status = "probable_expansion"
+                status = inferred_acronym_status(best_candidate)
             elif contextual_candidate:
                 status = "contextual_usage_only"
             elif source_family_row:
                 status = "source_family_only"
             else:
                 status = "unresolved"
+        elif strong_candidate and status in {"source_family_only", "contextual_usage_only", "unresolved"}:
+            status = inferred_acronym_status(best_candidate)
         if status in {"confirmed_expansion", "probable_expansion"} and not strong_candidate:
             status = "source_family_only" if source_family_row else "unresolved"
         current_expansion = default.get("current_expansion", "")
@@ -1277,7 +1306,7 @@ def build_acronym_status_rows(
                 "definition_quality": definition_quality or "not_found",
                 "best_evidence_source": best_candidate.get("source_file_label", "") if best_candidate else "",
                 "best_evidence_id": best_candidate.get("candidate_id", "") if best_candidate else "",
-                "best_evidence_quote": best_candidate.get("raw_definition", "") if best_candidate else "",
+                "best_evidence_quote": short_acronym_evidence_quote(best_candidate),
                 "confidence": best_candidate.get("confidence", "low") if best_candidate else "low",
                 "needs_human_review": needs_review,
                 "next_action": next_acronym_action(status),

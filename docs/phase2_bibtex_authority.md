@@ -42,6 +42,10 @@ Only strong evidence types such as abbreviation lists, explicit parenthetical de
 
 For weak cases, keep the source family visible but keep the expansion visibly unconfirmed, e.g. `MP source family [unexpanded]`.
 
+Treat parenthetical remarks, note labels, and ordinary English words as false-positive territory, not as expansions. `spelling of inscription (OBI)`, `Date ... (List)`, or lowercase `or:` are usage/noise patterns; they belong in the false-positive audit, not in `acronym_resolution_status.tsv`.
+
+Keep acronym evidence quotes short and documentary. Long catalogue prose should stay in the extraction context tables, while `best_evidence_quote` should remain a concise abbreviation-list row, heading, or source-list phrase.
+
 ## External BibTeX import
 
 `scripts/import_external_bibtex.py` imports `asia 2.bib` or another local BibTeX file reproducibly:
@@ -143,6 +147,8 @@ Important review columns:
 Use these rows to confirm or keep provisional expansions for abbreviations such as `A`, `B`, `MP`, `UB`, `PPA`, `TN`, `IPPA`, `UEM`, `SIP`, `MM`, `OR`, `Pl.`, `ARASI`, `Luce D`, `Luce J`, `JBRS`, and `JRAS`.
 
 If an expansion is still uncertain, keep the seed row but leave `needs_human_review = true`.
+
+The current best documentary targets for acronym review are the original corpus bibliographic-information files, Frasch's *Pagan: Stadt und Staat* witnesses and translations, `Bagan Epig Database.doc`, and nearby Luce/Frasch local files. If those files do not yield an explicit definition, keep the acronym visibly weak rather than hiding it behind a family placeholder.
 
 ## Reviewing high-frequency families first
 

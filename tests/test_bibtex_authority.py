@@ -15,7 +15,7 @@ if str(SCRIPTS_DIR) not in sys.path:
 from bibtex_common import parse_bibtex_text
 from build_bibtex_authority import ACRONYM_STATUS_FIELDS, AUTHORITY_FIELDS, CROSSWALK_FIELDS, SOURCE_FAMILY_FIELDS, build_authority, parse_locator
 from corpus_common import read_tsv, write_tsv
-from extract_bibliography_acronyms import extract_explicit_definition_candidates
+from extract_bibliography_acronyms import PRIORITY_ACRONYMS, extract_explicit_definition_candidates
 from extract_frasch_bibliography import run_extraction
 from harvest_local_bibliography_sources import run_harvest
 from import_external_bibtex import import_external_bibtex
@@ -148,7 +148,7 @@ class BibtexAuthorityTests(unittest.TestCase):
         self.assertEqual(parse_locator("RDASB 1971", "fam-rdasb-publication", "RDASB"), ("1971", "year"))
 
     def test_extract_explicit_definition_candidates_reads_abbreviation_list(self) -> None:
-        rows = extract_explicit_definition_candidates(
+        rows, rejected = extract_explicit_definition_candidates(
             "PPA = Inscriptions of Pagan, Pinya and Ava\nRDASB = Report of the Director, Archaeological Survey of Burma\n",
             source_file_id="doc-1",
             source_file_label="mock list",
@@ -158,15 +158,45 @@ class BibtexAuthorityTests(unittest.TestCase):
         self.assertEqual(by_acronym["PPA"]["candidate_expansion"], "Inscriptions of Pagan, Pinya and Ava")
         self.assertEqual(by_acronym["PPA"]["evidence_type"], "explicit_abbreviation_list")
         self.assertEqual(by_acronym["RDASB"]["definition_quality"], "explicit")
+        self.assertEqual(rejected, [])
 
     def test_extract_explicit_definition_candidates_ignores_contextual_usage(self) -> None:
-        rows = extract_explicit_definition_candidates(
+        rows, rejected = extract_explicit_definition_candidates(
             "PPA, p. 55\nPl. II 198\n",
             source_file_id="doc-2",
             source_file_label="mock contexts",
             acronyms=["PPA", "Pl."],
         )
         self.assertEqual(rows, [])
+        self.assertEqual(rejected, [])
+
+    def test_extract_explicit_definition_candidates_rejects_known_false_positives(self) -> None:
+        rows, rejected = extract_explicit_definition_candidates(
+            "Date: CS 581 (List)\nspelling of inscription (OBI)\nor: Palm-leaf manuscript\n",
+            source_file_id="doc-3",
+            source_file_label="mock bad cases",
+            acronyms=["List", "OBI", "OR"],
+        )
+        self.assertEqual(rows, [])
+        reasons = {row["acronym"]: row["reason_rejected"] for row in rejected}
+        self.assertIn("candidate expansion does not look like a title or source name", reasons["List"])
+        self.assertIn("candidate expansion does not look like a title or source name", reasons["OBI"])
+        self.assertIn("lowercase 'or' is not the OR acronym", reasons["OR"])
+
+    def test_extract_explicit_definition_candidates_keeps_multiline_sip_definition(self) -> None:
+        rows, rejected = extract_explicit_definition_candidates(
+            "SIP = Pe Maung Tin and G. H. Luce, Selections from the\nInscriptions of Pagan\n",
+            source_file_id="doc-4",
+            source_file_label="mock sip list",
+            acronyms=["SIP"],
+        )
+        self.assertEqual(rejected, [])
+        self.assertEqual(len(rows), 1)
+        self.assertEqual(
+            rows[0]["candidate_expansion"],
+            "Pe Maung Tin and G. H. Luce, Selections from the Inscriptions of Pagan",
+        )
+        self.assertEqual(rows[0]["definition_quality"], "explicit")
 
     def write_fixture_tables(self, base: Path) -> tuple[Path, Path, Path, Path, Path]:
         families_path = base / "reference_families.tsv"
@@ -467,6 +497,21 @@ class BibtexAuthorityTests(unittest.TestCase):
                     "source_file_label": "Frasch translation",
                     "source_location_hint": "pattern hit",
                     "evidence_type": "explicit_parenthetical_definition",
+                    "confidence": "high",
+                    "definition_quality": "explicit",
+                    "needs_human_review": "false",
+                    "notes": "",
+                },
+                {
+                    "candidate_id": "doc:sip",
+                    "acronym": "SIP",
+                    "candidate_expansion": "Pe Maung Tin and G. H. Luce, Selections from the Inscriptions of Pagan",
+                    "raw_definition": "SIP = Pe Maung Tin and G. H. Luce, Selections from the Inscriptions of Pagan",
+                    "definition_context": "SIP = Pe Maung Tin and G. H. Luce, Selections from the Inscriptions of Pagan",
+                    "source_file_id": "doc-3",
+                    "source_file_label": "Luce comparative wordlist",
+                    "source_location_hint": "line 12",
+                    "evidence_type": "explicit_abbreviation_list",
                     "confidence": "high",
                     "definition_quality": "explicit",
                     "needs_human_review": "false",
@@ -889,6 +934,47 @@ class BibtexAuthorityTests(unittest.TestCase):
             )
             self.assertFalse(result["ok"])
             self.assertTrue(any("requires strong evidence" in error for error in result["errors"]))
+
+    def test_validate_bibtex_authority_rejects_long_acronym_quote(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            temp_path = Path(temp_dir)
+            families_path, members_path, candidates_path, seeds_path, external_entries_path = self.write_fixture_tables(temp_path)
+            acronym_candidates_path, acronym_report_path = self.write_fixture_acronym_files(temp_path)
+            output_dir = temp_path / "authority"
+            build_authority(
+                reference_families_path=families_path,
+                reference_members_path=members_path,
+                work_candidates_path=candidates_path,
+                seed_path=seeds_path,
+                external_entries_path=external_entries_path,
+                output_dir=output_dir,
+                frasch_references_path=temp_path / "missing_frasch.tsv",
+                local_candidates_path=temp_path / "missing_local_candidates.tsv",
+                local_manifest_path=temp_path / "missing_local_manifest.tsv",
+                acronym_candidates_path=acronym_candidates_path,
+                acronym_report_path=acronym_report_path,
+            )
+            acronym_status_path = output_dir / "acronym_resolution_status.tsv"
+            rows = read_tsv(acronym_status_path)
+            sip_row = next(row for row in rows if row["acronym"] == "SIP")
+            sip_row["best_evidence_quote"] = "x" * 240
+            write_tsv(acronym_status_path, rows, ACRONYM_STATUS_FIELDS)
+            result = validate_bibtex_authority(
+                authority_bib_path=output_dir / "bibliography_authority.bib",
+                candidates_bib_path=output_dir / "bibliography_candidates.bib",
+                authority_tsv_path=output_dir / "bibtex_authority.tsv",
+                crosswalk_path=output_dir / "raw_reference_to_bibtex.tsv",
+                families_path=families_path,
+                external_entries_path=external_entries_path,
+                source_family_path=output_dir / "source_family_authority.tsv",
+                evidence_path=output_dir / "bibtex_authority_evidence.tsv",
+                report_path=output_dir / "bibtex_authority_report.json",
+                acronym_status_path=acronym_status_path,
+                acronym_candidates_path=acronym_candidates_path,
+                acronym_report_path=acronym_report_path,
+            )
+            self.assertFalse(result["ok"])
+            self.assertTrue(any("best_evidence_quote exceeds" in error for error in result["errors"]))
 
     def test_harvest_local_bibliography_sources_collapses_duplicates_by_sha(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:
@@ -1324,8 +1410,14 @@ class BibtexAuthorityTests(unittest.TestCase):
             self.assertIn("sf-ub", source_family_rows)
             self.assertEqual(acronym_rows["Pl."]["resolution_status"], "internal_locator")
             self.assertEqual(acronym_rows["PPA"]["resolution_status"], "confirmed_expansion")
+            self.assertEqual(acronym_rows["SIP"]["resolution_status"], "confirmed_expansion")
+            self.assertEqual(
+                acronym_rows["SIP"]["current_expansion"],
+                "Pe Maung Tin and G. H. Luce, Selections from the Inscriptions of Pagan",
+            )
             self.assertEqual(acronym_rows["UB"]["resolution_status"], "confirmed_expansion")
             self.assertEqual(acronym_rows["RDASB"]["resolution_status"], "source_family_only")
+            self.assertTrue(set(PRIORITY_ACRONYMS).issubset(acronym_rows))
             self.assertEqual(source_family_rows["sf-ppa"]["expanded_label"], "Inscriptions of Pagan, Pinya and Ava")
             self.assertEqual(source_family_rows["sf-mp"]["expanded_label"], "MP source family [unexpanded]")
             self.assertNotIn("workUnresolved", candidate_bib)
