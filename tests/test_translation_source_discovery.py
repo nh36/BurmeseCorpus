@@ -23,11 +23,16 @@ from validate_translation_source_discovery import validate_translation_source_di
 from verify_translation_witnesses import (
     CORE_DIRECT_WITNESS_SEARCH_FIELDS,
     DIRECT_WITNESS_SEARCH_FIELDS,
+    EB_FASCICLE_CONTENT_INSPECTION_FIELDS,
     EPIGRAPHIA_BIRMANICA_FASCICLE_COVERAGE_FIELDS,
     EPIGRAPHIA_BIRMANICA_REVIEW_FIELDS,
+    INSCRIPTIONS_OF_BURMA_TEXT_SEARCH_FIELDS,
     MISSING_DIRECT_SEARCH_FIELDS,
+    MISSING_CORE_WITNESS_HUNT_FIELDS,
     RESCUE_CANDIDATE_REVIEW_FIELDS,
+    SIP_WITNESS_ID,
     SIP_WITNESS_INSPECTION_FIELDS,
+    SOURCE_WITNESS_CONTENT_PROFILE_FIELDS,
     SNIPPET_FIELDS,
     SOURCE_WORK_GAP_FIELDS,
     VERIFICATION_FIELDS,
@@ -390,6 +395,90 @@ class TranslationSourceDiscoveryTests(unittest.TestCase):
 
             self.assertTrue(any("needs a matching source_work_witness_gaps.tsv row" in error for error in errors))
 
+    def test_validator_rejects_failed_sip_ocr_counting_as_sample_entry_inspection(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            tmp = Path(tmp_dir)
+            self._write_validation_fixture(
+                tmp,
+                source_rows=[base_source_row(source_work_key="sipSelectionsPagan", canonical_title="Selections from the Inscriptions of Pagan", short_title="SIP", authors_editors="Pe Maung Tin and G. H. Luce", related_source_family_ids="sf-sip", related_acronyms="SIP")],
+                plan_rows=[self._plan_row(source_work_key="sipSelectionsPagan", canonical_title="Selections from the Inscriptions of Pagan", discovery_status="verified_direct_witness_found", verified_direct_witness_count="1", verified_edition_witness_count="1")],
+                candidate_rows=[self._candidate_row(witness_id=SIP_WITNESS_ID, source_work_key="sipSelectionsPagan", canonical_title="Selections from the Inscriptions of Pagan", candidate_file_label="Selections from the Inscriptions of Pagan.pdf", candidate_file_id="sip-pdf")],
+                classification_rows=[self._classification_row(witness_id=SIP_WITNESS_ID, source_work_key="sipSelectionsPagan", canonical_title="Selections from the Inscriptions of Pagan", candidate_file_label="Selections from the Inscriptions of Pagan.pdf")],
+                verification_rows=[self._verification_row(witness_id=SIP_WITNESS_ID, source_work_key="sipSelectionsPagan", canonical_title="Selections from the Inscriptions of Pagan", candidate_file_label="Selections from the Inscriptions of Pagan.pdf", contains_translation_verified="unknown", contains_edition_verified="confirmed")],
+                sip_inspection_rows=[
+                    {
+                        "witness_id": SIP_WITNESS_ID,
+                        "file_label": "Selections from the Inscriptions of Pagan.pdf",
+                        "inspection_area": "sample_entry",
+                        "inspection_method": "ocr",
+                        "evidence_snippet": "",
+                        "contains_translation": "unknown",
+                        "contains_edition_or_transliteration": "unknown",
+                        "contains_notes_or_commentary": "unknown",
+                        "inspection_status": "attempted_no_recoverable_text",
+                        "next_action": "Retry targeted OCR.",
+                        "notes": "No recoverable sample-entry OCR was isolated.",
+                    }
+                ],
+                source_witness_content_profile_rows=[
+                    {
+                        "source_work_key": "sipSelectionsPagan",
+                        "witness_id": SIP_WITNESS_ID,
+                        "file_label": "Selections from the Inscriptions of Pagan.pdf",
+                        "verified_witness_type": "source_edition",
+                        "content_profile_status": "confirmed",
+                        "title_page_status": "confirmed",
+                        "contents_status": "unknown",
+                        "sample_entry_status": "attempted_no_recoverable_text",
+                        "translation_status": "unknown",
+                        "edition_status": "confirmed",
+                        "notes_commentary_status": "unknown",
+                        "plate_image_status": "not_applicable",
+                        "catalogue_metadata_status": "unknown",
+                        "coverage_scope": "whole_work",
+                        "confidence": "high",
+                        "next_action": "Retry targeted sample-entry OCR.",
+                        "notes": "",
+                    }
+                ],
+                report_overrides={"sip_sample_entry_inspected": True, "sip_sample_entry_ocr_attempted": True, "sip_translation_status": "unconfirmed", "sip_contains_translation_status": "unconfirmed"},
+            )
+
+            errors = self._run_validation(tmp)
+
+            self.assertTrue(any("sip_sample_entry_inspected cannot be true" in error for error in errors))
+
+    def test_validator_rejects_iob_plate_as_text_candidate(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            tmp = Path(tmp_dir)
+            self._write_validation_fixture(
+                tmp,
+                iob_text_search_rows=[
+                    {
+                        "query": "Inscriptions of Burma text",
+                        "matched_file_label": "Luce&PeMaungTin_InscriptionsOfBurma(Plates3,4,5)_1960.pdf",
+                        "matched_file_id": "iob-plates",
+                        "match_type": "filename",
+                        "match_confidence": "medium",
+                        "short_evidence": "Matched plate PDF filename.",
+                        "searched_sources": "local_file_manifest",
+                        "search_scope": "filename search",
+                        "search_date_or_run_id": "fixture",
+                        "search_result_status": "candidate_found",
+                        "recommended_action": "Keep searching for text volume.",
+                        "notes": "",
+                        "is_text_witness_candidate": "true",
+                        "is_plate_witness_candidate": "true",
+                        "false_positive_for_text": "false",
+                        "reason_not_text_witness": "",
+                    }
+                ],
+            )
+
+            errors = self._run_validation(tmp)
+
+            self.assertTrue(any("must not be marked as a text witness candidate" in error for error in errors))
+
     def _plan_row(self, **overrides: str) -> dict:
         row = {
             "source_work_key": "lucePeMaungTinInscriptionsOfBurma",
@@ -501,9 +590,13 @@ class TranslationSourceDiscoveryTests(unittest.TestCase):
         missing_search_rows: list[dict] | None = None,
         gap_rows: list[dict] | None = None,
         sip_inspection_rows: list[dict] | None = None,
+        source_witness_content_profile_rows: list[dict] | None = None,
+        eb_fascicle_content_inspection_rows: list[dict] | None = None,
         uem_search_rows: list[dict] | None = None,
         core_search_rows: list[dict] | None = None,
         iob_text_search_rows: list[dict] | None = None,
+        iob_text_volume_hunt_rows: list[dict] | None = None,
+        missing_core_witness_hunt_rows: list[dict] | None = None,
         rescue_review_rows: list[dict] | None = None,
         epigraphia_review_rows: list[dict] | None = None,
         epigraphia_fascicle_coverage_rows: list[dict] | None = None,
@@ -518,9 +611,77 @@ class TranslationSourceDiscoveryTests(unittest.TestCase):
         missing_search_rows = missing_search_rows or []
         gap_rows = gap_rows or []
         sip_inspection_rows = sip_inspection_rows or []
+        source_witness_content_profile_rows = source_witness_content_profile_rows or [
+            {
+                "source_work_key": "lucePeMaungTinInscriptionsOfBurma",
+                "witness_id": "w1",
+                "file_label": "Inscriptions of Burma.pdf",
+                "verified_witness_type": "source_edition",
+                "content_profile_status": "confirmed",
+                "title_page_status": "confirmed",
+                "contents_status": "unknown",
+                "sample_entry_status": "unknown",
+                "translation_status": "unknown",
+                "edition_status": "confirmed",
+                "notes_commentary_status": "unknown",
+                "plate_image_status": "unknown",
+                "catalogue_metadata_status": "unknown",
+                "coverage_scope": "whole_work",
+                "confidence": "high",
+                "next_action": "Continue targeted inspection.",
+                "notes": "",
+            }
+        ]
+        eb_fascicle_content_inspection_rows = eb_fascicle_content_inspection_rows or [
+            {
+                "witness_id": "eb-fixture",
+                "file_label": "Epigraphia Birmanica fixture.pdf",
+                "inspection_area": "title_page",
+                "short_snippet": "Epigraphia Birmanica",
+                "contains_translation": "unknown",
+                "contains_edition_or_transliteration": "confirmed",
+                "contains_notes_or_commentary": "unknown",
+                "contains_plate_or_image": "unknown",
+                "confidence": "medium",
+                "inspection_status": "confirmed",
+                "next_action": "Inspect contents.",
+                "notes": "",
+            }
+        ]
         uem_search_rows = uem_search_rows or []
         core_search_rows = core_search_rows or []
         iob_text_search_rows = iob_text_search_rows or []
+        iob_text_volume_hunt_rows = iob_text_volume_hunt_rows or [
+            {
+                "query": "Inscriptions of Burma text",
+                "matched_file_label": "",
+                "matched_file_id": "",
+                "match_type": "",
+                "match_confidence": "",
+                "short_evidence": "Checked local file manifest and OCR index; no text volume surfaced.",
+                "searched_sources": "local_file_manifest;source_library_manifest;ocr_text_index",
+                "search_scope": "local manifest plus OCR index",
+                "search_date_or_run_id": "fixture",
+                "search_result_status": "not_found",
+                "recommended_action": "Continue targeted portfolio/text hunt.",
+                "notes": "",
+            }
+        ]
+        missing_core_witness_hunt_rows = missing_core_witness_hunt_rows or [
+            {
+                "source_work_key": "uemSelectionsPagan",
+                "query": "U E Maung",
+                "variant_type": "author",
+                "matched_file_label": "",
+                "matched_file_id": "",
+                "match_type": "",
+                "match_confidence": "",
+                "short_evidence": "",
+                "search_result_status": "not_found",
+                "recommended_action": "Continue targeted local search.",
+                "notes": "Checked local manifest and OCR index.",
+            }
+        ]
         rescue_review_rows = rescue_review_rows or [
             {
                 "candidate_file_id": "111029.pdf",
@@ -574,9 +735,13 @@ class TranslationSourceDiscoveryTests(unittest.TestCase):
         write_tsv(root / "missing_direct_witness_search.tsv", missing_search_rows, MISSING_DIRECT_SEARCH_FIELDS)
         write_tsv(root / "source_work_witness_gaps.tsv", gap_rows, SOURCE_WORK_GAP_FIELDS)
         write_tsv(root / "sip_witness_inspection.tsv", sip_inspection_rows, SIP_WITNESS_INSPECTION_FIELDS)
+        write_tsv(root / "source_witness_content_profile.tsv", source_witness_content_profile_rows, SOURCE_WITNESS_CONTENT_PROFILE_FIELDS)
+        write_tsv(root / "eb_fascicle_content_inspection.tsv", eb_fascicle_content_inspection_rows, EB_FASCICLE_CONTENT_INSPECTION_FIELDS)
         write_tsv(root / "uem_direct_witness_search.tsv", uem_search_rows, DIRECT_WITNESS_SEARCH_FIELDS)
         write_tsv(root / "core_source_direct_witness_search.tsv", core_search_rows, CORE_DIRECT_WITNESS_SEARCH_FIELDS)
-        write_tsv(root / "inscriptions_of_burma_text_witness_search.tsv", iob_text_search_rows, DIRECT_WITNESS_SEARCH_FIELDS)
+        write_tsv(root / "inscriptions_of_burma_text_witness_search.tsv", iob_text_search_rows, INSCRIPTIONS_OF_BURMA_TEXT_SEARCH_FIELDS)
+        write_tsv(root / "inscriptions_of_burma_text_volume_hunt.tsv", iob_text_volume_hunt_rows, DIRECT_WITNESS_SEARCH_FIELDS)
+        write_tsv(root / "missing_core_witness_hunt.tsv", missing_core_witness_hunt_rows, MISSING_CORE_WITNESS_HUNT_FIELDS)
         write_tsv(root / "rescue_candidate_review.tsv", rescue_review_rows, RESCUE_CANDIDATE_REVIEW_FIELDS)
         write_tsv(root / "epigraphia_birmanica_witness_review.tsv", epigraphia_review_rows, EPIGRAPHIA_BIRMANICA_REVIEW_FIELDS)
         write_tsv(root / "epigraphia_birmanica_fascicle_coverage.tsv", epigraphia_fascicle_coverage_rows, EPIGRAPHIA_BIRMANICA_FASCICLE_COVERAGE_FIELDS)
@@ -633,16 +798,29 @@ class TranslationSourceDiscoveryTests(unittest.TestCase):
             "source_works_with_verified_direct_witness": len({row["source_work_key"] for row in verification_rows if row.get("verification_status") in {"verified_direct_witness", "verified_catalogue_witness"}}),
             "source_works_still_needing_direct_witness": sum(row.get("gap_type") in {"needs_direct_witness", "needs_title_page_review", "has_verified_plate_but_needs_text"} for row in gap_rows),
             "sip_inspection_completed": bool(sip_inspection_rows),
-            "sip_sample_entry_inspected": any(row.get("inspection_area") == "sample_entry" for row in sip_inspection_rows),
-            "sip_contains_translation_status": next((row.get("contains_translation") for row in sip_inspection_rows if row.get("inspection_area") == "sample_entry"), "unknown"),
+            "sip_title_page_inspected": any(row.get("inspection_area") == "title_page" and row.get("inspection_status") == "confirmed" for row in sip_inspection_rows),
+            "sip_contents_inspected": any(row.get("inspection_area") == "contents" and row.get("inspection_status") == "confirmed" for row in sip_inspection_rows),
+            "sip_sample_entry_ocr_attempted": any(row.get("inspection_area") == "sample_entry" for row in sip_inspection_rows),
+            "sip_sample_entry_inspected": any(row.get("inspection_area") == "sample_entry" and row.get("inspection_status") == "confirmed" for row in sip_inspection_rows),
+            "sip_translation_status": "confirmed" if any(row.get("witness_id") == SIP_WITNESS_ID and row.get("translation_status") == "confirmed" for row in source_witness_content_profile_rows) else "unconfirmed",
+            "sip_edition_status": "confirmed" if any(row.get("witness_id") == SIP_WITNESS_ID and row.get("edition_status") == "confirmed" for row in source_witness_content_profile_rows) else "unconfirmed",
+            "sip_needs_sample_entry_review": any(row.get("inspection_area") == "sample_entry" for row in sip_inspection_rows) and not any(row.get("inspection_area") == "sample_entry" and row.get("inspection_status") == "confirmed" for row in sip_inspection_rows),
+            "sip_contains_translation_status": "confirmed" if any(row.get("witness_id") == SIP_WITNESS_ID and row.get("translation_status") == "confirmed" for row in source_witness_content_profile_rows) else "unconfirmed",
             "uem_direct_search_count": sum(bool(row.get("matched_file_label")) for row in uem_search_rows),
             "core_source_direct_search_count": sum(bool(row.get("matched_file_label")) for row in core_search_rows),
             "inscriptions_of_burma_text_witness_search_count": len(iob_text_search_rows),
-            "inscriptions_of_burma_text_witness_found": sum(row.get("search_result_status") == "direct_witness_found" for row in iob_text_search_rows),
+            "inscriptions_of_burma_text_witness_found": sum(row.get("is_text_witness_candidate") == "true" and row.get("search_result_status") == "direct_witness_found" for row in iob_text_search_rows),
+            "inscriptions_of_burma_plate_false_positive_count": len({row.get("matched_file_id", "") or row.get("matched_file_label", "") for row in iob_text_search_rows if row.get("false_positive_for_text") == "true"}),
+            "inscriptions_of_burma_text_volume_hunt_count": len(iob_text_volume_hunt_rows),
+            "missing_core_witness_hunt_count": len(missing_core_witness_hunt_rows),
             "rescue_candidate_review_count": len(rescue_review_rows),
             "epigraphia_birmanica_review_count": len(epigraphia_review_rows),
             "eb_verified_fascicle_count": len(epigraphia_fascicle_coverage_rows),
             "eb_fascicle_coverage_count": len(epigraphia_fascicle_coverage_rows),
+            "eb_content_profile_count": sum(row.get("source_work_key") == "epigraphiaBirmanica" for row in source_witness_content_profile_rows),
+            "eb_translation_confirmed_count": sum(row.get("source_work_key") == "epigraphiaBirmanica" and row.get("translation_status") == "confirmed" for row in source_witness_content_profile_rows),
+            "eb_translation_unconfirmed_count": sum(row.get("source_work_key") == "epigraphiaBirmanica" and row.get("translation_status") != "confirmed" for row in source_witness_content_profile_rows),
+            "eb_fascicle_content_inspection_count": len(eb_fascicle_content_inspection_rows),
             "direct_witness_search_result_counts": {
                 "direct_witness_found": sum(row.get("search_result_status") == "direct_witness_found" for row in (uem_search_rows + core_search_rows + iob_text_search_rows)),
                 "candidate_found": sum(row.get("search_result_status") == "candidate_found" for row in (uem_search_rows + core_search_rows + iob_text_search_rows)),
@@ -673,16 +851,29 @@ class TranslationSourceDiscoveryTests(unittest.TestCase):
             "source_works_with_verified_direct_witness": len({row["source_work_key"] for row in verification_rows if row.get("verification_status") in {"verified_direct_witness", "verified_catalogue_witness"}}),
             "source_works_still_needing_direct_witness": sum(row.get("gap_type") in {"needs_direct_witness", "needs_title_page_review", "has_verified_plate_but_needs_text"} for row in gap_rows),
             "sip_inspection_completed": bool(sip_inspection_rows),
-            "sip_sample_entry_inspected": any(row.get("inspection_area") == "sample_entry" for row in sip_inspection_rows),
-            "sip_contains_translation_status": next((row.get("contains_translation") for row in sip_inspection_rows if row.get("inspection_area") == "sample_entry"), "unknown"),
+            "sip_title_page_inspected": any(row.get("inspection_area") == "title_page" and row.get("inspection_status") == "confirmed" for row in sip_inspection_rows),
+            "sip_contents_inspected": any(row.get("inspection_area") == "contents" and row.get("inspection_status") == "confirmed" for row in sip_inspection_rows),
+            "sip_sample_entry_ocr_attempted": any(row.get("inspection_area") == "sample_entry" for row in sip_inspection_rows),
+            "sip_sample_entry_inspected": any(row.get("inspection_area") == "sample_entry" and row.get("inspection_status") == "confirmed" for row in sip_inspection_rows),
+            "sip_translation_status": "confirmed" if any(row.get("witness_id") == SIP_WITNESS_ID and row.get("translation_status") == "confirmed" for row in source_witness_content_profile_rows) else "unconfirmed",
+            "sip_edition_status": "confirmed" if any(row.get("witness_id") == SIP_WITNESS_ID and row.get("edition_status") == "confirmed" for row in source_witness_content_profile_rows) else "unconfirmed",
+            "sip_needs_sample_entry_review": any(row.get("inspection_area") == "sample_entry" for row in sip_inspection_rows) and not any(row.get("inspection_area") == "sample_entry" and row.get("inspection_status") == "confirmed" for row in sip_inspection_rows),
+            "sip_contains_translation_status": "confirmed" if any(row.get("witness_id") == SIP_WITNESS_ID and row.get("translation_status") == "confirmed" for row in source_witness_content_profile_rows) else "unconfirmed",
             "uem_direct_search_count": sum(bool(row.get("matched_file_label")) for row in uem_search_rows),
             "core_source_direct_search_count": sum(bool(row.get("matched_file_label")) for row in core_search_rows),
             "inscriptions_of_burma_text_witness_search_count": len(iob_text_search_rows),
-            "inscriptions_of_burma_text_witness_found": sum(row.get("search_result_status") == "direct_witness_found" for row in iob_text_search_rows),
+            "inscriptions_of_burma_text_witness_found": sum(row.get("is_text_witness_candidate") == "true" and row.get("search_result_status") == "direct_witness_found" for row in iob_text_search_rows),
+            "inscriptions_of_burma_plate_false_positive_count": len({row.get("matched_file_id", "") or row.get("matched_file_label", "") for row in iob_text_search_rows if row.get("false_positive_for_text") == "true"}),
+            "inscriptions_of_burma_text_volume_hunt_count": len(iob_text_volume_hunt_rows),
+            "missing_core_witness_hunt_count": len(missing_core_witness_hunt_rows),
             "rescue_candidate_review_count": len(rescue_review_rows),
             "epigraphia_birmanica_review_count": len(epigraphia_review_rows),
             "eb_verified_fascicle_count": len(epigraphia_fascicle_coverage_rows),
             "eb_fascicle_coverage_count": len(epigraphia_fascicle_coverage_rows),
+            "eb_content_profile_count": sum(row.get("source_work_key") == "epigraphiaBirmanica" for row in source_witness_content_profile_rows),
+            "eb_translation_confirmed_count": sum(row.get("source_work_key") == "epigraphiaBirmanica" and row.get("translation_status") == "confirmed" for row in source_witness_content_profile_rows),
+            "eb_translation_unconfirmed_count": sum(row.get("source_work_key") == "epigraphiaBirmanica" and row.get("translation_status") != "confirmed" for row in source_witness_content_profile_rows),
+            "eb_fascicle_content_inspection_count": len(eb_fascicle_content_inspection_rows),
             "direct_witness_search_result_counts": {
                 "direct_witness_found": sum(row.get("search_result_status") == "direct_witness_found" for row in (uem_search_rows + core_search_rows + iob_text_search_rows)),
                 "candidate_found": sum(row.get("search_result_status") == "candidate_found" for row in (uem_search_rows + core_search_rows + iob_text_search_rows)),
@@ -707,9 +898,13 @@ class TranslationSourceDiscoveryTests(unittest.TestCase):
             missing_direct_search_path=root / "missing_direct_witness_search.tsv",
             source_work_gaps_path=root / "source_work_witness_gaps.tsv",
             sip_witness_inspection_path=root / "sip_witness_inspection.tsv",
+            source_witness_content_profile_path=root / "source_witness_content_profile.tsv",
+            eb_fascicle_content_inspection_path=root / "eb_fascicle_content_inspection.tsv",
             uem_direct_search_path=root / "uem_direct_witness_search.tsv",
             core_source_direct_search_path=root / "core_source_direct_witness_search.tsv",
             inscriptions_of_burma_text_search_path=root / "inscriptions_of_burma_text_witness_search.tsv",
+            inscriptions_of_burma_text_volume_hunt_path=root / "inscriptions_of_burma_text_volume_hunt.tsv",
+            missing_core_witness_hunt_path=root / "missing_core_witness_hunt.tsv",
             rescue_candidate_review_path=root / "rescue_candidate_review.tsv",
             epigraphia_birmanica_review_path=root / "epigraphia_birmanica_witness_review.tsv",
             epigraphia_birmanica_fascicle_coverage_path=root / "epigraphia_birmanica_fascicle_coverage.tsv",

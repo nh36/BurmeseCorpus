@@ -12,12 +12,14 @@ if str(SCRIPTS_DIR) not in sys.path:
 
 from verify_translation_witnesses import (
     SIP_WITNESS_ID,
+    annotate_iob_text_search_rows,
     build_direct_query_search_rows,
     build_epigraphia_fascicle_coverage_rows,
     build_epigraphia_promoted_verification_rows,
     build_epigraphia_birmanica_review_rows,
     build_rescue_candidate_review_rows,
     build_sip_witness_inspection_rows,
+    build_source_witness_content_profile_rows,
     build_source_work_gap_rows,
     build_verification_report,
     ensure_epigraphia_candidate_and_classification_rows,
@@ -317,9 +319,11 @@ class TranslationWitnessVerificationTests(unittest.TestCase):
         )
 
         self.assertTrue(rows)
-        self.assertTrue(all(row["contains_translation"] == "false" for row in rows))
-        self.assertTrue(any(row["contains_edition_or_transliteration"] == "true" for row in rows))
-        self.assertTrue(any(row["inspection_area"] == "sample_entry" for row in rows))
+        sample_entry = next(row for row in rows if row["inspection_area"] == "sample_entry")
+        self.assertEqual(sample_entry["inspection_status"], "attempted_no_recoverable_text")
+        self.assertEqual(sample_entry["contains_translation"], "unknown")
+        self.assertEqual(sample_entry["contains_edition_or_transliteration"], "unknown")
+        self.assertTrue(any(row["contains_edition_or_transliteration"] == "confirmed" for row in rows))
 
     def test_rescue_candidate_review_marks_chronicle_file_secondary(self) -> None:
         rows = build_rescue_candidate_review_rows(
@@ -387,13 +391,60 @@ class TranslationWitnessVerificationTests(unittest.TestCase):
             source_row(source_work_key="epigraphiaBirmanica", canonical_title="Epigraphia Birmanica", short_title="EB"),
             candidates,
         )
-        coverage_rows = build_epigraphia_fascicle_coverage_rows(review_rows)
+        coverage_rows = build_epigraphia_fascicle_coverage_rows(
+            review_rows,
+            [
+                {
+                    "source_work_key": "epigraphiaBirmanica",
+                    "witness_id": "epigraphiaBirmanica--vol1",
+                    "file_label": "Duroiselle - Epigraphica Birmanica1.pdf",
+                    "verified_witness_type": "source_edition",
+                    "content_profile_status": "confirmed",
+                    "title_page_status": "confirmed",
+                    "contents_status": "unknown",
+                    "sample_entry_status": "unknown",
+                    "translation_status": "unknown",
+                    "edition_status": "confirmed",
+                    "notes_commentary_status": "unknown",
+                    "plate_image_status": "unknown",
+                    "catalogue_metadata_status": "unknown",
+                    "coverage_scope": "whole_work",
+                    "confidence": "high",
+                    "next_action": "Inspect contents.",
+                    "notes": "",
+                }
+            ],
+        )
 
         self.assertEqual(len(candidates), 1)
         self.assertEqual(classifications[0]["witness_type"], "source_edition")
         self.assertEqual(promoted_rows[0]["verification_status"], "verified_direct_witness")
         self.assertEqual(promoted_rows[0]["contains_edition_verified"], "confirmed")
         self.assertEqual(coverage_rows[0]["contains_translation"], "unknown")
+
+    def test_iob_plate_search_rows_are_false_positives_for_text(self) -> None:
+        rows = annotate_iob_text_search_rows(
+            [
+                {
+                    "query": "Inscriptions of Burma text",
+                    "matched_file_label": "Luce&PeMaungTin_InscriptionsOfBurma(Plates3,4,5)_1960.pdf",
+                    "matched_file_id": "iob-plates",
+                    "match_type": "filename",
+                    "match_confidence": "medium",
+                    "short_evidence": "plate volume",
+                    "searched_sources": "local_file_manifest",
+                    "search_scope": "filename search",
+                    "search_date_or_run_id": "test",
+                    "search_result_status": "candidate_found",
+                    "recommended_action": "Keep searching for text volume.",
+                    "notes": "",
+                }
+            ]
+        )
+
+        self.assertEqual(rows[0]["is_plate_witness_candidate"], "true")
+        self.assertEqual(rows[0]["is_text_witness_candidate"], "false")
+        self.assertEqual(rows[0]["false_positive_for_text"], "true")
 
     def test_direct_search_rows_include_search_status_metadata(self) -> None:
         rows = build_direct_query_search_rows(
@@ -423,7 +474,7 @@ class TranslationWitnessVerificationTests(unittest.TestCase):
     def test_report_counts_match_verification_rows(self) -> None:
         verification_rows = [
             {
-                "witness_id": "w1",
+                "witness_id": SIP_WITNESS_ID,
                 "source_work_key": "sipSelectionsPagan",
                 "verification_status": "verified_direct_witness",
                 "contains_translation_verified": "unknown",
@@ -437,6 +488,66 @@ class TranslationWitnessVerificationTests(unittest.TestCase):
                 "contains_edition_verified": "no",
             },
         ]
+        sip_inspection_rows = [
+            {
+                "witness_id": SIP_WITNESS_ID,
+                "inspection_area": "title_page",
+                "inspection_status": "confirmed",
+                "contains_translation": "unknown",
+                "contains_edition_or_transliteration": "confirmed",
+                "contains_notes_or_commentary": "unknown",
+                "evidence_snippet": "Selections from the Inscriptions of Pagan",
+            },
+            {
+                "witness_id": SIP_WITNESS_ID,
+                "inspection_area": "sample_entry",
+                "inspection_status": "attempted_no_recoverable_text",
+                "contains_translation": "unknown",
+                "contains_edition_or_transliteration": "unknown",
+                "contains_notes_or_commentary": "unknown",
+                "evidence_snippet": "",
+            },
+        ]
+        content_profile_rows = [
+            {
+                "source_work_key": "sipSelectionsPagan",
+                "witness_id": SIP_WITNESS_ID,
+                "file_label": "Selections from the Inscriptions of Pagan.pdf",
+                "verified_witness_type": "source_edition",
+                "content_profile_status": "confirmed",
+                "title_page_status": "confirmed",
+                "contents_status": "unknown",
+                "sample_entry_status": "attempted_no_recoverable_text",
+                "translation_status": "unknown",
+                "edition_status": "confirmed",
+                "notes_commentary_status": "unknown",
+                "plate_image_status": "not_applicable",
+                "catalogue_metadata_status": "unknown",
+                "coverage_scope": "whole_work",
+                "confidence": "high",
+                "next_action": "Retry targeted sample-entry OCR.",
+                "notes": "",
+            },
+            {
+                "source_work_key": "epigraphiaBirmanica",
+                "witness_id": "eb1",
+                "file_label": "Duroiselle - Epigraphica Birmanica1.pdf",
+                "verified_witness_type": "source_edition",
+                "content_profile_status": "confirmed",
+                "title_page_status": "confirmed",
+                "contents_status": "unknown",
+                "sample_entry_status": "unknown",
+                "translation_status": "unknown",
+                "edition_status": "confirmed",
+                "notes_commentary_status": "unknown",
+                "plate_image_status": "unknown",
+                "catalogue_metadata_status": "unknown",
+                "coverage_scope": "whole_work",
+                "confidence": "high",
+                "next_action": "Inspect contents.",
+                "notes": "",
+            },
+        ]
         report = build_verification_report(
             verification_rows,
             [{"witness_id": "w1"}, {"witness_id": "w2"}],
@@ -446,10 +557,14 @@ class TranslationWitnessVerificationTests(unittest.TestCase):
                 {"source_work_key": "uemSelectionsPagan", "discovery_status": "needs_direct_witness_search"},
             ],
             [{"source_work_key": "uemSelectionsPagan", "gap_type": "needs_direct_witness"}],
-            [{"witness_id": SIP_WITNESS_ID}],
+            sip_inspection_rows,
+            content_profile_rows,
+            [{"witness_id": "eb1", "inspection_area": "title_page"}],
             [{"matched_file_label": "ue-maung-clue.pdf"}],
             [{"matched_file_label": "tn-clue.pdf"}],
-            [{"matched_file_label": "iob-text.pdf", "search_result_status": "candidate_found"}],
+            [{"matched_file_label": "iob-text.pdf", "search_result_status": "candidate_found", "is_text_witness_candidate": "false", "false_positive_for_text": "true"}],
+            [{"matched_file_label": "", "search_result_status": "not_found"}],
+            [{"source_work_key": "uemSelectionsPagan", "query": "U E Maung", "search_result_status": "not_found"}],
             [{"candidate_file_label": "111029.pdf"}],
             [{"file_label": "011041.pdf"}],
             [{"witness_id": "eb1"}],
@@ -461,6 +576,7 @@ class TranslationWitnessVerificationTests(unittest.TestCase):
         self.assertEqual(report["source_works_needing_direct_witness_count"], 1)
         self.assertEqual(report["source_work_witness_gap_count"], 1)
         self.assertEqual(report["eb_fascicle_coverage_count"], 1)
+        self.assertFalse(report["sip_sample_entry_inspected"])
 
 
 if __name__ == "__main__":

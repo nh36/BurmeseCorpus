@@ -152,6 +152,18 @@ Promotion should stay conservative, but strong local evidence can justify a prov
 - SIP now has a verified edition witness with extended inspection rows, but it still needs deeper sample-entry/content review before any translation claim can be made;
 - `Inscriptions of Burma` plate volumes remain plate witnesses only and do not replace the missing text witness.
 
+## Content profiles and failed OCR
+
+Identity evidence is not content evidence.
+
+- a title page can verify that a file is the right witness without proving that it contains translation;
+- failed OCR should be recorded as `attempted_no_recoverable_text`, which means the content status remains `unknown` or `unconfirmed`, not `false` or `not_present`;
+- edition status, translation status, notes/commentary status, and plate/image status should be tracked separately in `source_witness_content_profile.tsv` and the supporting inspection tables;
+- `sip_witness_inspection.tsv` can show that SIP sample-entry OCR was attempted while `sip_sample_entry_inspected = false` remains the correct report value if no recoverable entry text was isolated;
+- `eb_fascicle_content_inspection.tsv` should capture short title-page, contents, or sample-entry snippets for promoted `Epigraphia Birmanica` fascicles, but those fascicles stay non-translation witnesses unless explicit translation evidence appears;
+- `inscriptions_of_burma_text_witness_search.tsv` and `inscriptions_of_burma_text_volume_hunt.tsv` should keep plate/facsimile files visible as evidence while marking them as false positives for the missing text-witness gap;
+- direct-witness gaps therefore remain open for UEM, TN, PPA, UB, and the missing `Inscriptions of Burma` text volume even when plate witnesses or title-page-only identity evidence exist.
+
 ## Periodicals and series
 
 `JBRS`, `JRAS`, `BBHC`, and `ARASI` should remain containers unless article-level evidence is identified. `EB` needs direct fascicle review; do not treat unrelated numbered PDFs or periodical-style matches as EB witnesses automatically.

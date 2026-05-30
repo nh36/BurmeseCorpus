@@ -48,12 +48,16 @@ WITNESS_SNIPPETS_PATH = DISCOVERY_DIRECTORY / "witness_titlepage_toc_snippets.ts
 MISSING_DIRECT_SEARCH_PATH = DISCOVERY_DIRECTORY / "missing_direct_witness_search.tsv"
 SOURCE_WORK_GAPS_PATH = DISCOVERY_DIRECTORY / "source_work_witness_gaps.tsv"
 SIP_WITNESS_INSPECTION_PATH = DISCOVERY_DIRECTORY / "sip_witness_inspection.tsv"
+SOURCE_WITNESS_CONTENT_PROFILE_PATH = DISCOVERY_DIRECTORY / "source_witness_content_profile.tsv"
+EB_FASCICLE_CONTENT_INSPECTION_PATH = DISCOVERY_DIRECTORY / "eb_fascicle_content_inspection.tsv"
 UEM_DIRECT_SEARCH_PATH = DISCOVERY_DIRECTORY / "uem_direct_witness_search.tsv"
 CORE_SOURCE_DIRECT_SEARCH_PATH = DISCOVERY_DIRECTORY / "core_source_direct_witness_search.tsv"
 RESCUE_CANDIDATE_REVIEW_PATH = DISCOVERY_DIRECTORY / "rescue_candidate_review.tsv"
 EPIGRAPHIA_BIRMANICA_REVIEW_PATH = DISCOVERY_DIRECTORY / "epigraphia_birmanica_witness_review.tsv"
 EPIGRAPHIA_BIRMANICA_FASCICLE_COVERAGE_PATH = DISCOVERY_DIRECTORY / "epigraphia_birmanica_fascicle_coverage.tsv"
 INSCRIPTIONS_OF_BURMA_TEXT_SEARCH_PATH = DISCOVERY_DIRECTORY / "inscriptions_of_burma_text_witness_search.tsv"
+INSCRIPTIONS_OF_BURMA_TEXT_VOLUME_HUNT_PATH = DISCOVERY_DIRECTORY / "inscriptions_of_burma_text_volume_hunt.tsv"
+MISSING_CORE_WITNESS_HUNT_PATH = DISCOVERY_DIRECTORY / "missing_core_witness_hunt.tsv"
 
 VERIFICATION_FIELDS = [
     "witness_id",
@@ -123,6 +127,7 @@ SIP_WITNESS_INSPECTION_FIELDS = [
     "witness_id",
     "file_label",
     "inspection_area",
+    "inspection_status",
     "evidence_snippet",
     "contains_translation",
     "contains_edition_or_transliteration",
@@ -132,6 +137,27 @@ SIP_WITNESS_INSPECTION_FIELDS = [
     "coverage_scope",
     "confidence",
     "needs_human_review",
+    "next_action",
+    "notes",
+]
+
+SOURCE_WITNESS_CONTENT_PROFILE_FIELDS = [
+    "source_work_key",
+    "witness_id",
+    "file_label",
+    "verified_witness_type",
+    "content_profile_status",
+    "title_page_status",
+    "contents_status",
+    "sample_entry_status",
+    "translation_status",
+    "edition_status",
+    "notes_commentary_status",
+    "plate_image_status",
+    "catalogue_metadata_status",
+    "coverage_scope",
+    "confidence",
+    "next_action",
     "notes",
 ]
 
@@ -148,6 +174,13 @@ DIRECT_WITNESS_SEARCH_FIELDS = [
     "search_result_status",
     "recommended_action",
     "notes",
+]
+
+INSCRIPTIONS_OF_BURMA_TEXT_SEARCH_FIELDS = DIRECT_WITNESS_SEARCH_FIELDS + [
+    "is_text_witness_candidate",
+    "is_plate_witness_candidate",
+    "false_positive_for_text",
+    "reason_not_text_witness",
 ]
 
 CORE_DIRECT_WITNESS_SEARCH_FIELDS = [
@@ -210,6 +243,35 @@ EPIGRAPHIA_BIRMANICA_FASCICLE_COVERAGE_FIELDS = [
     "notes",
 ]
 
+EB_FASCICLE_CONTENT_INSPECTION_FIELDS = [
+    "witness_id",
+    "file_label",
+    "inspection_area",
+    "short_snippet",
+    "contains_translation",
+    "contains_edition_or_transliteration",
+    "contains_notes_or_commentary",
+    "contains_plate_or_image",
+    "confidence",
+    "inspection_status",
+    "next_action",
+    "notes",
+]
+
+MISSING_CORE_WITNESS_HUNT_FIELDS = [
+    "source_work_key",
+    "query",
+    "variant_type",
+    "matched_file_label",
+    "matched_file_id",
+    "match_type",
+    "match_confidence",
+    "short_evidence",
+    "search_result_status",
+    "recommended_action",
+    "notes",
+]
+
 VERIFICATION_STATUSES = {
     "verified_direct_witness",
     "verified_plate_witness",
@@ -240,6 +302,15 @@ DIRECT_SEARCH_RESULT_STATUSES = {
     "bibliographic_clue_found",
     "not_found",
     "blocked_by_missing_local_index",
+}
+CONTENT_PROFILE_STATUSES = {
+    "confirmed",
+    "possible",
+    "unknown",
+    "not_present",
+    "attempted_no_recoverable_text",
+    "needs_manual_review",
+    "not_applicable",
 }
 MAX_SNIPPET_LENGTH = 220
 MAX_STORED_SNIPPET_LENGTH = 260
@@ -332,6 +403,58 @@ INSCRIPTIONS_OF_BURMA_TEXT_QUERIES = [
     "Inscriptions of Burma plates text",
 ]
 
+INSCRIPTIONS_OF_BURMA_TEXT_VOLUME_HUNT_QUERIES = [
+    "Inscriptions of Burma text",
+    "Inscriptions of Burma portfolio text",
+    "Inscriptions of Burma Portfolio I text",
+    "Inscriptions of Burma Portfolio II text",
+    "Inscriptions of Burma text volume",
+    "Pe Maung Tin Luce Inscriptions of Burma text",
+    "Inscriptions of Burma transliteration",
+    "Inscriptions of Burma list text",
+    "Inscriptions of Burma readings",
+    "Inscriptions of Burma captions",
+    "Luce Pe Maung Tin Portfolio I",
+    "Luce Pe Maung Tin Portfolio II",
+    "Inscriptions of Burma 1933",
+    "Inscriptions of Burma 1956",
+    "Inscriptions of Burma 1960 text",
+    "Inscriptions of Burma 1963 text",
+]
+
+MISSING_CORE_WITNESS_HUNT_QUERIES = {
+    "uemSelectionsPagan": [
+        ("U E Maung", "author_name"),
+        ("U. E. Maung", "author_name"),
+        ("U E Maung Selections", "title_variant"),
+        ("Selections from the Inscriptions of Pagan U E Maung", "title_variant"),
+        ("Rangoon 1958 inscriptions Pagan", "publication_detail"),
+        ("UEM no.", "abbreviation"),
+    ],
+    "tnInscriptionsPaganPinyaAva": [
+        ("U Tun Nyein", "author_name"),
+        ("Tun Nyein 1897", "publication_detail"),
+        ("Inscriptions Pagan Pinya Ava", "title_variant"),
+        ("Rangoon Gazette Press inscriptions", "publisher"),
+        ("Government Printing Burma 1897 inscriptions", "publisher"),
+        ("TN p.", "abbreviation"),
+    ],
+    "ppaCatalogue": [
+        ("Pagan Pinya Ava", "title_variant"),
+        ("Inscriptions of Pagan Pinya and Ava", "title_variant"),
+        ("PPA catalogue", "abbreviation"),
+        ("IPPA", "abbreviation"),
+    ],
+    "ubSourceFamily": [
+        ("Upper Burma inscriptions", "title_variant"),
+        ("Inscriptions Collected in Upper Burma", "title_variant"),
+        ("Upper Burma Archaeological Survey", "series_reference"),
+        ("UB 1", "abbreviation"),
+        ("UB 2", "abbreviation"),
+        ("Report Superintendent Archaeological Survey Burma Upper Burma", "series_reference"),
+    ],
+}
+
 SEARCH_TERMS_BY_SOURCE = {
     "sipSelectionsPagan": [
         "Selections from the Inscriptions of Pagan",
@@ -413,7 +536,7 @@ def current_search_run_id() -> str:
 
 
 def search_scope_label() -> str:
-    return "targeted author/title/abbreviation search across local manifests, OCR index, and bibliography crosswalk"
+    return "targeted author/title/abbreviation search across local manifests, source-library paths, author-folder path hints, OCR index, and bibliography crosswalk"
 
 
 def searched_sources_label(*, include_raw_references: bool = True) -> str:
@@ -597,6 +720,77 @@ def probe_pdf_text(file_record: dict, *, first_page: int = 1, last_page: int = 4
             return truncate_snippet(" ".join(snippets), limit=MAX_STORED_SNIPPET_LENGTH), "pdftoppm+tesseract"
 
     return "", ""
+
+
+def probe_pdf_page_text(file_record: dict, page: int) -> tuple[str, str]:
+    path = local_pdf_path(file_record)
+    if not path or not (command_available("pdftoppm") and command_available("tesseract")):
+        return "", ""
+    with tempfile.TemporaryDirectory() as tmp_dir:
+        image_prefix = Path(tmp_dir) / f"page-{page}"
+        result = subprocess.run(
+            ["pdftoppm", "-f", str(page), "-l", str(page), "-r", "200", "-gray", "-singlefile", str(path), str(image_prefix)],
+            check=False,
+            capture_output=True,
+            text=True,
+        )
+        if result.returncode != 0:
+            return "", ""
+        image = image_prefix.with_suffix(".pgm")
+        if not image.exists():
+            return "", ""
+        ocr_base = Path(tmp_dir) / f"ocr-{page}"
+        ocr = subprocess.run(
+            ["tesseract", str(image), str(ocr_base), "--psm", "6"],
+            check=False,
+            capture_output=True,
+            text=True,
+        )
+        if ocr.returncode != 0:
+            return "", ""
+        text_path = ocr_base.with_suffix(".txt")
+        if not text_path.exists():
+            return "", ""
+        text = normalize_probe_text(text_path.read_text(encoding="utf-8", errors="ignore"))
+        if text:
+            return truncate_snippet(text, limit=MAX_STORED_SNIPPET_LENGTH), "pdftoppm+tesseract-single"
+    return "", ""
+
+
+def probe_pdf_pages(file_record: dict, pages: list[int]) -> tuple[str, str]:
+    snippets: list[str] = []
+    methods: list[str] = []
+    for page in pages:
+        snippet, method = probe_pdf_page_text(file_record, page)
+        if snippet:
+            snippets.append(snippet)
+            if method:
+                methods.append(method)
+    if snippets:
+        return truncate_snippet(" ".join(snippets), limit=MAX_STORED_SNIPPET_LENGTH), "+".join(sorted(set(methods)))
+    return "", ""
+
+
+def inspection_status_for_snippet(snippet: str) -> str:
+    return "confirmed" if snippet else "attempted_no_recoverable_text"
+
+
+def content_status_from_keywords(snippet: str, keywords: list[str], *, default_with_text: str = "unknown") -> str:
+    if not snippet:
+        return "unknown"
+    return "confirmed" if text_has_keyword(snippet, keywords) else default_with_text
+
+
+def has_recoverable_ocr_text(snippet: str) -> bool:
+    if not snippet:
+        return False
+    normalized = normalize_probe_text(snippet)
+    if len(normalized) < 20:
+        return False
+    if re.search(r"\b[A-Za-z]{3,}(?:\s+[A-Za-z]{2,}){3,}\b", normalized):
+        return True
+    alpha_chars = sum(char.isalpha() for char in normalized)
+    return alpha_chars >= 40 and alpha_chars / max(len(normalized), 1) >= 0.7
 
 
 def title_token_overlap_ratio(source_title: str, text: str) -> float:
@@ -1371,36 +1565,47 @@ def build_sip_witness_inspection_rows(
         return []
     source_row = source_by_key.get("sipSelectionsPagan")
     title_snippet, contents_snippet = review_title_and_contents_snippets(source_row, file_record)
-    preface_probe, _ = probe_pdf_text(file_record, first_page=2, last_page=5)
-    sample_probe, _ = probe_pdf_text(file_record, first_page=9, last_page=12)
+    preface_probe, _ = probe_pdf_pages(file_record, [2, 3, 4, 5])
+    sample_probe, _ = probe_pdf_pages(file_record, [9, 10, 11, 12])
+    recoverable_sample_probe = sample_probe if has_recoverable_ocr_text(sample_probe) else ""
     support_snippet = truncate_snippet(
         verification_row.get("ocr_or_text_snippet")
         or verification_row.get("title_page_evidence")
         or query_support_snippet(source_row.get("canonical_title", ""), file_record),
         limit=MAX_STORED_SNIPPET_LENGTH,
     )
-    combined = " ".join([title_snippet, contents_snippet, preface_probe, sample_probe, support_snippet])
-    translation_found = text_has_keyword(combined, TRANSLATION_KEYWORDS)
-    notes_found = text_has_keyword(combined, NOTES_KEYWORDS)
-    sample_entry_numbered = bool(re.search(r"\b\d+\b", sample_probe))
     rows = []
 
-    def add_row(area: str, snippet: str, *, confidence: str, notes: str, contains_notes: bool = False, contains_catalogue: bool = False) -> None:
+    def add_row(
+        area: str,
+        snippet: str,
+        *,
+        confidence: str,
+        inspection_status: str,
+        notes: str,
+        contains_translation: str = "unknown",
+        contains_edition: str = "unknown",
+        contains_notes: str = "unknown",
+        contains_catalogue: str = "unknown",
+        next_action: str,
+    ) -> None:
         rows.append(
             {
                 "source_work_key": "sipSelectionsPagan",
                 "witness_id": verification_row["witness_id"],
                 "file_label": file_record.get("candidate_file_label", ""),
                 "inspection_area": area,
+                "inspection_status": inspection_status,
                 "evidence_snippet": truncate_snippet(snippet, limit=MAX_STORED_SNIPPET_LENGTH),
-                "contains_translation": bool_string(translation_found),
-                "contains_edition_or_transliteration": "true",
-                "contains_notes_or_commentary": bool_string(contains_notes),
-                "contains_catalogue_metadata": bool_string(contains_catalogue),
-                "contains_plate_or_image": "false",
+                "contains_translation": contains_translation,
+                "contains_edition_or_transliteration": contains_edition,
+                "contains_notes_or_commentary": contains_notes,
+                "contains_catalogue_metadata": contains_catalogue,
+                "contains_plate_or_image": "not_present",
                 "coverage_scope": "selected_inscriptions_only",
                 "confidence": confidence,
-                "needs_human_review": "true" if not translation_found else "false",
+                "needs_human_review": "true",
+                "next_action": next_action,
                 "notes": notes,
             }
         )
@@ -1409,58 +1614,72 @@ def build_sip_witness_inspection_rows(
         "title_page",
         title_snippet,
         confidence="high",
+        inspection_status="confirmed",
         notes="Title-page OCR confirms Selections from the Inscriptions of Pagan by Pe Maung Tin and G.H. Luce.",
+        contains_edition="confirmed",
+        next_action="Continue content inspection; title-page identity alone does not establish translation coverage.",
     )
     add_row(
         "contents",
-        contents_snippet or preface_probe,
+        contents_snippet,
         confidence="medium" if contents_snippet else "low",
+        inspection_status=inspection_status_for_snippet(contents_snippet),
         notes=(
             "Contents-style pages were reviewed for translation or locator structure."
             if contents_snippet
             else "Targeted OCR of the early pages remained too noisy to isolate a contents heading."
         ),
-        contains_catalogue=bool(text_has_keyword(contents_snippet or preface_probe, ["index", "contents", "table of contents"])),
+        contains_catalogue=content_status_from_keywords(contents_snippet, ["index", "contents", "table of contents"]),
+        next_action="Retry contents-page OCR if a cleaner contents or index page becomes available.",
     )
     add_row(
         "preface",
-        preface_probe or title_snippet,
+        preface_probe,
         confidence="medium" if preface_probe else "low",
+        inspection_status=inspection_status_for_snippet(preface_probe),
         notes=(
             "Early prefatory pages were reviewed for commentary and translation clues."
             if preface_probe
             else "No recoverable preface snippet was isolated beyond the title-page region."
         ),
-        contains_notes=notes_found,
+        contains_notes=content_status_from_keywords(preface_probe, NOTES_KEYWORDS + ["preface", "introduction"], default_with_text="possible"),
+        next_action="Inspect a cleaner prefatory page before claiming commentary structure.",
     )
     add_row(
         "sample_entry",
-        sample_probe or support_snippet,
-        confidence="medium" if sample_probe else "low",
+        recoverable_sample_probe,
+        confidence="medium" if recoverable_sample_probe else "low",
+        inspection_status=inspection_status_for_snippet(recoverable_sample_probe),
         notes=(
             "Sample entry pages were OCR-probed; the witness still needs human review to determine whether English translation accompanies the edited text."
-            if sample_probe
+            if recoverable_sample_probe
             else "No recoverable sample-entry OCR was isolated; targeted OCR/text extraction is still needed."
         ),
-        contains_catalogue=sample_entry_numbered,
+        contains_catalogue=content_status_from_keywords(recoverable_sample_probe, ["list", "no.", "number"], default_with_text="possible"),
+        contains_edition="possible" if recoverable_sample_probe and bool(re.search(r"\b\d+\b", recoverable_sample_probe)) else "unknown",
+        next_action="Target a first inscription entry page before changing SIP translation or edition coverage semantics.",
     )
     add_row(
         "headings",
         support_snippet,
         confidence="medium",
+        inspection_status="confirmed" if support_snippet else "attempted_no_recoverable_text",
         notes="Supporting OCR headings were reviewed; no translation claim is promoted without explicit witness evidence.",
-        contains_notes=notes_found,
+        contains_edition="confirmed" if support_snippet else "unknown",
+        next_action="Use headings only as identity support; keep content claims tied to recoverable entry or contents text.",
     )
     add_row(
         "notes_or_commentary",
-        preface_probe or support_snippet,
-        confidence="low" if not notes_found else "medium",
+        preface_probe,
+        confidence="medium" if preface_probe else "low",
+        inspection_status=inspection_status_for_snippet(preface_probe),
         notes=(
-            "No explicit notes/commentary heading was confirmed from the stored snippets."
-            if not notes_found
-            else "The stored snippets suggest prefatory or commentary material alongside the edition."
+            "No explicit notes/commentary heading was confirmed from the recoverable snippets."
+            if not preface_probe
+            else "Prefatory material was inspected for commentary structure; no translation claim is promoted from it."
         ),
-        contains_notes=notes_found,
+        contains_notes=content_status_from_keywords(preface_probe, NOTES_KEYWORDS + ["preface", "introduction"], default_with_text="possible"),
+        next_action="Review a cleaner preface or notes page before promoting commentary coverage.",
     )
     return rows
 
@@ -1473,13 +1692,18 @@ def apply_sip_inspection(verification_rows: list[dict], inspection_rows: list[di
     target = by_id.get(first_row["witness_id"])
     if not target:
         return verification_rows
-    translation_confirmed = any(row["contains_translation"] == "true" for row in inspection_rows)
-    notes_found = any(row["contains_notes_or_commentary"] == "true" for row in inspection_rows)
+    translation_confirmed = any(row["contains_translation"] == "confirmed" for row in inspection_rows)
+    notes_found = any(row["contains_notes_or_commentary"] in {"confirmed", "possible"} for row in inspection_rows)
+    sample_entry_attempted = any(row["inspection_area"] == "sample_entry" for row in inspection_rows)
+    sample_entry_recovered = any(
+        row["inspection_area"] == "sample_entry" and row.get("inspection_status") != "attempted_no_recoverable_text"
+        for row in inspection_rows
+    )
     target["contains_translation_verified"] = "confirmed" if translation_confirmed else "unknown"
     target["contains_edition_verified"] = "confirmed"
     target["contains_plate_or_image_verified"] = "no"
-    target["contains_catalogue_metadata_verified"] = "no"
-    target["contains_secondary_discussion_verified"] = "possible" if notes_found else "no"
+    target["contains_catalogue_metadata_verified"] = "unknown"
+    target["contains_secondary_discussion_verified"] = "possible" if notes_found else "unknown"
     target["evidence_quality"] = "explicit"
     target["confidence"] = "high"
     target["recommended_action"] = (
@@ -1490,6 +1714,8 @@ def apply_sip_inspection(verification_rows: list[dict], inspection_rows: list[di
     notes = ["SIP title-page inspection completed."]
     if not translation_confirmed:
         notes.append("No explicit translation heading was verified from the stored snippets.")
+    if sample_entry_attempted and not sample_entry_recovered:
+        notes.append("Sample-entry OCR was attempted but no recoverable text was isolated.")
     if notes_found:
         notes.append("The inspected snippets suggest accompanying notes or commentary.")
     target["notes"] = compact_join([target.get("notes", "")] + notes, limit=4)
@@ -1542,7 +1768,7 @@ def build_source_work_gap_rows(
                 return "", row["matched_file_label"]
         if source_key == "lucePeMaungTinInscriptionsOfBurma":
             for row in iob_text_search_rows:
-                if row["matched_file_label"] and row.get("search_result_status") in {"candidate_found", "direct_witness_found"}:
+                if row.get("is_text_witness_candidate") == "true" and row["matched_file_label"] and row.get("search_result_status") in {"candidate_found", "direct_witness_found"}:
                     return "", row["matched_file_label"]
         return "", ""
 
@@ -1567,7 +1793,7 @@ def build_source_work_gap_rows(
             current_status = "verified_direct_witness_found"
             gap_type = "has_verified_edition_but_translation_unknown"
             next_action = "Inspect sample entries or contents before making any translation claim."
-            notes = "Verified SIP witness exists with edition evidence; translation remains unconfirmed after targeted OCR review."
+            notes = "Verified SIP witness exists with edition evidence; sample-entry OCR was attempted but translation remains unconfirmed because no recoverable entry text was isolated."
         elif source_key == "uemSelectionsPagan":
             current_status = "needs_direct_witness"
             gap_type = "needs_direct_witness"
@@ -1587,7 +1813,7 @@ def build_source_work_gap_rows(
             current_status = "verification_in_progress"
             gap_type = "has_verified_plate_but_needs_text"
             next_action = "Find the companion text volume before treating Inscriptions of Burma as text-covered."
-            notes = "Plate/facsimile witnesses are verified; the text-witness search should not count them as text coverage."
+            notes = "Plate/facsimile witnesses are verified; matching plate volumes remain false positives for the missing text-witness gap."
         elif source_key in {"tnInscriptionsPaganPinyaAva", "ppaCatalogue", "ubSourceFamily"} and best_candidate_file_label:
             current_status = "needs_title_page_review"
             gap_type = "needs_title_page_review"
@@ -1784,26 +2010,327 @@ def build_epigraphia_birmanica_review_rows(
     return rows
 
 
-def build_epigraphia_fascicle_coverage_rows(
+def build_eb_fascicle_content_inspection_rows(
     promoted_review_rows: list[dict],
+    file_records: dict[str, dict],
 ) -> list[dict]:
     rows: list[dict] = []
+
+    def add_row(
+        witness_id: str,
+        file_label: str,
+        area: str,
+        snippet: str,
+        *,
+        contains_translation: str = "unknown",
+        contains_edition: str = "unknown",
+        contains_notes: str = "unknown",
+        contains_plate: str = "unknown",
+        confidence: str = "medium",
+        inspection_status: str,
+        next_action: str,
+        notes: str,
+    ) -> None:
+        rows.append(
+            {
+                "witness_id": witness_id,
+                "file_label": file_label,
+                "inspection_area": area,
+                "short_snippet": truncate_snippet(snippet, limit=MAX_STORED_SNIPPET_LENGTH),
+                "contains_translation": contains_translation,
+                "contains_edition_or_transliteration": contains_edition,
+                "contains_notes_or_commentary": contains_notes,
+                "contains_plate_or_image": contains_plate,
+                "confidence": confidence,
+                "inspection_status": inspection_status,
+                "next_action": next_action,
+                "notes": notes,
+            }
+        )
+
     for review_row in promoted_review_rows:
-        contains_plate = review_row.get("contains_plate_or_image") == "true"
+        file_label = review_row["file_label"]
+        file_record = find_file_record(file_records, file_label)
+        if not file_record:
+            add_row(
+                review_row["witness_id"],
+                file_label,
+                "title_page",
+                "",
+                confidence="low",
+                inspection_status="needs_manual_review",
+                next_action="Locate the local fascicle before performing content inspection.",
+                notes="Promoted EB fascicle row exists, but the local file could not be reopened for content profiling.",
+            )
+            continue
+        title_page, _ = probe_pdf_page_text(file_record, 1)
+        preface_page, _ = probe_pdf_page_text(file_record, 2)
+        sample_pages = [5]
+        if "birmanica3" in normalize_for_match(file_label):
+            sample_pages = [10]
+        elif "talaing plaques" in normalize_for_match(file_label):
+            sample_pages = [30]
+        sample_entry, _ = probe_pdf_pages(file_record, sample_pages)
+        add_row(
+            review_row["witness_id"],
+            file_label,
+            "title_page",
+            title_page or review_row.get("title_page_snippet", ""),
+            contains_edition="confirmed",
+            contains_plate="confirmed" if review_row.get("contains_plate_or_image") == "true" else "unknown",
+            confidence="high",
+            inspection_status="confirmed" if title_page or review_row.get("title_page_snippet") else "needs_manual_review",
+            next_action="Use title-page identity evidence only for witness identity and high-level content type.",
+            notes="Title-page probe anchors the promoted EB fascicle to a local witness file.",
+        )
+        add_row(
+            review_row["witness_id"],
+            file_label,
+            "preface",
+            preface_page,
+            contains_notes=content_status_from_keywords(preface_page, NOTES_KEYWORDS + ["preface", "introduction"], default_with_text="possible"),
+            contains_plate="confirmed" if "plates" in normalize_for_match(preface_page) or review_row.get("contains_plate_or_image") == "true" else "unknown",
+            confidence="medium" if preface_page else "low",
+            inspection_status=inspection_status_for_snippet(preface_page),
+            next_action="Use preface material for commentary/plate cues, not for translation claims.",
+            notes=(
+                "Prefatory material was inspected for commentary and plate cues."
+                if preface_page
+                else "No recoverable preface snippet was isolated from the sampled front matter."
+            ),
+        )
+        add_row(
+            review_row["witness_id"],
+            file_label,
+            "sample_entry",
+            sample_entry,
+            contains_edition="confirmed" if sample_entry and "talaing plaques" not in normalize_for_match(file_label) else ("possible" if sample_entry else "unknown"),
+            contains_notes=content_status_from_keywords(sample_entry, NOTES_KEYWORDS + ["descriptive account"], default_with_text="possible"),
+            contains_plate="confirmed" if review_row.get("contains_plate_or_image") == "true" else "unknown",
+            confidence="medium" if sample_entry else "low",
+            inspection_status=inspection_status_for_snippet(sample_entry),
+            next_action="Inspect an explicit translation-bearing page before changing EB translation status.",
+            notes=(
+                "Sample fascicle pages were inspected for edition, commentary, and plate evidence."
+                if sample_entry
+                else "No recoverable sample-entry OCR was isolated from the sampled EB pages."
+            ),
+        )
+        if "talaing plaques" in normalize_for_match(file_label):
+            contents_page, _ = probe_pdf_page_text(file_record, 15)
+            add_row(
+                review_row["witness_id"],
+                file_label,
+                "contents",
+                contents_page,
+                contains_notes="possible" if contents_page else "unknown",
+                contains_plate="confirmed",
+                confidence="medium" if contents_page else "low",
+                inspection_status=inspection_status_for_snippet(contents_page),
+                next_action="Use the contents/index page to target a later legend or caption page for manual review.",
+                notes=(
+                    "The contents/index page was inspected to profile the Talaing plaques fascicle."
+                    if contents_page
+                    else "No recoverable contents/index OCR was isolated from the sampled Talaing pages."
+                ),
+            )
+    return rows
+
+
+def annotate_iob_text_search_rows(rows: list[dict]) -> list[dict]:
+    annotated: list[dict] = []
+    for row in rows:
+        label = row.get("matched_file_label", "")
+        normalized_label = normalize_for_match(label)
+        is_plate = "plates3 4 5" in normalized_label or "plates6 20" in normalized_label or "plates" in normalized_label
+        is_text_candidate = bool(label) and not is_plate and row.get("search_result_status") in {"candidate_found", "direct_witness_found"}
+        false_positive = bool(label) and is_plate
+        notes = row.get("notes", "")
+        if false_positive:
+            notes = compact_join(
+                [
+                    notes,
+                    "Plate/facsimile volume matched the text hunt but does not satisfy the missing text-witness requirement.",
+                ]
+            )
+        annotated.append(
+            {
+                **row,
+                "search_result_status": row.get("search_result_status", "not_found"),
+                "is_text_witness_candidate": bool_string(is_text_candidate),
+                "is_plate_witness_candidate": bool_string(is_plate),
+                "false_positive_for_text": bool_string(false_positive),
+                "reason_not_text_witness": (
+                    "plate/facsimile volume, not companion text volume" if false_positive else ""
+                ),
+                "notes": notes,
+            }
+        )
+    return annotated
+
+
+def build_search_hunt_rows(
+    source_work_key: str,
+    query_variants: list[tuple[str, str]],
+    file_records: dict[str, dict],
+    raw_reference_rows: list[dict],
+    verification_rows: list[dict],
+) -> list[dict]:
+    rows: list[dict] = []
+    coverage_note = f"Coverage: {searched_sources_label()} via {search_scope_label()}."
+    for query, variant_type in query_variants:
+        search_rows = build_direct_query_search_rows(
+            [query],
+            file_records,
+            source_work_key=source_work_key,
+            raw_reference_rows=raw_reference_rows,
+            verification_rows=verification_rows,
+        )
+        if not search_rows:
+            continue
+        row = search_rows[0]
+        if not row.get("matched_file_label") and not row.get("short_evidence"):
+            continue
+        rows.append(
+            {
+                "source_work_key": source_work_key,
+                "query": query,
+                "variant_type": variant_type,
+                "matched_file_label": row.get("matched_file_label", ""),
+                "matched_file_id": row.get("matched_file_id", ""),
+                "match_type": row.get("match_type", ""),
+                "match_confidence": row.get("match_confidence", ""),
+                "short_evidence": row.get("short_evidence", ""),
+                "search_result_status": row.get("search_result_status", "not_found"),
+                "recommended_action": row.get("recommended_action", ""),
+                "notes": compact_join([coverage_note, row.get("notes", "")]),
+            }
+        )
+    return rows
+
+
+def build_source_witness_content_profile_rows(
+    verification_rows: list[dict],
+    sip_inspection_rows: list[dict],
+    eb_inspection_rows: list[dict],
+    file_records: dict[str, dict],
+) -> list[dict]:
+    verification_by_id = {row["witness_id"]: row for row in verification_rows}
+    sip_by_area = {row["inspection_area"]: row for row in sip_inspection_rows}
+    eb_rows_by_witness: dict[str, list[dict]] = defaultdict(list)
+    for row in eb_inspection_rows:
+        eb_rows_by_witness[row["witness_id"]].append(row)
+    profiles: list[dict] = []
+
+    sip_verification = verification_by_id.get(SIP_WITNESS_ID)
+    if sip_verification:
+        sample_row = sip_by_area.get("sample_entry", {})
+        contents_row = sip_by_area.get("contents", {})
+        profiles.append(
+            {
+                "source_work_key": "sipSelectionsPagan",
+                "witness_id": sip_verification["witness_id"],
+                "file_label": sip_verification.get("candidate_file_label", ""),
+                "verified_witness_type": sip_verification.get("verified_witness_type", ""),
+                "content_profile_status": "needs_manual_review",
+                "title_page_status": "confirmed" if sip_by_area.get("title_page", {}).get("evidence_snippet") else "needs_manual_review",
+                "contents_status": contents_row.get("inspection_status", "unknown"),
+                "sample_entry_status": sample_row.get("inspection_status", "unknown"),
+                "translation_status": "unknown",
+                "edition_status": "confirmed",
+                "notes_commentary_status": sip_by_area.get("notes_or_commentary", {}).get("contains_notes_or_commentary", "unknown"),
+                "plate_image_status": "not_present",
+                "catalogue_metadata_status": contents_row.get("contains_catalogue_metadata", "unknown"),
+                "coverage_scope": "selected_inscriptions_only",
+                "confidence": "high",
+                "next_action": "Inspect a recoverable SIP sample entry before changing translation coverage status.",
+                "notes": "Title-page identity is secure, but failed sample-entry OCR leaves translation coverage unconfirmed.",
+            }
+        )
+
+    for row in verification_rows:
+        if row.get("source_work_key") != "epigraphiaBirmanica" or row.get("verification_status") != "verified_direct_witness":
+            continue
+        inspection_rows = eb_rows_by_witness.get(row["witness_id"], [])
+        by_area = {item["inspection_area"]: item for item in inspection_rows}
+        profiles.append(
+            {
+                "source_work_key": "epigraphiaBirmanica",
+                "witness_id": row["witness_id"],
+                "file_label": row.get("candidate_file_label", ""),
+                "verified_witness_type": row.get("verified_witness_type", ""),
+                "content_profile_status": "needs_manual_review",
+                "title_page_status": by_area.get("title_page", {}).get("inspection_status", "unknown"),
+                "contents_status": by_area.get("contents", {}).get("inspection_status", by_area.get("preface", {}).get("inspection_status", "unknown")),
+                "sample_entry_status": by_area.get("sample_entry", {}).get("inspection_status", "unknown"),
+                "translation_status": "unknown",
+                "edition_status": "confirmed",
+                "notes_commentary_status": by_area.get("preface", {}).get("contains_notes_or_commentary", by_area.get("sample_entry", {}).get("contains_notes_or_commentary", "unknown")),
+                "plate_image_status": "confirmed" if row.get("contains_plate_or_image_verified") == "confirmed" else "unknown",
+                "catalogue_metadata_status": "confirmed" if by_area.get("contents", {}).get("short_snippet") else "unknown",
+                "coverage_scope": row.get("candidate_file_label", ""),
+                "confidence": row.get("confidence", "medium"),
+                "next_action": "Inspect a later fascicle page before claiming translation coverage.",
+                "notes": "EB fascicle identity is verified, but translation coverage remains unknown without explicit translation text.",
+            }
+        )
+
+    for row in verification_rows:
+        if row.get("source_work_key") != "lucePeMaungTinInscriptionsOfBurma" or row.get("verification_status") != "verified_plate_witness":
+            continue
+        file_record = find_file_record(file_records, row.get("candidate_file_label", ""))
+        sample_pages = [9, 10, 11, 12]
+        sample_probe, _ = probe_pdf_pages(file_record, sample_pages) if file_record else ("", "")
+        profiles.append(
+            {
+                "source_work_key": "lucePeMaungTinInscriptionsOfBurma",
+                "witness_id": row["witness_id"],
+                "file_label": row.get("candidate_file_label", ""),
+                "verified_witness_type": row.get("verified_witness_type", ""),
+                "content_profile_status": "confirmed",
+                "title_page_status": "confirmed" if row.get("title_page_evidence") else "unknown",
+                "contents_status": "not_applicable",
+                "sample_entry_status": "confirmed" if sample_probe and "plates6 20" not in normalize_for_match(row.get("candidate_file_label", "")) else ("attempted_no_recoverable_text" if sample_probe == "" else "possible"),
+                "translation_status": "not_applicable",
+                "edition_status": "not_applicable",
+                "notes_commentary_status": "possible" if sample_probe else "unknown",
+                "plate_image_status": "confirmed",
+                "catalogue_metadata_status": "confirmed" if sample_probe and text_has_keyword(sample_probe, ["sip", "ppa", "tn", "list"]) else "unknown",
+                "coverage_scope": "plate/facsimile witness",
+                "confidence": row.get("confidence", "medium"),
+                "next_action": "Retain as a plate witness and continue hunting the companion text volume.",
+                "notes": "Plate/facsimile witness profiled separately so it cannot satisfy the missing text-witness gap.",
+            }
+        )
+    return profiles
+
+
+def build_epigraphia_fascicle_coverage_rows(
+    promoted_review_rows: list[dict],
+    source_witness_content_profile_rows: list[dict],
+) -> list[dict]:
+    profile_by_witness = {
+        row["witness_id"]: row
+        for row in source_witness_content_profile_rows
+        if row.get("source_work_key") == "epigraphiaBirmanica"
+    }
+    rows: list[dict] = []
+    for review_row in promoted_review_rows:
+        profile_row = profile_by_witness.get(review_row["witness_id"], {})
         rows.append(
             {
                 "witness_id": review_row["witness_id"],
                 "file_label": review_row["file_label"],
                 "probable_volume_or_fascicle": review_row.get("probable_volume_or_fascicle", ""),
                 "title_or_path_evidence": review_row.get("title_page_snippet", "") or review_row["file_label"],
-                "contains_edition_or_transliteration": "confirmed",
-                "contains_translation": "unknown",
-                "contains_plate_or_image": "confirmed" if contains_plate else "no",
+                "contains_edition_or_transliteration": profile_row.get("edition_status", "confirmed"),
+                "contains_translation": profile_row.get("translation_status", "unknown"),
+                "contains_plate_or_image": profile_row.get("plate_image_status", "unknown"),
                 "coverage_scope": review_row.get("probable_volume_or_fascicle", "") or "identified fascicle",
                 "confidence": review_row.get("confidence", "medium"),
                 "needs_human_review": "true",
                 "next_action": "Inspect sample fascicle contents before claiming translation coverage.",
-                "notes": "Promoted from direct-looking local EB fascicle evidence.",
+                "notes": "Promoted from direct-looking local EB fascicle evidence; content profile now tracked separately.",
             }
         )
     return rows
@@ -2018,19 +2545,27 @@ def build_verification_report(
     updated_plan_rows: list[dict],
     gap_rows: list[dict],
     sip_inspection_rows: list[dict],
+    source_witness_content_profile_rows: list[dict],
+    eb_fascicle_content_inspection_rows: list[dict],
     uem_search_rows: list[dict],
     core_search_rows: list[dict],
     iob_text_search_rows: list[dict],
+    iob_text_volume_hunt_rows: list[dict],
+    missing_core_witness_hunt_rows: list[dict],
     rescue_review_rows: list[dict],
     epigraphia_review_rows: list[dict],
     epigraphia_fascicle_coverage_rows: list[dict],
 ) -> dict:
     direct_search_rows = uem_search_rows + core_search_rows + iob_text_search_rows
-    sip_sample_entry_inspected = any(row.get("inspection_area") == "sample_entry" for row in sip_inspection_rows)
-    sip_translation_status = next(
-        (row.get("contains_translation") for row in sip_inspection_rows if row.get("inspection_area") == "sample_entry"),
-        "unknown",
-    )
+    sip_by_area = {row.get("inspection_area"): row for row in sip_inspection_rows}
+    sip_sample_entry_attempted = "sample_entry" in sip_by_area
+    sip_sample_entry_inspected = sip_by_area.get("sample_entry", {}).get("inspection_status") not in {"", "attempted_no_recoverable_text"}
+    sip_title_page_inspected = sip_by_area.get("title_page", {}).get("inspection_status") == "confirmed"
+    sip_contents_inspected = sip_by_area.get("contents", {}).get("inspection_status") == "confirmed"
+    sip_content_profile = next((row for row in source_witness_content_profile_rows if row.get("witness_id") == SIP_WITNESS_ID), {})
+    sip_translation_status = "confirmed" if sip_content_profile.get("translation_status") == "confirmed" else "unconfirmed"
+    sip_edition_status = "confirmed" if sip_content_profile.get("edition_status") == "confirmed" else "unconfirmed"
+    eb_content_profiles = [row for row in source_witness_content_profile_rows if row.get("source_work_key") == "epigraphiaBirmanica"]
     direct_witness_search_result_counts = {
         status: sum(row.get("search_result_status") == status for row in direct_search_rows)
         for status in DIRECT_SEARCH_RESULT_STATUSES
@@ -2060,23 +2595,40 @@ def build_verification_report(
             for row in gap_rows
         ),
         "sip_inspection_completed": bool(sip_inspection_rows),
+        "sip_title_page_inspected": sip_title_page_inspected,
+        "sip_contents_inspected": sip_contents_inspected,
+        "sip_sample_entry_ocr_attempted": sip_sample_entry_attempted,
         "sip_sample_entry_inspected": sip_sample_entry_inspected,
+        "sip_translation_status": sip_translation_status,
+        "sip_edition_status": sip_edition_status,
+        "sip_needs_sample_entry_review": sip_sample_entry_attempted and not sip_sample_entry_inspected,
         "sip_contains_translation_status": sip_translation_status,
         "uem_direct_search_count": sum(bool(row["matched_file_label"]) for row in uem_search_rows),
         "core_source_direct_search_count": sum(bool(row["matched_file_label"]) for row in core_search_rows),
         "inscriptions_of_burma_text_witness_search_count": len(iob_text_search_rows),
         "inscriptions_of_burma_text_witness_found": sum(
-            row.get("search_result_status") == "direct_witness_found" for row in iob_text_search_rows
+            row.get("is_text_witness_candidate") == "true" and row.get("search_result_status") == "direct_witness_found"
+            for row in iob_text_search_rows
         ),
+        "inscriptions_of_burma_plate_false_positive_count": len(
+            {row.get("matched_file_id", "") or row.get("matched_file_label", "") for row in iob_text_search_rows if row.get("false_positive_for_text") == "true"}
+        ),
+        "inscriptions_of_burma_text_volume_hunt_count": len(iob_text_volume_hunt_rows),
+        "missing_core_witness_hunt_count": len(missing_core_witness_hunt_rows),
         "rescue_candidate_review_count": len(rescue_review_rows),
         "epigraphia_birmanica_review_count": len(epigraphia_review_rows),
         "eb_verified_fascicle_count": len(epigraphia_fascicle_coverage_rows),
         "eb_fascicle_coverage_count": len(epigraphia_fascicle_coverage_rows),
+        "eb_content_profile_count": len(eb_content_profiles),
+        "eb_translation_confirmed_count": sum(row.get("translation_status") == "confirmed" for row in eb_content_profiles),
+        "eb_translation_unconfirmed_count": sum(row.get("translation_status") != "confirmed" for row in eb_content_profiles),
+        "eb_fascicle_content_inspection_count": len(eb_fascicle_content_inspection_rows),
         "direct_witness_search_result_counts": direct_witness_search_result_counts,
         "verified_translation_after_inspection_count": sum(row["contains_translation_verified"] == "confirmed" for row in verification_rows),
         "verified_edition_after_inspection_count": sum(row["contains_edition_verified"] == "confirmed" for row in verification_rows),
         "notes": [
             "Verification is stricter than candidate discovery: exact title-page, contents, or OCR-heading evidence is required before promoting translation or edition claims.",
+            "Failed OCR is tracked as unconfirmed/attempted, not as evidence that translation is absent.",
             "Weak filename matches are retained as reviewed evidence rather than silently deleted.",
         ],
     }
@@ -2121,12 +2673,16 @@ def verify_translation_witnesses(
     missing_direct_search_path: Path = MISSING_DIRECT_SEARCH_PATH,
     source_work_gaps_path: Path = SOURCE_WORK_GAPS_PATH,
     sip_witness_inspection_path: Path = SIP_WITNESS_INSPECTION_PATH,
+    source_witness_content_profile_path: Path = SOURCE_WITNESS_CONTENT_PROFILE_PATH,
+    eb_fascicle_content_inspection_path: Path = EB_FASCICLE_CONTENT_INSPECTION_PATH,
     uem_direct_search_path: Path = UEM_DIRECT_SEARCH_PATH,
     core_source_direct_search_path: Path = CORE_SOURCE_DIRECT_SEARCH_PATH,
     rescue_candidate_review_path: Path = RESCUE_CANDIDATE_REVIEW_PATH,
     epigraphia_birmanica_review_path: Path = EPIGRAPHIA_BIRMANICA_REVIEW_PATH,
     epigraphia_birmanica_fascicle_coverage_path: Path = EPIGRAPHIA_BIRMANICA_FASCICLE_COVERAGE_PATH,
     inscriptions_of_burma_text_search_path: Path = INSCRIPTIONS_OF_BURMA_TEXT_SEARCH_PATH,
+    inscriptions_of_burma_text_volume_hunt_path: Path = INSCRIPTIONS_OF_BURMA_TEXT_VOLUME_HUNT_PATH,
+    missing_core_witness_hunt_path: Path = MISSING_CORE_WITNESS_HUNT_PATH,
     witness_verification_report_path: Path = WITNESS_VERIFICATION_REPORT_PATH,
 ) -> dict:
     plan_rows = read_tsv(plan_path)
@@ -2216,6 +2772,7 @@ def verify_translation_witnesses(
     )
     sip_inspection_rows = build_sip_witness_inspection_rows(source_rows, verification_rows, file_records)
     verification_rows = apply_sip_inspection(verification_rows, sip_inspection_rows)
+    eb_fascicle_content_inspection_rows = build_eb_fascicle_content_inspection_rows(promoted_epigraphia_rows, file_records)
     snippet_rows.extend(
         {
             "witness_id": row["witness_id"],
@@ -2265,8 +2822,40 @@ def verify_translation_witnesses(
         raw_reference_rows=raw_reference_rows,
         verification_rows=verification_rows,
     )
+    iob_text_search_rows = annotate_iob_text_search_rows(iob_text_search_rows)
+    iob_text_volume_hunt_rows = [
+        row
+        for row in build_direct_query_search_rows(
+            INSCRIPTIONS_OF_BURMA_TEXT_VOLUME_HUNT_QUERIES,
+            file_records,
+            clue_source_work_key="lucePeMaungTinInscriptionsOfBurma",
+            raw_reference_rows=raw_reference_rows,
+            verification_rows=verification_rows,
+        )
+        if row.get("matched_file_label") or row.get("short_evidence")
+    ]
+    missing_core_witness_hunt_rows = [
+        row
+        for source_key, query_variants in MISSING_CORE_WITNESS_HUNT_QUERIES.items()
+        for row in build_search_hunt_rows(
+            source_key,
+            query_variants,
+            file_records,
+            raw_reference_rows,
+            verification_rows,
+        )
+    ]
     rescue_review_rows = build_rescue_candidate_review_rows(file_records, missing_search_rows)
-    epigraphia_fascicle_coverage_rows = build_epigraphia_fascicle_coverage_rows(promoted_epigraphia_rows)
+    source_witness_content_profile_rows = build_source_witness_content_profile_rows(
+        verification_rows,
+        sip_inspection_rows,
+        eb_fascicle_content_inspection_rows,
+        file_records,
+    )
+    epigraphia_fascicle_coverage_rows = build_epigraphia_fascicle_coverage_rows(
+        promoted_epigraphia_rows,
+        source_witness_content_profile_rows,
+    )
     gap_rows = build_source_work_gap_rows(
         source_rows,
         candidate_rows,
@@ -2302,9 +2891,13 @@ def verify_translation_witnesses(
         updated_plan_rows,
         gap_rows,
         sip_inspection_rows,
+        source_witness_content_profile_rows,
+        eb_fascicle_content_inspection_rows,
         uem_search_rows,
         core_search_rows,
         iob_text_search_rows,
+        iob_text_volume_hunt_rows,
+        missing_core_witness_hunt_rows,
         rescue_review_rows,
         epigraphia_review_rows,
         epigraphia_fascicle_coverage_rows,
@@ -2323,9 +2916,13 @@ def verify_translation_witnesses(
     write_tsv(missing_direct_search_path, missing_search_rows, MISSING_DIRECT_SEARCH_FIELDS)
     write_tsv(source_work_gaps_path, gap_rows, SOURCE_WORK_GAP_FIELDS)
     write_tsv(sip_witness_inspection_path, sip_inspection_rows, SIP_WITNESS_INSPECTION_FIELDS)
+    write_tsv(source_witness_content_profile_path, source_witness_content_profile_rows, SOURCE_WITNESS_CONTENT_PROFILE_FIELDS)
+    write_tsv(eb_fascicle_content_inspection_path, eb_fascicle_content_inspection_rows, EB_FASCICLE_CONTENT_INSPECTION_FIELDS)
     write_tsv(uem_direct_search_path, uem_search_rows, DIRECT_WITNESS_SEARCH_FIELDS)
     write_tsv(core_source_direct_search_path, core_search_rows, CORE_DIRECT_WITNESS_SEARCH_FIELDS)
-    write_tsv(inscriptions_of_burma_text_search_path, iob_text_search_rows, DIRECT_WITNESS_SEARCH_FIELDS)
+    write_tsv(inscriptions_of_burma_text_search_path, iob_text_search_rows, INSCRIPTIONS_OF_BURMA_TEXT_SEARCH_FIELDS)
+    write_tsv(inscriptions_of_burma_text_volume_hunt_path, iob_text_volume_hunt_rows, DIRECT_WITNESS_SEARCH_FIELDS)
+    write_tsv(missing_core_witness_hunt_path, missing_core_witness_hunt_rows, MISSING_CORE_WITNESS_HUNT_FIELDS)
     write_tsv(rescue_candidate_review_path, rescue_review_rows, RESCUE_CANDIDATE_REVIEW_FIELDS)
     write_tsv(epigraphia_birmanica_review_path, epigraphia_review_rows, EPIGRAPHIA_BIRMANICA_REVIEW_FIELDS)
     write_tsv(epigraphia_birmanica_fascicle_coverage_path, epigraphia_fascicle_coverage_rows, EPIGRAPHIA_BIRMANICA_FASCICLE_COVERAGE_FIELDS)
@@ -2357,12 +2954,16 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--missing-direct-search", type=Path, default=MISSING_DIRECT_SEARCH_PATH)
     parser.add_argument("--source-work-gaps", type=Path, default=SOURCE_WORK_GAPS_PATH)
     parser.add_argument("--sip-witness-inspection", type=Path, default=SIP_WITNESS_INSPECTION_PATH)
+    parser.add_argument("--source-witness-content-profile", type=Path, default=SOURCE_WITNESS_CONTENT_PROFILE_PATH)
+    parser.add_argument("--eb-fascicle-content-inspection", type=Path, default=EB_FASCICLE_CONTENT_INSPECTION_PATH)
     parser.add_argument("--uem-direct-search", type=Path, default=UEM_DIRECT_SEARCH_PATH)
     parser.add_argument("--core-source-direct-search", type=Path, default=CORE_SOURCE_DIRECT_SEARCH_PATH)
     parser.add_argument("--rescue-candidate-review", type=Path, default=RESCUE_CANDIDATE_REVIEW_PATH)
     parser.add_argument("--epigraphia-birmanica-review", type=Path, default=EPIGRAPHIA_BIRMANICA_REVIEW_PATH)
     parser.add_argument("--epigraphia-birmanica-fascicle-coverage", type=Path, default=EPIGRAPHIA_BIRMANICA_FASCICLE_COVERAGE_PATH)
     parser.add_argument("--inscriptions-of-burma-text-search", type=Path, default=INSCRIPTIONS_OF_BURMA_TEXT_SEARCH_PATH)
+    parser.add_argument("--inscriptions-of-burma-text-volume-hunt", type=Path, default=INSCRIPTIONS_OF_BURMA_TEXT_VOLUME_HUNT_PATH)
+    parser.add_argument("--missing-core-witness-hunt", type=Path, default=MISSING_CORE_WITNESS_HUNT_PATH)
     parser.add_argument("--witness-verification-report", type=Path, default=WITNESS_VERIFICATION_REPORT_PATH)
     return parser.parse_args()
 
@@ -2387,12 +2988,16 @@ def main() -> None:
         missing_direct_search_path=args.missing_direct_search,
         source_work_gaps_path=args.source_work_gaps,
         sip_witness_inspection_path=args.sip_witness_inspection,
+        source_witness_content_profile_path=args.source_witness_content_profile,
+        eb_fascicle_content_inspection_path=args.eb_fascicle_content_inspection,
         uem_direct_search_path=args.uem_direct_search,
         core_source_direct_search_path=args.core_source_direct_search,
         rescue_candidate_review_path=args.rescue_candidate_review,
         epigraphia_birmanica_review_path=args.epigraphia_birmanica_review,
         epigraphia_birmanica_fascicle_coverage_path=args.epigraphia_birmanica_fascicle_coverage,
         inscriptions_of_burma_text_search_path=args.inscriptions_of_burma_text_search,
+        inscriptions_of_burma_text_volume_hunt_path=args.inscriptions_of_burma_text_volume_hunt,
+        missing_core_witness_hunt_path=args.missing_core_witness_hunt,
         witness_verification_report_path=args.witness_verification_report,
     )
     print(json.dumps(report, ensure_ascii=False, indent=2))
