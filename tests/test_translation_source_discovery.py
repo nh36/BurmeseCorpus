@@ -27,9 +27,11 @@ from verify_translation_witnesses import (
     EPIGRAPHIA_BIRMANICA_FASCICLE_COVERAGE_FIELDS,
     EPIGRAPHIA_BIRMANICA_REVIEW_FIELDS,
     INSCRIPTIONS_OF_BURMA_TEXT_SEARCH_FIELDS,
+    INSCRIPTIONS_OF_BURMA_TEXT_VOLUME_HUNT_FIELDS,
     MISSING_DIRECT_SEARCH_FIELDS,
     MISSING_CORE_WITNESS_HUNT_QUERIES,
     MISSING_CORE_WITNESS_HUNT_FIELDS,
+    PLAUSIBLE_HUNT_TRIAGE_STATUSES,
     RESCUE_CANDIDATE_REVIEW_FIELDS,
     SIP_WITNESS_ID,
     SIP_WITNESS_INSPECTION_FIELDS,
@@ -37,6 +39,7 @@ from verify_translation_witnesses import (
     SNIPPET_FIELDS,
     SOURCE_WORK_GAP_FIELDS,
     VERIFICATION_FIELDS,
+    WITNESS_HUNT_CANDIDATE_TRIAGE_FIELDS,
 )
 
 
@@ -505,6 +508,24 @@ class TranslationSourceDiscoveryTests(unittest.TestCase):
                         "reason_not_text_witness": "plate/facsimile volume, not companion text volume",
                     }
                 ],
+                witness_hunt_candidate_triage_rows=[
+                    {
+                        "hunt_table": "inscriptions_of_burma_text_volume_hunt",
+                        "source_work_key": "lucePeMaungTinInscriptionsOfBurma",
+                        "query": "Inscriptions of Burma 1960 text",
+                        "matched_file_label": "Luce&PeMaungTin_InscriptionsOfBurma(Plates3,4,5)_1960.pdf",
+                        "matched_file_id": "iob-plates",
+                        "initial_match_type": "filename",
+                        "initial_search_result_status": "candidate_found",
+                        "triage_status": "known_false_positive",
+                        "triage_reason": "plate/facsimile volume, not companion text volume",
+                        "is_cross_source_match": "false",
+                        "is_secondary_or_unrelated": "false",
+                        "is_known_false_positive": "true",
+                        "recommended_action": "Retain as a plate witness; continue searching for the companion text volume.",
+                        "notes": "",
+                    }
+                ],
             )
 
             errors = self._run_validation(tmp)
@@ -613,11 +634,194 @@ class TranslationSourceDiscoveryTests(unittest.TestCase):
                     for source_work_key, query_rows in MISSING_CORE_WITNESS_HUNT_QUERIES.items()
                     for query, variant_type in query_rows
                 ],
+                witness_hunt_candidate_triage_rows=[
+                    {
+                        "hunt_table": "missing_core_witness_hunt",
+                        "source_work_key": "uemSelectionsPagan",
+                        "query": "Selections from the Inscriptions of Pagan U E Maung",
+                        "matched_file_label": "Luce 1928 inscriptions of Pagan.pdf",
+                        "matched_file_id": "sip-pdf",
+                        "initial_match_type": "normalized_title_filename",
+                        "initial_search_result_status": "candidate_found",
+                        "triage_status": "known_false_positive",
+                        "triage_reason": "known SIP/UEM false positive",
+                        "is_cross_source_match": "false",
+                        "is_secondary_or_unrelated": "false",
+                        "is_known_false_positive": "true",
+                        "recommended_action": "Inspect title page before promoting this as a direct witness.",
+                        "notes": "",
+                    }
+                ],
             )
 
             errors = self._run_validation(tmp)
 
             self.assertTrue(any("cannot be surfaced as promotable" in error for error in errors))
+
+    def test_validator_rejects_missing_triage_for_candidate_hunt_rows(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            tmp = Path(tmp_dir)
+            self._write_validation_fixture(
+                tmp,
+                iob_text_volume_hunt_rows=[
+                    {
+                        "query": "Inscriptions of Burma text volume",
+                        "matched_file_label": "a_list_of_inscriptions_found_in_burma_part_i.pdf",
+                        "matched_file_id": "list-pdf",
+                        "match_type": "normalized_title_filename",
+                        "match_confidence": "medium",
+                        "short_evidence": "Matched A List of Inscriptions Found in Burma Part I.pdf",
+                        "searched_sources": "local_file_manifest",
+                        "search_scope": "filename search",
+                        "search_date_or_run_id": "fixture",
+                        "search_result_status": "candidate_found",
+                        "recommended_action": "Inspect title page before promoting this as a direct witness.",
+                        "notes": "",
+                        "is_text_witness_candidate": "false",
+                        "is_plate_witness_candidate": "false",
+                        "false_positive_for_text": "false",
+                        "reason_not_text_witness": "separate List source work, not the Luce/Pe Maung Tin companion text volume",
+                    }
+                ],
+            )
+
+            errors = self._run_validation(tmp)
+
+            self.assertTrue(any("missing coverage for inscriptions_of_burma_text_volume_hunt" in error for error in errors))
+
+    def test_validator_rejects_iob_list_candidate_as_text_witness(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            tmp = Path(tmp_dir)
+            self._write_validation_fixture(
+                tmp,
+                gap_rows=[
+                    {
+                        "source_work_key": "lucePeMaungTinInscriptionsOfBurma",
+                        "canonical_title": "Inscriptions of Burma",
+                        "current_status": "verification_in_progress",
+                        "verified_direct_witness_count": "0",
+                        "verified_translation_witness_count": "0",
+                        "verified_edition_witness_count": "0",
+                        "verified_plate_witness_count": "2",
+                        "candidate_count": "0",
+                        "best_candidate_witness_id": "",
+                        "best_candidate_file_label": "",
+                        "gap_type": "has_verified_plate_but_needs_text",
+                        "priority": "high",
+                        "next_action": "Find the companion text volume before treating Inscriptions of Burma as text-covered.",
+                        "notes": "Verified plate/facsimile witnesses exist, but the current text-volume hunt only yields cross-source leads, secondary/article matches, bibliographic clues, or false positives.",
+                    }
+                ],
+                iob_text_volume_hunt_rows=[
+                    {
+                        "query": "Inscriptions of Burma text volume",
+                        "matched_file_label": "a_list_of_inscriptions_found_in_burma_part_i.pdf",
+                        "matched_file_id": "list-pdf",
+                        "match_type": "normalized_title_filename",
+                        "match_confidence": "medium",
+                        "short_evidence": "Matched A List of Inscriptions Found in Burma Part I.pdf",
+                        "searched_sources": "local_file_manifest",
+                        "search_scope": "filename search",
+                        "search_date_or_run_id": "fixture",
+                        "search_result_status": "candidate_found",
+                        "recommended_action": "Inspect title page before promoting this as a direct witness.",
+                        "notes": "",
+                        "is_text_witness_candidate": "true",
+                        "is_plate_witness_candidate": "false",
+                        "false_positive_for_text": "false",
+                        "reason_not_text_witness": "",
+                    }
+                ],
+                witness_hunt_candidate_triage_rows=[
+                    {
+                        "hunt_table": "inscriptions_of_burma_text_volume_hunt",
+                        "source_work_key": "lucePeMaungTinInscriptionsOfBurma",
+                        "query": "Inscriptions of Burma text volume",
+                        "matched_file_label": "a_list_of_inscriptions_found_in_burma_part_i.pdf",
+                        "matched_file_id": "list-pdf",
+                        "initial_match_type": "normalized_title_filename",
+                        "initial_search_result_status": "candidate_found",
+                        "triage_status": "cross_source_witness",
+                        "triage_reason": "Matched the separate List of Inscriptions source work, not the Luce/Pe Maung Tin companion text volume.",
+                        "is_cross_source_match": "true",
+                        "is_secondary_or_unrelated": "false",
+                        "is_known_false_positive": "false",
+                        "recommended_action": "Retain only as a reviewed cross-source List witness; continue searching for the Luce/Pe Maung Tin companion text volume.",
+                        "notes": "",
+                    }
+                ],
+            )
+
+            errors = self._run_validation(tmp)
+
+            self.assertTrue(any("a_list_of_inscriptions_found_in_burma_part_i.pdf cannot count as an IOB text witness candidate" in error for error in errors))
+
+    def test_validator_rejects_iob_111029_candidate_as_secondary(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            tmp = Path(tmp_dir)
+            self._write_validation_fixture(
+                tmp,
+                gap_rows=[
+                    {
+                        "source_work_key": "lucePeMaungTinInscriptionsOfBurma",
+                        "canonical_title": "Inscriptions of Burma",
+                        "current_status": "verification_in_progress",
+                        "verified_direct_witness_count": "0",
+                        "verified_translation_witness_count": "0",
+                        "verified_edition_witness_count": "0",
+                        "verified_plate_witness_count": "2",
+                        "candidate_count": "0",
+                        "best_candidate_witness_id": "",
+                        "best_candidate_file_label": "",
+                        "gap_type": "has_verified_plate_but_needs_text",
+                        "priority": "high",
+                        "next_action": "Find the companion text volume before treating Inscriptions of Burma as text-covered.",
+                        "notes": "Verified plate/facsimile witnesses exist, but the current text-volume hunt only yields cross-source leads, secondary/article matches, bibliographic clues, or false positives.",
+                    }
+                ],
+                iob_text_volume_hunt_rows=[
+                    {
+                        "query": "Luce Pe Maung Tin Portfolio I",
+                        "matched_file_label": "111029.pdf",
+                        "matched_file_id": "111029.pdf",
+                        "match_type": "source_family_match",
+                        "match_confidence": "medium",
+                        "short_evidence": "OBI_LIBRARY_ROOT:ChroniclleTagaung_PeMaungTinLuce1921.pdf",
+                        "searched_sources": "local_file_manifest",
+                        "search_scope": "filename search",
+                        "search_date_or_run_id": "fixture",
+                        "search_result_status": "candidate_found",
+                        "recommended_action": "Inspect title page before promoting this as a direct witness.",
+                        "notes": "",
+                        "is_text_witness_candidate": "true",
+                        "is_plate_witness_candidate": "false",
+                        "false_positive_for_text": "false",
+                        "reason_not_text_witness": "",
+                    }
+                ],
+                witness_hunt_candidate_triage_rows=[
+                    {
+                        "hunt_table": "inscriptions_of_burma_text_volume_hunt",
+                        "source_work_key": "lucePeMaungTinInscriptionsOfBurma",
+                        "query": "Luce Pe Maung Tin Portfolio I",
+                        "matched_file_label": "111029.pdf",
+                        "matched_file_id": "111029.pdf",
+                        "initial_match_type": "source_family_match",
+                        "initial_search_result_status": "candidate_found",
+                        "triage_status": "secondary_or_unrelated",
+                        "triage_reason": "Matched a Luce/Pe Maung Tin chronicle/article lead rather than the companion Inscriptions of Burma text volume.",
+                        "is_cross_source_match": "false",
+                        "is_secondary_or_unrelated": "true",
+                        "is_known_false_positive": "false",
+                        "recommended_action": "Retain only as a reviewed secondary/cross-source lead; continue searching for the Luce/Pe Maung Tin companion text volume.",
+                        "notes": "",
+                    }
+                ],
+            )
+
+            errors = self._run_validation(tmp)
+
+            self.assertTrue(any("111029.pdf cannot count as an IOB text witness candidate" in error for error in errors))
 
     def test_validator_rejects_eb_translation_confirmation_without_explicit_signal(self) -> None:
         with tempfile.TemporaryDirectory() as tmp_dir:
@@ -785,6 +989,7 @@ class TranslationSourceDiscoveryTests(unittest.TestCase):
         iob_text_search_rows: list[dict] | None = None,
         iob_text_volume_hunt_rows: list[dict] | None = None,
         missing_core_witness_hunt_rows: list[dict] | None = None,
+        witness_hunt_candidate_triage_rows: list[dict] | None = None,
         rescue_review_rows: list[dict] | None = None,
         epigraphia_review_rows: list[dict] | None = None,
         epigraphia_fascicle_coverage_rows: list[dict] | None = None,
@@ -881,6 +1086,7 @@ class TranslationSourceDiscoveryTests(unittest.TestCase):
             for source_work_key, query_rows in MISSING_CORE_WITNESS_HUNT_QUERIES.items()
             for query, variant_type in query_rows
         ]
+        witness_hunt_candidate_triage_rows = witness_hunt_candidate_triage_rows or []
         rescue_review_rows = rescue_review_rows or [
             {
                 "candidate_file_id": "111029.pdf",
@@ -939,8 +1145,9 @@ class TranslationSourceDiscoveryTests(unittest.TestCase):
         write_tsv(root / "uem_direct_witness_search.tsv", uem_search_rows, DIRECT_WITNESS_SEARCH_FIELDS)
         write_tsv(root / "core_source_direct_witness_search.tsv", core_search_rows, CORE_DIRECT_WITNESS_SEARCH_FIELDS)
         write_tsv(root / "inscriptions_of_burma_text_witness_search.tsv", iob_text_search_rows, INSCRIPTIONS_OF_BURMA_TEXT_SEARCH_FIELDS)
-        write_tsv(root / "inscriptions_of_burma_text_volume_hunt.tsv", iob_text_volume_hunt_rows, INSCRIPTIONS_OF_BURMA_TEXT_SEARCH_FIELDS)
+        write_tsv(root / "inscriptions_of_burma_text_volume_hunt.tsv", iob_text_volume_hunt_rows, INSCRIPTIONS_OF_BURMA_TEXT_VOLUME_HUNT_FIELDS)
         write_tsv(root / "missing_core_witness_hunt.tsv", missing_core_witness_hunt_rows, MISSING_CORE_WITNESS_HUNT_FIELDS)
+        write_tsv(root / "witness_hunt_candidate_triage.tsv", witness_hunt_candidate_triage_rows, WITNESS_HUNT_CANDIDATE_TRIAGE_FIELDS)
         write_tsv(root / "rescue_candidate_review.tsv", rescue_review_rows, RESCUE_CANDIDATE_REVIEW_FIELDS)
         write_tsv(root / "epigraphia_birmanica_witness_review.tsv", epigraphia_review_rows, EPIGRAPHIA_BIRMANICA_REVIEW_FIELDS)
         write_tsv(root / "epigraphia_birmanica_fascicle_coverage.tsv", epigraphia_fascicle_coverage_rows, EPIGRAPHIA_BIRMANICA_FASCICLE_COVERAGE_FIELDS)
@@ -1012,6 +1219,10 @@ class TranslationSourceDiscoveryTests(unittest.TestCase):
             "inscriptions_of_burma_plate_false_positive_count": len({row.get("matched_file_id", "") or row.get("matched_file_label", "") for row in (iob_text_search_rows + iob_text_volume_hunt_rows) if row.get("false_positive_for_text") == "true"}),
             "inscriptions_of_burma_text_volume_hunt_count": len(iob_text_volume_hunt_rows),
             "missing_core_witness_hunt_count": len(missing_core_witness_hunt_rows),
+            "witness_hunt_candidate_triage_count": len(witness_hunt_candidate_triage_rows),
+            "plausible_direct_candidate_count": sum(row.get("triage_status") in PLAUSIBLE_HUNT_TRIAGE_STATUSES for row in witness_hunt_candidate_triage_rows),
+            "known_false_positive_hunt_count": sum(row.get("triage_status") == "known_false_positive" for row in witness_hunt_candidate_triage_rows),
+            "cross_source_or_secondary_hunt_count": sum(row.get("triage_status") in {"cross_source_witness", "secondary_or_unrelated", "too_broad_query_noise"} for row in witness_hunt_candidate_triage_rows),
             "rescue_candidate_review_count": len(rescue_review_rows),
             "epigraphia_birmanica_review_count": len(epigraphia_review_rows),
             "eb_verified_fascicle_count": len(epigraphia_fascicle_coverage_rows),
@@ -1065,6 +1276,10 @@ class TranslationSourceDiscoveryTests(unittest.TestCase):
             "inscriptions_of_burma_plate_false_positive_count": len({row.get("matched_file_id", "") or row.get("matched_file_label", "") for row in (iob_text_search_rows + iob_text_volume_hunt_rows) if row.get("false_positive_for_text") == "true"}),
             "inscriptions_of_burma_text_volume_hunt_count": len(iob_text_volume_hunt_rows),
             "missing_core_witness_hunt_count": len(missing_core_witness_hunt_rows),
+            "witness_hunt_candidate_triage_count": len(witness_hunt_candidate_triage_rows),
+            "plausible_direct_candidate_count": sum(row.get("triage_status") in PLAUSIBLE_HUNT_TRIAGE_STATUSES for row in witness_hunt_candidate_triage_rows),
+            "known_false_positive_hunt_count": sum(row.get("triage_status") == "known_false_positive" for row in witness_hunt_candidate_triage_rows),
+            "cross_source_or_secondary_hunt_count": sum(row.get("triage_status") in {"cross_source_witness", "secondary_or_unrelated", "too_broad_query_noise"} for row in witness_hunt_candidate_triage_rows),
             "rescue_candidate_review_count": len(rescue_review_rows),
             "epigraphia_birmanica_review_count": len(epigraphia_review_rows),
             "eb_verified_fascicle_count": len(epigraphia_fascicle_coverage_rows),
@@ -1104,6 +1319,7 @@ class TranslationSourceDiscoveryTests(unittest.TestCase):
             inscriptions_of_burma_text_search_path=root / "inscriptions_of_burma_text_witness_search.tsv",
             inscriptions_of_burma_text_volume_hunt_path=root / "inscriptions_of_burma_text_volume_hunt.tsv",
             missing_core_witness_hunt_path=root / "missing_core_witness_hunt.tsv",
+            witness_hunt_candidate_triage_path=root / "witness_hunt_candidate_triage.tsv",
             rescue_candidate_review_path=root / "rescue_candidate_review.tsv",
             epigraphia_birmanica_review_path=root / "epigraphia_birmanica_witness_review.tsv",
             epigraphia_birmanica_fascicle_coverage_path=root / "epigraphia_birmanica_fascicle_coverage.tsv",

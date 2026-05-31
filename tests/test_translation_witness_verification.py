@@ -20,6 +20,7 @@ from verify_translation_witnesses import (
     build_rescue_candidate_review_rows,
     build_search_hunt_rows,
     build_sip_witness_inspection_rows,
+    build_witness_hunt_candidate_triage_rows,
     build_source_witness_content_profile_rows,
     build_source_work_gap_rows,
     build_verification_report,
@@ -293,6 +294,7 @@ class TranslationWitnessVerificationTests(unittest.TestCase):
             [],
             [],
             [],
+            [],
         )
 
         self.assertEqual(gap_rows[0]["gap_type"], "has_verified_edition_but_translation_unknown")
@@ -538,6 +540,125 @@ class TranslationWitnessVerificationTests(unittest.TestCase):
         self.assertEqual(rows[0]["is_known_false_positive"], "true")
         self.assertIn("do not promote", rows[0]["recommended_action"].casefold())
 
+    def test_iob_text_volume_hunt_triage_marks_list_pdf_cross_source(self) -> None:
+        hunt_rows = annotate_iob_text_search_rows(
+            [
+                {
+                    "query": "Inscriptions of Burma text",
+                    "matched_file_label": "a_list_of_inscriptions_found_in_burma_part_i.pdf",
+                    "matched_file_id": "list-pdf",
+                    "match_type": "normalized_title_filename",
+                    "match_confidence": "medium",
+                    "short_evidence": "OBI_LIBRARY_ROOT:A List of Inscriptions Found in Burma Part I.pdf",
+                    "searched_sources": "local_file_manifest",
+                    "search_scope": "filename search",
+                    "search_date_or_run_id": "test",
+                    "search_result_status": "candidate_found",
+                    "recommended_action": "Inspect title page before promoting this as a direct witness.",
+                    "notes": "",
+                }
+            ]
+        )
+
+        triage_rows = build_witness_hunt_candidate_triage_rows([], hunt_rows)
+
+        self.assertEqual(hunt_rows[0]["is_text_witness_candidate"], "false")
+        self.assertEqual(triage_rows[0]["triage_status"], "cross_source_witness")
+        self.assertIn("list witness", triage_rows[0]["recommended_action"].casefold())
+
+    def test_iob_text_volume_hunt_triage_marks_111029_secondary(self) -> None:
+        hunt_rows = annotate_iob_text_search_rows(
+            [
+                {
+                    "query": "Luce Pe Maung Tin Portfolio I",
+                    "matched_file_label": "111029.pdf",
+                    "matched_file_id": "111029.pdf",
+                    "match_type": "source_family_match",
+                    "match_confidence": "medium",
+                    "short_evidence": "OBI_LIBRARY_ROOT:ChroniclleTagaung_PeMaungTinLuce1921.pdf",
+                    "searched_sources": "local_file_manifest",
+                    "search_scope": "filename search",
+                    "search_date_or_run_id": "test",
+                    "search_result_status": "candidate_found",
+                    "recommended_action": "Inspect title page before promoting this as a direct witness.",
+                    "notes": "",
+                }
+            ]
+        )
+
+        triage_rows = build_witness_hunt_candidate_triage_rows([], hunt_rows)
+
+        self.assertEqual(hunt_rows[0]["is_text_witness_candidate"], "false")
+        self.assertEqual(triage_rows[0]["triage_status"], "secondary_or_unrelated")
+        self.assertIn("secondary", triage_rows[0]["recommended_action"].casefold())
+
+    def test_missing_core_uem_broad_hits_are_triaged_non_promotable(self) -> None:
+        rows = [
+            {
+                "source_work_key": "uemSelectionsPagan",
+                "query": "E Maung",
+                "variant_type": "author_name",
+                "matched_file_label": "031070.pdf",
+                "matched_file_id": "031070.pdf",
+                "match_type": "source_family_match",
+                "match_confidence": "medium",
+                "short_evidence": "OBI_LIBRARY_ROOT:CaveSculpture-MaungGyi1913.pdf",
+                "searched_sources": "local_file_manifest;source_library_manifest;ocr_text_index;raw_reference_to_bibtex",
+                "search_scope": "targeted author/title/abbreviation search across local manifests, source-library paths, author-folder path hints, OCR index, and bibliography crosswalk",
+                "search_date_or_run_id": "test",
+                "search_result_status": "candidate_found",
+                "is_known_false_positive": "false",
+                "false_positive_reason": "",
+                "recommended_action": "Inspect title page before promoting this as a direct witness.",
+                "notes": "",
+            },
+            {
+                "source_work_key": "uemSelectionsPagan",
+                "query": "U E Maung Pagan",
+                "variant_type": "title_variant",
+                "matched_file_label": "223151.pdf",
+                "matched_file_id": "223151.pdf",
+                "match_type": "source_family_match",
+                "match_confidence": "medium",
+                "short_evidence": "OBI_LIBRARY_ROOT:SakaEraPagan-PeMaungTin1932.pdf",
+                "searched_sources": "local_file_manifest;source_library_manifest;ocr_text_index;raw_reference_to_bibtex",
+                "search_scope": "targeted author/title/abbreviation search across local manifests, source-library paths, author-folder path hints, OCR index, and bibliography crosswalk",
+                "search_date_or_run_id": "test",
+                "search_result_status": "candidate_found",
+                "is_known_false_positive": "false",
+                "false_positive_reason": "",
+                "recommended_action": "Inspect title page before promoting this as a direct witness.",
+                "notes": "",
+            },
+            {
+                "source_work_key": "uemSelectionsPagan",
+                "query": "U E Maung inscriptions",
+                "variant_type": "title_variant",
+                "matched_file_label": "201033.pdf",
+                "matched_file_id": "201033.pdf",
+                "match_type": "source_family_match",
+                "match_confidence": "medium",
+                "short_evidence": "OBI_LIBRARY_ROOT:PeMaungTin-1930-OldWordsinInscriptions.pdf",
+                "searched_sources": "local_file_manifest;source_library_manifest;ocr_text_index;raw_reference_to_bibtex",
+                "search_scope": "targeted author/title/abbreviation search across local manifests, source-library paths, author-folder path hints, OCR index, and bibliography crosswalk",
+                "search_date_or_run_id": "test",
+                "search_result_status": "candidate_found",
+                "is_known_false_positive": "false",
+                "false_positive_reason": "",
+                "recommended_action": "Inspect title page before promoting this as a direct witness.",
+                "notes": "",
+            },
+        ]
+
+        triage_rows = build_witness_hunt_candidate_triage_rows(rows, [])
+        triage_by_query = {row["query"]: row for row in triage_rows}
+
+        self.assertEqual(triage_by_query["E Maung"]["triage_status"], "too_broad_query_noise")
+        self.assertEqual(triage_by_query["U E Maung Pagan"]["triage_status"], "secondary_or_unrelated")
+        self.assertEqual(triage_by_query["U E Maung inscriptions"]["triage_status"], "secondary_or_unrelated")
+        for row in triage_rows:
+            self.assertIn("do not promote", row["recommended_action"].casefold())
+
     def test_direct_search_rows_include_search_status_metadata(self) -> None:
         rows = build_direct_query_search_rows(
             ["U E Maung"],
@@ -640,6 +761,40 @@ class TranslationWitnessVerificationTests(unittest.TestCase):
                 "notes": "",
             },
         ]
+        triage_rows = [
+            {
+                "hunt_table": "inscriptions_of_burma_text_volume_hunt",
+                "source_work_key": "lucePeMaungTinInscriptionsOfBurma",
+                "query": "Inscriptions of Burma text",
+                "matched_file_label": "a_list_of_inscriptions_found_in_burma_part_i.pdf",
+                "matched_file_id": "list-pdf",
+                "initial_match_type": "normalized_title_filename",
+                "initial_search_result_status": "candidate_found",
+                "triage_status": "cross_source_witness",
+                "triage_reason": "Separate List source work.",
+                "is_cross_source_match": "true",
+                "is_secondary_or_unrelated": "false",
+                "is_known_false_positive": "false",
+                "recommended_action": "Retain only as a reviewed cross-source List witness; continue searching for the Luce/Pe Maung Tin companion text volume.",
+                "notes": "",
+            },
+            {
+                "hunt_table": "missing_core_witness_hunt",
+                "source_work_key": "uemSelectionsPagan",
+                "query": "Selections from the Inscriptions of Pagan U E Maung",
+                "matched_file_label": "Luce 1928 inscriptions of Pagan.pdf",
+                "matched_file_id": "sip-pdf",
+                "initial_match_type": "normalized_title_filename",
+                "initial_search_result_status": "candidate_found",
+                "triage_status": "known_false_positive",
+                "triage_reason": "known SIP/UEM false positive",
+                "is_cross_source_match": "false",
+                "is_secondary_or_unrelated": "false",
+                "is_known_false_positive": "true",
+                "recommended_action": "Do not promote this file; retain it only as a reviewed SIP/UEM false positive and continue targeted U E Maung search.",
+                "notes": "",
+            },
+        ]
         report = build_verification_report(
             verification_rows,
             [{"witness_id": "w1"}, {"witness_id": "w2"}],
@@ -657,6 +812,7 @@ class TranslationWitnessVerificationTests(unittest.TestCase):
             [{"matched_file_label": "iob-text.pdf", "search_result_status": "candidate_found", "is_text_witness_candidate": "false", "false_positive_for_text": "true"}],
             [{"matched_file_label": "", "search_result_status": "not_found"}],
             [{"source_work_key": "uemSelectionsPagan", "query": "U E Maung", "search_result_status": "not_found"}],
+            triage_rows,
             [{"candidate_file_label": "111029.pdf"}],
             [{"file_label": "011041.pdf"}],
             [{"witness_id": "eb1"}],
@@ -669,6 +825,10 @@ class TranslationWitnessVerificationTests(unittest.TestCase):
         self.assertEqual(report["source_work_witness_gap_count"], 1)
         self.assertEqual(report["eb_fascicle_coverage_count"], 1)
         self.assertFalse(report["sip_sample_entry_inspected"])
+        self.assertEqual(report["witness_hunt_candidate_triage_count"], 2)
+        self.assertEqual(report["plausible_direct_candidate_count"], 0)
+        self.assertEqual(report["known_false_positive_hunt_count"], 1)
+        self.assertEqual(report["cross_source_or_secondary_hunt_count"], 1)
 
 
 if __name__ == "__main__":

@@ -58,6 +58,7 @@ EPIGRAPHIA_BIRMANICA_FASCICLE_COVERAGE_PATH = DISCOVERY_DIRECTORY / "epigraphia_
 INSCRIPTIONS_OF_BURMA_TEXT_SEARCH_PATH = DISCOVERY_DIRECTORY / "inscriptions_of_burma_text_witness_search.tsv"
 INSCRIPTIONS_OF_BURMA_TEXT_VOLUME_HUNT_PATH = DISCOVERY_DIRECTORY / "inscriptions_of_burma_text_volume_hunt.tsv"
 MISSING_CORE_WITNESS_HUNT_PATH = DISCOVERY_DIRECTORY / "missing_core_witness_hunt.tsv"
+WITNESS_HUNT_CANDIDATE_TRIAGE_PATH = DISCOVERY_DIRECTORY / "witness_hunt_candidate_triage.tsv"
 
 VERIFICATION_FIELDS = [
     "witness_id",
@@ -278,6 +279,23 @@ MISSING_CORE_WITNESS_HUNT_FIELDS = [
     "notes",
 ]
 
+WITNESS_HUNT_CANDIDATE_TRIAGE_FIELDS = [
+    "hunt_table",
+    "source_work_key",
+    "query",
+    "matched_file_label",
+    "matched_file_id",
+    "initial_match_type",
+    "initial_search_result_status",
+    "triage_status",
+    "triage_reason",
+    "is_cross_source_match",
+    "is_secondary_or_unrelated",
+    "is_known_false_positive",
+    "recommended_action",
+    "notes",
+]
+
 VERIFICATION_STATUSES = {
     "verified_direct_witness",
     "verified_plate_witness",
@@ -318,6 +336,22 @@ CONTENT_PROFILE_STATUSES = {
     "needs_manual_review",
     "not_applicable",
 }
+HUNT_CANDIDATE_TRIAGE_STATUSES = {
+    "plausible_direct_candidate",
+    "bibliographic_clue_only",
+    "known_false_positive",
+    "cross_source_witness",
+    "secondary_or_unrelated",
+    "too_broad_query_noise",
+    "needs_title_page_review",
+}
+NON_PROMOTABLE_HUNT_TRIAGE_STATUSES = {
+    "known_false_positive",
+    "cross_source_witness",
+    "secondary_or_unrelated",
+    "too_broad_query_noise",
+}
+PLAUSIBLE_HUNT_TRIAGE_STATUSES = {"plausible_direct_candidate", "needs_title_page_review"}
 MAX_SNIPPET_LENGTH = 220
 MAX_STORED_SNIPPET_LENGTH = 260
 
@@ -1447,6 +1481,48 @@ def query_support_snippet(query: str, file_record: dict) -> str:
     return ""
 
 
+def looks_like_iob_plate_file(text: str) -> bool:
+    normalized = normalize_for_match(text)
+    return "plates3 4 5" in normalized or "plates6 20" in normalized or "plates" in normalized
+
+
+def looks_like_iob_list_source(text: str) -> bool:
+    normalized = normalize_for_match(text)
+    return "a list of inscriptions found in burma" in normalized or "list of inscriptions found in burma" in normalized
+
+
+def looks_like_iob_secondary_article(text: str) -> bool:
+    normalized = normalize_for_match(text)
+    return "111029 pdf" in normalized or "chroniclletagaung" in normalized or "chronicle tangaung" in normalized
+
+
+def has_plausible_iob_text_signal(row: dict) -> bool:
+    signal = " ".join(
+        [
+            row.get("matched_file_label", ""),
+            row.get("short_evidence", ""),
+            row.get("notes", ""),
+        ]
+    )
+    normalized = normalize_for_match(signal)
+    return (
+        ("inscriptions of burma" in normalized or "inscriptionsofburma" in normalized)
+        and not looks_like_iob_plate_file(signal)
+        and not looks_like_iob_list_source(signal)
+        and not looks_like_iob_secondary_article(signal)
+    )
+
+
+def hunt_row_key(hunt_table: str, row: dict, *, default_source_work_key: str = "") -> tuple[str, str, str, str, str]:
+    return (
+        hunt_table,
+        row.get("source_work_key", default_source_work_key),
+        row.get("query", ""),
+        row.get("matched_file_id", ""),
+        row.get("matched_file_label", ""),
+    )
+
+
 def build_direct_query_search_rows(
     queries: list[str],
     file_records: dict[str, dict],
@@ -1750,6 +1826,7 @@ def build_source_work_gap_rows(
     core_search_rows: list[dict],
     epigraphia_review_rows: list[dict],
     iob_text_search_rows: list[dict],
+    witness_hunt_candidate_triage_rows: list[dict],
 ) -> list[dict]:
     candidate_by_source: dict[str, list[dict]] = defaultdict(list)
     verification_by_source: dict[str, list[dict]] = defaultdict(list)
@@ -1758,6 +1835,9 @@ def build_source_work_gap_rows(
         candidate_by_source[row["source_work_key"]].append(row)
     for row in verification_rows:
         verification_by_source[row["source_work_key"]].append(row)
+    triage_by_source: dict[str, list[dict]] = defaultdict(list)
+    for row in witness_hunt_candidate_triage_rows:
+        triage_by_source[row.get("source_work_key", "")].append(row)
 
     def best_candidate_for_source(source_key: str) -> tuple[str, str]:
         if source_key == "epigraphiaBirmanica":
@@ -1779,6 +1859,14 @@ def build_source_work_gap_rows(
                 reverse=True,
             )
             return preferred_verifications[0].get("witness_id", ""), preferred_verifications[0].get("candidate_file_label", "")
+        plausible_triage_rows = [
+            row
+            for row in triage_by_source.get(source_key, [])
+            if row.get("triage_status") in PLAUSIBLE_HUNT_TRIAGE_STATUSES and row.get("matched_file_label")
+        ]
+        if plausible_triage_rows:
+            plausible_triage_rows.sort(key=lambda row: (row.get("triage_status") == "plausible_direct_candidate", row.get("matched_file_label", "").casefold()), reverse=True)
+            return "", plausible_triage_rows[0].get("matched_file_label", "")
         for row in core_search_rows:
             if (
                 row.get("source_work_key") == source_key
@@ -1818,7 +1906,7 @@ def build_source_work_gap_rows(
             current_status = "needs_direct_witness"
             gap_type = "needs_direct_witness"
             next_action = "Keep SIP excluded and continue targeted U E Maung witness search."
-            notes = "The Luce/Pe Maung Tin 1928 SIP file remains a reviewed UEM false positive."
+            notes = "No direct U E Maung witness has been found; current broad-query hits resolve to Pe Maung Tin or Maung Gyi material plus the reviewed SIP false positive."
         elif source_key == "epigraphiaBirmanica" and verified_direct_count > 0:
             current_status = "verified_direct_witness_found_needs_content_inspection"
             gap_type = "has_verified_edition_but_translation_unknown"
@@ -1833,7 +1921,7 @@ def build_source_work_gap_rows(
             current_status = "verification_in_progress"
             gap_type = "has_verified_plate_but_needs_text"
             next_action = "Find the companion text volume before treating Inscriptions of Burma as text-covered."
-            notes = "Plate/facsimile witnesses are verified; matching plate volumes remain false positives for the missing text-witness gap."
+            notes = "Verified plate/facsimile witnesses exist, but the current text-volume hunt only yields cross-source leads, secondary/article matches, bibliographic clues, or false positives."
         elif source_key in {"tnInscriptionsPaganPinyaAva", "ppaCatalogue", "ubSourceFamily"} and best_candidate_file_label:
             current_status = "needs_title_page_review"
             gap_type = "needs_title_page_review"
@@ -2187,33 +2275,57 @@ def annotate_iob_text_search_rows(rows: list[dict]) -> list[dict]:
     annotated: list[dict] = []
     for row in rows:
         label = row.get("matched_file_label", "")
-        normalized_label = normalize_for_match(label)
-        is_plate = "plates3 4 5" in normalized_label or "plates6 20" in normalized_label or "plates" in normalized_label
-        is_text_candidate = bool(label) and not is_plate and row.get("search_result_status") in {"candidate_found", "direct_witness_found"}
+        context = " ".join([label, row.get("short_evidence", ""), row.get("notes", "")])
+        is_plate = looks_like_iob_plate_file(context)
+        is_list_source = looks_like_iob_list_source(context)
+        is_secondary_article = looks_like_iob_secondary_article(context)
+        is_text_candidate = (
+            bool(label)
+            and not is_plate
+            and not is_list_source
+            and not is_secondary_article
+            and row.get("search_result_status") in {"candidate_found", "direct_witness_found"}
+        )
         false_positive = bool(label) and is_plate
         notes = row.get("notes", "")
+        recommended_action = row.get("recommended_action", "")
+        reason_not_text_witness = ""
         if false_positive:
+            recommended_action = "Retain as a plate witness; continue searching for the companion text volume."
+            reason_not_text_witness = "plate/facsimile volume, not companion text volume"
             notes = compact_join(
                 [
                     notes,
                     "Plate/facsimile volume matched the text hunt but does not satisfy the missing text-witness requirement.",
                 ]
             )
+        elif is_list_source:
+            recommended_action = "Retain only as a reviewed cross-source List witness; continue searching for the Luce/Pe Maung Tin companion text volume."
+            reason_not_text_witness = "separate List source work, not the Luce/Pe Maung Tin companion text volume"
+            notes = compact_join(
+                [
+                    notes,
+                    "The matched file belongs to the separate List source work and cannot satisfy the Inscriptions of Burma text-volume hunt.",
+                ]
+            )
+        elif is_secondary_article:
+            recommended_action = "Retain only as a reviewed secondary/cross-source lead; continue searching for the Luce/Pe Maung Tin companion text volume."
+            reason_not_text_witness = "secondary Luce/Pe Maung Tin chronicle/article lead, not the companion text volume"
+            notes = compact_join(
+                [
+                    notes,
+                    "The matched file points to a Luce/Pe Maung Tin chronicle/article lead rather than the companion Inscriptions of Burma text volume.",
+                ]
+            )
         annotated.append(
             {
                 **row,
                 "search_result_status": row.get("search_result_status", "not_found"),
-                "recommended_action": (
-                    "Retain as a plate witness; continue searching for the companion text volume."
-                    if false_positive
-                    else row.get("recommended_action", "")
-                ),
+                "recommended_action": recommended_action,
                 "is_text_witness_candidate": bool_string(is_text_candidate),
                 "is_plate_witness_candidate": bool_string(is_plate),
                 "false_positive_for_text": bool_string(false_positive),
-                "reason_not_text_witness": (
-                    "plate/facsimile volume, not companion text volume" if false_positive else ""
-                ),
+                "reason_not_text_witness": reason_not_text_witness,
                 "notes": notes,
             }
         )
@@ -2278,6 +2390,151 @@ def build_search_hunt_rows(
             }
         )
     return rows
+
+
+def triage_missing_core_hunt_row(row: dict) -> dict:
+    source_work_key = row.get("source_work_key", "")
+    signal = " ".join(
+        [
+            row.get("query", ""),
+            row.get("matched_file_label", ""),
+            row.get("short_evidence", ""),
+            row.get("notes", ""),
+        ]
+    )
+    normalized = normalize_for_match(signal)
+    triage_status = "needs_title_page_review"
+    triage_reason = "Local title/path evidence still needs title-page confirmation before any direct-witness promotion."
+    recommended_action = "Inspect title page before promoting this as a direct witness."
+    is_cross_source_match = False
+    is_secondary_or_unrelated = False
+    is_known_false_positive = row.get("is_known_false_positive") == "true"
+    if is_known_false_positive:
+        triage_status = "known_false_positive"
+        triage_reason = row.get("false_positive_reason", "") or "Reviewed known false positive."
+        recommended_action = row.get("recommended_action", "") or "Do not promote this file; retain it only as a reviewed false positive."
+    elif source_work_key == "uemSelectionsPagan":
+        if "maunggyi1913" in normalized or "cavesculpture" in normalized or "maung gyi" in normalized:
+            triage_status = "too_broad_query_noise"
+            triage_reason = "Broad name-fragment query matched a Maung Gyi cave-sculpture article, not a U E Maung direct witness."
+            recommended_action = "Do not promote this broad-query hit; retain it only as reviewed query noise and continue targeted U E Maung search."
+            is_secondary_or_unrelated = True
+        elif "pemaungtin" in normalized or "sakaerapagan" in normalized or "oldwordsininscriptions" in normalized:
+            triage_status = "secondary_or_unrelated"
+            triage_reason = "Matched a Pe Maung Tin article/path signal rather than a U E Maung direct witness."
+            recommended_action = "Do not promote this file as a U E Maung direct witness; retain it only as a reviewed secondary/unrelated lead and continue targeted U E Maung search."
+            is_secondary_or_unrelated = True
+    elif source_work_key == "ubSourceFamily":
+        if "swere1965" in normalized or "stoneinscriptionssale" in normalized:
+            triage_status = "secondary_or_unrelated"
+            triage_reason = "Matched a later article-style work rather than the core Upper Burma direct witness."
+            recommended_action = "Do not promote this file as the core Upper Burma witness; retain it only as a reviewed secondary/unrelated lead and continue targeted search."
+            is_secondary_or_unrelated = True
+    return {
+        "hunt_table": "missing_core_witness_hunt",
+        "source_work_key": source_work_key,
+        "query": row.get("query", ""),
+        "matched_file_label": row.get("matched_file_label", ""),
+        "matched_file_id": row.get("matched_file_id", ""),
+        "initial_match_type": row.get("match_type", ""),
+        "initial_search_result_status": row.get("search_result_status", ""),
+        "triage_status": triage_status,
+        "triage_reason": triage_reason,
+        "is_cross_source_match": bool_string(is_cross_source_match),
+        "is_secondary_or_unrelated": bool_string(is_secondary_or_unrelated),
+        "is_known_false_positive": bool_string(is_known_false_positive),
+        "recommended_action": recommended_action,
+        "notes": compact_join([row.get("notes", ""), triage_reason], limit=4),
+    }
+
+
+def triage_iob_text_volume_hunt_row(row: dict) -> dict:
+    triage_status = "needs_title_page_review"
+    triage_reason = "IOB-specific title/path evidence is promising but still needs title-page confirmation."
+    recommended_action = "Inspect title page before promoting this as a direct witness."
+    is_cross_source_match = False
+    is_secondary_or_unrelated = False
+    is_known_false_positive = False
+    if row.get("false_positive_for_text") == "true":
+        triage_status = "known_false_positive"
+        triage_reason = row.get("reason_not_text_witness", "") or "Plate/facsimile false positive for the text-volume hunt."
+        recommended_action = row.get("recommended_action", "") or "Retain as a plate witness; continue searching for the companion text volume."
+        is_known_false_positive = True
+    elif looks_like_iob_list_source(" ".join([row.get("matched_file_label", ""), row.get("short_evidence", ""), row.get("notes", "")])):
+        triage_status = "cross_source_witness"
+        triage_reason = "Matched the separate List of Inscriptions source work, not the Luce/Pe Maung Tin companion text volume."
+        recommended_action = "Retain only as a reviewed cross-source List witness; continue searching for the Luce/Pe Maung Tin companion text volume."
+        is_cross_source_match = True
+    elif looks_like_iob_secondary_article(" ".join([row.get("matched_file_label", ""), row.get("short_evidence", ""), row.get("notes", "")])):
+        triage_status = "secondary_or_unrelated"
+        triage_reason = "Matched a Luce/Pe Maung Tin chronicle/article lead rather than the companion Inscriptions of Burma text volume."
+        recommended_action = "Retain only as a reviewed secondary/cross-source lead; continue searching for the Luce/Pe Maung Tin companion text volume."
+        is_secondary_or_unrelated = True
+    elif has_plausible_iob_text_signal(row):
+        triage_status = "plausible_direct_candidate"
+        triage_reason = "Matched an IOB-specific title/path signal without any plate, List, or secondary-work disqualifier."
+    return {
+        "hunt_table": "inscriptions_of_burma_text_volume_hunt",
+        "source_work_key": "lucePeMaungTinInscriptionsOfBurma",
+        "query": row.get("query", ""),
+        "matched_file_label": row.get("matched_file_label", ""),
+        "matched_file_id": row.get("matched_file_id", ""),
+        "initial_match_type": row.get("match_type", ""),
+        "initial_search_result_status": row.get("search_result_status", ""),
+        "triage_status": triage_status,
+        "triage_reason": triage_reason,
+        "is_cross_source_match": bool_string(is_cross_source_match),
+        "is_secondary_or_unrelated": bool_string(is_secondary_or_unrelated),
+        "is_known_false_positive": bool_string(is_known_false_positive),
+        "recommended_action": recommended_action,
+        "notes": compact_join([row.get("notes", ""), triage_reason], limit=4),
+    }
+
+
+def build_witness_hunt_candidate_triage_rows(
+    missing_core_witness_hunt_rows: list[dict],
+    iob_text_volume_hunt_rows: list[dict],
+) -> list[dict]:
+    rows: list[dict] = []
+    for row in missing_core_witness_hunt_rows:
+        if row.get("search_result_status") not in {"candidate_found", "direct_witness_found"} or not row.get("matched_file_label"):
+            continue
+        rows.append(triage_missing_core_hunt_row(row))
+    for row in iob_text_volume_hunt_rows:
+        if row.get("search_result_status") not in {"candidate_found", "direct_witness_found"} or not row.get("matched_file_label"):
+            continue
+        rows.append(triage_iob_text_volume_hunt_row(row))
+    return rows
+
+
+def apply_hunt_candidate_triage(
+    hunt_table: str,
+    rows: list[dict],
+    triage_rows: list[dict],
+) -> list[dict]:
+    default_source_key = "lucePeMaungTinInscriptionsOfBurma" if hunt_table == "inscriptions_of_burma_text_volume_hunt" else ""
+    triage_by_key = {
+        hunt_row_key(row.get("hunt_table", ""), row): row
+        for row in triage_rows
+    }
+    updated: list[dict] = []
+    for row in rows:
+        triage_row = triage_by_key.get(hunt_row_key(hunt_table, row, default_source_work_key=default_source_key))
+        if not triage_row:
+            updated.append(row)
+            continue
+        adjusted = {
+            **row,
+            "recommended_action": triage_row.get("recommended_action", row.get("recommended_action", "")),
+            "notes": compact_join([row.get("notes", ""), triage_row.get("triage_reason", "")], limit=4),
+        }
+        if hunt_table == "inscriptions_of_burma_text_volume_hunt" and triage_row.get("triage_status") in NON_PROMOTABLE_HUNT_TRIAGE_STATUSES:
+            adjusted["is_text_witness_candidate"] = "false"
+            adjusted["reason_not_text_witness"] = row.get("reason_not_text_witness", "") or triage_row.get("triage_reason", "")
+            if triage_row.get("triage_status") == "known_false_positive":
+                adjusted["false_positive_for_text"] = "true"
+        updated.append(adjusted)
+    return updated
 
 
 def build_source_witness_content_profile_rows(
@@ -2626,6 +2883,7 @@ def build_verification_report(
     iob_text_search_rows: list[dict],
     iob_text_volume_hunt_rows: list[dict],
     missing_core_witness_hunt_rows: list[dict],
+    witness_hunt_candidate_triage_rows: list[dict],
     rescue_review_rows: list[dict],
     epigraphia_review_rows: list[dict],
     epigraphia_fascicle_coverage_rows: list[dict],
@@ -2640,6 +2898,12 @@ def build_verification_report(
     sip_translation_status = "confirmed" if sip_content_profile.get("translation_status") == "confirmed" else "unconfirmed"
     sip_edition_status = "confirmed" if sip_content_profile.get("edition_status") == "confirmed" else "unconfirmed"
     eb_content_profiles = [row for row in source_witness_content_profile_rows if row.get("source_work_key") == "epigraphiaBirmanica"]
+    plausible_triage_count = sum(row.get("triage_status") in PLAUSIBLE_HUNT_TRIAGE_STATUSES for row in witness_hunt_candidate_triage_rows)
+    known_false_positive_hunt_count = sum(row.get("triage_status") == "known_false_positive" for row in witness_hunt_candidate_triage_rows)
+    cross_source_or_secondary_hunt_count = sum(
+        row.get("triage_status") in {"cross_source_witness", "secondary_or_unrelated", "too_broad_query_noise"}
+        for row in witness_hunt_candidate_triage_rows
+    )
     direct_witness_search_result_counts = {
         status: sum(row.get("search_result_status") == status for row in direct_search_rows)
         for status in DIRECT_SEARCH_RESULT_STATUSES
@@ -2693,6 +2957,10 @@ def build_verification_report(
         ),
         "inscriptions_of_burma_text_volume_hunt_count": len(iob_text_volume_hunt_rows),
         "missing_core_witness_hunt_count": len(missing_core_witness_hunt_rows),
+        "witness_hunt_candidate_triage_count": len(witness_hunt_candidate_triage_rows),
+        "plausible_direct_candidate_count": plausible_triage_count,
+        "known_false_positive_hunt_count": known_false_positive_hunt_count,
+        "cross_source_or_secondary_hunt_count": cross_source_or_secondary_hunt_count,
         "rescue_candidate_review_count": len(rescue_review_rows),
         "epigraphia_birmanica_review_count": len(epigraphia_review_rows),
         "eb_verified_fascicle_count": len(epigraphia_fascicle_coverage_rows),
@@ -2708,6 +2976,7 @@ def build_verification_report(
             "Verification is stricter than candidate discovery: exact title-page, contents, or OCR-heading evidence is required before promoting translation or edition claims.",
             "Failed OCR is tracked as unconfirmed/attempted, not as evidence that translation is absent.",
             "Weak filename matches are retained as reviewed evidence rather than silently deleted.",
+            "Broad hunt hits now pass through candidate triage before they can count toward direct-witness progress.",
         ],
     }
 
@@ -2761,6 +3030,7 @@ def verify_translation_witnesses(
     inscriptions_of_burma_text_search_path: Path = INSCRIPTIONS_OF_BURMA_TEXT_SEARCH_PATH,
     inscriptions_of_burma_text_volume_hunt_path: Path = INSCRIPTIONS_OF_BURMA_TEXT_VOLUME_HUNT_PATH,
     missing_core_witness_hunt_path: Path = MISSING_CORE_WITNESS_HUNT_PATH,
+    witness_hunt_candidate_triage_path: Path = WITNESS_HUNT_CANDIDATE_TRIAGE_PATH,
     witness_verification_report_path: Path = WITNESS_VERIFICATION_REPORT_PATH,
 ) -> dict:
     plan_rows = read_tsv(plan_path)
@@ -2924,6 +3194,20 @@ def verify_translation_witnesses(
             verification_rows,
         )
     ]
+    witness_hunt_candidate_triage_rows = build_witness_hunt_candidate_triage_rows(
+        missing_core_witness_hunt_rows,
+        iob_text_volume_hunt_rows,
+    )
+    iob_text_volume_hunt_rows = apply_hunt_candidate_triage(
+        "inscriptions_of_burma_text_volume_hunt",
+        iob_text_volume_hunt_rows,
+        witness_hunt_candidate_triage_rows,
+    )
+    missing_core_witness_hunt_rows = apply_hunt_candidate_triage(
+        "missing_core_witness_hunt",
+        missing_core_witness_hunt_rows,
+        witness_hunt_candidate_triage_rows,
+    )
     rescue_review_rows = build_rescue_candidate_review_rows(file_records, missing_search_rows)
     source_witness_content_profile_rows = build_source_witness_content_profile_rows(
         verification_rows,
@@ -2943,6 +3227,7 @@ def verify_translation_witnesses(
         core_search_rows,
         epigraphia_review_rows,
         iob_text_search_rows,
+        witness_hunt_candidate_triage_rows,
     )
 
     updated_classification_rows = update_classification_rows(classification_rows, verification_rows)
@@ -2977,6 +3262,7 @@ def verify_translation_witnesses(
         iob_text_search_rows,
         iob_text_volume_hunt_rows,
         missing_core_witness_hunt_rows,
+        witness_hunt_candidate_triage_rows,
         rescue_review_rows,
         epigraphia_review_rows,
         epigraphia_fascicle_coverage_rows,
@@ -3002,6 +3288,7 @@ def verify_translation_witnesses(
     write_tsv(inscriptions_of_burma_text_search_path, iob_text_search_rows, INSCRIPTIONS_OF_BURMA_TEXT_SEARCH_FIELDS)
     write_tsv(inscriptions_of_burma_text_volume_hunt_path, iob_text_volume_hunt_rows, INSCRIPTIONS_OF_BURMA_TEXT_VOLUME_HUNT_FIELDS)
     write_tsv(missing_core_witness_hunt_path, missing_core_witness_hunt_rows, MISSING_CORE_WITNESS_HUNT_FIELDS)
+    write_tsv(witness_hunt_candidate_triage_path, witness_hunt_candidate_triage_rows, WITNESS_HUNT_CANDIDATE_TRIAGE_FIELDS)
     write_tsv(rescue_candidate_review_path, rescue_review_rows, RESCUE_CANDIDATE_REVIEW_FIELDS)
     write_tsv(epigraphia_birmanica_review_path, epigraphia_review_rows, EPIGRAPHIA_BIRMANICA_REVIEW_FIELDS)
     write_tsv(epigraphia_birmanica_fascicle_coverage_path, epigraphia_fascicle_coverage_rows, EPIGRAPHIA_BIRMANICA_FASCICLE_COVERAGE_FIELDS)
@@ -3043,6 +3330,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--inscriptions-of-burma-text-search", type=Path, default=INSCRIPTIONS_OF_BURMA_TEXT_SEARCH_PATH)
     parser.add_argument("--inscriptions-of-burma-text-volume-hunt", type=Path, default=INSCRIPTIONS_OF_BURMA_TEXT_VOLUME_HUNT_PATH)
     parser.add_argument("--missing-core-witness-hunt", type=Path, default=MISSING_CORE_WITNESS_HUNT_PATH)
+    parser.add_argument("--witness-hunt-candidate-triage", type=Path, default=WITNESS_HUNT_CANDIDATE_TRIAGE_PATH)
     parser.add_argument("--witness-verification-report", type=Path, default=WITNESS_VERIFICATION_REPORT_PATH)
     return parser.parse_args()
 
@@ -3077,6 +3365,7 @@ def main() -> None:
         inscriptions_of_burma_text_search_path=args.inscriptions_of_burma_text_search,
         inscriptions_of_burma_text_volume_hunt_path=args.inscriptions_of_burma_text_volume_hunt,
         missing_core_witness_hunt_path=args.missing_core_witness_hunt,
+        witness_hunt_candidate_triage_path=args.witness_hunt_candidate_triage,
         witness_verification_report_path=args.witness_verification_report,
     )
     print(json.dumps(report, ensure_ascii=False, indent=2))
