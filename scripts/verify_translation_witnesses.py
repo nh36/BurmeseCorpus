@@ -52,6 +52,8 @@ MANUAL_REVIEW_QUEUE_PATH = DISCOVERY_DIRECTORY / "manual_review_queue.tsv"
 RULED_OUT_WITNESS_CANDIDATES_PATH = DISCOVERY_DIRECTORY / "ruled_out_witness_candidates.tsv"
 EXTERNAL_CATALOGUE_SEARCH_LOG_PATH = DISCOVERY_DIRECTORY / "external_catalogue_search_log.tsv"
 EXTERNAL_CATALOGUE_CANDIDATE_TRIAGE_PATH = DISCOVERY_DIRECTORY / "external_catalogue_candidate_triage.tsv"
+DIRECT_WITNESS_ACQUISITION_STATUS_PATH = DISCOVERY_DIRECTORY / "direct_witness_acquisition_status.tsv"
+ACQUISITION_ACTION_QUEUE_PATH = DISCOVERY_DIRECTORY / "acquisition_action_queue.tsv"
 SIP_WITNESS_INSPECTION_PATH = DISCOVERY_DIRECTORY / "sip_witness_inspection.tsv"
 SOURCE_WITNESS_CONTENT_PROFILE_PATH = DISCOVERY_DIRECTORY / "source_witness_content_profile.tsv"
 EB_FASCICLE_CONTENT_INSPECTION_PATH = DISCOVERY_DIRECTORY / "eb_fascicle_content_inspection.tsv"
@@ -203,6 +205,33 @@ EXTERNAL_CATALOGUE_CANDIDATE_TRIAGE_FIELDS = [
     "is_authoritative_record",
     "is_cross_source_or_secondary",
     "recommended_action",
+    "notes",
+]
+
+DIRECT_WITNESS_ACQUISITION_STATUS_FIELDS = [
+    "source_work_key",
+    "canonical_title",
+    "local_direct_witness_status",
+    "external_catalogue_status",
+    "acquisition_status",
+    "translation_coverage_status",
+    "edition_or_text_status",
+    "current_blocker",
+    "next_action",
+    "priority",
+    "notes",
+]
+
+ACQUISITION_ACTION_QUEUE_FIELDS = [
+    "action_id",
+    "source_work_key",
+    "action_type",
+    "target_record_or_work",
+    "authority_evidence",
+    "what_to_do_next",
+    "success_condition",
+    "blocked_by",
+    "priority",
     "notes",
 ]
 
@@ -462,6 +491,32 @@ EXTERNAL_CATALOGUE_TRIAGE_STATUSES = {
 }
 CATALOGUE_RECORD_GAP_TYPES = {"has_authoritative_catalogue_record_needs_acquisition"}
 ACQUISITION_REVIEW_GAP_TYPES = OPEN_DIRECT_WITNESS_GAP_TYPES | CATALOGUE_RECORD_GAP_TYPES
+LOCAL_DIRECT_WITNESS_STATUSES = {
+    "local_direct_witness_verified",
+    "local_plate_witness_only",
+    "no_local_direct_witness",
+    "local_direct_witness_needs_content_review",
+}
+EXTERNAL_CATALOGUE_STATUSES = {
+    "authoritative_catalogue_record_found",
+    "bibliographic_clue_only",
+    "ambiguous_or_cross_source_hits_only",
+    "no_external_match_found",
+    "not_needed_for_current_step",
+}
+ACQUISITION_STATUSES = {
+    "local_witness_available",
+    "needs_local_copy_or_scan",
+    "needs_authoritative_catalogue_record",
+    "needs_manual_content_review",
+    "needs_source_identity_resolution",
+}
+TRANSLATION_COVERAGE_STATUSES = {
+    "confirmed",
+    "unconfirmed",
+    "not_applicable_for_plate_only",
+    "needs_manual_review",
+}
 MAX_SNIPPET_LENGTH = 220
 MAX_STORED_SNIPPET_LENGTH = 260
 
@@ -2864,6 +2919,175 @@ def build_manual_review_queue_rows(
     return queue_rows
 
 
+def build_direct_witness_acquisition_status_rows(
+    source_rows: list[dict[str, str]],
+    gap_rows: list[dict[str, str]],
+    direct_witness_acquisition_plan_rows: list[dict[str, str]],
+    source_witness_content_profile_rows: list[dict[str, str]],
+    external_catalogue_search_log_rows: list[dict[str, str]],
+    external_catalogue_candidate_triage_rows: list[dict[str, str]],
+) -> list[dict[str, str]]:
+    gap_by_source = {row.get("source_work_key", ""): row for row in gap_rows}
+    plan_by_source = {row.get("source_work_key", ""): row for row in direct_witness_acquisition_plan_rows}
+    profile_by_source: dict[str, list[dict[str, str]]] = defaultdict(list)
+    for row in source_witness_content_profile_rows:
+        profile_by_source[row.get("source_work_key", "")].append(row)
+    external_log_by_source: dict[str, list[dict[str, str]]] = defaultdict(list)
+    for row in external_catalogue_search_log_rows:
+        external_log_by_source[row.get("source_work_key", "")].append(row)
+    external_triage_by_source: dict[str, list[dict[str, str]]] = defaultdict(list)
+    for row in external_catalogue_candidate_triage_rows:
+        external_triage_by_source[row.get("source_work_key", "")].append(row)
+
+    def external_status_for_source(source_key: str) -> str:
+        triage_rows = external_triage_by_source.get(source_key, [])
+        log_rows = external_log_by_source.get(source_key, [])
+        if source_key in {"sipSelectionsPagan", "epigraphiaBirmanica"}:
+            return "not_needed_for_current_step"
+        if any(row.get("is_authoritative_record") == "true" for row in triage_rows):
+            return "authoritative_catalogue_record_found"
+        if any(row.get("triage_status") == "bibliographic_clue_only" for row in triage_rows):
+            return "bibliographic_clue_only"
+        if any(row.get("triage_status") in {"needs_human_review", "cross_source_or_secondary"} for row in triage_rows):
+            return "ambiguous_or_cross_source_hits_only"
+        if any(row.get("result_status") != "no_match" for row in log_rows):
+            return "ambiguous_or_cross_source_hits_only"
+        return "no_external_match_found"
+
+    def local_status_for_source(source_key: str) -> str:
+        gap_row = gap_by_source.get(source_key, {})
+        profiles = profile_by_source.get(source_key, [])
+        if source_key == "lucePeMaungTinInscriptionsOfBurma" and gap_row.get("verified_plate_witness_count", "0") not in {"", "0"}:
+            return "local_plate_witness_only"
+        if any(row.get("verified_witness_type") != "plate_volume" for row in profiles):
+            if any(row.get("translation_status") != "confirmed" for row in profiles):
+                return "local_direct_witness_needs_content_review"
+            return "local_direct_witness_verified"
+        if gap_row.get("current_status", "") in {"verified_direct_witness_found", "verified_direct_witness_found_needs_content_inspection"}:
+            return "local_direct_witness_needs_content_review"
+        return "no_local_direct_witness"
+
+    status_rows: list[dict[str, str]] = []
+    for source_row in source_rows:
+        source_key = source_row.get("source_work_key", "")
+        if source_key not in set(DIRECT_WITNESS_ACQUISITION_SOURCE_KEYS + FOLLOW_ON_ACQUISITION_SOURCE_KEYS):
+            continue
+        gap_row = gap_by_source.get(source_key, {})
+        plan_row = plan_by_source.get(source_key, {})
+        profiles = profile_by_source.get(source_key, [])
+        local_status = local_status_for_source(source_key)
+        external_status = external_status_for_source(source_key)
+        if any(row.get("translation_status") == "confirmed" for row in profiles):
+            translation_status = "confirmed"
+        elif source_key in {"sipSelectionsPagan", "epigraphiaBirmanica"}:
+            translation_status = "needs_manual_review"
+        elif local_status == "local_plate_witness_only" and source_key != "lucePeMaungTinInscriptionsOfBurma":
+            translation_status = "not_applicable_for_plate_only"
+        else:
+            translation_status = "unconfirmed"
+
+        if local_status in {"local_direct_witness_verified", "local_direct_witness_needs_content_review"}:
+            acquisition_status = "needs_manual_content_review" if translation_status == "needs_manual_review" else "local_witness_available"
+        elif external_status == "authoritative_catalogue_record_found":
+            acquisition_status = "needs_local_copy_or_scan"
+        else:
+            acquisition_status = "needs_authoritative_catalogue_record"
+
+        if source_key == "lucePeMaungTinInscriptionsOfBurma":
+            edition_or_text_status = "Verified plate portfolios only; companion text witness not yet acquired"
+            current_blocker = "Authoritative catalogue lead exists, but no local companion text witness has been acquired"
+        elif source_key == "sipSelectionsPagan":
+            edition_or_text_status = "Verified local edition witness"
+            current_blocker = "Local witness is present, but translation-bearing content remains unreviewed"
+        elif source_key == "epigraphiaBirmanica":
+            edition_or_text_status = "Verified local fascicles; translation-bearing sections still unreviewed"
+            current_blocker = "Local fascicles are verified, but explicit translation evidence has not been confirmed"
+        else:
+            edition_or_text_status = "No verified local edition/text witness"
+            current_blocker = gap_row.get("notes", "") or plan_row.get("notes", "") or "Authoritative catalogue record still needed"
+
+        status_rows.append(
+            {
+                "source_work_key": source_key,
+                "canonical_title": source_row.get("canonical_title", ""),
+                "local_direct_witness_status": local_status,
+                "external_catalogue_status": external_status,
+                "acquisition_status": acquisition_status,
+                "translation_coverage_status": translation_status,
+                "edition_or_text_status": edition_or_text_status,
+                "current_blocker": shorten_evidence(current_blocker, max_length=240),
+                "next_action": plan_row.get("recommended_next_action", "") or gap_row.get("next_action", ""),
+                "priority": plan_row.get("priority", "") or gap_row.get("priority", "") or source_row.get("priority", ""),
+                "notes": gap_row.get("notes", "") or plan_row.get("notes", ""),
+            }
+        )
+    return status_rows
+
+
+def build_acquisition_action_queue_rows(
+    direct_witness_acquisition_status_rows: list[dict[str, str]],
+    external_catalogue_search_log_rows: list[dict[str, str]],
+) -> list[dict[str, str]]:
+    status_by_source = {row.get("source_work_key", ""): row for row in direct_witness_acquisition_status_rows}
+    external_log_by_source: dict[str, list[dict[str, str]]] = defaultdict(list)
+    for row in external_catalogue_search_log_rows:
+        external_log_by_source[row.get("source_work_key", "")].append(row)
+
+    queue_rows: list[dict[str, str]] = []
+    for source_key in DIRECT_WITNESS_ACQUISITION_SOURCE_KEYS:
+        status_row = status_by_source.get(source_key)
+        if not status_row:
+            continue
+        if source_key == "lucePeMaungTinInscriptionsOfBurma":
+            berkeley_row = next(
+                (
+                    row
+                    for row in external_log_by_source.get(source_key, [])
+                    if row.get("match_assessment") == "authoritative_catalogue_record"
+                ),
+                {},
+            )
+            queue_rows.append(
+                {
+                    "action_id": "iob-berkeley-acquire-local-copy",
+                    "source_work_key": source_key,
+                    "action_type": "acquire_local_copy_or_scan",
+                    "target_record_or_work": "UC Berkeley Library record for Inscriptions of Burma",
+                    "authority_evidence": shorten_evidence(
+                        compact_join(
+                            [
+                                berkeley_row.get("candidate_url_or_identifier", ""),
+                                berkeley_row.get("evidence_snippet", ""),
+                            ],
+                            limit=4,
+                        ),
+                        max_length=240,
+                    ),
+                    "what_to_do_next": "Use the Berkeley catalogue lead to locate a local copy, legally usable scan, or holding location for the companion text volume.",
+                    "success_condition": "A local text witness is acquired or a legally usable scan/location is identified.",
+                    "blocked_by": status_row.get("current_blocker", ""),
+                    "priority": status_row.get("priority", ""),
+                    "notes": "Do not conflate this acquisition target with the already verified plate portfolios.",
+                }
+            )
+            continue
+        queue_rows.append(
+            {
+                "action_id": f"{slugify_fragment(source_key)}-locate-authoritative-record",
+                "source_work_key": source_key,
+                "action_type": "locate_authoritative_catalogue_record",
+                "target_record_or_work": status_row.get("canonical_title", ""),
+                "authority_evidence": shorten_evidence(status_row.get("current_blocker", ""), max_length=240),
+                "what_to_do_next": status_row.get("next_action", ""),
+                "success_condition": "A catalogue record names the expected source work clearly enough to distinguish it from known false positives or cross-source records.",
+                "blocked_by": status_row.get("current_blocker", ""),
+                "priority": status_row.get("priority", ""),
+                "notes": "",
+            }
+        )
+    return queue_rows
+
+
 def build_ruled_out_witness_candidate_rows(
     witness_hunt_candidate_triage_rows: list[dict[str, str]],
     rescue_candidate_review_rows: list[dict[str, str]],
@@ -3946,6 +4170,8 @@ def build_verification_report(
     ruled_out_witness_candidate_rows: list[dict],
     external_catalogue_search_log_rows: list[dict[str, str]],
     external_catalogue_candidate_triage_rows: list[dict[str, str]],
+    direct_witness_acquisition_status_rows: list[dict[str, str]],
+    acquisition_action_queue_rows: list[dict[str, str]],
     rescue_review_rows: list[dict],
     epigraphia_review_rows: list[dict],
     epigraphia_fascicle_coverage_rows: list[dict],
@@ -3968,6 +4194,28 @@ def build_verification_report(
     )
     authoritative_catalogue_record_count = sum(
         row.get("is_authoritative_record") == "true" for row in external_catalogue_candidate_triage_rows
+    )
+    direct_witness_acquisition_status_count = len(direct_witness_acquisition_status_rows)
+    source_works_still_needing_direct_witness = sum(
+        row.get("local_direct_witness_status") == "no_local_direct_witness"
+        for row in direct_witness_acquisition_status_rows
+    )
+    source_works_needing_authoritative_catalogue_record_count = sum(
+        row.get("acquisition_status") == "needs_authoritative_catalogue_record"
+        for row in direct_witness_acquisition_status_rows
+    )
+    source_works_with_authoritative_catalogue_record_needing_local_copy_count = sum(
+        row.get("acquisition_status") == "needs_local_copy_or_scan"
+        for row in direct_witness_acquisition_status_rows
+    )
+    source_works_needing_manual_content_review_count = sum(
+        row.get("acquisition_status") == "needs_manual_content_review"
+        for row in direct_witness_acquisition_status_rows
+    )
+    source_works_with_local_direct_witness_but_translation_unconfirmed_count = sum(
+        row.get("local_direct_witness_status") in {"local_direct_witness_verified", "local_direct_witness_needs_content_review"}
+        and row.get("translation_coverage_status") in {"unconfirmed", "needs_manual_review"}
+        for row in direct_witness_acquisition_status_rows
     )
     direct_witness_search_result_counts = {
         status: sum(row.get("search_result_status") == status for row in direct_search_rows)
@@ -3993,10 +4241,7 @@ def build_verification_report(
                 if row["verification_status"] in {"verified_direct_witness", "verified_catalogue_witness"}
             }
         ),
-        "source_works_still_needing_direct_witness": sum(
-            row["gap_type"] in {"needs_direct_witness", "needs_title_page_review", "has_verified_plate_but_needs_text"}
-            for row in gap_rows
-        ),
+        "source_works_still_needing_direct_witness": source_works_still_needing_direct_witness,
         "sip_inspection_completed": bool(sip_inspection_rows),
         "sip_title_page_inspected": sip_title_page_inspected,
         "sip_contents_inspected": sip_contents_inspected,
@@ -4028,7 +4273,13 @@ def build_verification_report(
         "ruled_out_witness_candidate_count": len(ruled_out_witness_candidate_rows),
         "external_catalogue_search_log_count": len(external_catalogue_search_log_rows),
         "external_catalogue_candidate_triage_count": len(external_catalogue_candidate_triage_rows),
+        "acquisition_status_count": direct_witness_acquisition_status_count,
+        "acquisition_action_queue_count": len(acquisition_action_queue_rows),
         "authoritative_catalogue_record_count": authoritative_catalogue_record_count,
+        "source_works_needing_authoritative_catalogue_record_count": source_works_needing_authoritative_catalogue_record_count,
+        "source_works_with_authoritative_catalogue_record_needing_local_copy_count": source_works_with_authoritative_catalogue_record_needing_local_copy_count,
+        "source_works_needing_manual_content_review_count": source_works_needing_manual_content_review_count,
+        "source_works_with_local_direct_witness_but_translation_unconfirmed_count": source_works_with_local_direct_witness_but_translation_unconfirmed_count,
         "plausible_direct_candidate_count": plausible_triage_count,
         "known_false_positive_hunt_count": known_false_positive_hunt_count,
         "cross_source_or_secondary_hunt_count": cross_source_or_secondary_hunt_count,
@@ -4049,6 +4300,7 @@ def build_verification_report(
             "Weak filename matches are retained as reviewed evidence rather than silently deleted.",
             "Broad hunt hits now pass through candidate triage before they can count toward direct-witness progress.",
             "With zero plausible direct candidates from the broad hunts, follow-on work now moves to the direct-witness acquisition plan and manual review queue.",
+            "Inscriptions of Burma now splits cleanly between verified plate witnesses and a separate acquisition step: an authoritative Berkeley catalogue record exists, but the local companion text witness is still missing.",
         ],
     }
 
@@ -4108,6 +4360,8 @@ def verify_translation_witnesses(
     ruled_out_witness_candidates_path: Path = RULED_OUT_WITNESS_CANDIDATES_PATH,
     external_catalogue_search_log_path: Path = EXTERNAL_CATALOGUE_SEARCH_LOG_PATH,
     external_catalogue_candidate_triage_path: Path = EXTERNAL_CATALOGUE_CANDIDATE_TRIAGE_PATH,
+    direct_witness_acquisition_status_path: Path = DIRECT_WITNESS_ACQUISITION_STATUS_PATH,
+    acquisition_action_queue_path: Path = ACQUISITION_ACTION_QUEUE_PATH,
     witness_verification_report_path: Path = WITNESS_VERIFICATION_REPORT_PATH,
 ) -> dict:
     plan_rows = read_tsv(plan_path)
@@ -4327,6 +4581,18 @@ def verify_translation_witnesses(
         gap_rows,
         source_witness_content_profile_rows,
     )
+    direct_witness_acquisition_status_rows = build_direct_witness_acquisition_status_rows(
+        source_rows,
+        gap_rows,
+        direct_witness_acquisition_plan_rows,
+        source_witness_content_profile_rows,
+        external_catalogue_search_log_rows,
+        external_catalogue_candidate_triage_rows,
+    )
+    acquisition_action_queue_rows = build_acquisition_action_queue_rows(
+        direct_witness_acquisition_status_rows,
+        external_catalogue_search_log_rows,
+    )
     ruled_out_witness_candidate_rows = build_ruled_out_witness_candidate_rows(
         witness_hunt_candidate_triage_rows,
         rescue_review_rows,
@@ -4373,6 +4639,8 @@ def verify_translation_witnesses(
         ruled_out_witness_candidate_rows,
         external_catalogue_search_log_rows,
         external_catalogue_candidate_triage_rows,
+        direct_witness_acquisition_status_rows,
+        acquisition_action_queue_rows,
         rescue_review_rows,
         epigraphia_review_rows,
         epigraphia_fascicle_coverage_rows,
@@ -4404,6 +4672,8 @@ def verify_translation_witnesses(
     write_tsv(ruled_out_witness_candidates_path, ruled_out_witness_candidate_rows, RULED_OUT_WITNESS_CANDIDATE_FIELDS)
     write_tsv(external_catalogue_search_log_path, external_catalogue_search_log_rows, EXTERNAL_CATALOGUE_SEARCH_LOG_FIELDS)
     write_tsv(external_catalogue_candidate_triage_path, external_catalogue_candidate_triage_rows, EXTERNAL_CATALOGUE_CANDIDATE_TRIAGE_FIELDS)
+    write_tsv(direct_witness_acquisition_status_path, direct_witness_acquisition_status_rows, DIRECT_WITNESS_ACQUISITION_STATUS_FIELDS)
+    write_tsv(acquisition_action_queue_path, acquisition_action_queue_rows, ACQUISITION_ACTION_QUEUE_FIELDS)
     write_tsv(rescue_candidate_review_path, rescue_review_rows, RESCUE_CANDIDATE_REVIEW_FIELDS)
     write_tsv(epigraphia_birmanica_review_path, epigraphia_review_rows, EPIGRAPHIA_BIRMANICA_REVIEW_FIELDS)
     write_tsv(epigraphia_birmanica_fascicle_coverage_path, epigraphia_fascicle_coverage_rows, EPIGRAPHIA_BIRMANICA_FASCICLE_COVERAGE_FIELDS)
@@ -4451,6 +4721,8 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--ruled-out-witness-candidates", type=Path, default=RULED_OUT_WITNESS_CANDIDATES_PATH)
     parser.add_argument("--external-catalogue-search-log", type=Path, default=EXTERNAL_CATALOGUE_SEARCH_LOG_PATH)
     parser.add_argument("--external-catalogue-candidate-triage", type=Path, default=EXTERNAL_CATALOGUE_CANDIDATE_TRIAGE_PATH)
+    parser.add_argument("--direct-witness-acquisition-status", type=Path, default=DIRECT_WITNESS_ACQUISITION_STATUS_PATH)
+    parser.add_argument("--acquisition-action-queue", type=Path, default=ACQUISITION_ACTION_QUEUE_PATH)
     parser.add_argument("--witness-verification-report", type=Path, default=WITNESS_VERIFICATION_REPORT_PATH)
     return parser.parse_args()
 
@@ -4491,6 +4763,8 @@ def main() -> None:
         ruled_out_witness_candidates_path=args.ruled_out_witness_candidates,
         external_catalogue_search_log_path=args.external_catalogue_search_log,
         external_catalogue_candidate_triage_path=args.external_catalogue_candidate_triage,
+        direct_witness_acquisition_status_path=args.direct_witness_acquisition_status,
+        acquisition_action_queue_path=args.acquisition_action_queue,
         witness_verification_report_path=args.witness_verification_report,
     )
     print(json.dumps(report, ensure_ascii=False, indent=2))

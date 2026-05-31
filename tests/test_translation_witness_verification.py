@@ -11,6 +11,8 @@ if str(SCRIPTS_DIR) not in sys.path:
     sys.path.insert(0, str(SCRIPTS_DIR))
 
 from verify_translation_witnesses import (
+    build_acquisition_action_queue_rows,
+    build_direct_witness_acquisition_status_rows,
     SIP_WITNESS_ID,
     annotate_iob_text_search_rows,
     build_direct_witness_acquisition_plan_rows,
@@ -951,10 +953,53 @@ class TranslationWitnessVerificationTests(unittest.TestCase):
             {
                 "source_work_key": "uemSelectionsPagan",
                 "canonical_title": "Selections from the Inscriptions of Pagan",
+                "source_family_or_acronym": "UEM",
+                "target_witness_needed": "Direct U E Maung witness",
+                "known_or_expected_author_editor": "U E Maung (ed.)",
+                "known_or_expected_year": "1958",
+                "known_or_expected_publisher_or_series": "unknown",
+                "known_variant_titles": "",
+                "local_search_status": "no_local_direct_witness",
+                "local_candidates_ruled_out": "",
+                "bibliographic_clues": "",
+                "likely_external_catalogues_or_repositories": "WorldCat",
+                "priority": "high",
+                "recommended_next_action": "Continue targeted catalogue search.",
+                "notes": "No direct U E Maung witness found yet.",
             },
             {
                 "source_work_key": "lucePeMaungTinInscriptionsOfBurma",
                 "canonical_title": "Inscriptions of Burma",
+                "source_family_or_acronym": "IOB",
+                "target_witness_needed": "Companion text volume",
+                "known_or_expected_author_editor": "G. H. Luce and U Pe Maung Tin",
+                "known_or_expected_year": "1933-1956",
+                "known_or_expected_publisher_or_series": "Oxford University Press, H. Milford",
+                "known_variant_titles": "",
+                "local_search_status": "verified_plate_witness_only",
+                "local_candidates_ruled_out": "",
+                "bibliographic_clues": "",
+                "likely_external_catalogues_or_repositories": "UC Berkeley Library;WorldCat",
+                "priority": "high",
+                "recommended_next_action": "Use the Berkeley catalogue lead to locate a local copy.",
+                "notes": "Plate portfolios are verified, but the companion text is missing.",
+            },
+            {
+                "source_work_key": "sipSelectionsPagan",
+                "canonical_title": "Selections from the Inscriptions of Pagan",
+                "source_family_or_acronym": "SIP",
+                "target_witness_needed": "Manual review of verified local witness content",
+                "known_or_expected_author_editor": "Pe Maung Tin and G. H. Luce",
+                "known_or_expected_year": "1928",
+                "known_or_expected_publisher_or_series": "unknown",
+                "known_variant_titles": "",
+                "local_search_status": "verified_direct_witness_translation_unconfirmed",
+                "local_candidates_ruled_out": "",
+                "bibliographic_clues": "",
+                "likely_external_catalogues_or_repositories": "not needed",
+                "priority": "medium",
+                "recommended_next_action": "Review the verified local witness without inferring translation from generic English prose.",
+                "notes": "",
             },
         ]
         manual_review_rows = [
@@ -980,6 +1025,7 @@ class TranslationWitnessVerificationTests(unittest.TestCase):
         )
         external_catalogue_log_rows = build_external_catalogue_search_log_rows(
             [
+                source_row(),
                 source_row(
                     source_work_key="uemSelectionsPagan",
                     canonical_title="Selections from the Inscriptions of Pagan",
@@ -995,6 +1041,55 @@ class TranslationWitnessVerificationTests(unittest.TestCase):
             ]
         )
         external_catalogue_triage_rows = build_external_catalogue_candidate_triage_rows(external_catalogue_log_rows)
+        acquisition_status_rows = build_direct_witness_acquisition_status_rows(
+            [
+                source_row(),
+                source_row(
+                    source_work_key="uemSelectionsPagan",
+                    canonical_title="Selections from the Inscriptions of Pagan",
+                    short_title="UEM",
+                    authors_editors="U E Maung (ed.)",
+                ),
+                source_row(
+                    source_work_key="lucePeMaungTinInscriptionsOfBurma",
+                    canonical_title="Inscriptions of Burma",
+                    short_title="IOB",
+                    authors_editors="G. H. Luce and U Pe Maung Tin",
+                ),
+            ],
+            [
+                {
+                    "source_work_key": "uemSelectionsPagan",
+                    "canonical_title": "Selections from the Inscriptions of Pagan",
+                    "gap_type": "needs_direct_witness",
+                    "current_status": "needs_direct_witness",
+                    "notes": "No direct U E Maung witness found yet.",
+                },
+                {
+                    "source_work_key": "lucePeMaungTinInscriptionsOfBurma",
+                    "canonical_title": "Inscriptions of Burma",
+                    "gap_type": "has_authoritative_catalogue_record_needs_acquisition",
+                    "current_status": "authoritative_catalogue_record_found",
+                    "verified_plate_witness_count": "1",
+                    "notes": "UC Berkeley Library record identifies the text volume, but the local corpus still lacks the companion text witness.",
+                },
+                {
+                    "source_work_key": "sipSelectionsPagan",
+                    "canonical_title": "Selections from the Inscriptions of Pagan",
+                    "gap_type": "has_verified_edition_but_translation_unknown",
+                    "current_status": "verified_direct_witness_found",
+                    "notes": "Local SIP witness verified; translation remains unconfirmed.",
+                },
+            ],
+            acquisition_rows,
+            content_profile_rows,
+            external_catalogue_log_rows,
+            external_catalogue_triage_rows,
+        )
+        acquisition_action_queue_rows = build_acquisition_action_queue_rows(
+            acquisition_status_rows,
+            external_catalogue_log_rows,
+        )
         report = build_verification_report(
             verification_rows,
             [{"witness_id": "w1"}, {"witness_id": "w2"}],
@@ -1018,6 +1113,8 @@ class TranslationWitnessVerificationTests(unittest.TestCase):
             ruled_out_rows,
             external_catalogue_log_rows,
             external_catalogue_triage_rows,
+            acquisition_status_rows,
+            acquisition_action_queue_rows,
             [{"candidate_file_label": "111029.pdf"}],
             [{"file_label": "011041.pdf"}],
             [{"witness_id": "eb1"}],
@@ -1031,12 +1128,18 @@ class TranslationWitnessVerificationTests(unittest.TestCase):
         self.assertEqual(report["eb_fascicle_coverage_count"], 1)
         self.assertFalse(report["sip_sample_entry_inspected"])
         self.assertEqual(report["witness_hunt_candidate_triage_count"], 2)
-        self.assertEqual(report["direct_witness_acquisition_plan_count"], 2)
+        self.assertEqual(report["direct_witness_acquisition_plan_count"], 3)
         self.assertEqual(report["manual_review_queue_count"], 2)
         self.assertEqual(report["ruled_out_witness_candidate_count"], len(ruled_out_rows))
         self.assertEqual(report["external_catalogue_search_log_count"], len(external_catalogue_log_rows))
         self.assertEqual(report["external_catalogue_candidate_triage_count"], len(external_catalogue_triage_rows))
+        self.assertEqual(report["acquisition_status_count"], len(acquisition_status_rows))
+        self.assertEqual(report["acquisition_action_queue_count"], len(acquisition_action_queue_rows))
         self.assertGreaterEqual(report["authoritative_catalogue_record_count"], 1)
+        self.assertEqual(report["source_works_needing_authoritative_catalogue_record_count"], 1)
+        self.assertEqual(report["source_works_with_authoritative_catalogue_record_needing_local_copy_count"], 1)
+        self.assertEqual(report["source_works_needing_manual_content_review_count"], 1)
+        self.assertEqual(report["source_works_with_local_direct_witness_but_translation_unconfirmed_count"], 1)
         self.assertEqual(report["plausible_direct_candidate_count"], 0)
         self.assertEqual(report["known_false_positive_hunt_count"], 1)
         self.assertEqual(report["cross_source_or_secondary_hunt_count"], 1)

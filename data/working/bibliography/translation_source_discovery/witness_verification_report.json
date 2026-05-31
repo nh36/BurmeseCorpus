@@ -35,7 +35,13 @@
   "ruled_out_witness_candidate_count": 11,
   "external_catalogue_search_log_count": 12,
   "external_catalogue_candidate_triage_count": 9,
+  "acquisition_status_count": 7,
+  "acquisition_action_queue_count": 5,
   "authoritative_catalogue_record_count": 1,
+  "source_works_needing_authoritative_catalogue_record_count": 4,
+  "source_works_with_authoritative_catalogue_record_needing_local_copy_count": 1,
+  "source_works_needing_manual_content_review_count": 2,
+  "source_works_with_local_direct_witness_but_translation_unconfirmed_count": 2,
   "plausible_direct_candidate_count": 0,
   "known_false_positive_hunt_count": 4,
   "cross_source_or_secondary_hunt_count": 7,
@@ -48,11 +54,11 @@
   "eb_translation_unconfirmed_count": 3,
   "eb_fascicle_content_inspection_count": 10,
   "direct_witness_search_result_counts": {
-    "not_found": 19,
+    "bibliographic_clue_found": 8,
     "candidate_found": 5,
-    "direct_witness_found": 0,
+    "not_found": 19,
     "blocked_by_missing_local_index": 0,
-    "bibliographic_clue_found": 8
+    "direct_witness_found": 0
   },
   "verified_translation_after_inspection_count": 0,
   "verified_edition_after_inspection_count": 4,
@@ -61,6 +67,7 @@
     "Failed OCR is tracked as unconfirmed/attempted, not as evidence that translation is absent.",
     "Weak filename matches are retained as reviewed evidence rather than silently deleted.",
     "Broad hunt hits now pass through candidate triage before they can count toward direct-witness progress.",
-    "With zero plausible direct candidates from the broad hunts, follow-on work now moves to the direct-witness acquisition plan and manual review queue."
+    "With zero plausible direct candidates from the broad hunts, follow-on work now moves to the direct-witness acquisition plan and manual review queue.",
+    "Inscriptions of Burma now splits cleanly between verified plate witnesses and a separate acquisition step: an authoritative Berkeley catalogue record exists, but the local companion text witness is still missing."
   ]
 }
