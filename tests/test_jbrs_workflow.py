@@ -15,6 +15,7 @@ if str(SCRIPTS_DIR) not in sys.path:
     sys.path.insert(0, str(SCRIPTS_DIR))
 
 import ocr_jbrs_google_vision as ocr
+import detect_jbrs_translation_candidates as detect
 import jbrs_workflow_common as common
 from corpus_common import write_tsv
 from jbrs_workflow_common import (
@@ -309,6 +310,68 @@ class JBRSWorkflowLogicTests(unittest.TestCase):
             self.assertTrue((args.local_output_root / "article_text/sample-output.txt").exists())
             self.assertTrue((args.local_output_root / "manifest/sample-output.json").exists())
 
+    def test_live_ocr_failure_preserves_submitted_page_count(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            temp_root = Path(tmpdir)
+            source = temp_root / "sample.pdf"
+            source.write_bytes(b"%PDF-1.4\nsample")
+            image = temp_root / "page-0001.png"
+            image.write_bytes(b"fake-image")
+            batch_rows = [
+                {
+                    "batch_id": "test-batch",
+                    "local_file_id": "sample-local-file",
+                    "file_name": "sample.pdf",
+                    "path_stub": "JBRS/sample.pdf",
+                    "volume": "",
+                    "issue": "",
+                    "year": "1933",
+                    "page_count_estimate": "1",
+                    "runtime_path_available": "true",
+                    "ocr_priority": "medium",
+                    "ocr_priority_reason": "test",
+                    "ocr_scope": "article_pages_only",
+                    "ocr_engine": "google_vision",
+                    "output_basename": "sample-output",
+                    "expected_output_format": "google_vision_json|page_text|article_text|metadata_sidecar",
+                    "metadata_sidecar_path": "data_local/ocr/jbrs/manifest/sample-output.json",
+                    "status": "ready_for_ocr",
+                    "blocked_by": "",
+                    "notes": "test row",
+                }
+            ]
+            batch_plan = temp_root / "batch.tsv"
+            status_log = temp_root / "status.tsv"
+            runtime_cache = temp_root / "runtime.json"
+            preflight_report_path = temp_root / "preflight.json"
+            write_tsv(batch_plan, batch_rows, OCR_BATCH_PLAN_FIELDS)
+            write_tsv(status_log, [], OCR_STATUS_LOG_FIELDS)
+            runtime_cache.write_text(json.dumps({"sample-local-file": str(source)}), encoding="utf-8")
+            args = SimpleNamespace(
+                batch_plan=batch_plan,
+                status_log=status_log,
+                runtime_path_cache=runtime_cache,
+                local_output_root=temp_root / "data_local/ocr/jbrs",
+                preflight_report=preflight_report_path,
+                batch_id=["test-batch"],
+                limit=0,
+                dry_run=False,
+                execute=True,
+            )
+            with (
+                patch.object(ocr, "gitignored_data_local", return_value=True),
+                patch.object(ocr, "staged_forbidden_paths", return_value=[]),
+                patch.object(ocr, "lookup_access_token", return_value=("token", "mock")),
+                patch.object(ocr, "source_to_images", return_value=[image]),
+                patch.object(ocr, "vision_ocr_image", side_effect=RuntimeError("quota blocked")),
+            ):
+                result = ocr.run_selected_batches(args)
+            self.assertEqual(result, 0)
+            written_status = read_tsv(status_log)
+            self.assertEqual(written_status[0]["status"], "failed")
+            self.assertEqual(written_status[0]["pages_submitted"], "1")
+            self.assertEqual(written_status[0]["pages_completed"], "")
+
     def test_validator_flags_blank_batch_plan_header(self) -> None:
         original_helper = common.tsv_header_and_row_count
 
@@ -335,6 +398,48 @@ class JBRSWorkflowLogicTests(unittest.TestCase):
             any("pilot summary reports OCR batch rows" in error for error in errors),
             errors,
         )
+
+    def test_narrow_candidate_selection_can_resolve_batch_ids(self) -> None:
+        manifest_rows = [
+            {"local_file_id": "target-file"},
+            {"local_file_id": "other-file"},
+        ]
+        batch_rows = [
+            {"batch_id": "batch-1", "local_file_id": "target-file"},
+            {"batch_id": "batch-2", "local_file_id": "other-file"},
+        ]
+        selected = detect.resolve_selected_local_file_ids(
+            manifest_rows,
+            batch_rows,
+            local_file_ids=[],
+            batch_ids=["batch-1"],
+        )
+        self.assertEqual(selected, {"target-file"})
+
+    def test_narrow_candidate_merge_preserves_existing_candidate_ids(self) -> None:
+        existing_rows = [
+            {
+                "candidate_id": "jbrs-candidate-0007",
+                "local_file_id": "target-file",
+                "candidate_type": "translation_word_hit",
+            },
+            {
+                "candidate_id": "jbrs-candidate-0008",
+                "local_file_id": "other-file",
+                "candidate_type": "translation_word_hit",
+            },
+        ]
+        replacement_rows = [
+            {
+                "candidate_id": "jbrs-candidate-0001",
+                "local_file_id": "target-file",
+                "candidate_type": "planned_or_general_translation_discussion",
+            }
+        ]
+        merged = detect.merge_candidate_rows(existing_rows, replacement_rows, {"target-file"})
+        merged_by_local_file = {row["local_file_id"]: row for row in merged}
+        self.assertEqual(merged_by_local_file["target-file"]["candidate_id"], "jbrs-candidate-0007")
+        self.assertEqual(merged_by_local_file["other-file"]["candidate_id"], "jbrs-candidate-0008")
 
 
 if __name__ == "__main__":

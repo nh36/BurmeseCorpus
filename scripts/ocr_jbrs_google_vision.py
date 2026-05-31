@@ -269,7 +269,19 @@ def sha256_for_file(path: Path) -> str:
     return digest.hexdigest()
 
 
-def update_status_log_row(existing_row: dict[str, str] | None, batch_row: dict[str, str], *, status: str, notes: str, output_path: Path | None = None, metadata_sidecar: Path | None = None, pages_submitted: int = 0, pages_completed: int = 0, error_type: str = "", error_message_short: str = "") -> dict[str, str]:
+def update_status_log_row(
+    existing_row: dict[str, str] | None,
+    batch_row: dict[str, str],
+    *,
+    status: str,
+    notes: str,
+    output_path: Path | None = None,
+    metadata_sidecar: Path | None = None,
+    pages_submitted: int | None = None,
+    pages_completed: int | None = None,
+    error_type: str = "",
+    error_message_short: str = "",
+) -> dict[str, str]:
     row = dict(existing_row or {})
     row.update(
         {
@@ -280,8 +292,8 @@ def update_status_log_row(existing_row: dict[str, str] | None, batch_row: dict[s
             "ocr_engine": batch_row["ocr_engine"],
             "ocr_scope": batch_row["ocr_scope"],
             "status": status,
-            "pages_submitted": str(pages_submitted) if pages_submitted else "",
-            "pages_completed": str(pages_completed) if pages_completed else "",
+            "pages_submitted": row.get("pages_submitted", "") if pages_submitted is None else (str(pages_submitted) if pages_submitted else ""),
+            "pages_completed": row.get("pages_completed", "") if pages_completed is None else (str(pages_completed) if pages_completed else ""),
             "output_path_stub": relative_stub(output_path) if output_path else row.get("output_path_stub", ""),
             "metadata_sidecar_stub": relative_stub(metadata_sidecar) if metadata_sidecar else row.get("metadata_sidecar_stub", ""),
             "error_type": error_type,
@@ -344,16 +356,19 @@ def run_selected_batches(args: argparse.Namespace) -> int:
         page_text_dir = paths["page_text"] / batch_row["output_basename"]
         json_dir.mkdir(parents=True, exist_ok=True)
         page_text_dir.mkdir(parents=True, exist_ok=True)
+        submitted_page_count = 0
+        completed_page_count = 0
         try:
             images = source_to_images(source_path, paths["rendered_pages"], batch_row["output_basename"])
+            submitted_page_count = len(images)
             status_rows[batch_row["batch_id"]] = update_status_log_row(
                 status_rows.get(batch_row["batch_id"]),
                 batch_row,
                 status="submitted",
-                notes=f"Submitting {len(images)} image page(s) to Google Vision via {credential_source}.",
+                notes=f"Submitting {submitted_page_count} image page(s) to Google Vision via {credential_source}.",
                 output_path=article_text_path,
                 metadata_sidecar=metadata_path,
-                pages_submitted=len(images),
+                pages_submitted=submitted_page_count,
             )
             write_tsv(args.status_log, [status_rows[key] for key in sorted(status_rows)], OCR_STATUS_LOG_FIELDS)
 
@@ -367,6 +382,7 @@ def run_selected_batches(args: argparse.Namespace) -> int:
                 page_text = extract_vision_text(response)
                 (page_text_dir / f"page-{index:04d}.txt").write_text(page_text, encoding="utf-8")
                 page_texts.append(f"[[page {index}]]\n{page_text}".rstrip() + "\n")
+                completed_page_count = index
 
             article_text_path.write_text("\n".join(page_texts).rstrip() + "\n", encoding="utf-8")
             metadata_path.write_text(
@@ -401,8 +417,8 @@ def run_selected_batches(args: argparse.Namespace) -> int:
                 notes=f"Live Google Vision OCR completed via {credential_source}.",
                 output_path=article_text_path,
                 metadata_sidecar=metadata_path,
-                pages_submitted=len(images),
-                pages_completed=len(images),
+                pages_submitted=submitted_page_count,
+                pages_completed=completed_page_count,
             )
         except Exception as exc:  # pragma: no cover - integration behavior
             status_rows[batch_row["batch_id"]] = update_status_log_row(
@@ -412,6 +428,8 @@ def run_selected_batches(args: argparse.Namespace) -> int:
                 notes="Live Google Vision OCR failed.",
                 output_path=article_text_path,
                 metadata_sidecar=metadata_path,
+                pages_submitted=submitted_page_count if submitted_page_count else None,
+                pages_completed=completed_page_count if completed_page_count else None,
                 error_type=exc.__class__.__name__,
                 error_message_short=truncate_error(str(exc)),
             )
