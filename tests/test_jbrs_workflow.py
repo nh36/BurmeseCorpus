@@ -254,6 +254,65 @@ class JBRSWorkflowLogicTests(unittest.TestCase):
                 )
         self.assertEqual(report["errors"], [])
 
+    def test_live_preflight_reports_quota_project_and_auth_probe_success(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            temp_root = Path(tmpdir)
+            source = temp_root / "sample.pdf"
+            source.write_bytes(b"%PDF-1.4\n")
+            batch_row = {"batch_id": "test-batch", "local_file_id": "sample", "status": "ready_for_ocr"}
+            with (
+                patch.object(ocr, "gitignored_data_local", return_value=True),
+                patch.object(ocr, "staged_forbidden_paths", return_value=[]),
+                patch.object(ocr, "lookup_access_token", return_value=("token", "gcloud auth application-default print-access-token")),
+                patch.object(ocr, "resolve_quota_project_id", return_value="project-123"),
+                patch.object(ocr, "vision_auth_probe", return_value={"responses": [{}]}),
+            ):
+                report = ocr.preflight_report(
+                       selected_rows=[batch_row],
+                       runtime_path_cache={"sample": str(source)},
+                       local_output_root=temp_root / "data_local/ocr/jbrs",
+                       live_mode=True,
+                )
+        self.assertEqual(report["errors"], [])
+        self.assertEqual(report["credential_source"], "gcloud auth application-default print-access-token")
+        self.assertEqual(report["quota_project_id"], "project-123")
+        self.assertEqual(report["vision_auth_probe_status"], "ok")
+
+    def test_live_preflight_fails_early_on_adc_quota_project_probe_error(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            temp_root = Path(tmpdir)
+            source = temp_root / "sample.pdf"
+            source.write_bytes(b"%PDF-1.4\n")
+            batch_row = {"batch_id": "test-batch", "local_file_id": "sample", "status": "ready_for_ocr"}
+            with (
+                patch.object(ocr, "gitignored_data_local", return_value=True),
+                patch.object(ocr, "staged_forbidden_paths", return_value=[]),
+                patch.object(ocr, "lookup_access_token", return_value=("token", "gcloud auth application-default print-access-token")),
+                patch.object(ocr, "resolve_quota_project_id", return_value=""),
+                patch.object(
+                       ocr,
+                       "vision_auth_probe",
+                       side_effect=RuntimeError(
+                           "Your application is authenticating by using local Application Default Credentials and no quota project is set."
+                       ),
+                ),
+            ):
+                report = ocr.preflight_report(
+                       selected_rows=[batch_row],
+                       runtime_path_cache={"sample": str(source)},
+                       local_output_root=temp_root / "data_local/ocr/jbrs",
+                       live_mode=True,
+                )
+        self.assertEqual(report["vision_auth_probe_status"], "failed")
+        self.assertTrue(
+            any("Google Vision rejected ADC because no usable quota project was supplied" in error for error in report["errors"]),
+            report["errors"],
+        )
+        self.assertTrue(
+            any("ADC token source is active but no quota project is configured" in warning for warning in report["warnings"]),
+            report["warnings"],
+        )
+
     def test_live_ocr_can_run_with_mocked_vision_response(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
             temp_root = Path(tmpdir)
@@ -302,7 +361,15 @@ class JBRSWorkflowLogicTests(unittest.TestCase):
                 dry_run=False,
                 execute=True,
             )
-            with patch.object(ocr, "gitignored_data_local", return_value=True), patch.object(ocr, "staged_forbidden_paths", return_value=[]), patch.object(ocr, "lookup_access_token", return_value=("token", "mock")), patch.object(ocr, "source_to_images", return_value=[image]), patch.object(ocr, "vision_ocr_image", return_value={"responses": [{"fullTextAnnotation": {"text": "Translation\\nSample text"}}]}):
+            with (
+                patch.object(ocr, "gitignored_data_local", return_value=True),
+                patch.object(ocr, "staged_forbidden_paths", return_value=[]),
+                patch.object(ocr, "lookup_access_token", return_value=("token", "mock")),
+                patch.object(ocr, "resolve_quota_project_id", return_value="project-123"),
+                patch.object(ocr, "vision_auth_probe", return_value={"responses": [{}]}),
+                patch.object(ocr, "source_to_images", return_value=[image]),
+                patch.object(ocr, "vision_ocr_image", return_value={"responses": [{"fullTextAnnotation": {"text": "Translation\\nSample text"}}]}),
+            ):
                 result = ocr.run_selected_batches(args)
             self.assertEqual(result, 0)
             written_status = read_tsv(status_log)
@@ -362,6 +429,8 @@ class JBRSWorkflowLogicTests(unittest.TestCase):
                 patch.object(ocr, "gitignored_data_local", return_value=True),
                 patch.object(ocr, "staged_forbidden_paths", return_value=[]),
                 patch.object(ocr, "lookup_access_token", return_value=("token", "mock")),
+                patch.object(ocr, "resolve_quota_project_id", return_value="project-123"),
+                patch.object(ocr, "vision_auth_probe", return_value={"responses": [{}]}),
                 patch.object(ocr, "source_to_images", return_value=[image]),
                 patch.object(ocr, "vision_ocr_image", side_effect=RuntimeError("quota blocked")),
             ):

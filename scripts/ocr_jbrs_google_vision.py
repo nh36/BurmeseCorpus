@@ -25,6 +25,10 @@ from jbrs_workflow_common import (
 )
 
 VISION_ENDPOINT = "https://vision.googleapis.com/v1/images:annotate"
+ADC_CREDENTIALS_PATH = Path("~/.config/gcloud/application_default_credentials.json").expanduser()
+VISION_AUTH_PROBE_PNG_BASE64 = (
+    "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO7Z0x8AAAAASUVORK5CYII="
+)
 
 
 def parse_args() -> argparse.Namespace:
@@ -117,6 +121,81 @@ def lookup_access_token() -> tuple[str, str]:
     raise RuntimeError("Unable to obtain a Google access token. Configure ADC or gcloud auth first.")
 
 
+def run_gcloud_command(command: list[str], timeout: int = 15) -> str:
+    try:
+        result = subprocess.run(command, check=True, capture_output=True, text=True, timeout=timeout)
+    except (FileNotFoundError, subprocess.CalledProcessError, subprocess.TimeoutExpired):
+        return ""
+    return result.stdout.strip()
+
+
+def load_adc_credentials() -> dict[str, object]:
+    if not ADC_CREDENTIALS_PATH.exists():
+        return {}
+    try:
+        return json.loads(ADC_CREDENTIALS_PATH.read_text(encoding="utf-8"))
+    except json.JSONDecodeError:
+        return {}
+
+
+def resolve_quota_project_id(credential_source: str) -> str:
+    env_quota_project = os.environ.get("GOOGLE_CLOUD_QUOTA_PROJECT", "").strip()
+    if env_quota_project:
+        return env_quota_project
+    adc_credentials = load_adc_credentials()
+    adc_quota_project = str(adc_credentials.get("quota_project_id", "")).strip()
+    if adc_quota_project:
+        return adc_quota_project
+    configured_quota_project = run_gcloud_command(["gcloud", "config", "get-value", "billing/quota_project"])
+    if configured_quota_project and configured_quota_project != "(unset)":
+        return configured_quota_project
+    configured_project = run_gcloud_command(["gcloud", "config", "get-value", "project"])
+    if credential_source.startswith("gcloud auth") and configured_project and configured_project != "(unset)":
+        return configured_project
+    return ""
+
+
+def vision_request(payload: dict[str, object], access_token: str, quota_project_id: str = "", timeout: int = 120) -> dict[str, object]:
+    headers = {"Authorization": f"Bearer {access_token}", "Content-Type": "application/json"}
+    if quota_project_id:
+        headers["x-goog-user-project"] = quota_project_id
+    request = urllib.request.Request(
+        VISION_ENDPOINT,
+        data=json.dumps(payload).encode("utf-8"),
+        headers=headers,
+        method="POST",
+    )
+    try:
+        with urllib.request.urlopen(request, timeout=timeout) as response:
+            return json.loads(response.read().decode("utf-8"))
+    except urllib.error.HTTPError as exc:  # pragma: no cover - integration behavior
+        raise RuntimeError(exc.read().decode("utf-8", errors="ignore") or str(exc)) from exc
+
+
+def vision_auth_probe(access_token: str, quota_project_id: str = "") -> dict[str, object]:
+    return vision_request(
+        {
+            "requests": [
+                {
+                    "image": {"content": VISION_AUTH_PROBE_PNG_BASE64},
+                    "features": [{"type": "TEXT_DETECTION"}],
+                }
+            ]
+        },
+        access_token,
+        quota_project_id=quota_project_id,
+        timeout=30,
+    )
+
+
+def normalize_vision_error_message(value: str) -> str:
+    text = " ".join(value.split())
+    lowered = text.casefold()
+    if "local application default credentials" in lowered and "quota project" in lowered:
+        return "Google Vision rejected ADC because no usable quota project was supplied; run gcloud auth application-default set-quota-project <PROJECT_ID> or use a service-account/token credential."
+    return text
+
+
 def preflight_report(
     *,
     selected_rows: list[dict[str, str]],
@@ -162,10 +241,23 @@ def preflight_report(
 
     if live_mode:
         try:
-            _token, provider = lookup_access_token()
+            token, provider = lookup_access_token()
             report["credential_source"] = provider
+            quota_project_id = resolve_quota_project_id(provider)
+            report["quota_project_id"] = quota_project_id
+            if provider == "gcloud auth application-default print-access-token" and not quota_project_id:
+                warnings.append(
+                    "ADC token source is active but no quota project is configured; Google Vision may return a 403 until gcloud auth application-default set-quota-project <PROJECT_ID> is run."
+                )
+            probe_response = vision_auth_probe(token, quota_project_id=quota_project_id)
+            report["vision_auth_probe_status"] = "ok"
+            responses = probe_response.get("responses", [])
+            if isinstance(responses, list) and responses and isinstance(responses[0], dict) and responses[0].get("error"):
+                error_payload = responses[0]["error"]
+                errors.append("Google Vision auth probe returned an API error: " + truncate_error(normalize_vision_error_message(str(error_payload))))
         except RuntimeError as exc:
-            errors.append(str(exc))
+            errors.append(truncate_error(normalize_vision_error_message(str(exc))))
+            report["vision_auth_probe_status"] = "failed"
     else:
         warnings.append("Dry run does not require Google credentials.")
 
@@ -207,9 +299,9 @@ def source_to_images(source_path: Path, rendered_root: Path, output_basename: st
     raise RuntimeError(f"Unsupported OCR source type: {source_path.suffix}")
 
 
-def vision_ocr_image(image_path: Path, access_token: str) -> dict[str, object]:
+def vision_ocr_image(image_path: Path, access_token: str, quota_project_id: str = "") -> dict[str, object]:
     content = base64.b64encode(image_path.read_bytes()).decode("ascii")
-    payload = json.dumps(
+    return vision_request(
         {
             "requests": [
                 {
@@ -218,19 +310,10 @@ def vision_ocr_image(image_path: Path, access_token: str) -> dict[str, object]:
                     "imageContext": {"languageHints": ["en", "my"]},
                 }
             ]
-        }
-    ).encode("utf-8")
-    request = urllib.request.Request(
-        VISION_ENDPOINT,
-        data=payload,
-        headers={"Authorization": f"Bearer {access_token}", "Content-Type": "application/json"},
-        method="POST",
+        },
+        access_token,
+        quota_project_id=quota_project_id,
     )
-    try:
-        with urllib.request.urlopen(request, timeout=120) as response:
-            return json.loads(response.read().decode("utf-8"))
-    except urllib.error.HTTPError as exc:  # pragma: no cover - integration behavior
-        raise RuntimeError(exc.read().decode("utf-8", errors="ignore") or str(exc)) from exc
 
 
 def extract_vision_text(response: dict[str, object]) -> str:
@@ -347,6 +430,7 @@ def run_selected_batches(args: argparse.Namespace) -> int:
         return 0
 
     access_token, credential_source = lookup_access_token()
+    quota_project_id = resolve_quota_project_id(credential_source)
     paths = ensure_output_directories(args.local_output_root)
     for batch_row in selected_rows:
         source_path = Path(runtime_path_cache[batch_row["local_file_id"]])
@@ -374,7 +458,7 @@ def run_selected_batches(args: argparse.Namespace) -> int:
 
             page_texts: list[str] = []
             for index, image_path in enumerate(images, start=1):
-                response = vision_ocr_image(image_path, access_token)
+                response = vision_ocr_image(image_path, access_token, quota_project_id=quota_project_id)
                 (json_dir / f"page-{index:04d}.json").write_text(
                     json.dumps(response, ensure_ascii=False, indent=2) + "\n",
                     encoding="utf-8",
@@ -431,7 +515,7 @@ def run_selected_batches(args: argparse.Namespace) -> int:
                 pages_submitted=submitted_page_count if submitted_page_count else None,
                 pages_completed=completed_page_count if completed_page_count else None,
                 error_type=exc.__class__.__name__,
-                error_message_short=truncate_error(str(exc)),
+                error_message_short=truncate_error(normalize_vision_error_message(str(exc))),
             )
     write_tsv(args.status_log, [status_rows[key] for key in sorted(status_rows)], OCR_STATUS_LOG_FIELDS)
     return 0
