@@ -16,11 +16,13 @@ JBRS_DIRECTORY = REPO_ROOT / "data/working/bibliography/jbrs"
 JBRS_REFERENCE_HUNT_PATH = JBRS_DIRECTORY / "jbrs_reference_hunt.tsv"
 JBRS_REFERENCE_HUNT_RAW_PATH = JBRS_DIRECTORY / "jbrs_reference_hunt_raw.tsv"
 JBRS_ARTICLE_REFERENCE_TARGETS_PATH = JBRS_DIRECTORY / "jbrs_article_reference_targets.tsv"
+JBRS_ARTICLE_REFERENCE_TARGETS_REVIEW_PATH = JBRS_DIRECTORY / "jbrs_article_reference_targets_review.tsv"
 JBRS_LOCAL_FILE_MANIFEST_PATH = JBRS_DIRECTORY / "jbrs_local_file_manifest.tsv"
 JBRS_REFERENCE_FILE_MATCH_PATH = JBRS_DIRECTORY / "jbrs_reference_file_match.tsv"
 JBRS_OCR_BATCH_PLAN_PATH = JBRS_DIRECTORY / "jbrs_ocr_batch_plan.tsv"
 JBRS_OCR_STATUS_LOG_PATH = JBRS_DIRECTORY / "jbrs_ocr_status_log.tsv"
 JBRS_TRANSLATION_CANDIDATE_LOG_PATH = JBRS_DIRECTORY / "jbrs_translation_candidate_log.tsv"
+JBRS_TRANSLATION_CANDIDATE_REVIEW_PATH = JBRS_DIRECTORY / "jbrs_translation_candidate_review.tsv"
 JBRS_PILOT_SUMMARY_PATH = JBRS_DIRECTORY / "jbrs_pilot_summary.json"
 JBRS_README_PATH = JBRS_DIRECTORY / "README.md"
 
@@ -77,6 +79,25 @@ ARTICLE_REFERENCE_TARGET_FIELDS = [
     "notes",
 ]
 
+ARTICLE_REFERENCE_TARGET_REVIEW_FIELDS = [
+    "target_reference_id",
+    "current_author",
+    "current_article_title",
+    "current_volume",
+    "current_issue",
+    "current_year",
+    "current_page_range",
+    "review_status",
+    "corrected_author",
+    "corrected_article_title",
+    "corrected_volume",
+    "corrected_issue",
+    "corrected_year",
+    "corrected_page_range",
+    "source_evidence_short",
+    "notes",
+]
+
 LOCAL_FILE_MANIFEST_FIELDS = [
     "local_file_id",
     "path_stub_or_redacted_path",
@@ -104,6 +125,7 @@ LOCAL_FILE_MANIFEST_FIELDS = [
 
 REFERENCE_FILE_MATCH_FIELDS = [
     "reference_id",
+    "target_review_status",
     "local_file_id",
     "match_status",
     "match_confidence",
@@ -182,13 +204,32 @@ TRANSLATION_CANDIDATE_FIELDS = [
     "notes",
 ]
 
+TRANSLATION_CANDIDATE_REVIEW_FIELDS = [
+    "candidate_id",
+    "local_file_id",
+    "candidate_type",
+    "review_status",
+    "reviewed_by_or_method",
+    "manual_assessment",
+    "is_actual_translation_section",
+    "is_inscription_translation",
+    "is_general_discussion",
+    "is_citation_to_external_translation",
+    "next_action",
+    "notes",
+]
+
 SHORT_SNIPPET_LIMIT = 220
 ABSOLUTE_PATH_PATTERN = re.compile(r"(^/(?:Users|home|var|private|tmp|opt|Volumes)\b|^[A-Za-z]:\\\\)")
 JOURNAL_TITLE = "Journal of the Burma Research Society"
 ARTICLE_REFERENCE_KINDS = {"article_reference", "unclear"}
-HIGH_PRIORITY_MATCH_STATUSES = {"exact_or_near_exact_match", "plausible_match", "multiple_candidates"}
+HIGH_PRIORITY_MATCH_STATUSES = {"exact_or_near_exact_match"}
+ACCEPTED_TARGET_REVIEW_STATUSES = {"accepted", "corrected"}
+SKIPPED_TARGET_REVIEW_STATUSES = {"parser_artifact", "duplicate_or_alias"}
+MANUAL_TARGET_REVIEW_STATUSES = {"needs_manual_bibliographic_review"}
 OCR_READY_STATUSES = {"ready_for_ocr"}
 IMAGE_EXTENSIONS = {".png", ".jpg", ".jpeg", ".tif", ".tiff", ".webp", ".bmp"}
+SOURCE_FILE_EXTENSIONS = IMAGE_EXTENSIONS | {".pdf", ".djvu"}
 
 JOURNAL_PATTERNS = [
     re.compile(pattern, re.IGNORECASE)
@@ -247,6 +288,23 @@ KEYWORD_MARKERS = [
     "pyu",
     "prome",
 ]
+
+GENERIC_TITLE_WORDS = {
+    "buddhism",
+    "burma",
+    "burmese",
+    "buildings",
+    "debt",
+    "inscription",
+    "inscriptions",
+    "myanmar",
+    "pagan",
+    "plate",
+    "prayers",
+    "religious",
+    "text",
+    "translation",
+}
 
 HEADING_TRANSLATION_PATTERN = re.compile(
     r"^(translation(?:\s+of\b.*)?|text\s+and\s+translation|translation\s+and\s+notes|translated\s+text)\s*[:.]?$",
@@ -311,6 +369,10 @@ def safe_path_stub(value: str | None, keep_parts: int = 4) -> str:
     return "/".join(parts[-keep_parts:])
 
 
+def is_runtime_source_file(path: Path) -> bool:
+    return path.is_file() and not path.name.startswith(".") and not path.name.startswith("._") and path.suffix.casefold() in SOURCE_FILE_EXTENSIONS
+
+
 def contains_jbrs_marker(value: str | None) -> bool:
     text = value or ""
     return any(pattern.search(text) for pattern in JOURNAL_PATTERNS)
@@ -356,6 +418,8 @@ def parse_reference_bits(value: str | None) -> tuple[str, str, str, str]:
     year_match = YEAR_PATTERN.search(text)
     if year_match:
         year = year_match.group(0)
+    if volume and year and volume == year and len(volume) == 4:
+        volume = ""
     page_match = PAGE_RANGE_PATTERN.search(text)
     if page_match:
         page_range = page_match.group(1).replace(" ", "").replace("–", "-")
@@ -409,6 +473,83 @@ def detect_title(value: str | None) -> str:
         if maybe and maybe.casefold() not in {JOURNAL_TITLE.casefold(), "jbrs"}:
             return maybe
     return ""
+
+
+def looks_like_person_name(value: str | None) -> bool:
+    text = normalize_space(value).strip(" ,.;:/")
+    if not text or len(text) > 40 or re.search(r"\d", text):
+        return False
+    normalized = normalize_for_match(text)
+    if not normalized:
+        return False
+    parts = normalized.split()
+    if not 1 <= len(parts) <= 4:
+        return False
+    if any(part in GENERIC_TITLE_WORDS for part in parts):
+        return False
+    if parts == ["u"]:
+        return False
+    return all(part.isalpha() for part in parts)
+
+
+def clean_article_title_fragment(author: str, title: str) -> str:
+    cleaned = normalize_space(title).strip(" ,.;:")
+    if not cleaned:
+        return ""
+    cleaned = re.sub(r"^\s*U\s*,\s*", "", cleaned, flags=re.IGNORECASE)
+    if author:
+        author_variants = {normalize_for_match(author)}
+        surname = normalize_space(author).split()[-1].strip(" ,.;:/")
+        if surname:
+            author_variants.add(normalize_for_match(surname))
+            cleaned = re.sub(rf"^\s*{re.escape(surname)}\s*[,/:-]?\s*", "", cleaned, flags=re.IGNORECASE)
+        if normalize_for_match(cleaned) in author_variants:
+            return ""
+    cleaned = cleaned.strip(" ,.;:/")
+    if cleaned.casefold() == "u":
+        return ""
+    if cleaned.endswith("/") and len(cleaned.rstrip("/").strip()) <= 4:
+        return ""
+    return truncate_short(cleaned, limit=120)
+
+
+def normalize_reference_fields(author: str, article_title: str, volume: str, year: str) -> tuple[str, str, str, bool]:
+    normalized_author = author
+    normalized_title = article_title
+    normalized_volume = volume
+    changed = False
+
+    if normalized_volume and year and normalized_volume == year and len(normalized_volume) == 4:
+        normalized_volume = ""
+        changed = True
+
+    if not normalized_author and looks_like_person_name(normalized_title):
+        normalized_author = normalized_title.strip(" ,.;:/")
+        normalized_title = ""
+        changed = True
+
+    cleaned_title = clean_article_title_fragment(normalized_author, normalized_title)
+    if cleaned_title != normalized_title:
+        normalized_title = cleaned_title
+        changed = True
+
+    return normalized_author, normalized_title, normalized_volume, changed
+
+
+def title_needs_review(value: str | None) -> bool:
+    text = normalize_space(value)
+    if not text:
+        return True
+    normalized = normalize_for_match(text)
+    if not normalized:
+        return True
+    if text.endswith("/"):
+        return True
+    if re.match(r"^u\s*(,.*)?$", normalized):
+        return True
+    if looks_like_person_name(text):
+        return True
+    return False
 
 
 def reference_confidence(author: str, article_title: str, year: str, volume: str, page_range: str) -> str:
@@ -585,6 +726,18 @@ def build_reference_hunt_rows() -> tuple[list[dict[str, str]], list[dict[str, st
                 len(row.get("matched_reference_text_short", "")),
             ),
         )
+        author, article_title, volume, auto_corrected = normalize_reference_fields(
+            preferred.get("author", ""),
+            preferred.get("article_title", ""),
+            preferred.get("volume", ""),
+            preferred.get("year", ""),
+        )
+        needs_review = (
+            preferred.get("needs_manual_bibliographic_cleanup", "") == "true"
+            or not article_title
+            or title_needs_review(article_title)
+            or auto_corrected
+        )
         target_id = f"jbrs-target-{index:04d}"
         for raw_row in group:
             raw_row["target_reference_id"] = target_id
@@ -597,19 +750,163 @@ def build_reference_hunt_rows() -> tuple[list[dict[str, str]], list[dict[str, st
                 "raw_reference_ids": "|".join(row["reference_id"] for row in group),
                 "raw_hit_count": str(len(group)),
                 "normalized_journal_title": JOURNAL_TITLE,
-                "volume": preferred["volume"],
+                "volume": volume,
                 "issue": preferred["issue"],
                 "year": preferred["year"],
                 "page_range": preferred["page_range"],
-                "author": preferred["author"],
-                "article_title": preferred["article_title"],
+                "author": author,
+                "article_title": article_title,
                 "inscription_or_topic_keywords": preferred["inscription_or_topic_keywords"],
                 "reference_confidence": preferred["reference_confidence"],
-                "needs_manual_bibliographic_cleanup": preferred["needs_manual_bibliographic_cleanup"],
-                "notes": "Deduplicated clean article target built from raw JBRS repository hits.",
+                "needs_manual_bibliographic_cleanup": bool_string(needs_review),
+                "notes": "Deduplicated clean article target built from raw JBRS repository hits."
+                + (" Applied cautious parser cleanup before review." if auto_corrected else ""),
             }
         )
     return raw_rows, target_rows
+
+
+def load_review_rows(path: Path, key_field: str) -> dict[str, dict[str, str]]:
+    if not path.exists():
+        return {}
+    return {row[key_field]: row for row in read_tsv(path) if row.get(key_field)}
+
+
+def build_article_target_review_rows(
+    target_rows: list[dict[str, str]],
+    raw_rows: list[dict[str, str]],
+    existing_review_rows: dict[str, dict[str, str]] | None = None,
+) -> list[dict[str, str]]:
+    existing_review_rows = existing_review_rows or {}
+    raw_by_id = {row.get("reference_id", ""): row for row in raw_rows if row.get("reference_id")}
+    review_rows: list[dict[str, str]] = []
+    for row in target_rows:
+        raw_ids = [part for part in row.get("raw_reference_ids", "").split("|") if part]
+        evidence_row = raw_by_id.get(raw_ids[0], {}) if raw_ids else {}
+        current_author = row.get("author", "")
+        current_title = row.get("article_title", "")
+        current_volume = row.get("volume", "")
+        current_issue = row.get("issue", "")
+        current_year = row.get("year", "")
+        current_page_range = row.get("page_range", "")
+
+        corrected_author, corrected_title, corrected_volume, auto_corrected = normalize_reference_fields(
+            current_author,
+            current_title,
+            current_volume,
+            current_year,
+        )
+        review_status = "accepted"
+        notes: list[str] = []
+        if auto_corrected:
+            review_status = "corrected"
+            notes.append("Applied cautious parser cleanup to author/title/volume fields.")
+        if title_needs_review(corrected_title):
+            review_status = "parser_artifact" if not corrected_title else "needs_manual_bibliographic_review"
+            notes.append("Article title remains malformed or incomplete after cautious cleanup.")
+        elif not (corrected_author and current_year and current_page_range):
+            review_status = "needs_manual_bibliographic_review"
+            notes.append("Target still lacks enough author/year/page evidence for automatic matching.")
+        elif row.get("needs_manual_bibliographic_cleanup", "") == "true" and review_status == "accepted":
+            review_status = "accepted"
+
+        generated = {
+            "target_reference_id": row.get("target_reference_id", ""),
+            "current_author": current_author,
+            "current_article_title": current_title,
+            "current_volume": current_volume,
+            "current_issue": current_issue,
+            "current_year": current_year,
+            "current_page_range": current_page_range,
+            "review_status": review_status,
+            "corrected_author": corrected_author,
+            "corrected_article_title": corrected_title,
+            "corrected_volume": corrected_volume,
+            "corrected_issue": current_issue,
+            "corrected_year": current_year,
+            "corrected_page_range": current_page_range,
+            "source_evidence_short": evidence_row.get("matched_reference_text_short", ""),
+            "notes": " ".join(notes) or "Auto-generated review state for clean article targets.",
+        }
+        existing = existing_review_rows.get(generated["target_reference_id"], {})
+        preserve_existing = bool(
+            existing
+            and (
+                existing.get("review_status") in {"accepted", "corrected", "duplicate_or_alias"}
+                or any(
+                    existing.get(field) and existing.get(field) != generated.get(field, "")
+                    for field in [
+                        "corrected_author",
+                        "corrected_article_title",
+                        "corrected_volume",
+                        "corrected_issue",
+                        "corrected_year",
+                        "corrected_page_range",
+                    ]
+                )
+            )
+        )
+        if preserve_existing:
+            for key in generated:
+                if key.startswith("current_") or key == "source_evidence_short":
+                    continue
+                if existing.get(key):
+                    generated[key] = existing[key]
+        review_rows.append(generated)
+    return review_rows
+
+
+def apply_article_target_reviews(
+    target_rows: list[dict[str, str]],
+    review_rows: list[dict[str, str]],
+) -> list[dict[str, str]]:
+    review_by_id = {row.get("target_reference_id", ""): row for row in review_rows if row.get("target_reference_id")}
+    reviewed_rows: list[dict[str, str]] = []
+    for row in target_rows:
+        reviewed = row.copy()
+        review = review_by_id.get(row.get("target_reference_id", ""), {})
+        reviewed["target_review_status"] = review.get("review_status", "accepted")
+        if reviewed["target_review_status"] in ACCEPTED_TARGET_REVIEW_STATUSES:
+            reviewed["author"] = review.get("corrected_author", reviewed.get("author", "")) or reviewed.get("author", "")
+            reviewed["article_title"] = review.get("corrected_article_title", reviewed.get("article_title", ""))
+            reviewed["volume"] = review.get("corrected_volume", reviewed.get("volume", ""))
+            reviewed["issue"] = review.get("corrected_issue", reviewed.get("issue", ""))
+            reviewed["year"] = review.get("corrected_year", reviewed.get("year", ""))
+            reviewed["page_range"] = review.get("corrected_page_range", reviewed.get("page_range", ""))
+        reviewed_rows.append(reviewed)
+    return reviewed_rows
+
+
+def build_translation_candidate_review_rows(
+    candidate_rows: list[dict[str, str]],
+    existing_review_rows: dict[str, dict[str, str]] | None = None,
+) -> list[dict[str, str]]:
+    existing_review_rows = existing_review_rows or {}
+    review_rows: list[dict[str, str]] = []
+    for row in candidate_rows:
+        candidate_type = row.get("candidate_type", "")
+        generated = {
+            "candidate_id": row.get("candidate_id", ""),
+            "local_file_id": row.get("local_file_id", ""),
+            "candidate_type": candidate_type,
+            "review_status": "needs_manual_review",
+            "reviewed_by_or_method": "auto_triage",
+            "manual_assessment": "Heuristic lead only; inspect the source manually before promoting this as translation-bearing content.",
+            "is_actual_translation_section": "",
+            "is_inscription_translation": "",
+            "is_general_discussion": "true" if candidate_type == "planned_or_general_translation_discussion" else "",
+            "is_citation_to_external_translation": "true" if candidate_type == "citation_to_someone_else_translation" else "",
+            "next_action": "Inspect the local source manually before treating this as an actual inscription translation.",
+            "notes": "Auto-generated review row; no candidate is promoted to verified translation coverage without human review.",
+        }
+        existing = existing_review_rows.get(generated["candidate_id"], {})
+        for key in generated:
+            if key in {"candidate_id", "local_file_id", "candidate_type"}:
+                continue
+            if existing.get(key):
+                generated[key] = existing[key]
+        review_rows.append(generated)
+    return review_rows
 
 
 def split_manifest_paths(value: str | None) -> list[str]:
@@ -779,6 +1076,7 @@ def build_local_manifest_rows(
 ) -> tuple[list[dict[str, str]], dict[str, str]]:
     manifest_by_id: dict[str, dict[str, str]] = {}
     runtime_path_cache: dict[str, str] = {}
+    seen_runtime_paths: set[str] = set()
 
     if existing_source_library_path.exists():
         for row in read_tsv(existing_source_library_path):
@@ -791,6 +1089,7 @@ def build_local_manifest_rows(
             runtime_path = resolve_existing_local_path(row.get("copied_path", ""))
             if runtime_path:
                 runtime_path_cache[local_file_id] = runtime_path
+                seen_runtime_paths.add(runtime_path)
             upsert_manifest_row(
                 manifest_by_id,
                 build_manifest_row(
@@ -815,6 +1114,7 @@ def build_local_manifest_rows(
             runtime_path = resolve_existing_local_path(row.get("copied_path", ""))
             if runtime_path:
                 runtime_path_cache[local_file_id] = runtime_path
+                seen_runtime_paths.add(runtime_path)
             descriptor = choose_best_descriptor(
                 [row.get("primary_original_path", ""), row.get("all_original_paths", ""), row.get("copied_path", ""), row.get("file_name", "")]
             )
@@ -842,6 +1142,7 @@ def build_local_manifest_rows(
             runtime_path = resolve_existing_local_path(row.get("source_path", ""))
             if runtime_path:
                 runtime_path_cache[local_file_id] = runtime_path
+                seen_runtime_paths.add(runtime_path)
             descriptor = row.get("source_file_label", "") or row.get("source_path", "")
             upsert_manifest_row(
                 manifest_by_id,
@@ -862,14 +1163,18 @@ def build_local_manifest_rows(
         if not root.exists():
             continue
         for path in sorted(root.rglob("*")):
-            if not path.is_file():
+            if not is_runtime_source_file(path):
+                continue
+            resolved_path = str(path.resolve())
+            if resolved_path in seen_runtime_paths:
                 continue
             descriptor = str(path.relative_to(root))
             search_text = f"{root.name} {descriptor}"
             if not contains_jbrs_marker(search_text):
                 continue
             local_file_id = slugify(str(path.relative_to(root)))
-            runtime_path_cache[local_file_id] = str(path.resolve())
+            runtime_path_cache[local_file_id] = resolved_path
+            seen_runtime_paths.add(resolved_path)
             stat = path.stat()
             upsert_manifest_row(
                 manifest_by_id,
@@ -967,18 +1272,14 @@ def match_row_for_reference(reference_row: dict[str, str], manifest_row: dict[st
 def build_reference_file_match_rows(reference_rows: list[dict[str, str]], manifest_rows: list[dict[str, str]]) -> list[dict[str, str]]:
     rows: list[dict[str, str]] = []
     for reference_row in reference_rows:
-        scored: list[tuple[int, dict[str, str], dict[str, str]]] = []
-        for manifest_row in manifest_rows:
-            score, detail = match_row_for_reference(reference_row, manifest_row)
-            if score > 0:
-                scored.append((score, manifest_row, detail))
-        scored.sort(key=lambda item: (-item[0], item[1].get("local_file_id", "")))
-        if not scored:
+        review_status = reference_row.get("target_review_status", "accepted")
+        if review_status in SKIPPED_TARGET_REVIEW_STATUSES:
             rows.append(
                 {
-                    "reference_id": reference_row["target_reference_id"] if "target_reference_id" in reference_row else reference_row["target_reference_id"],
+                    "reference_id": reference_row["target_reference_id"],
+                    "target_review_status": review_status,
                     "local_file_id": "",
-                    "match_status": "no_local_candidate_found",
+                    "match_status": "false_positive",
                     "match_confidence": "low",
                     "match_basis": "",
                     "author_match": "false",
@@ -988,8 +1289,48 @@ def build_reference_file_match_rows(reference_rows: list[dict[str, str]], manife
                     "path_context_match": "false",
                     "candidate_file_name": "",
                     "candidate_path_stub": "",
-                    "next_action": "Search additional local JBRS roots or inspect author/year folders manually.",
-                    "notes": "No local candidate met the article-target matching threshold.",
+                    "next_action": "Exclude this parser artifact or alias from automatic JBRS matching.",
+                    "notes": "Parser-artifact or alias targets are retained for review provenance but do not feed automatic matching.",
+                }
+            )
+            continue
+        scored: list[tuple[int, dict[str, str], dict[str, str]]] = []
+        for manifest_row in manifest_rows:
+            score, detail = match_row_for_reference(reference_row, manifest_row)
+            if score > 0:
+                scored.append((score, manifest_row, detail))
+        scored.sort(key=lambda item: (-item[0], item[1].get("local_file_id", "")))
+        if not scored or review_status in MANUAL_TARGET_REVIEW_STATUSES:
+            best_manifest = scored[0][1] if scored else {}
+            detail = scored[0][2] if scored else {
+                "author_match": "false",
+                "title_match": "false",
+                "year_match": "false",
+                "volume_issue_match": "false",
+                "path_context_match": "false",
+                "match_basis": "",
+            }
+            rows.append(
+                {
+                    "reference_id": reference_row["target_reference_id"],
+                    "target_review_status": review_status,
+                    "local_file_id": best_manifest.get("local_file_id", ""),
+                    "match_status": "needs_manual_review" if review_status in MANUAL_TARGET_REVIEW_STATUSES else "no_local_candidate_found",
+                    "match_confidence": "low",
+                    "match_basis": detail["match_basis"],
+                    "author_match": detail["author_match"],
+                    "title_match": detail["title_match"],
+                    "year_match": detail["year_match"],
+                    "volume_issue_match": detail["volume_issue_match"],
+                    "path_context_match": detail["path_context_match"],
+                    "candidate_file_name": best_manifest.get("file_name", ""),
+                    "candidate_path_stub": best_manifest.get("path_stub_or_redacted_path", ""),
+                    "next_action": "Review and clean the bibliographic target manually before using any candidate file for OCR."
+                    if review_status in MANUAL_TARGET_REVIEW_STATUSES
+                    else "Search additional local JBRS roots or inspect author/year folders manually.",
+                    "notes": "Unresolved targets are retained as low-confidence review leads only."
+                    if review_status in MANUAL_TARGET_REVIEW_STATUSES
+                    else "No local candidate met the article-target matching threshold.",
                 }
             )
             continue
@@ -1008,7 +1349,8 @@ def build_reference_file_match_rows(reference_rows: list[dict[str, str]], manife
             next_action = "Confirm article/file alignment before OCR."
         rows.append(
             {
-                "reference_id": reference_row["target_reference_id"] if "target_reference_id" in reference_row else reference_row["target_reference_id"],
+                "reference_id": reference_row["target_reference_id"],
+                "target_review_status": review_status,
                 "local_file_id": best_manifest["local_file_id"],
                 "match_status": match_status,
                 "match_confidence": match_confidence,
@@ -1072,7 +1414,10 @@ def build_ocr_batch_plan_rows(
         priority_reason = manifest_row.get("ocr_priority_reason", "")
         if matches and match_statuses & HIGH_PRIORITY_MATCH_STATUSES:
             priority = "high"
-            priority_reason = "Matched a clean article target with exact, plausible, or multiple-candidate evidence."
+            priority_reason = "Matched an accepted or corrected JBRS article target with exact or near-exact local evidence."
+        elif matches:
+            priority = "medium"
+            priority_reason = "Linked to a reviewed or still-unresolved article target; confirm the file manually before OCR."
         elif manifest_row.get("probable_author_from_path", "") or manifest_row.get("probable_title_from_filename", ""):
             priority = "medium"
             priority_reason = "Has author/title metadata that makes targeted OCR more useful than generic bulk OCR."
@@ -1347,6 +1692,8 @@ This directory stores working metadata for the *Journal of the Burma Research So
 7. Dry-run the Google Vision workflow: `python3 scripts/ocr_jbrs_google_vision.py --dry-run --limit 5`
 8. Run live Google Vision OCR only after preflight passes: `python3 scripts/ocr_jbrs_google_vision.py --execute --limit 5`
 9. Refresh conservative translation-candidate leads: `python3 scripts/detect_jbrs_translation_candidates.py`
+10. Review article-target cleanup in `jbrs_article_reference_targets_review.tsv` before trusting unresolved bibliographic rows.
+11. Review candidate outcomes in `jbrs_translation_candidate_review.tsv` before treating any OCR hit as translation-bearing.
 
 ## Runtime path cache
 - Local runtime cache path: `data_local/ocr/jbrs/manifest/jbrs_runtime_path_map.json`
@@ -1390,16 +1737,31 @@ def build_gitignore_has_data_local() -> bool:
     return "data_local/" in text or "data_local/ocr/jbrs" in text
 
 
+def tracked_files_under(prefix: str) -> list[str]:
+    result = subprocess.run(
+        ["git", "ls-files", "--", prefix],
+        cwd=REPO_ROOT,
+        check=False,
+        capture_output=True,
+        text=True,
+    )
+    if result.returncode != 0:
+        return []
+    return [line.strip() for line in result.stdout.splitlines() if line.strip()]
+
+
 def validate_jbrs_workflow() -> list[str]:
     errors: list[str] = []
     required_paths = [
         JBRS_REFERENCE_HUNT_RAW_PATH,
         JBRS_ARTICLE_REFERENCE_TARGETS_PATH,
+        JBRS_ARTICLE_REFERENCE_TARGETS_REVIEW_PATH,
         JBRS_LOCAL_FILE_MANIFEST_PATH,
         JBRS_REFERENCE_FILE_MATCH_PATH,
         JBRS_OCR_BATCH_PLAN_PATH,
         JBRS_OCR_STATUS_LOG_PATH,
         JBRS_TRANSLATION_CANDIDATE_LOG_PATH,
+        JBRS_TRANSLATION_CANDIDATE_REVIEW_PATH,
         JBRS_PILOT_SUMMARY_PATH,
         JBRS_README_PATH,
     ]
@@ -1411,17 +1773,21 @@ def validate_jbrs_workflow() -> list[str]:
 
     raw_rows = read_tsv(JBRS_REFERENCE_HUNT_RAW_PATH)
     target_rows = read_tsv(JBRS_ARTICLE_REFERENCE_TARGETS_PATH)
+    target_review_rows = read_tsv(JBRS_ARTICLE_REFERENCE_TARGETS_REVIEW_PATH)
     manifest_rows = read_tsv(JBRS_LOCAL_FILE_MANIFEST_PATH)
     match_rows = read_tsv(JBRS_REFERENCE_FILE_MATCH_PATH)
     batch_rows = read_tsv(JBRS_OCR_BATCH_PLAN_PATH)
     status_rows = read_tsv(JBRS_OCR_STATUS_LOG_PATH)
     candidate_rows = read_tsv(JBRS_TRANSLATION_CANDIDATE_LOG_PATH)
+    candidate_review_rows = read_tsv(JBRS_TRANSLATION_CANDIDATE_REVIEW_PATH)
     summary = json.loads(JBRS_PILOT_SUMMARY_PATH.read_text(encoding="utf-8"))
     readme_text = JBRS_README_PATH.read_text(encoding="utf-8")
 
     target_ids = {row["target_reference_id"] for row in target_rows}
+    target_review_by_id = {row["target_reference_id"]: row for row in target_review_rows}
     manifest_by_id = {row["local_file_id"]: row for row in manifest_rows}
     batch_by_id = {row["batch_id"]: row for row in batch_rows}
+    candidate_review_by_id = {row["candidate_id"]: row for row in candidate_review_rows}
 
     for row in raw_rows:
         if len(row.get("matched_reference_text_short", "")) > SHORT_SNIPPET_LIMIT:
@@ -1432,13 +1798,27 @@ def validate_jbrs_workflow() -> list[str]:
     for row in target_rows:
         if row.get("reference_kind") not in ARTICLE_REFERENCE_KINDS:
             errors.append(f"Clean article target has invalid reference kind: {row.get('target_reference_id', '')}")
+        review_row = target_review_by_id.get(row.get("target_reference_id", ""))
+        if not review_row:
+            errors.append(f"Clean article target lacks a review row: {row.get('target_reference_id', '')}")
+            continue
+        if title_needs_review(row.get("article_title", "")) and review_row.get("review_status") not in MANUAL_TARGET_REVIEW_STATUSES | SKIPPED_TARGET_REVIEW_STATUSES:
+            errors.append(f"Malformed clean article target lacks manual-review status: {row.get('target_reference_id', '')}")
 
     for row in match_rows:
         if row.get("reference_id") not in target_ids:
             errors.append(f"Reference match points to unknown clean target: {row.get('reference_id', '')}")
+        review_status = row.get("target_review_status", "")
+        target_review = target_review_by_id.get(row.get("reference_id", ""), {})
+        if review_status != target_review.get("review_status", ""):
+            errors.append(f"Reference match row has stale or missing target_review_status: {row.get('reference_id', '')}")
         local_file_id = row.get("local_file_id", "")
         if local_file_id and local_file_id not in manifest_by_id:
             errors.append(f"Reference match points to unknown local file id: {local_file_id}")
+        if review_status in SKIPPED_TARGET_REVIEW_STATUSES and row.get("match_status") != "false_positive":
+            errors.append(f"Parser-artifact target fed automatic matching: {row.get('reference_id', '')}")
+        if review_status in MANUAL_TARGET_REVIEW_STATUSES and row.get("match_status") in HIGH_PRIORITY_MATCH_STATUSES | {"plausible_match", "multiple_candidates"}:
+            errors.append(f"Manual-review target produced an overconfident match: {row.get('reference_id', '')}")
 
     for row in batch_rows:
         local_file_id = row.get("local_file_id", "")
@@ -1453,6 +1833,8 @@ def validate_jbrs_workflow() -> list[str]:
             errors.append(f"OCR batch row is ready_for_ocr but still blocked: {row.get('batch_id', '')}")
         if status == "ready_for_ocr" and not runtime_available:
             errors.append(f"OCR batch row is ready_for_ocr without runtime path availability: {row.get('batch_id', '')}")
+        if status == "needs_runtime_path_cache" and runtime_available:
+            errors.append(f"OCR batch row still waits on runtime cache despite runtime_path_available=true: {row.get('batch_id', '')}")
         if status == "needs_runtime_path_cache" and not blocked_by:
             errors.append(f"OCR batch row missing blocked_by reason for runtime-path wait: {row.get('batch_id', '')}")
 
@@ -1473,6 +1855,18 @@ def validate_jbrs_workflow() -> list[str]:
             errors.append(f"Explicit translation candidate lacks heading-like evidence: {row.get('candidate_id', '')}")
         if not (row.get("local_file_id") or row.get("reference_id_if_any")):
             errors.append(f"Translation candidate lacks both local_file_id and reference_id_if_any: {row.get('candidate_id', '')}")
+        if "review lead" not in row.get("notes", "").casefold():
+            errors.append(f"Translation candidate note no longer marks the row as a review lead: {row.get('candidate_id', '')}")
+        if row.get("candidate_id") not in candidate_review_by_id:
+            errors.append(f"Translation candidate lacks a review row: {row.get('candidate_id', '')}")
+
+    for row in candidate_review_rows:
+        if row.get("candidate_id") not in {candidate.get("candidate_id", "") for candidate in candidate_rows}:
+            errors.append(f"Translation candidate review points to unknown candidate: {row.get('candidate_id', '')}")
+        if row.get("is_actual_translation_section") == "true" and row.get("review_status") == "needs_manual_review":
+            errors.append(f"Candidate review marks actual translation content without a completed review status: {row.get('candidate_id', '')}")
+        if row.get("is_actual_translation_section") == "true" and not row.get("manual_assessment", ""):
+            errors.append(f"Candidate review marks actual translation content without manual assessment notes: {row.get('candidate_id', '')}")
 
     for row in manifest_rows:
         for key in ["path_stub_or_redacted_path"]:
@@ -1490,12 +1884,26 @@ def validate_jbrs_workflow() -> list[str]:
     if summary != summary_expected:
         errors.append("JBRS pilot summary counts do not match the generated artifacts.")
 
-    for path in [JBRS_REFERENCE_HUNT_RAW_PATH, JBRS_ARTICLE_REFERENCE_TARGETS_PATH, JBRS_LOCAL_FILE_MANIFEST_PATH, JBRS_REFERENCE_FILE_MATCH_PATH, JBRS_OCR_BATCH_PLAN_PATH, JBRS_OCR_STATUS_LOG_PATH, JBRS_TRANSLATION_CANDIDATE_LOG_PATH]:
+    for path in [
+        JBRS_REFERENCE_HUNT_RAW_PATH,
+        JBRS_ARTICLE_REFERENCE_TARGETS_PATH,
+        JBRS_ARTICLE_REFERENCE_TARGETS_REVIEW_PATH,
+        JBRS_LOCAL_FILE_MANIFEST_PATH,
+        JBRS_REFERENCE_FILE_MATCH_PATH,
+        JBRS_OCR_BATCH_PLAN_PATH,
+        JBRS_OCR_STATUS_LOG_PATH,
+        JBRS_TRANSLATION_CANDIDATE_LOG_PATH,
+        JBRS_TRANSLATION_CANDIDATE_REVIEW_PATH,
+    ]:
         text = path.read_text(encoding="utf-8")
         if ABSOLUTE_PATH_PATTERN.search(text):
             errors.append(f"Committed JBRS artifact includes an absolute path: {path.relative_to(REPO_ROOT)}")
         if "GOOGLE_APPLICATION_CREDENTIALS" in text or "-----BEGIN PRIVATE KEY-----" in text:
             errors.append(f"Committed JBRS artifact includes Google credential material: {path.relative_to(REPO_ROOT)}")
+
+    tracked_local_outputs = tracked_files_under("data_local/ocr/jbrs")
+    if tracked_local_outputs:
+        errors.append(f"Tracked local OCR outputs must not be committed: {', '.join(tracked_local_outputs[:5])}")
 
     if not build_gitignore_has_data_local():
         errors.append(".gitignore does not protect data_local/ OCR outputs.")

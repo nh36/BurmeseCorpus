@@ -13,9 +13,13 @@ from jbrs_workflow_common import (
     JBRS_REFERENCE_FILE_MATCH_PATH,
     JBRS_REFERENCE_HUNT_RAW_PATH,
     JBRS_TRANSLATION_CANDIDATE_LOG_PATH,
+    JBRS_TRANSLATION_CANDIDATE_REVIEW_PATH,
     TRANSLATION_CANDIDATE_FIELDS,
+    TRANSLATION_CANDIDATE_REVIEW_FIELDS,
     build_pilot_summary,
     build_translation_candidate_rows,
+    build_translation_candidate_review_rows,
+    load_review_rows,
     write_summary,
 )
 
@@ -29,6 +33,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--ocr-batch-plan", type=Path, default=JBRS_OCR_BATCH_PLAN_PATH)
     parser.add_argument("--ocr-status-log", type=Path, default=JBRS_OCR_STATUS_LOG_PATH)
     parser.add_argument("--output", type=Path, default=JBRS_TRANSLATION_CANDIDATE_LOG_PATH)
+    parser.add_argument("--review-output", type=Path, default=JBRS_TRANSLATION_CANDIDATE_REVIEW_PATH)
     parser.add_argument("--summary-output", type=Path, default=JBRS_PILOT_SUMMARY_PATH)
     return parser.parse_args()
 
@@ -42,10 +47,14 @@ def main() -> None:
     batch_rows = read_tsv(args.ocr_batch_plan)
     status_rows = read_tsv(args.ocr_status_log)
     rows = build_translation_candidate_rows(target_rows, manifest_rows, match_rows, status_rows)
+    existing_review_rows = load_review_rows(args.review_output, "candidate_id")
+    review_rows = build_translation_candidate_review_rows(rows, existing_review_rows)
     write_tsv(args.output, rows, TRANSLATION_CANDIDATE_FIELDS)
+    write_tsv(args.review_output, review_rows, TRANSLATION_CANDIDATE_REVIEW_FIELDS)
     summary = build_pilot_summary(raw_reference_rows, target_rows, manifest_rows, match_rows, batch_rows, status_rows, rows)
     write_summary(args.summary_output, summary)
     print(f"Wrote {len(rows)} JBRS translation-candidate rows to {args.output}")
+    print(f"Wrote {len(review_rows)} JBRS translation-candidate review rows to {args.review_output}")
 
 
 if __name__ == "__main__":

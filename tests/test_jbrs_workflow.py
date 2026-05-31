@@ -6,14 +6,19 @@ import sys
 import tempfile
 import unittest
 from pathlib import Path
+from types import SimpleNamespace
+from unittest.mock import patch
 
 ROOT = Path(__file__).resolve().parents[1]
 SCRIPTS_DIR = ROOT / "scripts"
 if str(SCRIPTS_DIR) not in sys.path:
     sys.path.insert(0, str(SCRIPTS_DIR))
 
+import ocr_jbrs_google_vision as ocr
+from corpus_common import write_tsv
 from jbrs_workflow_common import (
     JBRS_ARTICLE_REFERENCE_TARGETS_PATH,
+    JBRS_ARTICLE_REFERENCE_TARGETS_REVIEW_PATH,
     JBRS_LOCAL_FILE_MANIFEST_PATH,
     JBRS_OCR_BATCH_PLAN_PATH,
     JBRS_OCR_STATUS_LOG_PATH,
@@ -21,11 +26,16 @@ from jbrs_workflow_common import (
     JBRS_REFERENCE_HUNT_RAW_PATH,
     JBRS_REFERENCE_FILE_MATCH_PATH,
     JBRS_TRANSLATION_CANDIDATE_LOG_PATH,
+    JBRS_TRANSLATION_CANDIDATE_REVIEW_PATH,
+    OCR_BATCH_PLAN_FIELDS,
+    OCR_STATUS_LOG_FIELDS,
+    build_ocr_batch_plan_rows,
     build_pilot_summary,
     classify_reference_kind,
     classify_translation_candidate,
     is_clean_article_target_row,
     read_tsv,
+    title_needs_review,
 )
 
 
@@ -34,22 +44,26 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
     def setUpClass(cls) -> None:
         cls.raw_rows = read_tsv(JBRS_REFERENCE_HUNT_RAW_PATH)
         cls.target_rows = read_tsv(JBRS_ARTICLE_REFERENCE_TARGETS_PATH)
+        cls.target_review_rows = read_tsv(JBRS_ARTICLE_REFERENCE_TARGETS_REVIEW_PATH)
         cls.manifest_rows = read_tsv(JBRS_LOCAL_FILE_MANIFEST_PATH)
         cls.match_rows = read_tsv(JBRS_REFERENCE_FILE_MATCH_PATH)
         cls.batch_rows = read_tsv(JBRS_OCR_BATCH_PLAN_PATH)
         cls.status_rows = read_tsv(JBRS_OCR_STATUS_LOG_PATH)
         cls.candidate_rows = read_tsv(JBRS_TRANSLATION_CANDIDATE_LOG_PATH)
+        cls.candidate_review_rows = read_tsv(JBRS_TRANSLATION_CANDIDATE_REVIEW_PATH)
         cls.summary = json.loads(JBRS_PILOT_SUMMARY_PATH.read_text(encoding="utf-8"))
 
     def test_generated_files_exist(self) -> None:
         for path in [
             JBRS_REFERENCE_HUNT_RAW_PATH,
             JBRS_ARTICLE_REFERENCE_TARGETS_PATH,
+            JBRS_ARTICLE_REFERENCE_TARGETS_REVIEW_PATH,
             JBRS_LOCAL_FILE_MANIFEST_PATH,
             JBRS_REFERENCE_FILE_MATCH_PATH,
             JBRS_OCR_BATCH_PLAN_PATH,
             JBRS_OCR_STATUS_LOG_PATH,
             JBRS_TRANSLATION_CANDIDATE_LOG_PATH,
+            JBRS_TRANSLATION_CANDIDATE_REVIEW_PATH,
             JBRS_PILOT_SUMMARY_PATH,
         ]:
             self.assertTrue(path.exists(), path)
@@ -75,23 +89,20 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
         local_ids = {row["local_file_id"] for row in self.manifest_rows}
         for row in self.match_rows:
             self.assertIn(row["reference_id"], target_ids)
-            self.assertIn(row["local_file_id"], local_ids)
+            if row["local_file_id"]:
+                self.assertIn(row["local_file_id"], local_ids)
 
     def test_ready_for_ocr_never_has_blocked_by(self) -> None:
         for row in self.batch_rows:
             if row["status"] == "ready_for_ocr":
                 self.assertEqual(row["blocked_by"], "")
 
-    def test_rows_without_runtime_paths_need_runtime_cache(self) -> None:
-        pending_rows = [
-            row
-            for row in self.batch_rows
-            if row["status"] not in {"already_text_available", "skipped", "completed", "failed"}
-            and row["runtime_path_available"] != "true"
-        ]
-        self.assertGreater(len(pending_rows), 0)
-        for row in pending_rows[:25]:
-            self.assertEqual(row["status"], "needs_runtime_path_cache")
+    def test_drive_scan_now_has_runtime_ready_rows(self) -> None:
+        self.assertGreater(sum(row["runtime_path_available"] == "true" for row in self.batch_rows), 0)
+        self.assertGreater(sum(row["status"] == "ready_for_ocr" for row in self.batch_rows), 0)
+
+    def test_manifest_excludes_appledouble_sidecars(self) -> None:
+        self.assertFalse(any(row["file_name"].startswith("._") for row in self.manifest_rows))
 
     def test_numeric_filenames_get_cautious_metadata_only(self) -> None:
         numeric_rows = [
@@ -118,8 +129,51 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
         )
         self.assertEqual(self.summary, rebuilt)
 
+    def test_malformed_targets_have_review_rows(self) -> None:
+        review_by_id = {row["target_reference_id"]: row for row in self.target_review_rows}
+        for row in self.target_rows:
+            if title_needs_review(row["article_title"]):
+                self.assertIn(
+                    review_by_id[row["target_reference_id"]]["review_status"],
+                    {"needs_manual_bibliographic_review", "parser_artifact", "duplicate_or_alias"},
+                )
+
+    def test_parser_artifact_targets_do_not_feed_confident_matching(self) -> None:
+        parser_rows = [row for row in self.match_rows if row["target_review_status"] == "parser_artifact"]
+        self.assertGreater(len(parser_rows), 0)
+        for row in parser_rows:
+            self.assertEqual(row["match_status"], "false_positive")
+
+    def test_translation_candidates_require_review_before_promotion(self) -> None:
+        review_by_id = {row["candidate_id"]: row for row in self.candidate_review_rows}
+        self.assertEqual({row["candidate_id"] for row in self.candidate_rows}, set(review_by_id))
+        self.assertFalse(any(row["is_actual_translation_section"] == "true" for row in self.candidate_review_rows))
+
 
 class JBRSWorkflowLogicTests(unittest.TestCase):
+    def test_runtime_cache_changes_needs_runtime_path_cache_to_ready(self) -> None:
+        manifest_row = {
+            "local_file_id": "sample-local-file",
+            "file_name": "sample.pdf",
+            "path_stub_or_redacted_path": "JBRS/sample.pdf",
+            "probable_author_from_path": "",
+            "probable_title_from_filename": "",
+            "probable_year_from_filename": "1933",
+            "probable_year_from_folder": "",
+            "probable_volume_issue_from_filename": "",
+            "probable_article_start_page_from_filename": "1",
+            "probable_article_end_page_from_filename": "2",
+            "folder_context": "JBRS",
+            "is_article_split_pdf": "true",
+            "is_whole_issue_or_volume": "false",
+            "runtime_path_available": "false",
+            "ocr_priority_reason": "",
+        }
+        without_cache = build_ocr_batch_plan_rows([manifest_row], [], {}, [])
+        with_cache = build_ocr_batch_plan_rows([manifest_row], [], {"sample-local-file": "/Volumes/Example/JBRS/sample.pdf"}, [])
+        self.assertEqual(without_cache[0]["status"], "needs_runtime_path_cache")
+        self.assertEqual(with_cache[0]["status"], "ready_for_ocr")
+
     def test_translation_citation_is_not_explicit_heading(self) -> None:
         row = classify_translation_candidate(
             "See the translation of this inscription by Buhler for the Sanskrit passage.",
@@ -157,6 +211,88 @@ class JBRSWorkflowLogicTests(unittest.TestCase):
             runtime_cache.write_text('{"jbrs-local-0001":"/Volumes/Example/JBRS/vol1.pdf"}', encoding="utf-8")
             self.assertTrue(runtime_cache.exists())
             self.assertNotIn("/data/working/bibliography/jbrs/", str(runtime_cache))
+
+    def test_preflight_fails_cleanly_when_no_ready_rows_are_selected(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            with patch.object(ocr, "gitignored_data_local", return_value=True), patch.object(ocr, "staged_forbidden_paths", return_value=[]):
+                report = ocr.preflight_report(
+                    selected_rows=[],
+                    runtime_path_cache={},
+                    local_output_root=Path(tmpdir),
+                    live_mode=False,
+                )
+        self.assertIn("No ready_for_ocr rows were selected.", report["errors"])
+
+    def test_preflight_passes_with_mocked_ready_row_and_runtime_path(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            temp_root = Path(tmpdir)
+            source = temp_root / "sample.pdf"
+            source.write_bytes(b"%PDF-1.4\n")
+            batch_row = {"batch_id": "test-batch", "local_file_id": "sample", "status": "ready_for_ocr"}
+            with patch.object(ocr, "gitignored_data_local", return_value=True), patch.object(ocr, "staged_forbidden_paths", return_value=[]):
+                report = ocr.preflight_report(
+                    selected_rows=[batch_row],
+                    runtime_path_cache={"sample": str(source)},
+                    local_output_root=temp_root / "data_local/ocr/jbrs",
+                    live_mode=False,
+                )
+        self.assertEqual(report["errors"], [])
+
+    def test_live_ocr_can_run_with_mocked_vision_response(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            temp_root = Path(tmpdir)
+            source = temp_root / "sample.pdf"
+            source.write_bytes(b"%PDF-1.4\nsample")
+            image = temp_root / "page-0001.png"
+            image.write_bytes(b"fake-image")
+            batch_rows = [
+                {
+                    "batch_id": "test-batch",
+                    "local_file_id": "sample-local-file",
+                    "file_name": "sample.pdf",
+                    "path_stub": "JBRS/sample.pdf",
+                    "volume": "",
+                    "issue": "",
+                    "year": "1933",
+                    "page_count_estimate": "1",
+                    "runtime_path_available": "true",
+                    "ocr_priority": "medium",
+                    "ocr_priority_reason": "test",
+                    "ocr_scope": "article_pages_only",
+                    "ocr_engine": "google_vision",
+                    "output_basename": "sample-output",
+                    "expected_output_format": "google_vision_json|page_text|article_text|metadata_sidecar",
+                    "metadata_sidecar_path": "data_local/ocr/jbrs/manifest/sample-output.json",
+                    "status": "ready_for_ocr",
+                    "blocked_by": "",
+                    "notes": "test row",
+                }
+            ]
+            batch_plan = temp_root / "batch.tsv"
+            status_log = temp_root / "status.tsv"
+            runtime_cache = temp_root / "runtime.json"
+            preflight_report_path = temp_root / "preflight.json"
+            write_tsv(batch_plan, batch_rows, OCR_BATCH_PLAN_FIELDS)
+            write_tsv(status_log, [], OCR_STATUS_LOG_FIELDS)
+            runtime_cache.write_text(json.dumps({"sample-local-file": str(source)}), encoding="utf-8")
+            args = SimpleNamespace(
+                batch_plan=batch_plan,
+                status_log=status_log,
+                runtime_path_cache=runtime_cache,
+                local_output_root=temp_root / "data_local/ocr/jbrs",
+                preflight_report=preflight_report_path,
+                batch_id=["test-batch"],
+                limit=0,
+                dry_run=False,
+                execute=True,
+            )
+            with patch.object(ocr, "gitignored_data_local", return_value=True), patch.object(ocr, "staged_forbidden_paths", return_value=[]), patch.object(ocr, "lookup_access_token", return_value=("token", "mock")), patch.object(ocr, "source_to_images", return_value=[image]), patch.object(ocr, "vision_ocr_image", return_value={"responses": [{"fullTextAnnotation": {"text": "Translation\\nSample text"}}]}):
+                result = ocr.run_selected_batches(args)
+            self.assertEqual(result, 0)
+            written_status = read_tsv(status_log)
+            self.assertEqual(written_status[0]["status"], "completed")
+            self.assertTrue((args.local_output_root / "article_text/sample-output.txt").exists())
+            self.assertTrue((args.local_output_root / "manifest/sample-output.json").exists())
 
 
 if __name__ == "__main__":

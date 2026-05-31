@@ -14,9 +14,11 @@ from jbrs_workflow_common import (
     JBRS_REFERENCE_FILE_MATCH_PATH,
     JBRS_REFERENCE_HUNT_RAW_PATH,
     JBRS_TRANSLATION_CANDIDATE_LOG_PATH,
+    JBRS_TRANSLATION_CANDIDATE_REVIEW_PATH,
     OCR_BATCH_PLAN_FIELDS,
     OCR_STATUS_LOG_FIELDS,
     TRANSLATION_CANDIDATE_FIELDS,
+    TRANSLATION_CANDIDATE_REVIEW_FIELDS,
     build_ocr_batch_plan_rows,
     build_ocr_status_log_rows,
     build_pilot_summary,
@@ -35,6 +37,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--batch-output", type=Path, default=JBRS_OCR_BATCH_PLAN_PATH)
     parser.add_argument("--status-output", type=Path, default=JBRS_OCR_STATUS_LOG_PATH)
     parser.add_argument("--candidate-log", type=Path, default=JBRS_TRANSLATION_CANDIDATE_LOG_PATH)
+    parser.add_argument("--candidate-review", type=Path, default=JBRS_TRANSLATION_CANDIDATE_REVIEW_PATH)
     parser.add_argument("--summary-output", type=Path, default=JBRS_PILOT_SUMMARY_PATH)
     return parser.parse_args()
 
@@ -53,6 +56,8 @@ def main() -> None:
     write_tsv(args.status_output, status_rows, OCR_STATUS_LOG_FIELDS)
     if not args.candidate_log.exists():
         write_tsv(args.candidate_log, [], TRANSLATION_CANDIDATE_FIELDS)
+    if not args.candidate_review.exists():
+        write_tsv(args.candidate_review, [], TRANSLATION_CANDIDATE_REVIEW_FIELDS)
     summary = build_pilot_summary(raw_reference_rows, target_rows, manifest_rows, match_rows, batch_rows, status_rows, candidate_rows)
     write_summary(args.summary_output, summary)
     print(f"Wrote {len(batch_rows)} JBRS OCR batch rows to {args.batch_output}")
