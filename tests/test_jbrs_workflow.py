@@ -22,6 +22,8 @@ from jbrs_workflow_common import (
     JBRS_ARTICLE_REFERENCE_TARGETS_PATH,
     JBRS_ARTICLE_REFERENCE_TARGETS_REVIEW_PATH,
     JBRS_EMBEDDED_TRANSLATION_EXCERPT_REVIEW_PATH,
+    JBRS_EXTRACTED_SOURCE_TEXT_UNITS_PATH,
+    JBRS_EXTRACTED_TRANSLATION_UNITS_PATH,
     JBRS_FOLLOWUP_SOURCE_LEADS_PATH,
     JBRS_LOCAL_FILE_MANIFEST_PATH,
     JBRS_OCR_BATCH_PLAN_PATH,
@@ -30,6 +32,7 @@ from jbrs_workflow_common import (
     JBRS_PILOT_SUMMARY_PATH,
     JBRS_REFERENCE_HUNT_RAW_PATH,
     JBRS_REFERENCE_FILE_MATCH_PATH,
+    JBRS_STRUCTURED_EXTRACTION_PLAN_PATH,
     JBRS_TRANSLATION_CANDIDATE_LOG_PATH,
     JBRS_TRANSLATION_CANDIDATE_REVIEW_PATH,
     OCR_BATCH_PLAN_FIELDS,
@@ -61,6 +64,9 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
         cls.excerpt_review_rows = read_tsv(JBRS_EMBEDDED_TRANSLATION_EXCERPT_REVIEW_PATH)
         cls.followup_source_lead_rows = read_tsv(JBRS_FOLLOWUP_SOURCE_LEADS_PATH)
         cls.ocr_quality_review_rows = read_tsv(JBRS_OCR_QUALITY_REVIEW_PATH)
+        cls.structured_extraction_plan_rows = read_tsv(JBRS_STRUCTURED_EXTRACTION_PLAN_PATH)
+        cls.extracted_translation_unit_rows = read_tsv(JBRS_EXTRACTED_TRANSLATION_UNITS_PATH)
+        cls.extracted_source_text_unit_rows = read_tsv(JBRS_EXTRACTED_SOURCE_TEXT_UNITS_PATH)
         cls.summary = json.loads(JBRS_PILOT_SUMMARY_PATH.read_text(encoding="utf-8"))
 
     def test_generated_files_exist(self) -> None:
@@ -77,6 +83,9 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
             JBRS_EMBEDDED_TRANSLATION_EXCERPT_REVIEW_PATH,
             JBRS_FOLLOWUP_SOURCE_LEADS_PATH,
             JBRS_OCR_QUALITY_REVIEW_PATH,
+            JBRS_STRUCTURED_EXTRACTION_PLAN_PATH,
+            JBRS_EXTRACTED_TRANSLATION_UNITS_PATH,
+            JBRS_EXTRACTED_SOURCE_TEXT_UNITS_PATH,
             JBRS_PILOT_SUMMARY_PATH,
         ]:
             self.assertTrue(path.exists(), path)
@@ -175,22 +184,28 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
             self.assertEqual(row["match_status"], "false_positive")
 
     def test_translation_candidates_require_review_before_promotion(self) -> None:
-        review_by_id = {row["candidate_id"]: row for row in self.candidate_review_rows}
-        self.assertEqual({row["candidate_id"] for row in self.candidate_rows}, set(review_by_id))
+        review_by_key = {row["candidate_key"]: row for row in self.candidate_review_rows}
+        review_by_local_file = {row["local_file_id"]: row for row in self.candidate_review_rows}
+        self.assertEqual({row["candidate_key"] for row in self.candidate_rows}, set(review_by_key))
         self.assertFalse(any(row["review_status"] == "verified_translation_coverage" for row in self.candidate_review_rows))
-        shwegugyi = review_by_id["jbrs-candidate-0010"]
+        shwegugyi = review_by_local_file["1920-shwegugyiinscription-luce1920-pdf"]
         self.assertEqual(shwegugyi["is_actual_translation_section"], "true")
         self.assertEqual(shwegugyi["review_status"], "reviewed_manual_follow_up_needed")
-        ananda = review_by_id["jbrs-candidate-0012"]
+        ananda = review_by_local_file["1976-anandainscriptions-tinlwin1976-pdf"]
         self.assertEqual(ananda["is_actual_translation_section"], "true")
         self.assertEqual(ananda["review_status"], "reviewed_manual_follow_up_needed")
+        pyu = review_by_local_file["1917-pyuinscriptions-blagden1917-pdf"]
+        self.assertEqual(pyu["review_status"], "reviewed_general_discussion_only")
+        burma_debt = review_by_local_file["1932-burmadebttopagan-luce1932-pdf"]
+        self.assertEqual(burma_debt["is_actual_translation_section"], "false")
 
     def test_excerpt_and_followup_layers_cover_embedded_lead(self) -> None:
-        excerpt_by_candidate = {row["candidate_id"]: row for row in self.excerpt_review_rows}
-        self.assertIn("jbrs-candidate-0009", excerpt_by_candidate)
-        self.assertTrue(
-            any(row["trigger_candidate_id"] == "jbrs-candidate-0009" for row in self.followup_source_lead_rows)
-        )
+        candidate_by_local_file = {row["local_file_id"]: row for row in self.candidate_rows}
+        burma_debt = candidate_by_local_file["1932-burmadebttopagan-luce1932-pdf"]
+        excerpt_row = next(row for row in self.excerpt_review_rows if row["local_file_id"] == "1932-burmadebttopagan-luce1932-pdf")
+        followup_row = next(row for row in self.followup_source_lead_rows if row["possible_local_file_id"] == "1920-shwegugyiinscription-luce1920-pdf")
+        self.assertEqual(excerpt_row["candidate_key"], burma_debt["candidate_key"])
+        self.assertEqual(followup_row["trigger_candidate_key"], burma_debt["candidate_key"])
 
     def test_summary_distinguishes_translation_lead_types_without_verified_coverage(self) -> None:
         self.assertEqual(self.summary["embedded_translation_excerpt_candidate_count"], 1)
@@ -198,6 +213,27 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
         self.assertEqual(self.summary["standalone_translation_section_count"], 2)
         self.assertEqual(self.summary["fuller_source_followup_lead_count"], 1)
         self.assertEqual(self.summary["verified_translation_coverage_count"], 0)
+
+    def test_structured_extraction_plan_covers_current_jbrs_leads(self) -> None:
+        plan_by_local_file = {row["source_local_file_id"]: row for row in self.structured_extraction_plan_rows}
+        self.assertEqual(
+            {
+                "1920-shwegugyiinscription-luce1920-pdf",
+                "1976-anandainscriptions-tinlwin1976-pdf",
+                "1932-burmadebttopagan-luce1932-pdf",
+            },
+            set(plan_by_local_file),
+        )
+        self.assertEqual(plan_by_local_file["1920-shwegugyiinscription-luce1920-pdf"]["burmese_relevance_status"], "related_non_burmese_pagan_source")
+        self.assertEqual(plan_by_local_file["1976-anandainscriptions-tinlwin1976-pdf"]["burmese_relevance_status"], "mixed_burmese_pali_relevance")
+        self.assertEqual(plan_by_local_file["1932-burmadebttopagan-luce1932-pdf"]["lead_type"], "embedded_translation_excerpt")
+
+    def test_extraction_dry_run_records_shwegugyi_units_only(self) -> None:
+        self.assertEqual(len(self.extracted_translation_unit_rows), 1)
+        self.assertEqual(len(self.extracted_source_text_unit_rows), 1)
+        self.assertEqual(self.extracted_translation_unit_rows[0]["source_local_file_id"], "1920-shwegugyiinscription-luce1920-pdf")
+        self.assertEqual(self.extracted_source_text_unit_rows[0]["source_language"], "Pali")
+        self.assertEqual(self.extracted_translation_unit_rows[0]["translation_language"], "English")
 
 
 class JBRSWorkflowLogicTests(unittest.TestCase):
@@ -614,15 +650,17 @@ class JBRSWorkflowLogicTests(unittest.TestCase):
         )
         self.assertEqual(selected, {"target-file"})
 
-    def test_narrow_candidate_merge_preserves_existing_candidate_ids(self) -> None:
+    def test_narrow_candidate_merge_preserves_existing_candidate_ids_for_matching_candidate_keys(self) -> None:
         existing_rows = [
             {
                 "candidate_id": "jbrs-candidate-0007",
+                "candidate_key": "target-file:key-a",
                 "local_file_id": "target-file",
                 "candidate_type": "translation_word_hit",
             },
             {
                 "candidate_id": "jbrs-candidate-0008",
+                "candidate_key": "other-file:key-a",
                 "local_file_id": "other-file",
                 "candidate_type": "translation_word_hit",
             },
@@ -630,6 +668,7 @@ class JBRSWorkflowLogicTests(unittest.TestCase):
         replacement_rows = [
             {
                 "candidate_id": "jbrs-candidate-0001",
+                "candidate_key": "target-file:key-a",
                 "local_file_id": "target-file",
                 "candidate_type": "planned_or_general_translation_discussion",
             }
@@ -638,6 +677,56 @@ class JBRSWorkflowLogicTests(unittest.TestCase):
         merged_by_local_file = {row["local_file_id"]: row for row in merged}
         self.assertEqual(merged_by_local_file["target-file"]["candidate_id"], "jbrs-candidate-0007")
         self.assertEqual(merged_by_local_file["other-file"]["candidate_id"], "jbrs-candidate-0008")
+
+    def test_alignment_validator_flags_candidate_review_local_file_and_type_mismatches(self) -> None:
+        candidate_rows = [
+            {
+                "candidate_id": "jbrs-candidate-0001",
+                "candidate_key": "key-1",
+                "local_file_id": "1920-shwegugyiinscription-luce1920-pdf",
+                "candidate_type": "explicit_translation_heading",
+            }
+        ]
+        review_rows = [
+            {
+                "candidate_id": "jbrs-candidate-0001",
+                "candidate_key": "key-1",
+                "local_file_id": "1976-anandainscriptions-tinlwin1976-pdf",
+                "candidate_type": "translation_word_hit",
+                "review_status": "needs_manual_review",
+                "manual_assessment": "Ananda translation lead",
+                "is_actual_translation_section": "",
+                "is_inscription_translation": "",
+            }
+        ]
+        errors = common.validate_translation_candidate_alignment(candidate_rows, review_rows, [], [], [])
+        self.assertTrue(any("local_file_id does not match" in error for error in errors), errors)
+        self.assertTrue(any("candidate_type does not match" in error for error in errors), errors)
+
+    def test_alignment_validator_flags_named_source_conflicts_and_missing_quality_rows(self) -> None:
+        candidate_rows = [
+            {
+                "candidate_id": "jbrs-candidate-0002",
+                "candidate_key": "key-2",
+                "local_file_id": "1948-centuryofprogress-luce1948-pdf",
+                "candidate_type": "explicit_translation_heading",
+            }
+        ]
+        review_rows = [
+            {
+                "candidate_id": "jbrs-candidate-0002",
+                "candidate_key": "key-2",
+                "local_file_id": "1948-centuryofprogress-luce1948-pdf",
+                "candidate_type": "explicit_translation_heading",
+                "review_status": "reviewed_manual_follow_up_needed",
+                "manual_assessment": "The article contains a standalone inscription text-and-translation section with clear Shwegugyi framing and Ananda parallels.",
+                "is_actual_translation_section": "true",
+                "is_inscription_translation": "true",
+            }
+        ]
+        errors = common.validate_translation_candidate_alignment(candidate_rows, review_rows, [], [], [])
+        self.assertTrue(any("conflicts with local_file_id" in error for error in errors), errors)
+        self.assertTrue(any("lacks OCR quality review" in error for error in errors), errors)
 
 
 if __name__ == "__main__":

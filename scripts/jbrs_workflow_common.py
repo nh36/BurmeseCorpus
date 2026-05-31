@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import hashlib
 import re
 import subprocess
 from collections import defaultdict
@@ -26,6 +27,9 @@ JBRS_TRANSLATION_CANDIDATE_REVIEW_PATH = JBRS_DIRECTORY / "jbrs_translation_cand
 JBRS_OCR_QUALITY_REVIEW_PATH = JBRS_DIRECTORY / "jbrs_ocr_quality_review.tsv"
 JBRS_EMBEDDED_TRANSLATION_EXCERPT_REVIEW_PATH = JBRS_DIRECTORY / "jbrs_embedded_translation_excerpt_review.tsv"
 JBRS_FOLLOWUP_SOURCE_LEADS_PATH = JBRS_DIRECTORY / "jbrs_followup_source_leads.tsv"
+JBRS_STRUCTURED_EXTRACTION_PLAN_PATH = JBRS_DIRECTORY / "jbrs_structured_extraction_plan.tsv"
+JBRS_EXTRACTED_TRANSLATION_UNITS_PATH = JBRS_DIRECTORY / "jbrs_extracted_translation_units.tsv"
+JBRS_EXTRACTED_SOURCE_TEXT_UNITS_PATH = JBRS_DIRECTORY / "jbrs_extracted_source_text_units.tsv"
 JBRS_PILOT_SUMMARY_PATH = JBRS_DIRECTORY / "jbrs_pilot_summary.json"
 JBRS_README_PATH = JBRS_DIRECTORY / "README.md"
 
@@ -211,6 +215,7 @@ OCR_QUALITY_REVIEW_FIELDS = [
 EMBEDDED_TRANSLATION_EXCERPT_REVIEW_FIELDS = [
     "excerpt_review_id",
     "candidate_id",
+    "candidate_key",
     "batch_id",
     "local_file_id",
     "file_name",
@@ -235,6 +240,7 @@ EMBEDDED_TRANSLATION_EXCERPT_REVIEW_FIELDS = [
 FOLLOWUP_SOURCE_LEAD_FIELDS = [
     "lead_id",
     "trigger_candidate_id",
+    "trigger_candidate_key",
     "trigger_file",
     "cited_source_description",
     "possible_local_file_id",
@@ -249,6 +255,7 @@ FOLLOWUP_SOURCE_LEAD_FIELDS = [
 
 TRANSLATION_CANDIDATE_FIELDS = [
     "candidate_id",
+    "candidate_key",
     "local_file_id",
     "reference_id_if_any",
     "journal",
@@ -271,6 +278,7 @@ TRANSLATION_CANDIDATE_FIELDS = [
 
 TRANSLATION_CANDIDATE_REVIEW_FIELDS = [
     "candidate_id",
+    "candidate_key",
     "local_file_id",
     "candidate_type",
     "review_status",
@@ -281,6 +289,70 @@ TRANSLATION_CANDIDATE_REVIEW_FIELDS = [
     "is_general_discussion",
     "is_citation_to_external_translation",
     "next_action",
+    "notes",
+]
+
+STRUCTURED_EXTRACTION_PLAN_FIELDS = [
+    "extraction_plan_id",
+    "source_local_file_id",
+    "batch_id",
+    "file_name",
+    "article_title",
+    "author",
+    "year",
+    "lead_type",
+    "source_text_language_or_script",
+    "translation_language",
+    "contains_burmese_inscription",
+    "contains_pali_inscription",
+    "contains_other_language_inscription",
+    "burmese_relevance_status",
+    "page_range_or_markers",
+    "source_identifier_in_article",
+    "known_external_source_refs",
+    "extraction_unit",
+    "proposed_output_format",
+    "needs_manual_source_linkage",
+    "priority",
+    "next_action",
+    "notes",
+]
+
+EXTRACTED_TRANSLATION_UNIT_FIELDS = [
+    "translation_unit_id",
+    "source_local_file_id",
+    "batch_id",
+    "article_title",
+    "page_marker",
+    "unit_order",
+    "inscription_or_text_id",
+    "source_text_unit_id",
+    "source_language",
+    "translation_language",
+    "is_burmese_relevant",
+    "includes_pali",
+    "includes_burmese",
+    "includes_other_language",
+    "translation_text",
+    "translation_status",
+    "review_status",
+    "notes",
+]
+
+EXTRACTED_SOURCE_TEXT_UNIT_FIELDS = [
+    "source_text_unit_id",
+    "source_local_file_id",
+    "batch_id",
+    "article_title",
+    "page_marker",
+    "unit_order",
+    "inscription_or_text_id",
+    "source_language",
+    "script_or_transliteration",
+    "is_burmese_relevant",
+    "source_text",
+    "source_text_status",
+    "review_status",
     "notes",
 ]
 
@@ -371,6 +443,14 @@ GENERIC_TITLE_WORDS = {
     "translation",
 }
 
+LOCAL_FILE_REVIEW_HINTS = {
+    "1920-shwegugyiinscription-luce1920-pdf": {"shwegugyi", "1141 a d", "pali text"},
+    "1976-anandainscriptions-tinlwin1976-pdf": {"ananda", "translation of the text in p 1", "brick monastery"},
+    "1932-burmadebttopagan-luce1932-pdf": {"burma s debt", "myanmar s debt", "lemyethna", "minnanthu"},
+    "1917-pyuinscriptions-blagden1917-pdf": {"pyu inscriptions", "pyu", "translations in other languages"},
+    "1948-centuryofprogress-luce1948-pdf": {"century of progress", "dhammaceti"},
+}
+
 HEADING_TRANSLATION_PATTERN = re.compile(
     r"^(translation(?:\s+of\b.*)?|text\s+and\s+translation|translation\s+and\s+notes|translated\s+text)\s*[:.]?$",
     re.IGNORECASE,
@@ -419,6 +499,54 @@ def truncate_short(value: str | None, limit: int = SHORT_SNIPPET_LIMIT) -> str:
     if len(text) <= limit:
         return text
     return text[: limit - 1].rstrip() + "…"
+
+
+def candidate_lookup_key(row: dict[str, str]) -> str:
+    return row.get("candidate_key", "") or row.get("candidate_id", "")
+
+
+def infer_candidate_page_marker(text: str, evidence_marker: str) -> str:
+    current_page_marker = ""
+    normalized_marker = normalize_for_match(evidence_marker)
+    marker_slug = slugify(evidence_marker)
+    for line in text.splitlines():
+        stripped = line.strip()
+        page_match = PAGE_MARKER_PATTERN.fullmatch(stripped)
+        if page_match:
+            current_page_marker = f"[[page {page_match.group(1)}]]"
+            continue
+        if not stripped or not normalized_marker:
+            continue
+        normalized_line = normalize_for_match(stripped)
+        if normalized_marker in normalized_line or normalized_line in normalized_marker:
+            return current_page_marker
+        if marker_slug and marker_slug in slugify(stripped):
+            return current_page_marker
+    return current_page_marker if normalized_marker else ""
+
+
+def build_translation_candidate_key(
+    local_file_id: str,
+    candidate_type: str,
+    evidence_marker: str,
+    page_marker: str,
+) -> str:
+    anchor = page_marker or normalize_for_match(evidence_marker) or candidate_type
+    anchor_slug = slugify(anchor)[:48] or "candidate"
+    digest = hashlib.sha1(f"{local_file_id}|{candidate_type}|{anchor}".encode("utf-8")).hexdigest()[:12]
+    return f"jbrs-candidate-key:{local_file_id}:{candidate_type}:{anchor_slug}:{digest}"
+
+
+def manual_assessment_conflicts_with_local_file_id(manual_assessment: str, local_file_id: str) -> str:
+    lowered = normalize_for_match(manual_assessment)
+    if not lowered:
+        return ""
+    for expected_local_file_id, hints in LOCAL_FILE_REVIEW_HINTS.items():
+        if expected_local_file_id == local_file_id:
+            continue
+        if any(hint in lowered for hint in hints):
+            return expected_local_file_id
+    return ""
 
 
 def safe_path_stub(value: str | None, keep_parts: int = 4) -> str:
@@ -952,6 +1080,7 @@ def build_translation_candidate_review_rows(
         candidate_type = row.get("candidate_type", "")
         generated = {
             "candidate_id": row.get("candidate_id", ""),
+            "candidate_key": row.get("candidate_key", ""),
             "local_file_id": row.get("local_file_id", ""),
             "candidate_type": candidate_type,
             "review_status": "needs_manual_review",
@@ -964,9 +1093,9 @@ def build_translation_candidate_review_rows(
             "next_action": "Inspect the local source manually before treating this as an actual inscription translation.",
             "notes": "Auto-generated review row; no candidate is promoted to verified translation coverage without human review.",
         }
-        existing = existing_review_rows.get(generated["candidate_id"], {})
+        existing = existing_review_rows.get(generated["candidate_key"], {})
         for key in generated:
-            if key in {"candidate_id", "local_file_id", "candidate_type"}:
+            if key in {"candidate_id", "candidate_key", "local_file_id", "candidate_type"}:
                 continue
             if existing.get(key):
                 generated[key] = existing[key]
@@ -1752,9 +1881,12 @@ def build_translation_candidate_rows(
         match_row = match_by_local_file.get(local_file_id, {})
         reference_id = match_row.get("reference_id", "")
         reference_row = reference_by_id.get(reference_id, {})
+        page_marker = infer_candidate_page_marker(text, evidence_marker)
+        candidate_key = build_translation_candidate_key(local_file_id, candidate_type, evidence_marker, page_marker)
         rows.append(
             {
                 "candidate_id": f"jbrs-candidate-{len(rows) + 1:04d}",
+                "candidate_key": candidate_key,
                 "local_file_id": local_file_id,
                 "reference_id_if_any": reference_id,
                 "journal": JOURNAL_TITLE,
@@ -1815,7 +1947,7 @@ def build_pilot_summary(
         for row in ocr_quality_review_rows
         if row.get("manual_review_status") == "reviewed_bibliography_only"
     )
-    excerpt_review_candidate_ids = {row.get("candidate_id", "") for row in excerpt_review_rows}
+    excerpt_review_candidate_keys = {candidate_lookup_key(row) for row in excerpt_review_rows if candidate_lookup_key(row)}
     embedded_translation_excerpt_candidate_count = len(excerpt_review_rows)
     embedded_translation_excerpt_reviewed_count = sum(
         1
@@ -1826,7 +1958,7 @@ def build_pilot_summary(
         1
         for row in candidate_review_rows
         if row.get("is_actual_translation_section") == "true"
-        and row.get("candidate_id", "") not in excerpt_review_candidate_ids
+        and candidate_lookup_key(row) not in excerpt_review_candidate_keys
     )
     verified_translation_coverage_count = sum(
         1
@@ -1883,6 +2015,103 @@ def build_pilot_summary(
 def write_summary(path: Path, summary: dict[str, object]) -> None:
     ensure_parent(path)
     path.write_text(json.dumps(summary, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+
+def validate_translation_candidate_alignment(
+    candidate_rows: list[dict[str, str]],
+    candidate_review_rows: list[dict[str, str]],
+    ocr_quality_review_rows: list[dict[str, str]],
+    excerpt_review_rows: list[dict[str, str]],
+    followup_source_lead_rows: list[dict[str, str]],
+) -> list[str]:
+    errors: list[str] = []
+    candidate_by_key = {candidate_lookup_key(row): row for row in candidate_rows if candidate_lookup_key(row)}
+    candidate_by_id = {row.get("candidate_id", ""): row for row in candidate_rows if row.get("candidate_id")}
+    quality_by_local_file = {row.get("local_file_id", ""): row for row in ocr_quality_review_rows if row.get("local_file_id")}
+    excerpt_by_key = {candidate_lookup_key(row): row for row in excerpt_review_rows if candidate_lookup_key(row)}
+    followup_by_key = {
+        row.get("trigger_candidate_key", "") or row.get("trigger_candidate_id", ""): row
+        for row in followup_source_lead_rows
+        if row.get("trigger_candidate_key", "") or row.get("trigger_candidate_id", "")
+    }
+
+    if len(candidate_by_key) != len(candidate_rows):
+        errors.append("Translation candidate log contains duplicate candidate_key values.")
+    if len(candidate_by_id) != len(candidate_rows):
+        errors.append("Translation candidate log contains duplicate candidate_id display values.")
+
+    review_keys = set()
+    for row in candidate_review_rows:
+        review_key = candidate_lookup_key(row)
+        if not review_key:
+            errors.append("Translation candidate review row is missing candidate_key.")
+            continue
+        if review_key in review_keys:
+            errors.append(f"Translation candidate review contains duplicate candidate_key values: {review_key}")
+            continue
+        review_keys.add(review_key)
+        candidate_row = candidate_by_key.get(review_key)
+        if not candidate_row:
+            errors.append(f"Translation candidate review points to unknown candidate: {row.get('candidate_id', '')}")
+            continue
+        if row.get("candidate_id", "") and row.get("candidate_id", "") != candidate_row.get("candidate_id", ""):
+            errors.append(f"Translation candidate review has stale display id for candidate_key {review_key}")
+        if row.get("local_file_id", "") != candidate_row.get("local_file_id", ""):
+            errors.append(f"Translation candidate review local_file_id does not match candidate log: {review_key}")
+        if row.get("candidate_type", "") != candidate_row.get("candidate_type", ""):
+            errors.append(f"Translation candidate review candidate_type does not match candidate log: {review_key}")
+        conflicting_local_file_id = manual_assessment_conflicts_with_local_file_id(
+            row.get("manual_assessment", ""),
+            row.get("local_file_id", ""),
+        )
+        if conflicting_local_file_id:
+            errors.append(
+                f"Translation candidate review manual assessment conflicts with local_file_id {row.get('local_file_id', '')}: references {conflicting_local_file_id}"
+            )
+        if row.get("is_actual_translation_section") == "true" and row.get("review_status") == "needs_manual_review":
+            errors.append(f"Candidate review marks actual translation content without a completed review status: {row.get('candidate_id', '')}")
+        if row.get("is_actual_translation_section") == "true" and not row.get("manual_assessment", ""):
+            errors.append(f"Candidate review marks actual translation content without manual assessment notes: {row.get('candidate_id', '')}")
+        if row.get("review_status") == "verified_translation_coverage" and row.get("is_inscription_translation") != "true":
+            errors.append(f"Bibliography-only or non-inscription hit was promoted to verified translation coverage: {row.get('candidate_id', '')}")
+        if "embedded" in row.get("manual_assessment", "").casefold() and review_key not in excerpt_by_key:
+            errors.append(f"Embedded translation review is missing an excerpt-review row: {row.get('candidate_id', '')}")
+        if "fuller text and translation" in row.get("manual_assessment", "").casefold() and review_key not in followup_by_key:
+            errors.append(f"External fuller-source citation is missing a follow-up lead row: {row.get('candidate_id', '')}")
+        if row.get("is_actual_translation_section") == "true" and row.get("local_file_id", "") not in quality_by_local_file:
+            errors.append(f"Standalone translation-section lead lacks OCR quality review: {row.get('local_file_id', '')}")
+
+    for row in excerpt_review_rows:
+        review_key = candidate_lookup_key(row)
+        if not review_key:
+            errors.append(f"Excerpt review row is missing candidate_key: {row.get('excerpt_review_id', '')}")
+            continue
+        candidate_row = candidate_by_key.get(review_key)
+        if not candidate_row:
+            errors.append(f"Excerpt review points to unknown translation candidate: {row.get('candidate_id', '')}")
+            continue
+        if row.get("candidate_id", "") and row.get("candidate_id", "") != candidate_row.get("candidate_id", ""):
+            errors.append(f"Excerpt review has stale display id for candidate_key {review_key}")
+        if row.get("local_file_id", "") != candidate_row.get("local_file_id", ""):
+            errors.append(f"Excerpt review local_file_id does not match translation candidate: {row.get('excerpt_review_id', '')}")
+        if row.get("is_standalone_translation_section") == "true" and row.get("is_actual_translation_excerpt") != "true":
+            errors.append(f"Excerpt review marks a standalone translation section without confirming translation evidence: {row.get('excerpt_review_id', '')}")
+
+    for row in followup_source_lead_rows:
+        review_key = row.get("trigger_candidate_key", "") or row.get("trigger_candidate_id", "")
+        if not review_key:
+            errors.append(f"Follow-up source lead is missing trigger_candidate_key: {row.get('lead_id', '')}")
+            continue
+        candidate_row = candidate_by_key.get(review_key)
+        if not candidate_row:
+            errors.append(f"Follow-up source lead points to unknown translation candidate: {row.get('lead_id', '')}")
+            continue
+        if row.get("trigger_candidate_id", "") and row.get("trigger_candidate_id", "") != candidate_row.get("candidate_id", ""):
+            errors.append(f"Follow-up source lead has stale display id for candidate_key {review_key}")
+        if row.get("is_same_work_as_cited_source") == "true" and not row.get("possible_local_file_id"):
+            errors.append(f"Follow-up source lead marks a same-work match without a local file id: {row.get('lead_id', '')}")
+
+    return errors
 
 
 def build_readme_text() -> str:
@@ -1981,6 +2210,9 @@ def validate_jbrs_workflow() -> list[str]:
         JBRS_OCR_QUALITY_REVIEW_PATH,
         JBRS_EMBEDDED_TRANSLATION_EXCERPT_REVIEW_PATH,
         JBRS_FOLLOWUP_SOURCE_LEADS_PATH,
+        JBRS_STRUCTURED_EXTRACTION_PLAN_PATH,
+        JBRS_EXTRACTED_TRANSLATION_UNITS_PATH,
+        JBRS_EXTRACTED_SOURCE_TEXT_UNITS_PATH,
         JBRS_PILOT_SUMMARY_PATH,
         JBRS_README_PATH,
     ]
@@ -2017,6 +2249,9 @@ def validate_jbrs_workflow() -> list[str]:
     ocr_quality_review_rows = read_tsv(JBRS_OCR_QUALITY_REVIEW_PATH)
     excerpt_review_rows = read_tsv(JBRS_EMBEDDED_TRANSLATION_EXCERPT_REVIEW_PATH)
     followup_source_lead_rows = read_tsv(JBRS_FOLLOWUP_SOURCE_LEADS_PATH)
+    extraction_plan_rows = read_tsv(JBRS_STRUCTURED_EXTRACTION_PLAN_PATH)
+    extracted_translation_unit_rows = read_tsv(JBRS_EXTRACTED_TRANSLATION_UNITS_PATH)
+    extracted_source_text_unit_rows = read_tsv(JBRS_EXTRACTED_SOURCE_TEXT_UNITS_PATH)
     summary = json.loads(JBRS_PILOT_SUMMARY_PATH.read_text(encoding="utf-8"))
     readme_text = JBRS_README_PATH.read_text(encoding="utf-8")
 
@@ -2024,9 +2259,6 @@ def validate_jbrs_workflow() -> list[str]:
     target_review_by_id = {row["target_reference_id"]: row for row in target_review_rows}
     manifest_by_id = {row["local_file_id"]: row for row in manifest_rows}
     batch_by_id = {row["batch_id"]: row for row in batch_rows}
-    candidate_review_by_id = {row["candidate_id"]: row for row in candidate_review_rows}
-    excerpt_review_by_candidate_id = {row["candidate_id"]: row for row in excerpt_review_rows}
-    followup_lead_by_candidate_id = {row["trigger_candidate_id"]: row for row in followup_source_lead_rows}
     status_by_batch_id = {row["batch_id"]: row for row in status_rows}
 
     if summary.get("ocr_batch_plan_count", 0) and not batch_rows:
@@ -2114,34 +2346,49 @@ def validate_jbrs_workflow() -> list[str]:
             errors.append(f"Translation candidate lacks both local_file_id and reference_id_if_any: {row.get('candidate_id', '')}")
         if "review lead" not in row.get("notes", "").casefold():
             errors.append(f"Translation candidate note no longer marks the row as a review lead: {row.get('candidate_id', '')}")
-        if row.get("candidate_id") not in candidate_review_by_id:
+        if not row.get("candidate_key", ""):
+            errors.append(f"Translation candidate is missing candidate_key: {row.get('candidate_id', '')}")
+        if not any(candidate_lookup_key(review_row) == candidate_lookup_key(row) for review_row in candidate_review_rows):
             errors.append(f"Translation candidate lacks a review row: {row.get('candidate_id', '')}")
+    errors.extend(
+        validate_translation_candidate_alignment(
+            candidate_rows,
+            candidate_review_rows,
+            ocr_quality_review_rows,
+            excerpt_review_rows,
+            followup_source_lead_rows,
+        )
+    )
 
-    for row in candidate_review_rows:
-        if row.get("candidate_id") not in {candidate.get("candidate_id", "") for candidate in candidate_rows}:
-            errors.append(f"Translation candidate review points to unknown candidate: {row.get('candidate_id', '')}")
-        if row.get("is_actual_translation_section") == "true" and row.get("review_status") == "needs_manual_review":
-            errors.append(f"Candidate review marks actual translation content without a completed review status: {row.get('candidate_id', '')}")
-        if row.get("is_actual_translation_section") == "true" and not row.get("manual_assessment", ""):
-            errors.append(f"Candidate review marks actual translation content without manual assessment notes: {row.get('candidate_id', '')}")
-        if row.get("review_status") == "verified_translation_coverage" and row.get("is_inscription_translation") != "true":
-            errors.append(f"Bibliography-only or non-inscription hit was promoted to verified translation coverage: {row.get('candidate_id', '')}")
-        if "embedded" in row.get("manual_assessment", "").casefold() and row.get("candidate_id") not in excerpt_review_by_candidate_id:
-            errors.append(f"Embedded translation review is missing an excerpt-review row: {row.get('candidate_id', '')}")
-        if "fuller text and translation" in row.get("manual_assessment", "").casefold() and row.get("candidate_id") not in followup_lead_by_candidate_id:
-            errors.append(f"External fuller-source citation is missing a follow-up lead row: {row.get('candidate_id', '')}")
+    extraction_plan_ids = set()
+    for row in extraction_plan_rows:
+        extraction_plan_id = row.get("extraction_plan_id", "")
+        if not extraction_plan_id:
+            errors.append("Structured extraction plan row is missing extraction_plan_id.")
+            continue
+        if extraction_plan_id in extraction_plan_ids:
+            errors.append(f"Structured extraction plan contains duplicate extraction_plan_id: {extraction_plan_id}")
+        extraction_plan_ids.add(extraction_plan_id)
+        if not row.get("source_text_language_or_script", "") or not row.get("translation_language", ""):
+            errors.append(f"Structured extraction plan is missing language scope fields: {extraction_plan_id}")
+        if row.get("burmese_relevance_status", "") not in {
+            "direct_burmese_relevance",
+            "mixed_burmese_pali_relevance",
+            "related_non_burmese_pagan_source",
+        }:
+            errors.append(f"Structured extraction plan has invalid burmese_relevance_status: {extraction_plan_id}")
 
-    for row in excerpt_review_rows:
-        if row.get("candidate_id") not in candidate_review_by_id:
-            errors.append(f"Excerpt review points to unknown translation candidate: {row.get('candidate_id', '')}")
-        if row.get("is_standalone_translation_section") == "true" and row.get("is_actual_translation_excerpt") != "true":
-            errors.append(f"Excerpt review marks a standalone translation section without confirming translation evidence: {row.get('excerpt_review_id', '')}")
+    for row in extracted_translation_unit_rows:
+        if not row.get("translation_unit_id", ""):
+            errors.append("Extracted translation unit row is missing translation_unit_id.")
+        if not row.get("source_local_file_id", "") or not row.get("translation_text", ""):
+            errors.append(f"Extracted translation unit is missing required content fields: {row.get('translation_unit_id', '')}")
 
-    for row in followup_source_lead_rows:
-        if row.get("trigger_candidate_id") not in candidate_review_by_id:
-            errors.append(f"Follow-up source lead points to unknown translation candidate: {row.get('lead_id', '')}")
-        if row.get("is_same_work_as_cited_source") == "true" and not row.get("possible_local_file_id"):
-            errors.append(f"Follow-up source lead marks a same-work match without a local file id: {row.get('lead_id', '')}")
+    for row in extracted_source_text_unit_rows:
+        if not row.get("source_text_unit_id", ""):
+            errors.append("Extracted source-text unit row is missing source_text_unit_id.")
+        if not row.get("source_local_file_id", "") or not row.get("source_text", ""):
+            errors.append(f"Extracted source-text unit is missing required content fields: {row.get('source_text_unit_id', '')}")
 
     for row in manifest_rows:
         for key in ["path_stub_or_redacted_path"]:
@@ -2184,6 +2431,9 @@ def validate_jbrs_workflow() -> list[str]:
         JBRS_OCR_QUALITY_REVIEW_PATH,
         JBRS_EMBEDDED_TRANSLATION_EXCERPT_REVIEW_PATH,
         JBRS_FOLLOWUP_SOURCE_LEADS_PATH,
+        JBRS_STRUCTURED_EXTRACTION_PLAN_PATH,
+        JBRS_EXTRACTED_TRANSLATION_UNITS_PATH,
+        JBRS_EXTRACTED_SOURCE_TEXT_UNITS_PATH,
     ]:
         text = path.read_text(encoding="utf-8")
         if ABSOLUTE_PATH_PATTERN.search(text):

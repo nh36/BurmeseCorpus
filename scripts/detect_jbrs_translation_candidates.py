@@ -82,12 +82,12 @@ def merge_candidate_rows(
     replacement_rows: list[dict[str, str]],
     selected_local_file_ids: set[str],
 ) -> list[dict[str, str]]:
-    existing_by_local_file = {row.get("local_file_id", ""): row for row in existing_rows if row.get("local_file_id")}
+    existing_by_key = {row.get("candidate_key", ""): row for row in existing_rows if row.get("candidate_key")}
     next_number = next_candidate_number(existing_rows)
     merged_replacements: list[dict[str, str]] = []
-    for row in replacement_rows:
+    for row in sorted(replacement_rows, key=lambda candidate: candidate.get("candidate_key", "")):
         merged = dict(row)
-        existing = existing_by_local_file.get(merged.get("local_file_id", ""))
+        existing = existing_by_key.get(merged.get("candidate_key", ""))
         if existing:
             merged["candidate_id"] = existing["candidate_id"]
         else:
@@ -129,12 +129,12 @@ def main() -> None:
             row for row in match_rows if row.get("local_file_id") in selected_local_file_ids
         ]
     replacement_rows = build_translation_candidate_rows(reviewed_target_rows, filtered_manifest_rows, filtered_match_rows, status_rows)
-    rows = (
-        merge_candidate_rows(existing_rows, replacement_rows, selected_local_file_ids)
-        if selected_local_file_ids
-        else replacement_rows
+    rows = merge_candidate_rows(
+        existing_rows,
+        replacement_rows,
+        selected_local_file_ids or {row.get("local_file_id", "") for row in replacement_rows if row.get("local_file_id")},
     )
-    existing_review_rows = load_review_rows(args.review_output, "candidate_id")
+    existing_review_rows = load_review_rows(args.review_output, "candidate_key")
     review_rows = build_translation_candidate_review_rows(rows, existing_review_rows)
     write_tsv(args.output, rows, TRANSLATION_CANDIDATE_FIELDS)
     write_tsv(args.review_output, review_rows, TRANSLATION_CANDIDATE_REVIEW_FIELDS)
