@@ -13,6 +13,8 @@ if str(SCRIPTS_DIR) not in sys.path:
 from verify_translation_witnesses import (
     build_acquisition_action_queue_rows,
     build_direct_witness_acquisition_status_rows,
+    build_human_acquisition_checklist_rows,
+    build_translation_source_discovery_phase_summary,
     SIP_WITNESS_ID,
     annotate_iob_text_search_rows,
     build_direct_witness_acquisition_plan_rows,
@@ -600,6 +602,118 @@ class TranslationWitnessVerificationTests(unittest.TestCase):
         self.assertEqual(hunt_rows[0]["is_text_witness_candidate"], "false")
         self.assertEqual(triage_rows[0]["triage_status"], "secondary_or_unrelated")
         self.assertIn("secondary", triage_rows[0]["recommended_action"].casefold())
+
+    def test_human_acquisition_checklist_rows_preserve_iob_and_manual_review_distinctions(self) -> None:
+        acquisition_status_rows = [
+            {
+                "source_work_key": "lucePeMaungTinInscriptionsOfBurma",
+                "canonical_title": "Inscriptions of Burma",
+                "local_direct_witness_status": "local_plate_witness_only",
+                "external_catalogue_status": "authoritative_catalogue_record_found",
+                "acquisition_status": "needs_local_copy_or_scan",
+                "translation_coverage_status": "unconfirmed",
+                "edition_or_text_status": "plate_portfolios_verified_text_witness_missing",
+                "current_blocker": "Berkeley catalogue record found, but only plate portfolios are local.",
+                "next_action": "Use the Berkeley record to locate a local copy or legally usable scan.",
+                "priority": "high",
+                "notes": "",
+            },
+            {
+                "source_work_key": "sipSelectionsPagan",
+                "canonical_title": "Selections from the Inscriptions of Pagan",
+                "local_direct_witness_status": "local_direct_witness_needs_content_review",
+                "external_catalogue_status": "not_needed_for_current_step",
+                "acquisition_status": "needs_manual_content_review",
+                "translation_coverage_status": "needs_manual_review",
+                "edition_or_text_status": "local_edition_verified_translation_unconfirmed",
+                "current_blocker": "Verified edition witness exists, but sample-entry translation evidence is still unreviewed.",
+                "next_action": "Inspect a recoverable sample entry or contents page.",
+                "priority": "medium",
+                "notes": "",
+            },
+            {
+                "source_work_key": "uemSelectionsPagan",
+                "canonical_title": "Selections from the Inscriptions of Pagan",
+                "local_direct_witness_status": "no_local_direct_witness",
+                "external_catalogue_status": "bibliographic_clue_only",
+                "acquisition_status": "needs_authoritative_catalogue_record",
+                "translation_coverage_status": "unconfirmed",
+                "edition_or_text_status": "no_verified_witness",
+                "current_blocker": "Only SIP and Pe Maung Tin overlaps are local.",
+                "next_action": "Use targeted Rangoon/U E Maung catalogue searches.",
+                "priority": "high",
+                "notes": "",
+            },
+        ]
+        acquisition_action_queue_rows = [
+            {
+                "action_id": "iob-berkeley-local-copy",
+                "source_work_key": "lucePeMaungTinInscriptionsOfBurma",
+                "action_type": "acquire_local_copy_or_scan",
+                "target_record_or_work": "UC Berkeley Library record for Inscriptions of Burma",
+                "authority_evidence": "Type: Text; issued in portfolio; Berkeley call number lead.",
+                "what_to_do_next": "Locate the local copy or a legally usable scan.",
+                "success_condition": "A local text witness is acquired or a legally usable scan/location is identified.",
+                "blocked_by": "Only plate portfolios are locally verified.",
+                "priority": "high",
+                "notes": "",
+            }
+        ]
+
+        checklist_rows = build_human_acquisition_checklist_rows(acquisition_status_rows, acquisition_action_queue_rows)
+
+        iob_row = next(row for row in checklist_rows if row["source_work_key"] == "lucePeMaungTinInscriptionsOfBurma")
+        sip_row = next(row for row in checklist_rows if row["source_work_key"] == "sipSelectionsPagan")
+        uem_row = next(row for row in checklist_rows if row["source_work_key"] == "uemSelectionsPagan")
+
+        self.assertEqual(iob_row["task_type"], "acquire_local_copy_or_scan")
+        self.assertIn("Berkeley", iob_row["task"])
+        self.assertIn("local text witness", iob_row["failure_condition"])
+        self.assertEqual(sip_row["task_type"], "manual_content_review")
+        self.assertIn("translation status unconfirmed", sip_row["task"])
+        self.assertEqual(uem_row["task_type"], "locate_authoritative_catalogue_record")
+        self.assertIn("SIP", uem_row["failure_condition"])
+
+    def test_phase_summary_includes_guardrails_for_iob_and_sip_uem_false_positive(self) -> None:
+        summary = build_translation_source_discovery_phase_summary(
+            [
+                {
+                    "source_work_key": "sipSelectionsPagan",
+                    "canonical_title": "Selections from the Inscriptions of Pagan",
+                },
+                {
+                    "source_work_key": "epigraphiaBirmanica",
+                    "canonical_title": "Epigraphia Birmanica",
+                },
+                {
+                    "source_work_key": "lucePeMaungTinInscriptionsOfBurma",
+                    "canonical_title": "Inscriptions of Burma",
+                },
+                {
+                    "source_work_key": "uemSelectionsPagan",
+                    "canonical_title": "Selections from the Inscriptions of Pagan",
+                },
+                {
+                    "source_work_key": "tnInscriptionsPaganPinyaAva",
+                    "canonical_title": "Inscriptions of Pagan, Pinya and Ava",
+                },
+                {
+                    "source_work_key": "ppaCatalogue",
+                    "canonical_title": "Inscriptions of Pagan, Pinya and Ava",
+                },
+                {
+                    "source_work_key": "ubSourceFamily",
+                    "canonical_title": "Inscriptions Collected in Upper Burma",
+                },
+            ],
+            [{"source_work_key": "uemSelectionsPagan", "candidate_label": "Luce 1928 inscriptions of Pagan.pdf"}],
+        )
+
+        self.assertIn("Berkeley", summary)
+        self.assertIn("not a verified local witness", summary)
+        self.assertIn("plate portfolios", summary)
+        self.assertIn("SIP/UEM overlap", summary)
+        self.assertIn("false positive", summary.casefold())
 
     def test_missing_core_uem_broad_hits_are_triaged_non_promotable(self) -> None:
         rows = [

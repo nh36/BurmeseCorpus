@@ -39,6 +39,7 @@ from verify_translation_witnesses import (
     EXTERNAL_CATALOGUE_CANDIDATE_TRIAGE_PATH,
     EXTERNAL_CATALOGUE_SEARCH_LOG_PATH,
     EXTERNAL_CATALOGUE_TRIAGE_STATUSES,
+    HUMAN_ACQUISITION_CHECKLIST_PATH,
     HUNT_CANDIDATE_TRIAGE_STATUSES,
     INSCRIPTIONS_OF_BURMA_TEXT_SEARCH_PATH,
     INSCRIPTIONS_OF_BURMA_TEXT_VOLUME_HUNT_PATH,
@@ -56,6 +57,7 @@ from verify_translation_witnesses import (
     SIP_WITNESS_INSPECTION_PATH,
     SOURCE_WITNESS_CONTENT_PROFILE_PATH,
     SOURCE_WORK_GAPS_PATH,
+    TRANSLATION_SOURCE_DISCOVERY_PHASE_SUMMARY_PATH,
     TRANSLATION_COVERAGE_STATUSES,
     UEM_DIRECT_SEARCH_PATH,
     VERIFICATION_STATUSES,
@@ -122,6 +124,8 @@ def validate_translation_source_discovery(
     direct_witness_acquisition_status_path: Path = DIRECT_WITNESS_ACQUISITION_STATUS_PATH,
     manual_review_queue_path: Path = MANUAL_REVIEW_QUEUE_PATH,
     acquisition_action_queue_path: Path = ACQUISITION_ACTION_QUEUE_PATH,
+    translation_source_discovery_phase_summary_path: Path = TRANSLATION_SOURCE_DISCOVERY_PHASE_SUMMARY_PATH,
+    human_acquisition_checklist_path: Path = HUMAN_ACQUISITION_CHECKLIST_PATH,
     ruled_out_witness_candidates_path: Path = RULED_OUT_WITNESS_CANDIDATES_PATH,
     external_catalogue_search_log_path: Path = EXTERNAL_CATALOGUE_SEARCH_LOG_PATH,
     external_catalogue_candidate_triage_path: Path = EXTERNAL_CATALOGUE_CANDIDATE_TRIAGE_PATH,
@@ -155,6 +159,8 @@ def validate_translation_source_discovery(
         direct_witness_acquisition_status_path,
         manual_review_queue_path,
         acquisition_action_queue_path,
+        translation_source_discovery_phase_summary_path,
+        human_acquisition_checklist_path,
         ruled_out_witness_candidates_path,
         external_catalogue_search_log_path,
         external_catalogue_candidate_triage_path,
@@ -191,6 +197,7 @@ def validate_translation_source_discovery(
     direct_witness_acquisition_status_rows = read_tsv(direct_witness_acquisition_status_path)
     manual_review_queue_rows = read_tsv(manual_review_queue_path)
     acquisition_action_queue_rows = read_tsv(acquisition_action_queue_path)
+    human_acquisition_checklist_rows = read_tsv(human_acquisition_checklist_path)
     ruled_out_witness_candidate_rows = read_tsv(ruled_out_witness_candidates_path)
     external_catalogue_search_log_rows = read_tsv(external_catalogue_search_log_path)
     external_catalogue_candidate_triage_rows = read_tsv(external_catalogue_candidate_triage_path)
@@ -200,6 +207,7 @@ def validate_translation_source_discovery(
     periodical_plan_rows = read_tsv(periodical_article_plan_path)
     report = json.loads(report_path.read_text(encoding="utf-8"))
     verification_report = json.loads(witness_verification_report_path.read_text(encoding="utf-8"))
+    phase_summary_text = translation_source_discovery_phase_summary_path.read_text(encoding="utf-8")
 
     source_by_key = {row["source_work_key"]: row for row in source_rows}
     candidate_by_id = {row["witness_id"]: row for row in candidate_rows}
@@ -778,6 +786,57 @@ def validate_translation_source_discovery(
         if status_row and status_row.get("acquisition_status") != "needs_authoritative_catalogue_record":
             errors.append(f"{source_key} should remain in needs_authoritative_catalogue_record until an authoritative record appears")
 
+    checklist_by_source = defaultdict(list)
+    for row in human_acquisition_checklist_rows:
+        source_key = row.get("source_work_key", "")
+        checklist_by_source[source_key].append(row)
+        if source_key not in source_by_key:
+            errors.append(f"human_acquisition_checklist.tsv references unknown source_work_key {source_key}")
+        if not row.get("task_type"):
+            errors.append(f"human_acquisition_checklist.tsv row {row.get('checklist_id', source_key)} is missing task_type")
+        if not row.get("task"):
+            errors.append(f"human_acquisition_checklist.tsv row {row.get('checklist_id', source_key)} is missing task")
+        if not row.get("success_condition"):
+            errors.append(f"human_acquisition_checklist.tsv row {row.get('checklist_id', source_key)} is missing success_condition")
+        if not row.get("failure_condition"):
+            errors.append(f"human_acquisition_checklist.tsv row {row.get('checklist_id', source_key)} is missing failure_condition")
+        if not row.get("priority"):
+            errors.append(f"human_acquisition_checklist.tsv row {row.get('checklist_id', source_key)} is missing priority")
+    for source_key in acquisition_status_by_source:
+        if not checklist_by_source.get(source_key):
+            errors.append(f"Acquisition status {source_key} requires at least one human_acquisition_checklist.tsv row")
+
+    iob_checklist_rows = checklist_by_source.get("lucePeMaungTinInscriptionsOfBurma", [])
+    if not any(
+        row.get("task_type") == "acquire_local_copy_or_scan"
+        and "berkeley" in f"{row.get('task', '')} {row.get('notes', '')} {row.get('evidence_to_use', '')}".casefold()
+        and "local copy" in f"{row.get('task', '')} {row.get('failure_condition', '')}".casefold()
+        for row in iob_checklist_rows
+    ):
+        errors.append("Inscriptions of Burma human acquisition checklist must preserve the Berkeley acquisition lead and local-copy distinction")
+
+    for source_key in {"sipSelectionsPagan", "epigraphiaBirmanica"}:
+        for row in checklist_by_source.get(source_key, []):
+            if row.get("task_type") != "manual_content_review":
+                errors.append(f"{source_key} checklist rows must be manual content-review tasks")
+    for source_key in {"uemSelectionsPagan", "ubSourceFamily"}:
+        if not any(row.get("task_type") == "locate_authoritative_catalogue_record" for row in checklist_by_source.get(source_key, [])):
+            errors.append(f"{source_key} checklist rows must require catalogue-acquisition work")
+    for source_key in {"tnInscriptionsPaganPinyaAva", "ppaCatalogue"}:
+        if not any(row.get("task_type") == "resolve_source_identity" for row in checklist_by_source.get(source_key, [])):
+            errors.append(f"{source_key} checklist rows must require source-identity resolution")
+
+    summary_casefold = phase_summary_text.casefold()
+    for required_phrase in [
+        "berkeley",
+        "plate portfolios",
+        "not a verified local witness",
+        "sip/uem",
+        "false positive",
+    ]:
+        if required_phrase not in summary_casefold:
+            errors.append(f"translation_source_discovery_phase_summary.md is missing required guardrail language: {required_phrase}")
+
     ruled_out_by_key = {
         ruled_out_candidate_key(
             row.get("source_work_key", ""),
@@ -845,6 +904,7 @@ def validate_translation_source_discovery(
         ("direct witness acquisition status", direct_witness_acquisition_status_rows),
         ("manual review queue", manual_review_queue_rows),
         ("acquisition action queue", acquisition_action_queue_rows),
+        ("human acquisition checklist", human_acquisition_checklist_rows),
         ("ruled out witness candidates", ruled_out_witness_candidate_rows),
         ("external catalogue search log", external_catalogue_search_log_rows),
         ("external catalogue candidate triage", external_catalogue_candidate_triage_rows),
@@ -1288,6 +1348,8 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--direct-witness-acquisition-status", type=Path, default=DIRECT_WITNESS_ACQUISITION_STATUS_PATH)
     parser.add_argument("--manual-review-queue", type=Path, default=MANUAL_REVIEW_QUEUE_PATH)
     parser.add_argument("--acquisition-action-queue", type=Path, default=ACQUISITION_ACTION_QUEUE_PATH)
+    parser.add_argument("--translation-source-discovery-phase-summary", type=Path, default=TRANSLATION_SOURCE_DISCOVERY_PHASE_SUMMARY_PATH)
+    parser.add_argument("--human-acquisition-checklist", type=Path, default=HUMAN_ACQUISITION_CHECKLIST_PATH)
     parser.add_argument("--ruled-out-witness-candidates", type=Path, default=RULED_OUT_WITNESS_CANDIDATES_PATH)
     parser.add_argument("--external-catalogue-search-log", type=Path, default=EXTERNAL_CATALOGUE_SEARCH_LOG_PATH)
     parser.add_argument("--external-catalogue-candidate-triage", type=Path, default=EXTERNAL_CATALOGUE_CANDIDATE_TRIAGE_PATH)
@@ -1324,6 +1386,8 @@ def main() -> None:
         direct_witness_acquisition_status_path=args.direct_witness_acquisition_status,
         manual_review_queue_path=args.manual_review_queue,
         acquisition_action_queue_path=args.acquisition_action_queue,
+        translation_source_discovery_phase_summary_path=args.translation_source_discovery_phase_summary,
+        human_acquisition_checklist_path=args.human_acquisition_checklist,
         ruled_out_witness_candidates_path=args.ruled_out_witness_candidates,
         external_catalogue_search_log_path=args.external_catalogue_search_log,
         external_catalogue_candidate_triage_path=args.external_catalogue_candidate_triage,

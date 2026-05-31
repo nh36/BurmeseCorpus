@@ -54,6 +54,8 @@ EXTERNAL_CATALOGUE_SEARCH_LOG_PATH = DISCOVERY_DIRECTORY / "external_catalogue_s
 EXTERNAL_CATALOGUE_CANDIDATE_TRIAGE_PATH = DISCOVERY_DIRECTORY / "external_catalogue_candidate_triage.tsv"
 DIRECT_WITNESS_ACQUISITION_STATUS_PATH = DISCOVERY_DIRECTORY / "direct_witness_acquisition_status.tsv"
 ACQUISITION_ACTION_QUEUE_PATH = DISCOVERY_DIRECTORY / "acquisition_action_queue.tsv"
+TRANSLATION_SOURCE_DISCOVERY_PHASE_SUMMARY_PATH = DISCOVERY_DIRECTORY / "translation_source_discovery_phase_summary.md"
+HUMAN_ACQUISITION_CHECKLIST_PATH = DISCOVERY_DIRECTORY / "human_acquisition_checklist.tsv"
 SIP_WITNESS_INSPECTION_PATH = DISCOVERY_DIRECTORY / "sip_witness_inspection.tsv"
 SOURCE_WITNESS_CONTENT_PROFILE_PATH = DISCOVERY_DIRECTORY / "source_witness_content_profile.tsv"
 EB_FASCICLE_CONTENT_INSPECTION_PATH = DISCOVERY_DIRECTORY / "eb_fascicle_content_inspection.tsv"
@@ -231,6 +233,18 @@ ACQUISITION_ACTION_QUEUE_FIELDS = [
     "what_to_do_next",
     "success_condition",
     "blocked_by",
+    "priority",
+    "notes",
+]
+
+HUMAN_ACQUISITION_CHECKLIST_FIELDS = [
+    "checklist_id",
+    "source_work_key",
+    "task_type",
+    "task",
+    "evidence_to_use",
+    "success_condition",
+    "failure_condition",
     "priority",
     "notes",
 ]
@@ -3088,6 +3102,202 @@ def build_acquisition_action_queue_rows(
     return queue_rows
 
 
+def build_human_acquisition_checklist_rows(
+    direct_witness_acquisition_status_rows: list[dict[str, str]],
+    acquisition_action_queue_rows: list[dict[str, str]],
+) -> list[dict[str, str]]:
+    status_by_source = {row.get("source_work_key", ""): row for row in direct_witness_acquisition_status_rows}
+    actions_by_source: dict[str, list[dict[str, str]]] = defaultdict(list)
+    for row in acquisition_action_queue_rows:
+        actions_by_source[row.get("source_work_key", "")].append(row)
+
+    checklist_rows: list[dict[str, str]] = []
+    for source_key, status_row in status_by_source.items():
+        action_rows = actions_by_source.get(source_key, [])
+        primary_action = action_rows[0] if action_rows else {}
+        priority = status_row.get("priority", "") or primary_action.get("priority", "")
+        if source_key == "lucePeMaungTinInscriptionsOfBurma":
+            checklist_rows.append(
+                {
+                    "checklist_id": "iob-berkeley-local-copy",
+                    "source_work_key": source_key,
+                    "task_type": "acquire_local_copy_or_scan",
+                    "task": "Use the Berkeley record to locate or acquire a local copy of the companion text witness, or identify a legally usable scan/location.",
+                    "evidence_to_use": shorten_evidence(
+                        compact_join(
+                            [
+                                primary_action.get("target_record_or_work", ""),
+                                primary_action.get("authority_evidence", ""),
+                            ],
+                            limit=4,
+                        ),
+                        max_length=240,
+                    ),
+                    "success_condition": primary_action.get("success_condition", "") or "A local text witness is acquired or a legally usable scan/location is identified.",
+                    "failure_condition": "Only plate portfolios or catalogue metadata are available; do not promote the Berkeley record to a verified local text witness.",
+                    "priority": priority,
+                    "notes": "Keep the Berkeley catalogue lead separate from the already verified plate portfolios.",
+                }
+            )
+        elif source_key == "uemSelectionsPagan":
+            checklist_rows.append(
+                {
+                    "checklist_id": "uem-rangoon-catalogue-search",
+                    "source_work_key": source_key,
+                    "task_type": "locate_authoritative_catalogue_record",
+                    "task": "Search Myanmar/Rangoon catalogues under U E Maung / Pagan Kyauksa Let Ywei Sin / 1958 and separate the target from SIP and Pe Maung Tin material.",
+                    "evidence_to_use": shorten_evidence(status_row.get("current_blocker", ""), max_length=240),
+                    "success_condition": "A catalogue record or title-page witness clearly identifies the separate U E Maung edition.",
+                    "failure_condition": "Pe Maung Tin, Maung Gyi, or the reviewed SIP false positive remain the only hits, so the UEM gap stays open.",
+                    "priority": priority,
+                    "notes": "Do not reuse broad-query filename overlap as direct-witness evidence.",
+                }
+            )
+        elif source_key == "tnInscriptionsPaganPinyaAva":
+            checklist_rows.append(
+                {
+                    "checklist_id": "tn-source-identity-resolution",
+                    "source_work_key": source_key,
+                    "task_type": "resolve_source_identity",
+                    "task": "Resolve whether the U Tun Nyein 1897 target is genuinely distinct from the Forchhammer/Taw Sein Ko 1899 record before treating either as the direct witness.",
+                    "evidence_to_use": shorten_evidence(status_row.get("current_blocker", ""), max_length=240),
+                    "success_condition": "Catalogue metadata distinguishes a U Tun Nyein / 1897 witness or confirms the identity relationship explicitly.",
+                    "failure_condition": "Only ambiguous Gazette Press / Government Printing clues remain, so the direct-witness gap stays open.",
+                    "priority": priority,
+                    "notes": "Treat source-identity resolution as separate from translation coverage.",
+                }
+            )
+        elif source_key == "ppaCatalogue":
+            checklist_rows.append(
+                {
+                    "checklist_id": "ppa-source-identity-resolution",
+                    "source_work_key": source_key,
+                    "task_type": "resolve_source_identity",
+                    "task": "Resolve whether PPA/IPPA is a separate catalogue family or only a shorthand for the 1899 Inscriptions of Pagan, Pinya and Ava record.",
+                    "evidence_to_use": shorten_evidence(status_row.get("current_blocker", ""), max_length=240),
+                    "success_condition": "A catalogue record names PPA/IPPA clearly enough to confirm whether it is a separate source family or an alias.",
+                    "failure_condition": "Only overlapping title-family clues remain, so the PPA gap stays open.",
+                    "priority": priority,
+                    "notes": "Do not collapse PPA/IPPA into another source family without explicit catalogue evidence.",
+                }
+            )
+        elif source_key == "ubSourceFamily":
+            checklist_rows.append(
+                {
+                    "checklist_id": "ub-upper-burma-record-search",
+                    "source_work_key": source_key,
+                    "task_type": "locate_authoritative_catalogue_record",
+                    "task": "Locate standalone UB 1 / UB 2 records using the cited 1900/1903 Upper Burma references and Archaeological Survey of Burma variants.",
+                    "evidence_to_use": shorten_evidence(status_row.get("current_blocker", ""), max_length=240),
+                    "success_condition": "A catalogue record or holding entry clearly identifies a standalone Upper Burma witness.",
+                    "failure_condition": "Only later secondary or article-style hits remain, so the UB gap stays open.",
+                    "priority": priority,
+                    "notes": "Keep later secondary Upper Burma discussions out of direct-witness counts.",
+                }
+            )
+        elif source_key == "sipSelectionsPagan":
+            checklist_rows.append(
+                {
+                    "checklist_id": "sip-manual-content-review",
+                    "source_work_key": source_key,
+                    "task_type": "manual_content_review",
+                    "task": "Inspect a recoverable SIP sample entry or contents page and keep translation status unconfirmed unless explicit translation evidence appears.",
+                    "evidence_to_use": shorten_evidence(status_row.get("current_blocker", ""), max_length=240),
+                    "success_condition": "A sample entry or contents page is reviewed and the translation status is updated only from explicit evidence.",
+                    "failure_condition": "No recoverable sample entry or explicit translation heading appears, so SIP remains a verified edition witness with translation unconfirmed.",
+                    "priority": priority,
+                    "notes": "The reviewed SIP/UEM false positive must not be recycled as UEM evidence.",
+                }
+            )
+        elif source_key == "epigraphiaBirmanica":
+            checklist_rows.append(
+                {
+                    "checklist_id": "eb-manual-content-review",
+                    "source_work_key": source_key,
+                    "task_type": "manual_content_review",
+                    "task": "Inspect explicit translation headings or sections in the verified Epigraphia Birmanica fascicles.",
+                    "evidence_to_use": shorten_evidence(status_row.get("current_blocker", ""), max_length=240),
+                    "success_condition": "Explicit translation-bearing sections are confirmed or ruled out from the verified fascicles.",
+                    "failure_condition": "Only generic English prose, captions, or commentary appear, so translation coverage remains unconfirmed.",
+                    "priority": priority,
+                    "notes": "EB is a verified local fascicle witness, not a direct-witness acquisition problem.",
+                }
+            )
+    return checklist_rows
+
+
+def build_translation_source_discovery_phase_summary(
+    direct_witness_acquisition_status_rows: list[dict[str, str]],
+    ruled_out_witness_candidate_rows: list[dict[str, str]],
+) -> str:
+    status_by_source = {row.get("source_work_key", ""): row for row in direct_witness_acquisition_status_rows}
+
+    def bullet(source_key: str, text: str) -> str:
+        row = status_by_source.get(source_key, {})
+        title = row.get("canonical_title", source_key)
+        return f"- **{title}**: {text}"
+
+    recurrent_false_positives = [
+        "- **SIP/UEM overlap**: the reviewed Luce/Pe Maung Tin SIP witness and the UEM false positive must stay separate; SIP does not satisfy the UEM gap.",
+        "- **Broad UEM filename noise**: `031070.pdf`, `SakaEraPagan-PeMaungTin1932.pdf`, and `PeMaungTin-1930-OldWordsinInscriptions.pdf` are reviewed noise/cross-source hits, not U E Maung direct witnesses.",
+        "- **IOB text-volume false positives**: plate portfolios, `a_list_of_inscriptions_found_in_burma_part_i.pdf`, and `111029.pdf` remain ruled out for companion-text coverage.",
+    ]
+    if not ruled_out_witness_candidate_rows:
+        recurrent_false_positives = ["- Reviewed false positives remain ruled out and must not be re-promoted without new evidence."]
+
+    lines = [
+        "# Translation source discovery phase summary",
+        "",
+        "## Current overall state",
+        "- Local witness status, external catalogue status, acquisition status, and translation-review status are now tracked as separate layers.",
+        "- Verified translation witnesses remain **0**.",
+        "- Broad fuzzy hunts yielded **zero plausible direct candidates** and should not be reopened without new source-specific evidence.",
+        "",
+        "## Verified local witnesses",
+        bullet(
+            "sipSelectionsPagan",
+            "local edition witness verified; translation unconfirmed; needs manual sample-entry or contents review.",
+        ),
+        bullet(
+            "epigraphiaBirmanica",
+            "local fascicle witnesses verified; translation unconfirmed; needs manual content review.",
+        ),
+        "",
+        "## Verified plate-only witnesses",
+        bullet(
+            "lucePeMaungTinInscriptionsOfBurma",
+            "plate portfolios verified; Berkeley text-volume catalogue record found; local companion text witness still missing.",
+        ),
+        "",
+        "## Source works still needing authoritative catalogue records",
+        bullet("uemSelectionsPagan", "no local direct witness; needs U E Maung-specific catalogue/source identity work."),
+        bullet("tnInscriptionsPaganPinyaAva", "no local direct witness; needs U Tun Nyein catalogue/source identity resolution."),
+        bullet("ppaCatalogue", "no local direct witness; needs PPA/IPPA source identity resolution."),
+        bullet("ubSourceFamily", "no local direct witness; needs authoritative UB 1 / UB 2 catalogue work."),
+        "",
+        "## Source works with authoritative catalogue record but needing local copy/scan",
+        bullet(
+            "lucePeMaungTinInscriptionsOfBurma",
+            "Berkeley provides an authoritative catalogue lead for the text volume, but it remains an acquisition lead until a local text witness or legally usable scan/location is obtained.",
+        ),
+        "",
+        "## Source works needing manual content review",
+        bullet("sipSelectionsPagan", "review a recoverable sample entry or contents page; do not infer translation from failed OCR or generic English prose."),
+        bullet("epigraphiaBirmanica", "review explicit translation headings/sections in the verified fascicles; captions or commentary alone do not confirm translation."),
+        "",
+        "## Ruled-out recurrent false positives",
+        *recurrent_false_positives,
+        "",
+        "## What must not be promoted automatically",
+        "- Verified IOB plate portfolios do **not** satisfy the missing companion text witness.",
+        "- The UC Berkeley IOB catalogue record is not a verified local witness; it is only an acquisition lead until a local copy or legally usable scan/location is secured.",
+        "- The SIP/UEM false positive and broad Pe Maung Tin/Maung Gyi overlaps do **not** satisfy the UEM gap.",
+        "- Catalogue titles, generic English prose, and failed OCR do **not** confirm translation coverage.",
+        "",
+    ]
+    return "\n".join(lines)
+
+
 def build_ruled_out_witness_candidate_rows(
     witness_hunt_candidate_triage_rows: list[dict[str, str]],
     rescue_candidate_review_rows: list[dict[str, str]],
@@ -4362,6 +4572,8 @@ def verify_translation_witnesses(
     external_catalogue_candidate_triage_path: Path = EXTERNAL_CATALOGUE_CANDIDATE_TRIAGE_PATH,
     direct_witness_acquisition_status_path: Path = DIRECT_WITNESS_ACQUISITION_STATUS_PATH,
     acquisition_action_queue_path: Path = ACQUISITION_ACTION_QUEUE_PATH,
+    translation_source_discovery_phase_summary_path: Path = TRANSLATION_SOURCE_DISCOVERY_PHASE_SUMMARY_PATH,
+    human_acquisition_checklist_path: Path = HUMAN_ACQUISITION_CHECKLIST_PATH,
     witness_verification_report_path: Path = WITNESS_VERIFICATION_REPORT_PATH,
 ) -> dict:
     plan_rows = read_tsv(plan_path)
@@ -4593,12 +4805,20 @@ def verify_translation_witnesses(
         direct_witness_acquisition_status_rows,
         external_catalogue_search_log_rows,
     )
+    human_acquisition_checklist_rows = build_human_acquisition_checklist_rows(
+        direct_witness_acquisition_status_rows,
+        acquisition_action_queue_rows,
+    )
     ruled_out_witness_candidate_rows = build_ruled_out_witness_candidate_rows(
         witness_hunt_candidate_triage_rows,
         rescue_review_rows,
         verification_rows,
         iob_text_search_rows,
         iob_text_volume_hunt_rows,
+    )
+    phase_summary_markdown = build_translation_source_discovery_phase_summary(
+        direct_witness_acquisition_status_rows,
+        ruled_out_witness_candidate_rows,
     )
 
     updated_classification_rows = update_classification_rows(classification_rows, verification_rows)
@@ -4674,6 +4894,7 @@ def verify_translation_witnesses(
     write_tsv(external_catalogue_candidate_triage_path, external_catalogue_candidate_triage_rows, EXTERNAL_CATALOGUE_CANDIDATE_TRIAGE_FIELDS)
     write_tsv(direct_witness_acquisition_status_path, direct_witness_acquisition_status_rows, DIRECT_WITNESS_ACQUISITION_STATUS_FIELDS)
     write_tsv(acquisition_action_queue_path, acquisition_action_queue_rows, ACQUISITION_ACTION_QUEUE_FIELDS)
+    write_tsv(human_acquisition_checklist_path, human_acquisition_checklist_rows, HUMAN_ACQUISITION_CHECKLIST_FIELDS)
     write_tsv(rescue_candidate_review_path, rescue_review_rows, RESCUE_CANDIDATE_REVIEW_FIELDS)
     write_tsv(epigraphia_birmanica_review_path, epigraphia_review_rows, EPIGRAPHIA_BIRMANICA_REVIEW_FIELDS)
     write_tsv(epigraphia_birmanica_fascicle_coverage_path, epigraphia_fascicle_coverage_rows, EPIGRAPHIA_BIRMANICA_FASCICLE_COVERAGE_FIELDS)
@@ -4683,6 +4904,7 @@ def verify_translation_witnesses(
     write_tsv(periodical_article_plan_path, updated_periodical_plan_rows, periodical_fields)
     discovery_report_path.write_text(json.dumps(updated_report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     witness_verification_report_path.write_text(json.dumps(verification_report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    translation_source_discovery_phase_summary_path.write_text(phase_summary_markdown, encoding="utf-8")
     return verification_report
 
 
@@ -4723,6 +4945,8 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--external-catalogue-candidate-triage", type=Path, default=EXTERNAL_CATALOGUE_CANDIDATE_TRIAGE_PATH)
     parser.add_argument("--direct-witness-acquisition-status", type=Path, default=DIRECT_WITNESS_ACQUISITION_STATUS_PATH)
     parser.add_argument("--acquisition-action-queue", type=Path, default=ACQUISITION_ACTION_QUEUE_PATH)
+    parser.add_argument("--translation-source-discovery-phase-summary", type=Path, default=TRANSLATION_SOURCE_DISCOVERY_PHASE_SUMMARY_PATH)
+    parser.add_argument("--human-acquisition-checklist", type=Path, default=HUMAN_ACQUISITION_CHECKLIST_PATH)
     parser.add_argument("--witness-verification-report", type=Path, default=WITNESS_VERIFICATION_REPORT_PATH)
     return parser.parse_args()
 
@@ -4765,6 +4989,8 @@ def main() -> None:
         external_catalogue_candidate_triage_path=args.external_catalogue_candidate_triage,
         direct_witness_acquisition_status_path=args.direct_witness_acquisition_status,
         acquisition_action_queue_path=args.acquisition_action_queue,
+        translation_source_discovery_phase_summary_path=args.translation_source_discovery_phase_summary,
+        human_acquisition_checklist_path=args.human_acquisition_checklist,
         witness_verification_report_path=args.witness_verification_report,
     )
     print(json.dumps(report, ensure_ascii=False, indent=2))
