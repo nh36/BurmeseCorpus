@@ -21,12 +21,16 @@ from discover_translation_sources import (
 )
 from validate_translation_source_discovery import validate_translation_source_discovery
 from verify_translation_witnesses import (
+    ACQUISITION_REVIEW_GAP_TYPES,
     CORE_DIRECT_WITNESS_SEARCH_FIELDS,
     DIRECT_WITNESS_ACQUISITION_PLAN_FIELDS,
+    DIRECT_WITNESS_ACQUISITION_SOURCE_KEYS,
     DIRECT_WITNESS_SEARCH_FIELDS,
     EB_FASCICLE_CONTENT_INSPECTION_FIELDS,
     EPIGRAPHIA_BIRMANICA_FASCICLE_COVERAGE_FIELDS,
     EPIGRAPHIA_BIRMANICA_REVIEW_FIELDS,
+    EXTERNAL_CATALOGUE_CANDIDATE_TRIAGE_FIELDS,
+    EXTERNAL_CATALOGUE_SEARCH_LOG_FIELDS,
     INSCRIPTIONS_OF_BURMA_TEXT_SEARCH_FIELDS,
     INSCRIPTIONS_OF_BURMA_TEXT_VOLUME_HUNT_FIELDS,
     MANUAL_REVIEW_QUEUE_FIELDS,
@@ -474,6 +478,97 @@ class TranslationSourceDiscoveryTests(unittest.TestCase):
 
             self.assertTrue(any("Selections from the Inscriptions of Pagan.pdf needs a matching manual_review_queue.tsv row" in error for error in errors))
             self.assertTrue(any("Duroiselle - Epigraphia Birmanica Volume 1.pdf needs a matching manual_review_queue.tsv row" in error for error in errors))
+
+    def test_validator_requires_external_catalogue_log_for_acquisition_row(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            tmp = Path(tmp_dir)
+            self._write_validation_fixture(
+                tmp,
+                source_rows=[{**base_source_row(), "source_work_key": "uemSelectionsPagan", "canonical_title": "Selections from the Inscriptions of Pagan", "short_title": "UEM", "authors_editors": "U E Maung (ed.)", "date_or_date_range": "1958", "related_source_family_ids": "sf-uem", "related_acronyms": "UEM"}],
+                plan_rows=[self._plan_row(source_work_key="uemSelectionsPagan", canonical_title="Selections from the Inscriptions of Pagan", discovery_status="needs_direct_witness_search")],
+                gap_rows=[self._gap_row(source_work_key="uemSelectionsPagan", canonical_title="Selections from the Inscriptions of Pagan", gap_type="needs_direct_witness", current_status="needs_direct_witness")],
+                direct_witness_acquisition_plan_rows=[self._acquisition_plan_row(source_work_key="uemSelectionsPagan", canonical_title="Selections from the Inscriptions of Pagan", source_family_or_acronym="UEM", known_or_expected_author_editor="U E Maung (ed.)", known_or_expected_year="1958", known_or_expected_publisher_or_series="unknown")],
+                external_catalogue_search_log_rows=[],
+            )
+
+            errors = self._run_validation(tmp)
+
+            self.assertTrue(any("missing external catalogue search-log coverage" in error for error in errors))
+
+    def test_validator_does_not_allow_ambiguous_catalogue_hit_to_close_gap(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            tmp = Path(tmp_dir)
+            self._write_validation_fixture(
+                tmp,
+                gap_rows=[
+                    self._gap_row(
+                        source_work_key="lucePeMaungTinInscriptionsOfBurma",
+                        canonical_title="Inscriptions of Burma",
+                        gap_type="has_authoritative_catalogue_record_needs_acquisition",
+                        current_status="authoritative_catalogue_record_found",
+                        notes="Ambiguous catalogue hit only; local corpus still lacks the companion text witness.",
+                    )
+                ],
+                direct_witness_acquisition_plan_rows=[
+                    self._acquisition_plan_row(
+                        local_search_status="authoritative_catalogue_record_found",
+                        known_or_expected_year="1933-1956",
+                        known_or_expected_publisher_or_series="Oxford University Press, H. Milford",
+                    )
+                ],
+                manual_review_queue_rows=[self._manual_review_queue_row()],
+                external_catalogue_search_log_rows=[
+                    self._external_catalogue_search_log_row(
+                        result_status="ambiguous_match",
+                        match_assessment="needs_human_review",
+                        evidence_snippet="Portfolio-format overlap remains ambiguous.",
+                    )
+                ],
+                external_catalogue_candidate_triage_rows=[
+                    self._external_catalogue_candidate_triage_row(
+                        triage_status="needs_human_review",
+                        triage_reason="Ambiguous catalogue overlap only.",
+                        is_authoritative_record="false",
+                    )
+                ],
+            )
+
+            errors = self._run_validation(tmp)
+
+            self.assertTrue(any("cannot close from catalogue evidence" in error for error in errors))
+
+    def test_validator_allows_authoritative_catalogue_record_without_local_witness(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            tmp = Path(tmp_dir)
+            self._write_validation_fixture(
+                tmp,
+                plan_rows=[self._plan_row(discovery_status="verification_in_progress")],
+                gap_rows=[
+                    self._gap_row(
+                        source_work_key="lucePeMaungTinInscriptionsOfBurma",
+                        canonical_title="Inscriptions of Burma",
+                        gap_type="has_authoritative_catalogue_record_needs_acquisition",
+                        current_status="authoritative_catalogue_record_found",
+                        notes="UC Berkeley Library | Inscriptions of Burma. | 1934- identifies the IOB text volume, but the local corpus still lacks the companion text witness.",
+                    )
+                ],
+                direct_witness_acquisition_plan_rows=[
+                    self._acquisition_plan_row(
+                        local_search_status="authoritative_catalogue_record_found",
+                        known_or_expected_year="1933-1956",
+                        known_or_expected_publisher_or_series="Oxford University Press, H. Milford",
+                    )
+                ],
+                manual_review_queue_rows=[self._manual_review_queue_row()],
+                external_catalogue_search_log_rows=[self._external_catalogue_search_log_row()],
+                external_catalogue_candidate_triage_rows=[self._external_catalogue_candidate_triage_row()],
+            )
+
+            errors = self._run_validation(tmp)
+
+            self.assertFalse(any("cannot close from catalogue evidence" in error for error in errors))
+            self.assertFalse(any("cannot leave acquisition review states" in error for error in errors))
+            self.assertFalse(any("should use authoritative_catalogue_record_found" in error for error in errors))
 
     def test_validator_rejects_failed_sip_ocr_counting_as_sample_entry_inspection(self) -> None:
         with tempfile.TemporaryDirectory() as tmp_dir:
@@ -1113,6 +1208,47 @@ class TranslationSourceDiscoveryTests(unittest.TestCase):
         row.update(overrides)
         return row
 
+    def _external_catalogue_search_log_row(self, **overrides: str) -> dict:
+        row = {
+            "catalogue_log_row_id": "iob-berkeley-text-record",
+            "source_work_key": "lucePeMaungTinInscriptionsOfBurma",
+            "search_target": "IOB companion text volume",
+            "catalogue_or_repository": "UC Berkeley Library",
+            "query": "\"Inscriptions of Burma\" text",
+            "query_type": "title-author-text-volume",
+            "result_status": "exact_catalogue_match",
+            "candidate_title": "Inscriptions of Burma.",
+            "candidate_author_editor": "G. H. Luce; Pe Maung Tin",
+            "candidate_year": "1934-",
+            "candidate_publisher_or_series": "Oxford University Press, H. Milford",
+            "candidate_url_or_identifier": "https://digicoll.lib.berkeley.edu/record/289404",
+            "evidence_snippet": "Type: Text; issued in portfolio.",
+            "match_assessment": "authoritative_catalogue_record",
+            "next_action": "Use the catalogue record as an acquisition lead.",
+            "notes": "",
+        }
+        row.update(overrides)
+        return row
+
+    def _external_catalogue_candidate_triage_row(self, **overrides: str) -> dict:
+        row = {
+            "source_work_key": "lucePeMaungTinInscriptionsOfBurma",
+            "catalogue_log_row_id_or_query": "iob-berkeley-text-record",
+            "candidate_title": "Inscriptions of Burma.",
+            "candidate_author_editor": "G. H. Luce; Pe Maung Tin",
+            "candidate_year": "1934-",
+            "catalogue_or_repository": "UC Berkeley Library",
+            "triage_status": "authoritative_catalogue_record",
+            "triage_reason": "Catalogue metadata clearly identifies the companion text volume.",
+            "is_direct_witness_candidate": "false",
+            "is_authoritative_record": "true",
+            "is_cross_source_or_secondary": "false",
+            "recommended_action": "Use the catalogue record as an acquisition lead.",
+            "notes": "",
+        }
+        row.update(overrides)
+        return row
+
     def _write_validation_fixture(
         self,
         root: Path,
@@ -1137,6 +1273,8 @@ class TranslationSourceDiscoveryTests(unittest.TestCase):
         direct_witness_acquisition_plan_rows: list[dict] | None = None,
         manual_review_queue_rows: list[dict] | None = None,
         ruled_out_witness_candidate_rows: list[dict] | None = None,
+        external_catalogue_search_log_rows: list[dict] | None = None,
+        external_catalogue_candidate_triage_rows: list[dict] | None = None,
         rescue_review_rows: list[dict] | None = None,
         epigraphia_review_rows: list[dict] | None = None,
         epigraphia_fascicle_coverage_rows: list[dict] | None = None,
@@ -1272,6 +1410,8 @@ class TranslationSourceDiscoveryTests(unittest.TestCase):
                             canonical_title=row.get("canonical_title", source_by_key[source_key].get("canonical_title", "")),
                             source_family_or_acronym=source_by_key[source_key].get("short_title", ""),
                             known_or_expected_author_editor=source_by_key[source_key].get("authors_editors", ""),
+                            known_or_expected_year="1958" if source_key == "uemSelectionsPagan" else "1897" if source_key == "tnInscriptionsPaganPinyaAva" else "unknown" if source_key in {"ppaCatalogue", "ubSourceFamily"} else "1933-1956" if source_key == "lucePeMaungTinInscriptionsOfBurma" else "",
+                            known_or_expected_publisher_or_series="Government Printing, Burma" if source_key == "tnInscriptionsPaganPinyaAva" else "Archaeological Survey of Burma" if source_key in {"ppaCatalogue", "ubSourceFamily"} else "Oxford University Press, H. Milford" if source_key == "lucePeMaungTinInscriptionsOfBurma" else "unknown" if source_key == "uemSelectionsPagan" else "",
                             recommended_next_action=row.get("next_action", "Search external catalogues."),
                             notes=row.get("notes", ""),
                         )
@@ -1328,6 +1468,17 @@ class TranslationSourceDiscoveryTests(unittest.TestCase):
                             notes=row.get("next_action", ""),
                         )
                     )
+                elif row.get("gap_type") in ACQUISITION_REVIEW_GAP_TYPES:
+                    manual_review_queue_rows.append(
+                        self._manual_review_queue_row(
+                            review_id=f"{row.get('source_work_key', '')}-external-acquisition",
+                            source_work_key=row.get("source_work_key", ""),
+                            review_type="external_acquisition",
+                            target_file_or_work=row.get("canonical_title", ""),
+                            evidence_available=row.get("notes", ""),
+                            notes=row.get("next_action", ""),
+                        )
+                    )
         if ruled_out_witness_candidate_rows is None:
             ruled_out_witness_candidate_rows = []
             for row in witness_hunt_candidate_triage_rows:
@@ -1343,6 +1494,58 @@ class TranslationSourceDiscoveryTests(unittest.TestCase):
                             recommended_guardrail=row.get("recommended_action", ""),
                             related_queries_or_context=row.get("query", ""),
                             notes=row.get("notes", ""),
+                        )
+                    )
+        if external_catalogue_search_log_rows is None:
+            external_catalogue_search_log_rows = []
+            for row in direct_witness_acquisition_plan_rows:
+                source_key = row.get("source_work_key", "")
+                if source_key not in DIRECT_WITNESS_ACQUISITION_SOURCE_KEYS:
+                    continue
+                if source_key == "lucePeMaungTinInscriptionsOfBurma":
+                    external_catalogue_search_log_rows.append(self._external_catalogue_search_log_row())
+                else:
+                    external_catalogue_search_log_rows.append(
+                        self._external_catalogue_search_log_row(
+                            catalogue_log_row_id=f"{source_key}-no-match",
+                            source_work_key=source_key,
+                            search_target=row.get("canonical_title", ""),
+                            catalogue_or_repository="WorldCat",
+                            query=row.get("canonical_title", ""),
+                            query_type="title-search",
+                            result_status="no_match",
+                            candidate_title="",
+                            candidate_author_editor="",
+                            candidate_year="",
+                            candidate_publisher_or_series="",
+                            candidate_url_or_identifier="",
+                            evidence_snippet="No precise external catalogue record surfaced in the fixture search log.",
+                            match_assessment="",
+                            next_action="Continue targeted catalogue searching.",
+                        )
+                    )
+        if external_catalogue_candidate_triage_rows is None:
+            external_catalogue_candidate_triage_rows = []
+            for row in external_catalogue_search_log_rows:
+                if row.get("result_status") in {"no_match", "blocked_or_unavailable"} and not row.get("candidate_title"):
+                    continue
+                if row.get("match_assessment") == "authoritative_catalogue_record":
+                    external_catalogue_candidate_triage_rows.append(self._external_catalogue_candidate_triage_row())
+                else:
+                    external_catalogue_candidate_triage_rows.append(
+                        self._external_catalogue_candidate_triage_row(
+                            source_work_key=row.get("source_work_key", ""),
+                            catalogue_log_row_id_or_query=row.get("catalogue_log_row_id", "") or row.get("query", ""),
+                            candidate_title=row.get("candidate_title", ""),
+                            candidate_author_editor=row.get("candidate_author_editor", ""),
+                            candidate_year=row.get("candidate_year", ""),
+                            catalogue_or_repository=row.get("catalogue_or_repository", ""),
+                            triage_status="needs_human_review" if row.get("result_status") != "bibliographic_clue_only" else "bibliographic_clue_only",
+                            triage_reason="Fixture catalogue hit remains ambiguous." if row.get("result_status") != "bibliographic_clue_only" else "Fixture clue does not yet identify a standalone record.",
+                            is_direct_witness_candidate="false",
+                            is_authoritative_record="false",
+                            is_cross_source_or_secondary="false",
+                            recommended_action=row.get("next_action", ""),
                         )
                     )
             for row in rescue_review_rows:
@@ -1426,6 +1629,8 @@ class TranslationSourceDiscoveryTests(unittest.TestCase):
         write_tsv(root / "direct_witness_acquisition_plan.tsv", direct_witness_acquisition_plan_rows, DIRECT_WITNESS_ACQUISITION_PLAN_FIELDS)
         write_tsv(root / "manual_review_queue.tsv", manual_review_queue_rows, MANUAL_REVIEW_QUEUE_FIELDS)
         write_tsv(root / "ruled_out_witness_candidates.tsv", ruled_out_witness_candidate_rows, RULED_OUT_WITNESS_CANDIDATE_FIELDS)
+        write_tsv(root / "external_catalogue_search_log.tsv", external_catalogue_search_log_rows, EXTERNAL_CATALOGUE_SEARCH_LOG_FIELDS)
+        write_tsv(root / "external_catalogue_candidate_triage.tsv", external_catalogue_candidate_triage_rows, EXTERNAL_CATALOGUE_CANDIDATE_TRIAGE_FIELDS)
         write_tsv(root / "rescue_candidate_review.tsv", rescue_review_rows, RESCUE_CANDIDATE_REVIEW_FIELDS)
         write_tsv(root / "epigraphia_birmanica_witness_review.tsv", epigraphia_review_rows, EPIGRAPHIA_BIRMANICA_REVIEW_FIELDS)
         write_tsv(root / "epigraphia_birmanica_fascicle_coverage.tsv", epigraphia_fascicle_coverage_rows, EPIGRAPHIA_BIRMANICA_FASCICLE_COVERAGE_FIELDS)
@@ -1453,7 +1658,17 @@ class TranslationSourceDiscoveryTests(unittest.TestCase):
                 "epigraphiaBirmanica",
             ]
         ]
-        write_tsv(root / "periodical_article_discovery_plan.tsv", periodical_rows, PERIODICAL_ARTICLE_DISCOVERY_FIELDS)
+        write_tsv(
+            root / "periodical_article_discovery_plan.tsv",
+            periodical_rows,
+            PERIODICAL_ARTICLE_DISCOVERY_FIELDS
+            + [
+                "article_candidate_count",
+                "high_priority_article_count",
+                "needs_article_title_normalization",
+                "needs_local_file_search",
+            ],
+        )
         report = {
             "source_work_count": len(plan_rows),
             "source_works_with_candidate_witnesses": len({row["source_work_key"] for row in candidate_rows}),
@@ -1501,6 +1716,9 @@ class TranslationSourceDiscoveryTests(unittest.TestCase):
             "direct_witness_acquisition_plan_count": len(direct_witness_acquisition_plan_rows),
             "manual_review_queue_count": len(manual_review_queue_rows),
             "ruled_out_witness_candidate_count": len(ruled_out_witness_candidate_rows),
+            "external_catalogue_search_log_count": len(external_catalogue_search_log_rows),
+            "external_catalogue_candidate_triage_count": len(external_catalogue_candidate_triage_rows),
+            "authoritative_catalogue_record_count": sum(row.get("is_authoritative_record") == "true" for row in external_catalogue_candidate_triage_rows),
             "plausible_direct_candidate_count": sum(row.get("triage_status") in PLAUSIBLE_HUNT_TRIAGE_STATUSES for row in witness_hunt_candidate_triage_rows),
             "known_false_positive_hunt_count": sum(row.get("triage_status") == "known_false_positive" for row in witness_hunt_candidate_triage_rows),
             "cross_source_or_secondary_hunt_count": sum(row.get("triage_status") in {"cross_source_witness", "secondary_or_unrelated", "too_broad_query_noise"} for row in witness_hunt_candidate_triage_rows),
@@ -1561,6 +1779,9 @@ class TranslationSourceDiscoveryTests(unittest.TestCase):
             "direct_witness_acquisition_plan_count": len(direct_witness_acquisition_plan_rows),
             "manual_review_queue_count": len(manual_review_queue_rows),
             "ruled_out_witness_candidate_count": len(ruled_out_witness_candidate_rows),
+            "external_catalogue_search_log_count": len(external_catalogue_search_log_rows),
+            "external_catalogue_candidate_triage_count": len(external_catalogue_candidate_triage_rows),
+            "authoritative_catalogue_record_count": sum(row.get("is_authoritative_record") == "true" for row in external_catalogue_candidate_triage_rows),
             "plausible_direct_candidate_count": sum(row.get("triage_status") in PLAUSIBLE_HUNT_TRIAGE_STATUSES for row in witness_hunt_candidate_triage_rows),
             "known_false_positive_hunt_count": sum(row.get("triage_status") == "known_false_positive" for row in witness_hunt_candidate_triage_rows),
             "cross_source_or_secondary_hunt_count": sum(row.get("triage_status") in {"cross_source_witness", "secondary_or_unrelated", "too_broad_query_noise"} for row in witness_hunt_candidate_triage_rows),
@@ -1607,6 +1828,8 @@ class TranslationSourceDiscoveryTests(unittest.TestCase):
             direct_witness_acquisition_plan_path=root / "direct_witness_acquisition_plan.tsv",
             manual_review_queue_path=root / "manual_review_queue.tsv",
             ruled_out_witness_candidates_path=root / "ruled_out_witness_candidates.tsv",
+            external_catalogue_search_log_path=root / "external_catalogue_search_log.tsv",
+            external_catalogue_candidate_triage_path=root / "external_catalogue_candidate_triage.tsv",
             rescue_candidate_review_path=root / "rescue_candidate_review.tsv",
             epigraphia_birmanica_review_path=root / "epigraphia_birmanica_witness_review.tsv",
             epigraphia_birmanica_fascicle_coverage_path=root / "epigraphia_birmanica_fascicle_coverage.tsv",

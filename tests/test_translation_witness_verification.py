@@ -18,6 +18,8 @@ from verify_translation_witnesses import (
     build_epigraphia_fascicle_coverage_rows,
     build_epigraphia_promoted_verification_rows,
     build_epigraphia_birmanica_review_rows,
+    build_external_catalogue_candidate_triage_rows,
+    build_external_catalogue_search_log_rows,
     build_manual_review_queue_rows,
     build_rescue_candidate_review_rows,
     build_ruled_out_witness_candidate_rows,
@@ -293,6 +295,8 @@ class TranslationWitnessVerificationTests(unittest.TestCase):
                     "contains_edition_verified": "confirmed",
                 }
             ],
+            [],
+            [],
             [],
             [],
             [],
@@ -770,6 +774,8 @@ class TranslationWitnessVerificationTests(unittest.TestCase):
                     "triage_status": "secondary_or_unrelated",
                 },
             ],
+            [],
+            [],
         )
 
         gap_by_source = {row["source_work_key"]: row for row in gap_rows}
@@ -782,6 +788,53 @@ class TranslationWitnessVerificationTests(unittest.TestCase):
             "Luce&PeMaungTin_InscriptionsOfBurma(Plates3,4,5)_1960.pdf",
         )
         self.assertIn("cross-source", gap_by_source["lucePeMaungTinInscriptionsOfBurma"]["notes"].casefold())
+
+    def test_iob_gap_can_shift_to_authoritative_catalogue_record_without_local_text_witness(self) -> None:
+        external_log_rows = build_external_catalogue_search_log_rows(
+            [
+                source_row(
+                    source_work_key="lucePeMaungTinInscriptionsOfBurma",
+                    canonical_title="Inscriptions of Burma",
+                    short_title="IOB",
+                    authors_editors="G. H. Luce and U Pe Maung Tin",
+                )
+            ]
+        )
+        external_triage_rows = build_external_catalogue_candidate_triage_rows(external_log_rows)
+        gap_rows = build_source_work_gap_rows(
+            [
+                source_row(
+                    source_work_key="lucePeMaungTinInscriptionsOfBurma",
+                    canonical_title="Inscriptions of Burma",
+                    short_title="IOB",
+                    authors_editors="G. H. Luce and U Pe Maung Tin",
+                )
+            ],
+            [],
+            [
+                {
+                    "witness_id": "iob-plates",
+                    "source_work_key": "lucePeMaungTinInscriptionsOfBurma",
+                    "verification_status": "verified_plate_witness",
+                    "contains_translation_verified": "unknown",
+                    "contains_edition_verified": "unknown",
+                    "candidate_file_label": "Luce&PeMaungTin_InscriptionsOfBurma(Plates3,4,5)_1960.pdf",
+                }
+            ],
+            [],
+            [],
+            [],
+            [],
+            [],
+            external_log_rows,
+            external_triage_rows,
+        )
+
+        gap_row = {row["source_work_key"]: row for row in gap_rows}["lucePeMaungTinInscriptionsOfBurma"]
+        self.assertEqual(gap_row["gap_type"], "has_authoritative_catalogue_record_needs_acquisition")
+        self.assertEqual(gap_row["current_status"], "authoritative_catalogue_record_found")
+        self.assertEqual(gap_row["best_candidate_file_label"], "")
+        self.assertIn("local corpus still lacks", gap_row["notes"].casefold())
 
     def test_report_counts_match_verification_rows(self) -> None:
         verification_rows = [
@@ -925,6 +978,23 @@ class TranslationWitnessVerificationTests(unittest.TestCase):
             [{"matched_file_label": "Luce&PeMaungTin_InscriptionsOfBurma(Plates3,4,5)_1960.pdf", "matched_file_id": "iob-plates", "query": "Inscriptions of Burma text", "false_positive_for_text": "true", "reason_not_text_witness": "plate/facsimile volume, not companion text volume", "recommended_action": "Retain as a plate witness; continue searching for the companion text volume.", "source_work_key": "lucePeMaungTinInscriptionsOfBurma", "notes": ""}],
             [],
         )
+        external_catalogue_log_rows = build_external_catalogue_search_log_rows(
+            [
+                source_row(
+                    source_work_key="uemSelectionsPagan",
+                    canonical_title="Selections from the Inscriptions of Pagan",
+                    short_title="UEM",
+                    authors_editors="U E Maung (ed.)",
+                ),
+                source_row(
+                    source_work_key="lucePeMaungTinInscriptionsOfBurma",
+                    canonical_title="Inscriptions of Burma",
+                    short_title="IOB",
+                    authors_editors="G. H. Luce and U Pe Maung Tin",
+                ),
+            ]
+        )
+        external_catalogue_triage_rows = build_external_catalogue_candidate_triage_rows(external_catalogue_log_rows)
         report = build_verification_report(
             verification_rows,
             [{"witness_id": "w1"}, {"witness_id": "w2"}],
@@ -946,6 +1016,8 @@ class TranslationWitnessVerificationTests(unittest.TestCase):
             acquisition_rows,
             manual_review_rows,
             ruled_out_rows,
+            external_catalogue_log_rows,
+            external_catalogue_triage_rows,
             [{"candidate_file_label": "111029.pdf"}],
             [{"file_label": "011041.pdf"}],
             [{"witness_id": "eb1"}],
@@ -962,6 +1034,9 @@ class TranslationWitnessVerificationTests(unittest.TestCase):
         self.assertEqual(report["direct_witness_acquisition_plan_count"], 2)
         self.assertEqual(report["manual_review_queue_count"], 2)
         self.assertEqual(report["ruled_out_witness_candidate_count"], len(ruled_out_rows))
+        self.assertEqual(report["external_catalogue_search_log_count"], len(external_catalogue_log_rows))
+        self.assertEqual(report["external_catalogue_candidate_triage_count"], len(external_catalogue_triage_rows))
+        self.assertGreaterEqual(report["authoritative_catalogue_record_count"], 1)
         self.assertEqual(report["plausible_direct_candidate_count"], 0)
         self.assertEqual(report["known_false_positive_hunt_count"], 1)
         self.assertEqual(report["cross_source_or_secondary_hunt_count"], 1)

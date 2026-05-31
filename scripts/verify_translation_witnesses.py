@@ -50,6 +50,8 @@ SOURCE_WORK_GAPS_PATH = DISCOVERY_DIRECTORY / "source_work_witness_gaps.tsv"
 DIRECT_WITNESS_ACQUISITION_PLAN_PATH = DISCOVERY_DIRECTORY / "direct_witness_acquisition_plan.tsv"
 MANUAL_REVIEW_QUEUE_PATH = DISCOVERY_DIRECTORY / "manual_review_queue.tsv"
 RULED_OUT_WITNESS_CANDIDATES_PATH = DISCOVERY_DIRECTORY / "ruled_out_witness_candidates.tsv"
+EXTERNAL_CATALOGUE_SEARCH_LOG_PATH = DISCOVERY_DIRECTORY / "external_catalogue_search_log.tsv"
+EXTERNAL_CATALOGUE_CANDIDATE_TRIAGE_PATH = DISCOVERY_DIRECTORY / "external_catalogue_candidate_triage.tsv"
 SIP_WITNESS_INSPECTION_PATH = DISCOVERY_DIRECTORY / "sip_witness_inspection.tsv"
 SOURCE_WITNESS_CONTENT_PROFILE_PATH = DISCOVERY_DIRECTORY / "source_witness_content_profile.tsv"
 EB_FASCICLE_CONTENT_INSPECTION_PATH = DISCOVERY_DIRECTORY / "eb_fascicle_content_inspection.tsv"
@@ -166,6 +168,41 @@ RULED_OUT_WITNESS_CANDIDATE_FIELDS = [
     "reason_ruled_out",
     "recommended_guardrail",
     "related_queries_or_context",
+    "notes",
+]
+
+EXTERNAL_CATALOGUE_SEARCH_LOG_FIELDS = [
+    "catalogue_log_row_id",
+    "source_work_key",
+    "search_target",
+    "catalogue_or_repository",
+    "query",
+    "query_type",
+    "result_status",
+    "candidate_title",
+    "candidate_author_editor",
+    "candidate_year",
+    "candidate_publisher_or_series",
+    "candidate_url_or_identifier",
+    "evidence_snippet",
+    "match_assessment",
+    "next_action",
+    "notes",
+]
+
+EXTERNAL_CATALOGUE_CANDIDATE_TRIAGE_FIELDS = [
+    "source_work_key",
+    "catalogue_log_row_id_or_query",
+    "candidate_title",
+    "candidate_author_editor",
+    "candidate_year",
+    "catalogue_or_repository",
+    "triage_status",
+    "triage_reason",
+    "is_direct_witness_candidate",
+    "is_authoritative_record",
+    "is_cross_source_or_secondary",
+    "recommended_action",
     "notes",
 ]
 
@@ -399,6 +436,32 @@ NON_PROMOTABLE_HUNT_TRIAGE_STATUSES = {
 }
 PLAUSIBLE_HUNT_TRIAGE_STATUSES = {"plausible_direct_candidate", "needs_title_page_review"}
 OPEN_DIRECT_WITNESS_GAP_TYPES = {"needs_direct_witness", "needs_title_page_review", "has_verified_plate_but_needs_text"}
+CATALOGUE_RESULT_STATUSES = {
+    "exact_catalogue_match",
+    "plausible_catalogue_match",
+    "bibliographic_clue_only",
+    "no_match",
+    "ambiguous_match",
+    "blocked_or_unavailable",
+}
+CATALOGUE_MATCH_ASSESSMENTS = {
+    "direct_witness_candidate",
+    "authoritative_catalogue_record",
+    "cross_source_or_secondary",
+    "unrelated",
+    "needs_human_review",
+    "",
+}
+EXTERNAL_CATALOGUE_TRIAGE_STATUSES = {
+    "direct_witness_candidate",
+    "authoritative_catalogue_record",
+    "bibliographic_clue_only",
+    "cross_source_or_secondary",
+    "unrelated",
+    "needs_human_review",
+}
+CATALOGUE_RECORD_GAP_TYPES = {"has_authoritative_catalogue_record_needs_acquisition"}
+ACQUISITION_REVIEW_GAP_TYPES = OPEN_DIRECT_WITNESS_GAP_TYPES | CATALOGUE_RECORD_GAP_TYPES
 MAX_SNIPPET_LENGTH = 220
 MAX_STORED_SNIPPET_LENGTH = 260
 
@@ -606,6 +669,225 @@ DIRECT_WITNESS_REPOSITORY_HINTS = {
     "sipSelectionsPagan": "Local verified witness already present; external catalogues only if manual review needs supporting metadata",
     "epigraphiaBirmanica": "Local verified fascicles already present; external catalogues only if manual review needs supporting series metadata",
 }
+
+EXTERNAL_CATALOGUE_SEARCH_ROW_SEEDS = [
+    {
+        "catalogue_log_row_id": "uem-worldcat-hathitrust-no-match",
+        "source_work_key": "uemSelectionsPagan",
+        "search_target": "U E Maung 1958 edition",
+        "catalogue_or_repository": "WorldCat / HathiTrust",
+        "query": "\"Selections from the Inscriptions of Pagan\" \"U E Maung\" Rangoon 1958",
+        "query_type": "author-title-year",
+        "result_status": "no_match",
+        "candidate_title": "",
+        "candidate_author_editor": "",
+        "candidate_year": "",
+        "candidate_publisher_or_series": "",
+        "candidate_url_or_identifier": "",
+        "evidence_snippet": "No U E Maung 1958 catalogue record surfaced; major hits resolve to the 1928 Pe Maung Tin/Luce SIP edition.",
+        "match_assessment": "",
+        "next_action": "Keep UEM open and use Burmese-title or Myanmar institutional catalogue queries.",
+        "notes": "Negative result across the major global catalogue sweep.",
+    },
+    {
+        "catalogue_log_row_id": "uem-jstor-bibliographic-clue",
+        "source_work_key": "uemSelectionsPagan",
+        "search_target": "U E Maung 1958 edition",
+        "catalogue_or_repository": "JSTOR bibliography",
+        "query": "\"Pagan Kyauksa Let Ywei Sin\" \"U E Maung\"",
+        "query_type": "burmese-title-bibliographic",
+        "result_status": "bibliographic_clue_only",
+        "candidate_title": "Pagan Kyauksa Let Ywei Sin [Selected Pagan inscriptions]",
+        "candidate_author_editor": "U E Maung",
+        "candidate_year": "1958",
+        "candidate_publisher_or_series": "Rangoon; publisher not specified in the cited bibliography",
+        "candidate_url_or_identifier": "JSTOR selected bibliography citation",
+        "evidence_snippet": "\"E. Maung, U. ... Selected Pagan inscriptions ... 2 vols. Rangoon ... 1958\" confirms a U E Maung 1958 work but not a stable catalogue record.",
+        "match_assessment": "needs_human_review",
+        "next_action": "Search Myanmar/Rangoon catalogues under the Burmese title and 1958 date.",
+        "notes": "Useful as an external clue, but not enough to identify a holding or authoritative catalogue record.",
+    },
+    {
+        "catalogue_log_row_id": "tn-openlibrary-1899-overlap",
+        "source_work_key": "tnInscriptionsPaganPinyaAva",
+        "search_target": "TN / U Tun Nyein witness",
+        "catalogue_or_repository": "Open Library / WorldCat-linked record",
+        "query": "\"Inscriptions of Pagan, Pinya and Ava\" \"Tun Nyein\" 1897",
+        "query_type": "author-title-year",
+        "result_status": "ambiguous_match",
+        "candidate_title": "Inscriptions of Pagan, Pinya and Ava. Translation, with notes",
+        "candidate_author_editor": "Emanuel Forchhammer; Taw Sein Ko",
+        "candidate_year": "1899",
+        "candidate_publisher_or_series": "Superintendent, Government Printing, Burma",
+        "candidate_url_or_identifier": "https://openlibrary.org/books/OL6584848M/Inscriptions_of_Pagan_Pinya_and_Ava.",
+        "evidence_snippet": "Government Printing, Rangoon, 1899 title overlap is strong, but the surfaced record credits Forchhammer and Taw Sein Ko rather than U Tun Nyein.",
+        "match_assessment": "needs_human_review",
+        "next_action": "Retain as a bibliographic clue and look for a catalogue record that explicitly names U Tun Nyein or the 1897 issue.",
+        "notes": "Do not close the TN gap from this record alone.",
+    },
+    {
+        "catalogue_log_row_id": "tn-googlebooks-reprint",
+        "source_work_key": "tnInscriptionsPaganPinyaAva",
+        "search_target": "TN / U Tun Nyein witness",
+        "catalogue_or_repository": "Google Books",
+        "query": "\"Inscriptions of Pagan, Pinya and Ava\" \"Government Printing\"",
+        "query_type": "title-publisher",
+        "result_status": "plausible_catalogue_match",
+        "candidate_title": "Inscriptions of Pagan, Pinya and Ava: translation, with notes",
+        "candidate_author_editor": "Archaeological Survey of India; Emanuel Forchhammer; Taw Sein Ko",
+        "candidate_year": "2022 reprint of 1899 edition",
+        "candidate_publisher_or_series": "Creative Media Partners / reprint of Government Printing, Burma",
+        "candidate_url_or_identifier": "https://books.google.com/books?id=9lF1zwEACAAJ",
+        "evidence_snippet": "Modern reprint confirms a Government Printing line for the 1899 title, but it still does not resolve the U Tun Nyein attribution question.",
+        "match_assessment": "needs_human_review",
+        "next_action": "Use it as a publisher clue only; keep searching for a record tied directly to U Tun Nyein / 1897.",
+        "notes": "",
+    },
+    {
+        "catalogue_log_row_id": "ppa-worldcat-cross-source",
+        "source_work_key": "ppaCatalogue",
+        "search_target": "PPA / IPPA catalogue work",
+        "catalogue_or_repository": "WorldCat / Internet Archive",
+        "query": "\"PPA\" \"Inscriptions of Pagan, Pinya and Ava\" \"Archaeological Survey of Burma\"",
+        "query_type": "acronym-title-institution",
+        "result_status": "ambiguous_match",
+        "candidate_title": "Inscriptions of Pagan, Pinya and Ava: translation, with notes",
+        "candidate_author_editor": "Emanuel Forchhammer; Taw Sein Ko",
+        "candidate_year": "1899",
+        "candidate_publisher_or_series": "Superintendent, Government Printing, Burma",
+        "candidate_url_or_identifier": "https://www.worldcat.org/title/28517318",
+        "evidence_snippet": "Title overlap returns the 1899 translation-with-notes record, which aligns more naturally with TN/Forchhammer than with the separate PPA/IPPA catalogue family.",
+        "match_assessment": "cross_source_or_secondary",
+        "next_action": "Do not promote as PPA; keep searching for a catalogue record that explicitly uses PPA/IPPA or the Archaeological Survey of Burma catalogue family.",
+        "notes": "",
+    },
+    {
+        "catalogue_log_row_id": "ppa-ippa-no-match",
+        "source_work_key": "ppaCatalogue",
+        "search_target": "PPA / IPPA catalogue work",
+        "catalogue_or_repository": "WorldCat / HathiTrust / Google Books",
+        "query": "\"IPPA\" OR \"PPA catalogue\" \"Archaeological Survey of Burma\"",
+        "query_type": "acronym-catalogue-search",
+        "result_status": "no_match",
+        "candidate_title": "",
+        "candidate_author_editor": "",
+        "candidate_year": "",
+        "candidate_publisher_or_series": "",
+        "candidate_url_or_identifier": "",
+        "evidence_snippet": "No standalone PPA/IPPA catalogue record surfaced in the initial external sweep.",
+        "match_assessment": "",
+        "next_action": "Keep PPA open and continue with Archaeological Survey of Burma catalogue searches.",
+        "notes": "Negative result kept explicitly so the same acronym searches are not retried without new evidence.",
+    },
+    {
+        "catalogue_log_row_id": "ub-hathitrust-list-clue",
+        "source_work_key": "ubSourceFamily",
+        "search_target": "UB 1 / UB 2 source-family volumes",
+        "catalogue_or_repository": "HathiTrust / Internet Archive",
+        "query": "\"Inscriptions Collected in Upper Burma\" \"UB 1\" \"UB 2\"",
+        "query_type": "title-volume-search",
+        "result_status": "bibliographic_clue_only",
+        "candidate_title": "A list of inscriptions found in Burma",
+        "candidate_author_editor": "Charles Duroiselle",
+        "candidate_year": "1921",
+        "candidate_publisher_or_series": "Superintendent, Government Printing, Burma",
+        "candidate_url_or_identifier": "https://archive.org/details/listofinscriptio00burmuoft",
+        "evidence_snippet": "The 1921 List record refers to \"The Inscriptions collected in Upper Burma, Vol. I, 1900; Vol. II, 1903\" but does not surface standalone UB records.",
+        "match_assessment": "needs_human_review",
+        "next_action": "Use the cited volume references as external clues while continuing catalogue searches for standalone UB holdings.",
+        "notes": "",
+    },
+    {
+        "catalogue_log_row_id": "ub-bodawpaya-ambiguous",
+        "source_work_key": "ubSourceFamily",
+        "search_target": "UB 1 / UB 2 source-family volumes",
+        "catalogue_or_repository": "Internet Archive",
+        "query": "\"Original Inscriptions Collected By King Bodawpaya In Upper Burma\"",
+        "query_type": "related-upper-burma-title",
+        "result_status": "ambiguous_match",
+        "candidate_title": "Original Inscriptions Collected By King Bodawpaya In Upper Burma",
+        "candidate_author_editor": "",
+        "candidate_year": "1913",
+        "candidate_publisher_or_series": "",
+        "candidate_url_or_identifier": "https://archive.org/details/original-inscriptions-collected-by-king-bodawpaya-in-upper-burma-1913",
+        "evidence_snippet": "Upper Burma overlap is real, but this is a different title and should not stand in for UB 1 / UB 2.",
+        "match_assessment": "cross_source_or_secondary",
+        "next_action": "Retain as reviewed noise and do not use it to close the UB source-family gap.",
+        "notes": "",
+    },
+    {
+        "catalogue_log_row_id": "ub-worldcat-no-standalone-record",
+        "source_work_key": "ubSourceFamily",
+        "search_target": "UB 1 / UB 2 source-family volumes",
+        "catalogue_or_repository": "WorldCat / Google Books",
+        "query": "\"Inscriptions Collected in Upper Burma\" OR \"UB 1\" OR \"UB 2\"",
+        "query_type": "title-acronym-search",
+        "result_status": "no_match",
+        "candidate_title": "",
+        "candidate_author_editor": "",
+        "candidate_year": "",
+        "candidate_publisher_or_series": "",
+        "candidate_url_or_identifier": "",
+        "evidence_snippet": "No standalone UB 1 / UB 2 external catalogue record surfaced in the initial WorldCat/Google Books sweep.",
+        "match_assessment": "",
+        "next_action": "Keep UB open and continue targeted Archaeological Survey of Burma holding searches.",
+        "notes": "",
+    },
+    {
+        "catalogue_log_row_id": "iob-berkeley-text-record",
+        "source_work_key": "lucePeMaungTinInscriptionsOfBurma",
+        "search_target": "IOB companion text volume",
+        "catalogue_or_repository": "UC Berkeley Library",
+        "query": "\"Inscriptions of Burma\" \"G. H. Luce\" \"Pe Maung Tin\" text",
+        "query_type": "title-author-text-volume",
+        "result_status": "exact_catalogue_match",
+        "candidate_title": "Inscriptions of Burma.",
+        "candidate_author_editor": "G. H. Luce; Pe Maung Tin; University of Rangoon",
+        "candidate_year": "1934-",
+        "candidate_publisher_or_series": "Oxford University Press, H. Milford; University of Rangoon. Oriental studies. Publication no. 5-6",
+        "candidate_url_or_identifier": "https://digicoll.lib.berkeley.edu/record/289404",
+        "evidence_snippet": "Berkeley records the work as Type: Text, issued in portfolio, with contents for Portfolio IV and Portfolio V.",
+        "match_assessment": "authoritative_catalogue_record",
+        "next_action": "Use this catalogue record as the acquisition lead for the missing companion text volumes; keep local text-witness counts at zero until a local copy is obtained.",
+        "notes": "This identifies the companion text witness family without conflating it with the verified plate portfolios.",
+    },
+    {
+        "catalogue_log_row_id": "iob-openlibrary-portfolio-record",
+        "source_work_key": "lucePeMaungTinInscriptionsOfBurma",
+        "search_target": "IOB companion text volume",
+        "catalogue_or_repository": "Open Library / OCLC",
+        "query": "\"Inscriptions of Burma\" \"issued in portfolio\"",
+        "query_type": "title-format-search",
+        "result_status": "plausible_catalogue_match",
+        "candidate_title": "Inscriptions of Burma.",
+        "candidate_author_editor": "G. H. Luce; Pe Maung Tin",
+        "candidate_year": "1934",
+        "candidate_publisher_or_series": "Oxford University Press, H. Milford",
+        "candidate_url_or_identifier": "https://openlibrary.org/books/OL6378482M/Inscriptions_of_Burma.",
+        "evidence_snippet": "Open Library/OCLC 4344677 matches the title, editors, 1934 imprint, and portfolio format, but Berkeley gives the clearer text-volume framing.",
+        "match_assessment": "needs_human_review",
+        "next_action": "Retain as supporting catalogue evidence behind the Berkeley record.",
+        "notes": "",
+    },
+    {
+        "catalogue_log_row_id": "iob-luce-notebooks-secondary",
+        "source_work_key": "lucePeMaungTinInscriptionsOfBurma",
+        "search_target": "IOB companion text volume",
+        "catalogue_or_repository": "Internet Archive / archival finding aids",
+        "query": "\"Inscriptions of Burma\" transliteration notebooks",
+        "query_type": "secondary-archive-search",
+        "result_status": "bibliographic_clue_only",
+        "candidate_title": "G. H. Luce Papers. Notebooks D-F",
+        "candidate_author_editor": "G. H. Luce",
+        "candidate_year": "",
+        "candidate_publisher_or_series": "Archival papers",
+        "candidate_url_or_identifier": "https://archive.org/details/bdrc-W2KG200022",
+        "evidence_snippet": "Luce notebooks and archival papers relate to readings/transliterations for Inscriptions of Burma but are not the published companion text volume.",
+        "match_assessment": "cross_source_or_secondary",
+        "next_action": "Retain as contextual evidence only; do not count it as the published IOB text witness.",
+        "notes": "",
+    },
+]
 
 SEARCH_TERMS_BY_SOURCE = {
     "sipSelectionsPagan": [
@@ -1925,6 +2207,8 @@ def build_source_work_gap_rows(
     epigraphia_review_rows: list[dict],
     iob_text_search_rows: list[dict],
     witness_hunt_candidate_triage_rows: list[dict],
+    external_catalogue_search_log_rows: list[dict[str, str]],
+    external_catalogue_candidate_triage_rows: list[dict[str, str]],
 ) -> list[dict]:
     candidate_by_source: dict[str, list[dict]] = defaultdict(list)
     verification_by_source: dict[str, list[dict]] = defaultdict(list)
@@ -1936,6 +2220,12 @@ def build_source_work_gap_rows(
     triage_by_source: dict[str, list[dict]] = defaultdict(list)
     for row in witness_hunt_candidate_triage_rows:
         triage_by_source[row.get("source_work_key", "")].append(row)
+    external_log_by_source: dict[str, list[dict[str, str]]] = defaultdict(list)
+    for row in external_catalogue_search_log_rows:
+        external_log_by_source[row.get("source_work_key", "")].append(row)
+    external_triage_by_source: dict[str, list[dict[str, str]]] = defaultdict(list)
+    for row in external_catalogue_candidate_triage_rows:
+        external_triage_by_source[row.get("source_work_key", "")].append(row)
 
     def best_candidate_for_source(source_key: str) -> tuple[str, str]:
         if source_key == "epigraphiaBirmanica":
@@ -1978,6 +2268,18 @@ def build_source_work_gap_rows(
                     return "", row["matched_file_label"]
         return "", ""
 
+    def has_authoritative_catalogue_record(source_key: str) -> bool:
+        return any(row.get("is_authoritative_record") == "true" for row in external_triage_by_source.get(source_key, []))
+
+    def authoritative_catalogue_note(source_key: str) -> str:
+        for row in external_log_by_source.get(source_key, []):
+            if row.get("match_assessment") == "authoritative_catalogue_record":
+                repository = row.get("catalogue_or_repository", "")
+                title = row.get("candidate_title", "")
+                year = row.get("candidate_year", "")
+                return compact_join([repository, title, year], limit=3)
+        return ""
+
     gap_rows: list[dict] = []
     for source_key in TARGET_GAP_SOURCE_KEYS:
         source_row = source_by_key.get(source_key, {})
@@ -2015,6 +2317,13 @@ def build_source_work_gap_rows(
             gap_type = "needs_title_page_review"
             next_action = "Review the direct-looking Epigraphia Birmanica fascicle files before promotion."
             notes = "Direct-looking local EB fascicles exist, but they are not yet promoted into verified direct-witness counts."
+        elif source_key == "lucePeMaungTinInscriptionsOfBurma" and has_authoritative_catalogue_record(source_key):
+            current_status = "authoritative_catalogue_record_found"
+            gap_type = "has_authoritative_catalogue_record_needs_acquisition"
+            best_candidate_witness_id = ""
+            best_candidate_file_label = ""
+            next_action = "Use the authoritative catalogue record to acquire the companion text volume; do not count it as a verified local witness until a local copy is obtained."
+            notes = f"{authoritative_catalogue_note(source_key)} identifies the IOB text volume, but the local corpus still lacks the companion text witness."
         elif source_key == "lucePeMaungTinInscriptionsOfBurma" and verified_plate_count > 0:
             current_status = "verification_in_progress"
             gap_type = "has_verified_plate_but_needs_text"
@@ -2114,6 +2423,89 @@ def shorten_evidence(value: str, *, max_length: int = 240) -> str:
     return shortened if len(shortened) <= max_length else shortened[: max_length - 1].rstrip() + "…"
 
 
+def build_external_catalogue_search_log_rows(
+    source_rows: list[dict[str, str]],
+) -> list[dict[str, str]]:
+    source_keys = {row.get("source_work_key", "") for row in source_rows}
+    rows: list[dict[str, str]] = []
+    for seed in EXTERNAL_CATALOGUE_SEARCH_ROW_SEEDS:
+        if seed.get("source_work_key", "") not in source_keys:
+            continue
+        rows.append(
+            {
+                **seed,
+                "evidence_snippet": shorten_evidence(seed.get("evidence_snippet", ""), max_length=220),
+            }
+        )
+    return rows
+
+
+def build_external_catalogue_candidate_triage_rows(
+    external_catalogue_search_log_rows: list[dict[str, str]],
+) -> list[dict[str, str]]:
+    triage_rows: list[dict[str, str]] = []
+    for row in external_catalogue_search_log_rows:
+        result_status = row.get("result_status", "")
+        candidate_title = row.get("candidate_title", "")
+        if result_status in {"no_match", "blocked_or_unavailable"} and not candidate_title:
+            continue
+        match_assessment = row.get("match_assessment", "")
+        if match_assessment == "authoritative_catalogue_record":
+            triage_status = "authoritative_catalogue_record"
+            is_direct = "false"
+            is_authoritative = "true"
+            is_cross_source = "false"
+            triage_reason = "Authoritative catalogue metadata clearly identifies the target source work without requiring a local file promotion."
+        elif match_assessment == "direct_witness_candidate":
+            triage_status = "direct_witness_candidate"
+            is_direct = "true"
+            is_authoritative = "false"
+            is_cross_source = "false"
+            triage_reason = "Catalogue metadata appears to describe a direct witness that still needs acquisition."
+        elif match_assessment == "cross_source_or_secondary":
+            triage_status = "cross_source_or_secondary"
+            is_direct = "false"
+            is_authoritative = "false"
+            is_cross_source = "true"
+            triage_reason = "Title overlap or supporting context points to a different source work, archival lead, or secondary material."
+        elif match_assessment == "unrelated":
+            triage_status = "unrelated"
+            is_direct = "false"
+            is_authoritative = "false"
+            is_cross_source = "true"
+            triage_reason = "Reviewed catalogue hit is unrelated to the target source work."
+        elif result_status == "bibliographic_clue_only":
+            triage_status = "bibliographic_clue_only"
+            is_direct = "false"
+            is_authoritative = "false"
+            is_cross_source = "false"
+            triage_reason = "The record supplies a bibliographic clue but not a catalogue record strong enough to identify or acquire the target witness."
+        else:
+            triage_status = "needs_human_review"
+            is_direct = "false"
+            is_authoritative = "false"
+            is_cross_source = "false"
+            triage_reason = "The catalogue hit overlaps with the target source work but remains too ambiguous to promote automatically."
+        triage_rows.append(
+            {
+                "source_work_key": row.get("source_work_key", ""),
+                "catalogue_log_row_id_or_query": row.get("catalogue_log_row_id", "") or row.get("query", ""),
+                "candidate_title": candidate_title,
+                "candidate_author_editor": row.get("candidate_author_editor", ""),
+                "candidate_year": row.get("candidate_year", ""),
+                "catalogue_or_repository": row.get("catalogue_or_repository", ""),
+                "triage_status": triage_status,
+                "triage_reason": triage_reason,
+                "is_direct_witness_candidate": is_direct,
+                "is_authoritative_record": is_authoritative,
+                "is_cross_source_or_secondary": is_cross_source,
+                "recommended_action": row.get("next_action", ""),
+                "notes": row.get("notes", ""),
+            }
+        )
+    return triage_rows
+
+
 def build_direct_witness_acquisition_plan_rows(
     source_rows: list[dict[str, str]],
     gap_rows: list[dict[str, str]],
@@ -2122,6 +2514,8 @@ def build_direct_witness_acquisition_plan_rows(
     iob_text_volume_hunt_rows: list[dict[str, str]],
     witness_hunt_candidate_triage_rows: list[dict[str, str]],
     source_witness_content_profile_rows: list[dict[str, str]],
+    external_catalogue_search_log_rows: list[dict[str, str]],
+    external_catalogue_candidate_triage_rows: list[dict[str, str]],
 ) -> list[dict[str, str]]:
     source_by_key = {row.get("source_work_key", ""): row for row in source_rows}
     gap_by_key = {row.get("source_work_key", ""): row for row in gap_rows}
@@ -2134,6 +2528,12 @@ def build_direct_witness_acquisition_plan_rows(
     profile_by_source: dict[str, list[dict[str, str]]] = defaultdict(list)
     for row in source_witness_content_profile_rows:
         profile_by_source[row.get("source_work_key", "")].append(row)
+    catalogue_log_by_source: dict[str, list[dict[str, str]]] = defaultdict(list)
+    for row in external_catalogue_search_log_rows:
+        catalogue_log_by_source[row.get("source_work_key", "")].append(row)
+    catalogue_triage_by_source: dict[str, list[dict[str, str]]] = defaultdict(list)
+    for row in external_catalogue_candidate_triage_rows:
+        catalogue_triage_by_source[row.get("source_work_key", "")].append(row)
 
     plan_rows: list[dict[str, str]] = []
     for source_key in DIRECT_WITNESS_ACQUISITION_SOURCE_KEYS + FOLLOW_ON_ACQUISITION_SOURCE_KEYS:
@@ -2146,16 +2546,30 @@ def build_direct_witness_acquisition_plan_rows(
             limit=6,
         )
         author_editor = source_row.get("authors_editors", "") or source_row.get("author", "")
-        expected_year = source_row.get("publication_year", "")
+        expected_year = source_row.get("publication_year", "") or source_row.get("date_or_date_range", "")
         publisher_or_series = compact_join(
             [
                 source_row.get("publisher", ""),
-                source_row.get("publication_place", ""),
+                source_row.get("publisher_or_institution", ""),
                 source_row.get("series", ""),
             ],
             limit=4,
         )
         notes = gap_row.get("notes", "")
+        authoritative_rows = [
+            row
+            for row in catalogue_triage_by_source.get(source_key, [])
+            if row.get("is_authoritative_record") == "true"
+        ]
+        catalogue_clue_labels = summarize_row_labels(
+            catalogue_log_by_source.get(source_key, []),
+            label_key="candidate_title",
+            query_key="catalogue_or_repository",
+            statuses={"exact_catalogue_match", "plausible_catalogue_match", "bibliographic_clue_only", "ambiguous_match"},
+            status_key="result_status",
+            include_query=True,
+            limit=4,
+        )
 
         if source_key == "uemSelectionsPagan":
             local_candidates_ruled_out = compact_join(
@@ -2175,6 +2589,8 @@ def build_direct_witness_acquisition_plan_rows(
             )
             local_search_status = "no_direct_witness_found"
             target_witness_needed = "Direct witness or authoritative catalogue record for the separate U E Maung edition"
+            expected_year = expected_year or "1958"
+            publisher_or_series = publisher_or_series or "unknown"
             priority = "high"
             recommended_next_action = (
                 "Use author/title/year variants to search external catalogues and acquire a record or title page strong enough to separate U E Maung from SIP and Pe Maung Tin material."
@@ -2192,6 +2608,8 @@ def build_direct_witness_acquisition_plan_rows(
             ) or "Rangoon Gazette Press inscriptions; Government Printing Burma 1897 inscriptions"
             local_search_status = "no_direct_witness_found"
             target_witness_needed = "Direct witness or authoritative catalogue record for the U Tun Nyein / 1897 volume"
+            expected_year = expected_year or "1897"
+            publisher_or_series = publisher_or_series or "Rangoon Gazette Press / Government Printing, Burma (bibliographic clue)"
             priority = "high"
             recommended_next_action = (
                 "Search external catalogues under U Tun Nyein / Gazette Press / Government Printing variants and capture a title page or catalogue record for the direct witness."
@@ -2212,6 +2630,8 @@ def build_direct_witness_acquisition_plan_rows(
             ) or "No direct local file; rely on PPA/IPPA variant-title catalogue search"
             local_search_status = "no_direct_witness_found"
             target_witness_needed = "Direct witness or authoritative catalogue record for the PPA/IPPA catalogue work"
+            expected_year = expected_year or "unknown"
+            publisher_or_series = publisher_or_series or "Archaeological Survey of Burma"
             priority = "high"
             recommended_next_action = (
                 "Search external catalogues under PPA/IPPA and full title variants, then acquire a catalogue record or title page for the direct witness."
@@ -2229,6 +2649,8 @@ def build_direct_witness_acquisition_plan_rows(
             ) or "Upper Burma inscriptions; Inscriptions Collected in Upper Burma"
             local_search_status = "no_direct_witness_found"
             target_witness_needed = "Direct witness or authoritative catalogue record for the Upper Burma source-family volumes"
+            expected_year = expected_year or "unknown"
+            publisher_or_series = publisher_or_series or "Archaeological Survey of Burma"
             priority = "high"
             recommended_next_action = (
                 "Search external catalogues for UB 1 / UB 2 / Archaeological Survey of Burma variants and acquire a direct witness or authoritative holding record."
@@ -2252,14 +2674,31 @@ def build_direct_witness_acquisition_plan_rows(
                 statuses={"bibliographic_clue_found"},
                 include_query=True,
             )
-            local_search_status = "verified_plate_witness_only"
+            local_search_status = "authoritative_catalogue_record_found" if authoritative_rows else "verified_plate_witness_only"
             target_witness_needed = "Companion text volume for Inscriptions of Burma"
+            expected_year = expected_year or "1933-1956"
+            if authoritative_rows:
+                authoritative_row = next(
+                    (
+                        log_row
+                        for log_row in catalogue_log_by_source.get(source_key, [])
+                        if (log_row.get("catalogue_log_row_id", "") or log_row.get("query", "")) == authoritative_rows[0].get("catalogue_log_row_id_or_query", "")
+                    ),
+                    {},
+                )
+                publisher_or_series = publisher_or_series or authoritative_row.get("candidate_publisher_or_series", "")
+            else:
+                publisher_or_series = publisher_or_series or "unknown"
             priority = "high"
             recommended_next_action = (
-                "Search external catalogues specifically for the Luce/Pe Maung Tin companion text volume; plate portfolios, the separate List source, and article leads do not close the text-witness gap."
+                "Use the authoritative external catalogue lead to pursue the companion text volume while keeping the verified plate portfolios and cross-source leads separate from text-witness coverage."
+                if authoritative_rows
+                else "Search external catalogues specifically for the Luce/Pe Maung Tin companion text volume; plate portfolios, the separate List source, and article leads do not close the text-witness gap."
             )
             notes = notes or (
-                "Plate volumes are verified; companion text volume is not found. Current text-volume hunt hits are plate witnesses, the separate List source, a secondary/article lead, or bibliographic clues."
+                "An external catalogue record now identifies the companion text volume, but no local text witness has been acquired yet."
+                if authoritative_rows
+                else "Plate volumes are verified; companion text volume is not found. Current text-volume hunt hits are plate witnesses, the separate List source, a secondary/article lead, or bibliographic clues."
             )
         elif source_key == "sipSelectionsPagan":
             local_candidates_ruled_out = "Sample-entry OCR failed; no translation-bearing entry recovered locally"
@@ -2287,6 +2726,11 @@ def build_direct_witness_acquisition_plan_rows(
                 "Review verified Epigraphia Birmanica fascicles for explicit translation sections or translation headings and keep translation status unconfirmed unless that evidence appears."
             )
             notes = "EB remains a verified edition/direct-fascicle witness, but translation status stays unconfirmed until explicit translation evidence is found."
+
+        if catalogue_clue_labels:
+            bibliographic_clues = compact_join([bibliographic_clues, catalogue_clue_labels], limit=6)
+        if not publisher_or_series:
+            publisher_or_series = "unknown"
 
         plan_rows.append(
             {
@@ -2400,7 +2844,7 @@ def build_manual_review_queue_rows(
 
     for source_key in DIRECT_WITNESS_ACQUISITION_SOURCE_KEYS:
         gap_row = gap_by_source.get(source_key)
-        if not gap_row or gap_row.get("gap_type", "") not in OPEN_DIRECT_WITNESS_GAP_TYPES:
+        if not gap_row or gap_row.get("gap_type", "") not in ACQUISITION_REVIEW_GAP_TYPES:
             continue
         queue_rows.append(
             {
@@ -3449,6 +3893,9 @@ def update_plan_rows(
         elif verified_plate_count > 0:
             discovery_status = "verification_in_progress"
             next_action = gap_row.get("next_action") or "Find and inspect the companion text witness before treating plate evidence as full source coverage."
+        elif gap_row.get("gap_type") in CATALOGUE_RECORD_GAP_TYPES:
+            discovery_status = "verification_in_progress"
+            next_action = gap_row.get("next_action") or "Use the authoritative catalogue record to acquire a local witness."
         elif gap_row.get("gap_type") in {"needs_title_page_review", "has_verified_plate_but_needs_text"}:
             discovery_status = "verification_in_progress"
             next_action = gap_row.get("next_action") or "Inspect the strongest local candidate before promotion."
@@ -3497,6 +3944,8 @@ def build_verification_report(
     direct_witness_acquisition_plan_rows: list[dict],
     manual_review_queue_rows: list[dict],
     ruled_out_witness_candidate_rows: list[dict],
+    external_catalogue_search_log_rows: list[dict[str, str]],
+    external_catalogue_candidate_triage_rows: list[dict[str, str]],
     rescue_review_rows: list[dict],
     epigraphia_review_rows: list[dict],
     epigraphia_fascicle_coverage_rows: list[dict],
@@ -3516,6 +3965,9 @@ def build_verification_report(
     cross_source_or_secondary_hunt_count = sum(
         row.get("triage_status") in {"cross_source_witness", "secondary_or_unrelated", "too_broad_query_noise"}
         for row in witness_hunt_candidate_triage_rows
+    )
+    authoritative_catalogue_record_count = sum(
+        row.get("is_authoritative_record") == "true" for row in external_catalogue_candidate_triage_rows
     )
     direct_witness_search_result_counts = {
         status: sum(row.get("search_result_status") == status for row in direct_search_rows)
@@ -3574,6 +4026,9 @@ def build_verification_report(
         "direct_witness_acquisition_plan_count": len(direct_witness_acquisition_plan_rows),
         "manual_review_queue_count": len(manual_review_queue_rows),
         "ruled_out_witness_candidate_count": len(ruled_out_witness_candidate_rows),
+        "external_catalogue_search_log_count": len(external_catalogue_search_log_rows),
+        "external_catalogue_candidate_triage_count": len(external_catalogue_candidate_triage_rows),
+        "authoritative_catalogue_record_count": authoritative_catalogue_record_count,
         "plausible_direct_candidate_count": plausible_triage_count,
         "known_false_positive_hunt_count": known_false_positive_hunt_count,
         "cross_source_or_secondary_hunt_count": cross_source_or_secondary_hunt_count,
@@ -3651,6 +4106,8 @@ def verify_translation_witnesses(
     direct_witness_acquisition_plan_path: Path = DIRECT_WITNESS_ACQUISITION_PLAN_PATH,
     manual_review_queue_path: Path = MANUAL_REVIEW_QUEUE_PATH,
     ruled_out_witness_candidates_path: Path = RULED_OUT_WITNESS_CANDIDATES_PATH,
+    external_catalogue_search_log_path: Path = EXTERNAL_CATALOGUE_SEARCH_LOG_PATH,
+    external_catalogue_candidate_triage_path: Path = EXTERNAL_CATALOGUE_CANDIDATE_TRIAGE_PATH,
     witness_verification_report_path: Path = WITNESS_VERIFICATION_REPORT_PATH,
 ) -> dict:
     plan_rows = read_tsv(plan_path)
@@ -3839,6 +4296,10 @@ def verify_translation_witnesses(
         promoted_epigraphia_rows,
         source_witness_content_profile_rows,
     )
+    external_catalogue_search_log_rows = build_external_catalogue_search_log_rows(source_rows)
+    external_catalogue_candidate_triage_rows = build_external_catalogue_candidate_triage_rows(
+        external_catalogue_search_log_rows
+    )
     gap_rows = build_source_work_gap_rows(
         source_rows,
         candidate_rows,
@@ -3848,6 +4309,8 @@ def verify_translation_witnesses(
         epigraphia_review_rows,
         iob_text_search_rows,
         witness_hunt_candidate_triage_rows,
+        external_catalogue_search_log_rows,
+        external_catalogue_candidate_triage_rows,
     )
     direct_witness_acquisition_plan_rows = build_direct_witness_acquisition_plan_rows(
         source_rows,
@@ -3857,6 +4320,8 @@ def verify_translation_witnesses(
         iob_text_volume_hunt_rows,
         witness_hunt_candidate_triage_rows,
         source_witness_content_profile_rows,
+        external_catalogue_search_log_rows,
+        external_catalogue_candidate_triage_rows,
     )
     manual_review_queue_rows = build_manual_review_queue_rows(
         gap_rows,
@@ -3906,6 +4371,8 @@ def verify_translation_witnesses(
         direct_witness_acquisition_plan_rows,
         manual_review_queue_rows,
         ruled_out_witness_candidate_rows,
+        external_catalogue_search_log_rows,
+        external_catalogue_candidate_triage_rows,
         rescue_review_rows,
         epigraphia_review_rows,
         epigraphia_fascicle_coverage_rows,
@@ -3935,6 +4402,8 @@ def verify_translation_witnesses(
     write_tsv(direct_witness_acquisition_plan_path, direct_witness_acquisition_plan_rows, DIRECT_WITNESS_ACQUISITION_PLAN_FIELDS)
     write_tsv(manual_review_queue_path, manual_review_queue_rows, MANUAL_REVIEW_QUEUE_FIELDS)
     write_tsv(ruled_out_witness_candidates_path, ruled_out_witness_candidate_rows, RULED_OUT_WITNESS_CANDIDATE_FIELDS)
+    write_tsv(external_catalogue_search_log_path, external_catalogue_search_log_rows, EXTERNAL_CATALOGUE_SEARCH_LOG_FIELDS)
+    write_tsv(external_catalogue_candidate_triage_path, external_catalogue_candidate_triage_rows, EXTERNAL_CATALOGUE_CANDIDATE_TRIAGE_FIELDS)
     write_tsv(rescue_candidate_review_path, rescue_review_rows, RESCUE_CANDIDATE_REVIEW_FIELDS)
     write_tsv(epigraphia_birmanica_review_path, epigraphia_review_rows, EPIGRAPHIA_BIRMANICA_REVIEW_FIELDS)
     write_tsv(epigraphia_birmanica_fascicle_coverage_path, epigraphia_fascicle_coverage_rows, EPIGRAPHIA_BIRMANICA_FASCICLE_COVERAGE_FIELDS)
@@ -3980,6 +4449,8 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--direct-witness-acquisition-plan", type=Path, default=DIRECT_WITNESS_ACQUISITION_PLAN_PATH)
     parser.add_argument("--manual-review-queue", type=Path, default=MANUAL_REVIEW_QUEUE_PATH)
     parser.add_argument("--ruled-out-witness-candidates", type=Path, default=RULED_OUT_WITNESS_CANDIDATES_PATH)
+    parser.add_argument("--external-catalogue-search-log", type=Path, default=EXTERNAL_CATALOGUE_SEARCH_LOG_PATH)
+    parser.add_argument("--external-catalogue-candidate-triage", type=Path, default=EXTERNAL_CATALOGUE_CANDIDATE_TRIAGE_PATH)
     parser.add_argument("--witness-verification-report", type=Path, default=WITNESS_VERIFICATION_REPORT_PATH)
     return parser.parse_args()
 
@@ -4018,6 +4489,8 @@ def main() -> None:
         direct_witness_acquisition_plan_path=args.direct_witness_acquisition_plan,
         manual_review_queue_path=args.manual_review_queue,
         ruled_out_witness_candidates_path=args.ruled_out_witness_candidates,
+        external_catalogue_search_log_path=args.external_catalogue_search_log,
+        external_catalogue_candidate_triage_path=args.external_catalogue_candidate_triage,
         witness_verification_report_path=args.witness_verification_report,
     )
     print(json.dumps(report, ensure_ascii=False, indent=2))
