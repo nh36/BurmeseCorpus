@@ -1685,7 +1685,7 @@ This directory stores working metadata for the *Journal of the Burma Research So
 ## Core workflow
 1. Build raw and clean article references: `python3 scripts/build_jbrs_reference_hunt.py`
 2. Build or refresh the redacted manifest: `python3 scripts/build_jbrs_local_manifest.py`
-3. Write a local runtime path cache when you have live roots available: `python3 scripts/build_jbrs_local_manifest.py --root "/Volumes/ExternalDrive/JBRS" --write-runtime-path-cache`
+3. Write a local runtime path cache when you have live roots available: `python3 scripts/build_jbrs_local_manifest.py --root "/path/to/jbrs/root" --write-runtime-path-cache`
 4. Match clean article targets to local files: `python3 scripts/match_jbrs_references_to_local_files.py`
 5. Build the OCR plan and status log: `python3 scripts/plan_jbrs_ocr_batches.py`
 6. Run OCR preflight before live submission: `python3 scripts/preflight_jbrs_ocr.py --limit 5`
@@ -1750,6 +1750,14 @@ def tracked_files_under(prefix: str) -> list[str]:
     return [line.strip() for line in result.stdout.splitlines() if line.strip()]
 
 
+def tsv_header_and_row_count(path: Path, expected_fields: list[str]) -> tuple[str, int]:
+    text = path.read_text(encoding="utf-8")
+    nonempty_lines = [line.rstrip("\r") for line in text.splitlines() if line.strip()]
+    if not nonempty_lines:
+        return "", 0
+    return nonempty_lines[0], max(len(nonempty_lines) - 1, 0)
+
+
 def validate_jbrs_workflow() -> list[str]:
     errors: list[str] = []
     required_paths = [
@@ -1771,6 +1779,17 @@ def validate_jbrs_workflow() -> list[str]:
     if errors:
         return errors
 
+    batch_header, batch_row_count = tsv_header_and_row_count(JBRS_OCR_BATCH_PLAN_PATH, OCR_BATCH_PLAN_FIELDS)
+    status_header, status_row_count = tsv_header_and_row_count(JBRS_OCR_STATUS_LOG_PATH, OCR_STATUS_LOG_FIELDS)
+    expected_batch_header = "\t".join(OCR_BATCH_PLAN_FIELDS)
+    expected_status_header = "\t".join(OCR_STATUS_LOG_FIELDS)
+    if batch_header != expected_batch_header:
+        errors.append("JBRS OCR batch plan TSV is blank or missing the expected header.")
+    if status_header != expected_status_header:
+        errors.append("JBRS OCR status log TSV is blank or missing the expected header.")
+    if errors:
+        return errors
+
     raw_rows = read_tsv(JBRS_REFERENCE_HUNT_RAW_PATH)
     target_rows = read_tsv(JBRS_ARTICLE_REFERENCE_TARGETS_PATH)
     target_review_rows = read_tsv(JBRS_ARTICLE_REFERENCE_TARGETS_REVIEW_PATH)
@@ -1788,6 +1807,24 @@ def validate_jbrs_workflow() -> list[str]:
     manifest_by_id = {row["local_file_id"]: row for row in manifest_rows}
     batch_by_id = {row["batch_id"]: row for row in batch_rows}
     candidate_review_by_id = {row["candidate_id"]: row for row in candidate_review_rows}
+    status_by_batch_id = {row["batch_id"]: row for row in status_rows}
+
+    if summary.get("ocr_batch_plan_count", 0) and not batch_rows:
+        errors.append("JBRS pilot summary reports OCR batch rows, but jbrs_ocr_batch_plan.tsv has no rows.")
+    if summary.get("ready_for_ocr_count", 0) and not any(row.get("status") == "ready_for_ocr" for row in batch_rows):
+        errors.append("JBRS pilot summary reports ready_for_ocr rows, but the OCR batch plan has none.")
+    if summary.get("already_text_available_count", 0) and not any(row.get("status") == "already_text_available" for row in status_rows):
+        errors.append("JBRS pilot summary reports already_text_available rows, but the OCR status log has none.")
+    if len(batch_rows) != batch_row_count:
+        errors.append("JBRS OCR batch plan TSV row count does not match parsed batch rows.")
+    if len(status_rows) != status_row_count:
+        errors.append("JBRS OCR status log TSV row count does not match parsed status rows.")
+    if len(batch_rows) != len(batch_by_id):
+        errors.append("JBRS OCR batch plan contains duplicate batch_id values.")
+    if len(status_rows) != len(status_by_batch_id):
+        errors.append("JBRS OCR status log contains duplicate batch_id values.")
+    if len(batch_rows) != len(status_rows) or set(batch_by_id) != set(status_by_batch_id):
+        errors.append("JBRS OCR status rows do not correspond one-to-one with OCR batch rows.")
 
     for row in raw_rows:
         if len(row.get("matched_reference_text_short", "")) > SHORT_SNIPPET_LIMIT:
@@ -1904,6 +1941,8 @@ def validate_jbrs_workflow() -> list[str]:
     tracked_local_outputs = tracked_files_under("data_local/ocr/jbrs")
     if tracked_local_outputs:
         errors.append(f"Tracked local OCR outputs must not be committed: {', '.join(tracked_local_outputs[:5])}")
+    if tracked_files_under("data_local/ocr/jbrs/manifest/jbrs_runtime_path_map.json"):
+        errors.append("JBRS runtime path cache must not be committed.")
 
     if not build_gitignore_has_data_local():
         errors.append(".gitignore does not protect data_local/ OCR outputs.")

@@ -5,7 +5,7 @@ This directory stores working metadata for the *Journal of the Burma Research So
 ## Core workflow
 1. Build raw and clean article references: `python3 scripts/build_jbrs_reference_hunt.py`
 2. Build or refresh the redacted manifest: `python3 scripts/build_jbrs_local_manifest.py`
-3. Write a local runtime path cache when you have live roots available: `python3 scripts/build_jbrs_local_manifest.py --root "/Volumes/ExternalDrive/JBRS" --write-runtime-path-cache`
+3. Write a local runtime path cache when you have live roots available: `python3 scripts/build_jbrs_local_manifest.py --root "/path/to/jbrs/root" --write-runtime-path-cache`
 4. Match clean article targets to local files: `python3 scripts/match_jbrs_references_to_local_files.py`
 5. Build the OCR plan and status log: `python3 scripts/plan_jbrs_ocr_batches.py`
 6. Run OCR preflight before live submission: `python3 scripts/preflight_jbrs_ocr.py --limit 5`

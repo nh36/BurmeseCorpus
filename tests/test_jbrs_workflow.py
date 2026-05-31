@@ -15,6 +15,7 @@ if str(SCRIPTS_DIR) not in sys.path:
     sys.path.insert(0, str(SCRIPTS_DIR))
 
 import ocr_jbrs_google_vision as ocr
+import jbrs_workflow_common as common
 from corpus_common import write_tsv
 from jbrs_workflow_common import (
     JBRS_ARTICLE_REFERENCE_TARGETS_PATH,
@@ -35,6 +36,7 @@ from jbrs_workflow_common import (
     classify_translation_candidate,
     is_clean_article_target_row,
     read_tsv,
+    tsv_header_and_row_count,
     title_needs_review,
 )
 
@@ -129,6 +131,15 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
         )
         self.assertEqual(self.summary, rebuilt)
 
+    def test_batch_and_status_tsvs_have_headers_and_matching_rows(self) -> None:
+        batch_header, batch_row_count = tsv_header_and_row_count(JBRS_OCR_BATCH_PLAN_PATH, common.OCR_BATCH_PLAN_FIELDS)
+        status_header, status_row_count = tsv_header_and_row_count(JBRS_OCR_STATUS_LOG_PATH, common.OCR_STATUS_LOG_FIELDS)
+        self.assertEqual(batch_header, "\t".join(common.OCR_BATCH_PLAN_FIELDS))
+        self.assertEqual(status_header, "\t".join(common.OCR_STATUS_LOG_FIELDS))
+        self.assertEqual(batch_row_count, len(self.batch_rows))
+        self.assertEqual(status_row_count, len(self.status_rows))
+        self.assertEqual({row["batch_id"] for row in self.batch_rows}, {row["batch_id"] for row in self.status_rows})
+
     def test_malformed_targets_have_review_rows(self) -> None:
         review_by_id = {row["target_reference_id"]: row for row in self.target_review_rows}
         for row in self.target_rows:
@@ -170,7 +181,7 @@ class JBRSWorkflowLogicTests(unittest.TestCase):
             "ocr_priority_reason": "",
         }
         without_cache = build_ocr_batch_plan_rows([manifest_row], [], {}, [])
-        with_cache = build_ocr_batch_plan_rows([manifest_row], [], {"sample-local-file": "/Volumes/Example/JBRS/sample.pdf"}, [])
+        with_cache = build_ocr_batch_plan_rows([manifest_row], [], {"sample-local-file": "/example/jbrs/sample.pdf"}, [])
         self.assertEqual(without_cache[0]["status"], "needs_runtime_path_cache")
         self.assertEqual(with_cache[0]["status"], "ready_for_ocr")
 
@@ -208,7 +219,7 @@ class JBRSWorkflowLogicTests(unittest.TestCase):
     def test_runtime_path_cache_written_outside_repository_metadata(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
             runtime_cache = Path(tmpdir) / "jbrs_runtime_path_map.json"
-            runtime_cache.write_text('{"jbrs-local-0001":"/Volumes/Example/JBRS/vol1.pdf"}', encoding="utf-8")
+            runtime_cache.write_text('{"jbrs-local-0001":"/example/jbrs/vol1.pdf"}', encoding="utf-8")
             self.assertTrue(runtime_cache.exists())
             self.assertNotIn("/data/working/bibliography/jbrs/", str(runtime_cache))
 
@@ -293,6 +304,33 @@ class JBRSWorkflowLogicTests(unittest.TestCase):
             self.assertEqual(written_status[0]["status"], "completed")
             self.assertTrue((args.local_output_root / "article_text/sample-output.txt").exists())
             self.assertTrue((args.local_output_root / "manifest/sample-output.json").exists())
+
+    def test_validator_flags_blank_batch_plan_header(self) -> None:
+        original_helper = common.tsv_header_and_row_count
+
+        def fake_header(path: Path, fields: list[str]) -> tuple[str, int]:
+            if path == common.JBRS_OCR_BATCH_PLAN_PATH:
+                return "", 0
+            return original_helper(path, fields)
+
+        with patch.object(common, "tsv_header_and_row_count", side_effect=fake_header):
+            errors = common.validate_jbrs_workflow()
+        self.assertIn("JBRS OCR batch plan TSV is blank or missing the expected header.", errors)
+
+    def test_validator_flags_summary_without_batch_rows(self) -> None:
+        original_read_tsv = common.read_tsv
+
+        def fake_read_tsv(path: Path):
+            if path == common.JBRS_OCR_BATCH_PLAN_PATH:
+                return []
+            return original_read_tsv(path)
+
+        with patch.object(common, "read_tsv", side_effect=fake_read_tsv):
+            errors = common.validate_jbrs_workflow()
+        self.assertTrue(
+            any("pilot summary reports OCR batch rows" in error for error in errors),
+            errors,
+        )
 
 
 if __name__ == "__main__":

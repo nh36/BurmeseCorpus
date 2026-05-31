@@ -77,7 +77,7 @@ def missing_root_instructions() -> str:
     return (
         'Set one or more of OBI_LIBRARY_ROOT, OBI_AUTHOR_ALPHA_ROOT, or OBI_LOCAL_BIB_ROOT, '
         'for example:\n'
-        'export OBI_AUTHOR_ALPHA_ROOT="/Volumes/ExternalDrive/Authors alphabetical"\n'
+        'export OBI_AUTHOR_ALPHA_ROOT="/path/to/authors-alphabetical"\n'
         'export OBI_LOCAL_BIB_ROOT="$HOME/Downloads"'
     )
 
