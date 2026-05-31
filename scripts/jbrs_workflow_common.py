@@ -183,6 +183,8 @@ OCR_STATUS_LOG_FIELDS = [
     "notes",
 ]
 
+TERMINAL_OCR_STATUS_VALUES = {"dry_run_ok", "submitted", "completed", "failed"}
+
 TRANSLATION_CANDIDATE_FIELDS = [
     "candidate_id",
     "local_file_id",
@@ -1480,29 +1482,109 @@ def build_ocr_batch_plan_rows(
     return rows
 
 
-def build_ocr_status_log_rows(batch_rows: list[dict[str, str]]) -> list[dict[str, str]]:
+def effective_ocr_status(batch_row: dict[str, str], status_row: dict[str, str] | None = None) -> str:
+    status_value = (status_row or {}).get("status", "").strip()
+    if status_value:
+        return status_value
+    return batch_row.get("status", "").strip()
+
+
+def ocr_selection_skip_reason(
+    batch_row: dict[str, str],
+    status_row: dict[str, str] | None = None,
+    *,
+    rerun_failed: bool = False,
+    force_rerun_completed: bool = False,
+) -> str:
+    batch_id = batch_row.get("batch_id", "")
+    batch_status = batch_row.get("status", "").strip()
+    effective_status = effective_ocr_status(batch_row, status_row)
+    if batch_status != "ready_for_ocr":
+        return (
+            f"Skipped {batch_id} because the batch plan status is {batch_status or 'blank'}, "
+            "not ready_for_ocr."
+        )
+    if effective_status == "completed" and not force_rerun_completed:
+        return (
+            f"Skipped {batch_id} because the status log marks it completed; "
+            "use --force-rerun-completed to override."
+        )
+    if effective_status == "failed" and not rerun_failed:
+        return (
+            f"Skipped {batch_id} because the status log marks it failed; "
+            "use --rerun-failed to retry."
+        )
+    if effective_status == "submitted":
+        return f"Skipped {batch_id} because the status log still marks it submitted."
+    if effective_status not in {"ready_for_ocr", "dry_run_ok", "failed", "completed"}:
+        return f"Skipped {batch_id} because the status log status {effective_status or 'blank'} is not selectable."
+    return ""
+
+
+def batch_is_selectable_for_ocr(
+    batch_row: dict[str, str],
+    status_row: dict[str, str] | None = None,
+    *,
+    rerun_failed: bool = False,
+    force_rerun_completed: bool = False,
+) -> bool:
+    return not ocr_selection_skip_reason(
+        batch_row,
+        status_row,
+        rerun_failed=rerun_failed,
+        force_rerun_completed=force_rerun_completed,
+    )
+
+
+def build_ocr_status_log_rows(
+    batch_rows: list[dict[str, str]],
+    existing_rows: list[dict[str, str]] | None = None,
+) -> list[dict[str, str]]:
     rows: list[dict[str, str]] = []
     created_at = now_iso()
+    existing_by_batch_id = {row.get("batch_id", ""): row for row in (existing_rows or [])}
     for batch_row in batch_rows:
+        existing_row = existing_by_batch_id.get(batch_row["batch_id"])
         status = batch_row.get("status", "")
+        pages_submitted = ""
+        pages_completed = batch_row.get("page_count_estimate", "") if status == "already_text_available" else ""
+        output_path_stub = ""
+        metadata_sidecar_stub = ""
+        error_type = ""
+        error_message_short = ""
+        notes = ""
+        row_created_at = created_at
+        row_updated_at = created_at
+        if existing_row:
+            row_created_at = existing_row.get("created_at", created_at)
+            if existing_row.get("status", "") in TERMINAL_OCR_STATUS_VALUES:
+                status = existing_row.get("status", status)
+                pages_submitted = existing_row.get("pages_submitted", "")
+                pages_completed = existing_row.get("pages_completed", "")
+                output_path_stub = existing_row.get("output_path_stub", "")
+                metadata_sidecar_stub = existing_row.get("metadata_sidecar_stub", "")
+                error_type = existing_row.get("error_type", "")
+                error_message_short = existing_row.get("error_message_short", "")
+                notes = existing_row.get("notes", "")
+                row_updated_at = existing_row.get("updated_at", created_at)
         rows.append(
             {
-                "ocr_job_id": f"{batch_row['batch_id']}-status",
+                "ocr_job_id": existing_row.get("ocr_job_id", f"{batch_row['batch_id']}-status") if existing_row else f"{batch_row['batch_id']}-status",
                 "batch_id": batch_row["batch_id"],
                 "local_file_id": batch_row["local_file_id"],
                 "file_name": batch_row["file_name"],
                 "ocr_engine": batch_row["ocr_engine"],
                 "ocr_scope": batch_row["ocr_scope"],
                 "status": status,
-                "pages_submitted": "",
-                "pages_completed": batch_row.get("page_count_estimate", "") if status == "already_text_available" else "",
-                "output_path_stub": "",
-                "metadata_sidecar_stub": "",
-                "error_type": "",
-                "error_message_short": "",
-                "created_at": created_at,
-                "updated_at": created_at,
-                "notes": "",
+                "pages_submitted": pages_submitted,
+                "pages_completed": pages_completed,
+                "output_path_stub": output_path_stub,
+                "metadata_sidecar_stub": metadata_sidecar_stub,
+                "error_type": error_type,
+                "error_message_short": error_message_short,
+                "created_at": row_created_at,
+                "updated_at": row_updated_at,
+                "notes": notes,
             }
         )
     return rows
@@ -1649,8 +1731,12 @@ def build_pilot_summary(
         if row.get("match_status") in {"exact_or_near_exact_match", "plausible_match", "multiple_candidates"}
     }
     status_counts = defaultdict(int)
-    for row in batch_rows:
+    for row in status_rows:
         status_counts[row.get("status", "")] += 1
+    batch_status_counts = defaultdict(int)
+    for row in batch_rows:
+        batch_status_counts[row.get("status", "")] += 1
+    status_by_batch_id = {row.get("batch_id", ""): row for row in status_rows}
     candidate_type_counts = defaultdict(int)
     for row in candidate_rows:
         candidate_type_counts[row.get("candidate_type", "")] += 1
@@ -1662,10 +1748,19 @@ def build_pilot_summary(
         "matched_reference_count": len(matched_reference_ids),
         "unmatched_reference_count": len(target_rows) - len(matched_reference_ids),
         "ocr_batch_plan_count": len(batch_rows),
-        "needs_runtime_path_cache_count": status_counts["needs_runtime_path_cache"],
-        "ready_for_ocr_count": status_counts["ready_for_ocr"],
+        "needs_runtime_path_cache_count": batch_status_counts["needs_runtime_path_cache"],
+        "ready_for_ocr_count": batch_status_counts["ready_for_ocr"],
         "already_text_available_count": status_counts["already_text_available"],
-        "ocr_completed_count": sum(1 for row in status_rows if row.get("status") == "completed"),
+        "ocr_completed_count": status_counts["completed"],
+        "batch_plan_ready_for_ocr_count": batch_status_counts["ready_for_ocr"],
+        "status_log_ready_for_ocr_count": status_counts["ready_for_ocr"],
+        "status_log_completed_count": status_counts["completed"],
+        "status_log_failed_count": status_counts["failed"],
+        "selectable_for_ocr_count": sum(
+            1
+            for row in batch_rows
+            if batch_is_selectable_for_ocr(row, status_by_batch_id.get(row.get("batch_id", "")))
+        ),
         "translation_candidate_count": len(candidate_rows),
         "explicit_translation_candidate_count": candidate_type_counts["explicit_translation_heading"],
         "probable_translation_candidate_count": candidate_type_counts["text_and_translation_section"],
@@ -1677,7 +1772,8 @@ def build_pilot_summary(
         ),
         "notes": [
             "This summary records repository reference-hunt, local-manifest, matching, and OCR-preparation state only.",
-            "ready_for_ocr now counts only rows with a live runtime path; rows missing a runtime path cache are tracked separately.",
+            "ready_for_ocr_count and batch_plan_ready_for_ocr_count reflect the batch plan only; status_log_ready_for_ocr_count reflects rows still selectable after consulting the OCR status log.",
+            "selectable_for_ocr_count excludes completed and failed rows unless the rerun flags are used explicitly.",
             "Translation candidates are heuristic review leads, not verified translation coverage.",
         ],
     }

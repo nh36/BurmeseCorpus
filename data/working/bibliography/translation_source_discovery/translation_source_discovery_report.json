@@ -60,9 +60,9 @@
   "direct_witness_search_result_counts": {
     "not_found": 19,
     "blocked_by_missing_local_index": 0,
-    "candidate_found": 5,
     "direct_witness_found": 0,
-    "bibliographic_clue_found": 8
+    "bibliographic_clue_found": 8,
+    "candidate_found": 5
   },
   "verified_translation_after_inspection_count": 0,
   "verified_edition_after_inspection_count": 4,

@@ -8,19 +8,30 @@ from jbrs_workflow_common import DEFAULT_RUNTIME_PATH_CACHE
 def main() -> None:
     args = parse_args()
     batch_rows = read_tsv(args.batch_plan)
+    status_rows = read_tsv(args.status_log) if args.status_log.exists() else []
     runtime_path_cache = {}
     if args.runtime_path_cache.exists():
         import json
 
         runtime_path_cache = json.loads(args.runtime_path_cache.read_text(encoding="utf-8"))
-    selected_rows = select_batch_rows(batch_rows, args.batch_id, args.limit)
+    selected_rows, selection_warnings = select_batch_rows(
+        batch_rows,
+        status_rows,
+        args.batch_id,
+        args.limit,
+        rerun_failed=args.rerun_failed,
+        force_rerun_completed=args.force_rerun_completed,
+    )
     report = preflight_report(
         selected_rows=selected_rows,
         runtime_path_cache=runtime_path_cache,
         local_output_root=args.local_output_root,
         live_mode=args.execute and not args.dry_run,
+        selection_warnings=selection_warnings,
     )
     write_preflight_report(args.preflight_report, report)
+    for warning in report["warnings"]:
+        print(f"WARNING: {warning}")
     if report["errors"]:
         for error in report["errors"]:
             print(f"ERROR: {error}")

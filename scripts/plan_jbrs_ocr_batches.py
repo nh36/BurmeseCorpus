@@ -50,8 +50,9 @@ def main() -> None:
     match_rows = read_tsv(args.reference_match)
     runtime_path_cache = load_runtime_path_cache(args.runtime_path_cache)
     candidate_rows = read_tsv(args.candidate_log) if args.candidate_log.exists() else []
+    existing_status_rows = read_tsv(args.status_output) if args.status_output.exists() else []
     batch_rows = build_ocr_batch_plan_rows(manifest_rows, match_rows, runtime_path_cache, candidate_rows)
-    status_rows = build_ocr_status_log_rows(batch_rows)
+    status_rows = build_ocr_status_log_rows(batch_rows, existing_status_rows)
     write_tsv(args.batch_output, batch_rows, OCR_BATCH_PLAN_FIELDS)
     write_tsv(args.status_output, status_rows, OCR_STATUS_LOG_FIELDS)
     if not args.candidate_log.exists():

@@ -21,7 +21,9 @@ from jbrs_workflow_common import (
     JBRS_OCR_BATCH_PLAN_PATH,
     JBRS_OCR_STATUS_LOG_PATH,
     OCR_STATUS_LOG_FIELDS,
+    batch_is_selectable_for_ocr,
     now_iso,
+    ocr_selection_skip_reason,
 )
 
 VISION_ENDPOINT = "https://vision.googleapis.com/v1/images:annotate"
@@ -42,18 +44,55 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--limit", type=int, default=0)
     parser.add_argument("--dry-run", action="store_true", help="Validate staged OCR work without submitting anything.")
     parser.add_argument("--execute", action="store_true", help="Run live Google Vision OCR for selected ready_for_ocr rows.")
+    parser.add_argument("--rerun-failed", action="store_true", help="Allow rows marked failed in the OCR status log to be selected again.")
+    parser.add_argument(
+        "--force-rerun-completed",
+        action="store_true",
+        help="Allow rows marked completed in the OCR status log to be selected again.",
+    )
     return parser.parse_args()
 
 
-def select_batch_rows(batch_rows: list[dict[str, str]], batch_ids: list[str], limit: int) -> list[dict[str, str]]:
-    selected = [
-        row
-        for row in batch_rows
-        if row.get("status") == "ready_for_ocr" and (not batch_ids or row.get("batch_id") in set(batch_ids))
-    ]
+def select_batch_rows(
+    batch_rows: list[dict[str, str]],
+    status_rows: dict[str, dict[str, str]] | list[dict[str, str]] | None,
+    batch_ids: list[str],
+    limit: int,
+    *,
+    rerun_failed: bool = False,
+    force_rerun_completed: bool = False,
+) -> tuple[list[dict[str, str]], list[str]]:
+    status_by_batch_id = (
+        status_rows
+        if isinstance(status_rows, dict)
+        else {row.get("batch_id", ""): row for row in (status_rows or [])}
+    )
+    requested_batch_ids = set(batch_ids)
+    selected: list[dict[str, str]] = []
+    skipped: list[str] = []
+    for row in batch_rows:
+        if requested_batch_ids and row.get("batch_id") not in requested_batch_ids:
+            continue
+        status_row = status_by_batch_id.get(row.get("batch_id", ""))
+        skip_reason = ocr_selection_skip_reason(
+            row,
+            status_row,
+            rerun_failed=rerun_failed,
+            force_rerun_completed=force_rerun_completed,
+        )
+        if skip_reason:
+            skipped.append(skip_reason)
+            continue
+        if batch_is_selectable_for_ocr(
+            row,
+            status_row,
+            rerun_failed=rerun_failed,
+            force_rerun_completed=force_rerun_completed,
+        ):
+            selected.append(row)
     if limit > 0:
         selected = selected[:limit]
-    return selected
+    return selected, skipped
 
 
 def gitignored_data_local() -> bool:
@@ -202,10 +241,12 @@ def preflight_report(
     runtime_path_cache: dict[str, str],
     local_output_root: Path,
     live_mode: bool,
+    selection_warnings: list[str] | None = None,
 ) -> dict[str, object]:
     report: dict[str, object] = {"selected_batch_ids": [row.get("batch_id", "") for row in selected_rows], "errors": [], "warnings": []}
     errors: list[str] = report["errors"]  # type: ignore[assignment]
     warnings: list[str] = report["warnings"]  # type: ignore[assignment]
+    warnings.extend(selection_warnings or [])
 
     if not selected_rows:
         errors.append("No ready_for_ocr rows were selected.")
@@ -393,16 +434,28 @@ def run_selected_batches(args: argparse.Namespace) -> int:
     batch_rows = read_tsv(args.batch_plan)
     status_rows = {row.get("batch_id", ""): row for row in read_tsv(args.status_log)} if args.status_log.exists() else {}
     runtime_path_cache = load_runtime_path_cache(args.runtime_path_cache)
-    selected_rows = select_batch_rows(batch_rows, args.batch_id, args.limit)
+    selected_rows, selection_warnings = select_batch_rows(
+        batch_rows,
+        status_rows,
+        args.batch_id,
+        args.limit,
+        rerun_failed=args.rerun_failed,
+        force_rerun_completed=args.force_rerun_completed,
+    )
     live_mode = args.execute and not args.dry_run
     report = preflight_report(
         selected_rows=selected_rows,
         runtime_path_cache=runtime_path_cache,
         local_output_root=args.local_output_root,
         live_mode=live_mode,
+        selection_warnings=selection_warnings,
     )
     write_preflight_report(args.preflight_report, report)
+    for warning in report.get("warnings", []):
+        print(f"WARNING: {warning}")
     if report["errors"]:
+        for error in report.get("errors", []):
+            print(f"ERROR: {error}")
         if selected_rows:
             for batch_row in selected_rows:
                 status_rows[batch_row["batch_id"]] = update_status_log_row(

@@ -32,6 +32,7 @@ from jbrs_workflow_common import (
     OCR_BATCH_PLAN_FIELDS,
     OCR_STATUS_LOG_FIELDS,
     build_ocr_batch_plan_rows,
+    build_ocr_status_log_rows,
     build_pilot_summary,
     classify_reference_kind,
     classify_translation_candidate,
@@ -167,6 +168,29 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
 
 
 class JBRSWorkflowLogicTests(unittest.TestCase):
+    def _sample_batch_row(self, batch_id: str, status: str = "ready_for_ocr") -> dict[str, str]:
+        return {
+            "batch_id": batch_id,
+            "local_file_id": f"{batch_id}-local",
+            "file_name": f"{batch_id}.pdf",
+            "path_stub": f"JBRS/{batch_id}.pdf",
+            "volume": "",
+            "issue": "",
+            "year": "1933",
+            "page_count_estimate": "1",
+            "runtime_path_available": "true",
+            "ocr_priority": "medium",
+            "ocr_priority_reason": "test",
+            "ocr_scope": "article_pages_only",
+            "ocr_engine": "google_vision",
+            "output_basename": batch_id,
+            "expected_output_format": "google_vision_json|page_text|article_text|metadata_sidecar",
+            "metadata_sidecar_path": f"data_local/ocr/jbrs/manifest/{batch_id}.json",
+            "status": status,
+            "blocked_by": "",
+            "notes": "",
+        }
+
     def test_runtime_cache_changes_needs_runtime_path_cache_to_ready(self) -> None:
         manifest_row = {
             "local_file_id": "sample-local-file",
@@ -238,6 +262,74 @@ class JBRSWorkflowLogicTests(unittest.TestCase):
                     live_mode=False,
                 )
         self.assertIn("No ready_for_ocr rows were selected.", report["errors"])
+
+    def test_completed_batch_is_not_selected_by_default(self) -> None:
+        batch_rows = [self._sample_batch_row("completed-batch")]
+        status_rows = [{"batch_id": "completed-batch", "status": "completed"}]
+        selected, skipped = ocr.select_batch_rows(batch_rows, status_rows, [], 0)
+        self.assertEqual(selected, [])
+        self.assertTrue(any("--force-rerun-completed" in message for message in skipped), skipped)
+
+    def test_failed_batch_is_not_selected_by_default(self) -> None:
+        batch_rows = [self._sample_batch_row("failed-batch")]
+        status_rows = [{"batch_id": "failed-batch", "status": "failed"}]
+        selected, skipped = ocr.select_batch_rows(batch_rows, status_rows, [], 0)
+        self.assertEqual(selected, [])
+        self.assertTrue(any("--rerun-failed" in message for message in skipped), skipped)
+
+    def test_rerun_failed_allows_failed_batch(self) -> None:
+        batch_rows = [self._sample_batch_row("failed-batch")]
+        status_rows = [{"batch_id": "failed-batch", "status": "failed"}]
+        selected, skipped = ocr.select_batch_rows(batch_rows, status_rows, [], 0, rerun_failed=True)
+        self.assertEqual([row["batch_id"] for row in selected], ["failed-batch"])
+        self.assertEqual(skipped, [])
+
+    def test_force_rerun_completed_allows_completed_batch(self) -> None:
+        batch_rows = [self._sample_batch_row("completed-batch")]
+        status_rows = [{"batch_id": "completed-batch", "status": "completed"}]
+        selected, skipped = ocr.select_batch_rows(
+            batch_rows,
+            status_rows,
+            [],
+            0,
+            force_rerun_completed=True,
+        )
+        self.assertEqual([row["batch_id"] for row in selected], ["completed-batch"])
+        self.assertEqual(skipped, [])
+
+    def test_batch_id_respects_completed_guard_without_force(self) -> None:
+        batch_rows = [self._sample_batch_row("jbrs-ocr-1227")]
+        status_rows = [{"batch_id": "jbrs-ocr-1227", "status": "completed"}]
+        selected, skipped = ocr.select_batch_rows(batch_rows, status_rows, ["jbrs-ocr-1227"], 0)
+        self.assertEqual(selected, [])
+        self.assertTrue(any("jbrs-ocr-1227" in message for message in skipped), skipped)
+
+    def test_build_status_log_rows_preserves_completed_status(self) -> None:
+        batch_rows = [self._sample_batch_row("completed-batch")]
+        existing_rows = [
+            {
+                "ocr_job_id": "completed-batch-run",
+                "batch_id": "completed-batch",
+                "local_file_id": "completed-batch-local",
+                "file_name": "completed-batch.pdf",
+                "ocr_engine": "google_vision",
+                "ocr_scope": "article_pages_only",
+                "status": "completed",
+                "pages_submitted": "8",
+                "pages_completed": "8",
+                "output_path_stub": "data_local/ocr/jbrs/article_text/completed-batch.txt",
+                "metadata_sidecar_stub": "data_local/ocr/jbrs/manifest/completed-batch.json",
+                "error_type": "",
+                "error_message_short": "",
+                "created_at": "2026-05-31T00:00:00+00:00",
+                "updated_at": "2026-05-31T00:10:00+00:00",
+                "notes": "done",
+            }
+        ]
+        merged = build_ocr_status_log_rows(batch_rows, existing_rows)
+        self.assertEqual(merged[0]["status"], "completed")
+        self.assertEqual(merged[0]["pages_completed"], "8")
+        self.assertEqual(merged[0]["notes"], "done")
 
     def test_preflight_passes_with_mocked_ready_row_and_runtime_path(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
@@ -360,6 +452,8 @@ class JBRSWorkflowLogicTests(unittest.TestCase):
                 limit=0,
                 dry_run=False,
                 execute=True,
+                rerun_failed=False,
+                force_rerun_completed=False,
             )
             with (
                 patch.object(ocr, "gitignored_data_local", return_value=True),
@@ -424,6 +518,8 @@ class JBRSWorkflowLogicTests(unittest.TestCase):
                 limit=0,
                 dry_run=False,
                 execute=True,
+                rerun_failed=False,
+                force_rerun_completed=False,
             )
             with (
                 patch.object(ocr, "gitignored_data_local", return_value=True),
