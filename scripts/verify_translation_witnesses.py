@@ -56,6 +56,8 @@ DIRECT_WITNESS_ACQUISITION_STATUS_PATH = DISCOVERY_DIRECTORY / "direct_witness_a
 ACQUISITION_ACTION_QUEUE_PATH = DISCOVERY_DIRECTORY / "acquisition_action_queue.tsv"
 TRANSLATION_SOURCE_DISCOVERY_PHASE_SUMMARY_PATH = DISCOVERY_DIRECTORY / "translation_source_discovery_phase_summary.md"
 HUMAN_ACQUISITION_CHECKLIST_PATH = DISCOVERY_DIRECTORY / "human_acquisition_checklist.tsv"
+NEXT_ACTIONS_INDEX_PATH = DISCOVERY_DIRECTORY / "next_actions_index.tsv"
+TRANSLATION_SOURCE_DISCOVERY_README_PATH = DISCOVERY_DIRECTORY / "README.md"
 SIP_WITNESS_INSPECTION_PATH = DISCOVERY_DIRECTORY / "sip_witness_inspection.tsv"
 SOURCE_WITNESS_CONTENT_PROFILE_PATH = DISCOVERY_DIRECTORY / "source_witness_content_profile.tsv"
 EB_FASCICLE_CONTENT_INSPECTION_PATH = DISCOVERY_DIRECTORY / "eb_fascicle_content_inspection.tsv"
@@ -245,6 +247,19 @@ HUMAN_ACQUISITION_CHECKLIST_FIELDS = [
     "evidence_to_use",
     "success_condition",
     "failure_condition",
+    "priority",
+    "notes",
+]
+
+NEXT_ACTIONS_INDEX_FIELDS = [
+    "action_group",
+    "source_work_key",
+    "primary_artifact",
+    "supporting_artifacts",
+    "human_task",
+    "machine_task_available",
+    "blocked_by",
+    "success_condition",
     "priority",
     "notes",
 ]
@@ -3298,6 +3313,142 @@ def build_translation_source_discovery_phase_summary(
     return "\n".join(lines)
 
 
+def build_next_actions_index_rows(
+    direct_witness_acquisition_status_rows: list[dict[str, str]],
+    human_acquisition_checklist_rows: list[dict[str, str]],
+    acquisition_action_queue_rows: list[dict[str, str]],
+) -> list[dict[str, str]]:
+    status_by_source = {row.get("source_work_key", ""): row for row in direct_witness_acquisition_status_rows}
+    has_action_queue = {row.get("source_work_key", "") for row in acquisition_action_queue_rows}
+
+    rows: list[dict[str, str]] = []
+    for checklist_row in human_acquisition_checklist_rows:
+        source_key = checklist_row.get("source_work_key", "")
+        status_row = status_by_source.get(source_key, {})
+        primary_artifact = "human_acquisition_checklist.tsv"
+        supporting_artifacts = [
+            "direct_witness_acquisition_status.tsv",
+            "source_work_witness_gaps.tsv",
+        ]
+        action_group = f"{slugify_fragment(source_key)}-next-step"
+        if source_key == "lucePeMaungTinInscriptionsOfBurma":
+            action_group = "iob-local-copy-acquisition"
+            primary_artifact = "acquisition_action_queue.tsv"
+            supporting_artifacts = [
+                "human_acquisition_checklist.tsv",
+                "direct_witness_acquisition_status.tsv",
+                "source_work_witness_gaps.tsv",
+                "external_catalogue_search_log.tsv",
+                "external_catalogue_candidate_triage.tsv",
+            ]
+        elif source_key == "uemSelectionsPagan":
+            action_group = "uem-authoritative-catalogue-search"
+            supporting_artifacts.extend(
+                [
+                    "external_catalogue_search_log.tsv",
+                    "external_catalogue_candidate_triage.tsv",
+                ]
+            )
+        elif source_key == "tnInscriptionsPaganPinyaAva":
+            action_group = "tn-source-identity-resolution"
+            supporting_artifacts.extend(
+                [
+                    "external_catalogue_search_log.tsv",
+                    "external_catalogue_candidate_triage.tsv",
+                ]
+            )
+        elif source_key == "ppaCatalogue":
+            action_group = "ppa-source-identity-resolution"
+            supporting_artifacts.extend(
+                [
+                    "external_catalogue_search_log.tsv",
+                    "external_catalogue_candidate_triage.tsv",
+                ]
+            )
+        elif source_key == "ubSourceFamily":
+            action_group = "ub-standalone-record-search"
+            supporting_artifacts.extend(
+                [
+                    "external_catalogue_search_log.tsv",
+                    "external_catalogue_candidate_triage.tsv",
+                ]
+            )
+        elif source_key == "sipSelectionsPagan":
+            action_group = "sip-manual-content-review"
+            supporting_artifacts.extend(
+                [
+                    "manual_review_queue.tsv",
+                    "source_witness_content_profile.tsv",
+                ]
+            )
+        elif source_key == "epigraphiaBirmanica":
+            action_group = "eb-manual-content-review"
+            supporting_artifacts.extend(
+                [
+                    "manual_review_queue.tsv",
+                    "source_witness_content_profile.tsv",
+                    "epigraphia_birmanica_witness_review.tsv",
+                    "epigraphia_birmanica_fascicle_coverage.tsv",
+                ]
+            )
+        if source_key != "lucePeMaungTinInscriptionsOfBurma" and source_key in has_action_queue:
+            supporting_artifacts.append("acquisition_action_queue.tsv")
+        rows.append(
+            {
+                "action_group": action_group,
+                "source_work_key": source_key,
+                "primary_artifact": primary_artifact,
+                "supporting_artifacts": ";".join(dict.fromkeys(supporting_artifacts)),
+                "human_task": checklist_row.get("task", ""),
+                "machine_task_available": "yes",
+                "blocked_by": shorten_evidence(status_row.get("current_blocker", ""), max_length=240),
+                "success_condition": checklist_row.get("success_condition", ""),
+                "priority": checklist_row.get("priority", "") or status_row.get("priority", ""),
+                "notes": shorten_evidence(
+                    compact_join(
+                        [
+                            checklist_row.get("notes", ""),
+                            "Refresh existing verification/validation outputs only after the human step changes evidence.",
+                        ],
+                        limit=2,
+                    ),
+                    max_length=240,
+                ),
+            }
+        )
+    return rows
+
+
+def build_translation_source_discovery_readme() -> str:
+    lines = [
+        "# Translation source discovery",
+        "",
+        "This directory contains working-state artifacts for translation-source discovery, witness verification, acquisition tracking, and human review routing. It is a working layer, not release data.",
+        "",
+        "## Authoritative current-state files",
+        "- `translation_source_discovery_phase_summary.md`",
+        "- `direct_witness_acquisition_status.tsv`",
+        "- `human_acquisition_checklist.tsv`",
+        "- `acquisition_action_queue.tsv`",
+        "- `source_work_witness_gaps.tsv`",
+        "- `next_actions_index.tsv`",
+        "",
+        "## Evidence and log layers",
+        "- `external_catalogue_search_log.tsv`",
+        "- `external_catalogue_candidate_triage.tsv`",
+        "- `witness_hunt_candidate_triage.tsv`",
+        "- `ruled_out_witness_candidates.tsv`",
+        "",
+        "## Guardrails",
+        "- The Berkeley IOB catalogue record is not a verified local witness.",
+        "- The IOB plate portfolios are not the missing companion text witness.",
+        "- SIP does not satisfy the separate UEM witness gap.",
+        "- Do not infer translation coverage from OCR fragments or generic English prose.",
+        "",
+    ]
+    return "\n".join(lines)
+
+
 def build_ruled_out_witness_candidate_rows(
     witness_hunt_candidate_triage_rows: list[dict[str, str]],
     rescue_candidate_review_rows: list[dict[str, str]],
@@ -4574,6 +4725,8 @@ def verify_translation_witnesses(
     acquisition_action_queue_path: Path = ACQUISITION_ACTION_QUEUE_PATH,
     translation_source_discovery_phase_summary_path: Path = TRANSLATION_SOURCE_DISCOVERY_PHASE_SUMMARY_PATH,
     human_acquisition_checklist_path: Path = HUMAN_ACQUISITION_CHECKLIST_PATH,
+    next_actions_index_path: Path = NEXT_ACTIONS_INDEX_PATH,
+    translation_source_discovery_readme_path: Path = TRANSLATION_SOURCE_DISCOVERY_README_PATH,
     witness_verification_report_path: Path = WITNESS_VERIFICATION_REPORT_PATH,
 ) -> dict:
     plan_rows = read_tsv(plan_path)
@@ -4809,6 +4962,11 @@ def verify_translation_witnesses(
         direct_witness_acquisition_status_rows,
         acquisition_action_queue_rows,
     )
+    next_actions_index_rows = build_next_actions_index_rows(
+        direct_witness_acquisition_status_rows,
+        human_acquisition_checklist_rows,
+        acquisition_action_queue_rows,
+    )
     ruled_out_witness_candidate_rows = build_ruled_out_witness_candidate_rows(
         witness_hunt_candidate_triage_rows,
         rescue_review_rows,
@@ -4820,6 +4978,7 @@ def verify_translation_witnesses(
         direct_witness_acquisition_status_rows,
         ruled_out_witness_candidate_rows,
     )
+    readme_markdown = build_translation_source_discovery_readme()
 
     updated_classification_rows = update_classification_rows(classification_rows, verification_rows)
     updated_plan_rows = update_plan_rows(
@@ -4895,6 +5054,7 @@ def verify_translation_witnesses(
     write_tsv(direct_witness_acquisition_status_path, direct_witness_acquisition_status_rows, DIRECT_WITNESS_ACQUISITION_STATUS_FIELDS)
     write_tsv(acquisition_action_queue_path, acquisition_action_queue_rows, ACQUISITION_ACTION_QUEUE_FIELDS)
     write_tsv(human_acquisition_checklist_path, human_acquisition_checklist_rows, HUMAN_ACQUISITION_CHECKLIST_FIELDS)
+    write_tsv(next_actions_index_path, next_actions_index_rows, NEXT_ACTIONS_INDEX_FIELDS)
     write_tsv(rescue_candidate_review_path, rescue_review_rows, RESCUE_CANDIDATE_REVIEW_FIELDS)
     write_tsv(epigraphia_birmanica_review_path, epigraphia_review_rows, EPIGRAPHIA_BIRMANICA_REVIEW_FIELDS)
     write_tsv(epigraphia_birmanica_fascicle_coverage_path, epigraphia_fascicle_coverage_rows, EPIGRAPHIA_BIRMANICA_FASCICLE_COVERAGE_FIELDS)
@@ -4905,6 +5065,7 @@ def verify_translation_witnesses(
     discovery_report_path.write_text(json.dumps(updated_report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     witness_verification_report_path.write_text(json.dumps(verification_report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     translation_source_discovery_phase_summary_path.write_text(phase_summary_markdown, encoding="utf-8")
+    translation_source_discovery_readme_path.write_text(readme_markdown, encoding="utf-8")
     return verification_report
 
 
@@ -4947,6 +5108,8 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--acquisition-action-queue", type=Path, default=ACQUISITION_ACTION_QUEUE_PATH)
     parser.add_argument("--translation-source-discovery-phase-summary", type=Path, default=TRANSLATION_SOURCE_DISCOVERY_PHASE_SUMMARY_PATH)
     parser.add_argument("--human-acquisition-checklist", type=Path, default=HUMAN_ACQUISITION_CHECKLIST_PATH)
+    parser.add_argument("--next-actions-index", type=Path, default=NEXT_ACTIONS_INDEX_PATH)
+    parser.add_argument("--translation-source-discovery-readme", type=Path, default=TRANSLATION_SOURCE_DISCOVERY_README_PATH)
     parser.add_argument("--witness-verification-report", type=Path, default=WITNESS_VERIFICATION_REPORT_PATH)
     return parser.parse_args()
 
@@ -4991,6 +5154,8 @@ def main() -> None:
         acquisition_action_queue_path=args.acquisition_action_queue,
         translation_source_discovery_phase_summary_path=args.translation_source_discovery_phase_summary,
         human_acquisition_checklist_path=args.human_acquisition_checklist,
+        next_actions_index_path=args.next_actions_index,
+        translation_source_discovery_readme_path=args.translation_source_discovery_readme,
         witness_verification_report_path=args.witness_verification_report,
     )
     print(json.dumps(report, ensure_ascii=False, indent=2))

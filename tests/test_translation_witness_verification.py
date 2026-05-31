@@ -14,6 +14,8 @@ from verify_translation_witnesses import (
     build_acquisition_action_queue_rows,
     build_direct_witness_acquisition_status_rows,
     build_human_acquisition_checklist_rows,
+    build_next_actions_index_rows,
+    build_translation_source_discovery_readme,
     build_translation_source_discovery_phase_summary,
     SIP_WITNESS_ID,
     annotate_iob_text_search_rows,
@@ -715,6 +717,137 @@ class TranslationWitnessVerificationTests(unittest.TestCase):
         self.assertIn("SIP/UEM overlap", summary)
         self.assertIn("false positive", summary.casefold())
 
+    def test_next_actions_index_rows_cover_checklist_sources_and_existing_artifacts(self) -> None:
+        acquisition_status_rows = [
+            {
+                "source_work_key": "lucePeMaungTinInscriptionsOfBurma",
+                "canonical_title": "Inscriptions of Burma",
+                "current_blocker": "Authoritative catalogue lead exists, but no local companion text witness has been acquired",
+                "priority": "high",
+            },
+            {
+                "source_work_key": "uemSelectionsPagan",
+                "canonical_title": "Selections from the Inscriptions of Pagan",
+                "current_blocker": "No direct U E Maung witness has been found.",
+                "priority": "high",
+            },
+            {
+                "source_work_key": "tnInscriptionsPaganPinyaAva",
+                "canonical_title": "Inscriptions of Pagan, Pinya and Ava",
+                "current_blocker": "No local direct witness found.",
+                "priority": "high",
+            },
+            {
+                "source_work_key": "ppaCatalogue",
+                "canonical_title": "Inscriptions of Pagan, Pinya and Ava",
+                "current_blocker": "No local direct witness found.",
+                "priority": "high",
+            },
+            {
+                "source_work_key": "ubSourceFamily",
+                "canonical_title": "Inscriptions Collected in Upper Burma",
+                "current_blocker": "No direct witness found.",
+                "priority": "high",
+            },
+            {
+                "source_work_key": "sipSelectionsPagan",
+                "canonical_title": "Selections from the Inscriptions of Pagan",
+                "current_blocker": "Local witness is present, but translation-bearing content remains unreviewed",
+                "priority": "medium",
+            },
+            {
+                "source_work_key": "epigraphiaBirmanica",
+                "canonical_title": "Epigraphia Birmanica",
+                "current_blocker": "Local fascicles are verified, but explicit translation evidence has not been confirmed",
+                "priority": "medium",
+            },
+        ]
+        checklist_rows = [
+            {
+                "checklist_id": "iob-berkeley-local-copy",
+                "source_work_key": "lucePeMaungTinInscriptionsOfBurma",
+                "task": "Use the Berkeley record to locate or acquire a local copy of the companion text witness, or identify a legally usable scan/location.",
+                "success_condition": "A local text witness is acquired or a legally usable scan/location is identified.",
+                "priority": "high",
+                "notes": "Keep the Berkeley catalogue lead separate from the already verified plate portfolios.",
+            },
+            {
+                "checklist_id": "uem-rangoon-catalogue-search",
+                "source_work_key": "uemSelectionsPagan",
+                "task": "Search Myanmar/Rangoon catalogues under U E Maung / Pagan Kyauksa Let Ywei Sin / 1958 and separate the target from SIP and Pe Maung Tin material.",
+                "success_condition": "A catalogue record or title-page witness clearly identifies the separate U E Maung edition.",
+                "priority": "high",
+                "notes": "Do not reuse broad-query filename overlap as direct-witness evidence.",
+            },
+            {
+                "checklist_id": "tn-source-identity-resolution",
+                "source_work_key": "tnInscriptionsPaganPinyaAva",
+                "task": "Resolve whether the U Tun Nyein 1897 target is genuinely distinct from the Forchhammer/Taw Sein Ko 1899 record before treating either as the direct witness.",
+                "success_condition": "Catalogue metadata distinguishes a U Tun Nyein / 1897 witness or confirms the identity relationship explicitly.",
+                "priority": "high",
+                "notes": "",
+            },
+            {
+                "checklist_id": "ppa-source-identity-resolution",
+                "source_work_key": "ppaCatalogue",
+                "task": "Resolve whether PPA/IPPA is a separate catalogue family or only a shorthand for the 1899 Inscriptions of Pagan, Pinya and Ava record.",
+                "success_condition": "A catalogue record names PPA/IPPA clearly enough to confirm whether it is a separate source family or an alias.",
+                "priority": "high",
+                "notes": "",
+            },
+            {
+                "checklist_id": "ub-upper-burma-record-search",
+                "source_work_key": "ubSourceFamily",
+                "task": "Locate standalone UB 1 / UB 2 records using the cited 1900/1903 Upper Burma references and Archaeological Survey of Burma variants.",
+                "success_condition": "A catalogue record or holding entry clearly identifies a standalone Upper Burma witness.",
+                "priority": "high",
+                "notes": "",
+            },
+            {
+                "checklist_id": "sip-manual-content-review",
+                "source_work_key": "sipSelectionsPagan",
+                "task": "Inspect a recoverable SIP sample entry or contents page and keep translation status unconfirmed unless explicit translation evidence appears.",
+                "success_condition": "A sample entry or contents page is reviewed and the translation status is updated only from explicit evidence.",
+                "priority": "medium",
+                "notes": "The reviewed SIP/UEM false positive must not be recycled as UEM evidence.",
+            },
+            {
+                "checklist_id": "eb-manual-content-review",
+                "source_work_key": "epigraphiaBirmanica",
+                "task": "Inspect explicit translation headings or sections in the verified Epigraphia Birmanica fascicles.",
+                "success_condition": "Explicit translation-bearing sections are confirmed or ruled out from the verified fascicles.",
+                "priority": "medium",
+                "notes": "EB is a verified local fascicle witness, not a direct-witness acquisition problem.",
+            },
+        ]
+        action_queue_rows = [
+            {
+                "action_id": "iob-berkeley-acquire-local-copy",
+                "source_work_key": "lucePeMaungTinInscriptionsOfBurma",
+            },
+            {
+                "action_id": "uem-locate-authoritative-record",
+                "source_work_key": "uemSelectionsPagan",
+            },
+        ]
+
+        rows = build_next_actions_index_rows(acquisition_status_rows, checklist_rows, action_queue_rows)
+        row_by_source = {row["source_work_key"]: row for row in rows}
+
+        self.assertEqual(len(rows), len(checklist_rows))
+        self.assertEqual(row_by_source["lucePeMaungTinInscriptionsOfBurma"]["primary_artifact"], "acquisition_action_queue.tsv")
+        self.assertEqual(row_by_source["sipSelectionsPagan"]["primary_artifact"], "human_acquisition_checklist.tsv")
+        self.assertIn("external_catalogue_search_log.tsv", row_by_source["uemSelectionsPagan"]["supporting_artifacts"])
+        self.assertIn("source_witness_content_profile.tsv", row_by_source["epigraphiaBirmanica"]["supporting_artifacts"])
+
+    def test_readme_includes_critical_guardrails(self) -> None:
+        readme = build_translation_source_discovery_readme()
+
+        self.assertIn("Berkeley IOB catalogue record is not a verified local witness", readme)
+        self.assertIn("IOB plate portfolios are not the missing companion text witness", readme)
+        self.assertIn("SIP does not satisfy the separate UEM witness gap", readme)
+        self.assertIn("Do not infer translation coverage from OCR fragments or generic English prose", readme)
+
     def test_missing_core_uem_broad_hits_are_triaged_non_promotable(self) -> None:
         rows = [
             {
@@ -1204,6 +1337,16 @@ class TranslationWitnessVerificationTests(unittest.TestCase):
             acquisition_status_rows,
             external_catalogue_log_rows,
         )
+        checklist_rows = build_human_acquisition_checklist_rows(
+            acquisition_status_rows,
+            acquisition_action_queue_rows,
+        )
+        next_actions_rows = build_next_actions_index_rows(
+            acquisition_status_rows,
+            checklist_rows,
+            acquisition_action_queue_rows,
+        )
+        readme = build_translation_source_discovery_readme()
         report = build_verification_report(
             verification_rows,
             [{"witness_id": "w1"}, {"witness_id": "w2"}],
@@ -1234,6 +1377,9 @@ class TranslationWitnessVerificationTests(unittest.TestCase):
             [{"witness_id": "eb1"}],
         )
 
+        self.assertEqual(len(checklist_rows), len(acquisition_status_rows))
+        self.assertEqual(len(next_actions_rows), len(acquisition_status_rows))
+        self.assertIn("Berkeley IOB catalogue record is not a verified local witness", readme)
         self.assertEqual(report["verified_witness_count"], 2)
         self.assertEqual(report["verified_direct_witness_count"], 1)
         self.assertEqual(report["verified_plate_witness_count"], 1)

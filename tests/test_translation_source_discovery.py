@@ -34,6 +34,7 @@ from verify_translation_witnesses import (
     EXTERNAL_CATALOGUE_CANDIDATE_TRIAGE_FIELDS,
     EXTERNAL_CATALOGUE_SEARCH_LOG_FIELDS,
     HUMAN_ACQUISITION_CHECKLIST_FIELDS,
+    NEXT_ACTIONS_INDEX_FIELDS,
     INSCRIPTIONS_OF_BURMA_TEXT_SEARCH_FIELDS,
     INSCRIPTIONS_OF_BURMA_TEXT_VOLUME_HUNT_FIELDS,
     MANUAL_REVIEW_QUEUE_FIELDS,
@@ -807,6 +808,154 @@ class TranslationSourceDiscoveryTests(unittest.TestCase):
 
             self.assertTrue(any("phase_summary.md is missing required guardrail language" in error or "translation_source_discovery_phase_summary.md is missing required guardrail language" in error for error in errors))
 
+    def test_validator_requires_next_actions_index_coverage_for_all_checklist_sources(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            tmp = Path(tmp_dir)
+            self._write_validation_fixture(
+                tmp,
+                source_rows=[
+                    base_source_row(),
+                    {**base_source_row(), "source_work_key": "sipSelectionsPagan", "canonical_title": "Selections from the Inscriptions of Pagan", "short_title": "SIP", "authors_editors": "Pe Maung Tin and G. H. Luce"},
+                ],
+                direct_witness_acquisition_plan_rows=[
+                    self._acquisition_plan_row(),
+                    self._acquisition_plan_row(
+                        source_work_key="sipSelectionsPagan",
+                        canonical_title="Selections from the Inscriptions of Pagan",
+                        source_family_or_acronym="SIP",
+                        target_witness_needed="Manual review of verified local witness content",
+                        known_or_expected_author_editor="Pe Maung Tin and G. H. Luce",
+                        local_search_status="verified_direct_witness_translation_unconfirmed",
+                        priority="medium",
+                    ),
+                ],
+                direct_witness_acquisition_status_rows=[
+                    self._acquisition_status_row(),
+                    self._acquisition_status_row(
+                        source_work_key="sipSelectionsPagan",
+                        canonical_title="Selections from the Inscriptions of Pagan",
+                        local_direct_witness_status="local_direct_witness_needs_content_review",
+                        external_catalogue_status="not_needed_for_current_step",
+                        acquisition_status="needs_manual_content_review",
+                        translation_coverage_status="needs_manual_review",
+                        edition_or_text_status="Verified local edition witness",
+                        current_blocker="Local witness is present, but translation-bearing content remains unreviewed",
+                        next_action="Inspect a recoverable sample entry or contents page from the verified SIP witness.",
+                        priority="medium",
+                    ),
+                ],
+                human_acquisition_checklist_rows=[
+                    self._human_acquisition_checklist_row(),
+                    self._human_acquisition_checklist_row(
+                        checklist_id="sip-manual-content-review",
+                        source_work_key="sipSelectionsPagan",
+                        task_type="manual_content_review",
+                        task="Inspect a recoverable SIP sample entry or contents page and keep translation status unconfirmed unless explicit translation evidence appears.",
+                        evidence_to_use="Local witness is present, but translation-bearing content remains unreviewed",
+                        success_condition="A sample entry or contents page is reviewed and the translation status is updated only from explicit evidence.",
+                        failure_condition="No recoverable sample entry or explicit translation heading appears, so SIP remains a verified edition witness with translation unconfirmed.",
+                        priority="medium",
+                        notes="The reviewed SIP/UEM false positive must not be recycled as UEM evidence.",
+                    ),
+                ],
+                next_actions_index_rows=[
+                    self._next_actions_index_row(
+                        action_group="iob-local-copy-acquisition",
+                        source_work_key="lucePeMaungTinInscriptionsOfBurma",
+                    )
+                ],
+            )
+
+            errors = self._run_validation(tmp)
+
+            self.assertTrue(any("Checklist source sipSelectionsPagan requires at least one next_actions_index.tsv row" in error for error in errors))
+
+    def test_validator_requires_next_actions_primary_artifact_to_exist(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            tmp = Path(tmp_dir)
+            self._write_validation_fixture(
+                tmp,
+                next_actions_index_rows=[
+                    self._next_actions_index_row(primary_artifact="missing.tsv"),
+                    self._next_actions_index_row(
+                        action_group="sip-manual-content-review",
+                        source_work_key="sipSelectionsPagan",
+                        primary_artifact="human_acquisition_checklist.tsv",
+                        supporting_artifacts="direct_witness_acquisition_status.tsv;manual_review_queue.tsv;source_work_witness_gaps.tsv",
+                        human_task="Inspect a recoverable SIP sample entry or contents page.",
+                        blocked_by="Local witness is present, but translation-bearing content remains unreviewed",
+                        success_condition="A sample entry or contents page is reviewed.",
+                        priority="medium",
+                    ),
+                    self._next_actions_index_row(
+                        action_group="uem-authoritative-catalogue-search",
+                        source_work_key="uemSelectionsPagan",
+                        primary_artifact="human_acquisition_checklist.tsv",
+                        supporting_artifacts="direct_witness_acquisition_status.tsv;source_work_witness_gaps.tsv;external_catalogue_search_log.tsv;external_catalogue_candidate_triage.tsv;acquisition_action_queue.tsv",
+                        human_task="Search Myanmar/Rangoon catalogues under U E Maung / Pagan Kyauksa Let Ywei Sin / 1958.",
+                        blocked_by="No direct U E Maung witness has been found.",
+                        success_condition="A catalogue record or title-page witness clearly identifies the separate U E Maung edition.",
+                        priority="high",
+                    ),
+                    self._next_actions_index_row(
+                        action_group="tn-source-identity-resolution",
+                        source_work_key="tnInscriptionsPaganPinyaAva",
+                        primary_artifact="human_acquisition_checklist.tsv",
+                        supporting_artifacts="direct_witness_acquisition_status.tsv;source_work_witness_gaps.tsv;external_catalogue_search_log.tsv;external_catalogue_candidate_triage.tsv;acquisition_action_queue.tsv",
+                        human_task="Resolve whether the U Tun Nyein 1897 target is distinct from the 1899 record.",
+                        blocked_by="No local direct witness found.",
+                        success_condition="Catalogue metadata distinguishes a U Tun Nyein / 1897 witness or confirms the identity relationship explicitly.",
+                        priority="high",
+                    ),
+                    self._next_actions_index_row(
+                        action_group="ppa-source-identity-resolution",
+                        source_work_key="ppaCatalogue",
+                        primary_artifact="human_acquisition_checklist.tsv",
+                        supporting_artifacts="direct_witness_acquisition_status.tsv;source_work_witness_gaps.tsv;external_catalogue_search_log.tsv;external_catalogue_candidate_triage.tsv;acquisition_action_queue.tsv",
+                        human_task="Resolve whether PPA/IPPA is separate from the 1899 record.",
+                        blocked_by="No local direct witness found.",
+                        success_condition="A catalogue record names PPA/IPPA clearly enough to confirm whether it is separate or an alias.",
+                        priority="high",
+                    ),
+                    self._next_actions_index_row(
+                        action_group="ub-standalone-record-search",
+                        source_work_key="ubSourceFamily",
+                        primary_artifact="human_acquisition_checklist.tsv",
+                        supporting_artifacts="direct_witness_acquisition_status.tsv;source_work_witness_gaps.tsv;external_catalogue_search_log.tsv;external_catalogue_candidate_triage.tsv;acquisition_action_queue.tsv",
+                        human_task="Locate standalone UB 1 / UB 2 records.",
+                        blocked_by="No direct witness found.",
+                        success_condition="A catalogue record or holding entry clearly identifies a standalone Upper Burma witness.",
+                        priority="high",
+                    ),
+                    self._next_actions_index_row(
+                        action_group="eb-manual-content-review",
+                        source_work_key="epigraphiaBirmanica",
+                        primary_artifact="human_acquisition_checklist.tsv",
+                        supporting_artifacts="direct_witness_acquisition_status.tsv;manual_review_queue.tsv;source_witness_content_profile.tsv;epigraphia_birmanica_witness_review.tsv;epigraphia_birmanica_fascicle_coverage.tsv",
+                        human_task="Inspect explicit translation headings or sections in the verified fascicles.",
+                        blocked_by="Local fascicles are verified, but explicit translation evidence has not been confirmed",
+                        success_condition="Explicit translation-bearing sections are confirmed or ruled out from the verified fascicles.",
+                        priority="medium",
+                    ),
+                ],
+            )
+
+            errors = self._run_validation(tmp)
+
+            self.assertTrue(any("points to missing primary_artifact missing.tsv" in error for error in errors))
+
+    def test_validator_requires_readme_guardrails(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            tmp = Path(tmp_dir)
+            self._write_validation_fixture(
+                tmp,
+                readme_text="# Translation source discovery\n\nShort README without the required guardrails.\n",
+            )
+
+            errors = self._run_validation(tmp)
+
+            self.assertTrue(any("README.md is missing required guardrail language" in error for error in errors))
+
     def test_validator_rejects_failed_sip_ocr_counting_as_sample_entry_inspection(self) -> None:
         with tempfile.TemporaryDirectory() as tmp_dir:
             tmp = Path(tmp_dir)
@@ -1452,12 +1601,28 @@ class TranslationSourceDiscoveryTests(unittest.TestCase):
             "checklist_id": "iob-berkeley-local-copy",
             "source_work_key": "lucePeMaungTinInscriptionsOfBurma",
             "task_type": "acquire_local_copy_or_scan",
-            "task": "Use the Berkeley record to locate or acquire a local companion text witness, or identify a legally usable scan/location.",
+            "task": "Use the Berkeley record to locate or acquire a local copy of the companion text witness, or identify a legally usable scan/location.",
             "evidence_to_use": "UC Berkeley Library record for Inscriptions of Burma; Type: Text; issued in portfolio.",
             "success_condition": "A local text witness is acquired or a legally usable scan/location is identified.",
             "failure_condition": "Only plate portfolios or catalogue metadata are available; do not promote the Berkeley record to a verified local text witness.",
             "priority": "high",
             "notes": "Keep the Berkeley catalogue lead separate from the already verified plate portfolios.",
+        }
+        row.update(overrides)
+        return row
+
+    def _next_actions_index_row(self, **overrides: str) -> dict:
+        row = {
+            "action_group": "iob-local-copy-acquisition",
+            "source_work_key": "lucePeMaungTinInscriptionsOfBurma",
+            "primary_artifact": "acquisition_action_queue.tsv",
+            "supporting_artifacts": "human_acquisition_checklist.tsv;direct_witness_acquisition_status.tsv;source_work_witness_gaps.tsv;external_catalogue_search_log.tsv;external_catalogue_candidate_triage.tsv",
+            "human_task": "Use the Berkeley record to locate or acquire a local copy of the companion text witness, or identify a legally usable scan/location.",
+            "machine_task_available": "yes",
+            "blocked_by": "Authoritative catalogue lead exists, but no local companion text witness has been acquired",
+            "success_condition": "A local text witness is acquired or a legally usable scan/location is identified.",
+            "priority": "high",
+            "notes": "Refresh existing verification/validation outputs only after the human step changes evidence.",
         }
         row.update(overrides)
         return row
@@ -1560,6 +1725,7 @@ class TranslationSourceDiscoveryTests(unittest.TestCase):
         manual_review_queue_rows: list[dict] | None = None,
         acquisition_action_queue_rows: list[dict] | None = None,
         human_acquisition_checklist_rows: list[dict] | None = None,
+        next_actions_index_rows: list[dict] | None = None,
         ruled_out_witness_candidate_rows: list[dict] | None = None,
         external_catalogue_search_log_rows: list[dict] | None = None,
         external_catalogue_candidate_triage_rows: list[dict] | None = None,
@@ -1567,6 +1733,7 @@ class TranslationSourceDiscoveryTests(unittest.TestCase):
         epigraphia_review_rows: list[dict] | None = None,
         epigraphia_fascicle_coverage_rows: list[dict] | None = None,
         phase_summary_text: str | None = None,
+        readme_text: str | None = None,
         report_overrides: dict | None = None,
     ) -> None:
         source_rows = source_rows or [base_source_row()]
@@ -1885,6 +2052,96 @@ class TranslationSourceDiscoveryTests(unittest.TestCase):
                             notes="",
                         )
                     )
+        if next_actions_index_rows is None:
+            next_actions_index_rows = []
+            for row in human_acquisition_checklist_rows:
+                source_key = row.get("source_work_key", "")
+                if source_key == "lucePeMaungTinInscriptionsOfBurma":
+                    next_actions_index_rows.append(self._next_actions_index_row())
+                elif source_key == "uemSelectionsPagan":
+                    next_actions_index_rows.append(
+                        self._next_actions_index_row(
+                            action_group="uem-authoritative-catalogue-search",
+                            source_work_key=source_key,
+                            primary_artifact="human_acquisition_checklist.tsv",
+                            supporting_artifacts="direct_witness_acquisition_status.tsv;source_work_witness_gaps.tsv;external_catalogue_search_log.tsv;external_catalogue_candidate_triage.tsv;acquisition_action_queue.tsv",
+                            human_task=row.get("task", ""),
+                            blocked_by="No direct U E Maung witness has been found; current broad-query hits resolve to Pe Maung Tin or Maung Gyi material plus the reviewed SIP false positive.",
+                            success_condition=row.get("success_condition", ""),
+                            priority=row.get("priority", "high"),
+                            notes=row.get("notes", ""),
+                        )
+                    )
+                elif source_key == "tnInscriptionsPaganPinyaAva":
+                    next_actions_index_rows.append(
+                        self._next_actions_index_row(
+                            action_group="tn-source-identity-resolution",
+                            source_work_key=source_key,
+                            primary_artifact="human_acquisition_checklist.tsv",
+                            supporting_artifacts="direct_witness_acquisition_status.tsv;source_work_witness_gaps.tsv;external_catalogue_search_log.tsv;external_catalogue_candidate_triage.tsv;acquisition_action_queue.tsv",
+                            human_task=row.get("task", ""),
+                            blocked_by="No local direct witness found. Current evidence is only no-hit rows and bibliographic clue rows around Rangoon/Government Printing/Gazette Press.",
+                            success_condition=row.get("success_condition", ""),
+                            priority=row.get("priority", "high"),
+                            notes=row.get("notes", ""),
+                        )
+                    )
+                elif source_key == "ppaCatalogue":
+                    next_actions_index_rows.append(
+                        self._next_actions_index_row(
+                            action_group="ppa-source-identity-resolution",
+                            source_work_key=source_key,
+                            primary_artifact="human_acquisition_checklist.tsv",
+                            supporting_artifacts="direct_witness_acquisition_status.tsv;source_work_witness_gaps.tsv;external_catalogue_search_log.tsv;external_catalogue_candidate_triage.tsv;acquisition_action_queue.tsv",
+                            human_task=row.get("task", ""),
+                            blocked_by="No local direct witness found. IPPA/PPA variant searches currently do not produce a direct file.",
+                            success_condition=row.get("success_condition", ""),
+                            priority=row.get("priority", "high"),
+                            notes=row.get("notes", ""),
+                        )
+                    )
+                elif source_key == "ubSourceFamily":
+                    next_actions_index_rows.append(
+                        self._next_actions_index_row(
+                            action_group="ub-standalone-record-search",
+                            source_work_key=source_key,
+                            primary_artifact="human_acquisition_checklist.tsv",
+                            supporting_artifacts="direct_witness_acquisition_status.tsv;source_work_witness_gaps.tsv;external_catalogue_search_log.tsv;external_catalogue_candidate_triage.tsv;acquisition_action_queue.tsv",
+                            human_task=row.get("task", ""),
+                            blocked_by="No direct witness found. Current hits are bibliographic clues or later secondary/article-style material.",
+                            success_condition=row.get("success_condition", ""),
+                            priority=row.get("priority", "high"),
+                            notes=row.get("notes", ""),
+                        )
+                    )
+                elif source_key == "sipSelectionsPagan":
+                    next_actions_index_rows.append(
+                        self._next_actions_index_row(
+                            action_group="sip-manual-content-review",
+                            source_work_key=source_key,
+                            primary_artifact="human_acquisition_checklist.tsv",
+                            supporting_artifacts="direct_witness_acquisition_status.tsv;source_work_witness_gaps.tsv;manual_review_queue.tsv;source_witness_content_profile.tsv",
+                            human_task=row.get("task", ""),
+                            blocked_by="Local witness is present, but translation-bearing content remains unreviewed",
+                            success_condition=row.get("success_condition", ""),
+                            priority=row.get("priority", "medium"),
+                            notes=row.get("notes", ""),
+                        )
+                    )
+                elif source_key == "epigraphiaBirmanica":
+                    next_actions_index_rows.append(
+                        self._next_actions_index_row(
+                            action_group="eb-manual-content-review",
+                            source_work_key=source_key,
+                            primary_artifact="human_acquisition_checklist.tsv",
+                            supporting_artifacts="direct_witness_acquisition_status.tsv;source_work_witness_gaps.tsv;manual_review_queue.tsv;source_witness_content_profile.tsv;epigraphia_birmanica_witness_review.tsv;epigraphia_birmanica_fascicle_coverage.tsv",
+                            human_task=row.get("task", ""),
+                            blocked_by="Local fascicles are verified, but explicit translation evidence has not been confirmed",
+                            success_condition=row.get("success_condition", ""),
+                            priority=row.get("priority", "medium"),
+                            notes=row.get("notes", ""),
+                        )
+                    )
                 elif source_key == "ppaCatalogue":
                     human_acquisition_checklist_rows.append(
                         self._human_acquisition_checklist_row(
@@ -2057,6 +2314,26 @@ class TranslationSourceDiscoveryTests(unittest.TestCase):
             "- Verified IOB plate portfolios do not satisfy the missing text witness.\n"
             "- The SIP/UEM false positive remains ruled out as a false positive.\n"
         )
+        readme_text = readme_text or (
+            "# Translation source discovery\n\n"
+            "This directory contains working-state artifacts for translation-source discovery, witness verification, acquisition tracking, and human review routing.\n\n"
+            "## Authoritative current-state files\n"
+            "- `translation_source_discovery_phase_summary.md`\n"
+            "- `direct_witness_acquisition_status.tsv`\n"
+            "- `human_acquisition_checklist.tsv`\n"
+            "- `acquisition_action_queue.tsv`\n"
+            "- `source_work_witness_gaps.tsv`\n\n"
+            "## Evidence and log layers\n"
+            "- `external_catalogue_search_log.tsv`\n"
+            "- `external_catalogue_candidate_triage.tsv`\n"
+            "- `witness_hunt_candidate_triage.tsv`\n"
+            "- `ruled_out_witness_candidates.tsv`\n\n"
+            "## Guardrails\n"
+            "- The Berkeley IOB catalogue record is not a verified local witness.\n"
+            "- The IOB plate portfolios are not the missing companion text witness.\n"
+            "- SIP does not satisfy the separate UEM witness gap.\n"
+            "- Do not infer translation coverage from OCR fragments or generic English prose.\n"
+        )
         write_tsv(root / "source_work_authority.tsv", source_rows, SOURCE_WORK_FIELDS)
         write_tsv(root / "translation_source_discovery_plan.tsv", plan_rows, PLAN_FIELDS)
         write_tsv(root / "witness_candidates.tsv", candidate_rows, WITNESS_CANDIDATE_FIELDS)
@@ -2079,6 +2356,7 @@ class TranslationSourceDiscoveryTests(unittest.TestCase):
         write_tsv(root / "manual_review_queue.tsv", manual_review_queue_rows, MANUAL_REVIEW_QUEUE_FIELDS)
         write_tsv(root / "acquisition_action_queue.tsv", acquisition_action_queue_rows, ACQUISITION_ACTION_QUEUE_FIELDS)
         write_tsv(root / "human_acquisition_checklist.tsv", human_acquisition_checklist_rows, HUMAN_ACQUISITION_CHECKLIST_FIELDS)
+        write_tsv(root / "next_actions_index.tsv", next_actions_index_rows, NEXT_ACTIONS_INDEX_FIELDS)
         write_tsv(root / "ruled_out_witness_candidates.tsv", ruled_out_witness_candidate_rows, RULED_OUT_WITNESS_CANDIDATE_FIELDS)
         write_tsv(root / "external_catalogue_search_log.tsv", external_catalogue_search_log_rows, EXTERNAL_CATALOGUE_SEARCH_LOG_FIELDS)
         write_tsv(root / "external_catalogue_candidate_triage.tsv", external_catalogue_candidate_triage_rows, EXTERNAL_CATALOGUE_CANDIDATE_TRIAGE_FIELDS)
@@ -2086,6 +2364,7 @@ class TranslationSourceDiscoveryTests(unittest.TestCase):
         write_tsv(root / "epigraphia_birmanica_witness_review.tsv", epigraphia_review_rows, EPIGRAPHIA_BIRMANICA_REVIEW_FIELDS)
         write_tsv(root / "epigraphia_birmanica_fascicle_coverage.tsv", epigraphia_fascicle_coverage_rows, EPIGRAPHIA_BIRMANICA_FASCICLE_COVERAGE_FIELDS)
         (root / "translation_source_discovery_phase_summary.md").write_text(phase_summary_text, encoding="utf-8")
+        (root / "README.md").write_text(readme_text, encoding="utf-8")
         periodical_rows = [
             {
                 "series_source_work_key": key,
@@ -2295,6 +2574,8 @@ class TranslationSourceDiscoveryTests(unittest.TestCase):
             acquisition_action_queue_path=root / "acquisition_action_queue.tsv",
             translation_source_discovery_phase_summary_path=root / "translation_source_discovery_phase_summary.md",
             human_acquisition_checklist_path=root / "human_acquisition_checklist.tsv",
+            next_actions_index_path=root / "next_actions_index.tsv",
+            translation_source_discovery_readme_path=root / "README.md",
             ruled_out_witness_candidates_path=root / "ruled_out_witness_candidates.tsv",
             external_catalogue_search_log_path=root / "external_catalogue_search_log.tsv",
             external_catalogue_candidate_triage_path=root / "external_catalogue_candidate_triage.tsv",
