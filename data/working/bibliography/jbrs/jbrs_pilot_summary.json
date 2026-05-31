@@ -1,21 +1,23 @@
 {
   "reference_hunt_count": 69,
+  "article_reference_target_count": 13,
   "local_file_manifest_count": 1215,
-  "reference_file_match_count": 69,
-  "matched_reference_count": 43,
-  "unmatched_reference_count": 26,
+  "reference_file_match_count": 13,
+  "matched_reference_count": 13,
+  "unmatched_reference_count": 0,
   "ocr_batch_plan_count": 1215,
-  "ready_for_ocr_count": 1207,
-  "already_text_searchable_count": 0,
-  "ocr_completed_count": 8,
-  "translation_candidate_count": 8,
-  "explicit_translation_candidate_count": 5,
-  "probable_translation_candidate_count": 0,
+  "needs_runtime_path_cache_count": 1208,
+  "ready_for_ocr_count": 0,
+  "already_text_available_count": 7,
+  "ocr_completed_count": 0,
+  "translation_candidate_count": 7,
+  "explicit_translation_candidate_count": 0,
+  "probable_translation_candidate_count": 1,
   "edition_or_transliteration_only_count": 0,
-  "manual_review_needed_count": 3,
+  "manual_review_needed_count": 6,
   "notes": [
     "This summary records repository reference-hunt, local-manifest, matching, and OCR-preparation state only.",
-    "External-drive absolute paths and full OCR text stay outside committed metadata.",
-    "Translation candidates are heuristic leads, not verified translation coverage."
+    "ready_for_ocr now counts only rows with a live runtime path; rows missing a runtime path cache are tracked separately.",
+    "Translation candidates are heuristic review leads, not verified translation coverage."
   ]
 }

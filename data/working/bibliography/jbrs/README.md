@@ -1,18 +1,31 @@
 # JBRS working metadata
 
-This directory stores working metadata for the *Journal of the Burma Research Society* (JBRS) reference hunt, local-file matching, OCR planning, and translation-candidate triage. It does **not** store source PDFs, page images, or full OCR text.
+This directory stores working metadata for the *Journal of the Burma Research Society* (JBRS) reference hunt, local-file matching, OCR planning, and translation-candidate triage. It does **not** store source PDFs, page images, Google Vision JSON, or full OCR text.
 
-## Typical workflow
-1. Build the repository reference hunt: `python3 scripts/build_jbrs_reference_hunt.py`
-2. Scan one or more external-drive roots without committing absolute paths: `python3 scripts/build_jbrs_local_manifest.py --root "/Volumes/ExternalDrive/JBRS" --root "/Volumes/ExternalDrive/Burmese"`
-3. Match references to local files: `python3 scripts/match_jbrs_references_to_local_files.py`
-4. Build the OCR batch/status plan: `python3 scripts/plan_jbrs_ocr_batches.py`
-5. Dry-run the Google Vision workflow: `python3 scripts/ocr_jbrs_google_vision.py --dry-run --limit 5`
-6. Detect translation candidates from existing text or OCR text: `python3 scripts/detect_jbrs_translation_candidates.py`
+## Core workflow
+1. Build raw and clean article references: `python3 scripts/build_jbrs_reference_hunt.py`
+2. Build or refresh the redacted manifest: `python3 scripts/build_jbrs_local_manifest.py`
+3. Write a local runtime path cache when you have live roots available: `python3 scripts/build_jbrs_local_manifest.py --root "/Volumes/ExternalDrive/JBRS" --write-runtime-path-cache`
+4. Match clean article targets to local files: `python3 scripts/match_jbrs_references_to_local_files.py`
+5. Build the OCR plan and status log: `python3 scripts/plan_jbrs_ocr_batches.py`
+6. Run OCR preflight before live submission: `python3 scripts/preflight_jbrs_ocr.py --limit 5`
+7. Dry-run the Google Vision workflow: `python3 scripts/ocr_jbrs_google_vision.py --dry-run --limit 5`
+8. Run live Google Vision OCR only after preflight passes: `python3 scripts/ocr_jbrs_google_vision.py --execute --limit 5`
+9. Refresh conservative translation-candidate leads: `python3 scripts/detect_jbrs_translation_candidates.py`
+
+## Runtime path cache
+- Local runtime cache path: `data_local/ocr/jbrs/manifest/jbrs_runtime_path_map.json`
+- The committed TSV keeps redacted path stubs only.
+- The runtime cache maps `local_file_id -> absolute local path` and must stay gitignored.
 
 ## Local OCR output location
 - Preferred local output root: `data_local/ocr/jbrs/`
-- Recommended subdirectories: `manifest/`, `google_vision_json/`, `page_text/`, `article_text/`, `logs/`
+- Subdirectories used by the live OCR workflow:
+  - `manifest/`
+  - `google_vision_json/`
+  - `page_text/`
+  - `article_text/`
+  - `logs/`
 
 ## Safe to commit
 - TSV manifests and match logs in this directory
@@ -23,6 +36,7 @@ This directory stores working metadata for the *Journal of the Burma Research So
 ## Must not be committed
 - source PDFs or page images
 - full OCR text or long extracted passages
+- Google Vision JSON payloads
 - Nathan's absolute external-drive paths
 - Google credentials, API keys, or service-account secrets
 
@@ -30,4 +44,4 @@ This directory stores working metadata for the *Journal of the Burma Research So
 - The Berkeley IOB catalogue record is not a verified local witness.
 - The IOB plate portfolios are not the missing companion text witness.
 - SIP does not satisfy the separate UEM witness gap.
-- JBRS translation-candidate rows are only review leads; do not treat OCR snippets or English prose as verified translation coverage.
+- Translation candidates are review leads only; do not treat OCR snippets or English prose as verified translation coverage.
