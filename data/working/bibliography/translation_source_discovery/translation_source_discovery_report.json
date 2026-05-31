@@ -15,7 +15,8 @@
     "Verification is stricter than candidate discovery: exact title-page, contents, or OCR-heading evidence is required before promoting translation or edition claims.",
     "Failed OCR is tracked as unconfirmed/attempted, not as evidence that translation is absent.",
     "Weak filename matches are retained as reviewed evidence rather than silently deleted.",
-    "Broad hunt hits now pass through candidate triage before they can count toward direct-witness progress."
+    "Broad hunt hits now pass through candidate triage before they can count toward direct-witness progress.",
+    "With zero plausible direct candidates from the broad hunts, follow-on work now moves to the direct-witness acquisition plan and manual review queue."
   ],
   "verified_witness_count": 31,
   "verified_direct_witness_count": 4,
@@ -56,16 +57,19 @@
   "eb_translation_unconfirmed_count": 3,
   "eb_fascicle_content_inspection_count": 10,
   "direct_witness_search_result_counts": {
-    "blocked_by_missing_local_index": 0,
-    "bibliographic_clue_found": 8,
-    "not_found": 19,
     "candidate_found": 5,
-    "direct_witness_found": 0
+    "blocked_by_missing_local_index": 0,
+    "direct_witness_found": 0,
+    "bibliographic_clue_found": 8,
+    "not_found": 19
   },
   "verified_translation_after_inspection_count": 0,
   "verified_edition_after_inspection_count": 4,
   "witness_hunt_candidate_triage_count": 11,
   "plausible_direct_candidate_count": 0,
   "known_false_positive_hunt_count": 4,
-  "cross_source_or_secondary_hunt_count": 7
+  "cross_source_or_secondary_hunt_count": 7,
+  "direct_witness_acquisition_plan_count": 7,
+  "manual_review_queue_count": 11,
+  "ruled_out_witness_candidate_count": 11
 }

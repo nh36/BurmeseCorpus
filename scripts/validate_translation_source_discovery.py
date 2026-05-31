@@ -3,6 +3,7 @@ from __future__ import annotations
 import argparse
 import json
 import re
+from collections import defaultdict
 from pathlib import Path
 
 from corpus_common import REPO_ROOT, read_tsv
@@ -19,6 +20,7 @@ from discover_translation_sources import (
 from verify_translation_witnesses import (
     CONTENT_PROFILE_STATUSES,
     CORE_SOURCE_DIRECT_SEARCH_PATH,
+    DIRECT_WITNESS_ACQUISITION_PLAN_PATH,
     DIRECT_SEARCH_RESULT_STATUSES,
     DIRECTNESS_VALUES,
     EB_FASCICLE_CONTENT_INSPECTION_PATH,
@@ -28,12 +30,15 @@ from verify_translation_witnesses import (
     HUNT_CANDIDATE_TRIAGE_STATUSES,
     INSCRIPTIONS_OF_BURMA_TEXT_SEARCH_PATH,
     INSCRIPTIONS_OF_BURMA_TEXT_VOLUME_HUNT_PATH,
+    MANUAL_REVIEW_QUEUE_PATH,
     MISSING_DIRECT_SEARCH_PATH,
     MISSING_CORE_WITNESS_HUNT_QUERIES,
     MISSING_CORE_WITNESS_HUNT_PATH,
     NON_PROMOTABLE_HUNT_TRIAGE_STATUSES,
+    OPEN_DIRECT_WITNESS_GAP_TYPES,
     PLAUSIBLE_HUNT_TRIAGE_STATUSES,
     RESCUE_CANDIDATE_REVIEW_PATH,
+    RULED_OUT_WITNESS_CANDIDATES_PATH,
     SIP_WITNESS_ID,
     SIP_WITNESS_INSPECTION_PATH,
     SOURCE_WITNESS_CONTENT_PROFILE_PATH,
@@ -51,6 +56,14 @@ from verify_translation_witnesses import (
 ABSOLUTE_PATH_PATTERN = re.compile(r"(^/(?:Users|home|var|private|tmp|opt|Volumes)\b|^[A-Za-z]:\\\\)")
 SHORT_EVIDENCE_LIMIT = 280
 DIRECT_VERIFICATION_STATUSES = {"verified_direct_witness", "verified_catalogue_witness"}
+OPEN_DIRECT_WITNESS_GAP_SOURCE_KEYS = {
+    "uemSelectionsPagan",
+    "tnInscriptionsPaganPinyaAva",
+    "ppaCatalogue",
+    "ubSourceFamily",
+    "lucePeMaungTinInscriptionsOfBurma",
+}
+FOLLOW_ON_PLAN_SOURCE_KEYS = {"sipSelectionsPagan", "epigraphiaBirmanica"}
 
 
 def has_explicit_translation_signal(snippet: str, notes: str = "") -> bool:
@@ -66,6 +79,10 @@ def hunt_row_key(hunt_table: str, row: dict, *, default_source_work_key: str = "
         row.get("matched_file_id", ""),
         row.get("matched_file_label", ""),
     )
+
+
+def ruled_out_candidate_key(source_work_key: str, candidate_id: str, candidate_label: str, category: str) -> tuple[str, str, str]:
+    return (source_work_key, candidate_id or candidate_label, category)
 
 
 def validate_translation_source_discovery(
@@ -87,6 +104,9 @@ def validate_translation_source_discovery(
     inscriptions_of_burma_text_volume_hunt_path: Path = INSCRIPTIONS_OF_BURMA_TEXT_VOLUME_HUNT_PATH,
     missing_core_witness_hunt_path: Path = MISSING_CORE_WITNESS_HUNT_PATH,
     witness_hunt_candidate_triage_path: Path = WITNESS_HUNT_CANDIDATE_TRIAGE_PATH,
+    direct_witness_acquisition_plan_path: Path = DIRECT_WITNESS_ACQUISITION_PLAN_PATH,
+    manual_review_queue_path: Path = MANUAL_REVIEW_QUEUE_PATH,
+    ruled_out_witness_candidates_path: Path = RULED_OUT_WITNESS_CANDIDATES_PATH,
     rescue_candidate_review_path: Path = RESCUE_CANDIDATE_REVIEW_PATH,
     epigraphia_birmanica_review_path: Path = EPIGRAPHIA_BIRMANICA_REVIEW_PATH,
     epigraphia_birmanica_fascicle_coverage_path: Path = EPIGRAPHIA_BIRMANICA_FASCICLE_COVERAGE_PATH,
@@ -113,6 +133,9 @@ def validate_translation_source_discovery(
         inscriptions_of_burma_text_volume_hunt_path,
         missing_core_witness_hunt_path,
         witness_hunt_candidate_triage_path,
+        direct_witness_acquisition_plan_path,
+        manual_review_queue_path,
+        ruled_out_witness_candidates_path,
         rescue_candidate_review_path,
         epigraphia_birmanica_review_path,
         epigraphia_birmanica_fascicle_coverage_path,
@@ -142,6 +165,9 @@ def validate_translation_source_discovery(
     iob_text_volume_hunt_rows = read_tsv(inscriptions_of_burma_text_volume_hunt_path)
     missing_core_witness_hunt_rows = read_tsv(missing_core_witness_hunt_path)
     witness_hunt_candidate_triage_rows = read_tsv(witness_hunt_candidate_triage_path)
+    direct_witness_acquisition_plan_rows = read_tsv(direct_witness_acquisition_plan_path)
+    manual_review_queue_rows = read_tsv(manual_review_queue_path)
+    ruled_out_witness_candidate_rows = read_tsv(ruled_out_witness_candidates_path)
     rescue_review_rows = read_tsv(rescue_candidate_review_path)
     epigraphia_review_rows = read_tsv(epigraphia_birmanica_review_path)
     epigraphia_fascicle_coverage_rows = read_tsv(epigraphia_birmanica_fascicle_coverage_path)
@@ -508,6 +534,129 @@ def validate_translation_source_discovery(
             if "do not promote" not in row.get("recommended_action", "").casefold():
                 errors.append(f"Broad UEM hunt row {row.get('query')}:{row.get('matched_file_label')} cannot keep a promotable recommended_action")
 
+    acquisition_plan_by_source = {
+        row.get("source_work_key", ""): row
+        for row in direct_witness_acquisition_plan_rows
+    }
+    for row in direct_witness_acquisition_plan_rows:
+        source_key = row.get("source_work_key", "")
+        if source_key not in source_by_key:
+            errors.append(f"direct_witness_acquisition_plan.tsv references unknown source_work_key {source_key}")
+        if not row.get("recommended_next_action"):
+            errors.append(f"direct_witness_acquisition_plan.tsv row {source_key} is missing recommended_next_action")
+        if not row.get("priority"):
+            errors.append(f"direct_witness_acquisition_plan.tsv row {source_key} is missing priority")
+
+    open_gap_rows = [
+        row
+        for row in gap_rows
+        if row.get("source_work_key") in OPEN_DIRECT_WITNESS_GAP_SOURCE_KEYS
+        and row.get("gap_type") in OPEN_DIRECT_WITNESS_GAP_TYPES
+    ]
+    for row in open_gap_rows:
+        if row.get("source_work_key") not in acquisition_plan_by_source:
+            errors.append(f"Open source-work gap {row.get('source_work_key')} is missing a direct_witness_acquisition_plan.tsv row")
+
+    for source_key in FOLLOW_ON_PLAN_SOURCE_KEYS:
+        if source_key in source_by_key and source_key not in acquisition_plan_by_source:
+            errors.append(f"direct_witness_acquisition_plan.tsv is missing required follow-on row for {source_key}")
+
+    manual_review_lookup = {
+        (row.get("source_work_key", ""), row.get("target_file_or_work", ""), row.get("review_type", "")): row
+        for row in manual_review_queue_rows
+    }
+    manual_review_by_source = defaultdict(list)
+    for row in manual_review_queue_rows:
+        source_key = row.get("source_work_key", "")
+        if source_key not in source_by_key:
+            errors.append(f"manual_review_queue.tsv references unknown source_work_key {source_key}")
+        manual_review_by_source[source_key].append(row)
+
+    for row in source_witness_content_profile_rows:
+        source_key = row.get("source_work_key", "")
+        if source_key not in {"sipSelectionsPagan", "epigraphiaBirmanica"}:
+            continue
+        if row.get("translation_status") == "confirmed":
+            continue
+        target_key = (source_key, row.get("file_label", ""), "")
+        if not any(key[:2] == target_key[:2] for key in manual_review_lookup):
+            errors.append(
+                f"Verified direct witness {source_key}:{row.get('file_label')} needs a matching manual_review_queue.tsv row while translation remains unconfirmed"
+            )
+
+    iob_plate_profile_rows = [
+        row
+        for row in source_witness_content_profile_rows
+        if row.get("source_work_key") == "lucePeMaungTinInscriptionsOfBurma" and row.get("plate_image_status") == "confirmed"
+    ]
+    for row in iob_plate_profile_rows:
+        if ("lucePeMaungTinInscriptionsOfBurma", row.get("file_label", ""), "plate_guardrail") not in manual_review_lookup:
+            errors.append(f"IOB plate witness {row.get('file_label')} needs a plate_guardrail manual review row")
+
+    for row in open_gap_rows:
+        if (
+            row.get("source_work_key", ""),
+            row.get("canonical_title", ""),
+            "external_acquisition",
+        ) not in manual_review_lookup:
+            errors.append(f"Open source-work gap {row.get('source_work_key')} is missing an external acquisition manual-review row")
+
+    ruled_out_by_key = {
+        ruled_out_candidate_key(
+            row.get("source_work_key", ""),
+            row.get("candidate_id", ""),
+            row.get("candidate_label", ""),
+            row.get("ruled_out_category", ""),
+        ): row
+        for row in ruled_out_witness_candidate_rows
+    }
+    for row in witness_hunt_candidate_triage_rows:
+        if row.get("triage_status") not in NON_PROMOTABLE_HUNT_TRIAGE_STATUSES:
+            continue
+        key = ruled_out_candidate_key(
+            row.get("source_work_key", ""),
+            row.get("matched_file_id", ""),
+            row.get("matched_file_label", ""),
+            row.get("triage_status", ""),
+        )
+        if key not in ruled_out_by_key:
+            errors.append(
+                f"Non-promotable hunt triage row {row.get('source_work_key')}:{row.get('query')} is missing from ruled_out_witness_candidates.tsv"
+            )
+    for row in rescue_review_rows:
+        if row.get("classification") != "secondary_article":
+            continue
+        key = ruled_out_candidate_key(
+            row.get("possible_source_work_keys", ""),
+            row.get("candidate_file_id", ""),
+            row.get("candidate_file_label", ""),
+            row.get("classification", ""),
+        )
+        if key not in ruled_out_by_key:
+            errors.append(f"Rescue secondary-article row {row.get('candidate_file_label')} is missing from ruled_out_witness_candidates.tsv")
+    for row in verification_rows:
+        if row.get("verification_status") != "weak_false_positive":
+            continue
+        key = ruled_out_candidate_key(
+            row.get("source_work_key", ""),
+            row.get("witness_id", ""),
+            row.get("candidate_file_label", ""),
+            row.get("verification_status", ""),
+        )
+        if key not in ruled_out_by_key:
+            errors.append(f"Weak false-positive verification row {row.get('witness_id')} is missing from ruled_out_witness_candidates.tsv")
+    for row in iob_text_search_rows + iob_text_volume_hunt_rows:
+        if row.get("false_positive_for_text") != "true":
+            continue
+        key = ruled_out_candidate_key(
+            row.get("source_work_key", "lucePeMaungTinInscriptionsOfBurma"),
+            row.get("matched_file_id", ""),
+            row.get("matched_file_label", ""),
+            "known_false_positive",
+        )
+        if key not in ruled_out_by_key:
+            errors.append(f"IOB plate false-positive row {row.get('matched_file_label')} is missing from ruled_out_witness_candidates.tsv")
+
     for collection_name, rows in [
         ("source-work witness gaps", gap_rows),
         ("UEM direct search", uem_search_rows),
@@ -515,6 +664,9 @@ def validate_translation_source_discovery(
         ("Inscriptions of Burma text search", iob_text_search_rows),
         ("Inscriptions of Burma text volume hunt", iob_text_volume_hunt_rows),
         ("missing core witness hunt", missing_core_witness_hunt_rows),
+        ("direct witness acquisition plan", direct_witness_acquisition_plan_rows),
+        ("manual review queue", manual_review_queue_rows),
+        ("ruled out witness candidates", ruled_out_witness_candidate_rows),
         ("rescue candidate review", rescue_review_rows),
         ("epigraphia birmanica review", epigraphia_review_rows),
         ("epigraphia birmanica fascicle coverage", epigraphia_fascicle_coverage_rows),
@@ -702,6 +854,9 @@ def validate_translation_source_discovery(
         errors.append("translation_source_discovery_report.json has inconsistent titlepage_toc_snippet_count")
     if report.get("source_work_witness_gap_count") != len(gap_rows):
         errors.append("translation_source_discovery_report.json has inconsistent source_work_witness_gap_count")
+    expected_open_gap_count = sum(row.get("gap_type") in OPEN_DIRECT_WITNESS_GAP_TYPES for row in gap_rows)
+    if report.get("source_works_still_needing_direct_witness") != expected_open_gap_count:
+        errors.append("translation_source_discovery_report.json has inconsistent source_works_still_needing_direct_witness")
     if report.get("sip_inspection_completed") != bool(sip_inspection_rows):
         errors.append("translation_source_discovery_report.json has inconsistent sip_inspection_completed")
     if report.get("uem_direct_search_count") != sum(bool(row.get("matched_file_label")) for row in uem_search_rows):
@@ -738,6 +893,12 @@ def validate_translation_source_discovery(
     )
     if report.get("witness_hunt_candidate_triage_count") != expected_triage_count:
         errors.append("translation_source_discovery_report.json has inconsistent witness_hunt_candidate_triage_count")
+    if report.get("direct_witness_acquisition_plan_count") != len(direct_witness_acquisition_plan_rows):
+        errors.append("translation_source_discovery_report.json has inconsistent direct_witness_acquisition_plan_count")
+    if report.get("manual_review_queue_count") != len(manual_review_queue_rows):
+        errors.append("translation_source_discovery_report.json has inconsistent manual_review_queue_count")
+    if report.get("ruled_out_witness_candidate_count") != len(ruled_out_witness_candidate_rows):
+        errors.append("translation_source_discovery_report.json has inconsistent ruled_out_witness_candidate_count")
     if report.get("plausible_direct_candidate_count") != expected_plausible_triage_count:
         errors.append("translation_source_discovery_report.json has inconsistent plausible_direct_candidate_count")
     if report.get("known_false_positive_hunt_count") != expected_known_false_positive_hunt_count:
@@ -800,6 +961,8 @@ def validate_translation_source_discovery(
         errors.append("witness_verification_report.json has inconsistent titlepage_toc_snippet_count")
     if verification_report.get("source_work_witness_gap_count") != len(gap_rows):
         errors.append("witness_verification_report.json has inconsistent source_work_witness_gap_count")
+    if verification_report.get("source_works_still_needing_direct_witness") != expected_open_gap_count:
+        errors.append("witness_verification_report.json has inconsistent source_works_still_needing_direct_witness")
     if verification_report.get("inscriptions_of_burma_text_witness_search_count") != len(iob_text_search_rows):
         errors.append("witness_verification_report.json has inconsistent inscriptions_of_burma_text_witness_search_count")
     if verification_report.get("eb_fascicle_coverage_count") != len(epigraphia_fascicle_coverage_rows):
@@ -808,6 +971,12 @@ def validate_translation_source_discovery(
         errors.append("witness_verification_report.json has inconsistent missing_core_witness_hunt_count")
     if verification_report.get("witness_hunt_candidate_triage_count") != expected_triage_count:
         errors.append("witness_verification_report.json has inconsistent witness_hunt_candidate_triage_count")
+    if verification_report.get("direct_witness_acquisition_plan_count") != len(direct_witness_acquisition_plan_rows):
+        errors.append("witness_verification_report.json has inconsistent direct_witness_acquisition_plan_count")
+    if verification_report.get("manual_review_queue_count") != len(manual_review_queue_rows):
+        errors.append("witness_verification_report.json has inconsistent manual_review_queue_count")
+    if verification_report.get("ruled_out_witness_candidate_count") != len(ruled_out_witness_candidate_rows):
+        errors.append("witness_verification_report.json has inconsistent ruled_out_witness_candidate_count")
     if verification_report.get("plausible_direct_candidate_count") != expected_plausible_triage_count:
         errors.append("witness_verification_report.json has inconsistent plausible_direct_candidate_count")
     if verification_report.get("known_false_positive_hunt_count") != expected_known_false_positive_hunt_count:
@@ -855,6 +1024,9 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--inscriptions-of-burma-text-volume-hunt", type=Path, default=INSCRIPTIONS_OF_BURMA_TEXT_VOLUME_HUNT_PATH)
     parser.add_argument("--missing-core-witness-hunt", type=Path, default=MISSING_CORE_WITNESS_HUNT_PATH)
     parser.add_argument("--witness-hunt-candidate-triage", type=Path, default=WITNESS_HUNT_CANDIDATE_TRIAGE_PATH)
+    parser.add_argument("--direct-witness-acquisition-plan", type=Path, default=DIRECT_WITNESS_ACQUISITION_PLAN_PATH)
+    parser.add_argument("--manual-review-queue", type=Path, default=MANUAL_REVIEW_QUEUE_PATH)
+    parser.add_argument("--ruled-out-witness-candidates", type=Path, default=RULED_OUT_WITNESS_CANDIDATES_PATH)
     parser.add_argument("--rescue-candidate-review", type=Path, default=RESCUE_CANDIDATE_REVIEW_PATH)
     parser.add_argument("--epigraphia-birmanica-review", type=Path, default=EPIGRAPHIA_BIRMANICA_REVIEW_PATH)
     parser.add_argument("--epigraphia-birmanica-fascicle-coverage", type=Path, default=EPIGRAPHIA_BIRMANICA_FASCICLE_COVERAGE_PATH)
@@ -884,6 +1056,9 @@ def main() -> None:
         inscriptions_of_burma_text_volume_hunt_path=args.inscriptions_of_burma_text_volume_hunt,
         missing_core_witness_hunt_path=args.missing_core_witness_hunt,
         witness_hunt_candidate_triage_path=args.witness_hunt_candidate_triage,
+        direct_witness_acquisition_plan_path=args.direct_witness_acquisition_plan,
+        manual_review_queue_path=args.manual_review_queue,
+        ruled_out_witness_candidates_path=args.ruled_out_witness_candidates,
         rescue_candidate_review_path=args.rescue_candidate_review,
         epigraphia_birmanica_review_path=args.epigraphia_birmanica_review,
         epigraphia_birmanica_fascicle_coverage_path=args.epigraphia_birmanica_fascicle_coverage,

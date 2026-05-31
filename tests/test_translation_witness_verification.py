@@ -13,11 +13,14 @@ if str(SCRIPTS_DIR) not in sys.path:
 from verify_translation_witnesses import (
     SIP_WITNESS_ID,
     annotate_iob_text_search_rows,
+    build_direct_witness_acquisition_plan_rows,
     build_direct_query_search_rows,
     build_epigraphia_fascicle_coverage_rows,
     build_epigraphia_promoted_verification_rows,
     build_epigraphia_birmanica_review_rows,
+    build_manual_review_queue_rows,
     build_rescue_candidate_review_rows,
+    build_ruled_out_witness_candidate_rows,
     build_search_hunt_rows,
     build_sip_witness_inspection_rows,
     build_witness_hunt_candidate_triage_rows,
@@ -684,6 +687,102 @@ class TranslationWitnessVerificationTests(unittest.TestCase):
         self.assertTrue(rows[0]["search_scope"])
         self.assertTrue(rows[0]["search_date_or_run_id"])
 
+    def test_gap_rows_keep_iob_text_and_uem_open_after_ruled_out_hunt_hits(self) -> None:
+        gap_rows = build_source_work_gap_rows(
+            [
+                source_row(
+                    source_work_key="uemSelectionsPagan",
+                    canonical_title="Selections from the Inscriptions of Pagan",
+                    short_title="UEM",
+                    authors_editors="U E Maung (ed.)",
+                    related_source_family_ids="sf-uem",
+                    related_acronyms="UEM",
+                ),
+                source_row(
+                    source_work_key="lucePeMaungTinInscriptionsOfBurma",
+                    canonical_title="Inscriptions of Burma",
+                    short_title="IOB",
+                    authors_editors="G. H. Luce and U Pe Maung Tin",
+                ),
+            ],
+            [],
+            [
+                {
+                    "witness_id": "uem-fp",
+                    "source_work_key": "uemSelectionsPagan",
+                    "verification_status": "weak_false_positive",
+                    "contains_translation_verified": "unknown",
+                    "contains_edition_verified": "unknown",
+                    "candidate_file_label": "Luce 1928 inscriptions of Pagan.pdf",
+                },
+                {
+                    "witness_id": "iob-plates",
+                    "source_work_key": "lucePeMaungTinInscriptionsOfBurma",
+                    "verification_status": "verified_plate_witness",
+                    "contains_translation_verified": "unknown",
+                    "contains_edition_verified": "unknown",
+                    "candidate_file_label": "Luce&PeMaungTin_InscriptionsOfBurma(Plates3,4,5)_1960.pdf",
+                },
+            ],
+            [],
+            [],
+            [],
+            [
+                {
+                    "matched_file_label": "Luce&PeMaungTin_InscriptionsOfBurma(Plates3,4,5)_1960.pdf",
+                    "search_result_status": "candidate_found",
+                    "is_text_witness_candidate": "false",
+                },
+                {
+                    "matched_file_label": "a_list_of_inscriptions_found_in_burma_part_i.pdf",
+                    "search_result_status": "candidate_found",
+                    "is_text_witness_candidate": "false",
+                },
+                {
+                    "matched_file_label": "111029.pdf",
+                    "search_result_status": "candidate_found",
+                    "is_text_witness_candidate": "false",
+                },
+            ],
+            [
+                {
+                    "hunt_table": "missing_core_witness_hunt",
+                    "source_work_key": "uemSelectionsPagan",
+                    "query": "Selections from the Inscriptions of Pagan U E Maung",
+                    "matched_file_label": "Luce 1928 inscriptions of Pagan.pdf",
+                    "matched_file_id": "sip-pdf",
+                    "triage_status": "known_false_positive",
+                },
+                {
+                    "hunt_table": "inscriptions_of_burma_text_volume_hunt",
+                    "source_work_key": "lucePeMaungTinInscriptionsOfBurma",
+                    "query": "Inscriptions of Burma text",
+                    "matched_file_label": "a_list_of_inscriptions_found_in_burma_part_i.pdf",
+                    "matched_file_id": "list-pdf",
+                    "triage_status": "cross_source_witness",
+                },
+                {
+                    "hunt_table": "inscriptions_of_burma_text_volume_hunt",
+                    "source_work_key": "lucePeMaungTinInscriptionsOfBurma",
+                    "query": "Luce Pe Maung Tin Portfolio I",
+                    "matched_file_label": "111029.pdf",
+                    "matched_file_id": "111029.pdf",
+                    "triage_status": "secondary_or_unrelated",
+                },
+            ],
+        )
+
+        gap_by_source = {row["source_work_key"]: row for row in gap_rows}
+        self.assertEqual(gap_by_source["uemSelectionsPagan"]["gap_type"], "needs_direct_witness")
+        self.assertEqual(gap_by_source["uemSelectionsPagan"]["best_candidate_file_label"], "")
+        self.assertIn("no direct u e maung witness", gap_by_source["uemSelectionsPagan"]["notes"].casefold())
+        self.assertEqual(gap_by_source["lucePeMaungTinInscriptionsOfBurma"]["gap_type"], "has_verified_plate_but_needs_text")
+        self.assertEqual(
+            gap_by_source["lucePeMaungTinInscriptionsOfBurma"]["best_candidate_file_label"],
+            "Luce&PeMaungTin_InscriptionsOfBurma(Plates3,4,5)_1960.pdf",
+        )
+        self.assertIn("cross-source", gap_by_source["lucePeMaungTinInscriptionsOfBurma"]["notes"].casefold())
+
     def test_report_counts_match_verification_rows(self) -> None:
         verification_rows = [
             {
@@ -795,6 +894,37 @@ class TranslationWitnessVerificationTests(unittest.TestCase):
                 "notes": "",
             },
         ]
+        acquisition_rows = [
+            {
+                "source_work_key": "uemSelectionsPagan",
+                "canonical_title": "Selections from the Inscriptions of Pagan",
+            },
+            {
+                "source_work_key": "lucePeMaungTinInscriptionsOfBurma",
+                "canonical_title": "Inscriptions of Burma",
+            },
+        ]
+        manual_review_rows = [
+            {
+                "review_id": "sip-sample-entry-or-contents",
+                "source_work_key": "sipSelectionsPagan",
+                "review_type": "content_review",
+                "target_file_or_work": "Selections from the Inscriptions of Pagan.pdf",
+            },
+            {
+                "review_id": "iob-text-external-acquisition",
+                "source_work_key": "lucePeMaungTinInscriptionsOfBurma",
+                "review_type": "external_acquisition",
+                "target_file_or_work": "Inscriptions of Burma",
+            },
+        ]
+        ruled_out_rows = build_ruled_out_witness_candidate_rows(
+            triage_rows,
+            [{"candidate_file_label": "111029.pdf", "candidate_file_id": "111029.pdf", "classification": "secondary_article", "possible_source_work_keys": "sipSelectionsPagan;uemSelectionsPagan", "notes": "", "recommended_mapping": "Do not promote as a direct witness.", "matched_query": "Luce Pe Maung Tin Selections"}],
+            [{"witness_id": "uem-fp", "source_work_key": "uemSelectionsPagan", "candidate_file_label": "Luce 1928 inscriptions of Pagan.pdf", "verification_status": "weak_false_positive", "recommended_action": "Do not promote this file.", "notes": ""}],
+            [{"matched_file_label": "Luce&PeMaungTin_InscriptionsOfBurma(Plates3,4,5)_1960.pdf", "matched_file_id": "iob-plates", "query": "Inscriptions of Burma text", "false_positive_for_text": "true", "reason_not_text_witness": "plate/facsimile volume, not companion text volume", "recommended_action": "Retain as a plate witness; continue searching for the companion text volume.", "source_work_key": "lucePeMaungTinInscriptionsOfBurma", "notes": ""}],
+            [],
+        )
         report = build_verification_report(
             verification_rows,
             [{"witness_id": "w1"}, {"witness_id": "w2"}],
@@ -813,6 +943,9 @@ class TranslationWitnessVerificationTests(unittest.TestCase):
             [{"matched_file_label": "", "search_result_status": "not_found"}],
             [{"source_work_key": "uemSelectionsPagan", "query": "U E Maung", "search_result_status": "not_found"}],
             triage_rows,
+            acquisition_rows,
+            manual_review_rows,
+            ruled_out_rows,
             [{"candidate_file_label": "111029.pdf"}],
             [{"file_label": "011041.pdf"}],
             [{"witness_id": "eb1"}],
@@ -826,6 +959,9 @@ class TranslationWitnessVerificationTests(unittest.TestCase):
         self.assertEqual(report["eb_fascicle_coverage_count"], 1)
         self.assertFalse(report["sip_sample_entry_inspected"])
         self.assertEqual(report["witness_hunt_candidate_triage_count"], 2)
+        self.assertEqual(report["direct_witness_acquisition_plan_count"], 2)
+        self.assertEqual(report["manual_review_queue_count"], 2)
+        self.assertEqual(report["ruled_out_witness_candidate_count"], len(ruled_out_rows))
         self.assertEqual(report["plausible_direct_candidate_count"], 0)
         self.assertEqual(report["known_false_positive_hunt_count"], 1)
         self.assertEqual(report["cross_source_or_secondary_hunt_count"], 1)
