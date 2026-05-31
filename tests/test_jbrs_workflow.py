@@ -140,6 +140,10 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
         self.assertEqual(status_row_count, len(self.status_rows))
         self.assertEqual({row["batch_id"] for row in self.batch_rows}, {row["batch_id"] for row in self.status_rows})
 
+    def test_batch_and_status_tsvs_fit_github_contents_threshold(self) -> None:
+        self.assertLessEqual(JBRS_OCR_BATCH_PLAN_PATH.stat().st_size, common.MAX_GITHUB_CONTENTS_SIZE)
+        self.assertLessEqual(JBRS_OCR_STATUS_LOG_PATH.stat().st_size, common.MAX_GITHUB_CONTENTS_SIZE)
+
     def test_malformed_targets_have_review_rows(self) -> None:
         review_by_id = {row["target_reference_id"]: row for row in self.target_review_rows}
         for row in self.target_rows:

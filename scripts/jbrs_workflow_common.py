@@ -35,6 +35,7 @@ GITIGNORE_PATH = REPO_ROOT / ".gitignore"
 DEFAULT_LOCAL_OUTPUT_ROOT = REPO_ROOT / "data_local/ocr/jbrs"
 DEFAULT_RUNTIME_PATH_CACHE = DEFAULT_LOCAL_OUTPUT_ROOT / "manifest/jbrs_runtime_path_map.json"
 DEFAULT_PREFLIGHT_REPORT_PATH = DEFAULT_LOCAL_OUTPUT_ROOT / "logs/jbrs_ocr_preflight.json"
+MAX_GITHUB_CONTENTS_SIZE = 1_000_000
 
 RAW_REFERENCE_HUNT_FIELDS = [
     "reference_id",
@@ -1370,8 +1371,11 @@ def build_reference_file_match_rows(reference_rows: list[dict[str, str]], manife
 
 
 def output_basename_for_manifest_row(row: dict[str, str]) -> str:
-    preferred = row.get("probable_title_from_filename", "") or Path(row.get("file_name", "")).stem or row.get("local_file_id", "")
-    return slugify(" ".join([row.get("local_file_id", ""), preferred]))[:120]
+    local_file_id = row.get("local_file_id", "")
+    if local_file_id:
+        return slugify(local_file_id)[:120]
+    preferred = row.get("probable_title_from_filename", "") or Path(row.get("file_name", "")).stem
+    return slugify(preferred)[:120]
 
 
 def estimate_page_count(row: dict[str, str]) -> str:
@@ -1381,6 +1385,17 @@ def estimate_page_count(row: dict[str, str]) -> str:
         if end >= start:
             return str(end - start + 1)
     return ""
+
+
+def compact_ocr_priority_reason(value: str) -> str:
+    mapping = {
+        "Matched an accepted or corrected JBRS article target with exact or near-exact local evidence.": "accepted_target_match",
+        "Linked to a reviewed or still-unresolved article target; confirm the file manually before OCR.": "reviewed_target_match",
+        "Has author/title metadata that makes targeted OCR more useful than generic bulk OCR.": "metadata_clue",
+        "Existing text evidence already suggests a translation-bearing section.": "existing_translation_signal",
+        "Generic probable JBRS file; OCR priority remains low until a target or author clue is confirmed.": "generic_probable_jbrs",
+    }
+    return mapping.get(value, value)
 
 
 def build_ocr_batch_plan_rows(
@@ -1411,19 +1426,19 @@ def build_ocr_batch_plan_rows(
         match_statuses = {row.get("match_status", "") for row in matches}
 
         priority = "low"
-        priority_reason = manifest_row.get("ocr_priority_reason", "")
+        priority_reason = compact_ocr_priority_reason(manifest_row.get("ocr_priority_reason", "")) or "generic_probable_jbrs"
         if matches and match_statuses & HIGH_PRIORITY_MATCH_STATUSES:
             priority = "high"
-            priority_reason = "Matched an accepted or corrected JBRS article target with exact or near-exact local evidence."
+            priority_reason = "accepted_target_match"
         elif matches:
             priority = "medium"
-            priority_reason = "Linked to a reviewed or still-unresolved article target; confirm the file manually before OCR."
+            priority_reason = "reviewed_target_match"
         elif manifest_row.get("probable_author_from_path", "") or manifest_row.get("probable_title_from_filename", ""):
             priority = "medium"
-            priority_reason = "Has author/title metadata that makes targeted OCR more useful than generic bulk OCR."
+            priority_reason = "metadata_clue"
         if any(candidate.get("candidate_type") in {"explicit_translation_heading", "text_and_translation_section"} for candidate in candidates):
             priority = "high"
-            priority_reason = "Existing text evidence already suggests a translation-bearing section."
+            priority_reason = "existing_translation_signal"
 
         if existing_text:
             status = "already_text_available"
@@ -1431,7 +1446,7 @@ def build_ocr_batch_plan_rows(
             ocr_engine = "existing_pdf_text"
         elif not runtime_available:
             status = "needs_runtime_path_cache"
-            blocked_by = "Run build_jbrs_local_manifest.py with --root ... --write-runtime-path-cache to resolve a live source path."
+            blocked_by = "write_runtime_path_cache"
             ocr_engine = "google_vision"
         else:
             status = "ready_for_ocr"
@@ -1455,11 +1470,11 @@ def build_ocr_batch_plan_rows(
                 "ocr_scope": ocr_scope,
                 "ocr_engine": ocr_engine,
                 "output_basename": output_basename,
-                "expected_output_format": "google_vision_json|page_text|article_text|metadata_sidecar",
+                "expected_output_format": "vision_json|page_text|article_text|sidecar",
                 "metadata_sidecar_path": f"data_local/ocr/jbrs/manifest/{output_basename}.json",
                 "status": status,
                 "blocked_by": blocked_by,
-                "notes": "OCR plan uses runtime-path availability plus article-target matching, not probable-JBRS status alone.",
+                "notes": "",
             }
         )
     return rows
@@ -1469,11 +1484,7 @@ def build_ocr_status_log_rows(batch_rows: list[dict[str, str]]) -> list[dict[str
     rows: list[dict[str, str]] = []
     created_at = now_iso()
     for batch_row in batch_rows:
-        output_basename = batch_row.get("output_basename", "")
         status = batch_row.get("status", "")
-        output_stub = f"data_local/ocr/jbrs/article_text/{output_basename}.txt"
-        if status == "already_text_available":
-            output_stub = f"data_local/ocr/jbrs/article_text/{output_basename}.txt"
         rows.append(
             {
                 "ocr_job_id": f"{batch_row['batch_id']}-status",
@@ -1485,13 +1496,13 @@ def build_ocr_status_log_rows(batch_rows: list[dict[str, str]]) -> list[dict[str
                 "status": status,
                 "pages_submitted": "",
                 "pages_completed": batch_row.get("page_count_estimate", "") if status == "already_text_available" else "",
-                "output_path_stub": output_stub,
-                "metadata_sidecar_stub": batch_row["metadata_sidecar_path"],
+                "output_path_stub": "",
+                "metadata_sidecar_stub": "",
                 "error_type": "",
                 "error_message_short": "",
                 "created_at": created_at,
                 "updated_at": created_at,
-                "notes": "Initial OCR status generated from the current batch plan.",
+                "notes": "",
             }
         )
     return rows
@@ -1787,6 +1798,10 @@ def validate_jbrs_workflow() -> list[str]:
         errors.append("JBRS OCR batch plan TSV is blank or missing the expected header.")
     if status_header != expected_status_header:
         errors.append("JBRS OCR status log TSV is blank or missing the expected header.")
+    if JBRS_OCR_BATCH_PLAN_PATH.stat().st_size > MAX_GITHUB_CONTENTS_SIZE:
+        errors.append("JBRS OCR batch plan TSV exceeds the GitHub contents-view size threshold.")
+    if JBRS_OCR_STATUS_LOG_PATH.stat().st_size > MAX_GITHUB_CONTENTS_SIZE:
+        errors.append("JBRS OCR status log TSV exceeds the GitHub contents-view size threshold.")
     if errors:
         return errors
 

@@ -173,7 +173,13 @@ def write_jsonl(path: Path, records: Iterable[dict]) -> None:
 def write_tsv(path: Path, rows: Iterable[dict], fieldnames: list[str]) -> None:
     ensure_parent(path)
     with path.open("w", encoding="utf-8", newline="") as handle:
-        writer = csv.DictWriter(handle, fieldnames=fieldnames, delimiter="\t", extrasaction="ignore")
+        writer = csv.DictWriter(
+            handle,
+            fieldnames=fieldnames,
+            delimiter="\t",
+            extrasaction="ignore",
+            lineterminator="\n",
+        )
         writer.writeheader()
         for row in rows:
             writer.writerow(row)
