@@ -21,8 +21,11 @@ from corpus_common import write_tsv
 from jbrs_workflow_common import (
     JBRS_ARTICLE_REFERENCE_TARGETS_PATH,
     JBRS_ARTICLE_REFERENCE_TARGETS_REVIEW_PATH,
+    JBRS_EMBEDDED_TRANSLATION_EXCERPT_REVIEW_PATH,
+    JBRS_FOLLOWUP_SOURCE_LEADS_PATH,
     JBRS_LOCAL_FILE_MANIFEST_PATH,
     JBRS_OCR_BATCH_PLAN_PATH,
+    JBRS_OCR_QUALITY_REVIEW_PATH,
     JBRS_OCR_STATUS_LOG_PATH,
     JBRS_PILOT_SUMMARY_PATH,
     JBRS_REFERENCE_HUNT_RAW_PATH,
@@ -55,6 +58,9 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
         cls.status_rows = read_tsv(JBRS_OCR_STATUS_LOG_PATH)
         cls.candidate_rows = read_tsv(JBRS_TRANSLATION_CANDIDATE_LOG_PATH)
         cls.candidate_review_rows = read_tsv(JBRS_TRANSLATION_CANDIDATE_REVIEW_PATH)
+        cls.excerpt_review_rows = read_tsv(JBRS_EMBEDDED_TRANSLATION_EXCERPT_REVIEW_PATH)
+        cls.followup_source_lead_rows = read_tsv(JBRS_FOLLOWUP_SOURCE_LEADS_PATH)
+        cls.ocr_quality_review_rows = read_tsv(JBRS_OCR_QUALITY_REVIEW_PATH)
         cls.summary = json.loads(JBRS_PILOT_SUMMARY_PATH.read_text(encoding="utf-8"))
 
     def test_generated_files_exist(self) -> None:
@@ -68,6 +74,9 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
             JBRS_OCR_STATUS_LOG_PATH,
             JBRS_TRANSLATION_CANDIDATE_LOG_PATH,
             JBRS_TRANSLATION_CANDIDATE_REVIEW_PATH,
+            JBRS_EMBEDDED_TRANSLATION_EXCERPT_REVIEW_PATH,
+            JBRS_FOLLOWUP_SOURCE_LEADS_PATH,
+            JBRS_OCR_QUALITY_REVIEW_PATH,
             JBRS_PILOT_SUMMARY_PATH,
         ]:
             self.assertTrue(path.exists(), path)
@@ -130,6 +139,10 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
             self.batch_rows,
             self.status_rows,
             self.candidate_rows,
+            self.candidate_review_rows,
+            self.excerpt_review_rows,
+            self.followup_source_lead_rows,
+            self.ocr_quality_review_rows,
         )
         self.assertEqual(self.summary, rebuilt)
 
@@ -164,7 +177,27 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
     def test_translation_candidates_require_review_before_promotion(self) -> None:
         review_by_id = {row["candidate_id"]: row for row in self.candidate_review_rows}
         self.assertEqual({row["candidate_id"] for row in self.candidate_rows}, set(review_by_id))
-        self.assertFalse(any(row["is_actual_translation_section"] == "true" for row in self.candidate_review_rows))
+        self.assertFalse(any(row["review_status"] == "verified_translation_coverage" for row in self.candidate_review_rows))
+        shwegugyi = review_by_id["jbrs-candidate-0010"]
+        self.assertEqual(shwegugyi["is_actual_translation_section"], "true")
+        self.assertEqual(shwegugyi["review_status"], "reviewed_manual_follow_up_needed")
+        ananda = review_by_id["jbrs-candidate-0012"]
+        self.assertEqual(ananda["is_actual_translation_section"], "true")
+        self.assertEqual(ananda["review_status"], "reviewed_manual_follow_up_needed")
+
+    def test_excerpt_and_followup_layers_cover_embedded_lead(self) -> None:
+        excerpt_by_candidate = {row["candidate_id"]: row for row in self.excerpt_review_rows}
+        self.assertIn("jbrs-candidate-0009", excerpt_by_candidate)
+        self.assertTrue(
+            any(row["trigger_candidate_id"] == "jbrs-candidate-0009" for row in self.followup_source_lead_rows)
+        )
+
+    def test_summary_distinguishes_translation_lead_types_without_verified_coverage(self) -> None:
+        self.assertEqual(self.summary["embedded_translation_excerpt_candidate_count"], 1)
+        self.assertEqual(self.summary["bibliography_only_translation_hit_count"], 1)
+        self.assertEqual(self.summary["standalone_translation_section_count"], 2)
+        self.assertEqual(self.summary["fuller_source_followup_lead_count"], 1)
+        self.assertEqual(self.summary["verified_translation_coverage_count"], 0)
 
 
 class JBRSWorkflowLogicTests(unittest.TestCase):

@@ -23,6 +23,9 @@ JBRS_OCR_BATCH_PLAN_PATH = JBRS_DIRECTORY / "jbrs_ocr_batch_plan.tsv"
 JBRS_OCR_STATUS_LOG_PATH = JBRS_DIRECTORY / "jbrs_ocr_status_log.tsv"
 JBRS_TRANSLATION_CANDIDATE_LOG_PATH = JBRS_DIRECTORY / "jbrs_translation_candidate_log.tsv"
 JBRS_TRANSLATION_CANDIDATE_REVIEW_PATH = JBRS_DIRECTORY / "jbrs_translation_candidate_review.tsv"
+JBRS_OCR_QUALITY_REVIEW_PATH = JBRS_DIRECTORY / "jbrs_ocr_quality_review.tsv"
+JBRS_EMBEDDED_TRANSLATION_EXCERPT_REVIEW_PATH = JBRS_DIRECTORY / "jbrs_embedded_translation_excerpt_review.tsv"
+JBRS_FOLLOWUP_SOURCE_LEADS_PATH = JBRS_DIRECTORY / "jbrs_followup_source_leads.tsv"
 JBRS_PILOT_SUMMARY_PATH = JBRS_DIRECTORY / "jbrs_pilot_summary.json"
 JBRS_README_PATH = JBRS_DIRECTORY / "README.md"
 
@@ -184,6 +187,65 @@ OCR_STATUS_LOG_FIELDS = [
 ]
 
 TERMINAL_OCR_STATUS_VALUES = {"dry_run_ok", "submitted", "completed", "failed"}
+
+OCR_QUALITY_REVIEW_FIELDS = [
+    "review_id",
+    "batch_id",
+    "local_file_id",
+    "file_name",
+    "pages_expected",
+    "pages_present",
+    "page_markers_present",
+    "english_ocr_quality",
+    "burmese_or_pali_ocr_quality",
+    "contains_inscription_text",
+    "contains_translation_section",
+    "contains_transliteration_or_edition",
+    "contains_commentary_only",
+    "manual_review_status",
+    "short_safe_evidence_marker",
+    "next_action",
+    "notes",
+]
+
+EMBEDDED_TRANSLATION_EXCERPT_REVIEW_FIELDS = [
+    "excerpt_review_id",
+    "candidate_id",
+    "batch_id",
+    "local_file_id",
+    "file_name",
+    "article_title",
+    "author",
+    "year",
+    "page_marker_or_page_range",
+    "excerpt_type",
+    "source_reference_in_article",
+    "inscription_or_text_identification",
+    "is_actual_translation_excerpt",
+    "is_standalone_translation_section",
+    "is_citation_to_fuller_translation_elsewhere",
+    "has_source_text_nearby",
+    "has_transliteration_nearby",
+    "short_safe_evidence_marker",
+    "manual_review_status",
+    "next_action",
+    "notes",
+]
+
+FOLLOWUP_SOURCE_LEAD_FIELDS = [
+    "lead_id",
+    "trigger_candidate_id",
+    "trigger_file",
+    "cited_source_description",
+    "possible_local_file_id",
+    "possible_file_name",
+    "possible_path_stub",
+    "match_confidence",
+    "needs_bibliographic_cleanup",
+    "is_same_work_as_cited_source",
+    "recommended_action",
+    "notes",
+]
 
 TRANSLATION_CANDIDATE_FIELDS = [
     "candidate_id",
@@ -1724,7 +1786,15 @@ def build_pilot_summary(
     batch_rows: list[dict[str, str]],
     status_rows: list[dict[str, str]],
     candidate_rows: list[dict[str, str]],
+    candidate_review_rows: list[dict[str, str]] | None = None,
+    excerpt_review_rows: list[dict[str, str]] | None = None,
+    followup_source_lead_rows: list[dict[str, str]] | None = None,
+    ocr_quality_review_rows: list[dict[str, str]] | None = None,
 ) -> dict[str, object]:
+    candidate_review_rows = candidate_review_rows or []
+    excerpt_review_rows = excerpt_review_rows or []
+    followup_source_lead_rows = followup_source_lead_rows or []
+    ocr_quality_review_rows = ocr_quality_review_rows or []
     matched_reference_ids = {
         row["reference_id"]
         for row in match_rows
@@ -1740,6 +1810,30 @@ def build_pilot_summary(
     candidate_type_counts = defaultdict(int)
     for row in candidate_rows:
         candidate_type_counts[row.get("candidate_type", "")] += 1
+    bibliography_only_translation_hit_count = sum(
+        1
+        for row in ocr_quality_review_rows
+        if row.get("manual_review_status") == "reviewed_bibliography_only"
+    )
+    excerpt_review_candidate_ids = {row.get("candidate_id", "") for row in excerpt_review_rows}
+    embedded_translation_excerpt_candidate_count = len(excerpt_review_rows)
+    embedded_translation_excerpt_reviewed_count = sum(
+        1
+        for row in excerpt_review_rows
+        if row.get("manual_review_status", "") not in {"", "needs_manual_review"}
+    )
+    standalone_translation_section_count = sum(
+        1
+        for row in candidate_review_rows
+        if row.get("is_actual_translation_section") == "true"
+        and row.get("candidate_id", "") not in excerpt_review_candidate_ids
+    )
+    verified_translation_coverage_count = sum(
+        1
+        for row in candidate_review_rows
+        if row.get("review_status", "") == "verified_translation_coverage"
+        and row.get("is_actual_translation_section") == "true"
+    )
     return {
         "reference_hunt_count": len(raw_reference_rows),
         "article_reference_target_count": len(target_rows),
@@ -1764,6 +1858,12 @@ def build_pilot_summary(
         "translation_candidate_count": len(candidate_rows),
         "explicit_translation_candidate_count": candidate_type_counts["explicit_translation_heading"],
         "probable_translation_candidate_count": candidate_type_counts["text_and_translation_section"],
+        "embedded_translation_excerpt_candidate_count": embedded_translation_excerpt_candidate_count,
+        "embedded_translation_excerpt_reviewed_count": embedded_translation_excerpt_reviewed_count,
+        "standalone_translation_section_count": standalone_translation_section_count,
+        "fuller_source_followup_lead_count": len(followup_source_lead_rows),
+        "bibliography_only_translation_hit_count": bibliography_only_translation_hit_count,
+        "verified_translation_coverage_count": verified_translation_coverage_count,
         "edition_or_transliteration_only_count": candidate_type_counts["edition_or_transliteration_only"],
         "manual_review_needed_count": sum(
             1
@@ -1775,6 +1875,7 @@ def build_pilot_summary(
             "ready_for_ocr_count and batch_plan_ready_for_ocr_count reflect the batch plan only; status_log_ready_for_ocr_count reflects rows still selectable after consulting the OCR status log.",
             "selectable_for_ocr_count excludes completed and failed rows unless the rerun flags are used explicitly.",
             "Translation candidates are heuristic review leads, not verified translation coverage.",
+            "Embedded translation excerpts, bibliography-only hits, and fuller-source follow-up leads are tracked separately from verified translation coverage.",
         ],
     }
 
@@ -1877,6 +1978,9 @@ def validate_jbrs_workflow() -> list[str]:
         JBRS_OCR_STATUS_LOG_PATH,
         JBRS_TRANSLATION_CANDIDATE_LOG_PATH,
         JBRS_TRANSLATION_CANDIDATE_REVIEW_PATH,
+        JBRS_OCR_QUALITY_REVIEW_PATH,
+        JBRS_EMBEDDED_TRANSLATION_EXCERPT_REVIEW_PATH,
+        JBRS_FOLLOWUP_SOURCE_LEADS_PATH,
         JBRS_PILOT_SUMMARY_PATH,
         JBRS_README_PATH,
     ]
@@ -1910,6 +2014,9 @@ def validate_jbrs_workflow() -> list[str]:
     status_rows = read_tsv(JBRS_OCR_STATUS_LOG_PATH)
     candidate_rows = read_tsv(JBRS_TRANSLATION_CANDIDATE_LOG_PATH)
     candidate_review_rows = read_tsv(JBRS_TRANSLATION_CANDIDATE_REVIEW_PATH)
+    ocr_quality_review_rows = read_tsv(JBRS_OCR_QUALITY_REVIEW_PATH)
+    excerpt_review_rows = read_tsv(JBRS_EMBEDDED_TRANSLATION_EXCERPT_REVIEW_PATH)
+    followup_source_lead_rows = read_tsv(JBRS_FOLLOWUP_SOURCE_LEADS_PATH)
     summary = json.loads(JBRS_PILOT_SUMMARY_PATH.read_text(encoding="utf-8"))
     readme_text = JBRS_README_PATH.read_text(encoding="utf-8")
 
@@ -1918,6 +2025,8 @@ def validate_jbrs_workflow() -> list[str]:
     manifest_by_id = {row["local_file_id"]: row for row in manifest_rows}
     batch_by_id = {row["batch_id"]: row for row in batch_rows}
     candidate_review_by_id = {row["candidate_id"]: row for row in candidate_review_rows}
+    excerpt_review_by_candidate_id = {row["candidate_id"]: row for row in excerpt_review_rows}
+    followup_lead_by_candidate_id = {row["trigger_candidate_id"]: row for row in followup_source_lead_rows}
     status_by_batch_id = {row["batch_id"]: row for row in status_rows}
 
     if summary.get("ocr_batch_plan_count", 0) and not batch_rows:
@@ -2015,6 +2124,24 @@ def validate_jbrs_workflow() -> list[str]:
             errors.append(f"Candidate review marks actual translation content without a completed review status: {row.get('candidate_id', '')}")
         if row.get("is_actual_translation_section") == "true" and not row.get("manual_assessment", ""):
             errors.append(f"Candidate review marks actual translation content without manual assessment notes: {row.get('candidate_id', '')}")
+        if row.get("review_status") == "verified_translation_coverage" and row.get("is_inscription_translation") != "true":
+            errors.append(f"Bibliography-only or non-inscription hit was promoted to verified translation coverage: {row.get('candidate_id', '')}")
+        if "embedded" in row.get("manual_assessment", "").casefold() and row.get("candidate_id") not in excerpt_review_by_candidate_id:
+            errors.append(f"Embedded translation review is missing an excerpt-review row: {row.get('candidate_id', '')}")
+        if "fuller text and translation" in row.get("manual_assessment", "").casefold() and row.get("candidate_id") not in followup_lead_by_candidate_id:
+            errors.append(f"External fuller-source citation is missing a follow-up lead row: {row.get('candidate_id', '')}")
+
+    for row in excerpt_review_rows:
+        if row.get("candidate_id") not in candidate_review_by_id:
+            errors.append(f"Excerpt review points to unknown translation candidate: {row.get('candidate_id', '')}")
+        if row.get("is_standalone_translation_section") == "true" and row.get("is_actual_translation_excerpt") != "true":
+            errors.append(f"Excerpt review marks a standalone translation section without confirming translation evidence: {row.get('excerpt_review_id', '')}")
+
+    for row in followup_source_lead_rows:
+        if row.get("trigger_candidate_id") not in candidate_review_by_id:
+            errors.append(f"Follow-up source lead points to unknown translation candidate: {row.get('lead_id', '')}")
+        if row.get("is_same_work_as_cited_source") == "true" and not row.get("possible_local_file_id"):
+            errors.append(f"Follow-up source lead marks a same-work match without a local file id: {row.get('lead_id', '')}")
 
     for row in manifest_rows:
         for key in ["path_stub_or_redacted_path"]:
@@ -2028,7 +2155,19 @@ def validate_jbrs_workflow() -> list[str]:
     if "SIP does not satisfy the separate UEM witness gap" not in readme_text:
         errors.append("JBRS README is missing the SIP/UEM guardrail.")
 
-    summary_expected = build_pilot_summary(raw_rows, target_rows, manifest_rows, match_rows, batch_rows, status_rows, candidate_rows)
+    summary_expected = build_pilot_summary(
+        raw_rows,
+        target_rows,
+        manifest_rows,
+        match_rows,
+        batch_rows,
+        status_rows,
+        candidate_rows,
+        candidate_review_rows,
+        excerpt_review_rows,
+        followup_source_lead_rows,
+        ocr_quality_review_rows,
+    )
     if summary != summary_expected:
         errors.append("JBRS pilot summary counts do not match the generated artifacts.")
 
@@ -2042,6 +2181,9 @@ def validate_jbrs_workflow() -> list[str]:
         JBRS_OCR_STATUS_LOG_PATH,
         JBRS_TRANSLATION_CANDIDATE_LOG_PATH,
         JBRS_TRANSLATION_CANDIDATE_REVIEW_PATH,
+        JBRS_OCR_QUALITY_REVIEW_PATH,
+        JBRS_EMBEDDED_TRANSLATION_EXCERPT_REVIEW_PATH,
+        JBRS_FOLLOWUP_SOURCE_LEADS_PATH,
     ]:
         text = path.read_text(encoding="utf-8")
         if ABSOLUTE_PATH_PATTERN.search(text):
