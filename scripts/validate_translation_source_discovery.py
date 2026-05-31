@@ -28,6 +28,7 @@ from verify_translation_witnesses import (
     INSCRIPTIONS_OF_BURMA_TEXT_SEARCH_PATH,
     INSCRIPTIONS_OF_BURMA_TEXT_VOLUME_HUNT_PATH,
     MISSING_DIRECT_SEARCH_PATH,
+    MISSING_CORE_WITNESS_HUNT_QUERIES,
     MISSING_CORE_WITNESS_HUNT_PATH,
     RESCUE_CANDIDATE_REVIEW_PATH,
     SIP_WITNESS_ID,
@@ -45,6 +46,11 @@ from verify_translation_witnesses import (
 ABSOLUTE_PATH_PATTERN = re.compile(r"(^/(?:Users|home|var|private|tmp|opt|Volumes)\b|^[A-Za-z]:\\\\)")
 SHORT_EVIDENCE_LIMIT = 280
 DIRECT_VERIFICATION_STATUSES = {"verified_direct_witness", "verified_catalogue_witness"}
+
+
+def has_explicit_translation_signal(snippet: str, notes: str = "") -> bool:
+    lowered = f"{snippet} {notes}".casefold()
+    return any(keyword in lowered for keyword in ["translation", "translated", "parallel", "interlinear", "gloss"])
 
 
 def validate_translation_source_discovery(
@@ -342,6 +348,13 @@ def validate_translation_source_discovery(
         ]:
             if row.get(field) not in CONTENT_PROFILE_STATUSES:
                 errors.append(f"Source witness content profile {row.get('witness_id')} uses invalid {field} value {row.get(field)!r}")
+        if row.get("source_work_key") == "lucePeMaungTinInscriptionsOfBurma" and "plate" in row.get("verified_witness_type", ""):
+            if row.get("sample_entry_status") != "not_applicable":
+                errors.append(f"IOB plate content profile {row.get('witness_id')} must use sample_entry_status=not_applicable")
+            if row.get("translation_status") != "not_applicable" or row.get("edition_status") != "not_applicable":
+                errors.append(f"IOB plate content profile {row.get('witness_id')} must keep translation and edition statuses not_applicable")
+            if row.get("next_action") != "Retain as a plate/facsimile witness and continue hunting the companion text volume.":
+                errors.append(f"IOB plate content profile {row.get('witness_id')} has the wrong next_action")
     for row in eb_fascicle_content_inspection_rows:
         if row.get("inspection_status") not in {"confirmed", "attempted_no_recoverable_text"}:
             errors.append(
@@ -363,7 +376,9 @@ def validate_translation_source_discovery(
     explicit_translation_evidence_ids = {
         row.get("witness_id", "")
         for row in sip_inspection_rows + eb_fascicle_content_inspection_rows
-        if row.get("contains_translation") == "confirmed" and row.get("evidence_snippet")
+        if row.get("contains_translation") == "confirmed"
+        and (row.get("evidence_snippet") or row.get("short_snippet"))
+        and has_explicit_translation_signal(row.get("evidence_snippet", "") or row.get("short_snippet", ""), row.get("notes", ""))
     }
     unsupported_translation_ids = sorted(witness_id for witness_id in confirmed_translation_profile_ids if witness_id not in explicit_translation_evidence_ids)
     if unsupported_translation_ids:
@@ -392,8 +407,27 @@ def validate_translation_source_discovery(
             if row.get("search_result_status") not in DIRECT_SEARCH_RESULT_STATUSES:
                 errors.append(f"{collection_name} row uses invalid search_result_status {row.get('search_result_status')}")
     for row in missing_core_witness_hunt_rows:
+        for field in ["searched_sources", "search_scope", "search_date_or_run_id", "search_result_status"]:
+            if not row.get(field):
+                errors.append(f"missing core witness hunt row for {row.get('source_work_key')}:{row.get('query')} is missing {field}")
         if row.get("search_result_status") not in DIRECT_SEARCH_RESULT_STATUSES:
             errors.append(f"missing core witness hunt row for {row.get('source_work_key')}:{row.get('query')} uses invalid search_result_status")
+    expected_hunt_queries = {
+        source_key: {query for query, _variant_type in query_rows}
+        for source_key, query_rows in MISSING_CORE_WITNESS_HUNT_QUERIES.items()
+    }
+    observed_hunt_queries: dict[str, set[str]] = {}
+    for row in missing_core_witness_hunt_rows:
+        observed_hunt_queries.setdefault(row.get("source_work_key", ""), set()).add(row.get("query", ""))
+        if row.get("search_result_status") == "not_found":
+            if row.get("match_type") != "not_found" or row.get("match_confidence") != "low":
+                errors.append(f"missing core witness hunt no-hit row {row.get('source_work_key')}:{row.get('query')} must use match_type=not_found and match_confidence=low")
+            if row.get("matched_file_label") or row.get("matched_file_id"):
+                errors.append(f"missing core witness hunt no-hit row {row.get('source_work_key')}:{row.get('query')} must keep matched fields empty")
+    for source_key, expected_queries in expected_hunt_queries.items():
+        missing_queries = sorted(expected_queries - observed_hunt_queries.get(source_key, set()))
+        if missing_queries:
+            errors.append(f"missing core witness hunt is missing expected queries for {source_key}: {', '.join(missing_queries)}")
 
     for collection_name, rows in [
         ("source-work witness gaps", gap_rows),
@@ -426,6 +460,17 @@ def validate_translation_source_discovery(
     ]
     if not uem_sip_false_positive:
         errors.append("UEM does not retain the reviewed SIP false-positive row")
+    sip_false_positive_hunt_rows = [
+        row
+        for row in missing_core_witness_hunt_rows
+        if row.get("source_work_key") == "uemSelectionsPagan" and row.get("matched_file_label") == sip_candidate_label
+    ]
+    if sip_false_positive_hunt_rows:
+        for row in sip_false_positive_hunt_rows:
+            if row.get("is_known_false_positive") != "true":
+                errors.append("UEM/SIP false-positive hunt rows must be marked as known false positives")
+            if "do not promote" not in row.get("recommended_action", "").casefold():
+                errors.append("UEM/SIP false-positive hunt rows cannot be surfaced as promotable direct-witness candidates")
 
     for row in iob_text_search_rows:
         label = row.get("matched_file_label", "")
@@ -438,6 +483,13 @@ def validate_translation_source_discovery(
                 errors.append(f"Inscriptions of Burma plate row {label} must be marked as a false positive for the text witness hunt")
             if "plate" not in row.get("reason_not_text_witness", "").casefold():
                 errors.append(f"Inscriptions of Burma plate row {label} must explain why it is not a text witness")
+    for row in iob_text_volume_hunt_rows:
+        label = row.get("matched_file_label", "")
+        if "plates" in label.casefold():
+            if row.get("is_plate_witness_candidate") != "true" or row.get("is_text_witness_candidate") != "false" or row.get("false_positive_for_text") != "true":
+                errors.append(f"Inscriptions of Burma text-volume hunt plate row {label} must be a false positive for text")
+            if row.get("recommended_action") == "Inspect title page before promoting this as a direct witness.":
+                errors.append(f"Inscriptions of Burma text-volume hunt plate row {label} still uses a promotable direct-witness action")
 
     direct_eb_review_rows = [row for row in epigraphia_review_rows if row.get("classification") == "actual_eb_fascicle"]
     direct_eb_verifications = {
@@ -588,7 +640,7 @@ def validate_translation_source_discovery(
     expected_iob_plate_false_positive_count = len(
         {
             row.get("matched_file_id", "") or row.get("matched_file_label", "")
-            for row in iob_text_search_rows
+            for row in (iob_text_search_rows + iob_text_volume_hunt_rows)
             if row.get("false_positive_for_text") == "true"
         }
     )

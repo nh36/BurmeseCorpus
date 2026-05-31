@@ -182,6 +182,7 @@ INSCRIPTIONS_OF_BURMA_TEXT_SEARCH_FIELDS = DIRECT_WITNESS_SEARCH_FIELDS + [
     "false_positive_for_text",
     "reason_not_text_witness",
 ]
+INSCRIPTIONS_OF_BURMA_TEXT_VOLUME_HUNT_FIELDS = INSCRIPTIONS_OF_BURMA_TEXT_SEARCH_FIELDS
 
 CORE_DIRECT_WITNESS_SEARCH_FIELDS = [
     "source_work_key",
@@ -267,7 +268,12 @@ MISSING_CORE_WITNESS_HUNT_FIELDS = [
     "match_type",
     "match_confidence",
     "short_evidence",
+    "searched_sources",
+    "search_scope",
+    "search_date_or_run_id",
     "search_result_status",
+    "is_known_false_positive",
+    "false_positive_reason",
     "recommended_action",
     "notes",
 ]
@@ -426,31 +432,45 @@ MISSING_CORE_WITNESS_HUNT_QUERIES = {
     "uemSelectionsPagan": [
         ("U E Maung", "author_name"),
         ("U. E. Maung", "author_name"),
+        ("E Maung", "author_name"),
         ("U E Maung Selections", "title_variant"),
+        ("U E Maung Pagan", "title_variant"),
+        ("U E Maung inscriptions", "title_variant"),
         ("Selections from the Inscriptions of Pagan U E Maung", "title_variant"),
         ("Rangoon 1958 inscriptions Pagan", "publication_detail"),
         ("UEM no.", "abbreviation"),
     ],
     "tnInscriptionsPaganPinyaAva": [
         ("U Tun Nyein", "author_name"),
+        ("Tun Nyein", "author_name"),
         ("Tun Nyein 1897", "publication_detail"),
+        ("Tun Nyein Pagan", "title_variant"),
+        ("Tun Nyein Pinya", "title_variant"),
+        ("Tun Nyein Ava", "title_variant"),
+        ("Pagan Pinya Ava", "title_variant"),
         ("Inscriptions Pagan Pinya Ava", "title_variant"),
         ("Rangoon Gazette Press inscriptions", "publisher"),
         ("Government Printing Burma 1897 inscriptions", "publisher"),
-        ("TN p.", "abbreviation"),
     ],
     "ppaCatalogue": [
         ("Pagan Pinya Ava", "title_variant"),
+        ("Pagan Pinya and Ava", "title_variant"),
+        ("Inscriptions Pagan Pinya Ava", "title_variant"),
         ("Inscriptions of Pagan Pinya and Ava", "title_variant"),
+        ("PPA inscription", "abbreviation"),
         ("PPA catalogue", "abbreviation"),
         ("IPPA", "abbreviation"),
+        ("Pinya Ava inscriptions", "title_variant"),
     ],
     "ubSourceFamily": [
         ("Upper Burma inscriptions", "title_variant"),
         ("Inscriptions Collected in Upper Burma", "title_variant"),
+        ("Collected in Upper Burma", "title_variant"),
         ("Upper Burma Archaeological Survey", "series_reference"),
+        ("Upper Burma Stone Inscriptions", "title_variant"),
         ("UB 1", "abbreviation"),
         ("UB 2", "abbreviation"),
+        ("Archaeological Survey Burma Upper Burma", "series_reference"),
         ("Report Superintendent Archaeological Survey Burma Upper Burma", "series_reference"),
     ],
 }
@@ -2048,6 +2068,26 @@ def build_eb_fascicle_content_inspection_rows(
             }
         )
 
+    def classify_talaing_sample(snippet: str) -> tuple[str, str, str]:
+        normalized = normalize_for_match(snippet)
+        if not snippet:
+            return (
+                "unknown",
+                "Inspect a legend page with clearer OCR before changing EB translation status.",
+                "No recoverable Talaing legend sample was isolated from the sampled pages.",
+            )
+        if "he converses with the king" in normalized or "sends a message to his mother and father" in normalized:
+            return (
+                "possible",
+                "Treat the sampled English as caption/legend and commentary evidence unless a translation heading or fuller parallel text is confirmed.",
+                "Sampled Talaing pages mix short English legend glosses with surrounding narrative explanation; this is treated as caption/legend evidence rather than as a confirmed full-text translation.",
+            )
+        return (
+            "unknown",
+            "Inspect an explicit translation-bearing page before changing EB translation status.",
+            "Sampled Talaing pages yielded English prose, but the evidence remains too ambiguous to classify as inscription translation.",
+        )
+
     for review_row in promoted_review_rows:
         file_label = review_row["file_label"]
         file_record = find_file_record(file_records, file_label)
@@ -2069,8 +2109,17 @@ def build_eb_fascicle_content_inspection_rows(
         if "birmanica3" in normalize_for_match(file_label):
             sample_pages = [10]
         elif "talaing plaques" in normalize_for_match(file_label):
-            sample_pages = [30]
+            sample_pages = [29, 30]
         sample_entry, _ = probe_pdf_pages(file_record, sample_pages)
+        talaing_translation_status = "unknown"
+        talaing_next_action = "Inspect an explicit translation-bearing page before changing EB translation status."
+        talaing_notes = (
+            "Sample fascicle pages were inspected for edition, commentary, and plate evidence."
+            if sample_entry
+            else "No recoverable sample-entry OCR was isolated from the sampled EB pages."
+        )
+        if "talaing plaques" in normalize_for_match(file_label):
+            talaing_translation_status, talaing_next_action, talaing_notes = classify_talaing_sample(sample_entry)
         add_row(
             review_row["witness_id"],
             file_label,
@@ -2104,17 +2153,14 @@ def build_eb_fascicle_content_inspection_rows(
             file_label,
             "sample_entry",
             sample_entry,
+            contains_translation=talaing_translation_status,
             contains_edition="confirmed" if sample_entry and "talaing plaques" not in normalize_for_match(file_label) else ("possible" if sample_entry else "unknown"),
-            contains_notes=content_status_from_keywords(sample_entry, NOTES_KEYWORDS + ["descriptive account"], default_with_text="possible"),
+            contains_notes=content_status_from_keywords(sample_entry, NOTES_KEYWORDS + ["descriptive account", "legend"], default_with_text="possible"),
             contains_plate="confirmed" if review_row.get("contains_plate_or_image") == "true" else "unknown",
             confidence="medium" if sample_entry else "low",
             inspection_status=inspection_status_for_snippet(sample_entry),
-            next_action="Inspect an explicit translation-bearing page before changing EB translation status.",
-            notes=(
-                "Sample fascicle pages were inspected for edition, commentary, and plate evidence."
-                if sample_entry
-                else "No recoverable sample-entry OCR was isolated from the sampled EB pages."
-            ),
+            next_action=talaing_next_action,
+            notes=talaing_notes,
         )
         if "talaing plaques" in normalize_for_match(file_label):
             contents_page, _ = probe_pdf_page_text(file_record, 15)
@@ -2157,6 +2203,11 @@ def annotate_iob_text_search_rows(rows: list[dict]) -> list[dict]:
             {
                 **row,
                 "search_result_status": row.get("search_result_status", "not_found"),
+                "recommended_action": (
+                    "Retain as a plate witness; continue searching for the companion text volume."
+                    if false_positive
+                    else row.get("recommended_action", "")
+                ),
                 "is_text_witness_candidate": bool_string(is_text_candidate),
                 "is_plate_witness_candidate": bool_string(is_plate),
                 "false_positive_for_text": bool_string(false_positive),
@@ -2178,6 +2229,12 @@ def build_search_hunt_rows(
 ) -> list[dict]:
     rows: list[dict] = []
     coverage_note = f"Coverage: {searched_sources_label()} via {search_scope_label()}."
+    run_id = current_search_run_id()
+    known_false_positive_labels = {
+        row.get("candidate_file_label", "")
+        for row in verification_rows
+        if row.get("source_work_key") == source_work_key and row.get("verification_status") == "weak_false_positive"
+    }
     for query, variant_type in query_variants:
         search_rows = build_direct_query_search_rows(
             [query],
@@ -2189,8 +2246,17 @@ def build_search_hunt_rows(
         if not search_rows:
             continue
         row = search_rows[0]
-        if not row.get("matched_file_label") and not row.get("short_evidence"):
-            continue
+        is_known_false_positive = row.get("matched_file_label", "") in known_false_positive_labels
+        false_positive_reason = (
+            "known SIP/UEM false positive; reviewed file belongs to the Luce and Pe Maung Tin SIP witness, not to U E Maung"
+            if is_known_false_positive
+            else ""
+        )
+        recommended_action = row.get("recommended_action", "")
+        if row.get("search_result_status") == "not_found":
+            recommended_action = "Continue targeted local/direct-witness search."
+        elif is_known_false_positive:
+            recommended_action = "Do not promote this file; retain it only as a reviewed SIP/UEM false positive and continue targeted U E Maung search."
         rows.append(
             {
                 "source_work_key": source_work_key,
@@ -2198,12 +2264,17 @@ def build_search_hunt_rows(
                 "variant_type": variant_type,
                 "matched_file_label": row.get("matched_file_label", ""),
                 "matched_file_id": row.get("matched_file_id", ""),
-                "match_type": row.get("match_type", ""),
-                "match_confidence": row.get("match_confidence", ""),
+                "match_type": row.get("match_type", "not_found") or "not_found",
+                "match_confidence": row.get("match_confidence", "low") or "low",
                 "short_evidence": row.get("short_evidence", ""),
+                "searched_sources": row.get("searched_sources", searched_sources_label()),
+                "search_scope": row.get("search_scope", search_scope_label()),
+                "search_date_or_run_id": row.get("search_date_or_run_id", run_id),
                 "search_result_status": row.get("search_result_status", "not_found"),
-                "recommended_action": row.get("recommended_action", ""),
-                "notes": compact_join([coverage_note, row.get("notes", "")]),
+                "is_known_false_positive": bool_string(is_known_false_positive),
+                "false_positive_reason": false_positive_reason,
+                "recommended_action": recommended_action,
+                "notes": compact_join([coverage_note, row.get("notes", ""), false_positive_reason]),
             }
         )
     return rows
@@ -2253,6 +2324,12 @@ def build_source_witness_content_profile_rows(
             continue
         inspection_rows = eb_rows_by_witness.get(row["witness_id"], [])
         by_area = {item["inspection_area"]: item for item in inspection_rows}
+        sample_row = by_area.get("sample_entry", {})
+        next_action = "Inspect a later fascicle page before claiming translation coverage."
+        notes = "EB fascicle identity is verified, but translation coverage remains unknown without explicit translation text."
+        if "talaing plaques" in normalize_for_match(row.get("candidate_file_label", "")):
+            next_action = "Retain the sampled English as caption/legend-plus-commentary evidence unless a translation heading or fuller parallel text is confirmed."
+            notes = "The Talaing sample appears to mix short legend glosses with narrative commentary, so EB translation coverage remains unconfirmed."
         profiles.append(
             {
                 "source_work_key": "epigraphiaBirmanica",
@@ -2262,25 +2339,22 @@ def build_source_witness_content_profile_rows(
                 "content_profile_status": "needs_manual_review",
                 "title_page_status": by_area.get("title_page", {}).get("inspection_status", "unknown"),
                 "contents_status": by_area.get("contents", {}).get("inspection_status", by_area.get("preface", {}).get("inspection_status", "unknown")),
-                "sample_entry_status": by_area.get("sample_entry", {}).get("inspection_status", "unknown"),
+                "sample_entry_status": sample_row.get("inspection_status", "unknown"),
                 "translation_status": "unknown",
                 "edition_status": "confirmed",
-                "notes_commentary_status": by_area.get("preface", {}).get("contains_notes_or_commentary", by_area.get("sample_entry", {}).get("contains_notes_or_commentary", "unknown")),
+                "notes_commentary_status": by_area.get("preface", {}).get("contains_notes_or_commentary", sample_row.get("contains_notes_or_commentary", "unknown")),
                 "plate_image_status": "confirmed" if row.get("contains_plate_or_image_verified") == "confirmed" else "unknown",
                 "catalogue_metadata_status": "confirmed" if by_area.get("contents", {}).get("short_snippet") else "unknown",
                 "coverage_scope": row.get("candidate_file_label", ""),
                 "confidence": row.get("confidence", "medium"),
-                "next_action": "Inspect a later fascicle page before claiming translation coverage.",
-                "notes": "EB fascicle identity is verified, but translation coverage remains unknown without explicit translation text.",
+                "next_action": next_action,
+                "notes": notes,
             }
         )
 
     for row in verification_rows:
         if row.get("source_work_key") != "lucePeMaungTinInscriptionsOfBurma" or row.get("verification_status") != "verified_plate_witness":
             continue
-        file_record = find_file_record(file_records, row.get("candidate_file_label", ""))
-        sample_pages = [9, 10, 11, 12]
-        sample_probe, _ = probe_pdf_pages(file_record, sample_pages) if file_record else ("", "")
         profiles.append(
             {
                 "source_work_key": "lucePeMaungTinInscriptionsOfBurma",
@@ -2290,15 +2364,15 @@ def build_source_witness_content_profile_rows(
                 "content_profile_status": "confirmed",
                 "title_page_status": "confirmed" if row.get("title_page_evidence") else "unknown",
                 "contents_status": "not_applicable",
-                "sample_entry_status": "confirmed" if sample_probe and "plates6 20" not in normalize_for_match(row.get("candidate_file_label", "")) else ("attempted_no_recoverable_text" if sample_probe == "" else "possible"),
+                "sample_entry_status": "not_applicable",
                 "translation_status": "not_applicable",
                 "edition_status": "not_applicable",
-                "notes_commentary_status": "possible" if sample_probe else "unknown",
+                "notes_commentary_status": "unknown",
                 "plate_image_status": "confirmed",
-                "catalogue_metadata_status": "confirmed" if sample_probe and text_has_keyword(sample_probe, ["sip", "ppa", "tn", "list"]) else "unknown",
+                "catalogue_metadata_status": "unknown",
                 "coverage_scope": "plate/facsimile witness",
                 "confidence": row.get("confidence", "medium"),
-                "next_action": "Retain as a plate witness and continue hunting the companion text volume.",
+                "next_action": "Retain as a plate/facsimile witness and continue hunting the companion text volume.",
                 "notes": "Plate/facsimile witness profiled separately so it cannot satisfy the missing text-witness gap.",
             }
         )
@@ -2329,8 +2403,8 @@ def build_epigraphia_fascicle_coverage_rows(
                 "coverage_scope": review_row.get("probable_volume_or_fascicle", "") or "identified fascicle",
                 "confidence": review_row.get("confidence", "medium"),
                 "needs_human_review": "true",
-                "next_action": "Inspect sample fascicle contents before claiming translation coverage.",
-                "notes": "Promoted from direct-looking local EB fascicle evidence; content profile now tracked separately.",
+                "next_action": profile_row.get("next_action", "Inspect sample fascicle contents before claiming translation coverage."),
+                "notes": profile_row.get("notes", "Promoted from direct-looking local EB fascicle evidence; content profile now tracked separately."),
             }
         )
     return rows
@@ -2611,7 +2685,11 @@ def build_verification_report(
             for row in iob_text_search_rows
         ),
         "inscriptions_of_burma_plate_false_positive_count": len(
-            {row.get("matched_file_id", "") or row.get("matched_file_label", "") for row in iob_text_search_rows if row.get("false_positive_for_text") == "true"}
+            {
+                row.get("matched_file_id", "") or row.get("matched_file_label", "")
+                for row in (iob_text_search_rows + iob_text_volume_hunt_rows)
+                if row.get("false_positive_for_text") == "true"
+            }
         ),
         "inscriptions_of_burma_text_volume_hunt_count": len(iob_text_volume_hunt_rows),
         "missing_core_witness_hunt_count": len(missing_core_witness_hunt_rows),
@@ -2834,6 +2912,7 @@ def verify_translation_witnesses(
         )
         if row.get("matched_file_label") or row.get("short_evidence")
     ]
+    iob_text_volume_hunt_rows = annotate_iob_text_search_rows(iob_text_volume_hunt_rows)
     missing_core_witness_hunt_rows = [
         row
         for source_key, query_variants in MISSING_CORE_WITNESS_HUNT_QUERIES.items()
@@ -2921,7 +3000,7 @@ def verify_translation_witnesses(
     write_tsv(uem_direct_search_path, uem_search_rows, DIRECT_WITNESS_SEARCH_FIELDS)
     write_tsv(core_source_direct_search_path, core_search_rows, CORE_DIRECT_WITNESS_SEARCH_FIELDS)
     write_tsv(inscriptions_of_burma_text_search_path, iob_text_search_rows, INSCRIPTIONS_OF_BURMA_TEXT_SEARCH_FIELDS)
-    write_tsv(inscriptions_of_burma_text_volume_hunt_path, iob_text_volume_hunt_rows, DIRECT_WITNESS_SEARCH_FIELDS)
+    write_tsv(inscriptions_of_burma_text_volume_hunt_path, iob_text_volume_hunt_rows, INSCRIPTIONS_OF_BURMA_TEXT_VOLUME_HUNT_FIELDS)
     write_tsv(missing_core_witness_hunt_path, missing_core_witness_hunt_rows, MISSING_CORE_WITNESS_HUNT_FIELDS)
     write_tsv(rescue_candidate_review_path, rescue_review_rows, RESCUE_CANDIDATE_REVIEW_FIELDS)
     write_tsv(epigraphia_birmanica_review_path, epigraphia_review_rows, EPIGRAPHIA_BIRMANICA_REVIEW_FIELDS)

@@ -18,6 +18,7 @@ from verify_translation_witnesses import (
     build_epigraphia_promoted_verification_rows,
     build_epigraphia_birmanica_review_rows,
     build_rescue_candidate_review_rows,
+    build_search_hunt_rows,
     build_sip_witness_inspection_rows,
     build_source_witness_content_profile_rows,
     build_source_work_gap_rows,
@@ -438,13 +439,104 @@ class TranslationWitnessVerificationTests(unittest.TestCase):
                     "search_result_status": "candidate_found",
                     "recommended_action": "Keep searching for text volume.",
                     "notes": "",
-                }
+                },
+                {
+                    "query": "Inscriptions of Burma 1963 text",
+                    "matched_file_label": "Luce&PeMaungTin_InscriptionsOfBurma(Plates6-20)_1963.pdf",
+                    "matched_file_id": "iob-plates-2",
+                    "match_type": "filename",
+                    "match_confidence": "medium",
+                    "short_evidence": "plate volume",
+                    "searched_sources": "local_file_manifest",
+                    "search_scope": "filename search",
+                    "search_date_or_run_id": "test",
+                    "search_result_status": "candidate_found",
+                    "recommended_action": "Keep searching for text volume.",
+                    "notes": "",
+                },
             ]
         )
 
-        self.assertEqual(rows[0]["is_plate_witness_candidate"], "true")
-        self.assertEqual(rows[0]["is_text_witness_candidate"], "false")
-        self.assertEqual(rows[0]["false_positive_for_text"], "true")
+        for row in rows:
+            self.assertEqual(row["is_plate_witness_candidate"], "true")
+            self.assertEqual(row["is_text_witness_candidate"], "false")
+            self.assertEqual(row["false_positive_for_text"], "true")
+            self.assertEqual(
+                row["recommended_action"],
+                "Retain as a plate witness; continue searching for the companion text volume.",
+            )
+
+    def test_iob_plate_content_profile_uses_not_applicable_sample_entry(self) -> None:
+        rows = build_source_witness_content_profile_rows(
+            [
+                {
+                    "witness_id": "iob-plates",
+                    "source_work_key": "lucePeMaungTinInscriptionsOfBurma",
+                    "candidate_file_label": "Luce&PeMaungTin_InscriptionsOfBurma(Plates3,4,5)_1960.pdf",
+                    "verification_status": "verified_plate_witness",
+                    "verified_witness_type": "plate_volume",
+                    "title_page_evidence": "Inscriptions of Burma Plates 3, 4, 5",
+                    "confidence": "high",
+                }
+            ],
+            [],
+            [],
+            {},
+        )
+
+        self.assertEqual(rows[0]["sample_entry_status"], "not_applicable")
+        self.assertEqual(rows[0]["translation_status"], "not_applicable")
+        self.assertEqual(
+            rows[0]["next_action"],
+            "Retain as a plate/facsimile witness and continue hunting the companion text volume.",
+        )
+
+    def test_missing_core_hunt_preserves_no_hit_rows_with_coverage(self) -> None:
+        rows = build_search_hunt_rows(
+            "uemSelectionsPagan",
+            [("U E Maung", "author_name")],
+            {
+                "unrelated-pdf": file_record(
+                    candidate_file_id="unrelated-pdf",
+                    candidate_file_label="Unrelated witness.pdf",
+                    all_original_paths="OBI_LIBRARY_ROOT:Unrelated witness.pdf",
+                )
+            },
+            [],
+            [],
+        )
+
+        self.assertEqual(len(rows), 1)
+        self.assertEqual(rows[0]["match_type"], "not_found")
+        self.assertEqual(rows[0]["match_confidence"], "low")
+        self.assertEqual(rows[0]["search_result_status"], "not_found")
+        self.assertTrue(rows[0]["searched_sources"])
+        self.assertTrue(rows[0]["search_scope"])
+        self.assertTrue(rows[0]["search_date_or_run_id"])
+
+    def test_missing_core_hunt_marks_sip_row_as_known_uem_false_positive(self) -> None:
+        rows = build_search_hunt_rows(
+            "uemSelectionsPagan",
+            [("Selections from the Inscriptions of Pagan U E Maung", "title_variant")],
+            {
+                "sip-pdf": file_record(
+                    candidate_file_id="sip-pdf",
+                    candidate_file_label="Luce 1928 inscriptions of Pagan.pdf",
+                    all_original_paths="OBI_LIBRARY_ROOT:Luce 1928 inscriptions of Pagan.pdf",
+                )
+            },
+            [],
+            [
+                {
+                    "source_work_key": "uemSelectionsPagan",
+                    "candidate_file_label": "Luce 1928 inscriptions of Pagan.pdf",
+                    "verification_status": "weak_false_positive",
+                }
+            ],
+        )
+
+        self.assertEqual(rows[0]["is_known_false_positive"], "true")
+        self.assertIn("do not promote", rows[0]["recommended_action"].casefold())
 
     def test_direct_search_rows_include_search_status_metadata(self) -> None:
         rows = build_direct_query_search_rows(
