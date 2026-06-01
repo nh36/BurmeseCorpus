@@ -1,0 +1,14 @@
+{
+  "local_file_id": "1972-monplate-naipanhla-guillon1972-pdf",
+  "batch_id": "jbrs-ocr-1578",
+  "file_name": "MonPlate-NaiPanHla-Guillon1972.pdf",
+  "path_stub": "1972/MonPlate-NaiPanHla-Guillon1972.pdf",
+  "journal": "JBRS",
+  "year": "1972",
+  "ocr_engine": "google_vision",
+  "pages_completed": 9,
+  "ocr_date": "2026-06-01T09:17:07.739623+00:00",
+  "source_category": "other_source",
+  "language_scope_guess": "Pali",
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+}

@@ -1,0 +1,14 @@
+{
+  "local_file_id": "1968-burmeselanguages-luce1968-pdf",
+  "batch_id": "jbrs-ocr-1551",
+  "file_name": "BurmeseLanguages-Luce1968.pdf",
+  "path_stub": "1968/BurmeseLanguages-Luce1968.pdf",
+  "journal": "JBRS",
+  "year": "1968",
+  "ocr_engine": "google_vision",
+  "pages_completed": 6,
+  "ocr_date": "2026-06-01T09:12:49.872332+00:00",
+  "source_category": "other_source",
+  "language_scope_guess": "Mon",
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+}

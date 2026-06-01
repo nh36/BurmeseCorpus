@@ -18,6 +18,7 @@ if str(SCRIPTS_DIR) not in sys.path:
 import ocr_jbrs_google_vision as ocr
 import detect_jbrs_translation_candidates as detect
 import jbrs_workflow_common as common
+import run_jbrs_production_ocr as production
 from corpus_common import write_tsv
 from jbrs_workflow_common import (
     JBRS_ARTICLE_REFERENCE_TARGETS_PATH,
@@ -798,6 +799,59 @@ class JBRSWorkflowLogicTests(unittest.TestCase):
         with patch.object(common, "read_tsv", side_effect=fake_read_tsv):
             errors = common.validate_jbrs_workflow()
         self.assertTrue(any("Mixed-language extraction plan lacks mixed or version-specific source-unit scope" in error for error in errors), errors)
+
+    def test_production_selector_skips_weak_numeric_metadata_clues(self) -> None:
+        batch_rows = [
+            {
+                "batch_id": "jbrs-ocr-weak",
+                "local_file_id": "weak-row",
+                "file_name": "123456.pdf",
+                "status": "ready_for_ocr",
+                "ocr_priority": "medium",
+                "page_count_estimate": "",
+            },
+            {
+                "batch_id": "jbrs-ocr-strong",
+                "local_file_id": "strong-row",
+                "file_name": "PaliMonPagan1-Luce1976.pdf",
+                "status": "ready_for_ocr",
+                "ocr_priority": "medium",
+                "page_count_estimate": "",
+            },
+        ]
+        status_rows = []
+        manifest_rows = [
+            {
+                "local_file_id": "weak-row",
+                "file_name": "123456.pdf",
+                "probable_title_from_filename": "",
+                "probable_author_from_path": "G. H. Luce",
+                "is_article_split_pdf": "true",
+                "is_whole_issue_or_volume": "false",
+            },
+            {
+                "local_file_id": "strong-row",
+                "file_name": "PaliMonPagan1-Luce1976.pdf",
+                "probable_title_from_filename": "Pali Mon Pagan 1",
+                "probable_author_from_path": "G. H. Luce",
+                "is_article_split_pdf": "true",
+                "is_whole_issue_or_volume": "false",
+            },
+        ]
+        selected_rows, _ = production.select_production_batch_rows(
+            batch_rows=batch_rows,
+            status_rows=status_rows,
+            manifest_rows=manifest_rows,
+            match_rows=[],
+            citation_rows=[],
+            limit=10,
+        )
+        self.assertEqual([row["batch_id"] for row in selected_rows], ["jbrs-ocr-strong"])
+
+    def test_auth_error_helper_detects_token_expiry_responses(self) -> None:
+        message = '{ "error": { "code": 401, "message": "Request had invalid authentication credentials." } }'
+        self.assertTrue(ocr.is_refreshable_auth_error(message))
+        self.assertFalse(ocr.is_refreshable_auth_error("quota project missing"))
 
 
 if __name__ == "__main__":

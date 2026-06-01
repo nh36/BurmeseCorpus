@@ -1,0 +1,2027 @@
+[[page 1]]
+COMPARATIVE STUDY OF OLD & MODERN BURMESE
+1. Foreword
+2. Preface
+3.
+Introduction
+...
+4. Vowels & Consonants
+...
+...
+...
+5. The Earliest Burmese Records
+*
+6. Inconsistency of Old Burmese Orthography
+7. Changing of the Vowels ...
+...
+8. Usage of the third consonant for the first
+9. The use of Visarga (:) two dots
+...
+...
+:
+B
+...
+...
+10. Some common words in Old Mon & Old Burmese
+11. Comparison of Old & Modern Burmese glosses
+12.
+Evolution of some final Consonants...
+13. Tonal System ...
+...
+14. Syntax of Old Burmese
+...
+...
+...
+:
+57
+58
+...
+59
+...
+:
+...
+...
+61
+62
+...
+...
+62
+:
+64
+...
+...
+66
+...
+66
+...
+67
+...
+...
+68
+...
+...
+72
+...
+...
+73
+:
+74
+75
+...
+77
+604
+15. Some loan words from Mon, Pali & Sanskrit ...
+16. Bibiliography
+...
+...
+...
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 2]]
+"
+Foreword
+It is obvious that the author of this paper has made a serious study of the
+ancient epigraphs of Burma comprising lithic inscriptions, terra-cotta records as well
+as mural writings in ink. No one without adequate knowledge of such languages as
+Sanskrit, Pali, Mon and Burmese could have produced such a scholarly paper like
+this. This learned writer has dealt with some aspects of oriental linguistics, with
+special reference to the Burmese language, pertaining to the early era, medieval period
+and modern time.
+The introduction of this paper is a very clear perspective of the historical
+background of the Burmese race and language and its cognates.
+Having pointed concrete cases of inconsistency in Old Burmese orthography
+relevantly and in a representative manner, the author has illustrated the rule of vowel
+changes such as:- o><u; 0> subscript w; iw > ui or uih; à > a and e>
+a. It is also pointed out the fact that a voiced consonant in Old Burmese had and
+can become unvoiced in modern mother tongue of the Burmans. He then elucidated
+the employment of the double dotted tonal token known in Pali as Visajjani and
+in Sanskrit as Visarga, citing relevantly important authentic documents in the form
+of lithic inscriptions and mural writings in ink, especially on the walls of Lokahteikpan
+temple of Pagan which very few people know about.
+After explaining tonal system, this learned scholar supplied a comparative
+chart of common glosses of Old Mon and Old Burmese as well as a comparison of
+Old and Modern Burmese with their respective phonetic pronunciation. A scientifically
+inguistic study of the syntax of Old Burmese citing the extant examples from Maha
+Janaka Jātaka written on the walls of Lokahteikpan temple along with extracts from
+Mahā Nārada Jataka are also discussed.
+Finally, examples of some loan words among many that have been collected
+by him and his staff, as have been ascertained and shown along with their respective
+origin, namely, Sanskrit, Pali and Mon are well displayed. A comprehensive, if
+not a completely complete, philology of the Burmese language, if not an all-embracing
+oriental linguistics is yet to be written. As Dr.J.A. Matisoff, Professor of Linguistics
+of California University remarks "Nai Pan Hla's paper looks extremely interesting.
+Dr. A. B. Griswold thinks very highly of him..." and I, as one of the linguists, regard
+this paper though rather short, a really beautiful beginning beneficial character in
+tackling with the problem of the philology of the Old Burmese language leave alone that
+of orientalia.
+Rangoon,
+October 16, 1975.
+U Lu Pe Win*
+*M. A. (Calcutta: Gold Medallist ). Director of chaeological survey, _ urma (Retired).
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 3]]
+Preface
+In 1972, I was requested by the University of Hawaii to present a paper to
+the First International Conference on Austroasiatic Linguistics held in 1973. I wrote
+for them a paper on " Comparative Study of Old & Modern Mon". As I was unable
+to attend the Seminar it was circulated to all the international participants.
+It was
+also published in the following year by the Kagoshima University, Japan, in October
+issue of their Bulletin. The University of California, Berkeley also called for papers
+from me every year. Recently, the National University of Australia sent a request to
+me to contribute in their research Journal too. But I have not been able to comply
+with their request, owing to the pressure of departmental duty.
+This short paper is intended to be presented to the Eighth International Con-
+ference on Sino-Tibetan Linguistics at the University of California, Berkeley. It has
+been approved and accepted by the Board of the Linguistics Committee to be
+read on 25-10-75. However, since I am unable to attend the Seminar to read
+the paper myself there, I have to decide the publishing of it in our JBRS for the
+benefit of those who are interested both at home and abroad. This short paper is
+just a beginning of my study in Burmese epigraphy and phonology.
+To make this paper a success, my grateful thanks are due to Sayagyi U Lu Pe Win
+& Dr. Htin Aung for their encouragement; U Myint Kyi, Head of Burmese Dept. and
+U Shwe Thwin, Lecturer in Burmese of Rangoon University for their checking of my
+paper, especially on epigraphy and phonetics; Burmese Professor Daw Than Swe of Man-
+dalay University and Daw Than Nu, Anthropology Dept. of Rangoon University for
+their thoroughly and particularly scrutinizing of this paper; their valuable suggestions
+for improvement and corrections of some glosses which have been overlooked by me.
+However, the author alone is responsible for whatever omissions, if any would be in
+this paper.
+Rangoon,
+October 11, 1975.
+Nai Pan Hia®
+Head of Epigraphy Division, Archaeological Department, Rangoon, Member of the Burmese
+Dictionary Committee, Ministry of Education. Compiler of Mon Burmese Dictionary.
+8 U.P.-N. 75-1,100-13-11-75.
+B. S.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 4]]
+Introduction
+Racially all the indigenous peoples of Burma belong to Mongoloid (yellow
+coloured people) but linguistically they are divided into three main groups: the
+Tibeto-Burman, the Mon-Khmer (Austroasiatic) and the Thai-Chinese. Geographically,
+the Tibeto-Burman family extends a long series of languages and dialects spoken from
+Tibet in the north to Burma in the south and from Baltistan² (Kashmir) in the west
+to Yunnan in the east. In Burma, it comprises Burmese, Arakanese, Intha, Taungyo,
+Tavoyan, Merguese, Chin, Kachin, Karen, Kaya (Karenni), Kadu, Danu, Naga and
+various other hill tribes. In fact, the extinct Pyu language which had flourished in
+the 7th-8th century A.D. at Old Prome (Srīkṣetra) belongs to Tibeto-Burman group as
+revealed by Dr. C.O. Blagden.* Historically, the Pyu were the earliest comers into
+Burma among Tibeto-Burman stock. They might have reached central Burma in the
+first century A.D. I consider that the original homeland of the Tibeto-Burman family
+would probably be in the north-west of China. According to the Chinese contem-
+porary accounts, the Pyu Kingdom was sacked by Nanchao of Yunnan in 835 A.D.
+after which the Burmese founded their Kingdom at Pagan. Of course, a number of
+Pyu people migrated north due to the attack of Nanchao and they merged with
+Burmese at Pagan. The name Pagan is said to have derived from Руūgāma (Pyu
+village). Later on, the Burmese of Pagan Dynasty came into contact with the Mons.
+a different language belonging to Mon-Khmer family. The Mons of Pagan Dynasty.
+had already attained to a considerable high stage of civilization whose. Kingdoms
+were located in lower Burma and lower Siam known as Suvaṇṇabhumi and Dvaravatt
+respectively. Dvaravati had flourished in Old Siam from 6th to 11th centuries A.D.
+before the arrival of the Thais.
+5
+4
+In the History of Burma, the first famous Burmese king whose existence can
+be proved epigraphically, was known as Aniruddha (Anawrahta) who became king in
+1044 A.D. at Pagan. Soon after his accession he extended gradually, his sovereignty
+down to Tenasserim in the south including Thaton, the Mon capital in the delta and
+Arakan in the west. Obviously, Aniruddha had formed the first Union of Burma
+Linguistic Family
+Austric Super Family
+Sino-Tibetan Super Family
+Austroasiatic (Mon-Khmer)
+Sub-family
+Austronesian
+Sub-family
+Tibeto-Burman
+Sub-family
+Thai Chinese
+Sub-family
+2 G.A. Grierson, Linguistic Survey of India, Vol. III pt. I p. 1, Tibeto-Burman family.
+3 Epigraphia Birmanica Vol. I pt. I, pp. 59-68. The Pyu Face of 'Myazedi Inscription by
+C. O. Blagden.
+4 Dr. G. H. Luce considers that, "In 832 and 835 A.D. Halin, the Pyu capital in the
+north, and Michen, the chief Mon city in the south, were sacked by Nan-chao..." See
+his Old Burma-Early Pagan, Vol. 1, p.3.
+5 Taw Sein Ko's theory. See Burmese Sketches Vol. I p. 20 and JBRS Vol. XLII, i 1959,
+p. 56 (G. H. Luce's Note on the people of Burma in the 12th-13th century A. D.)
+6 Dvāravat by H.G. Quaritch Wales, 1969, London.
+JBRS, LVIII, i, Oct., 1975.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 5]]
+"60
+after the conquest of Mon Kingdom of Thaton in 1057 A.D. The Burmese soon
+adopted Mon alphabets and reduced their language to writing in the early part of 12th
+century A.D. The first Burmese inscription so far discovered was dated 1112 A.D.2
+Previous to this, the Burmese Kings had written mostly in Mon as evident in the
+early epigraphical records of Burma. Sanskrit and Pali languages were also used by
+the Burmese monarchs in writing the votive tablets besides Mon. Nagari scripts were
+used in writing Sanskrit. King Kyansittha had almost always written in Mon of a
+remarkably high standard literature. It is a curious fact in the history of Burma that
+the early great Burmese kings such as Aniruddha, Sawlu, Kyansittha and Alaungsithu
+(Cañsu 1) had never engraved their inscriptions in Burmese. The Burmese Kingdom
+of Pagan was sacked by the Mongols headed by Kublai Khan, grandson of Gengis
+Khan in 1287 A.D.³
+The Ruins of Pagan
+The ruins of Pagan, today, with not less than five thousand greater and smaller
+monuments covering a wide area of over ten square miles, whose survivors are still
+profoundly preserved and which from time to time became awe and inspiration of
+every generation, is one of the most talked about tourist centres in Southeast Asia
+and perhaps it is one of the wonders of the world. Unfortunately, Pagan was very
+badly shaken by a strong earthquake on the 8th of July 1975.4 It was the worst-hit
+and damages were the worse that had ever been occurred to Pagan during the long
+history of nine hundred years.. I imagine that it was worse than the destructions
+made by the Turks in the last quarter of 13th century A.D. Though most of the temples
+and stupas of Pagan developed cracks and their finials or pinnacles toppled or tilted
+due to the quake, they would be skillfully restored to their original shape and design
+in due course. Consequently, Pagan can still be remained for every visitor as the
+wonder that was old Pagan, even after the historic earthquake.
+History & Epigraphy
+Later Burmese kingdoms were known as Sagaing, Pinya, Myinsaing, Ava, Tongoo
+and Mandalay. The Burmese had three successive wars with the British in 1824,
+1852 and 18855 which led to the British annexation of Arakan and Tenasserim, the
+delta region of Pegu Division and finally of the rest of Burma proper respectively.
+Burma was occupied by the Japanese during World War II from 1942 to 1945 before
+she regained her Independence from the British on the 4th of January 1948. Burmese
+is the chief and official language of Burma since then.
+Burmese language is rich in literature. It has a great number of epigraphs on
+stone or clay; on the walls of the inner temples of Pagan below the mural paintings;
+on palmleaves and folded-papers (parabaik) and in printed books.
+The epigraphical records of over a thousand stone inscriptions, dedicatory in
+nature, dignified in style, with many allusions to incidents from Buddhist scriptures
+and Jataka tales, began from the early 12th century A.D. Burmese literature on
+palm-leaf and folded-paper manuscripts of an imaginative style in verse and prose
+came into being in the 15th century untill printing became prevalent in the 19th
+century.
+1 Luce & Tin, Glass Palace Chronicle.
+2 Epigraphia Birmanica, Vol. I pt. I, Govt. Press, Rangoon, 1919. Reprint 1974, Govt. Book-
+shop. Rangoon. Edited by Taw Sein Ko and Chas. Duroiselle.
+3 G. H. Luce, Burma Languages, JBRS, Vol. LI, pp. 29–34, 1968.
+4 The Working People's Daily, 9-7-75-though not so concerned with the subject, it is
+just mentioned for future reference.
+5 A History of Burma by Maung Htin Aung, pp. 210-233, Columbia University Press, New
+York, 1967.
+6 Burmese Proverbs by Dr. Hla Pe, p. 5.
+JBRS, LVIII, i, Oct., 1975.
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 6]]
+61
+Vowels and Consonants
+The Burmese alphabet, borrowed from Mon,' has evidently derived from the
+Pallava script of South India. Significantly, the Burmese, through Mon, adopted their
+vowels and consonants from Sanskrit as they have 12 vowels and 35 consonants in
+the olden days. But they later discarded two consonants as they have no use. These
+two consonants are $/s and $/sh². Of course the third s which is in use nowadays
+is pronounced th which is very different from Indian or Mon sound.. Thus the
+Burmese pronounce sila (virtue) as thila Milá / and siri (glory, splendour) as thīri
+eiri and so on.
+8 "
+ā
+အာ
+33
+I
+u
+ဤ ဥ
+00
+Vowels
+e
+ai
+30
+8. 2.
+ō
+aṁ āḥ/ā:
+6370 6375 32
+အား
+a
+ဩော်
+Ka
+Kā
+Ki Ki
+Ku Kū Ke Kai
+Ko
+Kō
+Kam
+Kāh
+Kā:
+Consonants
+00
+C
+kha
+ga
+gha
+na
+ဆ
+cha
+ja
+910
+jha/cya
+2/20
+ña/ñña
+083
+na
+$
+na
+မ
+ma
+8 2 2 0 2 8 7
+sa
+Q
+bha
+00
+ba
+uv M S D 5 8 3 8 -
+§
+ţa
+ta
+tha
+00
+tha
+da
+3
+dha
+0
+da
+dha
+ဘ
+ya
+pha
+ရ
+ra
+လ
+la
+wa
+အ
+a (vowel consonant)
+88 OÅTE WE
+0
+ha
+ļa
+က
+ca
+0
+pa
+8 2 0 5 5 1 8 5 2 3 £ 6 £ €
+ka
+sa/sa
+0
+şa/sha
+Sanskrit consonants used in old Mon
+and old Burmese only.
+1 JBRS, Vol. L. i, 1967, pp. 71-72, Burmese Professor Dr. Hla Pe of London University
+wrote thus: The Burmese were apt pupils. They wasted no time in emulating the Mon.
+They assimilated Mon culture, set up a State, embraced Buddhism and reduced their
+Language to writing in the 11th century by adapting the Mon script. ,,
+2 The Palace Inscriptions of Shwenankyawt Shin of Ava, line 10-warawas wayu ga kṣī ti
+bra te jo du rā ŝa phaḥ
+JBRS, LVIII, i, Oct., 1975.
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 7]]
+62
+The Earliest Burmese Records
+During the time of King Kyansittha, the written language was found mainly
+in Mon and perhaps Mon was his official language. After his death his disinherited
+son, Prince Rajakumar started writing Burmese for the first time though he did not
+drop Mon, Pyu and Pali languages which he engraved together on each face of a
+quadrilingual inscription stone. All the four languages are found to be of the same matter.
+The extinct Pyu and Old Mon languages appeared on this stone were at first unknown
+to the scholars of Burma until Dr. C. O. Blagden of the School of Oriental and African
+Studies in the London University found the key to tackle them and edited them in
+1909. This quadriligual inscription has been known as Myazedi inscription because
+it was unearthed near a modern pagoda of this name. Within half a century onwards
+from the first writing in Burmese began there are only a few dated Burmese inscriptions
+that have been discovered at Pagan. It is very curious enough to see a small temple
+at Pagan, called Lokahteikpan which contains both Mon and Burmese ink-inscriptions
+on its inner walls below the mural paintings depicting life story of Lord Buddha and
+Jātaka tales (Buddha's previous birth stories).
+All these Burmese records are found to be in the beginning stage. The
+spellings are very inconsistent which are haphazard and diverse. It is known as
+Transitional period. The transit from writing Mon to begin writing Burmese as begin-
+ners. It is also called pre-Standard Old Burmese or Burmese sub-period. Burmese
+orthography became standardised only in the reign of King Nataungmya (Jeyyasinkha)
+1211-1230 A.D. when Burmese became the main language of Pagan Dynasty.
+Examples of Inconsistency of Old Burmese Orthography²
+Meaning
+to conceive
+Old Burmese
+Mod.Burmese with pronunciation
+to ride
+..
+cway; coy
+CT
+; ciy
+cwai / swe |
+cih / si /
+1 See " Lokahteikpan by Bohmu Ba Shin, Rangoon University Press, 1962. The best authority
+in early Burmese records.
+2 This paper follows method of transliteration almost as in Epigraphia Birmanica Vol. I
+pt. I and key to pronunciation of the New Burmese-English Dictionary, being published
+in parts by the S.O. A. S., University of London. This Key is also found in Dr. Hla Pe's
+Burmese Proverbs pp. 88-89. The Key is adapted below by courtesy of Dr. Hla Pe for ready
+reference.
+Vowels
+a
+in open syallables, palm; elscwhere the same sound shortened.
+i
+in open syallables, eager; elsewhere pin.
+u
+in open syllables, too; elsewhere put.
+e
+Fr. élève.
+E
+in open syllables. Fr. élève; elsewhere well.
+0
+law.
+0
+ei
+Fr. eau.
+eight.
+ou
+bolt.
+au
+down, sound.
+ai
+fine.
+above.
+JBRS, LVIII, i, Oct., 1975.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 8]]
+63
+Meaning
+to cause to
+to instruct
+to admonish
+Old Burmese
+ci; ciy; cây
+chu mha; chū mha
+Mod. Burmese with pronunciation
+ce
+, se 1
+chumḥ ma / shouŋmá /
+to dwell
+ni; ni; niy
+ne
+/ ne
+}
+to give
+pi; pl; piy
+peh
+☐ pe /
+to run
+pli; pliy
+preh
+1 pye /
+to destroy
+phyek; phyec
+phyak
+/ phyɛ?/
+to ask
+miy; mi
+meh
+/ "me /
+to give birth
+muy; muy
+mweḥ
+mwe /
+to raise
+mhok; mlok, mlhok
+mhrok
+/ hmyau? /
+to enter
+wan; wan
+wan
+| wiŋ /
+Key to pronunciation:-
+Consonants
+b, d, g (as in go), h, j, k, l, m, n, ny (as gn in Fr. digne), p, r, s, t, w, y (as in
+you), z approximately as in English; but aspiration of k, s, t, and p must be avoided.
+C
+an intimate combination of t and y, resembling the initial consonantal
+sound in tulip or the ch of cheese made with tip of tongue touching lower
+teeth.
+when initial as ng in singer; when final, a nasalization of the preceding
+vowel.
+8. thin.
+shake (no rounding of lips).
+ŏ
+then.
+S
+h
+following a consonant indicates aspiration of that consonant, as in kh, sh,
+th, ph, ch. Preceding a consonant, it indicates that that consonant is a
+breathed consonant; thus ŋ, n, m, 1 are voiced consonants while hŋ,
+hn, hm, h are breathed consonants- hl being = the in Llandudno.
+P is a glottal stop as in the Cockney or the Glasgow pronunciation of
+water as water. For convenience this is further dealt with under Tones.
+Note. Assimilation of final nasals before certain consonants is not indicated in the
+phonetic transcription, e.g. `paŋna ‘asthma’, and `paŋdaiŋ ‘winning-post', which should
+be pronounced pan na and pan daiŋ.
+Tones
+A dash to the left indicates heavy falling tone as in sauŋ (harp); while a
+dash to the right produces a creaky tone as saun (to wait); abrupt tone
+needs a glottal stop as sau? (to be steep) and level tone has no mark as
+in saun (blanket).
+JBRS, LVIII, i, Oct., 1975.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 9]]
+}
+764
+to know
+to die
+alcohol, liquor
+to draw
+to persuade
+si; si'; siy,
+si; siy
+si; siy
+8 8 2.
+si
+1 61
+/ Be
+se
+/ Be
+suy; suy
+sweb
+Owe
+white
+phlu; phlo
+phrū
+phyu
+mother
+mi,miy; ami; amiy
+mi
+/
+mi 1
+daughter
+sami;samiy; sa.niy
+samiḥ
+1
+0ǝ mi /
+grandchild
+mliy
+mreh
+mye
+gold
+rhuy; rhyuy; rluy
+rhwe
+/ Swe
+water
+ri; riy; rły
+re
+/
+ye
+boat
+lhiy; Ihly
+The
+/ hle
+1
+fruit
+asi; sac sĩ; sac sły
+sac siḥ
+/ ei?
+Di /
+foot
+khri; khriy
+khre
+/
+che
+journey
+road
+}
+khariy; khari
+khariḥ
+| kha yi /
+house
+im; im; imm
+'im
+/ ein
+law
+taryā; tiryā; tryā
+tarah
+/ ta ya
+I
+buffalo
+kloy; klway
+kywai
+/ cwe
+1
+dog
+khuy; khyuy; khủy
+khweḥ
+"khwe
+1
+reward
+chu; chuo
+chu
+/ shu⭑
+Changing of Vowels'
+Some examples of using vowel o
+for u or u:-
+Meaning
+Old Burmese
+Mod. Burmese
+person
+SO
+su
+with pronunciation
+ðu /
+thief
+khuiw so
+khuiḥ sti
+kho ou /
+white
+phlo
+phyū
+/ phyu 1
+man
+luo
+10
+/ lu
+alms giving
+alho
+alhu
+/ chịu
+action, deed
+amho'
+amhu
+Ohmu'
+1 See Bohmu Ba Shin's Lokahteikpan pp. 27-29 for other examples.
+JBRS, LVIII, i, Oct., 1975.
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 10]]
+to go across
+ko
+kūḥ
+:
+to make
+plo'
+pru
+"ku /
+/ pyu? /
+to take
+yo
+yũ
+| yu |
+to dedicate
+lho
+lhủ
+Meaning
+Old Burmese
+Some examples of using medial vowel o for subscript
+hlu /
+W :-
+Mod. Burmese with pronunciation
+creeper
+noy
+nway
+/ nwɛ /
+slave
+kyon
+kywan
+1 cuŋ 1
+kite
+con
+cwan
+/ sun /
+alms food
+chom
+chwamh
+/ "shuŋ /
+excess
+lon
+Iwan
+/ luŋ /
+beyond
+to be free
+lot
+Iwat
+/ lu?. /
+to release
+lhot
+Ihwat
+/ hlu? /
+to point out
+nyon; non
+ñwan
+/ hnyuŋ /
+to hang
+choy
+chwai
+/ `shwe /
+Meaning
+Old Burmese
+Some examples of using iw for ui or uiḥ final vowels :-
+Mod. Burmese with pronunciation
+to converse
+to speak to
+cakà chiw
+chiw am so
+hunter
+mu chiw
+loin cloth
+puchiw
+cakāh chui
+|
+sa ka sho /
+chui am, so
+/
+sho af 80 /
+muchuiḥ
+/
+mou? sho/
+puchuiḥ
+/ posho /
+miw khyat
+night-fall
+Some examples of using å for a :-
+Meaning
+muiḥ khyup / “mo chou” /
+Mod. Burmese with pronunciation
+Old Burmese
+water tank
+kán
+kan
+| kaŋ /
+ten
+cháy
+chay
+/ she /
+lap
+tān
+tad
+/ tiŋ /
+two
+nhāc
+nhac
+/ hni" /
+sea
+paň ty
+pan lay
+/ pin le /
+to request
+pān
+pan
+/ paŋ /
+to create
+phần chân
+to enter
+wän
+at
+twän
+/ win. /
+twań
+/ twin /
+phân chanh / phan shin /
+wan
+65
+JBRS, LVIII, i, Oct., 1975.
+9 U.P.-N. 75-1,100-19-11-75,
+B S.
+Convright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd Bangkok Thailand
+
+[[page 11]]
+"
+..66
+Some examples of using vowel e for a :-
+Meaning
+Old Burmese
+Mod. Burmese with pronunciation
+dung
+ken kri
+kyan kriḥ
+/ cinci /
+tree
+trumpet
+sec paň
+nhen
+sac pan
+/
+i piŋ /
+nhanh
+/ `hnyiŋ /
+fetter
+khrî khyen
+khre khyanh / che chin /
+night
+ñeň
+ñaй
+/ nya /
+to cook
+khyek
+khyak
+/ chɛ? /
+to love
+khyac
+/ chi? |
+khet
+Usage of the Third Consonant for the First
+Mod. Burmese with pronunciation
+Meaning
+Old Burmese
+elder son
+să gri
+sāḥ kriḥ
+/ `ŋa ji /
+the great king
+man gri
+manḥ kriḥ
+/ `miŋji /
+headman
+sü gri
+sū kŕìh
+/ ða ji /
+great alms
+giving
+}
+alhū gri
+alhū kŕḥ
+/ ǝhlu ji /
+ant hill
+ton buiw,
+ton pui,
+/
+taun por /
+have passed
+lon bri
+Iwan prih
+/
+luŋ byi /
+have given
+have listened
+piy bri
+peh prib
+/ "pe byi /
+nā brī
+na prih
+/ na byi /
+The use of Visarga (:) two dots'
+In Old Burmese, the use of Visarga (:) two dots, transcribed (h) is almost not
+found in stone inscriptions. In Old Mon it indicates the explosive heavy tone as in
+Modern Burmese. Strangely enough, this usage is found in Old Burmese written at
+Lokahteikpan temple whereas Old Mon glosses are written side by side. I wonder if
+these Burmese glosses were composed by Mons of Pagan as many words are spelt
+in Mon way besides the use of Visarga like Mon. More over many Mon loan words.
+are found in Old Burmese glosses of this temple.2
+1 G. A. Grierson's Linguistic Survey of India Vol. III pt. 1 p. XXi “Visarga (:) is represen-
+ted by h and Anuswāra (→) is represented by m
+2 Professor Daw Than Swe of the Burmese Department, agrees with the author and she is
+of opinion that Lokahteikpan Burmese orthography indicates a date as old as Myazedi
+Inscriptions or perhaps earlier. She has studied very seriously both Old Mon and Old
+Burmese besides modern literature.
+JBRS, LVIII, i, Oct., 1975.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 12]]
+Some common words in
+Old Mon' and Old Burmese²
+Mod. Burmese with pronunciation
+67
+Meaning
+Old Mon Old Burmese
+Brahmin
+bumnah
+bumnah
+puṁnāh
+/ pouŋ na
+1
+buṁnāḥ
+army
+billabaḥ
+billabah
+buipā
+| bo ba
+to revolt
+pun
+pun
+pun
+1 poun
+rest house
+jarap.
+jarap
+jarap
+|
+zə ya?
+carap
+yellow robes
+singal
+sangān
+sankan
+/
+ein kan
+T
+Brahma
+brumh
+bruṁhma
+bramha
+/
+byaŋ ma
+to prophesy,
+prophecy,
+byādes
+byades
+bya dit
+/ bya dei?
+1
+to command
+dagger
+snek
+snek
+sanlyak
+/ ŋaŋ lyɛ"
+ï
+sword
+snail
+kin lo'
+kharu
+kharu
+| khǝyu
+1
+sign of
+lakṣan
+lakkhanā
+lakkhana
+/ lɛ? khǝna
+greatness
+pavilion
+prāsāt
+prasada
+prasad
+/
+pyá @a?
+1
+garden
+uyyan
+uyān
+uyyǎñ
+/ uʻyiŋ
+hermit
+risť
+rasi
+✓ rase
+/
+yo dé
+to offer
+pujaw
+pujaw
+pūjā
+.minister
+amat
+amatya
+amat
+/ pu zo
+/ ǝma?
+snake charmer
+alambay alambay
+alampay
+/ ǝlaŋ bɛ
+a general
+senapati
+senāpati
+senapati
+/ Genapati /
+serpent
+näk
+nagā
+nagaḥ
+/ naga
+1
+to conceive
+paţisan
+paţisandi
+patisande
+/ patei? Mande/
+deer
+raman
+saman
+saman
+/
+ŋǝ miŋ
+Indra tree
+pärikajāt
+pārikajāt
+paň laykasacpan /
+piŋlɛ kǝti? biŋ/
+(Erythmia Indica)
+1 See H. L. Shorto's Dictionary of Old Mon Inscriptions from 6th to 16th Centuries,
+Oxford University Press, 1971. The most reliable authority in Old Mon.
+2 Index cards of the Archaeological Department.
+JBRS, LVIII, i, Oct., 1975,
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 13]]
+68
+Meaning
+Comparison of Old and Modern Burmese glosses
+Old Burmese¹
+(some with variant spellings)
+Mod. Burmese with pronunciation
+Buddha
+purha
+bhurah
+/ pha'ya /
+great, big
+gri
+kriḥ
+} `ji ; `ci /
+finished
+bri
+priḥ
+/ `byi ; `pyi /
+gratitude
+klañjo
+kycḥ juh
+/ "ce zu /
+favour
+time, occasion
+rhow; rwow
+ro
+1 "yo 1
+village.
+rwoh rwo.
+rwa
+/ ywa /
+rwah; rwa
+caustive, May!
+ciy; ci; c; cây
+ce
+/
+se 1
+to run
+..
+grandchild
+to feed
+gold
+pliy; pli
+preḥ
+/ pye /
+mliy; mliy
+mreḥ
+/ "mye /
+muy; mūy
+mweḥ
+/ "mwe /
+rhuy; rhyuy
+rhwe
+/ we /
+rlüy
+eight
+het; hyet
+rhac
+/ fi? /
+crown, spire
+athot
+athwat
+1 athu? 1
+to become
+phlac; phlet; phlec phrac
+/ phyi? /
+slave
+kyon
+kywan
+/ cuŋ /
+to pass, elapse
+lon
+Iwan
+/ luŋ /
+to pour
+son
+swanh
+/ Aug /
+banana
+sandalwood
+nhak pyow
+tancikū
+candaküḥ
+nhak pyo
+/ hŋǝ pyɔ /
+/ saŋ doku
+jaggery
+than ryak
+thanh lyak
+/ the nyɛ? /
+Careya arborea
+panpuy;
+banh bweh
+/ `baŋ`bwe /
+panphwoy
+garuda
+kalun
+gaļun
+/ gǝ louŋ /
+-
+1 See Comparative Chart of Oldest Written Burmese in Dr. G. H. Luce's Old Burma-Early Pagan
+Vol. I, pp. 403–405.
+JBRS, LVIII, i, Oct., 1975.
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 14]]
+69
+Meaniag
+Old Burmese
+Mod. Burmese with pronunciation
+book
+klam
+kyamh
+/ *can /
+heavenly being
+nat
+nat
+/ na? /
+piety
+satan
+satanḥ
+/ ða tiŋ /
+drummer
+can san
+cañ sañ
+/
+si de 1
+to be young
+nay
+nay
+/
+ŋɛ /
+to write
+ri
+reḥ
+☐
+ye /
+Soap acacia
+kampon
+kań pwanḥ
+/
+kiŋ puŋ /
+Asafoetida
+hin kiw
+thinh khui
+/
+Sein kho
+Mesua flower
+saniw
+sa nuiḥ
+/
+a no /
+top, end
+phyā; byā
+phyāḥ
+/ phya /
+Cardamon
+phalā
+phālā
+1 phala /
+to plant
+cik
+cuik
+/ sai? /
+relations
+amliw
+amyuiḥ
+/ a myo /
+stupa
+puthuw
+puthuiḥ
+/ bǝ tho /
+to desire
+liw
+lui
+/ lo /
+also
+leh; le
+lañḥ
+/ 1ɛ /
+langon
+lanhkinh
+/
+la gauŋ /
+everyone
+tackāḥ
+takā
+{ tǝ ka
+tac kā
+much
+mhyāh
+myāḥ
+/ `mya /
+to preach
+haw
+ho
+/ hɔ /
+law
+tirya; tryā
+tarāḥ
+snake
+mruy
+fire
+miy
+miḥ
+mrwe
+/ to ya /
+/ mwe 1
+/ mi /
+to have
+hi; hiy
+rhi
+| Si' /
+not to have; nil
+máy,
+mai,
+/ mɛ/
+before
+infront
+to live
+}
+rhiy,
+rhe,
+, sé l
+niy
+ne
+1 ne 1
+property
+utca
+ucca
+/ ou? sa /
+to persuade
+sūy
+sweḥ
+/ Owe /
+to ask permission
+pān
+pan
+/ paŋ /
+JBRS, ĻVIII, i, Oct., 1975.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 15]]
+70
+Meaning
+Old Burmese
+Mod. Burmese with pronunciation
+ship
+word
+san pho
+cakkā
+san bho
+1
+Điŋ bɔ /
+cakāḥ
+/ saka /
+to rescue from water chay
+chay
+/
+she /
+stone
+klok
+kyok
+/
+cau? /
+palace
+imdaw
+'imto
+/
+eiŋ dɔ /
+mango
+siryak
+sayak
+/
+Bǝ yɛ? /
+to carry
+khi
+khyi
+/
+chị /
+to eat
+cay
+cāḥ
+\
+`sa
+earth
+mliy
+mre
+/ mye /
+dust
+pum
+phum
+/ phouŋ /
+arrow.
+mlá
+mrāḥ
+/ Chmya /
+to give birth
+muy
+mweḥ
+/ "mwe /
+to have bath
+to wash
+rain
+}
+riy khluiw
+re khyuih
+/ ye cho /
+muiw
+muiḥ
+/ `mo /
+eye
+myek ciy,
+myak ci
+/
+myɛ? si* /
+to be blind
+kān
+kanh
+1
+kaŋ 1
+to instal
+suy
+sway
+1. Owɛ 1
+to draw water
+riy khap
+re khat
+hell
+nray
+narai
+/ ye kha? /
+/ ŋa yɛ /
+to coil, wreath
+khūy
+khwe
+/ khwe /
+to dream, dream
+imak
+'im mak
+/
+eiŋ me? /
+princess
+mansamiy
+manhsamiḥ
+/ miŋ ðǝ mi /
+beloved wife
+pay maya
+paymayāḥ /
+pɛ mǝya /
+to love
+khet
+khyac
+/
+chi? /
+brick bat
+to raise
+ut khay
+mhlok
+'ut khai
+mhrok
+ou? khɛ/
+j
+hmyau? /
+male
+yokyā
+female
+mima
+yok kyāḥ
+minhma
+river
+mlac
+mrac
+| yau? ca /
+/ `meiŋ ma" /
+/ myi? /
+to fill
+swoń
+swanh
+1 win /
+to be angry
+myek
+myak
+/ myɛ? /
+JBRS, LVIII, i, Oct., 1975.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+:
+
+[[page 16]]
+Meaning
+elder brother
+younger brother
+Qld Burmese
+'ac kuiw
+'ac ñīу
+Mod. Burmese with pronunciation:
+'akui
+/ ako /
+ñī
+/ nyi /
+to-practise
+kyen
+kyan,
+/ ci
+richman
+sakroy
+sūkrway
+/ ðǝ cwɛ /
+ball or knot
+khran thuy
+khyan thweh / chi `thwe /
+of thread
+young person
+ruby
+su näy
+patta mară
+su nay
+pattamrāḥ
+1 bədə mya 1
+to answer or
+phri
+phre
+/ phye /
+explain
+wisdom
+prajň¾; prañā
+pañǎ
+/pyin nya /
+pracna
+merit
+pun; phun
+good deed
+(skt; punya)
+bhunḥ
+1 "phouŋ /
+to present
+nhap
+/ hna? /
+poison
+chip
+to mix
+nhaw
+achip
+nho
+/ ǝshei? /
+hno /
+liquor pot
+si auiw
+se auiḥ
+Je o 1
+to stop
+mrac
+mrac
+|
+myi? /
+to slip
+khlow
+khyo
+| `ch: /
+to call
+khaw
+kho
+| khɔ /
+parrot
+kī
+kyeḥ
+/ 'ce /
+before
+ran
+ran
+/ yiŋ /
+presence
+bribe
+alms hall
+tan chuiw
+tankup
+tan chuiḥ
+/
+to `so /
+tanḥ kup
+/
+tiŋ kou? /
+to drop water
+riy khla
+re (cak) khya / ye sɛ? chá /
+of dedication
+forest
+taw
+10
+uncle
+urī
+üh rih
+/ uyi /
+day
+niy,
+ne,
+☐ ne /
+night
+ñeň,
+ñañ,
+/ nyi; nyá /
+pwań
+pwan,
+/ pwin /
+to blossom
+pwon
+pwan
+pwak
+71
+JBRS, LVIII, i, Oct., 1975.
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 17]]
+772
+Meaning
+Old Burmese
+to bow down
+to follow
+ñot
+lik
+nwat
+luik
+Mod.Burmese with pronunciation
+/ nyu? /
+/ lai? /
+to pay respect
+rhiy, khuiw
+rhe, khuiḥ
+/ se kho /
+from infront
+to pay respect
+nok khuiw
+/ nau? kho /
+from behind
+hermitage
+sankhaṁ
+sankhamh
+/ ðin gaŋ /
+gourd
+tiger
+lion
+phū
+būḥ
+/ `bu /
+klā
+kyāḥ
+/ca/
+khran siy,
+khran se,
+/
+chin ŏé /
+silver
+nuy
+nwe
+/
+ŋwe /
+grandfather
+aphuiw
+abhuiḥ
+/
+a pho /
+grandmother
+aphiy
+aphwāh
+ǝ phwa /
+Evolution of some final Consonants
+As in Old Mon, Old Burmese had finals a ; w ; h and r which are
+no more in use in modern literature. In olden days, final a was denoted
+for the short tone either written next to or below the final consonant or vowel.
+It is represented now by a dot ( . ) as in ne, / né / ; to, / to^/ ; pui, / pơ" /
+; mo, / mɔ/ ; etc. which is known as amyit. In transcription of Old Burmese the
+final a written on the line next to consonant or vowel is transcribed as apostrophe
+and for the one written below as a comma under the vowel pointing out a tonal
+sign. Final w is used only when praying or wishing; i.e. ce sow / se ŏ / %; it has
+long been symbolized as a dash to the right of the vowel o and transcribed long ō.
+It has evolved thus- (သောင် > သော် > ဘော်). The Mon has gone too far thus
+( mod > em > am > -kow > kau) - meaning flower.
+ကော်
+Final h has integrated or merged with Visarga (:) two dots as both produce
+the same explosive or heavy sound. Medial final r of Old Burmese is not in use
+Old Burmese had it mostly in loan words from Sanskrit as in nerpān; purhā;
+tirya etc.
+now.
+One more to note is that though final y is still in use, it has a substitute
+sign of a dash to the left to indicate heavy tone. Both Old Mon and Old Burmese
+have no such symbol. Both the two languages have invented such modifications
+side by side. This symbol of a dash to the left derived from ey thus-
+( ငယ် > ပြ > > '). Curiously enough the Burmese consonant jh has
+interchanged to cy but the Mon still maintans jh. It evolved thus- (c) > al > > oj).
+This jh to cy theory has pointed out to me by Sayagyi U Tha Myat, author of
+Burmese Alphabets, since over 20 years. I discovered this evolution practically in an
+old palm-leaf manuscript only five years ago though others may not accept it as yet.
+JBRS, LVIII, i, Oct., 1975.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 18]]
+Tonal System
+73.
+There are three tones in Burmese-short, level and heavy. Practically four, if the
+very abrupt stop of the voice is reckoned. The short tone is indicated by a short
+final vowel or consonant. In transliteration the short tone is denoted either by adding
+an apostrophe or a comma on the line or below the letter known as (amyit).
+Examples:- to be given
+nhape'
+war
+cac
+one
+tac
+hna? i'
+/ si?
+/ti 7
+to destroy
+phyck
+/ phyɛ? /
+milk
+nuiw,
+/ no /
+to suck
+cuiw,
+/ sσ 1
+together
+akwa
+/ kwa̸/
+The level tone is shown by a long medial or final vowel.
+to come
+li
+to make
+mü
+younger brother
+kite
+ñî
+con
+slave
+kyon
+la
+1
+/ mu
+☐ nyi
+☐ sug
+/ cun
+The heavy tone is indicated by a final h or two dots or Visarga but some are
+not shown. Level and heavy tones in Old Burmese are complicated. Especially with
+the vowel o where it does not distinguish long or short as in Modern form written
+short o for heavy tone and long for level. In Old Burmese -on (short); -on
+(level) and -on (heavy).!
+-
+to give
+to die
+piy
+siy
+☐ pe
+1
+heavy tone
+1.00
+level tone
+wife
+mayā
+marya /
+heavy tone
+letter
+ca
+/ sa
+level tone
+also
+leb
+1
+to release
+lhot
+/ hlu?
+heavy tone
+,,
+”
+big
+gri
+/*ji/ci
+1
+,,
+fruit
+>
+as[
+,,
+carth
+mli
+water
+ri
+/ mle/mye/
+/ re/ye
+level tone
+”
+to question
+mi
+me
+foot
+khri
+/ che
+to ride
+cī
+☐ si
+heavy tone
+level tone
+heavy tone
+to cause
+ci
+/ se
+{
+level tone
+1 See G. H. Luce's chart for tonal system in Old Burmese on page 113 of his Old Burma-
+Early Fagan, Vol. I, Chapter VI.
+JBRS, LVIII, i, Oct., 1975.
+10 U.P.-N. 75-1,100-13-11-75,
+B S.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 19]]
+74
+Syntax of Old Burmese
+The syntax of Old Burmese is quite interesting. There are simple, compound
+and complex sentences. Some examples from Maha Janaka Jātaka written on the
+walls of Lokahteikpan temple are as follows;---1
+(1) Old B.
+M. B.
+Meaning.
+(2) O.
+0..
+B.
+.
+M. · B.
+Meaning.
+(3) .0. B.
+M. B.
+Meaning.
+(4) 0.
+B.
+M. B.
+sanphow ko liy e'
+sańbho kūḥ le e' / iŋ `bɔ "ku le i′ 1
+The ship crosses.
+sanphow kway raka
+sańbho kwai rakāḥ / Oiŋ `bɔ `kwɛ ya “ka /
+The ship wrecks.
+manimekhalã nhaǹ cakkã chujw`e'
+manimekhala nhan, cakah chui e'
+Manimekhala (goddess) with words speaks.
+(The Bodhisat) converses with Manimekhala (goddess).
+Manimekhalā purhāloń kuiw chay
+ruy pyaṁ li a purhalon kuiw uyañ
+twań klok thak tha yye' #
+Manimekhalā bhurāḥloňh kui chay
+rwe, pyaṁ le ah bhurāḥlonḥ kui
+uyyan twanḥ kyok thak thaḥ ye ။
+Meaning. Manimekhala (goddess) rescues the Bodhisatta and flies
+to a garden and put him upon the stone (bed).
+Examples from Mahā Nārada Jātaka :—
+0.
+B.
+M. B.
+ruja mañ so mansamiy yokya phlac so rhow so mya
+khuiw so nray khaṁ rakā apha pla piy ye's myok saň phlac
+so aphan 500 maň krok rakāŋ mañ alho piy ye' || man
+satañ suṁ e'|| koĥ mhu mũ e’ kon khran kyen raka
+siy kha rakā brumhā rwāh phlac liy ye'll
+ruja mañ so maňhsamiḥ yokyāḥ phrac so ro su mayāḥ
+khuiḥ so kron na rai khaṁ ra kāh apha pya peh e'
+myok sahh phyac so aphan 500 || maňh krok rakāḥ ||
+manh alhu peḥ e' mahh satanḥ sumh e konḥ mhu
+mu e' koňh khraňh kyan, rakāḥ se khai, rakāḥ bramhā
+rwa phrac le e' ||
+1 See Lokahteikpan by Bohmu Ba Shin for other ink inscriptions of Old Burmese.
+JBRS, LVIII, i, Oct., 1975.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 20]]
+75
+Meaning. The princess named Ruja shows her father how she was
+suffering in hell because she stole another man's wife
+when she was a man (in the previous existence). She
+became a castrated monkey for 500 times. The king
+scares. The king gives alms. The king meditates piety.
+Makes meritorious deeds. Practises virtue. After death
+(the king) became (reborn) in the Brahma world.
+Some Loan Words from Skt., Pali and Mon
+O.B.
+Origin
+to command
+byādes¹
+byatic2
+vyādesa (Skt.)
+to foretel
+byatit³
+sword
+snek
+snek (Mon) :
+oyster
+khuru; kharu
+kinlo' (Mon)
+widow
+kamay
+kamay (Mon)
+rest house
+jarap; carap
+jarap (Mon)
+dung
+haruk
+haruk (Mon)*
+bumnah
+bumnah
+Brahmin
+Brahma (god)
+minister
+sign of greatness;
+superior marks
+bumnah
+(Mon).
+pumnāḥ
+brumha
+brāhmaṇa (Pali)
+brahmä (S/P)
+amatya
+amātya (Skt.)
+}
+lakkhan
+lakṣaṇa (Skt.)
+pavilion
+yellow robes
+prasad
+to offer
+to conceive
+coronation
+sangan; (singal; Mon)
+pujaw; pucāw
+paţisandhi
+abhisek
+prāsāda (").
+sanghati (")
+plja (Pali)
+patisandhi (Pali)
+abhisekha (Pali).
+abhiṣeka (Skt.)
+1 Lokahteikpan gloss-see Bohmu Ba Shin's Lokahteikpan for byādes.
+2 See Artibus Asiac Vol. XXXIII, 3 p. 199 and elsewhere in Wetkyi-in Kubyauk-gyi temple,
+Pagan. Edited by G. H. Luce, Bolimu Ba Shin and K. J. Whitbread, 1971, for bystic,
+3 See glosses in later temples of Winidho group, Pagan for byätit. Modern form is
+byādit. Old Mon byādes and Modern Mon has corrupted into pyah duiḥ
+4 Old Burmese own word is Ken Krī in the same temple of Lokahteikpan.: Mod. Burmese
+Kyań Krih; khyeḥ /chi/. See gloss No 65, pp. 54; 92 in Lokahteikpan.
+JBRS, LVIII, i, Oct., 1975.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 21]]
+.76
+serpent
+snake charmer
+hell
+hermit
+wisdom
+troop; army
+garden
+chariot
+Omniscience
+prosperity
+to enshrine
+cave
+naga
+alambay
+nray
+rasi; rasiy,
+prajna
+pracña
+billabaḥ
+uyan; uyan; uyañ
+ratha
+sarwwannuta
+(si cap mrai nham,)
+Srt
+thāpanā
+ku
+A state of liberation from
+passion and the cycle of
+birth and rebirth (super-hea-
+ven) which ail Buddhists pray
+for. Nirvana, according to
+the Northern School of
+Buddhism (Mahayanism), is
+not 'annihilation after death, nerpån
+but the extinction of all nirpan
+worldly desires, 'the blowing
+out of the flame of selfish
+longing. To arrive at Nirvana
+is to reach the highest stage
+of bliss, since it is an escape
+from the everturning wheel
+of transmigration. Absolute nibban
+extinction or annihilation of
+individual existence or af all
+desires and passions, 2
+nirban
+nirbban
+niyrpan
+-
+naga (S/P)
+Alambāyana (Pali)
+naraka ($/P)
+(Skt.)
+prajñā (”)
+billabah (Mon); balawahana(Pali)
+uyyāna (Pali)
+ratha (")
+sarwwajñuta (Skt.)1
+sabbaññuta (Pali)
+Śrī
+,
+(Skt.)
+sthāpana (Skt.)
+guha (S/P)
+nirvāṇa (Skt.)
+nibbana (Pali)
+1 Selections from the Inscriptions of Pagan by Professor U E Maung. p. 59, line 6.-
+66
+သိ စပ် မြင် နှင့်
+,,
+သော သဗ္ဗ ညု တ ညာန် ”
+“si cap mran nham so sarbbaññutaññan
+"
+/i' sa? myiŋ hna ŋŋa? byiŋnyu′ taʼ nyaŋ/
+2 See A Sanskrit-English Dictionary by Monier Williams p. 557 and Alice Getty's
+The Gods of Northern Buddhism p.191 for this defination of Nirvāṇa.
+JBRS, LVHI, i, Oct., 1975
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 22]]
+771
+Bibliography
+Ba Shin, Bohmu (Colonel). "The Lokahteikpan," Rangoon University Press,
+1962.
+Pugaṁ manca cu sutesana lupňan: (Collection of Ink-Writings of Pagan,
+Rangoon, in Burmese) 1964. Burma Historical Commission.
+Blagden, Dr. C.O. "The Mon & Pyu faces of the Myazedi Inscriptions."
+Epigraphia Birmanica Vol. I pt. I Govt. Press, Rangoon, 1919.
+Reprint 1974.
+•
+Cornyn, W. Outline of Burmese Grammar, Journal of the Linguistic Society of
+America Vol. 20, No. 4, Suppl. 1944, Language Dissertation No. 38.
+Duroiselle, Chales. Epigraphia Birmanica, Vol. I pt. I, Govt. Press, Rangoon,
+1919. Reprint 1974. Govt. Bookshop (Sarpebeikman) Rangoon.
+E Maung, Professor. Selections from the Inscriptions of Pagan, Pyiññyananda
+Press, Rangoon 1958. (Burmese.)
+Getty, Alice. The Gods of Northern Buddhism, Oxford 1914. Second Edition
+1928. Reprinted in Japan 1962. (Sanskrit words pp. 190-191).
+Grierson, Dr. G.A. Linguistic Survey of India Vols. I to IV, Cai. 1904. Vol.III,
+pts. I to III (Tibeto-Burman Family).
+Halliday, Dr. Robert. "A Mon English Dictionary, Siam Society, Bangkok 1922"
+Reprinted by Man Section, Ministry of Culture, Rangoon, 1955.
+Harvey, G.E. History of Burma, London, 1925.
+Hla Pe, Dr. Burmese Proverbs, 1962, London.
+A Tentative List of Mon Loan Words in Burmese, JBRS Vol. L, pt. 1,
+1967, pp. 71-94.
+Some Adopted Pali Loan Words in Burmese, Burma Research Society
+Fiftieth Anniversary Publication No. 1 pp. 71–98, 1960.
+Htin Aung, Dr. A History of Burma, Columbia University Press, 1967.
+Kyaw Nyein, U. Old Burmese glosses, Index Cards in the Archaeology Dept.
+Lu Pe Win, U. Troublesome Tonal Tokens in Burmese Language, JBRS Vol.
+LVI, pts. 1 & 2, 1973, pp. 69-97.
+Luce, Dr. G.H. Burma Languages, JBRS, Vol. LI, 1968 pp. 29-34.
+Old Burma- Early Pagan, J.J. Augustin, New York, Vols. I, II, III;
+1969.
+Pagan Myinkaba Kubyaukgyi of Rajakumar and Old Mon writings
+on its walls, Bulletin of Burma Historical Commission Vol. II, 1961.
+The Ancient Pyu, JBRS, Vol. XXVII, pt. III 1937. Reprinted at Fiftieth
+Anniversary Publication No. 2, 1960.
+Luce, Dr. G.H., Bohmu Ba Shin and K.J. Whitbread. Pagan Wethyi-In Kubyauk-
+gyi, Artibus Asiae Vol. XXXIII, 3, 1971, pp. 167–218.
+JBRS, LVIII, i, Oct., 1975.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 23]]
+100
+78
+Malalasekera, Dr. G.P. Dictionary of Pali Proper Names, Vols. I & II, London,
+1937.
+Monier-Williams, Sir Monier. A Sanskrit-English Dictionary, Oxford, 1899.
+Mya, U. Votive Tablets of Burma, pts. I and 2 (Burmese), 1961. Govt. Book
+Shop, Rangoon.
+Nai Pan Hla. "Comparative Study of Old & Modern Mon" Bulletin of
+Kagoshima University, Oct. 1974, pp. 1–22.
+Nyein Maung, U. Old Burmese Inscriptions Vol. I, Govt. Press, Rangoon,
+1972. (Burmese)
+Pe Maung Tin, Dr. and Dr. G.H. Luce. The Glass Palace Chronicle of the
+Kings of Burma, (Translation from Burmese) Oxford, 1923. Reprint
+1960, Rangoon University Press.
+Pe Maung Tin, Dr. and Dr. G.H. Luce.
+Inscriptions of Burma, Portfolios I
+to V, Oxford University Press, 1933-56.
+Quaritch Wales, Dr. H.G. Dvăravati, London, 1969.
+Rhys Davids, T.W., and W. Stede. The Pali Text Society's Pali-English
+Dictionary, 1925.
+Shorto, Professor H.L. A Dictionary of the Mon Inscriptions from the 6th
+to 16th Centuries, Oxford, 1971.
+Stewart, J.A., C.W. Dunn., & Dr. Hla Pe. A Burmese-English Dictionary Part I,
+S.O.A.S., London, 1940.
+Taw Sein Ko. Burmese Sketches, Rangoon, Vol. I 1913, Vol. II 1920.
+Elementary Grammar of the Burmese Language, Hanthawaddy Press,
+Rangoon, 1891. Reprint 1949:
+Than Swe, Professor Daw. Myazedi Mon Inscriptions with reference to
+Burmese, Hanthawaddy Press, Rangoon, 1971. (Burmese.)
+Than Tun, Professor Dr. Social Life in Burma, A.D. 1044-1287, JBRS, Vol.
+XLI pts. 1&2, pp. 37-47. (Old Burmese Terms).
+JBRS, LVIII, i, Oct., 1975.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.

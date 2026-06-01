@@ -1,0 +1,14 @@
+{
+  "local_file_id": "1970-burmeseembassy1872-ba-pdf",
+  "batch_id": "jbrs-ocr-1568",
+  "file_name": "BurmeseEmbassy1872_Ba.pdf",
+  "path_stub": "1970/BurmeseEmbassy1872_Ba.pdf",
+  "journal": "JBRS",
+  "year": "1970",
+  "ocr_engine": "google_vision",
+  "pages_completed": 27,
+  "ocr_date": "2026-06-01T09:14:14.048763+00:00",
+  "source_category": "other_source",
+  "language_scope_guess": "Pali",
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+}

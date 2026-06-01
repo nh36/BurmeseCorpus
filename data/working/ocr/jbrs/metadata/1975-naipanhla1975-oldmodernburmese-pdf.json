@@ -1,0 +1,14 @@
+{
+  "local_file_id": "1975-naipanhla1975-oldmodernburmese-pdf",
+  "batch_id": "jbrs-ocr-1590",
+  "file_name": "NaiPanHla1975-OldModernBurmese.pdf",
+  "path_stub": "1975/NaiPanHla1975-OldModernBurmese.pdf",
+  "journal": "JBRS",
+  "year": "1975",
+  "ocr_engine": "google_vision",
+  "pages_completed": 23,
+  "ocr_date": "2026-06-01T09:31:39.319054+00:00",
+  "source_category": "other_source",
+  "language_scope_guess": "Mixed Burmese/Pali",
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+}

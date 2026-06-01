@@ -1,0 +1,14 @@
+{
+  "local_file_id": "luce_1932_names_of_pyu-95a665d52663",
+  "batch_id": "jbrs-ocr-3334",
+  "file_name": "Luce 1932 Names of Pyu.pdf",
+  "path_stub": "Luce/Luce 1932 Names of Pyu.pdf",
+  "journal": "JBRS",
+  "year": "1932",
+  "ocr_engine": "google_vision",
+  "pages_completed": 1,
+  "ocr_date": "2026-06-01T09:51:05.556132+00:00",
+  "source_category": "other_source",
+  "language_scope_guess": "Mon",
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+}

@@ -1,0 +1,14 @@
+{
+  "local_file_id": "1958-aspectsburmeseculture-lupewin1958-41-pdf",
+  "batch_id": "jbrs-ocr-1401",
+  "file_name": "AspectsBurmeseCulture_LuPeWin1958-41.pdf",
+  "path_stub": "1958/AspectsBurmeseCulture_LuPeWin1958-41.pdf",
+  "journal": "JBRS",
+  "year": "1958",
+  "ocr_engine": "google_vision",
+  "pages_completed": 19,
+  "ocr_date": "2026-06-01T09:05:33.172071+00:00",
+  "source_category": "article_pdf",
+  "language_scope_guess": "Mixed Burmese/Pali",
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+}

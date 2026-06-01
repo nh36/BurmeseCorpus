@@ -1,0 +1,14 @@
+{
+  "local_file_id": "1912-talaingepigraphy-blagden1912-pdf",
+  "batch_id": "jbrs-ocr-0733",
+  "file_name": "TalaingEpigraphy-Blagden1912.pdf",
+  "path_stub": "1912/TalaingEpigraphy-Blagden1912.pdf",
+  "journal": "JBRS",
+  "year": "1912",
+  "ocr_engine": "google_vision",
+  "pages_completed": 6,
+  "ocr_date": "2026-06-01T08:20:26.331921+00:00",
+  "source_category": "other_source",
+  "language_scope_guess": "Mixed Burmese/Pali",
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+}

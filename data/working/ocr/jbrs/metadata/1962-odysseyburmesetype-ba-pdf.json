@@ -1,0 +1,14 @@
+{
+  "local_file_id": "1962-odysseyburmesetype-ba-pdf",
+  "batch_id": "jbrs-ocr-1467",
+  "file_name": "OdysseyBurmeseType_Ba.pdf",
+  "path_stub": "1962/OdysseyBurmeseType_Ba.pdf",
+  "journal": "JBRS",
+  "year": "1962",
+  "ocr_engine": "google_vision",
+  "pages_completed": 7,
+  "ocr_date": "2026-06-01T09:09:03.245276+00:00",
+  "source_category": "other_source",
+  "language_scope_guess": "Pali",
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+}

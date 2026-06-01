@@ -1,0 +1,14 @@
+{
+  "local_file_id": "1936-buddhismpagan-pemaungtin1936-pdf",
+  "batch_id": "jbrs-ocr-1221",
+  "file_name": "BuddhismPagan-PeMaungTin1936.pdf",
+  "path_stub": "1936/BuddhismPagan-PeMaungTin1936.pdf",
+  "journal": "JBRS",
+  "year": "1936",
+  "ocr_engine": "google_vision",
+  "pages_completed": 19,
+  "ocr_date": "2026-06-01T08:39:37.474897+00:00",
+  "source_category": "other_source",
+  "language_scope_guess": "Mixed Burmese/Pali",
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+}

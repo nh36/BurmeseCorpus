@@ -1,6 +1,6 @@
 # JBRS working metadata
 
-This directory stores working metadata for the *Journal of the Burma Research Society* (JBRS) reference hunt, local-file matching, OCR planning, and translation-candidate triage. It does **not** store source PDFs, page images, Google Vision JSON, or raw `data_local/` OCR payloads.
+This directory stores working metadata for the *Journal of the Burma Research Society* (JBRS) reference hunt, local-file matching, OCR planning, and translation-candidate triage. Full repository-safe OCR text now lives under `data/working/ocr/jbrs/`; this metadata directory still does **not** store source PDFs, page images, Google Vision JSON, or raw `data_local/` runtime payloads.
 
 ## Core workflow
 1. Build raw and clean article references: `python3 scripts/build_jbrs_reference_hunt.py`
@@ -35,10 +35,11 @@ This directory stores working metadata for the *Journal of the Burma Research So
 - README and scripts
 - short evidence snippets only
 - compact OCR-derived published source/translation units when they are clearly marked as OCR-derived extraction output and linked to source metadata
+- repository-safe OCR text under `data/working/ocr/jbrs/text/` with matching metadata JSON under `data/working/ocr/jbrs/metadata/`
 
 ## Must not be committed
 - source PDFs or page images
-- raw `data_local/` OCR article_text/page_text dumps or Google Vision runtime payloads
+- raw `data_local/` OCR runtime payloads or local-only caches
 - Google Vision JSON payloads
 - Nathan's absolute external-drive paths
 - Google credentials, API keys, or service-account secrets

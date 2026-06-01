@@ -1,0 +1,14 @@
+{
+  "local_file_id": "201020-29b619f739e5",
+  "batch_id": "jbrs-ocr-1615",
+  "file_name": "PeMaungTin 1930 OldWordsInBurmeseInscriptions.pdf",
+  "path_stub": "Pe Maung Tin/PeMaungTin 1930 OldWordsInBurmeseInscriptions.pdf",
+  "journal": "JBRS",
+  "year": "1930",
+  "ocr_engine": "google_vision",
+  "pages_completed": 2,
+  "ocr_date": "2026-06-01T09:44:35.442779+00:00",
+  "source_category": "other_source",
+  "language_scope_guess": "Burmese",
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+}

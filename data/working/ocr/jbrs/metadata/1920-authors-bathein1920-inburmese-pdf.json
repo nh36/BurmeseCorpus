@@ -1,0 +1,14 @@
+{
+  "local_file_id": "1920-authors-bathein1920-inburmese-pdf",
+  "batch_id": "jbrs-ocr-0887",
+  "file_name": "Authors_BaThein1920-inBurmese.pdf",
+  "path_stub": "1920/Authors_BaThein1920-inBurmese.pdf",
+  "journal": "JBRS",
+  "year": "1920",
+  "ocr_engine": "google_vision",
+  "pages_completed": 18,
+  "ocr_date": "2026-06-01T08:24:52.332422+00:00",
+  "source_category": "other_source",
+  "language_scope_guess": "Pali",
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+}

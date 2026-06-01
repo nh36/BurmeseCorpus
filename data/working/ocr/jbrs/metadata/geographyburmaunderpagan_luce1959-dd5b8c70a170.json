@@ -1,0 +1,14 @@
+{
+  "local_file_id": "geographyburmaunderpagan_luce1959-dd5b8c70a170",
+  "batch_id": "jbrs-ocr-2156",
+  "file_name": "GeographyBurmaUnderPagan-Luce1959.pdf",
+  "path_stub": "Burmese/Burma JBRS/1959/GeographyBurmaUnderPagan-Luce1959.pdf",
+  "journal": "JBRS",
+  "year": "1959",
+  "ocr_engine": "google_vision",
+  "pages_completed": 20,
+  "ocr_date": "2026-06-01T09:51:02.024868+00:00",
+  "source_category": "other_source",
+  "language_scope_guess": "Mixed Burmese/Pali",
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+}

@@ -1,0 +1,14 @@
+{
+  "local_file_id": "1920-bayinnaung-sayalun1920-inburmese-pdf",
+  "batch_id": "jbrs-ocr-0888",
+  "file_name": "Bayinnaung_SayaLun1920-inBurmese.pdf",
+  "path_stub": "1920/Bayinnaung_SayaLun1920-inBurmese.pdf",
+  "journal": "JBRS",
+  "year": "1920",
+  "ocr_engine": "google_vision",
+  "pages_completed": 3,
+  "ocr_date": "2026-06-01T08:25:03.526016+00:00",
+  "source_category": "other_source",
+  "language_scope_guess": "Mon",
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+}

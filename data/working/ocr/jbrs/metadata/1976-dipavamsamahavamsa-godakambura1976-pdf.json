@@ -1,0 +1,14 @@
+{
+  "local_file_id": "1976-dipavamsamahavamsa-godakambura1976-pdf",
+  "batch_id": "jbrs-ocr-1596",
+  "file_name": "DipavamsaMahavamsa_Godakambura1976.pdf",
+  "path_stub": "1976/DipavamsaMahavamsa_Godakambura1976.pdf",
+  "journal": "JBRS",
+  "year": "1976",
+  "ocr_engine": "google_vision",
+  "pages_completed": 12,
+  "ocr_date": "2026-06-01T09:36:47.378116+00:00",
+  "source_category": "other_source",
+  "language_scope_guess": "Pali",
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+}

@@ -1,0 +1,14 @@
+{
+  "local_file_id": "1912-lacquerwarepagan-tawseinko1912-pdf",
+  "batch_id": "jbrs-ocr-0725",
+  "file_name": "LacquerwarePagan-TawSeinKo1912.pdf",
+  "path_stub": "1912/LacquerwarePagan-TawSeinKo1912.pdf",
+  "journal": "JBRS",
+  "year": "1912",
+  "ocr_engine": "google_vision",
+  "pages_completed": 4,
+  "ocr_date": "2026-06-01T08:19:33.844021+00:00",
+  "source_category": "other_source",
+  "language_scope_guess": "Mon",
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+}

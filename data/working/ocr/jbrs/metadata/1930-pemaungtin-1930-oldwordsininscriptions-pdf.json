@@ -1,0 +1,14 @@
+{
+  "local_file_id": "1930-pemaungtin-1930-oldwordsininscriptions-pdf",
+  "batch_id": "jbrs-ocr-1127",
+  "file_name": "PeMaungTin-1930-OldWordsinInscriptions.pdf",
+  "path_stub": "1930/PeMaungTin-1930-OldWordsinInscriptions.pdf",
+  "journal": "JBRS",
+  "year": "1930",
+  "ocr_engine": "google_vision",
+  "pages_completed": 3,
+  "ocr_date": "2026-06-01T08:34:09.800209+00:00",
+  "source_category": "other_source",
+  "language_scope_guess": "mixed_or_uncertain",
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+}

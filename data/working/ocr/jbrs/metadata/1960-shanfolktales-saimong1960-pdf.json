@@ -1,0 +1,14 @@
+{
+  "local_file_id": "1960-shanfolktales-saimong1960-pdf",
+  "batch_id": "jbrs-ocr-1437",
+  "file_name": "ShanFolktales-Saimong1960.pdf",
+  "path_stub": "1960/ShanFolktales-Saimong1960.pdf",
+  "journal": "JBRS",
+  "year": "1960",
+  "ocr_engine": "google_vision",
+  "pages_completed": 8,
+  "ocr_date": "2026-06-01T09:08:08.807103+00:00",
+  "source_category": "other_source",
+  "language_scope_guess": "non_burmese_relevant_context",
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+}

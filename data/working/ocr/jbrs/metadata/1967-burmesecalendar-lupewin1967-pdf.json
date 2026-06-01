@@ -1,0 +1,14 @@
+{
+  "local_file_id": "1967-burmesecalendar-lupewin1967-pdf",
+  "batch_id": "jbrs-ocr-1538",
+  "file_name": "BurmeseCalendar-LuPeWin1967.pdf",
+  "path_stub": "1967/BurmeseCalendar-LuPeWin1967.pdf",
+  "journal": "JBRS",
+  "year": "1967",
+  "ocr_engine": "google_vision",
+  "pages_completed": 22,
+  "ocr_date": "2026-06-01T09:12:26.992284+00:00",
+  "source_category": "other_source",
+  "language_scope_guess": "Mixed Burmese/Pali",
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+}

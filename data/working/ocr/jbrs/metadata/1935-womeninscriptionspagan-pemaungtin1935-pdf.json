@@ -1,0 +1,14 @@
+{
+  "local_file_id": "1935-womeninscriptionspagan-pemaungtin1935-pdf",
+  "batch_id": "jbrs-ocr-1213",
+  "file_name": "WomenInscriptionsPagan-PeMaungTin1935.pdf",
+  "path_stub": "1935/WomenInscriptionsPagan-PeMaungTin1935.pdf",
+  "journal": "JBRS",
+  "year": "1935",
+  "ocr_engine": "google_vision",
+  "pages_completed": 11,
+  "ocr_date": "2026-06-01T08:38:17.135444+00:00",
+  "source_category": "other_source",
+  "language_scope_guess": "Mixed Burmese/Pali",
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+}

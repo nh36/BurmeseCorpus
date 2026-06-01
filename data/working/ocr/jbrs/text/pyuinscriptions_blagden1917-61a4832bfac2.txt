@@ -1,0 +1,449 @@
+[[page 1]]
+THE "PYU” INSCRIPTIONS.*
+By C. O. Blagden.
+Although very little progress has been made in the decipherment and
+interpretation of these records, it seems worth while to state briefly how the
+matter stands at present, before I offer such suggestions as I can make for
+the further prosecution of this line of research.
+The study of “Pyu” epigraphy begins with the Fourth Text of the
+Myazedi inscription of Pagan, which was discussed in the Journal of the
+Royal Asiatic Society for April 1911. From a comparison of that text
+with the corresponding Pāli, Burmese and Talaing versions, the greater part
+of the "Pyu" alphabet was ascertained and a number of "Pyu" words
+were identified, some with certainty, others with more or less probability.
+From these data and from the syntax of the language, so far as it was ex-
+emplified in that one text, the inference was drawn that the language was a
+Tibeto-Burman one that had been in contact with Talaing. It was therefore.
+provisionally assumed to have been the vernacular of the Prome district in
+ancient times, and the name Pyu" was attached to is as a convenient label.
+Subsequent discoveries have tended to confirm these inferences. A
+number of other records in the same language have been found at Prome or
+its immediate neighbourhood. The "Pyu" inscriptions of which copies
+have been forwarded to me comprise the following :-
+66
+(1) the Bèbè Pagoda inscription;
+(2) the Kyaukka Thein inscription;
+(3) three or four short inscriptions on votive tablets and the like;
+(4) the inscriptions on urns found near the Payagyi Pagoda; (all
+the above were found at or near Prome);
+(5) the Amarapura inscription (removed to that place by a Bur-
+mese king); and
+(6) an inscription found (I believe) at Pagan, of which only a
+photograph has been sent to me. I am informed that the
+reverse of the stone bears another inscription in Chinese
+characters, apparently unconnected with the "Pyu" one.
+Nos. 1, 2 and 6 are so dilapidated that at present practically nothing can
+be done with them. The records included under No. 3 are more legible but
+they are very scrappy, while No. 5 contains a fragmentary text which up to
+now has yielded no new information that I can understand: No. 4 seems
+to offer the best opening for study. It comprises the inscriptions engraved
+on five urns, four large stone ones and a smaller one made of earthenware.
+Some of these urns were found to contain ashes and were probably used for
+the purpose of burying the cremated bodies of individuals of some local
+importance.
+* Reprinted from the Epigraphia Indica, Vol. XII with the consent of the author.-Editor.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 2]]
+38
+THE "PYU” INSCRIPTIONS.
+On these five urns there appear to be seven distinct inscriptions. Indi
+cating the stone urns by the letters A to D and the earthenware one by the
+letter E, the corresponding inscriptions can be conveniently referred to as
+A, B1, B2, C, D1, D2 and E. B2, which follows immediately on BI, is in
+faint letters many of which are hardly legible; it appears to contain 18 (or
+19) aksharas and to have little in common with the other records. E has
+only 11 aksharas and has also little in common with the rest. D2 is a
+long record of (apparently) 17 lines, viz. 8 lines of "Pyu" text, a final line
+of what appears to be merely ornamental flourishes and 8 interlinear rows
+of faint symbols differing from the "Pyu" letters. In this last peculiarity
+it resembles Nos. 1, 2 and 5 and at present I cannot explain what these
+symbols stand for. They are clearly not essential, for they do not occur in
+the shorter inscriptions.¹ Perhaps they are merely ornamental. D2 has
+little in common with the other inscriptions and it is engraved on the bottom.
+of its urn.
+The other urn inscriptions are engraved horizontally round the
+several urns.
+The four inscriptions A, BI, C and DI, are all of one type and I
+propose to make a detailed comparison of them here. Their resemblances
+and differences will probably turn out to be matters of importance. For, be
+it remembered, "Pyu" is a language of which as yet only a very small num-
+ber of words have been identified, and when one is invited to decipher and
+interpret inscriptions in it which, unlike the Myazedi one, are not accom-
+panied by translations in other languages, one finds oneself face to face with
+the difficulty of not knowing how to begin or where to seek for clues. It
+seems to me that our best chance of interpreting these records is to ascertain
+what is essential or common form in them so as to be able to distinguish it
+from what is accidental or individual. Every new record of this class that
+may turn up in the future will help us to draw this important distinction.
+Then, when we are tolerably certain of the general intent and purport of the
+essential words, a comparison with the known Tibeto-Burman languages
+ought to give us clues to their exact meanings. But we ought first to be fairly
+clear as to the sort of meanings that we should look for.
+"
+,1
+This is particularly necessary in the case of quasi-monosyllabic languages,
+where there are always a number of words that have several distinct mean-
+ings in different contexts, an inherent ambiguity which is only imperfectly
+met by differentiation of tone. "Pyu" appears to fall into this class. It
+is not strictly monosyllabic, but largely so, and it apparently rejects final
+consonants altogether, thus immensely reducing the possible number of its
+syllabic combinations. I am still of opinion that the dots or little circles
+resembling anusvāra, visarga, and their combinations, used in the "Pyu"
+script represent tonal marks. If that is correct, the "Pyu" tones must have
+numbered half a dozen or more. In any case it is necessary to reproduce
+these diacritical marks in our transcription, or we should be mixing up quite
+a number of distinct words.
+There are other difficulties in conection with these inscriptions. They
+are, it is true, engraved for the most part in clear and fairly well preserved
+I They seem to occur sporadically in No. 6 and, to a small extent, in the Myazedi in-
+scription.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 3]]
+THE "PYU" INSCRIPTIONS.
+39
+characters of the same archaic, South Indian type as the “Pyu" text of the
+Myazedi inscription, and most of the letters are easily recognizable. But
+same of them are only doubtfully identified as vet There annear to he
+them also). Further the compound aksharas are not always easy to decipher,
+the subscript forms of the letters being different from the isolated forms and
+by no means easy to identify. Also there is a strong resemblance, amounting
+almost to identity, between the lower portions of the letters k, r and subscript
+u. Accordingly the transcripts which I now propose to give must be regard-
+ed as tentative and subject to such further correction as subsquent enquiry
+may show to be necessary. To emphasise this point I put into parentheses
+such letters as I consider doubtful for want of certainty of identification.
+Square brackets, on the other hand, will serve to indicate places where the
+reading is conjectural because the stone has suffered damage. In order to
+show clearly the points of resemblance and difference amongst the four in-
+scriptions I place the corresponding words directly in the same vertical lines.
+The actual text of each of these four inscriptions (and also of B2) begins.
+with the three paragraph marks which appear at the beginning of the Mya-
+zedi inscription.
+TEXT.
+hi t(r)a hna (ka) harivikrama bas
+Plate A tda bat u
+,,
+Bl tda ba u (bhū) s(n)ū:
+C tda bas u
+,,
+[s]ihavikrama bas
+,,
+D1 tda bas u hi
+Plate A
+Bl
+,,
+C
+,,
+"
+hi
+suriyavikrama ba:
+sūriyavikrama þas uv(0);
+snis (n)a sū kni (de) hni
+sni
+hra su (de) hni
+sni (n)a sū (de) (p)i (n)a
+Dl bask(d)iº ba [ta] ti° (pl)i° snis (hau) sū pi (ñ)a
+Plate A tiº phvu (t)pū p(1)å ta (k)iº (kha) u snis snis p(l)a sū
+1.
+,,
+Bl ti° phvu
+C
+,,
+DI
+,,
+p(l)a ta (k)i° (kha) u snis snie p(1) a su
+ta (k)i° (kha) u [sn]i*sni: tr[u sau]³
+ta (k)i° (kha) u sni
+[There is a sign resembling an anusvara above, and virama below the akshara ma in
+Harivikrama.-S. K.]
+2. [Looks like tni*—S. K.]
+3. This looks more like sau in my rubbing than it does in the plate, but I am very doubtful
+of it.
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 4]]
+40
+THE “PYU” INSCRIPTIONS.
+Plate A ta
+,,
+•
+(de) kni
+ti° phvu t(k)o tiº tda: ba: u ru (kl)e: ya
+Bl p(1)a (de) t(k)o ti° phvụ (t)pū ti° tdas bas u ru (kl)e: ya
+1,
+C p(1)a
+tis tda: bas u ru (kl)es ya
+,,
+DI
+•
+bas u ru (kl)eı ya
+Where so much is uncertain it seems hardly worth while to discuss the
+doubtful letters at length. The word de may perhaps be le, or something else.
+The word bhû might conceivably be ro, re or nũ; ta may be va or even ve,
+and so on. There is very little to guide one in these doubtful
+cases, when.
+the language is as good as unknown. I am not sure whether ti° just before
+the last tda: ought to have two dots after it or one: the texts appear to differ.
+In C pina looks like mina. The letter it is also very like j in several of these
+words.
+It appears from these inscriptions compared together that they have the
+following common elements: (a) the phrase tda › þa : u. bas, which in-
+cludes the easily recognizable proper names Harivikrama, Sihavikrama and
+Sūriyavikrama, (b) the phrase beginning with snit and ending with ta ki kha
+u snis, and (c) the final phrase bas u ru kles ya. What are we to make of
+it all? It appears from the Myazedi inscription that tda: means "king”
+and bas is a general honorific word, prefixed to the names of august person-
+ages (and worshipful objects, such as the statue of the Buddha mentioned
+in that inscription). What the next few words stand for I do not know. In
+the Myazedi inscription hi appears to mean "to die" and "death", but I am
+by no means sure that it is the same word here. In view of the unintelligible
+variant in Bl and the additional tra hna ka in A, I have my doubts. Perhaps
+these are partly names or titles of the personages commemorated. It is plain
+that on the strength of the first phrase we are justified in speaking of a
+dynasty reigning at Prome, wihch used "Pyu" as its official language and
+affected Indian names ending in vikrama. But very likely its members had
+"Pyu' names as well. The honorific ba: was apparently capable of being
+suffixed as well as prefixed to the royal name. The words uvo】 to pli° in
+D1 are beyond me at present. I merely point out that the first word occurs
+in 1. 3 of the Myazedi inscription. Possibly it should be read u vos and in
+that case the и would be the genitive affix. It would then be tempting to
+conjecture that vo: meant "queen," as it accompanies the word maya: in
+that context. If we read uvo, perhaps the word means "his." But in any
+case I think we may conclude with great probability that D1 commemorates
+some near relations of Sūriyavikrama, whether his consort be among them
+or not. The string of words (with honorifics) after his name, for which
+there is no parallel in the other records, seems to indicate that much. Besides
+Sūriyavikrama's own urn is C, and no man requires more than one coffin.
+Copyright 1998- Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+,,
+•
+•
+
+[[page 5]]
+THE "PYU" INSCRIPTIONS.
+4T
+It is tempting to interpret pli° as meaning "grandchild", on the strength of
+1. 24 of the Myazedi inscription; but this last has pli, not pli°, which is a
+doubtful reading anyhow.
+I pass on to the next phrase. In the Myazedi inscription snit means
+"year " and I am confident that it has the same sense in our urn-inscriptions.
+A priori it is reasonable to assume that it would be closely associated with
+numerals, and I note that that is the case here. In Bl it is followed by hra,
+which in the Myazedi inscription represented "eight." In D1 it is followed
+by hau, which we might perhaps read ho: and which in any case reminds
+one of the word ho that stood for "three" in the Myazedi record. Later
+on in A there is a word ta, which in the Myazedi record meant "one." The
+inference is that the corresponding unknown words are also numerals.
+Among them there is one which constantly appears in the same relation to
+the other words, though these change. The constant is sû, and assuming
+Pyu" to use a decimal system, we must conclude that su means ten."
+For reasons that will presently appear, it cannot be a hundred" nor is it
+likely to be "twenty.”
+66
+66
+"
+,,
+At this point a digression becomes necessary. M. George Cœdès has
+published a very kind appreciation of my paper on the "Pyu" text of the
+Myazedi inscription and drawn my attention to the fact that the symbols
+in 11. 1-2 thereof which I had read cu jha e are not "Pyu" words of number
+as I had supposed but the conventional symbols employed in some ancient
+Indian inscriptions to represent 1,000, 600, and 20, respectively. I accept
+these identifications the more readily as I had myself felt (and suggested in
+a note) that my e might after all possibly be the old numeral symbol for 20.
+I can now confirm M. Coedès' view, as I have compared the original rubbings
+(which are much larger and also clearer than the plate published with my
+paper in the Journal) with Bühler's Indische Palæographie (Pl. IX) and find
+that the symbols, including that for 600, correspond. But with regard to hra
+I am not so sure. M. Coedès would also make of it a conventional symbol.
+But the symbol is hra not hra. And what has a tonal mark to do with a
+numeral figure? Secondly, hra is used in 1. 7 of the Myazedi text in con-
+nexion with an entirely different form of 20, which I conjecturally transliter-
+ated shū but now propose to identify with the tpū (or npū?) of A and Bl.
+This I take to be a genuine "Pyu" word for " twenty", not an Indian
+numeral symbol. Thirdly, hra is apparently used in Bl as a multiplier of
+su, ten. Therefore I still think that I may have been right in talking hra to
+be a "Pyu" word and a relative of the Burmese rhach, of genuine Tibeto-
+Burman descent.
+To return to the other numerals in our four inscriptions. There is no
+internal evidence as to the values of the unidentified ones not yet mentioned.
+I. Bulletin de l'Ecole Francaise d' Extreme-Orient, 1911, pp. 435 f.
+2. Journal of the Royal Asiatic Society, 1911, p. 383.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 6]]
+42
+THE "PYU" INSCRIPTIONS.
+The following table is therefore to be considered as based largely on conjec-
+ture tempered by a general comparison with the forms of numerals in other
+Tibeto-Burman languages¹:-
+I
+ta
+5
+na, piña
+9
+tko
+2
+hni
+6
+tru
+IO
+3
+haus, (hot) 7
+kni
+20
+su, (sau)
+tpū
+4
+pla
+8
+hra
+The vowel au is used in the Myazedi inscription as a variant of й; but
+I must admit that it is odd that both sũ and sau (which is, moreover, a doubt-
+ful reading) should appear in such a short document as C. Also the word
+tru is not quite certain, that portion of the rubbing being by no means clear;
+it might conceivably be tra, though I prefer the reading tru.. I assume that
+"five" has two forms, the shorter one being used as a multiplier. If these
+more or less hypothetical conclusions are correct, these inscriptions have by
+a fortunate concurrence of circumstances given us a series of Pyu"
+numerals which is complete so far as it goes and seems to be in general
+agreement with the numerals of other Tibeto-Burman languages. But fur-
+ther confirmation will of course be necessary before we can accept it as defi-
+nitely established in every particular.
+As snit means year
+" it seems reasonable to suppose that de (or le, or
+whatever the true reading may be) and phvu stand for other divisions of
+time, probably "month" and "day" respectively; for they also are followed
+by numerals, or words which we have found to form part of the numerical
+combinations used in connexion with snis, or words used alternatively to
+such words. I take tiº to be a postposition meaning “in”, but I admit that
+there is some doubt as to this, and its use here seems rather capricious and
+irregular. The phrase ta ki kha u sni common to all four texts is evidently
+a formula describing the type of year intended. As it is a consonant it can
+only refer to some characteristic or quality common to all the years prev-
+iously mentioned, and the most natural view of it would seem to be that it
+defines them by reference to some fixed point, in other words it denotes some
+Then follows another chronological phrase beginning with snis. This
+is wanting in D1 and I take it to refer to the ages of the deceased persons
+commemorated in these epitaphs. If urn D contained the mingled ashes of
+several members of the family, that might be a good reason why this phrase
+is not found in Dl. At any rate these numerals have no constant relation to
+the preceding sets of numerals, and they are too high to be probable lengths
+of reigns.
+Let us now tabulate these chronological data. Assuming the first set of
+numbers to be referable to some fixed point or era, the inscriptions will fall
+into the order D1, C, A, Bl. There is of course nothing in the texts (so far
+as we can understand them at present) to determine what fixed point or era
+is implied. But let us assume, for the sake of convenience, that it was the
+ordinary Burmese era of 638 A. D. We can then make out the following
+chronological table:-
+1 Compare as a handy reference Journal of the Royal Asiatic Society, 13, pp. 315 ff.
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 7]]
+THE "PYU" INSCRIPTIONS.
+43
+(1) year 35 (673 A. D.); Sūriyavikrama's relative or relatives died;
+(2) year 50 (688 A. D.), 5th month; Sūriyavikrama himself died,
+aged 64 years;
+(3) year 57 (695 A. D.), 2nd month, 24th day; Harivikrama died,
+aged 41 years, 7 months and 9 days.
+(4) year 80 (718 A. D.), 2nd month, 4th day; Sihavikrama died,
+aged 44 years, 9 months and 20 days.
+From this it is obvious that the three personages named could very well
+have been grandfather, father and son occupying the throne of the Prome
+monarchy in lineal succession. Of course we are not entitled to assert that
+this really was the fact: but as a working hypothesis it seems to be consistent
+with the evidence at present available.
+So too as to the era, the most one can say is that it is not an impossible
+one. But there is very little to guide us as to the age of these inscriptions.
+We know that the Myazedi record is only about 800 years old, yet its alphabet
+does not differ very materially from that of our urn-inscriptions. But then
+it shows signs of great archaism, the leading instance being the anchor-shaped
+subscript y, which was obsolete in India after the 4th century. This argues
+such a conservative attitude on the part of Pyu" scribes that I cannot
+understand how anyone can profess to date their inscriptions by palæograph-
+ical evidence alone. We know from history that the Burmese of Pagan
+conquered the South somewhere in the 11th century and therefore one is
+naturally disposed to date the Vikrama dynasty of Prome before that period
+(unless they were merely local chiefs, vassals of Pagan). Besides, the alpha-
+bet of the urn-inscriptions does look slightly older than that of the Myazedi
+record. On the other hand M. Finot has pointed out¹ that the form of the
+letter with the lower hook joined to the main shaft indicates a date not
+earlier than the 6th century. This leaves us a margin of about 500 years
+wherein to locate the Vikrama dynasty, and vague as it is I regret to say
+that at present I can suggest no more definite solution of this chronological
+problem. It is of course a perfectly reasonable inference from the archaic
+type of the alphabet that the introduction of Hindu civilization into the
+Prome district goes several centuries further back than the probable period.
+(7th or 8th century?) of these urn-inscriptions.
+There remain for consideration the concluding words of our texts. It
+will be noticed that there is complete agreement among them as to the last
+five syllables. Plainly the phrase has something to do with the common pur-
+pose of all these epitaphs. As the word ya appears from the Myazedi inscrip-
+tion to be a demonstrative meaning "this," I conjecture that the phrase is
+descriptive of the urns or their contents. The essential words are of course
+ru kle: (or uru kles) or whatever else the right reading may be. These are
+qualified by the honorific baɛ (or tdas bas). For it is not quite certain, first,
+whether tdas (which does not appear in DI) goes with what precedes or
+1. Journal Asiatique, 1912, Series X, Vol. XX, p. 133.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 8]]
+44
+1
+အရိုး
+THE "PYU" INSCRIPTIONS.
+with bas, secondly, whether u is the genitive particle or the first syllable of
+a word uru. Either way I imagine the phrase to mean something like "these
+are venerable (or royal, or worshipful) remains (or corporeal relics)", or
+"this is a royal funeral urn", or something of that kind. Here there is
+scope both for conjecture and for comparison. I have, I fear, already in-
+dulged in more than enough of the former and my want of acquaintance
+with the Tibeto-Burman languages disqualifies me from adequately using
+the latter method. But it has struck me that ru or uru is curiously like
+the Burmese 8: "bone", a word which I understand is applicable to
+the ashes of cremated persons. And if we could find out what kle s means,
+the sense of the phrase could be determined. Unfortunately the characteristic
+peculiarity of "Pyu" already referred to makes comparison very difficult.
+The language apparently tolerates no final consonant and therefore the word
+kle: might conceivably correspond to almost any Burmese monoysyllable
+beginning with ky or kr, and there are many such. Until the older forms of
+Burmese have been studied and it has been ascertained in what cases ky (or
+kr) goes back to a primitive kl, as it does in some words, or until a number
+of other Tibeto-Burman languages have been drawn into the comparison,
+any suggested explanation must remain highly conjectural. It is also, of
+course, by no means probable that Burmese will give useful clues for every
+Pyu" word; it may often be necessary to look for them in other members
+of the family.
+Here I must leave the subject, at any rate for the present. It will be
+obvious to everybody that there is a very great speculative element in the
+suggestions I have ventured to put forward. My object in throwing them out
+is to stimulate enquiry among those who are more competent to pursue this
+line of research than I can ever hope to be. I trust that I have put my hypo-
+theses in such a form that they can be checked by Tibeto-Burman scholars
+and I leave to them the task of confirming or refuting them, as the case may
+be, according to the balance of the evidence that may be brought to bear on
+these questions. But I venture to think that some of the results of my ex-
+amination of these urn-inscriptions, will stand the test of future research
+and that it will be found that these texts consist, broadly speaking, of phrases
+conveying pretty much the personal, chronological and other information,
+which my tentative analysis claims to have detected in them.
+1 If (as seems most likely) tda: goes with bag, I think u must probably be taken as a
+particle: tda: ba; n "H. M. the King's.”
+•
+0
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 9]]
+A.
+B.
+D.
+Four Pyu inscriptions
+B. R. S. Journal, Vol. VII, Part I.
+za piese zuzufüqüáðhe
+38:
+၁၃ ဦး ၃ သောင်း
+Copyright©1993 - Myanmar Book Centre & Book Promotion & Service Ltd, Bargkok, Thailand.

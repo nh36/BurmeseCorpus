@@ -211,6 +211,11 @@ def vision_request(payload: dict[str, object], access_token: str, quota_project_
         raise RuntimeError(exc.read().decode("utf-8", errors="ignore") or str(exc)) from exc
 
 
+def is_refreshable_auth_error(message: str) -> bool:
+    lowered = message.casefold()
+    return "invalid authentication credentials" in lowered or '"code": 401' in lowered
+
+
 def vision_auth_probe(access_token: str, quota_project_id: str = "") -> dict[str, object]:
     return vision_request(
         {
@@ -511,7 +516,14 @@ def run_selected_batches(args: argparse.Namespace) -> int:
 
             page_texts: list[str] = []
             for index, image_path in enumerate(images, start=1):
-                response = vision_ocr_image(image_path, access_token, quota_project_id=quota_project_id)
+                try:
+                    response = vision_ocr_image(image_path, access_token, quota_project_id=quota_project_id)
+                except RuntimeError as exc:
+                    if not is_refreshable_auth_error(str(exc)):
+                        raise
+                    access_token, credential_source = lookup_access_token()
+                    quota_project_id = resolve_quota_project_id(credential_source)
+                    response = vision_ocr_image(image_path, access_token, quota_project_id=quota_project_id)
                 (json_dir / f"page-{index:04d}.json").write_text(
                     json.dumps(response, ensure_ascii=False, indent=2) + "\n",
                     encoding="utf-8",

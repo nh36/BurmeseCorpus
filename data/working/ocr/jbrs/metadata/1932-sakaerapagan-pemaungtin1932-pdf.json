@@ -1,0 +1,14 @@
+{
+  "local_file_id": "1932-sakaerapagan-pemaungtin1932-pdf",
+  "batch_id": "jbrs-ocr-1171",
+  "file_name": "SakaEraPagan-PeMaungTin1932.pdf",
+  "path_stub": "1932/SakaEraPagan-PeMaungTin1932.pdf",
+  "journal": "JBRS",
+  "year": "1932",
+  "ocr_engine": "google_vision",
+  "pages_completed": 1,
+  "ocr_date": "2026-06-01T08:36:44.362115+00:00",
+  "source_category": "other_source",
+  "language_scope_guess": "Pali",
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+}

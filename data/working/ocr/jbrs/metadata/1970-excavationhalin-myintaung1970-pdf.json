@@ -1,0 +1,14 @@
+{
+  "local_file_id": "1970-excavationhalin-myintaung1970-pdf",
+  "batch_id": "jbrs-ocr-1570",
+  "file_name": "ExcavationHalin-MyintAung1970.pdf",
+  "path_stub": "1970/ExcavationHalin-MyintAung1970.pdf",
+  "journal": "JBRS",
+  "year": "1970",
+  "ocr_engine": "google_vision",
+  "pages_completed": 20,
+  "ocr_date": "2026-06-01T09:16:37.285049+00:00",
+  "source_category": "other_source",
+  "language_scope_guess": "Pali",
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+}

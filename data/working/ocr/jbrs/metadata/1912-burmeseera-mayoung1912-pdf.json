@@ -1,0 +1,14 @@
+{
+  "local_file_id": "1912-burmeseera-mayoung1912-pdf",
+  "batch_id": "jbrs-ocr-0709",
+  "file_name": "BurmeseEra-MayOung1912.pdf",
+  "path_stub": "1912/BurmeseEra-MayOung1912.pdf",
+  "journal": "JBRS",
+  "year": "1912",
+  "ocr_engine": "google_vision",
+  "pages_completed": 7,
+  "ocr_date": "2026-06-01T08:19:08.483234+00:00",
+  "source_category": "other_source",
+  "language_scope_guess": "mixed_or_uncertain",
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+}

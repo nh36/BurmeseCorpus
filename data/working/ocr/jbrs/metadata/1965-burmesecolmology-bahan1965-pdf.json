@@ -1,0 +1,14 @@
+{
+  "local_file_id": "1965-burmesecolmology-bahan1965-pdf",
+  "batch_id": "jbrs-ocr-1509",
+  "file_name": "BurmeseColmology_BaHan1965.pdf",
+  "path_stub": "1965/BurmeseColmology_BaHan1965.pdf",
+  "journal": "JBRS",
+  "year": "1965",
+  "ocr_engine": "google_vision",
+  "pages_completed": 8,
+  "ocr_date": "2026-06-01T09:09:55.018820+00:00",
+  "source_category": "other_source",
+  "language_scope_guess": "Pali",
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+}

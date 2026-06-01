@@ -1,0 +1,14 @@
+{
+  "local_file_id": "1948-pagansittan1-in-burmese-furnivall1948-pdf",
+  "batch_id": "jbrs-ocr-1307",
+  "file_name": "PaganSittan1(in Burmese)-Furnivall1948.pdf",
+  "path_stub": "1948/PaganSittan1(in Burmese)-Furnivall1948.pdf",
+  "journal": "JBRS",
+  "year": "1948",
+  "ocr_engine": "google_vision",
+  "pages_completed": 10,
+  "ocr_date": "2026-06-01T08:46:41.799156+00:00",
+  "source_category": "other_source",
+  "language_scope_guess": "non_burmese_relevant_context",
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+}

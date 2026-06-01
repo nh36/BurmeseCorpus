@@ -1,0 +1,14 @@
+{
+  "local_file_id": "1912-duroiselle1912-burmeseprosody-iii-pdf",
+  "batch_id": "jbrs-ocr-0720",
+  "file_name": "Duroiselle1912-BurmeseProsody-III.pdf",
+  "path_stub": "1912/Duroiselle1912-BurmeseProsody-III.pdf",
+  "journal": "JBRS",
+  "year": "1912",
+  "ocr_engine": "google_vision",
+  "pages_completed": 1,
+  "ocr_date": "2026-06-01T08:19:21.041989+00:00",
+  "source_category": "other_source",
+  "language_scope_guess": "Pali",
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+}

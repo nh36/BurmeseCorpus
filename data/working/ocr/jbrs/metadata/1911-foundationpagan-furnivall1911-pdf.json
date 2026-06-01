@@ -1,0 +1,14 @@
+{
+  "local_file_id": "1911-foundationpagan-furnivall1911-pdf",
+  "batch_id": "jbrs-ocr-0693",
+  "file_name": "FoundationPagan-Furnivall1911.pdf",
+  "path_stub": "1911/FoundationPagan-Furnivall1911.pdf",
+  "journal": "JBRS",
+  "year": "1911",
+  "ocr_engine": "google_vision",
+  "pages_completed": 4,
+  "ocr_date": "2026-06-01T08:18:14.589122+00:00",
+  "source_category": "other_source",
+  "language_scope_guess": "Pali",
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+}

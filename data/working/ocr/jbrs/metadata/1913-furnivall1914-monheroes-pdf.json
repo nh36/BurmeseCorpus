@@ -1,0 +1,14 @@
+{
+  "local_file_id": "1913-furnivall1914-monheroes-pdf",
+  "batch_id": "jbrs-ocr-0762",
+  "file_name": "Furnivall1914-MonHeroes.pdf",
+  "path_stub": "1913/Furnivall1914-MonHeroes.pdf",
+  "journal": "JBRS",
+  "year": "1913",
+  "ocr_engine": "google_vision",
+  "pages_completed": 5,
+  "ocr_date": "2026-06-01T08:20:39.888739+00:00",
+  "source_category": "other_source",
+  "language_scope_guess": "Mon",
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+}

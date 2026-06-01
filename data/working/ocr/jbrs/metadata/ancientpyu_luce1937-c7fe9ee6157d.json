@@ -1,0 +1,14 @@
+{
+  "local_file_id": "ancientpyu_luce1937-c7fe9ee6157d",
+  "batch_id": "jbrs-ocr-2137",
+  "file_name": "AncientPyu-Luce1937.pdf",
+  "path_stub": "Burmese/Burma JBRS/1937/AncientPyu-Luce1937.pdf",
+  "journal": "JBRS",
+  "year": "1937",
+  "ocr_engine": "google_vision",
+  "pages_completed": 15,
+  "ocr_date": "2026-06-01T09:47:51.567335+00:00",
+  "source_category": "other_source",
+  "language_scope_guess": "Mixed Burmese/Pali",
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+}

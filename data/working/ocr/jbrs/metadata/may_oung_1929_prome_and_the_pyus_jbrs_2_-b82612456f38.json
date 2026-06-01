@@ -1,0 +1,14 @@
+{
+  "local_file_id": "may_oung_1929_prome_and_the_pyus_jbrs_2_-b82612456f38",
+  "batch_id": "jbrs-ocr-3337",
+  "file_name": "021072.pdf",
+  "path_stub": "Burmese/Burma JBRS/JBRS Originals/021072.pdf",
+  "journal": "JBRS",
+  "year": "",
+  "ocr_engine": "google_vision",
+  "pages_completed": 2,
+  "ocr_date": "2026-06-01T09:51:11.094637+00:00",
+  "source_category": "article_pdf",
+  "language_scope_guess": "Mon",
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+}

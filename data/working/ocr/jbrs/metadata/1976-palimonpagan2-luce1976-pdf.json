@@ -1,0 +1,14 @@
+{
+  "local_file_id": "1976-palimonpagan2-luce1976-pdf",
+  "batch_id": "jbrs-ocr-1600",
+  "file_name": "PaliMonPagan2-Luce1976.pdf",
+  "path_stub": "1976/PaliMonPagan2-Luce1976.pdf",
+  "journal": "JBRS",
+  "year": "1976",
+  "ocr_engine": "google_vision",
+  "pages_completed": 60,
+  "ocr_date": "2026-06-01T09:43:54.346732+00:00",
+  "source_category": "other_source",
+  "language_scope_guess": "Pali",
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+}

@@ -1,0 +1,14 @@
+{
+  "local_file_id": "1957-warswithburmese3-damrong1957-pdf",
+  "batch_id": "jbrs-ocr-1395",
+  "file_name": "WarsWithBurmese3-Damrong1957.pdf",
+  "path_stub": "1957/WarsWithBurmese3-Damrong1957.pdf",
+  "journal": "JBRS",
+  "year": "1957",
+  "ocr_engine": "google_vision",
+  "pages_completed": 105,
+  "ocr_date": "2026-06-01T09:04:16.044523+00:00",
+  "source_category": "other_source",
+  "language_scope_guess": "Pali",
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+}

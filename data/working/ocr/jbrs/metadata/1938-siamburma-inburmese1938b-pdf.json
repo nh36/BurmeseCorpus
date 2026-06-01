@@ -1,0 +1,14 @@
+{
+  "local_file_id": "1938-siamburma-inburmese1938b-pdf",
+  "batch_id": "jbrs-ocr-1255",
+  "file_name": "SiamBurma_inBurmese1938B.pdf",
+  "path_stub": "1938/SiamBurma_inBurmese1938B.pdf",
+  "journal": "JBRS",
+  "year": "1938",
+  "ocr_engine": "google_vision",
+  "pages_completed": 1,
+  "ocr_date": "2026-06-01T08:45:04.672738+00:00",
+  "source_category": "other_source",
+  "language_scope_guess": "non_burmese_relevant_context",
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+}

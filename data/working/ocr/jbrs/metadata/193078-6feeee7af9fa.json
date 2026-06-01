@@ -1,0 +1,14 @@
+{
+  "local_file_id": "193078-6feeee7af9fa",
+  "batch_id": "jbrs-ocr-1137",
+  "file_name": "PeMaungTin 1929 PhilologicalFeaturesOfBurmeseInscriptions_1929.pdf",
+  "path_stub": "Pe Maung Tin/PeMaungTin 1929 PhilologicalFeaturesOfBurmeseInscriptions_1929.pdf",
+  "journal": "JBRS",
+  "year": "1929",
+  "ocr_engine": "google_vision",
+  "pages_completed": 2,
+  "ocr_date": "2026-06-01T08:34:16.480159+00:00",
+  "source_category": "other_source",
+  "language_scope_guess": "Pali",
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+}

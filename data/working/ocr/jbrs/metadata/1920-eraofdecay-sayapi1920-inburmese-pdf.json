@@ -1,0 +1,14 @@
+{
+  "local_file_id": "1920-eraofdecay-sayapi1920-inburmese-pdf",
+  "batch_id": "jbrs-ocr-0892",
+  "file_name": "EraOfDecay_SayaPi1920-inBurmese.pdf",
+  "path_stub": "1920/EraOfDecay_SayaPi1920-inBurmese.pdf",
+  "journal": "JBRS",
+  "year": "1920",
+  "ocr_engine": "google_vision",
+  "pages_completed": 1,
+  "ocr_date": "2026-06-01T08:25:07.070168+00:00",
+  "source_category": "other_source",
+  "language_scope_guess": "mixed_or_uncertain",
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+}

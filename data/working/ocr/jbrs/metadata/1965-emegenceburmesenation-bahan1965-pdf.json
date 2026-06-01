@@ -1,0 +1,14 @@
+{
+  "local_file_id": "1965-emegenceburmesenation-bahan1965-pdf",
+  "batch_id": "jbrs-ocr-1510",
+  "file_name": "EmegenceBurmeseNation_BaHan1965.pdf",
+  "path_stub": "1965/EmegenceBurmeseNation_BaHan1965.pdf",
+  "journal": "JBRS",
+  "year": "1965",
+  "ocr_engine": "google_vision",
+  "pages_completed": 14,
+  "ocr_date": "2026-06-01T09:10:39.782082+00:00",
+  "source_category": "other_source",
+  "language_scope_guess": "Mixed Burmese/Pali",
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+}

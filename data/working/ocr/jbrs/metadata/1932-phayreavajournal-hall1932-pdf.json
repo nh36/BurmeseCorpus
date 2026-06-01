@@ -1,0 +1,14 @@
+{
+  "local_file_id": "1932-phayreavajournal-hall1932-pdf",
+  "batch_id": "jbrs-ocr-1169",
+  "file_name": "PhayreAvaJournal-Hall1932.pdf",
+  "path_stub": "1932/PhayreAvaJournal-Hall1932.pdf",
+  "journal": "JBRS",
+  "year": "1932",
+  "ocr_engine": "google_vision",
+  "pages_completed": 22,
+  "ocr_date": "2026-06-01T08:36:41.209911+00:00",
+  "source_category": "other_source",
+  "language_scope_guess": "Pyu",
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+}

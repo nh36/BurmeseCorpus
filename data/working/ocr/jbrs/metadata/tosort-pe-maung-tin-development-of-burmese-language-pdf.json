@@ -1,0 +1,14 @@
+{
+  "local_file_id": "tosort-pe-maung-tin-development-of-burmese-language-pdf",
+  "batch_id": "jbrs-ocr-3350",
+  "file_name": "pe-maung-tin-development-of-burmese-language.pdf",
+  "path_stub": "ToSort/pe-maung-tin-development-of-burmese-language.pdf",
+  "journal": "JBRS",
+  "year": "",
+  "ocr_engine": "google_vision",
+  "pages_completed": 2,
+  "ocr_date": "2026-06-01T09:55:41.941480+00:00",
+  "source_category": "other_source",
+  "language_scope_guess": "Mixed Burmese/Pali",
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+}

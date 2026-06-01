@@ -1,0 +1,14 @@
+{
+  "local_file_id": "pe_maung_tin_development_of_burmese_lang-3825b88497cc",
+  "batch_id": "jbrs-ocr-3343",
+  "file_name": "141058.pdf",
+  "path_stub": "Burmese/Burma JBRS/JBRS Originals/141058.pdf",
+  "journal": "JBRS",
+  "year": "",
+  "ocr_engine": "google_vision",
+  "pages_completed": 2,
+  "ocr_date": "2026-06-01T09:54:44.361751+00:00",
+  "source_category": "article_pdf",
+  "language_scope_guess": "Mixed Burmese/Pali",
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+}

@@ -1,0 +1,14 @@
+{
+  "local_file_id": "1976-sonauttara-saimong1976-pdf",
+  "batch_id": "jbrs-ocr-1601",
+  "file_name": "SonaUttara-Saimong1976.pdf",
+  "path_stub": "1976/SonaUttara-Saimong1976.pdf",
+  "journal": "JBRS",
+  "year": "1976",
+  "ocr_engine": "google_vision",
+  "pages_completed": 10,
+  "ocr_date": "2026-06-01T09:44:25.099949+00:00",
+  "source_category": "other_source",
+  "language_scope_guess": "Pyu",
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+}

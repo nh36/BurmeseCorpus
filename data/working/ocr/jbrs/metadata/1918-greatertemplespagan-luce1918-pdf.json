@@ -1,0 +1,14 @@
+{
+  "local_file_id": "1918-greatertemplespagan-luce1918-pdf",
+  "batch_id": "jbrs-ocr-0857",
+  "file_name": "GreaterTemplesPagan-Luce1918.pdf",
+  "path_stub": "1918/GreaterTemplesPagan-Luce1918.pdf",
+  "journal": "JBRS",
+  "year": "1918",
+  "ocr_engine": "google_vision",
+  "pages_completed": 19,
+  "ocr_date": "2026-06-01T08:22:52.908754+00:00",
+  "source_category": "other_source",
+  "language_scope_guess": "Pali",
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+}

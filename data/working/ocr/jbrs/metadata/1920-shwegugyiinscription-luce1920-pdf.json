@@ -1,0 +1,14 @@
+{
+  "local_file_id": "1920-shwegugyiinscription-luce1920-pdf",
+  "batch_id": "jbrs-ocr-0898",
+  "file_name": "ShwegugyiInscription-Luce1920.pdf",
+  "path_stub": "1920/ShwegugyiInscription-Luce1920.pdf",
+  "journal": "JBRS",
+  "year": "1920",
+  "ocr_engine": "google_vision",
+  "pages_completed": 8,
+  "ocr_date": "2026-05-31T21:43:38.730681+00:00",
+  "source_category": "other_source",
+  "language_scope_guess": "Pali",
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+}

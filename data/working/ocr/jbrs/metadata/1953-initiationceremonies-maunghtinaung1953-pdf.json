@@ -1,0 +1,14 @@
+{
+  "local_file_id": "1953-initiationceremonies-maunghtinaung1953-pdf",
+  "batch_id": "jbrs-ocr-1337",
+  "file_name": "InitiationCeremonies-MaungHtinAung1953.pdf",
+  "path_stub": "1953/InitiationCeremonies-MaungHtinAung1953.pdf",
+  "journal": "JBRS",
+  "year": "1953",
+  "ocr_engine": "google_vision",
+  "pages_completed": 11,
+  "ocr_date": "2026-06-01T08:50:26.991306+00:00",
+  "source_category": "other_source",
+  "language_scope_guess": "Pyu",
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+}

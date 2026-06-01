@@ -1,0 +1,14 @@
+{
+  "local_file_id": "pyuinscriptions_blagden1917-61a4832bfac2",
+  "batch_id": "jbrs-ocr-3347",
+  "file_name": "PyuInscriptions-Blagden1917.pdf",
+  "path_stub": "Burmese/Burma JBRS/1917/PyuInscriptions-Blagden1917.pdf",
+  "journal": "JBRS",
+  "year": "1917",
+  "ocr_engine": "google_vision",
+  "pages_completed": 9,
+  "ocr_date": "2026-06-01T09:55:10.932641+00:00",
+  "source_category": "other_source",
+  "language_scope_guess": "Mon",
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+}

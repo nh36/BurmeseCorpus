@@ -1,0 +1,14 @@
+{
+  "local_file_id": "1937-burmeserule-at-toungoo-langhamcarter1937-pdf",
+  "batch_id": "jbrs-ocr-1244",
+  "file_name": "BurmeseRule-at-Toungoo-LanghamCarter1937.pdf",
+  "path_stub": "1937/BurmeseRule-at-Toungoo-LanghamCarter1937.pdf",
+  "journal": "JBRS",
+  "year": "1937",
+  "ocr_engine": "google_vision",
+  "pages_completed": 18,
+  "ocr_date": "2026-06-01T08:41:25.945366+00:00",
+  "source_category": "other_source",
+  "language_scope_guess": "non_burmese_relevant_context",
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+}

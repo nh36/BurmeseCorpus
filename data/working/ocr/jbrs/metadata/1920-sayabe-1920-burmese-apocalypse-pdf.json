@@ -1,0 +1,14 @@
+{
+  "local_file_id": "1920-sayabe-1920-burmese-apocalypse-pdf",
+  "batch_id": "jbrs-ocr-0897",
+  "file_name": "SayaBe-1920-burmese-apocalypse.pdf",
+  "path_stub": "1920/SayaBe-1920-burmese-apocalypse.pdf",
+  "journal": "JBRS",
+  "year": "1920",
+  "ocr_engine": "google_vision",
+  "pages_completed": 2,
+  "ocr_date": "2026-06-01T08:26:23.286308+00:00",
+  "source_category": "other_source",
+  "language_scope_guess": "mixed_or_uncertain",
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+}

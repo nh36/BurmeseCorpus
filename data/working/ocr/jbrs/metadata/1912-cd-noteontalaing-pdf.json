@@ -1,0 +1,14 @@
+{
+  "local_file_id": "1912-cd-noteontalaing-pdf",
+  "batch_id": "jbrs-ocr-0713",
+  "file_name": "CD-NoteOnTalaing.pdf",
+  "path_stub": "1912/CD-NoteOnTalaing.pdf",
+  "journal": "JBRS",
+  "year": "1912",
+  "ocr_engine": "google_vision",
+  "pages_completed": 3,
+  "ocr_date": "2026-06-01T08:19:14.664472+00:00",
+  "source_category": "other_source",
+  "language_scope_guess": "Mon",
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+}

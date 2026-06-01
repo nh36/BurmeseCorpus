@@ -1,0 +1,14 @@
+{
+  "local_file_id": "1911-grantbrown-1911-burmesesongs-pdf",
+  "batch_id": "jbrs-ocr-0695",
+  "file_name": "GrantBrown-1911-BurmeseSongs.pdf",
+  "path_stub": "1911/GrantBrown-1911-BurmeseSongs.pdf",
+  "journal": "JBRS",
+  "year": "1911",
+  "ocr_engine": "google_vision",
+  "pages_completed": 5,
+  "ocr_date": "2026-06-01T08:18:26.422679+00:00",
+  "source_category": "other_source",
+  "language_scope_guess": "Pali",
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+}

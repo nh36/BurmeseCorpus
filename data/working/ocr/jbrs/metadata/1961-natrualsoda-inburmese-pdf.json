@@ -1,0 +1,14 @@
+{
+  "local_file_id": "1961-natrualsoda-inburmese-pdf",
+  "batch_id": "jbrs-ocr-1456",
+  "file_name": "NatrualSoda_inBurmese.pdf",
+  "path_stub": "1961/NatrualSoda_inBurmese.pdf",
+  "journal": "JBRS",
+  "year": "1961",
+  "ocr_engine": "google_vision",
+  "pages_completed": 11,
+  "ocr_date": "2026-06-01T09:08:45.450221+00:00",
+  "source_category": "other_source",
+  "language_scope_guess": "non_burmese_relevant_context",
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+}

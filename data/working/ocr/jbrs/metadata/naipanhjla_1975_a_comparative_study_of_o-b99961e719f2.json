@@ -1,0 +1,14 @@
+{
+  "local_file_id": "naipanhjla_1975_a_comparative_study_of_o-b99961e719f2",
+  "batch_id": "jbrs-ocr-3339",
+  "file_name": "NaiPanHJla-1975-a-comparative-study-of-old-and-modern-burmese.pdf",
+  "path_stub": "Burmese/Burma JBRS/1975/NaiPanHJla-1975-a-comparative-study-of-old-and-modern-burmese.pdf",
+  "journal": "JBRS",
+  "year": "1975",
+  "ocr_engine": "google_vision",
+  "pages_completed": 23,
+  "ocr_date": "2026-06-01T09:52:14.921101+00:00",
+  "source_category": "other_source",
+  "language_scope_guess": "Mixed Burmese/Pali",
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+}

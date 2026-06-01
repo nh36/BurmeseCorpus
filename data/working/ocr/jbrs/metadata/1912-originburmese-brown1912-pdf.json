@@ -1,0 +1,14 @@
+{
+  "local_file_id": "1912-originburmese-brown1912-pdf",
+  "batch_id": "jbrs-ocr-0730",
+  "file_name": "OriginBurmese-Brown1912.pdf",
+  "path_stub": "1912/OriginBurmese-Brown1912.pdf",
+  "journal": "JBRS",
+  "year": "1912",
+  "ocr_engine": "google_vision",
+  "pages_completed": 7,
+  "ocr_date": "2026-06-01T08:20:07.092676+00:00",
+  "source_category": "other_source",
+  "language_scope_guess": "Mon",
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+}

@@ -1,0 +1,14 @@
+{
+  "local_file_id": "1936-prayersburma-luce1936-pdf",
+  "batch_id": "jbrs-ocr-1227",
+  "file_name": "PrayersBurma-Luce1936.pdf",
+  "path_stub": "1936/PrayersBurma-Luce1936.pdf",
+  "journal": "JBRS",
+  "year": "1936",
+  "ocr_engine": "google_vision",
+  "pages_completed": 8,
+  "ocr_date": "2026-05-31T20:31:28.488481+00:00",
+  "source_category": "other_source",
+  "language_scope_guess": "Burmese",
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+}

@@ -1,0 +1,14 @@
+{
+  "local_file_id": "stoneinscriptionssale_swere1965-1c981765c5c3",
+  "batch_id": "jbrs-ocr-3348",
+  "file_name": "StoneInscriptionsSale-Swere1965.pdf",
+  "path_stub": "Burmese/Burma JBRS/1965/StoneInscriptionsSale-Swere1965.pdf",
+  "journal": "JBRS",
+  "year": "1965",
+  "ocr_engine": "google_vision",
+  "pages_completed": 11,
+  "ocr_date": "2026-06-01T09:55:35.014746+00:00",
+  "source_category": "other_source",
+  "language_scope_guess": "mixed_or_uncertain",
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+}

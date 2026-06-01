@@ -1,0 +1,14 @@
+{
+  "local_file_id": "581053-41496a2a01b9",
+  "batch_id": "jbrs-ocr-2118",
+  "file_name": "581053_1975 ComparativeOldModernBurmese.pdf",
+  "path_stub": "Pe Maung Tin/581053_1975 ComparativeOldModernBurmese.pdf",
+  "journal": "JBRS",
+  "year": "",
+  "ocr_engine": "google_vision",
+  "pages_completed": 23,
+  "ocr_date": "2026-06-01T09:47:23.890125+00:00",
+  "source_category": "article_pdf",
+  "language_scope_guess": "Mixed Burmese/Pali",
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+}

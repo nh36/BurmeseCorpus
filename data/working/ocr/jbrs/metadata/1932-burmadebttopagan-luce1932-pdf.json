@@ -1,0 +1,14 @@
+{
+  "local_file_id": "1932-burmadebttopagan-luce1932-pdf",
+  "batch_id": "jbrs-ocr-1161",
+  "file_name": "BurmaDebtToPagan-Luce1932.pdf",
+  "path_stub": "1932/BurmaDebtToPagan-Luce1932.pdf",
+  "journal": "JBRS",
+  "year": "1932",
+  "ocr_engine": "google_vision",
+  "pages_completed": 8,
+  "ocr_date": "2026-05-31T20:54:30.979061+00:00",
+  "source_category": "other_source",
+  "language_scope_guess": "Mixed Burmese/Pali",
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+}

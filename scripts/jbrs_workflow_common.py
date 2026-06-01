@@ -43,6 +43,12 @@ GITIGNORE_PATH = REPO_ROOT / ".gitignore"
 DEFAULT_LOCAL_OUTPUT_ROOT = REPO_ROOT / "data_local/ocr/jbrs"
 DEFAULT_RUNTIME_PATH_CACHE = DEFAULT_LOCAL_OUTPUT_ROOT / "manifest/jbrs_runtime_path_map.json"
 DEFAULT_PREFLIGHT_REPORT_PATH = DEFAULT_LOCAL_OUTPUT_ROOT / "logs/jbrs_ocr_preflight.json"
+JBRS_WORKING_OCR_ROOT = REPO_ROOT / "data/working/ocr/jbrs"
+JBRS_WORKING_OCR_TEXT_ROOT = JBRS_WORKING_OCR_ROOT / "text"
+JBRS_WORKING_OCR_METADATA_ROOT = JBRS_WORKING_OCR_ROOT / "metadata"
+JBRS_OCR_TEXT_INDEX_PATH = JBRS_WORKING_OCR_ROOT / "jbrs_ocr_text_index.tsv"
+JBRS_OCR_PRODUCTION_RUN_LOG_PATH = JBRS_DIRECTORY / "jbrs_ocr_production_run_log.tsv"
+JBRS_OCR_TRANSLATION_HIT_INDEX_PATH = JBRS_DIRECTORY / "jbrs_ocr_translation_hit_index.tsv"
 MAX_GITHUB_CONTENTS_SIZE = 1_000_000
 
 RAW_REFERENCE_HUNT_FIELDS = [
@@ -190,6 +196,75 @@ OCR_STATUS_LOG_FIELDS = [
     "updated_at",
     "notes",
 ]
+
+JBRS_OCR_PRODUCTION_RUN_LOG_FIELDS = [
+    "run_id",
+    "run_date",
+    "selection_rule",
+    "selected_count",
+    "completed_count",
+    "failed_count",
+    "skipped_count",
+    "output_text_root",
+    "metadata_root",
+    "notes",
+]
+
+JBRS_OCR_TEXT_INDEX_FIELDS = [
+    "local_file_id",
+    "batch_id",
+    "file_name",
+    "year",
+    "path_stub",
+    "ocr_text_path",
+    "metadata_path",
+    "pages_completed",
+    "ocr_status",
+    "language_scope_guess",
+    "contains_translation_marker",
+    "contains_text_marker",
+    "contains_inscription_marker",
+    "contains_burmese_marker",
+    "contains_pali_marker",
+    "contains_mon_marker",
+    "contains_pyu_marker",
+    "notes",
+]
+
+JBRS_OCR_TRANSLATION_HIT_INDEX_FIELDS = [
+    "hit_id",
+    "local_file_id",
+    "batch_id",
+    "file_name",
+    "page_marker",
+    "hit_type",
+    "matched_marker",
+    "short_context",
+    "language_scope_guess",
+    "burmese_relevance_guess",
+    "priority",
+    "next_action",
+    "notes",
+]
+
+JBRS_OCR_LANGUAGE_SCOPE_VALUES = {
+    "Burmese",
+    "Pali",
+    "Mixed Burmese/Pali",
+    "Mon",
+    "Pyu",
+    "mixed_or_uncertain",
+    "non_burmese_relevant_context",
+}
+
+JBRS_BURMESE_RELEVANCE_GUESS_VALUES = {
+    "direct_burmese_relevance",
+    "mixed_burmese_pali_relevance",
+    "pali_only_not_burmese_corpus_material",
+    "non_burmese_inscriptional_context",
+    "contextual_only",
+    "uncertain_needs_review",
+}
 
 TERMINAL_OCR_STATUS_VALUES = {"dry_run_ok", "submitted", "completed", "failed"}
 
@@ -2191,6 +2266,139 @@ def validate_translation_candidate_alignment(
     return errors
 
 
+def validate_repo_ocr_artifacts() -> list[str]:
+    errors: list[str] = []
+    forbidden_suffixes = {
+        ".pdf",
+        ".png",
+        ".jpg",
+        ".jpeg",
+        ".tif",
+        ".tiff",
+        ".webp",
+        ".gif",
+    }
+    text_files = {
+        path.stem: path
+        for path in JBRS_WORKING_OCR_TEXT_ROOT.glob("*.txt")
+        if path.is_file()
+    }
+    metadata_files = {
+        path.stem: path
+        for path in JBRS_WORKING_OCR_METADATA_ROOT.glob("*.json")
+        if path.is_file()
+    }
+
+    for path in JBRS_WORKING_OCR_ROOT.rglob("*"):
+        if path.is_file() and path.suffix.casefold() in forbidden_suffixes:
+            errors.append(
+                f"Committed OCR working tree contains forbidden binary artifact {path.relative_to(REPO_ROOT)}."
+            )
+
+    for local_file_id, text_path in sorted(text_files.items()):
+        if local_file_id not in metadata_files:
+            errors.append(
+                f"OCR text file {text_path.relative_to(REPO_ROOT)} is missing a matching metadata sidecar."
+            )
+        text_content = text_path.read_text(encoding="utf-8")
+        if not re.search(r"^\[\[page \d+\]\]$", text_content, re.MULTILINE):
+            errors.append(
+                f"OCR text file {text_path.relative_to(REPO_ROOT)} lacks page markers."
+            )
+
+    for local_file_id, metadata_path in sorted(metadata_files.items()):
+        if local_file_id not in text_files:
+            errors.append(
+                f"OCR metadata file {metadata_path.relative_to(REPO_ROOT)} is missing a matching OCR text file."
+            )
+        metadata_content = metadata_path.read_text(encoding="utf-8")
+        if ABSOLUTE_PATH_PATTERN.search(metadata_content):
+            errors.append(
+                f"OCR metadata file {metadata_path.relative_to(REPO_ROOT)} contains an absolute path."
+            )
+        if "GOOGLE_APPLICATION_CREDENTIALS" in metadata_content or "-----BEGIN PRIVATE KEY-----" in metadata_content:
+            errors.append(
+                f"OCR metadata file {metadata_path.relative_to(REPO_ROOT)} contains a credential reference."
+            )
+
+    text_index_rows = read_tsv(JBRS_OCR_TEXT_INDEX_PATH)
+    for row in text_index_rows:
+        local_file_id = row["local_file_id"]
+        ocr_text_path = REPO_ROOT / row["ocr_text_path"]
+        metadata_path = REPO_ROOT / row["metadata_path"]
+        if row["language_scope_guess"] not in JBRS_OCR_LANGUAGE_SCOPE_VALUES:
+            errors.append(
+                f"OCR text index row {local_file_id} uses unsupported language_scope_guess '{row['language_scope_guess']}'."
+            )
+        if not ocr_text_path.exists():
+            errors.append(
+                f"OCR text index row {local_file_id} points to missing OCR text file {row['ocr_text_path']}."
+            )
+        if not metadata_path.exists():
+            errors.append(
+                f"OCR text index row {local_file_id} points to missing metadata file {row['metadata_path']}."
+            )
+        if local_file_id not in text_files:
+            errors.append(
+                f"OCR text index row {local_file_id} has no matching committed OCR text file."
+            )
+        if row["ocr_status"] != "completed":
+            errors.append(
+                f"OCR text index row {local_file_id} must have ocr_status=completed."
+            )
+
+    production_run_rows = read_tsv(JBRS_OCR_PRODUCTION_RUN_LOG_PATH)
+    for row in production_run_rows:
+        run_id = row["run_id"]
+        for field_name in ("selected_count", "completed_count", "failed_count", "skipped_count"):
+            if not row[field_name].isdigit():
+                errors.append(
+                    f"Production run row {run_id} has a non-numeric {field_name} value '{row[field_name]}'."
+                )
+        for field_name in ("output_text_root", "metadata_root"):
+            value = row[field_name]
+            if not value:
+                errors.append(f"Production run row {run_id} is missing {field_name}.")
+                continue
+            if ABSOLUTE_PATH_PATTERN.search(value):
+                errors.append(
+                    f"Production run row {run_id} stores absolute path '{value}' in {field_name}."
+                )
+            if not (REPO_ROOT / value).exists():
+                errors.append(
+                    f"Production run row {run_id} points to missing directory {value}."
+                )
+
+    translation_hit_rows = read_tsv(JBRS_OCR_TRANSLATION_HIT_INDEX_PATH)
+    for row in translation_hit_rows:
+        local_file_id = row["local_file_id"]
+        if row["language_scope_guess"] not in JBRS_OCR_LANGUAGE_SCOPE_VALUES:
+            errors.append(
+                f"OCR hit row {row['hit_id']} uses unsupported language_scope_guess '{row['language_scope_guess']}'."
+            )
+        if row["burmese_relevance_guess"] not in JBRS_BURMESE_RELEVANCE_GUESS_VALUES:
+            errors.append(
+                f"OCR hit row {row['hit_id']} uses unsupported burmese_relevance_guess '{row['burmese_relevance_guess']}'."
+            )
+        if local_file_id not in text_files:
+            errors.append(
+                f"OCR hit row {row['hit_id']} references missing OCR text for {local_file_id}."
+            )
+        if (
+            row["language_scope_guess"] == "Pali"
+            and row["burmese_relevance_guess"]
+            in {"direct_burmese_relevance", "mixed_burmese_pali_relevance"}
+        ):
+            errors.append(
+                f"OCR hit row {row['hit_id']} marks Pali-only file {local_file_id} as Burmese-relevant."
+            )
+        if ABSOLUTE_PATH_PATTERN.search(row["notes"]):
+            errors.append(
+                f"OCR hit row {row['hit_id']} contains an absolute path in notes."
+            )
+    return errors
+
+
 def build_readme_text() -> str:
     return """# JBRS working metadata
 
@@ -2292,6 +2500,9 @@ def validate_jbrs_workflow() -> list[str]:
         JBRS_STRUCTURED_EXTRACTION_PLAN_PATH,
         JBRS_EXTRACTED_TRANSLATION_UNITS_PATH,
         JBRS_EXTRACTED_SOURCE_TEXT_UNITS_PATH,
+        JBRS_OCR_PRODUCTION_RUN_LOG_PATH,
+        JBRS_OCR_TEXT_INDEX_PATH,
+        JBRS_OCR_TRANSLATION_HIT_INDEX_PATH,
         JBRS_PILOT_SUMMARY_PATH,
         JBRS_README_PATH,
     ]
@@ -2608,6 +2819,7 @@ def validate_jbrs_workflow() -> list[str]:
     )
     if summary != summary_expected:
         errors.append("JBRS pilot summary counts do not match the generated artifacts.")
+    errors.extend(validate_repo_ocr_artifacts())
 
     for path in [
         JBRS_REFERENCE_HUNT_RAW_PATH,
@@ -2626,6 +2838,9 @@ def validate_jbrs_workflow() -> list[str]:
         JBRS_STRUCTURED_EXTRACTION_PLAN_PATH,
         JBRS_EXTRACTED_TRANSLATION_UNITS_PATH,
         JBRS_EXTRACTED_SOURCE_TEXT_UNITS_PATH,
+        JBRS_OCR_PRODUCTION_RUN_LOG_PATH,
+        JBRS_OCR_TEXT_INDEX_PATH,
+        JBRS_OCR_TRANSLATION_HIT_INDEX_PATH,
     ]:
         text = path.read_text(encoding="utf-8")
         if ABSOLUTE_PATH_PATTERN.search(text):

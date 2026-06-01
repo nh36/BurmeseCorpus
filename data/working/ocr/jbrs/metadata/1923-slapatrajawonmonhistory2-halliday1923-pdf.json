@@ -1,0 +1,14 @@
+{
+  "local_file_id": "1923-slapatrajawonmonhistory2-halliday1923-pdf",
+  "batch_id": "jbrs-ocr-1001",
+  "file_name": "SlapatRajawonMonHistory2-Halliday1923.pdf",
+  "path_stub": "1923/SlapatRajawonMonHistory2-Halliday1923.pdf",
+  "journal": "JBRS",
+  "year": "1923",
+  "ocr_engine": "google_vision",
+  "pages_completed": 35,
+  "ocr_date": "2026-06-01T08:33:21.570145+00:00",
+  "source_category": "other_source",
+  "language_scope_guess": "Pali",
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+}

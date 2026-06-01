@@ -1,0 +1,14 @@
+{
+  "local_file_id": "1911-chineseantiquitiespagan-tawseinko1911-pdf",
+  "batch_id": "jbrs-ocr-0689",
+  "file_name": "ChineseAntiquitiesPagan-TawSeinKo1911.pdf",
+  "path_stub": "1911/ChineseAntiquitiesPagan-TawSeinKo1911.pdf",
+  "journal": "JBRS",
+  "year": "1911",
+  "ocr_engine": "google_vision",
+  "pages_completed": 10,
+  "ocr_date": "2026-06-01T08:18:04.105128+00:00",
+  "source_category": "other_source",
+  "language_scope_guess": "mixed_or_uncertain",
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+}

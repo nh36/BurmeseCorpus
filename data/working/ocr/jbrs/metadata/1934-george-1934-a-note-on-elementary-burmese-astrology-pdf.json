@@ -1,0 +1,14 @@
+{
+  "local_file_id": "1934-george-1934-a-note-on-elementary-burmese-astrology-pdf",
+  "batch_id": "jbrs-ocr-1193",
+  "file_name": "George-1934-a-note-on-elementary-burmese-astrology.pdf",
+  "path_stub": "1934/George-1934-a-note-on-elementary-burmese-astrology.pdf",
+  "journal": "JBRS",
+  "year": "1934",
+  "ocr_engine": "google_vision",
+  "pages_completed": 1,
+  "ocr_date": "2026-06-01T08:37:32.272775+00:00",
+  "source_category": "other_source",
+  "language_scope_guess": "non_burmese_relevant_context",
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+}

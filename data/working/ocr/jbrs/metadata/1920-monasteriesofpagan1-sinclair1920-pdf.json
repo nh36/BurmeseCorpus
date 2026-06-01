@@ -1,0 +1,14 @@
+{
+  "local_file_id": "1920-monasteriesofpagan1-sinclair1920-pdf",
+  "batch_id": "jbrs-ocr-0895",
+  "file_name": "MonasteriesOfPagan1_Sinclair1920.pdf",
+  "path_stub": "1920/MonasteriesOfPagan1_Sinclair1920.pdf",
+  "journal": "JBRS",
+  "year": "1920",
+  "ocr_engine": "google_vision",
+  "pages_completed": 15,
+  "ocr_date": "2026-06-01T08:26:03.843028+00:00",
+  "source_category": "other_source",
+  "language_scope_guess": "Pali",
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+}

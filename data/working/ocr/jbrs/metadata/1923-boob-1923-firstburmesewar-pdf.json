@@ -1,0 +1,14 @@
+{
+  "local_file_id": "1923-boob-1923-firstburmesewar-pdf",
+  "batch_id": "jbrs-ocr-0985",
+  "file_name": "Boob-1923-FirstBurmeseWar.pdf",
+  "path_stub": "1923/Boob-1923-FirstBurmeseWar.pdf",
+  "journal": "JBRS",
+  "year": "1923",
+  "ocr_engine": "google_vision",
+  "pages_completed": 19,
+  "ocr_date": "2026-06-01T08:29:46.829850+00:00",
+  "source_category": "other_source",
+  "language_scope_guess": "Pali",
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+}
