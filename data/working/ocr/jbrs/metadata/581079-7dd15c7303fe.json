@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T19:28:13.183893+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "581079.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/1975/581079.pdf",
+  "canonical_file_name": "1975-some-thoughts-united-nations-development-decades.pdf",
+  "canonical_base_name": "1975-some-thoughts-united-nations-development-decades",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/581079-7dd15c7303fe.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/581079-7dd15c7303fe.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1975-some-thoughts-united-nations-development-decades.pdf",
+  "probable_article_title": "Some Thoughts on the United Nations",
+  "probable_author": "Development Decades*",
+  "probable_year": "1975",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

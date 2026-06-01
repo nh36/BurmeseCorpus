@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T12:37:17.514158+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Mixed Burmese/Pali",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "022240.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/JBRS Originals/022240.pdf",
+  "canonical_file_name": "022240.pdf",
+  "canonical_base_name": "",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/022240-6b134be892b8.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/022240-6b134be892b8.json",
+  "canonical_pdf_path_stub": "",
+  "probable_article_title": "THE GREAT CHRONICLE OF CEYLON",
+  "probable_author": "",
+  "probable_year": "1912",
+  "identity_confidence": "medium",
+  "rename_status": "needs_manual_review"
 }

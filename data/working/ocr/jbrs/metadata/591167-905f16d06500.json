@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T19:42:20.482531+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Mixed Burmese/Pali",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "591167.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/1977/591167.pdf",
+  "canonical_file_name": "1977-dr-c-e-godakumbura-it-is-deep-sorrow-obituary.pdf",
+  "canonical_base_name": "1977-dr-c-e-godakumbura-it-is-deep-sorrow-obituary",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/591167-905f16d06500.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/591167-905f16d06500.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1977-dr-c-e-godakumbura-it-is-deep-sorrow-obituary.pdf",
+  "probable_article_title": "Dr. C. E. Godakumbura (–) It is with deep sorrow that we have to put on record the demise of Dr. Charles Edmund Godakum…",
+  "probable_author": "OBITUARY",
+  "probable_year": "1977",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T13:02:06.970480+00:00",
   "source_category": "other_source",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "Dictionary_1931.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/1929/Dictionary_1931.pdf",
+  "canonical_file_name": "1929-need-burmese-dictionary-most-civilized-peoples-are-careful-v.pdf",
+  "canonical_base_name": "1929-need-burmese-dictionary-most-civilized-peoples-are-careful-v",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/193075-610d1158c03e.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/193075-610d1158c03e.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1929-need-burmese-dictionary-most-civilized-peoples-are-careful-v.pdf",
+  "probable_article_title": "THE NEED OF A BURMESE DICTIONARY. Most civilized peoples are careful to preserve their prose and poetical literature, a…",
+  "probable_author": "V",
+  "probable_year": "1929",
+  "identity_confidence": "high",
+  "rename_status": "deferred_outside_phase1_scope"
 }

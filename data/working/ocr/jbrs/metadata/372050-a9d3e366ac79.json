@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T15:19:40.426737+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "372050.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/1954/372050.pdf",
+  "canonical_file_name": "1954-u-hla-kyaw-b-sc-ph-d-m-passive-immunisation-against.pdf",
+  "canonical_base_name": "1954-u-hla-kyaw-b-sc-ph-d-m-passive-immunisation-against",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/372050-a9d3e366ac79.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/372050-a9d3e366ac79.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1954-u-hla-kyaw-b-sc-ph-d-m-passive-immunisation-against.pdf",
+  "probable_article_title": "U HLA KYAW, B.Sc., Ph.D., M.R.C.V.S",
+  "probable_author": "PASSIVE IMMUNISATION AGAINST",
+  "probable_year": "1954",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

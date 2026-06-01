@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T17:58:42.655961+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "492219.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/1966/492219.pdf",
+  "canonical_file_name": "1966-new-species-fish-inle-lake-southern-shan-state-silurus-burmanensis.pdf",
+  "canonical_base_name": "1966-new-species-fish-inle-lake-southern-shan-state-silurus-burmanensis",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/492219-f8b8032df969.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/492219-f8b8032df969.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1966-new-species-fish-inle-lake-southern-shan-state-silurus-burmanensis.pdf",
+  "probable_article_title": "A NEW SPECIES OF FISH FROM THE INLE LAKE, SOUTHERN SHAN STATE, BURMA",
+  "probable_author": "SILURUS BURMANENSIS",
+  "probable_year": "1966",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

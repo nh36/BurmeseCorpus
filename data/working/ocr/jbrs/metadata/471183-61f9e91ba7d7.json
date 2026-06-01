@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T17:18:27.709581+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "471183.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/1964/471183.pdf",
+  "canonical_file_name": "1964-petrography-origin-taungtha-formation-exposed-taungtha-myingyan-district-dev-d-sarin.pdf",
+  "canonical_base_name": "1964-petrography-origin-taungtha-formation-exposed-taungtha-myingyan-district-dev-d-sarin",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/471183-61f9e91ba7d7.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/471183-61f9e91ba7d7.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1964-petrography-origin-taungtha-formation-exposed-taungtha-myingyan-district-dev-d-sarin.pdf",
+  "probable_article_title": "PETROGRAPHY AND ORIGIN OF TAUNGTHA FORMATION EXPOSED AT TAUNGTHA, MYINGYAN DISTRICT",
+  "probable_author": "Dev D. Sarin*",
+  "probable_year": "1964",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

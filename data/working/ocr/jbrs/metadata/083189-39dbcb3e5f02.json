@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T12:41:14.861351+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "083189.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/JBRS Originals/083189.pdf",
+  "canonical_file_name": "1918-greater-temples-pag-n-i-scan-2.pdf",
+  "canonical_base_name": "1918-greater-temples-pag-n-i-scan-2",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/083189-39dbcb3e5f02.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/083189-39dbcb3e5f02.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1918-greater-temples-pag-n-i-scan-2.pdf",
+  "probable_article_title": "THE GREATER TEMPLES OF PAGĀN",
+  "probable_author": "I",
+  "probable_year": "1918",
+  "identity_confidence": "high",
+  "rename_status": "deferred_outside_phase1_scope"
 }

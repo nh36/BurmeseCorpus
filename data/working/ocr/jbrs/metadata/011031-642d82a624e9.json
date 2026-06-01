@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T12:35:23.330427+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "011031.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/1911/011031.pdf",
+  "canonical_file_name": "1911-early-use-buddhist-era-burma-taw-sein-ko.pdf",
+  "canonical_base_name": "1911-early-use-buddhist-era-burma-taw-sein-ko",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/011031-642d82a624e9.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/011031-642d82a624e9.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1911-early-use-buddhist-era-burma-taw-sein-ko.pdf",
+  "probable_article_title": "THE EARLY USE OF THE BUDDHIST ERA IN BURMA",
+  "probable_author": "Taw Sein Ko",
+  "probable_year": "1911",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T14:15:27.267565+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "292198.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/1939/292198.pdf",
+  "canonical_file_name": "1939-netherlands-india-reviews.pdf",
+  "canonical_base_name": "1939-netherlands-india-reviews",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/292198-f0d2b2d0a78a.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/292198-f0d2b2d0a78a.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1939-netherlands-india-reviews.pdf",
+  "probable_article_title": "Netherlands India",
+  "probable_author": "REVIEWS",
+  "probable_year": "1939",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

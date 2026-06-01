@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T12:59:57.693791+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "171001.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/JBRS Originals/171001.pdf",
+  "canonical_file_name": "1927-english-relations-burma-1587-1686-introductroy-note.pdf",
+  "canonical_base_name": "1927-english-relations-burma-1587-1686-introductroy-note",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/171001-84052427e09b.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/171001-84052427e09b.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1927-english-relations-burma-1587-1686-introductroy-note.pdf",
+  "probable_article_title": "ENGLISH RELATIONS WITH BURMA 1587 1686",
+  "probable_author": "INTRODUCTROY NOTE",
+  "probable_year": "1927",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

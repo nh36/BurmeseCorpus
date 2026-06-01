@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T18:25:22.983059+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "512191.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/1968/512191.pdf",
+  "canonical_file_name": "512191.pdf",
+  "canonical_base_name": "",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/512191-bffc528053e7.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/512191-bffc528053e7.json",
+  "canonical_pdf_path_stub": "",
+  "probable_article_title": "ရှမ်းပြည်အခြေအနေ (၁၀၀၅ ၈၇) မကြန်* † အရှေ့ကမ်း အနောက်ကမ်းရှိ ယခုအများနားလည်",
+  "probable_author": "",
+  "probable_year": "1968",
+  "identity_confidence": "medium",
+  "rename_status": "needs_manual_review"
 }

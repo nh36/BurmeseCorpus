@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T13:29:00.011310+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "253145.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/1935/253145.pdf",
+  "canonical_file_name": "1935-additional-third-separate-head-anatomical-note.pdf",
+  "canonical_base_name": "1935-additional-third-separate-head-anatomical-note",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/253145-f345bbc8cd4b.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/253145-f345bbc8cd4b.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1935-additional-third-separate-head-anatomical-note.pdf",
+  "probable_article_title": "(AN ADDITIONAL (THIRD & SEPARATE) HEAD OF THE",
+  "probable_author": "Anatomical Note",
+  "probable_year": "1935",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

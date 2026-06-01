@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T13:01:59.691038+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "191001.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/JBRS Originals/191001.pdf",
+  "canonical_file_name": "1929-karen-bronze-drums-rev-h-i-marshall-m-karen-bronze-drums.pdf",
+  "canonical_base_name": "1929-karen-bronze-drums-rev-h-i-marshall-m-karen-bronze-drums",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/191001-0f934914c35c.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/191001-0f934914c35c.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1929-karen-bronze-drums-rev-h-i-marshall-m-karen-bronze-drums.pdf",
+  "probable_article_title": "KAREN BRONZE DRUMS * BY THE REV. H. I. MARSHALL, M.A., D.D",
+  "probable_author": "KAREN BRONZE DRUMS *",
+  "probable_year": "1929",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T14:05:33.602957+00:00",
   "source_category": "other_source",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "Dalet-Hall1938.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/1938/Dalet-Hall1938.pdf",
+  "canonical_file_name": "1938-journey-dalet-26th-nocember-embarked-board-wheel-flat-d-g-e-hall.pdf",
+  "canonical_base_name": "1938-journey-dalet-26th-nocember-embarked-board-wheel-flat-d-g-e-hall",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/282223-a944a3436cab.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/282223-a944a3436cab.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1938-journey-dalet-26th-nocember-embarked-board-wheel-flat-d-g-e-hall.pdf",
+  "probable_article_title": "A JOURNEY TO DALET IN .* 26th Nocember . Embarked on board the wheel Flat accom. panied by Lieutt. Glen with a detachme…",
+  "probable_author": "D. G. E. Hall",
+  "probable_year": "1938",
+  "identity_confidence": "high",
+  "rename_status": "deferred_outside_phase1_scope"
 }

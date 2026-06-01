@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T17:39:49.778256+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "481057.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/1965/481057.pdf",
+  "canonical_file_name": "1965-statistical-analysis-farm-size-and-current-expenditures.pdf",
+  "canonical_base_name": "1965-statistical-analysis-farm-size-and-current-expenditures",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/481057-e78cc302511d.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/481057-e78cc302511d.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1965-statistical-analysis-farm-size-and-current-expenditures.pdf",
+  "probable_article_title": "STATISTICAL ANALYSIS OF FARM SIZE",
+  "probable_author": "AND CURRENT EXPENDITURES*",
+  "probable_year": "1965",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

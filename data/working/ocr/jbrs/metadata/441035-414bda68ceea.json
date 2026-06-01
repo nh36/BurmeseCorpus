@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T16:25:34.601301+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "441035.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/1961/441035.pdf",
+  "canonical_file_name": "1961-since-we-are-all-sons-adam-it-would-bayinnaung-s-living-descendant.pdf",
+  "canonical_base_name": "1961-since-we-are-all-sons-adam-it-would-bayinnaung-s-living-descendant",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/441035-414bda68ceea.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/441035-414bda68ceea.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1961-since-we-are-all-sons-adam-it-would-bayinnaung-s-living-descendant.pdf",
+  "probable_article_title": "SINCE we are all sons of Adam it would be surprising if ancient kings did not now have innumerable obscure descendants.…",
+  "probable_author": "BAYINNAUNG'S LIVING DESCENDANT",
+  "probable_year": "1961",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

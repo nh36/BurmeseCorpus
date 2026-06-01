@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T08:25:03.526016+00:00",
   "source_category": "other_source",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "Bayinnaung_SayaLun1920-inBurmese.pdf",
+  "old_path_stub": "1920/Bayinnaung_SayaLun1920-inBurmese.pdf",
+  "canonical_file_name": "1920-116-life-bayin-naung-saya-lun-translated-maung-life-of-bayin-naung.pdf",
+  "canonical_base_name": "1920-116-life-bayin-naung-saya-lun-translated-maung-life-of-bayin-naung",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/1920-bayinnaung-sayalun1920-inburmese-pdf.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/1920-bayinnaung-sayalun1920-inburmese-pdf.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1920-116-life-bayin-naung-saya-lun-translated-maung-life-of-bayin-naung.pdf",
+  "probable_article_title": "116 LIFE OF BAYIN NAUNG. By Saya Lun. TRANSLATED BY MAUNG BA KYA. Mingyi nyo (fl. 1485 1530 A. D",
+  "probable_author": "LIFE OF BAYIN-NAUNG",
+  "probable_year": "1920",
+  "identity_confidence": "high",
+  "rename_status": "deferred_outside_phase1_scope"
 }

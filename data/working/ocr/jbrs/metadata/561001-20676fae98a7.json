@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T19:08:04.676298+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "561001.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/1973/561001.pdf",
+  "canonical_file_name": "1973-public-finance-public-policy-burma-1-introduction-aye-hlaing.pdf",
+  "canonical_base_name": "1973-public-finance-public-policy-burma-1-introduction-aye-hlaing",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/561001-20676fae98a7.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/561001-20676fae98a7.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1973-public-finance-public-policy-burma-1-introduction-aye-hlaing.pdf",
+  "probable_article_title": "Public Finance and Public Policy in Burma, .* 1. Introduction",
+  "probable_author": "U Aye Hlaing.*",
+  "probable_year": "1973",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

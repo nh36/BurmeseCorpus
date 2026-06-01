@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T13:43:27.193722+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "271074.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/JBRS Originals/271074.pdf",
+  "canonical_file_name": "1937-prehistoric-stone-implements-konbyinmyint-irrawaddy-paunglaung-rivers.pdf",
+  "canonical_base_name": "1937-prehistoric-stone-implements-konbyinmyint-irrawaddy-paunglaung-rivers",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/271074-e876dd7c50c6.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/271074-e876dd7c50c6.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1937-prehistoric-stone-implements-konbyinmyint-irrawaddy-paunglaung-rivers.pdf",
+  "probable_article_title": "PREHISTORIC STONE IMPLEMENTS FROM THE KONBYINMYINT OF THE IRRAWADDY AND",
+  "probable_author": "PAUNGLAUNG RIVERS",
+  "probable_year": "1937",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

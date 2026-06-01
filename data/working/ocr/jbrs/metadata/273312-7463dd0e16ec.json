@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T13:54:44.629066+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "273312.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/1937/273312.pdf",
+  "canonical_file_name": "1937-introduction-colloquial-burmese-j-stewart-british-burma-press-j-a-stewart.pdf",
+  "canonical_base_name": "1937-introduction-colloquial-burmese-j-stewart-british-burma-press-j-a-stewart",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/273312-7463dd0e16ec.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/273312-7463dd0e16ec.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1937-introduction-colloquial-burmese-j-stewart-british-burma-press-j-a-stewart.pdf",
+  "probable_article_title": "An Introduction to Colloquial Burmese, by J. A. Stewart (British Burma Press, Rs. 3.) Under the modest title of An Intr…",
+  "probable_author": "J. A. Stewart",
+  "probable_year": "1937",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

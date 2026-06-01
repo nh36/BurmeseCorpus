@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T13:28:32.572240+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "253129.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/JBRS Originals/253129.pdf",
+  "canonical_file_name": "1935-new-translation-let-we-thon-dhara-s-famous-ratu.pdf",
+  "canonical_base_name": "1935-new-translation-let-we-thon-dhara-s-famous-ratu",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/253129-acf5c2e71a2b.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/253129-acf5c2e71a2b.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1935-new-translation-let-we-thon-dhara-s-famous-ratu.pdf",
+  "probable_article_title": "A New Translation of Let We Thon Dhara's",
+  "probable_author": "Famous Ratu",
+  "probable_year": "1935",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

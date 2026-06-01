@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T12:36:56.973859+00:00",
   "source_category": "other_source",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "CD-JRI.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/1912/CD-JRI.pdf",
+  "canonical_file_name": "1912-123-journal-royal-anthropological-institute-great-britain-ireland-reviews.pdf",
+  "canonical_base_name": "1912-123-journal-royal-anthropological-institute-great-britain-ireland-reviews",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/021123-bc781df6a868.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/021123-bc781df6a868.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1912-123-journal-royal-anthropological-institute-great-britain-ireland-reviews.pdf",
+  "probable_article_title": "123 JOURNAL of the ROYAL ANTHROPOLOGICAL INSTITUTE of GREAT BRITAIN and IRELAND",
+  "probable_author": "REVIEWS",
+  "probable_year": "1912",
+  "identity_confidence": "high",
+  "rename_status": "deferred_outside_phase1_scope"
 }

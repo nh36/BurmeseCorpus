@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T14:44:32.453436+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "331095.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/1950/331095.pdf",
+  "canonical_file_name": "1950-95-book-review-old-moulmein-875-r-r-book-review.pdf",
+  "canonical_base_name": "1950-95-book-review-old-moulmein-875-r-r-book-review",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/331095-7f752c3a8359.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/331095-7f752c3a8359.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1950-95-book-review-old-moulmein-875-r-r-book-review.pdf",
+  "probable_article_title": "95 Book Review Old Moulmein (875 ), by R.R",
+  "probable_author": "Book Review",
+  "probable_year": "1950",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

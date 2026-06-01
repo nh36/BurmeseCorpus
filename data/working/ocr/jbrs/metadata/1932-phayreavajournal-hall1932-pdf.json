@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T08:36:41.209911+00:00",
   "source_category": "other_source",
   "language_scope_guess": "mixed_or_uncertain",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "PhayreAvaJournal-Hall1932.pdf",
+  "old_path_stub": "1932/PhayreAvaJournal-Hall1932.pdf",
+  "canonical_file_name": "1932-phayre-s-private-journal-his-mission-ava-transcribed-d-g-e-hall.pdf",
+  "canonical_base_name": "1932-phayre-s-private-journal-his-mission-ava-transcribed-d-g-e-hall",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/1932-phayreavajournal-hall1932-pdf.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/1932-phayreavajournal-hall1932-pdf.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1932-phayre-s-private-journal-his-mission-ava-transcribed-d-g-e-hall.pdf",
+  "probable_article_title": "PHAYRE'S PRIVATE JOURNAL OF HIS MISSION TO AVA IN . TRANSCRIBED WITH NOTES AND AN INTRODUCTORY NOTE BY D.G.E",
+  "probable_author": "D. G. E. Hall",
+  "probable_year": "1932",
+  "identity_confidence": "high",
+  "rename_status": "deferred_outside_phase1_scope"
 }

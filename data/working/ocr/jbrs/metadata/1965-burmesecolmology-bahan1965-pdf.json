@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T09:09:55.018820+00:00",
   "source_category": "other_source",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "BurmeseColmology_BaHan1965.pdf",
+  "old_path_stub": "1965/BurmeseColmology_BaHan1965.pdf",
+  "canonical_file_name": "1965-burmese-cosmogony-cosmology-1-cosmogonic-myths-ba-han.pdf",
+  "canonical_base_name": "1965-burmese-cosmogony-cosmology-1-cosmogonic-myths-ba-han",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/1965-burmesecolmology-bahan1965-pdf.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/1965-burmesecolmology-bahan1965-pdf.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1965-burmese-cosmogony-cosmology-1-cosmogonic-myths-ba-han.pdf",
+  "probable_article_title": "BURMESE COSMOGONY AND COSMOLOGY* 1. COSMOGONIC MYTHS",
+  "probable_author": "Dr. Ba Han **",
+  "probable_year": "1965",
+  "identity_confidence": "high",
+  "rename_status": "deferred_outside_phase1_scope"
 }

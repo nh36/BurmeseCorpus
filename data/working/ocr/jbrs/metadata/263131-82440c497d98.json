@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T13:36:54.061206+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "263131.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/JBRS Originals/263131.pdf",
+  "canonical_file_name": "1936-prayers-ancient-burma-g-h-luce-scan-2.pdf",
+  "canonical_base_name": "1936-prayers-ancient-burma-g-h-luce-scan-2",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/263131-82440c497d98.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/263131-82440c497d98.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1936-prayers-ancient-burma-g-h-luce-scan-2.pdf",
+  "probable_article_title": "Prayers of Ancient Burma",
+  "probable_author": "G. H. Luce",
+  "probable_year": "1936",
+  "identity_confidence": "high",
+  "rename_status": "deferred_outside_phase1_scope"
 }

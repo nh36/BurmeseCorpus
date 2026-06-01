@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T18:09:05.513445+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "502177.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/1967/502177.pdf",
+  "canonical_file_name": "1967-1-hla-pe.pdf",
+  "canonical_base_name": "1967-1-hla-pe",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/502177-9b894ba0f8dd.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/502177-9b894ba0f8dd.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1967-1-hla-pe.pdf",
+  "probable_article_title": "'* 1",
+  "probable_author": "Hla Pe",
+  "probable_year": "1967",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T08:25:07.070168+00:00",
   "source_category": "other_source",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "EraOfDecay_SayaPi1920-inBurmese.pdf",
+  "old_path_stub": "1920/EraOfDecay_SayaPi1920-inBurmese.pdf",
+  "canonical_file_name": "1920-beginning-era-decay-this-auspicious-world-cycle-following-the-era-of-decay.pdf",
+  "canonical_base_name": "1920-beginning-era-decay-this-auspicious-world-cycle-following-the-era-of-decay",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/1920-eraofdecay-sayapi1920-inburmese-pdf.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/1920-eraofdecay-sayapi1920-inburmese-pdf.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1920-beginning-era-decay-this-auspicious-world-cycle-following-the-era-of-decay.pdf",
+  "probable_article_title": "[At the beginning of the Era of Decay in this Auspicious World Cycle the following rules were enacted by rulers of men",
+  "probable_author": "THE ERA OF DECAY",
+  "probable_year": "1920",
+  "identity_confidence": "high",
+  "rename_status": "deferred_outside_phase1_scope"
 }

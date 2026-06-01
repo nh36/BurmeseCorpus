@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T12:41:24.432897+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "091053.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/JBRS Originals/091053.pdf",
+  "canonical_file_name": "1919-ari-burma-tantric-buddhism-charles-duroiselle.pdf",
+  "canonical_base_name": "1919-ari-burma-tantric-buddhism-charles-duroiselle",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/091053-5acfb4f31690.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/091053-5acfb4f31690.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1919-ari-burma-tantric-buddhism-charles-duroiselle.pdf",
+  "probable_article_title": "THE ARI OF BURMA AND TANTRIC BUDDHISM",
+  "probable_author": "Charles Duroiselle",
+  "probable_year": "1919",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

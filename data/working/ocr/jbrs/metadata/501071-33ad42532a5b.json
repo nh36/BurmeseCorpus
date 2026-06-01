@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T18:05:21.248474+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "501071.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/1967/501071.pdf",
+  "canonical_file_name": "1967-tentative-list-mon-loan-words-burmese-hla-pe.pdf",
+  "canonical_base_name": "1967-tentative-list-mon-loan-words-burmese-hla-pe",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/501071-33ad42532a5b.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/501071-33ad42532a5b.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1967-tentative-list-mon-loan-words-burmese-hla-pe.pdf",
+  "probable_article_title": "A TENTATIVE LIST OF MON LOAN WORDS IN BURMESE",
+  "probable_author": "Hla Pe",
+  "probable_year": "1967",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

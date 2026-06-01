@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T19:47:53.042218+00:00",
   "source_category": "other_source",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "EthnographicLinguisticSurvey-Taylor1956.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/1956/EthnographicLinguisticSurvey-Taylor1956.pdf",
+  "canonical_file_name": "1956-account-ethnographical-linguistic-survey-burma-by.pdf",
+  "canonical_base_name": "1956-account-ethnographical-linguistic-survey-burma-by",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/ethnographiclinguisticsurvey_taylor1956-b1fad00a1f88.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/ethnographiclinguisticsurvey_taylor1956-b1fad00a1f88.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1956-account-ethnographical-linguistic-survey-burma-by.pdf",
+  "probable_article_title": "ACCOUNT OF THE ETHNOGRAPHICAL AND LINGUISTIC SURVEY OF BURMA",
+  "probable_author": "by",
+  "probable_year": "1956",
+  "identity_confidence": "high",
+  "rename_status": "deferred_outside_phase1_scope"
 }

@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T18:00:38.100358+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "501001.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/1967/501001.pdf",
+  "canonical_file_name": "1967-survey-some-energy-sources-burma-maung-maung-kha.pdf",
+  "canonical_base_name": "1967-survey-some-energy-sources-burma-maung-maung-kha",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/501001-e9409c452f47.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/501001-e9409c452f47.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1967-survey-some-energy-sources-burma-maung-maung-kha.pdf",
+  "probable_article_title": "A SURVEY OF SOME ENERGY SOURCES FOR BURMA*",
+  "probable_author": "Dr Maung Maung Kha**",
+  "probable_year": "1967",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T14:23:28.547572+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "301384.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/1940/301384.pdf",
+  "canonical_file_name": "301384.pdf",
+  "canonical_base_name": "",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/301384-884a7b619638.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/301384-884a7b619638.json",
+  "canonical_pdf_path_stub": "",
+  "probable_article_title": "BURMESE PRINTED BOOKS BEFORE JUDSON The centenary of the completion of Judson's Burmese Bible is an occa sion for the c…",
+  "probable_author": "",
+  "probable_year": "1940",
+  "identity_confidence": "medium",
+  "rename_status": "needs_manual_review"
 }

@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T17:16:46.539746+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "471149.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/1964/471149.pdf",
+  "canonical_file_name": "1964-burmese-embassy-vietnam-24-b-r-pearn.pdf",
+  "canonical_base_name": "1964-burmese-embassy-vietnam-24-b-r-pearn",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/471149-02f68367f7cd.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/471149-02f68367f7cd.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1964-burmese-embassy-vietnam-24-b-r-pearn.pdf",
+  "probable_article_title": "THE BURMESE EMBASSY TO VIETNAM 24*",
+  "probable_author": "B. R. Pearn**",
+  "probable_year": "1964",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

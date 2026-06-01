@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T13:29:17.065109+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "253162.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/JBRS Originals/253162.pdf",
+  "canonical_file_name": "1935-871-ecc-4-dated-22nd-23rd-may-commissioner-information.pdf",
+  "canonical_base_name": "1935-871-ecc-4-dated-22nd-23rd-may-commissioner-information",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/253162-59327c1d4171.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/253162-59327c1d4171.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1935-871-ecc-4-dated-22nd-23rd-may-commissioner-information.pdf",
+  "probable_article_title": "871 ECC 4, dated the 22nd 23rd May , by the Commissioner, Tenasserim Division, Moulmein",
+  "probable_author": "information",
+  "probable_year": "1935",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

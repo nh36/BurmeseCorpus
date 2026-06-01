@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T08:18:49.294976+00:00",
   "source_category": "other_source",
   "language_scope_guess": "non_burmese_relevant_context",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "Bell-ABurmeseSaying.pdf",
+  "old_path_stub": "1912/Bell-ABurmeseSaying.pdf",
+  "canonical_file_name": "Bell-ABurmeseSaying.pdf",
+  "canonical_base_name": "",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/1912-bell-aburmesesaying-pdf.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/1912-bell-aburmesesaying-pdf.json",
+  "canonical_pdf_path_stub": "",
+  "probable_article_title": "76 NOTE ON A BURMESE SAYING",
+  "probable_author": "",
+  "probable_year": "1912",
+  "identity_confidence": "medium",
+  "rename_status": "needs_manual_review"
 }

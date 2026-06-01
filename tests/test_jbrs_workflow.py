@@ -27,6 +27,8 @@ from jbrs_workflow_common import (
     JBRS_EMBEDDED_TRANSLATION_EXCERPT_REVIEW_PATH,
     JBRS_EXTRACTED_SOURCE_TEXT_UNITS_PATH,
     JBRS_EXTRACTED_TRANSLATION_UNITS_PATH,
+    JBRS_FILE_ALIAS_MAP_PATH,
+    JBRS_FILE_RENAMING_PLAN_PATH,
     JBRS_FOLLOWUP_SOURCE_LEADS_PATH,
     JBRS_LOCAL_FILE_MANIFEST_PATH,
     JBRS_OCR_BATCH_PLAN_PATH,
@@ -83,6 +85,8 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
         cls.ocr_top_inscription_candidate_rows = read_tsv(
             JBRS_OCR_TOP_INSCRIPTION_EXTRACTION_CANDIDATES_PATH
         )
+        cls.file_renaming_plan_rows = read_tsv(JBRS_FILE_RENAMING_PLAN_PATH)
+        cls.file_alias_map_rows = read_tsv(JBRS_FILE_ALIAS_MAP_PATH)
         cls.summary = json.loads(JBRS_PILOT_SUMMARY_PATH.read_text(encoding="utf-8"))
         cls.ocr_production_summary = json.loads(
             JBRS_OCR_PRODUCTION_SUMMARY_PATH.read_text(encoding="utf-8")
@@ -111,6 +115,8 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
             JBRS_OCR_TOP_EXTRACTION_CANDIDATES_PATH,
             JBRS_OCR_TOP_INSCRIPTION_EXTRACTION_CANDIDATES_PATH,
             JBRS_OCR_PRODUCTION_SUMMARY_PATH,
+            JBRS_FILE_RENAMING_PLAN_PATH,
+            JBRS_FILE_ALIAS_MAP_PATH,
             JBRS_PILOT_SUMMARY_PATH,
         ]:
             self.assertTrue(path.exists(), path)
@@ -133,6 +139,23 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
     def test_ocr_top_inscription_candidate_report_has_twenty_rows(self) -> None:
         self.assertGreaterEqual(len(self.ocr_top_inscription_candidate_rows), 20)
         self.assertEqual(len(self.ocr_top_inscription_candidate_rows[:20]), 20)
+
+    def test_file_renaming_plan_and_alias_map_cover_numeric_top_candidates(self) -> None:
+        alias_by_local_file_id = {row["local_file_id"]: row for row in self.file_alias_map_rows}
+        numeric_top_candidate_ids = {
+            row["local_file_id"]
+            for row in self.ocr_top_candidate_rows[:50]
+            if re.fullmatch(r"\d+[A-Za-z]?\.pdf", row["old_file_name"])
+        }
+        self.assertGreater(len(numeric_top_candidate_ids), 0)
+        self.assertTrue(numeric_top_candidate_ids.issubset(alias_by_local_file_id))
+
+    def test_renamed_or_canonical_alias_rows_point_to_existing_files(self) -> None:
+        for row in self.file_alias_map_rows:
+            if row["alias_status"] not in {"renamed_in_repo", "already_canonical"}:
+                continue
+            self.assertTrue((ROOT / row["canonical_ocr_text_path"]).exists(), row)
+            self.assertTrue((ROOT / row["canonical_metadata_path"]).exists(), row)
 
     def test_general_burmese_text_translation_is_not_top_inscription_candidate(self) -> None:
         top_ten_local_ids = {

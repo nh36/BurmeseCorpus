@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T18:08:11.833644+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "501125.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/1967/501125.pdf",
+  "canonical_file_name": "1967-dictionaries-national-races-union-burma-summary.pdf",
+  "canonical_base_name": "1967-dictionaries-national-races-union-burma-summary",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/501125-91755ef7b530.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/501125-91755ef7b530.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1967-dictionaries-national-races-union-burma-summary.pdf",
+  "probable_article_title": "DICTIONARIES OF THE NATIONAL RACES OF THE UNION OF BURMA",
+  "probable_author": "SUMMARY",
+  "probable_year": "1967",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

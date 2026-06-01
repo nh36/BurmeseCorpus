@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T13:07:08.141719+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "221021.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/JBRS Originals/221021.pdf",
+  "canonical_file_name": "1932-use-bronze-drum-siam-rev-h-i-marshall-d-g-e-hall.pdf",
+  "canonical_base_name": "1932-use-bronze-drum-siam-rev-h-i-marshall-d-g-e-hall",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/221021-75cba121a12f.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/221021-75cba121a12f.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1932-use-bronze-drum-siam-rev-h-i-marshall-d-g-e-hall.pdf",
+  "probable_article_title": "THE USE OF THE BRONZE DRUM IN SIAM. REV. H. I. MARSHALL, M. A., D. D",
+  "probable_author": "D. G. E. Hall",
+  "probable_year": "1932",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

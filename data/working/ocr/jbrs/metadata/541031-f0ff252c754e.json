@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T18:56:10.936747+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "541031.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/JBRS Originals/541031.pdf",
+  "canonical_file_name": "1971-documents-french-foreign-ministry-prince-myngoon-s-odyssey.pdf",
+  "canonical_base_name": "1971-documents-french-foreign-ministry-prince-myngoon-s-odyssey",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/541031-f0ff252c754e.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/541031-f0ff252c754e.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1971-documents-french-foreign-ministry-prince-myngoon-s-odyssey.pdf",
+  "probable_article_title": "From Documents in the French Foreign Ministry",
+  "probable_author": "PRINCE MYNGOON'S ODYSSEY",
+  "probable_year": "1971",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

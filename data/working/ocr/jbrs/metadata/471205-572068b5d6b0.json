@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T17:19:28.100786+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "471205.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/1964/471205.pdf",
+  "canonical_file_name": "1964-problem-crime-criminal-its-solution-socialist-burma-kyaw-yin.pdf",
+  "canonical_base_name": "1964-problem-crime-criminal-its-solution-socialist-burma-kyaw-yin",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/471205-572068b5d6b0.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/471205-572068b5d6b0.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1964-problem-crime-criminal-its-solution-socialist-burma-kyaw-yin.pdf",
+  "probable_article_title": "THE PROBLEM OF CRIME AND THE CRIMINAL AND ITS SOLUTION IN SOCIALIST BURMA*",
+  "probable_author": "Dr Kyaw Yin**",
+  "probable_year": "1964",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

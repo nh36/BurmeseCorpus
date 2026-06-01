@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T12:46:16.566663+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "122069.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/1922/122069.pdf",
+  "canonical_file_name": "1922-mons-siam-r-halliday-mons-siam-are-talaings-the-mons-in-siam-scan-2.pdf",
+  "canonical_base_name": "1922-mons-siam-r-halliday-mons-siam-are-talaings-the-mons-in-siam-scan-2",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/122069-2eb7ec8c78a1.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/122069-2eb7ec8c78a1.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1922-mons-siam-r-halliday-mons-siam-are-talaings-the-mons-in-siam-scan-2.pdf",
+  "probable_article_title": "THE MONS IN SIAM. By R. HALLIDAY. The Mons of Siam are the Talaings of Burma, that is they are the same people as those…",
+  "probable_author": "THE MONS IN SIAM",
+  "probable_year": "1922",
+  "identity_confidence": "high",
+  "rename_status": "deferred_outside_phase1_scope"
 }

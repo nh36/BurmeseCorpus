@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T09:48:39.842302+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "AspectsBurmeseCulture_LuPeWin1958-41.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/1958/AspectsBurmeseCulture_LuPeWin1958-41.pdf",
+  "canonical_file_name": "1958-some-aspects-burmese-culture-by-scan-2.pdf",
+  "canonical_base_name": "1958-some-aspects-burmese-culture-by-scan-2",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/aspectsburmeseculture_lupewin1958_41-9f5d97f08316.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/aspectsburmeseculture_lupewin1958_41-9f5d97f08316.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1958-some-aspects-burmese-culture-by-scan-2.pdf",
+  "probable_article_title": "SOME ASPECTS OF BURMESE CULTURE '",
+  "probable_author": "by",
+  "probable_year": "1958",
+  "identity_confidence": "high",
+  "rename_status": "deferred_outside_phase1_scope"
 }

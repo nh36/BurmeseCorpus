@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T09:08:08.807103+00:00",
   "source_category": "other_source",
   "language_scope_guess": "non_burmese_relevant_context",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "ShanFolktales-Saimong1960.pdf",
+  "old_path_stub": "1960/ShanFolktales-Saimong1960.pdf",
+  "canonical_file_name": "1960-owl-crow-shan-folk-tales.pdf",
+  "canonical_base_name": "1960-owl-crow-shan-folk-tales",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/1960-shanfolktales-saimong1960-pdf.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/1960-shanfolktales-saimong1960-pdf.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1960-owl-crow-shan-folk-tales.pdf",
+  "probable_article_title": "The Owl and the Crow",
+  "probable_author": "SHAN FOLK TALES",
+  "probable_year": "1960",
+  "identity_confidence": "high",
+  "rename_status": "deferred_outside_phase1_scope"
 }

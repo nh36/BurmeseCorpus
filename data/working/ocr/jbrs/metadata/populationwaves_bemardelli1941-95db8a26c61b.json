@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T19:56:44.653162+00:00",
   "source_category": "other_source",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "PopulationWaves-Bemardelli1941.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/1941/PopulationWaves-Bemardelli1941.pdf",
+  "canonical_file_name": "1941-geometric-progression-interest-law-according-verhulst-pearl-population-waves.pdf",
+  "canonical_base_name": "1941-geometric-progression-interest-law-according-verhulst-pearl-population-waves",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/populationwaves_bemardelli1941-95db8a26c61b.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/populationwaves_bemardelli1941-95db8a26c61b.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1941-geometric-progression-interest-law-according-verhulst-pearl-population-waves.pdf",
+  "probable_article_title": "geometric progression, the interest law, or according to VERHULST-PEARL",
+  "probable_author": "POPULATION WAVES*",
+  "probable_year": "1941",
+  "identity_confidence": "high",
+  "rename_status": "deferred_outside_phase1_scope"
 }

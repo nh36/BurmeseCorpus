@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T15:06:04.556004+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "361077.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/JBRS Originals/361077.pdf",
+  "canonical_file_name": "1953-burmese-initiation-ceremonies-scan-2.pdf",
+  "canonical_base_name": "1953-burmese-initiation-ceremonies-scan-2",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/361077-f1d3d06ec5f6.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/361077-f1d3d06ec5f6.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1953-burmese-initiation-ceremonies-scan-2.pdf",
+  "probable_article_title": "BURMESE INITIATION",
+  "probable_author": "CEREMONIES",
+  "probable_year": "1953",
+  "identity_confidence": "high",
+  "rename_status": "deferred_outside_phase1_scope"
 }

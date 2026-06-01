@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T08:18:14.589122+00:00",
   "source_category": "other_source",
   "language_scope_guess": "non_burmese_relevant_context",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "FoundationPagan-Furnivall1911.pdf",
+  "old_path_stub": "1911/FoundationPagan-Furnivall1911.pdf",
+  "canonical_file_name": "1911-w-i-n-d-e-r-winder-go-if-mr-squeers.pdf",
+  "canonical_base_name": "1911-w-i-n-d-e-r-winder-go-if-mr-squeers",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/1911-foundationpagan-furnivall1911-pdf.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/1911-foundationpagan-furnivall1911-pdf.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1911-w-i-n-d-e-r-winder-go-if-mr-squeers.pdf",
+  "probable_article_title": "W.i.n.d.e.r.—Winder; go and clean it",
+  "probable_author": "If Mr. Squeers",
+  "probable_year": "1911",
+  "identity_confidence": "high",
+  "rename_status": "deferred_outside_phase1_scope"
 }

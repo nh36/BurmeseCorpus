@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T08:41:34.885341+00:00",
   "source_category": "other_source",
   "language_scope_guess": "Mon",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "MonInscriptionAyethema-PeMaungTin1938.pdf",
+  "old_path_stub": "1938/MonInscriptionAyethema-PeMaungTin1938.pdf",
+  "canonical_file_name": "1938-mon-inscription-kyanzittha-ayetthema-hill-april-i-paid-pe-maung-tin.pdf",
+  "canonical_base_name": "1938-mon-inscription-kyanzittha-ayetthema-hill-april-i-paid-pe-maung-tin",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/1938-moninscriptionayethema-pemaungtin1938-pdf.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/1938-moninscriptionayethema-pemaungtin1938-pdf.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1938-mon-inscription-kyanzittha-ayetthema-hill-april-i-paid-pe-maung-tin.pdf",
+  "probable_article_title": "A Mon Inscription by Kyanzittha at Ayetthema Hill In April I paid my first visit on a holiday to Ayetthema Hill on the…",
+  "probable_author": "U Pe Maung Tin",
+  "probable_year": "1938",
+  "identity_confidence": "high",
+  "rename_status": "deferred_outside_phase1_scope"
 }

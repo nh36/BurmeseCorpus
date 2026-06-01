@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T19:38:45.948773+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "591097.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/1977/591097.pdf",
+  "canonical_file_name": "1977-s-historical-earthquakes-burma-pagan-chronology.pdf",
+  "canonical_base_name": "1977-s-historical-earthquakes-burma-pagan-chronology",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/591097-50b0df275d48.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/591097-50b0df275d48.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1977-s-historical-earthquakes-burma-pagan-chronology.pdf",
+  "probable_article_title": "s Historical Earthquakes of Burma and Pagan",
+  "probable_author": "Chronology",
+  "probable_year": "1977",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

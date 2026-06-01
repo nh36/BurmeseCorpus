@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T16:45:05.731487+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "451079.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/1962/451079.pdf",
+  "canonical_file_name": "1962-politics-railroads-burma-india-problem-historical-interpretation-josef-silverstein.pdf",
+  "canonical_base_name": "1962-politics-railroads-burma-india-problem-historical-interpretation-josef-silverstein",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/451079-492ba7c3e673.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/451079-492ba7c3e673.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1962-politics-railroads-burma-india-problem-historical-interpretation-josef-silverstein.pdf",
+  "probable_article_title": "POLITICS AND RAILROADS IN BURMA AND INDIA: A PROBLEM OF HISTORICAL INTERPRETATION★",
+  "probable_author": "JOSEF SILVERSTEIN★★",
+  "probable_year": "1962",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

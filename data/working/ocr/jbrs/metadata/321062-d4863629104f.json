@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T14:37:42.425061+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "321062.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/1948/321062.pdf",
+  "canonical_file_name": "1948-curiosities-burmese-language-1-following-phenomena-can-be-m-p-h.pdf",
+  "canonical_base_name": "1948-curiosities-burmese-language-1-following-phenomena-can-be-m-p-h",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/321062-d4863629104f.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/321062-d4863629104f.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1948-curiosities-burmese-language-1-following-phenomena-can-be-m-p-h.pdf",
+  "probable_article_title": "·CURIOSITIES IN THE BURMESE LANGUAGE (1) The following phenomena can be observed in the Burmese language",
+  "probable_author": "M. P. H",
+  "probable_year": "1948",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

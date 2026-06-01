@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T09:47:23.890125+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Mixed Burmese/Pali",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "581053_1975 ComparativeOldModernBurmese.pdf",
+  "old_path_stub": "Pe Maung Tin/581053_1975 ComparativeOldModernBurmese.pdf",
+  "canonical_file_name": "581053_1975 ComparativeOldModernBurmese.pdf",
+  "canonical_base_name": "",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/581053-41496a2a01b9.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/581053-41496a2a01b9.json",
+  "canonical_pdf_path_stub": "",
+  "probable_article_title": "COMPARATIVE STUDY OF OLD & MODERN BURMESE 1. Foreword 2. Preface 3",
+  "probable_author": "Introduction",
+  "probable_year": "",
+  "identity_confidence": "low",
+  "rename_status": "needs_manual_review"
 }

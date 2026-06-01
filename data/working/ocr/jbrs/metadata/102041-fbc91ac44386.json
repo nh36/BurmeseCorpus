@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T12:43:10.260323+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "102041.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/JBRS Originals/102041.pdf",
+  "canonical_file_name": "1920-smaller-temples-pagan-i-scan-2.pdf",
+  "canonical_base_name": "1920-smaller-temples-pagan-i-scan-2",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/102041-fbc91ac44386.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/102041-fbc91ac44386.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1920-smaller-temples-pagan-i-scan-2.pdf",
+  "probable_article_title": "THE SMALLER TEMPLES OF PAGAN",
+  "probable_author": "I",
+  "probable_year": "1920",
+  "identity_confidence": "high",
+  "rename_status": "deferred_outside_phase1_scope"
 }

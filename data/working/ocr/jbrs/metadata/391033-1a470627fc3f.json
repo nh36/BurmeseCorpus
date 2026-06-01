@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T15:30:30.490273+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "391033.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/1956/391033.pdf",
+  "canonical_file_name": "1956-u-thein-nyun-u-than-nyun-daw-than-rice-starch-processing.pdf",
+  "canonical_base_name": "1956-u-thein-nyun-u-than-nyun-daw-than-rice-starch-processing",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/391033-1a470627fc3f.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/391033-1a470627fc3f.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1956-u-thein-nyun-u-than-nyun-daw-than-rice-starch-processing.pdf",
+  "probable_article_title": "U Thein Nyun, U Than Nyun and Daw Than Tin 2 Most authors maintain that rice starch cannot be prepared by tabling the s…",
+  "probable_author": "RICE STARCH PROCESSING",
+  "probable_year": "1956",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

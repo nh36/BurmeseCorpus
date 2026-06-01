@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T16:41:43.406665+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "451029.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/1962/451029.pdf",
+  "canonical_file_name": "1962-twan-sa-wan-mah-ca-s-rhwai-ma-kyan.pdf",
+  "canonical_base_name": "1962-twan-sa-wan-mah-ca-s-rhwai-ma-kyan",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/451029-7467b232a54a.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/451029-7467b232a54a.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1962-twan-sa-wan-mah-ca-s-rhwai-ma-kyan.pdf",
+  "probable_article_title": "TWAN: SAŃ: WAN MAHĀ CAÑSŪ Ū: RHWAI",
+  "probable_author": "MA KYAN✰✰",
+  "probable_year": "1962",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

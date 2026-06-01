@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T13:54:19.906985+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "273283.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/1937/273283.pdf",
+  "canonical_file_name": "273283.pdf",
+  "canonical_base_name": "",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/273283-1f4f3f3d3c9a.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/273283-1f4f3f3d3c9a.json",
+  "canonical_pdf_path_stub": "",
+  "probable_article_title": "A Burma Diary of . (In the year the London Missionary Society despatched two of its members to found a mission in Burma",
+  "probable_author": "",
+  "probable_year": "1937",
+  "identity_confidence": "medium",
+  "rename_status": "needs_manual_review"
 }

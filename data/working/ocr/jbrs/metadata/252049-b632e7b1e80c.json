@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T13:26:31.453559+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "252049.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/JBRS Originals/252049.pdf",
+  "canonical_file_name": "1935-intercourse-between-siam-burma-preface.pdf",
+  "canonical_base_name": "1935-intercourse-between-siam-burma-preface",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/252049-b632e7b1e80c.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/252049-b632e7b1e80c.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1935-intercourse-between-siam-burma-preface.pdf",
+  "probable_article_title": "Intercourse between Siam and Burma",
+  "probable_author": "PREFACE",
+  "probable_year": "1935",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

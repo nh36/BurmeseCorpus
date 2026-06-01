@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T09:07:33.437224+00:00",
   "source_category": "other_source",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "GeographyBurmaUnderPagan-Luce1959.pdf",
+  "old_path_stub": "1959/GeographyBurmaUnderPagan-Luce1959.pdf",
+  "canonical_file_name": "1959-geography-burma-under-pagan-dynasty.pdf",
+  "canonical_base_name": "1959-geography-burma-under-pagan-dynasty",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/1959-geographyburmaunderpagan-luce1959-pdf.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/1959-geographyburmaunderpagan-luce1959-pdf.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1959-geography-burma-under-pagan-dynasty.pdf",
+  "probable_article_title": "GEOGRAPHY OF BURMA UNDER THE PAGAN",
+  "probable_author": "DYNASTY'",
+  "probable_year": "1959",
+  "identity_confidence": "high",
+  "rename_status": "deferred_outside_phase1_scope"
 }

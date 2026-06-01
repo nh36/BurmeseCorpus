@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T14:33:54.858723+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "312137.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/1941/312137.pdf",
+  "canonical_file_name": "1941-recordings-burmese-classical-music-these-are-times-which-impermanence.pdf",
+  "canonical_base_name": "1941-recordings-burmese-classical-music-these-are-times-which-impermanence",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/312137-a6bd0ac693c1.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/312137-a6bd0ac693c1.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1941-recordings-burmese-classical-music-these-are-times-which-impermanence.pdf",
+  "probable_article_title": "RECORDINGS OF BURMESE CLASSICAL MUSIC These are times in which the Buddhist word",
+  "probable_author": "(Impermanence)",
+  "probable_year": "1941",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

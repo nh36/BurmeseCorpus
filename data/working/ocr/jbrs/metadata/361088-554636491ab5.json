@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T15:06:06.484802+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "361088.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/1953/361088.pdf",
+  "canonical_file_name": "1953-88-book-review-t-ht-book-review.pdf",
+  "canonical_base_name": "1953-88-book-review-t-ht-book-review",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/361088-554636491ab5.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/361088-554636491ab5.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1953-88-book-review-t-ht-book-review.pdf",
+  "probable_article_title": "88 Book Review by T. Ht",
+  "probable_author": "BOOK REVIEW",
+  "probable_year": "1953",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

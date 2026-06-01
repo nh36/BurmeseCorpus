@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T13:16:27.841503+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "242105.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/JBRS Originals/242105.pdf",
+  "canonical_file_name": "1934-105-lower-chindwin-nats-3-myinbyushin-1-elsewhere-lower-chindwin-nats.pdf",
+  "canonical_base_name": "1934-105-lower-chindwin-nats-3-myinbyushin-1-elsewhere-lower-chindwin-nats",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/242105-05acb32b6631.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/242105-05acb32b6631.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1934-105-lower-chindwin-nats-3-myinbyushin-1-elsewhere-lower-chindwin-nats.pdf",
+  "probable_article_title": "105 LOWER CHINDWIN NATS. 3. MYINBYUSHIN (1) ELSEWHERE IN BURMA The worship of the Nat Myinbyushin is common in Upper Bu…",
+  "probable_author": "LOWER CHINDWIN NATS",
+  "probable_year": "1934",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

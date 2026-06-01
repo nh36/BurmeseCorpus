@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T19:48:48.886756+00:00",
   "source_category": "other_source",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "LawsCustonsVietnam_Ba.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/1966/LawsCustonsVietnam_Ba.pdf",
+  "canonical_file_name": "1966-extracts-collection-laws-customs-great-south-kingdom-vietnam-vivian-ba.pdf",
+  "canonical_base_name": "1966-extracts-collection-laws-customs-great-south-kingdom-vietnam-vivian-ba",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/lawscustonsvietnam_ba-5708319c10d2.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/lawscustonsvietnam_ba-5708319c10d2.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1966-extracts-collection-laws-customs-great-south-kingdom-vietnam-vivian-ba.pdf",
+  "probable_article_title": "EXTRACTS FROM THE COLLECTION OF LAWS AND CUSTOMS OF THE GREAT SOUTH (KINGDOM OF VIETNAM) AND THE TRUE HISTORY OF THE GR…",
+  "probable_author": "Vivian Ba",
+  "probable_year": "1966",
+  "identity_confidence": "high",
+  "rename_status": "deferred_outside_phase1_scope"
 }

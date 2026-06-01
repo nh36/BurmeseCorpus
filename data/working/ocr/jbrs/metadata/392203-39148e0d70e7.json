@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T15:38:24.417867+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "392203.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/1956/392203.pdf",
+  "canonical_file_name": "1956-seasonal-fluctuations-burmese-economy-miscellanea.pdf",
+  "canonical_base_name": "1956-seasonal-fluctuations-burmese-economy-miscellanea",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/392203-39148e0d70e7.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/392203-39148e0d70e7.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1956-seasonal-fluctuations-burmese-economy-miscellanea.pdf",
+  "probable_article_title": "SEASONAL FLUCTUATIONS IN THE BURMESE ECONOMY: '",
+  "probable_author": "MISCELLANEA",
+  "probable_year": "1956",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

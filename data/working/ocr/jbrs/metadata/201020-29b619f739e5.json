@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T09:44:35.442779+00:00",
   "source_category": "other_source",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "PeMaungTin 1930 OldWordsInBurmeseInscriptions.pdf",
+  "old_path_stub": "Pe Maung Tin/PeMaungTin 1930 OldWordsInBurmeseInscriptions.pdf",
+  "canonical_file_name": "1930-some-old-words-inscriptions-it-is-pleasure-find-no-ix.pdf",
+  "canonical_base_name": "1930-some-old-words-inscriptions-it-is-pleasure-find-no-ix",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/201020-29b619f739e5.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/201020-29b619f739e5.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1930-some-old-words-inscriptions-it-is-pleasure-find-no-ix.pdf",
+  "probable_article_title": "SOME OLD WORDS IN THE INSCRIPTIONS. It is a pleasure to find so many old Burmese words and expres sions in the Inscript…",
+  "probable_author": "No. IX",
+  "probable_year": "1930",
+  "identity_confidence": "high",
+  "rename_status": "deferred_outside_phase1_scope"
 }

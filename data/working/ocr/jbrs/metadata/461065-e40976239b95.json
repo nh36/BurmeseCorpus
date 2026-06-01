@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T16:58:02.825267+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "461065.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/JBRS Originals/461065.pdf",
+  "canonical_file_name": "1963-storia-del-cristianesimo-nell-one-centenary-recalls-another.pdf",
+  "canonical_base_name": "1963-storia-del-cristianesimo-nell-one-centenary-recalls-another",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/461065-e40976239b95.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/461065-e40976239b95.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1963-storia-del-cristianesimo-nell-one-centenary-recalls-another.pdf",
+  "probable_article_title": "Storia del Cristianesimo nell",
+  "probable_author": "ONE CENTENARY RECALLS ANOTHER",
+  "probable_year": "1963",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

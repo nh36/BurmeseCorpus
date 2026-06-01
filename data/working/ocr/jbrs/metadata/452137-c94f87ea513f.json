@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T16:48:36.757966+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "452137.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/JBRS Originals/452137.pdf",
+  "canonical_file_name": "452137.pdf",
+  "canonical_base_name": "",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/452137-c94f87ea513f.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/452137-c94f87ea513f.json",
+  "canonical_pdf_path_stub": "",
+  "probable_article_title": "ဝန်ကြီးမှူးကြီးများအကြောင်း ၁၉၆၁ ခု မတ်လတွင် ပါမောက္ခ ဦးဝန် မန္တလေးမြို့မှ ပြန်လာသောအခါ မန္တလေးတက္ကသိုလ် မြန်မာစာပေဌာန…",
+  "probable_author": "",
+  "probable_year": "",
+  "identity_confidence": "low",
+  "rename_status": "needs_manual_review"
 }

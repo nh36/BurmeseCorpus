@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T14:28:55.681361+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "311047.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/1941/311047.pdf",
+  "canonical_file_name": "1941-s-criticism-is-bound-suffer-reviews.pdf",
+  "canonical_base_name": "1941-s-criticism-is-bound-suffer-reviews",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/311047-d909e46e6b56.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/311047-d909e46e6b56.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1941-s-criticism-is-bound-suffer-reviews.pdf",
+  "probable_article_title": "s criticism is bound to suffer from",
+  "probable_author": "REVIEWS",
+  "probable_year": "1941",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

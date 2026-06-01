@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T09:46:31.993522+00:00",
   "source_category": "other_source",
   "language_scope_guess": "Mon",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "PeMaungTin 1936 BuddhismInTheInscriptionsOfPagan.pdf",
+  "old_path_stub": "Pe Maung Tin/PeMaungTin 1936 BuddhismInTheInscriptionsOfPagan.pdf",
+  "canonical_file_name": "1936-buddhism-inscriptions-pagan-numerous-temples-pagodas-which-still-pe-maung-tin-scan-2.pdf",
+  "canonical_base_name": "1936-buddhism-inscriptions-pagan-numerous-temples-pagodas-which-still-pe-maung-tin-scan-2",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/261052-0eaebe68d937.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/261052-0eaebe68d937.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1936-buddhism-inscriptions-pagan-numerous-temples-pagodas-which-still-pe-maung-tin-scan-2.pdf",
+  "probable_article_title": "Buddhism in the Inscriptions of Pagan The numerous temples and pagodas which still attract visitors to Pagan bear silen…",
+  "probable_author": "U Pe Maung Tin",
+  "probable_year": "1936",
+  "identity_confidence": "high",
+  "rename_status": "deferred_outside_phase1_scope"
 }

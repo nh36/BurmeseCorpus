@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T09:17:07.739623+00:00",
   "source_category": "other_source",
   "language_scope_guess": "Mon",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "MonPlate-NaiPanHla-Guillon1972.pdf",
+  "old_path_stub": "1972/MonPlate-NaiPanHla-Guillon1972.pdf",
+  "canonical_file_name": "1972-mon-copper-plate-national-library-bangkok.pdf",
+  "canonical_base_name": "1972-mon-copper-plate-national-library-bangkok",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/1972-monplate-naipanhla-guillon1972-pdf.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/1972-monplate-naipanhla-guillon1972-pdf.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1972-mon-copper-plate-national-library-bangkok.pdf",
+  "probable_article_title": "A MON COPPER PLATE IN THE NATIONAL",
+  "probable_author": "LIBRARY, BANGKOK *",
+  "probable_year": "1972",
+  "identity_confidence": "high",
+  "rename_status": "deferred_outside_phase1_scope"
 }

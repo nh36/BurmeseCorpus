@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T15:23:06.574188+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "381066.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/1955/381066.pdf",
+  "canonical_file_name": "1955-theory-rate-interest-burmese-economy-by.pdf",
+  "canonical_base_name": "1955-theory-rate-interest-burmese-economy-by",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/381066-13a837c2022b.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/381066-13a837c2022b.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1955-theory-rate-interest-burmese-economy-by.pdf",
+  "probable_article_title": "A THEORY OF THE RATE OF INTEREST FOR THE BURMESE ECONOMY",
+  "probable_author": "by",
+  "probable_year": "1955",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

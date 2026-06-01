@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T17:54:11.342038+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "491071.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/1966/491071.pdf",
+  "canonical_file_name": "491071.pdf",
+  "canonical_base_name": "",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/491071-78314926c661.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/491071-78314926c661.json",
+  "canonical_pdf_path_stub": "",
+  "probable_article_title": "ကုန်း ဘောင် စေတီ စစ် တနိုး များ ဒေါက်တာရီရီ ** *",
+  "probable_author": "",
+  "probable_year": "1966",
+  "identity_confidence": "medium",
+  "rename_status": "needs_manual_review"
 }

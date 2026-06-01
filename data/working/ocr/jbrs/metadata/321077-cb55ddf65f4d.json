@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T14:38:02.451061+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "321077.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/1948/321077.pdf",
+  "canonical_file_name": "1948-1475-d-two-ships-were-sent-king-pegu-the-junk-in-pali.pdf",
+  "canonical_base_name": "1948-1475-d-two-ships-were-sent-king-pegu-the-junk-in-pali",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/321077-cb55ddf65f4d.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/321077-cb55ddf65f4d.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1948-1475-d-two-ships-were-sent-king-pegu-the-junk-in-pali.pdf",
+  "probable_article_title": "In 1475 A. D. two ships were sent by the King of Pegu, Burma, to the King of Ceylon on a Buddhist mission",
+  "probable_author": "THE JUNK IN PALI?",
+  "probable_year": "1948",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T18:10:48.470554+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "502195.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/1967/502195.pdf",
+  "canonical_file_name": "1967-1-introduction-compound-nouns-burmese-dr-k-forbes-k-forbes.pdf",
+  "canonical_base_name": "1967-1-introduction-compound-nouns-burmese-dr-k-forbes-k-forbes",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/502195-f6e6811cfe79.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/502195-f6e6811cfe79.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1967-1-introduction-compound-nouns-burmese-dr-k-forbes-k-forbes.pdf",
+  "probable_article_title": "1. Introduction' COMPOUND NOUNS IN BURMESE* * Dr K. Forbes§ it Any sequence which cannot be analy sed in to smaller uni…",
+  "probable_author": "Dr K. Forbes§",
+  "probable_year": "1967",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

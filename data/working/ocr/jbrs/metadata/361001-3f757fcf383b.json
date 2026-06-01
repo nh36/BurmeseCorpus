@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T15:01:03.419715+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Mixed Burmese/Pali",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "361001.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/JBRS Originals/361001.pdf",
+  "canonical_file_name": "1953-mons-pagan-dynasty-scan-2.pdf",
+  "canonical_base_name": "1953-mons-pagan-dynasty-scan-2",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/361001-3f757fcf383b.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/361001-3f757fcf383b.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1953-mons-pagan-dynasty-scan-2.pdf",
+  "probable_article_title": "MONS OF THE PAGAN",
+  "probable_author": "DYNASTY",
+  "probable_year": "1953",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

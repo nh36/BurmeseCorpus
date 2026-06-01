@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T18:17:32.032433+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "502285.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/1967/502285.pdf",
+  "canonical_file_name": "1967-meaning-significance-dhammacakka.pdf",
+  "canonical_base_name": "1967-meaning-significance-dhammacakka",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/502285-a2e4d0ca5eb0.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/502285-a2e4d0ca5eb0.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1967-meaning-significance-dhammacakka.pdf",
+  "probable_article_title": "THE MEANING AND SIGNIFICANCE OF THE",
+  "probable_author": "DHAMMACAKKA",
+  "probable_year": "1967",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

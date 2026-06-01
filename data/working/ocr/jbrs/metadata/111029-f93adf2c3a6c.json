@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T12:45:20.492950+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "111029.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/JBRS Originals/111029.pdf",
+  "canonical_file_name": "1921-chronicle-city-tagaung-we-shall-tell-story-sulathambhawa-d-g-e-hall.pdf",
+  "canonical_base_name": "1921-chronicle-city-tagaung-we-shall-tell-story-sulathambhawa-d-g-e-hall",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/111029-f93adf2c3a6c.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/111029-f93adf2c3a6c.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1921-chronicle-city-tagaung-we-shall-tell-story-sulathambhawa-d-g-e-hall.pdf",
+  "probable_article_title": "CHRONICLE OF THE CITY OF TAGAUNG. We shall tell the story of Sulathambhawa and Mahathambhawa, the two sons of the Tagau…",
+  "probable_author": "D. G. E. Hall",
+  "probable_year": "1921",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

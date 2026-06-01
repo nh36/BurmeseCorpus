@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T18:44:50.168297+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "531067.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/1970/531067.pdf",
+  "canonical_file_name": "531067.pdf",
+  "canonical_base_name": "",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/531067-5ad28de9cedd.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/531067-5ad28de9cedd.json",
+  "canonical_pdf_path_stub": "",
+  "probable_article_title": "မြန်မာနိုင်ငံ သုတေသနအသင်း၏ ဘဝခရီး (၁၉၁၀ ခုမှ ၁၉၁၄ ခုထိ ပထမ၅နှစ်ပိုင်း) ဦးဝန်*",
+  "probable_author": "",
+  "probable_year": "1970",
+  "identity_confidence": "medium",
+  "rename_status": "needs_manual_review"
 }

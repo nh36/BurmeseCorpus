@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T15:52:40.014391+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "402348.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/1957/402348.pdf",
+  "canonical_file_name": "1957-ome-early-references-first-burmese-english-dictionary-by.pdf",
+  "canonical_base_name": "1957-ome-early-references-first-burmese-english-dictionary-by",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/402348-44a560a99ccb.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/402348-44a560a99ccb.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1957-ome-early-references-first-burmese-english-dictionary-by.pdf",
+  "probable_article_title": "ŠOME EARLY REFERENCES TO THE FIRST BURMESE ENGLISH DICTIONARY OF",
+  "probable_author": "by",
+  "probable_year": "1957",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

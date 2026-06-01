@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T16:09:22.285327+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "422099.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/JBRS Originals/422099.pdf",
+  "canonical_file_name": "1959-mah-kassapa-his-tradition-by.pdf",
+  "canonical_base_name": "1959-mah-kassapa-his-tradition-by",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/422099-f8f7b0f9ae8e.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/422099-f8f7b0f9ae8e.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1959-mah-kassapa-his-tradition-by.pdf",
+  "probable_article_title": "MAHĀKASSAPA AND HIS TRADITION*",
+  "probable_author": "by",
+  "probable_year": "1959",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

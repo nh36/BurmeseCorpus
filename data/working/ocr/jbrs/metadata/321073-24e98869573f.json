@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T14:37:56.496362+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "321073.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/1948/321073.pdf",
+  "canonical_file_name": "1948-pasteurellosis-burma-the-position-of.pdf",
+  "canonical_base_name": "1948-pasteurellosis-burma-the-position-of",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/321073-24e98869573f.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/321073-24e98869573f.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1948-pasteurellosis-burma-the-position-of.pdf",
+  "probable_article_title": "PASTEURELLOSIS IN BURMA",
+  "probable_author": "THE POSITION OF",
+  "probable_year": "1948",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

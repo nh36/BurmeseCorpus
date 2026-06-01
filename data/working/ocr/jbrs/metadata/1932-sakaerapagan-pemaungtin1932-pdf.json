@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T08:36:44.362115+00:00",
   "source_category": "other_source",
   "language_scope_guess": "Pali",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "SakaEraPagan-PeMaungTin1932.pdf",
+  "old_path_stub": "1932/SakaEraPagan-PeMaungTin1932.pdf",
+  "canonical_file_name": "1932-saka-era-pagan-pe-maung-tin.pdf",
+  "canonical_base_name": "1932-saka-era-pagan-pe-maung-tin",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/1932-sakaerapagan-pemaungtin1932-pdf.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/1932-sakaerapagan-pemaungtin1932-pdf.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1932-saka-era-pagan-pe-maung-tin.pdf",
+  "probable_article_title": "THE SAKA ERA IN PAGAN",
+  "probable_author": "U Pe Maung Tin",
+  "probable_year": "1932",
+  "identity_confidence": "high",
+  "rename_status": "deferred_outside_phase1_scope"
 }

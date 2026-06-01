@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T13:38:27.069474+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "263157.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/1936/263157.pdf",
+  "canonical_file_name": "263157.pdf",
+  "canonical_base_name": "",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/263157-4b11ac6d0804.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/263157-4b11ac6d0804.json",
+  "canonical_pdf_path_stub": "",
+  "probable_article_title": "Venous Patterns in the Superficial Cubital Region of the Upper Limb in Orientals It is well known that veins are the su…",
+  "probable_author": "",
+  "probable_year": "1936",
+  "identity_confidence": "medium",
+  "rename_status": "needs_manual_review"
 }

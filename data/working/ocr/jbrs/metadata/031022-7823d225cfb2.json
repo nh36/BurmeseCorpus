@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T12:38:07.334725+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "031022.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/JBRS Originals/031022.pdf",
+  "canonical_file_name": "1913-professor-pali-rangoon-college-24-abhisambodhi-alankara.pdf",
+  "canonical_base_name": "1913-professor-pali-rangoon-college-24-abhisambodhi-alankara",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/031022-7823d225cfb2.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/031022-7823d225cfb2.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1913-professor-pali-rangoon-college-24-abhisambodhi-alankara.pdf",
+  "probable_article_title": "Professor of Pali, Rangoon College. 24",
+  "probable_author": "ABHISAMBODHI ALANKARA",
+  "probable_year": "1913",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

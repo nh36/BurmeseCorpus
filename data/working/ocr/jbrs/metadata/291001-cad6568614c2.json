@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T14:11:32.732576+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Mixed Burmese/Pali",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "291001.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/JBRS Originals/291001.pdf",
+  "canonical_file_name": "1939-beginnings-british-rule-burma-the-fashioning-of-leviathan.pdf",
+  "canonical_base_name": "1939-beginnings-british-rule-burma-the-fashioning-of-leviathan",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/291001-cad6568614c2.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/291001-cad6568614c2.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1939-beginnings-british-rule-burma-the-fashioning-of-leviathan.pdf",
+  "probable_article_title": "THE BEGINNINGS OF BRITISH RULE IN BURMA",
+  "probable_author": "THE FASHIONING OF LEVIATHAN",
+  "probable_year": "1939",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

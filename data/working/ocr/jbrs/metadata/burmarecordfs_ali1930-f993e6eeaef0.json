@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T19:43:38.227129+00:00",
   "source_category": "other_source",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "BurmaRecordfs_Ali1930.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/1930/BurmaRecordfs_Ali1930.pdf",
+  "canonical_file_name": "BurmaRecordfs_Ali1930.pdf",
+  "canonical_base_name": "",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/burmarecordfs_ali1930-f993e6eeaef0.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/burmarecordfs_ali1930-f993e6eeaef0.json",
+  "canonical_pdf_path_stub": "",
+  "probable_article_title": "BURMA RECORDS IN THE IMPERIAL RECORD DEPARTMENT (1753 ).1 1753 68",
+  "probable_author": "",
+  "probable_year": "1930",
+  "identity_confidence": "medium",
+  "rename_status": "needs_manual_review"
 }

@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T19:41:11.378137+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "591137.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/1977/591137.pdf",
+  "canonical_file_name": "591137.pdf",
+  "canonical_base_name": "",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/591137-ff80fd1fdaca.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/591137-ff80fd1fdaca.json",
+  "canonical_pdf_path_stub": "",
+  "probable_article_title": "RAMAYANA IN BURMESE LITERATURE AND ARTS U Thein Han and U Khin Zaw* In Burma, so far as our researches on Ramayana up t…",
+  "probable_author": "",
+  "probable_year": "1977",
+  "identity_confidence": "medium",
+  "rename_status": "needs_manual_review"
 }

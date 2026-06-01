@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T12:38:15.701800+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "031080.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/JBRS Originals/031080.pdf",
+  "canonical_file_name": "1913-talaing-pegu-chronicle-edited-schmidt-styles-this-personagem-philip-de-brito.pdf",
+  "canonical_base_name": "1913-talaing-pegu-chronicle-edited-schmidt-styles-this-personagem-philip-de-brito",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/031080-d0cd762eff2d.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/031080-d0cd762eff2d.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1913-talaing-pegu-chronicle-edited-schmidt-styles-this-personagem-philip-de-brito.pdf",
+  "probable_article_title": "The Talaing Pegu Chronicle (edited by Schmidt) styles this personagem (kappītā jarā",
+  "probable_author": "PHILIP DE BRITO",
+  "probable_year": "1913",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T08:29:49.876462+00:00",
   "source_category": "other_source",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "BurmeseGardening-Cooper1923.pdf",
+  "old_path_stub": "1923/BurmeseGardening-Cooper1923.pdf",
+  "canonical_file_name": "1923-166-correspondence-burmese-gardening-dear-sir-i-am-correspondence.pdf",
+  "canonical_base_name": "1923-166-correspondence-burmese-gardening-dear-sir-i-am-correspondence",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/1923-burmesegardening-cooper1923-pdf.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/1923-burmesegardening-cooper1923-pdf.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1923-166-correspondence-burmese-gardening-dear-sir-i-am-correspondence.pdf",
+  "probable_article_title": "166 CORRESPONdence. BURMESE GARDENING. DEAR SIR, I am desirous of obtaining information upon the practice of Garden ing…",
+  "probable_author": "CORRESPONdence",
+  "probable_year": "1923",
+  "identity_confidence": "high",
+  "rename_status": "deferred_outside_phase1_scope"
 }

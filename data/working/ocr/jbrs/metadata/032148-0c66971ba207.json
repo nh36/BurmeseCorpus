@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T12:38:44.391712+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "032148.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/JBRS Originals/032148.pdf",
+  "canonical_file_name": "1913-professor-pali-rangoon-college-continued-last-number-66-abhisambodhi-ala-k-ra.pdf",
+  "canonical_base_name": "1913-professor-pali-rangoon-college-continued-last-number-66-abhisambodhi-ala-k-ra",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/032148-0c66971ba207.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/032148-0c66971ba207.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1913-professor-pali-rangoon-college-continued-last-number-66-abhisambodhi-ala-k-ra.pdf",
+  "probable_article_title": "Professor of Pali, Rangoon College. (Continued from the last number.) 66",
+  "probable_author": "ABHISAMBODHI ALAŃKĀRA",
+  "probable_year": "1913",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

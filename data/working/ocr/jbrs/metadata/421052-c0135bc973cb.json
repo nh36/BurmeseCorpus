@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T16:01:21.669026+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "421052.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/JBRS Originals/421052.pdf",
+  "canonical_file_name": "1959-note-peoples-burma-12th-13th-century-d-by.pdf",
+  "canonical_base_name": "1959-note-peoples-burma-12th-13th-century-d-by",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/421052-c0135bc973cb.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/421052-c0135bc973cb.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1959-note-peoples-burma-12th-13th-century-d-by.pdf",
+  "probable_article_title": "NOTE ON THE PEOPLES OF BURMA IN THE 12th 13th CENTURY A. D",
+  "probable_author": "by",
+  "probable_year": "1959",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

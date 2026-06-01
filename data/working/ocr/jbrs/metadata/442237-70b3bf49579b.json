@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T16:36:55.261434+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "442237.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/1961/442237.pdf",
+  "canonical_file_name": "1961-grading-commercial-values-shrimp-paste-hmyin-ngapi-burma-by.pdf",
+  "canonical_base_name": "1961-grading-commercial-values-shrimp-paste-hmyin-ngapi-burma-by",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/442237-70b3bf49579b.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/442237-70b3bf49579b.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1961-grading-commercial-values-shrimp-paste-hmyin-ngapi-burma-by.pdf",
+  "probable_article_title": "GRADING COMMERCIAL VALUES OF SHRIMP PASTE (HMYIN NGAPI) IN BURMA AND DETECTING ADULTERATIONS WITH FISH AND SHRIMP PEELS…",
+  "probable_author": "By",
+  "probable_year": "1961",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

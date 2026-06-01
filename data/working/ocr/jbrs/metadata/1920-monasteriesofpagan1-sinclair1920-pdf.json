@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T08:26:03.843028+00:00",
   "source_category": "other_source",
   "language_scope_guess": "non_burmese_relevant_context",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "MonasteriesOfPagan1_Sinclair1920.pdf",
+  "old_path_stub": "1920/MonasteriesOfPagan1_Sinclair1920.pdf",
+  "canonical_file_name": "MonasteriesOfPagan1_Sinclair1920.pdf",
+  "canonical_base_name": "",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/1920-monasteriesofpagan1-sinclair1920-pdf.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/1920-monasteriesofpagan1-sinclair1920-pdf.json",
+  "canonical_pdf_path_stub": "",
+  "probable_article_title": "THE MONASTERIES OF PAGAN.* Burmese Art and Architecture have been smothered for years by a cloud of indifference and Bu…",
+  "probable_author": "",
+  "probable_year": "1920",
+  "identity_confidence": "medium",
+  "rename_status": "needs_manual_review"
 }

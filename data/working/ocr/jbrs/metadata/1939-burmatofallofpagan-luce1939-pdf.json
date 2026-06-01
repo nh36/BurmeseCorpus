@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T08:46:06.151785+00:00",
   "source_category": "other_source",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "BurmaToFallOfPagan-Luce1939.pdf",
+  "old_path_stub": "1939/BurmaToFallOfPagan-Luce1939.pdf",
+  "canonical_file_name": "1939-burma-down-fall-pagan-an-outline-part-i.pdf",
+  "canonical_base_name": "1939-burma-down-fall-pagan-an-outline-part-i",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/1939-burmatofallofpagan-luce1939-pdf.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/1939-burmatofallofpagan-luce1939-pdf.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1939-burma-down-fall-pagan-an-outline-part-i.pdf",
+  "probable_article_title": "BURMA DOWN TO THE FALL OF PAGAN",
+  "probable_author": "An Outline, Part I",
+  "probable_year": "1939",
+  "identity_confidence": "high",
+  "rename_status": "deferred_outside_phase1_scope"
 }

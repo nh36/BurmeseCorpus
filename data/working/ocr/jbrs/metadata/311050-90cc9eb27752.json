@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T14:29:02.122930+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "311050.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/1941/311050.pdf",
+  "canonical_file_name": "311050.pdf",
+  "canonical_base_name": "",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/311050-90cc9eb27752.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/311050-90cc9eb27752.json",
+  "canonical_pdf_path_stub": "",
+  "probable_article_title": "50 JOUR. BURMA RESEARCH SOC. XXXI, I, . SIAM IN TRANSITION. By Kenneth Perry Landon",
+  "probable_author": "",
+  "probable_year": "1941",
+  "identity_confidence": "medium",
+  "rename_status": "needs_manual_review"
 }

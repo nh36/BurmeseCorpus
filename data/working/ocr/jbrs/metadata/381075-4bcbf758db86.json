@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T15:23:27.509795+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "381075.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/JBRS Originals/381075.pdf",
+  "canonical_file_name": "1955-lord-great-mountain-by.pdf",
+  "canonical_base_name": "1955-lord-great-mountain-by",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/381075-4bcbf758db86.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/381075-4bcbf758db86.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1955-lord-great-mountain-by.pdf",
+  "probable_article_title": "THE LORD OF THE GREAT MOUNTAIN '",
+  "probable_author": "by",
+  "probable_year": "1955",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

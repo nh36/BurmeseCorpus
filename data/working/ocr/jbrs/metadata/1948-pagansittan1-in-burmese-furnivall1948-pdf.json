@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T08:46:41.799156+00:00",
   "source_category": "other_source",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "PaganSittan1(in Burmese)-Furnivall1948.pdf",
+  "old_path_stub": "1948/PaganSittan1(in Burmese)-Furnivall1948.pdf",
+  "canonical_file_name": "PaganSittan1(in Burmese)-Furnivall1948.pdf",
+  "canonical_base_name": "",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/1948-pagansittan1-in-burmese-furnivall1948-pdf.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/1948-pagansittan1-in-burmese-furnivall1948-pdf.json",
+  "canonical_pdf_path_stub": "",
+  "probable_article_title": "ပုဂံမြို့စစ်တန်း [မစ္စတာ ဂျေ၊အိုစ်၊ဖါနိဗဲလ်၏ စစ်တန်းစာအုပ်ကြီးမှ ရေးကူး ပုံနှိပ်ပါသည်။ ၁၁၂၇ ခု ပေမှ စစ်တန်း နမော တဿ ဘဂဝ…",
+  "probable_author": "",
+  "probable_year": "1948",
+  "identity_confidence": "medium",
+  "rename_status": "needs_manual_review"
 }

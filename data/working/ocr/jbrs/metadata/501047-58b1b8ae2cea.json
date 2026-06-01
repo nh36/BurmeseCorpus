@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T18:04:01.223174+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "501047.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/1967/501047.pdf",
+  "canonical_file_name": "1967-neologisms-english-burmese-introduction.pdf",
+  "canonical_base_name": "1967-neologisms-english-burmese-introduction",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/501047-58b1b8ae2cea.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/501047-58b1b8ae2cea.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1967-neologisms-english-burmese-introduction.pdf",
+  "probable_article_title": "NEOLOGISMS IN ENGLISH AND BURMESE*",
+  "probable_author": "Introduction",
+  "probable_year": "1967",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

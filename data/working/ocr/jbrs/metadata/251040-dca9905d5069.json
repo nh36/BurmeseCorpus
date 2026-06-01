@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T13:23:02.934732+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "251040.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/JBRS Originals/251040.pdf",
+  "canonical_file_name": "1935-as-you-all-know-we-are-celebrating-this-twenty-five-years.pdf",
+  "canonical_base_name": "1935-as-you-all-know-we-are-celebrating-this-twenty-five-years",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/251040-dca9905d5069.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/251040-dca9905d5069.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1935-as-you-all-know-we-are-celebrating-this-twenty-five-years.pdf",
+  "probable_article_title": "As you all know, we are celebrating this year the Silver Jubilee of His Majesty, the King Emperor; and as you all shoul…",
+  "probable_author": "TWENTY FIVE YEARS",
+  "probable_year": "1935",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

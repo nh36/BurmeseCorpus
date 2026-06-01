@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T08:35:21.180637+00:00",
   "source_category": "other_source",
   "language_scope_guess": "Pyu",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "NamesOfPyu-Luce1932.pdf",
+  "old_path_stub": "1932/NamesOfPyu-Luce1932.pdf",
+  "canonical_file_name": "1932-1-modern-burman-writes-word-pyu-i-e-names-of-the-pyu.pdf",
+  "canonical_base_name": "1932-1-modern-burman-writes-word-pyu-i-e-names-of-the-pyu",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/1932-namesofpyu-luce1932-pdf.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/1932-namesofpyu-luce1932-pdf.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1932-1-modern-burman-writes-word-pyu-i-e-names-of-the-pyu.pdf",
+  "probable_article_title": "1. The modern Burman writes the word Pyu i.e. Prū. But the older Burmese authors, so Pagan U Tin informs me, write it i…",
+  "probable_author": "NAMES OF THE PYU",
+  "probable_year": "1932",
+  "identity_confidence": "high",
+  "rename_status": "deferred_outside_phase1_scope"
 }

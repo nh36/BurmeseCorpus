@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T19:41:32.836064+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "591155.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/1977/591155.pdf",
+  "canonical_file_name": "1977-did-sona-uttara-come-lower-burma-sao-saimong-mangrai.pdf",
+  "canonical_base_name": "1977-did-sona-uttara-come-lower-burma-sao-saimong-mangrai",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/591155-15cf4fdd97ba.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/591155-15cf4fdd97ba.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1977-did-sona-uttara-come-lower-burma-sao-saimong-mangrai.pdf",
+  "probable_article_title": "Did Sona and Uttara Come to Lower Burma ?",
+  "probable_author": "Sao Saimong Mangrai*",
+  "probable_year": "1977",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

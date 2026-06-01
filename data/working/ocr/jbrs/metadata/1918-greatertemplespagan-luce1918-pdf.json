@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T08:22:52.908754+00:00",
   "source_category": "other_source",
   "language_scope_guess": "mixed_or_uncertain",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "GreaterTemplesPagan-Luce1918.pdf",
+  "old_path_stub": "1918/GreaterTemplesPagan-Luce1918.pdf",
+  "canonical_file_name": "1918-greater-temples-pag-n-i.pdf",
+  "canonical_base_name": "1918-greater-temples-pag-n-i",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/1918-greatertemplespagan-luce1918-pdf.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/1918-greatertemplespagan-luce1918-pdf.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1918-greater-temples-pag-n-i.pdf",
+  "probable_article_title": "THE GREATER TEMPLES OF PAGĀN",
+  "probable_author": "I",
+  "probable_year": "1918",
+  "identity_confidence": "high",
+  "rename_status": "deferred_outside_phase1_scope"
 }

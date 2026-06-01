@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T15:21:11.058544+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "381023.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/1955/381023.pdf",
+  "canonical_file_name": "1955-tensiometer-studies-mandalay-soil-by.pdf",
+  "canonical_base_name": "1955-tensiometer-studies-mandalay-soil-by",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/381023-97e6eaeac58d.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/381023-97e6eaeac58d.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1955-tensiometer-studies-mandalay-soil-by.pdf",
+  "probable_article_title": "TENSIOMETER STUDIES WITH MANDALAY SOIL'",
+  "probable_author": "by",
+  "probable_year": "1955",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

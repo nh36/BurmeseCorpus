@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T12:43:58.206371+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "111001.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/JBRS Originals/111001.pdf",
+  "canonical_file_name": "1921-kyaukse-irrigation-side-light-burmese-history.pdf",
+  "canonical_base_name": "1921-kyaukse-irrigation-side-light-burmese-history",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/111001-76a537aced4b.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/111001-76a537aced4b.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1921-kyaukse-irrigation-side-light-burmese-history.pdf",
+  "probable_article_title": "KYAUKSE IRRIGATION A SIDE LIGHT ON BURMESE",
+  "probable_author": "HISTORY",
+  "probable_year": "1921",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

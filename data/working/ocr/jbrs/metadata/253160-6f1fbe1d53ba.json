@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T13:29:09.350536+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "253160.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/1935/253160.pdf",
+  "canonical_file_name": "1935-160-jour-burma-research-soc-xxv-iii-dear-mr-secretary.pdf",
+  "canonical_base_name": "1935-160-jour-burma-research-soc-xxv-iii-dear-mr-secretary",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/253160-6f1fbe1d53ba.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/253160-6f1fbe1d53ba.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1935-160-jour-burma-research-soc-xxv-iii-dear-mr-secretary.pdf",
+  "probable_article_title": "160 JOUR. BURMA RESEARCH SOC. XXV, III",
+  "probable_author": "Dear Mr Secretary",
+  "probable_year": "1935",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

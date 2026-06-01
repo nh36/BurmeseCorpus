@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T08:24:52.332422+00:00",
   "source_category": "other_source",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "Authors_BaThein1920-inBurmese.pdf",
+  "old_path_stub": "1920/Authors_BaThein1920-inBurmese.pdf",
+  "canonical_file_name": "1920-adeissa-yanthi-aduminnyo-shin.pdf",
+  "canonical_base_name": "1920-adeissa-yanthi-aduminnyo-shin",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/1920-authors-bathein1920-inburmese-pdf.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/1920-authors-bathein1920-inburmese-pdf.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1920-adeissa-yanthi-aduminnyo-shin.pdf",
+  "probable_article_title": "Adeissa yanthi. Aduminnyo",
+  "probable_author": "Shin",
+  "probable_year": "1920",
+  "identity_confidence": "high",
+  "rename_status": "deferred_outside_phase1_scope"
 }

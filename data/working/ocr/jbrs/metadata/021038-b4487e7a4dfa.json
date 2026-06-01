@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T12:36:08.604646+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "021038.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/JBRS Originals/021038.pdf",
+  "canonical_file_name": "1912-notes-talaing-epigraphy-c-o-blagden-straits-settlements-notes-on-talaing-epigraphy-scan-2.pdf",
+  "canonical_base_name": "1912-notes-talaing-epigraphy-c-o-blagden-straits-settlements-notes-on-talaing-epigraphy-scan-2",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/021038-b4487e7a4dfa.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/021038-b4487e7a4dfa.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1912-notes-talaing-epigraphy-c-o-blagden-straits-settlements-notes-on-talaing-epigraphy-scan-2.pdf",
+  "probable_article_title": "NOTES ON TALAING EPIGRAPHY. BY C. O. BLAGDEN, Straits Settlements Civil Service (Retired.) Some apology is due to the S…",
+  "probable_author": "NOTES ON TALAING EPIGRAPHY",
+  "probable_year": "1912",
+  "identity_confidence": "high",
+  "rename_status": "deferred_outside_phase1_scope"
 }

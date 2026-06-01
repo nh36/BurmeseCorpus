@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T19:51:42.454130+00:00",
   "source_category": "other_source",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "Minbu_Ba-Shin1936.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/1936/Minbu_Ba-Shin1936.pdf",
+  "canonical_file_name": "1936-untitled-bibliographic-data.pdf",
+  "canonical_base_name": "1936-untitled-bibliographic-data",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/minbu_ba_shin1936-4839b22ac3ed.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/minbu_ba_shin1936-4839b22ac3ed.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1936-untitled-bibliographic-data.pdf",
+  "probable_article_title": "ဘရှင် ၊ ဗိုလ်မှူး",
+  "probable_author": "Bibliographic Data",
+  "probable_year": "1936",
+  "identity_confidence": "high",
+  "rename_status": "deferred_outside_phase1_scope"
 }

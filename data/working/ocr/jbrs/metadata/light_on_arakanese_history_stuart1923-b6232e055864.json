@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T19:49:20.874726+00:00",
   "source_category": "other_source",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "Light-on-Arakanese-History-Stuart1923.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/1923/Light-on-Arakanese-History-Stuart1923.pdf",
+  "canonical_file_name": "1923-appeal-more-light-arakanese-history-j-stuart.pdf",
+  "canonical_base_name": "1923-appeal-more-light-arakanese-history-j-stuart",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/light_on_arakanese_history_stuart1923-b6232e055864.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/light_on_arakanese_history_stuart1923-b6232e055864.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1923-appeal-more-light-arakanese-history-j-stuart.pdf",
+  "probable_article_title": "An Appeal for more light on Arakanese History",
+  "probable_author": "J. STUART",
+  "probable_year": "1923",
+  "identity_confidence": "high",
+  "rename_status": "deferred_outside_phase1_scope"
 }

@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T14:46:21.010076+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "332099.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/JBRS Originals/332099.pdf",
+  "canonical_file_name": "1950-burma-museum-draft-scheme-for.pdf",
+  "canonical_base_name": "1950-burma-museum-draft-scheme-for",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/332099-cda4f66f6999.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/332099-cda4f66f6999.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1950-burma-museum-draft-scheme-for.pdf",
+  "probable_article_title": "THE BURMA MUSEUM",
+  "probable_author": "DRAFT SCHEME FOR",
+  "probable_year": "1950",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

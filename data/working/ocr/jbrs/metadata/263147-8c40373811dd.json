@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T13:37:45.652743+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "263147.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/JBRS Originals/263147.pdf",
+  "canonical_file_name": "263147.pdf",
+  "canonical_base_name": "",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/263147-8c40373811dd.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/263147-8c40373811dd.json",
+  "canonical_pdf_path_stub": "",
+  "probable_article_title": "A Map of Burma (1795) by a Burmese Slave When the First Anglo Burmese War broke out in the Kubo Valley lying between Ma…",
+  "probable_author": "",
+  "probable_year": "1936",
+  "identity_confidence": "medium",
+  "rename_status": "needs_manual_review"
 }

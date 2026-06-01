@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T08:29:46.829850+00:00",
   "source_category": "other_source",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "Boob-1923-FirstBurmeseWar.pdf",
+  "old_path_stub": "1923/Boob-1923-FirstBurmeseWar.pdf",
+  "canonical_file_name": "1923-first-burmese-war-maung-boon-translated-san-shwe-translator-s-note.pdf",
+  "canonical_base_name": "1923-first-burmese-war-maung-boon-translated-san-shwe-translator-s-note",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/1923-boob-1923-firstburmesewar-pdf.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/1923-boob-1923-firstburmesewar-pdf.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1923-first-burmese-war-maung-boon-translated-san-shwe-translator-s-note.pdf",
+  "probable_article_title": "THE FIRST BURMESE WAR. BY MAUNG BOON. TRANSLATED BY SAN SHWE BU",
+  "probable_author": "Translator's Note",
+  "probable_year": "1923",
+  "identity_confidence": "high",
+  "rename_status": "deferred_outside_phase1_scope"
 }

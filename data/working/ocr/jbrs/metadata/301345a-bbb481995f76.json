@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T14:21:21.111255+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "301345A.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/1940/301345A.pdf",
+  "canonical_file_name": "301345A.pdf",
+  "canonical_base_name": "",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/301345a-bbb481995f76.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/301345a-bbb481995f76.json",
+  "canonical_pdf_path_stub": "",
+  "probable_article_title": "Among the parabeiks which some years ago were transferred from the Secretariat to the Rangoon University, is a document…",
+  "probable_author": "",
+  "probable_year": "1940",
+  "identity_confidence": "medium",
+  "rename_status": "needs_manual_review"
 }

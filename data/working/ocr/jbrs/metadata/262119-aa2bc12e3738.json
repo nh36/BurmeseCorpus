@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T13:35:55.887520+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "262119.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/JBRS Originals/262119.pdf",
+  "canonical_file_name": "1936-pal-olith-yenangyaung-small-hand-axe-illustrated-herewith-inches-long.pdf",
+  "canonical_base_name": "1936-pal-olith-yenangyaung-small-hand-axe-illustrated-herewith-inches-long",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/262119-aa2bc12e3738.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/262119-aa2bc12e3738.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1936-pal-olith-yenangyaung-small-hand-axe-illustrated-herewith-inches-long.pdf",
+  "probable_article_title": "A Palæolith From Yenangyaung The small hand axe illustrated herewith (Fig. 1) was picked up recently on the Yenangyaung…",
+  "probable_author": "inches long",
+  "probable_year": "1936",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

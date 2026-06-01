@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T19:42:01.145189+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "591165.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/1977/591165.pdf",
+  "canonical_file_name": "591165.pdf",
+  "canonical_base_name": "",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/591165-2e8ef52605fa.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/591165-2e8ef52605fa.json",
+  "canonical_pdf_path_stub": "",
+  "probable_article_title": "165 Editor's Note on Excavation of Old Thaton The Archaeological Survey of Burma had conducted three field seasons in ,…",
+  "probable_author": "",
+  "probable_year": "1977",
+  "identity_confidence": "medium",
+  "rename_status": "needs_manual_review"
 }

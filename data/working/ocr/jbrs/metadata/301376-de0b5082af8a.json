@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T14:23:21.677307+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "301376.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/1940/301376.pdf",
+  "canonical_file_name": "1940-superstitions-burmese-criminals-burmese-criminals-believe-superstition-performance-months.pdf",
+  "canonical_base_name": "1940-superstitions-burmese-criminals-burmese-criminals-believe-superstition-performance-months",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/301376-de0b5082af8a.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/301376-de0b5082af8a.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1940-superstitions-burmese-criminals-burmese-criminals-believe-superstition-performance-months.pdf",
+  "probable_article_title": "SUPERSTITIONS OF BURMESE CRIMINALS* Burmese criminals believe in superstition and the performance of cer tain rites bef…",
+  "probable_author": "Months",
+  "probable_year": "1940",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

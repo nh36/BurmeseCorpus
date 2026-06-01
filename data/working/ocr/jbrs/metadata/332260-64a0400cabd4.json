@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T14:53:26.335623+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "332260.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/JBRS Originals/332260.pdf",
+  "canonical_file_name": "1950-untitled-jisc.pdf",
+  "canonical_base_name": "1950-untitled-jisc",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/332260-64a0400cabd4.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/332260-64a0400cabd4.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1950-untitled-jisc.pdf",
+  "probable_article_title": "ယ မန္တာ ၊ အင်း ဒို၌ + / . ဆောင်သားမျိုး (မာ ရေး ပြီး",
+  "probable_author": "Jisc",
+  "probable_year": "1950",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

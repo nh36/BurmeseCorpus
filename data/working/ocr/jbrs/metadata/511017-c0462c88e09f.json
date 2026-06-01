@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T18:18:35.173779+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "511017.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/1968/511017.pdf",
+  "canonical_file_name": "1968-attitudes-burmese-men-women-male-dominance-in-the-family.pdf",
+  "canonical_base_name": "1968-attitudes-burmese-men-women-male-dominance-in-the-family",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/511017-c0462c88e09f.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/511017-c0462c88e09f.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1968-attitudes-burmese-men-women-male-dominance-in-the-family.pdf",
+  "probable_article_title": "\" ATTITUDES OF BURMESE MEN AND WOMEN TO MALE",
+  "probable_author": "DOMINANCE IN THE FAMILY",
+  "probable_year": "1968",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

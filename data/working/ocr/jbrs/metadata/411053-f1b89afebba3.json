@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T15:56:10.002241+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "411053.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/1958/411053.pdf",
+  "canonical_file_name": "1958-structure-properties-agave-fibre-by.pdf",
+  "canonical_base_name": "1958-structure-properties-agave-fibre-by",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/411053-f1b89afebba3.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/411053-f1b89afebba3.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1958-structure-properties-agave-fibre-by.pdf",
+  "probable_article_title": "STRUCTURE AND PROPERTIES OF AGAVE FIBRE'",
+  "probable_author": "by",
+  "probable_year": "1958",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

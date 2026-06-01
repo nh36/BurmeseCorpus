@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T08:27:51.384158+00:00",
   "source_category": "other_source",
   "language_scope_guess": "Mon",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "Pagan-Enriquez1921.pdf",
+  "old_path_stub": "1921/Pagan-Enriquez1921.pdf",
+  "canonical_file_name": "1921-pagan-major-c-m-enriquez-few-places-inspire-major-c-m-enriquez.pdf",
+  "canonical_base_name": "1921-pagan-major-c-m-enriquez-few-places-inspire-major-c-m-enriquez",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/1921-pagan-enriquez1921-pdf.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/1921-pagan-enriquez1921-pdf.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1921-pagan-major-c-m-enriquez-few-places-inspire-major-c-m-enriquez.pdf",
+  "probable_article_title": "PAGAN. BY MAJOR C. M. ENRIQUEZ, Few places inspire the imagination so vividly as Pagan. It is saturated with old associ…",
+  "probable_author": "MAJOR C. M. ENRIQUEZ",
+  "probable_year": "1921",
+  "identity_confidence": "high",
+  "rename_status": "deferred_outside_phase1_scope"
 }

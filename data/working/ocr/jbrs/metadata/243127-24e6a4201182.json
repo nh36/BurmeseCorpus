@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T13:18:44.561178+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "243127.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/JBRS Originals/243127.pdf",
+  "canonical_file_name": "1934-northern-hills-ponnagyun-township-by.pdf",
+  "canonical_base_name": "1934-northern-hills-ponnagyun-township-by",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/243127-24e6a4201182.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/243127-24e6a4201182.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1934-northern-hills-ponnagyun-township-by.pdf",
+  "probable_article_title": "THE NORTHERN HILLS OF THE PONNAGYUN TOWNSHIP*",
+  "probable_author": "BY",
+  "probable_year": "1934",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

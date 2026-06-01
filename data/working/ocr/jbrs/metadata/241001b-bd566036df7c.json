@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T13:13:26.213749+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "241001B.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/JBRS Originals/241001B.pdf",
+  "canonical_file_name": "1934-translation-burmese-face-lord-lord-dipankara-name-2-the-shwe-dagon-pagoda.pdf",
+  "canonical_base_name": "1934-translation-burmese-face-lord-lord-dipankara-name-2-the-shwe-dagon-pagoda",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/241001b-bd566036df7c.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/241001b-bd566036df7c.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1934-translation-burmese-face-lord-lord-dipankara-name-2-the-shwe-dagon-pagoda.pdf",
+  "probable_article_title": "Translation. BURMESE FACE A. Lord, the Lord Dipankara by name... (2) in",
+  "probable_author": "THE SHWE DAGON PAGODA",
+  "probable_year": "1934",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

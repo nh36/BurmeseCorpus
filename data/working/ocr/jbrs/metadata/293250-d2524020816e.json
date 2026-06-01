@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T14:18:11.978121+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "293250.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/1939/293250.pdf",
+  "canonical_file_name": "1939-admiral-sir-william-garnham-luard-was-born-witham-admiral-luard.pdf",
+  "canonical_base_name": "1939-admiral-sir-william-garnham-luard-was-born-witham-admiral-luard",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/293250-d2524020816e.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/293250-d2524020816e.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1939-admiral-sir-william-garnham-luard-was-born-witham-admiral-luard.pdf",
+  "probable_article_title": "Admiral Sir William Garnham Luard was born at Witham, in Essex, on the 7th April . He entered the Royal Naval College a…",
+  "probable_author": "ADMIRAL LUARD",
+  "probable_year": "1939",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

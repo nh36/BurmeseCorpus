@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T16:44:27.079729+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "451049.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/1962/451049.pdf",
+  "canonical_file_name": "1962-public-expenditures-inflationary-impact-burma-59-by.pdf",
+  "canonical_base_name": "1962-public-expenditures-inflationary-impact-burma-59-by",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/451049-4477549ee36b.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/451049-4477549ee36b.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1962-public-expenditures-inflationary-impact-burma-59-by.pdf",
+  "probable_article_title": "PUBLIC EXPENDITURES AND INFLATIONARY IMPACT IN BURMA 59*",
+  "probable_author": "by",
+  "probable_year": "1962",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

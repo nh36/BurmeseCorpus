@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T18:38:14.879806+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "522067.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/1969/522067.pdf",
+  "canonical_file_name": "1969-village-administration-upper-burma-during-87-ma-kyan.pdf",
+  "canonical_base_name": "1969-village-administration-upper-burma-during-87-ma-kyan",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/522067-3e938b822ba7.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/522067-3e938b822ba7.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1969-village-administration-upper-burma-during-87-ma-kyan.pdf",
+  "probable_article_title": "VILLAGE ADMINISTRATION IN UPPER BURMA DURING 87",
+  "probable_author": "Ma Kyan*",
+  "probable_year": "1969",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

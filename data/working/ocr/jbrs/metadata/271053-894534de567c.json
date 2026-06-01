@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T13:42:41.068213+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "271053.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/1937/271053.pdf",
+  "canonical_file_name": "1937-economic-grid-x-ray-investigation-thoracic-and-abdominal-conditions.pdf",
+  "canonical_base_name": "1937-economic-grid-x-ray-investigation-thoracic-and-abdominal-conditions",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/271053-894534de567c.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/271053-894534de567c.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1937-economic-grid-x-ray-investigation-thoracic-and-abdominal-conditions.pdf",
+  "probable_article_title": "ECONOMIC GRID FOR X RAY INVESTIGATION OF",
+  "probable_author": "THORACIC AND ABDOMINAL CONDITIONS",
+  "probable_year": "1937",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

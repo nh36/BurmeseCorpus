@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T17:20:40.183061+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Mixed Burmese/Pali",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "471225.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/1964/471225.pdf",
+  "canonical_file_name": "471225.pdf",
+  "canonical_base_name": "",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/471225-d04763ef473c.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/471225-d04763ef473c.json",
+  "canonical_pdf_path_stub": "",
+  "probable_article_title": "မြန်မာအဘိဓာန် သမိုင်းအချုပ် * မောင်တင်လှ ** အဘယ်ကြောင့် ကျွန်ုပ်တို့ စကားပြောကြပါသနည်း။ ဤအမေးကို ကျွန်ုပ် အလွယ်ဆုံး အကျ…",
+  "probable_author": "",
+  "probable_year": "1964",
+  "identity_confidence": "medium",
+  "rename_status": "needs_manual_review"
 }

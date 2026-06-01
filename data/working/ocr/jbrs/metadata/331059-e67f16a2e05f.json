@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T14:44:03.131392+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "331059.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/JBRS Originals/331059.pdf",
+  "canonical_file_name": "331059.pdf",
+  "canonical_base_name": "",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/331059-e67f16a2e05f.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/331059-e67f16a2e05f.json",
+  "canonical_pdf_path_stub": "",
+  "probable_article_title": "HSEBAWLAIK BURMESE CHEROOT) INDUSTRY",
+  "probable_author": "IN RANGOON",
+  "probable_year": "",
+  "identity_confidence": "low",
+  "rename_status": "needs_manual_review"
 }

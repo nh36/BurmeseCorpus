@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T15:52:53.096061+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "402356.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/1957/402356.pdf",
+  "canonical_file_name": "1957-356-book-reviews-union-burma-study-first-years-book-reviews.pdf",
+  "canonical_base_name": "1957-356-book-reviews-union-burma-study-first-years-book-reviews",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/402356-ab4470d51d91.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/402356-ab4470d51d91.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1957-356-book-reviews-union-burma-study-first-years-book-reviews.pdf",
+  "probable_article_title": "356 BOOK REVIEWS THE UNION OF BURMA: A Study of the First Years of Independence by Hugh Tinker (London: Oxford Universi…",
+  "probable_author": "BOOK REVIEWS",
+  "probable_year": "1957",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

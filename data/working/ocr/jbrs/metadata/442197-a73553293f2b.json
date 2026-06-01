@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T16:36:01.368981+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "442197.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/1961/442197.pdf",
+  "canonical_file_name": "1961-some-animals-maungmagan-adjoining-shores.pdf",
+  "canonical_base_name": "1961-some-animals-maungmagan-adjoining-shores",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/442197-a73553293f2b.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/442197-a73553293f2b.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1961-some-animals-maungmagan-adjoining-shores.pdf",
+  "probable_article_title": "SOME OF THE ANIMALS OF MAUNGMAGAN AND",
+  "probable_author": "ADJOINING SHORES*",
+  "probable_year": "1961",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

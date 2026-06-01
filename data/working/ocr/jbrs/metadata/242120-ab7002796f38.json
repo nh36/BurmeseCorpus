@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T13:17:30.458021+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "242120.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/1934/242120.pdf",
+  "canonical_file_name": "242120.pdf",
+  "canonical_base_name": "",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/242120-ab7002796f38.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/242120-ab7002796f38.json",
+  "canonical_pdf_path_stub": "",
+  "probable_article_title": "120 မြမာဇာတ်ရုပ်စုံသဘင်ပညာသည်တို့အကြောင်း ၁၈ဆက်။ အမှတ်ဂဏန်း ၂ ။ ဖေါ်ပြလတ္တံ့။ ။(သခင်ပညာသည်ဖြစ်ခြင်။)",
+  "probable_author": "",
+  "probable_year": "1934",
+  "identity_confidence": "medium",
+  "rename_status": "needs_manual_review"
 }

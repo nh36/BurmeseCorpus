@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T12:49:19.085840+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "131009B.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/JBRS Originals/131009B.pdf",
+  "canonical_file_name": "1923-translation-namo-tassa-bhagavato-arahato-sammasambuddhassa-r-j-a-history-of-kings-scan-2.pdf",
+  "canonical_base_name": "1923-translation-namo-tassa-bhagavato-arahato-sammasambuddhassa-r-j-a-history-of-kings-scan-2",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/131009b-2e3d5c68f5a4.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/131009b-2e3d5c68f5a4.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1923-translation-namo-tassa-bhagavato-arahato-sammasambuddhassa-r-j-a-history-of-kings-scan-2.pdf",
+  "probable_article_title": "TRANSLATION. Namo tassa bhagavato arahato sammasambuddhassa.¹ Rājāmunindam tiloka aggam, dhammañca sanghañca namāmi aha…",
+  "probable_author": "A HISTORY OF KINGS",
+  "probable_year": "1923",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

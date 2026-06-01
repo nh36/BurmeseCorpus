@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T14:55:57.862469+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "341047.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/1951/341047.pdf",
+  "canonical_file_name": "1951-47-1-reviews-of-books.pdf",
+  "canonical_base_name": "1951-47-1-reviews-of-books",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/341047-47650cdbca6b.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/341047-47650cdbca6b.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1951-47-1-reviews-of-books.pdf",
+  "probable_article_title": "47 1",
+  "probable_author": "REVIEWS OF BOOKS",
+  "probable_year": "1951",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

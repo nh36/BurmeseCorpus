@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T16:03:42.392127+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "422001.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/1959/422001.pdf",
+  "canonical_file_name": "1959-burmese-embassy-cochinchina-notes-on-a-manuscript.pdf",
+  "canonical_base_name": "1959-burmese-embassy-cochinchina-notes-on-a-manuscript",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/422001-5e810cab8296.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/422001-5e810cab8296.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1959-burmese-embassy-cochinchina-notes-on-a-manuscript.pdf",
+  "probable_article_title": "A BURMESE EMBASSY TO COCHINCHINA",
+  "probable_author": "NOTES ON A MANUSCRIPT",
+  "probable_year": "1959",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

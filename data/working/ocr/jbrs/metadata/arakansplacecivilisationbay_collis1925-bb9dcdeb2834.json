@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T19:43:19.810708+00:00",
   "source_category": "other_source",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "ArakansPlaceCivilisationBay-Collis1925.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/1925/ArakansPlaceCivilisationBay-Collis1925.pdf",
+  "canonical_file_name": "1925-s-place-civilization-bay-study-coinage-foreign-relations-coins-found-in-arakan.pdf",
+  "canonical_base_name": "1925-s-place-civilization-bay-study-coinage-foreign-relations-coins-found-in-arakan",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/arakansplacecivilisationbay_collis1925-bb9dcdeb2834.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/arakansplacecivilisationbay_collis1925-bb9dcdeb2834.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1925-s-place-civilization-bay-study-coinage-foreign-relations-coins-found-in-arakan.pdf",
+  "probable_article_title": "'s place in the civilization of the Bay. A STUDY OF COINAGE AND FOREIGN RELATIONS",
+  "probable_author": "Coins found in Arakan",
+  "probable_year": "1925",
+  "identity_confidence": "high",
+  "rename_status": "deferred_outside_phase1_scope"
 }

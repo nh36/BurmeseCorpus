@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T16:07:19.711309+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "422071.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/JBRS Originals/422071.pdf",
+  "canonical_file_name": "1959-religious-buildings-burma-d-by.pdf",
+  "canonical_base_name": "1959-religious-buildings-burma-d-by",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/422071-541d6fcebe8b.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/422071-541d6fcebe8b.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1959-religious-buildings-burma-d-by.pdf",
+  "probable_article_title": "RELIGIOUS BUILDINGS OF BURMA A.D",
+  "probable_author": "by",
+  "probable_year": "1959",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

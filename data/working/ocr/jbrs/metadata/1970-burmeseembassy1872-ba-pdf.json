@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T09:14:14.048763+00:00",
   "source_category": "other_source",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "BurmeseEmbassy1872_Ba.pdf",
+  "old_path_stub": "1970/BurmeseEmbassy1872_Ba.pdf",
+  "canonical_file_name": "1970-burmese-embassy-italy-hitherto-unpublished-documents-italian-sources-translated-and-annotated-by.pdf",
+  "canonical_base_name": "1970-burmese-embassy-italy-hitherto-unpublished-documents-italian-sources-translated-and-annotated-by",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/1970-burmeseembassy1872-ba-pdf.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/1970-burmeseembassy1872-ba-pdf.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1970-burmese-embassy-italy-hitherto-unpublished-documents-italian-sources-translated-and-annotated-by.pdf",
+  "probable_article_title": "THE BURMESE EMBASSY TO ITALY IN [From hitherto unpublished documents from Italian Sources",
+  "probable_author": "Translated and annotated by",
+  "probable_year": "1970",
+  "identity_confidence": "high",
+  "rename_status": "deferred_outside_phase1_scope"
 }

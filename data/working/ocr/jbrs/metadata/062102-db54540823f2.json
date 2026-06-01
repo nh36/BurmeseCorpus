@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T12:39:18.576680+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "062102.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/JBRS Originals/062102.pdf",
+  "canonical_file_name": "062102.pdf",
+  "canonical_base_name": "",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/062102-db54540823f2.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/062102-db54540823f2.json",
+  "canonical_pdf_path_stub": "",
+  "probable_article_title": "PROME",
+  "probable_author": "",
+  "probable_year": "1916",
+  "identity_confidence": "medium",
+  "rename_status": "needs_manual_review"
 }

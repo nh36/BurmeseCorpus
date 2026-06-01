@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T14:16:57.870059+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "293215.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/1939/293215.pdf",
+  "canonical_file_name": "1939-denmark-s-interest-burma-nicobar-islands.pdf",
+  "canonical_base_name": "1939-denmark-s-interest-burma-nicobar-islands",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/293215-3f3534af1590.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/293215-3f3534af1590.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1939-denmark-s-interest-burma-nicobar-islands.pdf",
+  "probable_article_title": "DENMARK'S INTEREST IN BURMA AND THE",
+  "probable_author": "NICOBAR ISLANDS",
+  "probable_year": "1939",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T13:07:01.226739+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "213059.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/JBRS Originals/213059.pdf",
+  "canonical_file_name": "1931-early-english-intercourse-burma-1587-1743-the-tragedy-of-negrais.pdf",
+  "canonical_base_name": "1931-early-english-intercourse-burma-1587-1743-the-tragedy-of-negrais",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/213059-198720759b45.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/213059-198720759b45.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1931-early-english-intercourse-burma-1587-1743-the-tragedy-of-negrais.pdf",
+  "probable_article_title": "Early English Intercourse with Burma, 1587-1743",
+  "probable_author": "THE TRAGEDY OF NEGRAIS",
+  "probable_year": "1931",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

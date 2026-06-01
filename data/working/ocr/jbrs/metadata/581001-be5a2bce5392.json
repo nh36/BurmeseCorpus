@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T19:27:27.558866+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "581001.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/JBRS Originals/581001.pdf",
+  "canonical_file_name": "1975-three-unpublished-papers-harvey-introduced-explained-and.pdf",
+  "canonical_base_name": "1975-three-unpublished-papers-harvey-introduced-explained-and",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/581001-be5a2bce5392.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/581001-be5a2bce5392.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1975-three-unpublished-papers-harvey-introduced-explained-and.pdf",
+  "probable_article_title": "THREE UNPUBLISHED PAPERS BY HARVEY",
+  "probable_author": "INTRODUCED, EXPLAINED AND",
+  "probable_year": "1975",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

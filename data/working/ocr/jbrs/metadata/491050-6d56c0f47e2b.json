@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T17:50:54.629579+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "491050.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/JBRS Originals/491050.pdf",
+  "canonical_file_name": "491050.pdf",
+  "canonical_base_name": "",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/491050-6d56c0f47e2b.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/491050-6d56c0f47e2b.json",
+  "canonical_pdf_path_stub": "",
+  "probable_article_title": "* ၁၁ လွန် မင်း လက် ထက် ဒအုပ် ချုပ်ရေး ဒေါက်တာ သန်းထွန်း ပြည်သူလူရဟန်းတို့၏ အားထားရာဖြစ်သော",
+  "probable_author": "",
+  "probable_year": "1968",
+  "identity_confidence": "medium",
+  "rename_status": "needs_manual_review"
 }

@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T14:29:03.502361+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "311052.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/1941/311052.pdf",
+  "canonical_file_name": "1941-52-jour-burma-research-soc-correspondence.pdf",
+  "canonical_base_name": "1941-52-jour-burma-research-soc-correspondence",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/311052-cd69bb9b6a58.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/311052-cd69bb9b6a58.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1941-52-jour-burma-research-soc-correspondence.pdf",
+  "probable_article_title": "52 JOUR, BURMA RESEARCH SOC",
+  "probable_author": "CORRESPONDENCE",
+  "probable_year": "1941",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

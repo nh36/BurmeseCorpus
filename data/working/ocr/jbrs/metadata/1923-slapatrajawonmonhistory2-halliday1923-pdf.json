@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T08:33:21.570145+00:00",
   "source_category": "other_source",
   "language_scope_guess": "Mon",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "SlapatRajawonMonHistory2-Halliday1923.pdf",
+  "old_path_stub": "1923/SlapatRajawonMonHistory2-Halliday1923.pdf",
+  "canonical_file_name": "1923-translation-namo-tassa-bhagavato-arahato-sammasambuddhassa-r-j-a-history-of-kings.pdf",
+  "canonical_base_name": "1923-translation-namo-tassa-bhagavato-arahato-sammasambuddhassa-r-j-a-history-of-kings",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/1923-slapatrajawonmonhistory2-halliday1923-pdf.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/1923-slapatrajawonmonhistory2-halliday1923-pdf.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1923-translation-namo-tassa-bhagavato-arahato-sammasambuddhassa-r-j-a-history-of-kings.pdf",
+  "probable_article_title": "TRANSLATION. Namo tassa bhagavato arahato sammasambuddhassa.¹ Rājāmunindam tiloka aggam, dhammañca sanghañca namāmi aha…",
+  "probable_author": "A HISTORY OF KINGS",
+  "probable_year": "1923",
+  "identity_confidence": "high",
+  "rename_status": "deferred_outside_phase1_scope"
 }

@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T17:40:13.455868+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "481077.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/1965/481077.pdf",
+  "canonical_file_name": "1965-antidysenterica-grown-burma-literature-survey-shows-that-large-phytochemical-studies-of-holarrhena.pdf",
+  "canonical_base_name": "1965-antidysenterica-grown-burma-literature-survey-shows-that-large-phytochemical-studies-of-holarrhena",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/481077-aaf5d3aded8e.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/481077-aaf5d3aded8e.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1965-antidysenterica-grown-burma-literature-survey-shows-that-large-phytochemical-studies-of-holarrhena.pdf",
+  "probable_article_title": "ANTIDYSENTERICA GROWN IN BURMA.* Literature survey shows that a large barks and seeds of Holarrhena both in Europe as w…",
+  "probable_author": "PHYTOCHEMICAL STUDIES OF HOLARRHENA",
+  "probable_year": "1965",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

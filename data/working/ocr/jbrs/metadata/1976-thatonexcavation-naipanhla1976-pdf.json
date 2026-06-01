@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T09:44:30.941541+00:00",
   "source_category": "other_source",
   "language_scope_guess": "non_burmese_relevant_context",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "ThatonExcavation-NaiPanHla1976.pdf",
+  "old_path_stub": "1976/ThatonExcavation-NaiPanHla1976.pdf",
+  "canonical_file_name": "ThatonExcavation-NaiPanHla1976.pdf",
+  "canonical_base_name": "",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/1976-thatonexcavation-naipanhla1976-pdf.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/1976-thatonexcavation-naipanhla1976-pdf.json",
+  "canonical_pdf_path_stub": "",
+  "probable_article_title": "165 Editor's Note on Excavation of Old Thaton The Archaeological Survey of Burma had conducted three field seasons in ,…",
+  "probable_author": "",
+  "probable_year": "1976",
+  "identity_confidence": "medium",
+  "rename_status": "needs_manual_review"
 }

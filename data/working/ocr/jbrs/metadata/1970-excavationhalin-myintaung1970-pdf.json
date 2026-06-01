@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T09:16:37.285049+00:00",
   "source_category": "other_source",
   "language_scope_guess": "mixed_or_uncertain",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "ExcavationHalin-MyintAung1970.pdf",
+  "old_path_stub": "1970/ExcavationHalin-MyintAung1970.pdf",
+  "canonical_file_name": "1970-main-problem-burmese-archaeology-is-fill-up-gaps-the-excavations-at-halin.pdf",
+  "canonical_base_name": "1970-main-problem-burmese-archaeology-is-fill-up-gaps-the-excavations-at-halin",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/1970-excavationhalin-myintaung1970-pdf.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/1970-excavationhalin-myintaung1970-pdf.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1970-main-problem-burmese-archaeology-is-fill-up-gaps-the-excavations-at-halin.pdf",
+  "probable_article_title": "The main problem of Burmese archaeology is to fill up the gaps in the curly chapters of Burmese history and to correlat…",
+  "probable_author": "THE EXCAVATIONS AT HALIN *",
+  "probable_year": "1970",
+  "identity_confidence": "high",
+  "rename_status": "deferred_outside_phase1_scope"
 }

@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T18:13:10.729448+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "502245.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/1967/502245.pdf",
+  "canonical_file_name": "1967-state-law-contemporary-i.pdf",
+  "canonical_base_name": "1967-state-law-contemporary-i",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/502245-9798d74ff8a5.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/502245-9798d74ff8a5.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1967-state-law-contemporary-i.pdf",
+  "probable_article_title": "STATE AND LAW IN CONTEMPORARY",
+  "probable_author": "I",
+  "probable_year": "1967",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

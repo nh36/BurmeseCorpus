@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T14:02:34.248140+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "282109.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/JBRS Originals/282109.pdf",
+  "canonical_file_name": "282109.pdf",
+  "canonical_base_name": "",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/282109-dadda21920c9.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/282109-dadda21920c9.json",
+  "canonical_pdf_path_stub": "",
+  "probable_article_title": "INTERCOURSE BETWEEN SIAM AND BURMA. The present translation is the second installment of the translation of such portio…",
+  "probable_author": "",
+  "probable_year": "1938",
+  "identity_confidence": "medium",
+  "rename_status": "needs_manual_review"
 }

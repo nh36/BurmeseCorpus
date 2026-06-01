@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T16:28:42.228400+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "441081.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/1961/441081.pdf",
+  "canonical_file_name": "441081.pdf",
+  "canonical_base_name": "",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/441081-7324d4a0404b.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/441081-7324d4a0404b.json",
+  "canonical_pdf_path_stub": "",
+  "probable_article_title": "တူရွင်းတိုင်မြို့စစ်တန်း ဤ ၁၁၄၅ ခု ၁၁၆၄ ခု ဆိုင်ရာ တူရွှင်းဘိုင်မြို့ စစ်တန်းများကို ကွယ်လွန်သူ သတိုးသီရိသုဓမ္မ ဒေါက်တာ…",
+  "probable_author": "",
+  "probable_year": "1961",
+  "identity_confidence": "medium",
+  "rename_status": "needs_manual_review"
 }

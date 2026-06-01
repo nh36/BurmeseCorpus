@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T18:31:34.188843+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "521027.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/1969/521027.pdf",
+  "canonical_file_name": "521027.pdf",
+  "canonical_base_name": "",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/521027-79b9ed779984.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/521027-79b9ed779984.json",
+  "canonical_pdf_path_stub": "",
+  "probable_article_title": "ဗိုလ်ချုပ်အောင်ဆန်း ဆောင်းပါးများ၊ မိန့်ခွန်းများ၊ လက်ရေးစာမူများ နှင့် 581",
+  "probable_author": "",
+  "probable_year": "1969",
+  "identity_confidence": "medium",
+  "rename_status": "needs_manual_review"
 }

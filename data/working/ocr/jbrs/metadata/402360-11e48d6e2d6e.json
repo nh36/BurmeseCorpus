@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T15:52:59.513620+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "402360.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/1957/402360.pdf",
+  "canonical_file_name": "1957-360-book-reviews-some-observations-libraries-manuscripts-books-book-reviews.pdf",
+  "canonical_base_name": "1957-360-book-reviews-some-observations-libraries-manuscripts-books-book-reviews",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/402360-11e48d6e2d6e.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/402360-11e48d6e2d6e.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1957-360-book-reviews-some-observations-libraries-manuscripts-books-book-reviews.pdf",
+  "probable_article_title": "360 BOOK REVIEWS SOME OBSERVATIONS ON LIBRARIES, MANUSCRIPTS. AND BOOKS OF BURMA from the 3rd. Century A. D. to by Miss…",
+  "probable_author": "BOOK REVIEWS",
+  "probable_year": "1957",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T14:12:58.317203+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "292157.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/1939/292157.pdf",
+  "canonical_file_name": "1939-157-tragedy-burmese-drama-i.pdf",
+  "canonical_base_name": "1939-157-tragedy-burmese-drama-i",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/292157-56aa15461e87.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/292157-56aa15461e87.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1939-157-tragedy-burmese-drama-i.pdf",
+  "probable_article_title": "157 TRAGEDY AND THE BURMESE DRAMA*",
+  "probable_author": "I",
+  "probable_year": "1939",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

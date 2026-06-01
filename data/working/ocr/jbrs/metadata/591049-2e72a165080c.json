@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T19:38:41.175974+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "591049.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/1977/591049.pdf",
+  "canonical_file_name": "1977-pagan-restoration-by.pdf",
+  "canonical_base_name": "1977-pagan-restoration-by",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/591049-2e72a165080c.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/591049-2e72a165080c.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1977-pagan-restoration-by.pdf",
+  "probable_article_title": "PAGAN RESTORATION'",
+  "probable_author": "by",
+  "probable_year": "1977",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T15:55:35.618426+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "411048.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/JBRS Originals/411048.pdf",
+  "canonical_file_name": "1958-flourimetric-methods-assay-uranium-burmese-minerals-1-by.pdf",
+  "canonical_base_name": "1958-flourimetric-methods-assay-uranium-burmese-minerals-1-by",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/411048-bbc7bf106580.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/411048-bbc7bf106580.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1958-flourimetric-methods-assay-uranium-burmese-minerals-1-by.pdf",
+  "probable_article_title": "FLOURIMETRIC METHODS FOR ASSAY OF URANIUM IN BURMESE MINERALS 1",
+  "probable_author": "by",
+  "probable_year": "1958",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

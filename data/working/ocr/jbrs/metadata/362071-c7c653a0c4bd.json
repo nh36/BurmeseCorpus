@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T15:10:31.566402+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "362071.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/1953/362071.pdf",
+  "canonical_file_name": "1953-importance-scientific-research-burma-by.pdf",
+  "canonical_base_name": "1953-importance-scientific-research-burma-by",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/362071-c7c653a0c4bd.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/362071-c7c653a0c4bd.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1953-importance-scientific-research-burma-by.pdf",
+  "probable_article_title": "THE IMPORTANCE OF SCIENTIFIC RESEARCH IN BURMA**",
+  "probable_author": "BY",
+  "probable_year": "1953",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T16:15:00.619756+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "431037.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/JBRS Originals/431037.pdf",
+  "canonical_file_name": "1960-role-masses-raising-the-standard-of-welfare.pdf",
+  "canonical_base_name": "1960-role-masses-raising-the-standard-of-welfare",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/431037-79baa579e9e2.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/431037-79baa579e9e2.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1960-role-masses-raising-the-standard-of-welfare.pdf",
+  "probable_article_title": "THE ROLE OF THE MASSES IN RAISING",
+  "probable_author": "THE STANDARD OF WELFARE",
+  "probable_year": "1960",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

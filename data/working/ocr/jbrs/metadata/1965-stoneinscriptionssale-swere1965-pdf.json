@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T09:11:09.515873+00:00",
   "source_category": "other_source",
   "language_scope_guess": "non_burmese_relevant_context",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "StoneInscriptionsSale-Swere1965.pdf",
+  "old_path_stub": "1965/StoneInscriptionsSale-Swere1965.pdf",
+  "canonical_file_name": "StoneInscriptionsSale-Swere1965.pdf",
+  "canonical_base_name": "",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/1965-stoneinscriptionssale-swere1965-pdf.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/1965-stoneinscriptionssale-swere1965-pdf.json",
+  "canonical_pdf_path_stub": "",
+  "probable_article_title": "စလေမြို့နှင့် အနီးတဝိုက်ရှိ ကျောက်စာများ ကျွန်ုပ်တို့သည် ရှေးဖြစ်ဟောင်း အကြောင်းရပ် များကို သိရှိလိုလျှင် သက်ကြီးဝါကြီး…",
+  "probable_author": "",
+  "probable_year": "1965",
+  "identity_confidence": "medium",
+  "rename_status": "needs_manual_review"
 }

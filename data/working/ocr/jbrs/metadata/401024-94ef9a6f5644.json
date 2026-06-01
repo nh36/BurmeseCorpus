@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T15:40:37.678073+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "401024.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/1957/401024.pdf",
+  "canonical_file_name": "1957-study-economic-history-burma-safety-first.pdf",
+  "canonical_base_name": "1957-study-economic-history-burma-safety-first",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/401024-94ef9a6f5644.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/401024-94ef9a6f5644.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1957-study-economic-history-burma-safety-first.pdf",
+  "probable_article_title": "A STUDY IN THE ECONOMIC HISTORY OF BURMA '",
+  "probable_author": "SAFETY FIRST",
+  "probable_year": "1957",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

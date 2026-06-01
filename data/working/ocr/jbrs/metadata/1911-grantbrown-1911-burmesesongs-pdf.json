@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T08:18:26.422679+00:00",
   "source_category": "other_source",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "GrantBrown-1911-BurmeseSongs.pdf",
+  "old_path_stub": "1911/GrantBrown-1911-BurmeseSongs.pdf",
+  "canonical_file_name": "GrantBrown-1911-BurmeseSongs.pdf",
+  "canonical_base_name": "",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/1911-grantbrown-1911-burmesesongs-pdf.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/1911-grantbrown-1911-burmesesongs-pdf.json",
+  "canonical_pdf_path_stub": "",
+  "probable_article_title": "91 BURMESE SONGS",
+  "probable_author": "",
+  "probable_year": "1911",
+  "identity_confidence": "medium",
+  "rename_status": "needs_manual_review"
 }

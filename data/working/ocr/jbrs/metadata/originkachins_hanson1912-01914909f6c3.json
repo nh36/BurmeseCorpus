@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T19:53:28.435504+00:00",
   "source_category": "other_source",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "OriginKachins-Hanson1912.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/1912/OriginKachins-Hanson1912.pdf",
+  "canonical_file_name": "OriginKachins-Hanson1912.pdf",
+  "canonical_base_name": "",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/originkachins_hanson1912-01914909f6c3.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/originkachins_hanson1912-01914909f6c3.json",
+  "canonical_pdf_path_stub": "",
+  "probable_article_title": "THE ORIGIN OF THE KACHINS.* The Kachins occupy a large and fertile territory extend ing from the 29th parallel north to…",
+  "probable_author": "",
+  "probable_year": "1912",
+  "identity_confidence": "medium",
+  "rename_status": "needs_manual_review"
 }

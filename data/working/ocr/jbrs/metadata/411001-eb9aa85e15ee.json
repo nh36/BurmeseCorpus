@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T15:53:16.557894+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "411001.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/1958/411001.pdf",
+  "canonical_file_name": "1958-u-chit-thoung-2-time-immemorial-two-staple-standards-for-ngapi.pdf",
+  "canonical_base_name": "1958-u-chit-thoung-2-time-immemorial-two-staple-standards-for-ngapi",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/411001-eb9aa85e15ee.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/411001-eb9aa85e15ee.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1958-u-chit-thoung-2-time-immemorial-two-staple-standards-for-ngapi.pdf",
+  "probable_article_title": "by U Chit Thoung 2 From time immemorial the two staple foodstuffs of the Burmese and the Siamese have been rice and Nga…",
+  "probable_author": "STANDARDS FOR NGAPI'",
+  "probable_year": "1958",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T18:35:56.369747+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Mixed Burmese/Pali",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "522027.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/1969/522027.pdf",
+  "canonical_file_name": "1969-burmese-concept-law-by.pdf",
+  "canonical_base_name": "1969-burmese-concept-law-by",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/522027-5a0fb4e70541.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/522027-5a0fb4e70541.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1969-burmese-concept-law-by.pdf",
+  "probable_article_title": "THE BURMESE CONCEPT OF LAW*",
+  "probable_author": "BY",
+  "probable_year": "1969",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

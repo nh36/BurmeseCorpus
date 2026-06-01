@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T08:18:04.105128+00:00",
   "source_category": "other_source",
   "language_scope_guess": "mixed_or_uncertain",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "ChineseAntiquitiesPagan-TawSeinKo1911.pdf",
+  "old_path_stub": "1911/ChineseAntiquitiesPagan-TawSeinKo1911.pdf",
+  "canonical_file_name": "1911-chinese-antiquities-pagan-by.pdf",
+  "canonical_base_name": "1911-chinese-antiquities-pagan-by",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/1911-chineseantiquitiespagan-tawseinko1911-pdf.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/1911-chineseantiquitiespagan-tawseinko1911-pdf.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1911-chinese-antiquities-pagan-by.pdf",
+  "probable_article_title": "CHINESE ANTIQUITIES AT PAGAN",
+  "probable_author": "BY",
+  "probable_year": "1911",
+  "identity_confidence": "high",
+  "rename_status": "deferred_outside_phase1_scope"
 }

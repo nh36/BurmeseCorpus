@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T18:23:44.591795+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "512173.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/JBRS Originals/512173.pdf",
+  "canonical_file_name": "1968-1629-48-administration-under-king-thalun.pdf",
+  "canonical_base_name": "1968-1629-48-administration-under-king-thalun",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/512173-a3516d020bab.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/512173-a3516d020bab.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1968-1629-48-administration-under-king-thalun.pdf",
+  "probable_article_title": "(1629 48)",
+  "probable_author": "ADMINISTRATION UNDER KING THALUN*",
+  "probable_year": "1968",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

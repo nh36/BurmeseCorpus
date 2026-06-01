@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T16:53:31.906046+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "461027.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/1963/461027.pdf",
+  "canonical_file_name": "1963-organization-planning-machinery-lessons-burmese-experience-thet-tun.pdf",
+  "canonical_base_name": "1963-organization-planning-machinery-lessons-burmese-experience-thet-tun",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/461027-87bba07f427d.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/461027-87bba07f427d.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1963-organization-planning-machinery-lessons-burmese-experience-thet-tun.pdf",
+  "probable_article_title": "ORGANIZATION OF PLANNING MACHINERY: LESSONS FROM BURMESE EXPERIENCE*",
+  "probable_author": "THET TUN**",
+  "probable_year": "1963",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T09:47:51.567335+00:00",
   "source_category": "other_source",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "AncientPyu-Luce1937.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/1937/AncientPyu-Luce1937.pdf",
+  "canonical_file_name": "1937-beginning-christian-era-peoples-dominating-further-india-were-the-ancient-pyu-scan-2.pdf",
+  "canonical_base_name": "1937-beginning-christian-era-peoples-dominating-further-india-were-the-ancient-pyu-scan-2",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/ancientpyu_luce1937-c7fe9ee6157d.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/ancientpyu_luce1937-c7fe9ee6157d.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1937-beginning-christian-era-peoples-dominating-further-india-were-the-ancient-pyu-scan-2.pdf",
+  "probable_article_title": "At the beginning of the Christian era, the peoples dominating Further India were probably Indonesian. They certainly we…",
+  "probable_author": "The Ancient Pyu",
+  "probable_year": "1937",
+  "identity_confidence": "high",
+  "rename_status": "deferred_outside_phase1_scope"
 }

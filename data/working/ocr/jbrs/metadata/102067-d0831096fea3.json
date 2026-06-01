@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T12:43:31.186475+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Mixed Burmese/Pali",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "102067.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/JBRS Originals/102067.pdf",
+  "canonical_file_name": "102067.pdf",
+  "canonical_base_name": "",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/102067-d0831096fea3.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/102067-d0831096fea3.json",
+  "canonical_pdf_path_stub": "",
+  "probable_article_title": "THE SHWEGUGYI PAGODA INSCRIPTION, PAGAN, 1141, A.D",
+  "probable_author": "",
+  "probable_year": "1920",
+  "identity_confidence": "medium",
+  "rename_status": "needs_manual_review"
 }

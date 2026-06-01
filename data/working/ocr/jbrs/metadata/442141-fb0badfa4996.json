@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T16:32:36.491942+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "442141.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/1961/442141.pdf",
+  "canonical_file_name": "442141.pdf",
+  "canonical_base_name": "",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/442141-fb0badfa4996.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/442141-fb0badfa4996.json",
+  "canonical_pdf_path_stub": "",
+  "probable_article_title": "ဗင်္ဂလားသွား မြန်မာသံတော်အဖွဲ့ (အေ ဒီ ၁၈၃၀)* မကြန်** ရေးသည် မြန်မာသံအဖွဲ့သည် အေဒီ ၁၀၃၀ ၌ ဗင်္ဂလားသို့သွားရောက်ရခြင်းမှာ…",
+  "probable_author": "",
+  "probable_year": "1961",
+  "identity_confidence": "medium",
+  "rename_status": "needs_manual_review"
 }

@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T15:12:48.735164+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "371001.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/1954/371001.pdf",
+  "canonical_file_name": "1954-life-history-dermogenys-pusillus-kuhl-van-hasselt-inya-by.pdf",
+  "canonical_base_name": "1954-life-history-dermogenys-pusillus-kuhl-van-hasselt-inya-by",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/371001-23c0ebc8f542.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/371001-23c0ebc8f542.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1954-life-history-dermogenys-pusillus-kuhl-van-hasselt-inya-by.pdf",
+  "probable_article_title": "LIFE HISTORY OF DERMOGENYS PUSILLUS KUHL & VAN HASSELT FROM THE INYA LAKE 1",
+  "probable_author": "By",
+  "probable_year": "1954",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

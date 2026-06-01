@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T19:10:18.915801+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "561061.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/1973/561061.pdf",
+  "canonical_file_name": "1973-our-late-lamented-professor-pe-maung-tin-burma-pe-maung-tin.pdf",
+  "canonical_base_name": "1973-our-late-lamented-professor-pe-maung-tin-burma-pe-maung-tin",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/561061-932ad0baa12f.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/561061-932ad0baa12f.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1973-our-late-lamented-professor-pe-maung-tin-burma-pe-maung-tin.pdf",
+  "probable_article_title": "In our late lamented Professor Pe Maung Tin, the Burma Research Society had lost the longest-living life-member, the ea…",
+  "probable_author": "U Pe Maung Tin",
+  "probable_year": "1973",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

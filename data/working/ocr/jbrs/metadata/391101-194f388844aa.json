@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T15:34:33.121955+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "391101.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/1956/391101.pdf",
+  "canonical_file_name": "1956-general-structure-languages-spoken-burma-by.pdf",
+  "canonical_base_name": "1956-general-structure-languages-spoken-burma-by",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/391101-194f388844aa.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/391101-194f388844aa.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1956-general-structure-languages-spoken-burma-by.pdf",
+  "probable_article_title": "THE GENERAL STRUCTURE OF LANGUAGES SPOKEN IN BURMA ¹",
+  "probable_author": "by",
+  "probable_year": "1956",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T19:51:14.623051+00:00",
   "source_category": "other_source",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "Luce-1959-OldKyaukseAndTheComingOfTheBurmans.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/1959/Luce-1959-OldKyaukseAndTheComingOfTheBurmans.pdf",
+  "canonical_file_name": "1959-geography-burma-under-pagan-dynasty-old-kyaukse.pdf",
+  "canonical_base_name": "1959-geography-burma-under-pagan-dynasty-old-kyaukse",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/luce_1959_oldkyaukseandthecomingofthebur-3515dbea8f5e.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/luce_1959_oldkyaukseandthecomingofthebur-3515dbea8f5e.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1959-geography-burma-under-pagan-dynasty-old-kyaukse.pdf",
+  "probable_article_title": "Geography of Burma under the Pagan dynasty",
+  "probable_author": "OLD KYAUKSE",
+  "probable_year": "1959",
+  "identity_confidence": "high",
+  "rename_status": "deferred_outside_phase1_scope"
 }

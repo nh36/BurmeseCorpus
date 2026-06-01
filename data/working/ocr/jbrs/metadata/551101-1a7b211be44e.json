@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T19:06:18.259205+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "551101.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/JBRS Originals/551101.pdf",
+  "canonical_file_name": "1972-coptright-myanmar-book-centre-book-promotion-service-ltd-ba-shin.pdf",
+  "canonical_base_name": "1972-coptright-myanmar-book-centre-book-promotion-service-ltd-ba-shin",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/551101-1a7b211be44e.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/551101-1a7b211be44e.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1972-coptright-myanmar-book-centre-book-promotion-service-ltd-ba-shin.pdf",
+  "probable_article_title": "Coptright Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand",
+  "probable_author": "Ba Shin",
+  "probable_year": "1972",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T08:34:09.800209+00:00",
   "source_category": "other_source",
   "language_scope_guess": "mixed_or_uncertain",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "PeMaungTin-1930-OldWordsinInscriptions.pdf",
+  "old_path_stub": "1930/PeMaungTin-1930-OldWordsinInscriptions.pdf",
+  "canonical_file_name": "1930-no-pe-maung-tin.pdf",
+  "canonical_base_name": "1930-no-pe-maung-tin",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/1930-pemaungtin-1930-oldwordsininscriptions-pdf.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/1930-pemaungtin-1930-oldwordsininscriptions-pdf.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1930-no-pe-maung-tin.pdf",
+  "probable_article_title": "ကျောက်စာ စကားဟောင်းများ။ နံပါတ် ၄။ [No",
+  "probable_author": "U Pe Maung Tin",
+  "probable_year": "1930",
+  "identity_confidence": "high",
+  "rename_status": "deferred_outside_phase1_scope"
 }

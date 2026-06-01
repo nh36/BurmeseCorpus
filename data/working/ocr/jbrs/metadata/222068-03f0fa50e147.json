@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T13:08:23.635748+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "222068.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/JBRS Originals/222068.pdf",
+  "canonical_file_name": "1932-phayre-s-private-journal-his-mission-ava-transcribed-d-g-e-hall-scan-2.pdf",
+  "canonical_base_name": "1932-phayre-s-private-journal-his-mission-ava-transcribed-d-g-e-hall-scan-2",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/222068-03f0fa50e147.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/222068-03f0fa50e147.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1932-phayre-s-private-journal-his-mission-ava-transcribed-d-g-e-hall-scan-2.pdf",
+  "probable_article_title": "PHAYRE'S PRIVATE JOURNAL OF HIS MISSION TO AVA IN . TRANSCRIBED WITH NOTES AND AN INTRODUCTORY NOTE BY D.G.E",
+  "probable_author": "D. G. E. Hall",
+  "probable_year": "1932",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

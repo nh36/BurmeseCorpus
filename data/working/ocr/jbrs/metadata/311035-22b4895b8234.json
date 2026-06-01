@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T14:28:24.966295+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "311035.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/JBRS Originals/311035.pdf",
+  "canonical_file_name": "1941-europeans-burma-the-early-portuguese.pdf",
+  "canonical_base_name": "1941-europeans-burma-the-early-portuguese",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/311035-22b4895b8234.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/311035-22b4895b8234.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1941-europeans-burma-the-early-portuguese.pdf",
+  "probable_article_title": "EUROPEANS IN BURMA",
+  "probable_author": "THE EARLY PORTUGUESE",
+  "probable_year": "1941",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

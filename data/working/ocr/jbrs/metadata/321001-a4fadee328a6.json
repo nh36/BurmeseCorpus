@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T14:34:24.708301+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "321001.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/1948/321001.pdf",
+  "canonical_file_name": "321001.pdf",
+  "canonical_base_name": "",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/321001-a4fadee328a6.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/321001-a4fadee328a6.json",
+  "canonical_pdf_path_stub": "",
+  "probable_article_title": "ရှေးပညာရှိကြီးများ၏စကား၊ အဂ္ဂမဟာပဏ္ဍိတ ဆရာကြီး ဦးလင်း။ မြန်မာစာပေအရေးအသားသည် အထင်အရှားအားဖြင့် မြန်မာနိုင်ငံ ပုဂံခေတ် န…",
+  "probable_author": "",
+  "probable_year": "1948",
+  "identity_confidence": "medium",
+  "rename_status": "needs_manual_review"
 }

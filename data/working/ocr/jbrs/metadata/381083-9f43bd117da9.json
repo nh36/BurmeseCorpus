@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T15:25:13.203626+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "381083.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/1955/381083.pdf",
+  "canonical_file_name": "1955-microscopic-study-burmese-timbers-maceration-method.pdf",
+  "canonical_base_name": "1955-microscopic-study-burmese-timbers-maceration-method",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/381083-9f43bd117da9.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/381083-9f43bd117da9.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1955-microscopic-study-burmese-timbers-maceration-method.pdf",
+  "probable_article_title": "MICROSCOPIC STUDY OF THE BURMESE TIMBERS",
+  "probable_author": "MACERATION METHOD'",
+  "probable_year": "1955",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

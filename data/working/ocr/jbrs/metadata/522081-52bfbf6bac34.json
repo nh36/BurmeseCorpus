@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T18:39:27.547640+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "522081.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/JBRS Originals/522081.pdf",
+  "canonical_file_name": "522081.pdf",
+  "canonical_base_name": "",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/522081-52bfbf6bac34.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/522081-52bfbf6bac34.json",
+  "canonical_pdf_path_stub": "",
+  "probable_article_title": "ကိုလိုနီခေတ်ဦးကာလ(၁၈၆၀ ၉၀)က မြန်မဂ္ဂပညာရေးတွင် ဗြိတိသျအစိုးရ ဆောင်ရွက်ချက်များအပေါ် ဆန်းစစ်သုံးသပ်ခြင်း ဦးခင်ဇော်ဝင်း၊",
+  "probable_author": "",
+  "probable_year": "",
+  "identity_confidence": "low",
+  "rename_status": "needs_manual_review"
 }

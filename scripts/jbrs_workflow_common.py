@@ -54,6 +54,8 @@ JBRS_OCR_TOP_INSCRIPTION_EXTRACTION_CANDIDATES_PATH = (
     JBRS_DIRECTORY / "jbrs_ocr_top_inscription_extraction_candidates.tsv"
 )
 JBRS_OCR_PRODUCTION_SUMMARY_PATH = JBRS_DIRECTORY / "jbrs_ocr_production_summary.json"
+JBRS_FILE_RENAMING_PLAN_PATH = JBRS_DIRECTORY / "jbrs_file_renaming_plan.tsv"
+JBRS_FILE_ALIAS_MAP_PATH = JBRS_DIRECTORY / "jbrs_file_alias_map.tsv"
 MAX_GITHUB_CONTENTS_SIZE = 1_000_000
 
 RAW_REFERENCE_HUNT_FIELDS = [
@@ -219,8 +221,14 @@ JBRS_OCR_TEXT_INDEX_FIELDS = [
     "local_file_id",
     "batch_id",
     "file_name",
+    "old_file_name",
+    "canonical_file_name",
+    "probable_article_title",
+    "probable_author",
     "year",
     "path_stub",
+    "old_path_stub",
+    "new_path_stub_or_repo_path",
     "ocr_text_path",
     "metadata_path",
     "pages_completed",
@@ -241,6 +249,12 @@ JBRS_OCR_TRANSLATION_HIT_INDEX_FIELDS = [
     "local_file_id",
     "batch_id",
     "file_name",
+    "old_file_name",
+    "canonical_file_name",
+    "probable_article_title",
+    "probable_author",
+    "old_path_stub",
+    "new_path_stub_or_repo_path",
     "page_marker",
     "hit_type",
     "matched_marker",
@@ -257,7 +271,13 @@ JBRS_OCR_TOP_EXTRACTION_CANDIDATES_FIELDS = [
     "local_file_id",
     "batch_id",
     "file_name",
+    "old_file_name",
+    "canonical_file_name",
+    "probable_article_title",
+    "probable_author",
     "year",
+    "old_path_stub",
+    "new_path_stub_or_repo_path",
     "ocr_text_path",
     "language_scope_guess",
     "burmese_relevance_guess",
@@ -275,6 +295,37 @@ JBRS_OCR_TOP_EXTRACTION_CANDIDATES_FIELDS = [
 JBRS_OCR_TOP_INSCRIPTION_EXTRACTION_CANDIDATES_FIELDS = (
     JBRS_OCR_TOP_EXTRACTION_CANDIDATES_FIELDS
 )
+
+JBRS_FILE_RENAMING_PLAN_FIELDS = [
+    "local_file_id",
+    "batch_id",
+    "old_file_name",
+    "old_path_stub",
+    "current_ocr_text_path",
+    "current_metadata_path",
+    "probable_article_title",
+    "probable_author",
+    "probable_year",
+    "canonical_base_name",
+    "proposed_pdf_file_name",
+    "proposed_ocr_text_file_name",
+    "proposed_metadata_file_name",
+    "identity_confidence",
+    "rename_status",
+    "notes",
+]
+
+JBRS_FILE_ALIAS_MAP_FIELDS = [
+    "local_file_id",
+    "old_file_name",
+    "old_path_stub",
+    "canonical_file_name",
+    "canonical_ocr_text_path",
+    "canonical_metadata_path",
+    "canonical_pdf_path_stub",
+    "alias_status",
+    "notes",
+]
 
 JBRS_OCR_LANGUAGE_SCOPE_VALUES = {
     "Burmese",
@@ -2358,15 +2409,11 @@ def validate_repo_ocr_artifacts() -> list[str]:
         ".gif",
     }
     text_files = {
-        path.stem: path
+        path.relative_to(REPO_ROOT).as_posix(): path
         for path in JBRS_WORKING_OCR_TEXT_ROOT.glob("*.txt")
         if path.is_file()
     }
-    metadata_files = {
-        path.stem: path
-        for path in JBRS_WORKING_OCR_METADATA_ROOT.glob("*.json")
-        if path.is_file()
-    }
+    metadata_entries: dict[str, dict[str, object]] = {}
 
     for path in JBRS_WORKING_OCR_ROOT.rglob("*"):
         if path.is_file() and path.suffix.casefold() in forbidden_suffixes:
@@ -2374,22 +2421,7 @@ def validate_repo_ocr_artifacts() -> list[str]:
                 f"Committed OCR working tree contains forbidden binary artifact {path.relative_to(REPO_ROOT)}."
             )
 
-    for local_file_id, text_path in sorted(text_files.items()):
-        if local_file_id not in metadata_files:
-            errors.append(
-                f"OCR text file {text_path.relative_to(REPO_ROOT)} is missing a matching metadata sidecar."
-            )
-        text_content = text_path.read_text(encoding="utf-8")
-        if not re.search(r"^\[\[page \d+\]\]$", text_content, re.MULTILINE):
-            errors.append(
-                f"OCR text file {text_path.relative_to(REPO_ROOT)} lacks page markers."
-            )
-
-    for local_file_id, metadata_path in sorted(metadata_files.items()):
-        if local_file_id not in text_files:
-            errors.append(
-                f"OCR metadata file {metadata_path.relative_to(REPO_ROOT)} is missing a matching OCR text file."
-            )
+    for metadata_path in sorted(JBRS_WORKING_OCR_METADATA_ROOT.glob("*.json")):
         metadata_content = metadata_path.read_text(encoding="utf-8")
         if ABSOLUTE_PATH_PATTERN.search(metadata_content):
             errors.append(
@@ -2398,6 +2430,47 @@ def validate_repo_ocr_artifacts() -> list[str]:
         if "GOOGLE_APPLICATION_CREDENTIALS" in metadata_content or "-----BEGIN PRIVATE KEY-----" in metadata_content:
             errors.append(
                 f"OCR metadata file {metadata_path.relative_to(REPO_ROOT)} contains a credential reference."
+            )
+        try:
+            metadata = json.loads(metadata_content)
+        except json.JSONDecodeError as exc:
+            errors.append(
+                f"OCR metadata file {metadata_path.relative_to(REPO_ROOT)} is not valid JSON: {exc}."
+            )
+            continue
+        local_file_id = metadata.get("local_file_id", "") or metadata_path.stem
+        if local_file_id in metadata_entries:
+            errors.append(
+                f"OCR metadata files {metadata_entries[local_file_id]['metadata_path']} and {metadata_path.relative_to(REPO_ROOT)} share local_file_id {local_file_id}."
+            )
+            continue
+        text_rel = metadata.get("canonical_ocr_text_path", "") or relative_stub(
+            JBRS_WORKING_OCR_TEXT_ROOT / f"{metadata_path.stem}.txt"
+        )
+        metadata_rel = metadata.get("canonical_metadata_path", "") or relative_stub(metadata_path)
+        metadata_entries[local_file_id] = {
+            "metadata_path": metadata_path.relative_to(REPO_ROOT).as_posix(),
+            "text_path": text_rel,
+            "metadata": metadata,
+        }
+
+    referenced_text_paths = {
+        entry["text_path"]: REPO_ROOT / str(entry["text_path"])
+        for entry in metadata_entries.values()
+    }
+    for text_rel, text_path in sorted(referenced_text_paths.items()):
+        if not text_path.exists():
+            errors.append(f"OCR metadata references missing OCR text file {text_rel}.")
+            continue
+        text_content = text_path.read_text(encoding="utf-8")
+        if not re.search(r"^\[\[page \d+\]\]$", text_content, re.MULTILINE):
+            errors.append(
+                f"OCR text file {text_path.relative_to(REPO_ROOT)} lacks page markers."
+            )
+    for text_rel, text_path in sorted(text_files.items()):
+        if text_rel not in referenced_text_paths:
+            errors.append(
+                f"OCR text file {text_path.relative_to(REPO_ROOT)} is missing a metadata sidecar reference."
             )
 
     text_index_rows = read_tsv(JBRS_OCR_TEXT_INDEX_PATH)
@@ -2418,18 +2491,28 @@ def validate_repo_ocr_artifacts() -> list[str]:
             errors.append(
                 f"OCR text index row {local_file_id} points to missing metadata file {row['metadata_path']}."
             )
-        if local_file_id not in text_files:
+        metadata_entry = metadata_entries.get(local_file_id)
+        if not metadata_entry:
             errors.append(
-                f"OCR text index row {local_file_id} has no matching committed OCR text file."
+                f"OCR text index row {local_file_id} has no matching committed OCR metadata entry."
             )
+        else:
+            if str(metadata_entry["text_path"]) != row["ocr_text_path"]:
+                errors.append(
+                    f"OCR text index row {local_file_id} points to {row['ocr_text_path']} but metadata references {metadata_entry['text_path']}."
+                )
+            if str(metadata_entry["metadata_path"]) != row["metadata_path"]:
+                errors.append(
+                    f"OCR text index row {local_file_id} points to metadata {row['metadata_path']} but the committed metadata file is {metadata_entry['metadata_path']}."
+                )
         if row["ocr_status"] != "completed":
             errors.append(
                 f"OCR text index row {local_file_id} must have ocr_status=completed."
             )
-    for local_file_id in metadata_files:
+    for local_file_id in metadata_entries:
         if local_file_id not in text_index_by_local_id:
             errors.append(
-                f"OCR metadata file {metadata_files[local_file_id].relative_to(REPO_ROOT)} has no matching OCR text index row."
+                f"OCR metadata file {metadata_entries[local_file_id]['metadata_path']} has no matching OCR text index row."
             )
 
     production_run_rows = read_tsv(JBRS_OCR_PRODUCTION_RUN_LOG_PATH)
@@ -2469,9 +2552,9 @@ def validate_repo_ocr_artifacts() -> list[str]:
             errors.append(
                 f"OCR hit row {row['hit_id']} references missing OCR text index row for {local_file_id}."
             )
-        if local_file_id not in text_files:
+        if local_file_id not in metadata_entries:
             errors.append(
-                f"OCR hit row {row['hit_id']} references missing OCR text for {local_file_id}."
+                f"OCR hit row {row['hit_id']} references missing OCR metadata/text for {local_file_id}."
             )
         if (
             row["language_scope_guess"] == "Pali"
@@ -2556,6 +2639,50 @@ def validate_repo_ocr_artifacts() -> list[str]:
                 errors.append(
                     f"OCR top inscription candidate row for {local_file_id} contains an absolute path in {field_name}."
                 )
+
+    renaming_plan_rows = read_tsv(JBRS_FILE_RENAMING_PLAN_PATH)
+    alias_map_rows = read_tsv(JBRS_FILE_ALIAS_MAP_PATH)
+    alias_by_local_file_id = {row["local_file_id"]: row for row in alias_map_rows}
+    canonical_name_to_local_id: dict[str, str] = {}
+    for row in renaming_plan_rows:
+        canonical_base_name = row.get("canonical_base_name", "")
+        if canonical_base_name:
+            existing = canonical_name_to_local_id.get(canonical_base_name)
+            if existing and existing != row["local_file_id"]:
+                errors.append(
+                    f"Canonical base name collision: {canonical_base_name} is assigned to both {existing} and {row['local_file_id']}."
+                )
+            canonical_name_to_local_id[canonical_base_name] = row["local_file_id"]
+        if row.get("identity_confidence", "") == "low" and row.get("rename_status", "").startswith("renamed"):
+            errors.append(
+                f"Low-confidence renaming plan row {row['local_file_id']} must not be auto-renamed."
+            )
+        for field_name in ("current_ocr_text_path", "current_metadata_path"):
+            value = row.get(field_name, "")
+            if value and not (REPO_ROOT / value).exists():
+                errors.append(
+                    f"Renaming plan row {row['local_file_id']} points to missing file {value}."
+                )
+    numeric_name_pattern = re.compile(r"^\d+[A-Za-z]?\.pdf$", re.IGNORECASE)
+    for row in text_index_rows:
+        if row.get("old_file_name", "") and numeric_name_pattern.fullmatch(row["old_file_name"]):
+            if row["local_file_id"] not in alias_by_local_file_id:
+                errors.append(
+                    f"Numeric OCR file {row['local_file_id']} is missing an alias-map row."
+                )
+    for row in alias_map_rows:
+        local_file_id = row["local_file_id"]
+        if local_file_id not in text_index_by_local_id:
+            errors.append(
+                f"Alias-map row for {local_file_id} has no matching OCR text index row."
+            )
+        if row["alias_status"] in {"renamed_in_repo", "already_canonical"}:
+            for field_name in ("canonical_ocr_text_path", "canonical_metadata_path"):
+                value = row.get(field_name, "")
+                if value and not (REPO_ROOT / value).exists():
+                    errors.append(
+                        f"Alias-map row for {local_file_id} points to missing canonical file {value}."
+                    )
     production_summary = json.loads(JBRS_OCR_PRODUCTION_SUMMARY_PATH.read_text(encoding="utf-8"))
     expected_summary = build_jbrs_ocr_production_summary(
         text_index_rows=text_index_rows,
@@ -2674,6 +2801,8 @@ def validate_jbrs_workflow() -> list[str]:
         JBRS_OCR_TOP_EXTRACTION_CANDIDATES_PATH,
         JBRS_OCR_TOP_INSCRIPTION_EXTRACTION_CANDIDATES_PATH,
         JBRS_OCR_PRODUCTION_SUMMARY_PATH,
+        JBRS_FILE_RENAMING_PLAN_PATH,
+        JBRS_FILE_ALIAS_MAP_PATH,
         JBRS_PILOT_SUMMARY_PATH,
         JBRS_README_PATH,
     ]
@@ -3015,6 +3144,8 @@ def validate_jbrs_workflow() -> list[str]:
         JBRS_OCR_TOP_EXTRACTION_CANDIDATES_PATH,
         JBRS_OCR_TOP_INSCRIPTION_EXTRACTION_CANDIDATES_PATH,
         JBRS_OCR_PRODUCTION_SUMMARY_PATH,
+        JBRS_FILE_RENAMING_PLAN_PATH,
+        JBRS_FILE_ALIAS_MAP_PATH,
     ]:
         text = path.read_text(encoding="utf-8")
         if ABSOLUTE_PATH_PATTERN.search(text):

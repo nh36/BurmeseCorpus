@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T17:48:36.173107+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "491001.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/1966/491001.pdf",
+  "canonical_file_name": "1966-evolution-burmese-dramatic-performances-and-festal-occasions.pdf",
+  "canonical_base_name": "1966-evolution-burmese-dramatic-performances-and-festal-occasions",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/491001-05ead68078f2.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/491001-05ead68078f2.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1966-evolution-burmese-dramatic-performances-and-festal-occasions.pdf",
+  "probable_article_title": "THE EVOLUTION OF BURMESE DRAMATIC PERFORMANCES",
+  "probable_author": "AND FESTAL OCCASIONS*",
+  "probable_year": "1966",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

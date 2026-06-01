@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T13:16:50.641317+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "242114.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/JBRS Originals/242114.pdf",
+  "canonical_file_name": "1934-114-jour-burma-research-soc-some-records-of-hlesatun.pdf",
+  "canonical_base_name": "1934-114-jour-burma-research-soc-some-records-of-hlesatun",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/242114-57df6cbc912b.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/242114-57df6cbc912b.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1934-114-jour-burma-research-soc-some-records-of-hlesatun.pdf",
+  "probable_article_title": "114 JOUR. BURMA RESEARCH SOC",
+  "probable_author": "SOME RECORDS OF HLESATUN",
+  "probable_year": "1934",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

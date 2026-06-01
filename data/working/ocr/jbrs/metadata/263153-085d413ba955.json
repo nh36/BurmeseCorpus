@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T13:38:07.200085+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "263153.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/1936/263153.pdf",
+  "canonical_file_name": "1936-gastro-intestinal-measurements-orientals-suggested-standard-stomach-information-and-peritoneal-fossae.pdf",
+  "canonical_base_name": "1936-gastro-intestinal-measurements-orientals-suggested-standard-stomach-information-and-peritoneal-fossae",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/263153-085d413ba955.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/263153-085d413ba955.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1936-gastro-intestinal-measurements-orientals-suggested-standard-stomach-information-and-peritoneal-fossae.pdf",
+  "probable_article_title": "GASTRO INTESTINAL MEASUREMENTS IN ORIENTALS, A SUGGESTED STANDARD FOR THE STOMACH AND INFORMATION ON THE APPENDIX, MESE…",
+  "probable_author": "AND PERITONEAL FOSSAE",
+  "probable_year": "1936",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

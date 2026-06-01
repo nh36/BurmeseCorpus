@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T14:42:32.207045+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "331039.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/JBRS Originals/331039.pdf",
+  "canonical_file_name": "331039.pdf",
+  "canonical_base_name": "",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/331039-f3773f1521d9.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/331039-f3773f1521d9.json",
+  "canonical_pdf_path_stub": "",
+  "probable_article_title": "၃ ၉ ခု မြို့စီတန်း {ယခင်စာစောင်မှ ဆေ။] တောင်ဘက်တန်းခေါင်း ရာစက္ကပို သို့ ၄ အသက် ၄၅ သူကို စစ်",
+  "probable_author": "",
+  "probable_year": "1950",
+  "identity_confidence": "medium",
+  "rename_status": "needs_manual_review"
 }

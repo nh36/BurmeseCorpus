@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T08:34:16.480159+00:00",
   "source_category": "other_source",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "PeMaungTin 1929 PhilologicalFeaturesOfBurmeseInscriptions_1929.pdf",
+  "old_path_stub": "Pe Maung Tin/PeMaungTin 1929 PhilologicalFeaturesOfBurmeseInscriptions_1929.pdf",
+  "canonical_file_name": "1929-philological-features-inscriptions-vii.pdf",
+  "canonical_base_name": "1929-philological-features-inscriptions-vii",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/193078-6feeee7af9fa.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/193078-6feeee7af9fa.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1929-philological-features-inscriptions-vii.pdf",
+  "probable_article_title": "PHILOLOGICAL FEATURES OF THE INSCRIPTIONS",
+  "probable_author": "VII",
+  "probable_year": "1929",
+  "identity_confidence": "high",
+  "rename_status": "deferred_outside_phase1_scope"
 }

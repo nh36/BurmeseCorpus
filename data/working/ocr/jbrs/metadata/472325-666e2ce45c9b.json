@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T17:26:03.935430+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "472325.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/JBRS Originals/472325.pdf",
+  "canonical_file_name": "1964-textural-characteristics-channel-sediments-dev-d-sarin.pdf",
+  "canonical_base_name": "1964-textural-characteristics-channel-sediments-dev-d-sarin",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/472325-666e2ce45c9b.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/472325-666e2ce45c9b.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1964-textural-characteristics-channel-sediments-dev-d-sarin.pdf",
+  "probable_article_title": "TEXTURAL CHARACTERISTICS OF CHANNEL SEDIMENTS",
+  "probable_author": "Dev D. SARIN*",
+  "probable_year": "1964",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

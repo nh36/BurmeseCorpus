@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T15:32:51.204316+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "391071.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/JBRS Originals/391071.pdf",
+  "canonical_file_name": "1956-use-new-type-multivibrator-for-radioactivity-detectors.pdf",
+  "canonical_base_name": "1956-use-new-type-multivibrator-for-radioactivity-detectors",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/391071-8a79070b5eb6.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/391071-8a79070b5eb6.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1956-use-new-type-multivibrator-for-radioactivity-detectors.pdf",
+  "probable_article_title": "ON THE USE OF A NEW TYPE OF MULTIVIBRATOR",
+  "probable_author": "FOR RADIOACTIVITY DETECTORS'",
+  "probable_year": "1956",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T16:15:44.618078+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "431041.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/1960/431041.pdf",
+  "canonical_file_name": "1960-inaugural-address-j-s-a.pdf",
+  "canonical_base_name": "1960-inaugural-address-j-s-a",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/431041-6fb537d44ba5.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/431041-6fb537d44ba5.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1960-inaugural-address-j-s-a.pdf",
+  "probable_article_title": "INAUGURAL ADDRESS, BY J. S",
+  "probable_author": "A",
+  "probable_year": "1960",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

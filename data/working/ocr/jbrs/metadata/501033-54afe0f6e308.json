@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T18:02:43.896992+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "501033.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/1967/501033.pdf",
+  "canonical_file_name": "1967-malapropism-my-reply-dr-hla-pe-hla-pe.pdf",
+  "canonical_base_name": "1967-malapropism-my-reply-dr-hla-pe-hla-pe",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/501033-54afe0f6e308.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/501033-54afe0f6e308.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1967-malapropism-my-reply-dr-hla-pe-hla-pe.pdf",
+  "probable_article_title": "MALAPROPISM–MY REPLY TO DR HLA PE",
+  "probable_author": "Hla Pe",
+  "probable_year": "1967",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

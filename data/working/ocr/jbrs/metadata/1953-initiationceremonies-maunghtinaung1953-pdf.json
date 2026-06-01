@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T08:50:26.991306+00:00",
   "source_category": "other_source",
   "language_scope_guess": "Pyu",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "InitiationCeremonies-MaungHtinAung1953.pdf",
+  "old_path_stub": "1953/InitiationCeremonies-MaungHtinAung1953.pdf",
+  "canonical_file_name": "1953-burmese-initiation-ceremonies.pdf",
+  "canonical_base_name": "1953-burmese-initiation-ceremonies",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/1953-initiationceremonies-maunghtinaung1953-pdf.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/1953-initiationceremonies-maunghtinaung1953-pdf.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1953-burmese-initiation-ceremonies.pdf",
+  "probable_article_title": "BURMESE INITIATION",
+  "probable_author": "CEREMONIES",
+  "probable_year": "1953",
+  "identity_confidence": "high",
+  "rename_status": "deferred_outside_phase1_scope"
 }

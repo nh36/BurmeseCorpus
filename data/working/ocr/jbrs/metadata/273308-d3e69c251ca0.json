@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T13:54:22.619664+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "273308.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/1937/273308.pdf",
+  "canonical_file_name": "1937-my-lady-wife-she-skilleth-well-give-her-roselle-buds.pdf",
+  "canonical_base_name": "1937-my-lady-wife-she-skilleth-well-give-her-roselle-buds",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/273308-d3e69c251ca0.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/273308-d3e69c251ca0.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1937-my-lady-wife-she-skilleth-well-give-her-roselle-buds.pdf",
+  "probable_article_title": "My lady wife she skilleth well To give her man good cheer. She gathers buds of brown roselle When buds do first appear",
+  "probable_author": "Roselle Buds",
+  "probable_year": "1937",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

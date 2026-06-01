@@ -24,7 +24,12 @@ from jbrs_workflow_common import (
     JBRS_EMBEDDED_TRANSLATION_EXCERPT_REVIEW_PATH,
     JBRS_EXTRACTED_SOURCE_TEXT_UNITS_PATH,
     JBRS_EXTRACTED_TRANSLATION_UNITS_PATH,
+    JBRS_FILE_ALIAS_MAP_FIELDS,
+    JBRS_FILE_ALIAS_MAP_PATH,
+    JBRS_FILE_RENAMING_PLAN_FIELDS,
+    JBRS_FILE_RENAMING_PLAN_PATH,
     JBRS_FOLLOWUP_SOURCE_LEADS_PATH,
+    JBRS_INSCRIPTIONAL_RELEVANCE_CLASS_VALUES,
     JBRS_LOCAL_FILE_MANIFEST_PATH,
     JBRS_OCR_BATCH_PLAN_PATH,
     JBRS_OCR_LANGUAGE_SCOPE_VALUES,
@@ -49,11 +54,19 @@ from jbrs_workflow_common import (
     JBRS_TRANSLATION_CANDIDATE_REVIEW_PATH,
     JBRS_WORKING_OCR_METADATA_ROOT,
     JBRS_WORKING_OCR_TEXT_ROOT,
+    KNOWN_AUTHORS,
     apply_article_target_reviews,
     batch_is_selectable_for_ocr,
     build_jbrs_ocr_production_summary,
     build_pilot_summary,
-    JBRS_INSCRIPTIONAL_RELEVANCE_CLASS_VALUES,
+    clean_article_title_fragment,
+    detect_author,
+    detect_title,
+    looks_like_person_name,
+    normalize_for_match,
+    probable_title_from_descriptor,
+    safe_path_stub,
+    slugify,
     write_summary,
 )
 
@@ -220,6 +233,8 @@ def parse_args() -> argparse.Namespace:
         type=Path,
         default=JBRS_OCR_PRODUCTION_SUMMARY_PATH,
     )
+    parser.add_argument("--file-renaming-plan", type=Path, default=JBRS_FILE_RENAMING_PLAN_PATH)
+    parser.add_argument("--file-alias-map", type=Path, default=JBRS_FILE_ALIAS_MAP_PATH)
     parser.add_argument("--preflight-report", type=Path, default=DEFAULT_PREFLIGHT_REPORT_PATH)
     parser.add_argument("--limit", type=int, default=100)
     parser.add_argument("--selection-rule", default="citation-match then keyword/article priority")
@@ -440,6 +455,378 @@ def relative_stub(path: Path) -> str:
     return path.relative_to(Path.cwd()).as_posix()
 
 
+AUTHOR_SLUG_STOP_WORDS = {"u", "daw", "dr", "sir", "prof", "professor"}
+TITLE_SLUG_STOP_WORDS = {
+    "a",
+    "an",
+    "and",
+    "at",
+    "by",
+    "for",
+    "from",
+    "in",
+    "of",
+    "on",
+    "or",
+    "the",
+    "to",
+    "with",
+}
+REPO_RENAME_SCOPE_TOP_CANDIDATES = 50
+REPO_RENAME_SCOPE_TOP_INSCRIPTION = 20
+
+
+def detect_authors(value: str | None) -> list[str]:
+    text = normalize_for_match(value)
+    matches: list[str] = []
+    for canonical, variants in KNOWN_AUTHORS:
+        if any(normalize_for_match(variant) in text for variant in variants):
+            if canonical not in matches:
+                matches.append(canonical)
+    return matches
+
+
+def first_heading_lines(text: str, max_lines: int = 10) -> list[str]:
+    first_page_text = split_pages(text)[0][1] if split_pages(text) else text
+    lines: list[str] = []
+    for raw_line in first_page_text.splitlines():
+        stripped = " ".join(raw_line.split()).strip()
+        if not stripped:
+            if lines:
+                break
+            continue
+        if PAGE_MARKER_PATTERN.fullmatch(stripped):
+            continue
+        lines.append(stripped)
+        if len(lines) >= max_lines:
+            break
+    return lines
+
+
+def titleish_heading_lines(lines: list[str]) -> list[str]:
+    selected: list[str] = []
+    for line in lines:
+        lowered = line.casefold()
+        if lowered.startswith("by "):
+            break
+        if "journal of the burma research society" in lowered or lowered in {"j.b.r.s.", "jbrs"}:
+            continue
+        if re.search(r"\bvol(?:ume)?\.?\b|\bpart\b|\bpp?\.?\b", lowered):
+            continue
+        if looks_like_person_name(line):
+            if selected:
+                break
+            continue
+        selected.append(line)
+        if len(selected) >= 4:
+            break
+    return selected
+
+
+def infer_probable_author(record: dict[str, str], manifest_row: dict[str, str]) -> str:
+    heading_lines = first_heading_lines(record["text"])
+    candidate_sources = [
+        " ".join(heading_lines[:6]),
+        record.get("file_name", ""),
+        record.get("path_stub", ""),
+        manifest_row.get("probable_title_from_filename", ""),
+        manifest_row.get("folder_context", ""),
+    ]
+    for line in heading_lines[:6]:
+        by_match = re.match(r"(?i)^by\s+(.+)$", line)
+        if by_match:
+            by_value = by_match.group(1).strip(" ,.;:")
+            canonical = detect_author(by_value)
+            if canonical:
+                return canonical
+            if looks_like_person_name(by_value):
+                return by_value
+        authors = detect_authors(line)
+        if authors:
+            return authors[0]
+        if looks_like_person_name(line):
+            return line.strip(" ,.;:")
+    for source in candidate_sources:
+        canonical = detect_author(source)
+        if canonical:
+            return canonical
+        authors = detect_authors(source)
+        if authors:
+            return authors[0]
+    return ""
+
+
+def infer_probable_title(record: dict[str, str], manifest_row: dict[str, str], author: str) -> str:
+    heading_lines = first_heading_lines(record["text"])
+    heading_text = " ".join(titleish_heading_lines(heading_lines))
+    for candidate_source in (
+        heading_text,
+        " ".join(heading_lines[:6]),
+        manifest_row.get("probable_title_from_filename", ""),
+        record.get("file_name", ""),
+        record.get("path_stub", ""),
+    ):
+        title = detect_title(candidate_source) or probable_title_from_descriptor(candidate_source)
+        title = clean_article_title_fragment(author, title)
+        if title:
+            return title
+    if heading_text:
+        return clean_article_title_fragment(author, heading_text)
+    return ""
+
+
+def title_slug(title: str) -> str:
+    parts = [part for part in normalize_for_match(title).split() if part not in TITLE_SLUG_STOP_WORDS]
+    if not parts:
+        parts = normalize_for_match(title).split()
+    return "-".join(parts[:8]) or "untitled"
+
+
+def author_slug(author: str) -> str:
+    parts = [part for part in normalize_for_match(author).split() if part not in AUTHOR_SLUG_STOP_WORDS]
+    if not parts:
+        parts = normalize_for_match(author).split()
+    return "-".join(parts[:5]) or "unknown-author"
+
+
+def preferred_year(record: dict[str, str], manifest_row: dict[str, str]) -> str:
+    for value in (record.get("year", ""), manifest_row.get("year", ""), record.get("file_name", "")):
+        match = re.search(r"\b(18|19|20)\d{2}\b", value or "")
+        if match:
+            return match.group(0)
+    return ""
+
+
+def canonical_base_name(year: str, title: str, author: str) -> str:
+    if not year or not title or not author:
+        return ""
+    return f"{year}-{title_slug(title)}-{author_slug(author)}"
+
+
+def text_signature(text: str) -> str:
+    normalized = re.sub(r"\s+", " ", text).strip()
+    return hashlib.sha1(normalized.encode("utf-8")).hexdigest()
+
+
+def rename_scope_local_file_ids(
+    top_candidate_rows: list[dict[str, str]],
+    top_inscription_rows: list[dict[str, str]],
+) -> set[str]:
+    scope = {
+        row["local_file_id"] for row in top_candidate_rows[:REPO_RENAME_SCOPE_TOP_CANDIDATES]
+    }
+    scope.update(
+        row["local_file_id"] for row in top_inscription_rows[:REPO_RENAME_SCOPE_TOP_INSCRIPTION]
+    )
+    for path in (
+        JBRS_STRUCTURED_EXTRACTION_PLAN_PATH,
+        JBRS_EXTRACTED_SOURCE_TEXT_UNITS_PATH,
+        JBRS_EXTRACTED_TRANSLATION_UNITS_PATH,
+    ):
+        for row in read_tsv(path):
+            local_file_id = row.get("local_file_id", "") or row.get("source_local_file_id", "")
+            if local_file_id:
+                scope.add(local_file_id)
+    return scope
+
+
+def build_file_renaming_rows(
+    exported_records: list[dict[str, str]],
+    manifest_rows: list[dict[str, str]],
+    phase1_scope_local_ids: set[str],
+) -> tuple[list[dict[str, str]], list[dict[str, str]]]:
+    manifest_by_local_file_id = {row["local_file_id"]: row for row in manifest_rows}
+    records_by_text_signature: dict[str, list[dict[str, str]]] = defaultdict(list)
+    for record in exported_records:
+        records_by_text_signature[text_signature(record["text"])].append(record)
+
+    provisional_rows: list[dict[str, str]] = []
+    alias_rows: list[dict[str, str]] = []
+    for record in exported_records:
+        manifest_row = manifest_by_local_file_id.get(record["local_file_id"], {})
+        old_file_name = record.get("old_file_name", "") or record["file_name"]
+        old_path_stub = record.get("old_path_stub", "") or record["path_stub"]
+        current_ocr_text_path = record["ocr_text_path"]
+        current_metadata_path = record["metadata_path"]
+        duplicate_candidates = [
+            candidate
+            for candidate in records_by_text_signature[text_signature(record["text"])]
+            if candidate["local_file_id"] != record["local_file_id"]
+        ]
+        named_duplicate = next(
+            (
+                candidate
+                for candidate in duplicate_candidates
+                if not is_generic_numeric_file_name(candidate.get("old_file_name", "") or candidate["file_name"])
+            ),
+            None,
+        )
+        probable_author = (
+            (named_duplicate or {}).get("probable_author", "")
+            or infer_probable_author(record, manifest_row)
+        )
+        probable_title = (
+            (named_duplicate or {}).get("probable_article_title", "")
+            or infer_probable_title(record, manifest_row, probable_author)
+        )
+        probable_year = (named_duplicate or {}).get("year", "") or preferred_year(record, manifest_row)
+        proposed_base_name = canonical_base_name(probable_year, probable_title, probable_author)
+        identity_confidence = "low"
+        notes: list[str] = []
+        if named_duplicate and proposed_base_name:
+            identity_confidence = "high"
+            notes.append(f"duplicate_of={named_duplicate['local_file_id']}")
+        elif proposed_base_name and probable_title and probable_author:
+            identity_confidence = "high" if not is_generic_numeric_file_name(old_file_name) else "medium"
+        elif probable_title and probable_year:
+            identity_confidence = "medium"
+        stored_status = record.get("rename_status", "")
+        preserved_status = stored_status if stored_status in {"renamed_in_repo", "already_canonical"} else ""
+        rename_status = preserved_status or (
+            "planned_repo_rename"
+            if record["local_file_id"] in phase1_scope_local_ids
+            and proposed_base_name
+            and identity_confidence in {"high", "medium"}
+            and (
+                Path(current_ocr_text_path).name != f"{proposed_base_name}.txt"
+                or Path(current_metadata_path).name != f"{proposed_base_name}.json"
+            )
+            else "already_canonical"
+            if proposed_base_name
+            and Path(current_ocr_text_path).name == f"{proposed_base_name}.txt"
+            and Path(current_metadata_path).name == f"{proposed_base_name}.json"
+            else "deferred_outside_phase1_scope"
+            if proposed_base_name
+            else "needs_manual_review"
+        )
+        provisional_rows.append(
+            {
+                "local_file_id": record["local_file_id"],
+                "batch_id": record["batch_id"],
+                "old_file_name": old_file_name,
+                "old_path_stub": old_path_stub,
+                "current_ocr_text_path": current_ocr_text_path,
+                "current_metadata_path": current_metadata_path,
+                "probable_article_title": probable_title,
+                "probable_author": probable_author,
+                "probable_year": probable_year,
+                "canonical_base_name": proposed_base_name,
+                "proposed_pdf_file_name": f"{proposed_base_name}.pdf" if proposed_base_name else "",
+                "proposed_ocr_text_file_name": f"{proposed_base_name}.txt" if proposed_base_name else "",
+                "proposed_metadata_file_name": f"{proposed_base_name}.json" if proposed_base_name else "",
+                "identity_confidence": identity_confidence,
+                "rename_status": rename_status,
+                "notes": "; ".join(notes),
+            }
+        )
+
+    grouped_by_base_name: dict[str, list[dict[str, str]]] = defaultdict(list)
+    for row in provisional_rows:
+        if row["canonical_base_name"]:
+            grouped_by_base_name[row["canonical_base_name"]].append(row)
+    for base_name, grouped_rows in grouped_by_base_name.items():
+        if len(grouped_rows) <= 1:
+            continue
+        grouped_rows.sort(
+            key=lambda row: (
+                0 if row["rename_status"] == "already_canonical" else 1,
+                0 if not is_generic_numeric_file_name(row["old_file_name"]) else 1,
+                row["local_file_id"],
+            )
+        )
+        for index, row in enumerate(grouped_rows, start=1):
+            if index == 1:
+                continue
+            suffixed_base_name = f"{base_name}-scan-{index}"
+            row["canonical_base_name"] = suffixed_base_name
+            row["proposed_pdf_file_name"] = f"{suffixed_base_name}.pdf"
+            row["proposed_ocr_text_file_name"] = f"{suffixed_base_name}.txt"
+            row["proposed_metadata_file_name"] = f"{suffixed_base_name}.json"
+            row["notes"] = "; ".join(
+                part for part in [row["notes"], f"collision_with={base_name}"] if part
+            )
+
+    for row in provisional_rows:
+        canonical_file_name = row["proposed_pdf_file_name"] or row["old_file_name"]
+        canonical_ocr_text_path = (
+            relative_stub(JBRS_WORKING_OCR_TEXT_ROOT / row["proposed_ocr_text_file_name"])
+            if row["proposed_ocr_text_file_name"]
+            else row["current_ocr_text_path"]
+        )
+        canonical_metadata_path = (
+            relative_stub(JBRS_WORKING_OCR_METADATA_ROOT / row["proposed_metadata_file_name"])
+            if row["proposed_metadata_file_name"]
+            else row["current_metadata_path"]
+        )
+        alias_rows.append(
+            {
+                "local_file_id": row["local_file_id"],
+                "old_file_name": row["old_file_name"],
+                "old_path_stub": row["old_path_stub"],
+                "canonical_file_name": canonical_file_name,
+                "canonical_ocr_text_path": canonical_ocr_text_path,
+                "canonical_metadata_path": canonical_metadata_path,
+                "canonical_pdf_path_stub": (
+                    f"data_local/sources/jbrs_canonical_pdfs/{canonical_file_name}"
+                    if row["proposed_pdf_file_name"]
+                    else ""
+                ),
+                "alias_status": row["rename_status"],
+                "notes": row["notes"],
+            }
+        )
+    provisional_rows.sort(key=lambda row: (row["old_file_name"], row["local_file_id"]))
+    alias_rows.sort(key=lambda row: (row["old_file_name"], row["local_file_id"]))
+    return provisional_rows, alias_rows
+
+
+def apply_repo_ocr_renaming_plan(
+    renaming_rows: list[dict[str, str]],
+    alias_rows: list[dict[str, str]],
+) -> None:
+    alias_by_local_file_id = {row["local_file_id"]: row for row in alias_rows}
+    for row in renaming_rows:
+        alias_row = alias_by_local_file_id[row["local_file_id"]]
+        current_text_path = Path.cwd() / row["current_ocr_text_path"]
+        current_metadata_path = Path.cwd() / row["current_metadata_path"]
+        target_text_path = Path.cwd() / alias_row["canonical_ocr_text_path"]
+        target_metadata_path = Path.cwd() / alias_row["canonical_metadata_path"]
+        ensure_parent(target_text_path)
+        ensure_parent(target_metadata_path)
+        if row["rename_status"] == "planned_repo_rename":
+            if current_text_path != target_text_path:
+                current_text_path.rename(target_text_path)
+            if current_metadata_path != target_metadata_path:
+                current_metadata_path.rename(target_metadata_path)
+            row["rename_status"] = "renamed_in_repo"
+            alias_row["alias_status"] = "renamed_in_repo"
+        else:
+            target_text_path = current_text_path
+            target_metadata_path = current_metadata_path
+            if row["rename_status"] == "already_canonical":
+                alias_row["alias_status"] = "already_canonical"
+        metadata = json.loads(target_metadata_path.read_text(encoding="utf-8"))
+        metadata.update(
+            {
+                "old_file_name": row["old_file_name"],
+                "old_path_stub": row["old_path_stub"],
+                "canonical_file_name": alias_row["canonical_file_name"],
+                "canonical_base_name": row["canonical_base_name"],
+                "canonical_ocr_text_path": relative_stub(target_text_path),
+                "canonical_metadata_path": relative_stub(target_metadata_path),
+                "canonical_pdf_path_stub": alias_row["canonical_pdf_path_stub"],
+                "probable_article_title": row["probable_article_title"],
+                "probable_author": row["probable_author"],
+                "probable_year": row["probable_year"],
+                "identity_confidence": row["identity_confidence"],
+                "rename_status": row["rename_status"],
+            }
+        )
+        target_metadata_path.write_text(
+            json.dumps(metadata, ensure_ascii=False, indent=2) + "\n",
+            encoding="utf-8",
+        )
+
 def source_category_from_manifest(manifest_row: dict[str, str]) -> str:
     if boolish(manifest_row.get("is_article_split_pdf", "")):
         return "article_pdf"
@@ -622,6 +1009,8 @@ def load_repo_export_records(
         repo_metadata_path = repo_metadata_root / f"{local_file_id}.json"
         ensure_parent(repo_text_path)
         repo_text_path.write_text(text, encoding="utf-8")
+        repo_text_path_stub = relative_stub(repo_text_path)
+        repo_metadata_path_stub = relative_stub(repo_metadata_path)
         pages_completed = status_row.get("completed_pages", "") or str(len(split_pages(text)))
         language_scope = guess_language_scope(manifest_row, batch_row, text)
         metadata = {
@@ -636,6 +1025,18 @@ def load_repo_export_records(
             "ocr_date": status_row.get("updated_at", "") or datetime.now(UTC).date().isoformat(),
             "source_category": source_category_from_manifest(manifest_row),
             "language_scope_guess": language_scope,
+            "old_file_name": batch_row.get("file_name", "") or manifest_row.get("file_name", ""),
+            "old_path_stub": batch_row.get("path_stub", "") or manifest_row.get("path_stub_or_redacted_path", ""),
+            "canonical_file_name": batch_row.get("file_name", "") or manifest_row.get("file_name", ""),
+            "canonical_base_name": "",
+            "canonical_ocr_text_path": repo_text_path_stub,
+            "canonical_metadata_path": repo_metadata_path_stub,
+            "canonical_pdf_path_stub": "",
+            "probable_article_title": "",
+            "probable_author": "",
+            "probable_year": batch_row.get("year", "") or manifest_row.get("year", ""),
+            "identity_confidence": "low",
+            "rename_status": "not_assessed",
             "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
         }
         ensure_parent(repo_metadata_path)
@@ -649,13 +1050,20 @@ def load_repo_export_records(
                 "local_file_id": local_file_id,
                 "batch_id": status_row.get("batch_id", ""),
                 "file_name": metadata["file_name"],
+                "old_file_name": metadata["old_file_name"],
+                "canonical_file_name": metadata["canonical_file_name"],
+                "probable_article_title": metadata["probable_article_title"],
+                "probable_author": metadata["probable_author"],
                 "year": str(metadata["year"]),
                 "path_stub": metadata["path_stub"],
-                "ocr_text_path": relative_stub(repo_text_path),
-                "metadata_path": relative_stub(repo_metadata_path),
+                "old_path_stub": metadata["old_path_stub"],
+                "new_path_stub_or_repo_path": repo_text_path_stub,
+                "ocr_text_path": repo_text_path_stub,
+                "metadata_path": repo_metadata_path_stub,
                 "pages_completed": str(metadata["pages_completed"]),
                 "ocr_status": "completed",
                 "language_scope_guess": language_scope,
+                "rename_status": metadata["rename_status"],
                 "notes": metadata["notes"],
                 "text": text,
                 **flags,
@@ -681,13 +1089,15 @@ def load_committed_ocr_records(
     manifest_by_local_file_id = {row["local_file_id"]: row for row in manifest_rows}
     exported_records: list[dict[str, str]] = []
     for metadata_path in sorted(repo_metadata_root.glob("*.json")):
-        local_file_id = metadata_path.stem
+        metadata = json.loads(metadata_path.read_text(encoding="utf-8"))
+        local_file_id = metadata.get("local_file_id", "") or metadata_path.stem
         if local_file_id not in completed_local_file_ids:
             continue
-        text_path = repo_text_root / f"{local_file_id}.txt"
+        text_path = Path.cwd() / (
+            metadata.get("canonical_ocr_text_path", "") or relative_stub(repo_text_root / f"{local_file_id}.txt")
+        )
         if not text_path.exists():
             continue
-        metadata = json.loads(metadata_path.read_text(encoding="utf-8"))
         text = text_path.read_text(encoding="utf-8")
         batch_row = batch_by_local_file_id.get(
             local_file_id,
@@ -713,13 +1123,23 @@ def load_committed_ocr_records(
                 "local_file_id": local_file_id,
                 "batch_id": batch_row.get("batch_id", metadata.get("batch_id", "")),
                 "file_name": batch_row.get("file_name", metadata.get("file_name", "")),
+                "old_file_name": metadata.get("old_file_name", metadata.get("file_name", "")),
+                "canonical_file_name": metadata.get("canonical_file_name", metadata.get("file_name", "")),
+                "probable_article_title": metadata.get("probable_article_title", ""),
+                "probable_author": metadata.get("probable_author", ""),
                 "year": batch_row.get("year", str(metadata.get("year", ""))),
                 "path_stub": batch_row.get("path_stub", metadata.get("path_stub", "")),
+                "old_path_stub": metadata.get("old_path_stub", metadata.get("path_stub", "")),
+                "new_path_stub_or_repo_path": metadata.get(
+                    "canonical_ocr_text_path",
+                    relative_stub(text_path),
+                ),
                 "ocr_text_path": relative_stub(text_path),
-                "metadata_path": relative_stub(metadata_path),
+                "metadata_path": metadata.get("canonical_metadata_path", relative_stub(metadata_path)),
                 "pages_completed": str(metadata.get("pages_completed", "")),
                 "ocr_status": "completed",
                 "language_scope_guess": guess_language_scope(manifest_row, batch_row, text),
+                "rename_status": metadata.get("rename_status", "not_assessed"),
                 "notes": metadata.get("notes", ""),
                 "text": text,
                 **flags,
@@ -799,6 +1219,15 @@ def build_translation_hit_rows(
                             "local_file_id": record["local_file_id"],
                             "batch_id": record["batch_id"],
                             "file_name": record["file_name"],
+                            "old_file_name": record.get("old_file_name", record["file_name"]),
+                            "canonical_file_name": record.get("canonical_file_name", record["file_name"]),
+                            "probable_article_title": record.get("probable_article_title", ""),
+                            "probable_author": record.get("probable_author", ""),
+                            "old_path_stub": record.get("old_path_stub", record["path_stub"]),
+                            "new_path_stub_or_repo_path": record.get(
+                                "new_path_stub_or_repo_path",
+                                record["ocr_text_path"],
+                            ),
                             "page_marker": page_marker,
                             "hit_type": hit_type,
                             "matched_marker": marker,
@@ -823,6 +1252,15 @@ def build_translation_hit_rows(
                     "local_file_id": local_file_id,
                     "batch_id": record["batch_id"],
                     "file_name": record["file_name"],
+                    "old_file_name": record.get("old_file_name", record["file_name"]),
+                    "canonical_file_name": record.get("canonical_file_name", record["file_name"]),
+                    "probable_article_title": record.get("probable_article_title", ""),
+                    "probable_author": record.get("probable_author", ""),
+                    "old_path_stub": record.get("old_path_stub", record["path_stub"]),
+                    "new_path_stub_or_repo_path": record.get(
+                        "new_path_stub_or_repo_path",
+                        record["ocr_text_path"],
+                    ),
                     "page_marker": "",
                     "hit_type": "citation_reference_seed",
                     "matched_marker": matched_marker,
@@ -968,7 +1406,16 @@ def build_top_extraction_candidate_rows(
                     "local_file_id": local_file_id,
                     "batch_id": record["batch_id"],
                     "file_name": record["file_name"],
+                    "old_file_name": record.get("old_file_name", record["file_name"]),
+                    "canonical_file_name": record.get("canonical_file_name", record["file_name"]),
+                    "probable_article_title": record.get("probable_article_title", ""),
+                    "probable_author": record.get("probable_author", ""),
                     "year": record["year"],
+                    "old_path_stub": record.get("old_path_stub", record["path_stub"]),
+                    "new_path_stub_or_repo_path": record.get(
+                        "new_path_stub_or_repo_path",
+                        record["ocr_text_path"],
+                    ),
                     "ocr_text_path": record["ocr_text_path"],
                     "language_scope_guess": record["language_scope_guess"],
                     "burmese_relevance_guess": burmese_relevance_guess(record["language_scope_guess"]),
@@ -1234,6 +1681,36 @@ def run_production_batch(args: argparse.Namespace) -> int:
         repo_text_root=args.repo_text_root,
         repo_metadata_root=args.repo_metadata_root,
     )
+    initial_hit_rows = build_translation_hit_rows(exported_records, citation_rows)
+    initial_ranked_candidate_rows = build_top_extraction_candidate_rows(
+        exported_records=exported_records,
+        hit_rows=initial_hit_rows,
+        manifest_rows=manifest_rows,
+        citation_rows=citation_rows,
+        limit=max(len(exported_records), CANDIDATE_REPORT_LIMIT),
+    )
+    initial_top_candidate_rows = initial_ranked_candidate_rows[:CANDIDATE_REPORT_LIMIT]
+    initial_top_inscription_candidate_rows = build_top_inscription_extraction_candidate_rows(
+        initial_ranked_candidate_rows,
+        limit=min(INSCRIPTION_CANDIDATE_REPORT_LIMIT, len(initial_ranked_candidate_rows)),
+    )
+    phase1_scope_local_ids = rename_scope_local_file_ids(
+        initial_top_candidate_rows,
+        initial_top_inscription_candidate_rows,
+    )
+    renaming_plan_rows, alias_map_rows = build_file_renaming_rows(
+        exported_records=exported_records,
+        manifest_rows=manifest_rows,
+        phase1_scope_local_ids=phase1_scope_local_ids,
+    )
+    apply_repo_ocr_renaming_plan(renaming_plan_rows, alias_map_rows)
+    exported_records = load_committed_ocr_records(
+        batch_rows=batch_rows,
+        status_rows=refreshed_status_rows,
+        manifest_rows=manifest_rows,
+        repo_text_root=args.repo_text_root,
+        repo_metadata_root=args.repo_metadata_root,
+    )
     index_rows = [
         {field: record[field] for field in JBRS_OCR_TEXT_INDEX_FIELDS}
         for record in exported_records
@@ -1260,6 +1737,13 @@ def run_production_batch(args: argparse.Namespace) -> int:
         top_inscription_candidate_rows,
         JBRS_OCR_TOP_INSCRIPTION_EXTRACTION_CANDIDATES_FIELDS,
     )
+    renaming_plan_rows, alias_map_rows = build_file_renaming_rows(
+        exported_records=exported_records,
+        manifest_rows=manifest_rows,
+        phase1_scope_local_ids=phase1_scope_local_ids,
+    )
+    write_tsv(args.file_renaming_plan, renaming_plan_rows, JBRS_FILE_RENAMING_PLAN_FIELDS)
+    write_tsv(args.file_alias_map, alias_map_rows, JBRS_FILE_ALIAS_MAP_FIELDS)
     args.production_summary_path.write_text(
         json.dumps(
             build_jbrs_ocr_production_summary(

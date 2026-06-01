@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T16:39:39.698745+00:00",
   "source_category": "article_pdf",
   "language_scope_guess": "Mixed Burmese/Pali",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "442299.pdf",
+  "old_path_stub": "Burmese/Burma JBRS/1961/442299.pdf",
+  "canonical_file_name": "1961-pali-burmese-dictionary-review.pdf",
+  "canonical_base_name": "1961-pali-burmese-dictionary-review",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/442299-63b1e8ce706e.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/442299-63b1e8ce706e.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1961-pali-burmese-dictionary-review.pdf",
+  "probable_article_title": "A PALI BURMESE DICTIONARY",
+  "probable_author": "REVIEW",
+  "probable_year": "1961",
+  "identity_confidence": "medium",
+  "rename_status": "deferred_outside_phase1_scope"
 }

@@ -10,5 +10,17 @@
   "ocr_date": "2026-06-01T08:59:45.353435+00:00",
   "source_category": "other_source",
   "language_scope_guess": "Burmese",
-  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/.",
+  "old_file_name": "WarsWithBurmese2-Damrong1957.pdf",
+  "old_path_stub": "1957/WarsWithBurmese2-Damrong1957.pdf",
+  "canonical_file_name": "1957-our-wars-burmese-row-robe-phama-thai-prince-translated-into-english.pdf",
+  "canonical_base_name": "1957-our-wars-burmese-row-robe-phama-thai-prince-translated-into-english",
+  "canonical_ocr_text_path": "data/working/ocr/jbrs/text/1957-warswithburmese2-damrong1957-pdf.txt",
+  "canonical_metadata_path": "data/working/ocr/jbrs/metadata/1957-warswithburmese2-damrong1957-pdf.json",
+  "canonical_pdf_path_stub": "data_local/sources/jbrs_canonical_pdfs/1957-our-wars-burmese-row-robe-phama-thai-prince-translated-into-english.pdf",
+  "probable_article_title": "OUR WARS WITH THE BURMESE (Row Robe Phama in Thai by Prince Damrong)",
+  "probable_author": "translated into English",
+  "probable_year": "1957",
+  "identity_confidence": "high",
+  "rename_status": "deferred_outside_phase1_scope"
 }
