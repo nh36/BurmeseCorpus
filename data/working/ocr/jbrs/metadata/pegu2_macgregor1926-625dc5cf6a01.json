@@ -1,0 +1,14 @@
+{
+  "local_file_id": "pegu2_macgregor1926-625dc5cf6a01",
+  "batch_id": "jbrs-ocr-3344",
+  "file_name": "Pegu2-Macgregor1926.pdf",
+  "path_stub": "Burmese/Burma JBRS/1926/Pegu2-Macgregor1926.pdf",
+  "journal": "JBRS",
+  "year": "1926",
+  "ocr_engine": "google_vision",
+  "pages_completed": 38,
+  "ocr_date": "2026-06-01T19:55:19.419481+00:00",
+  "source_category": "other_source",
+  "language_scope_guess": "Burmese",
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+}

@@ -1,0 +1,601 @@
+[[page 1]]
+NODULAR or S. G. IRON'
+by
+H. S. Sastri, B. A. B. E., M. I. B. F., M. 1. S. I., M. I. M.,
+2
+Pig iron or cast iron is an alloy of iron and carbon. Iron con-
+tains about four precent carbon. By volume this carbon amounts to
+ten or eleven percent. In most of the grey irons used in the foundries
+the carbon exists in the form of graphite flakes in the iron matrix. An
+examination of a specimen under the microscope reveals that flakes of
+graphite run along the iron matrix breaking the continuity of the
+metallic matrix. This discontinuity in the iron matrix obviously affects
+the strength of the material as the fibres of flake graphite are weak.
+As ten percent of the volume is lost to weak graphite the mean tension
+owing to a given total stress is increased on each point under stress and
+the material fails earlier than it should in its natural course. Besides,
+each small flake of graphite acts like a notch in the matrix decreasing
+the strength of iron when subjected to load.
+This weakness in the structure of grey irons was observed by
+metallurgists long ago who found the possibility of improving the grey
+irons in strength provided they could by any means disperse the flakes
+of graphite, uniformly, into minute spheroids in the matrix. For several
+decades they patiently tried to find a means by which they could trans-
+form the graphite flakes into uniformly distributed spherulitic nodules
+without success.
+However success crowned their efforts at last and the first
+intimation of a successful process for spheroidisation of graphite in
+cast iron was made in the presidential address to the British Cast Iron
+Research Association in December 1946 and the first description of the
+process was published by Messrs. Morrough and Williams in March
+1948. This dealt with the introduction of Metallic Cerium in molten
+hypereutectic cast irons. This process was covered by a patent in July
+1946 by the British Cast Iron Research Association though the
+publication of the cerium process took place in 1948.
+The International Mond Nikcle Company of U.S.A. and Canada
+obtained patents for promotion of spheroidal graphite irons by treating
+hyper-eutectic and hypo-eutectic cast irons with magnesium in March
+1947.
+1. Read on December 15, 1954, with U Chit Thoung in the Chair.
+2. Lecturer in Metallurgy, Faculty of Engineering, University of Rangoon.
+4
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 2]]
+14
+H. S. SASTRI
+The Mond Nickle Companies in India and other countries also
+obtained the patents. These two processes have become successful in
+spheroidising the graphite flakes and distributing the graphite into
+spherulitic nodules uniformly throughout the matrix. The tensile
+strength of the iron has increased as expected from 13 tons to 40 tons
+with an elongation of 10 percent.
+THE CERIUM PROCESS
+The cerium process consists in adding Mischmetal to a molten
+Hyper-eutectic iron of about 3.8 percent carbon, 2.5 percent silicon
+with sulphur 0.02 percent and phosphorus less than 0.1 percent. The
+sulphur specification is rather too low and not in the reach of ordinary
+cupolas to make. If desulphurisation is attempted the ordinary
+temperature of 1400. C. would go down considerably low rendering it
+difficult to carry on with the process in the final stage. When cerium
+dissolves in the iron it holds the carbon forming a
+strong carbide. It retards further graphitisation though it has first
+started the formation of the spheroidal nuclei. The addition of an
+inoculant is therefore necessary to promote further graphitisation.
+Silico manganese, zirconium alloy or ferrosilicon (75 percent silicon) are
+used as inoculants to promote the graphitisation after the addition of
+cerium. The amount of cerium to be added depended upon the section of
+the casting poured; the larger the section of the casting the larger is the
+amount added. The amount of cerium added varies from 0.22 to
+0.44 percent. The process has not become popular on account of the
+difficulty in getting low sulphur iron from our ordinary cupolas as well
+as facilities to desulphurise the metal at the temperatures available.
+MAGNESIUM PROCESS
+Unlike cerium magnesium cannot be added as magnesium metal
+since magnesium does not dissolve in the iron. Owing to the
+explosive evolution of magnesium vapour which burns generating much
+heat and light a violent reaction is caused on the surface of the molten
+metal which may be thrown out. Magnesium is therefore dissolved in
+molten nickle in which it dissolves quietly and the nickle magnesium
+alloy is used as the reacting substance in place of the naked metal. The
+normal reacting alloy contains from ten to twenty percent of
+magnesium. Like cerium, magnesium is a very strong carbide forming
+element which holds the carbon in combination as a carbide and does
+not allow the separation of graphite as spheroids though at the initial
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+M
+
+[[page 3]]
+NODULAR IRON
+15
+stage it has started the nuclei of spheroidal graphite as the reacting
+substance. It is therefore necessary to add a strongly graphitising
+substance to neutralise its effects and promote the further spheroidi-
+sation of the graphite. Ferrosilicon (75 percent silicon) is the inoculant
+chosen for this purpose. Nickle magnesium alloy is added in lumps of
+reasonable size and placed at the bottom of the ladle which is intended
+for the reaction. If the metal is of the required right composition the
+metal is added on to it just the required amount that should be added
+for the amount of nickle magnesium thrown in on the bottom. This
+is adjusted by the spring balance holding the ladle. Considerable light
+is emitted in the reaction and the slag in the ladle is corrected to proper
+consistency by addition of lime-stone chips. The slag is removed and
+the inoculant is added in walnut size and rabbled by a graphite stirrer.
+The amount of inoculant added varies from 0.5 percent to 1 percent,
+silicon enrichment depending upon the kind of matrix needed in the
+casting. Owing to the ease in operation as well as the less stringent speci-
+fications laid on the metal required for operation, this process is more
+popular and has been adopted in several foundries making spheroidal
+graphite iron.
+In the year 1950, several foundries in the United States of America
+and the United Kingdom took to work on S. G. iron. The managing
+director of the Cresent Iron and Steel Corporation, Gergeon Bombay had
+been to England in that year in order to study Foundries in England
+with a view to develop his foundry on mass production methods. When
+he got in touch with Messers Mond Nickle Company U. K. they
+advised him to manufacture small castings like valves, bends, teets,
+flanges etc, on mass production methods in spheroidal graphite iron,
+instead of in White-heart malleable iron which was the old process, then
+in vogue for the above mentioned materials. He was assured of great
+After he came back to
+success in the new field and very great future.
+India, in consultation with Mr. Mcneill of Mond Nickle Company
+Bombay branch I was apointed by him to try the magnesium process on
+Indian pig irons under local condition to establish the Crescent Iron and
+Steel Corporation in a new branch of Industry.
+Starting on our work we had to face several problems trying a new
+process under entirely new conditions of work and environment. The
+first and foremost problem that confronted us was the manufacture of
+a low sulphur iron at high temperature sufficiently high to cast bends
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 4]]
+16
+H. S. SASTRI
+and tees of one-eighth inch thickness in thousands with commercial
+success after spheroidisation with nickle magnesium and inoculation
+with 75 percent ferrosilicon. To obtain low sulphur iron at 1450-1500. C.
+was an impossible task with our cupola.
+We therefore equipped ourselves with a Rotary oil-fired furnace
+from Germany, specially provided with a Recuperator for 500. C. preheat
+for the automising air, and an electric heater for the oil fuel for correct
+automisation.
+Secondly, as the cost of nickle magnesium was high we wanted to
+avoid the wastage of nickle magnesium by preventing the magnesium
+sulphide formation and using it solely for the spheroidisation of the
+graphite. On this account we arranged for double desulphurisation of
+the iron by addition of sodium carbonate in teapot spout basic lined
+ladles. This was possible as we could easily reach 1500. C. in our
+Rotary Furnace for the iron we wanted to spheroidise. We provided
+ourselves with two teapot spout ladles and rigged up an arrangement
+to heat them with oil burners to the required temperature.
+The last and the greatest difficulty was in securing the right quality
+of pig iron for the spheroidisation process. In India there is very great
+scarcity for good quality foundry grade pig iron, recommendations
+often being issued by the controller of supplies to use offgrades
+correcting the quality by additions of ferrosilicon and ferromanganese.
+We needed pig iron of 3.5 to 3.8 percent total carbon 2.5 percent
+silicon and 0.02 percent sulphur and phosphorus less than 0.1 percent.
+We could of course rectify the silicon by ferrosilicon additions and
+regarding manganese we could be content with 0.3 percent, sulphur we
+could desulphurise by soda ash but the phosphorus we could not
+manage. Most of the Indian pig contains 0.35 to 0.4 percent. Even if
+we took a 75 percent steel scrap and 25 percent pig iron charge it was
+difficult for us to get it less than 0.145 percent which is fifty percent
+more than the minimum required by us. Our only hope was in the
+Mysore pig iron which was also now running high in phosphorus.
+We could not get the material we wanted, we tried the magnesium
+process with the material on hand using large percentages of steel
+scrap to lower the phosphorus.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 5]]
+NODULAR IRON
+17
+THE MAGNESIUM PROCESS
+The Rotary Furnace was installed as per instructions of the makers
+and the furnace lined with the lining material the makers had sent. It
+was sintered according to the standard procedure and kept ready for
+operation.
+The rotary furnace was started and heated for about an hour and
+good acid slag 60 percent SiO 2 and 10 percent Fe0 and 10 percent Mn0.
+and 10 per cent Ca0 was melted and a charge of 300 lbs. steel scrap and
+400 lbs. Burn pig iron and 400 lbs. Duplex No. 2 was charged. When
+the charge had melted fresh slag was given covering up the metal and
+a sample was sent for determination of manganese and sulphur. The
+manganese and silicon were corrected and the metal temperature was
+gauged by an optical pyrometer; and when the flame temperature was
+observed to be 1550. C. the metal was tapped into one teapot spout
+ladle in which soda ash had been added. The slag was watery it was
+thickened by small chips of limestone. Slag was removed and metal
+poured into another teapot spout ladle in which soda ash was kept
+ready at bottom. The first ladle was cleaned and the nickle magnesium
+(weighed amount) was kept ready. The second ladle slag was
+thickened and removed and the metal was poured back into the first
+ladle. The nickel magnesium was added as the metal was being
+poured into the first ladle. There was a brilliant reaction due to the
+nickle magnesium. After the reaction subsided the slag was thickened
+by limestone chips and slag rabbled out and the inoculant was added.
+and stirred by a wooden rabble. The material was poured into the
+moulds. Thus ladle after ladle was similarly treated and poured into
+moulds,
+The moulds were made by moulding machines using ordinary good
+moulding sand with five percent bentonite. Match plates with
+aluminium patterns were ready for each size of tees and bends. Steel
+contraction was used for the patterns i.e. 3/16th to " per foot and
+runners and risers were a little more liberal than for cast iron. After
+each heat the runners and risers were examined and shrinkages correc-
+ted and extra metal cut off whenever it was found unnecessary. About
+six hundred to seven hundred bends and tees were poured in each heat
+if they were small, and three hundred to four hundred if they were big.
+When the temperature of the metal while tapping is maintained at
+1500.C. which can easily be done with the rotary furnace the drop in
+temperature during desulphurising operations is considerably little the
+metal being highly fluid. The first ladle being attached to a spring
+5
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 6]]
+18
+H. S. SASTRI
+balance to start with the correct weight of metal is taken. The weight
+of nickle magnesium to be added is calculated and added assuming
+the final sulphur to be between 0.02 to 0.03 percent which is a result
+obtained by several desulphurisation processes conducted for deter-
+mining the value.
+Magnesium immediately it is added starts the spheroidisation
+nuclei but the metal when it comes into contact with carbon forms
+the carbide and prevents the carbon from becoming free graphite
+and gets spheroidised. In order to counteract this influence ferrosilicon
+(75 percent) is inoculated to give an impetus for further graphitisation
+and promote spheroidisation.
+The metal magnesium has an effect of depressing the eutectic
+temperature while it increases the nuclei for eutectic crystallisation.
+The graphite particles assume a spheroidal form and each speroid is
+enveloped by a coating of austenite.
+The austenite further absorbs the spheroidised graphite produced
+by the effect of inoculation and the spheroids grow without the
+formation of flakes.
+Since we are desirous of having a ductile iron we have maintained
+the silicon at 2.5 percent and manganese at 0.35 percent to obtain a
+'ferritic matrix which alone would give us elongation. The silicon given
+as inoculant not only stimulates graphitisation but also helps to supply
+the silicon deficiency if any to render the matrix ferritic
+In a spheroidal graphite iron the final matrices may be ferritic,
+pearlitic, acicular, martensitic or austenitic as desired depending upon
+the use for which it is required. But here as we have gone into regular
+production of pipe specials we have attempted to get a ductile
+ferritic matrix by adjusting the composition to obtain a ferritic matrix.
+I beg to draw your attention to the table where the analysis
+shows the magnesium in the matrix. We are permitted to carry
+magnesium from 0.06 to 0.12 percent. We have maintained the
+magnesium on the lower side just to maintain the matrix ferritic which
+would turn pearlitic or martensitic or acicular if magnesium were
+allowed to increase being a strong carbide former.
+Copyright© 1998 – Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 7]]
+NODULAR IRON
+19
+Manganese has also been maintained low since the whole manganese
+would form the carbide in the absence of sulphur which is low. Even
+though silicon is high enough the thin walled pipe specials have chilled
+and formed a hard matrix which should be annealed to become
+ferritic matrix.
+The final matrices if hard should be annealed.
+HEAT TREATMENT
+The heat treatment consists in heating the castings to about 900. C.
+and holding them at that temperature for about 2 hours while the
+massive cementite decomposes to form nodules of temper carbon and
+cooling them to the pearlitic change point about 730. C. and maintain
+there for about one hour. During this stage the carbon rejected from
+solid solution is deposited as graphite on the existing nodules.
+and
+They are then cooled
+then cooled below the critical temperature
+maintained there for four hours for breaking down the pearlite into
+ferritic and graphite and then cooled slowly in the furnace.
+Referring to the table annexed heat Nos. 1 and 2 there is no
+spheroidisation and there is no improvement in properties as well. In
+heat Nos. 5 & 6 magnesium is 0.07 percent and manganese is low and
+silicon is high enough and there is good spheroidisation and the tensile
+is 30 tons per square inch and elongation 5 percent. For heat
+Nos. 15 & 16 Mysore pig iron low in phosphorus was used and we see
+the tensile is 35 tons per square inch and elongation 10 percent and
+7.5 percent, as silicon is high, manganese low, and magnesium is high
+and inoculant also high there is good spheroidisation as the
+magnesium is 0.08 percent and high enough for good reaction. The
+matrix is ferritic since the silicon is high and manganese low. As the
+material was well annealed it gave an elongation of 10 percent in 15th
+heat and 7.5 percent in 16th heat. You may notice the impact
+value is low as phosphorus was too high. In heat Nos. 3 and 4 the
+material was not annealed and there was therefore no elongation as the
+matrix was pearlitic. The inoculant was also insufficient.
+From the results of our experiments at spheroidisation of Indian
+pig iron we have found that we can very successfully produce
+spheroidal graphite iron which gives a tensile stress of thirty five tons
+with an elongation of ten percent after heat treatment. The spheroidi-
+sation was excellent. A flange of S. G. iron struck by a small hammer
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 8]]
+20
+H. S. SASTRI
+when suspended from the top gave a clear ringing noise like that of a
+suspended rail piece serving as a bell in a railway station. The ringing
+noise is the real test for spheroidisation before taking the specimen to
+the microscope. It vouches for the proper arrangement of the
+molecules and the clear ring is the result of their proper arrangement
+and the consequent transmission of vibration without hindrance. In
+fact this served as a test for identification of S. G. iron castings in
+the yard.
+On the lathe the spheroidised castings hehaved very well. While
+being cut on the lathe the cut fibres would continue in one piece ten to
+fifteen feet long as though it was a thin wire issuing out. The whole
+factory was overjoyed on the finding of a new experience and a new
+metal which is not steel, which is not cast iron, but a metal with
+characteristics midway between, which had the advantages of both.
+Intricate castings can be teamed more easily and successfully than
+in steel with strength and properties approaching steel. High duty cast
+irons like niresist, nihard could be spheroidised and made stronger to
+serve better. There is no doubt that this recent research in cast iron
+will revolutionise the whole foundry industry in about twenty years.
+You will see the limitations in Indian pig irons in all of which the
+phosphorus is high. There is no brand which compares favourably
+with Hematitic pig iron. This is a serious handicap in the steel
+industry for recarburising purposes as well as in the spheroidal graphite
+iron industry where low phosphorus irons are in demand.
+In order to meet this demand for low phosphorus pig iron in
+America and Europe they have developed the Metallurgical blast
+cupola which converts hundred percent steel scrap into the finest low
+phosphorus pig iron with low sulphur. Where there is abundance of
+steel scrap and no power facilities for melting they have installed the
+Metallurgical Blast cupola and converted this scrap into pig iron with
+low phosphorus and low sulphur at a temperature of 1540. C. so as to suit
+ideally a Bessemer Converter. With this furance they have installed
+steel plants and rolling mills in America and in Europe. The
+spheroidal gaphite iron manufacture will run under ideal conditions
+with a Metallurgical Blast cupola.
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 9]]
+NODULAR IRON
+21
+With abundance of scrap in Burma a Metallurgical Blast cupola
+may be installed and low phosphorus and low sulphur pig iron may be
+manufactured and blown into steel in a Bessemer Convertor and
+sections rolled in a rolling mill. This may form the nucleus of a steel
+plant which in time to come would grow bigger and bigger.
+A small spheroidal graphite plant may also be established for
+manufacturing small pipe specials much required for the water supply
+department and several factories.
+A malleable iron foundry may also be established to manufacture
+several useful articles for the various industries. I should here express
+my gratefulness to the Director of Crescent Iron and Steel Corporation
+and to Mr. Mcneill of Messers. Mond Nickle Co. Bombay for giving
+me an opportunity to work on this scheme and my gratefulness to the
+authorities of the Burma Research Society for granting me kind
+permission to read this paper before them this evening.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 10]]
+CRESCENT IRON AND STEEL CORPORATION.
+22
+Tensile
+Heat Burn
+Date.
+Duplex
+No.
+1.
+2.
+Steel Car-Manga- Sili-
+scrap. bon. nese. con.
+P.
+S.
+N.
+Nickle:
+Mg. Magne-
+sium.
+Inocu-
+late.
+strength
+tons per tion.
+Heat
+Elonga- Izod
+treat-
+impact.
+square
+ment.
+inch.
+(1)
+(2) ( (3):
+(4)
+(5) (6)
+(7)
+(8)
+(9) (10)
+(11) (12) (13)
+(14)
+(15)
+(16)
+(17)
+(18)
+26-6-51
+I 400
+400
+300
+3.7
+26-6-51
+2 400
+40, 300
+3.6
+9-7-51
+3 400
+400
+300
+3.4
+10-7-51
+4 400
+400
+300
+3.6
+11-7-31
+5
+500
+300
+300
+3.6
+13-7-51
+b 500
+300
+300
+3.7
+16-7-51
+7
+800 300
+3.6
+18-7-51
+8
+800 300
+56
+19-7-51
+800 300
+3.6
+20-7-51
+10
+800 300
+3.6
+21-7-51
+800 300
+3.6
+21-7-51
+12
+800 300
+3.6
+23-7-51
+800 300
+3.6
+23-7-51
+14
+800 300
+3.6
+24-7-51
+15
+M.P. 800
+300
+3.6
+25-7-51
+16
+M.P. 800
+300
+3.6
+27-7-51 17
+800 300
+3.6
+28-7-51
+30-7-51
+18
+19
+31-7-51 20
+800
+800 300
+800 300 3.5
+300
+3.5
+3.6
+764607006660b0o66550
+wwwwwwww.s
+2.0
+.21 .02
+1.0 .04 3.5 lbs.
+13
+2.1
+.23
+.02
+1,0 .04 3.5
+14
+.37 2.4
+.23
+.02
+1,2 .06 5.0
+16 ozs.
+24
+.39 2.5 .22
+.02
+1.3: .06 50
+21
+28
+.30
+2.6
+.23
+.02
+1,3 .07 6.0
+'annealed
+2.6
+.23
+.02
+1.2
+.07 6.0
+.35
+2.6
+.23
+.02
+1.2
+.08 6,0
+.34 23
+.21
+.03
+1.2 .08 6.0
+.36 2.3
+.22
+.03
+1.2
+.07 6.0
+2.6
+.23
+.02
+1.2 .07
+6.0
+."4 2.5
+.22
+.02
+1.2.08 6.0
+.34
+2.6
+.23
+.02
+1.2 .07 6.0
+.34
+2.6
+.23
+.02
+1.2
+.07 6.0
+.24
+2.6
+.23
+.03
+1.2
+.07 6.0
+.33
+26 .16
+.02
+1,2
+.08 6.0
+35
+.33: 2.6
+.16
+.02
+1.2
+.08 6.0
+28
+35
+7.5
+.34
+2.6
+.23
+.03
+1.2
+.08 6.0
+28
+.35
+2.6
+.23
+.02
+1.2
+.08 6.0
+28
+.54 2.0
+.23 .02
+1.2
+.08 6.0
+28
+.34
+2.0
+.23
+.02
+1.3
+.08
+6.0
+28
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.

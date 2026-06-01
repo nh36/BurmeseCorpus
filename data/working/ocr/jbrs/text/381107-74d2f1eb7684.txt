@@ -1,0 +1,195 @@
+[[page 1]]
+A NEW SOLAR COOKER FOR THE UTILISATION
+OF SOLAR ENERGY IN BURMA'
+by
+Dr. Freddy Ba Hli, M. S. in E. E., Sc. D. ²
+Introduction
+All over the world there are many regions where the widespread
+depletion of forests has led to soil erosion, encroachment of deserts and
+the resultant distress of the people living in the area. Burma is now
+taking active steps to combat such conditions in the dry zone area of
+Central Burma and the Agricultural and Rural Development Corpora-
+hensive programme to stop the cutting down of the forests and to
+encourage the reforestation of previously wooded countryside. This
+will prevent soil erosion, conserve rainfall and thus put an end to the
+gradual conversion of good crop growing lands into deserts. The
+Forest Department is strongly supporting this reforestation and the
+Union of Burma Applied Research Institude is also helping in this
+important programme.
+To promote this reforestation scheme we must introduce new
+sources of heat energy for cooking (domestic and industrial); other-
+wise the present sparse timber growth and large trees will be quickly
+cut down for fuel.
+The dry zone area villages have been using mainly wood and its
+product charcoal for fuel to produce heat energy for domestic cooking
+and semi-industrial use such as palm jaggery making, since time
+immemorial. Unhindered use of wood naturally cuts down the forests.
+Lately the use of petroleum oil and its products kerosene, diesel
+oil, and petrol has come about to some extent but still to only a small
+degree for lighting and almost nil for cooking.
+The reason is that labour has in the past been cheap and the habit
+of the villager is to go to the forest, cut down a few trees for firewood
+which he considers free, rather than buy a kerosene stove and use
+kerosene fuel for cooking his food or for commercial uses.
+1. Read on May 5, 1955, with U Chit Thoung in the Chair.
+2. Acting Director of Research, Union of Burma Applied Research Institute,
+Kanbe, Rangoon.
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 2]]
+108
+Dr. F. BA HLI
+This habit has become so ingrained in the villager that even if he
+had a kerosene stove he probably would not buy kerosene but would
+try to get fire-wood in spite of the extra labour in cutting and splitting
+the wood, the smoke nuisance, and the inconvenience in removing the
+soot from the pots. So in order to prohibit the cutting of firewood,
+the alternative means of cooking must be free, that is, the running
+expenses must be nil. Solar Energy does satisfy this condition provided
+the converter used is of suitable design.
+The Properties of Solar Energy
+All the time that the sun shines brightly, the land surface of
+Burma receives solar energy per second equivalent to two hundred and
+forty thousands million kilowatts from the sun's rays. This is a
+tremendous amount of power, more than all the combined power
+available from the hydroelectric and coal reserves in the country.
+Of course we cannot hope to utilise all of this power as a lot of it
+falls on inaccessible areas. But to take just one area, say the Central
+Burma Dry Zone, we estimate that every second of a typical sunny day,
+over one thousand million kilowatts of solar energy falls on the thousand
+square miles around Mount Popa (that is an area about 30 miles long
+by 30 miles wide).
+What becomes of this huge amount of energy? A portion is
+utilised by the plants, trees and grass to convert carbon dioxide of the
+air into vegetable nutrition through chlorophyll, a portion evaporates
+water from the rivers, streams and ponds in the area and the rest goes
+to heat up the soil and the air. So here is a vast source of energy up
+to now wasted by the Burmese except for a very minute fraction which
+is used to dry saltfish and so on.
+It means that the people living in that area can have up to a
+million kilowatts of power doing work for them if they only
+utilise one thousandth of the sun's rays pouring down on them. In
+other words, they don't need to harness the sun's rays over the whole
+thousand square miles of their territory, they just need to efficiently
+harness the sun's rays over just one square mile to get a million kilo-
+watts of solar energy coming in to do some work.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 3]]
+A NEW SOLAR COOKER
+109
+Now when we remember that surveyors have to spend months in
+remote jungles trying to find the waterfall to yield just a few thousand
+kilowatts of water power, it seems unbelievable that right where we live,
+any square mile can give us a million kilowatts of solar power. Why
+has'nt more use been made of the sun's rays?
+The reason for the non-utilisation of solar energy is that the
+normal heating power of the sun's rays is insufficient to boil water.
+From the general point of view this is a very fortunate fact, otherwise
+we all would be dead. But for the purpose of cooking food or provid-
+ing power for cottage industries or for running engines, the boiling of
+water is a requisite.
+People have not used solar energy for so long that they have even
+reached the state of mind that it is useless. Some scientists who are
+unaware of the most modern developments also share this view. How-
+ever, this is not correct, because we now know that solar energy can be
+very useful if we go about it the right way.
+Let us consider first a few figures. The intensity of solar
+radiation half way between the earth and the sun is 1.94 gram calories
+per square centimeter per minute which is equivalent to 1.35 kilowatts
+per square meter.
+According to Ramdas and Yegnanarayanan the average value for
+India is 18,900,000,000 gram calories per day per acre, which works out
+to about half kilowatt per square meter. This average value agrees
+with the maximum intensity reached with the sun at the Zenith on a
+cloudless day of about 1 kilowatt per square meter, or 1.4 gram calories
+per square centimeter per minute. These values have also been
+measured in Burma.
+Now it is found that in order to boil water in an ordinary domestic
+pot placed without any protection in the wind, a heat intensity of about
+8.5 gram calories per square centimeter per minute equal to 6 kilowatts
+per square meter is required. Hence it is seen that some sort of
+concentrating device will be needed to enable the sun's rays to boil
+water.
+Practical Devices for the Utilisation of Solar Energy.
+Scientists in many countries have been working on the invention of
+practical devices for the utilisation of solar energy. Some of the
+famous names associated with this research are Professor H. C. Hotel
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 4]]
+110
+DR. F. BA HLI
+of M. I. T. (Massachusetts Institute of Technology) and Dr. Maria
+Telkes who built the first solar energy house; Messrs G. O. G. Lof,
+Farrington Daniels and N. W. Pirie of the United States, A. E. H.
+Bleksley of Southern Africa, Dr. K. N. Mathur and Dr. M. L. Khanna
+of the National Physical Laboratory, India, Mr. A. L. Gardner of
+UNESCO, and M. H. Masson and M. A. Nizery of French
+West Africa.
+They have produced many practical devices to either absorb the
+solar energy for heating of domestic water supplies and air conditioning
+systems or to reflect and concentrate the sun's rays to boil water and
+produce heat for other purposes. The boiling of water can be utilised
+for making beverages, cooking food or for generating steam.
+A review of these inventions reveals that they are not cheap
+enough for widespread use by rural populations. So the writer has
+designed and developed at the State Industrial Research Institute (Now
+Union of Burma Applied Research Institute) a solar energy converter
+which had as its objectives maximum simplicity and low cost. It has
+been made by a local carpenter and can be duplicated by any village
+carpenter within a few hours. The cost of a unit with two square feet
+of surface area is less than four kyats. To boil a pot with about 9 tea
+cups of water (2000 ccs) about 20 square feet of surface area is needed.
+Thus a practical cooker would cost about thirty five kyats and together
+with various accessories to improve the efficiency, it would cost about
+forty kyats. With a useful life around 1500 hours, the cost of boiling
+a pot of water would work out to 2.5 pyas. This may be compared
+with the cost of 3 pyas using cheap wood fuel and 3.6 pyas using a
+kerosene stove to boil the same amount of water.
+Design
+The basic idea of the solar cooker is of course to focus the sun's
+rays to one spot and increase its intensity from ½ KW per square meter
+to over 6 KW per square meter.
+From our coordinate geometry course in mathematics we learn that
+there is a curve called the parabola, whose formula is usually given as
+y² = 4 ax
+which has the property that any parallel beam of rays falling on it is
+reflected back to one single spot. This property of the parabola, has
+been utilised in the reverse direction in searchlights and motor car
+headlamps to produce a parallel beam from a point source of lights.
+The reflector of these searchlights is termed to be a paraboloid, which is
+a surface obtained by rotating a parabola around its axis.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 5]]
+A NEW SOLAR COOKER
+111
+Now in designing our solar cooker, we set out to get a paraboloid
+to focus the sun's rays but the fabrication of a true paraboloid is an
+expensive matter and so the practical solution was to use a number of
+vertical parabolas set along a horizontal parabola on the ground. The
+method now used is to make wooden frames about 4 feet by 1 foot
+wide, which are cut to the shape of parabolic curves along their length.
+Over each of these frames a bright tinned plate (4 feet by 1 foct) is
+nailed down and we get a metallic parabolic reflector. A number of
+these are placed along a parabola on the ground and we can then get
+the sun's rays concentrated on to a pot placed at the focus. The
+distance of the focus from the reflector can be chosen by means of the
+constant "a" in the above formula for the parabola.
+Thus a cheap and simple device for utilising solar energy for
+cooking (both domestic and industrial) is now available. It is so simple
+that any village carpenter can make it if shown a model and the cost is
+the lowest of any solar energy converter in the world. So Burma is at
+present leading in the research on popular solar energy utilisation by
+the masses.
+Conclusion
+Our objective in carrying out this new development on the solar
+converter has been to produce a practical device which would fill the
+need for a cheap and effective alternative to the use of wood fuel which
+was leading to deforestation.
+It is felt that for the problem at hand this simple, unpretensious
+device is a more satisfying solution than some weird, complicated
+apparatus which would not only cost a lot more but also have more
+chance of going wrong due to excessive mechanical elaborations.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand

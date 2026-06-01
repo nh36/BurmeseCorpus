@@ -1,0 +1,14 @@
+{
+  "local_file_id": "originkachins_hanson1912-01914909f6c3",
+  "batch_id": "jbrs-ocr-3341",
+  "file_name": "OriginKachins-Hanson1912.pdf",
+  "path_stub": "Burmese/Burma JBRS/1912/OriginKachins-Hanson1912.pdf",
+  "journal": "JBRS",
+  "year": "1912",
+  "ocr_engine": "google_vision",
+  "pages_completed": 10,
+  "ocr_date": "2026-06-01T19:53:28.435504+00:00",
+  "source_category": "other_source",
+  "language_scope_guess": "Burmese",
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+}

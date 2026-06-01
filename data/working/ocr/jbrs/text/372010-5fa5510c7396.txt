@@ -1,0 +1,378 @@
+[[page 1]]
+LOGICAL EMPIRICISM AND CARVAKA AND
+BUDDHIST SYSTEMS OF PHILOSOPHY 1
+by
+K. N. KAR, M.A. 2
+First of all I shall give, in brief outline, what logical empiricism
+is. Our knowledge may be real or verbal. Empiricism believes that
+all real knowledge arises from sense-experience and is validated by
+sense-experience. In technical terms of logic, real propositions are
+called synthetic and verbal propositions are called analytic proposi-
+tions. All propositions derived from sense-experience and validated
+by sense-experience are called a posteriori. A proposition is validat-
+ed, really means here, that its truth or falsity is determined. Hence
+propositions whose truth or falsity are determined by sense-experience
+are called a posteriori. Propositions whose truth or falsity are deter-
+mined independently of experience are called a priori propositions.
+Hence the empirical position is that all synthetic propositions are
+a posteriori and all a priori propositions are analytic. The old em-
+pirical position of Hume was established and maintained mostly on
+psychological analysis of the process of knowledge. The new em-
+piricism known as logical empiricism is established and maintained
+purely on logical grounds. Modern developments of symbolic logic
+have been the main basis of its arguments. As opposed to the em-
+pirical school, some other philosophers have maintained that a priori
+synthetic propositions are possible. One view is that metaphysics
+establishes such a priori synthetic propositions about ultimate reality
+through sheer reasoning which is deductive. Modern developments of
+logic have shown that logical propositions are tautologous. That is,
+they are a priori analytic propositions. Hence deductive logic can-
+not give a priori synthetic propositions. They further maintain that
+as it is the essential characteristic of all propositions to be true or
+false, there must be methods for the determination of the truth or
+falsity of every genuine proposition. If there is no method for the
+determination of a particular variety of so-called propositions, then
+they are not genuine propositions. Synthetic a posteriori propositions
+have a method for the determination of the truth or falsity of such
+propositions. The method is that of verification by sense-experience.
+All scientific propositions are so verifiable. All logical and mathe-
+matical propositions are a priori analytic. They are shown to be true
+by the fact that their contradictories are impossible. By the matrix
+method also it can be shown that logical propositions are always true.
+But there is no method which has found universal acceptance for the
+determination of the truth or falsity of a priori synthetic propositions.
+The genuineness of a proposition is determined by what will determine
+its truth or falsity. As a posteriori synthetic propositions alone among
+real propositions can have its truth determined, namely, through veri-
+fication by sense-experience, it is asserted that verification by sense-
+1. Read on August 11, 1953, with Professor Aung Than in the Chair.
+2. Lecturer in Philosophy, University of Rangoon.
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 2]]
+LOGICAL EMPIRICISM
+11
+experience is the sole determiner of genuine real propositions. They
+further maintain that the sense of a proposition is really determined
+by what the proposition verifies. Hence according to them sense-
+perception alone can give real knowledge. If reasoning be divided
+into deductive and inductive, they maintain that deductive logic does
+not give real knowledge. As for inductive reasoning, they do not
+recognise the process as logical. Inference through generalization is
+a purely psychological process. It is the repetition of the view of
+Hume. Perception guarantees the truth of singular propositions but
+it cannot guarantee the truth of universal propositions. The process
+of generalization of universal propositions of unlimited instances from
+singular propositions of perception is not logically valid. This was
+the extreme position of the earlier forms of logical empiricism. But
+some later forms have acknowledged the necessity of recognizing
+generalisation as a valid process.
+I shall sum up the whole position of the logical empiricists in
+ordinary language. All real knowledge is from sense-experience.
+Reasoning, meaning deductive reasoning, cannot give us any addi-
+tional knowledge which is real beyond what is contained in the pre-
+mises. Hence reasoning cannot be considered as a means of addi-
+tional real knowledge beyond that of sense-perception. As we can-
+not have sense-perception of God or gods, souls, the world beyond,
+there can be no genuine knowledge concerning them. All meaningful
+expressions in language are meaningful because they tell us what to
+expect in our sense-experience. If an expression in language does
+not and cannot tell us what to expect in sense-experience for their
+truth or falsity then they are meaningless or senseless expressions.
+As statements concerning God, gods, souls, other world, reality, higher
+reality do not and cannot tell us what to expect in sense-experience
+to know their truth or falsity, they are senseless expressions. Hence
+there can be no genuine propositions about realms beyond sense-
+experience. As 'This is yellow' and 'This is right' is not veri-
+fiable by anything in the external world like ‘This is straight', morality
+also is not expressive of anything objective and real. They stand for
+certain subjective conditions and attitudes merely. Hence morality is
+a purely subjective affair.
+The views of the Carvakas have not been properly preserved. It
+is only preserved in the accounts of other philosophical schools. The
+account given here is principally based on the account given in Madha-
+vacharya's 'Sarva Darsana Samgraha'. They recognize perception as
+the only source of real knowledge. This is the fundamental tenet of
+logical empiricism too. Carvakas reject inference as a valid source of
+knowledge. In Indian logic, inducive logic had never been separated
+from deductive logic. Though this non-separation leads in a certain
+sense to the right appreciation of the value of reasoning as used in
+actual thinking still the right appreciation of the distinctions of the
+two distinct processes did not take place because of this non-separation.
+The accounts about the Carvakas do not show the realization on their
+part that reasoning which is not inductive, namely, which does not
+involve generalization, is analytic and tautologous. They do not even
+show the recognition of the presence of such reasoning. To them
+every reasoning seems to involve generalization in the major premice.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 3]]
+12.
+K. N. KAR
+*
+They refute the validity of the inductive process of reasoning. This
+they think is the refutation of all reasoning. In this refutation they
+have not been surpassed by any of the modern empiricists. In the
+syllogism the major premise gives the universal proposition. So the
+problem of induction is the establishment of the invariable connection
+between the middle and the major terms. How is it established?
+Perception cannot establish it. The account says, ...; for although
+it is possible that the actual contact of the senses and the object will
+produce the knowledge of the particular object thus brought in contact,
+yet as there can never be such contact in the case of the past or the
+future, the universal proposition which was to embrace the invariable
+connection of the middle and major terms in every case becomes
+impossible to be known." (1)
+The universal relation between middle and the major depends
+also on the unconditionalness of the middle. In their words, "Again,
+this same absence of a condition, which has been given as the defini-
+tion of the universal connection (i.e., universal proposition), can itself
+never be known." (2)
+<<
+There are many more logical criticisms of importance given
+against the logical validity of inductive generalization. Finally it says,
+; and that in some cases this step (the step which the mind
+takes in generalization) is justified by the result, is accidental just like
+the coincidence of effects observed in the employment of gems, charms,
+drugs, etc." (3)
+The Carvakas further maintain that through inference people
+come to different conclusions about them. Hence inference leading to
+contradictory conclusions cannot be said to give knowledge about
+them. Hence as reasoning is of no value in advancing knowledge and
+as we cannot perceive by the senses, God or gods, souls, the other
+world, the laws, we can not assert the existence of such things. The
+earlier form of logical empiricism would wonderfully correspond with
+this position. The logical empiricist says, "The man who makes in-
+ductive inferences may be compared to a fisherman who casts a net
+into an unknown part of the ocean-he does not know whether he will
+catch fish, but he knows that if he wants to catch fish he has to cast
+his net. Every inductive prediction is like casting a net into the ocean
+of the happenings of nature; we do not know whether we shall have
+a good catch, but we try at least, and try by the help of the best means.
+possible." (4)
+Both this ancient school and its modern counterpart are skepti-
+cal about the logical basis of induction. The only difference will be
+the logical way of putting the situation. The logical empiricist will
+say that universal propositions are not genuine propositions because
+they cannot be verified to be true by any perceptible set of singular
+propositions. In logical language the universal propositions are not
+truth-functions of any definite set of perceptible singular propositions
+or in their terminology protocol propositions. Such terms as God,
+gods, next life, etc. are also without sense because we cannot decide
+what perceptible situations will determine their truth or falsity.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+2.
+
+[[page 4]]
+LOGICAL EMPIRICISM
+13
+But this is suicidal even for science, not only for religion and
+morality, because science itself claims to give us knowledge of the laws
+of nature. As a view it is logically irrefutable. What they say con-
+cerning induction is undoubtedly logically sound. But, life cannot go
+on on this basis. So the body of scientific knowledge has to be justified.
+So some of the later logical empiricists have tried to justify such a
+body of scientific knowledge. For this purpose some logical empiricists
+have joined hands with the pragmatists and some of them call them-
+selves operationalists.
+66
+Buddhist systems of philosophy come out with almost the same
+defence for inference. In the language of "Sarva Darsana Sangraha,"
+; for such doubts alone are to be entertained, the entertainment
+of which does not implicate us in practical absurdity and the like, as it
+has been said, 'Doubt terminates where there is practical absurdity'." (5)
+But is has to be acknowledged that the Carvakas, are right,
+along with their modern counterparts in logical empiricism, that the
+existence of soul, God, next-life and the like super-natural and trans-
+cendental things cannot be demonstrated by any amount of reasoning.
+This has been acknowledged by Kant and also by many Hindu ortho-
+dox thinkers. Hence their logical position is irrefutable. The Hindu
+orthodox thinkers tried to put the burden of proof on the Carvakas
+by asking 'How do the Carvakas know that they do not exist?' But
+I do not think that saves the position.
+According to one Nyaya treatise mentioned by Hiriyanna, the
+Carvakas did not deny inference altogether for purpose of life, but
+denied that through inference God, soul and such transcendental things
+can be demonstrated. (6) But this much is sure that by pointing out the
+insecure logical basis of inductive generalization, the Carvakas and the
+logical empiricists do give us the necessary corrective to view human
+knowledge as only probable and relative. Science does not deal with
+certainties but only probabilities. The logical empiricist says, "Gone
+is the ideal of the scientist who knows the absolute truth. The happen-
+ings of nature are like rolling dice rather than like revolving stars;
+they are controlled by probability laws, not by causality, and the
+scientist resembles a gambler more than a prophet. He is a better
+gambler, though, than the man at the green table, because his statistical
+methods are superior.” (7)
+When I am mentioning Buddhist philosophy, I am referring
+to the accounts of such philosophy as left in the records of the other
+systems of Indian philosophy. As I have already indicated, they oppos-
+ed the Carvaka view about inference and their denial of the validity of
+the laws of nature, on the ground that such a view is in contradiction
+to the practices of life. They distinguished universal laws of two
+kinds, namely, causal laws and laws of identity. Nothing happens
+without a cause. Only when a certain cause takes place, a certain
+effect is brought about. If the cause does not take place, the
+effect does not take place. Everything is conditional and relative.
+This is the only theory of the dependent origination of things. The
+logical empiricist demurs to such a view of causal determinism. He
+says, "that the idea of a strict causality is to be abandoned, and
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 5]]
+14
+K. N. KAR
+that the laws of probability take over the place once occupied by the
+law of causality.” (8)
+When the Buddhist philosophers talk of another kind of
+universal proposition namely that of identity, they come to recognize
+that some reasonings are very different from those which involve induc-
+tive generalization in their major premise. It is in line with the
+modern distinction of deductive and inductive reasoning and further
+recognition of the fact that the former involves mere repitition. If
+Indian logic had proceeded to develop on this line of distinction, it
+would have come to recognize the difference between deductive and
+inductive reasonings and to the realization that deductive reasoning
+is tautologous. Unfortunately this development did not take place.
+Strictly from the Buddhistic point of view, reals are particulars with
+their individual characters (svalaksana). Reasoning uses universals
+(Samanyalaksana). Universals are merely names and the product of
+imagination. There is no identity of two things. There is mere simi-
+larity. Hence reasoning distorts the nature of reality. So reasoning
+cannot be more than working fiction. Dinnaga says that the whole
+process of inference refer to what is imposed by thought and has no
+reference to external reality. (9) Logical empiricists will only change
+the word 'thought' to 'language'.
+The Buddhists refused to dabble on certain questions on the
+ground that answers to such questions are not finally determinable.
+"Some things Potthapada, I have laid down as certain, other things I
+have declared uncertain; The latter are those ten indeterminates that
+you raised, and for the reasons given I hold them matters of uncer-
+tainty." (10)
+This view comes very near to the view of the logical empiri-
+cist. The logical empiricist, maintains that every valid kind of know-
+ledge must have tests for the determination of their truth and falsity.
+If their truth and falsity are not determinable, they are not genuine
+propositions. The Buddhists did not formulate their view in such
+logical terms. But we can very correctly feel that such a view was
+vaguely at the back of their mind when they asked people
+not to think about indeterminable questions. Their logic was not
+sufficiently developed to enable them to formulate their view in the
+language of logical empiricism.
+About the first cause the logical empiricist says, Could there be
+a father who never had a child? Every one would ridicule a philo-
+sopher who regarded this question as a serious problem. The ques-
+tion of the cause of the first event, or of the cause of the universe as
+a whole, is not of a better type. The word ‘cause' denotes a relation
+between two things and is inapplicable if only one thing is concerned.
+The universe as a whole has no cause, since, by definition, there is
+nothing outside it that could be its cause. Questions of this type are
+empty verbalisms rather than philosophic arguments. The conclusion
+is Buddhistic but the reasons are based on modern logical researches.
+The Buddhist philosophy is against any notion of substance. It is
+called the doctrine of insubstantiality. We must not think of some
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 6]]
+LOGICAL EMPIRICISM
+15
+enduring things at the back of the changes. The changes are all that
+there is to it. The changes are according to laws. This is pheno-
+menalism. Logical empiricism also has led to phenomenalism in
+some cases. The substance which lies hidden behind phenomena has
+no place in logical empiricism as well as in Buddhist Philosophy. There
+is no soul behind the five Khandas. There is no God behind the
+universe.
+Logical empiricists and the Carvakas have no real place for
+morality and religion. But Buddhism believes both in the reality of
+moral life as well as in the reality of religious quest. In terms of the
+Indian conception of human goals (Purusarthas) the Carvakas believe
+only in artha and Kama (wealth and sense-pleasure) so do the logical
+empiricists. But the Buddhists believe in dharma and Moksa in addi-
+tion. Buddhism believes in other worlds, in rebirths as well as in the
+reality of nivana. These are not matters which can be known by
+sense-perception. Nor can they be known by reasoning. Buddhists
+introduce super-normal perception as the source of such knowledge.
+Through abhinna we can see and hear in the other worlds, we can know
+other people's thoughts, we can recollect our own previous births, we
+can know about other peoples previous births, we can be certain of the
+emancipation already attained. (11)
+In common with this Buddhistic view, that things beyond.
+sense-perception cannot be known through any amount of reasoning
+and that such phenomena can only be known by super-normal percep-
+tion (abhinna), the Vedantin view is also the same. Super-sensible
+reality cannot be known by any amount of reasoning because reasoning
+takes us to varied conclusions, all of which cannot be true at the same
+time. It can be known by yogaja perception only which is another
+name for abhinna. But the Vedantins claim to know Brahman as the
+permanent reality behind all phenomena by such means. Is this not
+in variance with the Buddhist conclusion that things are without
+substance? Hence in my humble opinion super-normal perception
+also does not give any certain knowledge about super-sensible pheno-
+mena. Anyhow, it in no way makes our knowledge about such things
+more certain than reasoning. It is quite in place here to mention the
+Mimamsaka criticism of yogi-pratyaksa. "As the external senses
+cannot come in contact with the distant objects in time and space and
+mind can independently of the external sense organs produce only
+experiences of pleasure and pain, these experiences cannot be per-
+ceptual." "The dependence of consciousness to the mind and the
+senses was also fully appreciated by the Nyaya philosophy when it
+denied consciousness to the soul when disjoined from the mind and
+the senses. We are condemned to this predicament, namely, we can
+not imagine any knowledge of objects which is not in terms of sense-
+perception. Further we cannot think of knowledge except through
+mind-body organism." (12)
+In Indian Philosophy the reality of morality and religion has
+been maintained by the Mimamsaka, without advocating Super-normal
+perception. "Religion and morality are not matters of truth or know-
+ledge. They are concerned with imperatives, that is action. If you
+want this do this." (13) The logical empiricists may not be averse to
+this view of religion and morality.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 7]]
+16
+K. N. KAR
+In summary we may note the agreements and disagreements of
+these three groups. They all deny the reality of soul and God. The
+logical empiricists and Carvakas deny the validity of inductive reason-
+ing. The Buddhists do maintain the validity of inductive generalization
+and reasoning. The logical empiricists recognize a separate kind of
+reasoning namely deductive reasoning as logical but do not believe
+that it can extend our real knowledge. The Buddhists and the logical
+empiricists are both nominalists. Reasoning does not represent any
+process of reality. The universals are mere names. Both resort to
+pragmatic grounds to justify knowledge. The Buddhists believe in laws
+not only in nature but also in moral sphere. The Carvakas and the
+logical positivists are very sceptical about such laws. They are nothing
+more than throwing stones into the unknown to obtain hits like a
+gambler. These two also do not believe in the objective reality of moral
+and religious goals. The Buddhists do believe in the reality of such
+goals. But the Buddhists with the logical empiricists maintain insub-
+stantiality of things. They also believe that reasoning cannot prove
+anything about super-sensible reality. But the Buddhist believes that
+by super-normal perception we can know things beyond nature. Thus
+Buddhism avoids the sceptical conclusions of the Carvaka and the
+logical empiricists.
+References:
+(1) Madhavacarya's 'Sarva Darsana
+Darsana Sangraha' translated by
+Cowell and Gough 3rd Edition, Page 6 (in future it will be
+referred to as 'SDS').
+(2) SDS Page 7.
+(3) SDS Page 9.
+(4) 'The Rise of Scientific Philosophy' by H. Reichenbach
+Page 245 (Future Reference 'RSP').
+(5) SDS Page 12-13.
+(6) ‘Outlines of Indian Philosophy' by M. Hariyanna Page 188
+(Future Reference 'OIP').
+(7) RSP
+Page 248.
+(8) RSP Page 163.
+(9) OIP Page 208.
+(10) Digha Nakaya, Vol. I page 191-(Potthapada Sutta).
+(11) Digha Nakaya, Vol. III page 281.
+(12) 'An Empiricists Constructive Survey of Contemporary Philo-
+sophy' by K. N. Kar.
+(13) Ibid.
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.

@@ -1,0 +1,331 @@
+[[page 1]]
+A THEORY OF THE RATE OF INTEREST FOR THE
+BURMESE ECONOMY
+by
+Dr. Tun Thin, M.A., Ph. D. 2
+Currently, in the field of theoretical economics, there are two
+major theories of the rate of interest, namely the liquidity preference
+theory and the loanable fund theory. The liquidity preference theory
+states that the rate of interest is determined by the supply of money
+and the demand for money. The loanable fund theory on the other
+hand says that the rate of interest is determined by the supply of and
+the demand for loanable funds.
+The various rates of interest in Burma can be differentiated thus:
+the commercial bank rate of interest, the black market rate of interest,
+and the bond rate of interest. The rates of interest in these three credit
+markets are different, though they have been more or less constant
+since some time ago. The rate of interest charged by the commercial
+banks is from 6 to 8 percent per annum, and the rate in the black
+market from 30 to 150 percent per annum, while the rate in the bond
+market is 3 percent per annum.
+The main forces acting on these three markets are different for
+each market, and hence a single formula cannot explain the rate of
+interest in Burma.
+The bank loans will be considered first. Those who are qualified
+to borrow money from the commercial banks are first, people of good
+standing, and second, people who can give security for their loars. The
+security given may be of three types: merchandise, immoveable pro-
+perty, and jewellery (gold and/or diamonds). Generally, immoveable
+property and jewellery are accepted only by the Burmese national
+banks. These banks charge the rate of interest of 12 to 15 percent per
+annum (1%to 1% per month) for jewellery securities and 6 to 8 per-
+cent (1% to 1% per month) for other securities. Two points may be
+observed firstly, the rates of interest charged by these banks have
+remained the same for a long time; secondly, the banks are under-
+1. Read on 16th December 1954, with Dr. Htin Aung in the Chair.
+2. Special Professor in Economics and Statistics, University of Rangoon,
+Commissioner of Census, Government of the Union of Burma.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 2]]
+INTEREST Rate in BurMA
+67
+loaned, meaning that their actual loans are less than the loans that they
+could make. This can be seen from the reserve ratio of these commer-
+cial banks. The actual cash reserve is, on the average, about 20 percent
+of the total liabilities. The legal cash reserve requirement is,
+on the average, about 7 percent. Therefore the actual reserve
+is about three times what is required legally. It would be interesting
+to investigate whether all these extra reserves are available for credit
+expansion by the banks or whether the legal requirement of the reserve
+ratio is an underestimate in the present circumstances. Such legal
+requirements have presumably been taken from the experience of other
+countries with advanced or long-established banking systems, where
+the inflow and outflow of funds from the bank tills is so balanced that
+a stable and large part of the cash remains untouched and hence a
+small reserve ratio of 3 to 9 percent is adequate. But in Burma,
+though the legal requirement is 8 percent because of the unbalanced
+nature of the inflow and outflow of funds the bankers may for practical
+purposes have to keep a reserve ratio of more than 8 percent.
+Hence this 8 percent may be a mistake. But in any case, with the
+difference between the legal and the actual reserve ratios, there is
+room for more loans.
+The demand for loans from these banks may be classified into two
+categories. The first category would be loans for fixed investment, e.g.
+for opening new factories, constructing apartment houses, etc. The
+second category would be loans for circulating capital, e.g. for export,
+import, trade purposes, for purchasing raw materials, input for
+factories, etc.
+Because of the fact that these loans are for income-earning
+purposes, the rate of interest paid on these loans will be equal to or
+less than the expected rate of return of the investments.
+In the demand for fixed investment, though the potential marginal
+efficiency of the capital of this investment is rather high, due to the
+lack of technological and management experience the would-be
+investors would calculate their expected returns very conservatively,
+and as a result the expected rate of return is not too high (in figure 1,
+it is assumed to be 8 per cent).
+Potentially, the curve would extend to quite a length until it
+gradually fell, but in Burma the curve becomes very inelastic after a
+certain point. This is not because the expected returns fall when
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 3]]
+68
+Int.
+rate
+00
+C
+C'
+DR. TUN THIN
+Fig. 1
+Amount of Investment
+investment increases, but because there are a limited number of people
+who can make such investment. This is partly due to the fact that the
+people who have the technological and management know-how to be
+able to carry out such investment are limited in number, and partly
+because even though there may be some such qualified people, they do
+not have enough of their own capital to be able to borrow from the
+banks. Assuming in unlimited supply of loans in relation to the
+demand, the rate of interest will be in the region CD. Because the
+demand curve is assumed to be elastic, the maximum returns to the
+banks will be obtained if the rate of interest is charged at the kink, i.e.
+at D.
+In the demand for circulating capital, the rate of return for
+such capital will decrease after a certain point as investment increases
+and will fall to a very low level.
+This is because of the fact that the demand for the final products-
+for which the loans are made is limited, i.e. there is a limited demand
+for finished products and also there is a limited demand for exports
+and imports. Hence the investment that is made for such purposes
+will have to be limited.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 4]]
+INTEREST RATE IN BURMA
+69
+If commercial banks have a somewhat unlimited supply, than the
+rate charged for these loans will be determined by the maximum
+returns of interest which they can receive, that is to say, they will
+maximize the rectangle OEFJ (in figure 2).
+Int.
+rate
+6
+D
+A
+'D'
+j
+Fig. 2
+Loans
+Looking at the supply side of those commercial banks, the avail-
+able loans are determined by the minimum reserve ratio, and it is
+assumed in figure 3 that OA' is the maximum possible amount of
+loans that they can make.
+These banks have a demand for their liquidity, i.e. for money, and
+this liquidity preference is interest inelastic and is shown by OA. That
+is to say, in the Keynesian sense the demand for money, is for
+transaction and precautionary purposes and not for speculative ones.
+Hence looking at figure 3 the amount available for loans is AA'.
+The loans for fixed investment is CD (from figure 1), say at 8 percent;
+the loans for circulating capital is EF (from figure 2), say at 6 percent.
+For the remaining available money GH, the commercial banks have no
+choice but to invest it in Government bonds at the very low interest
+rate of 3 percent.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 5]]
+70
+Int.
+rate
+3
+A
+1
+EL
+DR. TUN THIN
+G
+H
+A Loans
+Fig. 3
+In the black market, the borrowers are people who are not
+qualified to borrow from the commercial banks at a lower rate of
+interest, such as for example, rural labourers and producers who need
+capital every year because they cannot save enough, workers both in
+urban and rural areas who have to borrow money for everyday
+needs, and some business people who are not respectable enough to
+borrow from the commercial banks. The demand for loans from these
+people is somewhat inelastic. These are people who have to borrow
+and who cannot borrow from anywhere else. This is a case of mono-
+poly for the lenders, which was at its worst before the independence of
+Burma, when about a hundred percent of the credit requirements of the
+rural population, who were mostly agricultural workers, was provided
+by the Chettyars and when the then British Government did not solve
+the problem boldly.
+The black market may be divided into two markets, one where
+only secured loans are given, and the other where only unsecured loans
+are given. In the black market for secured loans, the suppliers of
+such loans are mostly Indians - Babus or Chettyars. In Rangoon
+most of them are to be found on Mogul Street and they are mostly
+jewellery merchants.
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 6]]
+INTEREST RATE IN BURMA
+71
+Int.
+rate
+A
+B
+C
+B'
+C'
+Fig. 4
+Loans
+The suppliers of the black market capital are these who have
+private capital and who may invest in buildings, land, or precious
+metals, or carry on trade, but who will not invest in industries. They
+are mostly Indians and Chinese living in Burma.
+To have a supply curve of the loans of these people, the concept
+of the "Assets preference schedule" will have to be introduced. The
+definition of assets includes liquid assets, i.e. money, and other assets
+like buildings, plots of land, and rare metals. As for money, these
+people can either hold it or else lend it out. As for other assets, they
+can hold them or else sell or pledge them and the proceeds may be used
+for lending. Hence the choice for these people is either to hold or to
+lend their assets. Hence a demand curve for holding assets may be
+conceived of as follows:
+First of all, the suppliers of funds in the black market would like
+to hold liquid assets, i.e. money. It is assumed that the demand for
+money by them is only for precautionary purpose and that it is there-
+fore interest inelastic (curve AA' in figure 4). Then there is a
+demand from those people for other assets such as gold and other
+precious metals, land, houses, etc. The demand for holding these non-
+liquid assets can be for three purposses, namely, transaction purposes,
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailan
+
+[[page 7]]
+72
+DR. TUN THIN
+prestige purposes, and speculative purposes. Transaction purposes will
+be true only for jewellery merchants. Here to hold jewellery etc. for
+transaction purposes means, to be in the jewellery business, when they
+must hold jewellery for sale and when the amount they hold will
+depend on the average rate of sales. The prestige demand, on the
+other hand, is true only with Burmese lenders. But only a thin line.
+divides the demands for these purposes; for example, those assets
+which are held for speculative purposes and for transaction purposes
+may be displayed for prestige and vice versa.
+Non-liquid assets may be classified into income-earning (like
+buildings, etc.) and non income-earning (such as gold, etc.). The
+demand for transaction and prestige purposes for non income-earning
+assets are conceived of as interest inelastic, whereas the speculative
+demand for such assets is interest elastic. Thus on the whole the
+demand for non income-earning assets is assumed to be interest elastic
+(curve CC' in figure 4).
+The demand for income-earning assets will depend on the rate of
+return on these assets. The rate of return or the marginal efficiency of
+capital for these assets will fall as more and more is invested.
+At the rate of interest equal to this rate of return, the demand for
+such assets will be derived from this curve, (Curve BB' in figure 4).
+Int.
+rate
+B
+Fig 5.
+0
+[J
+E'
+Loans
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 8]]
+DR. TUN THIN
+73
+Adding all these various demands for assets, we will have the
+curve BCD as in figure 5. The difference between BCD and the curve
+EE, which shows the existing assets, will be the supply of loans at
+various rates of interest.
+But this is still not the final supply of loans. The final supply of
+loans is greater than this and will have to be explained. In this market
+there has to be a pledge of jewellery and this works as follows: A
+customer will bring in a piece of jewellery, the fair or market price of
+which is assumed to be 100. The Chettyar will of course price it
+lower, say at 95. Of this forced price, the Chettyar lends 80 percent.
+Thus only 76, or 80 percent of 95 is lent. The Chettyar will of
+course charge a rate of interest of 2 to 3% per month. He will also
+take this jewellery to a commercial bank. A commercial bank will give
+the same facilities to him as to any other customer and the result would
+be this the jewellery, whose fair price is 100, would be priced by the
+commercial bank at a lower price than the Chettyar's, say at 85. We
+find that the Chettyar's margin of loan is 80 % of the fair price. The
+commercial bank's margin is lower and is around 60 %, which is
+60% of the fair price, so that only 51 is lent. Thus the Chettyar,
+with the security he obtains, can borrow 51 from a commercial bank at
+the low rate of interest of 1 percent per month. His original loan
+was 76, but he borrows 51 and hence only 25 percent is his own money.
+Thus there is a multiplier effect, and in this example it is three times.
+-
+It is to be noted here that the fair value and the margin given by
+the Chettyars are higher than those of the commercial banks. They
+can do this without very much added risk of capital loss, because of
+vertical integration of business, their other business being buying and
+selling jewellery, so that it is not at all difficult for them to get
+proceeds from the jewellery equal to their forced value. Also we find
+that because of the difference in the terms of loans offered by the
+commercial banks and by the Chettyars, the demand for loans from
+these two markets is different. With a given security, those who want
+more loans than the commercial banks can offer will come to the latter
+market. As seen above, they can get 76 from the Chettyars, but only
+51 from the banks.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 9]]
+74
+DR. TUN THIN
+It is interesting to note how much actual interest the Chettyars
+earn on their own money:
+3 percent on 76
+2.25
+less
+1 percent on 51
+0.50
+"
+Interest on his 25
+Interest on 100 would be
+1.75
+7 percent per month or
+84 percent per annum.
+2 percent on 76
+1.87
+less
+1 percent on 51
+0.50
+Interest on his 25
+1.37
+Interest on 100 would be
+5.5 per month or
+66 percent per annum.
+In the unsecured market, the percentage of Burmese lenders is
+greater than in the secured market. Here the supply of loans is as
+defined in the secured market. Because of the fact that there is no
+security, the offer curve is not multiplied as in the secured market,
+but rather, the supply curve is moved up because of the risk factor.
+Assuming that the rate of default is 75 percent, the rate of interest will
+then have to be adjusted so that the defaulted loans may be recouped.
+Since only 25 percent of the amount of the loans will be recovered, the
+interest charged will have to be three times the principal itself,
+i.e. the rate of interest will be 300 percent.
+The rate of interest in the secured and unsecured black market is
+determined at the point where the supply and demand curves meet.
+The demand for these loans may be considered as somewhat inelastic.
+Considering these facts, one can see that the rate of interest in
+the unsecured market will be higher than in the secured market.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.

@@ -1,0 +1,845 @@
+[[page 1]]
+TYPE OF RESEARCH REACTOR FOR BURMA '
+by
+U Hla Nyunt
+A study of the attached summary of reactor developments abroad
+will make it evident that even
+even small underdeveloped countries
+are planning ahead for a small research reactor program. Before
+any country can expect to benefit from the many promises of
+the peaceful uses of atomic energy, many people trained in Nuclear
+Science and Engineering is an essential prerequisite, this new branch of
+learning incorporating the various disciplines of knowledge involved in
+the study of atomic energy. For training in Nuclear Science and
+Engineering, a Research Reactor, which ought to be more properly
+called a training or Experimental Reactor is an essential tool, and that
+is exactly the reason why so many small countries are planning for a
+small research reactor.
+A nuclear reactor is essentially a device for producing and controll-
+ing a nuclear fission chain reaction with neutrons accompanied by the
+release of energy, mainly in the form of heat, and the production of
+neutrons and nuclear radiations. A research reactor is mainly for
+producing neutrons and nuclear radiations, and cannot produce
+electricity.
+If Burma is to try to keep up with the developments in the use of
+atomic energy, even amongst its own circle of underdeveloped count-
+ries, she will have to have more and more people trained in Nuclear
+Science and Engineering, and sooner or later a small research reactor
+will become a necessity.
+It is the object of this paper to consider the pertinent factors
+affecting the choice of a research reactor type for Burma, within
+the limitations of our purpose and requirements.
+1. Read on December 22, 1956 with U Chit Thoung in the Chair.
+2. Deputy Director and Head of Reactor Development, Union of Burma
+Atomic Energy Centre and Special Lecturer in Physics. University of
+Rangoon.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 2]]
+88
+U HLA NYUNT
+(A) Particular Purpose and Subsequent Flux
+•Before choosing the type of research reactor, any country or insti-
+tution should have clearly in mind the particular purpose for which the
+reacter is being installed and a detailed plan of the long term use the
+reactor will be put to. A research reactor is essentially a source of
+neutrons, and groups of trained personnel experienced in neutron and
+nuclear radiation studies, who would be qualified to make an efficient
+use of the available neutrons is an important prerequisite.
+The purposes and uses of a research reactor may be classified into
+the following main Categories
+(1) Training
+(2) Research
+(3) Planning and development of power reactors
+(4) Production and use of Radioisotopes
+(5) Gamma Irradiation Facility.
+The research and training program is in turn determined by the parti-
+cular thermal neutron flux. A high flux (useful for research) is
+usually connected with high powers, but not necessarily together. In a
+given reactor, the flux is proportional to the power output at a given
+moment. But two different reactors operating at the same power may
+not have the same flux. Since the power produced in a unit volume
+is what determines the flux, compact designs are ideal for a research
+A disadvantage of the compact design, on the other hand, is
+that it permits fewer experimental facilities. Fast flux is useful for the
+studies of interaction of fast neutrons with matter (radiation damage,
+solid state studies and fast cross section determinations), and if both
+fast and thermal fluxes are required, a compromise in the design is
+reactor.
+necessary.
+The types of training which can be organised in Burma are:-
+(a) Training in Nuclear Science and Engineering
+Graduates in Science and Engineering of the University of Rangoon
+could be trained in the various scientific disciplines involved in the
+different aspects of atomic energy by being able to do experiments
+with the reactor facilities. Work in Reactor Physics, Reactor
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 3]]
+TYPE OF RESEARCH REACTOR FOR BURMA
+89
+Engineering, Instrumentation and control of reactors, chemical separa-
+tion of fission products, radioactive waste disposal, metallurgy of
+uranium, testing of materials in gamma ray atmosphere and shielding
+studies can be made. Such experiments and the associated theoretical
+instruction will enable participants to become completely familiar with
+and competent in the installation, operation and maintenance of power
+reactors which may become necessary in our country in the future.
+(b) Training in Radiation Health Protection and use of
+Isotopes
+The advent of nuclear fission and its associated developments have
+created problems of radiation hazard all over the world. Therefore,
+whether a country is directly involved in an atomic energy program or
+not, a knowledge of radiation protection and health physics principles
+have become essential. Having a research reactor will enable us to
+conduct studies and training in health physics and radiation protection.
+With the use of radioisotopes by our medical doctors, agriculturists,
+and university Science departments, there should be a Burmese group
+specially trained in handling radioisotopes, routine monitoring of
+laboratory rooms for radiation level, monitoring of workers handling
+radioisotopes and to meet emergencies in case of accidental exposure
+or spillage. The training will involve the use and calibration of
+radiations survey and monitoring instruments, knowledge of maximum
+permissible levels of various radiations, radiation safety regulations,
+atmospheric radiation monitoring for radioactive fall out and other
+sources of contamination and associated problems. Such training
+can be given in the laboratories associated with a research reactor.
+(c) Training of Science Teachers of Colleges and Schools
+in Atomic Energy
+With the increasing importance of atomic energy throughout the
+world, it has become essential that the citizens of Burma should have
+some basic knowledge in this field. One of the ways of achieving this
+objective is to conduct courses for Science Teachers of Colleges and
+schools, in elementary concepts of atomic energy. By having a reactor
+facility, in or around Rangoon, to visit and study, the teachers will be
+afforded a very good incentive and experience.
+12
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 4]]
+90
+(d) Training of Defence Personnel
+U HLA NYUNT
+In this atomic age, the people working in defence services should
+always be prepared for the eventuality of nuclear warfare. Burmese
+military personnel can be trained in protection against radiation,
+radioactive fall-out and decontamination etc.
+Research may be done in the following fields :-
+(a) Research in Physics (b) Research in Chemistry ( c ) Research
+in Biology and Medicine (d) Research in Reactor Engineering
+(e) Testing of materials under irradiation (f) Shielding Studies of
+Locally Available materials.
+(a) Research in physics that may be conducted are fission process,
+gamma ray spectroscopy, beta ray spectroscopy, transmutation process,
+neutron diffraction, total reflection of neutrons and polarization,
+monochromatization by reflection from crystals, time of flight experi-
+ments, neutron decay, solid state physics, neutron capture gamma rays,
+production of fission neutrons, neutron resonance, absolute and
+relative units used for measuring reactor radiations, neutron cross
+sections, neutron diffusion studies, thermalisation of neutrons and
+albedo of neutrons.
+Research in Chemistry may be done in activation analysis. quantita-
+tive analysis with tracers, effect of neutron irradiation on chemical
+processes, effect of gamma radiation on chemical processes, effect of
+gamma and neutron irradiation on crystalline and plastic structure by
+neutron diffraction, chemical study of transmutation, effect of gamma
+radiation on combustion velocity, polymerization of oil, effect of
+radiations on petroleum processing (should be of special importance
+to Burma) and manufacture of plastics using radiation.
+Research in Biology and Medicine in the fields are radiation
+injury to personnel, delayed effect of radiation on living beings,
+mutation, effect of neutrons on tumors, cancer research, use as tracers,
+study of photosynthesis process, use of fertilisers by plants and insect
+and fungus control. The last two items should be of special
+significance in Burma.
+Research in Reactor Engineering can be done with a research
+reactor in the fields of criticality studies of reactor core, heat transfer,
+effect of control rods on reactivity, effect of safety rods on reactivity,
+operation of servomechanism, gas recombination process, fuel reproces-
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 5]]
+TYPE OF RESEARCH REACTOR FOR BURMA
+91
+sing, corrosion studies, disadvantages factor in a fuel red, decomposi-
+tion of liquid water under irradiation, moderator heating by fast
+neutrons, fluid film conductance, temperature transient in a fuel plate
+thermal and mechanical stress in heterogeneous fuel element, radio-
+activity after shut down, poisoning due to accumulation of fission
+products, effect of temperature and pressure on reproduction factor,
+neutron flux distribution in reacter core, and distribution of neutron
+flux by experimental beamports and cooling channels.
+.
+Materials Testing
+Existing and new materials which may be applicable for reactors
+can be appraised by testing them in various parts of the research
+reactor for determining the effect of the time of exposure, neutron flux.
+and temperature on their physical and chemical properties. The effect
+of intense radiation on essential mechanical components such as valves.
+flanges and counting equipment can be studied.
+Shielding Studies
+The shielding arrangement is generally a very costly part of the
+reactor.
+The efficiency of shielding of material locally available in
+Burma should be investigated for purpose of using them in concrete
+used as biological shield for future power reactors.
+In addition, experiments can be done in heat generation in shield
+by capture gammas, optimisation of alternate layers of different shield-
+ing materials in one composite shield, and radiation attenuation in
+different materials.
+(3) Planning and Development of Power Reactors
+For efficient conversion of heat into electricity, the temperature of
+the core has to be as high as possible, limited only by engineering
+difficulties. The corrosion of fuel cladding by the moderator or coolant
+increases rapidly with the increase of temperature. Other problems are
+melting points, phase changes, heat exchangers, conductivity of coolants,
+chemical reactions between coolant and moderator, pressurization, loss
+of thermal conductivity due to bubble formation etc. Therefore research
+work should be done on the following subjects of control of corrosion,
+melting points of cladding materials, heat exchange design, pressure
+vessel design, and film coefficients.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 6]]
+92
+U HLA NYONE
+'A group of scientists and engineers can therefore use the research
+reactor for planning and design studies of power reactors for
+the future.
+(4) Production and use of Radioisotopes
+The use of radioisotopes in future by Burmese medical doctors,
+agriculturists, and science research workers will necessitate the produc-
+tion of isotopes where half lives are too short to be imported from
+abroad. Examples of isotopes that should be made with our own
+research reactor are gold 198, (Half life 2. 69 days). Iodine 131
+(Half life 8.0 days), used in medicine and P-32 ( 14. 3 days), used
+in agriculture and medicine. For long lived isotopes like e. g. Co-60
+(5. 2 Yr ), it might be cheaper if we could manufacture them ourselves.
+For making artificial neutron sources, a Ra-Be neutron source is
+verv expensive, and if we have a research reactor, we could have a
+comparatively cheap Sb-Be photoneutron source by having Sb 124
+re-irradiated after its short half life of 60 days.
+(5) Gamma Irradiation Facility
+The spent fuel elements, removed from the reactor core for
+chemical reprocessing act as sources of strong gamma radiation for
+about three to six months. The sterilisation effect of gamma radiation
+on food such as potatoes, meat and grain, is gaining ground every day.
+In particular, storage of paddy and preservation of grain is one of our
+headaches, and the spent fuel elements from our research reactor, while
+left to cool, could be a big help in preventing the spoilage of our tons
+of paddy. Also, because of the poor refrigeration facilities in trans-
+portation of vegetables and meat, prices in Rangoon are much higher
+than in the places of origin, and if only gamma irradiation could come
+to the rescue it will indeed be a boon.
+The cracking of petroleum by gamma irradiation is also one of
+the fields of study Burma should be interested in.
+As mentioned earlier, the most important factor in the choice of a
+research reactor is the thermal neutron flux, because this is what
+decides the uses to which it can be put. For thermal fluxes below 10 10
+neutrons per Sq. cm. per sec, the reactor is essentially a zero energy
+pile, and because of the fact that no elaborate protective shielding is
+required as the radiation hazard is almost negligible and no cooling is
+necessary, they are useful for teaching and studies of reactivity, lattices,
+nuclear purity of materials, and propagation and absorption of
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 7]]
+TYPE OF RESEARCH REACTOR FOR BURMA
+93.
+of neutrons. In the early days of research reactors, it was considered
+normal to start the reactor program of a country with such zero power
+reactors as CP1, GLEEP, ZEEP, ZOE, LOPO and DIMPLE.but now-
+a-days, with more materials and information already available
+it is no longer considered ecconomical for a country to spend extra
+money building this type with only restricted uses, when most of these
+features could be incorporated in a higher flux and better performance
+type by spending a little more. Now-a-days, many companies in U.S A.
+have come out with what they call a laboratory reactor, giving fluxes
+of 106 - 10 8. Their utility may be weighed against a Ra-Be neutron
+source, but cannot be compared with higher flux reactors at all.
+On the other extreme, for studying radiation damage which is
+essential for the technology of future power reactors, a high flux of the
+order of 1014 is necessary, and the MTR of US and the RPT of
+U.S.S.R. are the only existing ones in operation, although many other
+designs using light or heavy water moderation are at present under
+construction in U.K., Canada and Europe, with this order of flux as a
+goal. In such reactors an important requirement is to provide a high
+fast flux by designing for a high fast to thermal flux ratio.
+21
+Medium low fluxes, around 10" are suitable for biological
+research, solid state research and radiochemistry, and for production
+of many short lived isotopes. However, as research in this class of
+fluxes is quickly saturating, interests have now shifted to higher fluxes
+of the order of 10 12 or 1013. This range of flux is now known as
+the "normal research flux", and is popularly in demand due to the
+wide range of research possibilities. As far as fluxes are concerned,
+the natural uranium - graphite type is limited to fluxes of the order of
+10 or lower half of 10 and it is difficult to get to higher fluxes,
+besides their inherently high cost due to relatively big dimensions, the
+estimated cost of BEPO being about $ 5.0 million. The Heavy Water -
+natural uranium type may be pushed up to higher fluxes, but the
+cost per unit of flux is not competitive with those using enriched
+uranium. Therefore most of the reactors of this type confine them-
+selves to orders of 10 12. The JEEP, e.g., costs $1.5 million, and has a
+flux of 10 12 The enriched uranium - heavy water type is suitable for
+fluxes of the order of 10 13, although this type is comparatively more
+complicated. The C.P. 5, for example costs $ 2.0 million and gives a
+flux of 2 x 10 13. The homogeneous water boiler and the uncirculated
+swimming pool reactors are comparative in a cost of about $ 0.5 million
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 8]]
+94
+U HLA NYUNT
+but the swimming pool is superior in fluxes, 0.8 x 10 12 or even, 10 13
+being attainable compared to the maximum of about 2 x 10 11 for a
+homogeneous water boiler. The tank type or the forced circulation
+swimming pool gives fluxes of the older of 10 13 and being cheaper than
+the C.P. 5 type, is getting more and more popular.
+For Burma's requirements also it is felt that we should not waste
+by having a small laboratory reactor, which is going to cost about
+$ 200,000 anyway, and will be limited by a flux of 106-108, whereas
+by spending a little more, say $ 500,000, we can attain much higher
+fluxes of 10 12 10 13
+-
+•
+(B) EXPERIMENTAL FACILITIES
+As far as experimental facilities afforded by the various types are
+concerned, the natural uranium - graphite reactor, due to its large core
+volume makes neutron flux available over a large volume. In addition
+to the possibility of simultaneous arrangement of a large number of
+experiments, radioisotopes can be produced on a large scale. In fact
+this type is now-a-days mainly used for large scale isotope production
+which is not necessary in Burma. The limitations of low flux makes it
+very unsuitable for any experiment of the materials testing type.
+In the heavy water reactors, due to the large slowing down length
+in heavy water, the experimental volume is still considerable to provide
+a large number of experiments. Later high power and improved types
+of this design approach 10 14 flux, making it also suitable for certain
+high flux experiments. The disadvantage is that compared to light water
+reactors, the ratio of fast to slow flux is low. Because of its compara-
+tively smaller volume than graphite reactors, they are not used for
+radioisotope production on a large scale.
+In the light water moderated homogeneous reactor, the core is
+small and approximates a point source of neutrons making beam
+experiments possible. The disadvantages are small irradiation volume
+and a comparatively low flux of 10 12.
+In the light water moderated heterogeneous reactors of the
+Swimming Pool or Tank Types, the advantages are the flexibility of
+arranging experiments, a comparatively high flux of the order of 10 13,
+and a high fast to thermal flux ratio. The main disadvantage is the
+rapid decline in flux with distance from the core due to the small
+slowing down length and diffusion length of neutrons in water.
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 9]]
+TYPE OF RESEARCH REACTOR FOR HURMA
+95
+Availability of Materials
+The choice of a particular type of research reactor will obviously
+depend upon the availability of materials, either locally or from foreign
+countries. The problem will be discussed under the two main headings
+of nuclear fuel and shielding material, as these two items are not
+included even if a research reactor is to be bought ready fabricated
+from abroad.
+Nuclear Fuel This is of course the heart of the reactor and its
+availability certainly the most important factor. Between the choice of
+natural uranium and enriched uranium, the main advantage of the
+choice of natural uranium is the easy availability in a nearly free
+market (§ 18 per lb. or $ 40 per Kgm ). If natural uranium is to be
+used however, the irony of nature is that abundant ordinary light water
+cannot be used as a moderator and either graphite of nuclear purity
+( $ 0.33 per lb.) in many tons, or heavy water ($ 28 per lb.) will have to
+be used. The disadvantages of using natural uranium are (1) Weak
+flux for a given power and consequently ( 2 ) more severe restrictions on
+choice of reactor materials for strict neutron economy (3) big reacting
+volumes to minimize surface neutron losses and therefore (4) elaborate
+and costly cooling facilities, and (5) large construction costs for
+building.
+The use of enriched uranium, where the percentage of U 235 has
+been artificially increased, has got certain technical advantages over
+that of natural uranium, namely increase in multiplication factor and
+decrease in the critical mass, although the control of enriched reactors
+is slightly more difficult because their small size makes them rather
+susceptible to variations in flux and power. However, the cheapest
+and most versatile research reactors developed both in U.S. A. and
+U. S. S. R. all use enriched uranium. The difficulty with enriched
+uranium is that it is not available in the open market, and the only
+way to get it is through bilateral agreements with U.S. A. or U.S. S. R.,
+the only two countries who can afford to offer others or through the
+International Atomic Energy Agency. It is to be noted that the
+maximum enrichment available to foreign countries is only 20% from
+U. S. A. and 10% from U. S. S. R.
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 10]]
+°96
+U.HLA NYUNT
+The length of time a fuel element can be left in an operating
+reactor without need for replacement is of course a very important
+factor for small underdeveloped countries like Burma, which might not
+be able to do their own fuel reprocessing for a number of years to come.
+The need for refuelling arises because of many factors such as radia-
+tion damage, resulting in physical distortion of shapes, mechanical,.
+thermal, and corrosional fatigue (mainly in natural uranium reactors),
+poisoning by fission products, and in the case of enriched fuel types,
+simple depletion. In cooled reactors, with a flux under 1013, the
+majority of the fuel elements will be serviceable for a number of years,
+whereas for reactors above 10 13, it might be a matter of months, as
+for example, 6 months in CP5. Fuel elements in the Swimming Pool
+type, if operated at 100 KW, mostly need not be replaced until after
+about 3 years operation, but of course, if the power level is increased
+the fuel life will decrease accordingly. The homogeneous water boiler
+type uses enriched uranium in the form of a solution of enriched uranyl
+sulphate in water, and therefore fuel reprocessing reduces to a compa-
+ratively simpler chemical problem.
+Shielding Material
+Besides the building housing the reactor and associated laboratories,
+sufficient shielding will have to be provided around the core and
+reflector with locally available material. Shielding is to reduce neutrons
+as well as gammas to safe tolerance levels around the working space of
+the reactor. Neutrons are most efficiently slowed down and eventually
+absorbed by lighter atoms whereas heavier atoms are required for
+gamma shielding. The problem is complicated by the fact that
+secondary gammas also arise out of neutron capture in the shield itself.
+The theory of shielding is highly complex, and experimental results
+have to be highly relied upon for shield designing. The practical
+shielding material now most commonly used for research reactors of
+normal research flux is Barytes concrete of the density of about 3.5.
+In Burma, since lead seems to be available cheaply, lead concrete seems
+to be economical. A cast iron thermal shield followed by 4-8 feet of
+concrete with lead punchings seem to be possible for our Burmese
+reactor. In the Swimming Pool Type, the water itself acts as most of
+the shield, and the lead concrete will be necessary only in the lower
+walls, ordinary concrete being sufficient for the higher parts.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 11]]
+TYPE OF RESEARCH REACTOR FOR BURMA
+97
+In the matter of shielding also, the smaller the active lattice, and
+the more compact the design, the smaller will be the total volume of
+the shield. The use of natural uranium, besides involving the high
+cost of heavy water or graphite also brings up the cost of shielding.
+This is another argument in favour of enriched uranium reactors.
+Controls and Safety
+Heavy water reactors have one advantage over light water reactors
+in the fact that the mean life of neutrons in water is much greater than
+in light water. So for the same excess reactivity, the reactor rising
+period will be much larger in a heavy water reactor and the control and
+safety machanism will find time to operate.
+While working with a light water reactor great care should be
+taken not to introduce any considerable excess reactivity suddenly.
+Also automatic shut down equipment should be very quickacting.
+Homogeneous reactors have the advantage that due to very high
+negative temperature coefficient of the fuel solution, a sudden rise in
+power is stopped by the core becoming subcritical. The production
+of gas by dissociation of water and high corrosion rate of the fuel
+solution on the core vessel and cooling circuit introduce difficulties of
+control.
+Natural uranium graphite reactors need the presence of small
+excess reactivity. This type is therefore comparatively safer from a
+control point of view. Due to the much larger core volume, a large
+number of control rods can be used keeping the flux distribution more
+uniform.
+Nuclear reactors, and research reactors especially are designed
+now-a-days so that there is inherent safety, by having a large built in
+negative reactivity coefficient. This is done by thermal coupling of the
+fuel elements to those portions of the reactor which give a substantial
+reduction to the neutron multiplication when heated. For example, in
+the case of enriched water moderated reactors close thermal contact
+between the fuel elements and the water moderator leads to reduction
+of density and vaporization in case of a runaway, and automatically
+shuts down the reactor. The control system is also designed so that
+if there is too high a power level, a serious reduction in coolant flow,
+or any major failure of fuel elements, monitoring by detection instru-
+ments and control channels leads to a scram. For small countries like
+Burma just planning for a first research reactor, it is advisable to
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 12]]
+98
+U HLA NYUNT
+choose designs avoiding the use of high temperatures, pressures and
+mechanical stresses to avoid the risk of a violent dislocation even if a
+runaway occurs. Auxiliary cooling circuits are necessary to counteract
+delayed heat production even after the reactor is scrammed. However,
+no mechanical system is absolutely fool proof and the probability of
+an accident cannot be ruled out. It is now generally accepted that a
+reactor runaway cannot be compared to an atomic bomb explosion.
+In fact a nuclear reactor runaway has little or no mechanical violence
+in itself, but as a consequence, the rupture of fuel elements may lead
+to escape of radioactive fission products, and the chemical reactions
+between different components could lead to a chemical explosion of
+considerable violence. For this reason, a gas tight building, not
+necessarily explosion proof may serve to prevent the spread of
+fission products if an accident does occur. The CP 5 building is main-
+tained at a slightly lower than out side atmospheric pressure in a gas
+tight building to minimize outward leakage risks.
+The main hazard therefore is the spread of radioactive dust,
+vapour and gas. As in other countries, the Government of Burma
+will have to set up a Reactor Safeguards Committee to conduct a study
+of the meteorology and hydrology of the proposed reactor site before
+final approval. The meteorological and hydrological characteristics
+studied are temperature inversion, mountain drainage, prevailing wind
+direction, rainfall frequency, run off, water supplies, oceanography
+and seismologic data. It is desirable to have the wind blow from the
+reactor to uninhabited areas, and not to be located on a main water-
+shed. From the point of view of hazard alone, it is desirable to have
+the reactor site far from populous or vital industrial areas. But
+obviously, that is not possible especially for a research reactor, and
+the site should not be too far from the University of Rangoon or the
+Union of Burma Applied Research Institute. The accepted rule of
+thumb for the exclusion area is given by r = P where r is the radius in
+miles of the excluded area and P is the reactor power in tens of
+megawatts. Therefore for a 100 KW reactor, P is 1 and therefore
+the radius of danger area is 1 mile or 176 yards. For a 1000 KW
+10
+reactor, the safety diameter is about 1000 yards.
+100
+However this rule.
+may not be rigidly enforced in the case of water boiler and swimming
+pool types, because of their particular inherent safety, especially more
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 13]]
+TYPE OF RESEARCH REACTOR FOR BURMA
+99
+so for the water boiler. If not located on the University Campus or
+Research Institute grounds, a gas tight building even will not be
+necessary if we confine ourselves to these two simplest types.
+Cost Considerations
+It would be difficult to make absolutely reliable cost estimates for
+a research reactor facility. Excluding the cost of the building and
+experimental equipment around the reactor, the following may be taken
+as approximate costs of the typical research reactor types being
+developed.
+Type
+Av. Thermal flux
+Estimated cost
+Nat. U-Graphite
+Nat. U-D 0
+2
+2 x 10 12
+10 12
+in Million $.
+$ 5.0
+$1.5
+Enriched U-D 20
+2 x 10 13
+$ 2.0
+Enriched U-H 2 O
+0
+0.8 x 10 18
+$ 0.5
+(heterogeneous Swimming
+Pool type)
+Enriched U-H 2 O
+0
+10 13
+$ 0.8-$1.5
+(heterogeneous tank type)
+Enriched U-H 2 O
+2 x 10 11
+$ 0.5
+(homogeneous water boiler)
+The costs include the cost of the reacter core, instruments and
+control, experimental facilities inside the reactor such as beam ports,
+thermal column, pneumatic tube etc., shielding, heat exchanger, fuel
+and moderator of all types. For the homogeneous type, the cost of
+the gas recombination system is included.
+It is therefore evident that from cost considerations, the Swimming
+Pool and Homogeneous Water Boiler Types are the most attractive.
+To their estimated costs, however, we must add the cost of the land,
+building and experimental equipment and associated laboratories,
+bringing up the ground total estimated cost to about $ 1.0 million or
+Kyats 50 lakhs.
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 14]]
+100
+U HLA NYUNT
+Trends in Types of Research Reactor Construction Abroad
+At this point it might not be out of place to consider the trends
+in the types of research reactors constructed all over the world.
+No
+of
+10
+Reactors
+5
+42
+46
+„Net U, graphite.
+Nat UD₂O-
+Water Boile
+$50
+Tank
+Typo
+U235 +
+-Swimming Pool
+*54
+'58
+Year of initial Operation
+We notice a trend away from graphite piles because of their
+inherently high cost and comparative low fluxes.
+Natural uranium-heavy water have found particular favour in
+countries that wish to be independent of enriched uranium. The
+construction of these reactors is limited by the fact that the advantage
+of using enriched fuels to obtain high thermal neutron fluxes at
+relatively low cost is now generally accepted, and because of the US
+offer of enriched uranium.
+Swimming Pool and tank type reactors. Tank type reactors are
+essentially swimming pool type reactors that normally operate above
+200 Kw, and thus requiring a forced circulation cooling system, partly
+to counteract the N 16 hazard. This type predominates because they
+are developed both in USA as well as USSR.
+Water Boiler. Recent indications are that this type is losing
+its ground against the Swimming pool and tank type. The two
+reasons are (1) Water Boilers cannot operate above 3 x 10 12 unless
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 15]]
+TYPE OF RESEARCH REACTOR FOR Burma
+101
+the system is pressurized so that the uranium solution temperature can
+be raised above 100°C. This is because at these fluxes at temperatures
+lower than 100°C, the uranium precipitates as peroxide, (2) Corrosion
+of reactor tank and subsequent leakage of the highly radioactive
+uranium solution.
+India, Brazil, Spain, Switzerland, West Germany, and Denmark
+are some of the countries who have decided for the Swimming Pool
+Type as their pioneer research reactor project. Red China is having
+an enriched uranium heavy water reactor as a gift from U.S. S. R.
+Japan is going into a homogeneous water boiler type, but she
+probably intends to have a Swimming Pool or a CP 5 type also
+later on.
+Pakistan, Phillipines and Thailand have decided on having a
+research reactor and are now in the stage of choosing the type of the
+pioneer project.
+It is my earnest hope that the members of the Burma Research
+Society will realise the importance attached to a research reactor
+program by intellectuals even in our neighbouring underdeveloped
+countries, as a preparation for the future power reactor age. It is
+therefore my appeal to all Burmese in the fields of science and
+engineering to take an interest in what we can do with a research
+reactor, and help choose the proper type to suit our purpose,
+requirements and limitations.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 16]]
+1.02
+U HLA NYUNT
+REFERENCES
+(1) Proceedings of the international Geneva Conference
+Vol II and III, in Particular :-
+L. Kowarski...... .Report on Research Reactor
+A. H. Snell The Nuclear Reactor in
+...
+P/946
+Basic Science ....
+E. Bretscher et. al ......... Research Reactors
+W. B. Lewis
+P/484
+....... P/401
+..... Some economic aspects of
+nuclear fuel cycles
+P/4
+J. V. Dunworth ...... Fuel cycles and types of
+reactors
+P/403
+A. M. Weinberg
+Survey of Fuel Cycles
+and Reactor Types
+P/862
+(2) Alam, Azzam & Hla Nyunt
+...... Comparative
+Study of Research Reactors
+(An ANL, SNSE REPORT)
+(3) Borst Design Comparison of Research
+Reactors Ann Rev. Vol V; 1955 of Nuclear
+Science
+(4) Nucleonics Sept. 1955 Issue
+......
+Aug. 1956 Issue
+(5) Catalogue of Nuclear Reactors
+Atomic
+Energy of Canada Ltd, 1955
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 17]]
+TYPE OF RESEARCH REACTOR FOR BURMA
+(6) Nuclear Reactor Catalogue, Isbin
+Appendix in Vol III of Geneva
+Conference Proceedings
+(7) Ray Theon Manufacturing Co... Nuclear
+Reactor Deta.
+(8) Atomic Power
+Scientific American
+Publishers
+(9) Wakefield ...... Nuclear Reactors for Industry
+and Universities
+(10) Mckinney Report on Peaceful Uses of Atomic
+Energy to Joint Committee in USA 1956
+(11) Proceedings of the University Research
+Reactor Conference Feb. 54 AECU 2900
+(12) World Development of Atomic Energy-
+Atomic Industrial Forum, New York.
+(13) HLA NYUNT
+103
+Reactor Developments Abroad as a
+Guide to Burma's Program (Lecture delivered at the
+Burma Science Association Ordinary Meeting on 13th
+November 1956).
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand
+
+[[page 18]]
+104
+U HLA NYUNT
+WORLD'S REACTOR DEVELOPMENTS
+Research Reactors
+Planned Completed]
+or under
+or in
+Construction Operation
+Power Reactors or
+Power Pu Prod.
+Reactors
+Planned Completed]
+or in
+or under
+Construction Operation
+Remarks
+on other
+Reactor
+Types
+Nations
+*
+Argentina
+* Australia
+* Austria
+* Belgium
+* Brazil
+* Britain
+Bulgaria
+Burma
+1 *
+1+1
+*
+1 +
+*
+1 *
+1
+*
+4
+23
+1 th
+* Canada
+1+ 1
+2
+1
+Ceylon
+* Chile
+*
+China
+1 @
+(Communist)
+* China
+1%
+(Nationalist)
+* Colombia
+1 #
+* Cuba
+1
+*
+1 G
+1 (@
+(Czechoslovakia
+* Denmark
+* Dominican
+Republic
+Egypt
+* Eire
+France
+(Germany (East)
+* Germany (West)
+1*
+*
+1
+*
+*
+*
+Greece
+1
+*
+(Hungary
+India
+1 C
+Indonesia
+* Israel
+1
+* haly
+* Japan
+* Korea
+1+1
++1 *
++
+*
+* Lebanon
+* Netherlands
+Norway
+*
+* New Zealand
+*
+1 *
+*
+* Pakistan
+* Peru
+* Philippines
+(Poland
+* Portugal
+Rumania
+* Spain
+* Sweden
+* Switzerland
+* Thailand
+* Turkey
+* Uruguay
+]
+*
+1 (
+*
+(w)
+**
+2 - 1
+1 ?
+1 ?
+1 ?
+1 *
+3
+1
+*
+# U.S.A.
+20
+21
+R U.S.S.R.
+?
+5
+32
+25
+15
+* Venezuela
+1 *
+Yugoslavia
+1 (@
+i
+(2 Pu Prod
+Reactors)
+(3 Pu Prod.
+(Reactors 2 Pro-
+pulsion & 7
+more Planned.)
+R. (1 Propulsion
+Reactor.)
+* Countries having bilateral agreements with U.S.A.
+(@Countries having bilateral agreements with U.S.S.R.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.

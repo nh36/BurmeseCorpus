@@ -1,2 +1,3 @@
 run_id	run_date	selection_rule	selected_count	completed_count	failed_count	skipped_count	output_text_root	metadata_root	notes
 jbrs-prod-ocr-20260601-092722	2026-06-01	citation-match then keyword/article priority	100	100	0	2896	data/working/ocr/jbrs/text	data/working/ocr/jbrs/metadata	deferred_ready_rows=355; reran 26 initial auth-expiry failures successfully after adding access-token refresh retry.
+jbrs-prod-ocr-20260601-195817	2026-06-01	citation-match then keyword/article priority	500	498	2	1835	data/working/ocr/jbrs/text	data/working/ocr/jbrs/metadata	deferred_ready_rows=1016; selected_batch_ids=jbrs-ocr-3340,jbrs-ocr-2128,jbrs-ocr-2123,jbrs-ocr-2122,jbrs-ocr-2117,jbrs-ocr-2108,jbrs-ocr-2092,jbrs-ocr-2076,jbrs-ocr-2072,jbrs-ocr-2045...

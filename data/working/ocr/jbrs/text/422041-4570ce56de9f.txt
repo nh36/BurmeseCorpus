@@ -1,0 +1,279 @@
+[[page 1]]
+BUTANOL OUT OF RICE-STARCH *
+by
+Than Nyunt and Than Tin
+I. INTRODUCTION
+Mc Cutchan and Hickey (1954)' stated in their review that the Butanol-
+Acetone Fermentations are true fermentations in the sense that they are
+anaerobic. In one case, the organism that brings about the fermentation of the
+carbohydrate, starch, is Clostridium acetobutylicum; and the products of
+fermentation are: (1) n-butyl alcohol (I-butanol) or n-butanol), (2) acetone
+(propanone), and (3) ethyl alcohol (ethanol).
+During World War 1, there was a great demand for acetone and none for
+butanol and the storage of the latter was then a problem. At present, esters
+of butanol like acetate are useful as lacquers for automobiles and for other
+industries. One more use to which butanol can be put is in synthesizing rub-
+ber by polymerization of butadiene, since the diene that is required for poly-
+merization can be produced from butanol.
+Historically it was Pasteur who observed butanol for the first time as a
+product of microbial action. After Pasteur came such workers as Fitz, Trecul,
+Gruber, Grimbert, Beijerinck, Van Tieghem, Perdrix, Bredemann, Duclaux
+and many others. But, it was Prazmowski who proposed the name of
+"clostridium" for these spore forming anaerobes; and, it was Schardinger
+(1905) who discovered that acetone was also a fermentation product.
+The polymerization of butadiene as a step to synthetic rubber was
+started in Europe in 1909. Strange and Graham Ltd. was able to obtain
+the able services of Perkin, Weizmann, Fernbach and Schoen. Among them,
+it was Weizmann who in 1912 - 14 found an organism which fermented a
+variety of starchy raw materials including corn and produced butanol and
+acetone.
+II. MATERIAL AND APPARATUS
+(a) Fermenting organism. There are many organisms responsible for the
+type of action known broadly as Butanol-Acetone Fermentations. Patents
+* Read at an ordinary meeting of the Society held on 20 XI 59 with the Hon'ble
+U Chit Thoung in the Chair.
+† B. Sc. (Ag.), B. Sc., A. M. (Duke), Head of Food Technology Section, UBARI
++ B. Sc., Applied Chemistry Research Department, UBARI
+R. J. Hickey.
+(1) Mc Cutchan, W.N. and Hickey, R.J. "The Butanol - Acetone Fermentations"
+Industrial Fermentations. Edited by L.A. Underkofter and
+New York. Chemical Publishing Co., Inc., 1954, Vol. I, p. 347.
+(2) Ibid., p. 349
+41
+JBRS, XLII, ii, Dec. 1959
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 2]]
+42
+THAN NYUN AND THAN TIN
+for these organisms depend on various factors: 1. variation in morphology,
+2. variation in carbohydrate substrate, 3. variation in rate of fermentation, 4.
+variation in types of nitrogeneous nutrients required and, finally, 5.variation in
+solvent ratios produced. For example, Cl. propyl butylicum alpha of Müller,
+B. tetryl of Arroyo and Owen, and C1. celerifactor of Hildebrandt and Erb
+thrive best on the substrate, invert sugar media; on uninverted molasses
+media thrive such organisms as Cl. Saccharoacetobutylicum and several
+variants of C1. Saccharobutyl-acetonicum-liquefaciens; whereas, C1. kaneboi
+in Japan thrives on both starch and cane sugar. C1. acetobutylicum
+Weizmann (because it was isolated from natural sources and successfully
+applied to industry by Weizmann) is a strain similar to C1. acetobutylicum of
+Bergey's Manual-Classification, and is technically called simply Cl. aceto-
+butylicum. It works in the fermentation of cereal-grain mashes. The strains
+mentioned above are more or less specific for its need of substrate. For our
+work on Burma rice, we therefore made a choice of substrate. For our work
+on Burma rice, we therefore made a choice and got strains from abroad that
+can ferment rice starch into products butanol and acetone. We used the
+following strain for study:
+Cl. acetobutylicum- NCL/BD/NCIM/362 from National Chemical
+Lab, National Collection of Industrial Micro-organisms, Poona-8, India.
+We will designate it as NCL in this paper.
+In this paper, we present our findings on rice-starch when we used NCL
+strain from India. This strain from India came in a sealed tube and was on soil
+stock.
+(b) Anaerobic jar. Anaerobic jar is one in which oxygen has been replaced
+by some other gases like hydrogen or nitrogen so that organisms like Clo-
+stridia that thrive only under very low pressure of oxygen or better in the
+absence of it can be cultured in it. It should be big enough to hold several
+test-tubes and must be fitted with the inlet and outlet for hydrogen that comes
+from a generation flask through water (to keep back HC1) and Sulfuric acid
+(to keep back H2 O). It should also be of such convenient size as to be kept
+in a laboratory-incubator.
+(c) Sterile Soil. Dry spore stock has to be raised on sterile soil. This
+soil-stock method was reported by Bredemann. Thaysen (1924) applied the
+principle to stock cultures of the Weizmann butyl organism, but used acid
+washed sand instead of soil. However, the use of neutral garden soil has
+become general with most workers in the handling of butyl anaerobes indust-
+rially. Here in our laboratory, mixture was made in the ratio:- sand:loam: :
+3:2. A word of caution is needed on the sterilization of the soil. Drying in an
+air oven is to be avoided since it will char the organic matter of the soil.
+JBRS, XLII, ii, Dec. 1959
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 3]]
+BUTANOL OUT OF RICE-Starch
+43
+Autoclaving is therefore almost indispensible, but dry soil is very difficult to
+sterilize. There is always air pocketed in the spaces of the soil, which surface is
+now wetted. It usually takes about 10 hours at 15 lbs. steam pressure to
+sterilize tubes of soil. The sterilization can be speeded up by moistening
+(but not water-logging) the soil with a few mls. of water, added after the soil is
+placed in tubes. Steam from the interstitial water of the soil drives out the
+pocketed air from the soil and in this way hastens the sterilization. Here, in the
+laboratory, sterilizing the soil was done successively for 3 days, each time at
+15 lbs pressure/1 hr. After this sterilizing treatment, sterility test was made.
+Only when no growth was observed in the nutrient agar and peptone water
+that was inoculated with soil, the latter was accepted as sterile. It has to be
+emphasized here that sterile soil was prepared so as to enable the culture
+merely to be carried on it in dormant form. In other words, what we had
+received from India in the form of one tube, we wanted to multiply into
+several stock-soil tubes. Each tube out of several others, then, serve as carrier
+of spores to be transferred when so desired to cultural broths, mashes,
+starters or the main batch media.
+(d) Agar Slopes, etc. For sterility test to be made on stock-soil, agar
+slopes as well as peptone-water are needed. It is very important that random
+samples be taken out of stock - soil tubes and that the samples so drawn be
+subjected to sterility test before any batch of soil is accepted for stock culture
+use. Nutrient Agar was made as usual. 1 lb. minced and trimmed veal was
+steeped in I liter of cold water,0° C,overnight and boiled next morning for 15
+minutes and filtered through muslin. To the broth was added 1.0 % peptone,
+0.5% Na Cl; and the whole medium was now adjusted to pH 7.6, raised to
+temperature 85°C and filtered. To this filtrate was made 1.5% Agar that *
+was dissolved by boiling. Medium was distributed into tubes and auto-
+claved (15 lbs. /40 min.). The tubes were left lying slantly on the floor. The
+Agar slopes thus formed were used for sterility test.
+(e) Vacuum desiccators.Vacuum in desiccators can be created by pump
+as well as by sprouted rice plants that use up oxygen on growing.
+(f) Aerobic agar plates. Melted nutrient agar from the tubes was poured
+into petri dishes and allowed to form a plate, neither too moist nor too dry.
+(g) Saline. Sterilized physiological (0.9%) was used.
+(h) Glucose solutions. They were prepared with known percentages and
+sterilized in the flowing steam for 1 hr. successively for 3 days.
+(i) Mash (corn, as well as rice.)
+⚫ (a) For distribution into beverage bottles for heat shocking, the
+JBRS, XLII, ii, Dec. 1959
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 4]]
+44
+THAN NYUN AND THAN TIN
+accepted corn-mash was a 7g. corn starch/ 100 ml. slurry, steri-
+lized at 12 lbs. per sq. in./1 hr. for 3 successive days.
+(b) For the main batch culturing of the organism, the mash was 6 g.
+corn starch/100 ml. slurry, sterilized at 12 lbs. per sq. in. steam for
+for 1 hr., pH 6.4; as well as, 6 g. rice starch/100 ml. slurry,, simi-
+larly treated at a similar pH.
+III. BUTANOL PRODUCTION
+It may not be out of place to record here that the butanol production was
+carried out at the first suggestion of U Thein Nyun, my immediate senior
+in research at the Applied Chemistry Research Department UBARI. If it be
+possible to manufacture starch³ from cheap grade Burma rice, will it still be
+possible to produce butanol out of that starch ? This paper is an attempt to
+answer that question.
+The production of butanol was fraught with difficulties. Even on opening
+the NCL tube containing organism on sterile soil, due precautions had to be
+taken. A scratch with file was made on the NCL ampoule and this scratch was
+touched with the red-hot tip of Pasteur pipette. A crack was thus formed along
+the scratch and the ampoule with a scratch thus formed was left for at least
+6 hours during which atmospheric air filled in the void or vacuum in the
+ampoule. Then only, the neck of the ampoule was broken,
+The transfer of the organism-bearing soil into the medium filling 2/3 of the
+beverage bottle was the next step. This step of transfer is called, in this paper,
+"recovering the organism."
+After opening the NCL ampoule containing organism, water must not be
+added to the soil in the ampoule since the water, it being hypotonic, will
+quickly plasmolyse the spores. 0.9% saline solution was therefore used to
+"recover the organism." A few mls. of this physiological saline was pipetted
+into the ampoule and the organism-bearing soil was stirred and transferred
+by the same pipette into the beverage bottle containing the corn mash medi-
+um. Incubation was done at 37°C for 48 hours, at the end of which, the bottle
+was heat shocked at 100° C for 2 minutes; and a few mls. of the medium
+(now subsiding after active fermentation) was transferred to another beverage
+bottle containing similar medium and incubation followed similarly for 48
+hours. Thus, heat shocking was done just before each transfer, followed with
+incubation and testing under microscope for stray outside organisms (micros-
+copically); and, altogether nearly 10 transfers were completed before the
+"
+(3) Thein Nyunt, etc. "Rice Starch Processing.' JBRS, XXXIX,i, June 1956
+pp. 33-40.
+JBRS XIII, ii, Dec. 1959
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 5]]
+BUTANOL OUT OF Rice-Starch
+45
+main batch culture was started. The medium should be freshly heated and
+cooled to about 37° C just before inoculation. This prevents the occlusion of
+any dissolved oxygen. Incubation was done throughout in anaerobic fashion.
+The beverage bottle containing the medium inoculated with the organism
+in the way depicted above was stoppered with a cotton plug and put in the
+anaerobic jar which was placed in the incubator.
+Butanol was detected during intermediate stages by the smell given off
+during fermentation.
+Detection of contamination by stray organisms was done microsco-
+pically only. The drive was towards producing the butanol and no
+elaboration other than detection by microscope was done on detection
+of stray organisms.
+Main-batch-production of butanol was the same except that the ferment--
+ation was allowed to go in big gallon-bottles and that no anaerobic jar was
+used for creation of anaerobic condition. Both the corn starch-slurry and
+thr rice starch-slurry were used in the main batch.
+Since our first objective was towards producing butanol qualitatively out
+of starch, we made sure that we put in enough nutrients into the medium.
+Biotin at the rate of one small capsule per gallon bottle was therefore put in.
+IV.
+RESULTS
+The medium, now containing butanol as well as living dormant organism
+should, strictly working, be filtered through special filters and then only
+should be distilled. In our case, since we had no Seitz filters with EK special
+pads, that can retain small bacteria on it, we simply distilled the medium in
+the usual fashion. This simply means, we assume Cl. acetobutylicum to be
+fairly non-pathogenic. Our observation on the distillation was semi-
+quantitative. With an idea to get a comparative result we carefully and
+separately collected the distillates from two sources (rice and corn) and
+to 100 ml. of each distillate, we added (NH 4) 2 SO 4 enough to salt out
+the butanol that, on standing, floated to the top. (NH4)2 SO 4 was
+dispensed with when we found that fractional distillation was better method
+to isolate butanol.
+Our comparative observation pointed out that rice starch acted upon
+with the strain from India and assisted with biotin produced larger amount of
+butanol than corn starch did under similar conditions.
+Since more work was on the rice slurry, here are some of the details. The
+JBRS. XLII, ii, Dec. 1959
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 6]]
+46
+THAN NYUN AND THAN TIN
+butanol we got is a clear and colourless liquid with the characteristic odour, is
+miscible in all proportions with alcohol forming clear colourless solutions,
+and has a boiling range of 116° -118° C. Below, it is mentioned the refractive
+index values of three normal-butanol's:-(1)Analar grade, whose specifications
+are given as they are laid down by the British Drug House 4; (2) the
+Chemical Product grade; and (3) our product of boiling range 116° -118°C.
+Analar, BDH
+Chemical Product
+Our Product
+20
+20
+20
+n
+1.3990 to 1.4000'n
+d
+bulb light
+=1.3980
+n
+bulb light
+-1.3958
+Our lower value in the refractive index might have been due to the fact
+that we took only the fraction strictly between 116-118° C; for, when we
+determined the index for the whole fraction whose boiling range is unspecified
+we found it to be 1.3992 under the bulb light. And, it is to be noted that,
+with the BDH specification, it will conform to the standard if not less than
+95% of the collection distill between 116-118°C.
+Quantitatively speaking, we find this: Out of 1 liter of the fermented
+liquor (6 g./100 ml. concentration of rice-starch), the fraction (boiling range
+116-118. C) collected was 3. 0141 grams. In other words, 60 grams of rice
+starch yields 3.0141 grams of n-butanol of aforesaid constants; and the yield
+is therefore 5%w/w.
+V. SUMMARY
+-
+1 liter of rice starch mash containing 6 g. rice starch/100ml. slurry can
+produce as much as 3 grams of n-butanol of boiling range 116-118°C an dof
+refractive index, n 20. 1. 3958 to 1.3992 which compares favourably with
+the standards laid down for n-butanol. This production was effected by
+fermentation of rice starch as medium, acted upon with Cl. acetobutylicum-
+NCL/BD/NC/M/362 from National Chemical Lab., National Collection of
+Industrial Micro-organisms, Poona - 8, India.
+BIBLIOGRAPHY
+(1) Mc Cutchan, W. N. and Hickey, R. J. “The Butanol - Acetone Fer-
+mentations". Industrial Fermentations. Edited by L. A. Underkofter and
+R. J. Hickey. New York: Chemical Publishing Co., Inc., 1954, vol. I, p. 347
+(2) Ibid., p. 349
+(3) Thein Nyunt, etc. "Rice Starch Processing." JBRS, XXXIX, i.
+June 1956, pp 33 - 40.
+(4) Analar Standards for Laboratory Chemicals, Ed. 4. The British Drug
+Houses Ltd, and Hopkin & Williams Ltd. London, 1949, p. 56.
+(4) Analar Standards for Labaratory Chemicals, Ed. 4. The British Drug Houses
+Ltd. and Hopkin & Williams Ltd. Lodon, 1949, p. 56.
+JBRS, XLII, ii, Dec. 1959
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.

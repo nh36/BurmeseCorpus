@@ -1,0 +1,14 @@
+{
+  "local_file_id": "lawscustonsvietnam_ba-5708319c10d2",
+  "batch_id": "jbrs-ocr-3330",
+  "file_name": "LawsCustonsVietnam_Ba.pdf",
+  "path_stub": "Burmese/Burma JBRS/1966/LawsCustonsVietnam_Ba.pdf",
+  "journal": "JBRS",
+  "year": "1966",
+  "ocr_engine": "google_vision",
+  "pages_completed": 16,
+  "ocr_date": "2026-06-01T19:48:48.886756+00:00",
+  "source_category": "other_source",
+  "language_scope_guess": "Burmese",
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+}

@@ -1,0 +1,828 @@
+[[page 1]]
+PSYCHOLOGICAL PROBLEMS RELATED TO MAZE:
+LEARNING
+"
+by
+U Khin Maung Tint, B. A., ( Hans, )
+2
+Experiments on maze learning are no longer popular with modern
+psychologists ever since the discovery of new and more effecient types
+of learning situations such as those presented by the Skinner problem
+box and the Lashley discrimination apparatus. The chief difficulty with
+maze experiments is the existence of a variety of maze types which
+makes standardization impossible. An added difficulty is, the labour
+involved in recording the data objectively and accurately. However, there
+are still two good reasons for continuing experiments with mazes. First,
+maze learning is one of the oldest types of learning experiments used
+in comparative psychology and as such has not only historical interest
+attached to it but also enables one to understand and appreciate how
+modern theories of learning have developed. Secondly, maze learning
+resembles a problem so commonly met with in a real life situation.
+Consider a man in the street of a new city attempting to reach an
+appointed place. He is essentially in a maze, One is then led to ask
+such simple yet fundamental psychological questions as to how he learns
+what he learns in a new situation as this, whether what he has learned
+before is an aid in his present learning and so on deposite
+„Enoitibo grow vingit pol
+The earliest experiments with mazes were mainly concerned with the
+question By what cues does the subject find his way through the
+maze? By vision? By kinesthetic sensations? Today, the psychologist
+of
+can give some definite answers. For instance, it is generally agreed
+that there is sufficient evidence to show that in maze learning the subject
+✓ vroed
+F
+11
+NIT
+sach dolew
+30
+1001 lud Jided to
+1. Read by Dr. Ha Thwin on December 22, 1955 with U Chit. Thoung in
+the Chair. This report is digested from a study made in partial fulfilment
+Tainiest Touren eid avez direntud
+in Psychology
+of the requirements, for the B. A. (Hons) Degree i
+"at the University Up Rangbon. mous of ton al gains
+10 zaoilingop to themtaikisles adj wd esagogası be
+2. Assistant Lecturer in Psychology, University College, Mandalay.
+do leng
+> becom
+11
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 2]]
+42
+U KHIN MAUNG TINT
+uses all senses and that the importance of any specific sense depends
+upon the condition of the subject and the conditions of the learning
+situation. Since the white rat has been the favourite animal for use as
+subject in maze experiments we may safely conclude with Watson that
+the rat has many resources at its command for learning and running
+a maze, that one which is found most serviceable in a given set of
+conditions is the one which becomes established and being so established
+is not easily upset. On the basis of other experiments in which rats
+were used after having different senses destroyed, Honsik has further
+concluded that the most important sense appeared to be the kinesthetic,
+the next important visual while smell and hearing came next, in that
+order.
+66
+What has remained controversial for the psychologists from a
+wealth of maze data is the more basic problem of what is actually
+learned and how it is learned. Numerous psychologists have tried
+to contribute to the solution of this fundamental problem of
+learning theory and they can be roughly divided into two groups,
+namely, the Tolman Group and the Hull Group with Tolman and Hull
+respectively as their spokesmen. Tolman has contended that the study
+of a rat's behaviour at a choice-point in a maze provides a good start
+for the development of a sound theory of learning. His wellknown
+theory so developed may be termed a “field of cognitive theory". Hull's
+theory is recognised as a "reinforcement theory". To the question
+"What does the organism learn?", Hull answers that it learns to make
+a response to certain stimuli. To the question, How does it learn?",
+he answers further that it learns through gradual accumulation of habit
+strength which depends on the action of receptor-effector process in
+close contiguity with reinforcing conditions. Tolman's theory is
+diametrically opposed to Hull's. First, Tolman rejects the principle of
+the automatic action of stimuli. He would rather look upon stimuli as
+signs or guide-posts, not as response-releasing triggers and contends
+that the learning of the organism consists in learning the meaning or
+significance of these signs. Learning is therefore not so much formation
+of habits but a series of cognitive changes. The organism learns the
+relationships of objects or what-leads-to-what with reinforcement having
+only a very indirect relationship with the actual learning. In his view,
+learning is not the mere automatic reproduction of reinforced condi-
+tioned responses but the establishment of cognitions or the restructuring
+of the perceptual field in terms of goal objects.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 3]]
+MAZE LEARNING
+43
+The influence of both theories for a psychology of learning has
+been considerable. In spite of the fact that a systematic bias is present
+in both points of view, it is generally recognised that they are not
+mutually exclusive and represent merely different assessments of the
+general importance of certain variables of which learning is a function.
+There is a wealth of evidence to support both views and yet further
+research is needed in order that one may give a verdict between the two
+theories or reconcile the conflicting interpretations. The following
+experiments were carried out to test certain logical implications of both
+theories.
+The experiments may be classified into three divisions. The first
+experiment deals with the problem of transfer of training, the second
+with Hull's goal gradient hypothesis, and the third with Tolman's latent
+learning principle. Another experiment was conducted to test the place
+versus movement interpretation of maze learning.
+Experiment I Transfer of Training
+-
+Accidental observations by the earliest experimenters with mazes
+showed that the learning of one problem seemed to influence the solu-
+tion of other problems favourably. Dashiell reported that even general
+adaptations of the animals to laboratory conditions led to positive
+transfer and that rats seemed to have learned the general orientation
+toward the food box which was later transfered to new maze situations.
+Hunter observed favourable transfer even when the new maze had
+the reversed arrangement of the previous maze. However, in later
+experiments he discovered negative transfer.
+Apparatus: T-shaped elevated mazes were used. There were three
+kinds of maze patterns, namely, Pattern A, Pattern B and Pattern C as
+shown in Figure 1. Each pattern consisted of seven units and each
+unit was three and a half feet long. In all patterns the length of blind-
+paths were kept constant, each blind-path being one foot long. The
+order of correct turnings in Pattern A was left-right-right-left-left-right
+while in Pattern B it was right-left-right-left-right-left and in Pattern C,,
+left-right-right-right-left-left. Different orders of correct turns were used
+to control any transfer which might arise out of learning the same
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 4]]
+44
+U KHÔN KHÔNG SAU
+sequence of movements. As rewards, pellets of cheese were given.
+Other materia watch to record the ad
+ve & indi jos)
+'dad' earth?
+'sweet to enter th the number of errofs and time take
+pre-afran kans
+d) to anom122922 trosilib
+noitonut o zi guinneþf doidz
+toy bas awei dod
+ows ad ese
+gniwollot aft
+diod to anof soilquai labigol
+A
+in
+d
+bellizedlo s
+B
+Fig. I
+Subjects: Nine white rats raised in our own laboratory served as
+subjects of the experiment. Of these, three were of the second genera-
+tion, while the remaining six belonged to the third generation. They
+were divided into three groups, each group having one rat from the
+sopond generation and two of the third generation. None of the rats
+had any previous maze experience
+"
+Jangiprocedure The day before the experiment the brats were kept
+under twenty-four hours dry food maintenance schedule. On the first
+way they were given preliminary training to make them: familiar with
+laboratory conditions and the kind of handling required in this experi-
+ment. Food pellets were placed on both ends of a straight maze
+seven feet in difgths The wat was planed in the centre of the maze and
+allowed to fumⱭtoſeither effɖ and eat food at either great both ends.
+Each bat stayed on the maze for one minute per trial after which it was
+returned to the home cage and another rat put on the mazed, Ton such
+trials were given to each rat. dq-bail dona asteno
+migi on the next day Group A'ran and Fearhed Maze Pattern A. Two
+form3 of ertor were recorded, namely, tetracing or turning backward
+to the starting place and (2) blind alley error
+Blind alley error or entering into any vind
+path.
+Time taken per trial was also recorded. For each fat a learning
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 5]]
+MAZE LEARNING
+45
+criterion of five successive errorless trials was set. Since no rat reached
+criterion in one day the experiment was continued for several days.
+For each rat only the results obtained on the day it reached
+criterion have been used for comparisons. The day after it had
+reached criterion on the first pattern, each rat was made to learn the
+second pattern and after having learned the second to criterion it was
+started on the third. The procedure for Groups B and C were the same
+as that for Group A except that Group B learned first Pattern B, then
+C and finally Pattern A while Group C learned Pattern C first followed
+by Patterns A and B, in that order. Each group therefore served as
+its own control.
+Discussion of Data: The amount of transfer can be determined
+by analysing the differences in amount of errors made by the three
+groups in learning a pattern. For example, since Group A started
+with the learning of Pattern A while Group C learned Pattern A after
+learning Pattern C and Group B learned Pattern A only after learning
+the other two patterns, any differences among the amount of errors
+made by the three groups would be indicative of transfer of training. A
+similar analysis can be applied to the learning of Patterns B and C.
+The results are presented in Table I and in Graphs 1, 2 and 3.
+Group
+Mean
+Errors
+6Σ
+F
+Group A
+4.6
+1.05
+0.75
+Pattern A
+Group B
+1.28.
+0.1
+0.1
+20
+Significant at
+0.01 level
+Group C
+0.57
+0.65
+0.5
+Group B
+2.8
+0.37
+0.25
+Pattern B
+Group A
+0.82
+0.36
+0.26
+22.4
+Significant at
+0.01 level
+Group C
+1.25
+0.5
+0.5
+Group C
+4.2
+2.16
+1.5
+Pattern C
+Group B
+1.5
+0.3
+0.2
+12.4
+Significant at
+0.05 level
+Group A
+1.2
+0.37
+0.26
+Table I. Showing Mean Errors of three groups of rats in learning
+Patterns A, B and C.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 6]]
+Number of ErNORS
+NUMBER OF ERROPS
+25
+GROUP
+GROUP B
+GROUP
+e
+NUMBER OF ERROMS
+2
+U KHIN MAUNG TINT
+GROUP
+54
+A
+8
+- GROUP
+GROUP C
+TRIALS (VINCENT'S TENTHS)
+GRAPH 1 LEARNING PATTERN A
+BY THE THREE - GROUPS
+TRIALS (VINCENT'S TENTHS)
+GaAPH 2 LEARNING or PATTERN &
+GROUP A
+GROUP 8
+30%
+GROUP
+C
+20%
+ERRORS
+10%
+151
+2nd
+301
+4th
+5th
+UNITS OF MAZE
+TRIALS (VINCENT'S TENTHS)
+GRAPH 3. LEARNING OF PATTERN &
+Graph 4 Percent Of Errors MADE
+AT DIFFERENT POINTS IN THE MAZE,
+The results clearly show the presence of positive transfer of
+training. In the learning of all three patterns, the group which started
+with that particular pattern made the greatest amount of errors on it.
+As the results in Table 1 indicate all differences reach statistical
+significance. Applying analysis of variance to the data F values of 20
+for learning Pattern A, 22.4 for Pattern B and 12.4 for Pattern C are
+obtained. The degrees of freedom for all three experimental conditions
+are 2 for the nominator and 5 for the denominator. The required
+values of F for these degrees of freedom are 13.27 at the 0.01 level of
+significance and 5.79 at the 0.05 level. The differences among the
+number of errors made by the three groups in learning Patterns A and
+B are significant at the 0.01 level while with Pattern C the differences
+are significant at the 0.05 level.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+8
+10.
+
+[[page 7]]
+MAZE LEARNING
+47
+One may ask what is transfered. We can say definitely that what
+is transfered is not sequence of movements. In the literature, a number
+of conditions conducive to positive transfer have been pointed out but
+there are apparent differences in the studies compared. The general
+consensus of opinion is that positive transfer is due to general factors
+while negative transfer is due to specific factors, namely, interferences.
+This is obvious because there is considerable evidence that even
+with mazes designed to produce learning of movements opposite of the
+movements learned in the original maze, we still find positive transfer.
+It is therefore clear that what is transfered is not learned movements.
+One explanation is that positive transfer is due to reduction of
+emotional factors, decrease in exploratory movements and tendency to
+return to the starting place. In our experiment we found considerable
+evidence in support of this explanation. In the early part of the
+experiment, urination and excretion, long fixed stops at the starting
+place and end of blind-alleys, attempts to go down from the maze,
+crouching and tremblings were found with all the rats. As the experi-
+ment proceeded such emotional behaviour gradually diminished.
+Since the number of errors made in each blind-alley was recorded
+throughout the experiment we may also test Hull's famous goal gradient
+hypothesis. According to Hull, the first correct paths to be learned
+are those nearest to the goal or food-box. In other words it means
+that there will be an increase in number of errors in a backward order.
+Graph 4 shows that the results of our experiment are in agreement with
+the prediction to be drawn from the hypothesis. The graph has been
+plotted from the average number of errors made by all rats on the day
+when each of them reached the criterion for the first time. It can be
+seen that 66% of errors were made in the first half of the maze and
+33% in the second half. The smallest amount of error (8%) was made
+in the final blind-alley which was nearest to the goal or food box.
+In conclusion we may say that our experiment clearly demonstrates
+positive transfer of training in maze learning. It also indicates that
+transfer is not due to similarity in sequence of movements. In addition,
+the experiment provides data supporting Hull's goal
+hypothesis.
+gradient
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 8]]
+is
+48
+U KHIN MAUNG TINT
+Experiment II-A Corollary of the Goal Gradient Hypothesis
+Many corollaries may be drawn from Hull's goal gradient
+hypothesis. One of these in which we became interested states that
+among many paths to the same goal the organism will choose the
+shortest path. This experiment was designed to test this corollary.
+Apparatus: T-shaped elevated mazes, each one foot in length,
+were used.
+The whole experimental design is shown in Figure II.
+It was so arranged that turning to one side led to a longer path
+"L" toward the goal while turning to the other side led to a shorter
+path "S" and to the same goal. Both the common path and the
+starting point were movable so that it was possible to interchange the
+long and short paths whenever necessary. The ratio in length of the
+longer to the shorter path could also be changed by adding or
+substracting maze units as necessary. A curtain crossed the centre of
+the maze to prevent the animal from observing the relation of the two
+paths before running the maze. Other materials used were a stop-
+watch to record time and data sheets for entry of data.
+Start
+Goal
+Curtain
+Fig.
+Norin
+Curtain
+Start
+Goat
+0
+Subjects: There was an interval of two weeks between this
+experiment and Experiment I. Six rats of the third generation used in
+the previous experiment were used here. They were divided into two
+equal groups.
+J
+Procedure: The day before the experiment the rats were kept
+under twentyfour hours dry-food maintenance schedule. On the
+following day they were given preliminary training. A T-maze with
+each arm two feet long and a common starting path one foot long
+was used. Food was placed on both ends of the straight arm and
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 9]]
+MAZE LEARNING
+49
+each rat ran three trials with starting point at each of the two opposite
+sides of the arm. Each rat was allowed to stay twentyfive seconds on
+the maze in each trial and eat at both ends. Any persistent turning to
+the left or right was recorded. It was found that there were two right-
+turning rats, one left-turning rat and the remaining rats with no
+preference for either side.
+On the next day the first group of rats learned this new maze
+pattern with the ratio of the long to the short path 2:1 while the
+second group learned the pattern with the ratio 4:3. Care was taken
+to see that the longer path was always on the rat's original choice side.
+The number of times each path was entered was recorded as well as the
+time taken. After the rat had chosen the shorter path for ten succes-
+sive errorless trials the positions of the two paths were interchanged.
+Again, the rat's movements into each path were recorded until the rat
+had chosen the shorter path in the new arrangement for ten successive
+trials.
+The results are presented in Graphs 5 and 6 which have been
+plotted from the average turnings of rats in each group.
+GRAPH 5 AVERAGE NUMBER OF CHOICES PER RAT
+MADE AT SHORT AND LONG PATHS (-)
+POSITIONS OF PATHS INTERCHANGED
+NO. OF CHOICES MADE 【AT THE LONG PATH
+GRAPH 6 AVERAGE NUMBER OF CHOICES PER RAT
+AT SHORT AND LONG PATHS (-)
+POSITIONS OF PATHS INTERCHANGED
+NO. OF CHOICES MADE AT THE LONG PATH
+LONG 1234569
++10+
++8 19 20 21 2
+LONG
+12848
++104
+SHORT
+* 1 & 27 28 29 30 31 38
+223456 PL . 18. 12. 13 28 I
+SHORT
+*210*17 18 18 15 16 17
+NGOF CHOICES MADE AT The Short Path
+ART PATH & LEARNING
+16 17 18 19
+4.5+
+414
+20 37 298 23 ***** 2
+MOOF CHOICES Made at The ShoRT PAYU
+FIRST ↑ LEARNING.
+SE
+LEARNING
+SECOND
+LEARNING
+SHORT PATHON THE
+WEST SIDE
+SHORT PATH ON THE
+EAST SIDE
+SHORT PATH ON THE
+WEST SIDE
+SHORT PATH ON THE
+EAST SIDE
+:.
+Discussion of Data: Our hypothesis in this experiment can be
+divided into two parts. The first part may be stated as follows: "Out
+of two paths to the same goal in a maze, where one is shorter than the
+other, the rat will, after some random turnings choose the shorter path."
+If we were to put this in operational terms it would mean that: "In a.
+maze where the path S on the western side is half as long as the path
+L on the eastern side and both paths lead to a common goal, the .
+rat will, after some random turnings to both, run the path S for all the
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 10]]
+50
+"
+U KHIN MAUNG TINT
+times. A study of the turnings in the first half of the experiment as
+shown in the graphs indicates that our experiment yields results which
+confirms the hypothesis.
+But one may argue that the rat chose the path S on the basis of
+position habit newly acquired in the experiment. To check this, after
+the rat had chosen the path S for ten successive errorless trials we
+interchanged the positions of the two paths as stated previously in the
+procedure. Therefore, the second part of our hypothesis may be
+stated as follows: "In a maze, after the rat has learned to run a
+shorter path S on the western side for all the trials, if later the path S
+is placed on the eastern side while the path L formerly on the eastern
+side is now placed on the western side, the rat soon stops to turn to the
+western side and start to run the path S which is now
+eastern side.
+,,
+on the
+Again, a study of the turnings in the second half of the experiment
+as shown in the graphs indicates that our experiment provides data
+supporting this second part of the hypothesis. It can also be seen that
+there is no real difference between learning the maze with the different
+S-L ratios although, as may be expected, discrimination seems to be a
+little more difficult with the S-L ratio 3:4. In conclusion, we may say
+that our experiment yields results which validates one of the corollaries
+which may be drawn from Hull's goal gradient hypothesis.
+Experiment III - Latent Learning
+As discussed previously, the Hull Group emphasises the role of
+reinforcement (reward) in learning. They explain the correct choice of
+turns in mazes as learned responses conditioned by reinforcement, the
+implication being that where there is no reinforcement there will be no
+learning. Now a serious blow to this reinforcement theory of learning
+has come from latent learning experiments carried out by Tolman and
+his disciples. By latent learning we refer to learning in the absence of
+immediate observable reinforcement for the responses. For a time such
+learning is unobservable and remains hidden but the effect of such
+learning can be readily inferred from the performance of the individual
+following the introduction of reinforcement later. Hence the name,
+latent learning. This experiment was designed to observe whether such
+learning takes place in a maze situation.
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 11]]
+MAZE LEARNING
+51
+Apparatus: Nine Y-shaped enclosed maze units were used. Out
+of these, five units formed the central right path while the remaining
+four constituted the blind-alleys along the central axis. Each unit was
+one foot long. Figure III shows the pattern of maze as used.
+START
+☐
+FOOD
+BOX
+Fig. III
+Subjects: Since this experiment was done one week after
+Experiment II the same six rats used then were used here. None of
+them had any experience with enclosed mazes before. They were again
+divided into two equal groups.
+Procedure: One day before the experiment all rats were kept under
+twentyfour hours dry-food maintenance schedule. However, while the
+Control Group was kept for the twentyfour hours in their home cages,
+the animals in the Experimental Group spent the night in three separate
+enclosed mazes of the same pattern used in the experiment. On the
+following day the members of the Experimental Group were given one
+pellet of food at the entrance of the experimental maze. This was their
+first experience to eat in an enclosed maze. Food was then placed in the
+goal box and the rats made to run the maze until each of them made
+five successive errorless runs to the goal. Blindalley and retracing errors
+together with time taken for each trial were recorded. Then the
+animals in the Control Group were brought out of their home cages
+and put through the same procedure as the Experimental animals. The
+results are presented in Table II and Graphs 7 and 8.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 12]]
+52
+Group
+Mean Errors
+9
+U KHIN MAUNG TINT
+% Saved. F
+Experimental
+Group
+Control Group
+10
+7
+50
+4.3
+21
+1.7
+...
+Table II. Showing the results of Experiment III.
+Discussion of Data: The data shows that the Experimental
+Group made 50% less errors than the Control Group. This reduction
+in error may be explained, as Tolman does, as the effect of latent
+learning. The Control Group learned the maze without previous
+experience of the pattern. The experimental animals, however, may
+have learned something (the general orientation of the maze as a
+whole) through mere explorations during the night although there was
+no reinforcement in the situation. Whatever had been learned during
+that night, that is, latent learning, enabled the rats to learn the maze
+much better than the control animals when reinforcement was later
+introduced.
+We are however cautious in drawing conclusions from our data
+since the standard deviation of the mean error of the Experimental
+Group is rather big. When analysis of variance is applied to test the
+significance of the difference in the performance of the two groups, an
+F value of 4.3 is obtained while we need an F value of 6.6 for the
+difference to be significant at the .05 level. But we need not reject the
+concept of latent learning on purely statistical grounds. In fact, in
+maze experiments we rarely get data which reach statistical significance.
+We can be cofident that by increasing the number of subjects and the
+number of experimental days we could have gathered more reliable
+results.
+CONTROL GROUP
+EXPERIMENTAL GROUP
+TIME (AVERAGE) IN MINUTES
+"
+CONTROL GROUP
+EXPERIMENTAL GROUN
+TRIALS
+GRAPH? ERRORS AS THE FUNCTION OF TRIALS.
+TRIALS
+GRAPH 8 DECREAse in Time As
+THE FUNCTION OF THE TRIALS
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 13]]
+MAZE LEARNING
+53
+In conclusion we may 'say that our experiment yields data which
+shows a tendency for the confirmation of the latent learning factor in
+maze experimentation.
+Experiment IV-Place Versus Movement Learning
+The reinforcement theory of learning implies that in a maze the
+organism learns the correct sequence of movements. The cognitive
+theory, however, asserts that the organism learns to follow signs to the
+goal or a particular behaviour-route, not a movement pattern. In
+1946-47 Tolman, Ritchie and Kalish performed a series of experiments
+to support the second view. From one experiment they were able to
+report that even after cerebellar damages the rats retained what they
+had learned previously. In another experiment the rats first learned
+a particular maze and then the paths were covered with water. Now,
+under this second condition the rats needed to make a new kind of
+movement pattern, i.e., swimming. They still retained what they had
+learned previously. From such data Tolman's Group has concluded
+that maze learning is essentially place-learning. Our experiment was
+designed to test this interpretation.
+Apparatus T-shaped elevated mazes with units one foot long
+were used. A central path eight foot long with moveable starting
+paths each one foot long were so combined to produce a T-maze
+pattern. Other materials used were a stop-watch, an electric bulb and
+data sheets. The whole pattern is illustrated in Figure IV.
+4 #
+4 ft
+DSC
+A
+Door
+N
+Liani
+F
+52
+B
+4
+TABLE
+R
+Fig. IV
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 14]]
+54
+U KHIN MAUNG TINT
+Subjects: The same six animals used in Experiments II and III
+served as subjects. The rats were divided into two equal groups,
+Group P forming the place-learning group and Group M, the
+movement-learning group.
+Procedure: The day before the experiment the rats were kept
+under twentyfour hours dry-food maintenance schedule. On the
+experimental day the position habit of each rat was determined with
+the same procedure used in Experiment II. It was found this time that
+no rat would choose either right or left persistently although two
+showed preference for the side which had the electric light. The
+experiment proper was then started on the next day. Both the
+preliminary training and the experiment proper were conducted in a
+dark, sound-proof room. The maze was placed in this room as already
+shown in Figure IV.
+Since the Central path ran from north to south, the moveable
+starting path could be placed on either the west or east side. An
+electric bulb was hung about six feet off the floor in the south-east
+corner of the room so that it cast a diffused light in the north-west
+corner. This directional lighting placed the end of the south arm of
+the T directly in the light and the end of the northern arm relatively
+in the shadow.
+animals found it
+Correction method
+the wrong end he
+Group P ran and learned the maze which was arranged as presented
+in Part A of Figure IV. The starting point, S 1, was on the west side of
+the central path. Food was placed on one fixed end, for instance, F 1,
+on the south end. Food was so placed that the
+always on the opposite end of their preferred side.
+was used which meant that when an animal ran to
+was allowed to correct his error. Each rat ran four trials from S I.
+Then the staring path was immediately carried around the maze and
+attached to the east side of the central path. Food was placed at the
+same end, F 1, on the south side. Froin S 2, that is, the east side the
+rats ran four trials and here again correction method was used. On
+each day each rat ran four trials from S1 and four trials from $ 2. Te
+make sure that it did not run all four trials from the same starting
+point, the order of starting points was S1, S1, S1, S2, S2, S2, S1, S2
+on the odd-number days and S2, S2, S2, SI, S1, S1, S2, S1 on the
+even-number days. To reach the same goal, F 1, the animals had to
+turn right when starting from S1 and to the left when starting from
+S2. This was the procedure for Group P.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 15]]
+MAZE LEARNING
+55
+The procedure for Group M was the same as that for Group P
+except that food was now placed in two places, F1 and F2. When
+starting from S 1 (west side) food was found on the south end, F1 and
+when starting from S2 (east side) food was found on the north end, F2.
+These rats, therefore, ran from two starting points S1 and S2 to two
+different goal-places, F1 and F 2, making the same movement pattern.
+This means that when starting from S1 the rats had to turn right to
+reach F 1 and when starting from S 2 they had to turn right again to
+reach F 2. The orders of starting points were the same as those with
+Group P.
+The experiment was carried on for four successive days. The
+following controls were also observed throughout. In order that the
+rats may not use extra cues, no animal was allowed to see another
+running the maze. They were brought individually to the experimental
+room and returned to the home-cage in the same way. When the
+animal was to be taken back from the goal to the starting point it was
+carried by the experimenter around the apparatus but not always
+around the same end. It should also be pointed out that by inter-
+changing the arms of the T at various times throughout the experiment
+the intramaze cues were varied in a random manner. The number of
+errors and time taken by each rat on each day were recorded.
+results are presented in Table III.
+The
+Days
+Average Error per Rat per Day
+F
+Group P
+Group M
+1st
+5.0
+5.7
+0.4
+2nd
+3.7
+4.3
+1.7
+3rd
+4.0
+4.7
+0.5
+4th
+3.3
+3.6
+0.07
+Average
+Errors per
+Rat for 4 Days
+M-4,0
+M=4.6
+a
+0.6.
+==0.76
+9=0.4
+0.44
+C.R.=|
+Table III. Showing the results of Experiment IV.
+The data shows that on all the experimental days Group M, the
+movement-learning group, made more errors than Group P. The place-
+learning group learned the maze better than the movement-learning
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 16]]
+56
+U KHIN MAUNG TINT
+group. However, the obtained F values for significant differences are
+much below the required value of 6.6 to be significant even at the 0.05
+level. The critical ratio of the difference between the means is also
+only 1.0. Consequently we are forced to conclude that the results of
+our experiment indicate only a slight difference in favour of the place-
+learning group but the difference is not statistically significant.
+The failure to find convincing evidence for our hypothesis that
+place-learning is easier than movement-learning may be due to:
+(1) The use of intramaze cues by the animals in spite of our
+many controls;
+(2) The place-learning group learning their problem not as
+two routes to the same goal-place but merely that when
+facing east to turn right and when facing west to turn
+left; and
+(3) The movement-learning group also learning
+their
+problem as two routes leading to the same goal-place.
+In conclusion we may say that in maze learning, place-learning
+appears to be easier than movement-learning although our data
+indicates the need for caution in such an interpretation.
+Acknowledgements
+I wish to express my gratitude to Dr. Hla Bu, Professor of
+Philosophy and Psychology for his kind permission in allowing me to
+undertake this research. I am greatly indebted to Dr. Hla Thwin,
+jecturer in Psychology, for providing me with the initial stimulus to
+investigate these problems and for guiding me with constant advice,
+constructive criticisms and encouragement throughout the whole study.
+Dashiell, J. F.
+Hilgard, E. R.
+Honsik, A. N.
+Bibliography
+Direction Orientation in Maze Running by the
+White Rat, in Comp. Psy. Monog. 7, No. 2,1907.
+Theories of Learning, Appleton-Century-Crofts,
+1948.
+Sensory Cues in Maze Learning, in Journ. of
+Comp. Psy. 20; 10-41; 1936.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 17]]
+MAZE LEARNING
+57
+Hull, C. L.
+Hull, C. L.
+Lashley, K. S.
+Skinner, B. F.
+Tolman, E. C.
+Tolman, E. C.,
+Watson, J. B.
+The Goal Gradient Hypothesis and Maze
+Learning, in Psy. Rev. 39: 25-43; 1932.
+Principles of Behavior, Appleton-Century, 1943.
+Discriminative Learning, in Journ. of Gen. Psy.
+26:241; 1942.
+Behavior of Organisms, Appleton-Century, 1938.
+The Determiners of Behavior at a Choice-point,
+in Psy. Rev. 45: 1-41: 1938.
+B. F. Ritchie, D. Kalish; Studies in Spatial
+Learning Place-Learning
+:
+versus Movement-
+Learning, in Journ. of Exp. Psy. 36: 221-229;
+1946.
+Kinesthetic and Organic Sensations: Their Role
+in the Reactions of the White Rat to the Maze,
+in Psy. Monog. 8; 1907.
+Woodworth, R. S. Experimental Psychology, Holt & Co., 1947.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailan‹

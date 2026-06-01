@@ -1,0 +1,336 @@
+[[page 1]]
+THE LINGUISTIC POSITION OF RONG (LEPCHA)
+by
+R. A. D. FORREST
+STEN KONOW, in the Linguistic Survey of India assigned Rong to the " unpronomi-
+nalised Himalayan group" of the Tibeto-Burman languages, though he did indeed note
+certain traits (vigesimal numeration, vestigial classification of nouns into animate and
+inanimate, etc.) which point to an ancient influence of languages of Munda type. He is
+followed by Schmidt in die Sprachfamilien und Sprachenkreise der Erde (Heidelberg, 1926),
+who, however, assigned to Rong a position apart from the other unpronominalised
+languages, justified by its sharp differences from the dialects with which Konow ranged it;
+and the Langues du Monde (1952) likewise follows Stonow's classification. So far as
+classification goes this is probably as accurate as one may expect; but in calling Rong a
+Tibeto-Burman language without qualification we are giving too little weight to its peculiar
+features.
+The principal source of our knowledge of Rong is Mainwaring's Dictionary (Berlin,
+1898), a work generally satisfactory. In it the author has marked those words which he
+recognised as being of Tibetan derivation, i.e., plainly traceable to the Tibetan written
+language or to the modern Lhasa pronunciation; omissions are rare, and questionable
+inclusions among the marked words are uncommon. As examples of this stratum we may
+quote the following:
+R. ca bird, T. bya
+R. thak hand, T. phyag
+R. tho religion, T. chhos
+R. khuk bag, T. khuk
+R. khyek freeze, T. nkhyag
+R. khe tax, T. khral
+R. sap, sop foundation, T. Zabs
+R. thop find, get, T. thop-pa
+R: thók string, T. thag
+R. do stone, T. rdo
+R. lo learn, T. slob
+R. san straighten, T. sroń-ba
+R. suk joint, T. tshrigs
+R. śók cut, T. gśag-pa
+-
+It is to be noted i) that among these asterisked forms there are none with initial dentals
+(including./) + y; ii) that asterisked forms constitute a much larger proportion among
+words with initial aspirated consonants than elsewhere; and iii) that compound initial
+consonants are very rare among the asterisked forms though common elsewhere. The
+significance of these facts will appear later.
+There is, however, a much older TB stratum in Rong which bears witness to a
+phase of TB development anterior to that preserved in the oldest written Tibetan. Many
+of the features here preserved in something like their original forms had been already
+reached by comparison of the modern TB dialects; some throw light on the forms restored
+for Karlgren's "Archaic "stage of Chinese. Among these are the following:
+41
+JBRS, XLV, i, June 1962
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 2]]
+42
+R.A.D. FORREST
+1. The metathesis of *kr-, etc., to rk-, etc., of written Tibetan had not yet taken
+place:
+R. krybk to throw down : T. rgyag-pa
+R. lók to lick: T. Idag-pa
+R. rón, tǎ-ryón net : T. rkon-pa
+R. gryá-lď thin: T. rke-ba < *krya
+R. dyóp throw (< *dryóp; R. rejects the initial combination dental + r, 1):
+T. rdeb-pa < *dryab-
+R. bryuk stout: T. rgyags-pa < *g-ryag-s (with change of prefix)
+R. len near T. Idan-pa
+2. The Tibetan developments */y-> ź-, *tly- > ch-, etc., had not yet operated, and
+Rong remains at the stage of most other TB dialects:
+R. klak end: T. gźug, mjug (mdźug), in which latter form the -d probably
+arose directly in the -1- stage, as in T. mda arrow < *mla.
+R. fd-li four T. bźi < *b-lyi
+R. lyan land, field : T. žin < * lian
+R. tűk-lin neck: T. hjin < *ndlian, ef. Burmese laħ < *lyan
+R. a-klyam sweet: T. zim <*liam
+R. Iyo take : T. ħju-ba < *ndlyu-
+R. a-li tongue T. Itfe <*tlya
+R. hlyốt twist : T. Itfud-pa *tlyuat: cf. Burmese rwat
+3. Tibetan had not yet resolved final -ts into -s :
+R. bát to swell: T. sbos
+R. nyắt two : T. gñis < *g-niat-s ; cf. Burmese hnac < *-yat
+4. Enigmatic are the cases where the Tibetan prefix appears to be represented in
+Rong by h, whereas in other occurrences of the same consonantal sequence Rong
+preserves the Tibetan prefix. These cases may be due to a later borrowing at a stage
+when the Tibetan prefix was being weakened in pronunciation prior to its final loss:
+R. hryẳn distance: T. rgyań-ba < *gry- (The final -n in Rong may be due to
+assimilation to the type of Rong verbal nouns in -n)
+R. kd-hryak pheasant: T. sreg-pa
+R. hlap learn: T. slob-pa
+R. a-hryol to loose, set free: T. ngrol-ba
+R. hryup suck : T. ńjibs-pa < *ndriap < *ndryup
+5. In a few cases the prefix has remained syllabic in Rong:
+R. ta-råk six: T. drug
+R. så-ryồm otter: T. sram; cf. also R. fa-li four, above.
+JBRS, XLV, i, June 1962
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd Bangkok Thailand
+
+[[page 3]]
+THE LINGUISTIC POSITION OF Rong (LepchA)
+-ly-, -y-
+43
+6. Rong f, v- arise in cases not yet clearly definable from a labial followed by -ry-,
+R. vyar quick: T. myur-ba
+R. vyón call, invite : T. sbron-pa
+R. fat to do: byed-pa
+R. fran firm T. brlin-ba < *brlyań
+R. fót to open: T. mbyed-pa
+R. flut to slip: T. mbyid-pa <*mbluat
+R. fren a sore, ulcer: T. rmen-pa < *mryan ; cf. B. mrań
+R. flen to strectch: T. rmyiň < *mriań
+R. a-fo taste: T. bro
+R. fik to tear: T. bźag-pa < *blyak
+In fron to reckon : T. bgrań, B. khraň, and R. vól carry: T. ǹkhrol-ba, it is possible that
+Rong took over a form with labial prefix which was not preserved in the other languages.
+7. Finally, a few words show isolated evolution in Rong. R. bryan name is not
+derivable from T. min nor even from the pre-classical myiń or *myań, which last we may
+infer from B. amañ. For the loss of -r- in T. ntshag-pa sift: R. rók, see my article "On
+Certain Tibetan Initial Consonant Groups" in Wennti, 3 (Yale, 1952).
+It will be observed that in the above lists a few Rong forms are quoted with syllable
+prefixes (tǎ-, tük-, etc.) which have no counterparts in Tibetan. These prefixes, used fairly
+freely with words of Tibeto-Burman but pre-Tibetan affinities, appear also but rarely with
+the modern borrowings (those asterisked by Mainwaring):
+-
+R. cd to do mischief: T. skyo-ba, > nén éă annoyance;
+R. jft splendour: T. brjid-pa, > nun-jit speckled, bright
+R. bar middle: T. bar, > tun-bar half
+We turn now to an examination of these syllabic prefixes.
+In the table which follows I have set out the commonest prefixes in Rong for com-
+parison with those in three Austroasiatic languages in which the prefixal system has surviv-
+ed as a living process of word-formation. Two of these prefixes kå- and så-, seem to have
+their equivalents in Tibetan, ceasing, of course, to form syllables; in both Rong and
+Tibetan they appear conspicuously in the names of animals, as they do also in the
+Austroasiatic dialects: R. ka-li squirrel, kä-śer hedgehog-; T. gzig leopard, gyag yak; Khasi
+ksi flea, ksår fox, etc.; R. să-căk leopard, să-na bear; T. sbal frog, stag tiger; Khasi skáin
+fly, sniang swine. The remainder appear to have equivalents, if anywhere, only among the
+Austroasiatic dialects. The TB prefix which was the most evident function, T. s- indi-
+cating causative sense, is totally absent from Rong, where its place is taken by a -y- infix;
+on the other hand it has not been posssble to identify in Rong the Austroasiatic instru-
+mental -n-.
+JBRS, XLV, i, June 1962
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 4]]
+44
+RONG
+PALAUNG
+KHASI
+kǎ-
+ka-
+k-
+animals,
+plants
+animals, parts
+of the body
+animals,
+relations,
+parts of the
+body
+kun-, kum-, &c
+kan-
+kyn-, kyr-
+animals,
+verbs, adjectives
+intensive
+plants
+luk-,
+lun-
+animals,
+lyng-
+animals
+R.A.D. FORREST
+KHMER
+kh-
+animals, esp.
+insects, parts
+of the body, &c
+kâm-
+instrumental,
+causative
+plants
+nun-, num-
+nong-
+abstract
+agent
+nouns, adjectives
+på-, pur-
+par- agent,
+p-causative
+pyn-, pyl-
+causative
+bầm, bên
+causative
+mǎ-, mun-
+să-
+absract
+nouns
+m- abstracts
+s'a
+animals,
+abstracts
+?
+sun-, sum-
+instrumental
+tun-
+abstracts
+s- animals
+sa- possessor
+syn-, syr-
+instrumental
+syng-
+instrumental
+tyng-
+abstracts
+Other important Austroasiatic prefixes, like Palaung ra- causative, Khasi jym-, jyn-, syng-
+instrumental, tyn-, thyn-, thyl- diminutive, and Khmer m- forming abstracts, cannot be
+equated with anything in Rong. Nevertheless it will be seen that Rong has in common
+with the Austroasiatic languages as large a proportion of its phonetically identifiable pre-
+fixes as those languages have in common with each other. If there remains any doubt as
+to the reality of the Austroasiatic provenance of this feature in Rong, the probability of
+its affinity is corroborated by a plentiful series of lexical correspondences:
+Ask: R. jắt, Bahnar jet, Khmer cōt
+Backbone: R. glyang, Palaung löng, Biat kluń
+Barn, granary: R. klyóng, Khmer khlän
+Bear, endure: R. kyón, Bahnar chón, Wa gun, Miao cháng
+Belly: R. båk, Khasi kpoh, Khmer pūḥ
+Burn: R. dyak, Bahnar tõk, Stieng duk
+JBRS, XLV, i, June 1962
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 5]]
+THE LINGUISTIC POSITION OF RONG (LEPCHA)
+Bury: R. lap, Khmer lap, Bahnar läp, Khasi khyllap
+Come: R. lat, Stieng luh, Sre lot, Lave leć
+Copulate. R. kit, Riang kot
+Cover: R. kap, Biat kôp, Khmer kǎp
+Cut: R. nar, Khasi ngor
+Devil, spirit: R. blyåk, Khmer braḥ, Stieng brah, Chrau m’brāh
+Dog: R. kǎ-ju, Khmer ksew, Stieng sõu, Biat cho, Riang sho, &c.
+Dung: R. ft, Khasi eit, Khmer äć, Bahnar ik, Stieng ech, Biat ǎć, etc.
+Eat: R. fyóm, Khasi bâm, Palaung bām "chew", &c.
+Fat (adj.) R. pak, Bahnar bēk
+Flesh R. ćók, Khasi pasoh, Khmer sắchm Bahnar xek
+Foot: R. dyan, Khmer jön, Bahnar, Stieng jong, Riang tsoŋ, &c.
+Frog: R. tǎ-kryuk, Khasi hynroh, HuaMiao qa, Bahnar drŏk, Riang rok, &c.
+Hard: R. krón, TsaKhmu grång, Mon krɔŋ' &c.
+45
+Hawk: R. kǎ-lyun, Khasi kling, Bahnar kläng, HuaMiao klan (The word has been
+borrowed into TB, as Kachin kalang, and even into Chinese, Karlgren
+Grammata Sinica, 890, ?ƒəŋ> * qluŋ, where the restoration of -l- is warranted
+by comparison of other words in the series).
+Heap: R. t'yul, Khmer tuol
+To heap up: R. bok, Khmer phnôk, Riang buic
+High: R. krón, khasi jrong, Riang tsǝrǝŋ
+Hinder: R. k'an, Khasi khang, Bahnar, etc., kań
+Fishhook: R. vór, Khasi woh, Palaung kavə
+Horn: R. rón, Khasi rengʻ Riang kəmrəŋ, Wa ruń
+Illness: R. a-dǎk, Niahön deh, Sò tić
+Jaw: R. kam, Khmer thkéam, Stieng gam, Sre, Biat kang, &c.
+Kindle: R. Căp, Palaung tsap, Bahnar coh, Stieng chu, wa tsäp, &c.
+Knife: R. ban, Mon bun
+Left (side): R. ví, Palaung ive, Wa kave, TsaKhmu vê
+Light (noun): R. a-óm, Bahnar, Sre, Biat ang
+Middle: R. diň, Khasi pdeng, HuaMiao ntaň
+Monkey: R. důk, Khmer dōć, Bahnar dök, Stieng duk, Biat dôk
+Midge: R. dyům, Palaung ta-d30:m, Sò rāyun, ChuanMiao joŋ
+Mouth: R. a-bon, Mon pãn, Biat m'bung
+Needle: R. ryum, Bahnar jòrum, Sre jurum
+Net: R. hróp, Riang rup, Wa rup, Palaung raræ p
+Pestle: R. tin -rf, Khasi synrei, Riang rɛ, Palaung gre:
+Pull out: R. dot, Bahnar duòt, Riang tɛt plɛ, Sre dus
+JBRS, XLV, i, June 1962
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 6]]
+46
+R.A.D. FORREST
+To reach: R. lat, Bahnar klech, Riang laic, Palaung hl:x
+Ring: R. vyan, Khmer vông, Bahnaruan, Men wain
+Round: R. pum, Bahnar apom
+Scratch: R. kór, Khmer kös, Bahnar khôr
+Sharp: R. let, Khasi lit (sharpen), Palaung lat (sharpen)
+Shoulder: R. på-li (scapula), Stieng po'lik, Biat m'lik
+Shut: R. hap, hyup, Palaung hjo:p, Khasi khap
+Skin: R. a-kap, Stieng kup
+Skin: R. kǎn-du, Bahnar ködoh (bark), Sò andōk (bark), Khasi dop (bark), Sre
+göltau (leather), Biat n'tou.
+To sow: R. frót, Biat m’brać, Mon gra:t, Khmer prūḥ, Palaung p’rat, etc.
+To spit: R. cóp, Stieng coh, Biat r'choh, Sò kućō
+To split: R. bík, Khmer pek, pāk, Balınar påk, Stieng bêk, pak, Mon påk, Chuan
+Miao mbai
+To split: R. blók, Sre blah, Riang plɔk, Biat plǎh, Palaung plo:x
+Squeeze R. pít, Riang piet, Bahnar pēt, Stieng påt, Mon pat, ChuanMiao mbai
+Stab: R. tsắt, Boloven, Stieng, chat, Bahnar sat, Mon cat, Palaung Sat,
+ChuanMiao t'au
+To stick, adhere: R. krap, Bahnar krāp, Biat krêp
+To stop up : R. dáp, Khmer kdop, Riang tap, Sre köldop
+Strength R. fran, blăn, Khasi khlain, Khmer khlan, Bahnar prän, Sre pran,
+Riang kraŋ, Palaung panrɛ:ŋ, &c.
+Stretch out R. dań, Khmer daň, Bahnar tẵng, Mon dāň
+Take R. kit, Mon ket
+Thread : R. a-bram < bră, Boloven, Biat, Stieng brai, Sre brac
+Throw R. nók, Khasi noh, Boloven norr
+Twist R. nyók, Palaung ŋok
+Twist R. vun, Khmer vĩnh, Biat wẫn
+Under R. sǎ-gram, Khmer kröm, Bahnar rom, Palaung krūm, Chuan Miao qəŋ
+Water R. un, Khasi um, Riang om, Palaung om, HuaMiao au
+Water : R. dă, Khmer dīk, Sheng dāk etc. Probably identical with Chinese*dok
+(Kerlgren S.G. 790).
+Wrap R. gryom, Khmer rum, Bahnar lôm, Biat n' klom
+Year: R. nam, Khasi snem, Bahnar hanâm, Sre (sö) nam, &c
+The above list excludes all ambiguous cases, i.e., where the same or a phonetically similar
+root exits in both Tibeto-Burman and Austroasiatic. It is clear that we have in Rong a
+very mixed form of speech, even if the very large number of vocables showing no resem-
+blance to those of similar meaning in the two major groups of languages does not indicate
+a third stratum. But it is much less easy to determine whether the Austroasiatic or older
+JBRS, XLV, i, June 1962
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 7]]
+THE LINGUISTIC POSITION OF RONG (LEPCHA)
+47
+Tibeto-Burman (or Tibetan?) stratum is the more fundamental. The word order, part of
+the basic vocabulary, the use of modification of finals in word-formation, and the agentive
+suffix all tell in favour of Tibeto-Burman affinities; while the extensive use of syllabic
+prefixes and a large part of the basic vocabulary are equally clearly Austroasiatic. There
+is no trace of the -n- infix denothing the instrument in many Austroasiatic dialects, while
+on the other hand the -- regularly used in Rong to form the causative of verbs has a
+parallel only in Chinese, where it is employed sparingly. Possibly the phonetic tendencies
+of the language may be a truer index of its fundamental type; here an antipathy to
+aspirated initials (which seem to arise in Austroasiatic generally as a result of composition)
+and to palatalisation (far commoner in Tibeto-Burman than in Austroasiatic, though by no
+means unknown in the latter), as well as the richer vocalism and the development of labial
+fricatives (Riang, Palaung, Miao, &c) all point to an Austroasiatic substratum. How-
+ever the Rong language be classified (and in such a
+case this must be a matter of
+practical convenience rather than of objective fact), there is no doubt as to its great
+importance as an aid towards recovery of the early phases of Tibetan and of the Tibeto-
+Burman languages generally.
+JBRS, XLV, i, June 1962
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd. Bangkok. Thailand.

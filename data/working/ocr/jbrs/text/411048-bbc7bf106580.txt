@@ -1,0 +1,202 @@
+[[page 1]]
+FLOURIMETRIC METHODS FOR ASSAY OF
+URANIUM IN BURMESE MINERALS 1
+by
+Maung Ba Shain 2
+Introduction
+According to Circular No, 199 of United States Geological Survey,
+published by F. S. Grimaldi, Irving May and M. H. Fletcher, Nicols
+and Slattery discovered in 1926, that a trace of Uranium in fused sodium
+fluride caused, an intense yellow-green fluorescence under Ultra-Violet
+light. The intensity of the fluorescence is, found to be proportional to
+the amount of Uranium present inside the fused flux, and this relation-
+ship is the basis for the quantitative determination of Uranium, by a
+Fluorimeter.
+Fluorescence is defined as the emission of light from a substance
+while it is actually being exposed to direct radiation such as Ultra-Violet
+liget. This phenomenon is well exhibited by the Fluospar, hence the
+name. (Senator The Hon. W. H. Spooner, Australian Atomic Energy
+Commission.)
+The fluorescence test for Uranium is specific when the exitation is
+with long wavelength (3650 A°) Ultra-Violet light. Many elements.
+interfere by quenching the Uranium fluorescence. A few micrograms
+of Iron, Cobalt, Chromium, Nickel or Manganese are said to reduce
+the fluorescence of Uranium by more than ten per cent. On the other
+hand the Uranium fluorescence are said to be enhanced by minute
+amounts of elements. which by themselves do not fluoresce in fluoride
+phosphors.
+Quenching elements for 2 grams of flux
+Pt., Au., Pb., Cr., Mn., Co., Ni., Lanthanum, Titanium, Cerium,
+Praseodymium., Neodymium., Mg., Sn., Fe., Thorium.
+Niobium fluoresces only with short wave excitation (2536 A°).
+1. Read at the Sixth Annual Research Conference on December 30, 1958,
+with Professor U Po Tha in the Chair.
+2. Research Officer, Union of Burma Atomic Centre, Kanbe.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 2]]
+FLOURIMETRIC METHODS FOR ASSAY OF URANIUM IN BURMESE MINERALS
+49
+Mercury has been reported as a strong quencher of Uranium
+fluorescence, but it is volatilised in the preparation of the melt.
+Two techniques are used to reduce or to eliminate interference due
+to quenching.
+(i) “Dilution" method or ' direct method' involve no
+chemical separations, Price, in 1945, found that it
+was possible to reduce quenching to a negligible factor
+by using sufficiently small sample for analysis. The
+degree of quenching is said to depend only on the
+concentration of the quenching of the flux, not on the
+ratio of Uranium to quenching element.
+(ii) "Separation" method involves separation of Uranium
+from quenching elements before the fluoride phosphors
+is made. The separation is accomplished by extraction
+of Uranyl Nitrate by Organic Solvents, (Ether and
+Ethyl Acetate.)
+Containers
+Platinum or Gold dishes can be used as containers for melting
+fluoride phosphors.
+As platinum dishes were not readily available, we used a gold dish
+of Grimaldi's design, as used by the United States Geological Survey.
+(Fig. 1.)
+The design was improved by Dr. Freddy Ba Hli, by narrowing the
+bottom from 35 mm. to 34 mm. in order to release the melt easily,
+within three minutes, after solidification and cooling at room
+temperature.
+This special gold dish is a circular gold plate of 0.2 mm. thickness
+and of 46 mm. diameter, hollowed to a depth of 10 mm. leaving a rim
+4 mm. width. The diameter of the top of the hollow is 38 mm. The
+diameter of the bottom is 27 mm. on the curved surface of 10 cm.
+radius. The hollow has a slant depth with a rounded curve of radius
+3.5 mm. These specifications have to be adhered to, in order to produce
+phosphors, which can fit the pit of phosphor-slide in the fluorimeter,
+retaining the form, 34 mm. diameter, and 1.5 mm. thickness at the centre.
+The gold dish is cleaned, by boiling in (1 to 1) HCl., before and
+after the use, and reshaped in the original dies.
+7
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 3]]
+50
+MAUNG BA Silain
+Reagents and Apparatus
+Mixed Carbonates Fluoride Flux
+Sodium Fluoride is used for the preparation of the Uranium
+Phosphors, although its melting point is high, with a tendency to stick
+to the gold or platinum dish. The salt can attack the gold dish at
+elevated temperature, resulting in some quenching of the Uranium
+Fluorescence by the dissolved metal.
+To minimize solution, metal from the dish, and to obtain phosphors,
+which readily part from the dish, a mixed flux of sodium carbonate,
+potassium and sodium fluoride is used. This melts around 600° C.
+To minimize the quenching effect of impurities in the flux, sodium
+fluoride, purified by repeated re-crystalization, or reagents of analar
+quality are used.
+We mixed 9 parts by weight of NaF, 45.5 parts by weight of Na 2
+CO3 and 45-5 parts by weight of K₂ CO3, (in the absence of Na₂ CO 3.
+72 parts by weight of NaHCO 3 is substituted.) The mixture is fused
+by melting in platinum basin and after cooling the melt for 3 minutes,
+the shrunken crust of flux is broken up and transferred into a clean
+porcelain motar and pestle, and it is crushed to a fine mesh and stored
+in an air tight bottle. This 'fused flux' melts at 605° C. and does not
+stick to the gold dish and it is found to be satisfactory for dissolving
+uranium residue completely from the platinum or gold dish, for
+measurement of fluorescence under ultra-violet light.
+Fluorimeters
+"Reflection" or "Transmission" are types of flourimeters.
+The main parts of a fluorimeter are:-
+1. An ultra-violet light source.
+2. Primary and secondary filters.
+3. A phototube together with an electrical system for measur-
+ing its response.
+Ultra-violet light source
+As the source of excitation, long wavelength Ultra-violet light
+(3650 Aº) H 100-E4 high pressure mercury vapour lamps, are used.
+(2536 A°) short wave radiation is dangerous to the eyes.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 4]]
+FLOURIMETRIC METHODS FOR ASSAY OF URANIUM IN Burmese MINERALS
+Filters
+51
+The primary filter absorbs visible light from the light source with-
+out seriously reducing the intensity of the ultra-violet light. Corning
+filters, No. 5960, 5874, 5 mm. thickness are satisfactory.
+The secondary filters allow the visible fluorescent (550 milli-micron
+band of Uranium fluorescence) light to pass through but absorbs ultra-
+violet light. Glass filters, corning No. 3484 or No. 3486 are used.
+Detection of Fluorescence and Measurement of
+Photo Electric Current
+Fluorescence is measured by photo-multiplier tubes directly with a
+micro-ammeter, using Model 514 M electronic photometer.
+Procedure
+Preparation of melts
+In order to produce proper fluorescent melts, we observe the
+following routine :—
+(i) We weigh almost exactly two grams of the flux in a
+short time and transfer all into the gold dish, contain-
+ing Uranium residue.
+(ii) The flux is melted in the gold dish in a small Meker
+burner flame, keeping the temperature near the
+melting point of the flux. The art is to keep the melt
+just where re-solidification and re-melting is taking
+place. We rock and swirl the melting flux for two
+minutes, by putting the dish in and out of the
+flame, alternately, causing the flux to alternately
+melt and begin to crystalize. At the end of two
+minutes of heating, we keep the melt in the hottest
+part of the flame for two seconds and then remove
+from the flame, keeping the melt still in horizontal
+position until the centre of the solidified flux turns
+white.
+(iii) The phosphor is allowed to cool for three minutes
+in the gold dish, from where it slips off by mere
+inversion of the dish. It is immediately stored in
+dessicator.
+(iv) The fluorimeter is set to read a certain value for a
+standard disc of known fluorescence of the unknown
+phos-phors then measured. We remove the phosphor
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 5]]
+52
+MAUNG BA SHAIN
+from the dessicator, and after putting it in the fluori-
+meter slide, read the micro-ampere scale deflections,
+by pressing the photo-multiplier keys, in order of
+increasing sensitivity to prevent overloading the
+galvanometer. We revolve the disc through an
+angle of 90 degrees and read the scale deflections,
+altogether eight times on each phosphor.
+(v) The fluorimeter has to be turned on for 20 minutes
+before any reading can be recorded.
+Summary
+We are perfecting our practical techniques in, two simple fluori-
+metric methods, viz.
+(i) "Dilution" method and
+(ii) "Separation " method, in order to support the geologi-
+cal mapping of Uranium bearing regions in Burma.
+To supplement and confirm our determinations by
+fluorimeter, we are devoloping volumetric methods of
+assay of uranium, using the special apparatus, "Jones
+Reductor" for referee assay.
+Acknowledgements and References:-
+1. Geological Survey Circular No. 199 by F. S. Grimaldi.
+2. The Manhattan Project Vol. VIII by C. J. Rodden.
+3. Australian Atomic Energy Commission, and Bureau of
+Mineral Resources...by Senater The Hon. W. H. Spooner.
+4. Proceedings of the International Conference in Geneva,
+1955. Vol. VI. and Vol, VIII.
+5. Pictoral Guide to Pagan by U Lu Pe Win.
+6. Professor Dr. G. H. Luce, for a series of illuminating
+lectures on fluorescent frescos and light filters in ancient
+Pagan temples, delivered during the October Vacation of
+1937.
+7. Thiri pyanchi U Chit Thoung, for his ‘hints on evalua-
+tion of Minerals and their salts, by Water Analysis.'
+8. Mr. Rollin E, Stevens, for his new departure in fine
+techniques in assay of Uranium.
+9. Armour Research Foundation of Illinois Institute of
+Technology, Technology Center, Chicago, 16, Illionois,
+U.S.A.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.

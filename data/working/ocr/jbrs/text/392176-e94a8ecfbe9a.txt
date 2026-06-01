@@ -1,0 +1,259 @@
+[[page 1]]
+SOME PROBLEMS OF A LEXICOGRAPHER IN
+BURMESE '
+by
+Maung Wun 2
+Abhidhan is the word for a dictionary in Burmese. It has been
+the name generally designated to Abhidhānappadipikā, the Pali
+dictionary of synonyms compiled in Ceylon in the 12th century. Most
+probably this famous work was introduced to Pagan just after its
+compilation and has been studied by the Burmese clergy ever since.
+A commentary on it was written by a Burman scholar at Pinya in the
+14th century. Internal evidence shows that the commentator consulted
+Amarakos'a, the Sanskrit dictionary of the 6th century, and its
+commentaries. So I venture to conclude that lexicons and lexicography
+have been known to the Burmans for some centuries now.
+However, the said dictionaries of Pali and Sanskrit are different
+from the modern dictionaries in conception. They are books of
+synonyms, something like Roget's Thesaurus, all the names given to a
+particular thing being grouped together and put into verse for the
+purpose of memorisation. The proper sense of the word "dictionary"
+came to be known to the Burmans only in the 19th century when a
+certain Mr. Charles Lane compiled an Anglo-Burmese dictionary with
+the help of the Prince of Mekkhara in 1833 at Ava. I should like to
+mention here in passing that the Prince had a copy of Dr. Johnson's
+English Dictionary in his collection of Western books. Side by side
+with the study of foreign languages such as Pali and Sanskrit (and later
+English also) the lexical study of the mother tongue was also
+carried on, consciously or unconsciously, by the Burman scholars. For
+the first beginnings of Burmese lexicography are to be found in the
+nissayas or word-for-word glosses in the vernacular with which Pali texts
+were furnished. Nissayas are as old as Pagan. Some short specimens are
+found in the Pagan inscriptions, both in Mon and in Burmese. The titles
+of some of them by a learned monk called Shin Guṇavataṁsaka of the
+early 13th century are recorded in the Pitaka-thamaing. Word-for-word
+translations of the Pali and Sanskrit dictionaries have also been made
+1. Read on March 2, 1954 with Professor U Pe Maung Tin in the Chair.
+2. Head of the Translation and Publications Department, University
+of Rangoon.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 2]]
+SOME PROBLEMS OF A LEXICOGRAPHER IN BURMESE
+177
+and revised many a time. An Abhidhānnissaya and an Amarakosanissaya
+are mentioned, besides over fifty other translations of Pali texts, in a
+book list in an inscription at Pagan of the year 1442 A. D.
+There is another class of literature which is more lexicographical
+in nature than the nissayas. It consists of the glossaries of archaic and
+hard words which are explained either in current Burmese or in Pali.
+But it seems that they started rather late i. e. about the 16th century
+when people began to feel the pressure of those obsolete words no
+longer bearable.
+But, as far as I can find out, a dictionary of the Burmese language
+as we understand it nowadays was first compiled by Dr. Judson, with a
+few vocabularies previous to his bigger enterprise done by Western
+scholars before him. Two of these vocabularies were F. Carey's
+'A Grammar of the Burman Language, to which is added a list of the
+simple roots from which the language is derived' (Serampore 1814)
+and G. H. Hough's 'An English and Burman Vocabulary' (Serampore
+1825). Dr. Judson's dictionary was a Burmese-English rendering. It
+was first printed posthumously at Maulmain in 1852. Many revised
+editions of this work have appeared ever since.
+In 1913 it was suggested by Mr. C. W. Dunn that Judson's
+Dictionary be revised and since then scholars like the late Dr. J. A.
+Stewart, Dr. Hla Pe, Mr. C. W. Dunn, and Mr. H. F. Searle, have
+worked on "A A Burmese-English Dictionary" of which the first part
+came out in 1941.
+During these pregnant years a Buddhist monk of Pyapon, U Obhāsa
+by name, was working quietly and single-handed on a purely Burmese
+dictionary. He completed it but unfortunately it was lost during the
+War. But after the War he worked on it again and in 1947 he managed
+to bring out the first part of his dictionary and later another part, but
+since then he has stopped his dictionary work altogether.
+In 1944 I was entrusted by the Pyinnyatagun Athin or the Burmese
+Academy now defunct, with the job of compiling a Burmese-Burmese
+dictionary. Since then I have been working on it off and on for ten years.
+I have published one part and another part is in the press. So much
+for a short sketch of the history of lexicography in Burma. (I have
+left out the story of later Pali dictionaries as they are well known
+to-day.)
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 3]]
+178
+MAUNG WUN
+A lexicographer has to concern himself not only in the language
+itself, but also, and very much so, with its written form.
+In 1849 Dr. Judson wrote in the preface to his Burmese and English
+Dictionary: "It is exceedingly difficult to settle the orthography of a
+language which has never been printed, and in which there are no
+grammars nor dictionaries." The same difficulty has been experienced
+by me, though in a lesser degree. Burmese orthography is still in a
+liquid state, in spite of the fact that the language has been in print for
+about one hundred and fifty years. There are works on orthography
+dating back to the early 17th century. I have consulted over fifty of
+them. They disagree in many points. The differences are sometimes
+so incongruous that one simply despairs of finding a solution, and is
+often given up to despondency. I admit that orthography of a language
+changes with time; even that of such a well kept classical language as
+Sanskrit or Pali changes. But when it changes out of all semantic and
+etymological recognition I think it has gone a little too far, and that
+there should be some attempt to arrest the change at some point.
+I am afraid I am rather digressing. To come back to my point
+I should like to tell you that generally speaking there are three parts to
+a word or part of a word in Burmese, namely the initial, the medial
+and the final. The initial of a word is often written in two or three
+different ways in different works and at different times or in the same
+work and in the same period. For instance the word for Buddha is
+purhā at Pagan, phura at Ava and bhurā: to-day, not to speak of
+barā: the latest member of the clan. There are five labial symbols
+in the Burmese alphabet and all the letters, except ma the nasal, have
+been used for the initial part of that word. Two of the above spellings
+are in current use, namely phura: and bhurā. Here I may be allowed
+to tell you that there are two schools of orthography in connection with
+the two letters pha and bha, i.e. the pha school and the bha school.
+There has been a tussel between the two since the time of the good old
+kings. At one point a compromise was made that the word for Buddha
+or its image or a pagoda is to be spelt with a bha and the word for a
+queen, a derivative of the same word, is to be spelt with a pha, as
+miphura. The Chief Queen of King Thibaw was said to have been
+very much annoyed with this. Now I have told you that there are
+two different initials for the same word with the same or almost
+the same meaning. Which shall I accept and which shall I reject?
+If, as is the case with dictionaries of other languages, both the
+spellings are to be entered in the dictionary which one deserves the place
+of precedence?
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 4]]
+SOME PROBLEMS OF A LEXICOGRAPHER IN BURMESE
+179
+Difficulties of the same nature exist among other letters: for
+instance, kyan and gyan, two variant spellings, for a spinning top; kale:
+and khale for a baby; cani: and jani: for a wife; carap and jarap
+for a rest house; che: and jhe: for a market; chi, ji and jhi: for a
+plum; titut, di: dut, and dhi: dhut for an owl; thā, dā: and dha:
+for a knife, etc. etc,
+Among the medials -y- and -r- often get mixed up. The letter r
+has lost its original phonetic value in standard Burmese and is
+pronounced exactly as the letter y. So there occur many words which,
+though differently written, have the same sound, and thus incorrect
+spellings have crept in and some of them have become so established
+that it is almost impossible to correct them. To avoid this difficulty
+authors and scholars have left us guides in the form of rhymes. Two
+words which have the same sound but different medials -y- or -r- are
+made to rhyme. These rhymes called khweda are very helpful in
+determining the orthography of a word but they do not cover the
+whole range of the language and sometimes they disagree
+among themselves. Apparent absurdities, supported by standard
+orthographical works, also exist. For instance the transitive
+verb 'to pulverise' in Burmese is khye, and logically its intransitive form
+should be kye. But it is not so. Kre is the form recommended by the
+spelling books. When in the negative sense, however, kye is accepted.
+Another instance is as follows. The word for 'to fear' is krok, while
+the word for 'to frighten' is khyok, which actually should be khrok.
+And one more instance to complete the picture is the word for to fall
+off, as leaves or fruits from trees'. It is krwe. You may expect a word
+like khrwe for its transitive form. But no. It is khywe as given in the
+spelling books. These are the problems in connection with the medials.
+Now we come to the finals. The case of the finals is not so bad
+as those of the initials and the medials. The regularity of the finals is
+well observed and preserved in the standard poetical works, which are
+meant to be and regarded as orthographical works too. However
+confusion arises when folk etymology comes in. Many people have
+played with folk etymology in Burmese for many years. They take their
+dictum from the Pali grammarians that Pali is the mother of all the
+languages of the world. They try to derive Burmese words, even such
+primary words as the sun and the moon, from Pali. Shin Raṭṭhasāra,
+the distinguished authority on orthography, has pup with a -p for
+‘putrid' in his rhymes, while the folk etymologists prefer put with a
+-t, because they argue that this word is a derivative of Pali pūti
+14
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 5]]
+180
+MAUNG WUN
+‘putrid, stinking, rotten.' On the other hand there are certain words
+which are clearly loaned from either Pali or Sanskrit or one of the
+Indian vernaculars, but are spelt differently from the originals. For
+instance the name for a certain heaven in Burmese is Tavatin which is
+Tavatisma in Pali. If the Pali spelling is strictly followed the word
+should end in an -m. But as it is it ends in an --n. Burmese for the
+camel, an exotic beast of burden, is kulā :up i.e. the foreign up.
+Actually the word is a derivative of either Pali oțțha or Sanskrit ushṭra,
+so it should be kulā: ut with a -t. Kula: means 'foreign'. Here I
+may be allowed to quote a joke which I have read in a Burmese news
+paper a few days ago. The school teacher asks a boy: Maung Hla,
+how many legs has an elephant?" The boy answers: "Four legs,
+sir." The teacher says: "Good! And how many legs has a kulā : up
+(a camel)?" The boy answers: "I cannot say, sir."
+"I cannot say, sir." The teacher:
+Why not?". The boy: "Because, sir, I do not know how many
+people are there in the crowd of Indians (kulā up)." A pun is
+developed from the sameness of sound in the two words. Confusion
+may also be produced if they are spelt in the same way as they are
+accepted to-day.
+"
+65
+Now I have talked to you about some of the apparent orthographi-
+cal problems. These are due to the defective nature of our extant
+texts. No autograph text seems to have come down to us, except the
+original inscriptions. Our books are made from transmitted texts or
+copies of copies. During the course of many years, which were often
+disturbed by wars, errors, both voluntary and involuntary, have crept
+into the texts. Mistakes on the part of scribes and correctors, misunder-
+standing and misinterpretation, misplaced learning and irrelevant
+scholarship are also responsible for them. When readings are faulty,
+interpretation also becomes faulty and they are a great stumbling block
+in lexicography. Texts which are edited with the help of textual
+criticism are a long-felt desideratum. The Burma Research Society
+has published quite a number of texts, but they are only collated texts;
+they are not critical editions in the proper sense of the word. Here I
+should like to cite an instance. When I was a student I was baffled by
+a word in an original inscription. It was ukhruiw which occurs in the
+sentence awici athay naray ukhruiw phlac ciy liy sate of an
+inscription of 1326 A.D. The word was strange, the shape of the
+word was strange. The lack of tonal marks made it stranger. One
+word which has some phonetic resemblance to it is u: khyui, ‘horn of
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 6]]
+SOME PROBLEMS OF A LEXICOGRAPHER IN BURMESE
+181
+an animal'. So the sentence might be translated as, "May he become a
+horn in hell”. It sounded likely, because there is another expression
+in the old inscriptions which says, "May he become a tree stump in
+hell". However the spelling does not allow such a fellowship of
+meaning. Again there is another word which might be compared with
+it phonetically i.e. ukhyui: 'a dove', but the meaning does not allow a
+complete comparison. The second part of the word khruiw occurs
+only in khrui: khram, 'to perform austerities' as far as the ortho-
+graphers have recorded in their books. There does not seem to be any
+connection between the two words. However in the course of my later
+studies I came across a word variously printed as ukhyui :, ukhyui :,
+ū : khyui: in Paramigan * 104, Sutaunggan * 148 and Ngayegan Pyos
+* 50. Then I remembered the baffling word ukhruiw of my student
+days. The context and situation are similar, if not identical; the only
+difference lies in the spelling viz. the medials --r- and -y-. In such a
+case the speakers of the Arakanese dialect can help. So I approached
+them and made inquiries whether they had a word like ukhrui:.
+Without hesitation they said yes and that the word meant 'cooked food
+slightly burnt and adhering to the bottom of cooking pots'. Only
+then the problem was solved, both semantically and orthographically.
+Because a sinner is always cooked in the hells and to be cooked in a
+hell like ukhrui: or khrui: (according to standard usage) is an
+expression still current among the people.
+Now I do not feel fair to worry you any more with my problems,
+which are numerous and various. So in conclusion I should like to
+say with Dr. T. W. Rhys Davids who writes in the Foreword to his
+Pali-English Dictionary, "Anybody familiar with this sort of work
+will know what care and patience, what scholarly knowledge and
+judgement are involved in the collection of such material, in the
+sorting, the sifting and final arrangement of it, in the adding of "cross
+references, in the consideration of etymological puzzles, in the
+comparison and correction of various or faulty readings, and in the
+verification of references given by others, or found in the indexes."
+Thank you.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.

@@ -1,0 +1,2685 @@
+[[page 1]]
+BURMESE MUSIC.
+(A Preliminary Enquiry).
+"Just at the moment, when western civilization is beginning to realise that oriental
+music is something better than the barbaric noise it has long thought it to be, the oriental
+nations are in grave danger of losing interest in it, and as it has been conveyed from
+generation to generation not by the arts of writing and printing. but orally, so soon as that
+interest is gone the art itself, unless special measures are taken, will have entirely evaporated
+that is, will be forever unrecoverable. One would wish East and West to study one another's
+music, whilst pursuing independent courses in their own, but that seems to be impossible."
+PERCY A. SCHOLES,
+Oxford Companion to Music, P 672.
+O.U.P 1938
+Part, I Classics, Legend and History.
+Burmese music is a virgin field for research. Nobody can bewail this virginity more
+than myself. To help me there does not seem to exist a single western work on Burmese
+music though there are such classics as Fox Strangways' on Indian and J. H. Levis' on
+Chinese music. Many writers on Burma have passed remarks, kind or humorous, on Burmese
+music. But few have attempted a technical study of it. Nothing Burmese escaped the notice of
+Sir James George Scott of course. But I know of only two who left some technical remarks
+on Burmese music; Paul Edmonds, the author of Peacocks and Pagodas; and P.A Mariano, in
+an appendix on Burmese music to that most lovingly produced book Burma by Max and
+Bertha Ferrars. I shall discuss the observations of both by and by¹. I draw attention to this
+paucity of reference material to prove that I cannot be well informed and therefore cannot
+speak with authority on the subject.
+It is fitting to begin with a translation of what has already been written on Burmese
+music in the Burmese language. If it is unscientific it is at least what the Burmese have to say
+about it. And I shall be lacking in veneration for the Burmese classics if I neglect the
+following extracts. They are published in U San Win's admirable effort to preserve Burmese
+classical tunes in his specially invented system of notation, entitled Burmese Music Notes
+Book No. 1 ပတ္တလားနှင့် စန္ဒယားအတီးသင်နည်း နိသျည်း။ ဘုတ်နံပါတ် ၁၁။ I must draw public attention to his
+and a second book which came out recently; because, in spite of their naively in technique of
+notation, they nevertheless mark the beginnings of a systematization of Burmese music by a
+1. In 1939 appeared Die Musik Birmas by Kurt Reinhard. But is an ethnological work on
+the races of Burma and what recognisable Burmese music there is in it is taken from
+Mariano.
+Copyright© 1998 – Myanmar Book Centre & Book Promotion & Service Ltd., Bangkok, Thailand.
+
+[[page 2]]
+388
+JOUR. BURMA RESEARCH SOC.
+XXX III. 1940.
+Burmese lover of music. It is a labour of love; and very considerable the labour must have
+been. Experts in western notation who may be disposed to smile at the Burmese Music Notes
+will realise notwithstanding that here at last are the authentic classical tunes of the Burmese
+Put on record in black and white. ready, and if desired, easy enough to be transcribed into
+western notation after a perusal of this article and its supplement 'The writing of Burmese
+music.'
+In the second book of U San Win is appended most valuable and authentic
+information on the fundamental's of Burmese music. such as, the tuning of the Burmese harp
+(စောင်းကောက်) its history; the tuning of the drum-circle (ဆိုင်းဝိုင်း); the gong-circle (ကြေးနောင်ဝိုင်း) the
+§ Hnè (Burmese oboe), big and small; and the succession of Burmese keys. The word 'key'
+will arouse sudden interest It will become very interesting indeed in due course. To begin
+with the classics:
+"Preface:- From the beginning of the world, during the sovereignty of the first President King
+the five principal sounds of bass, string, percussion wind and clapper, had been employed in must in
+ceremonies of sprinkling the holy water all over the world.
+"Three hundred years before Buddha's Enlightenment, when, to avoid the enmity of Pancala
+Raja, he Sakya kings of Kaplavatthu Dovadaha and Keliya left the middle regions (Majjhimadesa) and
+founded the Tagaung kingdom of Sankassarattha, the same five kinds of instruments were weat to
+supply music for auspicious Royal occasions and entertainment.
+"Also, during the life time of Lord Buddha, according to Sakkapanha Suttu deva Pancasikha,
+the wearer of five top knots renowned the Lord in song playing the seven times seven (49) melodic
+figures of it a pluta on his celestial harp, which was said to be three quarters of a yojana (i.e. about 2½
+miles)1 in length, called Bellevue- panda- vina.
+"The Buddhist anchorite Narada of the middle regions compiled the treatise Naradasikkha
+from musicology as know to all learned ones from the beginning In it was mentioned the same seven
+times seven (49) melodic figures (tana) and three times seven (21) modes (mucchana) which are
+mentioned in Sakkapanha Suita.
+"In she chronicle of Buddha are descriptions of how. when he was seated on the invincible
+throne Aparajita the devas came and paid homage with musical instruments; and how, on the occasion
+of His departure from their abode. Tavatimsa to visit Sankassa Nagara, they followed in His wake
+proclaiming His excellence in music and song.
+"After the death of Lord Buddha, too in the history of the middle regions, the Buddhist
+nobility and gentry practised music on various instruments, classifying and utilizing various kinds of
+sounds.,
+"In the history of our Buddhist country of Burma music and musical instruments existed
+throughout the successive kingdoms of Tagaung. Srikhettara, Pagan, Myinsaing, Sagaing, Pinya, Ava,
+Konbaung, Amarapura. down to Ratn pura Mandalay.
+"Among all the kings of Burma, there was one King Thalun, during whose reign (1629-1648
+A.D) Minister U Aye compiled a treatise on Burmese music called Naralekha¹ နရလေခ in which were
+included the 37 ritual songs, Later, in the reign of Bodawpaya (1782-1819 AD.) this treatise was
+1. Authorities differ on the exact measurement of Yojana
+Copyright© 1998 – Myanmar Book Centre & Book Promotion & Service Ltd., Bangkok, Thailand.
+
+[[page 3]]
+BURMESE MUSIC
+389
+revised and enlarged by Myawad: wungyi U Sa. It was known to be printed in the royal press within
+the city in Mandalay. Apart from this no other Burmese work on Burmese music has been known to
+exit for all the fifty years and more after the British annexation (1885 AD.)
+"Because of this paucity of printed record, it was thought that music existed only in western
+countries and not in Burma. Not so. There is evidence in Buddhist literature that music has flourished
+in this country for a long time. Unfortunately, the theory and practice of music have not been put into
+writing. Instead, they were handed down from father to son by word of mouth and by hand-on-hand
+instruction, so that, human memory was the only repository of Burmese music....
+"Appendix vide Abhidhana Nissays: The music which Pancasikha (the wearer of five top-
+knots) made on his three-quarter-yojana long celestial harp Bheluva is composed of 7 (ground tones)
+Svara. 3 Gramas, 21 Marchanas and 19 tans, the total effect of which is known as Sramandala.
+Bulls produce the Usabha tone; horse, the Dhevata; peacocks. the Çadya; goats, Gandhara;
+cranes, Majjhima; cuckoos Pancama; and elephants Nisada.
+"1
+Gramas are three: Çadya, Majjhima and Sadharana.
+Therefore the above scale of seven tones played in three different positions, raised,
+lowered, or natural, produces the21 varieties of sounds, which according to U Ba Choe in
+အသံစဉ် (၇) ပါးအကြောင်း is the reason why twenty one is the number of drums in a drum-circle
+ဆိုင်းဝိုင်း, gongs in a gong-circle ကြေးနောင်ဝိုင်း and pieces of bamboo or iron in the ပတ္တလား pattalar
+the Burmese relative of the xylophone or the glockenspiel.
+The above classical terms are explained authoritatively by Fox Strangways²:
+GRAMA (le) the name has been applied specifically only to three scales - the Sa-
+grama, our major with a sharpened Sixth; Ma-grama, our major C-c, but intended presumably
+to be used as an F-f scale³ with a sharpened Sixth; and the Ga-grama, possibly intermediate
+between the two, long obsolete.
+1
+None of the works on music mentioned are available nowadays. U San Win has seen Naralekha
+$6ǝ in parabeik form the informed me that he would try to trace the whereabouts of the present
+owner in response to my suggestion that this valuable document should findants nnual resting
+place in the University Library. In an article on the 7 tones အသံစဉ်(၇)ပါးအကြောင်း in စာဆိုတော် Vol.1.
+No.3 1936, U Ba Choe mentioned two more works Natyaçastra socg and Maghatika mw
+of which only the former, a Sanskrit classic attributed to Bharata, is mentioned in the list of
+Sanskrit works on music in Fox Strangways' Music of Hindostan.
+2. Music of Hindostan, P. 106 et seq. It should be noted however that these terms, in spite of their
+Burmese annexation, apply, so far as Fox Strangways is concerned, to the music of Hindostan.
+3. The italics are mine. This statement seems to apply to the Burmese scale of Hnyinlone ε:c: C-c
+which has puzzled me for a long time because that class of songs ☑:: Kyoh, Bwe
+Thachingan, which I am sure have F as their tonic, are said to be played in the C-c scale. These
+words made me feel less puzzled. However, there are, more puzzles to come Concerning the
+Burmese scale.
+Copyright© 1998 – Myanmar Book Centre & Book Promotion & Service Ltd., Bangkok, Thailand.
+
+[[page 4]]
+390
+JOUR. BURMA RESEARCH SOC.
+XXX III, 1940
+MURCHANA (gs) means primarily the 'swelling of sound' and seems to have been
+applied originally to high and low pitch and to have meant the rise and fall of voice in song.
+Then it came to have the technical sense of (1) a rise and fall from and to a particular note of
+a specific scale, and in this sense is accurately translated by 'mode'. But since the note on
+which they started was the most important and was generally ornamented with a grace note
+murchhana (Hindustani) has come to mean (2) grace note as applied to a particular Rag. In
+the old sense of the word the 'mode' consisted of seven notes, i.e. two tetrachords, so that
+murchhana may (3) be held also to translate the Greek harmony (heptachord).
+RAGA (po) means 'colour'; hence colour of mid, i.e. emotion. Its European analogue
+will therefore be whatever gives colour to a piece of music; and since this may be, according
+to circumstances, melody, harmony, counterpoint, or instrumentation, but most of all
+harmony, we have no real equivalent to a word which applies technically to melody... Its
+usual translation is 'melody-type or 'melody- mould', or even 'tune'. If it must be translated,
+perhaps 'Mood' would convey as much as is compressible in to one word.
+SAPTAKA (m) a 'set of seven takes the place of our word 'octave'; the saptaka
+contains seven svaras, i.e. not notes but intervals between them; and all Indian notations
+assume three saptakas, a higher (tara …), middle (maahya g) and lower (mandra or manda
+မန္ဒ).
+SVARA (q) is also a degree of the scale, or the diatonic note. It may be natural
+(suddha g) or chromatic (Vikrta 8∞). 'Natural' means not a 'white' note, but 'proper to the
+scale' whatever the scale may be. Vikrta (8mm) notes are sharp (tivra 6006) or flat komala
+(); very sharp atitivra or very flat (atikomala),
+ÇRUTI is the smallest audible sound. Like the svara it means both the interval
+and the note. The twenty-two çrutis have special names, and specific attributions of divine
+qualities lie no doubt concealed in these ... In assigning the çrutis then for Sa-grama
+Sa
+4
+Ri
+3 2
+Ga
+Ma
+4
+Pa
+4
+3
+Dha Ni
+2,
+Indian theory is indicating
+the relative sizes of the major Tone (4) minor Tone (3) and Semitone (2) with accuracy
+sufficient for its purpose. The Ma-grama is formed from this by the interchange of the çruti
+value of Pa and Dha 'Dha takes one cruti from Pa"-thus²:
+Sa
+4
+Ri
+3
+Ga
+2
+Ma
+4
+Pa
+Dha
+Ni
+4
+3
+2,
+2 See comparative table of 7 classical tones.
+3 This agrees with table U Ba Choe's table of the çrutis according to Maghatika.
+Copyright© 1998 – Myanmar Book Centre & Book Promotion & Service Ltd., Bangkok, Thailand.
+
+[[page 5]]
+Table I
+Comparative Table of seven classical tones, assuming C is Doh.
+391
+Sanskrit
+Pali
+Animal
+Symbols
+Terminology of
+the Burmese Harp
+Ditto of the Burmese Band
+A
+I
+BURMESE MUSIC
+Burmese Music Notes, Book I
+As identified by U San Win on addendum to page 11,
+C | Cadja
+သဇ္ဇ peacock
+ဒူရက
+၆ပေါက်အောက်ပြန်
+Duraka
+Chaukpauk aukpyan
+D| Rshabha
+ဥသဘ
+bull
+ပြည်တော်ပြန်
+Pyedawbyan
+မြင့်စိုင်း
+သံလတ်အောက်ပြန်
+Thanlat aukpyan
+ငါးပေါက်သံသီး
+E | Gandhara
+ဂန္ဓရ
+goat
+Myintsaing
+Ngapauk thanhti
+F | Madhyama
+မဇ္ဈိမ
+ပုလဲ
+crane
+Pule
+သံဖျားတျော။ဆစ်ကြီး
+Thanphyartayaw or Hsitkyih
+As identified by Fox Strangways on page 108,
+Music of Hindostan.
+G| Paacama
+B
+cuckoo
+အောက်ပြန်
+Aukpyan
+ပဆစ်ကြီးအောက်ပြန်။လေးပေါက်
+Hsitkyih aukpyan or Lepauk
+A Dhaivata
+ဗယာ horse
+Chaukthwenyunt
+ခြောက်သွယ်ညွန့်
+သံကြတ်
+Thankyat
+L
+D
+B | Nishada
+ိသာဒ
+ညှင်းလုံး
+သံရိုး။၇-သံချီ
+elephant
+Thanyoh or
+C
+Hnyinlone
+khunnathanchi
+Copyright© 1998 – Myanmar Book Centre & Book Promotion & Service Ltd., Bangkok, Thailand.
+
+[[page 6]]
+392
+JOUR. BURMA RESEARCH SOC.
+XXX, III, 1940.
+VADI, SAMVADI, ANUVADI and VIVADI (Translated 'sonant' 'consonant'
+'assonant' 'dissonant') ¾¾¾¾¾¾¾ are survivals of a theory of consonance
+(Samvaditva ) now forgotten. Samvadi definitely means the consonance of fourth and
+Fifth, as we should say 'Perfect consonance' Vadi is the note to which it is so related. Vivadi is
+applied by Bharata to the semitone. He speaks (verse 24) of notes being vivadi to one another
+when they are at the distance fo twenty çrutis. This is the same thing as two crutis (22-20)
+which reading actually appears in another manuscript. Anuvadi is the name for 'all other
+relations which are not vadi, samvadi or vivadi. These three relations belong to the tetrachord,
+and presumably anuvadi does too. Current tradition makes anuvadi the major Third. But
+Bharata says 'all other' (çesha), suppose that in the term anuvadi he included the major and
+minor tones (which together make up the major Third) all the determining elements of
+Bharata's scale would accounted for.
+Fox Strangways has a chapter on legend and history too. I shall quote the legends in
+which the same well-known names recur.
+"Once upon a time the great anchorite Narada thought within himself he had mastered the
+whole art and science of music. To curb his pride the all-knowing Vishnu took him to visit the abode
+of the gods. They entered a spacious building the in mates of which were numerous men and women,
+who were all weeping over their broken limbs. Vishnu stopped short and enquired of them the reason
+for their lamentation. They answered that they were the Rags, and Raginis of music, created by
+Mahadeva, but as one anchorite of the name of Narada, ignorant of the true knowledge of music and
+unskillful in performance, had sung them recklessly, their features wee distorted their limbs broken,
+and that unless Mahadeva or some other discreet and skillful person would sing them properly, there
+was slender hope of their ever being restored to their former state of body. Narada, ashamed, kneeled
+down before Vishnu and asked to be forgiven."
+"With Narada, the R'shi who first 'heard' the laws of music are associated Tumburu, the first
+singer, and Bharata, the first to draw up rules for the drama, of which music formed a large part. Of
+Tumburu it is said that he increased the scale in which the Samaveda was chanted from five notes to
+six or seven. The treatise which purports to record the doctrine of Narada, the Naradaçiksha
+is probably of late date (1000 A D.?) and gives no clue whatever to the achievement of the Narada of
+legend. The treatise which bears the name of Bharata, the Natyaçastra, is similarly an eponym. One or
+other of these three names appears probably in every book on music that has been written, and the
+existence of the authors is held, though in complete absence of any specific doctrine attributed to them
+as a pious belief."
+Among the Burmans the instrument of Guttila of the famous legend is a harp.
+Apparently it is a vina, according to fox Strangways, "To the vina, the national instrument,
+there are so many references both direct and allusive, that it is difficult to choose. Perhaps
+one story, from the Jatakas, will be enough:
+Copyright© 1998 – Myanmar Book Centre & Book Promotion & Service Ltd., Bangkok, Thailand.
+
+[[page 7]]
+393
+BURMESE MUSIC
+A feeble musician, Musila (c) of Ujjeni, whose music on the vina was 'like
+scratching on a mat,' come to learn of Guttila (ogg) of Benares (the Bodhisatta). Guttila's
+parents when they heard him said "Shoo! Shoo! the rats are gnawing the vina to pieces.
+Guttila who, as Bodhisatta, was skilled in discerning from the lineaments of the body' said
+'Go my son, this art is not for you.' But Musila got his way; and Guttila, the Bodhisatta who
+did not stint his knowledge, at last pronounced his pup perfect. Musila pressed to be taken
+into the king's service. This was done; but the king awarded Guttila twice as mush as his
+pupil. Musila protested, and forced matters to a contest, of which proclamation was made to
+tuck of drum. The Bodhisatta reflected that he was old, and that if he beats me, death in wood
+is better than the shame which will be my portion.' So to the woods he went but kept
+returning through fear of death, and going back to the wood for fear of shame, so that 'the
+grass died as he walked and his feet wore away a path. In his trouble Sakka, the king of gods,
+appeared. Guttila was to break in the contest, one string after another beginning at the
+'beestring' and the music should be as good as before. 'Then you shall go on playing with
+nothing but the body; and from the ends of the broken strings the sound shall go forth and fill
+all the land of Benares for the space of twelve leagues.' All happened as was foretold, and the
+scholar, beaten out of the field, was stoned and torn in pieces by the populace..
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+So far the classics: Yet it appears that in the music itself there is as much evidence (if
+not more) of Chinese and Siamese influence as there is of ancient Indian influence in
+literature. I hope these influences will receive the attention of researchers in Burmese history.
+As far as I am aware the Chinese influence seems to be the oldest. An unspoilt
+Burmese ear will catch Chinese cadences in any extemporization on the black keys of the
+piano in the truly old Burmese style. But that is no evidence. I quote J. Kunst.
+".....This being granted, Prof. von Hombostel has made a very important discovery,
+that the scales of very different civilizations and peoples are derived from this ancient
+Chinese cycle of blown fifths. All these scales are composed of a series of notes, ordinarily 5
+or 7 which follow each other in the cycle in some kind of regular fashion.
+1
+De Origine des Echelles Musicales Favano-Balinaises. Conference 7 Janvier 1928 a I'
+Institute Colonial d Amsterdam In Journal of the Siam Society, Vol. XXIII, pt. pp 115-
+116. Translated by G.
+Copyright© 1998 – Myanmar Book Centre & Book Promotion & Service Ltd., Bangkok, Thailand.
+
+[[page 8]]
+394
+JOUR. BURMA RESEARCH SOC.
+XXX. III. 1940
+On learning this remarkable fact, on will feel no doubt inclined to say: Quite so, but since the
+cycle is formed in a logical fashion by the application of the phenomenon of harmonics, is it not
+possible that the construction might also have been discovered elsewhere than in China, quite
+independently; in other words is it not possible that it may have a multiple origin."
+No doubt that would not be impossible in itself. But what is hardly believable is that not only
+should the structure of these scales be founded everywhere on the cycle of the blown fifths, but that all
+should start from the same fundamental note, that of the houang tchoung of 732 vibrations; which
+brings us back to the same conclusion that, not only the relative structure of the scale, but also the
+absolute pitch of the notes is the same in all cases considered. This circumstance eliminates the
+hypothesis of a series of coincidences: One is certainly dealing here with intercourse between people
+and people. For all we know, this intercourse may apply to the musical xylophones, of the pan-pipes of
+the Incas, to those of certain Melanesian, Polynesian and present-day Brazilian tribes. And it is
+intercourse of the same kind which one must concede, by virtue of the same arguments, to explain the
+Javano-Balinese scales, as we believe we have demonstrated by means of a number of measurements
+of sounds De Toonkunst Van Bali II, Figures I-V and VII-XIX. It has been proved that the influence of
+the Chinese meteorological basis, corresponding to the houang tchoung-230mm.-was used or is still
+used, everywhere independently of musical instruments and scales, in an enormous territory, stretching
+from Europe on the one side to South America on the other. Von Hornbostel, Ueber einige Panpeifen
+aus Nordwest-brasilien (in Th-Koch. Grunberg, Zwei Fahre unter den Indianepn), 1910; id., Ueber ein
+akustisches Kriterium fus Kulturzusammenhange (in the Zeitschrift fur Ethnologie, 1911, p.601 sqq);
+id., A brief summary of the theory of the blown fifths (in Anthropos, Vol. XIV/XV, p. 569-570), 1919-
+20; id., An article treating with the metrical norm in the Pater Schmidt Festshrift, which will very soon
+appear. Recently appeared under the title Die Massnorm als Kulturzeschichtliches Forschungsmittel.
+I hope those who are interested will be able to go farther into the matter the works
+mentioned. I feel personally very much inclined to believe that the Burmese scale, whatever it
+may be now, was at the beginning founded on a pentatonic basis not very much different
+from the kung, shang cho, tze, yui of the ancient Chinese musicologists.
+At this point I must draw the distinction between Burmese music as we know it and
+music which once existed in Burma now lost to us. Of the former the earliest mention was in
+connection with Mintra Shwehti's investment of Salin circa 1539 A.D. Of the latter the
+earliest mention was in the reign of Emperor Tê-tsung in 802 A. D. Mr. G. H. Luce says:
+*"In 791 K'o-lo-fêng's successor, I-mou-hsun, attacked the Mang tribes. At the
+request of Wei Kao, the Chinese governor of Hsi-ch'uan, he sent a troupe of musicians,
+including Pyu, which appeared at the T'ang court in 800. This led the Pyu king, Yung-ch'iang
+or K'un-mo-chang, to send in 801-2 a formal embassy to China via Nan-chao; it included his
+younger brother (or son) Sunandana, lord of the city of Sri, and also 35 musicians. Chinese
+texts give many details of the mission, and the Hsin-t'ang-shu in particular has a long
+Copyright© 1998 – Myanmar Book Centre & Book Promotion & Service Ltd., Bangkok, Thailand.
+
+[[page 9]]
+1
+description of Pyu music¹."
+BURMESE MUSIC.
+* *
+*
+*
+*
+*
+*
+*
+*
+*
+*
+395
+Yung-ch'iang also sent his younger brother, master of the city of Hsi-li-i, Shu-
+nan-t'o, to bring an offering of the music of their country. When they reached Ch'êng-tu,
+Wei Kao made a collection of their tunes, and considering their dances and musical
+instruments to be of unusual interest, he made pictures of them to send to Court. They
+have twenty-two instruments, made of eight different substance, to wit, metal, shell,
+bamboo, gourd, leather, ivory and horn: of metal, 2; of shell, 1; of string, 7; of bamboo,2;
+of gourd, 2; of leather, 2; of ivory 1; and of horn, 2. They have four bells shaped like
+those of the Kucha players, three inches in circumference, with clappers fastened by
+leather. They sound them in time with the tune. They have two iron clappers, three
+inches and a half long, and two inches and a half wide, flat in front, but with leather
+handles at the back. These and the bells are decorated profusely with steamers of brocade.
+There are four conch-shells, the largest capable of holding about 1 pint (shêng). There are
+two flat harps; one is 10 ft. long and its belly is 7 inches wide. It has a phoenix-head with
+neck 2 ft. 5 in. long. The front is decorated with snake-skin. There are 14 strings. The
+tuning-pegs are on the neck, facing outwards towards the phoenix-head. The other flat
+harp has "branching pegs."
+There are two lizard-head zithers. One of them is wholly in the shape of a lizard.
+It is 4 ft. Long, and has four legs; the belly is hollowed out. The back and the front are
+decorated with lizard skin as far as the shoulder, which turns upward like that of the
+Chinese lute Ch'in. It is 7 in. broad; the belly is 8 in. broad, and the tail a foot or more
+long. On the roller in the empty space there is fixed a barrier upon which are stretched
+nine strings on each side, attached to eighteen pegs. The front of the other zither is
+decorated with various-coloured flowers; or as an alternative, covered with snake-skin.
+There is a dragon-head lute (p'i-p'a) which resembles those used by the people of Kucha,
+but the neck is more than 2 ft. 6 in. long, and the belly 6 in. broad. The dragons' head face
+each other. There are three tuning pegs and three bridge, with strings to correspond. Two
+of the pegs are on the neck and one on the throat. It has a cover shaped like a lion. There
+is also a cloud-head guitar shaped like the foregoing; but the face is decorated with
+snake-skin and the whole surface with ivory bolts. The head is shaped like clouds. On the
+top of the pegs ate flowers shaped like the ideogram. The three strings, the cover and
+the handle (?) are all decorated with snake-skin. The plectrum is carved. It is
+In "Burma down to the fall of Pagan" B.R.S.J. Vol. XXIX, pt. 3, 1939.
+Copyright© 1998 – Myanmar Book Centre & Book Promotion & Service Ltd., Bangkok, Thailand.
+
+[[page 10]]
+396
+JOUR. BURMA RESEARCH SOC.
+XXX, III, 1940
+ornamented like this for dancing in the K'un-lun style. There are two large gourd-lutes,
+covered with half-gourds all painted and patterned. On the top are added bronze bowls. The
+lute itself is of bamboo, its head is bent as though it patterns across the top. it is 3 feet long;
+its head is bent as though it were making a bow, and is 2 inches long. The belly is tied with
+cords that go through the bowl and reach the bottom of the gourd. It would hold about 2 pints
+(shêng) of liquid. The big string plays t'ai-ts'ou; the next ku hsien. There is a one-stringed, but
+gourd-lute made of speckled bamboo. It is not decorated, but a snake's head is carved in the
+wood. The string is stretched without a tuning-peg, being tied to the neck. There are four
+bridges, as in the Kucha guitar. The string plays t'ai-ts'ou. There are two kinds of small
+gourd-lute shaped like the big ones, 2 ft. long. The big string plays nan-lu,, the next ving-
+chung. There are two transverse flutes, one about a foot long. When tested by our lu, it is
+completely out of tune; but when one adds a waxen lion's head over the real head and makes
+six holes with an ivory tusk, it gives the notes of the huang-chung-shang mode, and a full
+succession of semitones can be played on it. There is another flute to which one adds an
+elephant's head and it at once plays a scale corresponding to that described in the Flute
+Treatise Ti p'u of Hsun Hsu. Moreover it corresponds with the pitch of bells of the "high
+second" category. There are two double flutes, 2 ft. 8 in. long, separated by a joint. To left
+and right of the joint are vent holes. The two pants are hollowed out to the right proportions
+(?). The left side plays t'ai-ts'ou. The three holes at end of the pipe play ku-hsien-jui-pin, and
+i-tsê. The other plays lin-chung, while, the holes at the end play nan-lu, yingchung and ta-lu.
+If one carries one's finger to a hole underneath, it makes the t'ai-ts'ou of the octave above. The
+two hollowed furrows and seven holes enable one to play the scales of huang-chung and lin-
+chung.
+There are two big gourd mouth-organs with 16 pipes, 8 each side. It is shaped like a
+phoenix' wings. The largest pipe measures 4 ft. 8½ in., and the rest are of various sizes in
+proportion, as in an ordinary shêng. The pipes are also made to look like phoenix' wings. The
+tongue [i.e. vibrating "reed"]is made of bamboo which pierces the gourd right through. In
+high antiquity the instruments were all of wood and varnish. After wards metal was used
+instead for making the tongue (huang), and no instruments were any longer made of gourd.
+The old style survives only in the P'iao country.
+They also have two small gourd mouth-organs similar in construction to the big ones.
+They play the notes of the mode lin-chung-shang. There are two three-sided drums shaped
+like sine-jars, about 2 ft. high, with broad bottoms and pointed tops, seven inches above and
+four below (?). The belly is no where larger than the top. It is made with three layers of
+Copyright© 1998 – Myanmar Book Centre & Book Promotion & Service Ltd., Bangkok, Thailand.
+
+[[page 11]]
+397
+BURMESE MUSIC
+snake-skin tied on with blue ropes. When they put it down, they do not keep the drum-skin
+tied on. The sides are painted, with pictures of P'iao musicians holding mouth-organs and
+drums. There are four small drums like our waist-drums in shape, 5 in. long, only 3½ in.
+broad at the head, stretched with snake-skin. They have ivory nails and other ornaments; they
+have no handles and are shaken to mark the beat of the music. The "introducers" hold them.
+There is an ivory mouth-organ, made by piercing a gourd right through. It is lacquered; then
+two elephant tusks are put in instead of bamboo pipes. Both tusks play the note ku-hsien.
+There is a three horn mouth-organ, also made by piercing a gourd and lacquering it over; it is
+fitted with three bull's horns, playing one of them ku-hsien, the other two nan-lu. The horns
+are sharpened at the bottom and stuck through the gourd. The handle and mouthpiece are both
+straight. There is a two-horn mouth-organ of similar construction, ku-hsien. The gourd-part is
+ornamented with coloured designs.
+The name of their twelve tunes are:-
+(i)
+(ii)
+"Buddha's Seal." In P'iao it is called mu-t'o-mi. The natives and Indians sing
+this song when they minister to the king.
+"Praise of the sala flower." In P'iao it is called lung-mang-ti. The natives
+make clothes of this flower, thinking that it purifies their bodies.
+(iii)
+"The white dove. "In P'iao it is called ta-tu. They admire the way in which
+the bird flies or stops, according to its fancy.
+(iv)
+(v)
+(vi)
+(vii)
+"The white crane's rambles. "In P'iao it is called su-man-ti-li. It says that
+when it soars it touches the sky and when it walks, it steps sedately.
+"The fighting goat's victory." In P'iao it is called lai-nai. Once there was a
+man who saw two goats fighting on the sea-shore; the stronger thereafter saw
+the weaker one enter the mountains. The people of the time called it lai-nai,
+which means "the pomp of victory."
+"The dragon-headed single lute. "In P'iao it is called mi-ssu-mi. It has one
+string, but all the five notes complete: which signifies that a king of kings b
+his single virtue nourishes ten thousand countries.
+"Thana concentration." In P'iao it is called ch'ê-lan-shih. It tells how one
+who quits the world, becomes solitary and quiet.
+Copyright© 1998 – Myanmar Book Centre & Book Promotion & Service Ltd., Bangkok, Thailand.
+
+[[page 12]]
+398
+JOUR. BURMA RESEARCH SOC.
+XXX, III, 1940
+The above seven songs, when sung or danced, all follow the huang-chung-shang mode.
+(viii)
+(ix)
+(x)
+(xi)
+(xii)
+"Sweet Sugarcane King." In P'iao it is called o-ssu-luo. It says that Buddhists
+are as sweet as sugarcane, the flavour of which pleases everyone.
+"Peacock King." In P'iao it is called t'ao-t'ai. It tells of the brilliance of its
+plumage.
+"The wild goose." It says that flying or standing, these birds are always in
+pairs: so comrades must all forgather.
+"Banquet Music." It is called in P'iao lung-ts'ung-wang-mo. It says that tunes.
+of peace are excellent for banquets and meeting together.
+"Washing care away." It is also called "the reed -organ dance. "In P'iao it is
+called hu-na, It says that from tune to tune one washes away one's cares and
+anxieties and this song takes one's fancy.
+The above seven tunes are in one or other of the scales of huang-chung; one is in
+huang-chung shang (the i-yueh mode); one in lin-chung shang (the hsiao-chih mode)
+The musicians all wear K'un-lun dress, covering their loins with red cotton cloth
+(tieh-chao-hsia) which they call jung-man. They wear chao-hsia across their shoulders; on
+their legs and arms they have golden, jewel-studded bracelets; they wear golden head-dresses
+and ear-rings. They use a string or sash to thread flowers in order to make a headdress. They
+use two hair-retainers decorated with down. Before the dance begins the "introducers" come
+forward and explain its meaning. The dance-movements follow the music. The number of
+dancers used is 2, 4, 6, 8, or 10. They all were jewelled caps. When the tune is over, they
+bow. Their songs were translated at fifth hand.
+The Emperor Tê Tsung made Shu-nan-t'o an Officer of the Stables t'ai-p'u-ch'ing),
+and sent him home. T'ang Tz'u, Governor of K'ai-chou, made an "Eulogy upon the event of
+the P'iao offering music," which he laid before the Throne.
+*
+*
+*
+*
+*
+*
+One wishes that all this had not been lost so completely. Siamese influence is of
+course much more recent. There were two conquests of Ayudhya (05:30: Yodaya); the 1st by
+Bayinnaung (1551-81 A.D.) and the second by Hsinbyushin (1763-76 A.D). The latter was
+the more important because the conqueror not only brought back enormous numbers of
+prisoners of war but managed to hold Siam in subjection for a few year. Mr. Stewart, writing
+on the Burmese stage' remarked "Entertainers of all sorts were deported from the conquered
+1 Journal of the Royal Society Arts, Vol. LXXXVII. No. 4516. The Burmese Stage
+Copyright© 1998 – Myanmar Book Centre & Book Promotion & Service Ltd., Bangkok, Thailand.
+
+[[page 13]]
+399
+BURMESE MUSIC
+country to Burma, and these included actors capable of performing dramas, of which the
+prime favourites in Siam was the Rama play. "He restricted himself to the stage only. What
+was true of the entertainers was true also of artists, craftsmen, musicians, sculptors, even
+games and confectionery. It was at that time that our cultural store-house was filled with
+Siamese loot. And at that time there lived a remarkable adapter, creator and preserver of
+music, in the person of Myawadi-wungyi U Sa (1766-1853- A.D.) whose incredibly long life
+was filled with literary, dramatic and musical activity. There does not seem to by any to kind
+of songs which he has not written. Popular belief attributes to him no less than 200 patpyos
+o alone. All the patpyos in Enoung Zat are his. Our most famous Htumachana
+thachingan :is his. Our present harp with 13 strings instead of 7 was also his.
+Our Yodaya,:30: songs owe their establishment as a principal section in our classical
+repertoire entirely to the tireless adaptation into Burmese of every kind of Yodaya song he
+and his collaborator :: could lay hands on. If the second conquest of Ayudhya was
+the single event, U Sa was the single person responsible for the energizing of the body of our
+music by a liberal infusion of Siamese blood. Not content with adapting Siamese melodies, U
+Sa is reputed to have adapted certain slow measures of Christian sacred music ε
+which he heard from early Roman Catholic missionaries in the beginning of his 00:00:
+ပတ်ပျိုး In another သာဆန်းရဂုံပတ်ပျိုး notice the following phrase:
+Ex:
+17
+ပန်
+22
+5378
+လို့ သာ
+ယဉ် ဘောင်
+He was already experimenting with the Western Leading-note. The first B at ε is
+the flattish Burmese seventh, Whereas the B's in the following bar at mε: and ε are really the
+69
+Western Leading-notes only a semi-tone distant from the Tonic. It is impossible to be certain,
+but it is highly probable that it was then that an advance from the pentatonic basis was
+achieved. For even as late as Bodawpaya (1782-1819 A.D) according to the great harpist U
+Phoo Gaung, U Sa himself was still playing on a harp with only 7 strings, until his royal
+master asked him if he could not do better than that, when he fashioned the harp as we know
+it, with 13 strings and a gamut of nearly 3 octaves.2
+Under the circumstances mentioned above it is inevitable that the Siamese scale too
+came to Burma, to stay. The question is whether the Burmese adopted the Siamese scale or
+adapted it to their needs. The only clues that can lead to an answer to this question exist in the
+1
+In U Nu's ε: Sun Mag. July 1939
+2
+Although there are only 13 strings, the intermediate notes are obtained by 'stopping' the
+open strings with the tip of the fore-finger of the left hand.
+Copyright© 1998 – Myanmar Book Centre & Book Promotion & Service Ltd., Bangkok, Thailand.
+
+[[page 14]]
+400
+JOUR. BURMA RESEARCH SOC.
+XXX, III, 1940
+chart La Planche-I appended to J. Kunst's article. The measurements of the Siamese scale
+were taken from Stumpf's 'Tonsystem und Musik der Siamesan' p. 137; and the measurements
+of the Burmese scale, presumably the only scientific measurements ever taken, were from
+Von Hornbostel's Ueber ein akustisches Kriterium fur Kulturzusammenhange, p 613. The
+Siamese scale attracted also the attention of Prof. F. Max Mayer of the Missouri University,
+who, in his article Musician's Arithmetic seemed fully convinced that the Siamese equal
+tempered 7-tone-scale and the Javanese equal tempered 5-tine-scale with the western
+chromatic scale were the only equal tempered scales in the world. Kunst, however, refuted
+that theory towards the end of his article in the Journal of the Siam Society: -
+"Sometimes it seems as though they meant to create an equigraded scale (5 x 240
+C.), but most of the scales measured had one degree greater than the others. [Kunst's De
+Toonkunst van Bali, Vol. II, tables II, IV and V] in conformity with the hypothesis
+propounded above.
+"Furthermore, the famous tonal plan of the patet is based and the Sléndro too on
+the particular position in the scale of intervals having different dimensions, in other
+words: an equigraded scale (of which one uses all the tones in one and the same
+composition, as always with the Sléndro), is if I am not mistaken, incompatible with the
+pure nature of Javanese melody."
+That disposed of the theory the Javanese equal tempered 5 tone scale. Unfortunately,
+Kunst did not deal with the Siamese scale at all beyond supplying the measurement. And of
+these measurements, those of the Burmese scale by Hornbostel certainly look as though it
+was an equal tempered 7 tone scale. There was no sign of the existing sharpened Fourth.
+DU RAKA
+7123
+A
+PYIDAWAYAN
+G
+12
+92
+D
+58000
+G
+.
+31372
+Ba
+DRIVENIAN
+2
+E
+NYIN LONE
+မွင်းရ
+C
+F
+AUK PYAN
+Diagram 1.
+Diagrams of changes of key prescribed by
+the classics go right round the octave in a succession
+of under fifths without such means as the black keys
+of the piano [See Diagram 1]. Indeed U Ba Choe
+mentioned, in his : ε: one song (long
+forgotten) a kyoh ဘုန်းတော်းတေဇာ ဝေဖြာတိုးလို့ အစချီ ၇
+which modulates (?) into all the 7 keys.
+2
+1
+2
+University of Missouri Studies, Vol. IV, 1929.
+U Ba Choe has rediscovered it, and when we investigated its changes of key on the
+piano, we found that it went the round of 12 keys; C – F- B flat -so on, back to c major.
+Copyright© 1998 – Myanmar Book Centre & Book Promotion & Service Ltd., Bangkok, Thailand.
+
+[[page 15]]
+401
+BURMESE MUSIC.
+If ever true modulation into all the 7 Keys were possible, it must have been at the
+time of U Sa, employing some such scale as Hornbostel's echelle birmane. Was the Burmese
+scale pentatonic in origin. Did it adapt itself to an equal tempered seven tone scale from Siam
+towards the end of the 18th century? Did the intervals ten become less and less equal until
+they nearly approximated to the Chinese scale of Mr. K. C. Hsiao, presently to be quoted,
+with an indeterminate Fourth and Seventh? How did this indeterminate Fourth and Seventh
+come about? These are questions to be settled by future more competent research. I shall
+however quote the very significant remarks of K. C. Hsiao on the present day Chinese scale."
+1
+"
+The true cause seems to lie in the incorrect intonation of modern Chinese
+instruments, incorrect in the sense that the intonation has deviated from the theoretical of the scale
+construction.
+Let us take up the keyless flute and find out what sort of scale it produces. This flute is
+virtually the standard pitch pipe² of the Chinese ensemble... By careful experiment it has been
+found that the fourth and the seventh of the scale thereon are both "neutral", that is, the fourth is
+neither a half tone above the third as in the European diatonic major scale, nor a full tone above it
+as in the theoretical Chinese heptatonic scale, but is just about mid way between the third and the
+fifth, and the seventh is similarly mid way between the sixth and the octave. It becomes at once
+clear why Chinese instruments sound impersonal or neutral or out of tune...
+The true reason for the incorrect intonation the existing Chinese instruments cannot be
+stated with absolute certainty. The most probable reason is this: During the Yuan dynasty both the
+neutral and sharp F were used ..... But the production of both these chromatic tones could not be
+done on the flute except with the assistance of special key devices unknown to the Chinese
+instrument makers or with boring the second and fifth holes counting from the lower end, larger
+than the rest. It was possible at that time when both f and f sharp were in use to bore the holes on
+the Chinese flute so as to enable the player to produce the notes when desired by a definite system
+of fingering such as now used by western fife players. But with the coming of the Ming dynasty,
+this whole system transgressing the pentatonic scale was officially abolished.
+Musicians then and therefore did not have to bother at all about producing f and f sharp,
+and following the law of supply and demand, the flute makers undertook to make flutes that could
+not produce either f or f- sharp accurately, but had more uniformity and symmetry in their
+appearance by boring all the finger holes of the same size and with a minimum variation of
+distances from each other³
+If a player who had bought the flute cared to produce all the
+tones on the instrument, what he got was naturally a scale with neutral fourth and seventh,
+agreeing neither with the European diatonic (with the perfect), nor the Chinese heptatonic scale
+(with the augmented fourth). The same thing was then applied to the playing of stringed
+instruments......to be in tune with the wind instruments.
+.......
+Chinese scale theories. Appendix 6 to The Musician's Arithmetic by Prof. Max Meyer in
+the University of Missouri Studies, Vol. IV, 1929. pp. 115-6.
+2
+Like the Burmese oboe à (hnè)
+3
+See Diagrams 2, 3 of the Burmese oboe & (hnè) and tables 3 and 6.
+Copyright© 1998 – Myanmar Book Centre & Book Promotion & Service Ltd., Bangkok, Thailand.
+
+[[page 16]]
+402
+JOUR. BURMA RESEARCH SOC.
+XXX, III, 1940.
+....Nowadays in certain localities of China, the performance of music has come to be
+looked down on as a menial and unscholarly vocation...although this aversion is not universal in
+China, music has been intellectually neglected for along time. As a result music has become
+unmusical in China. And this in turn has increased the contempt in which it is held by the educated
+classes. It is a vicious circle."....
+I would not have allowed myself to be thus catapulted into the problem of the
+Burmese scale were it not so necessary to emphasise the very sharp line of demarcation
+between classical evidence and musical evidence. Too long have we taken shelter behind the
+façade of ancient Indian culture.
+With regard to the most important real evidence of the written records, what have we
+to rely on? Only one MS in parabeik form şǝ Naralékha. U San Win himself pointed out
+that no other Burmese work on Burmese music had ever been known to exist. Until one has
+seen that parabeik one would be foolish to talk about the Burmese scale with any conviction.
+The best that can be done is to proceed from the known to the unknown and talk of clues
+rather than discoveries.
+If is were possible, a scientific survey of the principal Burmese musical instruments
+should establish the one Burmese scale which is common to the whole country, or rather to
+which all the scales all over the country approximate. Everything about us approximate. Our
+tunes, having no notation, are always at variance. Western people talk of our lack of method.
+Yet......
+"The elements of tone and rhythm have been combined and recombined, and have left the
+theory a tangled mass of forgotten systems and the practice an ineradicable instinct. The
+veneration for the past because of its remoteness, the mental attitude which looks away from the
+categories of time and space and turns its attention upon the essence of the thing itself, the faith
+which links the present closely with the time when the gods walked the earth and still points to the
+visible imprints of their feet all these have united to personify every element of their music, and
+piously to preserve names and attitudes which have long lost their meaning; so that much of the
+theory is clear only to those who can read myth. Nor on the practical side has extemporization, as
+it is understood, been learned in a day, nor even in the left time of any individual ......But it is age
+long practice rather than memory which has placed at the command of the best singers that
+inexhaustible wealth of variation with which they make a melody their own, that gift of
+improvisation which takes on an epic quality, as all crafts do that are handed down from father to
+son. To walk on the old Trunk Road is, it has been said, to step into a chapter or Genesis: and in
+the same way we catch, in these immemorial cadences, the very spirit of the rhapsodists of Homer.
+Their music is old, but with an age like the eternal youth of Greece, not with a second childhood
+like the stereotyped formulas of the Troubadours"."
+1. Fox Strangways' Introduction to Music of Hindostan.
+Copyright© 1998 – Myanmar Book Centre & Book Promotion & Service Ltd., Bangkok, Thailand.
+
+[[page 17]]
+BURMESE MUSIC.
+403
+PART II.
+Science and the Burmese Scale.
+Technique.
+Speculations and Suggestions.
+The following tables were made possible by Professor West and his Staff in the Physics
+department of University College, who measured the pattalars, hnès (oboes) and the palwé
+(bamboo pipe) in their laboratory. Having measured the frequencies of each tone on the
+sonometre the intervals between each tone were calculated in cents, the octave having the
+value of 1200 cents.
+Formula: 3986.314 (log 423 log 385) i.e. To find the interval in cents between
+Frequencies 423 and 385
+2.6263
+3.6006
+2.5855
+2.6107
+0.0408
+2.2113
+Antilog
+162.7 cents.
+Table 5
+FREQUENCY FIGURES
+(from which the intervals in Cents were calculated.)
+Siamese Scale
+Burmese Scale Burmese Xylophone
+Burmese Xylophone
+(Stumpf's)
+(Hornbostel's).
+(Furnivall's_)
+(West's)
+D¹
+(846)
+672
+946.9
+1048
+T
+(770)
+611.6
+870.2
+952.6
+L
+697
+552
+787.5
+875.6
+S
+629
+500
+710.9
+792.9
+F
+572
+450
+647.4
+713.2
+M
+516
+408
+589.1
+649.8
+R
+470
+(369.25)
+532
+588
+D
+423
+(336)
+478.6
+524
+(Figures in brackets are obtained by multiplication or division of the original figures by 2.)
+Copyright© 1998 – Myanmar Book Centre & Book Promotion & Service Ltd., Bangkok, Thailand.
+
+[[page 18]]
+0
+404
+JOUR, BURMA RESEARCH SOC.
+Frequency
+Ratios.
+Table 2.
+XXX, III, 1940
+Just
+Meantone
+Intonation
+Equal
+Temperament
+Hornbostel's
+echelle birmane
+COMPARATIVE TABLE OF INTERVALS IN CENTS. (C-Doh)
+Comparative Intervals
+between each note •
+West's Measure
+Siamese
+ments of
+Burmese Pattalar
+Scale
+Cents.
+Cents. Cents.
+Intervals Intervals Errors Intervals Errors
+Cents. Cents.
+Intervals Errors
+Cents. Cents.
+Intervals Errors
+Cents. Cents.
+Hornbostel West
+Cents.
+Cents.
+Cents.
+Stumpf
+0
+-
+0
+0
+0
+(}
+0
+0
+0
+C
+163-5
+199:4
+182.6
+D
+9:8
+204
+193
+11
+200
+4
+163.5
++0.5
+1994
+4.6 D
+172-6
+172.6
+161.4
+E
+5:4
+386
+386
+()
+400
+14
+336.1
+49•9
+372
+14 E
+173
+161.4
+178:6
+F
+4:3
+498
+503
+5
+500
+2
+509-1
+11.1
+533.4
+35'4
+F
+182.6
+183:4
+164.6
+G
+3:2
+702
+697
+5
+700
+2
+691-7
+10.3
+716.8
+14.8 G
+Q2
+171
+171-8
+177:4
+A
+5:3
+884
+890
+6
+900
+16
+862-7
+21-3
+888.6
++6
+A
+177-4
+145.9
+172-6
+B. 15:8
+1088
+1083
+5
+1100
+12
+1040-1
+47.9 1034.5
+53.5 B
+162-5
+165
+162-7
+2:1
+1200
+1200
+0
+1200
+0
+1203-6
+3.6 1199-5
+'5
+C
+Figures in these columns are corrected figures. In Siam Vol. 2, p. 195, W. A.
+Graham says "The Siamese gamut consists of seven equal intervals each of which
+Copyright© 1998 – Myanmar Book Centre & Book Promotion & Service Ltd., Bangkok, Thailand.
+
+[[page 19]]
+405
+BURMESE MUSIC
+Table of actual figures.
+Pattalar
+Table 3.
+Palwé
+Burmese
+Bamboo-pipe
+(Ring-stopped)
+Measurements in inches.
+Burmese
+Xylophone
+(Bamboo)
+Frequency
+Intervals
+in cents.
+Total length
+Mouth end to languette
+to tone-hole
+023
+91
+21
+cl
+1195
+33
+,,
+,,
+165-4
+to thumb-hole 5
+,,
+"
+b
+1086
+,,
+,,
+to top hole
+183
+(Upper F).. 4
+Distance between each of
+Ab
+a
+977
+173
+the seven holes
+60
+g
+884
+Diameter of the pipe
+9/16
+155.9
+Diameter of the smallest
+top hole
+f
+808
+3/16
+190.1
+from which the holes
+e
+724
+gradually increase in
+147:1
+diameter to the lar-
+d
+665
+gest bottom hole
+163.5
+(Lower F)
+5/16
+C
+605
+171.4
+B
+548
+162:3
+A
+499
+Intervals
+1.75
+in cents Frequency G
+451
+115:2
+435.7
+F
+422
+175:4
+181:3
+393.7
+E
+380
+183.4
+162.3
+354.2
+D
+346
+230.4
+247.2
+310
+C
+300
+157.9
+254-3
+283
+B1
+259
+142.6
+96 07
+260.6
+A1
+245
+134
+109.6
+241:2
+G1
+230
+192.2
+198:9
+215.9
+F1
+205
+131.5
+E1
+190
+162.7
+D1
+173
+281.8
+(C=Doh)
+C1
+147
+Copyright© 1998 – Myanmar Book Centre & Book Promotion & Service Ltd., Bangkok, Thailand.
+
+[[page 20]]
+406
+JOUR. BURMA RESEARCH SOC.
+XXX, III, 1940
+How all the notes of the Burmese gamut behave will be seen from a glance at the
+table of actual figures. Table 3.
+Originally, Table 2 was constructed from figures obtained by measuring the bamboo
+pattalar, whose actual figures are given in Table 3. Later, after measuring the brass pattalar
+the more correct figures were substituted in the columns of Table 2.
+[For the time being I must let the figures speak for themselves making only one
+comment, that f¹ is indubitably sharper than f natural, B flatter than B natural, and G most
+nearly correct. It should be remembered that my pattalar may be anything but a perfect
+specimen.]
+Long after the foregoing paragraph was written, at the instance of Mr. Furnivall, who
+pointed out the deficiencies of the bamboo pattalar, and who supplied the frequencies of the
+notes of his own pattalar, further efforts were made to obtain the measurements of the
+modern Burmese scale both on a pattalar and on the most characteristic Burmese wind
+instrument, the hnè, i. e. an oboe, The pattalar (of brass) was carefully tuned by a
+professional Burmese musician and then measured together with the hnès in Dr. West's
+laboratory in the University of Rangoon . Mr. Furnivall's pattalar was measured in the
+Cavendish Laboratory, Cambridge. This is an older instrument than the brass pattalar, on
+which the scale is the scale of the present day. The Burmese scale of Hornbostel is still older,
+the source from which its measurement was obtained being "Zeitschrift for Ethnologie" jaarg.
+1911, blz. 601 vv. The oldest of all available measurements is the Siamese scale of Stumpf
+from "Beitrage zur Akustik und Musikwissenschaft" Bd. III, 1901.
+Thus, calculating from the given frequencies, the intervals in cents of all the scales
+have been plotted on graph paper putting them in chronological order with the hypothetical
+equi-distant seven tone scale on top, and the just scale and the western tempered scale at the
+bottom for comparison. The result is a chart showing the probable evolution of the Burmese
+scale after its advance from the pentatonic basis. See folding chart.
+Whereas the present western scale moved away from the Just Intonation via Mean
+Tone to its final drastic Equal Temperament into twelve semi tones, the Burmese scale seems
+to have moved away from equi-graded seven tones to its present almost diatonic appearance.
+Being unchromatic it has to make one fixed scale perform the function of at least three so that
+modulation may be possible to some extent. Table 7 shows to what extent that is possible.
+1
+Here and elsewhere, except where otherwise indicated by the context, the names of
+notes merely indicate the relative position in the scale and have no reference to absolute
+pitch. Thus F here is Fah.
+Copyright© 1998 – Myanmar Book Centre & Book Promotion & Service Ltd., Bangkok, Thailand.
+
+[[page 21]]
+BURMESE MUSIC
+Table 7.
+407
+Showing the size of the intervals of the Standard (?) Burmese Scale with the tonic.
+dominant, subdominant and leading note as Doh.
+D 200 R 160 M 180 F 160 S 180 L 160 T 160 D.
+Just Scale
+Tonic
+Dominant
+Subdominant
+Leading Note
+1200
+D
+1200
+1200
+1200
+1200
+1088
+T
+1040
+1040
+1020
+1040
+884
+L
+880
+860
+860
+860
+702 S
+700
+700
+660
+700
+498 F
+540
+500
+500
+520
+386
+M
+360
+340
+340
+360
+204
+R
+200
+0
+D
+0
+180
+0
+160
+160
+0
+0
+There are errors of as much as 40 cents i.e. nearly a quarter tone. But then, Science
+has never come to the help of Burmese music. Writing has never helped to put Burmese
+music on printed record. An exact Burmese scale has never existed. Ear alone, and memory
+are its guardians. And the present enquiry will have come just in time if the standard (?) scale
+plotted on the chart with the hope of putting the Burmese scale on an exact scientific basis is
+found to be of any use.
+Copyright© 1998 – Myanmar Book Centre & Book Promotion & Service Ltd., Bangkok, Thailand.
+
+[[page 22]]
+408
+JOUR BURMA RESEARCH SOC.
+XXX. III, 1940
+Table 6
+The scale of the Burmese oboes hnè-gyi and hnè-gale compared to the standard (?)
+Burmese scale.
+Hnè-gyi
+Hnd-galé
+Frequency.
+Intervals.
+Frequency.
+Intervals.
+Standard (?)
+Intervals.
+F1 889-2
+- -
+185-8
+M1 798.7
+190.5
+R¹ 715.5
+161:4
+D1 572-8
+1200
+D1 651.8
+1200
+D1 1200
+--
+179.7
+161.8
+160
+T 516-7
+1020.3
+T 593-6
+1038:2
+T 1040
+159.1
+186-2
+160
+L
+471
+861:2
+L 533.1
+852
+L
+880
+179.8
+179.8
+180
+$ 424.5
+681:4
+S 480-6
+672:2
+S
+700
+140.3
+134.4
+160
+F 391.5
+541:1
+F 444.6
+537.8
+F
+540
+178.2
+186.2
+180
+M 353.2
+362.9
+(399.3)
+351.6
+M
+350
+199:4
+189.8
+160
+R 314.8
+163:5
+(357-8)
+161.8
+R
+200
+163.5
+161.8
+200
+D 286.4
+0
+(325-9)
+0
+D
+0
+(Figures in brackets are obtained by multiplication or division of the original figures by 2)
+The above table shows how the scale of Burmese wind-instruments disagrees with
+that of the pattalars. The finger-holes on Burmese oboes (hnè) have that "uniformity and
+symmetry in their appearance" which K. C. Hsiao deprecates. (See diagrams 2 and 3). He
+says that in China the resultant impersonal scale was applied to the playing of stringed
+instruments to be in tune with wind-instruments. Happily for the Burmese scale the
+measurements of the hnès and the pattalars do NOT agree-yet.
+Copyright© 1998 – Myanmar Book Centre & Book Promotion & Service Ltd., Bangkok, Thailand.
+
+[[page 23]]
+BURMESE MUSIC
+409
+That is hopeful sing that the impersonal scale, which is no more than the result of a
+lazy way of boring finger holes on wind instruments, has not yet usurped the true Burmese
+scale. This is the time to instruct the makers of Burmese wind instruments to bore their finger
+holes more faithfully to the Burmese scale and with less uniformity and symmetry in
+appearance. Either that, or adopt the diatonic scale entirely with all its advantages.
+Actually it has been the Burmese oboists who have been keeping in tune with the
+other Burmese instruments by means of their wonderful expertness in lipping and blowing
+their inadequately bored instruments. To them a precision instrument like a modern European
+oboe with its mechanical keys is merely an impediment. The reed on their own instruments is
+everything, the system of holes a mere convenience. It is amazing how their hnès speak not
+from the bell but from the staple, and how they speak My saya can obtain all the motes of the
+chromatic scale on his hnè following my western oboe note by note.
+Diagrams 2 and 3 will show the different arrangements of the scale on hnè-gyi (big
+oboe) and hnè galé (little oboe), the former beginning and ending with the tonic and the latter
+with the subdominant. That does not mean that we have tenor oboes, alto oboes, transposing
+oboes and so on. The arrangement is purely for convenience. The middle one of the finger
+holes being the most convenient place for the most frequently fingered predomination note on
+the hnè gyi which plays those tunes with the subdominant predominating, that note is placed
+in the middle. On the hnè galé which plays those tunes with the tonic predominating, the
+tonic is placed in the middle .The theory of the "predominating note will be developed ion the
+course of this article.
+BURMESE
+OECE
+All holes
+stopped.
+All holes
+Stakked
+.. Thumb-hole 33/4-
+Double
+Reeds
+LAKE
+15"
+"Thumb-hole
+9"
+5"
+"
+5/16
+%16
+Distance between sach of the
+Distance between each of the
+seven holes
+-
+11"
+seven holes t
+"
+•
+.
+Sell
+The bell of thin brass is hung loosely by means of cords.
+It is of
+no acoustic value and is often dispensed with. 33: Hne-gyi is used for
+grand style songs in the subdominant mode; and mo: Ane-galé for songs
+All the holes
+in the ordinary key of the approximate diatomic major scale.
+In both instruments are of the same size.
+Copyright© 1998 – Myanmar Book Centre & Book Promotion & Service Ltd., Bangkok, Thailand.
+
+[[page 24]]
+410
+JOUR BURMA RESEARCH SOC
+XXX, III, 1940
+Now comes the time to discuss the technical remarks of Mr. Paul Edmonds and Mr.
+P.A Mariano mentioned at the beginning of this article. In Chap. VII of his Peacocks and
+Pagodas (Routledge. 1924) Paul Edmonds says:
+-
+Hla Tin having fixed up his mandolin proceeded to play me a tune. The tune, he said, was the
+introduction to the "baw lè," and the "baw lè" is the tune to which all songs of a sad and plaintive
+character are commonly sung though there is nothing about the tune that sounds sad to the
+western ears. The short introduction was in two parts, the lower being a kind of rough counter
+point². It is played at the beginning, between every verse, and at the end. I wrote it down on paper
+in western notation after several repetitions, (See Example 4) and upon examining the upper part,
+or tune, was interested to find that it was apparently in the pentatonic scale. I then successfully
+transcribed the "baw le" tune proper, (See Example 6), but this was, I found, approximately in our
+ordinary major scale, and it was difficult to say for certain whether or not the tune had originally
+been pentatonic³.
+Paul Edmonds also examined the xylophone (pattalar), the drum-circle (saingwaing),
+and the gong-circle(kyi-waing) and said:
+1
+2
+3
+45
+The pattalar, which seemed to be in the key of C, had an eight-note scale; but at first I was
+puzzled to classify it, since in the upper octave the not B was nearer to B-flat than to B-natural,
+whereas in the lower octave it was the other way about. How to account for an approximate B-flat
+in one octave and an approximate B-natural in the octave in the same instrument was a problemª.
+The note F in both octaves was indeterminate. It seemed to be about midway between F and F-
+sharp³.
+This first suggested do me what I now believe to be the true explanation, which is that the
+pentatonic scale is the foundation and that notes have been roughly inserted in the two gaps
+between E and G and between A and C in order to make the scale approximate to the Western
+major scale. I was not sure of this at that time, but subsequent investigations confirmed it.
+No wonder. Hal Tin has spoilt the plaintive part of the tune with a variation: (See Example 7) the
+last beat of the third bar leading down to the tonic in the beginning of the bar following. These
+five notes are characteristic of the baw-lè cadence, and of the original Burmese tonality.
+Harmonically, they form the arpeggio of the tonic major, chord with added sixth like the arpeggio
+ending to Grieg's To the Spring in F-sharp major.
+P. E apparently here refers to Hla Tin's thumb work. When playing the mandolin a Burman does
+not use the plectrum. Forefinger and thumb are employed, the latter to strike an occasional lower
+octave or the Fourth or the Fifth, or to help the forefinger along with the melody. The result
+perhaps often sounds like rough counterpoint. But the tune was certainly not in two parts. The
+division is of labour not thematic.
+It could not be Bawlè is a very much later invention attributed to Hlaing-Hteik-Khaung-Tin (1833-
+1875 A.D) an excellent summary of whose life translated by Nyi Nyi from the excellent series of
+short biographic of famous Burmese authorizes by Ma Ma Gyi, appeared in the World of Books
+Nos. 136-137 U Thein Han (Zaw Gyi) points out the germ of the baw-lè tune in the concluding
+part of a patpyo "ya-gon-myaing-gyar" attributed by some to Myawadi Wungyi and by others to
+Hlaing-Hteik-Kaung-Tin's own mother Ma Mya Galé.
+I would blame its maker. My pattalar reveals just the opposite.
+It is still there.
+Copyright© 1998 – Myanmar Book Centre & Book Promotion & Service Ltd., Bangkok, Thailand.
+
+[[page 25]]
+BURMESE MUSIC
+411
+I wish Paul Edmonds had left a full account of his investigations. It would be a real
+service not only to future research but also to Burmese music. While heartily agreeing with
+him that the pentatonic scale was the foundation of the Burmese scale, I hesitate to believe
+that the two notes he mentioned had been inserted in the way he mentioned. Hornbostel's
+echelle birmane stands in the way. Much more seems to have happened to the Burmese scale
+than the insertion mentioned by Paul Edmonds. To continue:
+The tuning of the gongs, as I rather anticipated, was similar to the tuning of the Pattalar. The
+drum-circle, however, was tuned, I was excited to find, in the pentatonic scale; there was no F and
+no B, with the exception of an F in the top octave of all. (See Example 1, 2, 3). My discovery of
+the pentatonic tuning of the drum-circle fairly convinced me that the pentatonic scale is, as had
+already begun to suspect, the foundation of Burmese music. And when I came to re-examine the
+two tunes which I had thought showed no signs of pentatonic origin, I found one significant point
+which I had previously over looked all the cadences were pentatonic, and there was no cadence in
+which the leading note B appeared as the penultimate note.
+Examples 1, 2 and 3 will show that Paul Edmonds' tuning of the drum-circle does not
+agree with U San Win's. But that will be because the modern drum-circle has had added to it
+three more drums. And perhaps it has also become sophisticated, as oriental ears have
+unconsciously become with the western diatonic major scale. In the beginning the drum-
+circle was not even a circle. It was a semi-circle, called :: (la-chan-saing) half-moon-
+band, the tuning of which could not be but pentatonic, to supply the ground notes of the
+tunes. The most characteristic (the first violin), among Burmese musical instruments is the
+hnè, Burmese oboe, whose limitless flexibility of tone has now been overwhelmed by the
+blustering gusto of the completed drum-circle. (See Diagrams 2 and 3). Although only one
+octave is shown in the diagrams, notes of the octave are easily obtained by lipping and
+overblowing. Actual blowing of the hnè in diagram 3 side by side with the modern oboe (new
+philharmonic pitch) shows that the lowest note of the hnè corresponds to the lowest A of the
+oboe, and the hnè's highest practicable note corresponds to the oboe's highest E, i.e. third line
+above the treble stave. The natural scale of the hnè is D pitched on octave higher.
+The bawlè Paul Edmonds heard might not have had any cadence which was not
+pentatonic. Nowadays it has too many things. Worse offenders than Hla Tin have with their
+variations, fioritura and bravura twisted its characteristic cadence out of all recognition. But
+there certainly are any amount of pentatonic cadences in Burmese music. In fact, an
+improvisation strictly on the black keys of the piano sounds more Burmese than many a
+modern Burmese song.
+His statement that the Burmese band, owing to the fixed scale of the gong-circle,
+always played in one key, C major – approximately, is very significant, though the reason, as
+will be seen later, may be other than "the fixed scale of the gong-circle." The absence of
+-
+Copyright© 1998 – Myanmar Book Centre & Book Promotion & Service Ltd., Bangkok, Thailand.
+
+[[page 26]]
+412
+JOUR BURMA RESEARCH SOC
+XXX, III, 1940
+semitones or accidentals convinced him that modulation into other keys was impossible. On
+the other hand Mariano decided that there was modulation into other keys. If the original
+scale was not and approximate affair, and the keys into which modulation occurred were also
+not approximate, then of course no modulation would be possible without semitones or
+accidentals or equi-distant intervals. It is now Mr. Mariano's turn. I draw attention at this
+point to the classical diagram of modulation, or rather, the rotation of the position of amca
+and to the examples of the tuning of some Burmese musical instruments, with
+acknowledgments by both to U Ba Choe and U San Win. [ See diagrams 1, 2, 3, 4]
+Notes atop these
+thick lines
+are raised one degree
+Diagram 4.
+Notes atop these wavy lines
+are lovered one degree.
+The key-signatures in the DIAGRAM OF TUNING THE BURMESE HARP shown below
+Diagram 4
+☑
+must not be taken too seriously.
+-
+They only denote change of mode.
+MYINSAING
+1
+008
+PULE
+42
+AUKPYAN
+အောက်မြန်
+HNYINLONE
+cyε m.
+The bowl is
+made of padauk wood
+(Pterocarpus indicus).
+Its hollow top is covered
+with deer hide, on which
+the ridge, with holes for
+the strings is attached.
+turning it into a sound-
+box. The curved stick is
+of sha (Acacia catechu):
+round this are tied corde
+with dangling tassels,
+one for each string, whose
+other end is held cunningly
+looped in the cord, which
+is pushed up and down and
+round the stick in small
+twitches to tune the string.
+The strings are of silk.
+Sha stick of round polished wood.
+Normal
+position
+Tuning the
+BURMESE HARP
+Conf:comm
+Baung-gauk
+which in the diagram
+is standing on its
+hoad.
+Ridge
+Deer hide covering with 2 holes on either sidú
+of the ridge.
+1. This word amça wil be explained in the larer pages.
+Copyright© 1998 – Myanmar Book Centre & Book Promotion & Service Ltd., Bangkok, Thailand.
+
+[[page 27]]
+Ex
+PLATE Í
+Tursing of the Burmese Saing Waing (Drum Circle) according to Paul Edmonds. Total 18 drums
+Ditto, ending to 24 Sauldin. Laas Khun-na-than-chi tuning
+2
+Ditto. Dito,
+of Than lät than tuning
+Total 21 drums
+Ex:
+Ja
+In únolemmy Thânlataukkyễn
+• Fourth and Nineth drums are tuned I degree higher. the sixth drum also ist” higher,
+Patiala JoNs: (Bamboo Mylophone) and Kyewaing om &
+:
+Brass gong-avels)
+are tuned scale wise, the former starting approximately at the second and the later at the fourth
+share of the ban chet.
+Edmond's notation of Introduction (1 i.e. Interlude incon staw) to omous Baw..
+am
+No bars & no timersi,
+•signatione
+The correct noon Ataw (Interlude. Mariano calls it symphony)
+Etc
+Clappe
+Edmunds Baw-li tune, inbarred and without time-signature
+For comparison with the tune above. See Example 11 for a proper
+rendering
+Ex:
+7
+Copyright© 1998 – Myanmar Book Centre & Book Promotion & Service Ltd., Bangkok, Thailand.
+ite
+
+[[page 28]]
+E
+4/00
+Mode of the Dominant.
+Ex:
+Mode of the sub-dominant
+10
+Clapper 1
+Bell
+PLATE II
+1!! Ending on Dominant
+* 2nd Ending on Tomie
+Copyright© 1998 – Myanmar Book Centre & Book Promotion & Service Ltd., Bangkok, Thailand.
+Etc
+
+[[page 29]]
+conwuf Baw·li
+0007
+Song, with instrumental accompaniment
+'as in Example 5.
+Adagio (42) Clapper & bell
+Voice
+Austr:
+of Grand @cand
+PLATE III
+Example 11.
+tilaing hail thrung-
+No one com
+Q
+လို
+y 3 w
+(ကြိုတင် 'ရယ်
+67
+1245 a agr5-
+tops cont of cont
+con jo 25 for ops conf
+Sighing fall. Dim.
+င်း တယ်
+cov:
+NE:
+Etc. See Complete score of song for violin or obce.
+Copyright© 1998 – Myanmar Book Centre & Book Promotion & Service Ltd., Bangkok, Thailand.
+
+[[page 30]]
+Moderate mac
+No. 3. ARIA.
+PLATE IV
+Mariano's notation of Nanthain - Yodaya.
+w
+Example 11a
+ARIA.
+SYMPHONY.
+SYMPHONY.
+Countery of Ma Tin Nyunal!
+Copied from BURMA by Max & Bartha Ferrare. Appendix.
+ARIA
+Ditto. Different barring
+ARIA
+SYMPHONY
+SYMPHON
+Ending & Beginning
+on the Mediant. Mode of this
+Copyright© 1998 – Myanmar Book Centre & Book Promotion & Service Ltd., Bangkok, Thailand.
+Mediant?
+
+[[page 31]]
+413
+BURMESE MUSIC
+In appendix C to Burma by Max and Bertha Ferrars (Low, Marston, 1900) Mr.
+Mariano says:
+The fundamental pitch note of Burmese music corresponds to our A natural. There
+kinds of scales are used. The first is the Diric scale consisting of the first, second, fifth, sixth and
+eighth intervals of the diatonic scale.
+-
+In example 7, I have drawn attention to the last beat of the third bar, which, with the
+first note in the bar following formed the C - E-G-A-C cadence so familiar to our ears.
+Unless Mr. Mariano meant the third instead of the second interval mentioned above, I am
+ignorant of the Doric scale he spoke of. In fact I have floundered among the Greek scales and
+the ecclesiastical modes of Europe in the hope of finding a short-cut to an explanation of the
+unchromatic Burmese scale. I fight shy of comparing the Burmese scale with the old modes
+of the West.
+Mariano:
+The second is the Burmese diatonic scale, in which however, the Seventh is tuned flat
+by about a quarter tone. There are no flats or sharps in the Burmese gamut. Nevertheless
+changes of keys are not infrequent in their melodies. These invariably proceed from the tonic to
+the sub-dominant but without the introduction of the seventh flat, as there is no regular system
+of counterpoint. Here the advantage of tuning the Seventh somewhat flat is apparent, for it does
+duty as the Fourth interval of the new key. A change from the tonic to the dominant also
+sometimes takes place.
+Mr. Mariano does not mention if it does so without the fourth sharp. Yet so it does by
+the help of the half-sharp Fourth which does duty as the Seventh of the new key. Mariano:
+The third scale is a kind of minor; it consists of the same notes as the major
+diatonic scale but it begins and ends with the third interval.
+This scale is strictly speaking only a mode the modes of the mediant (see Example
+11a). There seems to be also the modes of the dominant and the sub-dominant (See Examples
+9 to 10). Oddly enough the E-mode, which Mr. Mariano describes as a kind of minor, is
+commonly used in the happy lovemaking scenes :: hnitpathwa in pwès where the
+Prince and the Princess dance and sing in this E-mode till, after about two hours, troth has
+been plighted and in the final bar of the last song, the voice without stopping at the temporary
+keynote E holds it for a moment and then slides via D down to the real old tonic C; this
+descent being the signal that the scene has ended. Mr. Stewart describes the scene better:
+1
+"The Greek mode beginning with E was supposed to have manly and vigorous qualities"
+R. T. White in Music and its Story.
+Copyright© 1998 – Myanmar Book Centre & Book Promotion & Service Ltd., Bangkok, Thailand.
+
+[[page 32]]
+414
+JOUR. BURMA RESEARCH SOC.
+XXX, III, 1940
+The real hero and heroine again a Prince and Princess then come on, and with the aids of
+clowns in attendance on them, go through a stock scene which is knows as "the plighting of the troth"
+In this a few words may be said about the plot, but it is soon forgotten and the scene consists of
+alternate or simultaneous singing or dancing, the prince ardent, the princess coy or perhaps provoking
+a pretty quarrel, with frequent interjections by the clowns designed to vary the entertainment and to
+give the Prince and Princess time to recover their wind. During this scene all the performers have been
+addressing each other by their real names, stimulating the orchestra to grater efforts, and occasionally
+making speeches to the audience. Abut two o'clock, after two hours of really hard work, somebody
+remembers that they had started with the intention of acting a play, and, with a few words as to the
+plot, the scene closes."
+I doubt if discussion on Burmese changes of key, and modulation can ever be closed.
+My notes on the quotations from Mr. Mariano leave only one bona-fide key, the peculiar
+diatonic major key with indeterminate Fourth and Seventh both of which made it possible to
+change into approximate key to F and an approximate key of G. In the classical diagram of
+the circle of key is set the prescribed circular succession of keys in under fifths which (on the
+diagram) are identified with C F BEAD GC, but which, according to western musical
+theory, can only be C F B-flat E-flat A-flat G-flat C-flat, which is not by ant means a circle.
+use:
+-
+Moreover, both U San Win and U Ba Choe state that nowadays only four keys are in
+C -
+F* -
+B*-
+E*-
+ညှင်းလုံ Hnyinlone for the oldest and grandest class of songs. ကြိုး။ ဘွဲ့။ သီချင်းခန့်
+Aukpyan for songs not so old and grand, and ritual songs |:||
+လောကနတ်သံ။ လေးထွေသံကပ်။ etc.
+ပုလဲ Pule for Siamese, Talaing, Bawle and new songs ယိုးဒယား။ တလိုင်း။ ဘောလယ်။
+ရှေးသံဆန်းများ။
+: Myinzaing for Taydat (sonnet-like songs) and Dainthan :||
+ရှစ်ဆယ်ပေ ။ ဒိန်းသံ။
+* Presumably
+It is hard indeed to settle out of hand such questions of fundamental importance as
+keys and modes and modulation, especially when a western language and terminology have
+been found to be inadequate to represent the musical phenomena of the East. (See Fox
+Strangways on the translation of RAGA on page 4 of this article) One does not make
+pronouncements on one's own responsibility knowing very well that the proper thing to be
+1
+The Burmese Stage, in the Journal of the Royal Society of Arts. Vol. LXXXVII No. 4516.
+Copyright© 1998 – Myanmar Book Centre & Book Promotion & Service Ltd., Bangkok, Thailand.
+
+[[page 33]]
+415
+BURMESE MUSIC
+done is a thorough examination of the whole question by a conclave of experts who combine
+a knowledge of Burmese music with a knowledge of western musical theory. The matter is
+now extremely urgent. Burmese music seems to be dying out. Perhaps I may be permitted to
+leave a bout some threads which will lead future more complement research to their final
+unraveling. In only hope that the urgency will be recognised and early efforts made to begin a
+proper study of the music of the country.
+I have reduced. Mr. Mariano's three kinds of scales into one bona-fide key the
+peculiar major diatonic scale with indeterminate Forth and Seventh within which there dare
+changes of key of mode? I shall not say at present.
+With the classical circle of keys I shall deal later.
+The four keys still extant, as set out by U Ba Choe and U San Win are presumably
+the keys of C, F, B, E, in which different prescribed classes of Burmese songs must be played
+or sung, and in the prescribed order. It would not do to play a Yodaya :: or a bawlè
+6 in immediate succession to a Kyoh : A song from the patpyo o class must be
+the next to follow. Otherwise the new song will jar on the ear. All this is perfectly true. The
+puzzle is this When discussing the laws of Burmese music does the word 'key' in
+its strictly technical sense apply? I have met with many difficulties because I have so far
+been using this word with its strict musical denotations to represent a musical phenomenon
+which may be, so far as I know, represented by either one or all of the following three:
+1.
+Actual change of key.
+2.
+Change of mode.
+3.
+Change of 'tessitura'.
+Again 'tessitura' not quite right for the Sanskrit word amça Hearken to Fox Strangways,
+"What gives it peculiar flavour to a melody is the position of amça. Round it, and round its
+consonant or correlative (samwadi)- a note at the distance of a Fourth or a Fifth from it¹ are
+grouped the phrases of the song. They derive their meaning, their point, from their relation to
+it. It is easy to see that the character of a phrase would completely alter according as the
+amça, the salient note of the scale, were made the salient note of the phrase, or not. The amça
+may be any place in the scale not excluding the keynote or drone-note. The first section of the
+1
+In Burmese music, more often a Fourth than a Fifth.
+Copyright© 1998 – Myanmar Book Centre & Book Promotion & Service Ltd., Bangkok, Thailand.
+
+[[page 34]]
+416
+JOUR BURMA RESEARCH SOC.
+XXX, III, 1940
+tune usually circles round the amça and the second round its consonant. Aesthetic effect of a
+high or low amça is quite different, and in this respect the amça and all that it implies may be
+compared with what we know as tessitura, though that is rather a 'range of notes', whereas the
+amça is a single note. Over against amça stands the drone-note, or keynote. These two
+notes divide between them the function of our tonic."
+I shall leave it at that. The last sentence is significant not only because it may lead to
+a solution of our whole problem, but because it reminds me repeatedly of what my Burmese
+saya said to me once about the playing of the patpyo In these songs the tune seems to
+circle continually round the dominant and almost end with the dominant but that the main
+song must be followed by a postlude (thaphyan)² in free time which is the means of
+effecting a return to the tonic. I asked him if the patpyo was not in the key of G, and
+why was I not using F-sharp instead of F-natural? He said that it was not in the key of G; the
+tune only kept hovering round G; and it had to come back to the keynote C. ".
+ပြန်ပေါင်းရတယ်။ ပေါင်းလို ့ရမှ အတီးမှန်တယ်". That was why a thaphyan post-lude must invariably
+follow a patpyo : That was also why the Prince, at the end of the plighting of the troth
+scene, did not end the last song with the mediant but held it for a moment in order to return to
+the old tonic C. Now, were the dominant and tonic of the patpyo, and the mediant and tonic
+of the troth-plighting songs "dividing between themselves the function of the tonic?" Was a
+similar thing happening when the Hnyinlone :: class of songs were being played? The
+key was C-c, but the sub-dominant F often seemed to be the tonic. Were C and F also
+dividing between themselves the function of the tonic? Can it be that in reality the key is only
+on e in every case, an approximate diatonic major; only the position of the amça is changed;
+and the terms Hnyinlone ::, Aukpуan 6, Pulè cò, Myinzaing : apply not to
+four different keys but to the four different methods of tuning the Burmese harp for the sake
+of convenience in playing the four different classes of songs; and therefore are not to be
+identified with the keys of C, F, B, E, but rather with the four different positions of the amça
+in the four classes, viz, Kyoh, patpyo, yodaya, tédat,::|:3000:11 600:00||
+I will leave these questions to be answered more authoritatively. I did carry out one
+experiment.
+1
+Music of Hindustan Chap. XII.
+2
+ε is a corruption of than (sound, or note) and G phyan (unravel) i.e. restore the
+function of the tonic to the tonic proper.
+က
+3
+Amça can then be translated as " the predominating Degree of the scale,"
+Copyright© 1998 – Myanmar Book Centre & Book Promotion & Service Ltd., Bangkok, Thailand.
+
+[[page 35]]
+BURMESE MUSIC
+417
+Burmese pianists, who do not want to be bothered with the black keys of the piano
+have their piano tuned, as they say, "in the Burmese way" i.e. with B flattened and F
+sharpened by about a quarter tone, and E very slightly flattened.
+Then, they play all their songs with C as the keynote, but always in obedience to the
+prescribed order of the classes of songs. I used to think that it was because that method of
+tuning enabled them to modulate from C to G or F and back again without using F-sharp or
+B-flat. That was only partly true. They tuned their pianos in their own way not only for the
+sake of modulation but to make their own songs still sound Burmese in their ears. Everybody,
+including Fox Strangways, realises that western keyed instruments spell disaster to oriental
+music. The tuning of the piano in 'the Burmese way', seems to be a desperate effort on the
+part of Burmese pianists to preserve the tonality peculiar to their songs.
+The experiment was to watch a Burmese pianist playing on my piano (which is not
+tuned in the Burmese way) a representative song from each class of songs in the prescribed
+order of succession, to see whether she did or did not play all the four songs in one and the
+same key i.e. of the approximate C major. She did I asked her if she always played all
+Burmese songs with C as the tonic on other pianos? Yes, expcept on piano tuned in the
+Burmese way with D as the tonic'. In table 4 are tentative identifications of the keys used.
+There is no doubt whatever that something like modulation occurs frequently not
+only in changing from one class of songs to another but in one and the same song also. The
+question is :is it change of key? The peculiar nature of our scale, the fact that it is no longer
+equal-tempered, and our lack of a chromatic scale, for bids us the use of that word in its
+strictly technical sense. Then, shall we call it change of amça? That is a Sanskrit word.
+Perhaps there is a Burmese word for it in the cǝ Naralékha. Where is the Naralékha?
+1.
+That is in order to raise the pitch. And also perhaps because the Burmese players of
+string instruments have the tonic on the open third or D-string. Most Burmese violinists
+and mandolinists tune the four strings A-D-A-D instead of G-D-A-E. The latter even
+remove from their instruments the frets for what are known as the 'black' notes of the
+chromatic scale: to them they are unnecessary. In the tuning of the drum-circle
+(Saingwaing) and the harp (Saunggoul) it will be noticed that there does not seem to be
+any change of key the changes being only of the degrees of the scale. See Examples 2
+and 3, and Diagram 4.
+Copyright© 1998 – Myanmar Book Centre & Book Promotion & Service Ltd., Bangkok, Thailand.
+
+[[page 36]]
+418
+JOUR. BURMA RESEARCH SOC.
+Table 4.
+Key
+Tentative identification of Burmese keys
+XXX, III, 1940
+Amça
+Class of songs
+F
+ကြိုး။ ဘွဲ့။ သီချင်းခန့်။ Kyoh, Bwe, Thachingan
+Harp Terms
+C
+G
+ပတ်ပျိုး။ လောကနတ်သံ။ လေးထွေသံကပ်။
+E
+?
+Patpyo etc
+သစ္စာထား။ ကရင်ဩသံ။ နန်းသိမ်း။ Troth plighting etc.
+တလိုင်းသံ။ယိုးဒယား။ ရှေးသံဆန်း။ Yodaya, etc.
+with
+F
+ဘောလယ်။ သဖြန်တောလယ်။ bawle
+sharp
+F
+{}
+with
+B flat
+B natural | ဆယ်ဆယ်ရောင်ဖြာဒိန်းသံ။ also ဘောလယ်။
+Dainthan, also Baw-lè
+တေးထပ်။ ရှစ်ဆယ်ပေ ။ Tedat, etc.
+Hnyin lone
+ညှင်းလုံး
+Aukpyan
+အောက်ပြန်
+ပုလဲ Pale
+မဉ္ဇူင်း
+Myint Saing
+Copyright© 1998 – Myanmar Book Centre & Book Promotion & Service Ltd., Bangkok, Thailand.
+
+[[page 37]]
+BURMESE MUSIC
+419
+As for the classical cycle of keys, diagrams of which appeared both in U Ba Choe's
+article and U San Win's book 2, both U Ba Choe and U San Win quote authoritative verses
+from classical literature ( Nätakaratanakosa şɔjs: ) but regret that not all the
+keys mentioned are in use in this decadent age. With due reverence for the classics I shall
+assign these verses like Ruskin's works on art and Pater's, to literature. It is becoming
+increasingly difficult to fit classical theory with the actual music. Whereas our classical
+literature came en masse from ancient India along with Buddhism many hundred years ago
+our music seems to have come from the east. Indeed one class of songs yodaya (05:30:) came
+en masse from Siam less than two centuries ago. Music is the last thing that could have come
+with Buddhism. It seems to have developed quite independently of classical literature. In fact
+Burmese poetry lingä com alankära) is quite distinct from Burmese song (thachin ǝjε:)and
+from both stands massive and remote the Buddhist literature of the tripitaka in the Pali
+language.
+What seems to have happened is that while the elegant royalty and courtesans in the
+palace were delighting in the intricacies of Burmese versification with liberal infusion of both
+the Pali language and the Buddhist philosophy, music in its robust form was having its
+origins in animistic ritual (so§ò), in the village when somebody was giving alms and in the
+paddy-fields when the transplanting of the seedlings were in progress. For the former we have
+Byaw¹ (p) stick-struck drum songs, and for the latter we have Bonshay () long-drum or
+kauksaik () transplanting songs. Kyoh (☑:) that most ancient class of Burmese songs
+also must have been in the beginning a labour chant for concerted action that germinated in
+ancient row boats, grew into a boat-song, and then developed for royal ears into its present
+high order of melodic and literary grandeur (vide the royal barge songs:
+when the
+barge makes port, εε when the barge is being towed out by rowers in open boats,
+εwhen the barge is underway². The cadences of these still recall the rhythmic flash
+of wet oars in the sun. Thus Burmese music had as its sponsor the rustic festivals and the
+occupation of the hewers of wood and drawers of water, and not the Church as
+1 ကချေအစ ငှက်ပျောပွဲနှင့်ဗျောထဲက 'A dancer's life (or dancing) beings with a tray of banana
+offerings (or pwé marked by a central fire-bowl stand of plantain trunk) in a byaw music
+party. Till 1698 A.D. when the 8th king of the Nyaungyan dynasty Ɛ: Sané Min came
+to the throne there existed only intoned poems of " : but no real Burmese music.
+εs: by U Nu. Sun Magazine, 1938.
+2 U Ba Choe told me that this was not true. This class of songs used to be played as
+exercises in the playing of the Burmese harp, when the pupil first learnt to pluck
+simultaneously certain strings (☑: Kyoh). For a full explanation of it see - 28000 mje
+by U San Win.
+Copyright© 1998 – Myanmar Book Centre & Book Promotion & Service Ltd., Bangkok, Thailand.
+
+[[page 38]]
+420
+JOUR. BURMA RESEARCH SOC.
+XXX, III, 1940
+in Europe. Indeed the Buddhist religion so frowns upon music that it was practised rather
+shamefacedly and its devotees are often called Phet-khwet-sa (Eaters out of leaves), i.e.
+vagabonds. Even so recently as last year a learned old Burmese gentleman loath to depart this
+life without imparting all of his Burmese learning concluded a series of Burmese articles on
+Burmese music and dancing with an apology for having at all indulged in such frivolities.
+-
+Music found in the irrepressible gaiety of the Burmese people a fertile soil and it let
+its roots deep into the soil, and soon form occupational songs music developed into an art-
+form which finally invaded the towns, the capital and the royal palace. There it received fresh
+impetus from a system of competitive patronage in which the king himself joined with his
+own band. There also apparently it received its classical nomenclature. Names which sound
+imposing enough etc. Svara, Murchana, Grama, Çruti etc. but meant for
+quite different things, must have been borrowed in their entirety for the sake of their classical
+origin, so that the names were not in accordance with what they stood for, even as the Greek
+names, by which the western ecclesiastical modes were distinguished, were not in accordance
+with those of the ancient Greek octave system from which the names were taken. Thus it
+seems Burmese musical theory in the classical manner is grafted dignity which dignifies but
+does not apply. Indeed it seems yet to be written.
+"We think of grace-notes as something which may but need not be added to the note,
+not as something actually inherent in it. If cultivated for their own sake or used at
+all in excess they are regarded by us as meretricious. Indian 'grace' is different in
+kind. There never is the least suggestion of anything having been 'added' to the
+note which is graced. The note with the grace makes one utterance. The object of
+grace is, of course, to add importance to the particular note, but there are such
+varying degrees in which this may be done
+Copyright© 1998 – Myanmar Book Centre & Book Promotion & Service Ltd., Bangkok, Thailand.
+
+[[page 39]]
+BURMESE MUSIC
+421
+that the whole system of gamak, the general term for the thing becomes and
+elaborate vehicle of light and shade. It brings the notes of a melody, as surely ads
+the various light and shade of a picture brings the contours of the face from the
+flat into the round; which again is precisely what harmony does for them, by
+assigning to the successive notes varying degrees of consonance. There is an
+obvious reason for grace-notes wherever there is no harmony. For a melody is a
+sentence with important words' and unimportant, and grace-notes and harmonic
+texture are the only two things that can always be applied to enhance this
+importance. For stress and quantity, which serve this purpose in verse, are not so
+well adapted to music. Stress, which is additional volume is difficult to achieve
+with low notes; and quantity, which is additional duration, alters the melody
+itself, imposing on it from without something which should come from within."
+Although Burmese 'grace' may not be so elaborate or systematised at the Indian
+gamak, much of the above quotation equally applies to Burmese music. Much will have to be
+pointed out in notation when I deal with the problem of the 'writing' of Burmese music¹. Mr.
+Mariano concluded: "It is a matter for great regret that the beautiful music which the
+Burmans unquestionably possess is being forgotten. The modern tendency is to imitate
+European and Indian themes, and the time is not distant when genuine Burmese music will be
+a thing of the past.
+"
+He wrote that 40 years ago. Nowadays, the gramophone record business has
+encouraged wholesale filching of jazz tunes, first divested of harmony and then rd-dressed in
+an imitation of it, with Burmese words making ungainly efforts to step along side by side
+with the wholly unsuitable western tunes. Shades of Mariano!
+It is a matter for rejoicing that a state school of fine-arts has come into being. How
+much more rejoicing there would be in the hearts of lovers of true Burmese music if the
+government, instead of merely opening a class for teaching how to play certain musical
+instruments, had seized upon the means of saving real Burmese music from oblivion. The
+implacability of business so far as gramophone records are concerned, the repid deterioration
+of public taste pandered to by radio and gramophone, the invasion
+1. A full treatment of Burmese grace with classified examples in staff-notation will require
+a separate chapter in the manner of the chapter on Ornamentation in Arnold Dolmetsch's
+Interpretation of the music of 17th and 18th centuries. For the present see specimens in the
+complete violin part of Baw-lè.
+Copyright© 1998 – Myanmar Book Centre & Book Promotion & Service Ltd., Bangkok, Thailand.
+
+[[page 40]]
+422
+JOUR BURMA RESEARCH SOC.
+XXX, III, 1940
+of western instruments and instrumentation, the ephemeral catchiness of jazz tunes- who, but
+the government can save Burmese music from the combined assault of these powerful forces?
+True Burmese music nowadays resides only in the memory of old Burmese
+musicians. And they are now too old. Their music should be recorded. They should be
+organised into a state orchestra and paid to broadcast selections from the classics at least
+twice a week. Their instruments should be measured and a standard pitch and standard scale
+should be fixed and one complete set of Burmese musical instruments should be maintained
+and kept correctly in tune for purposes of research. The notation of the authentic ground
+patterns of Burmese classical songs should be undertaken. As an urgent preliminary measure
+U San Win should be subsidised to carry out his notation of the classics in his own style so
+that important classical tunes may be preserved for future more scientific notation and
+instrumentation. Above all, organised research into the theory of Burmese music should be
+instituted at once with suitable equipment and aid¹.
+1. I am glad to add that the Government has responded generously to the application of
+Burma Research Society for a grant towards the recording of a representative selection of
+Burmese classical songs, verse-forms, and drum music, for the gramophone. U Ba Choe
+labouring mightily, twenty-three recordings have just been completed at a total cost of
+Rs. 6, 250. A further grant has just been made by the Government to enable the Burma
+Research Society to send me on an errand collecting Burmese folksongs, if the University
+Authorities will sanction me leave. There is much yet to be done.
+Copyright© 1998 – Myanmar Book Centre & Book Promotion & Service Ltd., Bangkok, Thailand.
+
+[[page 41]]
+BURMESE MUSIC
+423
+Part III
+Notes on Time.
+There remains the question of Burmese musical time. Both Mr. Marian o and Paul
+Edmonds wrote with enthusiasm on the strictness with which Burmese musicians kept time.
+Very few among Burmans do not know how to keep the tiny bell (si :) and clapper (wah :)
+going correctly when music is playing. A foot or a hand of listeners and player alike may
+often be seen beating time. That may be partly because we as a race find it impossible to hear
+music with stolid immobility. Partly, however, it is because our language is not accentual but
+tonal.
+Rhythm in a language such as English is largely dependent upon differences of
+emphasis or accent upon the syllables in a word, and the words in a sentence. Differences of
+emphasis or accent do occur in Burmese, but not to the same extent; consequently emphasis
+or accent is not used very much, if at all, in the composition of Burmese verse.
+Burmese verse depends rather upon the schematic arrangement of words with certain
+sounds recurring at fixed points. That is Burmese verse has rhyme, but it has little or no
+accentual rhythm. On the other hand timing, especially such as depends upon the number of
+syllables pronounced in a given period and caesuras that mark the period are the grater
+importance in Burmese than in English. In Burmese singing the caesuras are even more
+important than the sets of syllables or words in each measure. See, the rests on the first beat
+of measures 1 to 8 (Example 11 Voice)'.
+The singer keeps time with a pair of tiny bells (si 8:) and a small clapper (wah ♂:) in
+his hand. The clap' coincides with each of he rests mentioned till the final note of he section
+when it coincides with the tonic.
+Simple duple or simple quadruple is the usual time. In the duple the bell (O) and the
+clapper (X) go alternately. In the quadruple there is a rest (-) on one or the other of he middle
+beats.
+1. Had Mariano known the significance of these rests, which often marked the beginning of
+bars, he would have discovered six such rests in his own notation of Nanthain-yodaya in
+bars 13, 15, 23, 27, 33 and 35. Make two of his bars equal one, and halve the value of all
+his notes, and all becomes right. In barring, I often found that western musicians
+mistakenly listened for the accented note. Accented notes in Burmese music do not mark
+the beginnings of bars. They are merely emphasised or underlined notes. The caesuras are
+what should have been looked for. The Burmese equivalent of he strong beat at the
+beginning of bars is the beat, or rather 'clap' of the clapper. See Example 11a.
+Copyright© 1998 – Myanmar Book Centre & Book Promotion & Service Ltd., Bangkok, Thailand.
+
+[[page 42]]
+424
+JOUR. BURMA RESEARCH SOC.
+'Thus:
+Ex:
+18
+Bell (8)
+Clapper(2:)
+q
+XXX, III, 1940
++
+No great importance is attached to the variation. In one and the same piece of music
+the quadruple may sometimes change into the duple, or become faster or slower in
+accordance with the needs of the particular piece of music. But never must a musical get out
+of rhythmic time¹.
+So far as I am aware compound time does not seem to be used at all in music, though
+I detect signs of it in the congregational chanting of certain quasi-religious verses which used
+to be the rage among young Burmese ladies when Myawadi Phongyi was at the height of his
+singular career about 18 years ago.
+Etc.
+ရာနာညို အပရာရှိတ
+UNEyj our
+que no forum pararmor of
+I give in example 8 what I can remember of the verses I used to chant as the only boy
+among a sort of choir of young ladies. This particular verse pays homage to Buddha. But
+young ladies used to pay homage to his reverence too, kneeling down and singing his praise
+and wishing him long-life etc. Had I not been a sort of pitch-pipe I would have been as little
+tolerated in that beauty chorus as a bee in a bouquet.
+Example 11 (6 Baw-lè) illustrates how the vocal part weaves in and out of
+(3) the instrumental part. Having no regular system of harmony or counterpoint the
+instrumental accompaniment to Burmese songs means something entirely different from what
+it means in the west. The instrument accompanies the voice with variations of the same tune
+liberally embellished. After each sections the instrument plays a bar of interlude (360)
+either to emphasise the close by repetition, or to link it with the next section. In Example 11,
+so far as the voice is concerned, the section ends with its last note (the tonic in bar 9). But the
+instrument postpones this final tonic for yet another bar playing the interlude which too ends
+on that tonic.
+1. He is not dead in time like players of dance music. He keeps in time because he feels in
+time. One thinks of Tempo Rubato, but for its implication of virtuosity.
+Copyright© 1998 – Myanmar Book Centre & Book Promotion & Service Ltd., Bangkok, Thailand.
+
+[[page 43]]
+BURMESE MUSIC
+425
+The 'instrument' may be any instrument. A melodic instrument will serve the purpose
+of notation better; for it will need only a single stave and thus provide a clearer and parallel
+reading. Anyway, a bass clef and a treble clef for Burmese instruments requiring two-handed
+playing will only mislead the reader. (See Example 12). As I have pointed out, the division
+into left-hand and right-hand is only of labour, not of melody and bass. A western notation of
+Burmese music will therefore be read horizontally, not form bottom to top.
+Lastly it will be noticed that although the key is C-major, the Fourth (F) is generally
+sharp in this tune. It may be thought that F-sharp is used in order to approximate this note to
+the half-sharp F of the Burmese musical instruments. Not so When playing other Burmese
+songs in C-major, it is not found so often imperative that F-sharp be used instead of F-natural.
+If there is a second Burmese scale, such a scale as Mr. Mariano suspects to be a sort of minor,
+I believe this scale with the sharpened Fourth to be it. In the key of C with F-sharp the bawlè
+6 is played. In the key of F with B-natural the dian-than ¾½: is played. It mains to be
+discovered what other tunes are played in this interesting scale, a natural product of 7 pipes
+standing in hemiolic sequence of perfect fifths: C. G. D. A. E. B. F-sharp forming the
+diatonic octave C. D. E. F-sharp G. A. B.
+The quaver rest in bar 8 of Example 11, vocal part is note-worthy. This rest is of
+supreme importance in the bawlè. Without this rest there can be no strategic in-breath at this
+point; without that in-breath there can be no sighing-out of the last notes of each section ;
+without such sighing-out the bawlè 6 which after all is a tuneful plaint, will be plaintive
+no longer, bawlè no longer. With that sigh this article ends.
+I wish here to thank Ma Tin Nyun, L. T. C. L, whose teaching of music was so painstaking
+and sympathetic of my special needs that the lessons become a musical co-operation between
+East and West (such as Percy A. Scholes wished). And so the foundations were laid on which
+this article is a first attempt at solid building.
+Copyright© 1998 – Myanmar Book Centre & Book Promotion & Service Ltd., Bangkok, Thailand.
+
+[[page 44]]
+426
+JOUR. BURMA RESEARCH SOC.
+XXX, III, 1940
+THE WRITING OF BURMESE MUSIC
+The first question is should it be written at all? I am of opinion that for singing, for
+the voice, it will require a certain amount of temerity to note Burmese music. Fox Strangways
+says:
+"It seems to us curious to draw a picture of a tune; but those who do so think not of a
+tune but of a mode. They conceive the tune as going in a general, not a particular direction.
+When a peasant sings a folk-song with six variations, he speaks of them as six ' ways' of
+singing it. And if you then sing him a seventh variation he accepts it, provided it is in the
+same mode (:). Notation, therefore, would only hamper the unlimited power to vary. It
+would also be useless, because the songs are handed down and valued as being 'so-and-so's
+'song, with, of course, all his idiosyncrasies and mannerisms, which could not possibly be
+noted.
+Grace, as a singer understands it, is the continuous flow of the voice round the graced
+note; and this is quite indefinable by notation which is confined to tones and semitones.
+Harmony, for which that notation is devised, abolishes mode; for, it in its prime, largely
+depended on minute difference in the 'size' of third, sixth, and other intervals. Mode depended
+also on certain points of rest, namely, on the pentatonic notes. Harmony can deal with these,
+certainly, and in doing so it takes on a coloring which has often a fascination; but it also
+defines what the singer left undefined; and there by removes a certain wistfulness and charm.
+If there are any who doubt that charm, it is probably because they have not heard folksong in
+its native hunts. Being itself a perfectly sincere thing, its charm does not survive publicity,
+nor the treatment of the song as something quaint, still less as something to be exploited.
+Folk-song is like a hedgerow flower, which when plucked, withers more quickly than one
+from a garden. If we were to get at its real beauty we must do with it what the singer himself
+has done - we must sing it all through and many times. Its merit comes from its having run
+the gauntlet of the best kind of criticism, that of the singers themselves. It has always been
+judged by results. If it did not move these singers, they either altered it or dropped it. It is, and
+can only be, the work of time.
+That passage refers to the Indian folk-song, but applies to some extent to Burmese
+singing as well. In any performance of Burmese chamber music you will notice that the
+singer wields the time-making clapper and bell (8:). That is not because the
+Copyright© 1998 – Myanmar Book Centre & Book Promotion & Service Ltd., Bangkok, Thailand.
+
+[[page 45]]
+BURMESE MUSIC
+427
+singer is the only person who has both hands free. It is because the singer is the most
+important person, who directs the progress of the song, controls its tempo, and decided its
+fate. There is no conductor in Burmese music. The singer fulfils some of the functions of a
+conductor. All the players must hearken to the 'clap' of the singer's clapper and go fast or
+slow as the 'claps' command. Restrict those claps either by metronome or notation and
+Burmese music is destroyed. The singer must not be note bound nor time-bound. That is why
+the 8: (bell) and clapper are in the hands of the singer, whose 'claps' mark the first beat of
+every bar; all other players hearken to those claps. Therefore I am of opinion that the singer's
+part should not be noted. Let him or her still enjoy absolute freedom, his or her taste being the
+only, master, and the criterion by which a musical performance shall be judged.
+As there is no harmony, there is no three-part, four-part, quintet, sextet and so on. In
+fact strictly logically speaking Burmese music for instruments need not be written on more
+than single stave. For instruments such as violin, pipe or hnè`s (Burmese equivalent of oboe)
+it is simple enough, provided that the prospective writer of Burmese music knows not only all
+the resources of staff-notation but also the laws of Burmese musical time. It is not so simple
+however in writing for such instruments as piano or pattalar which require left-hand and
+right-hand parts. Padon my use of the word 'part' here in its non-technical sense. The problem
+is to write for the left-hand and right-hand in double staves and yet show clearly that it does
+not mean melody and bass nor two melodies; that the two parts are really one part, the
+division being only of labour not thematic; that both staves together make one utterance of
+one melody only.
+Example 12 shows the melody separated into two parts the right-hand part in the G
+Clef and the left-hand part in the F Clef. As the melody bestrides the two staves gaps are left
+inevitably in both staves. And these gaps are filled by a liberal use of rests- rests which do not
+mean that there is a rest in the music but which are ' stop-gaps,' and therefore illogical. But
+see also Example 13. These rests can become tyrannically omnipresent so that the melody is
+lost in a maze of rests. The next three examples show the evolution of a page of piano music
+for a Burmese song called ကျွန်းကျွန်းသိမ်းမြန်း။
+Example 14 is a specimen received from an amateur musician, whose attempt at
+writing Burmese music is in the manner of the previous example. Because of the more
+intricate time-values the rests here are getting out of hand. The melody is well-nigh
+indistinguishable. A strictly logical representation of it would
+Copyright© 1998 – Myanmar Book Centre & Book Promotion & Service Ltd., Bangkok, Thailand.
+
+[[page 46]]
+428
+JOUR BURMA RESEARCH SOC.
+XXX, III, 1940
+resemble Example 15. But the music is still inconvenient to play from. The obvious
+suggestion is to put the time-strokes between the two staves. This suggestion came from a
+piano score of Debussy's "Jardine sous la pluie."
+Debussy had different reasons, of course, for writing in that manner, the extended
+chords perhaps, his melody being picked out by added stems to the notes of the melody. In
+Example 16 however it is just the opposite. The whole thing being melody, only those notes
+not essential to the melody are given added stems. These added stems are also employed to
+give certain notes their full value. Since there can be no question of ' parts', this, the only
+possible method of writing Burmese music for the piano, seems the less objectionable.
+As for Ornament, specimens are given written out in full in the complete notation of
+စိန်ခြးကြာညောင်ဘောလယ်။ Sein-chu-kya-nyaung Bawle for the violin.
+Copyright© 1998 – Myanmar Book Centre & Book Promotion & Service Ltd., Bangkok, Thailand.
+
+[[page 47]]
+PLATE V
+Example 12
+သံတျာတေရှင်း
+Pattala music for comparison with Example 13, in the manner of using rests.
+R.H.
+L.M.
+8.
+pp una corda (ad lib.)
+pp a tempo
+p a tempo
+poco rit.
+poco rit.
+*Pw.
+Etc
+AS
+Example 18
+poco ril.
+mfa tempo
+* Ped
+Copyright© 1998 – Myanmar Book Centre & Book Promotion & Service Ltd., Bangkok, Thailand.
+
+[[page 48]]
+F
+PLATE VI
+Copyright© 1998 – Myanmar Book Centre & Book Promotion & Service Ltd., Bangkok, Thailand.
+
+[[page 49]]
+Birave
+R.H.
+L.H
+PLATE VII
+Copyright© 1998 – Myanmar Book Centre & Book Promotion & Service Ltd., Bangkok, Thailand.
+
+[[page 50]]
+PLATE VIII
+mjft of wide @fi from Ke than
+Grave
+Example 16
+Copyright© 1998 – Myanmar Book Centre & Book Promotion & Service Ltd., Bangkok, Thailand.
+
+[[page 51]]
+BURMESE MUSIC
+429
+NOTES ON PLAYING THE BURMESE CLASSICAL SONGS
+FROM STAFF-NOTATION
+The following songs represent only four of the principal classes of Burmese classical
+song. Patpyo, Yodaya and Talaing remain, not to mention the minor classes. The ambition of
+the present contributor is to leave at least one each of all the classes as well as folk-songs in
+staff-notation before either he or the songs disappear. Time, means, and opportunities are at
+present insufficient.
+Before actually playing these specimens the following points will perhaps be useful:
+(1) Mannerism has to be firmly suppressed lest it should lend a western air to these
+oriental tunes. In order to avoid misleading to player attempt has been made to write
+out in full most of the ornaments. Trill has been introduced with misgivings. It is so
+rare in Burmese music. So is the pizzicato in the opening bars of the first song. The
+turns on the other hand are ubiquitous. But there are several kinds of turns as will be
+seen. Phrase-marks are given tentatively. It will be best to play as written without
+accent or style.
+(2) The piano is not playing an accompaniment to the violin. Both should be equally
+prominent. The two together make one utterance of the same theme. Both will follow
+the singer, if there is one. The vocal part has to be entirely omitted because only a
+Burmese singer who has slaved at learning to sing by imitation and repetition will
+know how to sing such songs. If the piano sounds empty it must be remembered that
+not only do we have no chords but also U San Win has reduced the measures to the
+bare bones of simplicity. Any Burmese pianist will introduce any amount of personal
+fioritura, which is the reason why it is so difficult to decide which version of a
+classical song is the authentic one.
+(3) The use of the Sustaining Pedal when playing Burmese music is highly objectionable.
+Oriental tunes are conceived in a single melodic line and the undue sustaining of
+notes never meant to blend together can only lead to confusion. The piano can be
+played loudly without the use of the 'Loud Pedal' which after all is meant for higher
+purpose than were loudness.
+(4) It is not necessary to procure a bell and clapper. Snapping of the fingers will do for
+the bell and tapping for the clapper. But one person should be snapping and tapping
+right through a song except where time is ad libitum. If there can be no such person, a
+player must tap with one foot the 'claps' which
+Copyright© 1998 – Myanmar Book Centre & Book Promotion & Service Ltd., Bangkok, Thailand.
+
+[[page 52]]
+430
+JOUR BURMA RESEARCH SOC.
+XXX, III, 1940
+fall on the first beat of the bars as written. There is no accent in the music. The ' clap'
+is the accent. In four-pulse measures one of the beats is a silence, as already pointed
+out in the article. It will go ta-silence-snap-snap; or tap-snap-snap-silence, according
+to preference.
+(5) The violin parts may be taken by an oboe without hesitation. In fact they have been
+tried on both the violin and the oboe, and the latter seems even more suitable
+precisely because the western violin technique is as unsuitable as is seems
+ineradicable. On the oboe, of course notes lower than B below middle C will have to
+be played one octave higher. There are only a few.
+(6)
+(7)
+Performers who are not conversant with Burmese classical music are requested to
+start the second song ε at bar 11, marked "Var" because tempo rubato or ad
+libitum is customary at the beginning and end of most Burmese songs, and only
+Burmese musicians will know just how much liberty is to be taken with musical time.
+For the same reason the third song may be ended with the first note of the 56th bar,
+immediately behind D.S. playing the postlude, if desired, as a coda.
+Western instrument like the piano and the oboe being keyed instruments and the
+Burmese scale being what it is, no, amount of notation and annotation can reproduce
+the tonality peculiar to Burmese music. We will always find the result do wè dai
+i.e. guilty of foreign accent. However, this point has been dealt with in the article.
+(8) The fourth song is a complete rendering of the famous baw-lè 86:
+without
+the piano part. It is an example of elaborate ornamentation and variation. For the sake
+of fidelity this and the preceding specimens in staff-notation have not been arranged
+in any way, although it would be possible to arrange them in such a way that ears
+unattained to Burmese music could be tolerant to them, and yet they would in on way
+be deprived of their Burmese individuality- if one had sufficient time, means and
+opportunity.
+N.B.—The pages of music are so arranged that they may, if desired,
+be separated from the article and rebound more suitably for
+convenience in playing.
+Copyright© 1998 – Myanmar Book Centre & Book Promotion & Service Ltd., Bangkok, Thailand.
+
+[[page 53]]
+Prelude to Kyok. Su
+Andanti
+Vidia
+Oboa
+Piano
+Arco
+MM
+1.48
+Pizz
+431
+cams an
+ကြီး
+Tempo
+Rit
+Grare
+& Fr
+Aria
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 54]]
+432
+(if of (cont')
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 55]]
+rralded (cont')
+433
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 56]]
+ဟု
+(?)
+434
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 57]]
+of sand @d. (cont?)
+435
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 58]]
+{{(contd)
+436
+Obor
+Springing bow
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+B from obor
+
+[[page 59]]
+Concluded
+437
+tor ohm
+Rit
+Hollo Ritardand
+R. T.
+Molto Retardanda
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 60]]
+Violin
+Obod
+Piano
+438
+ngs come
+umpor of t
+Sul E
+a temps.
+Rit.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 61]]
+10
+zoom (could)
+439
+Var:
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 62]]
+mmond (eat!)
+440
+0boa
+Springing from
+Ober
+Ova....
+Ober
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 63]]
+441
+Santilla
+Santilla
+Santille
+Santille
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 64]]
+mamit (cout!)
+442
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 65]]
+443
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 66]]
+2
+2
+444
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 67]]
+Postlude Ritenuto
+445
+W
+*This acciaccatura takes its time from the value of the last note in the previous bar, like an after-note
+or passing appoggiatura,
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 68]]
+Valin
+Obre
+Prelude
+Grave
+446
+ထူးများနား
+cos condo of
+Piano
+Aria
+my
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 69]]
+(CNA)
+447
+popoph
+2
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 70]]
+((cont)
+448
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 71]]
+(mgr. (contd)
+449
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 72]]
+(Grt pri (cal?)
+450
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 73]]
+5014
+451
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 74]]
+452
+D.S.
+4
+✓
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 75]]
+453
+con: Gropp: (aint')
+tr
+tr
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 76]]
+(concluded)
+454
+Postlude
+Molto
+Rit
+Molto
+Rat.
+5
+Ritenuto
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 77]]
+455
+Separate Parts for Violin or Oboe
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 78]]
+Prelude
+Andante
+MM T
+. 48
+Pizza
+456
+ဘုံ ၈၁ ဖြင့်
+Aria”
+Ated
+Violin or Oboe
+Pisc
+a tempo
+Rit.
+Grave
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 79]]
+457
+Springing bow
+bboc
+Bwa
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 80]]
+Scott (metulia)
+Molto Rit
+458
+© to chan
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+1
+to ober
+
+[[page 81]]
+459
+ဂန္ဓာတော
+လသာတီပန်းဘွဲ့
+Violin or Oboe
+Layo
+MM. P . 44
+SulA
+ohn
+8v
+Van,
+a timp
+Santille
+Sachille
+springing bow
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 82]]
+Santille
+Santille
+Rit.
+a tempo
+a tempo
+3
+460
+"Grave"
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 83]]
+^ "
+mconf (conclus
+a tempo
+Postlude Ritenuto
+461
+WW
+*This acciaccaturatakes its time from the value of the last note in the previous bar, like an after-note
+or passing appoggiatura.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 84]]
+Prelude
+Grown
+462
+ဖြားနား
+ရားပွဲ သချမ်း
+mf
+Avia my
+emendo
+De
+Violin, or Obot
+Crascende
+Dec incend
+2
+"'
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 85]]
+463
+*(87:49: (Contα)
+ားနား
+☑
+Gureando
+Dearese in do
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 86]]
+Ping: (concluded)
+Molto Rit
+464
+D.S. 2
+Postlude. Rit.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 87]]
+Adagio MM. J = 48
+465
+ဘာလာ
+Baw-li
+Ritomuto
+.8.
+a
+tempo
+Violin or Oboe.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 88]]
+FINE
+12'
+466
+Sul A
+D
+3
+☑
+Neutrall
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+D.S. el FINI

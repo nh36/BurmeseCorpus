@@ -1,0 +1,2821 @@
+[[page 1]]
+Intercourse between Siam and Burma
+PREFACE
+In March 1921, Mr. G. M. Luce, then Hon. Secretary of the Burma Research Society
+wrote to me suggesting that I should do for the Burma Research Society what I had done
+for the Siam Society, namely to give the story of the relations between Burma and Siam
+as recorded in Siamese Chronicles. Thirteen years have elapsed since that suggestion was
+made and now I am giving the first installment of the translation made from P'ra Raj
+P'onsawadan Chabab P'ra Raj H`at'alek'a called the "Royal Autograph Raj p' Edition, by
+Mr. W. A. R. Wood, C.I.E., author of A History of Siam. This edition of the Siamese
+Chronicles was revised by King Maha Mongkut (Rama IV) and first printed in three
+volumes in 1913. Though some of the dates given in it have been found to be not quite
+accurate, it is nevertheless an authoritative work in Slam just as the Hmannan Yazawin is
+in Burma.
+The first volume begins with the foundation of Ayut'ia in Cula Sakkaraj 712 (A.D.
+1350), and the first invasion of Siam by the Burmese took place in Sakkaraj 892 (A.D.
+1530). Without starting the translation where the narrative of the invasion begins, I have
+thought it better to begin with the foundation of Ayut'ia, giving briefly the history of the
+kings that reigned during the intervening 180 years, and the events in Siam immediately
+preceding the Burmese invasion. Only in this way can a good perspective of the events
+chronicled be obtained. Moreover, one can get an idea of how the Siamese of old wrote
+their history. The style in which the Siamese history was written is very similar to that of
+the Hmannan history, containing many imaginary speeches made by prominent
+characters who played important parts in the events narrated. It is my intention to make
+the translation as close as possible to the original so that readers may have an like idea of
+'what a History of Siam written in Siamese is like.
+In transliterating Siamese names, titles and places, I have followed the method
+adopted by Mr. W. A. R. Wood for the reasons given by him in the introduction to his
+History of Siam. I think Mr. Woods method is a very practical one for those who read
+English and who do not Intend to study Siamese deeply. For the benefit of those who
+may not have access to Mr. Wood's work, I reproduce below his remarks on
+transliteration. The transliteration of Siamese names, titles and places presents a very
+much greater difficulty than the transliteration of Burmese names, because most of the
+Siamese names are drawn from Sanskrit and Pall, and while retaining all the letters of the
+original, the pronunciation bears no semblance to what it should be according to the
+letters composing the original. For Instance there is a town called Nak'on Sawan which
+when written according to its spelling as derived from Sanskrit IS Nagara Svarga. One
+can easily imagine the impossibility of writing down Nagara Svarga and expecting people
+to pronounce it as Nak'on Sawan.
+The following is Mr. Wood's remarks on the transliteration of Siamese :-
+" With regard to the system of transliterating Siamese names and titles used in this
+book, trust that it will not be found entirely unsatisfactory. There are two main systems
+in use in Siam, namely the phonetic, which gives the sound of each word as heard
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 2]]
+50
+JOUR. BURMA RESEARCH SOC.
+XXV, II, 1935.
+or imagined by the transliterator, and the scientific, which gives the equivalent in Roman
+characters of the original Pall or Sanscrit pronunciation of the word. The former system,
+as a rule, utterly disguises the origin of all Pall and Sanscrit words, and the latter
+completely distorts their modern pronunciation.
+"As this book will, 1 hope, be read by many persons who know no Siamese, and by
+more who know no Sanscrit or Pall, I have thought it best to follow a phonetic system.
+For the sake of those readers who may be interested in tracing the Pall origin of the
+names and titles used, I have, however, with the kind assistance of Professor G. Coedès,
+added a list, in which the Pal i forms are set forth.
+"
+"
+There are two man classes of Siamese guttural, labial and dental consonants,
+namely the unaspirated and the aspirated. The latter are often represented by adding an
+h", e.g. Phya, Thien; but this misleads many people into pronouncing those combinations
+as in English. I have, therefore indicated the aspirated consonants by adding an
+apostrophe, e.g. P'hya, T'ien.
+"
+"There are two Siamese classes of letters which are usually transliterated by "ch".
+One is more or less soft, as in "church", the other is hard, rather like the "tch" at the end
+of the word pitch." To distinguish between these two classes of letters 1 have
+represented the soft sound by "j" and the hard sound by "ch." An exception has been
+made in the names of such well known places as Chiengmai and Chiengsen, and perhaps
+a few more slight inconsistencies may be found.
+"In regard to this matter, I crave the indulgence of my readers. No two persons can
+be found to agree as to the best method of transliterating Siamese names, and no system
+is entirely satisfactory. All I can hope for is to cause as little confusion as possible to
+readers who do not know Siamese or Sanscrit." .
+The spelling of the names of certain towns and titles has been so fixed in Siam and in
+books on Siam written in English that it would lead to misunderstanding in some cases if
+Mr. Wood's method were strictly followed. He himself has made an exception in the case
+of the names of such towns as Chiengmai and Chiengsen. But there are other towns such
+as Chainat, Pichai, Pichit, Chumpon, Petchburi etc. where the spelling with "ch" has
+been fixed and is met with so often that it may lead to misunderstanding by using " "j"
+Instead of," ch ". Then the words Phya and Phra, denoting ranks in Siamese titles, are so
+common, appearing in all English newspapers published in Siam, and in correspondence
+both official and private, that I have thought it better to retain Phya instead of P'ya and
+Phra instead of P'ra.
+The scientific or classical spelling of the names of kings, persons titles and places is
+given in the foot-note on the page where they occur first, but not in other places where
+they may occur again.
+His Royal Highness Prince Damrong's work, Our Wars with the Burmese, in two
+volumes, has been of the greatest help to me in understanding certain parts of the "Royal
+Autograph Edition" of the History of Siam. I may mention here that these two books
+were given me by His Royal Highness as a present and I take this opportunity of
+tendering him grateful thanks for the books, and for the help they have given me in my
+translation.
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 3]]
+PREFACE
+51
+Phya Sombati Borihar, late of his Siamese Majesty's Privy Purse Department, has
+helped me with explanations of certain Siamese terms and expressions and I take this 5
+opportunity of thanking him for his kind help.
+And I tender my sincere thanks to Mr. G. H. Luce of the University of Rangoon for
+his kindness In revising the English of this paper.
+PHRA PHRAISON SALARAK
+(U AUNG THEIN)
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 4]]
+Intercourse between Siam and Burmese as recorded in the "Royal autograph
+Edition" of the History of Siam
+REIGN OF SOMDET PHRA RAMATIBODI I
+On Friday the 6th waxing moon of the 5th Siamese month (April), in the year of the
+Tiger, the 2nd year of the decade 1, of Sakkaraj 712 (A.D. 1350), at the auspicious hour
+given by the Brahman astrologers, the city of P'ra
+1. The dates given in the Siamese History are according to the Cula Sakkaraj, the
+same as in the Hmannan History of Burma. The Cula Sakkaraj in use in Siam is the same
+as that in use in Burma. The Siamese have two cycles running concurrently with the year
+of the Sakkaraj, which the Burmese have not. One is a cycle of twelve years, each of the
+twelve being named after an animal as follows;
+1.
+Pee (year)
+Chuet
+the year of the Rat
+2.
+Chalu
+Bull
+,,
+,,
+,,
+,,
+,,
+3.
+4.
+5.
+,,
+,,
+K'an
+,,
+,,
+,,
+,,
+Tiger
+T'aw
+Hare
+,,
+,,
+"
+,,
+,,
+Marong
+,,
+,,
+,,
+,,
+Great Dragon
+6.
+,,
+Maseng
+"
+,,
+"
+"
+Small Dragon
+7.
+Mamia
+Horse
+,,
+,,
+"
+,,
+,,
+8.
+Mame
+Goat
+22
+,,
+"
+,,
+Wawk
+,,
+Raka
+Chaw
+Kun
+9.
+10.
+11.
+12.
+,,
+,,
+,,
+The other cycle is one of ten years, and the names of the years are Pali numerals,
+such as Eka Sok (sok=year) for the year. of Sakkaraj ending in one, as 911, T'o Sok (Pali
+Do, Dve), for the year. of Sakkaraj ending in two, as 912, Tri Sok for that ending in three,
+as 913, and so on. The whole ten of the cycle are as followed :-
+"
+,,
+"
+"
+Monkey
+Cock
+,,
+,,
+"
+,,
+,,
+,,
+,,
+Dog
+၅၅
+,,
+"
+,,
+Pig
+10.
+66%20UDWN-
+1.
+Eka
+Sok
+1st year of the decade
+2.
+T'o
+,,
+3.
+Tri
+2nd
+3rd
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+"
+,,
+4.
+Chatawa
+4th
+,,
+,,
+,,
+,,
+,,
+5.
+Bencha
+5th
+"
+,,
+,,
+"
+,,
+6.
+Chaw
+6th
+"
+,,
+,,
+,,
+,,
+7.
+Sapta
+7th
+,,
+,,
+,,
+,,
+,,
+8.
+Att'a
+8th
+,,
+,,
+,,
+"
+,,
+9.
+Nop'a (nava)
+Samrid
+9th
+,,
+,,
+,,
+,,
+,,
+,,
+Complete year of the decade
+Samrid (Samriddhi) does not mean tenth, but it means complete, finished, end.
+The two cycles run concurrently and so at the end of every sixty years, each year in
+the twelve years' cycle returns to the same position in the ten years' cycle. The period of
+sixty years la called the Great Cycle.
+In Siam if one asks a man in what year he was born, he generally answers not the
+Sakkaraj, but the name of the animal corresponding to that Sakkaraj, e.g., (I was born in
+the year of the Rat or the year of the Horse" as the case may be.
+The dates mentioned la the Siamese history from which this translation is made,
+almost invariably give the name of the animal and the year of the decade corresponding
+to the Sakkaraj. As they are of no importance whatever, except perhaps for the purposing
+of checking and correcting any errors in the Sakkaraj, they have bean left out in the
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 5]]
+INTERCOURSE BETWEEN SIAM AND BURMA
+53
+subsequent dates given in the translation. Nak'on Ayut'ia¹ was built and Phra Chao Ut'ong
+came from Sup'anburi² ascended the throne at Ayut'ia at the age of 37. The Brahmans
+proclaimed his title as Somdet Phra Rama T'ibodi Sri Sunt'on Borom Bop'it³, King of
+Krung T'eb Maha Nak'on Bowon "T"waravadi Sri Ayut'ia Mahadilok P'obnoparat
+Rajat'ani Burirom*, in the same style as the Somdet Phra Ramnarai who ascended the
+throne in Ayut'ia ancient days. The reference here is to Rama and Ayodya of the famous
+Indian epic.
+Then he conferred on K'un Luang P'a-ngua .who was the elder brother of his chief
+queen and whom he called his elder brother, the title of Somdet Phra Borom Rajat'irat
+Chao and made him rule over Maung Sup'anburi. He sent his son Phra Ralnesuan to go
+up and rule over Maung Lopburj7.
+6
+At the time of his accession to the throne he held sway over the following towns :-
+Malaka (Malacca), Jawa (Java), Tanaosri (Tenasserim), T'awai (Tavoy), Mawtama
+(Martaban), Mawlamleng (Moulmein), Songk'la, Chantabun³, Pljtsanulokg, Suk'ot'ai¹º,
+P'ichai¹¹, Sawank'alok 12, Pichit¹³, Kamp'engp'et 14, and Nak'on Sawan.'
+13
+15
+Some time afterwards he sent for his son Phra Ramesuan to come over from Muang
+Lopburi, told him that the Cambojans had thrown off their allegiance, and asked him to
+lead an army to bring them to subjection. Phra Ramesuan marched with an army of 5,000
+men and reached the capital of Camboja about dusk. The Phya Uparat¹ (Crown Prince),
+son of the King of Camboja, told his father that the enemy had arrived tired and fatigued
+and the full complement of the forces had not yet arrived and so he would launch an
+attack at once. The father gave his approval, the attack was made with complete success,
+the advance force of the Siamese army was routed and it fell back in disorder on the
+main forces in the rear, Phra Sri Sawat", one of the Commanders, was captured by the
+Cambojans. News of this reverse reached the Siamese capital. The King sent messengers
+post-haste to his brother-in-law at Sup'anburi to come to Ayut'ia and when Phra Borom
+Rajat'irat arrived, he was asked to go to the assistance of his nephew in the invasion of
+1. Nagara Ayuddhaya.
+2. Suvarnapuri
+3. Rama Dhipati Sri Sundara Paramapavitra.
+4. Deb (Deva) Maha Nagara Pavara Dvaravati set Ayuddhaya Mahatiloka Bhava
+Navaratana Rajadhani Puriramaya
+5. Parama RaJadhiraja.
+6. Ramesvara,
+7. Lavapuri.
+8. Candapora.
+9 Vishnuloka,
+10, Sukhodaya.
+12, Svargaloka.
+14. Karibeli Bejr (i.e Vajra)
+16 uparaja.
+11. Bijaya or Vijaya.
+13. Bicitra or Vicifra.
+15. Nagata Svatga.
+17. Sri Svaati.
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 6]]
+54
+JOUR. BURMA RESEARCH SOC
+XXV, II, 1935.
+Camboja. The Ruler of Sup'anburi went with reinforcements, the capital of Camboja was
+attacked and captured, and the Siamese army returned bringing in many prisoners of war.
+In the year 731 (A.D. 1269) King Phra Ramat'ibodi died.
+FIRST ACCESSION TO THE THRONE BY PHRA RAMESUAN
+.
+On the death of King Phra Ramat'ibodi I, his son Phra Ramesuan came and
+ascended the throne, but his sway was short-lived, down for he had to make way for his
+uncle.
+REIGIN OF PHRA BOROM RAJAT'IRAT I.
+In the year 732 (A.D. 1370) Phra Borom Rajat'irat came over to Ayut'ia from
+Sup'anburi. When the king was informed of the arrival of his uncle, the ruler of
+Sup'anburi, he went out and invited his uncle to enter the city and ascend the throne; then
+taking leave of the new king he went back to his old town of Lopburi.
+Almost every year of this King's reign was spent In expeditions against the rulers of
+neighbouring towns and bringing them under his sway. The Governors of P’itsanulok and
+Kamp'engp'et acknowledged his suzerainty. He died in the year 744 (A.D. 1383).
+REIGN OF PHRA CHAO TONG CHAN
+Chao T'ong Chan, the deceased king's son, who was only 15 years of age, ascended
+the throne but his reign lasted only seven days.
+SECOND ACCESSION TO THE THRONE OF PHRA RAMESUAN
+Phra Ramesuan came down from Lopburi. He succeeded in entering the palace and
+capturing his young cousin whom he ordered to be executed. He then ascended the
+throne.
+In the year 746 (A.D. 1384) the king led an expedition against Chieng. which was
+captured, the Ruler of Chiengmai fled from the town but his son Nak Sang was captured.
+Nak Sang was installed as Ruler and the king returned, bringing with him a large number
+of captives whom he made to settle down in the towns to the south of his capital.
+1
+The king of Camboja led a predatory expedition into Siam, coming as far as Maung
+Jonburi and Chantabun and took away between 6,000 and 7,000 persons back to
+Camboja. 'The King of Siam immediately set out to invade Camboja. The advance army
+under Phya Jai Narong² defeated the Cambojan army in an engagement. When the King
+of Siam succeeded in entering the city, the King of Camboja got into a boat to leave It.
+The King of Siam got down from his elephant and fired with his gun at the fleeing
+monarch. The shot missed the mark and hit a magazine of gun-powder which exploded
+1. Jalapurl
+2. Jaya Narariga
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 7]]
+INTERCOURSE BETWEEN SIAM AND BURMESE
+55
+and the King of Camboja got away safely. The operate, son of the King of Camboja, was
+however, captured. Leaving Phya Jai Narong to administer the country with a garrison of
+5000 men, the King returned to Ayut'ia. The Siamese were not allowed to occupy the
+country in peace, because the Yuans (the people of Annam) the eastern neighbours of the
+Cambojans, made frequent incursions into Camboja, and when they came in small
+numbers, the Cambojans were willing to fight them, but when they came in Large
+numbers the Cambojans were unwilling to offer resistance. Phya Jai Narong submitted a
+report of this state of affairs, and he was recalled. The Siamese army brought back a large
+number of Cambojans and a triumphant entry into the capital was accorded to the
+Siamese general and his army. In the year 749 (A.D. 1387) Phra Ramesuan died.
+REIGN OF PHRA CHAO RAM RAJAT'IRAT¹
+On the death of the King, his son Phya Ram succeeded to the throne, assuming the
+title of Phra Chao Ram Rajat'irat, and reigned for fourteen years. It is strange that nothing
+was recorded in the Siamese History, during all these years.
+In the year 763 (A.D. 1401) the king became angry with one of his high nobles who
+enjoyed the title of Chao Phya Maha Senabodi² whose arrest and execution he ordered.
+But the nobleman succeeded in eluding capture and made his way to Sup'anburi
+where he incited the ruler, Phra Nak'on In³, a grandson of Phra Borom Rajat'irat, to go
+over to Ayut'ia and capture the throne. This venture was successful and the Ruler of
+Sup'anburi ascended the throne at Ayut'ia as Phra Int'arajat'iraj*
+REIGN OF PHRA INT'ARAJAT'IRAJ
+The new King spared the life of Phya Ram whom he deposed, and made him
+Governor of Maung Pat'ak'ucham. He rewarded Chao Phya Maha Senabodi by giving
+him in marriage one of his daughters by a royal concubine and the paraphernalia of gold
+utensils emblematic of high noble rank.
+In the year 765 (A.D. 1403) Phra Maha T'ammaraja, Ruler of Maung P'itsanulok,
+died and the country round about it became disturbed. The King went up, quelled all
+disturbance and proceeded as far as Maung P'rabang, the capital of an important Lao
+State, the ruler of which came out and made obeisance to show submission.
+1. Rama Rajadhiraja.
+2. Maha Senapati.
+3. Nagara Indra
+4. Indarfjadhiraja
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 8]]
+56
+JOUR. BURMA RESEARCH SOC
+XXV, II, 1935
+He had three sons, the eldest was Chao Ai, Governor of Sup'anburi, the second son,
+Chao Yi, Governor of Maung Sang', and the third son, Chao Sam, Governor of Chainat².
+Phra Nak'on Int'arajat'irat died in the year 780 (A.D. 1418).
+REIGN OF PHRA BOROM RAJAT'IRAT II
+Chao Ai and Chao Yi marched to the capital with their following, each intending to
+take possession of the throne. They met in single combat, each mounted on his elephant.
+Both were killed in the fight, leaving the way open to their younger brother to ascend the
+throne. The ministers and nobles then went to Maung
+Chainat and invited Chao Sam to come to the capital and ascend the throne. He
+assumed the title of Phra Borom Rajat'irat. He exhumed the bodies of his two brothers.
+and cremated them, built a monastery at the place of cremation and two pagodas at the
+place where they met in single combat with fatal issue to both.
+In the year 783 (A.D. 1421) he led a successful expedition against Maung Nak'on
+Luang the capital of Camboja, captured the town, and brought back captives and bronze
+figures of animals, such as lions, bulls etc.
+In the year 790 (A.D. 1428) he went and attacked Chiengmai but was unable to take
+the town. He fell ill and so abandoned further operations and returned to his capital. Two
+years later he again attacked Chiengmai; this time he was successful in taking the town.
+It is recorded that the number of prisoners of war was 120,000, but it is not stated
+whether all of them were taken with him on his return.
+He died in the year 796 (A.D. 1434) and was succeeded by his son Phra Ramesuan.
+REIGN OF PHRA BOROM TRAILOKANAT³
+The new King assumed the title of Phra Borom Trailokanat. In his reign certain titles
+were created as appertaining to the officers in charge of the different branches of the
+administration. The officer who was in charge of the army was called Smuha Kalahom*
+(Minister of the Army) ; he in charge of the civil administration was called Smuha
+Nayok (Prime Minister) ; he in charge of the land was called Phra Kraset; he who
+controlled the peace and order of their capital city was called Phra Nak'on Ban' Maung ;
+the head of the royal treasury was called Phra Kosat'ibodi³ ; and the officer in charge of
+the royal palace and royal household was called Phra T'aramat'ikon'. these titles are still
+1. Sarga.
+3. Parama Tralokanatha
+5. Samuha Nayaka
+7. Nagarapila
+2. Jayanada.
+4. Samuha Kalaha or Kraiahoma
+6. Krasetra
+8. Kosadhipati
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 9]]
+INTERCOURSE BETWEEN SIAM AND BURMA
+in use on suitable occasions.
+57
+In the year 803 (A.D. 1441) an army was despatched to take Maung Malaka
+(Malacca), probably owing to its governor trying to become independent.
+In the year 806 (A.D. 1444) the King showed his religious enthusiasm by casting 550
+images representing the 550 anterior lives of Buddha before he attained Buddha hood,
+and building a monastery which was named Chulamani², and giving alms to priests,
+Brahmans, and beggars.
+In the year 808 (A.D. 1446) the governor of Maung Chlieng threw off his allegiance,
+and taking his family and followers, went and sought the protection of Phra Maharat³
+Ruler of Chiengmai. In the following year the Governor brought down the army of his
+new lord, attacked Maung P'itsanulok and captured it. From there he went and attacked
+Maung Kamp'engp'et, but was unable to take the town. The King and his son Phra
+Int'araja went up in time to assist the resistance of the town. In this expedition the prince
+distinguished himself by putting to rout one of the commanders of the forces of the
+enemy, and while engaged in single combat on elephants with another commander of the
+enemy, he was surrounded by four other elephants of the hostile forces, but managed to
+get out successfully with only a gun-shot wound in the face. The Chiengmai forces then
+returned to Chiengmai.
+In the year 811 (A.D. 1449) the King entered the priesthood at Wat (monastery )
+Chulamani and remained in the holy order for eight months. soon after leaving the priest
+hood, he died and was succeeded by his son Phra Int'araja*.
+REIGN OF PHRA INT' ARA'A II
+In the year 815 (A.D. 1453) the King got a female white elephant.
+In the year 824 (A.D. 1462) the Ruler of Lan Chang, the Linzin of the Hmannan
+history, died and the King sanctioned the succession of Phya Maung K'wa as Ruler. It is
+necessary to take note of this Lan Chang which literally means million elephants; the
+Hmannan history speaks of Linzin Min as the owner of a hundred thousand elephants () .
+The Ruler of Lan Chang played an important part in the intercourse between Burma and
+Siam and his name will appear in many places in the pages that follow. Apparently the
+King of Siam was then the nominal liegelord of the Ruler of that Lao principality, also
+called Krung Sri Satanak'anahut' in Siamese history.
+In the year 828 (A.D. 1466) the King's eldest son, Phra Borom Raja, entered the
+priest hood and left it the following year. He was then created Maha Uparat, i.e. Crown
+Prince.
+1. Dharmadhikarana
+2. Culamani
+4. Indarija
+3. Maha Raja
+5. Sri Satanaganahuta
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 10]]
+58
+JOUR. BURMA RESEARCH SOC.
+XXV, II, 1935
+In the year 832 (A.D. 1470) the King led an expedition against Maung T'awai
+(Tavoy), and when the town was about to be taken by storm many strange things
+happened, e.g. a cow gave birth to a calf with eight legs, a chicken hatched out from an
+egg with four legs, and six chickens came out of one egg. In that year at Tavoy husked
+rice sprouted producing leaves.
+King Phra Int'araja II died in the year 835 (A.D. 1473) and was succeeded by his son
+Borom Rajat'irat.
+REIGN OF PHRA RAMAT'IBNODI II
+The new king assumed the title of Phra Ramat'ibodi . In the year 341 (A.D. 1479) he
+started building a big shrine called Wat Sri Sanp'et² and began casting a huge standing
+image of Buddha to be placed in the shrine. It took four years to complete the casting of
+the image which was also called Phra Sri Sanp'et. The image was eight wahs (a wah is
+about two meters) in height from the foot to the decorated top on the crown of the head,
+usually ending in a point in Siamese images ; the face of it was four soks (a sok² is half a
+metre) long and three soks wide, and the chest was eleven soks broad. The gold plates
+used to cover the image weighed 286 chang. The consecration of the image was
+performed on Friday the 11th waxing moon of the 8th Siamese month (July) in the year
+845 (A.D. 1483).
+In the year 860 (A.D. 1498) he ordered the compilation of a treatise on military
+tactics.
+In the 7th Siamese month (June) of the year 866 (A.D. 1504) the King received an
+anonymous letter and many nobles were arrested on suspicion and executed.
+In the year 867 (A.D. 1505) there was severe drought and the rice crop failed. There
+was an earthquake and many strange things happened.
+In the year 868 (A.D. 1506) he raised his son Phra At'itwong³ to the position of
+Uparat and sent him to govern Maung P'itsanulok. Three years later he died was
+succeeded by his son whom he had created Uparat.
+REIGN OF PHRA BOROM RAJA MAHA PUTT'ANKUN4
+The new King assumed the title of Phra Borom Raja Noh Putt'ankun. Nothing is
+mentioned in the history of the events in his reign. the only record made is that he died of
+small-pox in the year 875 (A.D. 1513). His son by the name of Phra Rat'at'irat Kuman³,
+then only five year of age, was raised to the throne, but his reign lasted only five months.
+1. Sri Sarvajna
+2. "Sok" is the measure from the elbow to the tip of the middle finger; it is the equivalent
+of the Burmese. "ataung"
+3. Aditayavamsa
+4. Parama Raja Maha Buddhanknra
+5. Ratthadhirajakunara
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 11]]
+INTERCOURSE BETWEEN SIAM AND BURMA
+REIGN OF PHRA JAI RAJAT'IRAT
+59
+Prince Phra Jai Rajat'irat, descendant of Phra Ramat'ibodi, wanted to become king
+and so he killed the child king and ascended the throne. In one of his expeditions to the
+north, he reached a town called Chiengkran, identified by H. R. H. Prince Damrong and
+Mr. W. A. R Wood as the modern town or village of Gyaing in Amherst District.
+In the year 887 (A.D. 1525) he led an expedition to Chiengmai with the Governor of
+P'itsanulok commanding the forces and marching ahead of the King. He reached
+Chiengmai but failed in his attempt to take it, and so he returned to his capital.
+2
+Toward the close of the year a great and devastating fire occurred in Ayut'ia, and the
+Siamese chronicle says 100, 050 buildings, including houses, salas (rest houses),
+monasteries, and shrines, were destroyed, the fire burning for three days before it was put
+out.
+In the year 888 (A.D. 1526) the King again invaded Chiengmai. He ordered the
+Governor of P'itsanulok to march at the head of an advance force of 20,000 men. He
+took 12 days to reach Maung Kamp'engp'et where he rested for 15 days. Resuming his
+march, he took the town of Lamp'unjai on the way and reached Chiengmai and captured
+it on Monday the 9th waxing moon of the 4th Siamese month (March). Four days later a
+very extraordinary phenomenon occurred. In front of the doors of the house of the people
+both inside and outside the city there were found splashes of blood. The King probably
+took this to be an evil omen, because about a fortnight later he left Chiengmai to return to
+Ayut'ia. He died on the way in the year 8890 (A.D. 1527) and the body was taken down
+to the capital.
+The King had two sons, the elder by the name of Phra Keo Fah was only eleven years
+of age, and the younger whose name was Phra Sri Sin³ was only five years of age.
+When the cremation of the dead King was over, Phra T'ien Raja, a Kinsman of the
+deceased monarch, thought that his life was certainly in danger if he were to remain as he
+was a prince and a layman. He said he did not see where to find safety except in seeking
+the refuge of the Buddhist religion and sheltering under the protection of the yellow robe
+which was the flag of victory for an arahat and under the protection of which one is free
+from all danger. So he entered the priest hood in Wat Rajpradit'an 6. Later on he become
+King, and in his reign the first invasion of Siam by the Burmese took place.
+1. Jaya Rajadhiraja
+2. Mr. W. A. R Wood in his History of Siam (page 104) says 10,050 houses were destroyed. According to the
+word used in the Siamese history the number is 100.050. The Siamese word used, sen, means a hundred
+thousand.
+3. Sri Silapa
+4. H. R. H Prince Damrong in his work called Our Wars with the Burmese, Ayut'ia period (page 13) says that
+Phra T'ien Raja was half brother of Phra Jai Rajat'irat.
+5. Raja Pratisthana
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 12]]
+60
+JOUR. BURMA RESEARCH SOC.
+REIGN OF PHRA YOTFAH
+XXV, II. 1935
+The ministers, nobles and royal Brahman astrologers unanimously raised Phra Keo
+Fah, then only eleven years of age, to the throne and the Queen Mother, Srisudachan',
+was made regent to assist the young king in the affairs of the state. The boy King
+assumed the title of Phra Yotfah. In that year there was an earthquake, and the chronicler
+might have thought that it portended evil, and the subsequent events seemed to justify a
+common belief among the people of the orient, that earthquakes augur nothing but
+misfortune.
+In the 5th month (April) of the year 890( A.D. 1528) the young King came out to an
+open space in the palace enclosure attended by many of his ministers and court officers.
+He ordered an exhibition of an elephant fight between two royal elephants. During the
+fight one of the tusks of the elephant named Phya Fai was broken into three pieces.
+About dusk, the royal elephant Phra Chatt'anta², which was wont to be ridden by the
+King, shed tears and cried like a human being weeping in distress. All these strange
+happenings were recorded by the chronicler, probably to show that " coming events cast
+their shadows before."
+Not many months after these strange portents, while the Queen Mother, Sri
+Sudachan, was sitting in one of the apartments of the front palace reserved for men, she
+saw the attendant of the palace whose title was P'an But Srit'ep³. She became enamoured
+of him and took immediate steps to make her love known. She sent one of her female
+attendants to go and give a packet of picked tea and betel vine leaf and nut, wrapped in a
+handker chief to P'an But Srit'ep who, becoming aware of the amorous feelings of the
+Queen Mother, was not slow to take advantage of it. He sent back a Champak flower
+(Michelia champaca. L) by the same fair messenger to be presented to Queen Mother
+.This encouraging response added flame to her passing. Where there is a will there is a
+way, and she was in position to be able to find many ways of accomplishing her object.
+She said to Phya Rajap'akid one of the palace officials,probably attached to her suite and
+in attendance on her, that P'an But Srit'ep was an old and faithful servant and she wanted
+him to look after the inside palace,usually received for ladies, and to exchanged places
+with K'un Jinarat the attendant then in charge. In compliance with her wishes, the
+exchange was made, P'an But Srit'ep became K'un Jinarat in charge of the outside palace.
+She had thus ample opportunity to indulge in the consummation of her immoral passion.
+Naturally she could not be content to remain in this anomalous situation, and she wanted
+1. Sri Suta Candra.
+2. Chaddanta.
+3. Putra Srideva
+4. Raja Bhatti
+5. Jinaraja
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 13]]
+INTERCOURSE BETWEEN SIAM AND BURMA
+112
+61
+to raise her lover to the throne. The first step towards it was to raise him from a mere
+petty palace attendant to a position of some influence and power. So she ordered Phya
+Rajp'akdi to raise K'un Jinarat to the tile of K'un worwongsat'irat build a house for him
+close to the Registration Office of those who were hereditary servants of the crown
+called "Lek Sangkat", and to make him hold charge of that office. It is necessary to say a
+few words in explanation of this Registration Office of "lek Sangkat", so that readers may
+know the peculiar function of this Office. In very ancient times, a kind of feudal system
+prevailed in Siam, according to which "not only was all land in the kingdom the actual
+property of the crown, but every human being living within the frontiers of the state was
+considered as a mere chattel of the king, who had absolute right to dispose of the person,
+property or life of all such in any manner that might seem best to him." This right the
+king exercised " by demanding personal service from each man for a certain part of each
+year. "2 This service might be in any department of the state such as army, navy, public
+works, etc., or even menial work in the royal household. This service was hereditary, that
+is if the father served in any branch of service, the son on coming of age must serve in the
+same branch as that in which his father served, and so with the other departments. A
+complete register was maintained of the persons belonging to different department, and
+different marks were tattooed on the wrist of the men, indicating to which department
+they belonged. Every year, as occasion arose, this register was revised, and those coming
+of age and becoming able-bodied were called up, entered I the register and the mark
+indicative of the department to which each belonged was tattooed on the wrist. It was in
+effect a census roll of all those liable to render service to the king. Therefore, the officer
+in charge of this Registration Office knew exactly how many men there were in the
+several department, and if he could persuade them to espouse his cause and to serve him
+in case of need, he could gauge what strength he would have behind him in any
+hazardous adventure he might under take. Moreover, as he probably had the power or the
+opportunity of transferring men from one department to another, he could get a large
+number of men royal to him.
+It was with the object of strengthening her position in case of a secret disloyal
+movement or an open rebellion against her and her lover that the Queen Mother managed
+to put him in charge of the Registration Office. She had a royal cot or settee of the king
+used by a king placed in the front part of the house for K'un Worawongsat'irat to sit on.
+This was done so that all the nobles should show respect to him and be afraid of him. In
+oriental kingdoms where sumptuary rights prevailed, no one was allowed to use any thing
+which was reserved for the use of the king under pain of death, and if it should happen
+that one who was not a king had the power to contravene this privilege of the king, he
+1. Varavarnsadhiraja
+2. The words within inverted commas are from Mr. W. A. Graham's book 'Siam' Vol, 1,
+P.235
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 14]]
+62
+JOUR, BURMA RESEARCH SOC.
+,
+was feared and respected as if he actually was the king.
+XXV, II, 1935.
+,
+Step by step the Queen Mother was leading her lover to the throne. She ordered a
+stately house to be built for K'un Worawongsat'irat at Pratudin, one of the gates of the
+palace, and made him issue orders from there on affairs of the State.
+The conduct of the Queen Mother was much resented by the patriotic nobles and
+officials, but none dared show his resentment openly. On one occasion Phya Maha Sena
+and Phya Raj P'akdi had a private conversation to the effect that the country had gained
+an evil reputation by the misconduct of the Queen Mother, and that they should not let
+matters go from bad to worse, but think of some measure to put a stop to such a state of
+affairs. This got to the ears of the Queen Mother the next morning, probably through her
+spies. She ordered Phya Maha Sena to attend the afternoon audience at K'un
+Worawongsa's house at Pratudin. When the audience was over, Phya Maha Sena left the
+place soon after darkness had fallen, and he was stabbed to death by someone. With his
+last breath he said that when such a fate had befallen him, who could say what would
+happen to those still alive.
+By this time she was with child, and she had therefore to take a decisive step. She
+held a council of the ministers and told them that her son, Phra Keo Fah, was more fond
+of play than of attending to affairs of state, and it was beyond his capacity to discharge
+the responsibilities of his position. Moreover, in the country to the north of the capital,
+the unrest incidental to the succession of a king had not yet quieted down, and there was
+cause for anxiety about trouble coming from that quarter. She was of opinion that K'un
+Worawongsat'irat should assume the responsibility of discharging the affairs of the
+kingdom, until such time as her son came of age. Ostensibly she asked for an expression
+of opinion from the ministers, but they, knowing too well what her wish was and what
+was expected of them, said that her suggestion was the most suitable one.
+REIGN OF K'UN WORAWONG SAT'IRAT
+The Queen Mother had gained her point, and she ordered a palace official to take out
+a royal palanquin, together with utensils used as insignia of royalty and a conch shell
+usually blown in royal functions, and to fetch K'un Worawongsat'irat into the royal
+palace. The ceremony of Rajabisek' (the oriental form of coronation ) was performed
+and K'un Worawongsat'irat was raised to the throne as King of Ayut'ia. One Nai Chan, a
+brother of a the new King, who was living in a village, was brought to the capital and
+made Maha Uparat.
+In July of the year 891 (A.D. 1592), the new King and Queen Sri Sudachan both
+thought of making their position secure by removing Phra Keo Fah out of the way. The
+thought was not slow in being transformed into action, and the boy King was taken out
+1. Rajabhiseka.
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 15]]
+INTERCOURSE BETWEEN SIAM AND BURMA
+63
+and executed, but the life of his younger brother was spared, he being then only seven
+years of age. The young King was on the throne for a year and two months only.
+Evidently the evil deeds of the two arch evil doers had reached a point when no true
+patriotic son of the soil could remain inactive. K'un P'irent'rat'ep', who could boast of
+some royal blood in his veins, K'un Int'ratep², Mun Rajsneha³ and Luang Sriyot, four
+men who could trust each other, went to a secluded place for mutual consultation.
+They said they should not remain inactive when the affairs of the kingdom were in
+this disgraceful state, but should get hold of K'un Worawongsat'irat and kill him. Three
+of them, K'un Intrat'ep, Mun Rajsneha and Luang Sriyot said, supporting they succeeded
+in their plot where could they get a man to protect and govern the people of the country?
+K'un P'irent'rat'ep answered that he saw only Phra T'ien Raja, then in the priesthood, who
+could assume sovereignty. The others agreed and they all went to Wat Rajpradit to confer
+with Phra T'ien Raja, who had entered the holy order on the death of King Phra Jai
+Rajat'irat, for fear of harm coming to him, as he was a prince. After having made
+obeisance to the prince-priest, they told him the scandalous state of affairs and their plot
+to kill the usurper and to raise him to the throne; they wanted to know whether he
+approved of the plot or not. Phra T'ien Raja having given his approval, three of the
+plotters, namely K'un Int'rat'ep, Mun Rajsneha and Luang Sriyot, then said that their
+undertaking was a very great one, and so they should put reliance in the power of Buddha
+to make evident to them, by means of the augury of candles lighted after a solemn
+asseveration in front of an image of Buddha, whether Phra T'ien Raja was endowed with
+virtues (lit. paramitas) to become the supporter of Buddhism (Buddha Sasana) and to give
+protection to his countrymen. Phra T'ien Raja was of the same opinion, but K'un
+P'irent'ratep, who probably was less superstitious and more practical than the others, said
+that having proceeded so far in this great undertaking and having already made
+preparations for it, would it not damp their spirit and thereby conduce to failure, if the
+augury turned out to be not as they wished and expected, and expected, and would they
+abandon the undertaking should the augury happened to be unpropitious? Each then went
+his way without further dispute.
+In the evening when it become dark, K'un Intrat'ep, Mun Rajsneha, Luang Sriyot, and
+Phra T'ien Raja met together and rolled two wax candles, the weight of bees'-wax, the
+number of cotton threads, their length for the wick in each, and the length of the candles,
+being exactly the same. They then went to a shrine in monastery, and Phra T'ien Raja
+Having prostrated himself in adoration before an image of Buddha, made the following
+solemn declaration of truth:- First, when Buddha was alive, He went about preaching his
+1.
+2.
+Birendradeva or Virendradeva.
+Indradeva
+3. Raja Sneha or Sineha
+4. Sri Yasa
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 16]]
+64
+JOUR. BURMA RESEARCH SOC.
+XXV, II, 1935.
+Dhamma, and by means of His supreme wisdom brought enlightment and right conduct
+to human beings, and when He "entered parinibbana" (died), in his great compassion, he
+left behind five "Cetiyas" viz., His image, the Bodhi tree, His sacred utensils, His relics,
+and His Dhamma to represent Him for the adoration of succeeding generations. Secondly,
+he wanted to become King, being prompted by worldly desire to gain power to enable
+him to carry on the affairs of the state with justice, to protect the welfare of the people
+and be a refuge to them and to bring them peace, prosperity and happiness, as was the
+custom of ancient kings. He was in doubt whether his wish would be fulfilled or not, and
+so he implored the power of the five Cetiyas left behind by Buddha, and relied on the
+efficacy of his two declarations of truth, to dispel his doubt, and to this end he would
+offer to Buddha two lighted candles one for himself and another for K'un
+Worawongsat'irat. If his wish was to be fulfilled and he was to become king, let the light
+of K'un Worawongsat'irat's candle be extinguished first, and if his wish was not to be
+fulfilled then let the light of his own candle go out first. The two candles were then
+lighted at the same time, offered to Buddha and placed in front of the image of Buddha.
+A little while after K'un P'irent'rat'ep arrived on the scene, and when he saw K'un
+Worawongsat'irat candle longer than Phra T'ien Raja's, he was very angry and reproached
+them saying he had forbidden them to perform this he was chewing and without aiming at
+anything, threw it away casually, but the stray quid hit K'un Worawongsat'irat's candle
+and extinguished the light. The five conspirators were overjoyed. Just at that moment a
+priest fully robed with the prescribed three yellow robes and holding a palmary leaf fan
+entered the shrine and blessed them saying that for a certainty their wishes would be
+fulfilled. They paid obeisance to this strange priest and accepted the blessing. He then
+went out and disappeared as if into thin air. They left the shrine and returned to their
+respective homes. This portion has been translated somewhat fully to let readers know the
+method of divination by lighted candles practised by the Siamese in the old days.
+About fifteen days after the conspirators had ascertained to their satisfaction the
+probable issue of the conspiracy, the local officials of Maung Lopburi submitted a report
+to the capital that a male elephant, six 'sok' and four 'nyu (about 3 1/6 meters) in
+height with tails and ears answering of wild elephants. The prime minister submitted the
+report to his Majesty who said that he would go up in another two days and capture it,
+and ordered that instructions he issued to prepare for its capture. A week later the prime
+minister reported to His Majesty that the herd with the elephant in question had entered
+the elephant corral. His Majesty said he would go up the next day to capture it. That
+1 Nyu is the breath of the thumb; 24 nyu = 1 sok
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 17]]
+INTERCOURSE BETWEEN SIAM AND BURMA
+65
+evening when darkness had fallen, K'un P'irent' rat'ep told Mun Rajsneha (out of
+government service )' to go out to a place called T'a Sua and kill Maha Uparat on his way
+to the elephant corral. That same evening the governor of P'ichai and the Governor of
+Sawank'alok arrived at the capital and K'un P'irent'rat'ep sent a secret message to them of
+the intended plot. They fell in with it with joy and went and hid themselves near a canal
+called Bang Plamaw. K'un P'irent'rat Luang Sriyot, and Mun Rajsneha (in government
+service) armed themselves with the necessary weapons, each got into a boat, and waited
+for the coming of the king and his suite. Mun Rajsneha (out of service) took a gun and
+waited for the Maha Uparat, behaving in such a manner as to be mistaken for a governt
+official. when the Maha Uparat mounted his elephant to go to the corral, Mun Rajsneha
+shot his victim, who fell from his elephant and met an instantaneous death. At dawn K'un
+Worawongsat'irat, Queen Srisudachan, their infant daughter and Phra Sri Sin got into a
+royal boat and came along a canal called Srabua with K'un Intrat'ep (one of the plotters)
+in a boat in attendance on their Majesties, When K'un Worawongsat'irat the Governor of
+P'ichai, the Governor of Sawnk'alok Luang Sriyot, and Mun Rajsneha (in service) saw the
+royal boat coming up the shouted "Whose boats are those that come direct to us? " K'un
+P'irent rat'ep shouted in reply "I am come to take the lives of both of you " . K'un
+Intrat'ep quickly brought his boat up to the royal boat the all the conspirators boarded the
+royal boat, overpowered all resistance and killed the King, The queen and their infant
+daughter. The life of Phra Sri Sin was spared. The bodies of the murdered were impaled
+and exposed to public view to proclaim the fate of those who had misconduct themselves
+and brought dishonour to the nation. K'unm Intrat'ep and K'un P'irent'rat, together with
+the nobles who accompanied the King, returned to the capital and kept guard over the
+palace.
+REIGN OF SOMDET PHRA MAHA CHAKRAP'AT RAJAT’IRT²
+K'un P'irent'rat'ep then sent palace officials with a royal barge decorated with all the
+usual decorations for the reception of a king, to Wat Rajpradit, to beg Phra T'ien Raja to
+come along in the royal barge and enter the palace. Then on an auspicious day and hour,
+there assembled in the palace the Supreme Patriarch together with his monks, the
+ministers of state, royal preceptors and Brahman astrologer, and they unanimously
+offered the crown to Phra T'ien Raja who, on assuming sovereignty, took the title of
+1. Sometimes it happens that two persons may have the same title, one out of service and
+the other in active service. The reason for this is, that some titles appertain to the
+office, and any person holding it is given the title. A person may hold an office and
+enjoy the title which appertains to it, and may be permitted to retain the title on
+vacating it. His successor is given the same title, and so it happens that two persons
+may have the same title, but to differentiate the two, one is said to be out of service
+and the other in service.
+2. Maha Cakravarti Rajadhiraja
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 18]]
+66
+JOUR. BURMA RESEARCH SOC.
+XXV, II, 1935
+Phra Maha Chakrap'at Rajat'irat. Then K'un P'irent'rat'ep brought forward Phra Sri Sin
+and presented him to His Majesty who was kind enough to order that the young prince be
+maintained according to his position.
+The next day there was a general audience of all the ministers and officials, and His
+Majesty held a consultation on the question of the reward to be given to K'un
+P'irent'rat'ep, K'un Int'rat'ep Mun Rajsneha and luang Sriyot, saying that the we four men
+were the first persons to think of and plan the plot, and all the local officials in the
+provinces were of assistance only in maintaining peace and order during the coup d'etat.
+The four royal preceptors brought the records of rules and precedents from the royal
+archives for consultation. They took the case of the reward given to Chow Phya Maha
+Senabodi when he brought Phra Nak'on In from Sup'anburi, forced his entry into the
+palace and placed Phra Nak'on. In on the throne. On that occasion the reward consisted
+of a daughter by a royal concubine given in marriage, a pair of gold vessels with stand, a
+pair of gold trays with stands, a gold goblet, an double-edged sword, and ivory palanquin,
+and another palanquin with carvings of lotus petals. The precedent was submitted to His
+Majesty, and the said such a reward would be too little for these four men, because they
+risked their lives and those of all their relations, ancestors as well as descendants, in their
+endeavour for the good of the country, saving it from disaster and dishonour. He told the
+assembled ministers and officials that in the case of K'un P'irent'rat'ep on his father's side
+he was a mother's side he could claim kinship with King Phra Jai Rajat'irat. More over,
+he was the first to think of putting an end to the disgraceful state of affairs in the
+Kingdom.
+K'un P'irent rat'ep was raised to the rank of king of a dependency with the title of
+Phra Maha T'ammarajat'irat and made to rule over Maung P'itsanulok. He was given the
+King's daughter by the Chief Queen in marriage. The title of Phra Wisut Krasatri¹ and the
+rank of Chief Queen of Maung P'itsanulok were conferred on her. He was also given the
+use of certain utensils used only by a king, and ordered to proceed to Maung P'itsanulok.
+K'un Int'rat'ep was made Chow Phya Sri T'ammasokarat² and Governor of Nak'on Sri
+T'ammarat. A daughter of the King by a royal concubine of the first rank was given in
+marriage to him. The utensils of high gold trays with stands, a gold goblet, a double-
+edged sword, an ivory palanquin and a palanquin with carvings of lotus petals.
+Luang Sriyot was made Chow Phya Maha Senabodi, and Mun Rajsneha was made
+Chow Phya Maha T'ep². They each got a daughter of the king by a royal concubine in
+1. Visuddhi Krasatri
+2. Sri Dharmasokaraja
+3. Nagara Sri Dhammaraja
+4. Maha Dava
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 19]]
+INTERCOURSE BETWEEN SIAM AND BURMA
+67
+marriage. As regards the gold utensils and palanquins which were emblems of high
+nobility, they got the same as those given the Chow Phya Srit'ammasokarat.
+Mun Rajsneha (out of service) who shot and killed Maha Uparat was made Phya
+P'akdi Nujit, and given a daughter of a royal concubine to be his wife; emblems of
+nobility given were; two gold vessels with stands to be placed on the right hand and left
+hand side, a gold goblet and a sword with a gold guard.
+The Governor of P'ichai and Sawank'alok were raised from the rank of Phya to that
+of Chow Phya and given the same gold utensils as were given to Mun Rajsneha (out of
+service). Other officials who rendered assistance in this plot were also suitably rewarded.
+In the end His Majesty pronounced a curse in these words; "Who ever may become
+king hereafter, let him not do any harm to spill the blood of any of the relations and
+descendants of Somdet Phra Maha T'ammarajat'irat, Chow Phya Sri T'ammasokarat,
+Chow Phya Maha Sena, and Chow Phya Mahat'ep. If any king does not observe our
+interdiction, may his reign come to a speedy end."
+News of the events in Ayut'ia from the death of Somdet Phra Rajat'irat to the murder
+of the usurper K'un Jinarat and Queen Sri Sudachan, and of the consequent unrest and
+disturbance in the country, reached Krung Hongsawadi, i.e. Hanthawaddy. The King of
+Hanthawaddy thought, if the news were correct the outlying provinces would be much
+disturbed, and the capture of Ayut'ia by an invading army would be an easy matter. He
+was not slow to act, because an army composed of 30,000 foot-soldiers, 2000 cavalry and
+300 elephants was soon mobilised, and the first invasion of Siam by the Burmese was
+made. The route taken was through the frontier outpost station known as three Pagoda
+post. Maung Kanchanaburi² (modern Kanburi) was attacked and taken and the local
+officials captured and questioned. They told the Burmese King that it was true that there
+had been a disturbance, but then Phra T'ien Raja had ascended the throne and there was
+peace and order throughout the Kingdom. The King of Hanthawaddy then said that as
+they had come so far into foreign country it would not be to his credit and honour to
+return from there. He must continue the march up to the outskirts of the city, and when he
+had seen it he could return. Moreover, should a force come out and fight them they
+would know how far the Siamese soldiers were efficient. He then continued his march,
+attacked and captured Maung Sup'anburi, and from there went across the plain straight to
+a point above the mouth of the Mok stream, which he crossed. On Tuesday the 5th waxing
+moon of the 2nd Siamese month (January) Sakkaraj 892 (A.D. 1530), he pitched his camp
+at a place called Lump'li. A report sent by the local officials of Maung Sup'anburi
+reached the capital at the same time as the Burmese King reached Lump'li. The Siamese
+1. Bhatti Nujata
+2. Kancanapuri
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 20]]
+68
+JOUR. BURMA RESEARCH SOC.
+XXV, 11, 1935
+King was taken by surprise, and orders were issued to call up as quickly as possible the
+men, both inside the city and outside, to keep watch and ward over the city. The Burmese
+King remained in camp for three days, and having seen the walls of the city and the royal
+palaces inside it, he broke camp and returned by the same route by which he had come.
+1
+At the time of the invasion of Siam by the King of Hanthawaddy, the King of
+Camboja also invaded Siam, thinking to take advantage of the anarchy that usually
+prevailed on the accession of a new king. He came as far as Pachinburi,² and there,
+learning that Phra T'ien Raja had ascended not proceed further, and returned to Camboja
+taking back a large number of people as prisoners.
+The King of Siam was very angry that the Cambojans should have had the audacity
+to invade his territory and take away his subjects, and determined to avenge this insult as
+soon as there was no danger from Hanthawaddy. So in the year 984(A.D. 1532), hearing
+of no renewed activity of his Burman neighbour, he invaded Camboja with a force of
+50,000 men and some war boats, and meeting with no opposition on the way, marched
+right up to the capital. The king of Camboja sent a message to His Siamese Majesty
+admitting his fault, begging to be pardoned and requesting him not to attack the city; he
+promised that after three days he would go out and offer his submission.
+After the third day, he went out taking his two sons, Nak Phra Sut'o and Nak Phra
+Sut'an and formally offered to acknowledge the suzerainty of His Majesty of Siam, who
+was appeased by this submission, but probably to ensure the fidelity and loyalty of his
+vassal, the King of Siam said he would take away Nak Phra Sut'o and Nak Phra Sut'an
+and bring them up as his sons. The King of Camboja dared not object, and so his two son,
+were Taken away to Siam. On arrival at his capital Nak Phra Sut'an was made Governor
+of Muang Sawank'alok.
+In the 12th Siamese month (November) of the year 897(A.D. 1535), a white elephant
+was captured and named Phra K'ajent'arodom³. This white elephant was the first to be
+captured in his reign and six more were captured subsequently.
+1. This invasion of Siam by King Tabin Shwet'i is not mentioned in the Hmannan history.
+It is not given in Garvert's Gustirt if Burma nor in Wood's History of Siam H. R. H
+Prince Damrong in his Our Wars with the Burmese, Ayut'ia period, gives two
+invasions of Siam by King Tabin Shwet. but his account of the first invasion does not
+agree with the narrative given here. He puts the first invasion during the reign of King
+Phra Jai Rajat'irat in Cula Sakkaraj 900 (A.D. 1538), when the two monarchs not at
+Chieng Kran, identified by His royal Highness as the modern Gyaing in Amherst
+district. According to His Royal Highness, the Burmese King was the aggressor, who
+attacked and took Chieng Kran which belonged then to the Siamese. The Siamese
+King came over and attacked the Burmese. defeated them and re-took Chieng Kran.
+2. Pracinpuri or Pacinpuri.
+3. Gajenadarotama
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 21]]
+INTERCOURSE BETWEEN SIAM AND BURMA
+69
+About this time news reached the Siamese capital, that Nak Phra Sat'a,. a son of the
+King of Camboja, had gone and fetched Annamite army and invaded Camboja, capturing
+the capital, and taking away the King to Annam. It was necessary to regain Camboja
+from Annam, and so in November 898 (A.D. 1536) an army of 30,000 men and some
+war-boats were sent under the command of Nak Phra Sut'an, the Governor of
+Sawank'alok and a son of the King of Camboja. Owing to adverse winds, the war boats
+did not arrive in time to co-operate with the land forces, and the Siamese suffered a signal
+defeat at the hands of the combined Cambojan and Annamite army. Nak Phra Sut'an
+himself was killed in the fight, and the remnant of the Siamese army returned to Siam.
+During the succeeding six years no attempt was made to recover Camboja from Annam,
+the king's activities during that period being directed towards the capture of wild
+elephants and he was able to capture no fewer than two hundred and twenty elephants.
+In the year 905 (A.D. 1543) the king of Hanthawaddy thought that on his previous
+invasion of Siam he had gone as far as the outskirts of the city of Ayut'ia, and none had
+come out to fight his army. As he then had only a small army he could not have carried
+on a protracted siege and captured the city. If he were to take an army ten times as big as
+that on the last occasion he would be able to capture Ayut'ia Accordingly, he ordered the
+mobilisation of an army of 300,000 men, 3000 horse and 700 elephants. The Maha
+Uparaja was in command of the advance army, the King of Prome was in charge of the
+commissariat and transport, and the Governor of Bassein was in command of the army in
+the rear. On Sunday the 2nd waxing moon of the 3rd Siamese month (February) he left his
+capital and marched to Martaban. It took him seven days to get his huge army across the
+river, and he resumed his march by way of Sami.
+The local officials of Muang Kanchanaburi submitted a report to the Siamese capital,
+that the frontier guards had patrolled as for as a place called Choiya, and there received
+information that the King of Hanthawaddy was on his way to invade Siam and that it took
+seven days to get his army across the river at Martaban.
+The King of Siam ordered the people of the districts around the city to come into the
+city, and sent a message to Muang P'itsanulok asking Phra Maha T'ammaraja to bring
+down all the available forces in the northern provinces to repel the invaders when they
+reached the capital. Phya Chkri was ordered to go out and make entrechments at Lump'li
+and hold the place with a force of 15,000 men. A priest by the name of Maha Nark who
+resided at Wat (monastery) Puk'aot'ong left the priesthood and volunteered to construct
+entrechments from Wat Puk'aot'ong down to Wat Paplu to protect the war-boats. Chow
+Phya Maha Sena with a force of 10,000 men entreched himself at Ban Dokmai and built a
+fort. Phya Phra K’lang, (the minister in charge of the Royal Treasury), with a force of
+10,000 men constructed entrenchments and a fort at the end of the ditch dug by the priest
+Maha Nark. Phra Sunt'on Songk'ram, Governor of Muang Sup'anburi, with a force of
+1. Sundara Sangr'ma
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 22]]
+70
+JOUR. BURMA RESEARCH SOC.
+XXV, II, 1935
+10,000 men, built entrenchments at fort Champa. All the necessary arrangement to
+defend the city were also made.
+The King of Hanthawaddy reached Ayut'ia on Saturday the 5th waxing moon of the
+4th Siamese month (March) and pitched his camp at Kumdong. The Maha Uparaja
+camped at P'aniet, the King of Prome at Banmai Mak'amyong and the Governor of
+Bassein on the plain near Wat Worajet.'
+The next day the King of Siam came out of the city to look at the strength of the
+invading army. He was mounted on his elephant, fully dressed and armed as if to go to
+the field of battle. His chief Queen Phra Suriyot'ai², dressed in male attire of Maha
+Uparat and mounted on an elephant, followed her lord close behind him. Then came the
+King's two sons, Phra Ramesuan and Phra Mahint'rat'irat³, mounted on elephants and
+fully armed and dressed for the field of battle. The King proceeded to a place called K'ok
+P'hya followed by his Chief Queen and sons and stopped to see his men and elephants
+falling into battle order. When the Mon patrols saw exalted personage mounted on
+elephants and the activity of the Siamese forces, they went and reported what they saw to
+His Majesty of Hanthawaddy. The Burmese King said that probably Phra Maha
+Chakrap'at's army had come out to give them battle. He ordered his army to come out of
+their camps and fall into battle array. He dressed and armed himself for combat, and
+mounted his elephant, and the King of Prome did likewise. He then led his own forces in
+the direction of the Siamese King and halted at a distance of about 100 sen (4000 meters)
+waiting for an auspicious moment to begin the fight. In the meantime he ordered his
+horsemen to make their way through the foot-soldiers wielding their tasseled lances in
+many different ways to show off their skill and to gladden the hearts of the men in the
+front. The musicians and dancers in the army played their instruments and created a great
+noise. The forces armed with sword and shield and those armed with swords requiring
+two hands to wield them, made a display of their prowess walking to and fro.
+After a while the Burmese King saw the sun bright and shining clear of clouds and a
+vulture flew in front of the army as if to lead it forward. He then ordered the beating of
+gongs of victory, blowing of conch shell, and playing of drums, signals for all the
+commanders to lead their men forward and launch a vigorous attack on the opposing
+forces. The Siamese King ordered his army to spread out on both wings to repel the
+onslaught of the Burmese. The impact of the opposing forces must have been great, as the
+Siamese historian recorded that the men came to hand to hand fight, using the weapons
+with which they were armed, that the sky above the field of battle became overcast with
+smoke, and the ground was strewn with very many dead and wounded on both sides.
+1. Varajestha
+2. Suriyodaya
+3. Mahindradhiraja
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 23]]
+INTERCOURSE BETWEEN SIAM AND BURMA
+71
+The King of Siam led his elephant forward and attacked the elephant in the advance force
+of the King of Burma, but his animal was worsted in the fight and turned tail, and every
+endeavour to stop the flight and turn and face the enemy again failed. The King of Prome
+taking advantage of the situation, tired to follow up the runaway elephant. Queen
+Suriyot'ai, realising that her husband was in imminent danger of being captured, rushed
+her elephant forward and attacked the elephant was able to get its tusks under the head of
+her elephant and actually tilt it off its fore feet. Queen Suriyot'ai was thrown off her
+balance and her head and body fell back supine. The King of Prome cut her with his
+long-handled sword, and the blow must have been delivered with great force, as the
+weapon cut through the shoulder and reached the breast. Phra Ramesuan and Phra
+Mahint'rat'irat rushed their elephants forward to save their mother, but were not in time,
+and she expired on her elephant. However, the two brothers succeeded in holding up the
+enemy to enable the elephant with their dead mother to enter the city. The Siamese
+suffered a defeat, a very large number of men being killed in the fight. The Queen's body
+was embalmed and dept in the royal garden.
+The next morning Maha Uparaja attacked fort Champa and the entrenchment of Phra
+Sunt'on Songkʼram. The Siamese offered a stout resistance from morning till dusk, when
+at length the Burmese succeeded in capturing the fort. The casualties in dead and
+wounded were many, but the Siamese commander and the remnant of his force were able
+to get back to the city.
+The morning after the capture of fort Champa, the King of Hanthawaddy mounted his
+elephant and advanced with his army as far as Lump'li. The open ground there was edged
+on either side with forests. He made his foot soldiers remain in the woods on both sides,
+and standing on his elephant and pointing his finger in the direction of the entrenchments
+of Phya Chakri¹ he ordered 500 horsemen to ride forward and tempt the Siamese to attack
+them. Phya Chakri ordered his men to attack the handful of horsemen, but when the
+Siamese had gone far enough in pursuit of the Burmese horsemen, they were attacked on
+both sides by the Burmese foot-soldiers who were hidden in the woods. Both sides fought
+with determination coming to hand to hand fight, and there were many casualties in dead
+and wounded. The Burmese gained ground little by little and at last the entrenchments
+were reached, stormed and taken. Phya Chakri, and what remained of his forces,
+managed to get away and entered the city. The Burmese King then went back to his
+camp.
+The scene of the field of battle between the Siamese and the Burmese in those days
+must have been a painful sight to look at, because no mention is made in Siamese or in
+Burmese history of such care and attention as are now paid to the wounded and dead in
+the wars of the present day. Never a word is said of the wounded being removed and
+attended to, or of the dead being gathered and buried.
+1. Cakri.
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 24]]
+72
+JOUR. BURMA RESEARCH SOC.
+XXV, II. 1935
+The Siamese historian records that in the fight between the Burmese and Siamese
+army under Phya Chakri four-fifths of the Burmese horsemen engaged in the fight were
+able to secure the heads of the Siamese they had killed, and one-fifth failed to obtain the
+heads of the enemy. The total number of horsemen engaged is not mentioned, but it
+could not have been less than the 500 said to have been ordered to tempt the Siamese out
+from their entrenchments, and might have been considerably more than that small
+number. His Burman Majesty displayed considerable ingenuity in devising a form of
+punishment for those of his horsemen who failed to bring in gruesome evidence of their
+prowess in the shape of the head of a Siamese soldier. He caused a temporary building to
+be constructed having two platforms, one above the other. A banquet of fish and meat
+dishes and spirituous liquor was given to his horsemen engaged in the fight, those who
+secured the heads of the Siamese were accommodated on the upper plat-form, and those
+who failed to secure the heads were on the lower platform. Then when the feast was over,
+those above were made to wash their hands over the heads of those below, and as the
+proportion was four above to one below, one can imagine that those below got a fairly
+good drenching. This form of punishment was continued for three successive days.
+His Siamese Majesty told his ministers and nobles that the Burmese were still strong
+and in high spirits, and their supplies of food had not run short yet. Therefore, they
+should hold the city securely and prevent its capture for a month or more, and wait for the
+army from P'itsanulok to come down and attack the enemy. He suggested bringing up big
+cannons and demolishing the fortifications of the enemy to damp their spirits. The
+ministers and nobles approved of their King's suggestion and set to work. Apparently the
+big cannons were in the forts lower down the river, guarding the approach to the capital
+by the main waterway which led to the sea. As the Burmese did not come by sea nor
+approach the city by means of water boats, one would have expected that the big guns
+would have been removed to the city for its defence, before the approach of the Burmese
+by land. A big gun was lowered into a junk and brought along a waterway up to the city,
+its journey up being guarded by land forces on both banks of the river or water way. A
+platoon of Burmese soldiers consisting of about a hundred men, which was out on patrol
+to watch the activities of the Siamese, saw a junk being brought up in a suspicious
+manner. They made a report of what they had seen, adding the opinion that perhaps a big
+gun was being brought up to destroy their fortifications. Before the man making the oral
+report had finished what he had to say, the big gun was fired from the city, and the shot
+fell close to His Burman Majesty's living quarters. The King ordered some sort of
+propitiatory rite to be performed over the shot and moved his camp to a place called
+P'utlao, probably out of the range of the Siamese big guns.
+Three days after his removal to the new camp, His Burman Majesty led his own
+division of the army and approached the city. He ordered the Maha Uparaja to drive the
+men forward to storm the ramparts of the city. Phya Ram, the principal defender of the
+city, lowered a big gun into a junk and fired it towards the point, where the Burmese
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 25]]
+INTERCOURSE BETWEEN SIAM AND BURMA
+73
+King was watching from his elephant. The shot struck a big branch, about four twenty
+four inches in circumference, of a Bodhi tree, breaking it off the tree. It fell only about
+twenty feet away from the Burmese King. The recoil of the gun was so great that it sank
+the junk. The Siamese who were in the fort called Maha Jai, I also fired their big gun
+against the attackers, killing many of them. The assault failed and the Burmese King
+returned to his camp.
+When Phra Maha T'ammaraja, the vassal King of P' itsanulok, received information
+of the Burmese invasion, he mobilised the men from Muangs P' itsanulok, Sawank'alok,
+Suk' otai, P'ichai and P'ichits, in all 50,000 men, and marched to Chainat, a town on the
+main river flowing through the capital. He entrenched himself on both banks of the river
+and sent down a reconnoitering party of one hundred men to Singburi² district. The party
+met a force of 3000 men under the command of Sming. (Thamein in Burmese) Chak' ran
+and Sming Malun, foraging in the district. When the party saw they were vastly
+outnumbered they ran away. The Mon soldiers chased with their ponies and succeeded in
+capturing two of the fleeing party. The two captives were brought down and taken to the
+presence of the Burmese King. On being questioned they said that Phra Maha
+T'ammaraja, King of P' itsanulok, had received information sent from the capital of the
+Burmese invasion. He had got 50,000 men from the five Muangs (mentioned above) and
+come down to help the Siamese. A party of one hundred men had been sent down to
+reconnoiter, and they belonged to that party. His Burman Majesty smiled, a smile
+probably of contempt and not of joy, and ordered that the heads of the two men be shaved
+clean and they be set free with instructions to go and tell their King that His Burman
+Majesty was waiting to give him and his army a warm reception, but should he not come
+down, he should make his defences strong, as His Burman Majesty would pay him a visit.
+The order was carried out to the letter and the two men were taken up to Muang Singburi
+and set free there. They were taken to the presence of Phara T'ammaraja, who asked them
+if they could estimate the strength of the Burmese army. They answered that they did not
+roam about, but saw that the circumference of the King's camp nearly filled the whole of
+the plain of P'utlao. The King of P'itsanulik asked his ministers and nobles whether they
+were to take the Burmese King's words in earnest. They answered that they had heard
+rumours that whatever this black. tongued³ King of Hanthawaddy said, he always said it
+in earnest, and it proved to be true. The sobriquet "black-tongued" was given by the
+Siamese to Bayin Naung Kyawdin Nawrat'a i.e. Hanthawaddy Hsinbyushin of the
+Hmannan history. Maha T'ammaraja rejoined that in warfare it was had to accept
+1. Maha Jaya.
+2. Singapuri.
+3. The sobriquet of "black-tongued" was given to Bayin Naung Kyawdin Nawrat's when
+he invaded Siam as King of Burma, and not as Crown Prince under King Tabin
+Shwet'i. Here the Siamese historian must have confused the two persons, or mistaken
+this second invasion of Siam by King Tabin Shwet'i as an invasion by King Bayin
+Naung Kyawdin Nawrat'a.
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 26]]
+74
+JOUR, BURMA RESEARCH SOC.
+,
+XXV, II, 1935.
+everything said as true; perhaps the King of Hanthawaddy was afraid that he would be
+attacked in the rear, and he merely uttered a threat expecting that the northern army
+would be taken in by it and retrace its steps. He should, however, find out the truth by
+sending down a part of his army, and accordingly ordered the Governors of Sawank'alok
+and Int'aburi and fix their camps there.
+The King of Hanthawaddy ordered the Maha Uparaja to attack the fortifications at
+T'ung Hantara held by Chow Phya Maha Sena. At dawn the next day the Maha Uparaja
+led his forces and attacked the fortifications. Chow Phya Maha Sena offered a stout
+resistance, and the attackers were unable to take them. The Maha Uparaja became very
+angry and he led his elephant to the front of the fortifications, and halting at a distance of
+only about 370 feet, had it proclaimed to all the commanders of the platoons, companies
+and regiments that if the fortifications were not taken that day he would behead everyone
+of them and impale their heads. The commanders knowing that it was not an idle threat,
+were very much afraid of losing their heads, and so they drove the men armed with sword
+and shield against the defensive works, those in the rear being compelled to step into the
+places of those who fell in front of them. The defences were at last broken down, and the
+Burmese succeeded in entering into the fortified area. Chow Phya Maha Sena and the
+officers and men under him escaped by crossing a canal. There were many casualties in
+wounded, killed and drowned. The Maha Uparaja then returned to his camp and
+submitted a report of the success of the attack to the king.
+About this time provisions tin the Burmese army were running short, and foraging
+parties sent out were unable to get any more food for the huge army. The matter was
+reported to the King, and he assembled his ministers, governors and officers and asked
+for their opinion. They said not only had they run short of provisions, but as the rains
+were approaching they could not stay any longer, and withdrawal and return were a
+necessity. The King then said if return was decided upon, by which way should they go.
+They said that if they were to go by way of Muang Kamp'engp'et and the frontier station
+of Me Lamao, the northern army was well entrenched at Muang Chainat to bar their way,
+and so they might be delayed in their homeward march. They were of opinion that it
+would be better to go back by way of Kanchanaburi. The King said that to take that way
+was also difficult, because coming by that way they had seized all available provisions.
+Moreover he said he said he had sent word to Phra Maha T'ammaraja to come down and
+attack them, failing which he would go up and attack him. Since Phra Maha T'ammaraja
+failed to come down, it was certain that he had made his post as strong as possible and
+collected as much provision as he could find. That was exactly what he wanted. An
+insignificant army like Phra Maha T'ammaraja's could be put to flight in a day, and they
+would get all the provisions sufficient for their need. The assembled ministers and
+1. Indapuri
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 27]]
+INTERCOURSE BETWEEN SIAM AND BURMA
+75
+officers gave their unanimous approval. The King then said that in returning by the way
+decided upon, they would have to fight both in the front and the rear, because Phra Maha
+Chakrap'at must have known that his son-in-law had come down with an army and
+reached Chainat, and so it was certain that he would attack them in the rear; they should
+secure success both in front and rear. Having decided what to d, he issued orders that the
+Governors of Bassein, Lak'erng, Sieng, Taung-u (Toungoo) and Chittong (Sittaung), each
+in command of a division consisting of 30,000 men, with the King of Prome as
+commander in chief, should march ahead, and wherever they might find Phra Maha
+T'ammaraja, they were to fight and put him to flight in a day; should the fight continue on
+to night, the heads of the commanders would adorn the post for the impalement of
+decapitated heads instead of the heads of the enemy. the Maha Uparaja was to be in
+command of the rear, and whenever the Siamese army followed them, he should employ
+the stratagem of ambuscade and incitement to lure enemy into an ambush and capture one
+or two of the commanders. Should he fail in this, he would be punished with the forfeit of
+his life. The King said in another three days he would break camp and ordered them to
+get everything ready.
+Phra Maha Chakrap'at Rajat'irat learnt that Phra Maha T'ammaraja had brought down
+the forces from Muangs P'itsanulok, Sawank'alok, Suk'otai, P'ichai and P'ichit, in all
+50,000 men, and stationed himself at Muang Chainat, with an advance force stationed at
+Muang Int'aburi. He was exceedingly glad and said to his ministers and nobles that if the
+King of Hanthawaddy Knew that Phra Maha T'ammaraja had come down with an army,
+most probably he would not stay long but withdraw and return. should he go up north, it
+would be just as they wished because they could attack him in the rear. Should he return
+by way Sup'anburi they could not give an effective blow to his rear. Phra Sunt'on
+Songk❜ram then told His Majesty that in his opinion, His Majesty of Hanthawaddy would
+not return by way of Sup'anburi and Kanchanaburi, because being the route by which he
+had come, he had almost exhausted all the provisions available there, but he would go
+north with the object of attacking Phra Maha T'ammaraja and getting hold of the
+provisions collected by the means of an ambush attack the Burmese forces and bring back
+some trophy. Should he fail in this he would be punished personally. Phra Sunt'on
+Songk❜ram took out a force as ordered. The King then asked who would undertake to
+follow and attack the Burmese army should it go up north. His two sons Phra Remesuan
+and Phra Mahint'rat'irat volunteered to lead an army and attack the rear. This was
+approved of by the King.
+Midnight on Sunday the 9th waxing moon of the 4th Siamese month (March) was the
+time fixed to start the march homeward, and at that hour the march began, the five
+governors mentioned above with their respective divisions formed the advance force,
+then came His Majesty of Hanthawaddy, while the rear was under the command of the
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 28]]
+76
+JOUR. BURMA RESEARCH SOC.
+XXV, II, 1935
+Maha Uparaja who arranged to have a detachment of 500 horsemen following at some
+distance from the hindmost company of his forces, with order to this effect, that if they
+saw about 1000 men following them they were to despatch post-haste to him one
+horseman, if they saw about 2000 men two horsemen, if they saw about 3000 men, three
+horsemen, and so on, one horseman for each 1000 men they saw. The retreating army
+marched along the plain bordering the bank of the main river so that the army of men,
+elephants and horse could have easy access to water.
+The following morning the citizens found that the enemy had left, and the ministers
+informed His Majesty of Siam that the King of Hanthawaddy had left, and the rout taken
+was up north along the bank of the river. The King ordered his two sons to follow up with
+a force of along the bank of the river. The King ordered his two sons to follow up with a
+force 10,000 men. The two brother consulted together and were of opinion that for about
+two or three days after the retreat started, the forces would take great care and be on the
+alert. Therefore, it would be difficult to gain success if they were to attack hastily; they
+should follow at a distance of half a day's march for a day or two when the enemy would
+be less careful and be off their guard. Moreover, by then they would come upon Phra
+Maha T'ammaraja's army, when they would have to divide their attention and their forces
+to fight the front as well as the rear, and an attack launched at such a moment should
+succeed easily. So they kept themselves about half a day's march behind the retreating
+army.
+The horsemen who rode in front of the advance army reached Muang Int'aburi and
+saw two big fortified camps. They rode back and informed their commanders. The
+Governors of Bassein, Lak'erng, Sieng, Toungoo and Sittaung were glad to get this
+timely information, and each dressed himself for the fight and mounted his war elephant.
+They led their men forward to attack the fortified camps. The King of Prome mounted on
+his elephant issued orders to pull down the defensive works. The Burmese soldiers made
+a great noise, fired their muskets, waved their lances and swords, ran forward in groups,
+each group trying to outstrip the others, pulled out the spikes and thorny bushes, climbed
+over the obstacles constructed with earth or wood, and destroyed the defensive works
+round the camps. The defenders did their utmost to shoot down the attackers with their
+muskets and big guns, but whenever and wherever a man fell, wounded or dead, another
+filled his place, and wave after wave of the attackers came on until they succeeded in
+breaking through the obstacles and came to hand to hand encounter. Many were the dead
+and wounded on both sides, and the remainder of the defenders soon gave up the unequal
+contest and fled in disorder to the main army and reported the loss suffered to Phra Maha
+T'ammaraja. Almost simultaneously, those sent down to get information of the state of
+affairs in the capital arrived and reported that the whole of the Burmese had come up
+north. Phra Maha T'ammaraja found it would be impossible to offer any resistance, and
+so he ordered the found it would be impossible to offer any resistance, and so he ordered
+the evacuation of the fortified camps, each commander taking out the men under him and
+remaining concealed in the forest on the eastern bank of the river.
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 29]]
+INTERCOURSE BETWEEN SIAN AND BURMA
+77
+When the advance army under the King of Prome arrived at Munag Chainat, they
+saw the fortified camps empty and so they halted there and sent word to the main army. A
+day before the attack on the two camps at Muang Int'aburi, Maha Uparaja held a
+consultation with the commanders under him, saying that two or three days had elapsed
+since they left the Siamese capital, but the Siamese had not followed nor attacked them;
+that perhaps the Siamese were waiting to attack them when they were off their guard and
+when they met the northern army at Muang Int'aburi and Chainat; that must be the plan of
+the Siamese. Maha Uparaja then said that he must frustrate the plan of the Siamese with a
+counter plan, capture some officers and men and present them to his father as evidence
+of his prowess. But before he had finished his speech, he saw ten horsemen riding up
+hastily; by this he knew that the Siamese had 10,000 men. He ordered Sming Pa'tabert
+and Sming P'ataba to take 5000 men and conceal themselves in the forest on the edge of
+the plain. He told them not to be hasty in attacking the Siamese, but to permit them to
+come on, and only the commanders. The two Smings took the men and concealed
+themselves as ordered, and the Maha Uparaja moved up a distance of about 200 sens
+(about 5 miles)
+On the very day that the Maha Uparaja ordered his two Smings to lie in ambush, Phra
+Ramesuan and Phra Mahint' rat'irat thought that the Burmese army must have arrived at
+Muang Int'aburi and would be engaged in fighting with the northern forces. So they made
+a rapid march intending to attack the Burmese in the rear. When the two Smings saw the
+Siamese coming up quickly they remained quite silent. They noticed two elephants with
+howdahs the cover of which were gilt, so they made a rapid march intending to attack the
+Burmese in the rear. When the two Smings coming up quickly they remained quite silent.
+They noticed two elephants with howdahs the cover of which were gilt, so they took them
+to be those ridden by the generals. As soon as they heard the sound of the muskets, they
+attacked the Siamese fighting their way straight to where the two elephants having
+howdahs with gilt covers were. The attack was so sudden and unexpected that the
+Siamese were taken by surprise and put to flight. The Burmese forces surrounded the two
+elephants and captured Phra Ramesuan and Phra Mahint'rat'rat 2, together with their two
+pages who were riding behind their masters. The Maha Uparaja presented the messenger
+went down from Muang Chinat with the news that the enemy camps, having been
+1. Here the Siamese historian is evidently in error in saying that Bayin Kyawdin
+Nawrat'a whom he calls Maha Uparaja, was the son of King Tabin Shwet'i.
+2. H. R. H Prince Damrong in his Our Wars with the Burmese, Ayut'ia period, page 20,
+says that the Burmese captured Phra Ramesuan and Phra Maha T'ammaraja instead of
+Phra Mahint'rat'irat.
+Mr. W. A. Wood in his History of Siam, page 113, says Maha T'ammaraja and Prince
+Ramesuen were captured.
+Mr. G. H. Harvey, following the Hmannan history, says in his History of Burma, page
+159, that the Siamese King's son, brother and son-in-law were captured. Compare my
+own translation of Hmannan history published in the Siam Society Journal Vol. 5, Part
+1 pages 6,8 and 9.
+3. See foot-note (1) above
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 30]]
+78
+JOUR. BURMA RESEARCH SOC.
+XXV, 11, 1935
+evacuated by the enemy, were then held by the advance army. The Burmese King was
+very glad that affairs were turning out very much in his favour. He continued his march
+and halted at Muang Chainat. He then ordered the royal captives to be brought to his
+presence and said "You two are our enemies fighting against us ; now that we have
+captured you, what have you to say?" The two brothers replied "We are at your mercy; if
+you kill us we shall die, and if you spare our lives we shall live " . His Burman Majesty
+smiled on hearing the reply, and ordered that they be kept in custody.
+The routed Siamese army returned to the capital, and reported to the King the defeat
+of the army and the capture of his two sons. His Siamese Majesty was startled at the
+news, being apprehensive of danger to their lives. He immediately sent two of his
+noblemen with a letter to His Burman Majesty to the effect that his two sons were like
+birds caught in a trap and kept in a cage by the hunter; he asked the Burmese King not to
+take revenge but to set them free and allow them to return to the capital, and said that
+such an act of magnanimity would ever redound to His Burman Majesty's credit and
+honour. The Burmese King smiled and told the messengers that he would grant the
+request of their King, and turning to the two princes he asked them to go back and tell
+their father that he (the Burmese King) wanted two elephants, one called Sri Monk'on
+(Sirimangala) and the other called Monk'on T'aweep (Mangala Dvipa), to be taken to
+Hanthawaddy. The two princes and the messengers took leave of the Burmese King and
+returned to Ayut'ia. The princes told their father that the King of Hanthawaddy requested
+them to ask their father to give to him the two elephants mentioned above. The King held
+a consultation with his ministers whether to give or not. The ministers were unanimously
+of opinion that the elephants should be given as recompense for the Burmese King's
+manifestation of friendship in setting free the two sons of the Siamese King. His Siamese
+Majesty ordered the Royal Elephant Department to take the two elephants in question as
+quickly as possible and present them to the Burmese King at Muang Chainat. The
+elephants were handed over to the Burmese and Mon elephant keepers, but the elephants
+finding the voices of the new mahouts different from what they were accustomed to hear,
+became unmanageable, charging men and other elephants in the camp and causing a great
+disturbance. The Burmese King had very regretfully to return the elephants. The Siamese
+mahouts returned to Ayut'ia with the two elephants, and the King of Hanthawaddy
+returned to Hanthawaddy by way of Kamp'engp'et crossing the frontier at the frontier
+station of Melamao¹.
+1. Compare the above narrative of the second invasion of Siam by King Tabin Shwet'i
+with the narrative given in the Hmannan history as translated by me and published in
+the Siam Society Journal, Vol. 5, part 1, pages 4-11 Se also H. R. H Prince Damrong's
+Our Wars with the Burmese, Ayut'ia period, pages 12-26, Wood's History of Siam,
+pages 112-114, Harvey's History of Burma, pages 158-160.
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 31]]
+INTERCOURSE BETWEEN SIAM AND BURMA
+79
+Phra Maha T'ammaraja came down to the capital, reported to the King about the fight
+of the northern forces with the Burmese army, and returned to Muang P’itsanulok.
+The King of Siam then performed the cremation ceremony of his chief Queen Phra
+Suriyot'ai who was killed on the field of battle. A pagoda and a monastery were built at
+the place where the cremation took place.
+Phra Sri Sin, the younger son of Phra Jai Rajat'irat and the younger brother of Phra
+Yotfa, who was about seven years of age when Phra Maha Chakrap'at Rajat'irat ascended
+the throne, was fortunate enough not to meet the usual fate of young princes who had a
+right to ascend the throne. He was maintained according to his position, but most
+probably under strict supervision. When he attained the age of about fourteen, the King
+made him enter the Buddhist priesthood as a novice (samanera) at Wat Rajpradit'an. He
+had grown into adolescence, and acquired enough sense to know his rights and his
+position, but not sufficient discretion to know how to conduct himself. He was suspected
+of plotting secretly to recover the throne which was his by right, and Chow Phya Maha
+Sena was ordered to hold an enquiry.
+The result of the enquiry was that he was found guilty of the suspected offence. With
+great forbearance the King spared his life, but kept him in virtual confinement at Wat
+T'amikaraj'; In the year 906(A.D. 1544), when it was near the beginning of the Buddhist
+priest, he having attained the age of over twenty years, when, according to the rules
+prescribed for the holy order, ordination could be performed. He was seven years of age
+when Phra Maha Chakrap'at Rajat'irat ascended the throne in the year 891 (A.D. 1529),
+and so in the year 906(A.D. 1544) he would be about twenty three years. His ambition to
+become king must have overpowered any feelings of gratitude he might have had,
+because he had left his place of virtual confinement three days before the order for his
+ordination as priest was issued and was assembling men who would espouse his cause.
+Chow Phya Maha Sena was ordered to go and arrest him. Phra Sri Sin sent someone, to
+go and ask a priest by the name of Phra P'anarat² to find out the auspicious day on which
+he might execute his plan of seizing the throne. The priest said that Saturday the 1st
+waxing moon of the 8th month (July) was the auspicious day, and Phra Sri Sin should
+come in on that day. At that time there were five noblemen, namely Phya Dejo, Phya
+T'ainam, Phya P'ijai'ronarit, 4 Mun P'akdi Suan and Mun P'ainarin who were confined in
+the palace for some offence. They managed to send secretly a letter to Phra Sri Sin to
+reach him on the 13th waning of 7th month, i.e. two days, before the auspicious day named
+1. Dharmikaraja
+2 Vanaratana
+3. Tejo
+4. Vijaya Ranariddht
+5. Bhatti Svara
+6. Bhaya Narindra
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 32]]
+80
+JOUR. BURMA RESEARCH SOC.
+။
+XXV. II, 1935
+by the priest P'anarat. In the letter they said that the King had ordered their execution
+early on the morning of the 14th waning, and they begged him to come in on the night of
+the 13th waning so as to be in the palace before the dawn of the 14th. Phra Sri Sin came in
+as requested and entered the city by one of the gates. Chow Phya Maha Sena came to
+know that Phra Sri Sin had come in, so he also entered the city and kept a strict watch.
+When the King's whit elephant was taken out for its daily bath in the river just about
+dawn, Chow Phya Maha Sena came riding on the white elephant and attacked Phra Sri
+Sin in a street within the city. Phra Sri Sin cried out Do you know who I am? The
+Chow Phya answered" What punishment awaits you, the same would befall me." They
+fought together, and Phra Sri Sin managed to strike the Chow Phya with a bill-hook, and
+the blow sent him down to the ground. Phra Sri Sin succeeded in entering the palace. The
+King, entirely taken by surprise, got into a boat and escaped to an island called Maha
+P'ram'. Phra Sri Sin released the five noblemen from their bonds. Then the King's two
+sons, and the ministers and officers, many being killed on both sides. In the midst of this
+conflict Phra Sri Sin received a shot from a musket and he fell dead. Thus ended the
+unfortunate attempt to step on to the throne by means of a surprise attack on the reigning
+sovereign in his palace. The priest Phra P'anarat who was responsible for finding out the
+auspicious day and the five noblemen mentioned above were executed, and their bodies,
+together with the body of Phra Sri Sin, were exposed to public view as a warning to
+others. On that occasion the minor wives of many noblemen accused their lords of
+joining or receiving Phra Sri Sin, and after due enquiry, many were found guilty and
+executed.
+The chronicler is very particular in recording the dates of the auspicious day and the
+day of attack, probably to emphasise the belief that failure was due to the attack not being
+made on the auspicious day but two days previous to it.
+King Maha Chakrap'at Rajat'irat could pride himself as a very meritorious King
+according to the beliefs of the peoples of India, Burma, Siam and Camboja in having
+been able to capture no fewer than seven white elephants. In the year 896 (A.D. 1534)
+one white male elephant was captured and given the name of Phra Kajen Tarodom². In
+the year 907 (A.D. 1545) the second white male elephant was captured and given the
+name Phra Ratanakat³. Three of these precious animals were captured in the following
+year, one, a male, was given the name of Phra Keo Songbat,* and a female and its young,
+a male, both being white. The next year two were captured, one, a male, was named Phra
+Borom Kraisons, and the other also a male, was named Phra Suriya Kunjon. The country
+1. Maha Brahmana
+2. Gajenadarotama
+3. Ratanakas
+4. Keo Dranpas
+5. Parama Krasara
+6. Suriya Kunjara
+6
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 33]]
+INTERCOURSE BETWEEN SIAM AND BURMA
+81
+prospered greatly on account of having seven white elephants, and the King's fame
+spread to all the other countries far and wide. The capital was visited by ships and traders
+from France, England, Holland and Surat (India) and many Chinese junks also came
+every. The royal patriarch (supreme head of the order of Buddhist priests) together with
+the rest of the hierarchy under him, the ministers, nobles and royal Brahman preceptors,
+unanimously offered him the additional title of "Lord of white Elephants."
+။
+The fame that the Siamese capital possessed seven white elephants spread to
+Hanthawaddy and His Majesty of Hanthawaddy was desirous of getting two of them. He
+sent Sming Yok'arat" with a hundred followers to take a letter to the King of Siam asking
+for two white elephants. On arrival at the Siamese capital Sming Yok'arat was taken to
+His Siamese Majesty and the letter was presented to him. The following is a translation of
+the letter as near as possible to the wording given in the history:- " The King of
+Hanthawaddy who wiedls supreme sovereign power, having sub juggled great and small
+royal cities in ten directions, and to whom all governors and subject kings bow down and
+present countless tributes of gold and silver flowers, send a royal letter with greetings of
+friendship, to his royal elder brother, the King of Ayut'ia. Bews has reached us that our
+royal elder brother, being endowed with great merit, has as many as seven white
+elephants, both male and female. Your royal younger brother desires to ask for two white
+male elephants to adorn the city of Hanthawaddy. We wish our royal elder brother to
+extend his friendship to his royal younger brother. Hanthawaddy and Ayut'ia will be
+severed, and it is likely that the population of the kingdom will suffer in consequence."
+Having learnt the contents of the letter, the King of Siam ordered his ministers and
+nobles to consider it. They said that this black-tongued King of Hanthawaddy who held
+supreme power in Ramnnadesa, had extended his power in all the den directions. He had
+sent a letter of friendship and very politely asked for two white elephants. He had also
+shown his great friendship when he released the King's two sons. They were of opinion
+that the elephants should be given. But Prince Phra Ramesuan, Phya Chakri and Phra
+Sunt'on Songkram, Governor of Sup'anburi, were of a different opinion. They said that
+white elephants were an honour and a blessing to the city, so they should not be given
+away. Although the King of Hanthawaddy had once performed an act of friendship, he
+had asked in return two famous happened that they could not be taken away to
+Hanthawaddy. They would lose prestige in other countries, it being thought that the
+elephants were given through fear of the King of Hanthawaddy. The two opinions were
+submitted to the King, who asked whether, if they refused to give the white elephants and
+1. Yogaraja.
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 34]]
+82
+JOUR, BURMA RESEARCH SOC.
+,
+XXV, II, 1935
+,
+the King of Hanthawaddy invaded the country with a large army, they would be able to
+defend the city. The three who were of the opinion that they should refuse to give the
+elephants, said they would be responsible for the safety of the city, however large an
+army the Burmese King might bring. The King approved of the opinion of the minority
+and ordered that a reply be sent accordingly. The following is the wording of the letter;-
+"Phra Maha Chakrapat Rajatʼirat, who is King of Kings and who rules at Ayut'ia, a city
+blessed with many white elephants of the excellent breed of Iswara and Vishnu, sends
+greetings of friendship to his younger brother, the King of Hanthawaddy, who has
+absolute power in the Mon country. We have learnt the contents of the royal letter sent by
+you. But it has been an immemorial custom that whoever is so endowed with paranitas
+(perfections) as to become King usually possesses a powerful chakra, precious stones,
+beautiful women, valuable elephants, valuable horses, brave soldiers and excellent
+treasurers. If one has no merit and no " perfections", even if other persons were to obtain
+them for one, one will not be able to retain them. Whichever country possesses beautiful
+women, white elephants and male elephants with short tusks (believed to possess
+extraordinary strength), mines of precious stones and gold mines, such a country is liable
+to be attacked by other countries. Do not our royal younger brother be sorry."
+။
+The Burmese messengers having received a letter in reply, took leave of the Siamese
+King and returned to Hanthawaddy. The letter was presented to His Burman Majesty,
+who, on learning the contents of the letter said "Thank you, Phra Maha Chakrapat. We
+want only two white elephants. Is it proper that you should sever the tie of friendship for
+the sake of two white elephants? From this day onward Ayut'ia and Hanthawaddy will be
+in enmity with one another." He then consulted with his ministers and nobles saying that
+they had invaded Ayut'ia twice, but failed to capture the city for three reasons. First, the
+city was entirely surrounded by water, secondly, there was difficulty in obtaining food for
+the army, and consequently the invasion could not be prolonged throughout the year,
+thirdly, the five northern towns, Muangs P’itsanulok, Sawank'alok, Sukotai, Kampengpet
+and Pichai were, auxiliary strength or Ayut'ia and had a plentiful supply of food. If the
+northern towns were captured first, Ayut'ia would certainly be captured also. The
+ministers and nobles were all of the same opinion. The King said that this time he would
+take and army three times the strength of the last invasion. Orders were sent to his son-in-
+law the King of Ava, his grandson the King of Prome, the King of Chiengmai and to all
+the provincial governors to get their men, horses and elephants ready and at the end of the
+Buddhist lent to come and assemble at Hanthawaddy. Every one obeyed the order, and so
+at the end of lent in the year 910 (A.D. 1548) there assembled at Hanthawaddy the forces
+from the following towns:- Hanthawaddy, Angwa (Ava), Chiengmai, Pukam(Pagan),
+Pron, Pre(Prome), Lak'erng, Chittong (Sittaung) Tong-u (Toungoo), Passim (Bassein),
+Bua Puan, Sieng, Trang, Mawtama (Martaban), Mawlamlerng (Moulmein) and T'awai
+(Tavoy). There were 900,000 men, 7000 elephants and 15,000 horse. The Maha Uparaja
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 35]]
+INTERCOURSE BETWEEN SIAM AND BURMA
+83
+was put in command of the advance army consisting of 200,000 men, 3000 horse and
+1500 elephants; the King of Ava was on the right wing with 100,000 men 1000 horse and
+500 elephants; the King of Prome was on the left wing with 100,000 men, 1000 horse and
+500 elephants; the King of Chiengmai was in the rear with 10,000 men, 1000 horse and
+500 elephants. This huge army started on its march on Wednesday the 2nd Waxing moon
+on the 12th Siamese month (November). It took the army seven days to reach Martaban
+and five days to get the whole of it across the river. From there the army marched to
+Kampengpet, reaching it in twenty days. The King of Chiengmai was told off to build
+two hundred war boats. The Governor of Haripunjai (Lampun) and Nakon Lampang were
+sent to go up to Chiengmai and bring down the boat from the three towns to be used as
+transport-boats, and to assemble together at a place called Raheng. The King then
+marched to Muang Sukotai and halted there. He sent word to the Governor of Sukotai and
+Sawank'alok to come and see him, they did as requested and were told to get a force
+ready to accompany him. He then marched to P’itsanulok and encamped not far from the
+city.
+When the Burmese army reached his frontier post, Phra Maha T'ammaraja, the King
+of P'itsanulok sent an express boat to Ayut'ia giving information of the Burmese
+invasion and asking for an army to be sent up to help him. He then collected men from
+his provinces and brought them into the city and made preparations to defend it. The
+Burmese King instead of ordering the men to surround the city, made them prepare many
+scaling ladders. He also made them dig clay and make it into balls and keep them in
+mesh-work basket. The heap of these clay balls was higher than the city wall. His
+Burman Majesty then had an order written to the effect that the conqueror in all ten
+directions had come by that way to march to Ayut'ia and had reached P’itsanulok. He
+requested Phra Maha T'ammaraja, whom he addressed as his younger brother, to come
+out and see him, to confer about state affairs. This order was sent into the city. Phra Maha
+Chakrapat, Lord of White Elephants; therefore it was not becoming of him to go and pay
+respect of the Burmese Majesty sent the messengers back with the message that the city
+of P'itsanulok was too small even for his advance forces to find sufficient standing room
+in it. So if Phara Maha T'ammaraja would not come out he should think of the
+consequences. The King of P’itsanulok sent four Buddhist priests to go out and get some
+information. The Burmese King ordered that the priests be shown the heap of the clay
+balls and scaling ladders, and asked them to convey the news to their King that if the
+latter would not come out, he would make each soldier of his army pick up only one clay
+ball and throw it into the city and fill it up with clay balls within an hour. The priests
+returned to the city and reported to their King what they had seen and what the Burmese
+King had said. The futility of resistance was evident, but some excuse was necessary for
+1. Haribhunjaya
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 36]]
+84
+JOUR. BURMA RESEARCH SOC.
+XXV, II, 1935
+Phra Maha T'ammaraja to submit at the bidding of the enemy; and his excuse was that
+he had waited for help from the capital, but no help had arrived; that the Burmese army
+was so exceedingly large that the voices of men, horses and elephants were as loud as a
+raging storm; that resistance was impossible, and if he were loss and misery; and
+Buddhism would be retarded in its progress; that it would be better to incur the
+displeasure of King Maha Chakrapat, Lord of White Elephants, and surfer death and
+satisfied his conscience, Phra Maha T'ammaraja went out and met the Burmese King,
+Who told him that he would have to go with the Burmese to Ayut'ia and asked him to get
+his forces ready within a week. He got a force of 30,000 men and joined the Burmese
+army. The whole army then marched south and made a halt at Muang Nakon Sawan.
+When the report of Phra Maha T'ammaraja about the Burmese invasion reached the
+Siamese capital, the King of Siam sent up a force of 10,000 men under the command of
+Phya Pijai Ronarit¹. and Phra Wijit Narong², and made preparations to defend the city.
+When the two commanders reached the boundary of the province of Nakon Sawan, they
+received news that Muang P'itsanulok and the other northern towns had fallen; that Phra
+Maha T'ammaraja had been forced to accompany the Burmese army, and that the whole
+army had reached Muang Nakon Sawan, They could not possibly offer any resistance,
+and so they returned to the capital and reported the new to their King who, thereupon
+called up Phra Ramesuan, Phya Chakri and Phra Sunt'on songk'ran and asked them what
+they would do. They replied that when the enemy approached the capital they would go
+out and attack them. Preparations were then made to defend the city.
+The King of Chiengmai, who had been building war boats at Muang Kampengpet,
+finished his work and brought his war boats and transport boats down to Nakon Sawan.
+While preparations were being made to start again, the Burmese King asked Phra Maha
+T'ammaraja whether there was anybody who incited Phra Maha Chakrapat to refuse the
+elephants asked for by His Burman Majesty. Phra Maha T'ammaraja answered that on
+receipt of the letter asking for two white elephants, His Siamese Majesty sought the
+opinion of his ministers and nobles. With the exception of Prince Ramesuan, Phya Chakri
+and Phra Sunt'on Songkram the rest were of the opinion that the request should be
+complied with. The three were against it, and so the King asked them whether it would be
+possible to defend the city in case of an invasion. The three undertook the responsibility
+of defending it. On hearing this, His Burman Majesty laughed and said that it was usually
+the case with ignorant people who could not gauge their own strength and the strength of
+others.
+1. Vijaya Ranariddhi
+2. Vijita Naranga
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 37]]
+INTERCOURSE BETWEEN SIAM AND BURMA
+85
+5
+On the morning of Wednesday the 10th waning moon of the 2nd Siamese month
+(January) of the year 911 (A.D. 1549), the whole army made a move towards the capital.
+On arrival, the forces were encamped surrounding the city. the forces under the command
+of Maha Uparaja, forming the advance army, were encamped at a place call Paniet; the
+left wind under the King of Prome was encamped from Wat Potaram to Kaw Keo² canal
+; the right wing under the King of Ava from Wat Putai Sawan³ to Takien canal; the
+forces under the Governors of Toungoo, Sittang and Lak'erng, which formed the
+commissariat and transport division, were from Wat Karong to Wat Jai Watanaram ;
+those under the Governors of Bassein and Sieng, forming the advance guard of the King's
+own forces were at Lump'li ; and those under the direct command of His Majesty were at
+Wat Popuak. Phra Maha T’ammaraja and his forces were encamped at Makam Yong
+behind His Majesty's forces. The Burmese army completely surrounded the city; and
+wherever there was a river, a canal or other waterway separating the encampments, a
+temporary bridge was constructed across it, so that men and horses could go over it ; thus
+communication was maintained throughout the whole army, though it was spread out
+round the city. The work of making the bridges was completed n a single day.
+The Siamese on the watch on the walls of the city saw the Burmese engaged in
+making bridges, and they reported to their King that the strength of the Burmese army
+would be about three or four times that of the last invasion. The King thought it would be
+useless to organize sorties to dislodge the Burmese from their positions, and so he
+ordered that strict watch should be kept against any attempt of the enemy to storm the
+city.
+The Burmese King waited for seven days after his arrival, and there was no sign of
+any force coming out to attack his army. So he sent a long letter, stating his friendly
+feelings and his magnanimity in setting free the Siamese King's two sons; he mentioned
+that his request for two elephants was refused with the remark that a country which was
+fortunate to possess beautiful women, white elephants and male elephants with short
+tusks became liable to attack by other countries; he added that in accordance with this
+remark he had already arrived with an army the last seven days, and invited the Siamese
+King to come out and offer battle, or if he did not want to fight, then to discuss terms of
+settlement; if he would not come out to do the one or the other, the Burmese King threw
+out the threat that he would capture the throne ; and asked the Siamese King not to be
+sorry too late. One receipt of the letter, the Siamese King thought it would be impossible
+to defend the city against such an overwhelming force ;so he decided on submission, and
+1. Bodharama
+2. Kaw means island, keo means beautiful, valuable
+3. Buddhasvarya
+4. Ka=crow, rong=cry
+5. Jaya Vadhanrma
+6. Po=Bodhi tree, Puak white
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 38]]
+86
+JOUR, BURMA RESEARCH SOC.
+"
+XXV, II, 1935.
+a reply to this effect was sent. He then ordered the construction of a royal pavilion at a
+place where there were two monasteries called Wat Meruarajikaram' and Wat
+Hasdarwat². Two thrones of the same height were placed on the pavilion about six feet
+apart from one another of the same height were placed on the pavilion about six feet apart
+from one another. There were raised seats higher than the thrones to accommodate an
+image of Buddha, the Dhamma or Buddhist Scriptures, and some learned priests, When
+everything was ready, the King of Siam went to the pavilion in a royal barge together
+with his attendant ministers and nobles and took his seat on a throne. Then the Burmese
+King came with his followers, and nobles and took his seat on a throne. Majesty to sit on
+the other throne. His Burman Majesty seated himself on the throne and said that it was
+well that His Siamese Majesty had arranged for the presence of the image of Buddha, the
+Buddhist scripture and the Buddhist priests, and he invoked the three most precious gems
+to be witnesses that he gave city of Ayut'ia back to his elder brother the King of Siam.
+Then he said that he had all this trouble of bringing his big army, and so he would now
+ask for four white elephants. The Siamese King readily consented. The Burmese King
+then asked leave to take away Prince Phra Ramesuan to be adopted as his son, and said
+that if his request was granted he would return to Hanthawaddy with his army. The
+Siamese King demurred, giving the excuse that Phra Ramesuan was required to continue
+the line of his dynasty. The Burmese King met this excuse by saying that there was
+prince Mahint ratirat to continue the line, and that if both were kept in Siam, on the death
+of the King, the two brothers might find themselves in hostile camps, causing suffering to
+the people. The King of Siam had to give in, finding it impossible to refuse. A further
+request was made for leave to take away Phya Chakri and Phra Sunt' on Songkram to
+attend on Prince Ramesuan. This was also agreed to by the king of Siam. The names of
+the four white elephants handed over on this occasion were: Phra K'ajen T'arodom, Phra
+Borom Krasion, Phra Ratanakat and Phra Keo Songbat. The King of Siam then returned
+to the palace. The King of Hanthawaddy returned to his camp and ordered that a
+proclamation be issued to all commanders that all Siamese captured in the course of the
+invasion be realised. Prince Phra Remesuan, Phya Chakri and Phra Sunt on Songkram
+took leave of their sovereign. and taking their families joined the Burmese King in his
+camp. The greater part of the army was sent on ahead, and seven days after the departure
+of the advance forces, His Majesty of Burma followed. Phra Maha T’ammaraja
+accompanied the Burmese King as far as Kampengpet, and from there returned to
+Pitsaaanuok.
+1. Merurajikarama.
+2. Hastavas.
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 39]]
+INTERCOURSE BETWEEN SIAM AND BURMA
+87
+The Sultan of Patani, a small Malay State in the south of Siam, came to Ayut'ia with
+two hundred war boats to assist his suzerain against the Burmese. On the departure of the
+Burmese, he made and attempt to seize the throne and entered the palace with his
+followers. The King was taken entirely by surprise, got into a small boat and ran away to
+an island called Maha Pram. The ministers, nobles and other officials entered the palace
+and succeeded indriving out the Sultan and his followers, who fled from the capital in
+their own boats. The king was then brought back to the palace.
+In the year 912 (A.D. 1550) the King of Srisatanak'anahut, a Lao state in the north-
+east corner of Siam, the Linzin Min of Hmannan history, came to know that the daughter
+of His Siamese Majesty by his chief Queen Phra Suriyot'ai, who died on her elephant on
+the field of battle, in attempting to save her husband from falling into the hands of the
+Burmese, had grown up to a marriageable age. He sent ambassadors with a letter and
+presents to The Siamese King asking for the hand of the princess in question, whose title
+was Phra Tep Krasatri. He said in his letter that he had as yet no chief queen through
+whom to transmit his line of descendants.
+The King consulted his ministers and nobles and they were all of the opinion that this
+matrimonial alliance should be formed, because they said Hanthawaddy was always a
+menace to them, and in case of an invasion by the Burmese they could depend on the
+assistance of the King of Srisatanak'anahut. A reply was sent that the King of Siam was
+willing to give his daughter in marriage, and it was requested that the King of
+Srisatanak’anahut should sent suitable messengers to come and take her. On receipt of the
+favourable reply the King of the northern Lao State sent another batch of ambassadors
+with a following of 500 attendants, and some court ladies, to fetch the Siamese princess
+to his capital. When the ambassadors arrived, Princess Phra T'ep Krasatri was seriously
+ill, and her father was in a dilemma. If he were to tell the truth and say that his daughter
+1. Compare the above narrative with the account given in H.R.H. Prince Damrong's Our
+Wars with the Burmese, Ayut'ia period, pages 30-43. At the end of the narrative on
+page 43, H.. R.. H Prince Damrong writes as follows: In the history of Burma it is
+stated that on that occasion the King of Hongsawadi (Hanthawaddy, i.e. Burma) took
+away Somdet Phra Maha Chakarap at to Hanthawaddy, leaving Phra Mahintratirat to
+govern Ayut'ia as a tributary kingdom under the suzerainty of Hanthawaddy. And in
+another replace in the seam history it is stated that when the King of Hanthawaddy was
+celebrating the occupation of his new city and palaces, a suitable house befitting his
+position was built and given to the (deposed) King of Siam. I am of opinion that what is
+stated on this point in the History of Burma is not true, because at that time the peace
+arrived at was by mutual consent. If the terms of the peace were to take away Somdet
+Phra Maha Chakrapat, at the Siamese would never have consented to conclude such a
+peace. The facts must have been as given in the history of Siam, and as I have
+described above. Translation from the Siamese original. Compare Wood's History of
+Siam, Pages 117-119; Harvey's History of Burma, Pages 167-168 The Siam Society
+Jaunt Vol. 5, Part 1, Pages 21-28.
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 40]]
+88
+JOUR, BURMA RESEARCH SOC.
+,
+XXV, II, 1935.
+was ill, he was afraid that his prospective son-in-law would not believe him. He had said
+he would give, and he would not go back on his word, and so he sent another daughter of
+his, bearing the title of Phra Keo Fah, in the place of Phra T'ep Krasatri. She was given
+the paraphernalia of a chief queen, maids of honour, 500 male slaves and 500 female
+slaves. The ambassadors then returned with the Siamese princess, and on arrival
+presented her to their King, but to his great sorrow he found that she was not the princess
+he had asked for; he was particularly anxious to get as his chief queen the daughter of the
+chief queen who, in the guise of a man, bravely accompanied her lord to the field of
+battle, and who, from a keen sense of gratitude, sacrificed her life to save her husband.
+Not to be disappointed where he had made up his mind, he sent Phya Sen, Phya Nak on
+and Phya Tip Montri¹³ in the capacity of ambassadors to return the unwanted bride to her
+father. He also sent a letter saying that in the first instance His Majesty of Siam was
+pleased to offer Phra Tep Krasatri and the good news spread throughout the whole of
+Srisatanak'anahut, but now in sending Phra Keo Fah instead of Phra Tep Krasatri though
+the formers might possess qualities a hundred times better than those of the latter, they
+could not diminish a jot of the reputation the latter had gained among the people of the
+little Lao State. He repeated his request for the hand of the princess on whom he had set
+his heart. The King of Siam felt somewhat ashamed to have his daughter rejected and
+sent back.
+In the year 913 (A.D. 1551), when Princess Phra T'ep Krasatri had recovered from
+her illness, her father presented her with the same paraphernalia, attendants, male and
+female slaves, that were presented to her half sister on the occasion of the latter being
+sent as a prospective bride. Phya Men was ordered to conduct his daughter with a force of
+1000 men as escort. The Princess was carried in a golden sedan chair or palanquin, and
+the journey was made overland.
+When Phra T'ammaraja came to know that Phra Maha Chakrap'at, Lord of White
+Elephants, was about to send his daughter Phra T'ep Krasatri to Srisatanak'anahut, he
+sent a despatch rider with a letter conveying the news to His Majesty of Hanthawaddy,
+who immediately sent a force of 10,000 men, with Phra Taba in chief command and Fah
+Suatan and Mang Kalawkmaw as lieutenants, to intercept the bridal party. They waited
+on the border of Muang P'etchabun², attacked the escort and put them to flight, and
+1. Dibamittri.
+2. Bejra (i.e) Vajra) Pura.
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 41]]
+INTERCOURSE BETWEEN SIAM AND BURMA
+89
+carried away the Siamese Princess to Hanthawaddy'. The Lao noblemen who had come
+to meet the princess and receive her, went back empty handed and reported the
+circumstance to their King. He was neutrally very angry and said that P'itsanulok was at
+the bottom of this trick and the prime cause in enabling the King of Hanthawaddy to send
+a force to intercept and take away his bride. He made up his mind to avenge this wrong
+and made preparations to attack Muang P'itsanulok. When the King of Siam came to
+know about it, he sent messengers to go up and request the Lao King to desist. The Lao
+King accordingly gave up his intended attack on Muang P'itsanulok.
+FIRST REIGN OF SOMDET PHRA MAHINTRATIRAT
+In November 914 (A.D. 1552) Phra Maha Chakrap'at Rajat'irat, Lord of White
+Elephants, abdicated the throne in favour of his son Phra Mahint'rat'irat and retired to a
+secluded life. He was then fifty-nine years of age, and his son was twenty-five years.
+1. On the subject of the abduction of Phra T'eb Krasatri by the Burmese, H.R.H. Prince Damrong,
+in his Our Wars with the Burmese, Ayut'ia period, writes as follow on pages 47-48: Phra Maha
+T'ammaraja must have known of the exchange of diplomatic missions between Ayut'ia and
+Srisatanak'anahut on the subject of the request for the daughter of the King of Siam, because the
+ambassadors had to pass through the frontier station of Smawsaw (in the jurisdiction of Monto'n
+(Circle) P'etchabum), not very far from Muang P'itsanulok. When it was known that Phra Maha
+Chakrap at was going to give away Phra T'eb Krasatri to the King of Srisatanak'anahut, Phra
+Maha T'ammaraja did not at all approve of his father-in-law's action, because Phra T'eb Krasatri
+was the younger sister of his wife Phra Wisut Phra Wisut Krasatri by the same mother. Perhaps
+Phra Wisut Krasatri herself did not approve of the match as she may have felt certain the king of
+Hanthawaddy would invade Srisatanak'anahut, and the queens and concubines of Phra Chao Jai
+Jesta the King, would be in danger. It was quite likely that Phra Wisut Krasatri asked her
+husband to concert measures to prevent Phra T'eb Krasatri would be in danger. It was quite
+likely that Phra Wisut Krasatri asked her husband to concert measures to prevent Phra T'eb
+Krasatri being sent to Srisatanak'anahut. Also at that time Phra Maha Chakrap at had lost faith in
+Phara Maha T'ammaraja and did not trust him, and consequently did not consult him on the
+question of giving Phra T'eb Krasatri in marriage to Phra Chao Jai Jest's. It would have been
+ungracious on the part of Phra Maha T'ammaraja to ask his father-in-law to desist from his
+intended action, and so he cent a quick messenger to inform the king of Hanthawaddy about the
+offer of a daughter of the King of Siam to the King of Srisatanak'anahut. The King of
+Hanthawaddy sent a small force to intercept the princess on the way. When the officials
+escorting Phra T'eb Krasatri reached the place where the Burmese were waiting,, they were
+attacked by the Burmese and the princess was take a away to the Hanthawaddy. to make it
+appear that he had no hand in the abduction, Phra Maha T'ammaraja most probably reported it to
+Phra Maha Chakrap' at saying that His Majesty of Burma had acted on his own initiative, of his
+own accord, and that he himself had had no knowledge of it whatever. His fate hr-in-law could
+not have been so easily hoodwinked, and must have known as much as his son-in-law, but he
+could not reprimand him on account of the protecting shadow of His Majesty of Hanthawaddy.
+The old king must have felt greatly ashamed of this incident and consequently handed over the
+reins of government to Phra Mahint rat irat and entered the priesthood" Translation of the
+Siamese original.
+2. Jaya or Jeya Jestha. He is Bra Se Zit of the Hmannan History.
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 42]]
+90
+JOUR, BURMA RESEARCH SOC.
+,
+XXX, II, 1935
+,
+Although Phra Mahint'rat'irat was King of Siam, the country to the north of the
+capital round about Muang P'itsanulok was absolutely under the sway of Phra Maha
+T'ammaraja, who even presumed to dictate the policy and administrative measures of the
+King at Ayut'ia, and the latter was obliged to give effect to them. Phra Mahint'rat'irat was
+very much annoyed at the presumption of them. Phra Mahint'rat'irat was very much
+annoyed at the presumption of his vassal king and brother-in-law, but he had not the
+strength of will to resist the encroachment on his sovereign authority. He complained
+about Phra Maha T'ammaraja's conduct to his father, but he had not the strength of will to
+resist the encroachment on his sovereign authority. He complained about Phra Maha
+T'ammaraja's conduct to his father, but the old man did nothing, though he professed to
+be sorry for the state of affairs.
+The young King transferred Phya Ram from the Governorship of Kampengp'et to the
+Governorship of Chantabun, took him into his confidence, and concerted measures with
+him in secret to put an end to this anomalous position of a sovereign having to carry our
+the directions of his vassal. They sent a message to the King of Srisatanak'anahut to
+attack and capture P'itsanulok, a thing which the Lao King was only too willing and
+ready to do because he had his own grievance against the King of P'itsanulok on account
+of whose meddling he lost a very much cherished bride. Accordingly, military
+preparations were made to attack P'itsanulok. Phra Maha T'ammaraja came to know of
+these warlike preparations, and being yet ignorant of the secret move of his suzerain,
+submitted a report to the capital. The king sent Phya Siharaj Dejo' and Phra T'ainam to
+proceed to P'itsanulok, ostensibly to assist his brother-in-law, but with secret instructions
+that when the army from Srisatanak'anahut had surrounded P'itsanulok, they were to
+capture Phra Maha T'ammaraja without fail. The two noblemen were promised a liberal
+reward on the accomplishment of their mission. On arrival at P'itsanulok, Phya Siharaj
+Dejo divulged the secret plot of his King and Phya Ram to Phra Maha T'ammaraja,
+whose eyes were now opened as to the real feelings of his brother-in-law towards him.
+He then made preparations to defend the city.
+The King of Srisatanak'anahut marched to P'itsanulok with his army of about
+200,000² men, and arrived at his destination on the 13th waning of at a distance of about a
+mile and a quarter from one of the gates of the city, and his four commanders in different
+places round the city.
+When Phra Mahintratirat got information that the
+that the Lao army had left
+Srisatanak'anahut, he left the capital with his army and travelled by the main river and
+encamped at the mouth of Me Ping River. Phya Ram and Phya Chakri, who were in
+command of the advance forces, encamped higher up at Wat Chulamani. The war-boats
+were stationed along both banks of the river from Wat Chulamani to the King's camp.
+Word was sent into the city of their arrival and of their intention to enter it to assist Phra
+Maha T'ammaraja in repelling the attack of the Lao King, but permission to enter was
+1. Siharaja Tejo.
+2. The archaic words used in the original probably mean twenty-two hundred thousand,
+i.e. 2, 200,000 which is absurd for a small Lao State.
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 43]]
+INTERCOURSE BETWEEN SIAM AND BURMA
+refused, as to the real intentions of the soi-disant helpers were already known.
+91
+The King of Srisatanak'anahut was glad when the Siamese army arrived, and he
+launched and attack on the city ordering his men to storm it by climbing the walls. The
+defenders from behind the battlements swept the attackers with musket fire, and hurled
+sharp pointed iron and wood, causing many deaths among the soldiers of Lan Chang.
+When the Lao King saw the storming parties were losing heavily, he went and stood with
+his elephant almost on the edge of the moat of the city, but under cover of a shrine for
+keeping images of Buddha. He ordered the commanders to improvise shields, cross the
+moat and dig at the base of the city walls. The defenders threw down all kinds of
+weapons, but the improvised shields must have been very effective, because the weapons
+had little or no effect on the attackers. Seeing this Phra Maha T'ammaraja ordered an
+officer to get five hundred volunteers to go out and attack the Lao soldiers with swords
+and spears. This fight at close quarters proved effective and the Lao soldiers were driven
+back.
+Phra Maha T'ammaraja thought out a plan to destroy the war-boats brought up from
+the capital. He made fifty huge rafts of bamboos, each about 130 feet long and 65 feet
+broad. Inflammable materials were spread on the rafts and these were thoroughly
+sprinkled over with the oil from the yang tree (Dipterocarpus lavis. Ham). Two small
+boats which could be paddled very fast were also kept ready, to set the inflammable
+materials alight and get away quickly. When everything had been arranged, on the 4th
+waxing moon of the 4th Siamese month (March) when the moon had gone down, the rafts
+were let loose touching each other, down to the bend of the river above Wat Chulamani.
+The two small fast boats, one on either side of the rafts, set alight the oil-soaked
+inflammable materials, starting from the first raft downstream, and coming upstream as
+fast as they could after having set each raft in succession well alight. The flames spread
+quickly, and there was a big and raging sheet of fire. The water about the bend was not
+very deep, but the current was very strong and the flaming rafts were carried down very
+swiftly by the current. The men in the war-boats were entirely taken by surprise, and
+seeing flaming rafts coming down the river filling the whole of the waterway, they were
+panic-stricken, and there was scrambling and struggling among the men to escape from a
+fiery death. The flaming rafts set fire to the war-boats and a great many of them were
+destroyed and many men were killed. The remainder of the boats and men from the
+advance forces came down and joined the forces under the King at the mouth of Me Ping
+river.
+The King of Hanthawaddy, having received news of the attack on Muang P'itsanulok,
+sent quickly a force of 10,000 men and 1000 horse under the command of the Governor
+of Pukam (Pagan) and Governor of Sua Harn, to assist Pra Maha T'ammaraja. The two
+commanders succeeded in breaking through the cordon of Lao forces under Phya Mulek
+and entered the city. They and their men were handsomely rewarded for their timely
+arrival. The King of Siam came to know of the arrival of the assistance from
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 44]]
+92
+JOUR, BURMA RESEARCH SOC.
+,
+XXX, II, 1935
+,
+Hanthawaddy, and thinking that there was no possibility of achieving his object, he
+withdrew his forces and returned to the capital.
+The King of Srisatanak'anahut also lost heart, and so he abandoned the investment
+and returned to his capital. The two Burmese commanders asked leave of the King of
+P'itsanulok to follow up the retreating Lao army and attack it in the rear and bring back
+prisoners. The King dissuaded them not to be foolhardy, saying that the army was large,
+it had not been defeated and put to rout, but simply withdrawn of its own accord; that it
+was against the canons of military tactics, to follow and attack with a small force a vastly
+superior force which had not suffered a reverse in arms, and whose morale was good as it
+was at the commencement of the campaign. The two commanders were probably very
+anxious to show off their ability, and so they gave a plausible excuse in answer to the
+King's sound advice. They said they had not fought a pitched battle, and if they failed to
+follow up the retreating army, their King would punish them for not doing their duty. The
+King of P'itsanulok replied that they had fought successfully in breaking through the
+investing forces and getting into the city, and as regards being punished by their King, he
+would take the responsibility that they would not be punished at all. If the would not
+listen to his advice, he felt certain that they would meet with a reverse. Their
+overweening conceit must have overshadowed their discretion, for they, acting against
+sound advice, followed the retreating Lao forces which outnumbered their small force to
+the extent of ten to one.
+The King of Srisatanak'anahut kept there of his commanders with their forces in the
+rear. When they got to a place called Wari, the road was forces in the rear. When they got
+to a place called Wari, the road was narrow, and so they decided to meet the Burmese
+forces and give them a decisive blow. They hid part of their forces on both sides of the
+narrow roadway, and stationed themselves about three quarters of a mile farther up. They
+made their horsemen lure the Burmese into the snare, and the two Burmese commanders
+seeing only horsemen, oblivious of the fact that a much bigger force would be waiting for
+them farther up, and not suspecting that some forces lay in ambush on both sides of the
+narrow passage, eagerly chased the horsemen. Their eagerness soon led them right into
+the narrow passage, and when they had gone far enough to enable the ambuscade to give
+an effective blow, the Lao horsemen turned round and attacked the Burmese vigorously.
+The men in ambush came out, and the Burmese were assailed on all sides, and thoroughly
+beaten, losing many cavalry officers, horse and weapons. The two Burmese commanders
+managed to extricate what was left of their army, and returned to P'itsanulok thoroughly
+crestfallen,.
+Of the two Siamese noblemen sent up by the King of Siam with secret instructions to
+get hold of the person of the king of P'itsanulok; Phay Siharaj Dejo remained in
+P'itsanulok and Phra Tai Nam ran away to Ayut'ia.
+In the 8th Siamese month (July), being the beginning of the Buddhist lent, Phra Maha
+Chakrapat Lord of Whit Elephants, entered the Priest hood. Many officials entered the
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 45]]
+INTERCOURSE BETWEEN SIAM AND BURMA
+93
+priesthood also, as was the custom in those days, to show their loyalty and attachment to
+the King.
+It became clear to Phra Maha T'ammaraja that Phra Maha Mahintratirat had not the
+intelligence himself to initiate any sound movement, and that Phya Ram was the brain
+and the motive power of his brother-in-law. The last attack by the Lao King was Phya
+Ram's scheme to disposed him of the northern dependency. He wanted to remove Phya
+Ram out of the way; so he sent a letter to the King saying that the Governorship of
+Muang Pichai was vacant, and asking for Phya Ram to fill the vacancy. His Siamese
+Majesty was exceedingly angry. When Phya Ram knew about it, he was very much afraid
+that if Phra Maha T'ammaraja got hold of him, he would be sent away to Hanthawaddy,
+which was not unlikely. He told his King that according to information received by him
+of the affairs in P'itsanulok, Phra Maha T'ammaraja had thrown in his lot with the King of
+Hanthawaddy, making the whole of the northern country a dependency of Hanthawaddy.
+He was now trying to send away many able noblemen in the capital to Burma, with the
+object of depriving Ayut'ia of its able defenders. Phya Ram told his King that it was
+highly improper for a dependent King thus to dictate to his suzerain in matters of policy
+and administration, and begged the King not to surrender him to Phra Maha T'ammaraja,
+and boldly undertook to defend the city in case of an attack by the King of Hanthawaddy.
+SECOND REIGN OF PRA MAHA CHAKRAPT RAJAT'TRAT
+Pra Mahintratirat, the King, and Phya Ram went and told Phra Maha Chakrapat
+Rajat'irat, Lord of Whit Elephants, who was in the priesthood the affairs of the kingdom
+and besought him to leave the holy order and take up the reins of government. The royal
+priest refused several times but at last yielded to their importunity, left the priesthood and
+resumed the crown, on the 13th waning month of the 4th Siamese month (March) 916
+(A.D. 1555).
+The King of Hanthawaddy received news that the Governors of Pagan and Sua Han
+had suffered a heavy loss at the hands of the army of Lan Chang, and he was exceedingly
+angry. He sent a mounted courier to the two Governors to return to Hanthawaddy to
+receive condign punishment. They were in mortal fear of losing their heads, and so
+besought Phra Maha T'ammaraja to go with them to Hanthawaddy and plead on their
+behalf. The King of P'itsanulok pitied them very much, and so he and his son Prince Phra
+Marusann accompanied them to Hanthawaddy and begged His Majesty of Burma to
+pardon the two Governors. The King of Hanthawaddy consented saying that they had
+fully deserved death, but as the King of P'itsanulok had taken the trouble of coming as far
+as Hanthawaddy with the sole purpose of pleading on their behalf, he would spare their
+lives.
+The fact that Phra Maha T'ammaraja had gone to Hanthawaddy became know in
+Ayut'ia, and Phra Mahintratirat, told his father that Phra Maha T'ammaraja was no longer
+loyal to him and had formed an alliance with the King of Hanthawaddy. They should
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 46]]
+94
+JOUR. BURMA RESEARCH SOC.
+XXX, II, 1935.
+,
+therefore go up quickly with a force and bring down the King's daughter, the sister of
+Phra Mahint'ra, and her children. On account of his love for his wife and children, Phra
+Maha T'ammaraja would think twice before he ventured to do anything against the King
+of Siam. The old King agreed, and leaving Phay Ram to take care of the capital, both
+father and son went up by river to P'itsanulok and brought down Phra Wisut Krasatri,
+Phra Mahintra's sister, and Prince Ekat'otsarot' his nephew, together with all the old
+attendants who had accompanied her from Ayut'ia. On the way down the river, they
+halted at Muang Nak'on Sawan. Phra Mahintratirat told his father that Muang
+Kampengpet lay in the line of march of the levy of men and provisions in support of the
+enemy. He suggested that the town should be razed to the ground, and the inhabitants
+brought down to Ayut'ia and kept there for the defence of the capital. The old King was
+of the same opinion, and gave his consent for the destruction of the town. Phra
+Mahintratirat went up with a portion of the forces to Kampengpet, but two officers of the
+town who had been appointed from to Kampengpet, but two officers of the town who had
+been appointed from P'itsanulok, resisted all attempts to capture it, though three attempts
+were made to storm it at night. Phra Mahintratirat gave up the attempt, came down to
+Nak'on Sawan and then all returned to the capital.
+Phya Ram who left in charge of the capital, being unhampered in his work of
+preparing for the coming conflict which he must have foreseen, made the defences of the
+city as strong as he possibly could. On the walls surrounding the city he built small strong
+forts and firing platforms at a distance of about 130 feet apart, placed long range big guns
+at a distance of a quarter mile apart, and mortars only a distance of about 32 feet apart.
+The walls of the city were built originally in the old fashioned style, and no alterations
+had been made to pull down a part of the walls and build them close to the bank of the
+river. Phya Ram built a line of forts near the river outside the walls, and walls and placed
+many mortars in those forts. He also built in the river, which almost surrounded the city,
+observation towers like miniature lighthouses, at a distance of about thirty tow feet from
+bank, right round the city, to prevent enemies coming along the river and approaching the
+city wall. Judging by the preparations he had made during the short time, Phra Ram must
+have been a very and energetic man, especially in warfare.
+After Phra Maha Chakrap'at, Lord of White Elephants, and his son had taken away
+Phra Wisut Krasatri and her son to Ayut'ia, the officers left in charge of P'itsanulok
+during the absence of Phra Maha T'ammaraja and his son, sent a mounted courier post
+haste to Hanthawaddy to inform their King what had happened. Phra Maha T'ammaraja
+was much alarmed at the news and informed His Majesty of Burma of the action of his
+farther-in-Law in removing his queen and younger son to Ayut'ia. The King of
+Hanthawaddy said that such unceremonious breaking of friendly alliance, and such an
+1. Ekadasaratha.
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 47]]
+INTERCOURSE BETWEEN SIAM AND BURMA.
+95
+act of open hostility against the King of P'itsanulok, could not be ignored. He asked Phra
+Maha T'ammaraja to go back and to mobilise the men from the seven provincial towns
+and get his provisions collected, telling him that in the 12th Siamese month (November)
+he would bring his army. The King of P'itsanulok returned and made preparations by
+calling up men, collecting provisions and getting horses and elephants in fighting
+condition.
+On Thursday the 4th waning moon of the 12th Siamese month (November), the King
+of Hanthawaddy left his capital and marched to Kamp'engp'et, reaching it in twenty five
+marches. He appointed the King of Prome to take command of the war-boats, and a
+general march was made southwards to Nak'on Sawan, where all the forces by land and
+by water were to be assembled before proceeding to Ayut'ia. The army of invasion was
+composed of the following forces, including the contingents and auxiliaries, namely: the
+Burmese and Mon soldiers of Hanthawaddy, Ava, Toungoo, Prome, Tala(Dala), Pra
+Senwi(Hsenwi or Theinni), Muang Kong (Burmese=Mogaung), Muang U-
+Muong(Burmese=Onbaung-Yhibaw), Muang Sap'uabuase, Muang Srob and Muang T'ai
+Yai. The King of Chiengmai being unwell, he sent Phra Sen Luang P'ingjai in command
+of the Lao contingent from Chiengmai. According to an account taken of men in the
+whole army, it was found that their will 1,000,000 men, and this number did not include
+the forces from the seven northern towns of Siam, which formed a separated unit under
+the command of Phra Maha T'ammaraja. On an auspicious day and at an auspicious hour,
+His Majesty of Burma move down to the Capital.
+On receipt of the news that the Burmese army and its auxiliaries from the town in the
+northern Siam were on their way to the Capital, the King of the Siam and his son
+gathered in the men from the districts outside of the city to enter it for its defence, but
+they were able to get only a small proportion of the men in the four districts close to the
+capital; the greater portion left the towns and took refuge in the jungles. Moreover, the
+men from the small towns preferred the precarious life in the jungle to the arduous work
+of defending the capital. From such small towns, only the governor and his personal
+attendants entered the city. The King ordered Phya Ram to inspect all the defences, arms,
+and dispositions of the men on the walls of the city. All the forts had been put into
+thorough repair and they were as strong as they could possibly be.
+Then along the four sides of the city wall, reserve forces were stationed, each side
+having five companies of such reserves, Phya Ram stationed himself in the middle with
+the forces directly under his command, so that he could in the middle the force directly
+under his command, so that he could go to the assistance of any side requiring his
+assistance. In all places which were of importance and which required constant vigilance,
+the king put Phya Kalahom (the Minister of War) in charge, with the following officers
+under him, detailed to hold their respective posts, from Haw Ratanajai gate down to
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 48]]
+96
+JOUR, BURMA RESEARCH SOC.
+,
+11
+XXX, II, 1935
+,
+Kaw Keo island where there was no river bounding the city but only a moat: Phya
+P'onlat'ep, Phra Mahat'ep, Governors of Chainat, Sup'anburi, Lopburi, Int'aburi,
+Petchburi, Ratburi,³ Nak'on Nayok Sraburi³, P'romburi, Sankaburi," Sink'aburi Nak'on
+Chaisee T'oburi 10 and Mrit (Burmese Myeik= Mergui). On the remaining three sides
+where the city had rivers flowing outside the walls, the defence was apportioned as
+follows: from one of the city forts to Pratu Jai gate, Phya Phra K'ang (Minister of the
+Royal Treasury) was the chief company commander; from Pratu Jai to Pratu Wang Jai
+gate, Phya Int'ra Nak'onban was the chief company commander; from Pratu Wang Jai to
+Pratu Jik'an gate, Phra T'ainam was the chief company commander; from Pratu Jik'an to
+the corner of the government offices, Phya Siharaj Dejo was the chief company
+commander; from the last named place to the royal palace and thence along the moat
+joining two rivers Phya T'arama" was the company commander.
+12
+The King Hanthawaddy reached the capital on Wednesday the 1st waxing moon of
+the 1st waxing moon of the 1st Siamese month (December), and established his camp at
+Lump'li. The resourceful Phya Ram dragged a big gun measuring about twenty-one feet
+in length and fired it, aiming at the forces surrounding the Burmese King, killing many
+men, horses and elephants. The shell fell not far from the living quarters of the King. He
+had propitiatory rites performed over the shell and moved his camp to Maha P'ram¹4
+When all the forces composing the invading army had arrived, he ordered them to
+encamp surrounding the city. The Maha Uparaja and Phra Maha T'ammaraja fixed their
+camps on the east of the city where there was a canal called K'una. The King of Ava
+camped on the south side; the Governor of Dala, the Sawbwa of T'ai Yai and Phya Sen
+Luang of Chiengmai on the west side; the Governors of Bassein, Toungoo and Martaban,
+Phya Ap'aik'amini (Burmese Abhaya Gamani), Phya P'ataba, and Phya Pa'tabert on the
+north side. The forces under the King were camped at Wat Maheyong. At first the
+encampments were at a distance of about three quarters of a mile from the bank of the
+river. Before substantial stockaded forts were constructed trunks of toddy palm trees with
+earth buttress supports were used to protect them from the shells of big guns which,
+1. Baladeva.
+2. Mahadeva.
+3. Rajapuri
+4. Nagara Nayaka.
+5. Srapuri.
+6. Brahmapuri.
+7. Sargapuri.
+8. Singapuri.
+9. Nagara Jayasri
+10. Dhanapuri.
+11. Pratu (Siamese) = gate; Jai Pail, Jaya or jeya.
+=
+12. Indra Nagarapala,
+13. Dharma.
+14. Maha Brahmana.
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 49]]
+INTERCOURSE BETWEEN SIAM AND BURMA
+97
+according to the Siamese historian, did great execution among the invading forces. About
+ten days after they had finished their forts and found sufficient shelter from the shells of
+the Siamese big guns, they built another line of forts, about a quarter of a mile nearer the
+city then the old forts, and distant only by about half a mile from the edge of the river.
+The Siamese sent volunteers to sally out and attack the Burmese while engaged in
+building forts, and they also used their big guns with good effect. These sorties and the
+shellings caused great destruction in the Burmese army. So much so that the company
+and regimental officers found it impossible to perform the task of building forts in the
+day time and so they did the work at night and it took them a long time to complete their
+work. But His Burman Majesty would not be content with this second line of forts. He
+ordered the building of a third line of forts right on the edge of the river or moat. The task
+was an extremely difficult and trying one, because, being very close to the city wall, the
+defenders could train their big guns and mortars with great precision, and so heavy were
+the casualties among the invaders that even the King of Hanthawaddy had to modify his
+order. He instructed the men to dig several underground tunnels from the second line of
+forts to where they were building the third line of forts, and when they reached there to
+dig tunnels communicating with each other. The building was carried on secretly at night,
+the men being ordered to keep very silent. The defenders finding their guns had no effect
+on men approaching their work by underground passages, resorted to sortie. Several
+sorties were organized and may were the heads of the Burmese, Mon Shan and Lao
+soldiers which were taken back into the city. The work was, however, completed, thought
+it took over a month to accomplish it and involved very heavy loss. The invaders took
+over two months in getting these three lines of forts built.
+Phra Mahint'rat'irat ordered Phya Ram to sent a letter to Maung Lan Chang,
+requesting the Lao King to send an army to assist the Siamese. Phya Ram did as he was
+ordered and sent K'un Rajsena' and K'un Maha Wijai² with fifty followers to take the
+letter to Lan Chang.
+While the building of forts by the enemy was in progress, the Lord of White
+Elephants was very assiduous in going round every day inspecting the forces, and in
+organizing sorties on all the four sides of the city, with forces of about a thousand to two
+thousand strong but divided into small platoons or companies. These sorties were
+apparently very successful ones; may of the invaders were killed and many heads were
+taken into the city; but the invaders were not dispersed or put to fight, fresh men taking
+the place of those who had fallen.
+The king of Hanthawaddy then said to Maha Uparaja, the King of Prome, the King of
+Ava and the other commanders, that their attacks on all other cities or towns, when the
+task of surrounding the city was finished it could be stormed and taken in no time. But
+1. Rajasena.
+2. Maha Vijaya.
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 50]]
+98
+JOUR BURMA RESEARCH SOC.
+XXV, II, 1935.
+Ayut'ia was a very big city having almost a sea as a moat protecting it and the only
+vulnerable point where storming could possibly be carried out was the face having a
+canal joining two rivers. Even with this weak point for an attack, Ayut'ia could not be
+stormed and taken easily like other cities. To take the city this time, the siege would have
+to extend to a year. He asked all the commanders to issue orders to all those under have
+to extend to a year. He asked all the commanders to issue orders to all those under them
+not to take the offensive, but to hold the forts strongly and to send out foraging parties to
+gather rice and provisions to last them a year. Then a strict inspection should be made of
+every men in every platoon or regimental, that he had provisions to last him a year,. Any
+company commander or regimental office whose men were found not to have sufficient
+food for a year would be executed. The officers arranged to have only sufficient men in
+the forts to repel any surprise attack, and the rest were employed on forage duty. When
+the inspection was made, the platoon under Madot a very old personal servant of His
+Burman Majesty, was found short of provisions but notwithstanding his previous faithful
+and intimate service, he was executed.
+The old King Phra Maha Chakrap'at, Lord of White Elephants, died in the year 917
+(A.D. 1555) after an illness of about twenty-five days.
+SECOND REIGN OF PHRA MAHINT'RAT'IRAT
+Phra Mahint'rat'irat became King again on the death of his father. He took no interest
+in the war that was carried on within a few hundred feet of the city walls and rarely came
+out of his palace. The whole conduct of the war and the defence of the capital were left in
+the hands of Phya Ram, who made his daily round of inspection of all posts in the city,
+being carried on a gilt sedan chair, escorted by armed soldiers both in the front and rear,
+and followed by seven hundred musketeers. He also got men to go out and attack the
+enemy.
+On one occasion, Phya Chak Ratana' took out some soldiers and attacked the |
+fortified camp at T'ai K'u help by Phya Kiet (Mon or Burmese) and succeeded in
+breaking and burning about one hundred and thirty feet of the fortification. The guards of
+the camp were driven back, but on Phya Kiet making a counter attack, the Siamese were
+driven back, but on Phya Kiet making a counter attack, the Siamese were driven back
+into the city and their commander Phya Chak Ratana fell into the hands of the Burmese.
+Phya Kiet took his captive to His Majesty of Burma who, instead of being glad that a
+Siamese commander was captured, was very angry with Phya Kiet, and asked Maha
+Uparaja why Phya Kiet was not punished for failure to make his camp secure, and giving
+an opportunity to the Siamese to come out and burn it. The Maha Uparaja replied that as
+Phya Kiet had succeeded in capturing the Siamese commander, he had made amends for
+his remissness, and therefore no punishment was meted out to him. The King was angry
+with Maha Uparaja, and said that although Phya Kiet had succeeded in capturing the
+Siamese commander, that was not sufficient to exculpate him and excuse him from
+1. Cakra Ratana.
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 51]]
+INTERCOURSE BETWEEN SIAM AND BURMA
+99
+punishment. The fact that Maha Uparaja considered that Phya Kiet had made amends and
+did not punish him showed that Maha Uparaja himself did not care much about the
+investment operations. The King then said that he was removed from the command of the
+army, and that he could go away anywhere he liked with one elephant to ride on and two
+attendants. Having dismissed his son form the chief command of the army he ordered the
+execution of Phya Kiet. Maha Uparaja had just reached his camp when a messenger from
+His Majesty arrived, conveying the order that he wsa to leave the army immediately. The
+Kings of Prome and Ava, realizing how very angry His Majesty of Burma was, dared not
+intercede on behalf of the young prince, and so he appealed to Phra Maha T'ammaraja to
+plead for him. When the prince wsa appealing to Phra Maha T'ammaraja, a second
+messenger arrived with orders form His Majesty that the prince was to leave instantly.
+The prince, fearing more serious punishment, dressed himself, mounted his elephant, and
+started to go away. Phra Maha T'ammaraja sent a man to detain the prince while he went
+and begged pardon of the Burmese King, who condescended to grant it.
+The King of Prome who was in command of the war-boats was ordered to take his
+boats down the Sap'an Kai K'ao canal coming out at Bang Sai, and then to come up and
+station them at the back of the moat so as to prevent any boats coming up to the city or
+going out of it. From there the King of Prome sent out patrol boats to go down as far as
+Muang Nont'aburi¹ T'onburi and Sak'onburj² the last being almost at the mouth of the |
+river. At one time a Chinese junk sailed up the mouth of the river as far as a place called
+Lang Tao, not knowing that the Burmese were investing the city. The King of Prome
+went out to capture it with some war-boats, but the owner of the Burmese to capture it,
+turned back. When the war-boats came within some distance of the junk, it was already
+outside the mouth of the river and in deep water, and so the pursuit was abandoned and
+they returned to their quarters. His Burman Majesty was very angry with the King of
+Prome for failing to capture the junk, and punished him by leading of His Majesty
+amounted to a heinous crime. This form of punishment was usually meted out in those
+days to some of the worst criminals before they were executed, and the King of Prome,
+who was a vassal King, must have felt the humiliation keenly.
+The King of Hanthawaddy ordered the storming of the fort near the water-edge on
+that side of the city which had the gate called Pratu Haw Ratanajai. Phya Ram, Phya
+Kalahom, Phya Int'rat'ibodi,³ Phra Maha T'ep, Phra Mont'ri4 and other officers defended
+the fort successfully. Phra Maha T'ep called for volunteers and attacked the Burmese and
+1. Nandapuri.
+2. Sagarapuri.
+3. Indradhipati.
+4. Mantri.
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 52]]
+100
+JOUR BURMA RESEARCH SOC.
+XXV, II, 1935.
+,
+put them to rout many times. His Burman Majesty was angry at the failure of his
+commanders and punished them. He seemed to be greatly annoyed at the delay in the
+accomplishment of his object, and to have somewhat lost his sense of discrimination
+between the possible and the impossible, the attainable and the unattainable. He ordered
+the Maha Uparaja to go and establish a fort at Wat K'ao Din opposite the island called
+Kaw Keo; his son-in-law, the King of Ava, to establish a fort at Wat Sp'an Klua; and his
+nephew, the King of Prome to build a fort at Wat Chan opposite Bang Hien. They were
+also ordered to build a causeway across the order though they must have known that the
+task was Herculean and would cost them heavily. The defenders on the walls used their
+big and small guns with deadly effect on the men engaged, not in fighting, but in carrying
+earth and throwing it into the river. One day His Burman Majesty inspected the work
+expecting ot find the road finished, but finding it had not progressed much he said to the
+three commanders; "I cannot get these three men to make a road across such a small moat
+as this how then can I capture Ayut'ia? Only when one of them dies will the road be an
+accomplished fact. " Having said this much he went away. The three commanders could
+not treat lightly the veiled threat of their King, but at the same time they could not be so
+heartless as to see their men die without being able to defend themselves from the
+sweeping fire of the defenders. So they devised some sort of protection for their men by
+setting up trunks of toddy palm to shield their men. But the defenders soon demolished
+then with well directed fire from their big guns, and many deaths must have been due to
+the falling down of these big tree trunks. The supervisors of the work reported to the
+King the failure of their plan and the appalling casualties. The king asked the supervisors
+"When a man carrying a clod falls and dies, how many clods will his body be equal to".
+ON being told that the body of a dead soldier would be equal to seven or eight, clods, His
+Majesty simply said "All right, go and tell those in charge of the work to drive the men
+and hasten the work without stopping at all." What the King said to the men and hasten
+the work without shopping at all." What the King said to the supervisors was reported to
+the three commanders in charge of the work, and they had no alternative left but to drive
+their men to the work both day and night. Should any one fall dead with the clod he was
+carrying, his body was left where it fell, to take the place of seven or eight clods, for that
+was the implication of what His Majesty said. The roads were finished only after
+continuos work for three months.
+Phya Ram, Phya Kalahom and Phra Maha T'ep found that by the completion of the
+three causeways across the moat, the enemy had driven a wedge into their defence works,
+and so they built a stockade within the city wall, and placed mortars in front of the
+stockade to protect it, but the defenders on the city walls were not withdrawn and they
+still kept their positions as before.
+The King of Hanthawaddy brought his forces along the causeway at the corner
+opposite Kaw Keo island. He also brought his war boats to cooperate with the land
+forces, The Burmese opened a heavy fire with big guns and muskets, shot and shell
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 53]]
+INTERCOURSE BETWEEN AND BURMA
+101
+falling like a heavy shower of rain, and stormed the city wall, at the corner opposite Kaw
+Keo. Although the defenders on the city walls offered a stout resistance, they could not
+hold their position, but had to fall back on the stockade built with much foresight by Phya
+Ram and his associates. The Burmese were able to make a breach in the city wall at the
+point of attack, but they were unable to make this temporary success lead to further
+success and bring about the capitulation of the city.
+At this stage of the hostilities Phya Ram, who had been the life and spirit of the
+defence, became a little disheartened, not only on account of the causeway, in the
+construction of which they had shown such tenacity of purpose and sacrificed thousands
+of lives, but because his authority and influence seemed to be on the wane, and his orders
+did not carry finality as they had formerly. He expressed eh opinion to his associates that
+it was beyond their power to make further defence, and it would be better to open
+negotiations for a friendly peace. His associates expressed a note of dissent, saying that
+before they had yet fought a pitched battle they should not think of peace, and it was very
+doubtful if the Burmese King would accept a friendly peace after he had suffered so
+many casualties. From that time the canker of dissension attacked the Siamese
+commanders and nobles, who ignored Phya Ram's orders and instructions. There was no
+cooperation and nobles, who ignored Phya Ram's orders and instructions. There was no
+cooperation and harmony in the conduct of the defence, each leader acting on his own
+responsibility as he thought best. The Siamese King took no interest whatever in the
+struggle for the very existence of Siam as an independent Kingdom.
+Phra Maha T'ep with a force of willing soldiers was guarding the breach in the wall,
+stationing himself outside the stockade but inside the wall. The enemy made several
+attempts to storm the stockade, entering by the breach, but Phra Maha T'ep gallantly
+offered a very stout resistance and was able to repel every attempt. The King's son, Prince
+Phra Sri Sowarat' was unlike his father; he took his stand along with the other defenders. |
+He brought his men to help Phra Maha T'ep and ordered his men to go out and attack the
+enemy. Big guns were placed pointing at the breach and firing through it, causing many
+deaths among the enemy approaching it. Thus the enemy in front of the breach were held
+in check.
+The King of Hanthawaddy must have thought that the completion of the three
+causeways would soon bring the struggle to an end. But when he found that the resultant
+advantage was not very great and did not achieve the end the expected, it gradually
+dawned on his min that it was not an easy matter to capture a city like Ayut'ia. Moreover
+the rains were approaching, and there was misery and suffering in store in the near future.
+He therefore consulted with Phra Maha T'ammaraja how to get hold of Phya Ram by the
+artifice of sending a letter requesting the surrender of that able organizer of the defence.
+Their task would then be easy and the city would be of the defence. Their task would then
+be easy and the city would be captured in no time. Phra Maha T'ammaraja approved of
+the city would be captured in no time. Phra Maha T'ammaraja approved of the idea, and
+so he composed a letter the effect that the Lord of White Elephants and Phya Ram were
+1. Sri Seuvaraja.
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 54]]
+102
+JOUR BURMA RESEARCH SOC.
+XXV, II, 1935.
+responsible for the breach in the friendly relations between the two countries, and the
+present state of hostility. Now the Lord of White Elephants was dead, and only Phya Ram
+were surrendered, he had no wish to cause suffering to the priests and the people, but
+would raise the siege and return to Hanthawaddy. This letter was sent by one of his old
+personal servants called Nai Kon T'ong who managed to get secretly into the palace and
+handed it over to a mid of honour of Phra Maha T'ammaraja's queen, Phra Wisut Krasatri,
+who had been brought down from P'itsanulok. The maid of honour delivered the letter to
+the queen, who told Phra Mahint'rat'irat of the receipt of the letter and its contents. The
+king then called his ministers and nobles, and asked them to consult and consider the
+request of the King of Hanthawaddy for the surrender of Phya Ram. The conclusion they
+arrived at was that if the Burmese King really meant to raise the siege and return, Phya
+Ram should be surrendered. The Siamese King ordered that a reply be sent accordingly.
+The letter was delivered to Phra Maha T'ammaraja, who after readingly. The letter was
+delivered to Phra Maha T'ammaraja, who after reading it sent Nai Kon T'ong back with
+the message that the King of Hanthawaddy really meant friendly peace, and therefore
+they should send out Phya Ram without delay. The Siamese officers, not suspecting the
+mean trick being played on them requested their King to surrender Phya Ram would be
+surrendered, and that they should come and receive him. Phya Ram was put in chains,
+and sent in the custody of keepers accompanied by the Buddhist Patriarch of Kingdom
+and four other priests. What a reward for his patriotic, energetic resourceful and
+invaluable service to his king and country! It was sufficient to brake the heart of this
+great nobleman to be rewarded thus for his patriotism and able defence of the city. They
+were taken first to Phra Maha T'ammaraja, who had the chains taken off Phya Ram and
+led them to the presence of the Burmese King. His Majesty of Burma called a council,
+consisting of Maha Uparaja and the ministers, nobles and officers to discuss the matter of
+the surrender of Phya Ram in exchange for peace and friendship. They all told their King
+that to get hold of Phya Ram was as good as conquering the Kingdom of Ayut'ia. They
+did not want peace and friendship, but asked him to renew the attack. The king of Burma
+said that as a king it was improper for him to renew the attack. The King of Burma said
+that as
+king it was improper for him to continue the fight after the surrender of Phya
+Ram, and he ordered the cessation of hostilities for the time begin, both sides observing
+an informal truce. He then sent word by the Supreme Patriarch that if the King of Siam
+and all his nobles came out and tendered submission, he would offer peace and
+friendship. The nobles and ministers then told his King what the King of Burma had said,
+The nobles and ministers then told their King that in all this the King of Burma was
+simply trying to capture all of them by a trick, and after getting into the city he would the
+away all the inhabitants as prisoners of war. They all offered their lives for the defence
+of the city. The King asked them to reconsider their decision several times, viewing it
+from several aspects, but they were firm in the it resolve to fight for their freedom. The
+only dissentient in the assembly was Phya T'arama.
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 55]]
+INTERCOURSE BETWEEN SIAM AND BURMA
+103
+The King of Hanthawaddy waited seven days for a reply, but as no reply was
+received he was for resuming hostilities. Phra Maha T'ammaraja asked him to wait
+awhile, as he intended to go into the city and induce the king and the nobles to make
+peace, and thus prevent suffering and hardship to the people and priests. His Burman
+Majesty gave his consent; and Phra Maha T'ammaraja mounted a sedan chair and went
+and stopped in front of the place of which Phra Maha T'ep was in charge. A message was
+shouted to the men guarding the position that Phra Maha T'ammaraja intended to go in
+and settle terms of peace. Phra Maha T'ep being suspicious of the good faith of the
+visitor, sent a volley of shots and shell, which however, did no harm to Phra Maha
+T'ammaraja who had to get down from the sedan chair and be carried away by his
+attendants. Phra Mah T'ammaraja told the Burmese King what had happened, and the
+latter ordered the resumption of the attack day and night, saying that the city could not
+possibly slip through his hands, and the want of faith in the Siamese would only cause the
+fall of the city an suffering to the people.
+About this time, the Siamese King's son, Prince Phra Sri Sowaraj, was very active in
+the defence of the city. He commanded a force of 15,000 men, and established himself in
+the middle of city and went to the assistance of any point of the defence, when he was
+informed of the pressure of the enemy at every time, without consulting his father, who
+took no interest whatever in the hard fight for freedom. The father took umbrage at his
+son's conduct in not consulting him about the fighting, called him to his presence and
+ordered Phya T'arama to take him out and execute him. Civil and military officers were
+all very sorry for this unnecessary act of cruelty, and though perhaps they lost heart and
+wanted to give up the struggle, they still continued to fight, because the safety of their
+wives, children, and kith and kin depended on their efforts.
+K'un Raj Sena and K'un Maha Wijai who were sent to Lan Chang, arrived at their
+destination safely and delivered their message. The King of Srisatanak'anahut was very
+angry on learning the contents of the message, especially as he had his own personal
+grievance against the King of Hanthawaddy, on whom he was very anxious to get
+revenge whenever there was a favourable opportunity. He said, not only had the Burmese
+King kidnapped his bride from Ayut'ia, but now he had the audacity to attack the Siamese
+capital; he would like to see what the face of His Majesty of Burma looked like.
+Accordingly, he got together a force of 50,000 men, 300 elephants and 3000 horsemen,
+1. H.R.H. Prince Damrong in his Our War with the Burmese, Ayut'ia period, page 66,
+says that Prince Sri Sowarat was the King's half Brother and not son, according to a
+copy of the Siamese history discovered by Luang Presort and called Luang Prasert's
+coy. His Royal Highness further says that Prince Sri Sowarat was executed at the
+instigation of Phya Chakri, who poisoned the King's mind with the belief that the
+Prince was aiming to overthrow the King. If so, the execution took place after Phya
+Chakri got into the palace and not before, as stated in the "Royal Autograph Edition"
+of the History of Siam.
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 56]]
+104
+JOUR. BURMA RESEARCH SOC.
+XXV, II, 1935
+and left his capital on Saturday the 5th waning moon of the 3rd. Siamese month
+(February), and marched by land. The people of the frontier town of Nak'on Tai, as soon
+as they were aware of the coming of the army of Lan Chang, sent information down to
+Phra Maha Tammaraja, who informed the King of Hanthawaddy of the coming of the
+Lao army. The King said that if the Lao army were allowed to come near the capital the
+defenders would be encouraged, their drooping spirits would be revived, and they would
+make renewed efforts to defend the city. His plan was to put the auxiliary army to rout
+when still far from the capital. He asked Phra Maha Tammaraja and Phya Ram to get a
+skillful engraver and engrave the royal seal of the Siamese King, to be impressed on a
+forged letter to be sent to the King of Srisatanakanahut, requesting him to come as fast as
+possible, as the enemy forces were short of provisions and were on the point of
+abandoning the siege. His Majesty of Burma told Phra Maha Tammaraja to send the letter
+by an intelligent Siamese, who would be able to play his part well and dispel any
+suspicion, when questioned to test the genuineness of the letter. The Maha Uparaja was
+ordered to proceed with his forces to intercept the Lao auxiliary. He went as ordered,
+marching along the east bank of Pasak river, and waited near the town of Sraburi,
+concealing his men in the forests on both banks of the river.
+The messenger with the forged letter met the King of Srisatanakanahut at Muang
+P’etchabun. He was taken to the King and there gave his verbal account corroborating the
+contents of the letter. The King, not suspecting anything and believing in the contents of
+the letter, made a rapid march with a light heart to Muang Sraburi; and at a place called
+Mak Song Ton (two areca-nut trees). before all his forces had arrived together, the
+Burmese attacked the advance force and put it to rout, the King making his escape riding
+on a swift elephant. Many Laos were killed in the actual fight and in the pursuit of the
+fleeing army, many elephants and horses and about a hundred men were captured. Maha
+Uparaja returned and presented to His Majesty the men, elephants and horses he had
+captured. The King was very glad of the result, and sent the Lan Chang men into the city
+to tell the fate of the auxiliary army from Lan Chang. On learning what had officers and
+men defending the city were distressed that their hopes of help from outside had not been
+realized.
+One evening, just about nightfall, Phra Maha Tammaraja sent for Phya Chakri, who,
+together with Prince Phra Ramesuan, had been taken away to Hanthawaddy, when, on the
+previous invasion of the Burmese, King Phra Maha Chakrap'at, Lord of White Elephants,
+tendered his submission. The interview was private and no one was present. Having made
+Phya Chakri swear to preserve strict secrecy, Phra Maha Tammaraja began by saying that
+formerly they had both been loyal subjects of the Lord of White Elephants, but now they
+1. According to the Hmannan history Oya Ram, i.e., Phya Ram, was the messenger sent.
+See Siam Society Journal, Vol. 5, Part I, pp. 60 & 61.
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 57]]
+INTERCOURSE BETWEEN SIAM AND BURMA
+105
+were subjects of the King Hanthawaddy. The Lord of White Elephants had died, and so
+they should have no scruples about what he would propose doing. He himself, he said,
+had rendered some valuable services to the King of Hanthawaddy, but Phya Chakri had
+not yet had any opportunity of rendering valuable service. He had thought of offering
+Phya Chakri such an opportunity, in which he would be able to render very signal service
+and be the means of capturing the city easily. The nobleman agreed to accept the
+opportunity even if it should cost him his life. Phra Maha Tammaraja then divulged his
+secret plan to Phya Chakri, and they both went to see the King of Hanthawaddy, who on
+learning the details of the plan, was very glad. According to the proposed plan, Phya
+Chaki was put in chains and kept in custody for some ostensible offence. Thirty Burmese
+and Mons were detailed to guard the prisoner. About five or six days after, Phra Maha
+Tammaraja sent a man to take out Phya Chakri secretly form the place of confinement
+and send him into the city loaded with the chain he had on him. In the dead of night the
+noble prisoner entered the city at the place where Phya T'arama was in charge. When day
+broke the King of Hanthawaddy made a pretence of ordering a hunt for the escaped
+nobleman, and failing to find him he ordered the thirty men on guard to be taken round
+all the camps and their offence proclaimed, after which they were executed, and their
+bodies exposed to the view of the Siamese in front of the fort of which Phya T'arama was
+in charge-a hear tless and cruel sacrifice of thirty innocent lives to give colour of reality
+to a mean plot to deceive.
+Phya T'arama led Phya Chakri into the presence of King Phra Mahint'rat'irat, who,
+believing that Phya Chakri had really escaped from confinement, was very glad. The
+chains were removed, and rewards were showered on him, and he was given the chief
+command in the defence of the city with absolute power of life and death. For about a
+month he repaired forts, gates, moats, battlements, and gun platforms, and took other
+measures as if he really wanted to defend the city to the best of his ability. But when the
+month was over there came a complete change, whenever he saw a man brave, clever,
+energetic and attentive in the discharge of his duties, he found fault with him as being
+negligent, inattentive and careless, and punished him. He posted civil servants who had
+no military training or experience in the place of military officers, and put military
+officers in charge of civil appointments. The efficiency of the defence fell off in
+consequence. He then sent a secret letter to the King of Hanthawaddy, fixing Friday the
+10th waning moon of the 9th Siamese month (August) for a combined attack on the city.
+On the appointed day his Majesty of Burma arranged four columns: one column was
+dressed in black coats and armed with sword and shield; a second dressed in green coats
+and armed with two-handed swords; a third dressed in red coats and armed with muskets
+fired with a fuse; and a fourth dressed in blue coats and armed with lances and swords in
+scabbards slung over the shoulder. Phra Maha Tammaraja and Maha Uparaja were
+ordered to attack form the causeway in front of Kaw Keo island; the King of Ava and the
+King of Prome each along the other two causeways. The defenders sent volleys of musket
+fire, hurled javelins and sharpened wooden staves; killing a great many of the attackers,
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 58]]
+106
+JOUR. BURMA RESEARCH SOC.
+XXV, II, 1935
+but there was no recoil, on and on they came, fresh men taking the place of the dead and
+fallen, without check or intermission; the noise produced by the shouts of men and the
+sound of guns, resembled the rumbling of a great earthquake. Phra Maha Tammaraja and
+Maha Uparaja were able to break the resistance of Phra Maha T'ep, and captured his fort.
+The defending commander retreated and took his stand at a place called Wat K'o Wat
+Krabu. He was ousted again from that place, and made his second stand at a place called
+Wat P'ow K'ow; thence he was dislodged, and not able to rally again, as his men were
+scattered in several directions. The force which first succeeded in entering the city
+overawed the other defenders, and all the Burmese attackers succeeded in entering the
+city and capturing it. Thus, through the treachery of one of her own sons, the city of
+Ayut'ia fell into the hands of the Burmese at about 9 a.m. on Saturday the 11th waning
+moon of the 9th Siamese month (August) 918 (A.D 1556) 1. To understand the change of
+day form Friday to Saturday, and the date form the 10th to the 11th waning moon, it is
+necessary to explain that the Siamese of old, and the Siamese of the present day who do
+not know the modern system of reckoning time, count the new day from dawn or about 6
+a.m., and not from past midnight. The advance of the Burmese to the attack probably
+started between midnight and 6 a.m. under cover of darkness, which according to the old
+reckoning would still be Friday, the 10th waning moon. The actual fierce struggle
+probably commenced about dawn, when the attackers and defenders were able to see
+each other, just about the time when the day and date changed.
+Maha Uparaja and Phra Maha Tammaraja drove their elephants right up to the
+Siamese Kings place. King Mahintʼratʼirat came out of the place on a royal palanquin and
+met his brother-in-law. He was taken to the Burmese King at his camp at Wat Maheyong.
+His Burman Majesty invited the Siamese King to come and sit on his royal seat, showing
+the place where he was to sit by striking it with the hand. His Siamese Majesty crawled
+towards His Burman Majesty, but did not accept the seat indicated. His Burman Majesty
+lifted his gold box containing betel vine and betel nut, and offered it to His Siamese
+Majesty to chew betel; His Siamese Majesty took the box but did not chew betel. His
+Burman Majesty took a quid of prepared betel from a gold tray and handed it to His
+Siamese Majesty, who took it, held it in the hand for a while and chewed it. His Burman
+Majesty passed on the spittoon to His Siamese Majesty, but His Siamese Majesty did not
+1. H.R.H Prince Damrong in his Our Wars with the Burmese, Ayut'ia period, page 66
+gives the date of the fall of Ayut'ia as Sunday the 11th waning moon of the 9th Siamese
+month (August) Cula Sakkaraj 931, Buddha Era 2112, i.e. thirteen years later than the
+date given in the Royal Autograph Edition of the History of Siam.
+The Hmannan History of Burma gives the date of the fall of Ayut'ia as Tuesday the 4th
+waning of Wagaung (August), Cula Sakkaraj 931 (A.D 1569), which agrees with the date
+given by His Royal Highness.
+Compare this account of the Burmese invasion and the fall of Ayut'ia with that given
+in our Wars with the Burmese, Ayut'ia period, pages 48-68 See Wood's History of Siam,
+Pages 119-125; Harvey's History of Burma, pages 169 & 170; journal of the Siam
+Society, Vol. 5, Part I, pages 49-67.
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 59]]
+INTERCOURSE BETWEEN SIAM AND BURMA
+107
+spit into it. His Burman Majesty then said it was an ancient custom for a King to glorify
+himself by conquests and to extend his kingdom in all directions. He asked the Siamese
+King not to be very sorry for this defeat, but to accompany him to Hanthawaddy. He told
+Phra Maha T'ammaraja to take Phra Mahint'rat'irat in his charge and to attend to his
+comfort. He ordered the taking away of a great many prisoners of war and all the bronze
+statues and statuettes of several kinds of animals to Hanthawaddy.
+To celebrate the ceremony of the coronation of Phra Maha Tammaraja as King of
+Siam, the King of Hanthawaddy appointed the following noblemen and officers: Phya
+Nak'on Sri T'ammarat', Phra Sri Akk'arat², K'un Kasetrat'ibodi³, K'un Raksa Mont'ien*,
+Mun Narint' on Seni³, and others, totalling a hundred officials. It is recorded that only ten
+thousand inhabitants of the city, both men and women, were left behind; the rest were
+probably forced to migrate to Hanthawaddy. Thus ended the second fall of Ayut'ia,
+brought about by the treachery of one who was born and bred a Siamese, of noble
+descent, and whom the Siamese King delighted to honour by raising him to noble rank,
+and by appointing him to high office. In extenuation of his treachery one should take into
+consideration the circumstances in which he was placed. In the first place his life was
+completely at the disposal of the King of Burma, and refusal to accept the treacherous
+part assigned to him would have meant instant death or miserable confinement, with
+perhaps torture and unusual suffering added for daring to defy the wish of His Burman
+Majesty. It was a case of a choice between being unpatriotic and treacherous and
+continuing to keep the flame of life burning, or being patriotic by defying the vengeance
+of a ruthless King, and sacrificing his life for the welfare of his king and country. Love of
+life, of mere existence, is exceedingly strong in human nature. Moreover, it was quite
+possible that Phra Maha T'ammaraja may have used all manner of persuasion, with
+abundant promises of a happy future, to overcome any patriotic feelings in the poor
+nobleman placed in such trying circumstances; because to Phra Maha Tammaraja the fall
+of Ayut'ia meant his accession to its throne, and he was striving for it, just as much as the
+Burmese King, for the attainment of his highest ambition. To Phya Chakri, to be patriotic
+and to refuse to be a party in bringing about the fall of Ayut'ia, meant the sacrifice of a
+thing held most dear by ordinary humanity. The first fall of Ayut'ia was not a capture by
+force, but a surrender by its King.
+REIGN OF SOMDET PHRA SANP'ET
+After the capture of the Siamese capital, the King of Hanthawaddy did not return to
+Hanthawaddy immediately. He stay about three months and a half, waiting probably for
+the rains to be over, to see that the country settled down to peace and order on the
+1. Nagara Sri Dhammaraja
+2. Sri Aggaraja
+3. Krasetradhipati.
+4. Raksha Mandhara
+5. Narindra Seni
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 60]]
+108
+JOUR, BURMA RESEARCH SOC.
+XXV, II, 1935
+accession of a new King, and to perform the ceremony of coronation of Phra Maha
+Tammaraja. The rains in Siam come later than in Burma, the heaviest rainfall being
+sometimes in October or early November. The high flood season usually occurs in
+November. Ayut'ia was captured towards the end of August, and the ceremony of
+coronation was performed on Friday the 6th waxing moon of the first Siamese month
+(early December). The new King assumed the title of Somdet Phra Sanp’et I. He was
+then fifty four years of age.
+The King of Hanthawaddy left behind Phra Sunt'on Songkram to be the new Kings
+elder minister and adviser. This nobleman had been taken away to Hanthawaddy together
+with Phra Ramesuan and four white elephants, when Ayut'ia capitulated after investment,
+consequent on the refusal of the King of Siam to give two white elephants asked for by
+the King of Hanthawaddy. He commissioned the Governor of Muang Nak'on Prom,
+with a force of three thousand Burmese soldiers, to garrison Ayut'ia and assist the new
+King in guarding the city and maintaining peace and order. He then told Phra
+Mahint'rat'irat, the deposed King, to make preparations for departure, and ordered the
+new King to give the royal regalia and all the necessary royal utensils, decorations, orders
+etc, to the deposed King, and to allow him to take his queens, concubines, and personal
+attendants.
+When everything was ready His Majesty of Burma left Ayut'ia, going by way of
+Kamp'engp'et. When they reached Muang K'reng (Gyaing in Amherst District). Phra
+Mahint'rat'irat became very ill, and Lakwai T'ammu who was in attendance on him,
+reported the illness to His Majesty of Burma. Eleven Burmese, Mon and Siamese doctors
+were ordered to attend to the sick King, and they were made to understand that if they
+failed to effect a cure and death ensued, they were made to understand that if they failed
+to effect a cure and death ensued, they themselves would be punished with death. The
+next morning the Burmese King visited the sick man, told him not to lose heart and
+encouraged him to take the medicines prescribed and the nourishment offered. He
+encamped and waited for the recovery of the sick man but unfortunately Phra
+Mahint'rat'irat died after an illness of eleven days.² The eleven doctors were punished,
+but the record does not state definitely that they were executed; probably they were,
+because the Burmese King seldom failed to do what he had said he would do. The
+remains of the dead king were cremated, and the ashes and the whole of the deceased's
+retinue and belongings were sent back to Ayut'ia, under the charge of a Burmese, Mon
+and Lao escort. His Burman Majesty then resumed his journey home.
+1. Nagara Brahma.
+2. The Hmannan History makes no mention of the illness and death of the deposed king
+on the way to Hanthawaddy.
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.

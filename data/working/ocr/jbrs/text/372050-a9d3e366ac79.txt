@@ -1,0 +1,975 @@
+[[page 1]]
+PASSIVE IMMUNISATION AGAINST
+PASTEURELLA SEPTICA '
+by
+U HLA KYAW, B.Sc., Ph.D., M.R.C.V.S. 2
+A. INTRODUCTION.
+There are few records in the literature on passive immunisation
+of laboratory animals against Past. septica. Most of the records
+have referred to cattle. A very good review of the literature is given
+by Schutze (1929).
+Holmes (1910) recorded that the antiserum he had prepared pro-
+tected bulls in 10.0 ml. doses and buffaloes in 25.0 ml. doses. But
+his results were not consistent; smaller doses often giving protection
+while the larger doses did not. Kleptzoff (1903) claimed that potent
+antiserum could be produced by repeated injection of the bacilli and
+that antiserum prepared against one type of organism also gave pro-
+tection against other types. Tarantino (1911) claimed that the
+hyperimmune serum prepared against barbone gave some but not
+absolute immunity. Birch and Benner (1922-23) experimented with
+hyperimmune serum prepared in pigs against Past. suiseptica and
+found that the antiserum only prolonged the life of experimental
+rabbits, but did not save them. Ochi (1934) studied the relationship
+between the Past. septica. organisms isolated from various animals
+and included passive immunisation and cross-immunisation tests. He
+observed marked specific immunity but no cross-immunity. Khalifa
+(1934) made a similar observation. Naidu (1933) stated that the
+antiserum was of value for prophylaxis but not as therapeutic agent.
+Jacotot (1938, 1940), tested the efficiency of hyperimmune serum
+against artificial infection. He found that 10-20 ml. protected calves
+against a subsequent inoculation of virulent culture which killed con-
+trols in less than 36 hours. Inoculation of 20-30 ml. of serum either
+at the same time as the virulent culture or 6-12 hours after infection
+protected calves. 0.5 ml. of the antiserum given to the rabbits at the
+same time as virulent culture gave considerable protection. Similarly,
+the simultaneous inoculation of 1.5 ml. intravenously and 0.5 ml.
+subcutaneously 6 hours after inoculation, gave protection.
+1. Read on August 14, 1954, with Professor Ba-Nyunt in the Chair.
+2. Director of Veterinary Services, Shan and Kyah States.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 2]]
+PASSIVE IMMUNISATION
+51
+It was considered by the writer that it would be advisable to
+make studies on passive immunisation employing small experimental
+subjects in order to obtain indications of their value before testing
+them on large animals. Since Buddingh and Polk (1939) had em-
+ployed chick embryos successfully in their study of passive immunisa-
+tion with anti-meningococcus serum, it was decided to use chick
+embryos.
+B. EXPERIMENTS.
+The experiments carried out may be divided into 3 groups, as
+follows:-
+(1) Immunisation experiments on chick embryos.
+(2) Immunisation experiments on mice.
+(3) Experiments to determine if there was a relationship
+between the titre of the serum and the protective power.
+(1) Experiments on chick embryos.
+For this purpose, anti-sera to the strains P5 (Past. aviseptica), P24
+(Past. suiseptica) and P1 (Past. boviseptica) were employed.
+14 days old chick embryos were used. This series of experiments
+may be divided into 2 sub-groups, viz., (a) preliminary experiments and
+(b) main experiments.
+(a) Preliminary Experiments.
+Preliminary experiments were done using the anti-sera of the
+strain P5 (F).
+Technique.
+A modified technique was used. 0.1. ml. of the undiluted and diluted
+antiserum was introduced into the amniotic sac by means of a Pasteur
+pipette which had been drawn to a very fine point, the terminal 1 inch
+being bent at 135° and the level of 0.1 ml. marked on the pipette.
+30 minutes after the inoculation of the antisera, 18 hours cultures of
+P5 (F) grown on plain agar and suspended in plain broth and
+standardised to equal opacity Brown's 1 and tenfold dilutions of it,
+were dropped on to the chorion-allantoic membrane in 0.05 ml.
+quantities.
+In the first experiment, immune serum obtained from a rabbit
+14 days after it had received 1.0 ml. of heat killed vaccine standardis
+ed to Brown's 4 opacity was used. The rabbit had been given 0.1,
+0.2, 0.4, 0.8 and 1.0 ml. of the vaccine, the interval between one injec-
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 3]]
+,,
+23
+"
+"
+☑
+,,
+52
+U HLA KYAW
+tion and the next being 4 days. The agglutinating titre of the serum
+was 1:320. The results are given in Table 1 which follows :-
+TABLE 1. Passive Immunisation of Chick Embryos with P5 (F)
+Serum against Homologous Organisms.
+Dilution of
+serum.
+Dilution of
+suspension.
+1/10
+10
+-6
+,,
+,,
+10
+-5
+10
+-4
+i 5
+"
+"
+1/5
+10
+-6
+""
+10
+10
+,,
+-5
+-4
+8
+9
+10
+| 11
+12
+,,
+,,
+,,
+i
+2
+Number of
+embryos.
+Results
+Dilution of
+serum.
+Dilution of
+suspension
+embryos.
+Number of
+Results
+Undi-|
+Died within luted
+48 hours.
+-6
+10
+13
+Died within
+44 hours.
+23
+,,
+,
+14
+-5
+,,
+,,
+10
+15
+,,
+,,
+,,
+,,
+16
+,,
+10
+-4
+17
+,,
+""
+,,
+,,
+18
+,,
+-6
+10
+19
+,,
+Died within
+48 hours.
+20
+25
+,,
+-5
+10
+,,
+,,
+,,
+22
+22
+21
+"
+10
+,,
+32
+23
+"3
+24
+,,
+...
+25
+,,
+,,
+The results of this experiment showed that the serum afforded no
+protection whatever.
+It was thought that serum prepared with live cultures might afford
+protection. Such an immune serum was obtained by giving the rabbit
+2 further courses of dead organisms followed by a course of live
+organisms and bleeding 14 days after the last injection which consisted
+of 2.0 ml. of a suspension of live culture standardised to equal opacity
+of Brown's I.
+The technique adopted was the same as in the previous experi-
+ment. But the test inocula were 2, 20 and 50 A.L.D., taking 0.05 c.c.
+of 10-6 dilution of a suspension equal to opacity of Brown's tube I as
+one A.L.D. The results were the same as in the previous experiment ;
+all the serumized and non-serumized embryos died.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 4]]
+PASSIVE IMMUNISATION
+53
+At this juncture, the technique was changed, a single dilution of
+serum being left in contact with various dilutions of a suspension of
+live cultures for some hours, either at room temperature or in the
+cold store and the mixture dropped on to chorion-allantoic membrance.
+(b) Main Experiments.
+Experiment I. Repeated experiment on passive immunisation of
+chick embryos using the immune serum drawn after the rabbit was
+given 2.0 ml. of live culture.
+Technique.
+The technique employed was to mix 1/5 dilution of serum with
+equal volumes of various dilutions of a suspension standardised to the
+opacity of Brown's I and to leave the mixture at room temperature
+for 4 hours. At the end of that time 0.05 ml. was dropped on to the
+chorion allantoic membrane.
+The results of the experiment are given in Table 2 which
+follows:
+_
+TABLE 2. Repeated Experiment on Passive Immunisation of Chick
+Embryos. (Modified Technique).
+Number
+Inoculum.
+of
+embryo.
+Results.
+Inoculum
+Number
+of
+embryo.
+Results.
+-6
+-7
+10. + 1/5
+1
+Survived 6th
+10
+11
+serum
+day. Killed.
+2
+,,
+Survived 6th
+day. Killed.
+-5
+10 + 1/5
+serum
+3
+-6
+10
+12
+,,
+Died 2nd day
+,,
+4
+13
+""
+,,
+95
+5
+"
+Died 2nd
+day
+14
+,,
+"9
+-4
+10+ 1/5
+6
+Died 2nd
+-5
+serum
+day
+10
+15
+7
+16
+,,
+,,
+25
+8
+,,
+1,
+10
+-7
+-4
+10
+17
+,,
+9
+Died 2nd
+day
+18
+,,
+10
+,,
+,,
+1/5 serum
+19
+Hatched out.
+,,
+20
+20
+,,
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 5]]
+54
+U HLA KYAW
+This experiment shows some evidence that P5 (F) anti-serum drawn
+after the rabbit had been given live culture was protective against
+homologous organisms.
+The number of eggs employed in the experiment is far too small
+to give the results any statistical significance. Nevertheless 0.05 ml.
+of a final dilution of 1/10 of the serum may be taken as protecting
+against 50 A.L.D. or, bringing this result to common terms which will
+for convenience be used for all experiments, 1 c.c. may be said to have
+protected against 5,000 A.L.D.
+The above technique of mixing antiserum and culture appears to
+yield better results than the technique of inoculating the antiserum
+into amniotic sac. Therefore the same method was employed in an
+experiment to find out if P5 (B) antiserum would give any protection
+against P5 (F) organisms. It was found that no protection whatsoever
+was given by P5 (B) antiserum.
+Similar experiments were done with P24 (F) antiserum against
+P24 (F) organisms. The antisera drawn from the immunised rabbit
+before and after it had been given live cultures were both used. The
+modified techniques in which a certain dilution of the serum was
+mixed with the culture, in this case 1/5 and 1/2 dilutions respectively
+of the antiserum, was used. The results showed no evidence of
+protection.
+Similar experiments on chick embryos were performed with Pl
+antiserum. For the sake of convenience and orderliness, the experi-
+ments and their results are given in sub-section 3.
+(2) Experiments with mice.
+Experiments similar to those with chick embryos were performed
+with mice. Antisera of the same three strains P5 (F), P24 (F) and
+P1 were used.
+Experiment 1. Passive immunisation of mice with P5 (F) serum
+against homologous organisms.
+For this experiment the antiserum drawn after the rabbit was
+given live culture of P5 (F) and which was used in the experiments
+on chick embryos was used.
+Technique.
+1/10 dilution of the serum was given intraperitoneally in quantities
+of 0.5 ml. per mouse. It was given the last thing in the evening and
+the culture was given the first thing next morning. Multiple average
+lethal doses were injected intraperitoneally, in a volume of 0.5 ml.,
+batches of 3 mice being used. One A.L.D. was taken as 0.5 ml. of
+10-7 dilution of a suspension equal to opacity Brown's I. The ex-
+periment was kept under observation for 10 days.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 6]]
+PASSIVE IMMUNISATION
+The results are given in Table 3 which follows:
+55
+TABLE 3. Passive Immunisation of Mice with P5 (F) Serum against
+Homologous Organisms.
+Number
+of
+Mouse
+Dilution of
+test
+suspension
+2.5 A.L.D.
+"
+,,
+5. A.L.D.
+Results.
+Dilution of
+test
+suspension
+Number
+of
+Mouse
+1
+Died 30 hours] 50 A.L.D. 13
+2
+14
+,,
+"
+Died 6th day
+15
+,,
+4
+Died 42 hours
+Serumised
+Results.
+Died 20 hours
+15
+16
+17
+Serum
+Controls
+Died 3rd day
+Survived 10th
+day
+"
+18
+,,
+-7
+10
+19
+Died 27 hours
+5
+,,
+"
+10 A.L.D.
+7
+22
+Serumised
+Survived 10th
+day
+"
+Died 24 hours
+Died 40 hours
+Survived 10th
+day
+,,
+39
+222
+20
+21
+-6
+20 A.L.D.
+10
+Died 30 hours
+10
+22
+11
+23
+"
+"
+,,
+23
+12
+Died 42 hours
+24
+,,
+"
+Culture Controls
+Died 30 hours
+Survived 10th
+day
+Died 20 hours
+,,
+Survived 10th
+day.
+The results of this experiment are inconsistent but there appears
+to be no protection afforded by the intraperitoneal inocula of the
+anti-serum.
+Similar experiments were performed with P24 (F) anti-serum. The
+opportunity was also taken to test whether P24 (F) serum would
+protect against heterologous organisms.
+Experiment 2. Passive immunisation of mice with P24 (F) anti-
+serum against homologous and heterologous organisms.
+The antiserum obtained 3 days after the rabbit was given the last
+injection in the 3rd series of injections with heat killed vaccine was
+used. Its homologous agglution titre was 1 : 320.
+Technique.
+1/20 dilution of the antiserum was injected intraperitoneal into
+mice, in 0.5 ml. doses. 4 hours later, dilutions of cultures of P24 (F),
+P5 (F) and Pl all of which were standardised to equal opacity Brown's
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 7]]
+Controls
+56
+U HLA KYAW
+I were given intraperitoneally. The mice were divided into 4 batch
+of unequal sizes, 3 of which were given cultures and the 4th batch
+serum only. The first batch of mice was given P24 (F), the second
+P5 (F) and the third Pl; each mouse receiving 0.5 ml.
+The experiment was kept under observation for 7 days. The
+results are given in Table 4 which follows :
+TABLE 4. Passive Immunisation of Mice with P24 (F) Antiserum
+against Homologous and Heterologous Organisms.
+Deaths
+Percentage
+of
+Deaths
+2
+2
+100
+8
+7
+1
+2
+2
+100
+CULTURE
+-6
+87.5
+P 24 (F) 10 dilution of
+Brown's I.
+-7
+P 5 (F) 10 dilution of
+Brown's I.
+-7
+Pl (F) 10 dilution of
+Brown's I.
+Serum Control 4.
+Death
+-
+0.
+Protected
+Deaths
+2 50%
+3
+76.7%
+25%
+Though the numbers are small the results indicate that P24 (F)
+antiserum afforded a certain amount of protection both against the
+homologous and heterologous organisms. It is interesting that the
+antiserum should give more protection against the Past. boviseptica
+strain Pl than it did against the homologous strain P24 (F).
+Similar experiments were carried out using Pl antiserum.
+Experiment 3. Passive immunisation of mice with Pl anti-serum
+against homologous organisms.
+In this experiment the antiserum drawn from the rabbit 14 days.
+after the rabbit was given the last injection in the 3rd series of injec-
+tions with heat killed vaccine was used. The titre of the antiserum
+was 11280+.
+Technique.
+A 1/10 dilution of the serum was given in 0.5 ml. doses per mouse
+intraperitoneally in the evening. The following morning, 0.5 ml. of
+dilutions of a suspension in broth of an 18 hours culture grown on a
+plain agar slope and stardardised to equal opacity Brown's I was given
+intraperitoneally.
+The mice were kept under observation for 13 days. The results
+are shown in Table 5 which follows:
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+Percentage
+of
+Deaths
+
+[[page 8]]
+PASSIVE IMMUNISATION
+57
+TABLE 5. Passive Immunisation of Mice, with P1 Antiserum against
+Homologous Organisms.
+Number of
+serumized
+Results.
+mice.
+Dilution of test Number of
+suspension. controls.
+Results.
+-8
+10
+3
+All survived.
+3
+All survived
+-7
+10
+3
+-6
+3
+All survived
+x ml. 10 +
+x ml. broth
+-6
+3
+All survived
+10
+3
+-5
+3
+All survived
+x ml. 10
++
+4x ml. broth
+Viable Count
+10-8 ==
+C ; 0.
+10-7
+= C i 2
+= average
+1.
+10-6
+-
+20:19
+=
+average = 19.
+2 died within 48
+hours. 3rd died
+on 7th day.
+All died within
+32 hours.
+This experiment demonstrates that P1 anti-serum gave substantial
+immunity to mice. Calculating out the protective power of the anti-
+serum, it is seen that 1.0 ml. of it given intraperitoneally protected
+against at least 1,000 A.L.D.
+It was decided to use the survivors of this experiment to test if
+they were also protected against a heterologous organism. For this
+purpose strain P24 (F) was chosen.
+Experiment 4. Experiment to find out if mice passively protected
+against P1 by P1 anti-serum were also protected against P24 (F)
+organisms.
+Technique.
+12 days after the mice in the last experiment had received cultures
+of Pl and survived, they were given high dilutions of a live culture of
+P24(F) in exactly the same way as in previous experiments. 9 normal
+mice were used to act as controls. They were divided into 3 groups
+of 3 each and one group was given 10-6 dilution of a suspension
+equal to opacity Brown's I, the second group was given 10-7 dilution
+and the last group 10-8 dilution, in doses of 0.5 ml. per mouse.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 9]]
+58
+U HLA KYAW
+All the control mice except one which received 10-8 dilution died
+within 42 hours and all the test animals died within 48 hours.
+This experiment showed that Pl serum did not protect against the
+heterologous organism, P24 (F). This is contrary to what was expected,
+for P24 (F) serum was shown to afford considerable protection against
+Pl organisms. The interval of 13 days that elapsed between the inocu-
+lation of the serum and the inoculation of the culture might possibly
+explain the total lack of protection.
+(3) Experiments to determine if there was a relationship between
+the titre of the serum and the protective power.
+Attempts to determine the relationship between the titre and the
+protective power arise out of the observations made on the chick
+embryos in the course of experiments to titrate the protective power
+of Pl antiserum.
+Titration of the protective power of P1 antiserum was carried
+out on chick embryos in the same way as P5 (F) and P24 (F) antisera
+were titrated.
+Experiment 1. Passive immunisation of chick embryos with Pl
+anti-serum against homololous organisms.
+In this experiment the antiserum drawn after the rabbit had
+received intravenously 0.2 ml. of a live culture in broth standardised
+to equal opacity Brown's I, was used. The rabbit was given 0.1, 0.2.
+0.4, 0.8 and 1.5 ml. of heat killed vaccine, the interval between one
+and the next injection, being 4 days. After a rest of 14 days after
+the last injection, 0.1 c.c. of standardised live culture was given fol-
+lowed a fortnight later by 0.2 c.c. of a similar culture. The titre of
+the serum was 1:5120 ±.
+Technique.
+The modified Burnet's method, where an artificial air sac was created
+was employed. 1/10 dilution of the serum was given in 0.5 ml. quantities
+to each embryo. The serum was dropped on to the chorion-allantoic
+membrane in the evening and the next morning 0.05 ml. of various.
+dilutions of an 18 hour culture grown on plain agar slope and sus-
+pended in plain broth to give a suspension equal to the opacity of
+Brown's I was dropped on to the chorion-allantoic membrane.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 10]]
+PASSIVE IMMUNISATION
+The results are given in Table 6 which follows.
+59
+TABLE 6. Passive Immunisation of chick embryos with P1 Anti-
+serum against homologous organisms.
+!
+Number
+of
+Results
+Dilutions of suspension
+controls
+Number
+of seru-
+mised
+Results
+123
+456
+789
+Died 46 hours |
+,,
+""
+Died 40 hours
+"
+55
+Died 24 hours
+-7
+10
+,,
+,,
+10
+,,
+,,
+-6
+x ml. broth + x ml. 10
+,,
+,,
+10
+"
+22
+Died 54 hours
+,,
+-5
+10
+,,
+1,
+-4
+embryo
+-5
+10
+11
+Survived
+"3
+12
+,,
+13
+Survived
+14
+"1
+15
+,,
+16
+178
+Survived
+2 Serum Controls Survived.
+All the test embryos survived. On the 6th day, they were killed
+and cultures were made from Heart blood. All embryos gave posi-
+tive cultures of pure Pasteurella. Similarly, all controls gave pure
+cultures of Pasteurella from allantoic fluid and heart blood. This
+experiment shows that P1 serum gave a solid immunity to the em-
+bryos. 0.5 ml. of 1/10 dilution of the serum. was seen to protect
+embryos against 1,000 A.L.D., i.e., 1.0 c.c. of undiluted serum should
+theoretically protect against 20,000 A.L.D.
+The results are very different from those obtained with the anti-
+sera of P5 (F) and P24 (F) organisms. They may partly be accounted
+for by better technique. Perhaps a more likely explanation is that
+the strain P1, being more antigenic than the other two gave an anti-
+serum which was also more protective.
+At this juncture it was decided to find out if there was a rela-
+tionship between the titre of the serum and the protective power.
+Therefore, a new rabbit was immunised in a similar way. After the
+first three injections, some blood was drawn from the ear to get a
+serum of low titre. Its titre proved to be 1:40. Injections were
+then continued and a second series of injections with heat killed cul-
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 11]]
+60
+U HLA KYAW
+tures was given again. A fortnight after the last injection in the
+second series, blood was drawn from the ear again. This yielded a
+serum with a titre of 1: 1260+. These two antisera were used to
+immunise chick embryos and their protective powers titrated.
+Experiment 2. Passive immunisation of chick embryos with titre
+serum.
+The first of the two sera described above, whose titre was found
+to be 1 40 was used in this experiment.
+Technique.
+It was exactly the same as in experiment 1.
+The results are given in Table 7 which follows.
+TABLE 7. Passive
+immunisation
+titre serum.
+of chick embryos with low
+Number
+of
+controls
+Results
+Dilutions of suspension
+Number
+of seru-
+mized
+I embryos
+1
+Died 40 hours!
+2
+3 Survived
+456
+789
+Died 40 hours!
+"
+..
+Died 40 hours
+,,
+,,
+10
+32
+-7
+x ml, broth + xml. 10
+23
+-6
+10
+39
+,,
+-6
+10
+11
+12
+13
+23
+Results
+Survived
+Died 6th day
+Survived
+-5
+10
+14
+15
+Died 18 hour
+Died 6th day
+,,
+,,
+2 Serum Controls Survived.
+Viable Count 10-6
+==
+-
+121,63
+=
+average
+92
+10-5 too many to count.
+Cultures from the allantoic fluid and heart blood of all the con-
+trols gave pure cultures of pasteurella. Those protected embryos
+which died were opened as soon after death as possible. Those
+that survived were killed on the 6th day. Cultures were made from
+heart blood in all cases. All, except embryos number 10 gave pure
+cultures of pasteurella.
+This experiment shows that the strain P1 remained equally
+virulent as it was in the last experiment and that 0.5 ml. of 1/10 dilu-
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 12]]
+PASSIVE IMMUNISATION
+61
+tion of the low titre did not protect embryos which received
+100 A.L.D.
+Experiment 3. Passive immunisation of chick embryos with an
+anti-serum of medium titre.
+The second serum described before, whose titre was found to be
+1: 1280 ± was used in this experiment. The serum was obtained from
+the rabbit before it was given any live culture.
+Technique.
+This was exactly the same as in experiment 2.
+The results are given in Table 8 which follows.
+TABLE 8. Passive immunisation of chick embryos with an anti-
+serum of medium titre.
+Number
+of
+controls:
+Results
+Dilutions of suspension
+Number
+of seru-
+mized
+embryos
+Results
+-7
+1
+2
+Died 40 hours
+Survived
+10
+,,
+3 Died 45 hours
+1,
+x ml. broth + x ml. 10
+,,
+59
+-6
+456
+Died 40 hours
+10
+5.
+,,
+"
+,,
+x ml. broth + x ml. 10
+59
+10
+,,
+-5
+33
+x ml. broth + x ml. 10
+-4
+10
+,,
+-6
+789
+Survived
+"
+"0
+Survived
+-5
+11
+12
+9=2
+10 Survived
+15
+13 Survived
+14
+345
+,,
+35
+-4
+16 Survived
+678
+17
+,,
+18
+19
+20
+21
+222
+Died 2nd day
+3rd
+,,
+,,
+2nd
+,,
+,,
+2 Serum Controls survived.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 13]]
+62
+U HLA KYAW
+The results of this experiment show that 0.5 ml. of 1/10 dilution
+of the serum with a medium titre protected embryos against 500 A.L.D.,
+but not against 1000 A.L.D., i.e., its protective power fell between
+the low titre serum and the high titre serum obtained after the rabbit
+was given live culture.
+Thus some evidence was obtained that there is a certain amount
+of relationship between the titre of the serum and its protective
+power. But to what extent the relationship holds true in general
+must be left to further experimentation.
+C. DISCUSSION.
+The above observations indicate that strains of Past Septica vary
+in their antigenic properties and in their power of producing antisera
+of prophylactic value. The strain P5 (F) appeared to produce an
+antiserum of the lowest value, the strain P24 (F) produced a slightly
+better antiserum, while the strain P1 produced the best of the three.
+A parallel phenomenon was observed by Hadley (1912, 1913, 1914)
+who found that only one of his 16 avirulent strains used in the form
+of a living vaccine was able to afford immunity against virulent
+cultures.
+These observations also show that there was some evidence of
+relationship between the titre of the serum and the protective power,
+and that the agglutinin-producing power of a strain may be used as
+an indication of its probable protective power.
+The apparent confusion that still exists in the literature in con-
+nection with the use of antiserum as a prophylactic may now be partly
+explained by the fact that either unsuitable strains were used in the
+preparation of the antiserum and/or that polyvalent antisera against
+various antigenic groups of Past. septica were not employed.
+D. SUMMARY.
+(1) A review of the recent literature is given.
+(2) Immunisation experiments on chick embryos and mice are
+described.
+(3) The antisera against P5 (F) appeared to be of least prophylactic
+value, that of P24 (F) better and that of P1 best.
+(4) There are indications that P24 (F) antiserum gave some protection
+against heterologous organisms.
+(5) There is some evidence that there is a relationship between the
+titre of the antiserum and its protective power.
+(6) A short discussion is given on the value of antiserum as
+prophylaxis.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.

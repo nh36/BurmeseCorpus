@@ -1,0 +1,1516 @@
+[[page 1]]
+'*
+1. THESIS
+A RE-EXAMINATION OF BURMESE ‘CLASSIFIERS’*
+DR HLA PE**
+The thesis of this paper is that the
+words in Burmese sometimes called
+'classifier' - amongst other names have
+not been accurately assessed in previous
+studies. They are more consistently and
+conveniently divided into three categories,
+which I shall call 'classifiers', 'quantifiers'
+and repeaters'."
+II. STATEMENT
+The 'classifiers were first brought to
+light by Lieutenant Thomas Latter of the
+Bengal Army in his book: A Grammar
+of the Language of Burmah. He dedicated
+his work to the then Governor General
+of India describing it as an endeavor to
+promote the acquirement of the vernacular
+dialect of one of the numerous provinces
+under his sway, and thereby to benefit a
+large portion of British subjects... In it
+he says:" 'In compounding a Numeral
+with a Noun, the Burmese never use a
+as "one man": - but
+simple numeral
+employ, as auxiliary effixes, words or terms
+signifying either the class to which the
+name belongs, the use to which it is put,
+or some shape. form, or idea to which it
+may have some resemblance real or other-
+wise. These affixes may be styled generic.
+that is descriptive of some class or kind.
+The term numeral affix would be incorrect;
+a numeral affix being one that points out
+the number of the root, to which attached'.
+-
+It seems that Latter wrote his grammar
+before he had acquired a working know-
+ledge of the language. His analyses leave
+much to be desired, and his examples
+bristle with errors both idiomatic and
+orthographic. But credit should be given
+to him for putting on record this important
+aspect of the language that had hitherto
+been neglected by Burmese scholars. Seven
+years later Dr. A. Judson presented these
+'auxiliary affixes* in a more scholarly
+manner. Judson was an extremely industrious
+and perceptive American Baptist Missionary,
+propagating the Gospel in Burma at that
+time. He compiled his dictionary in 18524
+and prefaced it with 'A Grammar of the
+Burmese Language', drawing examples from
+both literary and spoken Burmese. In it
+under 'Adjectives* he included a section
+on 'Numeral Auxiliaries' which are shown
+side by side with the 'Classes of Things'
+10 which they are applied, and he also
+mentions what may be called 'repeaters'
+as well as quantifiers. The fundamentals
+were accepted by subsequent scholars,
+Burmese as well as non-Burmese-Bridges,
+Lonsdale at the turn of this century
+* Reproduced, with additional examples in Burmese, from Lingua 15 (1965) with the permission of
+the Publishers, The North- toiland Publishing Company, Amsterdam, The Netherlands.
+** M.A., Ph.D., Professor, School of Oriental & African Studies, University of London, London.
+1. The phonetic script given below is the same as that employed in t new Burmese-English
+dictionary (pt. 1, published in 1941) now being compiled at the School of Oriental and African
+Studies, University of London. The transliteration of the Old Burmese words given follows
+the system devised by C. O. Blagden and C. Duroiselle (see Epigraphia Birmanica, 1, 1, 6-12).
+2. T.Latter, A grammar of the language of. Burmah, Calcutta. 1845.
+3. Op. cit., 98.
+4. A.Judson, A dictionary, Burmese and English; Maulmain, 1852, esp., xx.
+5. J.E.Bridges, The Burmese manual, Rangoon, 1906, 124.
+6. A.W.Lonsdale, Burmese grammar and grammatical analysis, Rangoon. 1899, 74.
+5
+JBRS, L, ii, Dec., 1967.
+23--U.P.- G 124–1,000 + 50--15-5-68.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 2]]
+178
+Stewart in the thirties, Cornyn in the
+forties, Mary Haas and Pe Maung Tinto
+in the fifties and Burling¹¹ in the sixties,
+but they rejected his nomenclature and
+substituted various designations of their
+own: Numeral Auxiliaries, Numeral Generic
+Affixes, Numeral Affixes, Numeratives,
+Classifiers, Numeral Classifying Adjectives,
+and Numeral Classifiers.12
+13
+These 'classifiers' occur regularly in
+numerative phrases of set patterns, which
+may be divided into eight types. (SO
+specific object, N numeral other than ten
+or multiple of ten, T ten or multiple of ten,
+C 'classifier', MC modified ‘classifier', and
+the minus sign denotes open-juncture and
+the plus sign close-juncture.)1 4
+Type 1
+SO N + C
+-
+lu ta+yau?
+-
+'human being
+human being'
+Type 2
+SO
+'cuŋ
+--
+-
+တ - ယောက်
+one + person
+one
+N+ C (repeater)
+she + jun ကျွန်း ----ဆယ် -- ကျွန်း
+Burmese 'Classifiers'
+'island ten + island = ten islands. (See
+also under multiple of ten).
+Type 3
+N + C
+hna + la' şồ +00
+'two
+month(s)'
+With ten (which is a unit of number,
+shɛ, as well as a quantity, təshɛ) and multi-
+ples of ten, the same patterns are followed,
+but the 'classifier', except in certain cases
+under type 6, is either inserted in a modified
+form before the numeral (types 4 and 7) or
+disappears altogether (type 5).
+Type 4
+SO- MC
+lu
+NT
+-
+ayau?
+-
+to + she
++ 2045
+‘human being
+-
+အယောက်
+person one ten ten
+people.' (Note: MC is not used for type 2
+phrases).
+Type 5
+SO — N + T
+¹cun
+-
+Goy + z ကျွန်း ----- သုံး -- ဆယ်
+'island - three
+-
+-
+ten
+thirty islands.”
+lu
+-
+- 'le + 2ε 0.
+600: +2005
+-
+forty people.*
+'human being - four + ten
+-
+7. J. A. Stewart, Colloquial Burmese, Rangoon, 1936, 39: and Manual of colloquial Burmese,
+London, 1954, 22.
+8. W, S. Cornyn, Outline of Burmese grammar, (Language Dissertation, 38,) Baltimore, 1944, 26.
+9. Mary Haas, ‘The use of numeral classifiers in Burmese' in: Semitic and Oriental Studies, ed.
+Walter J. Fischel (Univ. California Publications in Semitic Philology, 11), Berkeley-Los Angeles,
+1951, 191.
+10. Pe Maung Tin, Burmese grammar [in Burmese], Rangoon, 1954, 101.
+11. R.Burling, 'How to choose a Burmese numeral classifier' [typescript], 1963.
+12. Cf. also O. Frankfurter, 'Descriptive words', in Elements of Siamese grammar, Bangkok, 1900,
+49–55; G.B. McFarland, 'Numeral designatory particles' in Thai-English Dictionary, California,
+1944, xiv-xvi; and W.A.C. H. Dobson, ‘The quantification of enumerated nouns' in: Early
+Archaic Chinese, a descriptive grammar, Toronto, 1962, 28.
+13. Cornyn treats types 1, 2, 3, 5 and 6 under three types but omits types 4, 7 and 8. See op.
+cit. 26f.
+14. For open-and close- junctures, see loc. cit.
+JBRS, L, ii, Dec., 1967.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 3]]
+Dr Hla Pe
+Type 6
+C
+yɛ?
+-----
+N+T
+14 -- ze ရက် ----ငါး --- ဆယ်
+'day five ten = fifty days.*
+Type 7
+MC
+-
+NT
+aye2 -- chau၃ + she အရက်--- ခြောက် --- ဆယ်
+"day - six + ten
+-
+Type 8
+sixty days.'
+@+
+လူ --- ပေါင်း---- ငါး
+SO + pauŋ
+lu + 'bauŋ
++2005
+N + T/C
+ŋa + zɛ
+total + fifty', or
+lu + 'bauŋ
+-- ယောက်
+—
+'ŋa + yau?
+လူ --- ပေါင်း ငါး
+'human being
+'human being + total - five + person.*
+III. JUSTIFICATION
+It is my submission that the class of
+numeratives, with which we are dealing, is
+made up of three sets of words, each being
+a different subclass which, I suggest, may
+be called Classifiers, Quantifiers and
+Repeaters.
+A classifier is a word for an attribute
+of a specifie object, some of which may
+have more than one; a repeater is the
+specific object itself or part of it, used as
+numerative; whilst a quantifier concerns
+itself with the estimating of things by some
+sort of measure size, extension, weight,
+amount or number especially of ten or
+multiples of ten. All these are numeratives,
+since the patterns! 5 are used in enumera-
+ting things:
+179
+Another common denominator among
+classifiers, quantifiers and repeaters is that
+all are one-word nouns. Classifiers are,
+however, not independent, or they can
+never be a determinatum16 of the designa-
+tory word they classify, whereas the
+quantifiers and repeaters may be dependent
+or substantive nouns, and some of the
+quantifiers and all repeaters can be deter-
+minata. Incidentally, a classifier or a repea-
+ter, because of its peculiar nature, can
+never be directly rendered into a language
+that has no such linguistic features, while
+a quantifier lends itself easily to translation.
+To give precision to the points that have
+been made, I should like to make use of
+some examples in a paper by Robbins Burl-
+ing, kindly sent to me in manuscript.17
+-
+-
+-
+-
+ta'myo one
+tɔshɛ ten
+-
+L
+tǝkhain
+ta'phi one comb or
+ta'than one shoulder
+tabei? a one viss
+He gives the following ‘classifiers' for
+banana-fruit (ŋa 'pyɔ'di): ta 'louŋ one
+round thing, one banana,
+class or variety of banana,
+bananas, tawɛ? one half of a banana,
+ta dwɛ one cluster of banana,
+one stalk of bananas,
+bunch of bananas,
+load of bananas, and
+of bananas. There is one classifier in the
+whole list: it is 'loun which is the only one
+that is an attribute of a fruit, 'myo is a
+repeater and the rest are quantifiers that state
+the amount of the bananas, and besides
+(twɛ, khaiŋ and phi can even be determinata
+of ŋa'pyɔ and function as repeaters, e.g.
+ŋə'pyɔ'myo tə + 'myo banana kind
+one kind, and ŋa'pyɔ gaiŋ
+banana stalk one stalk.
+ta + khaiŋ
+15. There are phrases particulariy in Burmese songs which fall into these numerative patterns, but
+these always have only ra 'a' or 'the', never other numbers. These are therefore not numera
+tives. E.g. yiŋ-12 + me 'graceful-a + maiden, a (or the) graceful maiden'. aupta + ng 'lower-
+the country, The Lower Burma'. Cf. also lu—ta + cho! ‘some people', and ye-ta + shei? 'a
+small amount of water'.
+16. For the technical meaning of these as well as subsequent terms, see S. Potter, 'Glossary of
+Linguistic terms', in Language in the modern world, Harmondsworth, 1960.
+17. Op. cit. 4.
+JBRS, L, ii, Dec., 1967.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 4]]
+180
+1. Classifiers
+Since the process of enumerating things
+by their attributes is esoteric, it may not be
+impertinent to give a brief historical survey
+of the classifiers before they are set out
+with examples: this may also add width to
+the depth.
+..
+Classifiers seem to be a common linguis-
+tic phenomenon in several of the languages
+of the Tibeto-Burman Family.18 In Burmese
+they are found in the earliest records of
+the language, the stone inscriptions of the
+12th, 13th and 14th centuries. It is obvious
+from these inscriptions that by that time
+the general patterns had been already
+established and that many classifiers had
+gained currency: e.g. (old Burmese in trans-
+literated form followed by modern pronun-
+ciation) pà, 'pa for sacred persons or
+precious things,20 yok, yau? for ordinary
+people (i.e. not those classified as 'pa); 21
+kon; kauŋ for animals; 22 thañ, thɛ for gar-
+ments; 23 cī, 'si for vehicles, mounts; 24
+khyap, cha? for flat things; 25 lum, 'louŋ for
+round things; 2
+;26 and cañ, siŋ for straight
+things.27
+Moreover certain standardized
+use.
+Burmese 'Classifiers'
+weights and measures for time and space
+the
+were alrerdy in
+Nevertheless
+application of some of the classifiers does
+not appear in comparison with modern
+Burmese usage to be either consistent or
+systematic. A few examples will suffice. The
+classifier vaur is found in collocation with
+wife, 28 monk,29 and king: 30 so is the
+classifier chū, shu for Buddhas, pagodas
+and images with sacred buildings, 51
+cymbals, 52
+and stone threshold 35 and
+Buddhist scriptures;54 and cattle have as
+their classifiers khu, khu' 'a unit' 35
+many instances too, especially in the lists
+of slaves, animals and objects dedicated to
+the monks and religious edifices, classifiers
+were omitted, but this practice was not
+persistently sustained throughout.
+In
+The use of classifiers gained impetus in
+the 15th century from Burmese poetry and
+the Pali-ization of Burmese prose. The
+authors of these works were Buddhist
+monks or courtiers educated in the monas-
+tery, where the emphasis was laid on the
+understanding of Buddhism and the pali
+language.
+18. See 'classifying particles' in Anon., Handbook of the Lisu (Yawyin) language, Rangoon, 1922,
+16-18; numeral auxiliaries' in the Rev. O. Hanson, A grammar of the Kachin language, Rangoon,
+1896, 37; B Houghton, Essay in the language of the Southern Chins and its offinities, Rangoon,
+1892, 20-21; and F. V. Clerk, A manual of the Lawngwaw or Maru language, Rangoon, 1911,17.
+19. The pattern given in Lisu and Maru (see n. 18) is similar to that of the Burmese SO- N
+that in the Kachin and Southern Chin is SO --- C-N (see B. Houghton, op. cit.).
+WILLIN
+C, but
+20. Pe Maung Tin and G. H. Luce, Selections from the Pagan inscriptions, Rangoon, 1928, 40, 62,
+141.
+21. Ibid., 8, 71, 102.
+22. Ibid., 144.
+23. Ibid., 31, 79.
+24. Ibid., 51, 55.
+25. Ibid., 57, 105.
+26. lbid., 97.
+27. lbid., 101.
+28. Ibid., 8.
+29. Ibid. 160.
+30. Ibid., 102.
+31. Ibid., 32.
+32. Ibid., 57.
+33. Ibid., 51.
+34. Ibid., 75.
+35, Ibid., 29.
+JBRS, L, ii, Dec., 1967.
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 5]]
+Dr Hla Pe
+Burmese poetry was already flourishing
+by the middle of the 15th century and it
+went on from strength to strength until the
+downfall of the Burmese monarchy in A.D.
+1886, when classical poetry ceased to be
+written. The themes are Buddhism, royalty,
+love and nature. The bulk of the poetry is
+composed in four syllable-lines, and its
+rhymes are internal. The rigid requirements
+of two rhymes in every eight syllables B
+X/X
+/or
+X: X
+e.g.,
+: or three rhymes
+in every twelve syllables, e.g.,
+☑
+X-/- X
+X IX
+111
+// or
+put a
+great strain on the idioms of the language
+and the verbal resources of the poet.
+The creative artist was also inclined to
+use words with some sort of imagery.
+All these were bound to affect various
+aspects of the language including classifiers.
+To cite just one example myi?, ‘a river',
+Burmese scholars may claim, has at least
+eight "classifiers'³--myi? itself, taŋ ‘a line',
+hmwa a section', 'sin ‘a straight thing',
+Awɛ a connection', 'pa (for sacred beings
+or objects) and khu' 'a unit'. Other words
+besides may be made to serve as numera-
+tives for myi?.
+Burmese prose since its birth, which
+probably took place in the 12th century,
+has been under the influence of Pali³e
+on which the Burmese syntax was often
+modelled. When Pali works, chiefly on
+Buddhism and grammar began to be
+translated or be adapted into Burmese on a
+large scale from the 15th century onwards,
+the syntax and vocabulary of written
+Burmese moved closer towards the Pali. Pali
+however has no classifiers; nevertheless the
+translator or adapter had no difficulth wity
+--
+181
+of
+regard to either animate or inanimate
+objecis, 'although he was liable to use the
+nondescript word khu' indiscriminately with
+every conceivable object. But on religious
+concepts he had to resort to classifiers
+which frequently occurred in poetry or
+had to give the old ones a new look.
+Two of these are 'pa, and ya? a place.
+The legitimate function of ipa, for Buddhas,
+sacred objects, was probably observed,
+but at the
+same time its range
+employment was extended until it came
+to mean no more than 'myo ‘a kind':e.g.
+goundɔ 'ko + 'ha 'noble attribute - nine+
+sacred thing, the nine attributes of Buddha,'
+and Qila' -
+five +
+'na + 'ba ‘Precept
+sacred thing, the Five Precepts*. To these
+added yoga – kozɛ'chau? + 'pa
+'disease-ninety six + kind, the ninety six
+kinds of diseases' and aya?myɛ?hna-shɛ+
+\ba ‘cardinal point ten kind, the ten
+directions'; and finally the profane-ǝpyi?-
+chau? + 'pa ‘sin six kind, the six sins
+(of drinking alcohol)' and məŋudɔ-khuŋna
++ pa ‘evil being - seven kind, the seven
+evil beings'. The role of ya? was similar
+to that of 'pa, except its application was
+confined to concepts such as sa'ga statement
+and piŋnya or ata? knowledge, skill,
+shɛ' fi? + ya? 'the eighteen arts
+and sciences (translating Pali attharassa-
+sippa).
+were
+e.g. ǝta?
+-
+-
+-
+The impact of Pali on Burmese syntax
+also affected the patterns. Instead of the
+non-Pali form SO N + Clu - 'Down +
+three Person', we
+you? ‘human being
+have N + C + linking particle SO: 'Aoun
++ you? + '80-lu; or even N + C - SO:
+'ŋa + 'ba-fila' 'Five + classifier-Precept'
+(from Pali pañca sila 'Five Precepts').
+-=
+36. For Burmese rhyme schemes, see Human Relations Area Files, 1, ed. F.N. Trager, New York,
+1956, i, 318.
+37. Of these only siŋ] and spa and Owɛare classifiers, whilst myi? is a repeater and the
+rest are quantifiers (which see).
+38. See J. Okell, 'Nissaya Burmese'. IPLS, 2.
+JBRS, L, ii, Dec., 1967.
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 6]]
+182
+To complicate the matter Burmese
+prose fell under the spell of poetry
+towards the end of the 18th century,
+when the authors started introducing
+rhymes into their works. The spell has
+not been entirely broken today. Classifiers
+in prose have had the worst of both
+worlds.
+To complete this brief survey, the
+spoken language of Burma down to 1886
+will have to be mentioned here. While
+other words had either become obsolete
+or acquired new meaning the classifiers,
+with a few exceptions had remained
+constant since the 15th century. What
+was the spoken Burmese? In addition to
+ordinary conversation, it embraced the
+special style of (1) religious discourses
+preached by the Buddhist monks, (2) dia-
+logue and monologue declaimed by actors
+and actresses, and by travelling minstrels,
+(3) speeches made on formal occasions
+and (4) instructions given in monasteries
+or in the houses of teachers-all of these
+have a mixed flavour of literary style,
+jargon, colloquialism and slang. Whatever
+medium these people used there
+however a hard core of classifiers which
+were in
+constant circulation. Naturally
+the range of classifiers might vary from
+person to person according to his ability
+or educational background.³
+38
+was
+This was the state of the classifiers
+in the middle of the 19th century when
+Thomas Latter collected them, which in
+turn was improved upon by Dr. Judson.
+Since then the number of classifiers,
+unlike that of the quantifiers, seem
+to
+remain static and their use to have been
+conventionalized. like the quantifiers and
+repeaters there is no division of classifiers,
+Burmese 'Classifiers
+as in the case of Burmese particles between
+written and spoken Burmese.
+A classifier indicates, an attribute of
+the object which assigns it to a class.
+Each classifier can be applied to several
+objects of similar attribute, and some
+of these objects may have more than
+one attribute. A person may be classed
+as a human being Or as an animal
+according to his behaviour; and a horse
+or an elephant as merely an animal or
+as a mount; and a sword as just a straight
+long thing or as a weapon. The choice of
+the classifier is prompted by the occasion.
+A close examination of the hard core of
+these classifiers shows that the Burmese
+people's conception of things may be
+divided into three distinctive categories,
+viz., animate, inanimate and conceptual
+object.
+1.l. Animate objccts
+The Burmese people have been
+Buddhist since long before the language
+was reduced to writing sometime in the
+12th century. They have apparently classed
+all beings by grades according to their
+intellectual and spiritual attainments. The
+hierarchy thus emerged reflected the attitude
+of the people towards the classified. (Note:
+Each classifier is followed in square brackets
+by its meaning, or by a query where the
+meaning is uncertain, and then by the
+objects arranged as far as possible in the
+chronological order in which it seems likely
+that each has come to be included in that
+class. Wherever necessary, comments are
+given in round brackets; n noun, vn verbal
+noun).
+1. shu n[?] supernorma lentities-Buddhas,
+Minor Buddhas; (anthropomorphic)
+39) The slang of actors and actresses has a few classifiers of its own.
+JBRS, L, ii, Dec., 1967.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 7]]
+Dr Hla Pe
+Buddhas' relics, pagodas, images;
+recorded words of Buddha i.e the Law,
+treatises and folded paper; (in olden
+days) teachers and scholars. (Excep-
+tions: mosquito-nets, fishing-nets,
+gardens and staircases.)
+2. pa. ln [proximity] supernormal per-
+sons Buddhas, Minor Buddhas, saints,
+monks; (anthropomorphic) the Law;
+precious things e.g. gems; deities, mem-
+bers of royalty; (in olden days) Court
+officials. (See the remarks on 'pa on p.
+180 f. and under 1.3. Conceptual
+objects).
+3. un [? the head] individual beings:
+(modern tendency) persons with status
+B
+- officials, teachers, scholars and
+wealthy people. (In literature pa, u and
+yau?, see below. are used indiscri-
+minately with monks.)
+4. yaur wo n [? person] ordinary human
+beings.
+5. kauŋ mɔ n [the body] subhuman beings
+animals; 40 dead people's spirits,
+ghosts, etc.;41 morally or intellectually
+depraved persons; (facetiously or in
+anger) any person.
+None of these classifiers, with the
+exception of kauŋ, can ever be a determi-
+natum of the designatory word.
+1.2. Inanimate objects
+are
+With inanimate objects, of which there
+more classes than the animate, the
+Burmese people seem to have separated
+them into two main groups, one with form
+183
+and the other without. The classifiers for
+formless things are difficult to organise into
+systematic subdivisions: some are assumed
+attributes, and the rest are concerned with
+the necessities of life - food, dress, imple-
+ments and weapons, vehicles, spoken and
+written words, all of which have only one
+classifier each, except dress which has two.
+(The examples are listed in Burmese alpha-
+betical order under each sub-head.)
+1.2.1. with form
+-
+1. 'kwiŋ ogć: vn [a circle] personal orna-
+ments especially those worn round the
+limbs and fingers bangles, gold or
+silver anklets, rings, ear-rings (if encir-
+cling the lobe); nether garments (skirts
+and sarongs) of both sexes (see under
+Dress 1.2.2. Without form).
+2
+chi a vn [something tide in a circle] an
+obsolete and poetic classifier for
+personal ornaments = 'kwiŋ see above.
+-
+3. cha? ǝjó vn [a flat thin thing] utensils
+saucers, plates, trays; planks or boards;
+floor coverings e. g. mats, carpets;
+palmleaves prepared for writing; brick;
+sheets of glass.
+4. 'chauŋ expƐ: n [a rod-like object] sticks;
+pens, pencils; legs (not arms), toes,
+fingers; teeth, tusks; needles and pins;
+tails, hair on the body; feather (see piŋ
+under Assumed attributes 1.2.2 Without
+form).
+5. sin of: vn [a straight and usually long
+thing] Burmese weapons (cf. lɛ? under
+Implements and weapons 1.2.2. With-
+out form); all forms of water and air
+40. Another classifier for animals is si from the verb 'si 'to ride', see 'vehicle' under '1.2. Inanimate
+objects'.
+41. Many people also regard kauŋ as a classifier for ſuðe a dead person, but it is a repeater, since
+we speak or write of lužjegauŋ
+hna + kauŋ 'dead person body two + body, two corpses'.
+JBRS, L, ii, Dec., 1967.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 8]]
+184
+transport (except rafts); trains (and no
+other vehicles); the sun (only with
+reference to the seven suns at the time
+of the destruction of the world by fire);
+(poetry) rivers, seas, oceans and needles
+(for which see 'chauŋ above).
+6. 'pya : vn [a flat thing] coins (see also
+'Repeaters').
+7. phouŋ vn [? a round heap] fishing-nets,
+sails; medicine; Burmese dominoes.
+8. loun c: vn [a round thing] spherical,
+cố:
+cylindrical, cubical or enclosed objects
+-
+- fruit, cups and scripts; funnels, bam-
+boos and posts; pieces of furniture and
+machines; caves and buildings (exclud-
+ing monasteries or schools, rest-houses
+and palaces); stars and planets (except
+the sun and the moon, which have
+repeaters); electric light bulbs.
+9. Owɛ ɔ vn [a long and slender thing]
+rivers (chiefly in poetry).
+1.2.2.
+Without form
+(a) Assumed attributes (see also ‘Repeaters')
+1. shauŋ ɔn [part of building under
+its own, separate or attached roof]
+mansions containing such structures-
+monasteries, rest-houses and palaces;
+(poetic expression) houses (excluding
+brick-houses, huts, and schools, all of
+which either have a classifier of their
+own or repeaters).
+ALS
+2. piŋ oć na plant] growing organism on
+the body feather (not hair which has
+a classifier or can be used as a repeater);
+things similar to a plant - cord, rope
+and thread.
+3. ywɛ? gon [a leaf] paper; (poetry) the
+hair on the head.
+JBRS, L, ii, Dec., 1967.
+(b) Food
+Burmese 'Classifiers'
+na? ș& vn [? a cooked thing] meals
+(tha 'miŋ cooked rice).
+(c) Dress
+1. the con [substance] individual pieces
+of garment (of both lay-people and
+members of the Order).
+2. paiŋ șƐ n [?] material worn as head-dress
+by men; shawls.
+(d) Implements and weapons
+lɛ? con [the hand] objects constantly
+handled - implements and weapons.
+(Cf. 'sin under 'With form'); musical
+instruments especially string-and wind-
+instruments. (Exceptions: principal
+actors 'miŋ'ða and actresses 'miŋ'ða'mi
+in a troupe.)
+(e) Vehicles
+\si 8; vn [riding thing] all forms of land
+transport (except trains); mounts (only
+elephants and horses). Exception in
+literature: sain bisons; colloquialism
+ane larger animals hunted for food
+or (slang) dupes, 'victims'.
+(f) Spoken words
+'khuŋ af: n [?] units of spoken words,
+(g) Written words
+sauŋ] 600€ vn [? what is kept in reserve
+for reference] materials on which
+words are written or printed-letters,
+manuscripts; royal edicts, official direc-
+tives; treatises; articles; newspapers and
+magazines (excluding saou? books,
+which takes a repeater).
+Many of these classifiers under this
+head, Inanimate objects, can be determinata
+and function as repeaters.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 9]]
+Dr Hla Pe
+1.3. Conceptual objects
+are
+Conceptual objects in Burmese
+mostly from Buddhist metaphysics. Their
+terms were originally either translated or
+transliterated from Pali, which has no classi-
+fiers. They were then frequently circulated
+through the media of Burmese prose and
+poetry, particularly from the 15th century
+onwards
+44
+In the early stone inscriptions and
+prose works on palm-leaf the word chiefly
+used as a numerative for these objects
+is 'pa42. But the Burmese poets in enumerat-
+ing them began to introduce, apparently
+because of the exigencies of rhyme, not
+only classifiers but repeaters and quantifiers
+as well. E.g. mɛ? 'the Path', of which
+there are four divisions, may have
+mɛ? —'le+mɛ?,-yu? ‘a place' (a repeater and
+an implicit repeater), 43 -taŋ 'a line row',
+taŋ 'a sector' (both quantifiers); ** and
+pa for sacred objects, Awɛ for long
+slender objects (both classifiers). Moreover,
+because of their natural tendency to bestow
+a certain imagery on a conceptual object.
+something sacred or having a shape or
+characteristics usually associated with con-
+crete objects, the poets begin to bring
+in the classifier to fit their imagery. In
+one of these poems, the five causes of a
+woman's insolent behaviour to her husband
+are given as maŋ - 'ŋa + igwin 'insolence
+five-ring'. 45.
+185
+Up to the downfall of the Burmese
+monarchy in 1886, as already stated, poetry
+which played no small part in the dissemi-
+nation of Buddhism played a major part
+in the lives of Burmese scholars, and they
+in turn perpetuated in their various works
+many of these expressions, that have been
+adhered to by the mass from generation to
+generation, until these expressions** became
+conventionalized by the end of the 19th
+century.
+The presence of this bewildering
+conglomeration of numeratives has led many
+scholars, including the Burmese 47 to assume
+that these are the classifiers for conceptual
+objects. It must be admitted that it is
+difficult to classify systematically all these
+objects that are conceptual. Nevertheless
+the consensus of religious works suggests
+that there are three numeratives used
+frequently as classifiers for most of these
+intangible objects. They are pa, ya? and
+khu, 48
+1. 'pa : n [proximity] (1) concepts which
+have a sacred or precious connotation-
+the attributes of Buddha, the Law and
+the like; (2) composite-terms, having
+as their second member the word tə’ya
+(law, nature, condition: duties etc.)
+e.g.'lɔgədaŋ ta'ya the law or nature
+of the world i.e. the vicissitudes
+of life, 'min jin' ta'ya royal duties;
+42. See Selections from the Pazar inscriptions, 26, 40, 62.
+43. Sec section on Repeaters under 3. below.
+44. See section on Quantifiers under 2. below.
+45. See Twinthin-taik-wun' Ballativa Pyo [Burmese poetry on Buddha's Birth Story],
+504, Rangoon, 1928, 1.
+46. Those who are interested to pursue this subject, see Obhāsabhivaṁsa, Thu-te-thana Thayouk-
+pya Abhiddan [a Dictionary of Established Sets of Forms (in Burmese)], Rangoon, 1955.
+which illustrates the versatility of these conventionalized poetic expressions.
+47. See Anon, A School grammar of the Burmese language [in Burmese], Rangoon, 1922, 51-56.
+48. See the remarks on three p. 181 above.
+JBRS, L, ii, Dec., 1967.
+24 24-U.P. – G 124——1,000 + 50-17-5-68.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd. Bangkok. Thailand.
+
+[[page 10]]
+186
+(3) established sets of religious as
+well as secular concepts.4
+49
+2. ya? qn (a place] chiefly with intellectual
+concepts -- knowledge, arts and sciences;
+statements.
+3. khu' n [a unit] with any concept, except
+those which have sacred, precious or
+intellectual connotation.
+2. Quantifiers
+Unlike the classifiers the numbers of
+quantifiers have not remained static: Burmese
+has absorbed many quantifiers derived
+from India and, since the 19th century,
+from the West. But like the classifiers
+they too have certain characteristics about
+them that tempt many of us to take them
+for classifiers. Their function however is
+dissimilar: they indicate the amount and
+not the attribute of the specific object.
+There are numerous quantifiers in the
+language. The majority of them are terms
+which vaguely indicate an amount, the
+nature of the object and the manner of
+quantification. The rest are standardised
+Burmese and some foreign -- weights and
+measures. It would be pointless to catalogue
+all of them in a paper of this kind.
+Instead, to give the list of examples some
+sense of cohesion and purpose, I propose
+to group them under separate headings-
+(the examples, appended with foreign loan-
+words wherever they occur, are listed in
+Burmese alphabetical order under each
+head).
+2.1.
+By indicating the characteristic of
+the object
+2.1.1. General objects
+1. khwe Ga
+vn ‘a coil' -rope, cord or hair.
+Burmese ‘Classifiers*
+2. thouŋ: vn 'a knot, something tied into
+a coil or some other form'-rope, hair.
+3. pyi? o̟jó vn ‘a woven piece' - a stick of
+woven thatch.
+2.1.2. Written or printed matter
+1. iŋga zədl n [Pali anga a constituent
+part] ‘a folio of palm-leaf manuscripts'.
+2. pou? ¿š n [Pali pada a foot] 'a series
+of stanzas making one poem, a series
+of paragraphs making a complete
+work',
+3. pai? șâ [variant form of pou? above]
+'a verse or stanza, a paragraph',
+4. phauŋ soɔć n [English forme] ‘a forme
+or set of proofs'.
+2.2. By stating part of a whole object
+1. SɛP of vn ‘a drop or splash of liquid'.
+2. tɛ? m vn 'a shoot, root of ginger, a
+clove of garlic',
+3. pau? solo vn ‘a drop or splash of a
+liquid',
+=
+4. pho'ɔ vn ‘a portion, share' -- originally
+of a collection of items.
+2.3. By the process of dividing an objeci
+1. 'chan: vn a half, split lengthwise or
+top to bottom' - bamboo, fruit.
+2. sei o vn 'a quarter, section or piece,
+split lengthwise or top to bottom' -
+bamboo, fruit.
+3. shi? x vn ‘a joint, section, cut along
+the length' - bamboo, sugar-cane.
+49. See Ka-pe Pondawgyi, Pinhya Kathāna Kyan [Catechism on Buddhism], Rangoon, (20th
+century, exact date unknown), ha-ku.
+JBRS, L, ii, Dec., 1967.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd Bangkok Thailand
+
+[[page 11]]
+Dr Hla Pe
+4. ti? 6 vn 'a piece, chopped off from
+meat or fish, usually smaller than
+touŋ below.
+5. 'touŋ : vn ‘a lump, segment, block.,
+cut out of meat, fish or log.
+6. thi? mos vn a notch. step in the ladder
+or staircase.
+7. 'pain : vn 'a half, part, portion, chop-
+ped breadth-wise'.
+8. phɛ
+vn a piece, broken off by hand
+or by a tool.
+9. hmyauŋvn a segment, cut off
+from top to bottom to form an angular
+piece'.
+10. hmwa ɔ vn ‘a section, sector, gashed
+obliquely: a section of fruits such as
+oranges or lemons'.
+11. hlwa vn 3
+000
+stratum'.
+slice, flake, layer or
+2.4. By the process of adding one object to
+another similar object
+1. co
+ကျေး
+vn ‘a loop, noose' rope or
+cord; 'a refrain of song'.
+2. sa? oỗ vn‘a junction, patch' – boards,
+pieces of cloth or expanses of water
+joining one another.
+3. shiŋ' æ vn a tier, storey, stage in
+succession'.
+4. tha? co vn ‘a layer, storey'.
+2.5. Measures of capacity
+2.5.1. Liquid
+1. cai? vn ‘a gulp'.
+187
+2. ŋouŋ ¿ vn ‘a mouthful of either liquid
+or solid matter'.
+The measures of capacity are also
+expressed in terms of liquid containers-from
+a spoon to a basin, a coconut shell to a
+water-butt and from a bottle to a can.
+Besides these, there are standardized mea-
+sures chiefly from the West e.g. pint, gallon,
+litre, etc..
+2.5.2 Grain, powdery stuff and separate
+items
+1. kɛ' cò̟ vn ‘an amount removed surrepti-
+tiously from a pile or collection'.
+2. kɔ smá vn ‘an amount prised out of a
+pile or heap with a finger or with an
+implement such as spade or shovel'.
+3. 'couŋ cojj: vn ‘an amount gathered by
+both hands'.
+4. pai? ¿es vn ‘a quantity held in the arms,
+an armful' - corn sheaves, faggots, etc.
+5. pwe so vn ‘an armful,
+6. Lou? covn 'a mouthful of food, a
+morsel'.
+The Burmese also use containers rang-
+ing from the smallest stirring ladle to a pot,
+a tiny casket to a box, a tray to a pannier
+and from a condensed milk tin to a basket.
+And there are of coures standardised
+measures for grain - bushel, half and quar-
+ter of a bushel and so on.
+2.6.
+Measures of space
+1. kaŋ' m§ vn ‘a space between two cross
+lines or partitions, a compartment; a
+measure roughly .29 of an acre'.
+2. kwɛ? mm vn ‘a defined area, compart-
+ment, plot, square* - rice-fields, inhabit-
+ed space.
+JBRS, L, ii, Dec., 1967.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd. Bangkok, Thailand.
+
+[[page 12]]
+188
+3. \khiŋ ǝč: vn 'an expanse of cleared or
+cultivated ground, a large plot'.
+4. 'khaŋ ǝș: vn ‘a space between one post
+and another in a house, compartment
+or house in a horoscope'.
+5. taŋ' yn 'a sector, section in a horo-
+scope'.
+6. thau? Gooo vn a distance between two
+stopping places on a route..
+7. pa? još vn a lap, circuit'.
+8. 'paŋ oș: n'a race' - boats, carts, horses
+from the starting point to the winn-
+ing post.
+9. pvin GƐ n ‘an expanse'.
+10. phɛ ɔɔ̃ n 'a circumference or girth as
+large as one can embrace'.
+For standardized measures of space,
+both lineal and square, the Burmese people
+had their own up to the downfall of the
+Burmese monarchy e.g. Iɛ?i? 'a finger-
+breadth', thwa ‘a span', tauŋ ‘a cubit'; kaŋ'
+*.29 of an acre' (see above) and pɛ ‘1.75 of
+an acre'. Since then these have become
+obsolescent, as they are being ousted by
+English measures.
+2.7. Measures of time
+from
+1. chi a vn * contest, match*
+the beginning the to end boxing,
+wrestling: a performance of a pwe
+(kind of stage play)'.
+2. pyait ဗြိုက် vn a duration or spell of
+rain'.
+3. phyi? ‹œð vn ‘a snap of the fingers'.
+4. phwa yɔ vn ‘(the time it takes) to puff a
+cheroot or a pipe.
+JBRS, I, ii, Dec., 1967.
+Burmese 'Classifiers'
+To these we may add quantifiers which
+are not preceeded by an object e.g.
+1. cein vn a time, occasion'.
+2. kha ál n ‘a time'.
+3. khau? saks vn a time, turn'.
+4. wa ♂] n [Pali vāsa] ‘a lent, usually of
+the Lent a monk keeps about three
+months (approximately from the middle
+of June to the middle of September)'.
+Besides, there are the recognized terms
+for the Burmese measures of time, some
+native and others of Indian origin. But
+these are being discarded in favour of
+Western measures.
+2.8. Weights
+1. 'shwɛ vn ‘a haul, as much as one
+can haul up with one's finger (roughly-
+one viss or about 31 lbs)'.
+2. \thaŋ cod: vn ‘a shoulder-load, as much
+as one can carry on one's shoulder'.
+3. ywɛr goð vn 'a head-load, as much as
+one can carry on the head'.
+The Burmese people are still using
+weights of their own, mostly derived from
+India, in transacting business among them-
+selves especially in Burmese products.
+They have recourse to Western weights
+only in dealing with imported and exported
+commodities.
+2.9. Groups
+1. ou? à vn ‘a herd, flock; a group of
+peope; a bale of cloth'.
+2. ouŋ à vn ‘a swarm of bees, termites
+or ants; a crowd of pepole; a group
+of floral patterns as decoration on a
+building'.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 13]]
+Dr Hla Pe
+3. 'kouŋ : vn ‘a string of flowers, pearls
+or beads, and (later on) gold'.
+4. khiŋ on ‘a hank or skein of thread'.
+5. khaiŋ na stalk of fruits' - bananas,
+toddy-palms, coco- and areca nuts.
+6. 'sio vn *a bundle of long things'-
+sticks, bamboos, sugar-cane and flowers.
+7. suo vn 'a collection, group (smaller
+in size than ou? see above) of people,
+buildings and small items'.
+8. shain : vn ‘a package of foil*- gold,
+silver or other metal; 'the amount of
+things that can be carried in a sling
+at the end of a porter's yoke'.
+i
+9. tan ons: vn 'a row of houses, trees
+and people.
+10. ta? cɔ n ‘a co-ordinate body of people,
+an armed force'.
+11. twɛ of vn 'a cluster, joined naturally
+or by hand fruits, pieces of meat
+and fish.
+12. thour coб vn 'a bundle or packet'.
+13. pouŋ ò̟ vn ‘a heap; used as a quantifier
+for the Buddhist Scriptures'- pitaka?
+'Jouŋ boun 'the Three Divisions of the
+B. S.
+14. pyouŋvn ‘a conglomeration'- people
+or things.
+15. phi & vn 'a comb or bunch of bananas'.
+16. ma'w n ‘a brood of chickens, a swarm
+of bees, a shower of rain'.
+17, myoun n ‘a brood of chickens'.
+18. youŋ à vn ‘a clump of bamboos, reeds
+or gourds'.
+189
+19. Jain ‘a nest, gang of people'.
+21. 'gainn [Pali gaṇa] 'a sect, schism;
+a group of letters of the alphabet; a
+political party, block or wing; a
+faction, set or clique'.
+22. pati olos n [English party] ‘a political
+party; clique, set'.
+2.10 Sets
+1. souŋ & vn ‘a complete set' - husband
+and wife; set of clothes usually consist-
+ing of the head-dress, jacket and
+sarong; a set of books.
+2. 'pyu : vn 'a set of twins, a set of two
+or more things joined together'.
+2.11.
+Pairs
+1. fiŋ : vn 'a yoke of animals' - only
+oxen and buffaloes (in Burma).
+2. yaŋ q$ vn ‘a pair of pieces of wearing
+apparel or ornaments e.g sandals and
+shoes; ear-rings, wristlets and bangles'.
+3. phɛ? oc vn 'one of a pair' - hand, foot;
+ear, eye; ear-ring.
+2.12 Set-numbers
+1. o!za အိုးစား n (obsolescent) 'a group of
+members of armed forces eating out
+of one pot ten'.
+2. cei o n 'ten'.
+3. daziŋ aleć n [English dozen] ‘a dozen'.
+4. gayu? ngơ n [English gross] 'a gross'.
+These may be augmented by the
+inclusion of Type 5, SO - N + T. E.g.
+tashɛ, hnashɛ, 'Jouŋzɛ 10, 20, 30 etc.
+JBRS, L, i, Dec., 1967.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 14]]
+190
+3. Reepaters
+Repeaters too occur in the earliest
+Burmese inscriptions.50 They include some
+ciassifiers and almost all quantifiers. A
+classifier, as stated, indicates the attribute,
+a quantifier the amount of an object,
+whereas a repeater repeats the whole or
+part of the designatory word: its function
+is to itemize the object.
+The object may have a one-word
+designation - ein ‘a house', iPta 'a box',
+'cun 'an island', ta? ‘an army'; or it may be
+a compound word usually but not
+necessarily of two free morphemes e.g.
+tai?ein ‘a brick-built house', 'tɔywa ‘a forest
+(rural) village' and shi' bouŋ ‘an oil can'; or
+a complex word usually of two morphemes
+of which the second one is bound e.g.
+tai? 'taŋ ‘a brick building-row, row of brick
+buildings', 'mobau? 'a rain-drop', and
+Bippin a wood-plant, a tree'. Admittedly
+each of these compound and complex words
+can have qualifying nouns of noun expres-
+sions e.g 'hnaŋzi 'boungǝle 'sesamum
+oil can small, a small can of sesamum oil'
+or myiŋ' dɛ Hippiŋ'ji ‘high (connecting
+particle) wood-plant large, a large tall tree'.
+But in the repeater patterns in which
+enumerating is concerned only with the
+specific object these are treated as
+extraneous matter.
+3.1. Repeaters of one-word designation
+There are too many to list them all,
+but they can be grouped together and the
+group divided into two main heads.
+3.1.1.
+Those which have no classifiers
+(a) Physical features e.g. kouŋ ‘an upland“,
+'cuŋ an island', 'to a forest', tauŋ ‘a
+mountain'; aiŋ ‘a lake', 'chauŋ ‘a rivulet',
+40. E. g. klwan
+te
++
+Burmese 'Classifiers'
+myi? ‘a river'; kwe' ‘a bend', jaiŋ' ‘a
+hollow': 'laŋ 'a road' and la' 'the moon'.
+(b) Political units such as tai? 'a continent',
+nainnan a state, kingdom', pye 'a
+country', myo' ‘a town', ywa ‘a village'.
+(c) Structures, which include chaŋ ‘an
+enclosure for cultivation or animals',
+wiŋ 'an enclosure around a building or
+buildings', mou? 'an entrance".
+(d) Measures of time, distance and capacity
+- yɛ? 'a day'; main ‘a mile'; 'tin ‘a
+bushel'.
+(e) The body and its parts - ko 'the body',
+IE? 'the hand', paun 'the thigh'.
+(f) Group of things among which are gaiŋ
+'a faction, gang'; pati ‘a political party',
+\pwɛ ‘a dramatic performance (where
+people gather)'.
+(g) Conceptual things si? 'war', sei? 'the
+mind', nyaŋ 'the intellect', naŋ ‘name',
+you? 'form'; mɛ? 'the Path', pho 'the
+Fruition'; goun 'reputation, status'; wu?
+‘retribution, duty,; nya' ‘night', ne' ‘day'.
+To be more comprehensive we may
+add the following miscellaneous words: 'si
+‘line of demarcation', shu' ‘a reward', zap
+‘a story, drama', poun ‘a fable, story, pic-
+ture', mi 'fire'.
+With every one of these designatory
+words the repeater is its replica e.g.
+1. 'kouŋta gouŋms:
++ --
+upland',
+2. tai? - hna + tai?
+continents*.
+3. chaŋ -- 'Jouŋ + jaŋ [§ -
+kiwan Caj Teju island
+enclosures'.
+-
+တ + ကုန်း “one
+-
+နှစ် + တိုက် two
+သုံး + ဩ “thrce
+four island, the Four Islands - North,
+South, East and West', Selections from the Pagan inscriptions, 111.
+JBRS, L, ii, Dec., 1967.
+"
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 15]]
+Dr Hla Pe
+3.1.2. Those which have classifiers
+1. əkauŋ
+*creature
+--
+or body'.
+ta + gauŋ sasmod
+191
+က - ကောင်
+one creature, one creature,
+2. asu-hnə + su' - +o 'two groups'.
+These are one of the many puzzling
+features in the Burmese language. They
+operate as repeaters in spite of having
+classifiers of their own. For these also we
+can put forward certain guiding principles 3. louŋou+on+three
+by considering them under two sub-heads.
+(a) Animate objects
+As far as am aware there are only
+two: (i) bo ‘a leader of an organised group
+of people' and (ii) 'miŋ ‘a king'. There is
+also the classifier kauŋ ‘a body'.
+(b) Inanimate objects
+>
+round things'.
+(b) N+N
+brick
+house one house, one
+1. taipeiŋ-ta+ein
+building
+masonry house',
+2. tɔywa-hnɔ+ywa coo+g. 'two
+forest (rural) villages'.
+3. shi bouŋ— 'Jouŋ + boug :
+'three oil cans'.
+(i) Almost all enclosed objects – build-
+ings such as 'eiŋ 'a house', tai? 'a brick
+building', 'couŋ 'a monastery or school; (c) N+IN
+containers of all sorts
+baskets and bottles.
+pieces of crockery.
+(ii) All forms of transport - hle a boat',
+thle a cart', phaun ‘a raft' and many of the
+classifiers.
+3.2. Repeaters of two-word designation
+ww
+These repeaters reduplicate the deter-
+minatum of the composite word, of which
+there are five types, both complex and
+compound: (a) nouns with prefix ə- AN,
+(b) noun+noun N+N, (c) noun + in-
+complete noun N+ IN, (d) incomplete
+noun + noun INN and (e) in-
+complete noun incomplete noun IN
++IN. All these types give explicit repeat-
+1. tai? tanto 'dan
+‘brick building row
+က - တန်း
+one +row, one
+row of brick buildings'.
+2. luðegauŋ—hnə + kauŋ paɔɔemɔd – şû +
+ကောင် two dead bodies or corpses,.
+3. shize?
+-
+'Douŋ + ZɛP
+'three oil-splashes'.
+(d) IN + N
+ဆီပက် - လုံး + ရက်
+1. Gip tɔ to do 600 07 - 0000
+'wood forest--one + forest, one forest".
+--
+2. hmar taiy ---- hna + taiy မှတ်တိုင် —နှစ် + တိုင်
+two mile-posts'.
+ers, but the last four often produce implicit 3. 'ouŋ 'juŋ -- 'fouŋ + juŋ $imis: - ∞: +
+repeaters.
+'three coconut-islands'.
+3.2.1. Explicit repeaters
+(e) IN N
+These need no comment. The follow-
+ing examples will speak for themselves.
+1. ou?su'
+13 -- zu' အုပ်စ
+Ly
+(a) AN
+block
+(political)'.
++ co
+'power-
+one + block, one power block
+JBRS, L, ii, Dec., 1967.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 16]]
+192
+Burmese 'Classifiers'
+2. myɛ? 'louŋ—hnə + 'louŋ újósó: နှစ်+: second nembers of the word by a numeral
+'two eyes'.
+-
+will not in any way give rise to ambiguity.
+Besides it is terse and pithy. This practice
+3. ya?kwe?ŋouŋ+gw+has been followed, as far as can be traced,
+'three wards or quarters'.
+3.2.2. Implicit repeaters
+When enumerating an object by means
+of repeaters, the explicit repeaters are of
+course preferable for the sake of idiom,
+and more important still, to avoid ambiguity.
+There are cases however in which an
+implicit repeater is possible without being
+even unidiomatic or unambiguous. The
+practice is to insert a numeral between
+the determinant and the determinatum.
+This licence however cannot be taken
+with the type AN, nor could it be taken
+with most of the words in the other four
+types N + N, N + IN, IN + N and
+IN IN.
+since the earliest recorded Burmese. E g51
+nyauŋ'Jouŋ + biŋ ‘banyan-three + tree,
+three banyan trees', obviously an implicit
+repeater for nyauŋbiŋ Jouŋ + bin.
+There are many implicit repeaters of
+this kind in the language, and here are
+a few of them.
+--
+1. N + N: byɔma she' chaur + bouŋ
+ဗြဟ္မာ - ဆယ့်ခြောက် + ဘုံ “Brahma - 16 +
+-
+abodes, the 16 abodes of the Brahmas'.
+-
+2. N+ IN: 'paŋ- to + ŋoun of: ∞s+ &
+'one flower bud'.
+3. IN -- N: 9i2 - hna -- tai] သစ် -- နှစ် + တိုင်
+'two wooden-posts'.
+IV.
+of 'three coconut trees'.
+CONCLUSION
+MARI
+In AN the initial a is only a prefix 4. IN + IN: 'ouŋ—'Jouŋ + biŋ ³§: − ∞;+
+and has no meaning. As regards most of
+the words in the other four, the infixing
+of a numeral between a determinant and
+determinatum may result in (i) a non-
+sensical phrase such as (object: tai?
+eiŋ 'masonry house') tai? ta ein
+'masonry one house', comparable in
+English to 'rain one + bow'; or a quasi-
+classifier, entailing an ambiguous phrase
+e. g. (object: chin louŋ 'basket-ball') chin
+talouŋ basket one + round thing,
+one basket'; or (iii) a quantifier (object:
+shi 'bouŋ ‘oil-can') shi - ta 'bouŋ ‘oil
+one + can; one can of oil.
+-
+The special composite-words which
+lend themselves to this treatment are those
+in which the determinatum, apart from
+being a non-classifier or non-quantifier,
+is also a complement of the determinant.
+As such the separation of the first and
+51. Selections from the Pagan inscriptions, 52.
+JBRS, L, ii, Dec., 1967.
+I have re-examined what have been
+known as Burmese 'classfiers' and in the
+light of evidence in hand, these have been
+divided into (1) Classifiers, (2) Quantifiers
+and (3) Repeaters - explicit and implicit.
+To conform to these new terms, it is
+proposed to reproduce the eight types of
+patterns (see pp. 177-179) with the follow-
+ing new abbreviations, in addition to
+those already given therein: (Q quantifier,
+MQ modified quantifier, RE explicit repeater,
+RI implicit repeater and / ‘or').
+Type 1
+SO. N + C/Q/R!
+lu-ta + you? c
+တ - ယောက် “one human
+being' C.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 17]]
+Dr Hla Pe
+shan to
+din 50$
+• to + din 20$ - ∞ + ooε: 'one bushel
+of rice' Q.
+'paŋ—to + ŋouŋ oậ:
+bud' RI.
+-
+Type 7
+MQ
+N + T
+-
++ 'one flower-
+193
+Type 2
+SO
+N+RE
+cuY -she + Iju ကျွန်း--ဆယ် --- ကျွန်းéten islands'.
+Type 3
+N + Q
+lina + la' s +co 'two months'.
+Type 4
+SO
+lu
+2
+MC/MQ + N + T
+avau? +hno + she အောက် နှစ်
+L : 'twenty human beings'.
+shaŋ
+--
+atauŋ chauk + sh: အတောင် --- ခြောက် - ဆယ်
+"sixty cubits'.
+Type 8
+SO + pauŋ
+-
+-
+NT/C/RE
+lu + ‘bauŋ —¡ŋa + za op + sulε: - cl: + 2005
+'human being + total fifty'.
+--
+cl: +
+lu + 'bauŋ ---- 'ŋa + yau? op + culƐ:
+'human being + total five
+person'.
+-
+'cuŋ+ 'bauŋ—'ŋa+ juŋ mi§: + culĉ:-cl: + mj§:
+island + total five island'.
+My purpose in submitting this paper
+is to stimulate scholars to further research
+a'tiŋ + hna + she of -sood; + work on this linguistic feature in other
+of 'twenty bushels of rice'.
+Type 5
+SO NT (Quantifiers)
+. 'Gout) ++ 2E ကျွန်း -- သုံး -- ဆယ် thirty
+icur
+islands'.
+Type 6
+Q-N+T
+yɛP
+languages. Scholars have dealt with classi-
+liers in, apart from Burmese, languages
+such as Chinese, Japanese and Tai. Some
+of them use different nomenclature for
+the same material, but tradition looms
+at the back of each of their writings.
+This paper I hope will provoke scholars
+into re-examining the languages containing
+this special linguistic feature, in order to
+ascertain whether all those they claim to
+be are genuine classifiers or, as I have
+stated, composed of classifiers, quantifiers
+\ŋa + zɛ qo6 – c: + ‘fifty days'. and repeaters.
+JBRS, L, 11, Dec., 1967.
+25-G 124-1,000+ 50-21-5-68.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.

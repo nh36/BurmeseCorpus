@@ -1,0 +1,14 @@
+{
+  "local_file_id": "411076-6d84457ee38b",
+  "batch_id": "jbrs-ocr-1921",
+  "file_name": "411076.pdf",
+  "path_stub": "Burmese/Burma JBRS/1958/411076.pdf",
+  "journal": "JBRS",
+  "year": "1958",
+  "ocr_engine": "google_vision",
+  "pages_completed": 7,
+  "ocr_date": "2026-06-01T15:57:01.077454+00:00",
+  "source_category": "article_pdf",
+  "language_scope_guess": "Burmese",
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+}

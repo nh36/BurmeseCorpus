@@ -5,7 +5,7 @@ import re
 import sys
 import tempfile
 import unittest
-from collections import defaultdict
+from collections import Counter, defaultdict
 from pathlib import Path
 from types import SimpleNamespace
 from unittest.mock import patch
@@ -35,6 +35,7 @@ from jbrs_workflow_common import (
     JBRS_OCR_STATUS_LOG_PATH,
     JBRS_OCR_TEXT_INDEX_PATH,
     JBRS_OCR_TOP_EXTRACTION_CANDIDATES_PATH,
+    JBRS_OCR_TOP_INSCRIPTION_EXTRACTION_CANDIDATES_PATH,
     JBRS_OCR_TRANSLATION_HIT_INDEX_PATH,
     JBRS_PILOT_SUMMARY_PATH,
     JBRS_REFERENCE_HUNT_RAW_PATH,
@@ -79,6 +80,9 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
         cls.ocr_text_index_rows = read_tsv(JBRS_OCR_TEXT_INDEX_PATH)
         cls.ocr_translation_hit_rows = read_tsv(JBRS_OCR_TRANSLATION_HIT_INDEX_PATH)
         cls.ocr_top_candidate_rows = read_tsv(JBRS_OCR_TOP_EXTRACTION_CANDIDATES_PATH)
+        cls.ocr_top_inscription_candidate_rows = read_tsv(
+            JBRS_OCR_TOP_INSCRIPTION_EXTRACTION_CANDIDATES_PATH
+        )
         cls.summary = json.loads(JBRS_PILOT_SUMMARY_PATH.read_text(encoding="utf-8"))
         cls.ocr_production_summary = json.loads(
             JBRS_OCR_PRODUCTION_SUMMARY_PATH.read_text(encoding="utf-8")
@@ -105,6 +109,7 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
             JBRS_OCR_TEXT_INDEX_PATH,
             JBRS_OCR_TRANSLATION_HIT_INDEX_PATH,
             JBRS_OCR_TOP_EXTRACTION_CANDIDATES_PATH,
+            JBRS_OCR_TOP_INSCRIPTION_EXTRACTION_CANDIDATES_PATH,
             JBRS_OCR_PRODUCTION_SUMMARY_PATH,
             JBRS_PILOT_SUMMARY_PATH,
         ]:
@@ -124,6 +129,22 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
             row for row in self.ocr_top_candidate_rows if "top_20_priority" in row["notes"]
         ]
         self.assertGreaterEqual(len(top_twenty_marked), 20)
+
+    def test_ocr_top_inscription_candidate_report_has_twenty_rows(self) -> None:
+        self.assertGreaterEqual(len(self.ocr_top_inscription_candidate_rows), 20)
+        self.assertEqual(len(self.ocr_top_inscription_candidate_rows[:20]), 20)
+
+    def test_general_burmese_text_translation_is_not_top_inscription_candidate(self) -> None:
+        top_ten_local_ids = {
+            row["local_file_id"] for row in self.ocr_top_inscription_candidate_rows[:10]
+        }
+        grant_local_ids = {
+            row["local_file_id"]
+            for row in self.ocr_text_index_rows
+            if row["file_name"] == "GrantBrown-1911-BurmeseSongs.pdf"
+        }
+        self.assertTrue(grant_local_ids)
+        self.assertTrue(grant_local_ids.isdisjoint(top_ten_local_ids))
 
     def test_shorttitle_metadata_hit_stays_out_of_clean_targets(self) -> None:
         raw_row = next(row for row in self.raw_rows if row["matched_reference_text_short"] == "shorttitle = {JBRS},")
@@ -896,6 +917,29 @@ class JBRSWorkflowLogicTests(unittest.TestCase):
         }
         text = "TRANSLATION OF BURMESE SONGS\\nBURMESE TEXT\\nThis article mentions Pali metres only in passing."
         self.assertEqual(production.guess_language_scope(manifest_row, batch_row, text), "Burmese")
+
+    def test_inscriptional_relevance_marks_grant_brown_as_general_burmese_text_translation(self) -> None:
+        manifest_row = {
+            "file_name": "GrantBrown-1911-BurmeseSongs.pdf",
+            "probable_title_from_filename": "Burmese Songs",
+            "folder_context": "",
+            "path_stub_or_redacted_path": "1911/GrantBrown-1911-BurmeseSongs.pdf",
+        }
+        batch_row = {
+            "file_name": "GrantBrown-1911-BurmeseSongs.pdf",
+            "path_stub": "1911/GrantBrown-1911-BurmeseSongs.pdf",
+            "language_scope_guess": "Burmese",
+        }
+        self.assertEqual(
+            production.inscriptional_relevance_class(
+                batch_row,
+                manifest_row,
+                Counter({"translation_marker": 1, "text_marker": 1}),
+                Counter({"translation": 1, "text": 1}),
+                [],
+            ),
+            "general_burmese_text_translation",
+        )
 
     def test_language_scope_keeps_pali_literature_as_pali(self) -> None:
         manifest_row = {

@@ -1,0 +1,579 @@
+[[page 1]]
+SOME EXAMPLES OF DEPLETION OF MEANING IN BURMESE*
+Dr Kathleen Forbes §
+In his article "On the Semantic
+Structure of Language”, in Universals of
+Language (1963) 114 ff., Uriel Weinreich
+remarks (p.114f) that depletion of meaning
+is probably a universal phenomenon. It
+is a familiar fact that historically many
+morphemes which now have grammatical
+function only, originally were full words
+which gradually (often in compounds)
+came to have purely grammatical function.
+Sometimes the independent morpheme
+with full meaning was lost altogether
+while it became an affix in combination
+with other forms. A good example of
+this is the history of the English suffix
+which
+-hood, on
+the Oxford English
+Dictionary has the following: "Orig. a
+distinct sb., meaning 'person, personality,
+sex, condition, quality, rank' (see HAD sb.)
+which being freely combined with nouns,
+as in O.E. cild-hád child-condition, mæçð-
+hád virgin state, papan-hád papal dignity,
+ceased at length to be used as a separate
+word, and survived as a mere suffix, and
+is thus noteworthy as a late example of the
+process by which suffixes arose." Some-
+times the full word remained in use, but
+was no longer closely associated with the
+phonetically identical bound form with
+purely grammatical function: e.g. -less,
+-ful identical in pronunciation with free
+forms less, full in: hopeless, senseless,
+hopeful, careful, wakeful etc. Combinations
+with less would probably not be inter-
+preted by the ordinary native speaker as
+compounds of the noun plus the free
+form less, and some combinations with-ful
+could not be interpreted as noun plus full:
+e.g. wakeful.
+Burmese is interesting in that many
+elements that have grammatical function
+can be readily identified with full words.
+Such are: (1) the morpheme -:; (2) classi-
+fiers and repeaters; (3) the noun-forming
+morpheme :; (4) the verbal noun for-
+ming morphemes - 5c:, -am, −4, −6q:;
+(5) ကိုယ် in ကိုယ့်ဟာကိုယ်
+The forms listed above are marked as
+empty morphemes, i.e. morphemes posses-
+sing grammatical function, rather than
+conveying lexical meaning, not on the
+grounds of meaning or lack of meaning
+that it seems necessary to attribute to them
+in translation (cf. Gleason, An Introduction
+to Descriptive Linguistics (1955) p.77), but
+because they have one or more of the
+following characteristics:- they are compul-
+sory in certain contexts and therefore non-
+contrastive and meaningless in that context
+(some classifiers and repeaters); as bound
+forms in some contexts they occur in free
+variation with other forms with no differ-
+-
+ence of meaning (-ခြင်း, -ချက်, ရေး, မှု့ ကိုယ်,
+and some repeaters and classifiers their
+free counterparts are not mutually inter-
+changeable); they can be freely combined
+with any morpheme of a certain class (—č:
+* Read before the Language and Cultural Research Division of the Burma Research Congress
+held in Rangoon on 20th March 1968 with Professor Myo Min in the Chair.
+§ Lecturer in English, Art and Science University, Mandalay.
+JBRS, LI, i. June 1968.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 2]]
+24
+and - in certain contexts, :); the bound
+morpheme pairs up with a different
+(feminine) counterpart from the free form
+(-:). On this process in general, cf.
+Vendryes, Language (1925) 164–171. Each
+of the Burmese morphemes or sets of
+morphemes mentioned above will now be
+considered more fully in relation to
+these characteristics.
+(1) The Morpheme-
+-: in such forms as
+“best”,
+Dr K. Forbes
+really redundant since it adds nothing to
+the meaning of voow.
+(2) Classifiers and Repeaters
+The term "classifier" is often applied
+to all morphemes occurring as the third
+term (X) in the patterns: noun + number + X
+or naun + X + number. The latter pattern,
+or the pattern noun + number, is used when
+the number is 10 or a multiple of 10. For
+references to the literature on Burmese
+classifiers, see Hla Pe, "A Reexamination
+of Burmese Classifiers", Lingua 15 (1965)
+163-4. Hla Pe continues his paper with a
+full description of this class of words.
+Both he and Cornyn ("Outline of Burmese
+Grammar", Language Dissertation No. 38
+(1944) sects. 141-148) divide classifiers into
+three types, which Hla Pe terms "classi-
+fiers".
+"repeaters", and "quantifiers".
+"Classifiers" is the term he applied to
+morphemes used for specific classes of
+objects, e.g, - for round and square
+things, for pagodas and images of
+Buddha, -swɔm for people. He uses the
+term "repeater" when the morpheme
+following the number is the same as the
+morpheme preceding the number, as in
+360: "heaviest" can be identified with
+the free form : “end” (cf. vb. : “come
+to an end, die"). In combination with
+verbal nouns in -, as memoε etc., -
+seems to have only grammatical function,
+equivalent to the English superlative suffix
+-est, thus from o "hot" we have so
+"hottest". Quite apart from how one
+translates it, the weakened meaning of -x:
+is indicated by the fact that it can be com-
+bined with any verbal noun in
+when the verbal noun is not used independ-
+ently, and always conveys the same sort of
+meaning as a superlative affix. That these
+combinations of 3− + Vb. + −×: are not
+ordinary compound nouns is shown by the "one house", "one
+300 even
+>
+fact that such forms in -: cannot be
+qualified by other nouns or qualifiers,
+though Burmese nouns normally can be so
+qualified. Forms in -: typically occur as
+qualifiers before nouns or as a predicate
+with_ဘဲ/ဖြစ်သည် “is”.
+-: can not only be combined with
+any verb with the prefix --, but also with
+some words in - which do not seem to
+be derived from verb stems, e.g.
+"behind", : “last”;
+“in front”,
+-
+အိမ်ဘအိမ် “one ပုလင်းတပုလင်း
+bottle", "one plant” (182 ff).
+“Quantifier” is his term for all morphemes
+following the numeral which imply
+measurement (of weight, size, distance etc.),
+e.g. ကာဖီတပေါင် “one pound of coffee, အဝတ်
+"one yard of cloth". Hla Pe's
+terminology is followed in this paper.
+To the extent that any classifier etc. is
+obligatory after a given noun plus numeral,
+or is in free variation with one or more
+other morphemes in that position, that
+classifier (repeater) has in that context
+meg: "foremost"; cul "above", csuffered depletion of meaning. In fact,
+အရှေ့ဆုံး အပေါ်
+"uppermost"; also with the qualifier vœu
+"first", ooow (ဦး)ဆုံး “first”, where --(ဦး) is
+JBRS, LI, I, June 1968.
+where a classifier really is obligatory
+and does not play a part in a system
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 3]]
+Some Examples of Depletion of Meaning in Burmese
+of contrasts, it is meaningless there even
+though it is one of a large set of similar
+classifiers (or repeaters) from which the
+choice of a suitable term is governed by
+the nature of the preceding noun.
+Clearly, since in this paper we are
+only concerned with the extent to which
+certain morphemes have suffered weakening
+of meaning, we will not be concerned
+with the quantifiers, since presumably any
+morpheme indicating a measurement must
+belong to
+25
+For compounds, the compulsory
+repeater often consists of the second member
+of the compound, e.g.စာအုပ်တအုပ်, စာရွက်တရွက်
+သစ်ပင်တပင်
+"one book", "one piece of
+paper", "one tree". This repeater, even
+more obviously than in the case of classi-
+fiers, adds nothing to the meaning of the
+whole. Where two classifiers can alternate
+freely after certain nouns with no contrast
+of meaning, these, too, are meaningless;
+so one can say: လူတယောက်လူတဦး “one man”,
+အိမ်တအိမ်/အိမ်တဆောင် “one house”. I know of
+classifiers are
+contrastive in that they can both follow
+the same noun, which has a different
+meaning in each case: “one bird”,
+but also coo: "one sampan". The different
+classifiers here are of course directly
+related to and required by the contrast-
+ing meanings of ငှက်
+only one case where two
+a larger set of contrasting
+morphemes, and anything of which we
+state the size must be capable of variation
+in size, so that no quantifier could be
+absolutely obligatory with any given noun,
+and therefore meaningless. Thus 80000
+"viss" is one of a set of morphemes
+indicating weight, including co.
+အစိတ်သား etc. Words which are not so
+obviously terms of measurement may be
+02.
+used in the same way: e.g. နွားနို ့ပိဿာ
+can be contrasted with နွားနို ့တခွက်, နွားနို ့
+Likewise, to my knowledge,
+တပုလင်း etc.
+there are no two or more quantifiers which
+show depeletion of meaning in that they
+are interchangeable without any difference
+of meaning.
+(3) The Noun-forming Morpheme – ɔɔɔ:
+သား
+: as a free form meaning "son"
+contrasts specifically with သမီး “daughter".
+::
+But : also often occurs as the second
+member of compounds, and it is here
+that depletion of meaning is perceptible.
+In some compounds, --သား has a corres-
+ponding feminine form in -: like the
+free form, so in ec: "prince", fem.
+"princess", sax: "Tuesday-born child
+(male)", fem. a, where the meaning
+of-o: is clearly the same as in the sim-
+plex, though it is less obvious in [::/
+fem. "citizen (male/female)". In
+these cases there is no formal indication
+of weakening or divergence of meaning of
+-သား in compounds as compared with သား
+as a free form.
+On the other hand, it is probably
+true to say that classifiers and repeaters
+are normally meaningless. For in many
+cases, a given classifier or repeater is
+obligatory after a particular noun. Thus
+the only way of saying “one dog”, “one
+ring”, “one monk", is ခွေးတကောင်, လက်စွပ်
+တကွင်း, ဘုန်းကြီးတပါး, where the classifiers-
+‘‘ကောင်,~ကွင်း-ပါး, contribute nothing to the
+total meaning of these expressions.
+Similarly, a repeater also is often
+compulsory, so that for “one village”
+“one sect”, one can only say: ရွာတရွာ, ဂိုဏ်း ကျောင်းသား / - သူ, “male / female student',
+4-U.P.-H 42-1,000 + 100–11-2-69.
+By contrast, there are many other
+compounds of : for which the feminine
+counterpart is formed in
+20 as in
+-
+-
+'
+JBRS LI, i, June, 1968.
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 4]]
+-
+26
+-
+Dr K. Forbes
+-
+69°
+ရွာသား / − သူ “male / female villager", မိသားcombination with dissyllabic verbs, – ရေး
+- သူ “townsman / townswoman", ရှံသား
+-
+- "male/female officeworker". Some
+other compounds in
+femi-
+သား have no
+nine counterpart at all, e.g. coб: "worker",
+600000: “boatman”, သင်္ဘောသား ““sailor”, ထောင်
+သား “prisoner in goal”, အချုပ်သား “prisoner
+under trial".
+-
+-
+In many of these compounds, especial-
+ly the last group, one would not
+feel there to be any semantic connex-
+ion between သား and the simplex သား
+"son". The link between free
+သား and
+bound ɔɔ, already weak on the seman-
+tic level is further weakened on the mor-
+phological level where the bound mor-
+pheme contrasts with a different feminine
+form from the free morpheme or has no
+corresponding feminine form at all. To
+some extent, then, there is evidence that
+bound: where it contrasts with -
+28
+or zero in the feminine has become little
+more than a derivative affix which is
+slightly productive: ကျောင်းဆောင်သား and
+ရုံးသား … at
+least are presumably
+coinages.
+recent
+(4) The Verbal Noun Forming Morphemes
+-ခြင်း, — ချက်, - ရှေး,
+Ji
+As free forms, etc. have the
+following ranges of meaning: :"act,
+behaviour”, aq "matter, business”, a
+"business, affair", or "a lawcase",
+"subject, matter". These meanings still
+appear in combinations with other nouns,
+အချက်
+စစ်ရေး “matters of war, warfare", ပညာရေး
+education, "a case of thefi”, မှတ်ချက်
+I JL
+"remark" etc.
+-
+or ajo may alternate with
+-
+↳ without
+J₁
+တိုးတက်ရေး
+any difference of meaning, i.e. they are
+not contrastive. For example, from
+and both mean "improvement",
+တိုးတက်မှု
+ကျန်းမာရေး and ကျန်းမာမှု mean “health”, ခံစား
+ချက် and ခံစားမှု mean “experience”, လိုအပ်ချက်
+and mean "requirement". In the
+second place, a verbal noun could proba-
+bly be formed from any dissyllabic verb
+with the aid of one of the three morphemes
+698, ajo or Dissyllabic verbs
+are not commonly combined with - ε:
+in this way, though we do find::::
+“1ss”, ချီးမြှင့်ခြင်း “honour”, အံ့ဩခြင်း “sur-
+-
+prise".
+-
+ချက်
+•
+JL
+There is in addition another kind of
+construction in which
+-
+Eε: and can be
+used. It seems to me at present that
+within the Burmese sentence, four types
+of sequence with nominal function have
+to be distinguished:
+(a) Sequences in close juncture in
+which one element is a noun, the other
+element(s) free or bound morpheme(s)
+which could be combined with any member
+of the noun class. Thus in
+လူများ
+and
+ကလေးသို့, the morphemes – များ, တို့ could be
+combined with any member of the noun
+class. We can call these simple nominal
+constructions.
+(b) Sequences in close juncture in
+which both or all the members are nouns
+or verbs, and in which no member could
+as in: q: “state matters, i.e. politics", be freely combined with all morphemes
+of the same class as one of the other
+members. Thus in
+"mad dog", ca:
+ခွေးရူး
+is a noun, gi a verb, but cannot be
+ခွေး
+combined freely with any member of
+the verb class, nor can q: be combined
+freely with any member of the noun
+class. These are what we ordinarily call
+compound nouns.
+But when the morphemes (3) : etc.
+are combined with a preceding verba!
+a preceding verbal
+constituent, loss of meaning in the noun
+element is evident. In the first place, in
+JBRS, LI, i, June 1968.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 5]]
+Some Examples of Depletion of Meaning in Burmese
+(c) Sequences of two nouns in which
+the second is normally polysyllabic and
+often itself a compound, and which are
+not in close juncture, but form a kind of
+fixed unit. For example, opposes "educa-
+tion deparment", cmc: "schoolmaster",
+sqa "refrigerator”. Characteristically,
+in these cases the transition is rather
+swift between one unit and the next,
+sometimes to the point of the final vowel
+in the first unit being shorter than it
+would be before a pause, as in es
+Normally no pause would occur between
+the parts of these sequences even in slow
+speech. Neither member could be freely
+interchanged with other nouns.
+call these noun phrases.
+We may
+(d) Sequences of any number of mor-
+phemes which as a whole have the gram-
+matical function of a noun, but of which
+not all the parts are in close juncture,
+and which do not form a closely knit
+unit. The various parts would generally
+be freely interchangeable with a large
+27
+bal nouns. But there is some difference
+between the use of - and: to form
+verbal nouns like and the use of
+the same morphemes to transform whole
+clauses into nouns. First, in this usage
+some
+-
+&: is very common, though it rarely
+seems to be used to form simple verbal
+nouns with dissyllabic verbs. Secondly,
+in open nominal constructions – ε: and
+- can be combined with any verb whether
+monosyllabic or dissyllabic, whereas in
+compounds the verb is very rarely mono-
+syllabic. Thirdly, a variety of morphemes.
+of them also verbs, some of
+which are other-
+them verbal affixes,
+wise only attached to finite verbs, can also
+be retained between the verb and ε: or
+Such forms are: -es indicating a
+continuous state of affairs, 09- sometimes
+indicating obligation or necessity, the affix
+-- which can be added to the verb when
+it has a plural subject, an affix
+indicating past time, and the negative
+verbal prefixe-. The following are typical
+examples of this use of -: and -W (1)
+-
+number of other morphemes. These mayခြင်း လွတ်လပ်ရေး ကြိုးပမ်းခဲ့ကြစခြင်းများနှင့် လွှတ်မြောက်
+be called complex nominal constructions.
+For example, ဒီနေ့ဝယ်တဲ့ဟာ မနေ့ကလာတဲ့လူ ပြုသည်။ “They became free througlh their own
+sequence functioning as a noun could
+combine the features of (a), (d) and (c)
+or (b).
+It is with the occurence of - w and
+: in sequences of the last type, complex
+nominal constructions, that we shall be
+concerned with next. For it seems to me
+that it is here above all that the morphe-
+mes have become mere grammatical units
+serving to transform a sequence with a fi-
+nite verb into a noun, so that it can function
+as the subject, object etc. of the sentence. In
+these cases, - and -: are combined with
+struggle for freedom” (note the morphemes
+bctween the verb ကြိုးပမ်း
+-9-
+and here). (2) -
+11
+-ခြင်း အမေရိကန်က ဗြိတိန်အပေါ်
+ဆက်လက် ယုံကြည်နေမှုအပေါ်တွင် တည်နေသည် ။ “It
+depends on America's continued trust in
+Britain".
+The morphemes -
+seem to be used in this
+and
+--ရေး
+do not
+way. But some-
+times, and may be added to
+-
+a sequence larger than a verb, but still
+forming a stereotyped unit:-e.g. cumɔqui
+"request",
+"livelihood”, ကွင်း
+the verb morpheme in close juncture just as ဆင်းလေ့လာချက် “held study”, ငြိမ်းချမ်းစွာအတူနေရေး
+they could be combined with verb stems to
+form compounds which in effect are ver-
+စိတ်ကူးယဉ်မှု
+"peaceful coexistence", "wishful
+thinking". These are better classed as
+JBRS, LI, i, June 1968.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 6]]
+28
+Dr K. Forbes
+noun phrases (see above) than as complex comparable to the weakening of the mean-
+nominal constructions.
+ing of body in somebody, nobody in English.
+Conclusion
+(5) The Morpheme
+is another morpheme which has
+a full lexical meaning ("body") in many.
+contexts (e.g. in "(his body is
+hot", i.e. "he is feverish"), but in the fixed
+patterns, the morpheme has main-
+ly the function of emphasis, as in
+"he came himself". That
+does not have the lexical meaning of
+"body" here that it has as a free form is
+shown by the fact that
+can
+alternate freely with သူဟာသူ, ငါဟာငါ etc.,
+where the pronoun will correspond with
+the pronoun of the subject. All these
+expressions have the meaning of "self".
+Thus, "he himself came" can be translated
+သူ ကိုယ်ဟာကိုယ်လာသည်သူဟာသူလာသည်; “I myself
+did it" can be translated
+ငါ ဟာငါလုပ်သည်။ The weakening of the mean-
+ing of ကိုယ် in the expression ကိုယ်ဟာကိုယ် is
+In all the morphemes discussed above,
+loss of meaning to a greater or lesser degree
+is apparent.
+In his paper on the Burmese classifiers,
+Hla Pe remarks (op. cit. p. 167 ff) that
+classifiers appear already in the earliest
+Burmese inscriptions and are also used in
+some of the other Sino-Tibetan languages.
+A historical study not only of the classifiers
+and repeaters but also of the other
+morphemes discussed in this paper would
+be especially interesting if it should be
+possible to show how the loss of lexical
+meaning came about. It would also be
+interesting to know whether in the other
+languages of Burma morphemes of similar
+meaning show parallel development.
+JBRS, LI, i, June 1968.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 7]]
+Page Column Line
+31 (2
+1-3
+CORRIGENDA
+Read
+IV. Pre-Tibeto-Burman or Mixed
+Languages. The MRO or
+MRU of North Arakan (not
+to be confused with the
+For
+between the ever expanding
+Agricultural Chinese of the
+Middle and Lower Yellow
+River, and the Hunter
+32 1 1-3
+"
+between the ever expanding
+Agricultural Chinese of the
+Middle and Lower Yellow
+kiver, and the Hunter
+Or
+The
+IV. Pre-Tibeto-Burman
+Mixed Languages.-
+MRO or MRU of North
+Arakan (not to be confused
+with the
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.

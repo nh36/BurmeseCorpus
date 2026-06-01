@@ -1,0 +1,664 @@
+[[page 1]]
+SEASONAL FLUCTUATIONS IN THE BURMESE
+ECONOMY'
+by
+R. M. Sundrum, B. A., B. L., Ph. D. 2
+( 1 ) Background of the Investigation
+This paper may be considered as an interim report on one line of
+research being conducted by the Economics Research Project of the
+University of Rangoon. This line of research is concerned with the
+compilation of a Business Indicator for the Burmese economy. A
+business indicator to be a useful measure has to reflect sensitively even
+fairly small changes in the economy and has therefore got to be based
+on time series which are themselves reliable in the sense of portraying
+accurately and promptly significant changes in the factors influencing
+business activity. As a preliminary, therefore, to the construction of
+an Index of Business Activity, it was thought desirable to collect a
+number of relevant time series and subject them to some sort of check
+on the question of their overall accuracy, and the promptness of their
+publication. One aspect of this check is to study the story they tell of
+the seasonal fluctuations in the economy, verifying the results of analy-
+sing each time series both with general impressions of academic students
+members of the business community and officials of the administration
+who understand the seasonal rhythm in the motion of our economy,
+and in regard to the mutual consistency of the various time series.
+Hence the present investigation.
+(2) Method of Analysis
+The main statistical technique used in the present investigation to
+isolate seasonal movements from broader changes in the economy has
+been a 12-month moving average centred at calendar months to permit
+of comparisons; ratios to such a moving average were computed, and
+averaged over as many post-war years as statistical data permitted, and
+then adjusted to have a mean over the year of 100.
+1. Read on 16th December 1954, with Dr. Htin Aung in the Chair.
+2.
+Lecturer in Economics & Statistics, University of Rangoon; and also
+Director of Central Statistics & Economics Department, Ministry of
+National Planning.
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 2]]
+SEASONAL FLUCTUATIONS IN BURMA
+.53
+This is usually considered one of the most satisfactory methods of
+isolating purely seasonal factors. It was not felt useful to go in for
+greater refinements that were theoretically possible but not advisable in
+this preliminary study. However, we must mention straight away a
+number of weaknesses of the method. If the present method is applied
+to any series whatsoever, whether it is sensibly affected by seasonal
+fluctuations or not, we will end up with seasonal indices which will
+generally show some departures from annual averages, and the impor-
+tant theoretical question arises whether they do indicate a definite
+seasonal pattern, or whether they should be considered, from a statisti-
+cal point of view, as mere sampling effects. This question might have
+been settled in each case by an appeal to analysis of variance or other
+tests of seasonality, but again it was felt that the assumptions to be
+fulfilled in such analyses would not be justified in the present case
+and a full theoretical test had to be postponed. Instead, some remarks
+are appended in the appropriate places as to the intensity of the
+seasonal effects revealed by the moving average method.
+As explained before, the study is mostly confined to the post-war
+period from 1946 onwards. Most of our series have thus been very
+short, and too much reliance should not therefore be placed on the
+final results. In addition to the shortness of the time series on which
+we are operating, these years have been disturbed times and perhaps
+our method of analysis tends somewhat to exaggerate the abnormal
+- situations in some years over a much longer period and thus to distort
+the picture somewhat. This is to be seen particularly with data relating
+to the Burma Railway earnings.
+In spite of these limitations of our sources of information and our
+method of analysis, it is felt that the final picture that is revealed of
+the seasonal movement of the Burmese economy is interesting, and
+useful in indicating, however roughly, the direction of changes, even
+if the quantitative effects may not be too reliable. The research
+workers on this project have been only too well aware that perhaps
+after all they may not be producing information that is not already
+well known among the people for whom this is meant. Still, our
+business community is young and particularly the present tendency of
+the administration to guide and control the business world somewhat
+inexperienced and it is hoped that they might possibly benefiit from
+some of the conclusions which we have ventured to draw in the
+following pages.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 3]]
+54
+R. M. SUNDRUM
+We must mention that most of the data on which the following
+analysis is based is published in the Quarterly Bulletin of Statistics,
+issued by the Central Statistical and Economics Department of the
+Ministry of National Planning, though in some cases we have had to go
+to the original sources of such data. One of the incidental purposes of
+this investigation is to suggest to agencies concerned with collection of
+statistical data some directions in which their work may be developed
+in view of the possible uses to which they might be put in such work of
+statistical analysis.
+(3) Prices
+We begin with a study of price movements. Two important price
+series were used, namely:
+-
+I (a) Wholesale Price Index of Agricultural products published
+in the Quarterly Bulletin of Statistics (hereafter referred to
+as Q. B. S.) from June 1950 to June 1954.
+I (b) Consumers' Price Index (including Rent) for a Burmese
+family, prepared by the Directorate of Labour, from
+January 1947 to May 1954.
+The wholesale Agricultural Price Index shows a smooth movement,
+high from June to December, and low from January to May. This is
+perhaps only to be expected, though the period of high prices lasts
+perhaps a little too long. The Index is an unweighted average of prices
+of 5 groups of article, cereals, pulses, oilseeds, other foodstuffs and
+non-foods. In view of the overwhelming predominance of the cereals
+group, this method tends to underweight the prices of that group.
+The Consumers' Price Index tends to follow roughly the same
+movement, though its high and low periods tend to occur a little earlier
+than those of the Wholesale Agricultural Price Index. It is natural
+that agricultural prices dominate the movement of the Consumers'
+Price Index, but a search among the price series of individual
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 4]]
+SEASONAL FLUCTUATIONS IN Burma
+110
+100
+90
+(a)
+(b)
+CHART I
+--- (a) Wholesale Price Index of Agricultural products 1950-54.
+(b) Consumers' Price Index 1947-54.
+---
+Table 1
+Mo.
+(a)
+(b)
+J
+A
+14 M¬¬d GOZA
+94.91
+96.60
+F
+92..75
+95.67
+M
+92.95
+94.60
+94. 10
+94.48
+96.35
+98.02
+100. 11
+107.85
+104.11
+108.86
+A 106.36 108.08
+[05.72 106.31
+0 105.20 99.48
+N 106.64 95.83
+D 100.89 94.20
+55
+.constituents of the Consumers' Price Index suggests that the movement
+of prices of fish and fish products might explain a not inconsiderable
+part of the overall movement. So a study was made of the conditions
+relating to the Fish group. Three series were taken into account,
+namely:-
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 5]]
+56
+R. M. SUNDRUM
+II (a) Retail Price Index of fish and fish Products at Rangoon,
+published by Q. B. S., from January 1950 to June 1954.
+II (b) Imports of Fish and Fish Products compiled by the
+Customs Department, from October 1950 to March 1954.
+II (c) Unit Value Index of Imported Fish, calculated from
+Q. B. S., from October 1950 to March 1954.
+120
+Filsh
+Prices
+110
+100
+901
+(a)
+CHART II
+(a) Retail Price Index of Fish and Fish Products at Rangoon, 1950-54. 1200
+(b)` Imports of Fish and. Fish Products 1950-54
+(c) Unit Value Index of Imported Fish and Fish Products, 1950-54.
+Fish
+Imports
+150'
+100
+☑
+Table I
+Mo.
+(α)
+(b)
+(C)
+50
+NEMA MOZA
+J
+F
+94.88
+92.74
+79.98 105.26
+76.44
+93.63 124.12
+94.69 80.11
+99.33
+99.91
+103.32
+100.26 79.86 102.79
+105.28 170.78 106.80
+J
+116. 17
+175.94
+112.56
+111.06
+146.93
+105.43
+105.49
+89.83
+68. 15
+98.92
+57.49
+86.84
+N
+D
+93.31
+93.58
+66.90
+94.12
+51.63
+95.49
+A comparison of series I (b) and II (b) shows very strikingly that
+the behaviour of fish prices parallels very closely the movement of the
+Consumers' Price Index. This is not surprising in view of the large
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 6]]
+SEASONAL FLUCTUATIONS IN BURMA
+57
+weight assigned to Fish and Fish Products in the Budget of the family.
+We may therefore conclude that in addition to the influence of the
+prices of agricultural products involved in the cost of living, fish prices
+also contribute substantially to the seasonal movement of the
+Consumers' Price Index.
+It was thought interesting to study also the seasonal movement in
+the imports of fish and fish products into Burma; the series II (b).
+indicates the highly seasonal nature of these imports, the high imports
+occurring precisely in the period of high local prices, while series II (c).
+shows further that the price movements of these imports also follow
+closely the movement of domestic prices of that group of
+commodities. These
+These facts are of interest in any study of the
+regulation of the imports of fish products, where it must be remembered
+that they serve primarily to meet the seasonal shortage and also that
+the period of large imports coincides with the period of high prices of
+these products. It is also of interest in any study of the possibilities of
+stabilisation in the cost of living over the year.
+(4) Foreign Trade
+Having started with one group of imports we proceed now to study
+the seasonal pattern of our foreign trade as a whole. The Customs.
+data reported in the Q. B. S. was used, and two series were first studied.
+with the following results :—
+III (a) Value of General Imports of Burma, from October 1949
+to March 1954.
+III (b) Value of General Exports of Burma, from October 1949
+to March 1954.
+These results are based on very short time series, and have been
+particularly affected by the great instability of the post-war period in
+Burma. It is possible that with more data, pattern of trade may show
+a different picture. In any case, it is useful to compare the pattern of
+post-war trade as shown by the above results with the pre-war pattern..
+Two other series for imports and exports of the pre-war were studied,
+from data published in the pre-war Burma Trade Journal:-
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 7]]
+58
+1401
+120
+100
+80
+(9)
+A
+(a)
+1
+1
+CHART III
+1
+(a) Value of General Imports, 1949-54.
+(b) Value of General Exports, 1949-54. \
+Table II
+Mo
+(a)
+(b)
+J
+99.08
+73.73
+F
+A
+60
+* Mnd Wom0
+85.66
+82.05
+M
+87.43
+137.30
+82.97
+115. 50
+90.92
+138.96
+87.60
+123.58
+107.59
+92.94
+106.84
+106.27
+110.01
+84.31
+86.86
+61.40
+116.93
+80.15
+138.11
+102.87
+0
+R. M. SUNDRUM
+IV (a) Value of Imports, from January 1929 to December 1939.
+IV (b) Value of Exports, from January 1929 to December 1939.
+Considering first the pre-war pattern, we observe that imports and
+exports tend to have the same seasonal movement over the year, but
+imports are much more stable, as is only to be expected under normal
+conditions. As is also to be expected, the volume of imports begins to
+rise in the later part of the calendar year before the exports do, as the
+demand for imports is stimulated by the post-harvest increase of
+business activity inside the country, whereas it takes a much longer
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 8]]
+SEASONAL FLUCTUATIONS IN BURMA
+59
+time before the new crop is ready for shipment. In this period of rice
+shipments, from February till about June, there is a dip in the index
+for both imports and exports, for the month of April, for which I have
+not been able to find any explanation. The fact that imports and
+exports tend to follow the same seasonal movement in the years before
+the war also helped the better utilisation of shipping space, and to
+some extent, reduced the amount of foreign exchange reserves that
+would have been required to transact the foreign trade of the country.
+Compared with this position before the war, the post-war pattern
+shows a great change. Firstly, the value of imports appears to
+fluctuate almost as much as export values (considering proportions).
+120
+100
+160
+140L
+}
+Pal
+CHART IV
+Table IV
+Mo.
+(a)
+(b)
+SEMA UNA DOZA
+J
+1:4.16
+97.41
+103. 66
+100.72
+118.06
+156.49
+96.52
+103.84
+M
+110.49
+121.38
+J
+97.51
+104.36
+j
+90.95
+93.94
+95.85
+89.35
+5
+86.37
+81.64
+95.56
+82.83
+N
+96.94
+86,79
+95.93
+81.22
+---
+(a) Value of Imports, 1929-39.
+(b) Value of Exports, 1929-39.
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 9]]
+60
+R. M. SUNDRUM
+Secondly, imports and exports appear to be concentrated in different
+parts of the year. It is interesting however to note that the dip of
+both indices in the month of April continues in this period, though
+much less noticeably for imports.
+One consequence of the fact that imports do not any longer
+follow the same pattern of seasonal fluctuation as exports is that
+Burma tends to suffer from less effective utilisation of shipping space.
+This is already aggravated by the fact that our imports are of the
+compact type of goods, whereas our exports are of the bulky type, a
+factor which led even in pre-war times, to the fact that 20 per cent of
+incoming merchant shipping was in ballast, while only 9 per cent of
+outgoing merchant shipping was in ballast. The position regarding the
+post-war period is not so clear. It appears that the percentage in
+ballast of incoming shipping has been consistently higher, whereas the
+percentage for outgoing shipping has varied about the pre-war figure.
+The fact that imports tend to pack towards the end of the calendar
+year is also reflected in the pattern of our current receipts and
+expenditures of foreign exchange. For a number of post-war years,
+large deficits in current transactions tend to occur about September or
+October, so that exchange reserves earned in the early part of the year
+from our exports have to be tied up for a rather long time to meet the
+large imports of the latter part of the year.
+It is interesting to speculate on the causes of this change in our
+trading practice. The most significant fact, of course, is that the post
+war period has been one of fairly stringent trade control. However, it
+still remains to be explained why such shifts have occured, especially in
+the pattern of our imports. Although the data on which the present
+analysis is based are not entirely adequate for firm conclusions, the
+facts thrown up here must be taken into account in any appraisal of
+this period of trade control and in any future reformulation of such
+trade policies with a view to promoting economic use of shipping space
+and of our exchange reserves.
+(5) Transport
+We next consider some series connected with the volume of trans-
+port activity, itself a useful indirect index of business activity. Only
+two series were available, Earnings of the Burma Railways, and
+Earnings of the Inland Water Transport system. Attempts to get
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 10]]
+SEASONAL FLUCTUATIONS IN BURMA
+61
+corresponding series for petrol sales, indicating the volume of traffic on
+the highways, were not successful. The series used were therefore:
+V (a) Burma Railway Earnings, from October 1949 to Septem-
+ber 1953. Information is available for Railway earnings
+for earlier periods, but these are found to be very much
+affected by the disturbed conditions of the country during
+that period, and had to be ommitted from the present
+calculations.
+V (b) Freight and Passenger earnings of the Inland Water
+Transport system from October 1948 to June 1954.
+130
+120
+110
+100
+90
+80
+(a)
+A
+1
+CHART V
+((a) Burma Railway Earnings 1949-53.
+-- (b) Inland Water Transport (Freight and Passenger) Earnings, 1948-54.
+---
+S
+>>M< M¬>4 00ED
+Table V
+Mo.
+(a)
+(br
+J
+32. 75
+92.26
+F
+119.90
+100.20
+113.75 114.92
+A
+124.16
+87.77
+113.66
+100.12
+114.02
+97.79
+101.82
+94.16
+A
+83.08 100.72
+81.71
+83.77
+130.67
+83.33
+M
+83.34
+91.50
+88.03
+10. 55
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 11]]
+62
+R. M. SUNDRUM
+The
+On examination, the statistics obtained regarding the earnings of
+the I. W. T. are found to be unsuitable for our present purpose.
+peak in March is reliable and the dip in April is explained as being due
+to the conditions of the tides during that month. Apart from that, the
+other indices are either unreliable statistically, or the data on which
+they arise are not satisfactory. For example, the peak in September
+looks suspiciously like the consequences of the closing of accounts at
+the end of the fiscal year, and therefore not to be taken too seriously
+for our present purpose.
+On the other hand, for the periods tudied, the seasonal pattern of
+the railway earnings seems fairly stable. It is interesting when compar-
+ing this with the indices for Exports of the country, III (b), to find a
+very close correspondence. The obvious explanation is that the Burma
+Railway activity is chiefly influenced by the conditions relating to the
+export trade. The relative importance of the Railways in the handling
+of the rice export is indicated by the fact that in 1950-51, Railways
+handled 27.5 per cent of the total volume exported, and that in 1951-52,
+this proportion went up to 36.50 percent.
+On the other hand, we may draw the conclusion that domestic
+trade does not seem to enter very significantly into railway activity.
+This is interesting from the point of view of Transport Policy, in a
+developing economy, for it would be desirable for improvement in
+transport measures to play a really effective part in the development of
+the domestic market for local produce.
+(6) Finance
+We take up finally three time-series concerning monetary and
+and financial data.
+VI (a) Notes and Coins in Circulation, data published by the
+Union Bank of Burma, from January 1952 to March
+1954.
+VI (b) Value of Bank Clearings, data published by the Union
+Bank of Burma, from January 1948 to February 1954.
+VI (c) Loan and Advances of Commercial Banks, data published
+by the Union Bank of Burma, from July 1950 to
+December 1953.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 12]]
+SEASONAL FLUCTUATIONS IN BURMA
+130
+CHART VI
+1:20
+Mo.
+Table VI
+(b)
+(C)
+125.4
+-(Q)
+96.84 105.43
+108.30 94.69 127.1
+116.19 104.96 116.7
+A 116.19 88.78 105.3
+F
+M
+NEW NUTA Sozo
+M 111.32 105.89 101.0
+106.45 109.41
+90.7
+101.41 110.89 91.8
+97.93 98.80 85.9
+J
+92.25 102.30 83.7
+86.45
+96.58
+84.8
+N
+82, 11
+86.75
+89.7
+D
+84.53
+95.55
+97.6
+110
+100
+V
+90
+80
+-
+11
+11
+(c)
+- (a) Notes and Coins in Circulation, 1952-54.
+-(b) Value of Bank Clearings
+1948-54.
+---- (c) Loans and Advances of Commercial Banks.
+63
+The first two series may be considered as describing changes in the
+money supply as affecting the two sectors, one predominantly using
+notes and coins and the other banking sector, i.e. the sector of import
+and export trade and urban business in general. The third series shows
+loans and advances of the commercial banks.
+The seasonal patern of the graph VI (c) shows very clearly that the
+loans and advances of the commercial banks are issued primarily in the
+stage of assembling the paddy crop. There are some year to year
+variations of the timing of the peak but the concentration at the peak
+is noticeable. This indicates that even with the present resources of
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 13]]
+64
+R. M. SUNDRUM
+the banking system, possibilities of credit creation lie unused for quite
+the major part of the year; the magnitude of this sort of idle credit
+potential may be indicated by the fact that in 1953, for instance, the
+difference between the seasonal high and low figures amounted to
+K. 70 millions. The big problem is how this may be diverted partly at
+least to finance the cultivator's seasonal needs.
+The indices for Notes and Coins in circulation are based on a very
+short series, but they would seem to be one of the most regular forms.
+of seasonal variations in the whole group which we have been studying.
+Variations in the volume of this form of money supply are registered
+by withdrawals and returns in the accounts of the Union Bank of
+Burma, but ultimately they represent the extra money which is taken
+out of the banking system in order to purchase the annual rice crop
+from the agricultural sector. While increased withdrawls from the
+banking system early in the year can be expected to follow a fairly
+regular pattern year after year, owing to the normal practice in the
+assemblage of the rice crop, it is surprising to note that the amounts
+returned to the banking system also follow a regular pattern. The
+conclusion would seem to be that the rural population engaged in the
+agricultural sector also follows a fairly rigid time schedule in their
+economic dealings with the rest of the economy.
+The indices of Bank clearings are interesting. One would expect
+them to indicate more closely than any other series the variation of
+business activity in the urban centres. Each index in our series is an
+average of at least five years' figures and can therefore be expected to
+be fairly reliable. Still, we cannot find any simple explanation of the
+variations in this series on the basis of the other series we have studied
+so far. The irregularities in the early part of the calendar year
+appear to reflect the balance between the lull in export trade on the one
+hand and the briskness of import trade which in post-war years tends
+to occur in that period; there is the same dip in the month of April,
+which we have noticed elsewhere. In the later part of the year, this
+series follows the series for Notes and Coins, and presumably
+reflects the deflationary effect of the banks taking back the money
+supply. In the middle of the year however, clearings, show a high
+level. Perhaps the most important influence on this is the scale of
+Government expenditures, which tends to be high in this period. The
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 14]]
+SEASONAL FLUCTUATIONS IN BURMA
+65
+data on this field however are not entirely satisfactory and an exact
+analysis was not attempted. Another factor to remember is that this is
+the period of high prices in the economy.
+(7) Conclusion
+Now, we can permit ourselves some general reflections on the
+seasonal movement of our economy. We have tried to bring together
+some of the most important economic time series available. The most
+striking feature of our present analysis is that all these series have a
+large seasonal variation which seems ultimately to link up with the
+agricultural season. The net result of all this may therefore be
+summarised in the remark that, over and above the direct share of
+agriculture in the national economy, agriculture sets the pace for the
+greater part of the economic activities of Burma.
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand

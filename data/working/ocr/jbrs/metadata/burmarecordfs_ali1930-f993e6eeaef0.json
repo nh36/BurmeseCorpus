@@ -1,0 +1,14 @@
+{
+  "local_file_id": "burmarecordfs_ali1930-f993e6eeaef0",
+  "batch_id": "jbrs-ocr-2140",
+  "file_name": "BurmaRecordfs_Ali1930.pdf",
+  "path_stub": "Burmese/Burma JBRS/1930/BurmaRecordfs_Ali1930.pdf",
+  "journal": "JBRS",
+  "year": "1930",
+  "ocr_engine": "google_vision",
+  "pages_completed": 6,
+  "ocr_date": "2026-06-01T19:43:38.227129+00:00",
+  "source_category": "other_source",
+  "language_scope_guess": "Burmese",
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+}

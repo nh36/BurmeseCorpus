@@ -1,0 +1,392 @@
+[[page 1]]
+RICE STARCH PROCESSING
+by
+U Thein Nyun, U Than Nyun and Daw Than Tin 2
+Most authors maintain that rice starch cannot be prepared by
+tabling the slurries. They base their opinion on the fact that the rice
+starch granules are very minute, ranging in size from only 3 to 5 micra
+(Brautlecht). Thus when rice starch slurries are tabled the rate of
+settlement of the starch granules will be very slow. Separation, there-
+fore, is usually achieved by sedimenting and centrifuging or filtering
+the slurry. When settling vats are used, the sieved slurry can
+be diluted to the desired density with a caustic soda solution. The
+heavier impurities will then settle in about an hour. The top portion
+containing the dispersed starch can then be allowed to settle in tanks,
+where the starch separates out in two or three days' time, leaving a
+cloudy supernatant protein water. The settled starch is resuspended,
+washed and resettled and the process is repeated again. The starch
+which has settled for the third time is resuspended and filtered to obtain
+starch with a definite moisture content ready for drying; or it may be
+centrifuged directly, which though it represents a greater investment,
+actually reduces space, time and sieving operations. ³ In some
+factories imperforate bowl centrifuges are coming into popular use.
+Some other factories make combined use of sieve, vat and centrifugal
+separation and purification methods. However, the object of the
+authors is to show that the tabling method can be used in separating
+rice starch, rathar than to comment on the best possible method of
+separating and purifying the same.
+Materials and Method
+The rice starch granules are the smallest of the starches of
+commerce, the largest ones being about the size of the smallest ones of
+corn. In shape they are definitely polygonal, and because of their small
+size, features such as hilium, striations and lines are not clear even by
+polarised light. The granules may aggregate together and form
+compound granules.
+1. Read on December 22, 1955, with U Chit Thoung in the Chair.
+2. Staff of the Department of Applied Chemistry Research of the Union
+of Burma Applied Research Institute, Kanbe, Rangoon.
+3. Merco Centrifugal Co., San Francisco 11, California.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 2]]
+34
+U THEIN NYUN ET AL
+Rice starch has not, hitherto, been manufactured in Burma, but
+its manufacture is now possible even with the use of tabling methods.
+The production of rice starch presents similar problems as the produc-
+tion of maize starch, because unlike wheat starch, the gluten is not
+present as a whole cohesive structure (Jones). If once the very
+compact layer of gluten that forms the coat of each individual granule
+is properly softened, it may be possible for the purification and
+separation of the rice starch from the gluten to be effected by using the
+very same tables at Thingangyun, once used by The Indian Starch
+Products Ltd. for the manufacture of maize starch. In this starch
+production factory, fibre can be effectively eliminated by using sieves of
+proper sizes and by also using a rotary drier. Probably here, Sweco 4
+separation may be found to be superior to the present shaking sieves.
+Rice is generally classified into head rice, broken rice or screenings,
+and brewer's rice; to these a "second head", composed of the larger
+broken kernels is sometimes added. Since head rice is decidedly more
+valuable than the other qualities, it is damaged or broken rice which
+usually consitutes the starting raw material for starch prodution
+(Copland). As the processes of hulling, skinning and polishing of rice
+at the mills all involve breakage of the grains, broken rice accounts for
+20 to 50 percent of the rough rice (Brautlecht ).
+The polished and broken rice has approximately the following
+percentage composition: (Brautlecht)
+Moisture
+Protein
+10.0
+6.0
+--
+14.0
+9.0
+Fat
+0.2
+-
+0.8
+Starch
+70.0
+-
+78.0
+Sugar and gums
+0.8
+1.9
+Fibre etc.
+0.1
+0.5
+Ash
+0.4
+-
+2.0
+However, the broken rice received from S. A. M. B. for our
+experiment gives the following analytical composition :
+Moisture
+21.0
+Starch on dry sample 67.2
+4. Sweco, Div. of Southwestern Engineering Co., 4800 Santa Fe Ave, Los
+Angeles 58, Carifornia.
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 3]]
+RICE STARCH PROCESSING
+35
+We have used our analytical figures for all calculations in the
+experiments conducted to determine the outturn percentage of starch
+by the tabling method.
+Alkali steeping is an important process preparatory to the making
+of the rice slurry for sieving and tabling. It may be recalled that it
+was Jones who first described and used the alkali steeping process in
+1840, and his method is still used with minor modifications. Because
+it is important to liberate individual granules from the cementing gluten,
+steeping the rice grains in chemical agents is essential. Caustic soda is
+usually employed for this loosening effect and also to purify the starch.
+In the Department of Applied Chemistry Research of the U. B. A. R. I.,
+the first group who successfuly conducted the steeping experiments were
+Daw Kyin Yi and Ma Than Myint. They found that with the use of
+0.4% NaOH as the steeping solution, the maximum amount of water is
+absorbed by the grains at room temperature within the first 10 to 14
+hours.
+In practice, about 208 lbs. of rice (raw material or R. M.) is
+soaked in about 50 to 99 gallons of 0.3-0.5% NaOH solution for about
+21 to 48 hours in a steel tank with perforated false bottom. Initially it
+is stirred. The first lye solution is often drained off within the first 10
+hours of steeping and second steep added. At the end of steeping in
+the above reagent (R1), the steeped rice (treated material) is usually
+soft enough to crush between thumb and finger. The starchy residue
+is then thoroughly washed in water, between the hands.
+In order that the caustic soda solution that is used may not run
+down in strength, the steeping water should not be hard. It is fortunate
+that Rangoon water is not as hard as Mandalay water. In fact, it is
+soft and any salts of iron that might impart a brown colour to the
+starch can be easily eliminated by aeration and settling. It has been
+argued that some organic acids formed by enzymes and also the
+protein of rice can react with caustic soda and may weaken the
+solution. However, there was no such difficulty in our experiments.
+This steeped and washedʻrice (treated material or T.M. I) with
+about 58% of water (according to Yi) is then ground between mill
+stones to a slurry (T.M.II) of about 5-11 Be. A dilute solution of
+about 0.25% NaOH or just water (R2) is fed during milling. (See
+the experiment of September 19 to 21 for grinding results). The slurry
+(T.M.II) is then bulked with water or 0.25% NaOH (R3) to a desired
+density of about 3 to 4. Be, but never above 5. Be. Lyall and Tin.
+maintain that 3 Be should be strictly adhered to. This slurry of the
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 4]]
+36
+"U THEIN NYUN ET AL
+desired density (T.M.IIIa) is then sifted on shaking sieves fitted with a
+silk bolting of a specified quality. (See the experiment of September
+21 to 22 for sifting results). Sometimes when R 2 and R3 are plain
+water, saturated solution of lime (R 4) may be added. The slurry
+after being sifted is adjusted to a new, usually lower, density. The
+slurry (T.M.IV) is now tabled. It is at this stage only that the process
+is shunted on to a new track.
+The separation and purification of the starch, especially from
+protein hydrolysates and fibre that have passed through the sieve, is
+effected by tabling. The tables are about 22 inches wide and 85 feet
+long. Since the tables at the factory are with a slope of depression of
+about 2 to 3 inches in 100 feet, a new perfectly horizontal table was
+made. Unfortunately this table was available only for the November 12
+experiment.
+The starch on first collection (T.M.V) may be redispersed again
+and retabled for better quality, or, it may go directly to the centrifuge.
+The centrifuge used is an ordinary perforate one, which is efficient in
+separating the starch and gluten from the dissolved impurities, and
+should not be confused with the imperforate bowl type. This means
+that the starch collected from the perforate centrifuge (T.M.VI) is not
+free from gluten at this stage. Hence, the value of retabling lies in
+eliminating the gluten in the form of soluble hydrolysates.
+The starch collected from the centrifuge is sun-dried in all the
+experiments. This gives dry starch (T.M.VII).
+Results
+September 19-21. To get the slurry (T.M.II) grinding has to be
+done. An experiment was conducted to determine the grade at which
+grinding would be best. After each graded grinding, the slurry was
+bulked to a desired density and sifted. The filterate was collected
+and the fibre percentage by volume was read after centrifuging it for
+5 minutes. It was found that grinding at grade 11 is better than at 1
+or 1. In all subsequent experiments grinding was done at grade 1.
+September 21-22. The slurry to be tabled (T.M.IV) is obtained by
+sifting the slurry-T.M.IIIa. This is an important process in which
+sifting is done in a wet stage. Finer fibre is expected to be retained
+on the sieve, provided that a suitable sieve is used. It was found that
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 5]]
+RICE STARCH PROCESSING
+37
+between two pieces of bolt silk-No. 15XX and No. 14-No. 14 is
+decidedly superior as it eliminates most of the fibre. In all subsequent
+experiments No. 14 was used for sieves.
+The experiments listed below were conducted with a view to show
+that the "outturn of starch" is high enough in percentage, so as to
+show that rice starch can be separated by the process of tabling.
+October 13. R.M.=208 lbs; R₁ =99 gallons of 0.5% NaOH;
+steeping time 48 hours; first lye run off at the end of 24 hours;
+thorough washing; R 2 = R3 = 0.25% NaOH solution; T.M. IIIa
+at 3 Be; pH 12.52; the stage T.M.IIIa was followed directly by
+T.M.IV stage; T.M.IV was at pH 11.87; T.M.V led directly to T.M.VI,
+then to T.M.VII (sun-drying). S.P. stage was not realized (i.e. dry
+sifting with a rotary drier was not done). It is to be noted that in this
+experiment the fraction that was tabled off (S.M.c) was again tabled on
+top of the first layer. The Outturn of Starch was 45%.
+Ni
+October 15. Same as October 13, except that 49 gallons were
+used for the first steeping with the subsequent use of 50 gallons of
+0.5% NaOH; total steeping time 48 hours; there was no loss of
+starch from the centrifuge. The Outturn of Starch was 61.5%.
+October 18. Same as October 15 in essential points. The
+Outturn of Starch was 37.3%.
+November 12. R.M. = 208 lbs; R₁ = 99 gallons of 0.5% NaOH
+solution; steeping time 17 hours; R2 = R 3 = water; T.M. III at
+4 Be; R 4 = 60 gallons of saturated lime, added to bulk the slurry to
+3.Be. (This step was omitted in the previous experiments); T.M. IIIa
+was followed by T.M.s IV, V, VI, and VII, the last step being just sun-
+drying. Milling and dry sifting were not done due to the lack of a
+boiler, and hence the last traces of fibre were not eliminated. The
+Outturn of Starch was 94.2%.
+The working steps of the above experiment are shown in detail
+below. For all the experiments the same steps were used.
+Outturn, total or gross
+Moisture percentage in Outturn
+Moisture total in Outturn Total
+Moisture percentage in rice grains
+Outturn, dry
+Rice grains, taken
+Rice grains, dry
+Starch in rice grains, dry
+The Outturn of Starch
+..
+Starch percentage on dry sample
+183 lbs.
+43.1%
+78.9 lbs.
+104.1 lbs.
+208 lbs.
+21%
+164.3 lbs.
+104 × 100
+67.2%
+110.5 lbs.
+94.2%
+=
+110
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 6]]
+38
+U THEIN NYUN ET AL
+Discussion
+The Outurn of Starch will be much below 94% after the starch
+has gone beyond the stage VII to the actual milling, where dirt and the
+remaining fibre will be eliminated by a process called "Rotary Drying
+and Sifting". However, the experiment of November 12, 1955 is
+expected to be the best, for the following reasons:
+1. The first successful sample was run on the level table.
+2. The highest outurn of starch was obtained, viz: 94%.
+3. There was a high elimination of fibre off the sieves, with
+the result that the sample was exceptionally free from
+fibre, as found by eye-inspection after the sample,
+dispersed in water to a density of about 5. Be, was
+centrifuged. It was also noted that the elimination of
+fibre off the sieves was exceptional in the sense that it
+did not involve too much loss of starch as experienced in
+previous experiments.
+4. Good settling was obtained. The fraction that was tabled
+off (i.e. S.M.c) gave a density reading of only 0.5. Be as
+against 3. Be at the head of the table.
+reached in physical
+.
+This may be regarded as the ideal sample. Although an ideal
+stage is often defined as one that cannot be
+reality, and although it may not be realistic to carry out the ideal
+process on absolutely level tables, at least it is gratifying to have, on
+this occasion, approached the ideal situation to the nearest possible.
+All subsequent experiments can thus be judged in comparison to this
+one.
+However, considerable attention has yet to be paid to the purity of
+the samples of the final Starch Product (S.P.), which cannot be done at
+the present moment, due to lack of some facilities such as a boiler
+giving at least 100 lbs. per square inch pressure of steam to dry the
+starch. "Dry Sifting" to eliminate the least traces of impurities can
+only be done when the starch is dry by the time it reaches the Rotary
+Drier. The work of U Htay and Daw Ma Ma Lay, of the Analysis
+Department, seems to point out that the stage will soon be reached
+where commercially pure grades of Starch Products can be obtained.
+Their spectrographic work on the samples of dry starch obtained by
+Copyright© 1998 – Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 7]]
+RICE STARCH PROCESSING
+39
+using caustic soda and lime during the process, shows the presence of
+mere traces only of Calcium and Sodium. The time is not yet ripe,
+however, to pass judgement on the purity of the samples.
+Summary
+1. It has been maintained by many authors that in the
+separation of the rice starch, rice starch slurries cannot
+be tabled due to the very slow settling rate of the starch
+granules.
+2. Its manufacture is thought possible by the authors with
+the use of the tabling method.
+3. In fact, the production of rice starch offers similar
+problems to the production of maize starch, and in both
+cases steeping in caustic soda solution has to be done in
+order to free granules of starch from gluten.
+4. For the tabling of maize starch slurry, tables with a slope
+are used.
+5. The nearest approach to the ideal stage can be reached in
+the case of rice starch separation by (a) using level tables
+(b) adjusting the density of the slurry to be immediately
+tabled to 3 or 4° but never above 5. Be, (c) the introduc-
+tion of calcium ions, long known in soil studies as a
+flocculating agent, (d) retabling the "fraction off the
+tables", and finally, (e) careful inspection of the perforate
+centrifuge so that nothing more than water with solutes
+can escape, carrying with it as little starch as possible.
+Bibliography
+Brautlecht, C.A., Starch - Its Production. Sources and Uses,
+Reinhold Publishing Corporation, U.S.A., 1953.
+Copeland, E. B., Rice, (1924) p. 321.
+Htay, U and Daw Ma Ma Lay, No. 6. 4602/A/55. (34) Analysis
+Department, Departmental letter of Nov. 15, 1955, (U.B.A.R.I.)
+Jones, O., British Patent 8488 (1840).
+Lyall, J. C., and Daw Than Tin -
+(U. B. A. R. I.).
+personal communication -
+Radley, J. A., Starch and its derivatives, (1943) p. 175.
+Yi, Daw Kyin, The Production of Starch from Broken Rice -
+Absorbtion of Moisture under variable Steeping Conditions.
+U. B. A. R.I. - Report. 1955.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 8]]
+40
+U THEIN NYUN ET AL
+TABLING IN RICE STARCH PROCESSING
+(RM) RICE
+(RI)
+CAUSTIC SODA (OR)AMY STEEPING SOLUTION
+H15.M 2) SPENT CAUSTIC SODA SOLUTION
+(TM) STEEPED RICE
+(SM.d') Heavy Figre Fraction
+(TM, b) SLURRY
+(R2)
+WATER (OP) CAUSTIC SODA SALUTION
+(T.M.II) SLURRY < 11°BE.
+ALLOWED TO STAND
+(OR)
+..
+(R3)
+(OR)
+OTHERS
+-WATER (GR)(austic Soda SOLUTION
+`(T.Ma) SLURRY AT 3 BE
+(R4)
+(OR)
+(OR)
+OTHERS
+AT OTHER DENSITY
+(S.M.6) FRACTION SIEVED OFF
+(TM) SLURRY TO BE TABLED
+(R 5) SMALL AMOUNT OF WATER
+(R6) WATER
+TM
+SEDIMENT
+(S.M.c") FRACTION OF
+HYDROLYSATES ->(S.M.c") RECOVERY.
+(SM.d) FRACTION, OFF THE
+CENTRIFUGE
+(TM) STARCH COLLECTED
+FROM CENTRIFUGE
+(Ra) WATER (SM.c) FRACTION
+TABLED OFF
+(TMY) STARCH ON FIRST COLLECTION
+(S.M.e) MOISTURE)
+•(T.M.II) Dry StraCH
+(S.M.f) FIBRE
+(S.P) STARCH PRODUCT
+[To-MILLING-]
+(TM) SLURRY AT 3 BE ETC.
+1
+(S.M.6)FRACTION AGAIN SIEVED OFF
+(TMSLURRY TO BE AGAIN TABLED
+1
+(S.M.C) FRACTION AGAIN TABLED OFF
+(TMT) STARCH ON SECOND COLLECTION
+[TO
+-
+MILLING-]
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.

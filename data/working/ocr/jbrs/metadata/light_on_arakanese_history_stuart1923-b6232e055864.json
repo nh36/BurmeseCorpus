@@ -1,0 +1,14 @@
+{
+  "local_file_id": "light_on_arakanese_history_stuart1923-b6232e055864",
+  "batch_id": "jbrs-ocr-3331",
+  "file_name": "Light-on-Arakanese-History-Stuart1923.pdf",
+  "path_stub": "Burmese/Burma JBRS/1923/Light-on-Arakanese-History-Stuart1923.pdf",
+  "journal": "JBRS",
+  "year": "1923",
+  "ocr_engine": "google_vision",
+  "pages_completed": 4,
+  "ocr_date": "2026-06-01T19:49:20.874726+00:00",
+  "source_category": "other_source",
+  "language_scope_guess": "Burmese",
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+}

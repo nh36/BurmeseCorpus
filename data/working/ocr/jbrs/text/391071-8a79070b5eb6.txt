@@ -1,0 +1,552 @@
+[[page 1]]
+ON THE USE OF A NEW TYPE OF MULTIVIBRATOR
+FOR RADIOACTIVITY DETECTORS'
+by
+Dr. Freddy Ba Hli, Sc.D. (MIT), M.S. in E.E., B.Sc.
+I. Introduction
+2
+An important phase of the program for the development of
+Atomic Energy in Burma is the prospecting for radioactive minerals
+which are the fuels for atomic reactors and which now command a
+good price in the world market. The prospecting for radioactive
+minerals is done to a large extent with the aid of radioactivity detectors,
+popularly known as Geiger Counters.
+A reliable radioactivity detector needs to have some meter indica-
+tion of the radioactivity either in terms of counts per minute or
+milliroentgens per hour. For this, we need to have in addition to the
+Geiger Mueller tube which is sensitive to the gamma and beta rays
+from the radioactive minerals, some electronic device to convert the
+random and irregularly shaped pulses from the Geiger Mueller tube
+into well defined pulses of constant height and width. Only then will
+the meter reading be a correct indication of the quantity of
+radioactivity being measured. For this job, a suitable circuit has been
+found to be what is called a monostable multivibrator. Multivibrators,
+of many types are well known in the literature of electronic circuits
+especially in radar work. But in radar and electronic computers they
+were used for time base and master control and synchronising
+purposes.
+Also the previous multivibrator circuits employed radio tubes as
+their active elements. But very recently, transistors have been invented
+which require only one-thousandth the power requirements of heated
+filament radio tubes. By employing these transistors as the active
+elements of multivibrator circuits a good saving in battery drain can be
+achieved. It is obvious that this is a great advantage for portable
+radioactivity detectors which we want to take into the jungles on long
+prospecting trips.
+1. Read on December 21, 1955, with Dr. Maung Maung Kha in the Chair.
+2. Acting Director, Union of Burma Atomic Energy Centre Union of
+Burma Applied Research Institute, Kanbe, Rangoon.
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 2]]
+72
+F. BA HLI
+Hence the use of a new type of multivibrator employing transistors
+is to be recommended and marks a step forward in the development of
+radioactivity detectors.
+II. Multivibrator Dynamics
+In order to trace this development work it will be necessary to say
+a few words about multivibrator dynamics to acquaint you with these
+unheard of devices. I will not however attempt to give you a full
+understanding of the multivibrator because that would demand too
+much of your time as complicated electronics is in volved.
+Let us consider a typical radio tube multivibrator. Its principle
+of operation is well known to us who have worked with radar and
+electronic computing machines. Figure 1 shows a simplified circuit
+diagram of such a multivibrator.
+The period of a complete cycle of generation and regeneration of
+such a multivibrator is
+RU
+pl
+T=C₁ (Rg1+
+__IPL) log
+E BB
+-
+E pl
+Eg2
+RLI
+pl
+-
+R 12
+EBB Ep2
+I
++ C 2 ( R 82 +
+p2) log
+Egl
+R 12
+p2
+where
+I pl
+Ept
+-
+dynamic plate resistance of Vi
+plate voltage of V 1
+and the other symbols are as shown in figure 1.
+The particular type of multivibrator we are interested in is the
+monostable multivibrator. As its name implies this has one stable
+state and we can assume for our discussion that it ordinarily stays in
+this stable state and that during such times it gives no output. Then if
+we apply a trigger pulse to this multivibrator it is disturbed from this
+state and gives out a well defined electrical pulse whose characteristics
+are fixed by the design of the multivibrator and then it relapses back
+to its stable state.
+In this way, for every trigger pulse (whose individual shapes and
+sizes may vary) we get one output pulse (whose shape and size is well
+defined and unvarying). Now these output pulses from a multivibrator
+are sent into an Integrator and are used in the radioactivity detector to
+actuate a meter. The reading of the meter will indicate in a predeter-
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 3]]
+NEW MULTIVIBRATOR FOR RADICACTIVITY DETECTORS
+73
+mined way the radioactivity even though the input triggers (that is the
+random pulses from the Geiger Mueller tube) were irregular and
+variable.
+This is a great advantage in our work with radioactivity detectors.
+as we can now calibrate our meters beforehand and get reliable
+indications of the intensity of radioactivity.
+We can get a further improvement by utilising in our radioactivity
+detector a transistor multivibrator instead of a radio tube multivibrator
+because of the saving in power requirements and less battery drain in
+field operations.
+Since transistors are about as unfamiliar as multivibrators to you
+I will say a little about them.
+III. Transistor Characteristics
+Here again full understanding in not communicable to you within
+a short time as transistor characteristics can only be explained precisely
+with the use of of Quantum Mechanics-a highly perplexing tool
+developed by Max Planck, Albert Eistein and other mathematical
+physicists. This mathematical method solves the problems of permis-
+sible energy levels and quantum states in an atom. The reason for the
+difficulty of the average scientist to comprehend Quantum Mechanics.
+arises out of the fact that Schroedinger's Equation
+d 2 y
+A
+dx 2
+dy
+☑
+Vy
+=
+B
+dt
+which forms the starting point of a branch of Quantum Machanics has
+no physical meaning whatsoever. This equation with no apparent rela-
+tion to any physical phenomena however is a fundamental equation in
+Quantum Mechanics because on solving for the y's which satisfy the
+above equation it is discovered that they correspond to the quantum
+states of the atom; other branches of Quantum Mechanics are equally
+hard to understand.
+So in describing the characteristics of transistors, I will utilise the
+equivalent circuit approach which though not quite so complete
+theoretically nevertheless is much easier to follow. Also it is more
+directly applicable to the work in hand, namely to design an electrical
+circuit to do certain things for us in a radioactivity detector. So I hope
+you will release me from the task of explaining the transistor in terms
+of donor-acceptor arrays, p-n Junction crystal lattices, the wavepacket
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 4]]
+74
+F. BA HLI
+concept of electrons, Heisenberg's Uncertainty Principle, Pauli's exclu-
+sion theorem on the nature of forbidden bands and valence bond bands
+which one can find in any text on transistors.
+For our purpose we start from the equations for small signal
+variations
+df,
+df 1
+VI
+=
+1
+i, +
+i2
+dl 2
+dfi
+df 2
+i2
+i +
+V2
+al 2
+where v
+& v
+2
+V 2 given by
+are the small signal variations in the voltages V, and
+V₁
+1
+==
+1
+f₁ (I, I₂)
+V 2
+=
+I
+f2 (11, 12)
+i. e. I and I 2 are taken as our independent variables in Figure 2.
+If we call
+1
+we get
+Vi
+-
+V 2
+df
+as
+T 12
+dfi
+as
+r 11
+55 55 5
+dI
+2
+df 2
+df 2
+al a
+as
+I 21
+as
+1 22
+1
+12 2
+121 1 1 + 122 1
+2
+which leads to the matrix equation
+Va
+[] [
+I 11
+T 21
+I 12
+122
+] [
+i₁
+2
+It is determined from actual experiments that the voltage-current
+relations for the transistor are given by
+(Ie + Ib) ie + Ibic
+where
+V1
+V2
+I e
+I b
+Ic
+===
+==
+( 1 b + Im ) i ¸•+ (Ib + c )ic
+e
+resistance of the emitter
+resistance of the base
+= resistance of the collector
+and rm is the emitter-collector transresistance. A sketch showing the
+construction of typical transistors is depicted in Figure 3.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 5]]
+NEW MULTIVIBRATOR FOR RAdioactivity DETECTORS
+75
+From the above equations we may derive the T network equivalent
+as shown in Figure 4 for the base grounded.
+If the emitter is grounded the T network equivalent is derived
+from the matrix equation
+V1
+(r b
+-
++ re)
+(re - rm)
+-
+ib
+re
+(re-Imre)
+] [ ]
+V2
+This network equivalent is shown in Figure 5.
+From the equivalent circuit we calculate the amplification of a
+grounded-emitter transistor amplifier as follows:
+The Kirchoff equations in matrix form are
+where
+(I bre)
+Liv
+Vi
+0
+] [
+=====
+Vi
+e
+----
+(re-Im)
+eg
+-
+ibrg
+I e
+RD)] [ ]
+(re + Ic - Im + RL),
+= generator voltage
+internal resistance of generator
+g
+r g
+R L
+load resistance
+The circuit determinant then is
+re
+r bre
+refe
+I e
+I m
+and in terms of A
+-
+RL (Im
+•A
+re)
+>
+the voltage amplification
+-
+Im R
+1
+A
+V
+while the current amplification is
+Ai
+--
+I m
+I c
+-
+-
+I e
+Imre + RE
+Typical values of Ay are about 130 for point contact transistors and
+575 for junction transistors.
+A is about 20 for both transistors. The power gain is about 1700
+for point contact transistors and 6600 for junction transistors.
+i
+So we see that the transistors characteristics are quite capable of
+giving good amplification and permits their use instead of radiotube
+amplifiers in the multivibrator. However their equivalent circuit is
+quite different from that of a radiotube so how will we make a
+transistor multivibrator?
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 6]]
+.76
+F. BA HLI
+Transistor Multivibrator
+The design of a transistor multivibrator is made possible by
+employing the principle of electrical network duality propounded by
+my professor, Dr. Ernst Guillemin of M.I.T. Applying this method to
+the matrix equation of a grounded cathode radio tube, it is found that
+1
+12
+-
+arcei
+A
+r
+Te + Ic (1-a)
+re
+e 1
+A
+re
+Terb
+e2
+A
+A
+which may be converted by matrix manipulations into
+I
+e 1
+e 2
+e
+re
+-
+tib
+arc
+Ie
+retro (1 - a)
+-
+where if we write rm for are, we get the matrix equation for a
+grounded emitter transistor.
+Thus we arrive at the circuit shown in Figure 6.
+The performance of this circuit is analysed quantitatively by
+determining the differential equations referring to the transient condi-
+tions. These are (after simplification) and using the Laplace
+Transform relationship
+Laplace
+as F(s)
+[aff(t)]
+d
+dt
+1
+(s + Pc) (s + p¹。) ic₁ (s) + a。posica (S)
+a。posia (s) + (s + pc) (s+p¹) ic2 (s)
+-
+af (0)
+I
+C
+(p' opc + ao Pos)
+1¢
+(s + pc) (s + p¹。)
+S
+E cc
+where
+Ic
+Re
+G₁ + G c
+Po
++
+C₁
+aop。C c
+G
+==
+1/RC
+=======
+Po 2 fca, fca being the frequency at which the
+magnitude of a is down by 3 db.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 7]]
+i
+*
+NEW MULTIVIBRATOR FOR RADIOACTIVITY DETECTORS
+.77
+ao
+base transistor.
+= value of the short circuit current gain of a grounded
+p'o
+= P。 (1-a。)
+solving for ici (s) we get
+id(s) Ic
+(°, d + s ) ( ³d + s ) ³d °, d
+0
+s[(s+pc) (s+p'。) + a。pos] [(s+pc) (+p
+The inverse Laplace Transform of ic (s) will provide i… (t)
+from which the regeneration time is computed. From the location
+of the dominant poles of the Laplace Transform the regeneration time
+can be evaluated to be of the order of
+t
+1
+2pa
+log
+Po - Po
+(1 - a.) Pc
+which for the typical circuit with
+C₁
+Rc
+-
+R b
+ao
+fa
+Cc
+Po
+C₂
+p¹
+====
+4300 ohms
+500 micromicrofarads
+430,000 ohms
+.99
+1.57 megacycles
+=== 20 micromicrofarads
+=
+107
+10 B
+G1
+Ge
+198 X 10-8 mhos
+233 × 10-6 mhos
+=
+pc
+8.6 × 10 B
+we find to be about .83 microsecond which is satisfactory for normal
+levels of radioactivity encountered in prospecting for radioactive
+minerals.
+References
+1 Torrey and Witmer, M. I. T. Radiation Laboratory Series.
+Crystal Rectifiers (McGraw Hill Book Co.)
+2 M. I. T. Radar School Staff Principles of Radar (McGraw
+Hill.)
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 8]]
+78
+F. BA HLI
+3 William Shockley Electrons and Holes in Semiconductors
+(Van Nostrand.)
+4 John. G. Linvill, Sc.D. (M. I. T.) Nonsaturating Pulse
+Circuits Proceedings of the Institute of Radio Engineers,
+July 1955.
+-
+5 G. Y. Chu, Sc.D. (M. I. T.) Unilateralization of Junction
+Transistor Amplifiers at High Frequencies Proc. I. R. E.,
+August-1955.
+6 W. Shockley Transistor Electronies Proc. I R. E.,
+November 1952.
+7
+G. H. Royer Switching Transistor DC to AC converter.
+Communications and Electronics July 1955.
+8 R. R. Law, C. W. Mueller, J. I. Pankove and L. D.
+Armstrong A developmental P-N-P. Germanium
+9
+10
+Transistor
+Proc. I. R. E., November 1952.
+Junction
+L. E. Barton Experimental Transistor Broadcast Receiver.
+Proc. I. R. E., July 1954.
+.
+D. D. Holmes, T. O. Stanley, L. A. Freedman Developmental
+Pocket Size Broadcast Receiver Employing Transistors Proc.
+I. R. E., June 1955.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 9]]
+NEW MULTIVIBRATOR FOR RADIOACTIVITY DETECTORS
+079
+Figure 1. Circuit diagram of radiotube multivibrator.
+BLY
+-+1/1/412
+EBB
+5
+Rg2
+R.
+'g1
+BLZ
+Figure 2. Voltages and currents for equivalent electrical
+circuit of transistor.
+I₂
+It
+Equivalent
+Cfrenit of
+Transistor
+71
+Figure 3. Sketch of typical transistors.
+(a) Point Contact Type
+(b) Junction Type
+Actual size of transistor is only of that shown in sketch
+☑
+EMITTER BASE COLLECTOR
+GERMANIUM
+PELLETS
+WHISKER
+P.Typ
+N TYPE
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 10]]
+80
+curo 4, Equivalent circuit of the transistor with
+base grounded.
+A
+Inte
+V2
+Figure 5. Equivalent circuit of the transistor with
+emitter grounded.
+rmib
+IB
+18
+Figure 6. Transistor multivibrator eircuit.
+3
+I₁
+C
+E
+Ab
+Ba
+C1
+E
+;
+V2
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.

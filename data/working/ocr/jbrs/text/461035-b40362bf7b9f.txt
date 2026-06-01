@@ -1,0 +1,346 @@
+[[page 1]]
+PROBLEMS OF HIGH ACID RICE BRAN OILS IN BURMA
+AND THEIR SOLUTIONS*
+DR. FREDDY Ba Hli, U Thein Nyun AND U Kyaw Thaung**
+During the past few years a number of rice bran oil extraction plants were set up
+and operated. Many of these plants extract oil from rancid rice bran and so the rice bran
+oil produced has a high Free Fatty Acid (FFA) content. This is because the rice bran
+contains an enzyme which starts to hydrolyse the oil when the bran is removed from the
+grain after the rice polishing process in the rice mill and this enzyme converts the glyce-
+rides in the rice bran oil into free fatty acids at the rate of about half per cent FFA per
+hour so that rice bran which is even a few days old is rancid and produces oil with high
+FFA content.
+These high acid rice bran oils are used by the soap industries to a limited extent.
+These oils cannot be used te a large extent since the soap then becomes soft and unsaleable.
+The limited amount of high acid rice bran oils taken by the soap manufacturers of Burma
+is less than the output of the present rice bran oil extraction plants. Thus high acid rice
+bran oil remained unsold and a large problem arose of utilising them.
+A study of the local situation revealed that there are many problems associated
+with high acid rice bran oils. First and foremost is the difficulty of refining these high
+acid oils into edible oils (with FFA less than half per cent.) It is found that when these
+high acid oils are put through a refining process, the refining loss is so high that it is
+uneconomical. In fact the refining loss approaches 100 per cent and the yield of edible oil
+is negligible so that it does not pay to refine them.
+Another problem is encountered in trying to utilise these high acid bran oils in the
+production of alkyd resins, epoxy fatty acid plasticisers and derivatives such as adhesives
+which are manufactured in Europe (according to the Technical Division of Unilever Ltd.,
+London.) This problem is that of transporting the high acid oil to the manufacturing
+countries since the price of containers and freight for these oils is too high it is not
+profitable to export the oil.
+A survey of the literature by McPhie of Port Sunlight revealed papers by G.B.
+Martinenghi on "Utilisation of Rice Bran Oil of High Acidity", by M. Miyazaki on
+"Problems of Rice Bran Oil", by S. Ueno on "Hydrogenation of fatty acids with recycling
+of used catalyst”, by H. Tsurata and T. Tamura on “Refining of rice oil by use of Urea”
+and by R. Kovama on "Refining of rice oil having high Acid Numbers".
+In order to solve the problem of the lack of sale of high acid rice bran oil in Burma
+in a practical way, the Applied Chemistry Research Department of the Union of Burma
+Applied Research Institute (UBARI) carried out experiments and three successful formulas
+* Read at the Tenth Annual Research Conference of the Society on 16th January 1963 with U Chit
+Thoung in the Chair.
+** All of the Union of Burma Applied Research Institute.
+35
+JBRS, XLVI, i. June 1963
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 2]]
+36
+UBARI Officers
+were obtained to utilise immediately the high acid rice bran oils. These formulas have
+been sold to many interested industrialists for use with the high acid rice bran oils available
+in the country.
+The first formula is a method for making hair shampoo out of high acid rice bran
+oil. This hair shampoo gives a good lather, satisfactorily cleanses the hair and is not
+injurious having been tested by many people. It is cheaper than other hair shampoos to
+make. The fact that it is made from high acid oil is not a source of danger to the user
+because the acids in the oil are converted by the caustic potash (one of the ingredients in
+the formula) into neutral soluble soaps which are non-injurious.
+Another formula is for making liquid soap from high acid rice bran oil. Liquid
+soap is being used more and more in advanced countries because of its hygienic and
+economic advantages for public hand washing basins, factories, universities and school
+wash rooms. The UBARI formula for liquid soap uses 3 times more high acid rice bran
+oil than coconut oil and so is cheap to make.
+The third formula is for making soap powder which is very popular with house-
+wives because of its convenience in use for laundry purposes. A very high proportion of
+the acidic rice bran oil is used in the preparation. The powder has the great advantage
+over the soap cake in that the required amount is simply added to water and stirred. In
+the case of the cake it remains in contact with water after use and so it softens and turns
+pasty giving a bad appearance and making it difficult to handle. The high acid oil can
+also be used as an illuminant for oil lamps and in this respect it saves the user a large
+percentage of the cost as this oil is much cheaper than other oils on the market. The
+elegant way to use the high acid rice bran oil is to hydrogenate it into stearic acid or
+hardened fatty acids. The process consists in (1) splitting the acidic rice bran oil into
+free fatty acids and glycerin by heating under pressure in the presence of a catalyst (2)
+refining the fatty acids obtained by vacuum distillation and (3) hydrogenating the distilled
+fatty acids in the usual way. In this way over 12,000 tons of acidic rice bran oil can be
+annually consumed in the production of a tallow substitute by a factory with a capacity of
+40 tons high acid oil per day. This will save foreign exchange spent on an annual import
+of 8,000 to 10,000 tons of tallow for making good, hard soap. Besides, the hydrogenated
+product can be used in the cosmetic, rubber, candle and other industries.
+But it must not be overlooked that the main purpose of setting up rice bran oil
+plants is to supplement the supply of edible oil from local sources in order to attain self-
+sufficiency in this commodity. The problems encountered with the high capacity plants,
+particularly that relating to the non-availability of fresh bran, have already been mentioned.
+And no satisfactory method has yet been found to keep the bran fresh on long storage.
+Where it has been possible to get bran which has not been stored for too long a time, the
+extracted oil contains 20 to 30 per cent of free fatty acids. Although this can be econo-
+mically refined to edible oil using modern refining methods, the refining losses are high
+and it could never be sold as cheaply as that refined from very low acid bran oil. There-
+fore, considering this industry from all aspects, it is quite clear that the best course to
+adopt is to use fresh bran for oil extraction rather than allow it to go rancid. This will
+make it simple and straightforward and there will be no problems to follow in its wake.
+Thus the proverb "Prevention is better than cure" particularly applies to this industry.
+JBRS, XLVI, i, June 1963
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd. Bangkok Thailand
+
+[[page 3]]
+Problems of High Acid Rice Bran Oils in Burma
+37
+From the very beginning when the UBARI took up this project the problem of
+rancidity of the bran was clearly foreseen and so it did not recommend the setting up of
+large commercial plants for rice bran oil extraction. Instead, research was directed
+towards the construction of a simple extraction unit which could be locally fabricated and
+easily and economically operated. The unit was to be attached to a rice mill and it would
+be of such capacity that it could consume the daily production of bran from the mill. By
+this means fresh bran would always be used so that oil with low free fatty acids would
+invariably be obtained and easily refined to edible oil. After laboratory research and
+pilot plant studies had been completed, the UBARI rice bran oil extraction unit was
+erected and successfully operated.
+A review of the present situation in the country regarding the Rice Bran Oil Industry
+may now be made. It includes details of production costs based on actual data gathered
+from commercial operations of the UBARI Rice Bran Oil Extraction unit.
+The annual production of rice bran in the Union of Burma is about 440,000 tons
+per year. Deducting the bran tonnage to feed the large (25 ton and 50 ton) foreign made
+Rice Bran Oil Extraction Plants for 300 working days per year at 735 tons per day (which
+works out to 220, 500 tons per year) there is still available about 220,000 tons of bran per
+year. This bran could be extracted for rice bran oil very profitably by the small scale,
+UBARI Rice Bran Oil Extraction (RBOE) units as will be shown by the cost analysis
+presented below.
+The rice bran needed for cattle feeding, etc. could be provided by the extracted rice
+bran from the RBOE units as this extracted bran is full of proteins, vitamins and other
+food materials required by the cattle and also will not turn rancid or be injurious to the
+cattle or human beings.
+As a single UBARI RBOE unit has a capacity of 5.23 metric tons (5232 kilograms)
+per 24 hour day the amount of rice bran excess in the country can easily feed about 140
+UBARI RBOE units.
+From the sales market point of view, edible rice bran oil is now well accepted in the
+local market and the supply cannot meet the demand. Moreover, as the country is
+importing many thousand tons of edible oil every year worth about 3 crore kyats and there
+is good possibility for export also, there is ample sales market for the product.
+Having shown above that there is sufficient raw material (rice bran) and sales mar-
+ket for the rice bran oil it will now be shown that the production cost is also competitive,
+in fact it will be seen that the production cost is very low giving a good profit to the pro-
+ducer of edible oil from a UBARI RBOE unit.
+The designed capacity of a UBARI RBOE unit is 720 lbs (327 kilograms) of rice
+bran per batch extraction. 10 batch extractions can be completed in 16 hours and 16
+batch extractions in 24 hours. These have been proved and even exceeded in practice by
+actual commercial producers and can be guaranteed after about one month of training of
+the workmen. The full designed capacity rating of one UBARI RBOE unit is thus 5.23
+metric tons (5232 kg 16 × 327 kg) per 24 hour day. In practice more tonnage of bran
+could be processed if desired as this figure of 5.23 tons per day is a conservative one.
+JBRS, XLVI, i, June 1963.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 4]]
+38
+UBARI Officers
+Using this safe estimate of 5.23 tons per 24 hour the cost of processing 1 ton
+of rice bran is as follows. Cost of one UBARI RBOE unit is assumed at K 60,000. This
+is also a conservative figure and includes installation cost and structure.
+Table I.
+Depreciation at 15 per cent per year of
+300 working days of 24 hours
+Interest at 6 per cent per annum on average
+investment of K 30,000/-
+60,000 × 15
+== K 5/75
+100 × 300 × 5.23
+30,000 × 6
+Maintenance and Supplies per ton of rice bran =
+Solvent Loss of 2.5 per cent on weight of bran
+processed = 55 lbs of SBP 62/82 weighing 6.8
+lbs per gallon 8.1 gallons at K 1/90 per
+gallon (BOC Bulk rate)
+=
+(This figure of Solvent Loss is that actually
+achieved in the long run in the field by the
+commercial producer and confirmed by our
+own experiments and calculations)
+100 x 300 × 5.23
+=
+K 1/15
+K 4/90
+K 15/39
+Power costs at 20 pyas per KWH
+K 5/50
+Water costs for circulating 100 gallons per
+minute of cooling water
+K 3/06
+Labour, 3 men per shift at K 4/- per man.
+(3 shifts process 5.23 tons)
+K 6/88
+Insurance and License Fees (K 595/- per year)
+K -/84
+K 1/00
+K 44/47
+Misecellaneous expenses
+(A) Processing cost per ton of bran
+=
+In the above tabulation it is assumed that the steam requirements will be obtained
+from the rice mill to which this RBOE unit is attached. As rice husks and boiler steam
+are freely available at most rice mills only a nominal charge is made for steam in the
+above table I under Miscellaneous Expenses.
+In case a separate boiler (costing about K 35,000/-) with boilerman and fuel (oil or
+coal or firewood) has to be used to provide the 2500 lbs of steam required to process one
+ton of rice bran then the cost of this steam would be K 18/50.
+(B) The processing cost per ton of bran
+including separate boiler and steam
+costs
+JBRS, XLVI, i, June 1963
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+K 62/97
+
+[[page 5]]
+Problems of High Acid Rice Bran Oils in Burma
+39
+For RBOE units attached to small rice mills with output of rice bran less than
+5 tons per day, the RBOE unit need not be operated a full 24 hour day and a sample
+calculation for a unit running only 2 shifts (16 hours) per day processing 3.27 metric tons
+(3270 kg) of bran per day is as follows.
+Table II.
+Depreciation at 10 per cent per year of 300
+working days of 16 hours each
+Interest at 6 per cent on average investment
+of K 30,000/-
+Maintenance and Supplies at 8 per cent per year
+Solvent loss at 2.5 per cent on weight of
+bran = 55 lbs of SBP 62/82 weighing 6.8 lbs
+per gallon 8.1 gallons at K 1/90 per gallon
+(BOC Bulk rate)
+=
+Power costs at 20 pyas per KWH
+Water costs for circulating 100 gallons per
+minute of cooling water
+60,000
+-
+K 6/14
+10 × 300 × 3.27
+30,000 × 6
+100 × 300 × 3.27
+K 1/84
+60,000 × 8
+100 × 300 × 3.27
+=
+K 4/91
+K 15/39
+K 5/50
+K 3/06
+Labour 3 men per shift at K 4/- per man (2
+shifts process 3.27 tons of bran)
+=
+K 24
+K 7/35
+3.27
+Insurance and License Fees (K 595/-per year)
+Miscellaneous expenses
+K 1/32
+=
+K 1/00
+(C) Average cost of processing one ton of
+bran with 16 hours working per day
+K 46/51
+Plus steam costs if separate boiler, boilerman
+and fuel is used
+=
+K 18/50
+(D) Average cost of processing one ton of
+bran including steam costs for 16 hours
+working per day
+=
+K 65/01
+The white rice bran gives an average yield of 12 to 14 per cent of oil and the
+parboiled bran gives oil yields up to 25 per cent by weight of the bran.
+JBRS, XLVI, i, June 1963
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 6]]
+40
+UBARI Officers
+Therefore with white rice bran assuming the conservative figure of 12 per cent oil
+yield, the cost of producing one gallon (9 lbs) crude rice bran oil will be:
+(A) using K. 44/47 for processing cost per ton
+of bran, oil cost is calculated at K 44/47
+for 2200 lbs of bran or 12 × 2200 = 264
+100
+lbs of crude oil or K 44.47 × 9 = K 1/52
+264
+per gallon of crude rice bran oil;
+(B) using 62/97 for processing cost including
+separate boiler and steam costs per ton
+of bran, oil cost is calculated at K 62/97
+for 2200 lbs of bran or 264 lbs of crude
+oil or K 62.97 × 9 = K 2/14 per gallon of
+264
+crude rice bran oil;
+(C) using K 46/51 for average processing
+cost per ton of bran with 16 hour
+working day, oil cost is calculated at
+K 46.51 × 9 K 1/59 per gallon of crude
+264
+rice bran oil;
+=
+(D) using K 65/01 as cost of production
+including steam costs with 16 hour
+working day, the oil cost is calculated at
+K 65.01 × 9 ====== K 2/22 per gallon of crude
+264
+rice bran oil.
+In case parboiled bran is processed, the oil yield is about twice that of white rice
+bran and the corresponding costs of production of crude rice bran oil will be:—
+(A)* K 44.47 × 9
+==
+76 pyas per gallon
+528
+(B)* K 62.97×9
+528
+==
+K 1/07 per gallon
+(C)* K 46.51 × 9
+528
+===
+(D)* K 65.01 ×.9
+=
+528
+80 pyas per gallon
+K 1/11 per gallon
+It is seen from the above calculations that the highest cost of production of crude
+rice bran oil from a UBARI RBOE unit working only 16 hours per day is (D) = K 2/22
+per gallon with white rice bran. This is equivalent to K 8/88 per 4 gallons (10 viss).
+The other costs are all lower than this and can go down to as low as K 3/04 per 10 viss
+(4 gallons) using parboiled bran and 24 hour operation,
+JBRS, XLVI, i, June 1963
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 7]]
+Problems of High Acid Rice Bran Oils in Burma
+41
+The fresh bran from the rice mill (giving oil with less than 2 per cent free fatty acid
+content) can be processed within 4 hours of dehusking with a UBARI ROBE unit installed
+at the rice mill (in fact the UBARI ROBE units are specially designed to be attached next
+to an average sized Burmese rice mill).
+The oil from this UBARI ROBE unit could be produced for less than K 2/22 per
+gallon as shown above. This crude oil can be refined for less than K 2/- per gallon
+(including the refining loss of 10 per cent for this type of crude oil). As this refined oil
+is edible and is an excellent cooking oil it fetches a market price of not less than K 7/- per
+gallon at present, giving a good profit. This is very different from the situation for high
+acid rice bran oil (which comes out from old rice bran usually processed in large foreign
+made RBOE plants). This high acid rice bran oil cannot be refined economically as its
+refining loss approaches 100 per cent and since the demand for it in the local market is
+small it does not fetch more than K 2 per gallon. In the above cost calculation the cost
+of bran is not included. This is because the cost of 12 per cent loss in weight of rice bran
+(due to oil being extracted) is more than made up by the higher selling price of extracted
+rice bran.
+From the foregoing review it would appear that the extraction of edible rice bran
+oil by the UBARI RBOE unit is a small scale chemical industry with a good chance of
+success and would help to solve the problems of high acid rice bran oil to a large degree.
+JBRS, XLVI, i, June 1963
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.

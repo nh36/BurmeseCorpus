@@ -1,0 +1,1315 @@
+[[page 1]]
+THE LINGUISTIC RELATIONSHIP OF MRU
+Traces of a Lost Tibeto-Burmic Language?
+Abbreviations and Classification
+Anal (Lamgang Kukish)'
+Andro (Luish)
+Bh. Bhotish (Tibetan)
+Bhramu (West Himalayish)
+Bu. Burmese
+C. Campbell
+E. East Himalayish
+Empeo (West Kukish)
+Gr. Grierson 2
+H. Hindustani
+Haka (Central Kukish)
+K. Kukish
+Ka. Katinish
+Kanauri (West Himalayish)
+Kh. Khami (South Kukish)
+Khimi (S. Khami dialect)
+Khoirao (West Kukish)
+L. Lusei (Central Kukish)
+LSI. Linguistic Survey of India
+M. Myaing
+Meithei (Kukish)
+Mošang (Nagish group of Baric)
+N. Northern
+O. Old
+Ph. Phayre
+Purum (Old Kukish)
+Pwo (Karenic) .
+S. Southern
+So. (Southern Kukish)
+sp. spoken
+Tableng (Nagish group of Baric)
+Tamlu (Nagish group of Baric)
+Taungtha (Kukish)*
+Taungthu (Karenic)
+TB. Tibeto-Burmic
+Tsang (Nagish group of Baric)
+Tsangla (Bhotish)
+Tšepang (West Central Himalayish)
+Tšinbon (Southern Kukish)
+Vayu (West Central Himalayish)
+W. West Himalayish
+wr. written
+"
+1 Kukish includes all the "Kuki-Chin" languages and all the Tibeto-Burmic
+languages spoken in the Naga Hills except the northeasternmost. When Kukish
+proper is referred to, it excludes the Naga languages.
+In the field of Sino-Tibetan, where even the precise classification of the languages has
+not been determined and the nomenclature has consequently not become stabilized, it seems
+preferable to introduce a logical system of nomenclature. The names of linguistic groups
+have consequently been given terminations which have the widest similar application in the
+names of Indo-European linguistic groups. Thus the ending - an denotes the family, as Sino-
+Tibetan, corresponding to the same termination in Indo-European. The ending -ic denotes
+a main division of a family, as Sinitic, Manic, Daic, Baric, Burmic, and Karenic, correspond-
+ing to similar subdivisions in Indo-European such as Germanic, Keltic, Baltic, Slavic, Hellenic.
+And the ending -ish indicates a sub-group of one of the main divisions of a family; thus
+Burmish, Loloish, Katšinish, Kukish and Luish are sub-groups of the Burmic division of
+Sino-Tibetan. This ending is similarly employed to denote the IE sub-groups: English, Irish,
+Lettish, Polish, Spanish, Swedish, Danish, and in slightly corrupted form in Welsh and
+French.
+2 Where no page number is cited, the word will be found in the usual place in the Mru
+vocabulary in the LSI.
+* Probably a Lai dialect (Central Kukish) which has been influenced by Southern
+Kukish.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 2]]
+59
+THE LINGUISTIC RELATIONSHIP OF MRU
+Occasionally a linguist chances upon a language of no great importance
+for comparative purposes or for the number of its speakers, which has
+been very briefly and imperfectly recorded, yet which, because of the
+problems it raises, arouses considerable interest.
+Such is the case with Mru.
+The greater portion of its vocabulary agrees with Kukish, particularly
+with Southern Kukish. However, because the Mru inhabit territory
+occupied chiefly by Southern Kukish peoples they live alongside the
+Khami such lexical similarities are suspect of borrowing from Kukish.
+-
+-
+Behind this is an older stratum of the language, such as the greater
+part of the numeral system and some other common words, which represent
+a Tibeto-Burmic linguistic stock which is certainly not Kukish and is more
+archaic in some respects than written Burmese. This stratum of the
+language may be a borrowing from a now non-existing Tibeto-Burmic
+stock.
+The reason for believing that this stratum is also borrowed is that,
+after eliminating all the words mentioned in strata 1 and 2, there remains
+quite a number of words, some of them very common words such as those
+designating parts of the body and the numerals for "one" and "two",
+which bear no resemblance to any corresponding Tibeto-Burmic words, and
+indicating a possible non-Tibetan origin of the Mru.
+These three strata of the language may be designated the oldest, the
+middle, and the newest strata.
+"1
+"
+In the following discussion, all the Tibeto-Burmic parallels for a Mru
+word will not be given, but only those which are the nearest to the Mru
+word. Thus while Bu. waṁ bear is undoubtedly the same root as occurs
+in Mru tom, the latter is closer phonetically to K. *tǎ-wŏm, O. Bh. dom.
+Similarly Bu. wak "pig" looks as if cognate to Mru pak, but no satisfactory
+phonetic explanation has yet been found for the interchange of initial p and
+w in Tibeto-Burmic; but Mru pak does correspond to Mikir pʻak, Bh. p‘ag.
+Mru wi "blood" is undoubtedly cognate to Bu. swe:, but the Mru word
+does not resemble the Burmese form as closely as it does Trepang wi or
+Vayu vi. Also Mru k'im "house" looks as if it had some connection with
+Bu. 'im, but it is closer to O. Bh. kʻyim.
+Where two or more parallels, all equally good, are found for a Mru
+word, and one of these parallels is Kukish, it has been assumed that, because
+of the geographical proximity of Kukish and Mru, the influence has been
+Kukish, and the other parallels have usually been excluded from
+consideration.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 3]]
+60
+JOUR. BURMA RESEARCH SOC.
+XXXI, II, 1941
+In following these criteria for the determination of the different strata
+to which the Mru words should be assigned, it will be found that there is
+little ground for placing Mru in the Burmish group, even tentatively as was
+done in the Linguistic Survey of India, especially as Konow (or Grierson)¹
+admits that Mru presents forms which are paralleled most frequently by
+Kukish. The following Mru comparisons with Burmese will show how
+few these are:²
+66
+66
+mu sky," wr. Bu. muig', actually mui: ; koan “heaven," Bu. k‘oń
+top, summit"; kre' “star," Bu. kray; na "devil," Bu. nat "spirit"; yauk
+sa son's wife," Bu. yok (see vocab.); tǎ-yut “monkey,” Bu. myok; ta-kwi,
+kwi "dog," Bu. k'we: ; mo "yam," cf. Bu. myok; laun "boat," Bu. lon,
+but Kh. mă-laun, pă-laun; a-wat' "dress," Bu. 'a-wat "garment"; rǎ-hnit
+"seven," Bu. k'u-hnats; na "to be," Maru na; ton-lai “cultivator," Bu.
+t'wan a harrow."*
+66
+There are only 13 words which seem to bear a closer resemblance to
+Burmish than to Kukish. And some even of these appear to be late
+borrowings from Burmese, such as the Mru words for "boat," "dress"
+and possibly "devil."
+If Mru does not agree with Burmese in vocabulary or phonetics, the
+case is quite different regarding its agreement with Kukish. The following
+lexical comparisons will show how large a part of the Mru vocabulary
+corresponds to Kukish:
+3
+1
+LSI., v. 1, pt. 1, p. 79.
+2 The length of vowels is not usually marked as they are generally short when medial
+and long when final. The Mru record is too uncertain for length of vowel to be significant.
+* The author has overlooked a number of Burmese parallels: mru "man,” Bu. lu q;
+wi-s'a “salt,” sp. Bu. s'a, wr. Bu. æɔ: c'ã:, O. Bu c'ă; -ma “fem. suffix,” Bu. ♥ mă, O. Bu.
+ma; prěn "country," Bu. S prañ, O. Bu. prañ; k'an-pŏn “friend,” Bu. ǝƐy: k'an-pwan :,
+O. Bu. k‘ań-pwan; k'ai "past tense suffix,” Bu. k'ai', O. Bu. k'ay; a-ko "now," Bu. wɔą ya-k'u,
+O. Bu. ya-k'u; plan “again," Bu. § pran, O. Bu. plan. Moreover Bu. 85 lip "tortoise,” is
+closer to Mru lip, than is Kh. * tǎ-lip with which the author compares it below. Similarly
+Mru um-pai "duck" resembles Bu. o: wam: b'ai:, O. Bu. wampay, more than it does
+Taungtha wom-be, Tinbon wan-pwe, with which the author compares it below. Mru sŏră-
+'to kiss," probably really meaning "to smell," is nearer semantically to Bu. $S: nam:
+'to smell" (tr.), than it is to Lušei nam 'to smell" (intr.). To the second entry of Mr.
+Shafer's above, may be preferred Bu. emƐ:mƐ kon: -kan O. Bu. koň-kaň.
+nam-
+64
+"
+G. H. L.
+3 Only the Khami words are given if they correspond better than, or as well as, the corres-
+ponding word in the other Kukish dialects, and similarly with o. In some instances Kukish
+in general has been cited where the form occurs over the whole area of Kukish proper at
+least. A number of parallels between Mru and Kukish probably originated in Burmese, but
+have been borrowed by Mru from Kukish, which originally borrowed them from Burmese:
+poi "feast," Khimi poi, sp. Bu. pwè, wr. Bu. § pwai; s'i “oil,” S. Kh. s'i, sp. Bu. sfi (Ph.),
+wr. Bu. c'I; etc.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 4]]
+61
+"
+"
+.
+"
+THE LINGUISTIC RELATIONSHhip of mRU
+66
+66
+66
+,
+ră-li "air", S. Kh. kǎ-li, gă-li¹; tǎ-nin "sun", ni day", S. K.
+kǎ-ni "sun", L. ni "sun, day"; *la "moon", Kh. la, hla; mai "fire",
+Kh. mai; tui "water", Kh. tui; a-u "river", Kh. tǎ-va, kǎ-va; kroun
+"earth", N. Kh. kǎloun; min "name", Kh. min, K. *rmin; pu grand-
+father", K. *pu; pi "grandmother", K. pi; pa "father", K. pa; u
+mother Šo u; nao-ma “younger brother ", K.
+younger brother", K. nao; tsa "child". N. Kh.
+*tsa; aña servant", Kh. añña'; lu "head", Kh. lu; sam, tsam "hair",
+K. *sam, *tsam; na-koń "nose", Kh. -na-k'on; mik, mi "
+nose”, Kh. -na-k’on; mik, mi “eye”, K. *mik;
+dai "tongue", Mikir de; rut “hand”, K. kut, k'ut¹; bon “hand", (meaning
+probably not precise), L. ban "arm"; na aun "neck", L. n'on; pi "skin",
+N. Kh. -pik; hut "bone", Khimi -hu'; na-sai "elephant", Kh. kǎ-sai; na
+"buffalo", Kh. ma-na, pai-no; tom "bear", K. tǎ-wom; koraña "horse",
+K. *kor, *ran; t-siya cow”, Šo
+So ya; n-ki "deer", L. -k'i; pak "pig".
+Mikir p'ak; tǎ-myin, min “cat”, Šo min, myin; lip "tortoise", Kh. *tă-lip;
+tǎ-roa, rwa "snake", K. m-rul; da-m "fish", Kk. moi; tǎ-wa, wa "bird",
+Kh. tǎ-wa, K. *-wa; -a, -ak" crow", Kh. -a, -ak; um-pai “duck", Taungtha
+wom-be, Tšinbon wan-pwe, wr. Bu. 'wam -'b'ai; tǎ-tsan "mosquito",
+N. Kh. tšan; dui “ egg", Kh. -dui; kywan "teak", Kh. kywan; ǎ-p'on
+mango”, Kh. a-p'on; pa-ou "flower", Kk. -pa; a-ram "leaf", Kh. n-gam
+(g<*r); kua “ village”, L. k'ua; tšeň “shopkeeper”, Khimi ts'eń sa-zuń
+"market place"; -ban "wall", Kh. -pan; poi "feast", Kh. poi; s'i "oil",
+Kh. s'i; won property",
+", So won; ha "ten", S. K. ha; ǎ-pum "all", K.
+pum; la', -lak, la "far", Haka hlať', L. hla, Khimi -lo; tsan "to be",
+Old K. tsan; woi "to be", Meithei woi-; sin- "to be alive", Kh. -sin; pe
+"to give ", L. pe, pek'; tša, tšak "to eat; food", K. *tsa *tsak; -kla- "to
+fall", K. *kla, *klak; ma-mi “demon. pron.", K. ma, ǎ-ma "third pers.
+pron."; a-mi-a "whose", Khimi ǎ-mi; -o "vocative", Šo -o; -ta" past
+tense", K. -ta.
+"
+-
+It is at once apparent that Mru is much closer to Kukish in its
+vocabulary than it is to Burmish. But how about the phonetic agreement?
+Konow (or Grierson?) states regarding Mru that "in the main it follows
+the phonetic system of Burmese, —". I find no evidence to support this.
+Where Burmese writes final ui as in 'muig': (really 'mui) "sky", Mru has
+mu; Bu. "kui “nine", but Mru tǎ-ku. In having final u equivalent to -ui
+in Bu., Mru agrees with Kukish. The vowel i in the Mru word for " eye'
+agrees with Kukish, not with the ya in Bu. myak. The e in Mru pe "to
+give" agrees with Kukish pe, pek', not with Bu. 'pe which is from Sino-
+Tibetan *pi. Mru mai "fire" agrees with Khami mai, not with Bu.
+'mi. The preservation of the prefix t-2 in the Mru words tǎ-ru, tǎ-ku "six",
+"nine", agrees with Kukish, not with Burmese which has k'rok, 'kui.
+1 For Mrur <*k, see infra.
+2 See below, the section labelled “Prefixes."
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+,,
+
+[[page 5]]
+62
+JOUR. BURMA RESEARCH SOC.
+XXXI, II, 1941
+Mru agrees, then, neither lexically nor phonetically with Burmese, but
+rather with Kukish.
+But the Mru live alongside the Khami, a Southern Kukish people, and
+such lexical similarities are suspect of borrowing from their more powerful
+Kukish neighbors. These lexical parallels with Kukish may then be
+tentatively termed the latest stratum of the language.
+One might suppose that with the elimination of the Kukish borrowings,
+the resulting vocabulary was the original Mru. But it is doubtful if this
+is the case. Much of the Mru vocabulary which remains seems to belong
+to a still older stratum of borrowing belonging to a middle period of the
+history of the language. The relationship of this part of the word stock
+is most clearly seen in the numerals.
+The Mru word for "nine", tǎ-ku, cannot be from Burmese because
+it preserves the original prefix t-, which Burmese does not. On the other
+hand, it cannot be from Kukish proper, as the Kukish word was *tǎ-kua,
+i.e. had an augment in -a. It does correspond to O. Bh. dgu.
+The Mru word rǎ-hnit "seven" does correspond to Bu. k'ŭ-hnatš.
+Kukish has quite a different form and so does Old Bhotish. On the other
+hand, Mru riyat "eight" corresponds almost exactly with L. riat, but
+not with the Khami which has tǎ-ya, kǎ-ya. And if the word were
+borrowed from Kukish, we should expect it to be borrowed from the closest
+neighbors of the Mru, the Khami.
+Now one can hardly suppose that the Mru went about borrowing
+numerals here and there, "seven" from the Burmese,
+from the Burmese, “eight" from the
+Kuki, “nine” from some Tibeto-Burmic stock which was neither Burmese
+or Kukish. It is more probable that all the Mru numerals which correspond
+to Tibeto-Burmic come from some Tibeto-Burmic stock which was neither
+Burmish nor Kukish, nor any other now known.
+If this hypothetical Tibeto-Burmic language rested upon the Mru
+numeral system alone, the evidence would indeed be weak. But a consider-
+able number of Mru words other than numerals do have lexical parallels
+outside of the Kukish and Burmish groups. Such are:
+"
+"
+<<
+tša, tsat "sun", cf. Andro tsa-mit "sun", Tsang tša "sunlight",
+tša-nyu 'sun”, Ka. tšan "sun"; war" night", Garo wal “evening";-nin
+year”, Tsangla niñ year", O. Bh. k'a-nin, na-nin "last year"; tšu-
+"hill top ", Garo -tău "mountain"; mru "man", Ka. măru "the Maru or
+Lawngwaw people"; nor "mouth", cf. Mokang nürr; kum "back",
+Maram (Ka.) nu-gum; wi "blood", Tšepang wi, Vayu vi, W. *śui, Bu.
+swe: *rwa goat", cf. O. Bh. ra- “goat", rwa horn"; ǎ-nan "horn",
+"
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 6]]
+63
+"
+THE LINGUISTIC RELATIONSHIP OF MRU
+"
+<
+cf. Ka. nruň, Pwo non, Taungthu nuñ; tsin-dun "tree", O. Bh. sin-sdon
+“ tree-trunk”; tǎ-ma “ road”, cf. Dhimal dama; k'im, kim “house”, O. Bh.
+k'yim; wi-s'a "salt", wr. Bh. wa-ts'wa "a kind of salt", ts'wa "salt",
+sp. Bh. ts'a; ran, ran to buy", cf. W. *rań, Kanauri ren- to sell "; tep
+to beat", O. Bh. ãdebs-pa “to strike"; k'ia' (or k’i?)
+to strike"; k'ia' (or k'i?) "to see ", Kanauri
+k'i-, k'ya-; yoń "to stand", Tableng, Tamlu yoń; añ “I, my”, Baric an
+"I", W., E. an "my"; -la "masc." (of animals), Ka. -la, but Meithei
+-la-ba; -ma "fem.", occurs in K. infrequently, but commonly in Tibeto-
+Burmic; kun "behind", Baric -k'un, -kun "back".
+Of course, if one assumes that the hypothetical Tibeto-Burmic language
+from which these borrowings were made was more akin to Kukish than any
+other, many of the comparisons with the Kukish group may really belong
+to this middle stratum."
+And since so few comparisons were found between Mru and Burmese,
+they should probably be included here. The Mru language must have be-
+come almost entirely Tibeto-Burmic during this time, since nearly all the
+numerals probably belong to this period.
+The reason for believing that the original basis for the language was
+not Tibeto-Burmic consists of a small list of very common words such as
+those designating some parts of the body and the numerals "one" and
+"two", which bear no resemblance to any corresponding Tibeto-Burmic
+words:
+,,
+"
+"1
+"
+"
+tǎ-w'a "stone"; tai "silver"; nar slave"; toa-ma sister"; pǎ-ram
+ear (*ram in comp.); yon, yön "tooth"; nwi "fruit"; tša-rai "dah";
+lok' (?) one"; pre two”; -t'on, ton- near"; koń, kun "to die"; koi
+"to go"; man "to go"; pot'- "to run"; ton "what"; lu- "on”; -köi
+"locative"; -döi "not".
+No words have been entered in this list except those entered in extensive
+comparative vocabularies such as in the LSI or Hunter's dictionary, or which
+the writer would be likely to remember in many Tibeto-Burmic languages.
+The list probably can be extended from the appended comparative vocabulary
+of Mru.
+,,
+While the list is not large, it includes some words which are so different
+from the corresponding Tibeto-Burmic forms, which are practically uniform
+throughout the area. Such are pǎ-ram "ear (*ram in comp.), TB. -na;
+pre "two", TB. *-nis; koń, kuñ- “to die”, TB. * ši; nwi “ fruit ”, TB. *se.
+As regarding everything about Mru, the data on the oldest stratum
+are merely indicative, not conclusive.
+We may summarize the tentative conclusions, in the present state of
+our knowledge of Mru, by stating that there is a latest stratum borrowed
+1 Some of the comparisons with Kukish are nevertheless late borrowings by Mru
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 7]]
+64
+JOUR. BURMA RESEARCH SOC.
+XXXI, II, 1941
+from Kukish, that there is a middle stratum borrowed from an extinct
+Tibeto-Burmic language, and an oldest stratum representing the original
+Mru language. The evidence for the latter is, however, weak, and the word
+stock here called the middle stratum may represent the only surviving
+member of an independent Tibeto-Burmic linguistic stock.
+PREFIXES
+There is some evidence of original prefixes having been preserved in
+Mru. This is particularly noticeable in the system of numerals. The various
+consonant prefixes all seem, however, to have fallen together, regardless of
+their origin, into the prefix tǎ-. If this is true, it must not be assumed that
+the original p- or m- or k- prefixes have been replaced by another prefix t-.
+It is probably due to phonetic degeneration; for in Kukish proper, if the
+prefixes are preserved at all, there is not a p- and an m- prefix in the
+same dialect, but only a p- or an m-, representing both the original prefixes.
+Mru probably shows a further phonetic degeneration, all the original pre-
+fixes becoming tǎ-. The evidence, very meagre, is:
+ORIGINAL t- PREFIX
+Meaning
+Lang.
+Word
+Burmese Mru
+Author
+and O. B.
+six
+O. Bh.
+d-rug
+66005
+tǎ-ru
+Ph.
+k'rok
+tŏ-ruk
+Gr.
+nine
+O: Bh.
+d-gu
+ကိုး
+ta-ku
+Ph.
+kuiw
+tak-ku
+Gr.
+bear
+O. Bh.
+d-om
+ō
+t-om
+M.
+K.
+*t-wom
+lawaṁ
+bird
+Kh.
+*tǎ-wa (or e prefix
+*kǎ-wa) u for birds wa
+ORIGINAL p- (or m-?) PREFIX
+ta-wa
+Ph.¹
+Gr.
+four
+O. Bh.
+b-zi
+600:
+tă-li
+Ph.
+< *b-zli
+liy
+te-li
+Gr.
+five
+K.
+pa-na
+cl:
+tă-na
+Ph.
+ma-ňa
+nā
+ta-na
+Gr.
+monkey
+Bhramu
+pa-yuk
+64005
+tǎ-yut
+Ph.¹
+myok
+< *m-yuk
+snake
+K.
+*pǎ-rul
+မြွေ
+tǎ-roa
+Ph.¹
+*mǎ-rul
+mruy
+1 But see below.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 8]]
+THE LINGUISTIC RELATIONSHIP OF MRU
+ORIGINAL k- PREFIX
+65
+sun
+O. Bh.
+g-nyi
+နေ
+tă-nin
+Ph.
+(arch.)
+niy
+( < *-ni)
+Kh.
+kǎ-ni
+three
+O. Bh.
+g-sum
+သုံး
+t-sum
+Gr.¹
+suṁ, sum
+The difficulty with the above comparisons of Mru names of animals
+is that Phayre is the only one to record them with tǎ- prefix and that he
+prefixed tǎ to the names of nine (or possibly eleven) out of 14 names of
+animals. Since other recorders than Phayre do not give the tă- prefix with
+animal names, it appears that tǎ- is prefixed to the names of animals in Mru
+similar to the manner in which sa is prefixed in Lu ei. Phayre has apparently
+given the animal names with this prefix while the others omitted it as not
+a part of the root.²
+We must then, in the present state of our knowledge of Mru, eliminate
+the names of animals with tǎ- prefix corresponding to original consonantal
+prefixes as being of very doubtful value. One exception to this is the
+word tom "bear", recorded by Myaing, corresponding to K. *t-hwom. In
+this word the K. wo < *wa has contracted in Mru to o, so that *t-hwom
+has become tom in Mru, just as it became dom in Old Bhotish.
+,,
+66
+The reliable examples we have then of Mru tă- from original t- prefix
+"nine
+are only the words for "six",
+and 'bear"; for Mru tă-
+from original p- (or m-?) prefix are only the words for "four" and
+"five". For Mru tă- from original k- prefix, the evidence is very weak.
+Although Grierson gives tsum for "three" which has been suggested may
+be from t-sum, Phayre gives only sun and the difference may only be due
+to faulty hearing. The best reason for believing that original k- prefix
+became Mru tǎ- is the fact that original p-(or m-) became tǎ- in Mru,
+from which one may infer that original k- probably also became tǎ- in Mru.
+The whole question of original prefixes in Mru must therefore await
+fuller information on the language before final conclusions may be drawn.
+The notes here are only suggestive.
+PHONETICS
+The phonetic development of Mru bears many resemblances to that
+of its Southern Kukish neighbors. Thus the final stop consonants are
+* But Ph. Šun.
+* Phayre may have, however, recorded a different dialect. Or the prefix may have been
+dropped due to phonetic decay, since his record was made.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 9]]
+66
+"
+JOUR, BURMA RESEARCH SOC.
+XXXI, II, 1941
+probably followed by a glottal stop, making the final consonant difficult for
+a European to hear. In Southern Kukish this glottal stop has entirely
+replaced the original final stop consonants. Examples from Mru:
+Grierson mik“ eye”, but Myaing mi; Campbell na
+"spirit"; Phayre rut “hand", Konow rut'-, Campbell ru.
+"devil", Bu. nat
+Final nasals seem to be better distinguished than in Southern Kukish,
+yet Phayre and Myaing write the word for "tooth" with final -n, but
+Campbell and Grierson with -n; Grierson tsum "three", but Phayre šun.
+,,
+An initial nasal frequently nasalizes the following i, as tǎ--nin "sun"
+(really tă-nt), min "eye (Phayre, Campbell; really mĩ; Myaing mi,
+Grierson mik).
+16
+The most common vowels, a, i, u generally correspond to approxi-
+mately the same vowels in Old Bhotish and Kukish: -ña "five", O. Bh.
+Ina, K. pǎ-ña, mă-na; wi-s'a "salt", O. Bh. ts'wa (wr.), ts'a (sp.); pa
+father", O. Bh. p'a, K. pa; sam, tsam hair", K. *sam, *tsam; tă-nin
+sun”, ni "day", O. Bh. nyi-, L. ni; miñ “name”, O. Bh. min, K. *rmiń;
+mik, mI "eye", O. Bh. mig, K. *mik; hut "bone" (Myaing; but Phayre
+-hot), O. Bh. rus-, Kh. -hu'; rut "hand", K. kut, k'ut; pu “grandfather",
+K. pu; lu "head", K. lu; ǎ-pum "all", K. pum.
+"
+*e, when final, becomes a diphthong as in Kukish; and *o becomes a
+diphthong when medial, to which Kukish also shows a tendency: mai
+"fire," Kh. mai, O. Bh. me; dai "tongue," Mikir de (Mikir -e- O. Bh. -e);
+yauk, Bu. yok; laun "boat", Bu. lon, S. Kh. mă-laun, N. Kh. pă-laun, L.
+lon. But medial *e is preserved in Mru: tsen "shopkeeper ", Khimi ts'en
+sǎ-zun “market place"; tep "to beat", O. Bh. ãdebs-pa to strike"; deb-
+"to entreat", O. Bh. -ãdebs-pa "to answer; to explain, to advise; to make
+a request".
+And Mru -o, vocative, corresponds to So, Anal, Purum and
+Haka -o, indicating that *-o does not diphthongize in Mru.
+.
+"
+66
+The diphthongs found in Kukish, and sometimes in Burmese, are
+generally found in Mru: tui, twi “water”, Kh. tui, twi, L. tui; kwi "dog",
+Bu. 'k'we; nao-ma, nau-ma younger brother", K. *nao; ña-sai
+"elephant", Kh. kǎ-sai, L. sai; pai- "third pers. pron., demonst.", Naga K.
+*pai; kua, kwa "village", L. k'ua; poi "feast", Khimi poi; woi "to be",
+Meithei woi-. There seems to be a diphthong with a vowel whose exact
+pronunciation is obscure, as in the Mru locative and the word for "not"
+(see vocab.), for both of which no comparisons have been found.
+There is a contraction of wo to o in tom "bear", K. t-hwom, O. Bh.
+dom; and perhaps in ton-lai "cultivator", Bu. t'wan "a harrow ".
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 10]]
+67
+THE LINGUISTIC RELATIONSHIP OF MRU
+Final * and *-r have apparently dropped in Mru: ta-roa, rwa
+"snake", K. *m-rul; pa-ou "flower", Kh. -pa, L. par; sa
+bably from H. sar.
+66
+>>
+arrow , pro-
+One of the most peculiar phonetic shifts is that from an original
+guttural initial to Mru r, as:
+Mru ră-li "air ,,
+..
+,,
+"
+"
+rut hand
+rǎ-hnit" seven
+S. Kh.
+K.
+kǎ-li, gă-li
+kut, k'ut
+,,
+Bu.
+k'ŭ-hnatš
+This is apparently not a regular phonetic shift, as Mru has guttural
+initials in other words which correspond to gutturals in Tibeto-Burmic.
+Does the Mru r in these cases represent *g or *gʻ. One reason for
+suggesting this is that Kukish has sonant b and d but no g which
+corresponds to a guttural initial. Consequently it is suggested that this
+Mru r of guttural origin may represent an original guttural sonant. The
+guttural or gutturals from which this Mru r is derived are not well enough
+authenticated to know their precise origin.
+Allowing for uncertain recording of Mru aspiration and of final
+consonants, Mru consonants, with the exceptions noted above, generally
+represent the corresponding Tibeto-Burmic consonants, except *s- has been
+dropped in the Mru word for "nose", as well as original initial ** in
+"blood", and *z (?) in moon”, q. v. There is also the fluctuation
+between surd and sonant and surd aspirate to be found in Tibeto-Burmic
+languages.
+41
+The phonetics of Mru are too uncertain to arrange the vocabulary
+according to the Mru initial. It has accordingly been arranged by cate-
+gories. No attempt has been made to gather in this vocabulary all Mru
+words heretofore published as not quite all this material was available.
+However, enough of the Mru vocabulary and morphology are given to
+show the relationship or lack of relationship to various Tibeto-Burmic
+languages.
+Although the length of vowels is not significant, due to the rough
+recording of Mru, they have nevertheless been marked in the vocabulary
+in case the reader wishes to know how they were marked in the original.
+Since the original authors did not use a uniform system in some instances,
+some interpretation has been necessary according to the manner in which
+other authors wrote the same word. Thus the same author may use u for
+both u as oo in boot and u in but. In the following vocabulary A represents
+the u in but, a sound coming from *a.
+-
+[With the author's approval, modern and old Burmese equivalents. the former in
+Burmese script, the latter literally transcribed - have been added in square brackets after
+each item. It is not to be assumed that the Burmese word is connected with the Mru
+one; in many cases it obviously is not. The object is simply to enable the reader to judge
+the distance between Mru and Burmese, as compared with other languages. G. H. L.]
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 11]]
+68
+JOUR. BURMA RESEARCH SOC.
+INDEX TO VOCABULARY
+XXXI, II, 1941
+The universe
+Mankind, occupations and relations
+Parts of body
+Animals
+Plants
+,,
+Nos.
+1
+20
+21
+,,
+-
+38
+39 58
+-
+79
+59
+"
+80
+86
+,,
+Artifacts and articles of consumption
+87 104
+.
+"
+Numerals
+-
+105 .118
+,,
+Adjectives
+Verbs
+Morphology
+119-126
+,,
+-
+,,
+127 .154
+155 -179
+,,
+COMPARATIVE VOCABULARY
+"
+1. mu sky" (Ph); cf. wr. Bu. 'muig', a false
+'mui. [SS: muiw ]
+way
+of writing
+2. kōan, kŏǎn “heaven" (Konow 392); Bu. k'on "top, summit",
+cf. L. kan “up”. [ခေါင် koi = top. But cf, ကောင်းကင်. konkan sky ]
+3. rã-li “air” (Ph); S. Kh. kă-li, gă-li. [ [eco liy]
+4.
+-
+,,
+sun,
+tǎ-nin "sun", ni "day" (Ph), A-ni "today" (C), A-ni “to-day
+(Gr. 402 no. 224); S. K. kǎ-nĭ “sun", L. ni "sun, day”.
+niy' = day. Note also ε: tanhaṁ in de
+နေ့
+68
+[ep niy
+Sunday, Monday]
+5. tša (C), tsat (Gr) “sun”; cf. Katš in tšăn, dzăn, Andro tsa-mit
+'sun", Tsang tša-nyu "sun", tša "sunlight ".
+66
+,,
+6. pu-la moon (Ph) (cf. Loloish), la-ma (Gr), a-ma (C); Kh.
+la, Hla. [co la]
+7. ke-rě "star" (Gr), kĭ-rěk (Ph), kre' (wr. kreh) (C); Bu. krǎy.
+[ကြယ် kray]
+[လင်း
+8. wǎ-tai “light” (Ph); Khimi vaň, L. var. [coε: lan]
+9. war "night" (Ph); Garo wal “evening". [ñan, ña]
+,,
+10. -nin "year (Konow 393), A-nin "year" (Gr. 402 no. 221);
+Tsangla niñ “year”, Bh. k‘a-nin, na-nin “last year". [36 nhac]
+11.
+12.
+maï “fire” (Ph, M, C), măĩ (Gr); Kh. mai. [8: mī]
+,,
+tui " water (Ph), tui (Gr, C), twi (M); Kh. twi, tui; L. tří.
+[ရေ riy]
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 12]]
+69
+THE LINGUISTIC RELATIONSHIP OF MRU
+13. ǎŭ "river" (Ph); cf. Kh. tǎ-va, kǎ-va. [ 6 mlac ]
+[§
+earth” (Ph); N. Kh. kål ún (Ph). [ mliy]
+14. kroun "earth”
+15. prěn
+prăñ. [
+16.
+17.
+pren “country” (Konow 393), pren (Gr. 402 no. 222); Bu.
+prañ
+to
+tšu- "hill top” (C); Garo -tšu "mountain". [con t'ip]
+tǎ-w'a "stone" (Ph.) [empos klok]
+[ကျောက်
+18. lõŭn-Ha “iron” (Ph), lõnHa (Gr), lon-Ha (C); Aryan lōha.
+[o sam]
+19.
+ku “gold” (Gr, C); Pe (Miao) ku. [eg rhuy]
+20. tǎ "silver" (Gr.). [eg nuy]
+21.
+Sak lu
+[လူ li ]
+22.
+66
+"
+,,
+mru (Ph), mrů (Konow 392), mro (C), m ru (Gr) man
+,,
+man (Ph); cf. Ka. măru “the Maru or Lawngwaw people."
+$6
+"
+,,
+,
+66
+mĭtši-wa woman", mǎt s'i-wǎ woman, girl", mǎtši “wife”
+(Gr), mɅtš-tši-wa woman m^ts-tsi“ wife”, m^-ši “wife” (in tson
+m^ši “to marry”) (C), masi “wife” (M); cf. L. Hmeĭ-tš‘ia “woman”.
+[8g miyma, mima ]
+66
+23. nar slave" (Gr, C). [$ kywan]
+24. a-mat' -a-mală "harlot ,,
+(Konow 393).
+25. t'ǎŭ-rǎi "god" (a-t'ow-ǎ “devil") (Gr); Meithei lai "god,
+devil".
+26. na "devil" (C); cf. Bu. nǎt "spirit". (so nat]
+,,
+66
+27. min "
+name (C), min (in ĕn min mya your name what?”)
+(Gr. 402), ĕ-mĭ (i.e. your name") (Ph); K. *rmin, *min "name";
+O. Bh. min. [ mañ - to be named]
+=
+28. pu "grandfather, wife's father; mother's brother" (M); K.. pu.
+[အဖိုး apuiw]
+29. pi "grandmother" (either) (M); K. pi. [g]: ap'wå ]
+30. pa
+"father" (Ph, Gr), pa (Gr. 398, 399), -pa (a-) 2 (Konow
+392, 393), -pa (a-) (M), -p'a (a-) (C); K. pa. [ ap'a]
+31.
+[အမိ ami]
+u "mother" (Gr, M), -u (a-) (C), -u (ǎ-) (Ph); Šo -u (ǎ-).
+1 For the phonetic development of mr to 1, cf. So where this change takes place.
+* The prefix a- always occurs in the specimen, whether the word is in the voc., or with
+pers. prons., or means the father."
+618
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 13]]
+70
+JOUR. BURMA RESEARCH SOC.
+..
+XXXI, II, 1941
+32. ta-ran (Gr. 402 no. 225), t^-ran (C) “uncle", t^ r^ǹ (wr. tu
+rung) husband's father" (M); cf. N. Kh. (Aying) pr^n (wr. prun)
+husband's father" (M).
+$1
+33. -tai (a-) "elder brother" (C), -tai (a-) "elder brother (said
+by man), elder sister (said by woman)" (M); cf. So -ta. [ackuiw =
+elder brother]
+68
+34. naŭ-ma (C), năŭ-mă (Konow 393) "younger brother", naŏ-ma
+brother" (Gr); K. nao younger brother". [ ni, ñi]
+toa-ma "sister
+35.
+[be acma
+[အစ်မ
+=
+,,
+"
+[ညီ
+(C), tŏă-ma (Gr), twă-mă (Gr. 402 no. 225).
+elder sister, hama, nīma - younger sister of man or
+Sʊ
+woman respectively ]
+$6
+36. tša (C., Konow 392, 393), tša-pa (Konow 392) "son,” tsa
+"child" (Gr), tsa-ma daughter” (Gr. 399), tsa- son" (Gr. 402 no.
+228); N. Kh. *tsa, K. *tsa. [ɔ: sã ]
+**
+37. yaŭk sa "son's wife" (said by man or woman) (M); Bu. yok
+"
+man (homo). (with suffixes, denotes "wife's brother," "husband's
+sister; woman's brother's wife," "father-in-law, mother-in-law "). [ewood
+[ယောက်
+yok numeral affix of persons; wɔnge yokk‘ama · father-in-law,
+mother-in-law; swɔ yokp'a = brother-in-law; etc. ]
+-
+38. k'an-pŏn “friends” (Konow 393). [ǝƐgs: k'ańpwan ]
+39. lu“head” (Ph, Gr, M, C); K. lu. [¾cǝƐ: ük‘on]
+40. sam “hair” (Ph), sam (M), tsam (Gr), tam (C); K. *năm,
+*tsǎm. [ c'am]
+41. mik "eye" (Gr), mi (M), min (Ph), min³ (C); Tibeto-Burman
+*mik. [4058 myakciy ]
+42. pǎ-ram (Ph, C), p'a-ram (Gr) "ear," pǎ-răm- "to hear"
+(Konow 393), prăm “ear,” răm saĭk “ear-ring" (cf. kwa-saĭk “bangles ")
+(M). [: nãear
+ear]
+"
+,,
+43. na-koň nose (Gr), na-kon (C), na (wr. nar) (M); Kh.
+(Awa) ǎ-na-k‘on (M); Bu. nā-'k‘on. [3ɔcalƐ: nhāk‘'on ]
+"
+,,
+44. nor mouth (C), nor (Gr), năŭr (Ph), nawa (M); cf.
+Mošang nür. [ại nhut ]
+45.
+[သွား swā ]
+yun "tooth"
+tooth” (Ph), yon (M), yön (wr. yeung (C), yěňň (Gr).
+46. dai "tongue" (M, C), dăĭ (Gr); Mikir de. [cp lhyā]
+1 Really m, the nasalized vowel being from the initial, not from an original final.
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 14]]
+1
+71
+THE LINGUISTIC RELATIONSHIP OF MRU
+66
+rut hand" (Ph), rŭť-bŭť
+ring" (wr. ruth-buth) (Konow
+47.
+392), ru "hand” (C); K. kŭt, k'üt. [cos lak]
+[လက်
+48. bŏn "hand" (Gr); L. ban "arm." [ε mon ]
+,,
+49. krōå « finger " (Konow 392). [လက်ချောင်း ]
+,,
+50. k'ŏük (Ph), klŎň (Gr), k‘ð-på (Konow 392), ko-pa (C) “foot,"
+k'o k'an "anklet (M). Possible Sino-Tibetan comparisons exist, but
+phonetics of the Mru word are too uncertain to hazard conjectures. [k'riy]
+51. mu (Gr), mů (Konow 392), mun (C) “ belly,” mgu “stomach '
+(M). [os: waṁ - belly, womb; - bowels]
+,,
+52. kum "back" (Gr, C); Maran (Katšín)nů-gum. [2: kun]
+53. na aŭn "neck" (M); L. n'on (if the Mru word is really one
+syllable); Meithei nǎk-săm (if the Mru word is two syllables). [co lañ ]
+54. pan-kŏť "neck" (Konow 392) (really "cheek" ?). [ol: cheek,
+o nape of neck ]
+55. pi "skin" (Ph); N. Kh. -pik. [qariy]
+56. Hut "bone
+"bone” (M), ǎ-Hŏt (Ph); Khimi -Hu'; L. rŭ' < *rus;
+Bh. rus-pa. [: aruiw]
+[အရိုး
+k'ā
+57. ti lun (wr. -lung) "waist" (M); cf K. *mlün “heart.” [ǝl:
+= waist, : nhaclum = heart]
+ɲoj:
+58. wi "blood" (Ph); Tsepang wi, Vayu vi, vĩ, W. * šui, Bu. 'swe.
+[သွေး suy ]
+59. nǎ-s'aĭt "elephant" (Ph), na sai (M); Kh. kǎ-sai. [∞ε c'an]
+60. tǎ pri "tiger
+tiger" (Ph), pri (M); Taḍuva (Dravidian) pirri
+(Hunter). [mp: klä]
+61. na "buffalo" (Ph, M); Kh. (Awa) ma-na, (Aying) pai-no (M).
+[ klway]
+62. tom
+tom "bear” (M); K. *tă-wŏm, Bh. dom. [ō lawaṁ]
+63. kōrǎna "horse" (Ph), kŏr-na (Gr, C), kwa-ña (M); K. *kŏr,
+*răn. [GC: mran]
+64. t-siya "cow" (Ph), t-sĩa (Gr), tšia- (wr. chea-) (C), ktya
+(wr. kyta) (M); Lemyo (dialect of So) sya (Ph), Tšepang mo-sya
+cow,” mi-sya "buffalo,” me-sya “goat.” [ε nwã
+##
+=
+cow]
+65. na-HAi (wr. -hue) (Gr), n-ki (wr. ng-kee) (C) "deer"; L.
+-k'i "barking deer." [ca - barking deer]
+ရေ
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 15]]
+72
+JOUR. BURMA RESEARCH SOC.
+XXXI, II, 1941
+66. tǎ-răuǎ (Ph), rŏa (Konow 393), roa- (C) “goat,” rŏă “goat,”
+rðǎ-t'în-mĭ“ shepherd" (Gr), kwa (M) "goat"; cf. Bh. ra- "goat,” rwa
+"horn." [85 c'it goat]
+67. tǎ-pak "hog" (Ph), pa "pig," pak- (in pak-tša- translated
+husks," lit. "hog-eat-”, i.e. "hog food"), (Konow 392), pak “pig”
+(Konow 387), PA^i “pig" (wr. pue) (M); Mikir p‘ak, Bh. p'ag. [on wak [
+68. tǎ-yut "monkey" (Ph); Bhramu pa-yuk, Tšepang yuk, Bu
+myok. [
+myok ]
+69. tǎ-kwi "dog" (Ph), kwi (M), kui (Gr, C); Bu. 'k'we. [eg: k'uy]
+70. tǎ-myin “cat” (Ph), mĭn (Gr), mar (C); Šo mìn, mĩn, myin.
+[ ကြောင် kron ]
+71. lip "tortoise" (M); Kh. *tă-lip, Bu. lip. [Slip ]
+72. tǎ-roǎ (wr. -ro-a) "snake" (Ph), rwa (M); cf. K. *m-rul. [
+mruy ]
+,,
+73. dam (<tă-m ?) "fish" (Ph), d^m (M); cf. Khimi mɔi. [cl: nā]
+74. tǎ-wa "bird,” wǎ-a “
+crow"
+(Ph), wa "bird," wa-klån "cock
+(Gr), wa "bird," wa-klan “cock" (C), wa "fowl" (M); Kh. *tǎ-wa
+“bird,” K. *-wa “bird." [ço nhak. But note a u-, prefix for birds]
+"
+,,
+"
+"
+75. wǎ-a crow (tǎ-wa "bird") (Ph), wa ak crow (wa
+"fowl") (M); Kh. -a, -ak, L. tšo-ak. [o kliy]
+76. kum-pǎi "duck" (Gr), um-paĭ (M), um-pai (C); Zayein
+(Karen) -kům-paĭ, Taungtha woŏm-bě, Tšinbon wǎn-pwe, Bu. 'wăm-'b‘ai.
+[ဝမ်းဘဲ wampay]
+[ခြင်]
+77. tǎ-tsan "mosquito" (Ph); N. Kh. tšan, K. *krǎn ?, Bu. kʻrań.
+78. dui “egg” (Ph); Kh. -dui, -dwi. [e u ]
+79. ǎ-nań "horn” (Ph); cf. Ka. nǎ-run, n-run, run; Pwo nŏn;
+Taungthu năn. [Q ūk‘ruiw ]
+80. tsin-dun (Ph), siñ-do (wr. -dow) (Gr),šin-dɔ (wr. -daw) (C),
+sen (M. 145, 146) "tree"; Bk. sin-sdóń tree trunk," [boε sac-pan]
+[သစ်ပင်
+1
+81. kywan "teak” (M); Kh. (Awa) kywan (M),Bu. 'kywǎn.
+kywan]
+[ကျွန်း
+82. A-p'on “mango” (M); Kh. (Ayaing) A-p‘on (M). [ɔɔ siryak]
+83. mɔ "yam" (Ph); cf. Bu. myok. [sup]
+1 wr. sain, in names of trees.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 16]]
+73
+THE LINGUISTIC RELATIONSHIP OF MRU
+84. pa-ŏŭ "flower" (Ph); Kh. -pa, L. par. [o$: pan]
+85.
+arwak]
+"
+ǎ-ram “leaf” (Ph); Kumi n-gam (wr. ngám) < n-ram ?. [magos
+86. nwi "fruit" (M). [8: asi]
+87. kwa "village (Ph), kua (C), kŏǎ (Gr. 403 no. 241); L. k‘ua.
+[gp rwā]
+88. tšěn shopkeeper" (Gr. 403 no. 241); Khimi t'en sǎ-zun
+market place." [88 = shop ]
+tǎ-ma "road" (Ph). Cf. Dhimal dama. [coS: k'arī]
+89. tǎ-ma
+90. kim "house" (Gr. 397; Gr. 402 no. 223, Konow 393), kim (Gr.
+402 no. 226 and 403 no. 233), kĭm (M), kim, k^m, -kiĭm (C), kĩn (Ph);
+O. Bh. k'yĭm. [986 im, im]
+91. kĭm bɅn "wall" (kim "house") (M); S. Kh. (Awa) aun ta
+pan "wall" (aun "house"), N. Kh. (Ayaing) Am pAn "wall" (^m
+'house") (M). [ram]
+"
+,,
+92. tui kwam “well (C), kwa- (-la) (Gr. 403 no. 237); H. kuā.
+[ ရေတွင်း riy twai )
+93. laŭn "boat" (Ph); Bu. lon, K. *m-lon, S. Kh. mă-laŭn, etc.,
+N. Kh. pǎ-laŭn, etc. [scoƐ: lon-canoe. cf. O. Mon dlun]
+94. bai (wr. by) "mat" (M). [ч p'yā]
+95. a-wat' "dress" (for man) (Konow 392); Bu. 'ǎ-wăt “garment."
+[အဝတ် awat]
+96. fanǎi
+fanǎi "shoe" (Konow 392); H. panahi "slipper." [ p'inap]
+97. tša-rai (wr. -rie) "dah" (M). [∞00:]
+98. sa
+66
+">
+[ထား]
+arrow (Ph); probably < H. sar, but possibly
+(> *sǎl?). [: mlā. Note Kadu mīs‘ā, Ganan māt-ts'a]
+-
+L. t'ǎl
+99. Hom-"food" (Konow 392), tšй-an-dzin-tša-Hŏm-ti š" let us
+eat” (= ? -we (for an in) -eat-food- ?) (Konow 393). [™ɔ acā]
+,,
+100. pŏi “feast (Konow 393); Khimi poi. [8 pway]
+101. kŏm "bread," -tša-gom “to eat," kŏm-lãĭ "(he) was in want
+(of food)" (Konow 392). [§ mun]
+102. wi-s'a "salt" (Ph); wr. Bh. ts'wa, sp. Bh. ts'a. [20: c'ā]
+,,
+103. si “oil” (Ph); S. Kh. si (Ph), sp. Bu. sỹ (Ph), r. Bu
+t'i. [8c1]
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 17]]
+"
+74
+JOUR. BURMA RESEARCH SOC.
+104.
+So wŏn.
+$6
+XXXI, II, 1941
+wan goods" (Konow 392), wŏn property" (Konow 393);
+[m$ kun
+[ကုန်
+goods for sale]
+-
+105. lok "one" (Gr), lok-ya (Gr. 399), lo' (Gr. 400), lo (Konow
+392), lo-Ĭya (Konow 392, 393), luk (M), lðúň (Ph). [∞ tac]
+106. pre
+"
+two" (Ph, Gr, C), prěy-a (Gr. 398 no. 105), prě-a (Gr.
+399 no. 123), prǎiy-a' (Konow 392), praĭ (M). [ nhac]
+[နှစ်
+62
+107. tsum (Gr), tšum (C), sum (M) "three,” šun three," tsum-
+gom "thirty" (Ph); K. *k-sům. The Mru word is not borrowed from
+K. proper, as K. has initial t'- <*s-. [ɔ: suṁ, sum]
+108. tǎ-li (Ph), te-li (Gr), t^-li (C) "four,” ta lu "four," li kon
+forty" (M); K. *p-li, S. Kh. mă-li, Khimi bi-li. [6c0: liy]
+[လေး
+,,
+109. tă-na "five" (Ph), ta-na "five," ña-kom "fifty" (Gr), t^-na
+"five," na-kom "fifty (C), ta nu "five," na kon" fifty" (M); K.
+*b-na (?). [c: nã]
+110. tǎ-ru "six" (Ph), tŏ-ruk (Gr), tA-ro (C), ta-rok (M); K.
+t-ruk. [ခြောက် krok ]
+66
+,,
+111. rǎ-Hnit seven (Ph), ră-nĭt (Gr), Hv^-nin (i.e. v^-Hnî' ?)
+(C), a-Hni (M); Bu. k‘ů-Hnătš. [ą
+kunhac]
+112. riyat "eight" (Ph), reat (Gr), riya (C), a-yat (M); Bu.
+Hrătš, L. rîǎt. [§ het, hyat, yhat
+113. tǎ-ku "nine" (Ph), t^-ku (C), ta ku (M), tak-ku (Gr);
+Bu. 'kŭi, K. *t-kua. [o: kuiw]
+[ကိုး
+114. Ha "ten" (Ph), Ha (wr. Har) (M), Hă-muit (Gr), H^-mui
+(C); S. K. Ha. [20 c'ay, c'ai; (of persons) of kip ]
+115. pi-ră-mi “twenty" (Ph), pi-ra-mi (M), pir-mi (C), pĭr-mi
+(Gr). Cf. pre, etc., "two." [ nhac c'ay, nhac kip]
+[SocÔng So 6 nhạc
+116. -gǎum “ten" (in multiples of ten) (Ph), -kŏm (Gr).
+117. a-kōm "hundred" (Gr. 395), kom (C), komg (M). [ ryā]
+118. lai (wr. lie) (connects the tens and digits as "20 and 1") (M).
+[sçnhan. Note cops le = also ]
+119. a-ta- "elder (son)" (Konow 393); K. *tǎr “old." [s: akri -
+elder]
+120. a-sŏ- “younger (son)" (Konow 392); K. *sǎr "new." [scus
+anay younger; æœ: atʼuy · youngest; „ɔɔɔ§ asac - new ]
+{အငယ်
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 18]]
+75
+THE LINGUISTIC RELATIONSHIP OF MRU
+121. ǎ-pům (transl.: "(goat) one," but may mean "(goat) whole")
+(Konow 393); K. pům “all.” [ó̟ apuṁ - a heap, a great many]
+အပုံ
+122. but' -but' -měŏn “how many" (Konow 392), měŏn- “many-
+(so- years)" (Konow 393); cf. K. mǎn "much."
+[Sap'ay
+[အဘယ် apay = what ?
+ɖɔ: myã much, many ]
+-
+123. m^n-k'ǎt “how many (years?), how (far)? (Gr. 402 no. 221,
+222), mAn-yā – how many ?” (Gr. 402 no. 223). [ဘယ်လောက်]
+124. la "far" (Gr. 402 no. 222), lǎ'-ma "far" (Gr), a-la’-ma “a
+long way" (Gr. 402 no. 224), a-lak-ma "far" (Konow 392), a-la-ma
+"far," a-lla "a long way" (C); Haka HlaṬ', L. Hla, Khimi -1ɔ. [co:]
+125. a-t'on "near" (C), tŏn- (Gr.). [:: ani, anā]
+"
+1,
+126. k'ůše-, k‘ůší-, k‘ůsí-, -k‘ůši- merry' (Konow 393); Urdu
+khushi "pleasure, gaiety," from Persian.
+66
+127. tšǎn (this what) is (?)," "(merry) being (for)" (Konow
+393); Old K. tšǎn “to be,” L. tšǎn “to become," [§ hiy
+to become]
+--
+to be, p'lac
+s
+"
+128. na "to be" (not used in past tense) (Gr. 400-401), na "yes
+(Gr, C), na-dŏi “no”
+no” (-dŏi “neg".) (Gr), na-dŏi “(I thy son to be
+called)) am not " (Konow 392); Bu. nã "to rest, to stop," i.e. "to be at,"
+Maru na "to be". [:= to perch, rest; cs niy = to dwell]
+-
+129. wǎi "to be" (in past tense only) (Gr. 401), wŏi “(how many
+sons) are (in father's house)" (Gr. 402 no. 223), wěy “(in house) is
+(saddle)" (Gr. 402 no. 226), wŏi "my father) lives (in that small house)"
+(Gr. 403 no. 233), ŏǎi “(there) was (no food)," "(man one, sons two)
+were," ŏwŏi "(my father's servants bread enough) is "¹ (Konow 392),
+a-sin-ŏi "safe" (better "alive was "), tǎi-ŏ wŏi-k‘ůši-ŏi “should make
+merry," wa-k'ǎi "(his elder son field in) was," ka-syan-wŏi
+"thou me
+with) together art" (Konow 393), du-tšak-ŏwŏi"(his belly) to fill wished".
+(better: "(his belly)-?- food-was") (Konow 392); Meithei wŏi-bă “to
+be."
+130. sin "alive" (Konow 393, Gr. 303), -sin-ŏi "safe" (better
+"alive-is") (Konow 393); W. *srin (W. 105); K. *Hriň < *srin; Kh.
+-sin (Ph). [εarhan]
+131. Kŏn "to die" (Gr), kůň- (C). [ew siy]
+132. tson "to take a wife" (C), tšʻyon (Gr. 402 no. 225).
+1 Actual meaning may be "was," the Prodigal Son thinking back to the way it was
+before he left home.
+3
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 19]]
+76
+JOUR. BURMA RESEARCH SOC.
+XXXI, II, 1941
+133. nǎr- "to sin" (Konow 392). Bu "hell"? [ aplac
+nray - hell]
+sin; cò
+134. r^n "to buy" (Gr. 403 no. 241), r^n (Gr. 403 no. 240), -ran-a
+(C); cf. W. *răn, Kanauri ren- “to sell" (W. 80) [pƐ: ron - to sell; ouS
+way, wai to buy]
+1
+66
+,,
+135. -na (a-) servant (Konow 393), -nǎ (ǎ-) (Konow 392);
+Khimi anna', cf. Bu. Hñā " to hire.” [çk- to hire, borrow, lend]
+,,
+136. pe (Gr), pe' (wr. peh) (C) “to give ", păi “give,” pǎy-a “(he)
+gave" (Konow 392), pě-ǎ' “(thou) gavest (Konow 393); L. pe, pek'.
+[ပေး piy]
+137. rǎt “to divide" (Konow 392). [co wuy, uy = to distribute]
+138. tep, teb- (-a) (Gr. 398, 401, 402), těp, těb- (-a) (C) “to beat";
+Bh. ǎděbs-pa (but pf. btab) "to strike, to hit." [my etc.]
+139. tŏn-lǎi “cultivator" (Gr); cf. Bu. t'wăn “a harrow." [ogs t'wan]
+140. k'iǎ' "saw" (-ǎ may be suf. of past tense); Kanauri k'i-, k‘ya-
+to see (W. -J. 53-k). [kran' - to look at]
+66
+,,
+141. sŏ rǎ-nam- "to kiss" (really "to smell" ?) (Konow 392); L.
+nam to smell of, give forth a smell, to be strong smelling"; Bh. bsnams
+(pf.) "to smell." [S: nam - to smell, kiss; to stink]
+=
+142. tǎip- “to say " (Konow 392-393). [‹ hū, hu, cɔ praw,
+c'uiw]
+143. tša (Gr, C), -tšǎ- (Konow 392), -tša- (Konow 393)" to eat,"
+pak-tša-mĭ "husks" (i.e.
+(i.e. "pig-eat-ing"), tšak "food,” dň-tšak-ŏwŏi
+"(belly) to fill wished,” tšǎk-rǎi "hunger" (Konow 392); K. *tsa ? *tsak ?
+[00: că to eat,ɔ acã ==
+acă food, c'ã-hungry]
+[စား
+ǝɔ
+"
+144. děb- (-ǎ) “(he) entreat(ed)” (Konow 393); Bh. ño-spród, gros,
+gsól-ba ǎděbs-pa "to answer, to explain, to advise, to make a request. [ပန်
+pan; coɔɔε: ton to request]
+တောင်း =
+145. yŏn “to stand” (Gr), yŏén (C); Tableng, Tamlu yön. [§§ ryap]
+146. kiom (wr. keom) "to sit" (Gr), tšům "to sit; to live in "
+(C); cf. Dimasa kǎm. [8]
+147. -kŏi “to go” (Konow 392), kõi-mañ (C). [₁gɔ: swã, cɔɔ: lã ]
+148. măn¹ "to go" (Gr. 397, 402), -man "to come (behind)" (Gr.
+403 no. 239); main "to come (behind)"; "to walk (before),” kŏi-maṁ
+"to go" (C).
+1 Not found in the parable.
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 20]]
+77
+THE LINGUISTIC RELATIONSHIP OF MRU
+149. wań (C), wăn (Gr) "to come," wan-tin-k'ŏ "came-arrived,"
+wan-ma-k'ǎ "(house to) came when," wăn-tin "(he) returned," wan
+"(house-to) came" (Konow 393), Ŏwǎn-pŏ-la “bring (a dress)" (Konow
+392); Empeo wan-, Khoirao woń-. [co - to come]
+150. pŏt "to run, to go (out)" (Konow 392), pöf (wr. peuf)
+" to run (C). [: pliy]
+"
+151. ŏǎn-klǎ-k'ǎi "fell (on his neck)" (lit. "went (and) fell")
+(Konow 392); K. kla? [kla to fall from a height ]
+=
+152. ka-syan “joined (a man)"; (thou with me) together (art)"
+(Konow 392, 393), ga-san "(we) all (should make merry)" (Konow 393).
+[ɔɔ§: k‘apsim, k‘apsiṁ — all]
+153. ka- “to be found" (Konow 393). [g-to find]
+66
+"
+154. ta-ma- to be lost (Konow 393). [copyok]
+155.
+an “I, my, (to) me, (make) me (a servant)" (Konow 392, 393),
+an-in "my" (Konow 392), ǎn-kŏi “to me (gavest)", ǎn-en "we" (Konow
+393), ăn “I, my,” ăn-in “ we,” (r. ung, ung-) (Gr), an (C); Baric an
+“I”; W., E. ǎn “my." [c] nã, na]
+156. ĕn "thou, thy" (Gr), en "thou, thy, thee" (Konow 392, 393),
+ĕn thou" (C); cf. K. na "thy." [$Ɛ nan]
+66
+157. p'ǎi-mi “he, his, they" (Gr), păi-mĭ “his, he, they" (Gr. 402
+no. 227, no. 228, Gr. 400, 401, 402), păĭy-a "that (house)" (Gr. 403
+no. 233), păĭ-mĩ “he, his, (to) him (gave), that (country)" (Konow 392,
+393), păï-kíði.“ there" (Konow 392); Naga K. *paï. [× sū, wƐ: ayan]
+158. ma-mi "that, this, those, him, his" (Gr. 403, nos. 232, 234-
+236, 231), mă- "his (sisters)" (Gr. 402 no. 225), mă-mi "that" (C);
+K. ma, ǎ-ma "3rd. pers. pron.". [o t'uiw]
+159. a-mi-a “whose, (from) whom” (C), a-my-a "whose" (Gr. 403
+no. 239), mya- "(from) whom" (Gr. 403 no. 240); Khimi ă-mi "who?
+whose?". [ akran = who, what; S ap'ay - what?]
+"
+160. -mi with pronouns: pai-mi "he" (C), p'ǎi -mi "he, (of) them,
+his" (Gr), pǎi-mi "he, they, his, him" (Gr. 401, 403 nos. 231, 235),
+păi-mĭ "he, that, his, him" (Konow 392, 393), pak-tsa-mi "husks" (lit.
+pigs eat that," "that which pigs eat," aka-mĭ "share" (lit. "share what-
+ever," "whatever share," a-sŏ-mi “younger" (lit. " he who was younger")
+(Konow 392), nă-mi “this," ŏr-mi “him," tŏ-ra-mi “whatever," a-ta-mĭ
+"elder" (lit. he who was elder") (Konow 393), ŏr-mi "they" (Gr). See
+also nos. 157 and 158.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 21]]
+78
+JOUR. BURMA RESEARCH SOC.
+XXXI, II, 1941
+161. -po forms indef. prons.: lõĭya-pŏ “anybody" (Konow 392),
+dit' -tšǎ-pŏ" at any time," tŏm-pŏ-ka, -kǎ "because" (Konow 393) (cf.
+Grierson ton "what,” tŏn-p'a “why”).
+162. -la masc. suffix (with names of animals), -lla (in “bull”) (C);
+Ka. -la, Meithei -la-ba. [coɔ: -lānot castrated (of animals)]
+cock" (wr.
+163. wa-klan "cock" (wa "bird") (C), wa-klɲǹ “cock
+-klung) (wa "bird") (Gr). [ = fowl]
+-
+,, 64
+66
+,, "
+,,
+"6
+164. -ma "fem. suffix" (in "sister," daughter," cow," "female
+deer") (C), (in "sister," " daughter,' mare,” cow, ," "bitch," "female
+goat," "female deer") (Gr); occurs in K., but infrequently; common in
+Bh. and generally in Tibeto-Burmic. [ ma]
+1
+165. ton "what?" (Gr., Konow 393), tŏn-p'a "why?" (Gr), ton
+"(this) what (is?)" (Konow 393), a-ton "(bring) a¹ (dress)", "(feet
+shoes) a pair' (put on)" (Konow 392), tŏn-t sö "what," tom-bo-ka "why"
+(C).
+166. kun (C), kůň- (Gr), kun-gě (Gr. 398) "behind," kůň-kěĕy
+"(thy) behind (whose boy goes)" (Gr. 403 no. 239), kůň-kŏí "after
+(spending)", kun-a-Ha "afterwards (he said)", kun-ě-H afterwards (he
+went)" (Konow 392);Baric -k'ün, kůň “back” (noun). [ɔ nok - behind]
+167. lǎi “of” (Gr. 395, 396, 398, 399). [e']
+168. tud-ǎ "(he the father) to (went)", "(I sinned thee-) before,"
+"(I my friends) with (merry being for)" (Konow 392, 393), tŭ-ǎ "(the
+father) to (shall go)" (Konow 392). [ suiw' - to]
+169. Hǎi "with (harlots)" (Konow 393), Hai "with (ropes)" (C).
+[နှင့် nhan' ]
+170. pur-"before" (C, Gr. 403 no. 238). [
+arhiy']
+171. lu- "(to sit) on (a horse)" (C), “(to put saddle) on (horse's
+back)” (Gr. 402 no. 227). [coT paw, com tak]
+172. Locative, dative, accusative: tšut-kŏi "up," pur-göi "before"
+(wr. -goi), pur-kei (wr. -ke e) “before,” kun-köľ (wr. -koih) "behind,"
+tsu-keĭ (wr. -ke e) "on top of the hill," lu-kai "sitting) on," kŏí "in
+(the house is the saddle)" (C), -kŏi “(that country-) in (men food was
+not)", "(he country-) in (on man joined)", "(I sinned heaven) to," "(the
+son-) acc. (the father saw)", "(the son the father-) to (said)", "(the
+1 i. c. "any," the indef. pron. corresponding to the interrog. "what?".
+2 Not found in any text except Konow 392 in kŏm-lǎi which seems to mean "bread-
+without,' was in want.”
+"> #
+,
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 22]]
+79
+THE LINGUISTIC RELATIONSHIP OF MRU
+father servants) to (said)", "(his son field-) in (was)", "(house-) to
+(came)”, “(house) inside (enter would)”, “(me-) to (goat one thou
+gavest)", "(far away-) in (when the son the father saw)" (Konow 392,
+393), kůň-kōi “after (spending)" (Konow 392). [s: ā- loc. and dat.
+suffix; o kuiw*** objective suffix]
+173. -ŏ“vocative" (Konow 392); So, Anal, Purum, Haka -ŏ [ဩ
+o Prefix ]
+174. k'ǎi “past tense" (Konow 392-393). [k'ay; k'a]
+$6
+175. -ta past tense" (in "heard"), -tă (in "asked ") (Konow
+393), tǎ (in "sent," "wasted") (Konow 392, 393), -ta- (used in both
+past and pres.) (Gr. 401, nos. 178, 181, 183, 184), -ta- (in “have beaten ")
+(Gr. 402 no. 228); K. -ta past tense.'
+"
+66
+,,
+176. -a, -ǎ, -ǎ' “ past partic., past tense" (Konow 392, 393), -a'
+(Konow 392); K. -a, -a'.
+177. -doi "not" (Konow 392-393), -důĭ "not" (Konow 393), na-döi
+(wr. -doi)
+“no” (na ' yes") (C), na-dŏi “no” (na "yes") (Gr).
+(oma, a (prefixed)]
+66
+,,
+178. a-kō now (Konow 393). [w₁ yak'u]
+[ယခု
+179. plăn "again" (Konow 392, 393), ǎ-plǎn, a-plan (Konow 393);
+cf. K. lan. [Ⓒ
+[G
+plan]
+ROBERT SHAFER.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.

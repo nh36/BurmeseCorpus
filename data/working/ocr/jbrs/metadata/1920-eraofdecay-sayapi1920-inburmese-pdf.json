@@ -9,6 +9,6 @@
   "pages_completed": 1,
   "ocr_date": "2026-06-01T08:25:07.070168+00:00",
   "source_category": "other_source",
-  "language_scope_guess": "mixed_or_uncertain",
+  "language_scope_guess": "Burmese",
   "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
 }

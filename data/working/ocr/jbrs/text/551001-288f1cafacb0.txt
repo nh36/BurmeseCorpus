@@ -1,0 +1,809 @@
+[[page 1]]
+SOME TRENDS IN SCIENTIFIC RESEARCH *
+Dr F. Ba Hli **
+If someone were to ask a historian
+in the next century what was the most
+significant scientific research in the 1960-
+70 decade, 1 think he or she would reply
+that it was space research. Here I am
+assuming that men are still living on this
+earth in the next century and that the
+advances in atomic science of the 1940's
+and 50's which produced the atomic and
+hydrogen bombs had not wiped out civili-
+sation in the years to come.
+But let us not spend our time this
+evening discussing further these dismal
+possibilities. Instead let us consider the
+happier events in scientific research of the
+past few years.
+The first time in the history of
+mortals, men have set foot on the Moon.
+I think most of you are already familiar
+with the scientific research and develop-
+ment which made possible the flights to
+the Moon. Many different scientific dis-
+ciplines had to be combined together with
+immense effort and superb coordination to
+produce the various instruments, rockets
+and communications equipment necessary
+to successfully complete a mission to the
+Moon. The outstanding feature of space
+research and other modern scientific
+research is the multidisciplinary nature of
+this research. But more than the scientific
+achievements, I think that the importance
+of the Moon Mission may be said to be
+the achievement of unification of the
+people. This was very apparent during
+the Apollo 13 moon flight during which,
+due to a malfunction, the a stronauts could
+not land on the moon. However they
+**
+**
+were able to return safely to the earth,
+after the combined prayers and good
+wishes of the millions of people who
+followed the whole flight by television and
+radio.
+Some may question the usefulness of
+spending billions of dollars on the moon
+missions but from the USA or USSR
+governments' viewpoints the money was
+well spent because these missions have
+unified their people through the identifi-
+cation of their hopes for world supremacy
+and singleness of purpose in carrying out
+their missi .ns. The space research pro-
+grammes have captured the imagination of
+the people, not only in the USA and
+USSR but in many other countries as well.
+In addition to the direct benefits of
+space research such as the encouragement
+of progress in rocket fuels, the develop-
+ment of all kinds of instruments and
+equipment and of advances in basic
+sciences such as physics, chemistry and
+metallurgy, there have been many other
+benefits commonly referred to as the
+“spin-off from the space programme."
+One of the outstanding developments has
+been the introduction of the Intelsat
+system whereby television, telegraph and
+telephone signals from one part of the
+world can be relayed to other parts by
+means of artificial satellites placed in orbit
+over the Atlantic, Pacific and Indian
+Oceans. Better communications between
+different parts of the world are to be
+welcomed as they can lead to more trade
+and commerce and also hopefully, to
+better understanding between different
+Presidential Address delivered at the Annual General Meeting of the Burma Research
+Society held on 17th Feburary 1972.
+M. S. in E. E., Sc. D., Director General, Union of Burma Applied Research Institute,
+Rangoon.
+JBRS, LV, i & ii, Dec., 1972.
+M. H. W.
+1 U.P.-L. 227-1,100-19–10–73.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd Bangkok Thailand
+
+[[page 2]]
+2
+peoples. It is to be hoped that in the
+future, Burma and other developing
+countries can gain more benefits from the
+spin offs of the space programmes by
+using the satellites for geological prospect
+ing and other uses just as they are now
+being used for weather forecasting.
+Another benefit of the space program-
+me which has so far not been mentioned
+is the fact that theories and scientific laws
+discovered by Sir Issac Newton and later
+scientists have now been tested out beyond
+the confines of this earth and found to be
+universally true. In particular, at this time
+we should pay tribute to Newton who
+first laid the foundations of physics three
+centuries ago and also propounded the
+Law of Universal Gravitation which is
+used in all calculations connected with
+the flight of rockets, satellites and space
+ships.
+One of the interesting related resear-
+ches which helped the space programme
+and which in turn is being developed
+faster as a result of the spin off from the
+space programme is that of thermoelectri-
+city. The possibility of converting heat
+into electricity was discovered by Seebeck
+in 1821 but no commercial use of ther-
+moelectric generators was made for a
+long time due to the economic advantages
+of the dynamo, the principle of which had
+been discovered by Faraday. However
+from a scientific point of view, the genera-
+tion of electricity by the conventional
+method is a roundabout way of converting
+heat into electricity. Whereas in a ther-
+moelectric generator, heat applied to a
+thermopile (ie. a device containing n and p
+type semiconductors) directly causes electri-
+city to flow between the hot and cold
+junctions of the two thermoelements.
+Though the Seebeck Effect was used by
+scientists for some experiments it was
+only in the 1930's that Academician A.F.
+Ioffe of USSR and his team of researchers
+investigated the phenomena of thermoelec-
+tricity and deduced a theory for it and
+methods of calculation. By about 1960 a
+number of thermoelectric devices had been
+developed following the invention of the
+JBRS, LV, i & ii, Dec., 1972.
+Some Trends in Scientific Research
+semiconductors (now used widely for
+transistors). The main advantages of
+tharmoelectric generators compared with
+other energy sources are independence,
+complete silence in operation, durability
+and ease of maintenance.
+Thermoelelectric generators are now
+successfully ured for producing electricity
+in remote and inaccessible places such as
+space vehicles, under water and for auto-
+matic radio scientific stations in the
+Antarctic and on the Moon. The semi-
+conductors used in these types of genera-
+tors are Bi₁ Tе3, Bi₂ Sе3, Sb₂ Tes Tes Pb S,
+Pb Te, Pb Se, Sn Te, Ge Te and alloys
+made from them. The SNAP-11 thermo-
+electric generator was designed for use on
+the moon. It consists of a Curium (Cm
+242) radioisotope source with half life of
+120 days to give a heat output of 538
+Watts. The p & n type thermoelements
+were of Pb Te and about 1 cm long. The
+thermopile contained 72 thermoelements.
+The unit produced 18 W during the lunar
+day and 25 W during the lunar night-the
+increase in output being due to the lower
+night. The SNAP-11 unit was 20 cm
+temp of the cold junction during the lunar
+diameter and 23 cm long and weighed (with
+the radiation shielding) 13.6 kg. A later
+version SNAP-27 used Plutonium 238
+and lasts for 1 year on the Moon.
+The SNAP 21 was designed for use
+in unmanned navigation buoys and for
+submarine cables. It contained Sr 90 (half
+life 27.7 years) with a heat output of
+256 W. There were 60 pairs of Pb Te
+thermoelements which produced 10W of
+electricity. Efficiency was 3.9%. The unit
+weighed 834 kg including the biological
+shielding to protect the handlers from
+radioactivity. It is housed in a copper
+beryllium alloy case resistant to seawater
+corrosion and depths up to 7000 metres.
+It useful life is already 5 years and cost
+$14,000 including the radioisotape fuel.
+Without the special high pressure and corro-
+sion resistant housing, there is a 20%
+reduction in cost for shore based installa-
+tions.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 3]]
+Dr F. Ba Hll
+The research on these units costs
+about 30 million dolars which indicates
+the complexity of the design of a ther-
+moelectric generator even though the
+unit itself seems outwardly simple. The
+basic reason for spending so much on
+these units is that they are much more
+reliable than other electrical generators
+and their power to weight ratio is very
+much higher than batteries e.g a radio-
+isotope thermoelectric generator can pro-
+duce 10,000 watt-hours per kg weight
+whereas a storage battery can produce
+only 300 Wh/kg and an electrochemical
+cell can produce only 200 Wh/kg. Also
+their useful life is much longer.
+Closely related to the semiconductors
+used in thermoelectric generators are the
+semiconductors used in solar cells which
+generate electricity from sunlight. They
+are used in many man made satellites
+to provide electricity from solar energy
+to operate the radio transmitters and
+receivers in the orbiting satellite. They
+are the lightest of all electric generators
+from the point of view of longlasting
+ability to produce electricity though they
+are expensive. That is why we cannot
+use them for ordinary electrical genera-
+tion. The cheapest electrical generators
+are the hydroelectric generators. Some
+of the large hydroelectric stations in the
+world produce electricity at a cost of
+only half a pya per unit (KWH). In
+the final analysis these hydroelectric
+stations derive their power from solar
+energy and gravitation because the water-
+falls on which they depend could not
+exist without the sun which evaporates
+the water from the oceans; this water
+vapour later falls as rain and flows along
+a river till it comes to a cliff and falls
+down due to the earth's gravitation. If
+we analyse further we see that solar
+energy is derived from nuclear fusion
+reactions in the sun. So when we use
+solar energy we are really using nuclear
+energy in the ultimate analysis.
+In the past few years there has
+been an increased interest in the utilisa-
+tion of solar energy because it is pollu-
+tion-free. It is even better as a pollu-
+tion free source of power than electri-
+city because some forms of electricity
+generation and utilisation give rise to
+heat-pollution and carbon dioxide pollu
+tion of the environment.
+The latest research in which the
+United Nations and we are interested is
+development of solar refrigeration.
+I think all of you will be intrigued.
+by the possibility of using the heat of
+the sun to overcome this same heat
+which is causing us discomfort by making
+it work an air conditioner to cool our
+room. In theory this is quite feasible
+but much research and development will
+be necessary before it becomes techni-
+cally and economically feasible. Much
+nearer possibility is to develop a solar
+ice maker and I have initiated some
+work on such a device. This device, if
+economically feasible, could be of great
+benefit to our country and to all deve-
+loping countries where electricity is at
+present too expensive,
+Solar Energy is really nuclear energy
+received through solar radiation from a
+distance of 93 million miles. Why?
+Because the heat and light energy of
+the sun is derived from thermonuclear
+reactions in the interior of the sun by
+the fision of hydrogen nuclei into helium
+nuclei. Though nature has been using
+this vast source of energy for millions
+and may be even billions of years, scientists
+are still trying to find a practical way
+of harnessing this energy for peaceful
+uses.
+It is said that man does not live
+by bread alone, and in the field of
+scientific research also, we are interested
+not only in inventing new materials and
+energy sources. In fact, scientists are also
+very much interested in research on non-
+material items and one of the significant
+modern trends of scientifi research has
+been the development of electrical com-
+munications engineering which in Europe
+JBRS, LV, if & ii, Dec., 1972.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 4]]
+4
+is sometimes referred to as "small currents
+engineering” in contrast to electrical power
+engineering which deals with the genera-
+tion and transmission of large currents or
+large amounts of electricity.
+In the science of communications we
+are mainly concerned with the transfer of
+information which needs only a small
+amount of electricity which is quite insigni-
+ficant from the electrical power point of
+view. But these insignificant amounts of
+electricity are by no means insignificant
+to human beings because all our thoughts,
+words and actions are regulated by these
+tiny electrical currents.
+When we say that brain is more
+important than brawn in this modern
+world we are in effect saying that intelli-
+gence is more powerful than mere strength
+of muscle. Now, intelligence is really
+transmitted from one place to another by
+the small electrical currents which flow in
+the telephone and telegraph wires or by
+the electromagnetic waves which are trans-
+mitted by radio stations. The amount of
+research which is being done on electrical
+communica'i ns is by no means an insig-
+nificat portion of human endeavour and
+its results are indeed far reaching and have
+in some cases changed the whole concept
+of things. For instance, when Christopher
+Columbus reached the new world in his
+day, no one saw him land there except
+the sailors on his own ship. But when-
+ever astronauts now land on the moon
+(which is the new world today) milions of
+persons all over the world ctually see
+them set foot on lunar soil through the
+results of electrical communications
+research.
+Out of the immense amount of
+resea ch done in the communications and
+electronics field at MIT one of the
+developments which has caused changes in
+b siness practice and many other areas of
+human activities is the Electronic Com-
+puter, Burma is also setting up a com-
+puter contre and will soon be using the
+computer to solve many problems. Our
+JBRS, LV, i & ii, Dec., 1972.
+Some Trends in Scientific Research
+neighbouring countries are already using
+computers with great advantage to them-
+selves. A lot of research is currently
+being done to improve computer hardware
+and also to find better ways of program-
+ming the computers so that they may
+solve more complex problems.
+Almost as unbelievable as the extra-
+ordinary power of modern computing
+machines is the ability of very sensitive
+nucleonic instruments to find out the age
+of ancient objects dug up by the archaeo-
+logist or geologists. This may be some-
+thing that is of immediate interest to those
+of you who are doing research in archaeo-
+logy and history.
+This is the radiocarbon method of
+finding the age of an object which at one
+time was a living organism but which
+become buried and is found at the site
+of an excavation. This method, usually
+referred to for short as radiocarbon
+dating, depends upon the discovery by
+WP. Libby and his coworkers at the
+Lawrence Radiation Laboratory that when
+a living organism (such as a tree or a
+shellfish dies the radiocarbon atoms of
+C14 decay. A living organism has an
+equilibrium value of 15.3 disintegrations
+per minute per gram of carbon.
+By measuring with a nucleonic instru-
+ment, designed for this purpose, the
+radioactivity of that particular sample it
+is possible to estimate by means of a
+formula the time elapsed since the living
+organism from which the sample was
+obtained, had dieđ.
+-
+[Specific Activity = Radioact vity
+weight in grams of sample.
+Sp.Act. = 15.3 c - 0.693 t/5568
+where t is the number of years
+since death of sample; 5568
+life of C 14]
+half
+One of the trends of scientific research
+has been for researchers to specialise in
+in narrow fields because they found it
+impossible to do outstanding creative
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 5]]
+Dr F. Ba Hli
+work or to have complete knowledge in
+a broad area of science. There is a
+humorous definition of a specialist as"a
+person who knows more and more about
+less and less until at last he knows
+everything about almost nothing”. This
+indicates that it is easier to know a lot
+about a very narrow speciality than
+to be knowledgeable about a wide variety
+of subjects.
+However, there have been a few
+notable exceptions to the above. One
+example is the creation of the new science
+of Cybernetics by the late Dr. Norbeth
+Wiener, Professor of Mathematies at M.I.T.
+In addition to being a professor of mathe-
+matics Dr Wiener was also an expert in
+electrical engineering, economics and
+neurology besides knowing about ten
+languages. He took the theory of feed-
+back from the servomechanisms field of
+electrical engineering and applied it to
+the investigation of control systems
+in the human being and was successful in
+predicting some of the phenomena in the
+human nervous system.
+This theory of feedback has numerous
+applications in electronics e.g. the electro-
+nic organ, radio, amplifier, etc, are design-
+ed with the use of this theory. Moreover
+the big guns of a battleship, the antiair-
+craft guns and the attack movements
+of a supersonic jet fighter are all
+controlled by sewomechanisms which
+also use the theory of feedback. This
+same theory was used by Dr Tun Thin
+and me when we were together in Cam-
+bridge, Massachusetts to solve his docto-
+rate research problem at Harvard Univer-
+sity which was to predict mathematically
+what would happen in a market where
+two competitors of many com netitors
+were waging a price war. Later Dr Tun
+Thin got not only his Ph.D. but also the
+Wells Prize from Harvard University for
+his thesis which contained this successful
+application of feedback theory to econo-
+mics. Cybernetics has also been used not
+only in studies of the human nervous
+control system but also to study the be-
+havior of human social systems.
+Modern science is becoming increa-
+singly concerned with human relation-
+ships. No longer do scient sts think only
+of physical theories in an “ivory tower
+atmosphere" but due to the social and
+economic implications and reactions of
+new scientific discoveries and the develop-
+ment of new technologies they are forced
+to think also of their impact on human
+society. Due to this trend and the wide-
+spread pollution caused by industrial
+wastes in the developed countries there
+has been much interest in the previously
+little known topic of ecology. In the old
+days, ecology was just a topic in biology
+but now at some universities in the
+developed countries, ecology has become
+the most important and popular course
+of study for the students. Newspapers
+and magazines are also devoting increasing
+attention to ecology which is concerned
+with interaction of change in the environ-
+ment with the living beings in that
+enviroment including man and man made
+changes. Ecology commands this place
+in human interest because it is said to
+provide the answer to the problem of
+industrial pollution. However in the less
+developed countries, industrial pollution
+is relatively small as yet and by proper
+measures which can be
+antipollution
+implemented as part of the industrialisa-
+tion programme may be we can avoid
+the present troubles of the highly in-
+dustrialised countries.
+Provided that we are willing to learn
+from the bad experiences of the more
+industrialised countries we can benefit from
+their mistakes and the fact that we are
+at present industrially behind the times
+can help us to achieve industrialisation
+in our turn with less growing pains than
+those before us. As my talk this evening
+is mainly about scientific trends I will not
+touch upon industrial technology any more
+except to remark in passing that we of
+the developing nations will have to pay
+more attention in the future to the subject
+of transfer of technology if our country
+is to benefit from the technology developed
+in the highly industrialised countries.
+JBRS, LV,™i & ii, Dec., 1972.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 6]]
+6
+The
+Speaking of scientific research trends
+I have already mentioned in connection
+with the space research programme that
+one of its striking features was the mul-
+tidisciplinary nature of the research.
+same feature may be noticed in petro-
+chemical research which has been one of
+the recent areas of chemical interest.
+Petrochemicals is that branch of science
+or industry which deals with the many
+different products that can be made from
+petroleum or the derivatives of petroleum.
+In this area of research, all the big research
+labs employ thousands of post graduates
+and doctorates to attack the difficult pro-
+blems of production of new compounds.
+These researchers belong to many different
+scientific disciplines such as organic che-
+mistry, physical chemistry, physics, me-
+tallurgy and engineering because one type
+of chemist alone could not successfully
+complete the task of producing a new
+compoud on an industrial scale. Many of
+these new compounds are of potential
+interest to us in Burma. For example
+starting from petroleum and its refinery
+products as our raw materials there is the
+possibility of making plastics such as
+polyethylene, polypropylene, polyvinyl-
+chloride (PVC), the synthetic fibres popu-
+larly known as tetoron, nylon, vinylon,
+the fertilisers such as urea and ammonium
+sulphate, the resins and adhesives such as
+urea formaldehyde, phenol formaldehyde
+and melamine formaldehyde, and other
+products such as insecticides, synthetic
+rubber and so on. In considering these
+possibilities we must also take into account
+the natural and synthetic products which
+are similar to the above items such as
+rayon and polynosic fibres (made from
+cellulose raw materials) natural glues, and
+natural rubber which are also polymers.
+In fact, the term polymer is a general
+term which includes both the petrochemi-
+cal synthetic products and also the cellu-
+losic and the naturally occuring products.
+Polymer means all those organic compounds
+which contain long chains of molecules.
+Incidentally we may observe that the
+monomer compounds and the polymer
+compounds polymerised from them (i.e.
+built up from the monomers) are usually
+JBRS, LV, i & ii, Dec., 1972.
+Some Trends in Scientific Research
+quite different in their properties. E.g.
+ethylene is a gas but po yethylene is a
+plastic, sugar is sweet and crystalline but
+cellulose which is a polymer made up of
+sugar molecules and which occur in trees
+and cotton is not sweet or crystalline and
+rayon which is the polymer made from
+cellulose is rather different in physical
+properties from cellulose. The study of
+polymers has grown immensely since the
+day when Carruthers of the Du Pont
+Research Labs first made nylon from
+caprolactum and thus produced the first
+synthetic fibre. We in Burma are also
+taking an interest in polymers and hope
+to establish a Polymer Research Laboratory
+in the near future with the aid of the
+United Nations.
+Speaking earlier of archaeology in
+connection with radiocarbon dating,
+reminds we of a theory proposed by a
+physicist of the Clarendon Laboratory,
+Oxford. He is Dr Kurt Mendelssohn,
+F.R.S. who visited Egynt as a tourist and
+saw the pyramids. They interested him
+so much that he went on a second trip
+and with the help of the Egyptian Anti-
+quities Service scrutinised all the pyramids
+very closely from the viewpoint of the
+magnitude of the technological organisa-
+tion required for their construction. Those
+of you who have seen the Great Khufu
+Pyramid at Giza near Cairo may remember
+that it is about twice as big as the Shwe-
+dagon Pagoda in volume and when we
+reflect that the Pyramids were built about
+5,000 years ago it can easily be realised
+that the building of 5 large pyramids in
+that early period of human civilisation
+represents a truly colossal human and
+technical undertaking.
+Now the commonly heard theory of
+pyramid building was that the pharaohs
+had them built to be their tombs or
+mausoleums when they died. Furthermore
+it was assumed by the Epyptologists that
+huge numbers of villagers commandeered
+from the countryside toiling under the
+whips of slave drivers pulled the large
+pieces of stone up ramps to construct
+the pyramids. This assumption was made
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 7]]
+R
+Dr F. Ba HИ
+popular by pictures that are frequently
+seen showing the poor slaves and their
+drivers painted by some present day
+modern artists in the old Egyptian style.
+Actua ly no written records or original
+pictures have come down to us of how
+or why the pyramids were built. The
+above theories and pictures are all drawn
+by Egyptologists in this century and Dr
+Kurt Mendelssohn has proved them to
+be wrong by means of careful measure-
+ments and calculations that he has made
+and published in April 1971. His theories
+have been confirmed by other scientists
+writing in the August 1971 issue of the
+journal, American Scientist”. They
+include a medical doctor, mechanical
+engineer, electronics engineer and a
+chemist. Many Egyptologists also now
+agree with him.
+$$
+Dr Mendelssohn's theory is based
+on the fact that the first few pyramids
+were really designed and constructed by
+Imhotep, the chief minister of Zoser,
+the first king of the Third Dynasty who
+unified the two separate states of Lower
+Egypt and Upper Egypt. According to
+Egyptian tradition, Imhotep not only
+designed the first stone buildings but
+also was the first to teach astronomy
+and medicine in ancient Egypt. Now it
+has been found that some of the pyramids
+do not contain the dead body of any
+pharaoh at all so that the theory that
+they were built primarily as a pharaoh's
+tomb does not have strict validity. Se-
+condly, from the writings of Herodotus
+who visited the pyramids about three
+thousand years ago we learn that about
+100,000 men were employed for twenty
+years in erecting the Great Pyramid.
+Professor Flinders Petrie of University
+College, London who is noted for his
+famous survey at Giza, considered this
+estimate reasonable. Herodotus mentions
+that the above large number of workers,
+were employed for three months every
+year at the time that the River Nile
+has in flood and when no agricultural
+work could be done. Now, Dr Men-
+delssohn argues that in those days when
+automatic weapons such as sten guns and
+for
+machine guns were not yet invented, it
+would have required many thousands of
+guards to force the workers to work and
+prevent them and their relatives in the villa-
+ges from revolting. Hence, five thousand
+years ago it would have been impossible
+for a small group of the pharaoh's men
+to subjugate the hundreds of thousands.
+of workers required every year
+pyramid building for over a century and
+to round them up every year from amongst
+the millions of disgruntled relatives if
+the project was really carried out with
+unwilling forced labour. Thus it is much
+more likely, according to Dr Mendelssohn
+that Imhotep built the first pyramid at
+Saqqara (usually called the Step Pyramid)
+with voluntary labour and that the other
+pyramids were also built as cooperative.
+efforts by willing villagers who were
+united by a common and inspiring
+endeavour. Imhotep had the wisdom to
+realise that a good way to unite the
+people of Egypt, some of whom had
+been traditional enemies, was to give
+them a large project in which they all
+could participate and take pride in, upon
+its completion. The project that he
+implemented was that of erecting a
+man-made mountain ostensible for the
+purpose of allowing the pharaoh's soul
+to ascend to the Sungod of the ancient
+Egyptians and thus bring prosperity to
+the pharaoh's people. This project had
+the advantage that it was simple and it
+could utilise the large labour force made
+idle by the Nile floods for three months
+every year and by bringing the hundreds
+of thousands of villagers from all parts
+of Egypt together in one place it could
+establish feelings of brotherhood and
+comradeship in a common, religious and
+challenging joint endeavour.
+Thus Dr Mendelsohn's new analysis
+suggests that, far from being a period of
+abject slavery and exhaustion, the pyramid
+age in Egypt represented a new form of
+cooperative work and living for the
+benefit of all. The information available
+from other sources indicates that at the
+time when the pyramids were erected,
+Egypt's prosperity increased. The pharaoh
+JBRS, LV, i & ii, Dec., 1972.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 8]]
+Seneferu, who was responsible for the
+building of the Meidum Pyramid, the Bent
+Pyramid at Dashur, and the Red Pyramid,
+is credited with building the first seagoing
+ships and established a hold over terri-
+tories beyond the Nile Valley, which had
+been the original Egypt of the Third
+Dynasty.
+The validity of the above hypothesis
+is supported by the discovery in the valley
+of Mexico of the remains of huge man-
+made mounds of bricks. These were
+erected by the Teotihuacanos for the
+purpose of achieving centralisation of
+power in a primitive culture. They
+achieved the necessary organisation of the
+villagers who formerly had been disunited,
+by creating a large labour force for a
+striking communal task and the most
+obvious project, that of building an
+artificial mountain, was chosen. The
+purpose of their pyramid was slightly
+different from the Egyptians and it was
+used to perform religious rituals on the
+top of the man-made mountain. So their
+"pyramids" have a flat top instead of
+being pointed as in the case of the
+Egyptian pyramids.
+Dr Ivan Fras, a medical doctor, has
+commented that Dr Mendelssohn's article
+should be of interest to a much broader
+circle than Egyptologists (i.e. researchers
+interested in ancient Egyptian his ory and
+Some Trends in Scientific Research
+pyramids). His thesis that human civili-
+sation and unification needs a common
+goal, is not new but it is often overlooked
+and Dr Fras feels that the only recent
+national effort in the world which is
+comparable to the building of pyramids is
+the space research programme because this
+research programme shares the following
+common points with the ancient Egyptian
+before, it is challenging and it goes into
+programme-it has never been done
+before, it is challenging and it goes into
+where man has never been.
+Dr Mendelssohn replied that the thou hts
+expressed by Dr Fras also came to his
+mind. He was struck by the phenomenon
+of millions of people all over the world
+identifying with the man who first stepped
+on the moon, possibly in the same way
+as the Egyptians of 5,000 years ago
+identified themselves with the pharaoh
+ascending to the sun on the pyramid they
+had helped to build.
+arras
+Now that I have come round again
+to the subject of space research please
+let me conclude my talk now because there
+are so many new developments in science
+that I could go on for hours without
+exhausting them but I would probably
+exhaust all of you. However, I would
+mention one point before closing. May
+be we should also learn a lesson from
+history and utilise Imhotep's brilliant idea
+of unifying the people with a worthwhile
+large scale project.
+JBRS, LV, i & ii, Dec., 1972.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.

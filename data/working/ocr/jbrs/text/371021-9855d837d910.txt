@@ -1,0 +1,881 @@
+[[page 1]]
+86
+ACTIVE IMMUNISATION AGAINST PASTEURELLA
+SEPTICA" 1
+by
+Dr. Hla Kyaw, Ph. D. (Cantab), B. Sc (Vet Sc) (London),
+M.R.C.V.S., F.Z.S. 2
+66
+A. INTRODUCTION
+There is a vast literature on this subject and the reports of the
+results are conflicting and confusing. Schutze (1929) gave a very able
+review of the literature up to the time of his writing. He remarked
+It is difficult to form an idea as to the real prophylactic value of
+vaccination against bovine pasteurellosis. Most opinions on the subject
+are the result of field experiments without adequate control............In
+this way a false impression may often be given that treatment by
+vaccination has lowered the morbidity rate and brought the epizootic
+to a standstill". The same lack of convincing evidence is seen in
+regard to active immunisation against Past. suiseptica infection. In
+fowl cholera there is certain substantial evidence of success but there
+are also many other reports to the contrary.
+It will be pointless to review the literature so ably covered by
+Schutze. Therefore it is proposed here just to emphasize certain points
+which have a direct bearing on the following experiments and to review
+the literature not covered by Schutze.
+Since Pasteur (1880) successfully produced immunity in fowls by
+the use of an attenuated culture of Past, aviseptica, there had been many
+attempts to immunise against Past. septica from various animals by
+killed, attenuated and live avirulent vaccines. Attempts to confer
+protection have been made in various ways. Generally speaking, with
+Past. septica, killed vaccines have not been satisfactory. Vaccination
+with attenuated cultures has given variable results and sometimes cause
+the death of the vaccinated animals. Quite a few observations have
+been made using live avirulent vaccine and the reports on the whole
+have been encouraging. Hadley (1911, 1913) produced solid immunity
+in rabbits again Past. aviseptica by using an avirulent strain as a live
+vaccine. Manninger (1919) obtained evidence of a certain degree of
+protection against virulent Past. avtseptica from the inoculation of a
+living avirulent strain. De Kruif (1921) observed that a single injection
+of a living avirulent variant of Past. lepiseptica conferred a high
+degree of immunity on rabbits against virulent strains of Past.
+1. Read on August 12, 1952 with Mr. J. S. Furnivall in the Chair.
+2. Director of Veterinary Services, Shan and Kayah States.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 2]]
+22
+DR. HLA KYAW
+lepiseptica. Harvey and Iyengar (1922, 1923) worked with strains of
+Past. aviseptica using pigeons as experimental animals. They studied
+the relative immunising value of a killed virulent vaccine,
+a killed avirulent vaccine and a living avirulent vaccine. The vaccines were
+given intravenously. They found no appreciable differences between
+the three vaccines. Anderson et. al (1929) made observations on
+similar lines. They used (a) killed “S” type, (b) killed "R" type,
+(c) mixed killed "S" and "R" types and (d) living "R" vaccines.
+These four types of vaccines were tested for their relative immunising
+power on pigeons against virulent "S" type and killed doses of "R"
+type. These workers observed that there was no evidence of any
+protection being given against killing doses of "R" type by any of the
+vaccines except by "mixed killed "S" and "R" type vaccine which
+conferred some immunity. But against virulent "S" type all vaccines
+gave variable degree of immunity and they could be placed in ascending
+order as follows:-(a) killed “S” type, (b) killed “R” type, (c)
+mixed "S" and "R" type, and (d) living "R" type vaccine.
+Priestley (1936) carried out immunising experiments against a
+strain of Past. aviseptica using mice. He compared the immunising
+power of a heat killed virulent vaccine with the organisms still
+possessing a capsule, a heat killed avirulent vaccine and a heat killed
+avirulent vaccine heated to such a temperature that the capsules
+were destroyed. He found that against very virulent organisms, the
+latter two vaccines gave no protection while the first did give a
+considerable degree. But against a strain of low virulence, the
+avirulent vaccine afforded some protection.
+(2) Main experiments.
+B. EXPERIMENTS
+On account of the short supply of experimental animals only very
+limited observations could be made. Mice only were
+used as
+experimental animals throughout the whole series of experiments.
+The experiments carried out may be divided into two groups, viz.
+(1) Preliminary experiments and
+1. PRELIMINARY EXPERIMENTS
+The preliminary experiments consisted of attempts to find out if
+"blue" variants would protect mice against "fluorescent "precursors
+and attempts at finding a reliable route of inoculating the vaccine.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 3]]
+ACTIVE IMMUNISATION
+23
+(a) Experiment 1.-Preliminary experiment to determine if the
+"blue" variant protects mice against "fluorescent" precursors.
+For this purpose, mice which had survived incculation
+intraperitoneally with tenfold dilutions of a suspension of 18 hours old
+live P24 (B) culture were used.
+Fourteen days later they were given multiple average lethal doses
+intraperitoneally. The experiment was kept under observation
+for 14 days.
+The results are given in Table 1 which follows:-
+TABLE 1. Preliminary Experiment to Determine if P24 (B) Protects
+Mice Against P24 (F).
+Dilution of
+suspension of
+P24 (B)
+Number of
+Dilution of
+Results.
+Mouse
+suspension of P24 (F)
+10-7
+2
+122
+10-6
+10-5
+456
+780
+2 A.L.D.
+5 A.L.D.
+5 A.L.D.
+Died 45 hours.
+,,
+Survived
+Died 18 hours.
+,,
+42
+,,
+66
+"
+Died 18 hours.
+10 A.L.D.
+9
+,,
+24
+"
+,,
+42
+"
+10*
+Died 42 hours.
+10-4
+11
+20 A.L.D.
+3
+12
+13
+10-3
+14
+20 A.L.D.
+15
+50 A.L.D.
+16
+10-2
+17
+Died 45 hours.
+Survived
+Died 9th day
+50 A.L.D.
+11th
+10-1
+21
+Undiluted
+22
+* 287 23
+18
+"
+,,
+9th
+,,
+,,
+19
+20
+50 A.L.D.
+Died 7th day
+,,
+42 hours.
+Survived
+Survived
+100 A.L.D.
+Brown's 1
+24
+"
+,,
+Out of 6 control mice given 0.5 ml. 2 A. L. D. 4 died in 42 hours and the
+2 at 66 hours.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 4]]
+24
+P24 (B)
+-
+DR. HLA KYAW
+Died of salmonella infection 14 days after inoculation of
+Viable Count
+P24 (F)-10-8
+10-7
+-
+2; 12 Average
+72; 144
+"
+-
+7
+108
+10-6 numerous
+The results of this experiment show that fairly heavy inoculations
+of P24 (B) organisms prolonged the survival time of some mice while
+others actually survived. Thus there were some indications that live
+"blue" variants protected mice against "fluorescent" precursors.
+Later it was considered that the intraperitoneal injection of a
+vaccine resulted in rapid absorption and excretion of the vaccine. It is
+the generally accepted idea that a slow absorption of a vaccine gives a
+greater and a more lasting immunity. Therefore, a preliminary expri-
+ment to ascertain a route of inoculation yielding better results
+was done.
+(b) Experiment 2.-Preliminary experiment to find a better route
+of inoculation.
+In this experiment, a Past. suiseptica strain, 1875, was employed.
+The vaccine was given intramuscularly to one batch and subcutaneously
+to another batch of mice. These two routes were used as they are most
+likely to be the routes used for cattle.
+Technique.
+Eighteen hours growths of strain 1875 (F) on 1 per cent dextrose agar
+in Roux bottles were washed off with sterile saline and standardised to
+equal the opacity of Brown's tube X. The suspension was killed by
+heating at 56°C for hour, 1:10,000 merthiolate added as a preservative,
+and the vaccine was stored in the ice chest. It was used ten days later
+after having been shown to be culturally sterile.
+Forty-eight mice were divided into two groups of 24 mice each.
+One group was given 0.25 ml per mouse subcutaneously while the
+other group received 0.1 ml intramuscularly, in the inside of the thigh.
+Fourteen days later, they were given 0.5 ml each of tenfold dilu-
+tions of an 18 hours live culture of 1875 (F), grown on agar slopes,
+washed off with broth, and standardised to equal the opacity of
+Brown's 1. Sixteen control mice were used and they also received 0.5
+ml of inoculum.
+The experiment was kept under observation for 14 days. The
+results are given in Table 2 which follows.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 5]]
+ACTIVE IMMUNISATION
+TABLE 2. Preliminary Experiment to find a better Route of
+Controls.
+Inoculation.
+25
+Intramuscular injection. Subcutaneous injection.
+Dilution
+of
+suspen-
+Number of
+Number of
+Number of
+sion.
+mice injec-
+Deaths.
+mice injec- Deaths.
+mice injec Deaths.
+ted.
+ted.
+(1)
+(2)
+(3)
+(4)
+(5)
+ted.
+(6)
+(7)
+10-3
+4
+3
+4
+0
+10-7
+4
+4
+0
+10-6
+4
+3
+4
+0
+4
+1
+10-5
+4
+4.
+4
+1
+4
+0
+10-4
+4
+2.
+10-3
+3*
+2
+3*
+1
+...
+one mouse in each group died after vaccination. The mouse
+which died in the group inoculated by intramuscular route died on
+the 10th day. Its heart blood was sterile. The mouse in the other group
+died on the 11th day and Salmonellas were recovered from its heart
+blood
+The duration of life amongst the controls varied from overnight
+to 4th day. No protected animals died overnight.
+Viable Count. 10-8 1:
+=
+0 Average
+-
+?
+10-7
+==
+3: 5
+4
+"
+=
+10-5 =38; 24
+=31
+"
+The results show that 0.5 ml of a thick suspension of vaccine gave
+a strong immunity to the mice. Calculating on the assumption that
+0.5 ml f 10-ª dilution of the suspension of live culture of 1875 (F) was
+an A. L. D., 1.0. ml of the vaccine protected against 10,000 A. L. D.
+The results further show no difference in the. protection afforded
+by the intramuscular and subcutaneous routes of inoculation although
+the results appeared more clear cut with intramuscular injection.
+Therefore in further experiments, vaccination was done via sub-
+cutaneous route.
+2 Main Experiments.
+In view of the successful use of live avirulent vaccine in the control
+of human plague by Otten in Java and Girard and Robic In Madagascar
+7
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 6]]
+26
+DR. HLA KYAW
+and also the use of live Brucella abortus in the control of bovine
+contagious abortion and the recorded successful use of live avirulent
+Past. septica vaccine, it was decided to use avirulent variants of Past.
+septica as live vacicne. It had already been shown that the virulence of
+"blue" variants varied within certain limits. Therefore if live cultures of
+these were to be used, it became important that their avirulence should
+be fixed.
+Therefore recourse was made to a “blue” variant dissociated from
+the "fluorescent" strain of P5, which variant had been transplanted
+directly from plain agar to plain agar and tested for purity at irregular
+intervals.
+The main object of the following experiments was to compare the
+immunising power of a live avirulent vaccine with other vaccines pre-
+pared from virulent, encapsulated, "fluorescent" strains. In view of
+Priestley's (1936) work on the importance of keeping the bacterial
+capsules intact in preparing a satisfactory vaccine against Past. avisep-
+tica, it was decided to repeat his work on the time and temperature
+required to kill organisms of the strain P5(F) without destroying the
+capsule.
+Experiment 1.-To determine the temperature and time of
+heating necessary to kill P5 (F) organisms without
+Technique.
+destroying the capsule.
+P=
+18-20 hours growth of P5(F) on
+serum agar slopes
+was washed off with sterile saline and the suspension standardised to
+equal the opacity of Brown's II. About 10.0 ml of the suspension was
+put into each test tube of 2 sets of 4 test tubes per set. One set was
+heated at 56°C and the other at 60°C in a water bath. Examination
+for capsules was done before heating and at intervals by the Indian ink
+method.
+Viability of the suspension was tested at intervals by inoculating
+0.5 ml of the suspension into mice intraperitoneally.
+The results are given in Table 3 which follows.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 7]]
+ACTIVE IMMUNISATION
+27
+TABLE 3; To determine the Temperature and Time of Heating necessary
+to kill P5(F) organisms without destroying the capsule.
+.
+56°C
+60°C
+Time of
+heating.
+Capsule.
+Number of
+mice in-
+Number of
+Number
+dead.
+Number
+Capsule.
+mic in-
+dead.
+noculated.
+oculated.
+(1)
+(2).
+.(3)
+(4)
+(5)
+(6)
+(7)
++
+3..
+3.
++
+3.
+3
++
+3
+3
+3
+3
+,,
+3
+3
+++
+3
+3.
++
+3
+3.
++
+3
+3
+5 mins.
+15
+30'
+45
+The duration of life of the mice inoculated with the suspension
+heated at 60°C was longer than that of those which received the
+supension heated at 56°C. All mice which received the latter
+suspension died within 36 hours, while the others died with 48 hours.
+Pure culture of Past. septica were recovered from the heart blood
+of all.
+These results show that the capsule of strain P5 was more difficult
+to destroy and that P5 was more resistant to heat than Priestley's
+strains.
+It was necessary therefore to repeat the experiment heating the
+suspension for longer periods.
+Experiment 2.-Repetition of Experiment 1.
+Technique. The technique was exactly the same as in Experiment
+1, except that the suspension was heated at 60°C only.
+The results are given in Table 4 which follows.
+TABLE 4. Repetition of Expertment 1.
+Time of heating.
+Capsule.
+Number of
+mice inoculated,
+Number
+dead.
+30 mins.
+3
+3
+45
++ in some &
+3
+0
+"
+60
+"
+3
+0
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 8]]
+28
+DR. HLA KYAW
+Although the results show that the capsule of some organisms was
+destroyed after heating at 60°C for 45″, it was decided to heat the
+suspension for 60" to avoid any death resulting from the inoculation of
+the suspension.
+Experiment 3.-Comparative immunising power of various
+types of vaccines prepared from strain P5.
+In this experiment the following vaccines were compared.
+(a) Heat killed vaccine, prepared by heating the suspension at
+60°C for 60 minutes.
+(b) Merthiolate killed vaccine, prepared by adding Merthiolate
+(Lilley) to the suspension to give a final concentration of 1/2,500
+(0.04) per cent.
+earlier.
+(c) Live avirulent vaccine, using the variant P5(B) described
+Technique.-The first two vaccines were prepared from the same
+suspension derived by growing P5(F) on 1% dextrose agar Roux flasks.
+The suspension was prepared in the same way as described earlier:
+The last vaccine was prepared by growing P5(B) on plain agar in Roux
+flasks and the suspension was prepared in the same way as the other.
+All the suspensions were then standardised to equal opacity
+Brown II.
+33 mice were divided into 3 batches of 12, 12 and 9. The first
+batch was given the suspension heated at 60°C for 60 minutes, the
+second the merthiolate killed vaccine and the last batch the live
+avirulent vaccine. All mice were inoculated subcutaneously.
+Out of the first batch, 6 mice died at 48 hours and 5 more died at
+intervals up to 4 days. The remaining single mouse survived and was
+discarded. Mice in the other two batches survived.
+14 days after vaccination, these mice were given 0.5 ml each of
+tenfold dilutions of a live, suspension of P5(F) in broth standardised to
+equal opacity Brown's I. 9 mice were used as controls.
+The results are given in Table 5 which follows.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 9]]
+ACTIVE IMMUNISATION
+29:
+TABLE 5. Comparative Immunising Power of Merthiolate killed vaccine
+and live avirulent vaccine.
+Controls.
+Mice vaccinated with
+live avirulent culture.
+Dilution of
+Mice vaccinated with
+Merthiolate killed
+vaccine.
+suspension.
+Mice in-
+oculated.
+Number
+dead.
+Mice in-
+oculated.
+Number
+dead.
+Mice in- Number
+oculated.
+dead.
+(1)
+(2)
+(3)
+(4)
+(5)
+(6)
+(7)
+10-7
+3
+0
+10.6
+3
+2
+10-5
+3
+3
+3
+2
+10-4
+3
+0
+4
+3
+10-3
+3
+3
+4
+3
+The results show that there was an appreciable degree of immunity
+given by both vaccines and there are slight indications that the live
+avirulent vaccine was more protective.
+In the inoculation of cattle, the suspension of the vaccine would
+probably be much denser. Therefore in the next experiment, a denser
+suspension was used.
+Experiment 4.-Comparative immunising power of forma-
+lised vaccine and live avirulent vaccine.
+This experiment was specially designed to find out if any experi-
+mental data could be gained to justify further experimentation with
+cattle in Burma involving the use of a live avirulent vaccine to control
+haemorrhagic septicaemic.
+It was therefore decided to prepare a formalised vaccine in a
+similar way as is done in Burma and to compare its immunising power
+with live avirulent vaccine.
+A preliminary experiment involving 2 batches of 6 mice each was
+carried out to determine what dose of the live avirulent suspension the
+mice could withstand. One batch was given a suspension standardised
+to equal Brown's X and the other Brown's VI. Each mouse in both
+batches was given 0.5 ml of the suspension subcutaneously. No
+mortality occurred in the batch which received suspension of opacity
+Brown's VI, while two mice died in the other batch. It was therefore
+decided to use suspensions standardised to equal opacity Brown's VI.
+8
+Copyright©1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 10]]
+30
+DR. HLA KYAW
+Technique.—P5(F) was grown on plain agar in Roux flasks for 24
+hours. The growths were washed off with sterile saline and the suspen-
+sion standardised to equal the opacity of Brown's VI. Formalin was
+added in the inorning to make a final concentration of 1/500. 6 hours
+later, a loopful was taken out and inoculated into a broth tube for
+viability. There was no visible growth next morning.
+On the day the P5(F) suspension was killed, P5(B) was grown on
+plain agar in a Roux flask and a suspension prepared in exactly the
+same way as with P5(F).
+160 mice, all males, and of individual weights between 18-25
+grammes were taken, and 80 were inoculated with formalised vaccine
+and the other 80 with live avirulent vaccine. Each mouse received
+0.5 ml of the inoculum subcutaneously.
+Some mortality occured in both batches, both from inoculation and
+from intercurrent infection with Salmonella. Out of the batch which
+received formalised vaccine, 17 died in 14 days. From 9 of them all of
+which died in the first 7 days, pure cultures of "fluorescent" Pasteurella
+were recovered from the heart blood of the other mice, B. coli were
+recovered from the heart blood of 2 and Salmonellas from the same of
+the remainder.
+Eight deaths occurred within the same fortnight in the other batch
+which received live avirulent vaccine. Four, all of which died in the first
+4 days, gave pure "blue" Pasteurella from the heart blood. The
+remainder gave Salmonellas and B. coli.
+14 days after the last inoculation, the surviving mice were given a
+second injection, except 6 in the batch which received the formalised
+vaccine.
+On that day, 27 additional normal mice were inoculated with
+formalised vaccine and 8 with live avirulent vaccine, this being done to
+make up the numbers again, the opportunity also being taken of
+obtaining some data on the relative efficiency of double and single
+inoculation.
+Thus on the day when the second inoculation was made, there were
+90 mice in the group which was givren fomalised vaccine. Of these.
+57 received two inoculations, 6 had a single inoculation a fortnight
+before and 27 had received a single inocluation on that day. In the
+other batch, there were 80, 72 of which received double inoculation and
+8 a single inoculation.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 11]]
+ACTIVE IMMUNISATION
+31.
+Further mortality occurred, this time only due to Salmonellas as
+determined by the motility of all cultures recovered from the heart
+blood, and by "sugar" fermentation tests of some. This time, of the
+groups which received formalised vaccine, 5 out of those which received
+double inoculation died and 2 out of the 8 fresh lot died.
+Thus, a fortnight later, when live cultures of P5 (F) were given
+there remained only 81 mice in the first group and 73 mice in the other.
+These were divided into lots and given multiple A.L.D. of P5 (F).
+assuming that 0.5 ml of a 10-6 dilution of P5 (F) was an A.L.D. 30
+mice were used as controls.
+The results are given in Table 6.
+TABLE 6. Comparative Immunising Power Of Formalised Virulent
+And Live Avirulent Vaccines
+Injected with “fluorescent”
+vaccine.
+Injected with live avirulent
+vaccine
+Dilution
+of
+Double injec- Single injec-
+Controls
+tion
+tion
+Double injec-
+tion
+Single injec-
+tion
+Suspen-
+sion
+Total
+Mor-
+Morta-
+lity due
+Morta-
+Total
+Mor-
+lity due
+to Paste-
+to Past-
+tality
+tality
+urella
+eurella.
+Total
+Mor-
+tality
+Morta-
+tity due
+to Past-
+eurella.
+Total
+Mor-
+Morta-
+lity due
+to Past
+tality
+eurella.
+10-7
+1/10
+:
+...
+10-6
+8/10
+444
+...
+:
+...
+...
+10-5
+9/10
+4/10 0/10
+1/6
+0/6
+2/10 0/10
+....
+20 A.L.D.
+***
+*810_1/10
+0/5
+0/5
+6/10 0/10
+50 A.L.D.
+...
+0/10 0/10
+1/6
+0/6 2/10 0/10
+1/6 0/6
+:
+Single
+old
+*2/10} 1{10 0/12 0/12
+*1/10 1/10
+10-4
+(100
+A.L.D.)
+10-3
+(1000
+A.L.D.)
+10-2
+:
+4/12
+0/12
+(10,000
+A.L.D.)
+Numerator-number dead
+-see text.
+:
+:
+0/10
+0/10
+***
+..
+:
+:
+8
+...
+6/17 0/17
+denominator-number injected
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 12]]
+32
+DR. HLA KYAW
+All controls that died, died within 48 hours and all gave pure
+cultures of "Pasteurella" from heart blood.
+All the mice which were dead and which received double and single
+inoculation of vaccines gave pure Salmonella cultures or mixtures of
+Salmonella and B. coli except the following, which gave pure cultures of
+Pasteurella from heart blood and which were in the group marked with
+an asterisk.
+1 mouse which received two injections of killed fluoresent vaccine
+and which died on the 2nd day after receiving 10-4 dilution
+of suspension.
+1 mouse which received double injections of killed fluorescent
+vaccine and which died on the 2nd day after receiving 20 A.L.D. of the
+suspension.
+4
+1 mouse which received double injection of live avirulent vaccine
+and which died on the 3rd day after receiving 10 dilution of the
+suspension.
+The results are difficult to interpret in view of the intercurrent
+infection due to Salmonella. But in view of the fact that the second
+batch of mice which received a single inoculation of vaccines and
+amongst which the Salmonella infection was still negligible survived up
+to 100 A.L.D. which was the maximum number of A.L.D. tested in their
+case, it could be reasonably concluded that a single injection of vaccine
+was potent enough to protect against 100 A.L.D.
+Unsatisfactory as the experiment had been, it could be resasonably
+assumed that double inoculation with both vaccines protect mice up to at
+least 1,000 A.L.D. and that live avirulent vaccine is just as protective as
+the killed virulent vaccine, if not more so. Had there been no protec-
+tion afforded by vaccine, it would be reasonable to expect the test
+animals to yield at least a mixture of Pasteurella and Salmonella cultures
+from the heart blood. But tests carried out by planting out broth
+cultures recovered from the heart
+the heart blood yielded only colonies of
+Salmonellas and in a few instances also B. coli,, but no Pasteurella.
+C DISCUSSION
+The successful use of living avirulent vaccine had been recorded by
+workers in various fields. The records in regard to Past. septica. infec-
+tion were given in the introduction to this report. The results reported.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 13]]
+ACTIVE IMMUNISATION
+33
+here are contrary to those observed by Priestley (1936). It would seem
+that the resistance to heat of the capsules of different strains varies
+considerably; thus the mice inoculated with a virulent, capsulated
+suspension of P5 (F) organisms heated at 60°C for 45 minutes in these
+experiments died. It seems therefore, impossible for any hard and fast
+rule to be laid down regarding the temperature and the duration
+required to kill the organisms without destroying the capsule.
+Anderson et al (1929), in their extensive studies of the comparative
+prophylactic value of Past. aviseptica, prepared their vaccines by heating
+at 56°C for 30 minutes and carbolising to 0-5 percent workers and by
+the writer himself, avirulent strains, either killed or living used as
+vaccines appear to be at least as efficient as killed virulent vaccines. Since
+heating or preservatives might conceivably destroy the antigenic proper-
+ties of of the organisms in some way, it seems better to use living
+organisms for immunisation. The great objection to this of course, is
+that the strain might regain its virulence. But there is no evidence that
+a completely avirulent strain has spontaneously regained its virulence.
+In the same way as Brucell abortus strains of modified virulence are
+now being used on a large scale, it may also be possible in the near
+future to make use of living avirulent Past. septica for the control of
+pasteurellosis on a large scale. The successful use of living cultures in
+the control of haemorrhagic septicaemia by Hardenbergh and Boesner
+(1916-1917) gives encouragement to follow up this line of research.
+D. SUMMARY
+(1) A review of the recent literature is given.
+(2) "Blue" variants can be used successfully as live vaccine to
+confer active immunity on mice against virulent "fluorescent"
+types.
+(3) The capsule of strain P5(F) appeared to be fairly resistant
+to heat.
+(4) A short discussion is given on the use of living, avirulent
+vaccine.
+BIBLIOGRAPHY
+1. Anderson, L.A.P. Coombes,
+M.G. & Mallick, S.M.K.
+2. De Kruif, P. H.
+...
+...
+1929. Indian J. Med. Res: 17, 611.
+1921. J. exp. Med. 33, 733.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 14]]
+34
+3. Hadley, P.
+"
+,,
+:
+...
+DR. HLA KYAW
+1913. Zbl. Bakt. 10, 69 271
+(cited by Anderson, etal Indian J,
+med. Res, 17, 611),
+1914. Ag. Exp. Sta. Rhode, Island
+State Coll. Bull, No. 159.
+4. Harvey, W.F. & Iyengar, K.R.K. 1922. Indian J. med. Res.9. 730
+"
+"
+,,
+5. Pasteur, L.
+,,
+"
+6. Priestley, F. W.
+"
+,,
+...
+...
+...
+...
+...
+...
+...
+7. Schutze. H.
+...
+...
+1923a. Ibid 11, 113.
+1923b. Ibid 11, 433.
+1880a. C. R. Acad. Sci., Paris
+91, 239.
+1880 b. Rec. Med. Vet, 180, 125,
+422.
+1936 a. J. Comp, Path. 49, 340.
+1936 b. Ibid 49, 348.
+1936. Brit J. exp. Path. 17, 374.
+1929. A system of Bacteriology.
+M.R.C. Vol. 4, 447,
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand

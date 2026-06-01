@@ -1,0 +1,584 @@
+[[page 1]]
+THE BURMESE MODIFICATION OF THE BERNREUTER
+PERSONALITY INVENTORY
+U Sein Tu*
+Introduction
+The present research was designed to develop a paper-and-pencil personality test
+applicable in the Burmese socio-cultural context and standardized on a Burmese population.
+The paradigm and concepts utilised in this study are in the psychometric and psychologi-
+cal test tradition. The basic conviction of the test-author is that the development of
+objective psychological test instruments which are properly designed and validated consti-
+tutes an important and necessary step in the application of universalistic and impartial
+principles to the problem of selection and placement in universities, armed forces,
+government agencies, industry, etc. (7,8,9). In the absence of a long-range plan to fulfil
+this need, a modest grant was obtained from the Burma Research Society! to do prelimi.
+nary work on one of the more important psychological tests currently being used in the
+West, namely the Burnreuter Personality Inventory.(5)
+The Bernreuter Personality Inventory
+The Bernreuter Personality Inventory is a paper-and-pencil personality test intended
+for use on populations ranging from children of Grade IX to adults. The original
+Bernreuter consisted of 125 items organized in the form of a questionnaire which could be
+self-administered by a normal adult subject in a period of between ten and twenty-five
+minutes. Each of the 125 items could be responded to in one of three ways, namely:
+YES, NO, or? These 125 items were selected from an item-pool which drew upon four
+other personality measures, namely the Allport Ascendance-Submission Reaction Study,
+the Bernreuter Self-Sufficiency Test, the Laird C₂ Introversion Scale, and the Thurstone
+Neurotic Inventory. (4,9)
+From inspection of the item-content Bernreuter devised, on an apriori basis, scoring
+keys for 4 personality traits for his test, namely, Neurotic Tendency (B,N), Self-Sufficiency
+(B2S), Introversion-Extroversion (B,I) and Dominance-Submission (B4D). The Bernreuter
+scales were then correlated against the original scales developed by Thurstone et.al, and
+intercorrelations ranging from .67 to .94 were obtained. These intercorrelations, however,
+are spurious measures of validity in view of the fact that subjects will tend to answer the
+same questions in the same way regardless of the context in which they may be presented.
+They may be more appropriately regarded as indices of reliability.
+* Ph.D., Professor of Psychology, Mandalay University.
+1. The writer gratefully wishes to acknowledge the research grant by the Burma Research Society
+which made this study possible.
+77
+JBRS, XLVII, i, June 1964
+12
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 2]]
+78
+U Sein Tu
+Within the Inventory itself too, it turns out that the individual traits do not possess
+the status of independent aspects of personality. Appreciable interscale correlations were
+obtained between Introversion (BN) and Submission (B4D); and between Self-Sufficiency
+(B2S) on the one hand and Extroversion (BI) and Dominance (BD) on the other; while
+Introversion (BI) and Neurotic Tendency (B₁N) were found to be practically identical
+(r = .95). (3,6,9,10)
+Flanagan (6) subjected the 125 original items of the Bernreuter Personality Inventory
+to factor-analysis and came out with two factors which accounted for 96 percent of the
+variance in the original items. Factor I was identified tentatively as Self-Confidence, and
+Factor II as Self-Sufficiency or Independence. Persons who score high on Factor I tend
+to be sure of themselves, reliant on their own ability, and possess a high level of tolerance
+for criticism; while low scores on this trait tend to be self-deprecatory, to feel timid and
+inferior, and to possess little capacity to withstand criticism. Factor II measures the
+degree to which a person tends to do things by himself rather than seek solace in sympathy
+of friends and companions, and to solve one's problems by oneself instead of seeking
+advice or help.
+Each of the four original Bernreuter traits, (B₁N), (B₂S), (BI), and (B,D) were
+found to consist of these 2 basic factors Self-Sufficiency and Confidence in varying propor-
+tions, together with some minor unidentified factors. Thus "Extroversion" was found to
+be made up of Self-Confidence with the addition of some Self-Sufficiency items.
+Flanagan's two factors have the added advantage of being orthogonal of factorially
+independent of each other.
+The Burmese Bernreuter
+The psychologist who intends to adapt a standard psychological test to his own
+cultural milieu has the choice of following either of two courses of action. First, he may
+take a test, translate the individual items, and publish the result as the completed test.
+This verbalistic method is employed by persons who have no basic understanding of the
+procedures and underlying rationale of psychometrics, possesses little merit, and need not
+concern us further. The other course is to study the form and spirit in which the original
+test was built, and to practically construct a new test, beginning with the creation of an
+item-pool of test questions applicable to one's own socio-cultural setting, and following
+the original test construction procedures step by step through item-analysis, reliability
+testing, validation, and final standardization on a new population. The latter is the standard
+order of procedure and is greatly to be desired provided the time and the facilities for
+such thoroughgoing test reconstruction are available.
+In a modest test-program such as the present one, however, such facilities are usually
+wanting, and such time-consuming work is for the most part entirely out of the question.
+For the psychologist in this situation, a third strategy is available. This is to take
+a reasonably long original test, translate the test items, and, using the translated list as the
+JBRS, XLVII, i, June 1964
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 3]]
+The Burmese Bernreuter
+79
+item pool for the construction of the new test, conduct an item-scale correlational analysis
+on the results of an administration of the translated items to a sample drawn from one's
+own society. If those items which yield high item-test correlations are selected for the
+modified test, we shall be left with a short form of the original test which has been
+developed on the basis of data obtained on the new population.
+The value of such a procedure is enhanced when scales representing more or less
+factorially pure traits are translated and adapted, since the derived test items in each scale
+may themselves be subjected to further factorial analysis to determine whether they do or
+do not hang together in the modified scale and in the new culture. This is essentially the
+method that has been followed in the development of the Burmese version of the Burn-
+reuter Personality Inventory.
+Flanagan's factor-analysis version of the Bernreuter Personality Inventory, consisting
+of 50 items comprising two factors, Self-Confidence and Self-Sufficiency or Sociality, were
+first translated into terms meaningful to Burmese subjects. The translated items were
+then administered to a group of 125 Intermediate Part (B) college students. Item-scale
+correlations were then computed for each factor taken separately, and items were selected
+on the basis of the extent to which each individual item correlated against the whole scale.
+This analysis left us with twenty items on the Self-Confidence Factor (Factor I) and
+fourteen items on the Sociality or Self-Sufficiency Factor (Factor II). These two scales
+were then incorporated into a single test format as shown in Fig. I and designated the
+Burmese Bernreuter Personality Inventory.
+အမည်...
+အသက်
+လိပ်စာ
+FIG. I. The Burmese Bernreuter Personality Inventory
+ဘ—ရ-တ
+ကျား / မ
+အတန်း
+ရက်စွဲ
+အောက်ပါ မေခွန်းတို့တွင် မေးခွန်း၏ ဘေးဘက်ရှိ ပေးထားသော နေရာ၌ သင့်သဘောနှင့် ကိုက်ညီလျှင်
+( ( ၂ ) ဟုပေး၍ မကိုက်ညီပါက (x) ဟုဖော်ပြပါ။
+၁။ အကြံအစည်များကို သူတပါးနှင့် ပူးတဲ့ ကြံစည်ခြင်းထက် တကိုယ်တည်း ကြံစည်ခြင်းကို နှစ်သက်
+C
+သလား။
+၂။ သင်၌ ပြဿနာပေါ်ပေါက်လာသောအခါ အကူအညီရှာလေ့ရှိသလား။
+၃။ လူအများနှင့် အစဉ် ပေါင်းသင်း ဆက်ဆံ နေလိုးလေ့ ရှိသလား။
+၄။ ဆုံးဖြတ်ချက်များကို တယောက်တည်း ပြုလုပ်လိုလေ့ရှိ သလား။
+JBRS, XLVII, 1, June 1964 .
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 4]]
+80
+U Sein Th
+၅။ သူတပါးနှင့် ပူးတွဲ အလုပ်လုပ်ခြင်းကို ပိုမိုနှစ်သက်
+သလား။
+၆။ ခက်ခဲပင်ပန်းသော အလုပ်များကို အားပေးလမ်းညွှန်သူမလိုဘဲ တယောက်တည်း လုပ်ချင်သလား။.
+၇။ သင်စိတ်ပျက် အားငယ်သောအခါ နှစ်သိမ့်ပေးမည့်သူကို ရှာဖွေလေ့ရှိသလား။
+ဂ။
+သင်နာဖျားသောအခါ လူများလာမေးစေလိုသလား။
+၉။ အရေးကြီးသော ဆုံးဖြတ်ချက်များကို ပြုလုပ်သောအခါ သူတပါးတို့၏ အကြံဉာဏ်များကို တောင်းခံ
+မည်လား။
+၁၀။ ညနေခင်းတွင် တကိုယ်တည်း နေချင်လေ့ ရှိသလား။
+၁၁။ သင့်အလုပ်တာဝန်ကို အခြားသူများခွဲဝေယူလျှင် နှစ်သက်သလား။
+၁၂။ ပြဿနာများကို သိနားလည်အောင် ဖတ်ရှုမည့်အစား သူတပါးနှင့် တိုင်ပင်ဆွေးနွေးမည်လား။
+၁၃။ သင်စိတ်ထိခိုက်သောအခါ လူအများနှင့် အတူနေချင်သလား။
+၁၄။ မိတ်ဆွေအပေါင်းအသင်း ခေါင်းပါးသော နေရာတွင် အလုပ် လုပ်နေလိုသလား။
+(စ) အမှတ်
+၁၅။ သင်သည်အလွယ်တကူ စိတ်ထိခိုက်လေ့ ရှိသလား။...
+၁၆။ သင်သည် မကြာခဏ စိတ်လှုပ်ရှားစိုးရိမ် တတ်သလား။
+၁၇။ သင့်ကို ရှက်အောင်လုပ်လျှင် အလှယ်ဘကူ ရှက်သွားလေ့ရှိသ
+၁၈။ အစည်းအဝေးထဲမှာ ထပြီးစကားပြောရမှာ ဝန်လေးမည်လား။.
+၁၉။ သူဘပါးကသင့်ကို ဝေဖန်သောအခါ များစွာမနှစ်မြို့ခြင်း ဖြစ်လေ့ရှိသလား။.
+၂၀။ သင်သည် မကြာခဏ အလိုအလျောက် ဝမ်းနည်းနေလေ့ရှိသလား။
+၂၁။ သင်သည် စိတ်ကဘုန်ကရင် ဖြစ်လေ့ရှိသလား။....
+၂၂။ သင်သည် အများအားဖြင့် ရှက်ဘတ်သလား။..
+၂၃။ သင်သည် စိတ်ဆိုးလိုက် စိတ်ကြည်လိုက် ဝမ်းနည်းလိုက် ဝမ်းသာလိုက်နှင့် ရုတ်တရက် စိတ်ပြောင်းလဲလေ့
+ရှိသလား။ ……..
+၂၄။ ဈေးသည် တယောက်က ကြိုးစားပမ်းစား သင့်အား ဈေးရောင်းသော အခါ မဝယ်ဘူးဟု ငြင်းဆိုရမှာ
+ခက်သလား။..........
+၂၅။ မတွေ့ချင်သူနှင့်လမ်းမှာဆုံသော် သင်ရှောင်တိမ်း မည်လား။
+၂၆။ လူကြီးသူကြီးများနှင့် တွေ့ဆုံသောအခါ မိမိပြုလုပ် ထားမိသော တစုံဘခုကြောင့် မလုံမလဲ ဖြစ်နေတတ်
+သလား။
+၂၇။ ကျီစားခြင်းကို အစဉ်ကြံ့ကြံ့ခံ နိုင်သလား။……
+JBRS, XLVII, i, June 1964
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 5]]
+The Burmese Bernreuter
+၂၈။ သင်အလုပ်လုပ်နေစဉ် လူအများဝိုင်းဝန်းကြည့်ရှုနေလျှင် ဂရုမပြုဘဲနေနိုင်မည်လား။
+၂၉။ အခြားသူများနှင့် သဘောချင်း မတိုက်ဆိုင်သောအခါ စိတ်ပျက်အားငယ်ဖြစ်မည်လား။…
+၃၀။ မျက်နှာစိမ်းဘခယာက်ကို မိမိကစဘင်၍ စကားပြောရမှာ ခက်လေ့ရှိသလား။
+၃၁။ သင်သည် ကိုယ့်ကိုယ်ကို အားကိုးလေ့ ရှိသလား။
+၃၂။ အခြားသူတပါးထံမှ အကူအညီမယူဘဲ ပြဿနာများကို သင်ကိုယ်တိုင်ဖြေရှင်းလေ့ရှိသလား။.
+၃၃။ အခြားသူများက တခါတရံ သူတို့ကိုယ်ကျိုးအတွက် သင့်ကိုအသုံးချနေသည်ဟု ထင်မြင်မိသလား။...
+၃၄။ အခြားသူများထက် ညံ့နေသည်ဟု သင့်ကိုယ်သင် ထင်မြင်လေ့ရှိသလား။.
+81
+(မေးခွန်းတိုင်းကိုဖြေဆိုပြီးဖြစ်ကြောင်း ပြန်လှန်စစ်ဆေးကြည့်ရှုပါ။
+ပြီးဖြစ်ကြောင်း ပြန်လှန်စစ်ဆေးကြည့်ရှုပါ။ မဖြေဆိုရသေးသော မေးခွန်းများ
+ကျန်ခဲ့လျှင် ပြန်၍ဖြေဆိုပါဦး။)
+(က) အမှတ်
+Reliability
+Internal consistency reliability for the Burmese Bernreuter Personality Inventory
+was computed from the average inter-item correlation, and found to be .87 for Factor I
+(Self-Confidence) and .79 for Factor II (Self-Sufficiency). This indicates that the items in
+each translated scale are in fact measuring the same single trait, even when applied to a
+Burmese population.
+That the scales are measuring meaningful factors which are independent of each
+other is also indicated by the negligible correlation of .0682 between Factor I and
+Factor II.
+Reliability coefficients were also computed for the two factors. Retest reliability
+calculated from readministration of the Sociability scale after an interval of 12 days to
+115 B.A./B.Sc. (Part A) college students was .85. The Confidence scale, when given to
+109 B.A./B.Sc. Psychology students on two occasions, again with an interval of 12 days in
+between, yielded a retest reliability coefficient of .74.
+Validity
+A study by Ma Aye Than (2) examined the validity of the Burmese Modification
+of the Bernreuter, using self ratings and other ratings as validation criteria. The Inventory
+was administered to 76 high school students, who were also asked to rate themselves and
+their fellow classmates on Factors Sand C. The correlations obtained between test
+scores and these two forms of ratings are presented inTable I.
+JBRS, XLVII, i, June 1964
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 6]]
+82
+U Sein Tu
+TABLE I
+Validity Coefficients obtained when Factors I & II on
+the Burmese Bernreuter are correlated against Self
+and Other Ratings.
+Factor I (C)
+Self Rating
+.36
+.37
+Other Rating
+Factor II (S)
+.31
+.33
+Regarding the validity of the Burmese Bernreuter Personality Inventory, Ma Aye
+Than concludes from her study as follows:
+The 4 correlations ranging from .31 to .37 between the test scores
+and ratings may be designated as moderately positive. This would
+seem to indicate a certain degree of ability on the part of the inven-
+tory to measure personality although uncritical use of such tests are
+not warranted. The modification of the personality questionnaire
+was shown to be in some degree valid. With regard to the reliabi-
+lity of the correlations obtained, when N=76, d.f.=74, the correlation
+must be .30 so as to be significant at the .01 level, and only one in
+a hundred trials would an r as large as .31 or .33 or .36 or .37
+arise from fluctuations of sampling if the population r
+Hence r's ranging from .31 to .37 can be taken as being indicative
+of a real correlation. Thus the inventory may be used for discover-
+ing group trends while for purposes of discovering individual trends
+a higher correlation than is found in the present study should be
+obtained.
+(2)
+As a postscript to Ma Aye Than's study it may be of interest to mention that
+Factor C and Factor S remained independent in her results as well, a negative correlation
+of -.0496 being obtained between Sociability and Self-Confidence.
+Another study by Khin Mg Than, Nyi Win Hman and Ma Kyin Sein (1963)
+validated the BBPI against ratings by others. Possibly due to the use of trained raters in
+his study, in contrast to Ma Aye Than's high school students, validity coefficcients
+as high as .81 were obtained between the Confidence Factor and Other Ratings.
+JBRS, XLVII, i, June 1964
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 7]]
+The Burmese Bernreuter
+Norms
+83
+To be able to determine whether a given score or mean score is high, average or
+low with reference to other groups or individuals, we need to have standards or norms
+for the test set up on a sample similar to the one with which the test is to be used. To
+obtain such standards, the Burmese Bernreuter was administered to 308 college students,
+and separate norms for males and females were drawn up. The results are given in the
+form of normalised standard scores or T-Scores. The T-Score equivalent of each
+Bernreuter raw score may be read off from the Conversion Tables built for the Burmese
+Bernreuter shown in Tables II and III.
+TABLE II
+Conversion Tables for
+Transforming Raw Scores
+Into T-Scores on the Burmese Modification of the
+Transforming
+Bernreuter Personality
+Confidence).
+Inventory.
+(Factor I.
+T-SCORE EQUIVALENT*
+B.B.P.I.
+Raw Scores
+Males (N=211)
+Females (N=107)
+17
+16
+15
+14
+13.
+47
+20
+19
+18
+#6592485
+74
+67
+77
+69
+273839
+80
+63
+59
+50
+56
+53
+12
+45
+51
+11
+43
+49
+10
+41
+47
+9
+39
+1876543210
+45
+37
+42
+35
+39
+21
+2222222
+34
+36
+32
+30
+28
+29
+28
+26
+20
+20
+*22222
+34
+32
+20
+*
+Separate Norms have been provided for men and women in view of the
+fact that a sex difference significant at the .025 level has been obtained
+on Factor I.
+JBRS, XLVII, i, June 1964
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 8]]
+84
+TABLE III
+Conversion Tables for Transforming Raw Scores
+into T-Scores on the Burmese Modification of the
+Bernreuter Personality Inventory. (Factor II:
+Self-Sufficiency.)
+B.B.P.I.
+RAW SCORES
+T-SCORE EQUIVALENT
+Males (N=211) Females (N=107)
+14
+73
+13
+12
+11
+10
+9
+8
+14532222
+68
+66
+64
+62
+59
+57
+7
+55
+6543210
+52
+49
+49
+41
+47322
+29
+20
+45
+45
+41
+36
+Fr8638562277628
+20
+71
+64
+60
+55
+U Sein Tu
+The advantage of using T-Scores is that they normalize skewed distributions, with
+the result that a given T-Score will have the same meaning, relative to the individual's
+position in the total population, regardless of the sample in which it is obtained.
+The significance of the T-Score obtained through use of the Conversion Tables
+may be determined by reference to Table IV given below.
+TABLE IV
+Table Showing the Significance of T-Score Equiva-
+lents on the Burmese Bernreuter.
+T-Scores
+RATING
+PERCENT
+65 and above
+highest
+-
+55 - 64
+45 54
+35 - 44
+below 35
+above average
+average
+below average
+lowest
+24
+38
+24
+72027
+JBRS, XLVII, i, June 1964
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 9]]
+The Burmese Bernreuter
+85
+For the convenience of test-users, the above T-Score data have been recast in
+Table V, so that T-Score ratings may be read off directly from Bernreuter raw scores.
+TABLE V
+Table to determine the Significance of Burmese
+Bernreuter Scores by Direct Reading from Raw
+Scores.
+(a) FACTOR I: CONFIDENCE (Males)
+13
+B.B.P.I.
+RAW SCORES
+RATING
+PER CENT
+19 - 20
+highest
+ĵ
+-
+16 18
+above average
+12 - 15
+average
+-
+? - 11
+0
+below average
+6
+lowest
+2025
+24
+38
+24
+7
+(b) FACTOR I:
+B.B.P.I.
+RAW SCORes
+17
+14
+9
+6
+--
+-
+-
+0
+-
+- 20
+26385
+13
+CONFIDENCE (Females)
+RATING
+PER CENT
+highest
+16
+above average
+average
+below average
+38
+24
+lowest
+-2027
+24
+(c) FACTOR II: SELF-SUFFICIENCY (Males)
+B.B.P.I.
+RAW SCORES
+RATING
+PER CENT
+12 and above
+highest
+7
+7 11
+-
+3 - 6
+above average
+24
+average
+38
+20
+-
+below average
+lowest
+24
+JBRS, XLVII, i, June 1964
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 10]]
+86
+(d) FACTOR II: SELF-SUFFICIENCY (Females)
+B.B.P.I.
+RAW SCORES
+11 and above
+RATING
+PER CENT
+highest
+7
+7
+10
+above average
+4 6
+2
+0
+-
+-
+3
+1
+average
+below average
+lowest
+282
+24
+38
+24
+7
+U Sein Tu
+Summary
+The present paper reports the results of an attempt to modify the Bernreuter
+Personality Inventory to suit Burmese conditions. Flanagan's factor-analysed version of
+the Personality Inventory was translated, and two scales representing two orthogonal
+factors, Confidence and Self-Sufficiency, were prepared. Of the original 50 items in
+the Flanagan Bernreuter, an item analysis based on item-scale correlations eliminated 16
+items, leaving 14 in the Self-Sufficiency scale and 20 in the Confidence scale. These
+remaining items were then subjected to reliability and validation analysis.
+Internal reliability coefficients of .87 and .79 were obtained for Factors I
+(Confidence) and II (Self-Sufficiency) respectively, while retest reliability coefficients were
+.74 for Factor I and .85 for Factor II.
+Validation of the Burmese Bernreuter Personality Inventory against externa]
+criteria (self ratings and classmates' ratings in a group of high school students) yielded
+moderate positive validity coefficients ranging from .31 to .37, indicating the need for
+caution in applying the test to individual cases. Validation with use of sophisticated
+raters, however, raised the validity coefficient on Factor I to .81.
+The two factors, Confidence and Self-Sufficiency, turn out to be consistently
+independent of each other in the Burmese samples tested, one study revealing a negligible
+positive correlation of .0682 and the other a negative correlation of -.0496 between the
+two traits.
+Norms for use of the Burmese Bernreuter Personality Inventory with college
+students have been prepared on a University of Mandalay student sample and are presented
+in the text. Separate norms exist for the Rangoon University college population, having
+been developed on a sample of 618 Rangoon University students, and may be
+obtained by writing to Professor U Hla Thwin, Department of Psychology, Rangoon
+University.
+JBRS, XLVII, i, June 1964
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 11]]
+The Burmese Bernreuter
+87
+References
+1. Anderson, J.E. “The Effect of Item-Analysis upon the Discriminative Power of an
+Examination." J. of Appl. Psychol. 1935, 19, 237-244.
+"
+2. Aye Than, Ma. "Validation of the Burmese Modification of the Bernreuter Personality
+Inventory, using Self-Ratings and Classmates' Ratings as Validation Criteria.
+Unpublished Honours thesis, Psychology Department, University of Rangoon.
+3. Banks, C. and Kier, G. “A Functional Analysis of Items in the Bernreuter
+Personality Inventory." Br. J. of Psychol. 1952, 5.
+4.
+Bernreuter, R. G. "The Measurement of Self-Sufficiency." J. of Abnorm. Soc.
+Psychol. 1933, 28, 291-426.
+5. Bernreuter, R.G. The Personality Inventory and Manual. Stanford University Press.,
+1935.
+6. Flanagan, J.C. Factor Analysis in the Study of Personality, Stanford University Press,
+1935.
+7.
+Khin Mg Than, Nyi Win Hman and Ma Kyin Sein. Validation of the B.B.P.I.
+against Ratings by Others. Unpublished Experiment, Department of Psychology.
+Mandalay University.
+8. "Page, H.E. “Detecting Psychoneurotic Tendencies in Army Personnel.” Psychol. Bull.
+1945, 42, 645-654.
+9. Page, J., Landis, C. and Katz, S.E. "Schizophrenic Traits in the Functional
+Psychosis and in Normal Individuals." Amer. J. Psychiat. 1934, 13, 1213-1225.
+10. Shaffer, L.F. The Psychology of Adjustment. Ch.ll. Houghton Mifflin Co., 1936.
+11. Stagner, R. "Validity and Reliability of the Bernreuter Personality Inventory."
+J. Abnorm. Soc. Psychol. 1934, 28, 413-418.
+JBRS, XLVII, i, June 1964
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.

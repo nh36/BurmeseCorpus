@@ -1,0 +1,2639 @@
+[[page 1]]
+NISSAYA BURMESE *
+A CASE OF SYSTEMATIC ADAPTATION
+TO A FOREIGN GRAMMAR AND SYNTAX
+JOHN OKELL §
+Note. Details of works referred to below are given in a list at the end.
+PART I: PALI AND BURMESE
+GRAMMAR.
+It is recorded in the Burmese chroni-
+cles (Kala i p.184) that king Anorahta
+'placed the thirty sets of the Pițaka' – the
+Theravada Buddhist scriptures which he
+had brought into his kingdom- 'in a shrine
+studded all over with precious stones, and
+had the noble Order of monks give in-
+struction in them'. This event is said to
+have taken place in the second half of the
+eleventh century A.D. Instruction in the
+Pitaka and in Pali, the language in which
+they are written, is still given today and
+has had profound effects on the language
+and literature of the Burmese. The pur-
+pose of this paper is to draw attention
+to one of these effects in the field of
+language, namely 'nissaya Burmese'.
+Besides being a linguistic curiosity in
+itself, nissaya Burmese, it is suggested, may
+well have in importance for the analysis of
+Burmese grammar that has not been
+properly seen in perspective. Early Western
+grammars (e.g. Judson, Lonsdale) were
+dominated by nissaya-influenced Burmese
+and accepted most of it without question,
+while recent studies (e.g. Stewart, Cornyn
+Outilne, and Minn Latt) have perhap
+tended to underrate it.
+Nissaya translation
+Nissaya are works in which each word
+or phrasę of a Pali text is followed
+immediately by its Burmese translation
+(example in Appendix 1). In some nissaya
+the Burmese incorporates material, literary
+or explanatory, additional to the Pali text.
+Tin Lwin classifies four types of nissaya:
+verbatim, free, ornate, and translation with
+short notes. It is the ordinary verbatim
+type, with minimal additions, which is
+relevant for this paper. Nissaya have been
+known in Burma since at least the mid-
+15th century(see Bode's Literature p.101),i.e.
+a little before the bulk of non-inscriptional
+Burmese literature begins. Since then
+nissaya have been composed and studied in
+considerable numbers and are still written
+today. In addition to whole works written
+in this way, there are many short passages
+of nissaya in both classical and modern
+texts.
+From the grammatical point of view,
+the interest of nissaya is in the fact that
+they were intended not only to give the
+reader the meaning of the Pali text but also
+* Reproduced, with additional examples in Burmese, from Indo-Pacific Linguistic
+Studies (Lingua 15), Amsterdam, 1955, with the permission of the Publishers, North-
+Holland Publishing Company, Amsterdam, The Netherlands.
+§ M.A. (Oxon), Lecturer in Burmese, School of Oriental and African Studies,
+University of London.
+JBRS, L, i, June 1967.
+Copyright 1998-Myanmar Book Centre & Book Promotion & Services Ltd, Bangkok, Thailand.
+
+[[page 2]]
+96
+to anable him to construe its grammar. For
+the student, nissaya 'could be a kind of
+grammar or manual as well as a dictionary.
+He can grasp syntactical construction of the
+language as he scans the lines and learns
+the meaning of a Pali word or phrase'
+(Tin Lwin p.39). Clearly, the word-by-word
+a
+alone imposes
+close
+arrangement
+structural correspondence with Pali; but,
+more than this, a system was established
+whereby certain particles-and in Burmese
+it is the suffixed particles that bear the main
+burden of grammatical and syntactic rela-
+tions-were conventionally employed to
+represent such features as number, case
+tense and mood (shown in Appendix 1).
+Their position at the end of a word makes
+them curiously parallel to tense-and case-
+endings. As a result, the nissaya-writers
+were able to represent, with remarkable
+accuracy, the inflections and syntax of Pali,
+an Indo-European language, in unrelated
+Burmese, which belongs to the Sino-Tibetan
+family and is largely monosyllabic. (This
+also appears to be true
+mutatis mutandis,
+for traai, the Mon equivalent of nissaya:
+see Duroiselle's Talaing Nissaya p.113.) The
+strength and widespread acceptance of the
+system can be gauged from the fact that the
+same grammatical conventions have been
+preserved unchanged for more than four
+centuries: there is nothing to distinguish
+a nissaya rendering of 1491 from one of
+1910 (examples in Appendices 2 and 3).
+The major part of this paper (Part II)
+consists of an analysis of these conventions.
+Cornyn once suggested (Commentary p.358),
+as one of the possibilities of an investiga-
+tion of the Burmese jātaka commentaries,
+'the information to be gained from the
+attempt to reflect Pali syntactic features
+in a language of different structure'. He did
+himself point out some of these features in
+passing, and the attempt is made here to
+JBRS, L, i, June 1967,
+Nissaya Burmese
+take up his suggestion and carry the
+analysis further.
+It is hoped that the analysis may
+(1) hold some interest of its own as an
+example of a language of one type
+deliberately and systematically adapted
+to the structure and syntax of another.
+It should also be possible (2) to use it
+for comparison when examining other
+Burme e prose styles and phraseology.
+(3) The implications of nissaya Burmese
+for grammatical study become apparent
+when one considers particle usages and
+sentence structures, evidently generated
+within nissaya, which have as it were
+escaped into other kinds of Burmese.
+Pali, as the language of the Pitaka, has
+always been held in such esteem that
+escapes were easily made. While nissaya
+Burmese can be analysed entirely, and
+most satisfactorily, in terms of Pali gram-
+mar, it will readily be appreciated that
+other kinds of Burmese, which are not
+completely in the nissaya style but have
+drawn on its conventions to some extent,
+will require, at the worst, two separate
+grammars: one for the Pali and one for
+the Burmese; and both may be in opera-
+tion within the same sentence. This 'split
+personality' of Burmese grammar and syn-
+tax may well underlie much of the elusive-
+ness of its analysis, particularly at a time
+when grammarians are making efforts to
+avoid 'translational' pitfalls.
+The influence of nissaya style
+The extent to which nissaya usages
+have permeated non-nissya Burmese is
+not easily delimited. Much of Burmese
+prose written before the 20th century
+consists of translations, adaptations, and
+Some of
+compilations from Pali texts.
+these works, as one would expect, are
+very close to nissaya - notably the five-
+volume translation of the 550 jätaka by
+Copyright 1998-Myanmar Book Centre & Book Promotion & Services Ltd, Bangkok, Thailand.
+
+[[page 3]]
+John Okell
+the Nyaunggan Sayadaw (c. 1800), which
+(with the exception of only one or two
+particles throughout) reads exactly like a
+nissaya with the Pali text omitted (example
+in Appendix 4). Others, such as the
+well-known translation of eight of the
+ten jätaka of the Mahā Nipata by U
+Obhāsa (1782-1787), adhere less closely
+to the original Pali, but their grammar,
+apart from the omission of certain par-
+ticles, is still readily analysable in Pali
+terms (example in Appendix 5).
+Original Burmese prose, not based
+on Pali texts, differs from nissaya Bur-
+mese to a greater or lesser extent according
+to the author and his subject. Up to
+about the 20th century the pressure on
+writers to model their prose on Pali was
+strong: stylistic traditions had been
+established since the beginning by tran-
+slated works, and students were expected
+to reproduce exactly what they had been
+taught. Pali was regarded as the model
+of correctness in language, so that the
+closer to Pali one's Burmese was, the
+purer it seemed to be.
+Burmese grammars
+were based on nissaya Burmese, and
+ordinary speech was disregarded by
+scholars. Nissaya ‘framed the style of
+the Burmese language. The Burmese
+sentence thus becomes exactly like the
+Pali sentence' (Pe Maung Tin p. 79).
+The conventions of nissaya, however, did
+not overrule Burmese idiom completely,
+and in the course of time what were
+presumably changes in the spoken lan-
+guage affected the use of particles in
+written prose. It is interesting to see,
+for example, how U Kala, writing
+between 1714 and 1733, writes in a style
+much closer to nissaya in the early parts
+of his chronicle when his source materials
+may have been in a similar style if not
+actually in Pali, than in the later parts
+which are probably more original. How-
+97.
+ever, much of the apparent difference
+arises from the fairly regular replace-
+ment of particles by others of similar
+function, or from their omission (examples
+in Appendix 6). It is a simple matter in
+most of his sentences to reproduce nissaya
+Burmese merely by the substitution or
+the insertion of particles: thus the struc-
+ture of the sentence is still largely modelled
+on Pali, and his use of particles, both
+the old ones that persisted and the new
+ones that were introduced, still reflects
+nissaya usage. The same characteristics
+are to be seen in much other written
+Burmese prose, including books, news-
+papers and magazines of the present
+day.
+For some purposes it is convenient.
+to draw a line dividing particles and usages
+appropriate to written Burmese' from
+those of 'spoken Burmese', and it is temp-
+ting to think that the influence of Pali
+grammar stops on the written side of the
+line, where stylistic traditions maintain
+nissaya-like features, while the natural
+spoken language has developed indepen-
+dently without being subjected to these
+alien pressures. However, the dividing line
+is not always very clear. Stewart (Manual
+p. xi) expressed his belief that the differ-
+ence between the two forms of Burmese
+is ‘usually exaggerated'. Cornyn (Outline
+p. 5) found it necessary to make a sharp
+and arbitrary distinction between his [in-
+formant's] colloquial speech and his know-
+ledge of the literary language'; and Minn
+Latt (First report p. 53) while wishing to
+concentrate on 'Modern Burmese' and to
+'exclude, as strictly as possible, Classical
+Burmese' which he regards as 'a language
+no longer spoken, or at least highly re-
+moved from the language of modern times'-
+nevertheless admits that 'the high style
+[of Modern Burmese]... merges sometimes
+with Classical Burmese,' and that at the
+--
+JBRS, L, i, June, 1967.
+13-U.P.-G 7—1,000+ 50—14–3–68.
+Copyright 1998-Myanmar Book Centre & Book Promotion & Services Ltd, Bangkok, Thailand.
+
+[[page 4]]
+98
+present stage of development
+$
+users of
+the language are apt to mix even the
+comparatively distinct forms of Modern
+and Classical Burmese in their less natural
+moments'.
+The fact is that although one wants
+to avoid teaching students to talk in un-
+naturally bookish terms or to use archaisms
+that still find a place in written prose, it
+is impossible to put all usages neatly on
+one side or the other of a dividing line:
+rather, there is a broad band of overlap,
+so that one finds almost a gradual shading
+off from the extreme nissaya style down
+to highly colloquial forms of speech and
+slang. Styles often thought of as 'written
+Burmese' may be heard spoken in formal
+contexts such as speeches and lectures, and
+news broadcasts are delivered in a style
+closer to the nissaya end of the scale than
+much written material never intended to
+be read aloud. There is a widespread
+feeling among Burmese speakers that styles
+associated with the written language are
+'correct', and that the further one moves
+towards the colloquial styles the more
+debased and slangy one's language becomes.
+Consequently, on formal occasion, and also
+a
+when speakers are asked about their lan-
+guage, when they are speaking into
+microphone or know they are talking to
+a linguisti.e. 'in their less natural mo-
+ments they may often make use of morė
+bookish forms than usual.
+It is possible, then, that just as some
+of the features of Pali grammar; carefully
+reproduced in nissaya Burmese, are to be
+found in non-nissaya texts, both translated
+and original, so they may have trickled
+here and there even into everyday spoken
+Burmese the way for this being made
+easier by the high prestige of Pali and the
+belief in the correctness of written usage,
+both extended over a long period of
+-
+JBRS, L, i, June, 1967.
+Nissaya Burmese
+Burmese history. An assessment of the
+extent to which this development may
+have taken place would require not only
+an analysis of nissaya Burmese such as is
+given here in outline, but also, for com-
+parison, an analysis of the grammar of a
+Burmese that had definitely never been
+exposed, directly or indirectly, to Pali
+influence; and no such Burmese exists.
+Looking for an out-of-the-way dialect is
+unlikely to help since nearly every village
+has its monastery with a collection of Pali
+texts; and going back in history is ruled
+out as no Burmese is recorded from the
+time before Anorahta brought back the
+Pitaka to his kingdom.
+Two points that emerge, however,
+from a consideration of nissaya Burmese
+are: first, that in analysing the grammar
+even of spoken Burmese it may prove
+both desirable and defensible sometimes
+to adimt certain categories - e.g. subject,
+object, accusative, locative, future, causative-
+and at other times to deny them. They
+may be logically quite defensible as the
+reproduction in speech, unconsciously or
+otherwise, of Pali patterns long established
+in styles at the written end of the scale,
+but may well have no place in patterns
+deriving from pre-Pali Burmese. It is
+interesting to note too that when the Pali
+categories are similar to English ones,
+'translational' grammar would be more
+appropriate than an exotic analysis. Second-
+ly, the existence of nissaya Burmese and
+the likelihood that some of its features
+have penetrated fairly deep into the lan-
+guage underlines the importance of gram-
+matical study of languages closely related
+to Burmese. If, as is to be hoped, they
+have not been subject to such powerful
+external pressure, many features in their
+grammars should match those of Burmese
+and thus highlight the structure of the
+pre-Pali language. On a graph with these
+Copyright 1998-Myanmar Book Centre & Book Promotion & Services Ltd, Bangkok, Thailand.
+
+[[page 5]]
+John Okell
+languages as one axis and nissaya as
+the other it should be possible to plot
+with greater precision the elusive figures
+of Burmese grammar.
+Background
+In order to appreciate how some
+features of nissaya Burmese may have
+found their way into spoken Burmese it
+is perhaps worth recalling, first, something
+of the prestige of Pali among the Burmese
+and secondly some of the ways in which
+the ordinary Burman can come into
+contact with Pali-influenced Burmese.
+The prestige of the nissaya style
+from
+Pali studies are not just a single
+thread running through the history of
+Burmese language and literature: on the
+contrary, they colour the whole fabric.
+Burmese was first written at the begin-
+ning of the 12th century, and
+then until the middle of the 15th it is
+known only in the restricted form of
+inscriptions on stone recording the dedica-
+tion of property to the religion. No major
+work in Burmese dating from before 1455
+is extant today, and none is certainly
+known to have been committed to writing
+before that date. During these three and
+a half centuries, however, the study of
+Pali texts was flourishing (see Bode
+Literature). Numbers of commentaries in
+Pali on matters in the Pitaka and allied
+subjects were written, many of them gram-
+mars (see Bode Grammarians). One of
+these was the Saddaniti, dated 1154, which
+was examined at the time by scholars
+from Ceylon 'who knew grammar well’
+and made them exclaim 'in the subject of
+grammar there is no book like this in
+the island of Sihala [Ceylon], even the
+detailed analysis as contained in this book
+we did not know", they spoke highly in
+various ways' (Paññāsāmi transl. p. 81).
+In the same source (p. 85 ff.) are stories
+99
+99
+illustrating the great interest in and know-
+ledge of Pali grammar displayed by the
+inhabitants of the then capital of Burma-
+including even 'the wretched young woman
+who guards the fields and goods.'
+Pali was thus the language of books
+and learning for a long time while Bur
+mese appears to have been written only
+for records of religious deeds. Although,
+in the language of these early inscriptions,
+the use of particles does not seem to have
+been closely adapted to Pali patterns, the
+influence of Pali is discernible - not sur-
+prisingly in various phrases and expres-
+sions. When Burmese came to be used
+-
+alone and on palm-leaf it was mainly
+for verse, where grammatical patterns
+are frequently modified to suit the
+verse-form. It is worth noting in pass-
+ing that much of this verse was written on
+themes from Pali works, sometimes with
+parts of the Pali text quoted at the head of
+each section (as in the Kogan Pyo, 1523),
+and in some cases this was given a nissaya
+translation (as in the Paramidawgan Pyo,
+1491; cf. Tin Lwin p. 105ff.). Among such
+prose works as there were, translations and
+adaptations from Pali had an important
+place; e.g., in the early period, Pārāyana
+Vatthu (1511), those parts of the Rājavan-
+kyō (1520) which are not in nissaya,
+Maṇikuṇḍala Vatthu (1629), and Dhamma-
+pada Vatthu (1680). Before any known
+Burmese work was composed, however,
+there were nissaya: nineteen are included in
+a list of books dedicated to a monastery in
+1442 (Bode Literature p. 101). There is
+also a 19th century record of nissaya
+composed still earlier, in about 1300 (Wun-
+p. 131). There can be no certainty that
+there were not earlier works composed in
+Burmese alone, but as it stands the scant
+evidence would suggest that, apart from the
+inscriptions, Burmese prose was actually
+first written in nissaya form.
+JBRS, L, i, June, 1967.
+Copyright 1998-Myanmar Book Centre & Book Promotion & Services Ltd, Bangkok, Thailand.
+
+[[page 6]]
+100
+In addition to the influential position
+of Pali and Pali writings in Burmese
+literature, there were suggestions of a
+continuous line of descent from classical
+times: 'After the 334,569 kings from
+Mahāsammata at the beginning of the
+world up to Siddhattha Kummāra who
+became Buddha, there arose in our country
+of Burma the great states of Tagaung,
+Thindwè, Thayekhittaya, Pagan, Myin-
+zaing, Pinya, Ava, and Konbaung (Mahā
+Jeyyasankhayā p.6). The Burmese kings
+were believed to ‘have their origin in the
+Sun dynasty of the Sakiyan line' (Hman-
+nan beginning of Part 3); more recently,
+adding the continuous line of kings, from
+the Buddha-to-be Siddhattha Kummāra
+up to king Thibaw, who was second to
+enjoy the palace in the royal city of
+Ratanapuṁ [i.e. Mandalay: he reigned
+1878-1885], brings the number to 335,876-
+a dynasty of Sakiyan kings descended from
+the Solar race, an unbroken succession of
+umbrella-bearing sovereigns (Banya Dala,
+publisher's preface).
+Nissaya Burmese
+[Pali = 'many' ]: delete ba; at hu make
+u into ui'; make h into t or dh and join
+it to ui'. The result is tui' or dhui*.
+(Okpo Sayadaw p.29)
+မှ ဟူသည်။ သ္မာပုဒ်ပျက်။ သ္မာကို မှပြု။ မှဖြစ်၏။
+mha [sign of ablative case in nissaya
+Burmese] is a corruption of smā
+[a Pali ablative inflection]: make sma
+into mha. The result is mha. (ibid..p32)
+These are only two examples from what
+must be several hundred such derivations
+in the same work. Many others are
+offered by Mahā Jeyyasaṁkhayā and Kyaw-
+aung San-hta Sayadaw II. The tradition
+has still not died out and is not confined
+to scholars.
+From the grammatical aspect too,
+Burmese was naturally not expected to
+differ from Pali. By the 18th century, when
+grammars with Burmese examples were
+first written, the language had had cen-
+turies to shape itself in the Pali mould.
+Two early grammars give their examples in
+nissaya, there being no difficulty in illus-
+There have been many Pali loan-words trating all their points in both Pali and
+in Burmese since the time of the earliest
+records, and it was inevitable, against this
+background, that when, in the 18th century,
+Burmese and its literature came to be
+considered subjects fit for scholars, it
+should have been treated as an extension of
+Pali studies. It has even been argued (Shwe
+Zan Aung pp.57, 144) that Burmese is
+related to Pali. Earlier scholars did not go
+quite so far (e.g. Maha Jeyyasankhayā
+pp.7, 259, 268; Kyaw-aung San-hta Saya-
+daw II p.6), but they derived large numbers
+of Burmese words from Pali without
+hesitation; for example
+တို့ကား ဗဟုပုဒ်ပျက်။ ဗကိုချေ။ ဟု၌ ဥကို ပြု။ ဟကို
+ဘသော်၎င်း၊ ဓသော်၎င်းပြု၍။ သို့ကပ်။ တို့မို့ ဖြစ်၏။
+tui [sign of nominal plural in nissaya
+Burmese] is a corruption of bahu
+JBRS, L, i, June, 1967.
+Burmese (Taungdwin Sayadaw in ? 1750,
+and Kyaw-aung San-hta Sayadaw I in
+1748). These may well have been what
+Lonsdale had in mind when he complained
+(p. iii) that native grammarians' not con-
+tent with merely borrowing the gramma-
+tical nomenclature of the Pali language,
+also attempted to assimilate the grammati
+cal principles of uninflected Burmese to
+those of inflected Pali, so that they pro-
+duced, not Burmese grammars, but modi-
+fied Pali grammars in Burmese dress'. He
+found their attempts 'futile', and blamed
+‘the servile veneration in which they held
+the Pali language.' Needless to say, the
+existence of these grammars and of Pali-
+influenced Burmese made it much easier
+for the early Western grammarians, includ-
+ing Lonsdale himself, to treat Burmese
+Copyright© 1998-Myanmar Book Centre & Book Promotion & Services Ltd, Bangkok, Thailand.
+
+[[page 7]]
+John Okell
+grammar on traditional classical lines. On
+the other hand, later studies (since Ste-
+wart's Introduction 1936), in their deliberate
+concentration on ' colloquial' Burmese,
+have perhaps been too shy of admitting
+categories that often bear a suspicious
+resemblance to English ones.
+Perhaps the above few instances will
+serve as a reminder of what it means to
+say that Pali is a prestige language among
+the Burmese, and how it has affected
+their traditional thinking about language.
+In this atmosphere it would not have been
+difficult for the usage of Burmese to be
+influenced by the grammar of Pali, assis-
+ted by numerous nissaya with their con-
+ventional renderings preserved unchanged
+for so long.
+The dissemination of the nissaya style
+Even so, it may be felt, it is a far
+cry from the artificial linguistic convention
+of monkish scholars to the everyday speech
+of the layman. In fact, nissaya Burmese
+is not the exclusive preserve of the learned.
+We may discount the stories of the popu-
+larity of Pali grammar at Pagan. There is
+the cumulative effect of centuries of tradi-
+tional monastery education (see Kaung)
+through which nearly all male Burmans
+were directly exposed to nissaya for at
+least a few years in their lives. Here the
+children were first taught the alphabet and
+then made to repeat aloud nissaya texts
+of religious works and learn them by heart
+(Kaung p. 29). If nissaya Burmese were
+thus held up as the best Burmese in the
+schools for many generations, this alone
+might have been enough to establish some
+new speech habits; but Pali-influenced
+Burmese continued to be disseminated in
+the secular schools which were founded in
+the time of the British government in the
+19th century. This was not through nissaya
+but through readers (see list of books
+101
+under readers) mainly written in a style
+closely resembling that of U Obhāsa's
+jätaka translations. Some of the pieces
+are actually jätaka retold. After leaving
+school the Burman today keeps in touch
+with a language descended from nissaya
+-influenced Burmese through broadcast
+news, newspapers, journals, and books-
+'the classical texts that are one's daily
+reading matter' (Minn Latt first report
+P.53 ); through parts of the popular
+dramatic shows, and through the enthu-
+siastically attended sermons given by monks
+well trained in Pali.
+It
+So through reading, schooling, enter-
+tainment and preaching, the Burman has
+for several centuries been encouraged to
+regard as correct the Pali grammar of
+nissaya Burmese and similar styles.
+would hardly be surprising if he some-
+times echoed it in his speech, above all
+when he is consciously on his best linguis-
+tic behaviour.
+PART II: ANALYSIS
+Text
+The analysis which follows is based
+on the first volume of a nissaya, made
+in the second half of the 18th century
+by Shin Guṇalaňkāra, of the Mahā
+ummagga-jataka (No.546). A jātaka pro-
+vides a wider range of grammatical and
+syntactic features, and is simpler to
+follow, than some of the more famous
+nissaya which consist of disquisitions and
+commentary rather than narrative and
+dialogue. This particular jātaka has
+further the advantage that two passage
+from it are included in Andersen's Pāli
+reader, which has been an invaluable aid-
+where his text is the same as Shin
+Gunalankara's - in parsing the Pali (his
+nos.29 and 30 ==== nissaya 121.14-139.10
+and 29.3-32.14). The outlines of the
+analysis were in fact based on the material
+JBRS, L, i, June, 1967.
+Copyright© 1998-Myanmar Book Centre & Book Promotion & Services Ltd, Bangkok, Thailand.
+
+[[page 8]]
+102
+in these two passages before the rest of
+the text was examined for modifications
+and features not found in those few
+pages.
+Scope
+The first aim of the analysis is to
+illustrate the way in which Burmese was
+adapted to represent the grammar and
+syntax of Pali. The coverage is therefore
+not intended to be exhaustive. The list
+gives features in the Pali which appeared
+to have regular and consistent rendering
+in Burmese, but omits locutions that occur
+infrequently; and certain items (e.g. Pali
+perfect and conditional tenses) were
+found in the text at all. These, however,
+on account of their rarity, are less likely
+to have acquired regular conventional
+equivalents in Burmese, and they are
+consequently of little importance for the
+present purpose.
+not
+Even among constantly recurring
+features variations in the Burmese render-
+ings are found. These are also recorded
+in the list, and though no frequency
+count was made there is usually not much
+difficulty in deciding which Burmese form
+is the regular equivalent of the Pali. It
+may be taken therefore that renderings
+listed as 'variant' or 'occasional' are in
+the minority. There are also occasions
+when, for one
+reason or another, the
+regular or simple rendering of the Pali
+is not employed: the purpose of the
+nissaya being to help the reader under-
+stand the Pali text, it is inevitable that
+sometimes a strictly literal translation or
+the mechanical reproduction of the Pali
+grammar and syntax would not further
+this purpose.
+A number of these 'irre-
+gularities', with examples of other kinds
+of inexact translation, are exemplified in
+the analysis. In general, however, it is
+remarkable how successful the system is
+JBRS, L, i, June, 1967.
+Nissaya Burmese
+in conveying the meaning of the Pali
+and at the same time revealing the
+grammar and syntax of each sentence,
+and how rarely the translator has to use
+a variant form or make an exception.
+By far the commonest and most
+important equivalences in nissaya are for
+number, case, and tense. These are listed
+in Sections I (nouns) and II (verbs).
+The treatment of Pali adjectives and one
+type of adverb is less far-reaching: they
+are listed in Sections III and IV respectively.
+Sections VI and VII, illustrating types of
+predication and subordinate clauses, com-
+plete the listing of equivalences with direct
+grammatical relevance. There are, however,
+some Pali words which have regular
+Burmese renderings and occur in the text
+with great frequency. Though they have
+no special grammartical interest in them-
+selves, their Burmese equivalents, being so
+common, play a prominent part in form-
+ing the distinctive quality of the nissaya
+style, and for this reason it seemed worth
+listing them briefly. They are distributed
+between two Sections: Section V contains
+pronouns
+derivatives
+and pronominal
+while indeclinables and common com-
+pounds are placed in Section VIII. The
+remaining two Sections are not concerned
+with equivalents at all: Section IX deals
+with irregularities, mentioned above, and
+Section X illustrates the occurrence in the
+text of certain Burmese verb suffixes which
+appear to stand outside the Pali-Burmese
+system.
+Conventions
+Arrangement: With some exceptions,
+the procedure is to list each Pali gram-
+matical category or word, then give its
+Burmese equivalent, and follow this equa-
+tion with a few examples. The examples:
+are chosen, where possible, so as to
+include instances of both singular and
+Copyright© 1998-Myanmar Book Centre & Book Promotion & Services Ltd, Bangkok, Thailand.
+
+[[page 9]]
+103 -
+John Okell
+plural under nouns and verbs, and positive I
+and negative under verbs.
+Script: Pali is given in the usual
+romanization (see Duroiselle's Translitera-
+tion), and Burmese in Burmese script.
+2
+2.1.1
+NOUNS
+number
+singular = no plural suffix
+======
+1
+1.1
+1.2
+plural
+N of
+case
+nominative (D301*594) = N
+123.2 dhītā
+သမီးသည်၊
+ရွာတို့သည်၊
+less often
+N: (cf. pana
+mo: VIII.2)
+124.10 aham
+ငါကား၊
+40.3 ratho
+ရထားကား၊
+2.1 v
+Brackets It is common nissaya prac-
+ice to omit a Burmese word where the
+meaning of the Pali is obvious, leaving
+only the suffix showing its grammatical 2.1.2
+function; e.g. hutvā § (for ſô§). Where
+this was difficult to avoid in the selection
+of examples, the missing word is restored
+between brackets : { ဖြစ် } ၊
+Square brackets mark off certain Bur-
+mese verb suffixes which are apparently
+unconnected with the representation of the
+Pali: see Section X.
+Names are sometimes abbreviated in
+examples to save space; e.g. U. for Udum-
+baradevi.
+2.1.3
+7.2 gāmā
+=
+2.2
+Abbreviations: B = Burmese; P = Pali;
+N = noun; V = verb; pl. plural; neg. =======
+negative.
+=
+=
+D Duroiselle's Grammar of Pali,
+quoted by page and section thus: D301*
+594. References to D are made for a
+brief description of the use of a Pali form
+or word.
+=
+A Andersen. Acknowledgement is
+made to A when a rough indication of the
+meaning of a Pali word has been extracted
+from his glossary.
+References: Italicized figures refer to
+Sections of this analysis (e.g. II.4.1), and
+n, v, and x stand for note, variant, and
+exception respectively; figures in the exam-
+ples (e.g. 121. 20) refer to page and line
+of Shin Gunalaṁkāra's nissaya (vol. 1).
+occasionally both suffixes are
+used
+101.25 ayaica paiha ဤပြဿနာ
+သည်ကား
+may also be rendered as accu-
+sative (N) with verbs in the
+passive: II. 4.8
+vocative (D515*602 ) = no case
+suffix
+(but cf. ambho, bho
+VIII.12)
+122.4 tāta
+122.10 devi
+124.9 bhadde
+124.10 sāmi
+129.7 amma
+106.2 tātā
+2.3
+=
+အို N:
+မောင်ငယ်၊
+ရှင်မိဘုရား၊
+အဘယ်၊
+အရှင်၊
+အမိ၊
+အမောင်တို့၊
+accusative (D306*598) two forms
+distinguished
+30.5 akkhin i
+2.3.1
+object of a verb =
+N ကို
+29.7
+mukham
+မျက်နှာကို၊
+မျက်နှာတို့ကို၊
+2.3.2
+motion towards
+=
+N သို့
+122.19 garam
+145.19 phalakāni
+အိမ်သို့၊
+ပျဉ်တို့သို့၊
+JBRS, L, i, June, 1967.
+Copyright 1998-Myanmar Book Centre & Book Promotion & Services Ltd, Bangkok, Thailand.
+
+[[page 10]]
+104
+2.3x
+2.4
+2.5
+2.6
+exception: tam divasam 'on that
+day' and similar phrases (D307*
+598) are regularly translated as
+if they were in the locative case
+(N §): see irregularities IX.5
+genitive (D301*595) = Nå
+123.18 purisassa
+ယောကျ်ား၏၊
+.
+131.1 mütüpitunam အမိအဘတို့၏ . 2.7.3
+dative (D304*597) = N ɔɔ:
+146.18 bhariyaya
+မယားအား၊
+122.20 sahāyakānaṁ ❤ɔɔɔčv§: 2.8
+တို့အား
+ablative (D310*600) two forms
+Nissaya Burmese
+16.21 diṭṭhasuvinena (sameti)
+မက်သော အိမ်မက်နှင့် (ညီညွတ်၏)
+66.11 bodhisattena (sadiso) :
+လောင်းနှင့် (တူသောသူ)
+154.24 tayā (sadisā):
+(တူကုန်သည်)
+may also be rendered as nomina-
+tive ( N∞) with verbs in the
+passive: II.4 8nl
+locative (D312*601) two forms
+distinguished
+distinguished
+2.6.1
+meaning ‘from' = N
+130.19 araññato
+2.6.2
+65.23 pituto
+63.11 puttehi
+2.7
+forms distiguished
+2.7.1
+normally = N ဖြင့် V သဖြင့်
+II
+2.8.1
+meaning 'at, in'
+=
+N §
+123.19 gehe
+အိမ်၌၊
+7.17 kulesu
+အမျိုးတို့၌၊
+60000
+တောမှ
+2.8.2
+pl.)
+105.13 bhohi passeni နံပါးနှစ်ဘက်
+meaning 'than' = N ထက်
+တို့မှ
+အဘထက်၊
+သားတို့ထက်၊ 2.8.3
+instrumentive (D308*599) two
+meaning ‘among' = No̟ (always
+111.1 tāsu dvīsu gāthāsu ē
+ဂါထာတို့တွင်
+140.17 tesu ထိုသုခမိန်ငါးယောက်တို့တွင်၊
+rendered as nominative ( N သည်)
+or accusative (N) in locative
+absolute: VII. 4. 3n
+VERBS
+126.12 pātiyā
+ခွက်ဖြင့်၊ 1
+number
+142.17 pannehi
+ဟင်းရွက်တို့ဖြင့်၊ 1.1
+singular = no plural suffix
+36.4 bhayena
+ကြောက်သဖြင့်၊ 1.2
+plural = V m§
+36.5 kopena
+အမျက်ထွက်သဖြင့်၊
+2
+2.7.2
+meaning ‘with' = N şɛ (i.e. before
+တကူ)
+38.20 vacanena (sameti) ɔɔş
+(ညီကြ၏)
+JBRS, L, i, June, 1967.
+words of comparison and saddhim,
+saha ======
+89.2 rahid (suddhim) မင်းနှင့် (တက်)
+133.5 sahāyikāhi (saddhim) əƐušt
+တို့နှင့် (တကွ)
+144.24 udakena (saha) eqṣć (mm)
+18.3 ruthena (sahd) ရထားနှင့် (တက္ခ)
+negation: na = eV without tense
+suffix, except in future (4.3) and
+imperative (4.5)
+person: differences between 1st,
+2nd and 3rd person inflection in
+verbs are not normally shown in B
+21.3 dadāmi
+84.23 asi
+ပေး၏ '(I) give'
+ဖြစ်၏ (thou) art
+'(he) does'
+125.28 karoti ပြု၏
+150.10 lajjāma gråmşer '(we)
+are ashamed'
+Copyright© 1998-Myanmar Book Centre & Book Promotion & Services Ltd, Bangkok, Thailand.
+
+[[page 11]]
+(ငါတို့)မေးကုန်၏ ….၊
+'(we) asked'
+tense, mood, voice
+4.1
+present (D320*611)
+= Vå
+124.6 pucchati
+မေး၏
+130.12 bhuñjanti
+124.13 natthi
+စားကုန်၏
+မရှိ
+John Okell
+3n
+31.10 janatha
+သိကုန်၏(လော) (do 4.3.1.
+=
+V sȧ
+122.5 ǎnemi
+you) know?'
+102.8 bhavanti ဖြစ်ကုန်၏ '(they)
+are'
+Occasionally, however, when the
+verb is in the 1st person and sub-
+ject is not expressed in the P, the
+B supplies it. Words so supplied
+are bracketed in the following
+examples.
+100.14 na jānāmi (c)ʊx ‘(I) do
+not know'
+120.22 apucchimha
+4.3.2
+12.11 karissāma
+105
+ဆောင်အံ့
+ပြုကုန်အံ့
+no examples of neg. မ V အံ့ were
+found
+= V အံ့သတည်း
+124.22 harissami ဆောင် [ပေါ့ အံ့သတည်း
+10.27bhavissanti ဖြစ် [လတ်] ကုန်အံ့
+တည်း
+သ
+10.18 na nibbattissati မဖြစ်အံ့သတည်း
+nakilanissima မပင်ပန်းကုန်အံ့
+12.4
+သတည်း
+questions (D 331 * 625 ii - xiv)
+nearly all questions in the text
+are asked in the present or future
+tense
+questions answerable by 'yes' or
+'no'
+V ၏လော or V သလော
+4.4
+4.4.1
+4.4.1.1
+present tense =
+125.10 na-enti
+မလာပြန်ပါကုန်
+129.17 atthi
+ရှိ၏လော
+4.lv
+rarely
+= V သတည်း
+158.22 karomi
+75.5 atimaññati
+ပြုသဘည်း
+မထီမဲ့မြင်ပြုသတည်း
+future tense
+4.2
+aorist (D 321 * 621
+ii)
+=====
+121.17 vicāresi
+136.27 karimsu
+143.25 na-adāsi
+16.2 na passimsu
+V a
+စီရင်၏
+ပြုကုန်၏
+UGU:
+မမြင်ကုန်
+4.4.1.2
+30.26 hoti
+125. 4 kasati
+သိကုန်၏လော
+ဖြစ်သလော
+လယ်ထွန်[လေ]သလော
+V အံ့လော or V
+အံ့သလော၊ V အံ့သည်လော
+31.10 jānātha
+135.16 khādissasi
+30.10 țhassatha
+125.17 essati
+129. 2 pivissasi သောက်[ပါ]အံ့သည်လော
+စားအံ့လော
+တည်ကုန်အံ့လော
+လာအံ့သလော
+4.2V
+rarely = V သတည်း
+4.4.2
+open questions
+56.26 akāsi
+ပြု လေ] သတည်း
+4.4.2.1
+present tense = V သနည်း
+124.28 karoti
+4.2n
+The aorist tense is also used
+for negative imperatives which B
+renders accordingly: II.4.5.ln
+ပြု [လေ] သနည်း
+134. 2 gacchasi
+သွားသနည်း
+4.4.2.2.
+future tense V အံ့နည်း
+-
+4.3
+future (D 321 * 613) two forms
+are found
+124.20 harissasi
+ဆောင်အံ့နည်း
+139.26 jānāma
+သိကုန်အံ့နည်း
+JBRS, L, i, June, 1967,
+14-G 7—1,000+50-14-3-67.
+Copyright© 1998-Myanmar Book Centre & Book Promotion & Services Ltd, Bangkok, Thailand.
+
+[[page 12]]
+106
+4.4.2.3
+4.5.
+4.5.1
+4.5.In
+4.5.2
+4.6
+4.6n
+aorist tense only one example
+found = V သနည်း
+31.27 ganhi
+ယူသနည်း
+impérative (D 323*616) two forms
+distinguished
+2nd person imperative
+127. 3 ācihkka
+140. 8 āhara
+122.17 karohi
+30.16 gaṇhatha
+=
+V GOOD
+ကြားလော့
+ဆောင်လော့
+ပြု [လေ] လော့
+ယူကုန်လော့ 4.7h
+Negative 2nd person imperatives
+in the text commonly use P aorist
+and are rendered » V coε
+23.17 mā akāsi
+104.2 mā cintayittha
+မပြုလင့်
+sic
+51.23 ma cintayittha မကြံကုန်လင့် ၂
+3rd person imperative = V:
+10.10 hotu
+67.9 hontu
+72.14 mā hotu
+ဖြစ်စေသတည်း
+ဖြစ်စေကုန်သတည်း
+မဖြစ်စေသတည်း
+93.15 mg pinassantu မပျက်စေကုန်သတည်း
+=
+optative (D322*614) V ရာ၏ (neg.
+မVရာ)
+43.9 jāneyya
+122.8 na rucceyya
+သိရာ၏
+မနှစ်သက်ရာ
+no examples of pl. were found
+The P also uses the optative for
+commands and in conditional
+clauses, and these are rendered in
+the B according to the appropriate
+conventions:
+4.8
+130.1 āroceyyasi :[] = im- 4.8nl
+perative II.4,5.1
+123.19 bhaveyyam
+= condi-
+tional VII.6.3
+4.7
+causative (D306*598 iv )
+=
+V.GO
+followed by the appropriate inflec-
+tion
+JBRS, L, i, June, 1967.
+138.21 kāresi Go
+Nissaya Burmese
+140.14 pesissāma com
+122.1 jānāpehi S
+(aorist)
+(future)
+(imperative)
+164.22 thapeyya Scopes (optative)
+100.18 gganlhdpit. သင်စေအပ်ကုန်၏
+(passive)
+123.20 santhapetui ... တည်စေခြင်းငှာ
+(infinitive)
+138.18 nisi dapetvā $60§ (gerund)
+An apparent violation of the con-
+vention, by using the aspirated
+form of a B verb instead of the
+'causative' of the unaspirated
+form (when such a pair exists),
+is explained occasionally by a
+note:
+131.28 pātesi ချ၏(ကျစေ၏သော်လည်းဟူ)
+131.26 nāsesi ဖျက် [ဘိ]သနည်း (ပျက်စေ
+[ဘိ] သနည်းသော်လည်းဟူ)
+compare also 130.27 bhojetvā soyj:
+ပြီး၍ (စားစေပြီး၍ဟူ၍သော်လည်းဆို)
+passive sometimes
+====
+V зǝ followed
+by the appropriate inflection, but
+this convention is disregarded
+perhaps as often as it is observed.
+In fact the only passive form
+that occurs regularly in the text
+is the past participle, which is
+listed below (5.3.2). Only one
+other example of a passive form
+(a present participle) was found:
+30.20 kaḍḍhiyamāno co
+B evidently could not be made
+to produce a satisfactory passive
+construction, so that where the
+Pali has (so to speak) 'the duck
+was killed by the farmer' the B
+turns it to ‘'the farmer killed the
+duck'. In such cases, therefore,
+the P instrumentive case (D 328*
+Copyright 1998-Myanmar Book Centre & Book Promotion & Services Ltd, Bangkok, Thailand.
+
+[[page 13]]
+John Okell
+4.8n2
+4:8n3
+620 vi) has to be rendered by
+the B 'nominative', and the P
+nominative by the B‘accusative”.
+(This point is discussed by the
+Taungdwin Sayadaw, paras 115– 5.1
+128). For example:
+139.20 tena bhariyā ānītā ‘a wife
+has been brought by him' of M
+မယားကိုဆောင်အပ်၏ “M. has brought
+a wife'
+93.3 te pañho cintito ‘is the problem
+solved by you?? သင်သည် ပြဿနာကိုကြ
+အပ်၏ (လော) “have you solved the
+problem?'
+Certain past participles in P,
+however, are apparently not felt
+to have a genuinely passive sense;
+e.g. gata ‘is gone', jāta ‘is become',
+and many others In such cases
+P nominative is retained in the
+B (
+=
+N သည် ).
+132.25 sāāgatā
+ထို A သည် လာ၏
+144.11 ekakolāhalaṁ jātaṁ šɔɔɔɔ
+ဖြစ်၏
+These words seem not to take
+, but the converse is not always
+true; e.g. 91. 14 diṭṭhaṁ ‘is seen',
+149. 20 pucchita ‘is asked', are
+both rendered without အပ်။
+When the P past participle is
+used in the locative absolute
+construction (VII.4), the subject
+(in the locative case in P) may be
+rendered either by B ‘accusative'
+(N) as in nl above, or by
+'nominative' (N ₁s) as in n2,
+according to the sense.
+115.13 paihe kathite ပြဿနာကို ဖြေသည်
+ရှိသော်
+5
+5.2
+5.3
+5.3.1
+5.3.In
+5.3.2
+107
+156.15 yase parihine စည်းစိမ်ချမ်းသာ
+သည် ယုက်သော်
+other parts of the verb
+infinitive
+=
+see VII.1
+gerund
+=
+V အံ့သောငှာ Or V ခြင်းငှာ
+V §, or occasionally V
+ပြီး၍၊ V သောကြောင့် - see VII.2
+participles are used in a variety
+of ways, some of which overlap
+in B with other constructions.
+They are therefore placed in the
+appropriate sections as shown
+below.
+present participle
+V 6000
+see adjectives III.1.2, 2.2.
+V w¿§§§ see sub. clauses VII.4
+V (infrequent) see sub.
+clauses VII.3
+V see sub. clauses
+VIL.5
+V (လတ်) သော် (infrequent) see sub.
+clauses VII.4v
+No distinction is made in B be-
+tween the active and reflective
+forms of the present participle
+(D140*357, 184*447): examples
+at II.1.2, VII.4.1, VII-5, etc.
+past participle
+V (အပ်) သော see adjectives III,1.3,
+3.2
+V see sub. clauses VII.4
+V (အပ်) သည်ဖြစ်၍ see sub. clauses
+VII.3
+V () see predication VI.1.3
+V (a) see predication VI.I.3
+JBRS, L, i, June 1967.
+Copyright 1998-Myanmar Book Centre & Book Promotion & Services Ltd, Bangkok, Thailand.
+
+[[page 14]]
+108
+5.3.3
+III
+future passive participle (also
+called gerundive)
+-
+= V por V This is mostly
+found as a predicate and is there-
+fore exemplified in that section
+(VI.1.4).
+ADJECTIVES (D316*604)
+This section includes participles
+used as adjectives.
+The plural is ms as for verbs.
+when qualifying a noun =
+1.1 adjective
+108.8 aḍdham
+103.10 pāpāni
+1.2 present participle
+11.11 kilantassa
+60.24 caramānam
+15.28 nikkhantā
+1.3 past participle (for
+122.14 abhirucitam
+134.28 nisinnam
+V 6500
+ကြွယ်ဝသော
+ယုတ်မာကုန်သော
+ကစားသော
+ကျက်စားသော
+ထွက်လေကုန်သော
+see II.4.8)
+ကြိုက်နှစ်သက်သော
+2.2 present participle
+171.26 palāyantaṁ
+40.10 agacchante
+2.3 past participle
+31.8 ţhitā
+3
+122.7 ānitā
+125.11 gatānam
+Nissaya Burmese
+ပြေးသောသားကို
+လာသောသူတို့ကို
+တည်သောမိန်းမသည်
+ဆောင်အပ်သောမိန်းမကို
+သွားသောသူတို့၏
+numeral adjective (D ch. VIII): Although
+in P numeral adjective are used in
+much the same way as other adjec-
+tives, they require special treatment in
+nissaya since counting in B entails the
+use of ‘numeratives* (see Hla Pe,
+Stewart's Manual p. 21, Cornyn's Out-
+line p. 26). The standard nissaya
+rendering for numeral adjectives quali-
+fying nouns is: number + numerative +
+cɔɔ preceding the counted noun. As
+with other adjectives, plural is shown
+by ကုန်။
+52.23 ekam
+တစင်းသော one (rope)
+တယောက်သော one (bride)
+တခုသော one (hall)
+နှစ်ဦးကုန်သော two (enemies)
+100.9 pañcahi clew
+122.13 ekam
+656003
+12.10 ekam
+87.10 dve
+85.2
+gatassa
+128.8 vuttam
+သွားသော
+ဆိုအပ်သော
+4.11 catūsu com
+138.28 pahitam
+သအပ်သော
+men)
+9.4 dinno
+163.26 phuttha
+ပေးအပ်သော
+တွေ့အပ်ကုန်သော
+(D 327* 619
+translates
+four (corners)
+five (wise
+2
+When used substantially
+iii) = V သော N; i.c,
+V 6 as for 1 and supplies an
+appropriate N. In this case the plural
+is Nas for nouns.
+2.1 adjective
+9.4
+puññavatā
+8.20
+ābādhikānam
+ဘုန်းရှိသောသူသည်
+အနာရှိသောသူတို့အား
+3y Sometimes the from current in ordina-
+ry modern spoken Burmese is used,
+i. e. number + numerative following the
+counted noun. This may occur in the
+rendering of a P numeral compound
+(D256*548), when the number is no;
+translated separately from the nount
+also when an inflected numeral adjec-
+tive and its noun are similarly taken
+together without a break in the tran-
+slation; and (without the noun )
+for days, months, years.
+JBRS, L, i, June, 1967.
+Copyright© 1998-Myanmar Book Centre & Book Promotion & Services Ltd, Bangkok, Thailand.
+
+[[page 15]]
+John Okell
+87.19 paicapandito သု ခ မိန် ငါး ယောက် တို့ IV ADVERBS
+(compound)
+but 87. 6 pancapandito ငါးယောက်သောသုခမိန်တို့
+(regular)
+15.25 catuhi värehl တံခါးလေးမျက်နှာတို့ဖြင့်
+(taken together)
+77.17 sattāhaṁ
+109
+adverbs from P adjectives in the
+accusative (D240*532d)
+=
+V စာ
+13.2 sadhukam
+ကောင်းစွာ
+ကြာမြင့်စွာ
+ချမ်းသာစွာ
+လျင်စွာ
+32.11 ciram
+5.10 sukham
+1.8 sigham
+(days)
+7.19 dasamāsaccayena 2005 00 00 00 Gε
+(months)
+15.17 sattavassaccayena ခု နစ် နှစ်လွန်သဖြင့်
+(years)
+V
+The word sahassa 6000
+'thousand' is
+rendered both in the regular way
+and in the variant above, again the
+form current in spoken Burmese
+today.
+132.27 pahāpaṇa sahassena 60620
+အသပြာနှင့် (regular)
+120.25 gavari sahassam နို ့ညှစ်နွားတထောင်
+တို့ဖြင့် (vationt)
+3n Like other adjectives, numeral adjec-
+tives may be used substantivally,
+12.21 sahassam
+1
+Other adverbs (not rendered V g) are
+listed under pronominal adverbs V.2,
+and indeclinables VIII.
+PRONOUNS
+Pronouns are declined in nissaya
+in the same way as nouns. Their
+use in P is described in D ch. IX
+and 317*605-609. P forms are given
+here in nominative singular masculine.
+regular nissaya equivalents
+1.1 aham = cl‘I' 1.1, 144.15
+1.1v Occasional variants from junior or
+inferior speakers: 57.17,26.9.
+1.2 tvam = သင် thou 32.1, 140.2
+1.2v Occasional variants from junior or
+inferior speakers, adding title or rank,
+and then sometimes omitting သင် 139.
+22, 59.4, 127.21, 122.15
+'this, that, he, she, it' see ini
+102.12 tayo သုံးယောက်ကုန်သောသုခမိန်တို့ကို
+တထောင်သောအသပြာကို 1.3 50 =
+82. 7 satasahassena တသိန်းသောဥစ္စာဖြင့် ... eso =
+1.4 eso = % or 'this' 6.12, 67.8, 61.9,
+36.27
+3n2 The numerative for animals, mɔε,
+in comman use in spoken B today,
+seems not to have been adopted
+for nissaya.
+60.24 ekam
+83. 6 ekam
+တခုသော
+တခုသော
+18.17 eko တခုသော
+one (mule)
+one (goat)
+one (kite)
+4 adjective are also used as predicates
+and in subordinate ´clauses, which B
+renders accordingly: see VI and VII.3.
+1.5 ayam = 'this' 88.6, 22.9, 124.4
+-
+1.6 asu, asuko = 'such and such'
+22.22, 142.6
+6
+1.7.1 yo = အကြင် “who, he who’166.23,
+150.26, 124.13
+1.7.2 yo koci = အမှတ်မရှိသော whoever,
+whosoever, anyone' (lit. 'not having
+a mark', hence 'undistinguished, in-
+definite') 8.20, 17.14, 9.19
+JBRS, L, i, June, 1967.
+Copyright 1998-Myanmar Book Centre & Book Promotion & Services Ltd, Bangkok, Thailand.
+
+[[page 16]]
+110
+=
+'who? which?' 22.19, 34.15:
+see notes 4 and 5 below
+1.8 ko
+1.9
+numerative ɔɔɔ‘anyone,
+koci =
+someone or other' 129.16, 151.22,
+122.11
+nl Pronouns
+used
+are
+in P both
+adjectivally (so puriso 'that man') and
+substantivally (so 'he'). Their equiva-
+lents in nissaya B, however, do not
+stand alone (except c) and oε, and
+occasionally ayaṁ ဤသည်ကား as at
+121.11, 153.18); so B reproduces the
+substantival use by supplying an
+appropriate noun (cf. substantival use
+of adjectives and participles III.2).
+48.21 so rājā ε: 'that king'
+ထိုသူသည် “that ( person)’
+137.23 so
+===
+122.18 so ထိုဘုရားလောင်းသည် “that ( Bo-
+dhisatta)".
+In2 Explanatory words are sometimes
+added in the B, apparently to avoid
+ambiguity about the reference of
+certain pronouns.
+The extra words
+are bracketed in the examples below.
+59.24 taya saiiiya ထို (ကြည့်သော) အမှတ်ဖြင့်
+'by that signal (of giving a look)'.
+9.9 tasnii khane ထို (လိမ်းသော) ခဏ၌ “at
+that moment (of anointing)'
+133.2 atha ထို( A လာသော) အခါ၌ “at that
+time (of A's coming)'.
+129.4 athu ထို (သို့ ရောက်သော) အခါ၌ “at that
+time (when he arrived in that
+way'.
+In3 Relative clauses (D300*592) receive no
+special treatment as a whole: each
+word is rendered just as it stands in
+the Pali.
+127.11 yena dadāmi tena vadāmi
+အကြင် ပေး၏ ထိုလက်ဖြင့်
+လက်ဖြင့်
+Nissaya Burmese
+In4 For the forms ko ('who') and kim
+(idiomatically 'how now?' etc. D240*
+532b) of the interrogative pronoun, B
+has the alternative forms and အသို့။
+146.19 ko အသူနည်း ( for အဘယ်သူနည်း)
+126.20 kim အသို့နည်း (for အဘယ်သို့နည်း)
+33.33
+In5 In the P text the word nāma (lit.
+'name') is sometimes used idiomatically
+after interrogative pronouns. This is
+rendered in nissaya B as pics (lit.
+‘named'), and this phrase is also used
+sometimes in the B even when nāma
+is not in the original. There is perhaps
+a connection to be made with
+used as an interrogative in some
+(usually written) styles of B prose.
+36.27 kim nama saddo
+အသံနည်း
+80.17 ko nāma
+96.14 ko
+16.8 katara vaḍḍhakinā
+လက်သမားနည်း
+အဘယ်မည်သောသူသည်
+အဘယ်မည်သောသူသည်
+အဘယ်မည်သော
+2 pronominal adverbs etc. The numerous
+'adverbial derivatives from pronominal
+bases (D137*344-352, 239*530-532)
+are rendered in various idiomatic
+ways in nissaya, evidently with the in-
+tention of bringing out the meaning
+rather than of indicating grammatical
+froms. The base from which the words
+is derived, however, is usually indicated
+by etc. as appropriate, and
+case-derivations are sometimes shown.
+A few of the commonest are listed
+below.
+2.1 -tha (D137*346, 240*531d)
+125.48 atha
+ထိုအခါ၌
+137. 6 tattha
+ဆို၏
+ထိုအရှေ့တူ
+126.18 tattha
+ထိုယာဂု၌
+'I direct you by the hand with which
+I give to you'.
+125. 8 yattha
+အကြင်အရပ်သို့
+155.22 yattha
+အကြင်အရပ်၌
+JBRS, L, i, June, 1967.
+Copyright 1998-Myanmar Book Centre & Book Promotion & Services Ltd, Bangkok, Thailand.
+
+[[page 17]]
+John Okell
+111
+2.2 -dā (D137*345, 240*531e)
+122.25 tadā
+6.11 idāni
+87.8 kadāci
+ထိုအခါ၌
+ယခုအခါ၌
+တရံတဆစ်သောအခါ၌
+119.22 kadāci
+တရံတဆစ်မျှသောအခါ၌
+81.14 kudāci
+2.3 ablative case (D240*531c)
+31.27 kasmā
+အဘယ်ကြောင့်
+123. 2 dhita abhirupā dassani yā
+သမီးသည် အလွန်အဆင်းလှ၏၊ ရှူချင်ဘွယ် ရှိ၏
+“Their daughter was extremely
+beautiful. She was a delight
+to look at'
+=
+တရံတဆစ်မျှ 1.3 past participle predicate V ၏ or
+( perhaps less often ) V ပြီ။
+As the past participle is a passive
+form အပ် is sometimes used (II.4.8).
+144.11 jātam
+127.26 yasmā
+အကြင်ကြောင့်
+ဖြစ်၏
+132.25 āgatā
+လာ၏
+127.26 tasmā
+ထိုကြောင့်
+47.21 chinnam
+ပြတ်၏
+128.16 vuttam
+2.4 ablative case ( D 240*532 )
+ဆိုအပ်၏
+29.24 kuto
+အဘယ်အရပ်မှ
+16.14 katā
+121.14 tato
+ထိုအခါမှ
+52.16 nato
+ပြုအပ်၏
+သိအပ်၏
+139.5 tato
+ထိုနေ့မှ
+121.21 jāto
+ဖြစ်ပြီ
+147.2 tato
+ထိုဘင်တွင်းမှ
+128.25 niṭṭhito
+ပြီးပြီ
+144.10 palāto
+ပြေး[လေ]ပြီ
+VI PREDICATION
+Apart from predicates containing verbs
+other than the verb 'to be', which
+are not included here, a predicate
+may be either “direct’ or with parts
+of hoti 'is'.
+7 Direct predicates: a direct predicate
+in P is simply a noun, adjective
+or verb standing alone ('with the
+verb hoti understood' D 299*590 ).
+1.1 noun predicate = N တည်း
+30.7 ayam yakkhini
+ဤမိန်းမသည် ဘီလူးမတည်း
+“This woman (is) an ogress’
+89.13 eso paiho ganthipatho
+ဤပြဿနာသည် ခဲခက်သောပြဿနာတည်း
+'This problem (is) a difficult
+problem'
+1.2 adjective predicate
+V S
+126.18 sittäni mahantāni
+ထမင်းလုံးတို့သည် များကုန်၏
+'The rice grains are many'
+93.4 cintito
+91.27 diṭṭho
+16.11 na katā
+126.22 na laddham
+91.27 na diṭṭho
+negative without အပ် not found
+1.4 future passive participle (D329*622) -
+V ရာ၏ or V အပ်၏
+Also called 'gerundive'.
+10.20 bhavitabbam
+24.15 veditabbam
+99.2 kattabbo
+27.2 daṭṭhabbo
+=
+ဖြစ်ရာ၏
+သိရာ၏
+ပြုအပ်၏
+မှတ်အပ်၏
+2 predication with hoti, 'is' and its parts,
+and with jāta 'become'. Like direct
+predication this form appears in the
+P text with nouns, adjectives, and
+past participles (not found with future
+passive participle). Hoti aud jäta are
+translated ဖြစ်, which is infected as
+appropriate.
+JBRS, L, 1, June, 1967,
+129.9 dinnā
+ပေးအပ်ပြီ
+ကြံအပ်ပြီ
+မြင်အပ်ပြီ(လော)
+မပြုအပ်
+မရအပ်
+မမြင်အပ် [သေး
+Copyright© 1998-Myanmar Book Centre & Book Promotion & Services Ltd, Bangkok, Thailand.
+
+[[page 18]]
+112
+Nissaya Burmese
+2.1 noun
+hoti = N သည် ဖြစ်
+32.1 tvam yakkhini jātā
+သင်သည် ဘီလူးမသည် ဖြစ်၏
+'You are an ogress'
+58.22 ayam pañho bhavissati
+ဤသည် ပြဿနာသည် ဖြစ် [လတ် အံ့သတည်း
+• This will be a problem ”
+2.2 adjective + hoti = V သည် ဖြစ်
+46.8 nanguttam tanukam hoti
+မြီးထူးသည် ငယ်သည် {ဖြစ်}၏
+• The tail is small
+44.11 mulam bhāriyaṁ hoti
+အရင်းသည် လေးသည် ဖြစ်၏
+*The lower part is heavy'
+2.3 past participle + hoti = V သည်ဖြစ်
+84.23 tvam nippanno ahosi
+{သင်} သည် အိပ်သည် ဖြစ်၏
+“You were lying down '
+88.1 Senako nisinno ahosi
+1
+သိန်းသည် နေသည် {ဖြစ်} ၏
+• Senaka was seated '
+VII SUBORDINATE CLAUSES
+As there is some overlapping among
+certain of the nissaya renderings for
+the different methods of subordina-
+tion in P, examples in these cases
+are listed under the B version instead
+of the P original.
+infinitive (D324*617) = V အံ့သောငှာ or
+V ခြင်းငှာ
+121.23 kātum
+2v2 occasionally
+137.25 katvā
+=
+V သောကြောင့်
+137.27 modāya
+ပြုသောကြောင့်
+ဝမ်းမြောက်သောကြောင့်
+2n1 Gerunds with negative prefix a-
+(D326*618 iv) are occasionally ren-
+dered regularly
+37.18
+ajānitvā
+91.24 adisvā
+မသိ၍
+မမြင်သောကြောင့်
+မဆေးမူ၍
+မထားမူ၍
+but more often in the form မV မူ၍
+126.8 adhovitvā
+126.15 athapetvā
+2n2 Gerunds with suffixed va (normally
+==
+လျှင်) are
+regularly
+35.13 sutvāve
+21.17
+disvāva
+occasionally
+rendered
+ကြား၍လျှင်
+မြင်၍လျင်
+but perhaps more often conventionally
+as V ကတည်းကလျှင် (cf. D326*618 ii. may
+be translated “as soon as”)
+61.22 sutvāva
+123.17 disvāva
+ကြားကတည်းကလျှင်
+မြင်ကတည်းကလျှင်
+2n3 Some alternative renderings for the
+gerund are found in the Nyaunggan
+Sayadaw's nissaya-like translation of
+the 550 jātaka. In addition to the
+forms listed above, he has the follow-
+ing. References are to page and line of
+his vol.iv; and the Pali original is taken
+from Fausboll v pp.39-47.
+581.10 (ñatvā)
+ပြုအံ့သောငှာ
+2n3.1 V လျှင်
+131.24 pacitum
+13.20 kātum
+ချက်အံ့သောငှာ
+သိလျှင်
+ပြုခြင်းငှာ
+585.7 (sutvā)
+ကြားလျှင်
+12.16 pasiritum
+ခင်းခြင်းငှာ
+2n3.2 V ပြီးလျှင်
+2
+gerund (D325*618) ==
+V ၍
+583.15 (āruyha)
+တက်ပြီးလျှင်
+19.15 ñatvā
+သိ၍
+579.15 (pavisitvā)
+ဝင်ပြီးလျှင်
+122.14 pariyesitvā
+ရှာ၍
+2v1 occasionally = V ပြီး၍
+2n3.3 V သဖြင့်
+138.6
+ñatvā
+သိပြီး၌
+578.25 (patvā)
+ရောက်သဖြင့်
+5.14 vatvā
+ဆိုပြီး၍
+578.27 (acikkhitvā)
+ကြားသဖြင့်
+JBRS, L, i, June, 1967.
+Copyright© 1998-Myanmar Book Centre & Book Promotion & Services Ltd, Bangkok, Thailand.
+
+[[page 19]]
+John Okell
+3
+V represents two locutions
+in P
+3.1 adjective + hutvā: hutvā, the gerund
+of hoti, is regularly rendered, and
+expressions of the form adjective-hutvā
+are then treated in the same way as
+main clause predication with hoti
+(VI.2).
+35.15 pațibandhacittā hutvā တပ်သော
+စိတ် ရှိသည် {ဖြစ်} ၍
+109.22 minn tatvd ချိုင့်ဝှမ်းကုန်သည် {ဖြစ်} ၍
+3.2 adjectives and participles standing alone
+(D299*509 ‘with hoti understood');
+cf. direct predication VI.1.
+3.2.1 adjective
+35.6 sampannavatthālaṁkāra
+ဝတ်စားတန်ဆာရှိသည် ဖြစ်၍
+89,26 anekacittā . မ တည်ကြည်သောစိတ် ရှိကုန်
+သည် ဖြစ်၍
+3.2.2 present participle
+37.25 jānanto
+29.26 karontiyo
+သိသည် ဖြစ်၍
+ပြုကုန်သည် ဖြစ်၍
+3.2.2n Present participles with negative
+prefix a are often rendered this way
+37.12 ajānanto
+21.5 apassanto
+3.2.3 past participle
+90.13 ṭhitā
+1.8.8 vutto
+မသိသည် ဖြစ်၍
+မမြင်သည် ဖြစ်၍
+တည်သည် ဖြစ်၍
+မှာ [လိုက်] အပ်သည် ဖြစ်၍
+3.2 The regular nissaya form for com-
+pounds in -kāma 'desirous of' is V
+လိုသည်ဖြစ်-, and this is occasionally
+used for present participles where the
+sense is appropriate.
+99.3 kāronto
+127.5 acikkhanti
+113
+for present participle standing alone,
+and infrequently for the past participle
+in the same position.
+4.1 present participle
+4.1 present participle alone
+28.16 karonti
+8.28 jāyamāno
+11.23 dhāvantā
+ပြုသည် ရှိသော်
+ဘွားသည် ရှိသော်
+ပြေးကုန်သည် ရှိသော်
+4.2 past participle alone (infrequent)
+19.13 bhi to
+33.9 pațipanno
+4.3 locative absolute
+60.6 vutte
+116.20 vutte
+90.21 akathente
+ကြောက်သည် ရှိသော်
+သွား [လေ] သည် ရှိသော်
+ဆိုသည် ရှိသော်
+ဆိုအပ်သည် ရှိသော်
+မဆိုသည် ရှိသော
+4.3n Where the participle in locative
+absolute has a subject (in the locative
+case) B renders it, if with a past
+participle, as either accusative' or
+' nominative' (II.4.8n); and if with
+a present participle, as 'nominative'-
+125.23 udake ente ရေသည် လာသည် ရှိသော်
+' if the water comes ,
+93.4 mayi acintente ငါသည် မကြံသည် ရှိသော်
+if I were not to solve it'
+v1 V ( လတ် ) သော် is perhaps most con-
+veniently listed as a variant of V p
+ရှိသော်။ It is used infrequently for the
+present participle standing alone, and
+for the past participle in locative
+absolute.
+ပြုလိုသည် ဖြစ်၍ 4v1.1 present participle
+39.26 nikkhanto
+ကြား ပေ] လိုသည် ဖြစ်၍
+4 V သည် ရှိသော် is regular for locative
+absolute (D315*603); and is also used
+39.9 āvajjanto
+59.7 gacchantā
+ထွက်လတ်သော်
+ကြည့်လတ်သော်
+သွား [လေ] ကုန်သော်
+JBRS, L, i, June, 1967.
+24 15-U.P.-G 7-1,000 + 50--19-3-68.
+Copyright© 1998-Myanmar Book Centre & Book Promotion & Services Ltd, Bangkok, Thailand.
+
+[[page 20]]
+114
+4vl.2 past participle in locative absolute
+မိုးသည် ကျလတ်သော်
+20.20 vasse patite
+156.15 yase parihine စည်းစိမ် ချမ်း
+သာ
+သည်
+ယုတ်သော်
+155. 2 atthe jāte အလိုသည် ဖြစ်လတ်သော်
+4v2 V cups: is used for a participle
+or gerund + pi: see VIII.3
+5
+6
+V cojos represents the present participle
+standing alone (perhaps its commonest
+rendering in this position) and is
+rarely used for other forms
+139. 8 vasanto
+30.23 rodamānā
+137. 9 kadḍhantā
+နေလျက်
+ငိုလျက်
+ငင်ကုန်လျက်
+conditional clauses (D 330*623 v, 322
+*613 iii, 323*614 vi, 299*590): These
+appear in the text with ce, sace,
+noce, or yadi (all = samu̸§) ‘if',
+followed by the present or future
+tense, or infrequently by the optative
+or imperative, by a past participle
+or an adjective. All these are rendered
+in the same way in the B: V p
+ဖြစ်အံ့ or rather less commonly V
+6.1 present tense
+63.28 sace upakārako
+140.24 sace gaṇhāti
+hoti အကယ်၍
+ကျေးဇူးပြုတတ်သည် ဖြစ်အံ့
+6.3 other forms
+87.22 yadi
+Nissaya Burmese
+nasakkuṇeyyātha (opt.)
+အကယ်၍ မတတ်နိုင်ကုန်သည် ဖြစ်အံ့
+46.28 noce
+pesentu (imp.) amus
+မဆက်လာကုန်သည် ဖြစ်အံ့
+91.28 yadi nadiṭṭho (part.) smug
+မမြင်သည် ဖြစ်အံ့
+132.6 sace nasundaraṁ (adj.) mug
+မကောင်းသည် ဖြစ်အံ့
+6n Between the conditional clause and
+the main verb there is sometimes the
+phrase evam sati (D315*603 iii) * it
+being so'. Evam is rendered regularly
+as (VIII.8), and sati is a locative
+absolute and is rendered as such
+(VII.4.3), but the phrase is always
+given an explanation in B.
+140.24 evam sati
+' it being so
+53.20 evam sati
+'it being so
+123.13 evam sati
+'it being so
+husband)'
+ဤသို့ ယူသည် ရှိသော်
+(that it is taken)'
+ဤသို့ ဆိုသည် ရှိသော်
+(that he says so)'
+ဤသို့ လင်မရှိသည် ရှိသော်
+(that she has no
+VIII INDECLINABLES,
+1
+CONJUNC-
+TIONS, ADVERBS, COMPOUNDS,
+ETC.
+(D243*538, 330*623f., 239*529–532 )
+eva = j‘just, even, only' (A): 121,
+17, 35.14, 125.17, 123.6, 21.17, 131.23
+53.19 sace adati, အကယ်၍ ဆိုသည်ဖြစ် အံ့
+အကယ်၍ ယူအံ့
+အကယ်၍ မရှိအံ့ . 11 Occasionally ပင်လျှင် or သာလျှင် 137.4, 16.7
+58.18 sace natthi
+153.27 ce paṇḍitā na bhavissati šmus
+6.2 future tense
+ပညာရှိသည် မဖြစ်အံ့
+123.6 sace paṇḍitā bhavissati
+အကယ်၍ ပညာရှိသည် ဖြစ်အံ့
+125.18 sace essati အကယ်၍ လာသည် ဖြစ်အံ့
+126.8 sace dassati အကယ်၍ [ပေး] လတ် အံ့
+125.18 noce essati အကယ်၍ မလာသည် ဖြစ်အံ့
+JBRS, L, i, June, 1967.
+1v2 Following a verb at the end of a
+sentence =
+2
+143.7
+=
+V သည်သာလျှင်တည်း 129.25
+pana m: 'but; now! well! then!
+(A): 150.21,22.7, 134.16, 122.25, 137.15
+3 api copy: ‘and, also; very, even,
+although; but; perhaps' etc. (A): 130:23,
+135.2, 137.14
+=
+Copyright© 1998-Myanmar Book Centre & Book Promotion & Services Ltd, Bangkok, Thailand.
+
+[[page 21]]
+John Okell
+3y Sometimes often a gerund or participle
+V: cf. D326*618_iii, 327*
+=
+-
+619 v:'may be translated by "although”
+0.8 ñatvāpi သိသော်လည်း (gerund)
+3.18 carantopi
+33.4 paṭikkhitopi
+(pres.part.)
+:(past part.)
+108.1 rukkhesupi: (noun)
+4
+ca
+4.1 singly = cops: ‘and, also' (A): 150.28,
+153.17
+4.2 correlatively
+=
+(A): 127.7, 131.9
+လည်းကောင်း “both...and’
+5 yadi, sace, noce, ce =
+အကယ်၍ if; see
+VII.7
+6
+viya, iva, yathā = N
+V ‘like,
+7
+8
+as if, as it were' (A): 160.3, 107.23,
+28.12, 110.4, 110.19
+kira usually = Vos indeed, really,
+probably, namely, you know, you see,
+we hear, it is said' (A): 32.23, 117.21,
+150.15
+iti ‘thus, in this manner' (A), also
+used in a variety of ways to mark
+the end of reported speech etc.
+==
+8.1 taken alone = 121.24 and passim
+8.2 taken together with preceding words
+or ဟူ၍ 129.13, 20.21, 44.3
+9
+9v
+=======
+- ဟု
+==
+evam 'thus, in this way' (A):
+122.17, 127.18, 128.8. Sometimes
+expanded (cf. V. Inl):
+50.15 eam . ဤသို့ ယောကျ်ား သားဘွားခြင်းသည်
+'thus (that men bear children)'
+As an affirmative answer to a ques-
+tion 'yes', translated idiomatically
+in different ways
+124.18 evam
+ဤသို့ ဆိုတိုင်း ဟုတ်၏
+'It is true thus as you have said'
+125.5 evam ǎma
+'Indeed, it is true'
+-
+115
+အော် ဟုတ်၏
+10 puna = $ ‘back, again, once more"
+(A): 36.5, 87.17, 164.10
+11.1 hi = co preceded by an explanatory.
+clause 'for, since, indeed, verily' (A)
+119.3, 46.5
+=
+hi saccam မှန်၏ preceded by an
+explanatory clause 'truly, indeed,
+verily, justly, by rights' (A): 148.10, 2.3
+12.1 ambho = Å followed by an appro-
+priate noun 'vocative particle' (A):
+30.25, 60.27, 139.14
+=
+12.2 bho, bhonto = 3 N as above 'vocative
+particle' (A): 49.24, 87.5
+13 saddhim, saha
+see I. 2.7.2
+=
+o'together (with)':
+=
+14 compounds in -kāle = V. သောအခါ၌
+'at the time of, when': 141.11, 93.21,
+87.20
+15
+16
+words with -bhāva = V GOOD (or V
+သည်၏ or N) အဖြစ် the state, condition
+of, the fact that': 129.14, 60.4, 4.1
+words with -kāma (D249*545 iii)= V &
+('inflected' as an adjective) 'desirous
+of: 59.1, 29.10, 100.28
+17 words with -patta = Vãε: (or N) p
+( 'inflected' as an adjective) 'having
+attained, reached'. 30.21, 9.15, 83.18
+18 words with -tā, -tāya (D294*581) = V
+သည်၏အဖြစ်ကြောင့် “on account of, because
+of: 10.9, 32.16, 44.5, 40.12
+19 words with -matta = Vmɔ (or N) ‘as
+much as, only, mere' ( A ): 88.13, 5.1,
+77.3, 131.19
+1.9v Occasionally emphasised by the addition
+of တည်း 9.26, 17.12
+JBRS, L, i, June, 1967.
+Copyright 1998-Myanmar Book Centre & Book Promotion & Services Ltd, Bangkok, Thailand.
+
+[[page 22]]
+116
+20 words with -ana (D275*576) = Vခြင်း
+'suffix forming nouns': 126.4, 125.3
+21 words with -atthāya (D241*532) V
+ɔɔɔ ‘for the sake of, for the purpose
+of': 145.19, 20.2ª, 142.11
+21 Meaning 'for the advantage of' = Na
+အကျိုးငှာ 129.12
+22 words with -ṭhana = V pq ‘place of,
+place for: 123.7, 13.24, 84.16
+23 words with -adi = N အစရှိသည် “begin-
+ning from N, N and so on': 134.14,
+83.26, 4.26
+24. ablative with paṭṭhaya
+===
+Nမှစ၍ “start-
+ing from N, from N onwards': 121.14,
+132.15, 139.5
+25 negated verb with pubba = Voɔ: ‘never
+V'd before: 53.19, 155.21, 155.24
+26 words with -niya = Vous 'things to V':
+32.27, 171.4, 123.2 (only a few exam-
+ples in the text)
+27 nāma is rendered in different ways
+according to context
+27.1 as a noun အမည် “name”: 38.4, 124.16
+27.2 following a name = ɔ ‘named'
+3.28 Vedeho nāma
+606300
+အမည် ရှိသော
+33.17 Dighapiṭṭhi nāma D. „ã
+27.3 following other nouns = မည်သည် “particle
+of affirmation or emphasis' (A); in the
+nominative often followed by mo:
+17.1 sālam nāma
+စရပ်မည်သည်ကို
+137.26 phalam nama အကျိုးမည်သည်ကား
+27.4 following an interrogative = episɔɔ see
+V.1n5
+IX IRREGULARITIES
+1
+These are departures from a strict and
+systematic rendering of the P text as
+it stands.
+There are a few translator's notes,
+such as those quoted above in con-
+nection with the causative (II.4.7n),
+JBRS, L, i, June, 1967.
+2
+3
+Nissoyo Burmese
+or 154.12 နောက်သို့ ဆုတ်၍ သမ္ဗန်မှ ဥပမာဥပမေယျ
+ထင်သည်
+'The point of the simile is not
+clear unless one construes back-
+wards'
+Occasionally there are explanatory
+nature
+additions of a commentarial
+(bracketed in the following examples).
+1.11 Jetavane
+( ဇေတဝန် မင်း၏ ဥယျာဉ်၌ ဆောက်သော
+ကြောင့်) ဇေတဝန် ( အမည်ရှိသော ကျောင်း
+ကြီး) ၌
+'at (the great monastery named)
+Jetavana (because it was built
+in the park of Lord Jetavana)'
+75.3 Vedeham
+(ဝိဒေဟတိုင်းကို အစိုးရသောကြောင့်) ဝေဒေဟ
+(အမည်ရှိသော)
+'( named) Vedeha ( on account
+of his being ruler of the country
+of Videha)'
+their
+Certain pronouns, as noted in V.1n2
+above, are translated with their
+antecedents stated again, or with
+qualifying phrases to identify
+references. Similar treatment is found
+with the phrase evam sati (VII.6n)
+with hi (VIII.11 ) and sometimes
+evaṁ (VIII.9). In addition to these,
+words for 'other' (añña, itara, apara )
+are often treated in a comparable
+way. The simple rendering does occur-
+51.28 aññam
+149. 2 aññesam
+တပါးသော
+တပါးကုန်သော
+51.1 aparasmim divase တပါးသော နေ့၌
+but often, especially with itara, the
+reference of the word is clarified,
+either by direct identification
+130.26 itarā
+(i.e. not Mahosadhā )
+or by explicit exception
+အမရဒေဝီ
+Copyright 1998-Myanmar Book Centre & Book Promotion & Services Ltd, Bangkok, Thailand.
+
+[[page 23]]
+John Okell
+4
+5
+5.27 .ahto ငါတို့သုခမိန်လေးယောက်တို့မှ တပါး X
+6000
+‘another, apart from us four
+wise men' or by both
+37.21itaram ဒီဃပိဠိမှ တပါးသော ဂေါတကာလကို
+'the other, Gotakāla, excluding
+Dīghapiṭṭhi'
+Irregular renderings are sometimes
+made in order to bring out the meaning.
+137.20 hasamānā ရယ်ခြင်း၏အကြောင်းကား
+'the reason for my laughter'
+( strictly ရယ်လျက် “laughing'
+pres. part. )
+15.25 jānātha
+=
+သိအောင် ပြုကုန်လော့
+'act so as to know'
+( strictly
+imp. )
+66. 6 na akāsi
+=
+သိကုန်လော့ “know!?
+'it was not
+(to slight his
+( strictly =
+aor. )
+ပြုသည် မဟုတ်
+that he did it
+father )'
+did not do' neg.
+In other cases of irregularity it seems
+either that Burmese idiom slipped
+through inadvertently or that a strictly
+conventional rendering would have
+resulted in incomprehensible or mis-
+leading Burmese.
+145.12 gata
+'I shall follow' future
+( strictly
+=
+part. )
+18.15 ekadivasáṁ
+လိုက်အံ့
+လိုက်၏ Or လိုက်ပြီ past
+(( on) one day' ablative
+1.1
+တနေ့သောနေ့၌
+(strictly
+=
+accusa
+tive)
+100.15 kim jānanti
+အဘယ် သိကုန်အံ့နည်း
+2.1
+=
+'How could they know?” future
+(strictly
+အဘယ် သိကုန်သနည်း
+present)
+117
+BURMESE VERB SUFFIXES OUT-
+SIDE THE SYSTEM
+A number of verb suffixes appear in
+nissaya Burmese without having any
+apparent correlation with Pali gram-
+matical or syntactic features. Their
+use is no doubt regulated by the
+situational context in the narrative or
+by stylistic considerations, but their
+precise function has never been very
+clear and most of them present
+serious problems to the analyst. For
+this reason no indication of their
+function is attempted here. It seemed
+worth listing them, from the point of
+view of Burmese grammatical study,
+in order to single them out from
+items which have definitely been
+equated with Pali features. Some of
+them are discussed in A.J. . Allott's
+Categories, and references are given
+below to other published studies:
+S = Stewart's Manual, C = Cornyn's
+Outline, ML = Minn Latt's Second
+report, J = Judson's Grammar. Re-
+ferences are to paragraphs,
+pages.
+not
+The suffixes are grouped arbi-
+trarily into two: those which seem
+to be more concerned with style and
+emphasis than with controvertible
+meaning are listed before the remain-
+der. No examples of the first group
+are quoted here. Most of them occur
+in examples given in preceding Sec-
+tions, where they have been enclosed
+in square brackets.
+6
+honorific: V cos S61 perform royal
+or holy V', used when the subject
+of the verb is a royal or sacred being
+emphatic, euphonic?"
+1.2.1 VS61, C72, 92, ML16, J112, 118
+1.2.2 VS61, ML16, J112, 118
+JBRS, L, i, June, 1967.
+Copyright© 1998-Myanmar Book Centre & Book Promotion & Services Ltd, Bangkok, Thailand.
+
+[[page 24]]
+118
+1.2.3 V Gal S61, 68, J112, 118
+1.2.4 V coo J118: specially common in
+V လတ်သော် VII.Ap
+1.2n There are also isolated occurrences
+of V လှည့် (169.16), V ဘိ (100.21), V တုံ
+(100.5), V ∞ (112.26f)
+2
+other suffixes
+2.1
+Và S61, 68, C89, ML14
+63.5 jātam
+52.18 bhijji
+ဖြစ်ခဲ့၏
+ကျိုးခဲ့၏
+Nisaya Burmese
+2.3n Though often described in grammars
+of Burmese as indicating plurality, m
+in nissaya does not displace the regu-
+lar sign of the plural (m³). It even
+occurs in the rendering of a singular
+P verb:
+38.20 sameti
+ညီကြ၏
+'(one statement) tallies (with the
+other)'
+77.4 na sameti
+မညီကြ
+ဆောင်ခဲ့ကုန်လော့
+ဆောင်ခဲ့၍
+ကြားခဲ့၍ 2.5
+ဆောင်၍
+2.1n This suffix is often used when tran-
+slating P verbs with the prefix ā-
+'to, at, towards, near to, until, as
+far as, away, all round' (D222*516)
+12.6 āharatha
+21.24 ānetvā
+136.19 ācikkhitvā
+but not regularly
+126.13 āharitvā
+‘(a person of good luck) is not com-
+patible (with one of ill luck)'
+2.4 V: S54. C91, ML16
+150.22 pucchissāmi
+164.21 uddharitvā
+122.12 mā vadetha
+မေးဦးအံ့
+(ဆင်းရဲမှ)ထုတ်ဦး၍
+မဆိုလင့်ဦး
+(B singular for P polite pl.)
+$54, C101, ML16
+104.15 daharo
+V 600:
+ဆောင်ချေ၍
+ကြားပေါ၏ . 2.6
+sayittha အိပ်[တော်မူရပါ]၏(လော)
+136.11
+ānetvā
+45.20
+ācikkhi
+2.2
+9
+V S64, C103, ML15
+5.11
+'did you sleep?"
+130.10 pacāmi
+ချက်ရအံ့နည်း
+'(how much) should I cook?”
+138.3 gamissasi
+သွားရအံ့သတည်း
+2.7
+VS S61, C90, ML14
+'you will have to go'
+136.2 khipi
+42.27 pesayimsu
+ပစ်ချလိုက်၏
+စေလိုက်ကုန်၏
+17.14 na hoti
+ငယ်သေး၏
+မဖြစ်သေး
+V c GOOD $54, C93, ML16
+20.2 nema ဆောင်[ရ]ကုန်တော့အံ့
+(လော)
+58.9dnema ဆောင်[ရ]ကုန်အံ့တော့
+No other examples found.
+(sic)
+(6000)
+2.2n This suffix occurs much more fre-
+quently in the text with than with
+other 'tenses': often, as in the second
+example above, with P present 2.8
+rendered (irregularly) as B 'future'
+(cf. D320*611 v: 'the present is some-
+times used with a future signification')
+2.3 VS54, C88, ML14
+87.11 jātā
+87.12 caranti
+ဖြစ်ကြကုန်၏
+သွားကြကုန်၏
+JBRS, L, i, June, 1967.
+(often with this and similar verbs)
+VS54, C92, ML16
+1.7 likkhissāmi qulaḍ (translator
+to reader)
+81.11 saddahami (Mahosadhā
+to king)
+30.11 hassana တည်ကြပါကုန်အံ့ (liti-
+gants to arbitrator)
+Copyright 1998-Myanmar Book Centre & Book Promotion & Services Ltd, Bangkok, Thailand.
+
+[[page 25]]
+John Okell
+APPENDIX 1
+119
+Example of nissaya translation (A.D.-c. 1750-1800)
+From Shin Guṇalaṁkāra, vol.i, p. 121, 1.14ff.
+in the Burmese text both
+references to Sections of the
+The translation is given here as it appears in the text, i.e. Pali words followed
+by Burmese. The Pali words are romanized below, but
+languages are in Burmese script. In the lower line are
+analysis and English glosses.
+Tuto ထိုအခါမှ
+V2.4 that time abl.
+yaso စည်းစိမ်ချမ်းသာသည်
+1.2.1 luxury wealth nom.
+ahosi { ဖြစ် } ၏
+II.4.2 was aor.
+Udumbaradevi yeva
+ဒေဝီ သည် လျှင်
+1.2.1, VIII.1 Queen U.
+nom. just
+patthaya စ၍
+VII.2 begin ger.
+mahā များသည်
+VI.2.2 great pred. adj.
+Bodhisatassa ဘုရားလောင်း၏
+I.2.4 Bodhisatta gen.
+Tai sabbai ထိုအလုံးစုံသောစည်းစိမ်ချမ်းသာကို
+III.2.1 that entire adj. luxury wealth acc.
+vicdresi စီရင်၏
+II.4.2 manage aor.
+'From that time onwards, the Bodhisatta lived in great wealth and luxury; and
+it was Queen Udumbara who looked after it all.'
+APPENDIX 2
+Example of early nissaya translation (1491)
+From Shin Sīlavaṁsa's Paramidawgan Pyo, p. 7
+Rammd နှလုံးမွေ့လျော်ဘွယ် ရှိသော … Kapilava ကပိလ(အမည်ရှိသော)ပြည်မှ
+III.1 delightful
+aho nikkhemitva ထွက်ပြီး၍
+VII.2vl having gone uot
+padhanam ကမ္မဋ္ဌာန်းကို
+1.2.3.1 meditation
+dukkarakariyam ဒုက္ကၡစရိယာကို
+1.2.3.1 austerity
+1.2.6 from the country (called) K.
+Tathagato မြတ်စွာဘုရားသည်
+1.2.1 the excellent Lord
+padahitvana လုံ့လဦး၍
+V.2.11. X.2.4 having made effort
+katvd ပြုတော်မူဦး၍
+VII.2.11, X.1.1, X.2.4 having done
+Ajaplarakkhamilusmim A. (အမည်ရှိသော) ညောင်ပင်အနီး၌
+1.2.8 by the Bodhi tree (called) Ajapāla
+nisiditvā နေတော်မူပြီး၍
+Tathagato မြတ်စွာဘုရားသည်
+VII.2vl, X.1.1 sitting
+1.2.1 the excellent Lord
+JBRS, L, i, June, 1967.
+Copyright 1998-Myanmar Book Centre & Book Promotion & Services Ltd, Bangkok, Thailand.
+
+[[page 26]]
+120
+tattha ထို(ညောင်ပင်ရင်း)၌
+V.2.1 there (at the foot of the Bodhi tree)
+payasam နို ့ဆွမ်းကို
+1.2.3.1 milk-rice
+Neraijaram နေရဉ္စရာမြစ်သို့
+I.2.3.2 to the river N.
+paggayhaခံတော်မူပြီး၍
+VII.2vl having taken
+upeti ကပ်တော်မူ၏
+II.4.2, X.1.1 approached
+Nissaya Burmese
+'The Buddha, after going out of the lovely country of Kapila, exerted himself
+in meditation and practised austerity; then, sitting at the foot of the Bodhi tree called'
+Ajapāla, the Buddha there took the milk-rice and proceeded to the river Nerañjara.
+· APPENDIX 3
+Example of recent nissaya translation (1910) From Saya Lun p.381
+Kyi:sai Le: thap Mahātherena (ကျေးဇူးတော်ရှင်) အသျှင်ကျီးသဲလေးထပ်ဆရာတော်ဘုရားကြီးနှင့်
+I.2.7.2 with the venerable K abbot (who deserves our gratitude)
+saddhim တကူ
+VIII.13 together
+pasantassa သီတင်းသုံးနေတော်မူသော
+III.1.2, X.1.1 residing
+Wa:lay gana vihare ဝါးလယ်ရွာကျောင်း၌
+1.2.8 in the monastery of W. village
+Sirimala Therassa.အသျှင် သီရိမာလာ မဟာထေရ် (မြတ်) ၏
+1.2.4 the venerable and) reverend monk S’s
+santikeü အထံတော်တို့မှ
+1.2.6 from the presences
+samai အညီအညွတ်
+cf. I.2.7.2 in accordance
+manditvā တန်းဆာဆင်၍
+VII.2.11 embellishing
+Kabyä Särattha Sangaho
+I.2.1 the book K.S.S.
+ekasahassa dvisata dvesattati
+Sakkarāje
+III.1 (called) S. 1272 [ = A.D 1910]
+vasse နှစ်၌
+1.2.8 in the year…..
+laddhopadesena ရအပ်သောနည်းဥပဒေသဖြင့်
+I.2.7.1, III.1.3 with instruction received
+catukandehi လေးပိုင်းလေးကဏ္ဍတို့ဖြင့်
+1.2.7 with four sections
+racito စီရင်အပ်သော
+III.1.3 composed
+ကဗျာသာရတ္ထ သင်္ဂြိုဟ်ကျမ်းသည်
+သက္ကရာဇ် ၁၂၇၂ တည်း (ဟူသော)
+suntthito ကောင်းစာစီရင်အောင်မြင်ပြီးစီးပေပြီ
+VI-1.3 is well finished
+'The book Kabyā Sārattha Sangruih, composed with the embellishment of four
+sections, in accordance with instruction received at the feet of the venerable Kyithè
+Laydat Sayadaw who deserves our gratitude, and the venerable monk the reverend
+Sirimālā, who resides in the monastery of the village of Walè, was brought to a
+successful conclusion in the year 1910.'
+JBRS, L, I, June, 1967,
+Copyright 1998-Myanmar Book Centre & Book Promotion & Services Ltd, Bangkok, Thailand.

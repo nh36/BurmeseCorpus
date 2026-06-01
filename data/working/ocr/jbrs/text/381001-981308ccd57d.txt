@@ -1,0 +1,525 @@
+[[page 1]]
+TRACE ELEMENT RESEARCH ¹
+31
+by
+2
+Richard A. Carrigan, Ph. D. 3
+Any chemical element can be a trace element. To qualify, it need
+only be almost, but not quite, absent. The major elements of one
+material can be the trace elements in another. Those elements occur-
+ring in "traces in common materials have received an uncommon
+amount of attention in recent years by chemists, physicists, and biolo-
+gists, all of whom have recognized that traces of chemical substances
+can exert effects out of all proportion to the amount present.
+Trace elements have attracted attention in a number of different
+fields. Astonishingly slight amounts of certain metals have been found
+to play vital roles in biological phenomena. In industry traces of
+impurities must often be eliminated before a successful operation is
+possible. In other cases, the right amount of some impurity is the key
+to success. The purpose of the present discussion is to present to
+Burmese scientific people some thoughts of one who has been engaged
+in trace element research for a number of years, with a view to indicat-
+ing some ways in which this area of investigation may find application
+in Burma.
+Before proceeding any further, however, it may be well to clear up
+a possibly dubious point. We shall not be discussing tracer elements.
+The latter term has been used in recent years to denote an element
+added in minute quantities for the purpose of tracing the fate of a
+given element in a chemical or biological system. Usually the added
+tracer element is one of the rarer isotopes of the element whose fate is
+being studied. Being an isotope, it is assumed to have virtually the
+same behavior as the more common isotopes of the same element.
+Thus, the fate of cobalt ingested by farm animals has been studied by
+feeding vanishingly small amounts of a radioactive isotope of cobalt
+and using a Geiger counter to detect the radioactivity in various inter-
+nal organs, as well as in the excreta. It is assumed that the radioactive
+atoms of cobalt will undergo a similar fate to the main amount of
+cobalt that would normally be ingested. The case illustrates both
+trace elements and tracer elements. Minute quantities of cobalt are
+1. Read on December 15, 1954, with U Chit Thoung in the Chair.
+2. Research Associate, State Industrial Research Institute, Rangoon,
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 2]]
+2
+R. A. CARRIGAN
+found in any diet adequate for cattle or sheep. These traces of cobalt
+found normally in natural feeds are essential for nutrition. Hence
+cobalt is regarded as an essential trace element in the nutrition of
+ruminants. In the above-mentioned experiments, however, cobalt
+would be considered as a tracer element, since the radioactive cobalt
+atoms, being easily detected by a Geiger counter, served to trace the
+path of cobalt through the organism. In our present discussion we
+shall omit any further reference to tracer elements, and confine ourselves
+to trace elements, whether naturally occurring, or artificially introduced.
+Biological Relationships
+Perhaps the best known examples of the necessity of traces of
+certain chemical elements occur in the biological realm. Until the
+importance of these traces was realized, it was customary to state that
+ten, and only ten, elements are essential for plant nutrition. The
+" classical" ten essential elements of plant nutrition were carbon,
+oxygen, hydrogen, nitrogen, phosphorus, sulphur, calcium, magnesium,
+iron, and potassium. Research
+Research during the present century,
+especially during the past 25 years,
+has shown that many
+species of plant are unable to survive unless supplied with
+traces of manganese, copper, zinc, and boron. More recently,
+molybdenum has been shown to be essential for a limited
+number of species. The delay in discovering the importance of the
+trace elements can perhaps be attributed to the slowness of scientists in
+guessing that such small amounts of chemical elements could be
+biologically effective. With attention being concentrated on the "major"
+elements during the earlier phases of developing the science of plant
+nutrition, it was only natural to ignore traces of heavy metals, or at
+least to defer consideration of them until more promising areas of
+research had been explored. The most orderly and rapid development
+of any science is likely to occur when investigators are selecting for
+study those questions most amenable to approach at any given point in
+time, provided, of course, that these problems are among those that
+will contribute to filling out the framework of facts and theories that
+will ultimately comprise the final form of the science. Hence
+it could not be expected that early workers would gamble on the
+chance of making significant contributions by investing time and
+research facilities on the trace elements when more promising investi-
+gations were staring them in the face, as it were. Moreover, the
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 3]]
+TRACE ELEMENT
+99
+3
+methods of analytical chemistry were not sufficiently developed to
+permit recognition of the existence of certain traces in the "chemically
+pure nutrient salts commonly used in plant nutrition studies.
+Gradually, as methods were improved, more and more workers came
+to recognize that traces of heavy metals have widespread occurrence
+in plant and animal tissues. Evidently, these trace elements were
+usually derived from soils or fertilizers, or could even be supplied by
+the chemicals used in nutrition experiments, hitherto thought to be
+"pure". It was, of course, natural to suppose that these traces were
+only incidental and that they played no essential roles, being absorbed
+by plants, whether they needed them or not, simply because they were
+available in the nutrient medium. If anything, some of these traces
+might have been considered potentially harmful, since some of them
+were known to be poisonous to plants or animals if supplied in larger
+concentrations, e. g., copper and boron. In the Chilean nitrate industry,
+efforts had been directed toward eliminating trace impurities in order to
+supply a purer fertilizer salt which presumably would be more suitable.
+The failure to achieve complete success in the latter operation allowed
+for a residual trace of boron to remain in the nitrate. To this trace of
+boron was later attributed superior results obtained in fertilizing certain
+boron-requiring crops, as compared with results obtained with synthetic
+nitrogen sources.
+The small amounts of trace elements needed can be illustrated by
+an example or two. The total ash constituents of vegetable matter
+may comprise in the neighbourhood of five per cent of the dried plant
+matter, more or less. These ash constituents account for much of the
+major plant nutrient elements. Copper, one of the essential trace
+metals, however, may occur in the dried plant matter at concentrations
+below 0.001 per cent and yet be present in adequate supply to carry out
+its necessary physiological functions. In Australia, less than one pound
+of molybdenum per acre was sufficient to provide an adequate suply
+of this essential metal in experiments with pastures. Though cobalt is
+not known to be an essential factor in plant nutrition, it is required in
+the nutrition of certain farm animals. Hence a satisfactory forage
+grass must contain an adequate supply of cobalt, or else this element
+must be fed in the form of a mineral supplement, along with such
+minerals as salt, iron and copper salts, and bone meal. But the
+requirement for cobalt is so slight that sheep receive sufficient if the
+pasture grasses contain as little as 0.07 part per million of the dried
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+65
+"
+
+[[page 4]]
+4
+R. A. CARRIGAN
+plant matter. At lower cobalt levels, animals may suffer from a fatal
+nutritional anemia even in the midst of an abundant supply of
+herbage.
+By the time that it had been realized that plants and soils contain
+ever-present traces of heavy metals and other presumably non-essential
+elements, the question naturally arose as to whether these traces had
+any biological signficance, or whether they were merely innocent
+bystanders, neither helping nor hindering normal, physiological
+processes. The fact that certain poisons can act in exceedingly small
+concentrations must have suggested that beneficial effects might also be
+conceivable under similar circumstances. Numerous puzzling obser-
+vations, unexplainable on the basis of the major elements, called for
+explanations. Even in the past century, some investigations were made
+that pointed the way to an appreciation of the importance of trace
+elements, but these were not adequately followed up. Reluctance to
+proceed is understandable on the basis of an observation of the author
+to the effect that even present-day scientists may hesitate to study the
+as yet "unexplored" trace elements, for fear that research adminis-
+trators may regard their work as visionary and impractical! It is much
+safer" to stick to tried and true avenues of research (even if they are
+already overworked!) rather than to risk reputation and the hope of
+future appropriations by carrying out researches that may prove
+unfruitful of positive results. This is, of course, a very negative
+attitude from the standpoint of the necessary ultimate working out of
+all the details of the science, but it is understandable.
+<<
+..
+In addition to the known essential trace elements in plant nutrition,
+plants also regularly, or frequently, contain traces of other elements
+concerning which we have little or no clue as to their roles, if indeed
+they have any. These include strontium, lithium, barium, titanium,
+aluminium, cobalt, fluorine lead, nickel, rubidium, silver, tin,
+vanadium, zirconium and chromium. All higher plants contain
+calcium and any natural material containing calcium also contains
+traces of strontium, an element with chemical properties similar to
+calcium and which therefore tends to accompany calcium in nature.
+Do these ever-present trace levels of strontium have any biological
+potency? Are they essential to life? Are they harmful under certain
+conditions? Even if unessential, are they stimulating, or do they
+modify the behavior of plants? Do they, perhaps, in some way
+compete with, or interfere with, the normal action of the essential
+trace metals? These are questions that must be answered. Until
+they are answered, the science of plant physiology will be
+incomplete and we shall not be sure we really know what is
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 5]]
+TRACE ELEMENT
+5
+going on within plants. Continuing with strontium as a case
+in point, it has been objected that its universal occurrence in plant.
+nutrient media should relegate the problem to the realm of purely
+academic interest. Hence practical agricultural investigators and
+specialists in nutritional science shouldn't concern themselves with the
+problem. However, while strontium may occur universally in calcium-
+bearing materials, we cannot suppose that it occurs at uniform concen-
+tration levels. Therefore, if it has any effect at all, the effect may vary
+according to local conditions and hence may have to be taken into
+account.
+Strontium is an element not possessed of an especially versatile
+chemical nature. But consider chromium, by no means so innocent
+chemically. It exists in several oxidation states. It cccurs in acid and
+basic combinations. It has unusually well-developed propensities for
+forming complex molecules and ions. Physicists can tell us
+that, in the conceptual building up of the periodic system of the
+elements by the progressive addition of the electrons to an increasingly
+complex nucleus, chromium represents an irregularity in the series, as
+may be seen by reference to a table of the electronic configurations of
+the atoms. This must confer special properties upon it. Such
+chemical "versatility" may be compared with the simpler properties of,
+for example, copper or zinc. If, as evidence indicates, these metals,
+participatate in enzymatic processes, it must be because they possess.
+special reactivity toward the specific organic compounds involved.
+Can we safely assume, then, that copper or zinc ions can carry
+out their necessary functions in the presence of traces of such a
+versatile element as chromium without at least some modification of
+the process, perhaps in the nature of an interference? This is specula-
+tion, of course, but it is the sort of speculation which must be a
+prerequisite to our planning of future research. It is, of course, true
+that enzymatic reactions are phenomenally specific. Perhaps we needn't
+worry ourselves about anything interfering with the specific reactions
+of copper, but we shall never know the answer to the question of
+whether copper requirements are modified by chromium levels until
+the matter is investigated. The same can be said for many other
+such relationships. Suffice it to say that we must assume that the
+"incidental" trace elements may play various roles whether they are
+essential or not.
+Most agricultural workers in America prefer to call the trace
+elements minor elements, as distinguished from the major elements.
+This implies no suggestion that they are of minor importance. We are
+forced to conclude that Liebig's Law of Limiting Factors applies to the
+2
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 6]]
+6
+R. A. CARRIGAN
+minor elements with as much force as to the major elements. Ten or
+fifteen pounds or zinc sulphate may suffice for an acre of corn on sandy
+land, but this small quantity is fully as necessary as the much larger
+quantity of commercial fertilizer that would ordinarily be supplied. The
+commercial fertilizer contaning nitrogen, phosphorus and potassium,
+might be drastically needed. Without it, a virtual crop failure might
+result in the case of very sandy soils in an area of high rainfall. Yet
+alone, without the zinc, the commercial fertilizer may produce only a
+slight improvement in yield. Nor would the zinc sulphate alone
+produce much of a result. Together, the fertilizer and the zinc
+sulphate might well produce a several-fold increase in yield. In other
+words, the crop cannot prosper unless all of its essential requirements
+are adequately met, even those needed only in slight amounts. The
+zinc is not a stimulant, but an essential nutrient element and, as such,
+it cannot be replaced by any amount of other nutrient elements. This
+is, of course, an important implication of the Law of Limiting Factors,
+which otherwise tells us that the growth of living organisms will be
+limited by a relative dificiency of any single essential environmental or
+nutritional factor. The deficient factor is then known as the "limiting
+factor" and it alone can control growth and limit production, even
+though all other factors are favourable.
+The Law of Limiting Factors tells us, in effect, that we cannot
+conduct experiments with the major elements without at the same time.
+controlling the minor elements. This is not always easy to do.
+Failure to appreciate this point in the past has made it necessary to
+re-examine the conclusions of older experiments and sometimes to plan
+new research to clear up doubts. At least two types of difficulty have
+confused earlier interpretations :—
+(1) Where one or more trace elements have been deficient
+in soils and fertilizer materials, the trace elements have
+acted as limiting factors and have prevented the major
+fertilizer elements from producing their full effects. An
+example of this sort of thing is the previously described
+experience in treating corn with fertilizer, but without
+zinc. Thus, unless the experimentalist has made sure that
+no trace element is a limiting factor, he cannot depend on
+reaching sound conclusions respecting the effects of the
+major elements.
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 7]]
+TRACE ELEMENT
+7
+(2) Since trace elements occur as impurities in compounds
+of the major elements, their presence may confuse inter-
+pretation in cases where one or more trace elements are
+limiting factors. As mentioned above, effects that might
+have been attributed to the nitrogen in Chile nitrate, were
+later explained as partly due to an impurity of boron.
+Obviously any conclusions as to the need for fertilizer
+nitrogen would have been clouded by unsuspected benefits
+ascribable to the trace of boron in the nitrogen source.
+Practices based on these experiments would obviously
+prove inapplicable if a change were subsequently made to
+a purer nitrate. Moreover, money and time might have
+been wasted in supplying more nitrogen than necessary,
+just to get the benefit of a trace of boron, which could
+have been supplied much more cheaply. An instance of
+this sort of thing occurred in New Zealand, where,
+formerly, iron ores and salts were fed to sheep to over-
+come bush-sickness”. a nutritional anemia attributed at
+that time to iron deficiency. The cure worked satisfac-
+torily until a new source of iron ore was found which
+was ineffective. It was then found that a trace of cobalt
+in the iron sources had been largely responsible for the
+beneficial effect. One observer made the comment that,
+over a number of years, the equivalent of one entire
+shipload of ferric ammonium citrate had been imported
+into New Zealand just to get a few pounds of cobalt.
+66
+Quite obviously, investigators should know whether their major-
+element sources contain significant levels of biologically potent trace
+elements. Otherwise they may over look the really effective factors in
+their experiments, while concentrating their attention, and their inten-
+tions on the major eleinents. Even among the latter elements, we have
+had some enlightening refinements in experiments of recent years which
+have shown that some of the responses of crops to superphosphate
+fertilizer have been due to the large quanity of sulphate in that
+materials.
+Progress in trace element studies has been due in no small part to
+advances in analytical chemistry. Control of trace impurities in all
+experimental materials is essential, and this can only be done when
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 8]]
+00
+8
+R. A. CARRIG AN
+analytical methods of sufficient sensitivity, specificity and accuracy are
+available. The spectrograph has proved to be a boon in this connec-
+tion, as have also newer chemical reagents and methods of using thein.
+Until such methods came into being, there was insufficient appreciation
+of the extent to which impurities occur in even the purest analytical
+reagent-grade chemicals.
+Along with progress and enlightenment we have gained our fair
+share of confusion and misguided enthusiasm. Especially has this been
+true in the domain of soil analysis. Naturally we would like to be able
+to analyze soils for their trace elements, and, by referring to some
+compendium of data on optimum levels, to decide whether individual
+soils contain adequate amounts of trace elements, or are deficient.
+Failing in this, we would at least like to be able to analyze plants and
+decide questions of adequacy or deficiency. The only trouble is that we
+don't happen to possesss the necessary compendium of data against
+which to compare our analytical results. Trace element specialists
+know this, but they are quite accustomed to putting up with quite a bit
+of impatience on the part of usually well-intentioned enthusiasts who
+want to be getting along with ambitious programs of soil treatment or
+animal feeding on a regional basis. In a few instances, especially in
+some local circumstances, critical levels are indeed known to a certain
+degree of approximation. Even so, they may be variable, depending
+on many environmental conditions. On a regional, or nation-wide
+basis, soils and environmental conditions are so variable that, in the
+present state of knowledge, it is much too soon to attempt to evaluate
+soil deficiencies of trace elements in one central laboratory purely by
+reference to analytical values and without intimate acquaintance with
+local conditions.
+Another way in which enthusiasm can take the wrong direction is
+by way of the idea that we should supply trace elements just in case
+they may be needed. This is particularly true when we are dealing
+with elements that have never been proved essential in the specific
+circumstances, if at all. Molybdenum has been shown to be required
+by certain pasture plants and by some vegetables. On the other hand,
+excessive molybdenum in certain soils has caused serious intestinal
+disturbances with cattle, even when the dried forage contained as low
+as ten parts per million of molybdenum. Yet carefull experiments
+have shown that two pounds of sodium molybdate per acre
+increase the molybdenum content of pasture herbage above this level
+Copyright© 1998 – Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 9]]
+TRACE ELEMENT
+9
+for two years following an original application to a sandy soil, even
+when all clippings are removed from the area. In the light of such
+facts, the writer made a negative recommendation to a fertilizer
+company that wished to add molybdenum to their products in the hope
+of producing fertilizers of superior quality.
+That trace element deficiencies may occur in highly leached soils of
+Burma is certainly to be expected. In a field near Heho, the writer
+noticed that the leaves of a certain weed, known in America as "tea
+weed", exhibit apparent symptom of some nutritional deficiency.
+There is a pronounced "frenching"; or yellow mottling, which may
+be indicative of a trace element deficiency. The same symptoms
+are shown by this plant (or at least a very close relative of it) in
+Florida, where one observer attributed them to iron deficiency. It
+seemed doubtful that iron could be the causative factor in the particu-
+lar Burmese soil; manganese deficiency might provide another
+possible explanation. In any case, the weed appears to be especially
+sensitive to the deficiency (assuming that it is a deficiency) and it may
+perhaps be useful as an indicator of some factor limiting crop yields in
+a less obvious manner. "Frenched " tea weed in Florida has been
+considered to reveal potential iron deficiency in neighbouring tung
+trees.
+In
+Rarely, excessive concentrations of a trace element will render a
+soil non-productive. Such cases, however, may be indicative of under-
+ground ore resources. As a matter of fact, the analysis of plants for
+their content of trace metals has been used as a method of searching
+for ores. Geobotanical prospecting, as the method is called, depends.
+upon the ability of plants to absorb traces of metals, whether or not
+they are used in metabolism by the plant. Geochemists are well
+acquainted with the accumulation of trace elements in the topsoil,
+the zone of plant feeding, trace metals may be released into solution
+by the gradual dissolution of soil minerals or they may travel to this
+zone in solution in waters ascending from below during drier periods.
+In either case the trace metals are absorbed by plants, later to be
+returned to the topsoil in decaying plant parts. They may be
+re-absorbed by plants and thereafter carried through the process again.
+and again, being trapped, as it were, in a "bio-geochemical" cycle at
+the surface of the earth. Since the process of accumulation and
+3
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 10]]
+10
+66
+R. A. CARRIGAN
+trapping" continues for thousands of years, an appréciable enrich-
+ment of trace elements occurs in topsoils. If the waters ascending
+from below pass through zones of ore accumulation, the fact may
+sometimes be revealed by an unusually large content of the particular
+metals in plants. We have here a case in which the analysis reveals
+only traces which are, in themselves, not important. Hence the
+absolute concentration of a given element is not necessarily of direct
+interest. We are only using it as an indicator of a larger body nearby.
+Hence we must consider the content of the element in plants relative to
+other plants in the neighbourhood, but remote from the ore. Because
+of the widespread prevalence of trace metals in topsoils, the concentra-
+tions found in plants affected by ore deposits are significant only when
+compared with the prevailing "background" concentrations found in
+the area.
+Plans are being formulated for a trial of the geobotanical
+method of prospecting in Burma. It is hoped that this method
+will give some useful clues to the location of ores whose outcrops would
+otherwise be obscured by the mantle of soil. In this activity it is
+planned to use the spectrograph as an analytical tool. This versatile
+instrument will permit us to examine samples for a number of metals
+simultaneously without recourse to tedious "wet" chemical procedures.
+Since plant ashes produce fairly simple spectra, it should be possible to
+use a medium quartz spectrograph, and hence to avoid the extra work.
+of producing multiple spectra that would be required with a larger
+instrument. To be sure, plant analysis is fraught with some difficulty
+of interpretation, since the concentration level of a trace metal will
+depend on the species sampled, on the particular part of the plant, and
+on the season. Some plants are better accumulators of metals than
+others. The soil is thus likely to be a more stable sampling medium,
+but its high content of iron, with the resulting complex spectrum,
+makes the use of a large spectrograph mandatory. Multiple exposures
+would then be necessary for each sample, if a fairly comprehensive
+analysis is required, as it should be. The most suitable conditions will
+have to be worked out in practice. Geobotanical prospecting has been
+successfully tested in connection with the search for uranium in
+America. A sensitive chemical and fluorimetric method was used.
+Trace concentrations of uranium were found generally in woody
+3 Cannon, Helen L., Geobotanical Reconnaissance near Grants, New
+Mexico. U. S., Geological Survey, Geological Survey Circular 264, 8 pp. (1953).
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 11]]
+TRACE ELEMENT
+11
+plants throughout the area sampled; but a two-fold increase in the
+uranium content in the plants was indicative of significant concentra-
+tions in underlying rocks.
+,,
+Going still further from the strictly biological realm, we may take
+note of some industrial applications of trace element studies. In the
+catalytic cracking of petroleum oils, catalyst "poisons may impair
+the efficiency of the catalyst. Such a "poison" is arsenic, which
+occurs in exceedingly slight traces in some petroleums. The identifi-
+cation and measurement of traces in oils often taxes the ingenuity of
+analytical chemists.
+Instability in storage is an unfortunate characteristic of many
+products of organic origin such as foods, medicines and beverages.
+Under tropical conditions, with high temperature and humidity, these
+tendencies are likely to be intensified. They are known in some cases
+to be catalyzed by traces of heavy metals, such as copper. It may well
+be, then, that Burmese research workers may find it necessary to apply
+the methods of trace element studies to future problems of this
+nature.
+A considerable volume of work has gone into investigations of trace
+metals in biological tissues and excreta, from the standpoint of industrial
+hygiene. Metals such as lead and beryllium have been determined in
+trace quantities in such materials to furnish a guide to the protection of
+industrial workers. Some thought may have to be given to the
+problems in Burma, where operations at the cottage industry level
+may occassionally be carried out without adequate health safeguards.
+One may well enquire as to how slight traces can produce
+significant effects, which in some instances in the biological world are
+little short of dramatic. Perhaps we may indicate, in an incomplete
+way, several categories into which trace element effects may fall:-
+(1) Sometimes the trace element is intrinsically valuable and can
+profitably be extracted from ores containing only traces
+of it. Such is the case with gold and uranium. It is well
+to remember, in this connection, that trace elements often
+occur in the from of “stray” atoms tucked away in the
+three-dimensional atomic (or/ionic) lattice of a crystalline
+mineral where they really play the role of unnecessary
+'guests" which were accommodated in the lattice
+merely because they happened to fit into the geometrical
+pattern established by the lattice structure of the
+“host” mineral.
+66
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 12]]
+12
+R. A. CARRIGAN.
+(2) Trace elements can enter into a many catalyst systems.
+Presumably they play such a role in biology. A slight
+quantity of a catalyst may suffice because it can be used
+over and over again.
+(3) In the case of geobotanical prospecting, trace quantities
+are important simply because they point to the location
+of major deposits.
+,,
+(4) A fourth category includes those cases where "guests
+atoms, present in a crystal lattice only in traces, produce
+slight dislocations in the lattice which lead to various
+effects, desirable or otherwise. These effects are now
+intensively studied by solid-state physicists and are
+recognized as important in the production of semi-
+conductors, phosphors and solid catalysts, and in other
+ways.
+It would be impossible, in a brief paper, to present a comprehensive
+outline of all the areas in which traces play a role. An attempt has
+been made, however, to show the need for continued awareness of
+possible trace element effects during the progress of Burma's scientific
+and industrial growth and to suggest possible areas where trace
+elements may bear upon Burma's development.
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.

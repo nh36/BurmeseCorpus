@@ -1,0 +1,14 @@
+{
+  "local_file_id": "nissaya_okell_1967-466204552757",
+  "batch_id": "jbrs-ocr-3340",
+  "file_name": "Nissaya-Okell-1967.pdf",
+  "path_stub": "Burmese/Burma JBRS/1967/Nissaya-Okell-1967.pdf",
+  "journal": "JBRS",
+  "year": "1967",
+  "ocr_engine": "google_vision",
+  "pages_completed": 26,
+  "ocr_date": "2026-06-01T19:52:56.960160+00:00",
+  "source_category": "other_source",
+  "language_scope_guess": "Mixed Burmese/Pali",
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+}

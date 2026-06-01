@@ -1,0 +1,14 @@
+{
+  "local_file_id": "ethnographiclinguisticsurvey_taylor1956-b1fad00a1f88",
+  "batch_id": "jbrs-ocr-2147",
+  "file_name": "EthnographicLinguisticSurvey-Taylor1956.pdf",
+  "path_stub": "Burmese/Burma JBRS/1956/EthnographicLinguisticSurvey-Taylor1956.pdf",
+  "journal": "JBRS",
+  "year": "1956",
+  "ocr_engine": "google_vision",
+  "pages_completed": 17,
+  "ocr_date": "2026-06-01T19:47:53.042218+00:00",
+  "source_category": "other_source",
+  "language_scope_guess": "Burmese",
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+}

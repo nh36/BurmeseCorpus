@@ -1,0 +1,283 @@
+[[page 1]]
+TOWARDS THE STANDARDIZATION OF VIETNAMESE
+ORTHOGRAPHY
+by
+Nguyen Dinh Hoa, B.A., M.A., Ph. D., Department of Linguistics,
+Faculty of Letters, University of Saigon
+(Republic of Vietnam)
+In the seventeenth century Catholic missionaries from Portugal, Spain, Italy and France
+worked out a Roman script which was to become quocngu or the national written language
+of Vietnam. The Vietnamese-Portuguese-Latin dictionary compiled by Alexandre de
+Rhodes, a Jesuit scholar-missionary from France, and published in Rome in 1651 is believed
+to be the earliest document in codified quocngu script. The new writing system, at any
+rate, assumed an increasingly important role in the program of study provided for Vietnam-
+ese youth. Nowadays quocngu has deservedly acquired the full status of a "national
+language," to which is due a marked increase of literacy. Inconsistencies in this writing
+system do, however, slow the beginner down a great deal. The standardization of
+the orthography now in use will help avoid useless confusions, make meaningful distinc-
+tions, and consequently speed up the learning process and accelerate the literacy campaign.
+Since a good writing system is one that is phonemic our effort will have to be based upon a
+good phonemicization of the language of Vietnam. The present paper discusses briefly the
+phonemic system (vowels, consonants and tones), the syllabic structure in terms of morphe-
+mics, then suggests some “spelling rules.”
+tones.
+1. THE PHONEMES OF VIETNAMESE
+Vietnamese has eleven vowel phonemes, twenty-one consonant phonemes, and six
+1. Vocalic Phonemes
+The system has three front vowels (all unrounded), four back vowels (three rounded
+and one unrounded), and four central vowels (all unrounded).
+The unrounded front vowels are /i e E/. The back vowels include / uoɔ/
+(rounded) and /*/ (unrounded). The central vowels are / ǝ ǝ a a /. The pair / a. and
+a presents only a difference in length whereas the members of the pair / ǝ and ǝ / are
+different both in height and in quantity, / ǝ / being higher and longer than / ǝ /.
+The eleven vowel phonemes are summarized below:
+Front
+Unrounded
+Central
+Unrounded
+Back
+i
+E
+a'
+a
+Unrounded Rounded
+u
+0
+0
+67
+JBRS, XĻIII, i, June 1960
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd. Bangkok. Thailand.
+
+[[page 2]]
+68
+Nguyen Dinh Hoa
+2. Consonantal Phonemes
+Five manners of articulation are observed.
+2.1. There are first three sets of stops: fortis voice-less unaspirated (bilabial /p/,
+alveolar /t/, palatal /c/ and velar /k/), fortis voiceless aspirated (alveolar /th/), and lenis
+voiced unaspirated (labial /b/ and alveolar /d/).
+2.2. The system has four nasals, all voiced and homorganic to the four voiceless
+unaspirated stops, that is, in bilabial /m/, alveolar /n/. palatal /ñ/ and velar /7/ positions,
+respectively.
+2.3.
+Spirants include voiceless (labiodental slit fricative /f/, alveolar groove
+fricative /s/, velar fricative /x/ and glottal /h/) and voiced (labiodental /v/, alveolar /z/ and
+velar /g/) ones.
+2.4.
+There is a voiced lateral in alveolar position /1/.
+2.5.
+Finally there are two semivowels: /w and y/.
+The 21 consonant phonemes are given in the following table:
+Bi
+Labio – Alveolar
+labial
+dental
+Stops
+Voiceless
+unasp.
+p
+asp.
+b
+t
+th
+d
+Voiced
+Nasals Spirants
+Voiceless
+Voiced
+Lateral
+Voiced
+Semivowels
+E
+W
+f
+V
+n
+ESN
+Z
+Palatal
+32
+ñ
+y
+Velar
+Glottal
+k
+× 0.0
+g
+✗
+h
+3. Tone Phonemes
+Each morpheme can be affected by one of the six tones characterized by pitch levels
+The tones are indicated in the conventional orthography by dia-
+as well as by contours.
+critic marks as follows:
+High level
+High rising
+Low falling
+Low rising
+Broken rising
+Low constricted
+JBRS, XLIII, i, June 1960
+(unmarked)
+as in
+ma
+"ghost"
+"
+má
+"cheek"
+"
+ma
+"but"
+,,
+ma
+"grave"
+1,
+mã
+"horse"
+,,
+mą
+"rice shoot"
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 3]]
+VIETNAMESE ORTHOGRAPHY
+HL
+4.
+HR*
+69
+LF*
+LR
+BR
+LC
+II.
+THE SYLLABIC STRUCTURE
+7
+Marginal (consonant) phonemes are:
+4.1. Eighteen plain /t c k th b d m n ñ fsxh vz g 1 and fifteen
+labialized tw cw kw thw dw nw ñw w sw xw hw zw gw lw w/ in
+initial position;
+4.2. Eight in final position: /p tk, m ny, wy/.
+5.
+Nuclear (vowel) phonemes are:
+5.1. One of the nine vowels / i eɛ u oɔu ǝ a' followed by zero;
+5.2.
+One of the three clusters / iǝ uǝ uǝ / followed by zero;
+5.3.
+One of the eleven vowels followed by one consonant of 4.2%;
+6.
+5.4.
+5.5.
+5.6.
+5.7.
+5.8.
+5.9.
+5.10.
+One of the three clusters / ia ч uǝ / followed by one consonant of 4.2;
+One of the glides / ǝw aw ay ay / followed by a (labio) velar stop or nasal;
+One of the nine vowels of 5.1 preceded by one of the eighteen plain
+consonants of 4.1;
+One of the three clusters / iǝ ǝ uǝ / preceded by one of the eighteen plain
+consonants of 4.1;
+One of the sequences of 5.3 preceded by one of the eighteen plain
+consonants of 4.1;
+One of the sequences of 5.4 or 5.5 preceded by one of the eighteen plain
+consonants of 4.1;
+One of the sequences mentioned in 5.6 through 5.9, where a labialized
+consonant occurs instead of a plain consonant.
+Formulae
+If V represents a vowel and also a semivowel in nuclear position, C a consonant and
+Syllables ending with a stop have only one of these two tones.
+JBRS, XLIII, i, June 1960
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 4]]
+70
+Nguyen Dinh Hoa
+also a semivowel in final or post-vocalic position, and Cw a labialized consonant, we have
+the following twelve possibilities:
+V
+VV
+CVC
+CVVC
+VC
+CwV
+VVC
+CwVV
+CV
+CVV
+CwVC
+CwVVC
+III. SPELLING REFORMS
+7. There are several inconsistencies in the presently used orthography. Some of them
+are listed.
+*
+7.1.
+A vowel symbol is used for a semivowel, and vice versa.
+7.2.
+7.3.
+7.4.
+7.5.
+7.6.
+7.7.
+A semivowel is represented by two different letters because it is preceded
+by two different vowels.
+The nature of each glide (5.5) is not fully realized, hence the misrepresen-
+tation of the glide itself as single vowel and of the velar final.
+A velar consonant in initial position is represented by one symbol if it
+precedes a front vowel and by a different symbol if it precedes a central or
+back vowel.
+Special letters which are used to represent initial consonants add to the
+confusion, for example, ph- for /f/, & for /d/, x- for /s/, s- for /š/, ch-
+for /c/, tr- for /t/, d- for /z/, and gi- for /ž/.*
+8. Samples
+Labialization is not accurately and consistently indicated.
+The coincidence of the morpheme and the syntactic word in most cases
+tends to perpetuate the myth of monosyllabism. Syllable boundaries being
+clearly determined in terms of syllabic structure, a compound can very well
+be written as what it is-one (syntactic) word.
+8.1. Sample 1.
+nakta | sawnày hay hay z3 kũy là ñề cũ kuák nữ // Nước ta sau này
+hay hay dở, cũng là nhờ chỗ quốc ngữ. Nhâk tỏa saw này hay hay z8
+kūng làa nhỏ cũ kuakngũ.
+8.2. Sample 2.
+lukxảy và fa' mhwa' / là hay thiền dày dùng
+Phạm-Hoa là hai thi-nhân đồi Đường.
+haay thịnhân dày Duâng.
+found in other dialects
+JBRS, XLIII i, June 1960
+Luc-Khai và
+Lukkhẳay vaa Fạamhwaa làa
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd. Bangkok, Thailand.
+
+[[page 5]]
+VIETNAMESE ORTHOGRAPHY
+BIBLIOGRAPHY
+71
+Emeneau, Murray B. :
+Angeles:
+Studies in Vietnamese (Annamese) Grammar.
+University of California Press, 1951.
+Berkeley and Los
+Jones, R. B. and Huynh Sanh Thong: Introduction to Spoken Vietnamese. Washington.
+D.C.: American Council of Learned Societies, 1957.
+Le Van Ly: Le Parler Vietnamien. Paris: Huong-Anh, 1948.
+Mineya Toru: = # # # Annango Annamese/
+66
+M1,"
+****Tokyo,
+Tokyo, Kenkusya, 1955.
+pp. 833-70.
+Nguyen Dinh Hoa Quor-Ngu-The-Modern Writing System in Vietnam. Washington, D.C.,
+1955.
+: Speak Vietnamese. Saigon, University of Saigon School of
+Languages, 1957.
+: Vietnamese Phrase Book. Saigon, Vietnamese
+Association, 1959.
+-
+American
+: Hoa's Vietnamese-English Dictionary. Saigon: Binh Minh, 1959.
+Smalley, William and Nguyen Van Van A Course in Spoken and Written Central
+Vietnamese. Dalat: Mission Evangelique, 1954.
+Thompson, Lawrence: "Saigon Phonemics," Language, Vol. 36, No. 3 (1959)
+JBRS, XLIII, i, June 1960
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.

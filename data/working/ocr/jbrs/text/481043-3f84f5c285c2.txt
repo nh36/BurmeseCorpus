@@ -1,0 +1,1326 @@
+[[page 1]]
+THE BALUGYUN SAMPLE SURVEY, 1962. *
+(1) Introduction
+U Thet Lwin **
+In Burma, at present, there is a large
+amount of statistical data that is regularly
+being collected and published mostly as
+a by-product of the regular administra-
+tion. This data provides a great deal of
+information for the study of economic
+and social conditions in Burma. But they
+have also their limitations mainly because
+the needs of administration do not always
+coincide with the methods of scientific
+study of these conditions. Therefore, there
+is often a great need for additional infor-
+mation based on more appropriate defini-
+tions and for subjects not covered by the
+regularly collected statistical data. One of
+the great difficulties in the use of such
+data is the fact that there is a considerable
+time lag between the events studied and
+the time, the information becomes available.
+But in order to get more and more data
+for effective planning of economic and
+social developments in the country, it is
+necessitated to collect up to data infor-
+mation about the existing conditions and
+trends of change in all parts of the
+country. The most effective method for
+getting such information is by way of
+probability sampling.
+The application of sampling techniques
+to social and economic problems in Burma
+is of recent introduction. In order to
+expand the application of modern sampling
+techniques, the experience with sampling
+procedures in other countries is of great
+help, but sampling work in Burma cannot
+be based entirely on such outside experience,
+as conditions in Burma
+are different in
+many respects. Therefore, the adaptation
+of improved techniques practised elsewhere
+requires considerable research and experi-
+mentation with various sampling techniques
+to meet the special conditions in Burma.
+This survey may be considered as a
+further experimentation with improved
+sampling techniques in determining some
+important aspects of socio-economic pro-
+blems in Balugyun.
+(2) The Island of Balugyun
+The island is situated opposite the
+town of Moulmein, in the river Salween
+near the mouth where it flows into the
+Gulf of Martaban. It lies between North.
+latitudes 16° 38' and 16° 30' and between
+East longitudes 97° 22' and 97 38' occupying
+a total area of about 180 square miles.
+It enjoys a tropical Southwest Monsoon
+climate with an annual rainfall of about
+190".
+The inhabitants of the island are
+predominantly Mon, although people of
+most indigenous Burmese races are to be
+found. There are in all 43 village tracts
+with a total estimated population of about
+80,000 living in about, 15,000 households.
+The island has an abundance of
+natural wealth, the main asset is the vast
+paper is an abridged version of the Thesis
+partial fulfilment of the requirements for the
+* Read at the Twelfth Annual Research Conference of the Society on 24th December 1964 with
+Professor Khin Mg Nyunt in the chair. This
+submitted to the University of Rangoon in 1964 in
+Degree of Master of Science in Statistics.
+** Assistant Lecturer, Department of Statistics, Institute of Economics, Rangoon.
+43
+JBRS, XLVIII, i, June 1965
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 2]]
+44
+area of land ideally suited for paddy
+cultivation. Besides agriculture and fisheries,
+it has been found to have a considerable
+number of cottage industries. The famous
+products of the island are smoking-pipes,
+slates, coconut-fibre ropes etc.
+The location, size, communication and
+particularly the functions of the various
+cottage industries on the island offers a
+good opportunity for applying sampling
+methods to determine the economic and
+social conditions and particularly to study
+the differentials in those conditions as
+between the villages which contain such
+cottage industries and those which
+predominantly agricultural.
+(3) Objectives of the Survey
+are
+(a) The first objective of the survey
+was to make further experiments in the
+application of the sampling method to
+the survey of economic and social con-
+ditions in Burma. This involves gaining
+experience in planning surveys, designing
+questionnaires, recruiting, training and
+supervising interviewers, collecting the
+required data and analysing them.
+(b) The second objective of the survey
+was to collect general information on some
+important aspects of the social and eco-
+nomic conditions of the people of Burma,
+especially with a view to measure the
+changes taking place at present, in such
+matters as demographic processes, agri-
+cultural develpments and the trends of
+industrialisation. The present survey has
+been designed. particularly with a view
+to comparison with the similar survey
+carried out in Thaketa in 1941. Within
+this survey itself, an attempt is made to
+get information for the comparison of
+economic condition in purely agricultural
+JBRS, XLVIII, i, June 1965
+U Thet Lwin
+villages and in villages with a considerable
+amount of cottage industries.
+(4) The Sample Design
+The Sample Design adopted in this
+survey is described by D.G. Horvitz and
+D. J. Thompson, "A generalization of
+sampling from finite universe", in the
+journal of American Statistical Association,
+1953.
+In accordance to prior information,
+the 43 village tracts were stratified into
+five strata on the basis of their economic
+activities. The actual selection of households
+being included in the sample was effected
+in two stages. At the first stage, a pair
+of village tracts had been chosen from
+each stratum without replacement with
+probabilties proportionate to their sizes.
+And at the second stage, in agreement
+with the limited amount of time and
+resources available, a sampling intensity
+of two percent was so adjusted that the
+resulting number of households expected
+to be interviewed would fall around 300.
+In computing the estimated sampling
+variances, standard errors of estimates
+and coefficients of variation, the formula
+developed by J. Durbin,
+developed by J. Durbin, "Some Results
+in Sampling theory when the units are
+selected with Unequal Probabilities”, in
+the Journal of the Royal Statistical Society,
+1953 was deliberately used; because the
+solutions provided by Horvitz and Thomp-
+son do not give satisfactory approxima-
+tions in the cases met with in practice.
+(5) The Questionnaire
+The Questionnaire, designed to be can-
+vassed by the interviewers, contained enqui-
+res on a wide variety of economic and social
+topics. It was known that many such ques-
+tions could not be fully answered in the short
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 3]]
+The Balugyun Sample Survey, 1962
+space of time alloted for the completion of
+each schedule, and many of the questions
+included in the questionnaire were meant
+only to get an idea of the difficulties of get-
+ting such information in the field by the
+questionnaire method. Therefore, a part of
+the questionnaire is to be considered as an
+experimental survey for testing the ques-
+tionnaire itself.
+In the first section, there was a part in
+which information was collected on the type
+of houses occupied by the sample house-
+holds, depending on the materials of
+construction of the roof, walls, posts, and
+floor including the number of rooms and
+storeys and whether there was electrical
+installation or not. After this, the social
+section was mainly devoted to the informa-
+tion about demographic conditions of the
+individuals in the household, viz. name, age,
+sex, relationship to the head of household,
+marital status, race, birth place, educational
+qualification, primary and secondary
+occupations and employment status.
+In the agricultural section, information
+was sought for the owned, rented and other
+type of land cultivated by agrarian families
+classified according as the crop, paddy or
+others for the past agricultural year. Then,
+there was an enquiry about the total output,
+the quantity of "Wunza" for domestic
+consumption, quantity set aside for seed,
+quantity sold and sale proceds for different
+crops. In a third part of this section, there
+was an attempt to get the paid out costs of
+cultivation such as labour, cattle, imple-
+ments, fertilizers, seedlings etc., and the
+asset of the household such as agricultural
+land, garden land, carts, boats, ploughs,
+harrows including the values of the asset.
+In a third section on cottage industry,
+an effort was made to get information on
+output, value, period of operation of
+45
+industry, quantity sold and its value, the
+value of raw materials, cost of fuel, cost of
+labour and value of equipment used to
+produce goods.
+There was also a section on the amount
+of loans taken for agricultural and for
+industrial purposes, the agency from which
+the loans were taken, the interest paid and
+the balance of indebtedness.
+In a final section on consumption
+pattern, households were requested to
+indicate the amount spent or selected groups
+of commodities such as food, tobacco,
+clothing, fuel and water, religious and
+charitable expenditure and miscellaneous
+items.
+(6) The People of Balugyun
+The following estimates are expected to
+portray the main features of the people of
+Balugyur.
+Variable
+Number of Households
+Population
+Male
+Female
+Average Household Size:-
+Sex-Ratio
+Estimate
+15,229
+86,251
+44,115
+42,136
+5.71
+95.51%
+It is evident that the average size of a
+household turns out to be very high in rela-
+tion to results of previous surveys; the aver-
+age size for Balugyun is 5.71 while the aver-
+age size in Rangoon in 1953 was 4.77, in the
+urban areas in 1953 was 4.54, in rural areas
+in 1954 was 4.45, and in the 1962 Thaketa
+Sample Survey was 5.13. This high rate may
+be due to some difference in the census
+procedure and in the procedure adopted in
+these surveys, although care was taken in
+the surveys to use the census concept of the
+household. In fact, in Balugyun there was
+JBRS, XLVIII, i, June 1965
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 4]]
+46
+no case of more than one household in a
+dwelling unit and when compared with the
+rest of the country both Thaketa and Balu-
+gyun are relatively more prosperous parts of
+the urban and rural sectors respectively.
+It is also found that the number of
+females is less than the number of males
+U Thet Lwin
+which is somewhat surprising as the sex
+ratio is generally assumed to be more than
+100 in rural areas.
+To facilitate further comparison, the
+percentage age distribution of the popula-
+tion of Balugyun is given below along with
+those of other surveys and censuses.
+Percentage Age Distribution of the Population of Balugyun
+Age
+Enumeration
+0-15
+16-30
+31-45
+46-60
+61+
+Total
+Males
+Balugyun, 19:2
+40.8
+24.2
+15.7
+11.9
+7.4
+100.00
+Rangoon, 1953
+30.0
+32.5
+24.3
+10.4
+2.8
+100.00
+Other Urban
+Areas, 1953
+35.0
+29.6
+20.0
+11.3
+4.1
+100.00
+Rangoon, 1957
+33.8
+28.9
+24.7
+9.5
+3.2
+100.00
+Rural Areas 1954
+38.0
+27.8
+18.1
+11.5
+4.6
+100.00
+Thaketa, 1961
+38.5
+27.1
+20.8
+10.7
+2.9
+100.00
+Females
+Balugyun,
+37.3
+25.5
+18.7
+13.0
+5.5
+100.00
+Rangoon, 1953
+33.9
+34.2
+18.5
+9.6
+3.8
+100.00
+Other Urban
+Areas, 1953
+34.2
+31.1
+19.0
+11.2
+4.5
+100.00
+Rangoon, 1957
+36.7
+30.2
+18.8
+10.0
+4.3
+100.00
+Rural Areas, 1954
+36.6
+30.0
+18.9
+11.4.
+4.4
+100.00
+Thaketa, 1962
+41.8
+27.8
+18.2
+9.7
+2.5
+100.00
+In this table irrespective of sex, it is
+seen that the proportion of the population
+in the 0-15 age group is very large when
+compared with the results of other enumera-
+tions and approaches the rural census of
+1954 most closely. According to the Tha-
+keta and Balugyun Surveys, the relative
+proportion in age group 15-30 is much
+smaller than in the censuses showing that
+JBRS, XLVIII, i, June 1965
+they were less disturbed by immigration at
+these ages. In the case of Thaketa, it is
+possibly due to the fact that the abnormal
+influx at these ages into Rangoon before
+1953 has moved on to the age group 31-45
+by the time of that survey. In the case of
+Balugyun, the low proportion in 15-30 is
+just due to the fact that there was no immi-
+gration at these ages, and even possibly that
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 5]]
+The Balugyün Sample Survey, 1962
+there was emmigraton at these ages to the
+neighbouring town of Moulmein. This is
+reinforced by the fact that at the ages 30-45.
+also, the proportion in Balugyun was on
+the low side, approaching the position
+observed in the 1954 census. A surprising
+thing however is the very large proportion
+of people in the oldest age group of over
+60 years.
+The large proportions of people found
+in the age groups 0-15 and 60+ might be
+either due to the economic achievement
+of Balugyun over rural Burma or to the
+recent improvement of health conditions
+and the consequent decline in mortality.
+Further, a thorough study of the population
+waves of Burma as described by Dr. R. M.
+Sundrum (1956) in his pamphlet on "The
+Enumeration
+47.
+Population Statistics of Burma", revealed
+the effects of demographic phenomenon to
+produce waves of high and low birth rates
+in a cycle of about a generation of 30 years.
+The age and sex composition of the people
+of Balugyun observed around 1960 seemed
+to resemble the age and sex composition of
+the indigeonous population of Burma
+around 1930. Hence, the most appropriate
+reason for the strange age distribution obser-
+ved for a rural area like Balugyun might be
+due to the systematic and cyclical change
+in the age structure of the population reflect-
+ed by the Population Waves of Burma.
+In Balugyun, there is not much
+difference between males and females in
+educational qualifications. When compared
+with other places, a significant difference in
+Educational Qualifications (Percent)
+Up to 4th
+std.
+5th to 7th
+std.
+8th Std. &
+above
+Others
+Total
+Rangoon, 1953
+21.60
+12.45
+3.55
+62.40
+100.00
+Urban Areas, 1953
+23.45
+9.90
+2.05
+64.60
+100.00
+Rural Areas, 1954
+12.45
+2.30
+0.20
+85.05
+100.00
+Thaketa, 1961
+31.90
+19.25
+6.50
+42.35
+100.00
+Balugyun, 1962
+21.90
+5.50
+2.35
+70.25
+100.00
+the educational levels has been observed
+between Balugyun and Rural Burma. It is
+seen that 29.75% of the people of Balugyun
+were literates. But the statistics collected in
+the 1954 Rural Cencus of Burma showed
+that only 14.95% of the rural population
+could read and write. Should one
+considered Balugyun as a representative
+sample of rural areas, the higher educa-
+tional levels of Balugyun found in 1962
+compared to those areas covered by the
+1954 census could be taken to reflect a
+further evidence of the recent educational
+facilities provided by the Government in
+the Rural Areas between 1952 and 1962.
+In every census just to avoid omission
+of any member of a household or rather as
+an aid to memory on the part of the res-
+pondents in reporting, data on the relation-
+ship of the various members of a household
+to the head of household has been collected.
+Analysis of any sort with the accumulated
+JBRS, XLVIII, i, June 1965
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 6]]
+48
+data was not attempted so far. As it is
+believed that an exploration in this field
+might result in interesting discoveries, a
+preliminary study was made with the same
+informations gathered in the Thaketa Sam-
+ple Survey. In order to justify and prove
+the validity of the results found in Thaketa,
+further analysis was conducted with the
+Balugyun data along this line.
+In this survey, the members of a house-
+hold are also classified into two groups,
+precisely following the concepts and proce-
+U Thet Lwin
+dures employed in Thaketa. One group
+belonging to what may be called the basic
+family-consisting of the head of household,
+his or her spouse, their children and if
+present, the mother. The father is not
+included for it seems more appropriate to
+consider as cases being composed of two
+basic families. This is a slight extension of
+the concept of nuclear family, which ex-
+cludes the mɔther also; the second group
+consists of all other members of the house-
+hold, whether related to the head of house-
+hold or not.
+* Characteristics of Households of Different Structures
+No. of households
+Household
+(percent)
+Average age of Head
+Average Size of
+Household
+containing
+Balugyun Thaketa Balugyun Thaketa
+Balugyun Thaketa
+1962
+1961
+1962
+1961
+1952
+1961
+Basic family
+61.88
+57.45
+45.40
+39.8
+5.12
+4.44
+Married Children
+26.35
+10.84
+59.70
+52.0
+5.39
+7.35
+Unmarried Brothers
+& Sisters
+3.29
+15.18
+51.21
+38.4
+4.86
+5.88
+Married Brothers &
+Sisters
+1.65
+5.42
+50.50
+41.0
+6.00
+7.60
+Other Relatives
+9.18
+18.43
+58.19
+43.0
+5.85
+5.54
+Unrelated Persons
+0.00
+1.90
+...
+...
+*The figures under the caption in the above table do not add up to 100, because of overlaps among
+the various categories.
+Irres-
+The households of Balugyun are found
+largly to be of Basic family units which
+account for 62% of all households.
+pective of the structural composition of
+households, the average ages of head of
+households in Balugyun are much higher
+than those found in Thaketa; and so is with
+the head of households including married
+JBRS, XLVIII, i, June 1965
+children, unmarried and married brothers
+and sisters. Significant differences had
+been observed in married children between
+Balugyun and the Migrant Commumity of
+Thaketa. The excess of married children
+in Balugyun might be due to a tradition
+in rural areas for newly married chil-
+dren to live with parents for a few
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 7]]
+The Balugyun Sample Survey, 1962
+years until their families become large
+enough to separate out or to be absorbed
+in with that of their parents. As is to be
+expected, a high proportion of unmarried
+brothers and sisters found in Thaketa were
+mostly in young adult mobile age groups.
+Being found able-bodied, they could be
+believed to be in search of fortune and
+before a substantial sum has been saved,
+they live with a relatively well established
+related or acquainted families so as to solve
+their accomodation difficulties.
+(7) Agriculture
+According to prior decision that the
+survey should cover the entire phase of the
+rural economy, every effort was made
+togather relevent information on the
+different activities of agriculture. But the
+response received particularly on outturn
+and sale proceeds was not very satisfactory
+for the people of the sample households
+49
+were very suspicious of the purpose of the
+survey and inspite of repeated persuasions
+remained unwilling to provide all the
+required information.
+Tenancy In the 1954 agricultural census
+of rural Burma, about 66% of male member
+of the labour force above the age of 10
+were found to be engaged in farming, hunt-
+ing, fishing and forestry whereas the pro-
+portion in Balugyun in 1962 was about
+73% This shows the excessive dependence
+of the existing economy on agriculture.
+This characteristic is found to be true in all
+the under-developed or developing countries
+of the world. Moreover, to have a vivid
+picture of the number of households
+involved in agriculture and related occupa-
+tions, it is thought that a further break
+down of the agrarian households into those
+that considered agriculture as principal
+occupation and to those that considered
+agriculture as subsidiary occupation.
+Occupational Combinations by Households
+Balugyun
+Occupational combinations
+Industrial villages
+Agricultural villages Total
+*1. Agriculture (paddy)
+67.86
+72.55
+70.89
+2. Paddy cultivation with
+other agricultural
+activities as subsidiary
+3.57
+11.76
+8.86
+3. Agriculture with
+non-agriculture as subsidiary
+26.79
+5.88
+13.29
+4. Non-agriculture with
+agriculture as subsidiary
+1.78
+9.81
+6.96
+Total
+100.00
+100.00
+100.00
+* Agriculture refers to all activities concerned with fishing, growing vegetables, fruits etc.
+7
+JBRS, XLVIII, i, June 1965
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 8]]
+50
+As is to be expected, the proportion of
+households engaged in agriculture and
+related occupations in agricultural villages
+is much higher than those found in indus-
+trial villages. Yet, it is however, surprising
+to find a high percentage of households in
+agricultural villages were reported to have
+mainly involved in non-agricultural activi-
+ties besides agriculture.
+The study of agricultural economics in
+Balugyun requires as its background the
+social structure of the village community
+on this island. The existing village com-
+U Thet Lwin
+munity could be divided into six main
+groups. There are (i) the owners of land
+and those who have hereditary rights of
+tenancy; (ii) the tenants, iii landless agri-
+cultural labourers, (iv) village artisans;
+(v) shopkeepers and money lenders; and
+in
+(vi) persons personal services e.g.
+Moreover, an
+barber, village officials etc.
+individual may combine ownership of land
+with the role of a tenant, a money lender or
+a shopkeeper. A tenant may also be a
+field labourer or an artisan. This knowledge
+led to the following classification of land.
+Estimated number of Acres and Farms under different types of land Tenure
+Type of land
+Balugyun
+Tenure
+Acre
+Percent
+Farms
+Percent
+Owned
+32,202,80
+39.22
+2,240
+40.51
+Rented
+31,062.50
+37.83
+2,310
+41.77
+*Mixed
+16,886.45
+20.56
+875
+15.82
+Others
+1,960.00
+2.39
+105
+1.90
+Total
+82,111.75
+100.00
+5,530
+100.00
+*Mixed refers to plots owned and rented.
+This table shows the occupancy of land
+in Balugyun. About 40% of the land were
+owner operated and almost about the same
+proportion of land were under tenants.
+In this survey in order to widen the
+capacity of comparison, the concept
+regarding farms used especially in the 1953
+and 1954 agricultural censuses of Burma
+were adopted, wherever necessary. By
+precisely following the census concepts,
+the types of land tenure could also be
+classified in terms of farms.
+JBRS, XLVIII, i, June 1965
+It is evident from the above table that
+whether the distribution of land were in
+acres or in farms, the proportions under
+owners' and tenants' were about the same-
+the extent being around 40%.
+Outturn The average size of farms and the
+average out-turn of paddy in Balugyun for
+the agricultural year starting from May 1961
+to April 1962 was given below along with
+those of recent census results.
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 9]]
+The Balugyun Sample Survey, 1962
+51
+Enumeration
+Average size of
+a farm
+(Acres)
+Balugyun, 1962
+Industrial Villages
+14.39
+Average yield
+per acre
+(Baskets)
+30.44
+Agricultural Villages
+15.10
+30.56
+Total
+14.85
+30.52
+*Amherst, 1963 (Urban)
+14.95
+33.35
+*Burma, 19:3 (Urban)
+11.46
+31.73
+*Burma, 1954 (Rural)
+9.98.
+32.01
+1 Burma, 1957--58
+26.30
+1
+"
+58-59
+60-61
+30.30
+31.57
+*Refer 1953, 1954 Agricultural Censuses of Burma
+1 Refer Economic Survey of Burma, 1960, page 14, Table 8.
+1 Paddy yield per acre.
+Since Balugyun is in the Amherst
+District, the average size of farms in Balu-
+gyun ought to have been and is observed to
+be in the neighbourhood of the average size
+of firms in Amherst. But, when compared
+to Burma as a whole it is a bit large.
+Regarding outturn, the averege yield of
+paddy per acre in Balugyun estimated for
+the agricultural year 1961-62 is lower than
+those of Amherst in particular and Burma
+in general. A deterioration in output could
+be seen for the past few years. However,
+the present averag output in Balugyun is as
+great as the national average estimated for
+the agricultural season 1960-1961. A slight
+fall observed in the average yield of paddy
+per acre in Balugvun might be due to floods
+as stated by respondents in some parts of
+the island or it could be due to
+the misreporting of yield by the respondents
+concerned.
+Live-Stock Since the efficiency and pros-
+perity of a predominantly unmechanized
+agriculture depepnds very largely on draught
+animals, information only on cattle and
+buffaloes owned by farm families were
+collected and analysed. The cattle popula-
+tion on the island was estimated to be 29,000
+heads among which 21,000 of them were
+males and 8,000 females. Their distribution
+among farms of different sizes were rather
+irregular and a major concentration was
+seen around farms with sizes ranging from
+5 to 40 acres. This trend is similar to that
+found in 1954 Agricultural Censuses of
+Burma.
+A further analysis on age and sex of
+cattle showed that among male-cattle
+within Balugyun, the proportion under 4
+years is almost a third of that with ages 4
+years and above. Approximately the same
+ratio was found in 1953 and 1954 Agricul-
+tural Censuses. Among female-cattle, the
+existing ratio between young and old is
+about one half. Hence, the greater propor-
+tion of female cattle aged 4 years and above
+found on the island explains the attitude
+JBRS, XLVIII, i, June 1965
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 10]]
+52
+towards and priority given to live-stock or
+rather husbandary by the agrarian popula-
+tion.
+Moreover, it is known that a pair of
+draught animals is required on the average
+to cultivate a paddy farm of size 10 acres.
+This knowledge led to determine the availa-
+bility of draught animals especially oxen in
+Balugyun.
+Enumeration
+Balugyun
+Agricultural Villages
+Industrial Villages
+Oxen 4 years and over
+per 10 acres
+1.95
+2.19
+1.48
+The estimated rate of 1.95 oxen per 10
+acres for this island is found to be almost
+in agreement with the conventional rate.
+The rates are however a bit above and below
+the standard for the agricultural and indust-
+rial villages within Balugyun. It is therefore
+suspected that this low rate might be either
+U Thet Lwin
+due to buffaloes or to the introduction of
+tractors in some parts of the island. The
+practice of hiring draught animals by far-
+mers in industrial villages might present
+another possibility. But, the estimated 800
+heads of buffaloes on the island were too few
+to result a substantial change in the availa-
+bility of oxen. Furthermore, additional
+informations revealed that only about 1.28%
+of the total area cultivated in industrial
+villages were under mechanical plough.
+Hence, a fall in the rate of availability of
+draught animals in industrial villages might
+be attributed to the practice of employing
+hired cattle.
+Manure Originally cow-dung has had
+been the only recognised manure in Burmese
+agriculture. Later, the application of che-
+mical fertilizers had been introduced into
+the Burmese fields by the Agriculture and
+Rural Development Corporation, especially
+in the post-war periods. In this survey, an
+attempt is made to determine the extent
+of the application of chemical fertilizers
+in Balugyun.
+Percentage Distribution of Farms Treated with Different Types of Manures
+Type of
+Manure
+Industrial
+Villages
+Dung
+51.22
+Fertilizer
+24.39
+Dung and Fertilizer
+24.39
+Total
+100.00
+Balugyun
+Agricultural
+Villages
+Total
+61.54
+57.98
+5.13
+11.77
+33.33
+30.25
+100.00
+100.00
+In Balugyun, farmers were found to
+apply fertilizers with and without cow-dung.
+The proportion of farms under a mixture of
+fertilizer and dung is 30% and that exclusi-
+vely under fertilizer is 12%. The fewer num-
+JBRS, XLVIII, i, June 1965
+ber of farms to have been treated with ferti-
+lizers might be either due to a relatively
+high cost of these chemicals over cheap local
+cow-dung or to the time factor which
+rendered the farmers to make further
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 11]]
+The Balugyun Sample Survey, 1962
+experiments with different types of chemicals.
+This is the only possible reason which could
+be attributed to a high proportion of farms
+reported to have been treated with fertili-
+zers along with cow-dung.
+Seed The annual Season and Crop Re.
+ports of Burma issued by the settlement au-
+thorities showed that the seed requirement
+of paddy per acre was one basket. A relative
+study of the subject in Balugyun gave the
+availability of grains as seed for the next
+(1962-63) agricultural season as 0.58 basket
+per acre. As it is, the reported amount of
+paddy kept aside as seed is insufficient. The
+reasons for the insufficiency in seed require-
+ment might be due to :-
+(i) The indebtedness of the farmers,
+(ii) crop failure in some parts of the
+island,
+(iii) transplantation of seedlings, and
+(iv) bias statements made by respond-
+ents.
+A thorough stuby of these reasons
+in conformity to various informations
+gathered placed great emphasis on the
+indebtedness of the agrarian population
+concerned.
+(8) Cottage Industries
+The sample survey of Balugyun did
+cover a number of cottage industries carried
+53
+out on the island; but, unfortunately,
+the informations received from suspicious
+respondents were thought not adequate
+enough to make a comprehensive study of
+the industries concerned, and therefore the
+investigated unreliable results were deli-
+berately neglected from stating in this paper.
+(9) Finance
+A study of the agricultural economics
+is rather complicated and has to cover a
+very wide field. First, because the economic
+complex of a farm family enterprise com-
+bines both producing and consuming activi-
+ties. Secondly, the financial transactions
+of a productive enterprise is highly inter-
+linked with the existing economic and social
+features of the area concerned. Thirdly, diffe-
+rent methods of estimating rural income;
+especially on the evaluation of (i) untraded
+goods and services, goods and services, if
+any, traded through barter, and (iii) pay-
+ments and receipts in kind. Realising the
+difficulties that have had to overcome
+in exploring this field, an attempt has
+been made, in this survey, to collect
+informations only on few economic aspects
+like amount of loans borrowed, interests
+paid, costs incurred on farm, household
+expenditure on selected groups of commo-
+dities etc. so as to determine the general
+financial conditions of the agrarian popu-
+lation.
+Cash Requirement, Amount Borrowed and Interest Paid by an Average Farm Family
+during the whole agricultural season
+*
+Balugyun
+Average
+Farm size of
+Value Paid Out
+Cost on
+Amount Borrowed
+(kyats)
+**Interest Paid
+(kyats)
+(acres)
+Asset
+Farm
+(kyats) (kyats) Govt. Private Total Govt. Private Total
+Industrial
+Agricultural
+$ Total
+15.74
+16.89 5,143 750
+15.16 14,332 392
+4.602
+286 152 438
+30
+31
+61
+120
+239
+359
+14
+42
+56
+511
+175
+210
+385 19
+38
+58
+*Period uncertain.
+**Based on households provided with complete information.
+JBRS, XLVIII, i, June 1965
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 12]]
+54
+It is evident from the above table that
+the average value of asset owned by an
+average agrarian family in industrial villages
+is comparatively higher than that of a farm
+family in agricultural villages. This in-
+directly shows the economic achievement
+of industrial areas over agricultural areas.
+Next, it is also seen that the amount of
+paid out costs incurred on a farm in indus-
+trial villages is comparatively much higher.
+It is almost twice as high as that incurred
+on a farm in agricultural areas. A differ-
+ence in cash in these two areas might be
+due to many factors. Size may be one and
+labour the other. A generous application
+of manures like chemical fertilizers might
+contribute to a substantial change. Beside
+these, is the method of cultivation; but this
+might not be a major reason since the
+whole island is known to follow the same
+old conventional method.
+Further, seasonal agricultural loans
+were sought by farmers both in agricultural
+and in industrial villages. The Govern-
+ment loans were issued by :-
+(i) The Agriculture and Rural De-
+velopment Corporation and
+(ii) The Co-operative Bank.
+The rates of interest charged by the
+former was 6% and that by the latter
+12%.
+However, farmers in industrial areas
+were found to acquire almost twice as
+much as that amount of Government
+U Thet Lwin
+loans borrowed by farmers in agricultural
+areas. In any event, the fact that the
+acquirement of priavie loans indicates the
+insufficiency of Government loans. This
+proves that the average farmer is So
+short of capital that he could hardly
+meet his current cash costs badly needed
+for farm operations. Moreover, as the
+cultivation of paddy calls for a series of
+successive operations on farms throughout
+the whole agricultural season, it is the
+general practice of farmers to seek loans
+either in cash or in kind for a particu-
+lar operation. The private money lenders
+taking advantage of the financial stringency
+of local farmers, provided loans at an
+interest rate of about 3% per month on
+surety of gold or jewellery. A high rate
+of interest ranging from 10% per month
+or higher was charged on loans from
+money lenders given without surety to
+persons whom they consider trustworthy.
+It is also the interest rate charged on the
+system of mortgaging the agricultural or
+fish produce in advance.
+*
+Next, it is desired to compare the
+facts observed about the seasonal agri-
+cultural loan requirements on the island
+with those requirements estimated for Bur-
+ma by Professor U Aye Hlaing of the
+Economics Department, University of Ran-
+goon (1958). He gave four estimates.
+Some of them are furnished below along
+with those estimates computed for Balugyun.
+Average Seasonal Agricultural loan Requirements per Acre
+Balugyun, 1961-62
+Burma, 1953-54
+*
+Loan Borrowed
+per acre
+(kyats)
+25
+18
+Paid out Costs
+incurred per acre
+(kyats)
+33
+21 Low Estimate
+31 High Estimate
+Some Aspects of seasonal Agricultural loans in Burma and Agro-Economic Problems
+in Burma by U Aye Hlaing.
+JBRS, XLVIII, i, June 1965
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 13]]
+The Balugyun Sample Survey, 1962
+He first assumed that the amount of
+seasonal agricultural loan requirements is
+approximately equal to the amount of
+loan borrowed as given in censuses. His
+next assumption is that the amount of
+seasonal agricultural loan requirements is
+approximately equal to the amount of
+paid out cash costs incurred on farms.
+Moreover, he did find that the two
+estimates derived from the above two
+assumptions are at variance. He also
+noticed the tendencies in the first assump-
+tion to under-estimate and that in the
+second to over-estimate the seasonal loan
+requirements. These facts were again found
+to be true in Balugyun. Further, it is
+evident that inspite of time lag and price
+fluctuations, the average amount of paid
+55
+out costs incurred on an acre in Balugyun
+is found to be in the neighbourhood of
+that amount of seasonal agricultural loan
+requirement estimated by U Aye Hlaing.
+In Balugyun about 90% of the amount
+paid out in cash on farms in agricultural
+areas is borrowed whereas in industrial
+areas the proportion is just around 60%.
+This shows the extent up to which the
+said areas can afford to meet their own
+capital requirements or in other words
+the degree of dependence of agriculture
+on seasonal agricultural loans.
+Further, a comparison is made over
+grains set aside for seed and home con-
+sumption per farm for the next agricultural
+season in Balugyun with the rest of the
+country.
+Average number of baskets of paddy set aside for seed and Home Consumption
+by a farm family
+Enumeration
+Balugyun, 1962
+Amherst, 1954
+Paddy Set Aside for Seed and
+Home Consumption
+(Baskets)
+139.37
+115.06
+Rural Burma, 1954
+A significant difference in the availabi-
+lity of paddy until next crop has been
+observed among farms in Balugyun,
+Amherst and whole Burma. Balugyun,
+according to the above results, is much
+better off than the 1954-positions of
+average farms of the Rural Burma in gene-
+ral and those of Amherst in particular-the
+rate for Balugyun being 139 baskets and
+that for Rural Burma 93 baskets.
+Finally, the annual household expendi-
+ture pattern of major groups of commodi-
+ties by an average farm family is compared
+with the official percentage weights derived
+92.56
+by the Central Statistics and Economics
+Department on the pattern of expenditure
+among low and middle income households
+in Rangoon holding 1958 as the base year.
+But a slight difference in the grouping of
+selected commodities seemed to deprive the
+weights of their power of comparability and
+hence it is feared that the results might
+produce misleading information on the
+subject under study.
+(10) Conclusion
+Primarily, it was proposed to use the
+technique of area sampling throughout the
+island; but on the field adequate maps of
+JBRS, XLVIII, i, June 1965
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 14]]
+56
+villages were not available nor there was
+enough time to draw rough sketches of
+villages being included in the sample to
+meet the purpose of the survey. Hence, in
+some cases, thanks to the flexibility of the
+sample design, an alternative procedure of
+selecting ultimate units i.e. households from
+REFERENCES
+U Thet Lwin
+1. Aye Hlaing, U, (1957). "Some Aspects
+of Seasonal Agricultural Loans
+in Burma". R.U. Economics
+Research Project, Economics
+Paper, No. 14.
+the household lists of villages compiled by 2. Durbin, J., (1953) "Some Results in
+the national registration authorities had to
+be used with great reluctance. This proce-
+dure of selecting from household lists,
+although simpler from one point of view,
+is not actually to be preferred; first, because
+the procedure depends heavily on the fact
+that the lists are complete and second, that
+the households selected on this basis tend
+to be widely scattered all over the village
+thus involving a great deal of time, labour
+and in particular the cost of enumeration.
+Next, the questionnaire, although
+designed properly, had never been tried or
+pretested under realistic conditions before
+being put into use. Moreover, the enumera-
+tors recruited were all high school students
+who though had an interest in the work
+yet, as is to be expected, they lacked the
+essential qualifications of (i) a genuine
+understanding and the appreciation of the
+need for objectivity and neutrality on the
+part of the interviewer and (ii) the ability
+to make a serious attempt to answer the
+questions carefully.
+In conclusion, it must be admitted that
+in tune with the amount of resources and
+manpower made available, the present
+survey was not very satisfactory and things
+could have been much improved if a little
+more time could be given on the field.
+Sampling Theory when the Units
+are Selected with Unequal Prob-
+abilities". Jour. Roy. Stat. Soc.,
+Series B, 15, No. 1, 262-269.
+3. Horvitz, D. G., and D. J. Thompson
+(1953). "A Generalization of
+Sampling Without Replacement
+from a Finite Universe". Jour.
+Amer. Stat. Assoc., 47, 663-684.
+4. Monroe, J., and A. L. Finkner (1959).
+"Handbook of Area Sampling".
+New York, Chilton Co.
+5. Mukerjee, P. K., (1959).
+"Economic
+Surveys in Underdeveloped
+Countries, A Study in Methodo-
+logy”. Bombay, Asia Pub.
+House.
+6. Sundrum, R. M. (1962). "Report of
+Thaketa Sample Survey, 1961".
+R.U. Economics Research Pro-
+ject, Stat. Paper, No. 7.
+7. Yates, F., and P. M. Grundy (1953).
+"Selection without replacement
+from within strata with prob-
+ability proportional to Size".
+Jour. Roy. Stat. Soc. Series B,
+15, No. 1, 253–261.
+JBRS, XLVIII, i, June 1965
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.

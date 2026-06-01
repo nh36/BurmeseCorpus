@@ -1,0 +1,14 @@
+{
+  "local_file_id": "021123-bc781df6a868",
+  "batch_id": "jbrs-ocr-0104",
+  "file_name": "CD-JRI.pdf",
+  "path_stub": "Burmese/Burma JBRS/1912/CD-JRI.pdf",
+  "journal": "JBRS",
+  "year": "1912",
+  "ocr_engine": "google_vision",
+  "pages_completed": 1,
+  "ocr_date": "2026-06-01T12:36:56.973859+00:00",
+  "source_category": "other_source",
+  "language_scope_guess": "Burmese",
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+}

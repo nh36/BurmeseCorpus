@@ -13,30 +13,48 @@ from types import SimpleNamespace
 from corpus_common import ensure_parent, read_tsv, write_tsv
 import ocr_jbrs_google_vision as ocr
 from jbrs_workflow_common import (
+    JBRS_ARTICLE_REFERENCE_TARGETS_PATH,
+    JBRS_ARTICLE_REFERENCE_TARGETS_REVIEW_PATH,
     DEFAULT_LOCAL_OUTPUT_ROOT,
     DEFAULT_PREFLIGHT_REPORT_PATH,
     DEFAULT_RUNTIME_PATH_CACHE,
     JBRS_BURMESE_RELEVANCE_GUESS_VALUES,
     JBRS_CORPUS_CITATION_PRIORITY_QUEUE_PATH,
     JBRS_DIRECTORY,
+    JBRS_EMBEDDED_TRANSLATION_EXCERPT_REVIEW_PATH,
+    JBRS_EXTRACTED_SOURCE_TEXT_UNITS_PATH,
+    JBRS_EXTRACTED_TRANSLATION_UNITS_PATH,
+    JBRS_FOLLOWUP_SOURCE_LEADS_PATH,
     JBRS_LOCAL_FILE_MANIFEST_PATH,
     JBRS_OCR_BATCH_PLAN_PATH,
     JBRS_OCR_LANGUAGE_SCOPE_VALUES,
+    JBRS_OCR_QUALITY_REVIEW_PATH,
     JBRS_OCR_PRODUCTION_SUMMARY_PATH,
     JBRS_OCR_PRODUCTION_RUN_LOG_FIELDS,
     JBRS_OCR_PRODUCTION_RUN_LOG_PATH,
     JBRS_OCR_STATUS_LOG_PATH,
+    JBRS_OCR_TOP_INSCRIPTION_EXTRACTION_CANDIDATES_FIELDS,
+    JBRS_OCR_TOP_INSCRIPTION_EXTRACTION_CANDIDATES_PATH,
     JBRS_OCR_TEXT_INDEX_FIELDS,
     JBRS_OCR_TEXT_INDEX_PATH,
     JBRS_OCR_TOP_EXTRACTION_CANDIDATES_FIELDS,
     JBRS_OCR_TOP_EXTRACTION_CANDIDATES_PATH,
     JBRS_OCR_TRANSLATION_HIT_INDEX_FIELDS,
     JBRS_OCR_TRANSLATION_HIT_INDEX_PATH,
+    JBRS_PILOT_SUMMARY_PATH,
     JBRS_REFERENCE_FILE_MATCH_PATH,
+    JBRS_REFERENCE_HUNT_RAW_PATH,
+    JBRS_STRUCTURED_EXTRACTION_PLAN_PATH,
+    JBRS_TRANSLATION_CANDIDATE_LOG_PATH,
+    JBRS_TRANSLATION_CANDIDATE_REVIEW_PATH,
     JBRS_WORKING_OCR_METADATA_ROOT,
     JBRS_WORKING_OCR_TEXT_ROOT,
+    apply_article_target_reviews,
     batch_is_selectable_for_ocr,
     build_jbrs_ocr_production_summary,
+    build_pilot_summary,
+    JBRS_INSCRIPTIONAL_RELEVANCE_CLASS_VALUES,
+    write_summary,
 )
 
 SELECTION_TERMS = [
@@ -55,11 +73,19 @@ SELECTION_TERMS = [
     "pali",
     "translation",
     "text",
+    "text and translation",
+    "burmese inscription",
+    "pagan inscription",
+    "ppa",
+    "list",
 ]
 SELECTION_TERM_WEIGHTS = {
     "translation": 6,
     "inscription": 6,
     "inscriptions": 6,
+    "burmese inscription": 7,
+    "pagan inscription": 7,
+    "text and translation": 7,
     "old burmese": 6,
     "burmese": 5,
     "ananda": 5,
@@ -72,6 +98,8 @@ SELECTION_TERM_WEIGHTS = {
     "pinya": 3,
     "ava": 3,
     "text": 2,
+    "ppa": 4,
+    "list": 2,
 }
 TRANSLATION_MARKERS = [
     "translation",
@@ -131,8 +159,34 @@ BURMESE_STRUCTURAL_MARKERS = [
 PALI_STRUCTURAL_MARKERS = ["pali text", "pali version", "pali versions", "pali verse"]
 MON_STRUCTURAL_MARKERS = ["talaing inscription", "mon inscription", "old talaing", "talaing epigraphy"]
 PYU_STRUCTURAL_MARKERS = ["pyu inscription", "pyu text", "ancient pyu"]
+INSCRIPTION_TITLE_MARKERS = [
+    "inscription",
+    "inscriptions",
+    "burmese inscription",
+    "pagan inscription",
+    "old burmese",
+    "text and translation",
+    "epigraphy",
+    "list",
+    "ppa",
+]
+EPIGRAPHY_TITLE_MARKERS = [
+    "epigraphy",
+    "old burmese",
+    "language",
+    "comparative study",
+    "nissaya",
+]
+GENERAL_BURMESE_TEXT_MARKERS = [
+    "burmese songs",
+    "burmese history",
+    "burmese embassy",
+    "burmese calendar",
+    "burmese literature",
+]
 PAGE_MARKER_PATTERN = re.compile(r"^\[\[page (?P<page>\d+)\]\]$", re.MULTILINE)
 CANDIDATE_REPORT_LIMIT = 50
+INSCRIPTION_CANDIDATE_REPORT_LIMIT = 20
 
 
 def parse_args() -> argparse.Namespace:
@@ -155,6 +209,11 @@ def parse_args() -> argparse.Namespace:
         "--top-candidates-path",
         type=Path,
         default=JBRS_OCR_TOP_EXTRACTION_CANDIDATES_PATH,
+    )
+    parser.add_argument(
+        "--top-inscription-candidates-path",
+        type=Path,
+        default=JBRS_OCR_TOP_INSCRIPTION_EXTRACTION_CANDIDATES_PATH,
     )
     parser.add_argument(
         "--production-summary-path",
@@ -222,6 +281,20 @@ def collect_keyword_hits(*values: str) -> list[str]:
     return [term for term in SELECTION_TERMS if phrase_present(haystack, term)]
 
 
+def metadata_haystack_for_record(
+    record: dict[str, str],
+    manifest_row: dict[str, str],
+) -> str:
+    return normalize_searchable_text(
+        record.get("file_name", ""),
+        record.get("path_stub", ""),
+        manifest_row.get("file_name", ""),
+        manifest_row.get("probable_title_from_filename", ""),
+        manifest_row.get("folder_context", ""),
+        manifest_row.get("path_stub_or_redacted_path", ""),
+    )
+
+
 def keyword_weight(keyword_hits: list[str]) -> int:
     return sum(SELECTION_TERM_WEIGHTS.get(term, 1) for term in keyword_hits)
 
@@ -264,16 +337,38 @@ def select_production_batch_rows(
         local_file_id = batch_row["local_file_id"]
         manifest_row = manifest_by_id.get(local_file_id, {})
         local_matches = matches_by_local_id.get(local_file_id, [])
+        metadata_haystack = metadata_haystack_for_record(batch_row, manifest_row)
         keyword_hits = collect_keyword_hits(
             batch_row.get("file_name", ""),
             manifest_row.get("file_name", ""),
             manifest_row.get("probable_title_from_filename", ""),
+            batch_row.get("path_stub", ""),
         )
-        has_translation_keyword = any(term in {"translation", "text", "pali", "burmese", "old burmese"} for term in keyword_hits)
-        has_inscription_keyword = any(
-            term in {"inscription", "inscriptions", "ananda", "shwegugyi", "pyu", "mon", "talaing"}
+        has_translation_keyword = any(
+            term in {"translation", "text", "text and translation", "pali", "burmese", "old burmese"}
             for term in keyword_hits
         )
+        has_inscription_keyword = any(
+            term
+            in {
+                "inscription",
+                "inscriptions",
+                "burmese inscription",
+                "pagan inscription",
+                "old burmese",
+                "ananda",
+                "shwegugyi",
+                "pyu",
+                "mon",
+                "talaing",
+                "ppa",
+                "list",
+            }
+            for term in keyword_hits
+        )
+        has_direct_inscription_phrase = text_has_any_phrase(metadata_haystack, INSCRIPTION_TITLE_MARKERS)
+        has_general_burmese_text_phrase = text_has_any_phrase(metadata_haystack, GENERAL_BURMESE_TEXT_MARKERS)
+        has_epigraphy_phrase = text_has_any_phrase(metadata_haystack, EPIGRAPHY_TITLE_MARKERS)
         exact_reference_match = any(
             row.get("match_status") == "exact_or_near_exact_match" for row in local_matches
         )
@@ -297,14 +392,17 @@ def select_production_batch_rows(
             1 if citation_priority else 0,
             1 if exact_reference_match else 0,
             1 if direct_reference_match else 0,
-            1 if has_translation_keyword else 0,
+            1 if has_direct_inscription_phrase else 0,
             1 if has_inscription_keyword else 0,
+            1 if has_translation_keyword else 0,
+            1 if has_epigraphy_phrase else 0,
             keyword_score,
             len(keyword_hits),
             0 if multiple_candidate_match else 1,
             batch_priority_rank(batch_row.get("ocr_priority", "")),
             1 if is_article else 0,
             0 if is_whole_volume else 1,
+            0 if has_general_burmese_text_phrase and not has_direct_inscription_phrase else 1,
             0 if generic_numeric else 1,
             -page_count,
             batch_row["batch_id"],
@@ -319,6 +417,7 @@ def select_production_batch_rows(
                         "citation-priority" if citation_priority else "",
                         "exact-reference-match" if exact_reference_match else "",
                         "direct-reference-match" if direct_reference_match and not exact_reference_match else "",
+                        "direct-inscription-signal" if has_direct_inscription_phrase else "",
                         f"keywords={','.join(keyword_hits[:6])}" if keyword_hits else "",
                         "article-pdf" if is_article else "",
                     ]
@@ -426,6 +525,54 @@ def burmese_relevance_guess(language_scope: str) -> str:
         "non_burmese_relevant_context": "contextual_only",
     }
     return mapping[language_scope]
+
+
+def inscriptional_relevance_class(
+    record: dict[str, str],
+    manifest_row: dict[str, str],
+    hit_type_counts: Counter[str],
+    marker_counts: Counter[str],
+    citation_hits: list[dict[str, str]],
+) -> str:
+    metadata_haystack = metadata_haystack_for_record(record, manifest_row)
+    language_scope = record["language_scope_guess"]
+    translation_hit_count = hit_type_counts["translation_marker"]
+    text_hit_count = hit_type_counts["text_marker"]
+    inscription_hit_count = hit_type_counts["inscription_marker"]
+    has_inscription_title = text_has_any_phrase(metadata_haystack, INSCRIPTION_TITLE_MARKERS)
+    has_epigraphy_title = text_has_any_phrase(metadata_haystack, EPIGRAPHY_TITLE_MARKERS)
+    has_general_burmese_text_title = text_has_any_phrase(metadata_haystack, GENERAL_BURMESE_TEXT_MARKERS)
+    has_text_and_translation_marker = "text and translation" in marker_counts
+    has_burmese_inscription_marker = any(
+        marker in marker_counts
+        for marker in {"burmese inscription", "pagan inscription", "inscription", "inscriptions"}
+    )
+
+    if language_scope in {"Mon", "Pyu"}:
+        return "non_burmese_inscription_context"
+    if language_scope == "Pali" and (inscription_hit_count or citation_hits):
+        return "non_burmese_inscription_context"
+    if (
+        language_scope in {"Burmese", "Mixed Burmese/Pali"}
+        and translation_hit_count
+        and (inscription_hit_count or has_inscription_title or has_text_and_translation_marker)
+    ):
+        return "direct_inscription_translation"
+    if (
+        language_scope in {"Burmese", "Mixed Burmese/Pali"}
+        and (inscription_hit_count or text_hit_count)
+        and (has_inscription_title or has_burmese_inscription_marker)
+    ):
+        return "direct_inscription_text"
+    if inscription_hit_count or citation_hits:
+        return "inscription_commentary_or_citation"
+    if has_epigraphy_title or "old burmese" in marker_counts:
+        return "language_history_or_epigraphy"
+    if language_scope in {"Burmese", "Mixed Burmese/Pali"} and translation_hit_count:
+        return "general_burmese_text_translation"
+    if has_general_burmese_text_title:
+        return "general_burmese_text_translation"
+    return "uncertain"
 
 
 def marker_flags(text: str) -> dict[str, str]:
@@ -724,10 +871,21 @@ def build_top_extraction_candidate_rows(
         "Pali": 1,
         "non_burmese_relevant_context": 0,
     }
+    inscription_class_rank = {
+        "direct_inscription_translation": 6,
+        "direct_inscription_text": 5,
+        "inscription_commentary_or_citation": 4,
+        "language_history_or_epigraphy": 3,
+        "general_burmese_text_translation": 2,
+        "non_burmese_inscription_context": 1,
+        "uncertain": 0,
+    }
     ranked_candidates: list[tuple[tuple[int, ...], dict[str, str]]] = []
     for record in exported_records:
         local_file_id = record["local_file_id"]
         local_hits = hits_by_local_file_id.get(local_file_id, [])
+        if not local_hits:
+            continue
         hit_type_counts = Counter(row["hit_type"] for row in local_hits)
         marker_counts = Counter(row["matched_marker"] for row in local_hits if row.get("matched_marker", ""))
         page_scores = Counter()
@@ -748,8 +906,17 @@ def build_top_extraction_candidate_rows(
         text_hit_count = hit_type_counts["text_marker"]
         inscription_hit_count = hit_type_counts["inscription_marker"]
         citation_hits = citation_rows_by_local_file_id.get(local_file_id, [])
+        relevance_class = inscriptional_relevance_class(
+            record=record,
+            manifest_row=manifest_row,
+            hit_type_counts=hit_type_counts,
+            marker_counts=marker_counts,
+            citation_hits=citation_hits,
+        )
         score = (
+            inscription_class_rank[relevance_class],
             scope_rank.get(record["language_scope_guess"], 0),
+            1 if translation_hit_count and inscription_hit_count else 0,
             translation_hit_count,
             1 if translation_hit_count and text_hit_count else 0,
             inscription_hit_count,
@@ -759,7 +926,7 @@ def build_top_extraction_candidate_rows(
             0 if is_whole_volume else 1,
             -intish(record.get("year", ""), default=0),
         )
-        reason_parts = [record["language_scope_guess"]]
+        reason_parts = [relevance_class, record["language_scope_guess"]]
         if translation_hit_count:
             reason_parts.append(f"{translation_hit_count} translation hits")
         if inscription_hit_count:
@@ -805,6 +972,7 @@ def build_top_extraction_candidate_rows(
                     "ocr_text_path": record["ocr_text_path"],
                     "language_scope_guess": record["language_scope_guess"],
                     "burmese_relevance_guess": burmese_relevance_guess(record["language_scope_guess"]),
+                    "inscriptional_relevance_class": relevance_class,
                     "translation_hit_count": str(translation_hit_count),
                     "text_hit_count": str(text_hit_count),
                     "inscription_hit_count": str(inscription_hit_count),
@@ -827,6 +995,8 @@ def build_top_extraction_candidate_rows(
             -item[0][6],
             -item[0][7],
             -item[0][8],
+            -item[0][9],
+            -item[0][10],
             item[1]["file_name"],
             item[1]["local_file_id"],
         )
@@ -863,6 +1033,8 @@ def build_top_extraction_candidate_rows(
             -item[0][6],
             -item[0][7],
             -item[0][8],
+            -item[0][9],
+            -item[0][10],
             item[1]["file_name"],
             item[1]["local_file_id"],
         )
@@ -873,6 +1045,51 @@ def build_top_extraction_candidate_rows(
         if rank <= 20:
             row["notes"] = "; ".join(part for part in [row["notes"], "top_20_priority"] if part)
     return candidate_rows
+
+
+def build_top_inscription_extraction_candidate_rows(
+    top_candidate_rows: list[dict[str, str]],
+    limit: int = INSCRIPTION_CANDIDATE_REPORT_LIMIT,
+) -> list[dict[str, str]]:
+    inscription_class_rank = {
+        "direct_inscription_translation": 6,
+        "direct_inscription_text": 5,
+        "inscription_commentary_or_citation": 4,
+        "language_history_or_epigraphy": 3,
+        "non_burmese_inscription_context": 2,
+        "uncertain": 1,
+        "general_burmese_text_translation": 0,
+    }
+    scope_rank = {
+        "Burmese": 3,
+        "Mixed Burmese/Pali": 3,
+        "mixed_or_uncertain": 2,
+        "Mon": 1,
+        "Pyu": 1,
+        "Pali": 0,
+        "non_burmese_relevant_context": 0,
+    }
+    ranked_rows = sorted(
+        top_candidate_rows,
+        key=lambda row: (
+            -inscription_class_rank[row["inscriptional_relevance_class"]],
+            -scope_rank[row["language_scope_guess"]],
+            -intish(row["translation_hit_count"]),
+            -intish(row["inscription_hit_count"]),
+            -intish(row["text_hit_count"]),
+            0 if "whole_volume_or_issue" in row["notes"] else 1,
+            1 if "citation_priority=" in row["notes"] else 0,
+            row["file_name"],
+            row["local_file_id"],
+        ),
+    )
+    inscription_rows = [dict(row) for row in ranked_rows[:limit]]
+    for rank, row in enumerate(inscription_rows, start=1):
+        row["candidate_rank"] = str(rank)
+        row["notes"] = "; ".join(
+            part for part in [row["notes"], "inscription_top_20_priority"] if part
+        )
+    return inscription_rows
 
 
 def upsert_tsv(
@@ -888,6 +1105,79 @@ def upsert_tsv(
         existing[row[key_field]] = row
     ordered_rows = [existing[key] for key in sorted(existing)]
     write_tsv(path, ordered_rows, fieldnames)
+
+
+def refresh_pilot_summary(
+    batch_rows: list[dict[str, str]],
+    status_rows: list[dict[str, str]],
+    manifest_rows: list[dict[str, str]],
+    match_rows: list[dict[str, str]],
+    citation_rows: list[dict[str, str]],
+) -> None:
+    raw_reference_rows = read_tsv(JBRS_REFERENCE_HUNT_RAW_PATH)
+    target_rows = read_tsv(JBRS_ARTICLE_REFERENCE_TARGETS_PATH)
+    target_review_rows = (
+        read_tsv(JBRS_ARTICLE_REFERENCE_TARGETS_REVIEW_PATH)
+        if JBRS_ARTICLE_REFERENCE_TARGETS_REVIEW_PATH.exists()
+        else []
+    )
+    reviewed_target_rows = apply_article_target_reviews(target_rows, target_review_rows)
+    candidate_rows = read_tsv(JBRS_TRANSLATION_CANDIDATE_LOG_PATH) if JBRS_TRANSLATION_CANDIDATE_LOG_PATH.exists() else []
+    candidate_review_rows = (
+        read_tsv(JBRS_TRANSLATION_CANDIDATE_REVIEW_PATH)
+        if JBRS_TRANSLATION_CANDIDATE_REVIEW_PATH.exists()
+        else []
+    )
+    excerpt_review_rows = (
+        read_tsv(JBRS_EMBEDDED_TRANSLATION_EXCERPT_REVIEW_PATH)
+        if JBRS_EMBEDDED_TRANSLATION_EXCERPT_REVIEW_PATH.exists()
+        else []
+    )
+    followup_source_lead_rows = (
+        read_tsv(JBRS_FOLLOWUP_SOURCE_LEADS_PATH)
+        if JBRS_FOLLOWUP_SOURCE_LEADS_PATH.exists()
+        else []
+    )
+    ocr_quality_review_rows = (
+        read_tsv(JBRS_OCR_QUALITY_REVIEW_PATH)
+        if JBRS_OCR_QUALITY_REVIEW_PATH.exists()
+        else []
+    )
+    extraction_plan_rows = (
+        read_tsv(JBRS_STRUCTURED_EXTRACTION_PLAN_PATH)
+        if JBRS_STRUCTURED_EXTRACTION_PLAN_PATH.exists()
+        else []
+    )
+    extracted_translation_unit_rows = (
+        read_tsv(JBRS_EXTRACTED_TRANSLATION_UNITS_PATH)
+        if JBRS_EXTRACTED_TRANSLATION_UNITS_PATH.exists()
+        else []
+    )
+    extracted_source_text_unit_rows = (
+        read_tsv(JBRS_EXTRACTED_SOURCE_TEXT_UNITS_PATH)
+        if JBRS_EXTRACTED_SOURCE_TEXT_UNITS_PATH.exists()
+        else []
+    )
+    write_summary(
+        JBRS_PILOT_SUMMARY_PATH,
+        build_pilot_summary(
+            raw_reference_rows,
+            reviewed_target_rows,
+            manifest_rows,
+            match_rows,
+            batch_rows,
+            status_rows,
+            candidate_rows,
+            candidate_review_rows,
+            excerpt_review_rows,
+            followup_source_lead_rows,
+            ocr_quality_review_rows,
+            citation_rows,
+            extraction_plan_rows,
+            extracted_translation_unit_rows,
+            extracted_source_text_unit_rows,
+        ),
+    )
 
 
 def run_production_batch(args: argparse.Namespace) -> int:
@@ -952,13 +1242,24 @@ def run_production_batch(args: argparse.Namespace) -> int:
 
     hit_rows = build_translation_hit_rows(exported_records, citation_rows)
     write_tsv(args.translation_hit_index, hit_rows, JBRS_OCR_TRANSLATION_HIT_INDEX_FIELDS)
-    top_candidate_rows = build_top_extraction_candidate_rows(
+    ranked_candidate_rows = build_top_extraction_candidate_rows(
         exported_records=exported_records,
         hit_rows=hit_rows,
         manifest_rows=manifest_rows,
         citation_rows=citation_rows,
+        limit=max(len(exported_records), CANDIDATE_REPORT_LIMIT),
+    )
+    top_candidate_rows = ranked_candidate_rows[:CANDIDATE_REPORT_LIMIT]
+    top_inscription_candidate_rows = build_top_inscription_extraction_candidate_rows(
+        ranked_candidate_rows,
+        limit=min(INSCRIPTION_CANDIDATE_REPORT_LIMIT, len(ranked_candidate_rows)),
     )
     write_tsv(args.top_candidates_path, top_candidate_rows, JBRS_OCR_TOP_EXTRACTION_CANDIDATES_FIELDS)
+    write_tsv(
+        args.top_inscription_candidates_path,
+        top_inscription_candidate_rows,
+        JBRS_OCR_TOP_INSCRIPTION_EXTRACTION_CANDIDATES_FIELDS,
+    )
     args.production_summary_path.write_text(
         json.dumps(
             build_jbrs_ocr_production_summary(
@@ -972,6 +1273,13 @@ def run_production_batch(args: argparse.Namespace) -> int:
         )
         + "\n",
         encoding="utf-8",
+    )
+    refresh_pilot_summary(
+        batch_rows=batch_rows,
+        status_rows=refreshed_status_rows,
+        manifest_rows=manifest_rows,
+        match_rows=match_rows,
+        citation_rows=citation_rows,
     )
 
     if not args.rebuild_indexes_only:

@@ -1,0 +1,14 @@
+{
+  "local_file_id": "piquantsplendours_bahan1967-4f2fcdb639cc",
+  "batch_id": "jbrs-ocr-3345",
+  "file_name": "PiquantSplendours_BaHan1967.pdf",
+  "path_stub": "Burmese/Burma JBRS/1967/PiquantSplendours_BaHan1967.pdf",
+  "journal": "JBRS",
+  "year": "1967",
+  "ocr_engine": "google_vision",
+  "pages_completed": 11,
+  "ocr_date": "2026-06-01T19:55:53.586002+00:00",
+  "source_category": "other_source",
+  "language_scope_guess": "Burmese",
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+}

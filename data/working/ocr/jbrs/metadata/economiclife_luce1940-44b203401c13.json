@@ -1,0 +1,14 @@
+{
+  "local_file_id": "economiclife_luce1940-44b203401c13",
+  "batch_id": "jbrs-ocr-2146",
+  "file_name": "EconomicLife-Luce1940.pdf",
+  "path_stub": "Burmese/Burma JBRS/1940/EconomicLife-Luce1940.pdf",
+  "journal": "JBRS",
+  "year": "1940",
+  "ocr_engine": "google_vision",
+  "pages_completed": 53,
+  "ocr_date": "2026-06-01T19:47:09.516851+00:00",
+  "source_category": "other_source",
+  "language_scope_guess": "Burmese",
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+}

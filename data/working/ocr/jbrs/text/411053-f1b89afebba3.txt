@@ -1,0 +1,474 @@
+[[page 1]]
+STRUCTURE AND PROPERTIES OF AGAVE FIBRE'
+by
+Thanda Pe 2
+Introduction
+Science and technology' of fibre may be regarded as one of the
+most creative adventures of our time. No doubt, fibres were being
+utilised for apparels and garments from the very early times, but this
+utilisation was far from economic. The development at early stages
+followed a pattern which was alien to the disciplines of science-nothing
+to speak of technology which depends for its survival and development
+on the result of scientific researches. As a result of investigations with
+more and more developed techniques, the study of fibre has been raised
+to the status of exact science.
+Natural fibres are classified into two major divisions, (a) animal
+fibre and (b) vegetable fibre. The latter in turn has been classified
+into three sub-divisions, e. g. (a) seed fibre, (b) bast fibre, and (c) leaf
+fibre. An extensive study on animal fibres has been made by investiga-
+tors like Astbury, Pauling and others, (1), by employing X-ray diffraction
+and allied methods. Vegetable fibres also, with the notable exception
+of leaf fibres, have been thoroughly investigated by several workers. As
+protein is the main constituent of animal fibres, so is cellulose in the
+case of vegetable fibres. The cellulose content varies from fibre to
+fibre. In cotton, a seed fibre, the cellulose content is about 98 %. In
+bast fibres like ramie, flax, hemp and jute the quantity of cellulose
+present is comparatively low, the percentages being 83, 78, 71 and 65
+respectively. The second major constituent of bast fibres in lignin.
+Jute, though one of the most important of bast fibres, has not received
+careful study by (X-ray diffraction methods till Saha and Sircar (2) in
+1. Read at the Sixth Annual Research Conference on December 30, 1958.
+with Professor U Po Tha in the Chair. This investigation was carried
+out under the guidance of Dr. N. N. Saha of the Department of
+Physics.
+2. Assistant Lecturer in Physics, University of Rangoon.
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 2]]
+54
+THANDA PE
+Calcutta and Woods and others (3) at Leeds started their investiga-
+tions. It has been shown by Saha (2) that on delignification the X-ray
+pattern of jute is cleaned up, but the lattice constants remain unaltered.
+This finding shows that lignin is not in chemical combination with
+cellulose, but acts as a cementing material.
+-
+Swelling a phenomenon which plays a pre-eminent role in the
+family of textile fibres-usually precedes almost all the cellulosic reac-
+tions. The swelling of fibre on immersion in liquids may be either
+intermicellar. Since natural fibres contain both crystalline and
+amorphous regions, it is essential to know whether the swelling agent
+penetrates the interior of the crystallites (i.e. intramicellar) or just
+remains in between the crystalline areas (i. e. intermicellar). The study
+of this phenomenon which throws light on the physical and chemical
+properties of fibre could be made with a fair degree of accuracy by
+employing X-ray crystallographic analysis. An exhaustive study of the
+swelling of fibre in water and other chemical compounds has been
+made by many workers. It has been shown Saha (2) in jute that
+the swelling of this fibre in water is intermicellar and in NaOH it
+is intramicellar. The most important of swelling phenomena is the
+action of NaOH on cellulose, which is known as mercerisation. This
+depends on the temperature and concentration of the mercerising
+solution; the degree of mercerisation is more pronounced as the temper-
+ature is lowered. That swelling in this case is intramicellar is evident
+from the revealing differences between the X-ray diagrams due to raw
+and mercerised fibres. It is well known that an 18% NaOH solution
+brings about complete mercerisation of cotton, when it is treated with-
+out tension at room temperature. As the mercerisation is accompanied
+by an appreciable amount of shrinkage, sometimes about 17%, the
+process adopted commercially in the case of cotton is to keep the fibre
+under tension. By this process the fibre is only partially mercerised,
+but the lustre and strength increase. The degree of mercerisation, can
+best be ascertained by X-ray analysis, as shown by Saha in Jute
+and Sisson and Saner in cotton. It has been found that the strength
+of jute fibre decreases as the strength of mercerising solution
+increases.
+The physical properties of a fibre depend to a great extent on the
+size of crystallites as well as their orientation with respect to the fibre
+axis. A highly oriented fibre is supposed to be more crystalline. An
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 3]]
+STRUCTURE AND PROPERTIEs of Agave FIBRE
+55
+idea of the degree of crystallinity and orientation could be obtained by
+the sharpness of the diffraction rings and the concentration of rings
+into arcs respectively.
+Textile fibres are built up of chain molecules formed by polymerisa-
+tion of simpler units. The chains in fibre lie either closely parallel to or
+along a spiral path about the fibre axis; the pitch and inclination
+of the spiral vary from fibre to fibre. In ramie, the crystallites are
+supposed to be arranged in such a manner that the orientation is
+almost parallel to the fibre axis. This parallel orientation, howsoever
+perfect from crystallographic point of view, is not really an ideal
+configuration so far as the textile properties of a fibre is concerned. It
+is true that ramie fibres have the greatest tensile strength of all natural
+fibres, but they are brittle and weave into a relatively harsh fabric.
+Perfect alignment thus makes for rigidity and good strength in the fibre
+direction, but there is an associated brittleness in the transverse
+direction. In cotton, the crystallites are distributed in spirals which
+make an angle of more than 30° with the fibre axis. Though cotton
+does not have the intrinsic strength of ramie, it is more resilent and
+weaves into a softer fabric. It, therefore, appears that the spiral
+arrangement is more favourable so far as the textile properties are
+concerned. Astbury suggests that all fibres have their crystallites
+arranged in spiral manner. He argues that even in ramie where the
+alignment is supposed to be parallel to the fibre axis, the arrangement
+is, in fact, in a spiral form. The spiral in this case is very steep, which
+amounts to almost parallel configuration.
+X-ray diagrams of natural fibres can be differentiated by the length
+and the width of the diffraction spots or arcs. Visual examination
+alone, without going into the final analysis, gives sufficient indication as
+to how the crystallites are oriented. It also reveals whether a spiral is
+steep or flat. It must be pointed out that a cellulose fibre having
+crystallites aligned almost parallel to the fibre axis will produce an
+X-ray pattern having well defined spots or spots very slightly drawn out
+into arcs. But as the spiral organisation is more and more flat, the
+reflections will be drawn out into longer and longer arcs. The degree
+of fluctuation of the crystallites along the spiral, a lower degree of
+lateral order, the small crystallite size and the presence of constituents
+other than cellulose find their manifestations in the width of arcs. A
+correct idea of the size and orientation of crystallites can, therefore, be
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 4]]
+56
+THANDA PE
+Measure-
+obtained from the length and width of the (002) reflection.
+ment of intensity along different directions of the (002) reflection
+provides a good method of classification of fibres. Till recently, the
+method used for classifying jute fibre was based on visual estimation of
+colour, lustre and strength, and no method claiming scientific precision
+was adopted. A method based on X-ray determination of percentage
+of micelles oriented in directions making different angles with fibre axis
+has been developed by Saha (2) in the case of jute fibre. This method
+has helped the jute dealers preventing large quantities of fibre, hitherto
+classified as low, from being condemned merely for its bad colour and
+lack of lustre.
+The X-ray diagrams of different cellulose fibres show that all
+patterns consist principally of reflections in the form of spots or rings
+equidistantly placed on the photographs and the dimension of the unit
+cell has been found to be the same in all fibres. These reflections,
+however, owe their origin to the crystalline region in the fibre. A
+cellulose fibre is not all crystalline. In between the crystalline regions
+are some amorphous substances known as "intercrystalline material ".
+This intercrystalline material which varies from fibre to fibre is a
+characteristic distinguishing feature of a particular type of fibre. The
+finer details on the X-ray photographs are due to these intercrystalline
+materials. A careful study of these details combined with the details.
+supplied by crystalline regions provide a wealth of information
+regarding the structure and properties of fibres.
+In fact, X-ray analysis is one of the most effective and important
+tools not only for determining the molecular structure, but also in
+providing valuable information like the folding and unfolding of chains
+reorientation and slippage of crystallites during elongation, the
+mechanism of mercerisation, etc.
+In view of the unwavering superiority of the X-ray method over
+any other, and also of the fact that the leaf fibres have not yet received
+systematic and exhaustive study by this method, the present investiga-
+tion on a particular type of leaf fibre-Agave Vera Cruz-by employing
+X-ray diffraction analysis has been undertaken by us.
+Experimental
+Raw leaves of Agave Vera Cruz, obtained from the Department of
+Botony were retted as usual. The fibres obtained from the leaves were
+thoroughly washed, dried, cleaned and combed before using for X-ray
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 5]]
+STRUCTURE AND PROPERTIES OF AGAVE FIBRE
+57
+analysis. Specimens for X-ray analysis were prepared in the form of a
+bundle containing about 20 strands and each cut into 2.5 cm. in length.
+The fibres of the specimen were made parallel to each other by applying
+a little tension and were fixed on the specimen holder with the fibre axis
+perpendicular to the X-ray beam. The specimen was next placed against
+the X-ray beam emerging out of a circular slit of 0.05 cm. in diameter
+and 6 cm. in length. Cuk x radiation, filtered through Ni foil, from a
+Raymax 60 demountable X-ray tube operated at 36 kv and a tube
+current of 14 ma was used throughout the investigation. The central
+beam passing through the specimen was stopped by a small lead disc
+fixed at the centre of the film holder.
+A few samples were treated with 15% 20%, 25% and 30% Na OH
+solution at room temperature and were washed thoroughly with distilled
+water and dried. In order to study swelling in water a sample was kept
+in boiling water for about an hour. Two samples, one raw and another
+after the removal of lignin, were bleached by passing chlorine gas in
+the fibre kept in water.
+X-ray photographs of these samples were taken as before. The
+physical properties such as intrinsic strength and fineness were
+measured of the samples treated with different strengths of the
+mercerising solutions.
+All the X-ray photographs reproduced in this paper were taken
+with Unicam single crystal goniometer with a film to specimen distance
+of 3 cm. Calibration was made by superimposing the X-ray pattern of
+a copper wire on the photographs.
+Results and Discussion
+X-ray diffraction patterns of raw and treated Agave fibres are
+reproduced in Plate I. Fig. 1 which is due to raw Agave fibre corresponds
+to the basic pattern of nat ve cellulose, though some differences in finer
+details are observed. The equatorial interferences correspond to
+A₁ (101), A2 (101) and A4 (002) reflection of native cellulose,
+A 4 being most intense. A1 and A2 are nearly fused together. The
+A4 arcs end rather abruptly and continue with weaker intensity along
+the diffraction ring. The spacings calculated from Fig. 1 are given in
+Table 1.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 6]]
+58
+TABLE I
+THANDA PE
+Planes (hkl)
+Spacings in A°
+Intensity
+002
+3.93
+V.S.
+101
+5.4
+S.
+101
+5.92
+S.
+020
+5.15
+W.
+120
+4.3
+m.
+110
+6.35
+m.w.
+040
+2.56
+m.s.
+c=
+Three more reflections of spacing 14.45 A°, 9.57 A° and 4.2 A° were
+found. The unit cell dimension calculated from these data was found
+to be, a = 8.3 A°, b= 10.3 A°, c = 7.98 A° and d = 84°. This is
+quite in agreement with the unit cell dimension of native cellulose. The
+photograph shows the presence of a few irregular spots scattered all
+over the diagram. These are due to diffraction by calcium oxalate
+crystals present in the fibre. The presence of these crystals has been
+confirmed by chemical analysis. Kubo suggested that the cellulose
+present in Agave fibre is in the modified form, known as cellulose T.
+Our findings, however, do not support this suggestion.
+Our chemical analysis shows that the cellulose content of this
+fibre is 75%, and the lignin which is the next major constituent is about
+15% Two reflections near the central spot of spacings 14.75 A° and
+9.57 A° appear to be due to lignin. X-ray photographs of mercerised
+fibres (Figures 5,6,7,8) show that these two reflections get gradually
+weaker as the strength of the mercerising solution increases. The fact
+that the stronger the solution used for mercerisation, the larger is the
+quantity of lignin removed, proves that these two spacings are due to
+lignin. The reflection of spacing 4.2 A°, which is more intense on the
+meridian, may be due to wax present in the fibre. That wax is
+Copyright© 1998 – Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 7]]
+STRUCTURE AND PROPERTIES OF AGAVE Fibre
+59
+responsible for this spacing has been verified by taking an X-ray
+photograph of wax and a dewaxed sample.
+Our X-ray photographs reveal that the (002) reflections are drawn
+out into arcs which are longer than those in bast fibres. The length of
+the arc in the case of raw fibre has been found to be about 60°. The
+extension of this arc along the diffraction circle indicates that the
+pattern corresponds to the diagram of cellulose oriented in spiral
+configuration, the spiral making an angle of 30° with the fibre axis.
+Figure 1 shows four fainter arcs diagonally on the meridian. They
+correspond to the (021) reflections of cellulose and are not as sharp as
+they are in ramie or flax. This diffuseness appears to be due to the
+flat spiral in Agave fibre. A comparison of (002) reflection of Agave
+fibre with that in cotton shows that the arcs are much wider in the
+former. This pronounced width suggests that the size of the crystallites
+is small. It also indicates the fluctuation of orientation of crystallites
+around the spiral as well as a lower degree of lateral order.
+The suggestion that lignin helps to retain the fibre strength gets
+support from the X-ray photographs of two samples of Agave fibre
+bleached under two different conditions. i.e. one bleached after the
+removal of lignin and another before. The strength of the predeligni-
+fied sample was much less than that of the other. The X-ray photograph
+of the former, (Fig 3) particularly the (002) reflection, has been found.
+to be as sharp as it is in cotton, which is almost a pure cellulose. The
+spacings, however, remained unaltered on bleaching, but the pattern as
+a whole became remarkably cleaner. The X-ray pattern due to the
+latter specimen was not so clean. This indicates that more and more
+of amorphous constituents have been removed in the predelignified
+sample. The enhanced loss of strength in the predelignified sample,
+therefore, seems to be due to the removal of lignin and other
+amorphous materials.
+X-ray photograph (Fig 4) of fibre kept in boiling water for about
+an hour shows that the reflections are sharp, and the pattern as a whole
+is cleaner than that of the raw fibre. This indicates the removal of
+some incrusting materials which due to their scattering cause the extra
+blackening of the photographs. It is to be noted that the (020)
+reflection on the meridian is more clearly visible, and the length of the
+(002) arc is less than that in raw fibre, e.g. 23°. No change in the
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 8]]
+60
+THANDA PE
+spacing was, however, observed; this suggests that the swelling is of
+intermicellar type. The reduced length and the sharpness of the (002)
+reflection indicate better crystallinity and orientation.
+Figs 5, 6, 7 and 8 represent the X-ray diffraction patterns of
+samples treated with 15 %, 20%, 25%, and 30% Na OH solutions. In
+cotton, it was found that 18% NaOH solution is sufficient to effect
+complete mercerisation, but in Agave fibre even with a 30% solution
+mercerisation was not complete. This shows that some intercrystalline
+materials predominanently present in this fibre affect mercerisation. It
+is to be noted that the sample which was boiled before hand could be
+mercerised completely with a 18% Na OH solution. The spacings
+calcutated from these photographs of mercerised fibres are same.as
+these due to mercerised or hydrated celluelose, and are given in Table
+II below. The two reflections of spacings 5.92 A°, and 5.4 A° are not
+included in the table II, because of the fact that they are due to (101)
+and (101) planes of native cellulose.
+TABLE II
+Planes (hkl)
+Spacings in A°
+Intensity
+002
+4.03
+V.S
+101
+7.36
+W.
+101
+4.4
+S.
+020
+5.2
+V.W.
+040
+2.56
+m.s.
+120
+4.35
+S.
+The unit cell dimension calculated from these spacings (Table II)
+has been found to be a 8.1 A°, b= 10.3 A°, c=9.1 A° and d=62°.
+-
+Measurement of the strength of the mercerised fibres shows that
+the intrinsic strength decreases with the increasing concentration of the
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 9]]
+STRUCTURE and PROPERTIES OF AGAVe Fibre
+61
+mercerising solution. It may be mentioned that the strength of the
+fibres has a direct bearing on the nature of the X-ray photographs.
+The following table shows the relationship between the intrinsic
+strength of the fibre and length of the (002) arc, i.e. the angle which
+the spiral makes with the fibre axis.
+TABLE III
+Percent NaOH
+Intrinsic strength
+Spiral angle
+Raw fibre
+23.5
+30°
+15%
+14.1
+25°
+20%
+11.8
+22.5°
+25%
+20°
+30%
+9.7
+15°
+It can be seen that the raw fibre with spiral angle 30° has an
+intrinsic strength of 23.5. When the fibre is treated with 15%, 20%
+and 30% NaOH salution, the spiral angles are respectively 25°, 22.5°
+and 15° and the corresponding intrinsic strengths are 14.1, 11.8 and 9.7.
+It is to be noted that the spiral angle decreases with the decrease in
+intrinsic strength. This finding is in contrary to that observed in
+cotton, where the spiral angle increases as the intrinsic strength
+decreases. It may be pointed out that this fibre, unlike cotton, contains
+about 15% lignin and other polysaccharides as intercrystalline materials.
+The lignin, as mentioned before, acts as a cementing material; and
+though absent in some strong fibres like cotton and ramie, it adds
+to the strength of the fibres, if and where it is present. It is
+well known that on mercerisation lignin is removed, and as a
+result an associated loss of strength is reasonable to expect. The
+gradual fading of two reflections near the central spot of the X-ray
+diagrams of mercerised fibres supports this view. That the crystallites
+are better oriented as a result of mercerisation is evident from teh
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 10]]
+62
+THANDA PE
+gradual decrease in length of the (002) acrs. It is expected that the
+strength would increase due to this preferred orientation, but this
+increase has been outweighed by the loss of strength due to the removal
+of lignin. It, therefore, clearly explains why in spite of gradual decrease
+in intrinsic strength due to higher degree of mecerisation, the length of
+the arcs becomes gradually shorter and shorter.
+It has not been possible for us to gather the details of difficulties
+encountered by local manufacturers in the uses of this fibre in longyi
+industry, except that the fibre is coarse. The fibres which are taken
+by the manufacturers as single fibres are not really so. They consist
+of a number of strands. The optical study has revealed that this
+so called single fibre gets splitted into finer fibrils after a treatement with
+sulphuric acid.
+It is well known that the length of the micelles is closely related
+with the strength of the fibre; the longer the micelle the greater is the
+strength. The length and orientation of the micelles could be deter-
+mined by following the method adopted by Saha (2). The intensity of
+(002), (020) and (021) reflections will be measured with the help of
+microphotometer; the length will be calculated by the application of
+Laue (4) equation to the calculated intensity.
+In conclusion, it must be mentioned that the present paper
+embodies in it the results of our preliminary investigation. It will
+however, be admitted that this preliminary investigation has not only
+placed us on a much better footing for further work, but has also
+opened up a number of avenues, which if systematically pursued, will
+unveil a lot of mysteries. These will be of immense importance not only
+from the point of view of fundamental research, but as well from the
+point of view of industry. An extensive programme of research with
+leaf types of fibres available in this country has been undertaken by us
+and the work is in progress.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 11]]
+STRUCTURE AND FROPERTIES OF AGAVE FIBRE
+63
+References
+1. Astbury & Street, Phil. Trans. A230, 75, (1931).
+Astbury & Woods, Phil. Trans. A232. 333, (1933).
+2. Sirkar & Saha, Proc. Nat. Inst. Sc., 10, 325, (1944).
+Sirkar & Saha, Proc. Nat. Inst. Sc., 12, 151, (1946).
+Sirkar & Saha, Nature, 157. 839, (1946).
+Saha, N. N., Ind. J. Phys., 22, 141, (1948).
+Saha, N. N., Ind. J. Phys., 22, 243, (1948).
+Saha, N. N., Proc. Nat. Inst. Sc., 13, 339, (1947).
+Saha, N. N., Science & Culture, 14. 243, (1948).
+3. Sen & Woods, Biochim. et Biophys. Acta, 3, 325, (1944).
+4. Laue, M. Von., Z. Krist., 64, 115, (1926).
+Fig. 1. Raw Agave fibre.
+Plate
+Fig. 2. Bleached Agave fibre without removal of lignin.
+Fig. 3. Bleached Agave fibre after the removal of lignin.
+Fig. 4. Fibre kept in boiling water.
+Fig. 5. Fibre treated with 15 percent NaOH solution.
+Fig. 6. Fibre.........
+Fig. 7. Fibre.....
+Fig. 8. Fibre……
+..
+20 per cent NaOH solution.
+25 per cent NaOH solution.
+30 per cent NaOH solution.
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 12]]
+64
+THANDA PE
+Fig 1.
+Fig 2.
+ig 3.
+Fig
+4.
+Fig 5.
+Fig 6.
+Fig 7.
+X-ray
+Diffraction
+Photographs.
+Fig 8.
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.

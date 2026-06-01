@@ -1,0 +1,2346 @@
+[[page 1]]
+STATISTICAL ANALYSIS OF FARM SIZE
+AND CURRENT EXPENDITURES*
+[A brief consideration of the statistical aspects of farms enumerated in
+the 1953-54 Agricultural Census of Burma.]
+Introduction
+U Saw Win**
+The first post-war census taken in
+1953-54 introduced simultaneously both
+the Agricultural census and the popula-
+tion census for the first time. Therefore
+a wealth of new information became
+available. Unfortunately complete enumera-
+tion was not possible mainly due to
+unsettled conditions of the country at
+that time.
+The Agricultural Census was obtained
+by asking a trigger question so as to
+determine whether a respondent was a
+farmer in the "complete population census".
+If so, the farmer is given the Agricultural
+Schedule which is given as appendix to
+this report. The questionnaire contains
+12 sections dealing with, farm operator;
+total area tenure and location; Crops;
+Storage, marketing and wunza; land utiliza-
+tion; agricultural population and employ-
+ment; equipment; livestock and poultry;
+irrigation and drainage; expenditure; loans,
+interest and debts; and value, rent and taxes.
+In pre-war days great deal of infor-
+mation was collected as a by-product of
+land revenue Adminstration and published
+in settlement reports, Season and Crop
+Reports; and Marketing-Section surveys.
+**
+The settlement Reports were parti-
+cularly valuable but they were conducted
+non-synchronously, district by district,
+covering the whole country in 20 years.
+As land revenue was fixed on per acre
+basis, there was no interest in the size
+of farms except in some settlement reports.
+The result of the 53-54 Agricultural census
+gives farm size for the whole country
+for the first time. This may be con-
+sidered as the high-light of this Agri-
+cultural Census.
+This paper is divided into two sections.
+The first section will deal with the size
+of farms enumerated in the census in
+which the relation between the size of
+the farms and the location, and the size
+distribution of farms have been examined.
+The second section will deal with the
+current expenditures on the operation of
+farms. A comparison between the Urban
+and the Rural farms will be made and
+the reasons for these differences will be
+given in the last part of the second
+section.
+Section I. Farm Size
+Before the 1953-54 Censuses of Burma,
+although a great deal of agricultural
+statistics was collected and published, there
+was no nation-wide data on individual
+* Read at the Twelfth Annual Research Conference of the Society on 24th December 1964
+with Professor Khin Mg Nyunt in the chair.
+This paper is part of the thesis submitted in partial fulfilment of the requirement for
+an M.Sc. degree in Statistics, University of Rangoon.
+Assistant Lecturer in Statistics, Institute of Economics, Rangoon.
+F. 8
+57
+JBRS, XLVIII, i, June 1965
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 2]]
+58
+farm sizes. Although this information is
+great importance in the study of agri-
+cultural production factors, this informa-
+tion was not collected by the government
+agencies because the data collected by
+them was mostly a by-product of land
+revenue administration. In Burma land
+revenue was assessed without any reference
+to the farm size, but at a flat rate per
+acre, different for different crops, soil and
+districts. These rates were determined on
+the basis of Land Revenue Settlement
+Operations carried out district by district,
+so that at any one time, there may be
+three or four settlement parties at work
+in different parts of the country. The
+settlement operation in any district usually
+took three or four years and every district
+was settled in this way roughly in twenty
+years. In the course of their operations,
+the settlement parties collected some data
+on farm sizes. But owing to the nature
+of this scheme, no synchronous data was
+collected for the whole country at any time.
+The Agricultural Census obtained data
+about farm sizes among others and most
+of the information collected in these
+censuses were published, cross-tabulated
+by farm size. Therefore data on farm-
+sizes and the effect on agriculture were
+made available covering large parts of
+U Saw Win
+the country for the first time by these
+census operations. Some of this data is
+presented in this chapter, with some
+statistical analysis.
+According to the census department,
+a farmer is a person who operates a
+farm, and a farm is a piece or pieces
+of land standing close together or far
+apart managed by one farmer. This farm
+concept is new to this country. The
+common unit is a holding which is a
+unit of assessment. It is a piece of land
+which may be owned or occupied by a
+person. He may, however have more
+than one holding. He may work on one
+or more holdings and may rent out others.
+There are also large holdings which may
+be partly worked by the owner and partly
+by tenant or tenants. A holding therefore
+has no economic significance and the new
+concept of a farm has to be adopted for
+the census purposes.
+The basic data for Lower Burma
+and Upper Bnrma is given in table 1.1.
+The 1953 Census also covered the Myit-
+kyina and Bhamo districts which formed
+the Kachin State and which were in-cor-
+porated in the data for Upper Burma.
+But in 1954 Census, they were completely
+omitted.
+Table 1.1
+Area (acres)
+Average Farm Size
+33,362
+371,216
+11.12
+14,282
+110,755
+7.75
+47,644
+481,971
+10.11
+1953 Census
+Lower Burma
+Upper Burma
+Total
+1954 Census
+Number of Farms
+Lower Burma
+174,630
+1.922,157
+11.01
+Upper Burma
+98,915
+862,441
+8.72
+Total
+273,545
+2,784.599
+10.17
+JBRS, XLVIII, i, June 1965
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 3]]
+Statistical Analysis of Farm Size and Current Expenditures
+The areas shown in the above table
+refer to occupied area and the following
+table 1.2 shows the part left fallow and
+59
+net-sown area. The corresponding figures
+for 1952-53 and 1953-54 Season and Crops
+Reports (S.C.R.) are also given.
+Table 1.2
+1953
+1952-53
+1954
+1953-54
+Census
+S.C.R.
+Census
+S.C.R.
+Net-sown Area
+426,031
+14,802,338
+2,701,630
+15,131,311
+Fallow Area
+15,664
+6,316,455
+41,147
+6,043,627
+Arable Land
+441,695
+21,118,794
+2,742,777
+21,174,938
+Other Land
+40,277
+41,822
+Occupied Area
+481,971
+Area-sown
+12,995
+998,767
+2,784,598
+110,600
+1,032,248
+more than once
+From the above table, we see that the
+area covered by the 1953 Census formed
+2.09% of the area shown as arable land in
+the 1952-53 Season and Crop Report.
+Assuming that the same percentage of arable
+land in 1952-53 and 1953-54, belonged to
+the urban places covered by the 1953 Census,
+the remaining area is 20,733,243 acres.
+this, the 1954 Census covered 13.22 per
+cent. Therefore we may assume that the
+1953 Census covered all the "urban"
+agricultural area and the 1954 Census
+covered 13.22 per cent of the remaining
+"rural" area.
+Of
+As the agricultural area given by the
+Season and Crop Report minus the area
+covered by the 1953 Census is approxi-
+mately 7.5 times the area covered by the
+1954 Census, a simple estimate of national
+totals of other agricultural characteristics
+from these censuses may be obtained by
+adding the 1953 Census total to 7.5 times
+the 1954 Census. The corresponding figures
+of the inflation factors are 6.0 for Lower
+Burma and 10.6 for Upper Burma.
+Although the 1953 Census is generally
+referred to as a census of "towns", in fact,
+the places enumerated do not conform to
+normal census definition of towns, which
+refers only to areas with population greater
+than 5,000 and a few other areas such as
+cantonments considered to possess urban
+facilities such as municipalities, etc.
+1953 Census of towns, however, include
+many places with small population, as
+shown below from the population census.
+The
+JBRS, XLVIII, i, June 1965
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 4]]
+60
+Table 1.3
+U Saw Win
+Size
+Population
+No. of
+Categors
+Towns
+Total
+Population
+Average Population
+per Town
+A
+100,000 over
+3
+1,025,723
+341,907
+B
+50,000–100,000
+2
+139,877
+69,938
+C
+20,000–50,000
+23
+665,318
+28,927
+D
+10,000– 20,000
+26
+367,018
+14,116
+E
+5,000- 10,000
+53
+381,173
+7,192
+F
+1,000- 5,000
+122
+345,118
+2,829
+under 1000
+23
+16,477
+716
+G
+It might be seen suprising that there are
+nearly half-a-million acres of farms in Urban
+places, but the following table shows that
+most of them are in the small towns only.
+Table 1.4
+Size of Town
+No. of Farms
+Area (in acre)
+Average Farm Size by Town Size
+Average Farm Size
+(in acre)
+A
+2.580
+15,449.05
+5.99
+B
+1,684
+14,974.16
+8.89
+C
+7,072
+77,023.70
+10.89
+D
+7,428
+67,348.81
+9.07
+E
+10,907
+117,334.12
+10.75
+F
+16,821
+177,566.73
+10.55
+G
+1,152
+12,244.86
+10.62
+47,644
+481,971.43
+10.11
+Total
+This shows that 61% of total number
+of farms and 64% of total agricultural land
+found in 1953 Census were actually in towns
+of population less than 10,000, which con-
+tained only 25.26% of the urban population.
+This suggests the hypothesis that the smal-
+ler the town the greater the amount of
+agriculture carried on.
+But the average farm size found in
+table 1.4 shows that there is little variation
+in average farm size in towns other than
+of class A and B. It is therefore not true
+that apart from the 5 towns in these 2
+classes, the average farm size varies inverse-
+JBRS, XLVIII, i, June 1965
+The average
+ly with the size of towns.
+farm size is consistently about 10 acres in
+all the other towns. In fact, the average
+farm is also of this size in the whole of the
+1954 Census.
+Table 1.1. however shows that there is
+a distinct difference in average farm size
+between Lower Burma and Upper Burma.
+It therefore seems interesting to investigate
+the relation between farm size of towns for
+the two zones separately. The results are
+shown in the following table together with
+results for village tracts obtained from 1954
+census.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 5]]
+Statistical Analysis of Farm Size and Current Expenditures
+61
+Table 1.5
+Average Farm Size in
+Class of Town
+Lower Burma
+Upper Burma
+All Burma
+A
+6.88
+4.69
+5.99
+B
+8.89
+8.89
+CDH
+11.29
+8.16
+10.89
+11.60
+5.39
+19.07
+E
+12.47
+7.23
+10.75
+F
+11.28
+9.23
+10.55
+G
+12.15
+7.36
+10.62
+All Towns
+11.12
+7.75
+10.11
+11.01
+8.72
+10.17
+1954 Census
+The average size of farm in Upper
+Burma is consistantly smaller than in
+Lower Burma for all classes of town.
+Further, there is greater variability of farm
+size among the various classes of town both
+in Lower Burma and Upper Burma showing
+a greater tendency for the smaller towns to
+have larger average farm size.
+The 1954 Census was taken in 2129
+village tracts all over Burma. The plan to
+cover all village tracts in 1954 had to be
+abandoned owing to unsettled conditions in
+many parts of the country. Therefore only
+a part of the area not covered by the 1953
+Census would be covered by 1954 Census.
+It is estimated that rural population in 1954
+was about 17 million,' so on a population
+basis the 1954 Census covered about 17.55%
+of the rural population. The actual village
+tracts entering the 1954 Census were chosen
+primarily for their security condition. It
+may therefore be suspected that most of the
+village tracts were close to the towns and
+that they may therefore be much influenced
+by their urban neighbourhood. The 1954
+Census cannot be considered a representative
+sample of the rural areas.
+The coverage of rural area in the 1954
+Census varied from district to district as
+may be seen from the following table show-
+ing the occupied area (net sown area +
+others fallow area) covered by the 1954
+Census, and the corresponding total area
+given in the Season and Crop Report for
+1953-54 from which the areas covered in
+towns by 1953 Census have been subtracted.
+"
+1. "Studies in the the Burmese Population Censuses” unpublished thesis, by Khin San Myint.
+JBRS, XLVIII, i, June 1965
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 6]]
+62
+U Saw Win
+Division
+Area Covered
+in 1954 Census
+Table 1.6
+Area Shown in
+S. C. R. 53-54
+Percent
+Coverage
+Arakan
+56,720
+1,203,428
+4.71
+Pegu
+991,542
+4,268,531
+22.23
+Irrawaddy
+616,037
+4,171,356
+14.77
+Tenasserim
+257,858
+1,833,345
+14.06
+LOWER BURMA
+1,922,157
+11,476,660
+16.75
+Magwe
+137,556
+2,718,541
+5.06
+Mandalay
+405,241
+3,069,577
+13.20
+Sagaing
+319,644
+3,203,019
+9.97
+UPPER BURMA
+862,441
+8,991,137
+9.59
+20,467,797
+13.60
+ALL BURMA
+2,784,598
+We thus see that the percentage of
+"rural" farm area coverd by the 1954 Census
+varied greatly in different divisions of
+Burma. As the type of farms included
+in the 1954 Census might be expected to
+depend on this coverage, great care is
+needed in making comparison of agricul-
+tural conditions in different divisions from
+the data of the "rural" census of 1954.
+As the area covered in 1954 Census
+varied greatly in different divisions, it is
+District
+necessary to investigate the relation between
+average farm size and area coverage in 1954
+Census, for the variation of average farm
+size may be due mainly to different rates of
+coverage. The average farm size is given
+below for all districts together with the
+percentage of "rural" farm area covered by
+the 1954 Census. It shows clearly that there
+is no relation between average farm size
+and area coverage in 1954 Census, except in
+Pegu, Insein, Hanthawaddy, Pyapon and
+Thaton.
+Table 1.7
+Average Farm Size in
+1954
+Rate of Coverage
+(percentage)
+Akyab
+8.58
+3.74
+Kyaukpyu
+5.51
+7.45
+Sandoway
+4.18
+6.84
+Pegu
+15.41
+22.27
+Tharawaddy
+8.39
+49.20
+Hanthawaddy
+20.44
+23.77
+Insein
+17.00
+21.19
+Prome
+6.82
+13.18
+Toungoo
+8.94
+2.02
+Bassein
+13.27
+9.71
+JBRS, XLVIII, i, June 1965
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd. Bangkok, Thailand.
+
+[[page 7]]
+Statistical Analysis of Farm Size and Current Expenditures
+Continued from Table 1.7
+District
+Henzada
+Myaungmya
+Average Farm Size in
+1954
+Rate of Coverage
+(percentage)
+8.86
+33.77
+9.63
+2.74
+Maubin
+9.07
+28.85
+Pyapon
+20.22
+5.97
+Thaton
+17.58
+18.07
+Amherst
+11.89
+11.05
+Tavoy
+7.71
+14.01
+Mergui
+6.38
+8.66
+Thayetmyo
+3.58
+.41
+Minbu
+7.39
+7.29
+Magwe
+8.08
+5.82
+Pakokku
+6.60
+4.34
+Mandalay
+7.34
+20.04
+Kyaukse
+8.61
+07.50
+Meiktila
+9.77
+11.80
+Myingyan
+8.88
+12.21
+Yamethin
+7.64
+16.10
+Shwebo
+Sagaing
+10.21
+10.48
+10.00
+9.87
+Katha
+Lower Chindwin
+9.08
+5.87
+13.29
+4.48
+5.59
+Upper Chindwin
+We may expect farm size to differ
+according to crops and we must study the
+information from the agricultural census,
+on average farm size for different crops.
+The following table 1.8 shows the average
+Crop
+1. Paddy
+1953 Area (percent)
+7.35
+farm size as obtained by combining them
+according to the area coverage of 1954
+Census in Lower Burma and Upper Burma,
+as shown in Season and Crop Report.
+Table 1.8
+Lower Burma Upper Burma All Burma
+87.49
+12.51
+100.00
+1953 Average Farm Size
+12.39
+7.49
+11.46
+1954 Area (percent)
+82.82
+17.18
+100.00
+1954 Average Farm Size
+11.32
+6.27
+9.76
+Combined Area (percent)
+82.56
+17.44
+100.00
+Combined Average Farm Size
+11.48
+6.44
+9.23
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+JBRS, XLVIII, i, June 1965
+63
+83
+
+[[page 8]]
+64
+Crop
+2. Groundnut
+U Saw Win
+Continued from Table. 1.8
+Lower Burma Upper Burma All Burma
+1953 Area (percent)
+16.02
+83.98
+100.00
+1953 Average Farm Size
+2.13
+4.08
+3.56
+1954 Area (percent)
+19.12
+80.88
+100.00
+1954 Average Farm Size
+2.19
+3.58
+3.20
+Combined Area (percent)
+13.64
+86.36
+100.00
+Combined Average Farm Size
+2.17
+3.63
+3.34
+3. Sessamum
+1953 Area (percent)
+.59
+99.41
+100.00
+1953 Average Farm Size
+1.67
+4.02
+3.99
+1954 Area (percent)
+.17
+99.87
+100.00
+1954 Average Farm Size
+1.22
+3.41
+3.41
+Combined Area (percent)
+1.71
+98.29
+100.00
+Combined Average Farm Size
+1.22
+3.46
+3.45
+4. Cotton
+1953 Area (percent)
+100.00
+100.00
+1953 Average Farm Size
+3.46
+3.46
+1954 Area (percent)
+.08
+99.92
+100.00
+1954 Average Farm Size
+2.19
+9.09
+9.09
+Combined Area (percent)
+.84
+99.16
+100.00
+Combined Average Farm Size
+2.19
+8.23
+8.22
+5. Jute*
+1953 Area (percent)
+100.00
+100.00
+1953 Average Farm Size
+2.53
+2.53
+1954 Area (percent)
+95.68
+4.32
+100.00
+1954 Average Farm Size
+2.17
+2.00
+2.16
+6. Peas and Beans
+1953 Area (percent)
+14.52
+85.48
+100.00
+1953 Average Farm Size
+2.65
+3.87
+3.64
+1954 Area (percent)
+23.58
+77.42
+100.00
+1954 Average Farm Size
+3.31
+3.71
+3.62
+Combined Area (percent)
+14.65
+85.35
+100.00
+Combined Average Farm Size
+* Inflation factor is not availble for jute.
+3.18
+3.72
+3.62
+Therefore combined arca and combined average farm size are not given.
+JBRS, XLVIII, i, June 1965
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 9]]
+Statistical Analysis of Farm Size and Current Expenditures
+From table 1.8, we find that average
+farm size for paddy and jute are larger
+in Lower Burma and for groundnut,
+sessamum, cotton, and peas and beans,
+are larger in Upper Burma. Further it is
+interesting to note that the average farm
+size for most crop is smaller in 1954
+than in 1953. One possible explanation
+is that there was greater security in the
+areas covered in 1953 so that farmers
+65
+were able to cultivate on a larger scale
+in that area.
+The analysis so far has been only
+in terms of the average farm size. For
+further analysis it is useful to consider
+the size distribution of farms in detail.
+The percentage size distribution by divi-
+sions is given below in table 1.9. Some
+statistical measures of dispersion and
+skewness are given in table 1.10
+Table 1.9
+Distribution of Farms by Size
+(percent)
+Division
+Small Medium
+Large Total
+Average Farm Size
+Arakan
+1953
+34.98
+58.14
+6.88
+100
+6.92
+1954
+15.92
+81.14
+2.94
+100
+6.56
+Pegu
+1953
+29.47
+55.90
+14.63
+100
+10.05
+1954
+66.69
+77.34
+15.97
+100
+11.87
+Irrawady
+1953
+23.62
+58.25
+18.13
+100
+11.48
+1954
+10.72
+78.63
+10.65
+100
+9.89
+Tenasserim
+1953
+26.05
+49.03
+24.92
+100
+15.08
+1954
+16.15
+62.28
+21.57
+100
+12.75
+LOWER
+1953 28.06
+55.08
+16.86
+100
+11.12
+BURMA
+1954
+9.71
+76.23
+14.06
+100
+11.01
+Magwe
+1953
+30.56
+64.37
+5.06
+100
+6.33
+1954 15.89
+78.98
+5.13
+100
+7.39
+Mandalay
+1953
+34.84
+55.36
+9.80
+100
+8.20
+1954
+11.69
+82.57
+5.74
+100
+8.43
+Sagaing
+1953
+26.40
+64.21
+9.39
+100
+8.41
+1954
+7.96
+82.32
+9.72
+100
+9.96
+Kachin
+1953
+70.61
+25.19
+4.20
+100
+4.25
+UPPER
+1953
+32.22
+59.29
+8.49
+100
+7.75
+BURMA
+1954
+11.26
+81.81
+6.93
+100
+8.72
+Note. Small means farms less than 2.5 acres
+Medium means between 2.5 acres and 20 acres.
+Large means farms with size greater than 20 acres.
+JBRS, XLVIII, i, June 1965
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 10]]
+66
+U Saw Win
+Table 1.10
+LOWER BURMA
+UPPER BURMA
+ALL BURMA
+Statistical measure
+1953
+1954
+1953
+1954
+1953
+1954
+Mean
+11.12
+11.01
+7.75
+8.72
+10.11
+10.17
+Median
+7.93
+9.31
+6.03
+8.09
+7.28
+8.83
+Variance
+153.65 91.87
+86.03
+47.52
+135.28
+77.08
+Standard Deviation
+Co-efficient of variation
+B₁ Skewness
+12.39
+111.42% 86.74%
+3.14 3.73
+19.01 7.72
+9.55
+11.63 8.78
+115.03% 97.83%
+5.09 4.07
+18.07
+8.61
+B₂ Kurtosis
+From table 1.10, it is seen that all the
+distributions have the same order of possi-
+tive skewness and have fairly uniform
+co-efficients of variation between 80% and
+120%. But table 1.9 shows some interesting
+differences.
+(a) In all divisions of Burma, the per-
+centage of small farms is greater in
+1953 than in 1954.
+(b) The percentage of large farms is
+greater in 1953 than in 1954 in all
+divisions except Pegu, Magwe and
+Sagaing.
+(c) The excess percentage of small farms
+in Lower Burma is, however, more
+than balanced in 1953, by the excess
+percentage of large farms in all the
+9.27 6.88
+119.61%78.90%
+4.79 3.32
+9.57 8.16
+divisions, except Pegu, so that the
+average farm size is greater in 1953 in
+all these divisions, while in Upper
+Burma the excess percentage of
+large farms in 1953 is more than
+balanced by the excess percentage of
+small farms in all divisions, so that
+the average farm size is low in 1953
+than in 1954.
+To further investigate the reasons, for
+this variation of farm size between 1953 and
+1954 and by division, we now study the
+farm size for some important crops. The
+distribution of small, medium and large
+farms is given in table 1.11 for paddy farms
+only. The data is presented in an alterna-
+tive form in table 1.12.
+Table 1.11
+Paddy Farm Size Distribution
+Division
+Small Medium
+Large
+Total
+Average Farm
+Size
+Arakan
+1953
+14.26
+76.30
+9.44
+100.00
+8.19
+1954
+14.84
+82.16
+3.00
+100.00
+5.93
+Pegu
+1953
+2.02
+76.82
+21.16
+100.00
+11.54
+1954
+2.35
+79.96
+17.69
+100.00
+12.21
+Irrawaddy
+1953
+5.89
+69.88
+24.23
+100.00
+13.62
+1954
+4.26
+82.89
+12.85
+100.00
+10.61
+JBRS, XLVIII, i, June 1965
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 11]]
+Statistical Analysis of Farm Size and Current Expenditures
+Continued from Table 1.11
+Tenasserim
+1953
+3.86
+59.74
+36.40
+100.00
+15.65
+1954
+7.10
+67.22
+25.68
+100.00
+12.68
+LOWER
+1953
+3.81
+72.53
+23.66
+100.00
+12.39
+BURMA
+1954
+4.22
+79.65
+16.13
+100.00
+11.32
+Magwe
+1953
+10.03
+86.45
+3.52
+100.00
+4.86
+1954
+11.64
+85.42
+2.94
+100.00
+5.19
+Mandalay
+1953
+5.37
+77.78
+16.85
+100.00
+8.72
+1954
+4.94
+88.96
+6.10
+100.00
+5.59
+Sagaing
+1953
+3.31
+83.07
+13.62
+100.00
+7.39
+1954
+4.51
+86.48
+9.01
+100.00
+7.71
+Kachin
+1953
+31.15
+58.19
+10.66
+100.00
+6.77
+UPPER
+1953
+6.15
+80.77
+13.08
+100.00
+7.49
+BURMA
+1954
+5.95
+87.47
+6.58
+100.00
+6.28
+ALL
+1953
+4.26
+74.11
+21.63
+100.00
+11.54
+BURMA
+1954
+4.68
+81.74
+13.58
+100.00
+9.97
+Table 1.12
+Paddy Farms as Percent of Total Farms.
+67
+1953 Census
+1954 Census
+Division
+Small Medium Large Total
+Small Medium Large Total
+Arakan
+30.2
+97.3 10.0 74.1
+91.3
+98.4 99.6 97.9
+Pegu
+4.5
+91.4
+99.2
+66.5
+31.6
+92.5
+99.5
+89.8
+Irrawaddy
+18.4
+88.6
+98.7
+73.8
+32.6
+86.6
+99.0
+82.1
+Tenasserim
+8.5
+70.3
+84.3
+57.7
+36.8
+90.4
+99.7
+83.8
+LOWER BURMA 9.0
+87.5
+93.3
+66.5
+37.9
+90.6
+99.4
+86.8
+Magwe
+10.5
+43.3
+22.4
+32.2
+37.5
+55.3
+29.3
+51.2
+Mandalay
+5.8
+53.1
+65.0
+37.8
+22.9
+58.5
+57.6
+54.3
+Sagaing
+4.8
+50.2
+56.3
+38.8
+34.3
+63.7
+56.2
+60.7
+Kachin
+13.2
+69.6
+76.4
+30.1
+UPPER BURMA 7.0
+50.0 56.6
+36.7
+29.4
+59.6
+53.0 55.8
+ALL BURMA
+8.3 75.7
+86.8
+57.5
+34.5
+78.9 89.3
+75.6
+JBRS, XLVIII, i, June 1965
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 12]]
+68
+U Saw Win
+From these tables we may draw the
+following conclusions :-
+(a) Just as in the case of all farms,
+table 1.11 shows that the proportion
+of large paddy farms is greater in
+1953 than in 1954 for all divisions of
+Burma. This is explained by the fact
+seen in table 1.12 that paddy land
+forms a high proportion of all the
+large farms both in 1953 and 1954.
+This proportion is higher in Lower
+Burma than in Upper Burma.
+(b) There is only a small difference in
+proportion of small farms growing
+paddy both in 1953 and 1954. Fur-
+thur only a small percentage, except
+for Arakan Division in 1954, of small
+farms grow paddy. The proportion
+of small farms growing paddy is small
+in 1953 than in 1954, in all divisions
+except Pegu. Therefore the observed
+high proportion of small farms for
+all crops in 1953 must be accounted
+for by other crops.
+The agricultural census of 1953 gives
+details of farm sizes only for the major
+crops of paddy, oil crops, fibre crops, peas
+and beans. By substracting these farms
+from the total number of farms for all
+crops, the difference which is unaccount-
+ed by the major crops indicate the
+number of farms growing other crops.
+However there is some difficulty in this
+method, because the same farm may be used
+for more than one crop so that the sum of
+the farms shown for the major crops only
+may exceed the total number of farms cover-
+ed by the census. Also, we can not find the
+size distribution of these unaccounted farms,
+the farm size when reported under each
+major crop, is referred to the total size of
+farm, for every crop form on it, irrespective
+of the area under each crop.
+The 1953 Census covered cities and all
+the sizeable towns numbering 252 in all.
+The 1954 Census covered 2129 village tracts
+in all the 32 districts of Burma Proper.
+The actual village tracts entering the 1954
+Census were not chosen at random, and
+therefore they cannot be considered as a
+representative sample of the rural area.
+are :-
+The principal conclusions of our study
+(1) As 61% of the farms were found in
+towns with population less than
+10,000 we can conclude that "urban”
+farms are mostly in small towns.
+(2) Farm size does not depend on the
+size of towns. In fact the average
+farm size is about 10 acres for all
+classes of town except the big five
+towns.
+(3) Average farm size is smaller in Upper
+Burma than in Lower Burma in 1953
+for all town sizes.
+(4) Rural census covered 13% of all the
+rural area, and the rate, of coverage
+varied greatly for different regions.
+(5) Farm size does not depend on the rate
+of coverage, for the average farm size
+lies between 5 and 10 acres for most
+of the districts.
+(6) Farm size varied greatly according to
+crops, as shown in the following
+table.
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 13]]
+Statistical Analysis of Farm Size and Current Expenditures
+Average Farm Size (in acres)
+Crop
+1953
+1954
+Paddy
+11.46
+9.76
+Groundnut
+3.56
+3.20
+Sessamum
+3.99
+3.41
+Cotton
+3.46
+9.09
+Jute
+2.53
+2.10
+Peas and Beans
+3.64
+3.62
+(7) For paddy and jute farms, the average
+farm size is larger in Lower Burma
+than in Upper Burma, where as for
+groundnut, sessamum, cotton and
+peas and beans the average size is
+larger in Upper Burma than in
+Section II. Current Expenditures
+Introduction
+In this section we will study the expen-
+ditures on farm operations. We will confine
+our study on current expenditures only.
+A comparison is made between Urban and
+Rural farms with respect to cost of cultiva-
+Lower Burma.
+69
+(8) Average farm size is smaller in 1953
+for most of the crops.
+(9) There is great variation in the distri-
+bution of farm sizes. The proportion
+of small farms varies from place to
+place.
+(10) The percentage of small farms is
+greater in 1953 than in 1954, whereas
+the 1954 Census covered mostly
+medium size farms.
+(11) For paddy farms, the proportion of
+large farms is greater in 1953 than
+in 1954.
+tion with some statistical analysis.
+The average operating expenses per
+acre of cultivated land (i.e.) total sown area
+plus area under fruit trees, vine and shrub
+is given in table 2.1 below.
+Table 2.1
+Average Operating Expenses per Acre (in kyats)
+Division
+1953 Census
+1954 Census
+Arakan
+42.39
+21.14
+Pegu
+60.79
+26.58
+Irrawaddy
+43.28
+28.63
+Tenasserim
+54.79
+30.29
+LOWER BURMA
+55.47
+28.29
+Magwe
+34.32
+17.95
+Mandalay
+54.65
+22.88
+Sagaing
+32.46
+20.77
+Kachin State
+101.23
+UPPER BURMA
+43.88
+21.31
+26.01
+ALL FARMS
+Table 2.1 shows that in all the divi-
+sions under consideration the average
+operating expenses per acre of cultivated
+land is greater in 1953 than in 1954. To
+investigate this fact we will consider the
+52.72
+expenditure patterns of "urban" and
+“rural” farms. The current expenditures
+are classified into five categories, namely,
+wages, cattle hire, purchase of seeds and
+seedlings, feeding of livestock and others.
+JBRS, XLVIII, i, June 1965
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 14]]
+70
+The percentage distribution of operating expenses is given in table 2.2.
+Table 2.2
+Percentage Distribution of Operating Expenses
+U Saw Win
+Division
+Wages
+Cattle Hire Seed and
+Seedlings
+Feeding of
+Livestock
+Others
+Arakan
+1953
+61.07
+8.46
+3.43
+14.40
+12.64
+1954
+65.06
+13.48
+4.64
+4.79
+12.08
+Pegu
+1953
+53.29
+6.51
+3.86
+23.67
+12.67
+1954
+71.19
+11.73
+3.86
+5.86
+7.36
+Irrawaddy
+1953
+56.22
+8.61
+5.37
+12.15
+17.65
+1954
+68.26
+12.14
+5.01
+4.55
+8.64
+Tenasserim 1953
+57.91
+8.25
+2.96
+8.43
+22.45
+1954
+68.85
+12.14
+3.11
+5.62
+10.28
+LOWER
+1953
+55.09
+7.31
+3.83
+17.86
+15.91
+BURMA
+1954
+69.76
+12.42
+4.15
+5.37
+8.30
+Magwe
+1953
+34.46
+2.41
+14.45
+37.48
+10.84
+1954
+54.05
+5.52
+19.30
+11.58
+9.55
+Mandalay
+1953
+49.04
+3.95
+11.43
+27.17
+8.41
+1954
+57.38
+4.84
+15.71
+11.33
+10.74
+Sagaing
+1953
+37.45
+3.02
+20.51
+28.02
+11.00
+1954
+57.74
+4.98
+17.32
+10.61
+9.35
+UPPER
+BURMA
+1953
+43.53
+3.58
+13.96
+29.45
+9.48
+1954
+57.02
+4.98
+16.77
+11.13
+10.10
+From table 2.2, it is seen that wages
+are the single largest item of operating
+expenses in both 1953 and 1954 Censuses.
+The only exception being the 1953 figure
+in the Magwe division where the propor-
+tion of expenditure on feeding of livestock
+to the total expenditure is higher than that
+of the wages to the total. Also it is
+observed that in all the divisions a larger
+proportion of expenditure was allocated
+to the feeding of livestock in 1953 as com-
+pared to 1954. In fact expenditure on
+feeding of livestock is as high as 29% of
+the current expenditure in Upper Burma
+in 1953. Another point we notice is that,
+JBRS, XLVIII, i, June 1965
+a relatively high proportion of expenditure
+was spent on purchase of seeds and
+seedlings in Upper Burma than in Lower
+Burma.
+Another item of expenditure which
+accounted significant proportion was for
+the hire of cattle and implements. Lower
+Burma spends 6-13 percent of the current
+expenditures and Upper Burma spends
+about 2-6 percent only. This suggests,
+among other things, that the animal power
+accredited to a good majority of the
+farmers in Lower Burma were very small
+as compared to their counterparts in
+Upper Burma.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 15]]
+Statistical Analysis of Farm Size and Current Expenditures
+Table 2.3 shows the expenses incurred
+for cultivating one acre of land on wages,
+cattle hire, purchases of seeds and seedlings,
+71
+feeding of livestock and others for 1953
+and 1954 Censuses by division.
+Table 2.3
+Expenses Incurred for Cultivating on Acre of Land on
+Division
+Wages
+Cattle
+Hire
+Seeds &
+Seedlings
+Feeding of
+Livestock
+Others
+(in kyats)
+Arakan
+1953 25.88
+3.59
+1.45
+6.10
+5.37
+1954
+13.75
+2.85
+.98
+1.01
+2.55
+Pegu
+1953
+32.39
+3.96
+2.35
+14.39
+7.70
+1954
+18.92
+3.12
+1.02
+1.56
+1.96
+Irrawaddy
+1953
+25.33
+3.73
+2.32
+5.26
+7.64
+1954
+19.54
+3.87
+1.43
+1.30
+2.49
+Tenasserim
+1953
+31.73
+4.52
+1.62
+4.62
+12.30
+1254 20.85
+3.68
+.94
+1.70
+3.12
+LOWER
+1953
+30.56
+4.05
+2.18
+9.90
+8.78
+BURMA
+1954
+19.73
+3.51
+1.17
+1.52
+2.36
+Magwe
+1953
+11.13
+.83
+4.96
+12.98
+3.72
+1954
+9.70
+.99
+3.46
+2.08
+1.72
+Mandalay
+1953
+26.80
+2.16
+6.25
+14.85
+4.59
+1954
+13.13
+1.11
+3.59
+2.59
+2.46
+Sagaing
+1953
+12.15
+.98
+6.66
+9.09
+3.58
+1954
+11.99
+1.03
+3.59
+2.20
+1.96
+Kachin
+1953
+30.28
+5.02
+5.33
+46.17
+14.43
+UPPER
+1953
+19.10
+1.57
+6.12
+12.55
+4.54
+BURMA
+1954
+12.15
+1.06
+3.57
+2.37
+2.16
+The above table shows that, expenses
+on all the items of current expenditures
+except "hire of cattle and implements"
+were higher in 1953 than in 1954 in all
+the divisions. The most significant difference
+between 1953 and 1954 is shown by the
+two items "wages" and "feeding of lives-
+tock”, while there does not seem to be
+much of a difference between the other
+items.
+In order to investigate why relatively
+a larger amount of money was spent on
+wages in 1953 than in 1954, it is necessary
+to study the conditions of employment
+on the farms.
+JBRS, XLVIII, i, June 1965
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 16]]
+72
+Table 2.4
+Duration of Employment on the Farms (in months)
+Less than 1-3
+4-5
+U Saw Win
+6-11
+12 months
+1953 Lower Burma
+Unpaid family workers
+6,333
+5,860
+4,947
+10,434
+38,498
+Paid family workers
+1,379
+663
+546
+856
+1,253
+Outside labourers
+348,609
+27,909
+6,914
+10,488
+11,672
+1953 Upper Burma
+Unpaid family workers.
+4,060
+1,926
+2,340
+5,818
+16,770
+Paid family workers
+1,292
+341
+74
+161
+288
+Outside labourers
+168,570
+9,774
+3,377
+1,740
+2,224
+1954 Lower Burma
+Unpaid family workers
+67,330
+46,975
+22,759
+44,978
+174,248
+Paid family workers
+3,258
+2,539
+1,103
+1,241
+2,001
+Outside labourers
+1,078,224
+61,902
+22,916
+18,734
+23,606
+1954 Upper Burma
+Unpaid family workers
+20,049
+45,628
+14,670
+23,287
+126,910
+Paid family workers
+1,514
+368
+161
+234
+409
+17,545
+5,590
+3,216
+3,912
+Outside labourers
+636,666
+Table 2.4 shows that the bulk of the
+work on the field is done by household
+members themselves, indicates by a large
+number of unpaid family workers reported
+to work for the whole season, while a
+smaller number of outside labourers were
+reported to work for the whole year.
+The large number of labourers reported
+to work for less than a month were
+usually casual labourers engaged for works
+such as transplanting and harvesting. The
+number of man-months employed for each
+division is obtained by multiplying the
+number of persons reported as paid family
+workers and outside labourers by its
+corresponding duration of employment.
+The average
+number of man-months
+employed per farm is obtained by dividing
+the numbers of man-months employed
+by total number of farms reported. The
+average number of man-months employed
+per farm is given for paid workers (paid
+family workers and outside labourers) and
+unpaid family workers, in table 2.5.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 17]]
+Statistical Analysis of Farm Size and Current Expenditures
+Table 2.5
+Average Number of Man-months Employed per Farm
+Paid
+Workers
+Unpaid Family Workers
+Division
+1953
+1954
+1953
+1954
+Arakan
+10.08
+3.63
+18.62
+16.28
+Pegu
+14.91
+7.48
+17.22
+13.88
+Irrawady
+13.81
+7.04
+19.26
+16.19
+Tenasserim
+20.27
+7.92
+17.05
+19.51
+LOWER BURMA
+15.51
+7.19
+17.61
+15.48
+Magwe
+7.16
+3.73
+17.65
+24.79
+Mandalay
+12.94
+4.76
+18.82
+16.05
+Sagaing
+13.75
+5.06
+19.20
+20.31
+Kachin State
+3.96
+19.09
+UPPER BURMA
+11.69
+4.66
+18.70
+19.09
+73
+From table 2.5 it is seen that the
+average number of man-months employed
+in 1953 is much greater than that of
+1954 and it may be noted that this is
+not due to greater average number of
+man-months worked by unpaid family
+workers in 1954 as compared to that of
+1953. In fact in some of the divisions,
+the average number of man-months worked
+by household members appears to be
+greater in 1943 than in 1954.
+Most farmers have to seek loans to
+finance the current operating cost, and
+in some cases, to buy implements and
+food for home consumption. It is there-
+fore possible that availability of loans
+F. 10
+will be one of the factors determining
+the size of outside labour employed in
+farm operation.
+There are two sources of financing
+loans to farmers namely, agricultural loans
+distributed by the Government agencies and
+by private money-lenders. The interest
+rate for government loans is about 7% per
+annum and for private loans the interest
+rate in some places worked out to be about
+50% for a period of 6 to 9 months.
+The following table shows the average
+amount of loans borrowed by farmers from
+the Government and from private money-
+lenders seperately.
+JBRS, XLVIII, i, June 1965
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 18]]
+74
+Division
+Table 2.6
+Average Amount of Loans Borrowed per Farm
+(in kyats)
+Government
+Private
+1953
+1954
+1953
+1954
+Arakan
+Pegu
+121
+109
+158
+125
+114
+113
+346
+257
+Irrawaddy
+114
+99
+346
+253
+Tenasserim
+201
+153
+418
+309
+LOWER BURMA
+133
+111
+350
+256
+Magwe
+98
+87
+231
+215
+Mandalay
+135
+105
+286
+236
+Sagaing
+106
+80
+197
+175
+Kachin State
+81
+294
+UPPER BURMA
+116
+94
+243
+212
+U Saw Win
+There is no significant difference in the
+average amount of Government loans bor-
+rowed by the owner of a farm between
+1953 and 1954. But amount of private
+loans in 1953 is consistantly greater than
+1954 in all the divisions, especially in
+Lower Burma. The excess amount of
+loans borrowed in 1953 over 1954, is
+however not sufficient to explain average
+numbers of man-months employed in 1953
+than in 1954.
+Division
+Arakan
+It is also found in table 2.2 that
+expenditure of feeding of livestock formed
+a considerable proportion of current expen-
+ditures in 1953, whereas in 1954 expenditure
+on this item amounted to only about
+5% of the operating expenses in Lower
+Burma and about 10% in Upper Burma.
+This seems to be due to the fact that more
+poultry farms reported in 1953 than in
+1954, except in the Tenasserim division as
+may be seen from the following table.
+Table 2.7
+Poultry Farms as Percent of Total Farms Reported
+Pegu
+Irrawaddy
+Tenasserim
+Magwe
+Mandalay
+Sagaing
+Kachhin State
+1953
+Census
+1954
+Census
+16.26
+10.16
+7.64
+1.72
+5.27
+4.23
+10.82
+10.76
+7.22
+4.43
+12.78
+5.75
+9.20
+4.68
+16.20
+JBRS, XLVIII, i, June 1965
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 19]]
+But table 2.7 showing expenditures on
+wages and feeding of livestock as percent of
+Statistical Analysis of Farm Size and Current Expenditures
+75
+total expenditure suggests that poultry
+farming is confined to small farms only.
+Table 2.8
+LOWER BURMA
+UPPER BURMA
+Farm Size
+in acres
+1953 Census
+Wages
+Feeding of Livestock
+as Percent of Total
+Wages
+Feeding of Livestock
+as Percent of Total
+Expenditure
+Expenditure
+Less than 5
+19.13
+58.53
+17.07
+64.26
+5 - 10
+59.23
+8.87
+41.35
+23.74
+10 15
+-
+60.82
+8.03
+44.63
+16.93
+-
+15 20
+63.29
+7.37
+51.44
+16.94
+20 & above
+68.44
+17.86
+43.53
+28.61
+ALL FARMS
+55.09
+17.86
+43.53
+28.61
+1954 Census
+Less than 5
+44.74
+14.94
+40.74
+19.50
+5 - 10
+63.68
+6.95
+54.16
+10.97
+-
+10 15
+69.59
+4.68
+61.04
+9.81
+15 20
+71.31
+4.58
+63.02
+8.92
+20 & above
+76.48
+3.68
+66.59
+7.37
+ALL FARMS
+69.76
+8.37
+57.01
+11.12
+To carry the analysis furthur, we will
+study the variation in the average cost of
+cultivation between districts. The coeffi-
+cients of variation between districts is given
+in table 2.9.
+Lower Burma
+Upper Burma
+Table 2.9
+Coefficient of Variation
+1953
+59.49%
+56.85%
+In Lower Burma, the average cost of
+cultivation varied from district to district in
+the 1953 Census. Rangoon, Insein, Toun-
+goo, Henzada, Thaton and Mergui districts
+reported a high cost of cultivation than the
+remaining districts. This increase in cost
+of cultivation may have been due to either
+that the amount of money spent on wages
+is greater in these 6 districts or that poultry
+1954
+12.23%
+35.19%
+farming is carried out in large scale or both
+these factors affecting simultaneously. Cost
+of cultivation for the remaining districts in
+Lower Burma show a slight variation only.
+However in the 1954 Census, the coefficient
+of variation for Lower Burma is only 12%,
+the reason being that the expenditure on
+feeding of livestock is very small in all the
+districts.
+JBRS, XLVIII, i, June 1965
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 20]]
+76
+In Upper Burma, the average cost
+varied greatly between districts and it is
+due to changes in the pattern of cultivation
+from districts to districts.
+Amount of money spent on wages of a
+district depends on the amount of outside
+labour employed and the wage rate.
+Information about the wage rate prevailing
+in various parts of the country is not
+available. Therefore we investigate the
+relation between average amount of money
+spent on wages per farm and average
+amount of outside labour employed. In
+the 1953 Census, there appears to be a lack
+of correlation between average amount of
+money spent on wages and average number
+of man-month employed. Therefore varia-
+tion in the average amount of money spent
+on wages seem to be mainly due to different
+wage rates prevailing at the time of enumera-
+tion. But in the case of the 1954 Census,
+the correlation coefficient between average
+expenditure on wages and average number
+of man-months employed for Lower Burma
+is 0.909 respectively. Therefore in the case
+of Rural areas especially in Upper Burma,
+variation in the average expenditure of
+wages is mainly due to the variation in the
+amount of outside labour employed.
+The main conclusions of this section
+can be briefly summarized in the following
+manner. We observed that the average
+operating expenses (excluding capital
+capital
+expenditures) of the Urban farms (1953
+U Saw Win
+Census) appears to be greater than those of
+the Rural farms (1654 Census), for all
+divisions of the country. When we consider
+the expenditure patterns, we observe that
+the item "wages" is the single largest item
+of the total expenditure. The most signifi-
+cant difference between Urban and Rural
+farms is shown by the two items "wages"
+and “feeding of livestock”.
+Another interesting feature to be noted
+is that the average expenditure is higher in
+the 1953 Census than that of the 1954
+Census. This is due to :-
+(a) higher expenditure on wages and
+(b) higher expenditure on feeding of
+livestock.
+One main reason why there is a
+difference in the expenditure on wages is
+that more outside labour was employed in
+1953 than in 1954. On the other hand, the
+higher expenditure on feeding of livestock
+is primarily due to more poultry farms
+being found in 1953 than in 1954, the rea-
+son for which, unfortunately, I could not
+account for. However it appears that the
+concentration of poultry farms is confined
+largely to small farms of less than 5 acres.
+Finally, we can assert that, from the whole
+analysis, in reducing the costs of operations
+of the farms, the main factor on expenditure
+seems to be, none other than, the wages of
+outside labour compared to this factor;
+other factors can be ignored.
+JBRS, XLVIII, i, June 1965
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.

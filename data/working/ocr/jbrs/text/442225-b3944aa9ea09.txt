@@ -1,0 +1,547 @@
+[[page 1]]
+THE EFFECT OF CONCENTRATION OF SALTS ON THEIR
+RATE OF ABSORPTION BY PLANTS IN WATER CULTURE
+AND THE ROLE OF AERATION
+by
+Than Tun*
+INTRODUCTION
+The significance of the concentration of salts in relation to the rate of absorption
+has not received as much attention as other aspects of salt uptake.
+Judging from the literature, the general belief seems to be that the rate of uptake of
+ions is dependent on their concentration in the culture medium, the reduction in concentra-
+tion leading to a reduced rate of uptake. In opposition to this view, Olsen came
+to the conclusion that "the rate of absorption is independent of the concentration,
+of course apart from the very lowest concentrations lying below 0.003 mg. equivalent
+per litre."
+Olsen criticises the previous workers on the following grounds.
+Some investigators used solutions of different pH values. For example, the
+weakest solution used by Gracenin had a pH of 4.6 and the strongest solution had a pH
+(3.1, and the rate of phosphate uptake rises rapidly with decreasing pH.
+Most investigators used ordinary distilled water which contains about 0.2 mg. of
+copper per litre, and this amount has toxic effects on plants and decreases the rate of
+uptake of other ions when the concentration of the solution is low, while copper does not
+have this effect when the concentration of the solution is high, due to the antagonistic
+effect of other ions.
+Olsen seems to attach the greatest importance to "stirring the solution", and
+attributes to this the effect of aeration of the medium. He reasons that "if the solution is
+allowed to remain unstirred, the plants first absorb the part of the solution nearest to the
+root. Hence a considerable difference in concentration is caused in the solution, which
+can only be evened out by diffusion, but, as is well known, this is a slow process. The
+greater the difference in concentration, the stronger, however, will be the stream of ions
+diffusing in, and therefore plants in stationary solutions are able to absorb greater
+amounts of ions from solutions with high concentrations than from solutions with lower".
+* B.Sc. (Agriculture), B.Sc. (London), Ph. D. (London), Biology Department, University
+of Mandalay
+225
+JBRS, XLIV, ii, Dec. 1961
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 2]]
+226
+The aim of this investigation is to study:
+THAN TUN
+1) The role of aeration, to see whether its importance lies mainly in the physical effect of
+stirring, as suggested by Olsen, or in the physiological effect of oxygen.
+2) The significance of concentration of phosphate and nitrate in relation to their rate of
+uptake by wheat and pea seedlings.
+In all the experiments, Pyrex distilled water was used, in order that no compli-
+cation due to copper could arise.
+Also, if solutions of different concentrations were used, the ratio of the four main
+salts, namely, Ca(NO_)_4H_O, MgSO 7H_O, KH PO and KNO
+was maintained
+unchanged.
+32 2
+4 2
+2 4
+3
+MATERIALS and METHODS
+1. Preliminary Culture of Seedlings
+The undermentioned method was found to be the most satisfactory for getting
+seedlings with undamaged root system, as required for the experiments.
+For wheat seedlings, the seeds, after being soaked in water, were kept in a refrige-
+rator over a night and then were sown on thoroughly wetted blotting paper in a tray
+covered with a glass sheet. When they were about three days old, 12 seedlings were
+transferred to a cork mat with 12 holes in such a way that the root system passed through
+the holes with the seeds resting on the mat. The cork mat with the seedlings was floated
+on the culture medium contained in a 600 ml beaker. Through a hole on the side of the
+cork mat, a glass tube for aerating the culture medium passed to the bottom of the
+beaker. Continuous aeration was maintained by an electric air pump. As the plants
+were grown in the laboratory where the light intensity was low, an additional supply of
+light was given every day from 8.00 am, to 11.00 pm., using 4 hundred-watt bulbs, kept
+3 feet above the plants. The root system was also darkened by wrapping the beaker with
+thick tarred paper. The plants were grown in this way for 14-20 days before being used
+for the experiments.
+For pea seedlings, the seeds were first soaked in water over a night and were sown
+in thoroughly wetted sawdust. After 3 days' growth, 9 seedlings were transferred to a
+perforated cork mat, and grown in the same way as the wheat.
+The culture solution used in the preliminary culture was more or less like Olsen's
+0.3 concentration; its composition is given below:
+JBRS, XLIV, ii, Dec. 1961
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 3]]
+CONCENTRATION OF SAITS
+41 0
+Ca(NO 3'2
+MgSO 7H O
+4 2
+KH PO
+2
+KNO 3
+4
+Sodium citrate
+ml of A-Z solution after Hoagland (1933).
+g. per litre
+0.1686
+0.1014
+0.0228
+0.1490
+0.1000
+227
+3 drops of freshly prepared saturated ferrous sulphate solution were added to each
+beaker every three days.
+11. Method of Analysis
+(1941).
+Phosphate estimation was done by the calorimetric method after R. J. Robinson
+Nitrate estimation was done by the calorimetric method after the America Public
+Health Association (1946).
+III. Experimental Method for the Estimation of the Rate of Sali Absorption
+The cork mat with the seedlings from the preliminary culture was taken out and the
+cork together with the roots was thoroughly washed with distilled water, and then
+transferred to a known volume of culture solution of the required composition contained
+in a beaker, and aerated continuously. After the solution had been left aside about one
+hour till equilibrium was attained, an initial sample of appropriate volume was taken out
+for analysis of phosphate and nitrate. Then further samples were taken out and analysed
+at intervals.
+The amount of phosphate and nitrate absorbed was plotted against time. From
+the slope of the graph, the rate can be calculated.
+EXPERIMENT I
+The absorption of phosphate and nitrate by one set of pea seedlings and one sct of
+wheat seedlings, both 18 days old, was studied over a period of 24 hours in nutrient solu-
+tions of the same composition as that used in the preliminary culture.
+Observations and Conclusions
+1) The rate of phosphate uptake was high during the “day-period" and low during
+the "night-period” Also, though the concentration of phosphate was reduced from
+16.5 mg. to 7.92 mg. per litre in the culture solution by wheat seedlings, and from
+16.5 mg. to 8.9 mg. in the culture solution by pea seedlings, from the first "day-period"
+JBRS, XLIN. ii, Dec. 1961
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 4]]
+2.0
+TOTAL NITRATE ABSORBED IN MG.
+30
+228
+TOTAL PHOSPHATE ABSORBED IN MG.
+01
+2P4
+10,
+RATE 0.285 MG PER HOUR,
++ RATE = 0.275 MG PER HOUR
+2.0
+TOTAL PHOSPHATE ABSORBED IN MG.
+3.0
+THAN TUN
+RATE=0.20 MG. PER HOUR
+RATE = 0.193 MG PER HOUR.
+2 PM
+2 AM
+CLOCK TIME
+1PM
+FIG. ABSORPTION
+OF PHOSPHATE BY PEA.
+1PM
+2AM
+CLOCK TIME
+FIG. I. ABSORPTION OF PHOSPHATE BY WHEAT.
+RATE=0
+TOTAL PHOSPHATE ABSORBED IN MG.
+0.5
+15
+1.02
+0
+130PM
+A--
+AAA B
+Nz
+RATE= 0.27 MG. PER HOUR
+RATE 0.26 MG PER HOUR
+6.30PM
+CLOCK TIME
+11:30PM
+2 PM
+2AM
+CLOCK TIME
+1PM
+FIG. ABSORPTION OF NITRATE BY PEA AND WHEAT
+PIG IV ABSORPTION OF PHOSPHATE BY WHEAT
+"'
+A IN
+B. IN
+CONCENTRATION 5
+CONCENTRATION
+JBRS, XLIV, ii, Dec. 1961
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 5]]
+CONCENTRATION OF SALTS
+229
+to the second "day-period" the rate remained unchanged (see Fig. I and II). It suggests
+that the rate of phosphate uptake is independent of the concentration at least over the
+range 16.5 mg. to 7.92 mg. per litre. It may not be justified to draw any definite conclu-
+sion, since it is also possible that the effect of concentration is of a low order and that it
+was not detected due to the small range of concentration, where the ratio of the phosphate
+concentration in the two "day-periods" was about 2:1 only.
+2) There was no detectable amount of nitrate uptake by plants (see Fig. III). The
+possible reason for this finding may be that even when the seedlings were 18 days old,
+they were still relying on the seed nitrogen, and that they would not utilise the externally
+supplied inorganic nitrate until the seed nitrogen was exhausted.
+EXPERIMENT II
+1)
+This series of experiments was designed:-
+to study the effect of the concentration of phosphate and nitrate on their rate of
+uptake by seedlings:
+2) to investigate the possible reason for not observing any uptake of nitrate by seedlings,
+as found in Experiment I;
+3) to study the role of aeration and to discover whether its effect lies in the physical
+process of stirring or in maintaining high oxygen tension in the medium for root respira-
+tion, in which case the effect will be regarded as physiological.
+The possibility has been suggested that even when the seedlings were 18 days old,
+they were relying on the seed nitrogen and that they used seed nitrogen in preference to
+the externally supplied inorganic nitrogen source. To verify this hypothesis, seedlings
+were grown in the preliminary culture as explained before, but with their seeds removed
+after 5 days growth. Thus, after removal of the seeds, the seedlings would have to rely
+on the externally supplied inorganic nitrogen source. Seedlings grown in this manner
+were used in all the later experiments.
+Since the seedlings were grown in the same way for the same period, it was assumed
+that they had approximately the same amount of root system in the sets of the same type
+of plant, and this was confirmed experimentally on a dry weight basis. Thus, if the rate
+of absortion of salts by different sets of the same type of plant in Concentration “5” (the
+same concentration as the preliminary culture solution) and in Concentration “1” (1/5 of
+the concentration of the preliminary culture) are equal, we may take it as an indication
+that the rate of salt absorption is independent of the concentration of it in the culture
+solution, at least over the range from Concentration "5" to Concentration "I".
+Also, if the main effect of aeration of the medium on the rate of salt uptake is due
+to the physical process of stirring, then if nitrogen gas is bubbled through instead of air,
+the rate of uptake of salts should remain unchanged. On the other hand, if it decreases
+significantly, the inference will be that the effect of aeration is also due to maintaining a
+high oxygen tension in the medium for root respiration, in which case it will play a
+physiological role.
+JBRS, XLIV, ii, Dec. 1961
+12
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 6]]
+230
+1.5
+1.0
+TOTAL PHOSPHATE ABSORBED IN MG.
+0
+20
+0.51
+RATEC.245 M6 PER HOUR
+12.30 PM
+A
+6 30 PM
+CLOCK TIME
+11 30 PM
+FIG V. ABSORPTION OF PHOSPHATE BY PEA
+A
+B
+IN
+IN
+"
+CONCENTRATION
+CONCENTRATION
+'5"
+}
+"
+TOTAL NITRATE ABSORBED IN MG.
+15.0,
+10.07
+5.0
+1256 PM
+ABSORBED IN MA
+TOTAL
+NITRATE
+15.0
+10.0
+12.30 PM
+RATE:
+0
+THAN TON
+1.85 MG /HOUR
+AAA B
+RATE 0.70 MG/HOUR
+6.30 PM
+11.30 PM
+CLOCK TIME
+FIG. ABSORPTION OF NITRATE BY WHEAT
+A
+IN
+CONCENTRATION "5"
+B
+IN
+CONCENTRATION "1*
+--- A
+N₂
+RATE: 175 MG/HOUR
+RATE. 0.50 MG/HOUR
+6.50PM
+CLOCK TIME
+FIG VIL ABSORPTION OF NITRATE BY PEA
+"
+A IN
+į
+IN
+CONCENTRATION 5
+CONCENTRATION “I
+"
+JBRS, XLIV. ii, Dec. 1961
+11:30 PM
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 7]]
+CONCENTRATION OF SALTS
+231
+On the basis of the above theoretical considerations, the experiments were carried
+out as follows:
+Absorption of phosphate and nitrate was studied with one set of pea seedlings and
+one set of wheat seedlings in Concetnration "5". A similar procedure was adopted with
+Concentration "I". After about 5-6 hours, aeration was stopped in one set of pea
+seedlings in Concentration "5" and in one set of wheat seedlings in Concentration "1",
+and nitrogen gas was bubbled continuously through the medium. The study of absorp-
+tion was continued.
+Thus, taking the whole series of experiments together, nitrogen gas was bubbled
+into one Concentration "5" and one Concentration "1"; another Concentration “1”
+and another Concentration "5", which were still aerated, served as controls.
+Seedlings used in this experimental srries were 18 days old.
+The results are presented in graphical form (see Fig. IV-VII).
+Observations and Conclusions
+1) There was considerable uptake of both nitrate and phosphate by both pea and wheat
+seedlings, unlike in experiment I. This seems to support the hypothesis that even up to
+18 days after germination, the seeds were relying mainly on the seed nitrogen, and only
+when this source of nitrogen was removed did they absorb the externally supplied nitrate,
+and that the seed nitrogen was more readily assimilated than the nitrate supplied in the
+medium.
+2) The rate of phosphate uptake per set of seedlings is approximately the same for each
+type of plant at a comparable period in both Concentration “5” and Concentration “1”,
+indicating that it is independent of the Concentration over the range tested (i.e. from about
+3.2 mg. to 16.3 mg. of phosphate per litre of cultural solution) (see Fig. IV & V).
+3) Oddly enough, the rate of nitrate uptake, by contrast with the uptake of phosphate,
+was markedly influenced by its concentration in the medium. When the concentration of
+nitrate was increased from 35.0 mg. to 176.0 mg. per litre, the rate of its absorption
+increased by about 2.2 times (see Fig. VI & VII).
+4) After aeration was stopped, and even when nitrogen gas was bubbled through the
+culture solution to stir it vigorously, the rate of uptake of both nitrate and phosphate
+continued for about 1-2 hours at a much reduced rate and practically stopped after that.
+This suggests the effect of aeration of the medium on the rate of salt uptake was not due
+to the physical process of stirring, but to the oxygen supply having a physiological effect
+(see Fig. IV-VII).
+JBRS, XLIV, ii, Dec. 1961
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 8]]
+232
+THAN TUN
+1.4
+CONC. 1
+CONC.5
+1.4
+07
+CONC.'5"
+RATE
+50.36MG/HR
+CUNC"1"
+RATE - 0.35 MG/HR
+WW
+RATE 0.35 MG/HR
+8.15 AM
+1PM
+RATE 0.35 MG/HR
+CLOCK TIME
+FIG VIL A.
+5PM
+8.15 AM
+1PM
+CLOCK TIME
+FIG. VIL B
+ABSORPTION OF PHOSPHATE BY WHEAT
+5PM
+0.5
+RATE=0.26MG/HR
+8.15AM
+1PM
+CLOCK TIME
+FIG. IX. A
+ATE: 0.25 MG 5
+6
+1.0
+RATE 0.26M6/HR
+0
+5PM
+8.15 AM
+ABSORPTION OF PHOSPHATE BY PEA
+1PM
+RATE - 0.20 MG/HR.
+CLOCK TIME
+FIG. IX.B
+JBRS, XLIV, i, Dec. 1961
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+5PM
+
+[[page 9]]
+CONCENTRATION OF SALTS
+EXPERIMEnt ii
+233
+This series of experiments was designed so that a direct comparison of the rate of
+uptake of phosphate and nitrate by the same set of plants in media of different concentra-
+tions could be made.
+The two culture solutions used in this experimental series were the same as in
+Experiment II, namely, Concentration "1" and Concentration "5". The absorption of
+phosphate and nitrate by one set of pea seedlings and by one set of wheat seedlings was
+first studied in Concentration "1" for a period of three hours, after which the same sets
+were transferred to Concentration "5" and the absorption of phosphate and nitrate was
+further followed. Another set of a pea seedlings and another set of wheat seedlings were
+used in similar experiments, but absorption was first studied in Concentration “5” and
+later in Concentration "**
+Seedlings used in this experimental series were 20 days old.
+Results are presented in graphical form (Fig. VIII-XI).
+Observations and Conclusions
+1) The rates of uptake of phosphate by the same set of plants in Concentration "1" and
+in Concentration "5" were approximately the same, suggesting that absorption of phos-
+phate is independent of its concentration in the culture medium over the range investigat-
+ed, i.e. from about 3.2 to 16.3 mg. per litre (see Fig. VIII, IX).
+2) The rate of uptake of nitrate was markedly affected by its concentration in the
+external medium. The increase of nitrate concentration from 35 to 176 mg. per litre was
+followed by an increase in the rate of its absorption by about 3.2-3.7 times (see
+Fig. X-XI).
+SUMMARY AND DISCUSSION
+1)
+Seedlings grown with their seeds attached to them even up to about 18 days of age,
+did not absorb detectable amounts of nitrate, though they absorbed considerable amounts
+of phospate from the culture medium (Experiment I),
+Seedlings with their seeds removed absorbed considerable quantities of nitrate as
+well as phosphate (Experiments II and III). This suggests that both pea and wheat
+seedlings, even 18 days after germination, relied solely on the seed nitrogen, and only
+when this source was removed did they absorb the inorganic nitrate supplied in the
+medium. It also suggests that seed nitrogen is more readily assimilated than the inorganic
+nitrate supplied in the medium.
+2) The rate of absorption of phosphate by seedlings was high during the "day-period"
+and low during the "night-period" (Experiment I). Two main possible factors, acting
+directly or indirectly, singly or together, are suggested:
+(a) Light: As we are dealing with a complex system, i.e. a whole plant, it is
+possible that light may have some effect on the rate of salt absorption through its effect on
+the physiology of the shoot system. It is likely that the effect of light operates via its
+effect on the rate of transpiration. The correlation between the rate of transpiration
+and that extent of salt uptake has been reported by Hylmo (1953) and Brouwer (1954,
+1956).
+JBRS, XLIV, il, Dec. 1961
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 10]]
+234
+THAN TUN
+75
+5.0
+CONC.""
+CONC."5"
+10.0
+CONC
+RATE-2.55 (96/83
+5.0
+CONC."S"
+W CZ
+10.0pt
+0
+25
+JPM
+RATE=0.80MG/HR
+$.15 AM
+5PM
+CLOCK TIME
+FIG. ✗ A
+3.5
+RATE: 0.85ME/HR/
+8.15AM
+ABSORPTION OF NITRATÉ BY WHEAT.
+CONC."I
+CONC.'5"
+10.0
+IPM
+CLOCK TIME
+FIG. I B
+CONC."5"
+CONC."!
+5PM
+WE DZ
+RATE, 0.80MG/HR
+1PM
+0
+5PM
+8.15 AM
+"CLOCK TIME
+FIG. XI A
+RATE: 0.85MG/HR
+8.15AM
+ABSORPTION OF NITRATE BY PEA
+1PM
+CLOCK TIME
+FIG. B
+5PM
+JBRS, XLIV, ii, Dec. 1961
+Convright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd. Ranokok Thailand
+
+[[page 11]]
+CONCENTRATION OF SALTS
+235
+(b) Temperature: As with any other physiological process, this factor may have a
+considerable effect on the rate of salt uptake. The temperature of the medium dropped
+from an average day temperature of 20°C to an average of 18°C during the night. It is
+also not unlikely that temperature affects salt uptake indirectly through its influence on
+transpiration.
+At the moment it is not possible to evaluate the relative importance of these factors,
+which can only be done by carrying out experiments under varying light intensities and
+temperatures.
+3) After stopping aeration, and even when nitrogen gas was bubbled vigorously through
+the medium, salt absorption continued at a much reduced rate for about 1-2 hours, and
+ceased thereafter (Experiment II). This clearly shows that the effect of aeration of the
+medium does not lie in its mechanical stirring, but that aeration is important as a means
+of keeping high oxygen tension in the medium for root respiration. This is in agreement
+with the finding that salt uptake is coupled with the level of oxygen (reported by Steward
+(1933), Hoagland and Broyer (1936, 1942).
+4) The rate of absorption of phosphate is independent of its concentration in the external
+medium, in agreement with Olsen's finding (1950). The rate is the same in culture
+solutions having 3.2 to 16.3 of phosphate per litre (Experiments II and III).
+The rate of nitrate absorption, on the other hand, is greatly influenced by its
+concentration in the external medium. This finding is contradictory to that of Olsen
+(1950). Increase of nitrate concentration from 35 mg. to 176 mg. per litre was accom-
+panied by an increase in the rate of uptake by 2.3-3.7 times (Experiments II,III).
+It is not possible to explain the difference in nature between the rates of nitrate
+absorption and phosphate absorption in relation to their concentration in the culture
+solution. This difference may possibly lie in their different metabolic role, but further
+work is needed to elucidate this point.
+1)
+BIBLIOGRAPHY
+American Public Health Association 1946: Methods of the Examination of water and
+sewage (9th. edition)
+2) Brouwer 1954. Acta Bot. Neerl., 3, 364
+3) Brouwer 1956. Acta Bot.
+Neerl., 5, 287
+Rev. Biochem., 1, 614, 2, 471
+4) Hoagland 1933, Ann.
+5) Hoagland and Broyer 1936.
+6) Hoagland and Broyer 1942.
+7) Hylmo 1953. Physiol.
+8) Hylmo 1958. Physiol.
+9) Olsen 1950. Physiol.
+Plant Physiol., 11, 47].
+J. Gen. Physiol., 25, 865
+Plauta, 6, 333
+Planta, 17,
+Planta, 3, 152
+382
+10) R.J. Robinson 1941. Ind. Eng. Anal. Ed., 13, 465
+11) Steward 1933. Protoplasma, 18, 208
+JBRS, XLIV, ii, Dec. 1961
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd. Bangkok. Thailand.

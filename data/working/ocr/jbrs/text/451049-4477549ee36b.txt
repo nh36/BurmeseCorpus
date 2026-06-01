@@ -1,0 +1,1944 @@
+[[page 1]]
+PUBLIC EXPENDITURES AND INFLATIONARY IMPACT
+IN BURMA
+1951-59*
+by
+DR. K. S. MALI ✰✰
+1
+In the post World War II period, especially after the launching of the Eight Year
+Plan for development in 1952-53, the government expenditures and receipts have
+increased sharply. The public domestic payments amount to approximately 50 percent o
+the Gross Domestic Product at current prices. In relation to the public domestic receipts
+the public domestic payments have been consistently above by more than 11 percent of the
+current GDP over the period 1954-55 to 1959-60. The Union Government's receipts and
+expenditures (current and capital) have risen from a level around 16 percent of the curren-
+GDP to that around 25 percent. The government operations, therefore, are a single
+most important factor determining the economic trends in the economy.
+TABLE I
+Public Domestic Receipts and expenditures, and Union Government's
+Receipts and Expenditures as Percent of Current GDP
+Public domestic receipts
+Public domestic expenditures
+Union Government's receipts
+Union Government's expenditures
+1951-
+1954- 1955- 1956- 1957-
+1958-
+1959.
+52
+55
+56
+57
+58
+59
+60
+34
+30
+38
+37
+35
+37
+50
+44
+50
+49
+47
+50
+17
+25
+20
+22
+25
+25
+25
+16
+27
+21
+21
+24
+24
+24
+Source: Derived from data given in Economic Survey of Burma, 1954 to
+1961, Suptd. Govt. Printing and Stationery, Rangoon; and Union Bank of
+Burma Bulletin, Second Quarter, 1961 Union Bank of Burma, Rangoon.
+The aim of the present paper is to analyse the inflationary impact of the public
+expenditures from 1950 to 1960. The problem is analysed through an aggregative approach
+in part I and through a sectoral approach in part II.
+Read at the Ninth Annual Research Conference on 7 Dec. 1961 with Professor
+Aye Hlaing in the Chair.
+✰✰ Lecturer in Economics, University of Rangoon.
+1. See Table 1.
+49
+JBRS, XLV, i, June 1962
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 2]]
+50
+DR. K.S. MALI
+I
+Expenditure Gap and Aggregate Expenditures
+An aggregative approach to the study of inflation may be made by first indentifying
+the crucial variables that determine the aggregate demand in the domestic market. These
+variables may be identified by rearranging the following equation which relates gross
+national product to aggregate expenditures.
+C + B + G + X
+M
+==
+GNP
+====
+C + Sb + Sp + D + Tb + Ty
+(1)
+Where C consumption expenditures, B-- gross private capital formation, G-- government
+spendings on goods and services including capital goods, X - - exports, M - - imports, GNP
+gross national product, Sb - - business savings, Sp - - personal savings, D depreciation,
+Tb - business taxes Ty taxes on income.1 Cancelling C and rearranging terms gives:
+--
+-
+-
+G – Tb − Ty + B + (x − m) = Sp + Sb + D
+(2)
+In the case of Burma two modifications are needed: (a) Th and Ty should be
+understood to include taxes on public enterprises (government boards and corporations)
+and rehabilitation contributions2 from public enterprises; (b) the overall balance of
+payments (X-M) should be split into the government balance of payments (x1-m²) and
+the private sector's balance of payments (x-m)³. These adjustments are made in equation
+(3) below:
+G-Tb - Ty+B+(x¹-m¹)+(x-m) = Sp+Sb+D
+(3)
+Now since government exports (x1) are the receipts of the government from abroad and
+government imports (m1) are government expenditures abroad, they should be adjusted in
+G and Th and Ty. Thus we get:
+(G – m¹) – (Tb +Ty-x¹) + B +(x-m) = Sp + Sb + D
+--
+-
+(4)
+1. T - - business taxes, are taxes on business profits and exclude personal incomes earned
+in business. T-- ytaxes on income, include taxes on personal incomes earned in
+business.
+2. The rehabiltation contributions are determined by government policy decisions as to
+how much should be drawn from profits after tax of public enterprises for capital or
+other expenditures. The largest rehabitation contributions have been made by the
+State Agricultural Marketing Board (SAMB).
+3. Such a splitting of the balance of payments account is needed since the government
+exports are a heavy item and imports are a light item relative to the exports and
+imports of the private sector. The overall balance of payments does not accurately
+reflect the deficit of the private sector.
+JBRS, XLV. i, June 1962
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 3]]
+PUBLIC EXPENDITURES AND INFLATIONARY IMPACT IN BURMA
+Transposing equation (4) we get:
+51
+-
+-
+(G – m¹) – (Tb + Ty-x¹) = (Sp+Sb+ D−B) − {x-m)
+(5)
+The bracketed components of question (5) mean: (G – m¹) - - Total government
+expenditures minus government expenditures abroad; (Tb+ Ty - x¹) - - total receipts of the
+government minus the government receipts from abroad; (Sp+Sb+D-B) -- the gross
+savings of the private sector minus the gross private investment; and (x-m) - - private
+exports minus private imports.
+(G - m¹) is the government domestic expenditure (Tb+Ty-x1) is the government
+domestic receipts. (G-m1)-(Tb + Ty-x1) is the cash deficit of the government with the
+private sector. (Sp + Sh÷D - B) is the excess of private saving over private investment.
+(xm) is the surplus of balance of payments on private account. The excess of private
+saving over investment minus the surplus of balance of payments on private account gives
+the net surplus on private account". Alternatively, we can say that the excess of private
+savings over investment plus the deficit on private sector's balance of payments gives us
+the net surplus on private account. Equation (5) therefore, can be interpreted as equality
+between the government's cash deficit with the private sector and the net surplus on
+private account.
+Using ex ante terms the condition for a stable level of aggregate expenditures may
+be stated as equality between the government's cash deficit with the private sector and the
+intended (or desired) excess of private savings over investment at the initial level of income,
+plus the intended net imports that the private sector would wish to undertake at the initial
+level of income. In other words, the surplus on private account in ex ante terms is called
+the "intended surplus on private account".
+Increasing aggregate expenditures imply that the government's cash deficit should
+exceed the intended surplus on private account. The excess may be termed Expenditure
+Gap. The increase in aggregate expenditures will tend to exceed, and will be a multiple
+of, the expenditure gap if it is maintained over successive periods.
+The main variables that determine the size of the expenditure gap may be identified
+from equation (5) as level of public domestic expenditure, level of public domestic receipts'
+excess of intended gross private saving over investment, and the level of intended net
+private imports. Given the level of public domestic receipts and the level of the intended
+surplus on private account the expenditure gap will be determined by the level of public
+domestic expenditures. To avoid inflation these crucial variables of equation (5) should
+be so adjusted by the fiscal authority as to create an expenditure gap that would generate
+aggregate expenditures equal to the total value of Gross Domestic Product at constant
+prices.
+In a growing economy, such as Burma, let us suppose the rate of growth of GDP
+at constant prices to be five percent per annum. To maintain price stability the aggregate
+JBRS, XLIV, i, June 1962
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 4]]
+52
+DR. K. S. MALI
+expenditures should also grow at the same rate. Given the multiplier the level of expen-
+diture gap may be worked out to give the required level of aggregate expenditures. Suppose
+the multiplier is 5 then the required level of expenditure gap would be 1 per cent of the
+initial level of aggregate expenditures.1 An expenditure gap larger than this would give
+rise to an "inflationary gap". The inflationary gap will be represented by that increase
+in the aggregate expenditures which will not be absorbed by the economy at constan
+prices.
+In order to make this little price of theory an effective tool of fiscal policy numerous
+difficulties arise. First, to determine the ratio between the expenditure gap and the
+aggregate increase in expenditures, a number of factors have to be considered. On the
+consumption side, the resulting increase will be determined by the multiplier effect. On
+the investment side, the resulting increase in expenditures will depend upon induced
+investment, that is, how private investment responds to an increase in total demand. The
+response will depend not only on the initial increase in expenditures but also on resulting
+changes in money supply. The effects of changes in money supply continue to be felt
+even though the effects of initial expenditure gap will taper off in future periods if the
+rate of increase of expenditure gap is discontinued. The effects of changes in money
+supply are continued to be felt also because of structural reasons and, especially, the dicho-
+tomous character of the economy - a rural subsistence production sector and the urban
+sector which restrict inter-sectoral flow of incomes. In respect to the response of private
+investment to increase in total demand it is not only the magnitude but also the rapidity
+of response which is of great importance to policy making.
+In an economic organisation, such as that of Burma, where institutional factors -
+various import, exchange, price, and distribution controls - - restrict the true propensities
+to consume and import no meaningful estimates of the multiplier and induced investment
+are possible. Because of the complexity of the problem it is not possible to predict the
+extent to which the expenditure gap will increase aggregate expenditures: Besides in a
+developing economy a given ratio of expenditure gap to total expenditures may be correct
+for one year yet quite a different ratio may apply to another time.
+Given the ratio of expenditure gap to total expenditures it still remains to determine
+what increase in total expenditures is permissible in order to avoid inflation. It may be
+argued that the increase in total expenditures generated by the expenditure gap should
+match the increase in output valued at constant prices. An increase in total expenditures
+more than the increase in real output will create an inflationary gap. In a developed
+economy, under full employment, increase in output will be due to increased productivity,
+and the marginal capital/output ratio may be determined. But in a developing economy
+the increase in income may not be easy to estimate. In such an economy there is no
+simple ratio between addition to capital stock and level of full employment income. Full
+R
+K
+1. The formulae that applies is percent of initial level of expenditure where R is
+percentage increase in aggregate expenditures and K is the multiplier.
+JBRS, XLV, i, June 1962
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 5]]
+PUBLIC EXPENDITURES AND INFLATIONARY IMPACT IN BURMA
+53
+employment level of income continues changing in a developing economy as the factors
+continue improvement in efficiency, as older techniques are replaced by newer ones,
+and a labour gains mobility.
+The full employment assumption is not valid for a country like Burma where a
+considerable number of people remain unemployed or underemployed. The expenditure
+gap, to the extent it draws such people to productive employment would increase output
+rather than cause inflation. In this case the desirable increase in the total level of expen-
+ditures would be greater than what it would be under full employment. But much will
+depend on how responsive the idle resources are to increases in demand, to what extent
+bottlenecks and shortages will develop and so forth. In Burma certain cultural factors
+also impede such responsiveness. The problem which the creation of expenditure gap
+then involves is the extent of price rise which would be permissible with a given increase
+in real output, the areas where such price rises may occur and so forth. These factors
+can not easily be appraised but they must be kept in mind by the policy maker when
+deciding on the desired increase in total expenditure the level of expenditure gap, and the
+required level of taxation in order to avoid inflation.
+Foreign Exchange Earnings and Net Private Imports
+The current level of foreign exchange earnings and their reflection in the contribu-
+tion of public enterprises, especially the SAMB, have no direct bearing on the size of the
+government's cash deficit with the private sector; and hence no bearing on the need for
+taxation. The size of the cash deficit and hence the need for taxation are the same whether
+the government obtains its funds by drawing on balances, borrowing from the Union Bank
+of Burma, or from SAMB.
+Foreign exchange earnings, however, bear indirectly on the need for taxation.
+More foreign exchange makes more imports available. If we take private imports as a
+residual item after government imports, then higher foreign exchange receipts enable the
+private sector to finance a higher level of imports. A decline in foreign exchange earnings,
+therefore, makes it necessary to restrict private imports. The restriction of drivate imports
+reduces the intended surplus on private account. This requires a corresponding reduction
+in the government deficit with the private sector, and hence a corresponding higher level
+of domestic taxation or a lower level of public domestic expenditures.
+The structure of Burmese economy is such that a substantial cash deficit of the
+government with the private sector is needed to maintain the level of total expenditures.
+Its main function is to act as an offset against the surplus on private account and also to
+provide for an adequate growth of money supply as output increases. The most significant
+item in the surplus on private account is the net private imports. Burma is dependent to a
+1. This view implies that a mild inflation will be conducive to the growth of output.
+Further see pages 55 and 56.
+JBRS, XLV, ), June 1962
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 6]]
+54
+DR. K. S. MALI
+very large extent on imports of consumer goods and will be more so during the earlier and
+intermediate stages of development, when the cousumer goods are not domestically
+produced. The rise in total income generated by the expenditure gaps will put heavy
+pressures for larger quantities of consumer imports.
+Consumer imports are limited by the availability of the foreign exchange which is
+the most vulnerable item in the Burmese economy. The foreign exchange earnings depend
+largely upon the foreign sale proceeds of agricultural produce especially of rice. Both the
+world price of rice and the volume of rice export are beyond the control of the policy
+maker; the former is determined by the world market forces and the latter largely by
+weather conditions. Great ingentuity and practical judgement is called for of the policy
+maker in adjusting the proper level of cash deficit with the private sector or of expenditure
+gap which would promote stability and economic development.
+Expenditure Gap and Changes in Money Supply
+A cash deficit of the government with the private sector will give rise to a correspon-
+ding increase in the privately held money supply, whether it is financed out of SAMB
+contributions or by borrowing from the Union Bank of Burma. The release of the SAMB
+earnings for government spending acts in the same way as receipts from private exports on
+the money supply of the economy. To the extent the deficit is financed by sale of bonds
+to the non-bank public, the deficit will not increase privately held money supply. However,
+sale of bonds to the non-bank public is not yet an important factor in Burma.
+Net imports by the private sector involve the purchase of foreign exchange from the
+Union Bank of Burma and thus result in a corresponding reduction in the privately held
+money supply.
+An excess of intended saving over planned investment will effect changes in money
+supply depending on the velocity of money in the private sector. If the private sector's
+velocity of money is one then changes private money supply will equal the difference
+between the intended saving and planned investment in the private sector.
+If the velocity
+of money in the private sector is not one but constant the private expenditures will change
+directly and proportionately with changes in money supply. However, total expenditures
+will not necessarily vary directly and proportionately with money supply. This will be
+true only if government expenditures were a constant ratio of private expenditures. In
+other words even if valocity of money in the private sector is constant the income velocity
+of money need not be constant.
+If the income valocity of money is constant the cash deficit of the government equal
+to the intended surplus on private account! will keep the total expenditures constant.
+1. If the intended private net imports (m - x) = 0, then the intended surplus on private
+account will be the excess of intended saving over planned investment.
+JBRS, XLV, i. June 1962
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 7]]
+PUBLIC EXPENDITURES AND INFLATIONARY IMPACT IN BURMA
+55
+A change in total expenditures will be possible only if there is a corresponding change in
+money supply. Thus, an excess in the cash deficit above the intended surplus on private
+account (i.e. an expenditure gap) will give rise to an equal increase in the privately held
+money supply and the increase in total expenditures will be equal to the expenditure gap.
+However, the assumption, constant income valocity of money, is not a realistic one.
+If changes in income valocity are allowed, a situation of constant total expenditures need
+not necessarily be one in which money supply remains constant. An expenditure gap may,
+but need not, be accompanied by a corresponding increase in private money supply.
+This is not to deny that changes in private money supply, implicit in the expenditure
+gap, are important. They are infact very important in Burma where holding of cash
+balances is not a widespread practice. But changes in money supply are not necessarily
+equal to the expenditure gap as bank loans to private borrowers, savings deposits, etc.,
+also enter the picture, although in relatively small amounts.
+Expenditure Gap and Development
+Expenditure Gap (or deficit financing) is now a well recognized fiscal tool to combat
+unemployment in advanced economies. A situation of unemployment in developed
+economies is attended with excess capacity and the main purpose of an expenditure gap
+is to increase aggregate demand. An expenditure gap, for the purpose of achieving full
+employment, may be created by a combination of increased government expenditures and
+reduced taxation.
+However, the fundamental role of expenditure gap in an undeveloped economy is
+to develop resource and capital capacity. A large part of unemployment in such econo-
+mies is not due to lack of aggregate demand but because of relative shortage of capital to
+fully emyloy other factors. In an "undeveloped setting" large expenditures are needed for
+capital formation. Creation of large expenditure gaps will result in strong inflationary
+pressure especially because of the long "production lags" and high capital/output ratios.
+Long production lags are inevitable since capacity has to be developed before output can
+be produced. High capital/output ratios can not be avoided where heavy expenditures
+are made on Social Overhead Capital at the initial stages of development. Therefore, in
+order to mitigate inflationary pressure, the fiscal policy in an undeveloped setting must
+not combine increased expenditures with overall reduction in tax yield as in a full-employ-
+ment-policy. On the contrary tax yield must be increased to mop up the inflationary gap.
+Measures taken to increase tax yield should not be such as to adversely affect
+incentives to work and to produce or to become actual additions to costs. The effect of
+such tax measures would be to increase the inflationary pressure through "cost push price"
+type of medias.
+JBRS, XLV, i, June 1962
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 8]]
+56
+DR. K. S. MALI
+What is an appropriate level of expenditure gap which would give a maximum rate
+of development' while avoiding inflation? It may be argued that the increase in aggregate
+expenditures should match the increase in real output. This will be too strict a view
+especially in a "development setting". Besides the real output there are other factors
+also deserving consideration.
+A mild inflation may be conducive to development since it would permit manipula-
+tion of relative prices in favour of factors that are required for development projects
+without imposing reductions in prices and wages in other sectors.
+Besides " money
+illusion" would also induce greater effort and intensive application of factors. 2 There-
+fore, a slightly higher rate of increase in aggregate expenditures may be allowed for then
+that in real output.
+The other factor to be considered in determining an appropriate level of expenditure
+gap is the flexibility of the revenue structure. If the revenue structure is so designed as to
+posses a high degree of flexibility so that as increasing incomes are generated by the expen-
+diture gap they are, at the same time, mapped up by the tax system, the fiscal authority
+would enjoy a greater freedom in the creation of an expenditure gap. Flexibility of the
+tax structure is of crucial importance, in a development setting, if the inflationary impact
+of large expenditure gaps is to remain within controllable limits. In more precise terms
+the permissible level of aggregate expenditures and that of expenditure gap may be.
+determined as follow:
+Permissible increase of
+aggregate expenditures
+=
+A₁ (Or + X)(T₁. Tr)
+Where A is the initial (previous) period's aggregate expenditures
+Or is the average (or current year) rate of growth of real output
+X is an arbitrary rate to have a slight degree of inflation for
+development purpose. T₁ is the initial (or previous) period's tax yield
+Tr is the average (or current) rate of increase in tax yield.
+The level of expenditure gap is given by dividing the permissible increase in aggregate
+expenditure by ths Multiplier, K.
+1. It is assumed that expenditures are made in an economically efficient manner and
+bear a direct relationship with rate of development. However, expenditures are not
+the only factor that determine the maximum rate of development. Other factors such
+as availability of other resources, techniques, cultural molds also have a great affect
+on the rate of development.
+2. Bronfenbrenner, Martin, "The High Cost of Economic Development", Land Econo-
+mics, May, 1953, especially p. 210
+3. Permissible increase in aggregate expenditures means non-inflationary increase.
+JBRS, XLV, i, June 1962
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 9]]
+PUBLIC EXPENDITURES AND INFLATIONARY IMPACT IN BURMA
+57
+A note of warning may be given here against a possible mistaken notion that since inflation
+can be controlled by raising tax yield, expenditure gaps can be increased to any level.
+Rising of tax yield is not without limits. These limits are set by inefficiencies in tax
+administration, by political opposition to the raising of tax rates and introduction of new
+taxes or expansion of the tax base, and by adverse effects of taxation on incentives. Besides,
+however flexible a tax system may be it would not completely siphon off the inflationary
+gap generated by the expenditure gap since a part of the increased incomes flows into
+channels which can be siphoned off only through shiftable taxes, or taxes that become
+actual additions to costs. A partial effect of such taxes is to raise prices and hence to
+aggrevate inflationary pressure. Increased expenditures in these channel may be supported
+by a fall in liquidity preference which might offset the deflationary effect of taxation on
+income.
+The average annual rate of growth of real output in Burma for the period 1953-54
+to 1959-60 has been 4.6 per cent' and another .4 per cent may be allowed to create a
+mild inflation for development purpose, The average annual rate of growth of revenue
+also has been 4.62 percent for the period 1952-53 to 1960-61. Permissible increase in
+aggregate expenditures and level of expenditure gaps under different assumptions of the
+multiplier (K) are given in the table 2 below.
+TABLE 2
+Permissible Increare in Aggregate Expenditures and Level of Expenditure Gaps,
+1955-56 to 1960-61
+(in million kyats)
+1954-55 1955-56 1956-67 1957-58 1958-59 1959-60
+Aggregate Expenditures
+4813
+5162
+5452
+5373
+5583 5985
+Revenue Yield
+940
+738
+963
+1019
+918
+1054
+Permissible increase in aggregate
+expenditures
+284
+292
+317
+316
+321
+348
+Expenditure Gap K = 3
+95
+97
+106
+105
+107
+116
+,,
+,,
+"
+K =
+2
+K = 1.5
+,,
+,,
+,,
+142
+141
+158
+158
+161
+174
+189
+195
+211
+210
+214
+232
+Source: for Aggregate Expenditures, GDP at current prices figures drawn from
+Economic Survey of Burma, 1954-55 to 1960-61 for Revenue Yield,
+Budget Estimates of the Union of Burma 1954 to 1961, Suptd. Govern.
+ment Printing and Stationary, Rangoon.
+1. Ministry of National Planning, Second Four Year Plan, A Draft Outline, Suptd.
+Government Printing and Stationery, Union of Burma, Rangoon: 1961. Also see
+table 5.
+2. Derived from the Budget Estimates of the Government of the Union of Burma, Suptd.
+Govt. Printing and Stationery, Rangoon. Also see table 5 below.
+JBRS, XLV, i, June 1962
+8
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd. Bangkok. Thailand.
+
+[[page 10]]
+58
+DR. K. S. MALI
+Expenditure Gap Policy of the Government
+During the fiscal years,1
+1947 thru 1952, the government maintained overall
+budget surpluses. The surpluses were maintained inspite of the low revenue potential of
+the war-crippled economy and high military expenditures because of insurgent activities.
+The explanation for the large budget surpluses, during the years 1947 thru 1952,
+lies in the large government receipts from the rice exports in a period of boyant world
+market for rice.² With a system of fixed price paid to the cultivators for rice, and a state
+monopoly of rice exports, the government was able to draw a third to half of its annual
+revenue from foreign rice sales. A second contributing factor for the budget surpluses
+was the relatively low level of developmental expenditures, during this period.
+After the inauguration of the Eight Year Plan for economic development in 1952-53
+government expenditures began to increase sharply. Along with large increase of expen-
+ditures on capital formation expenditures on capital formation expenditures on social
+welfare and current account (administrative) also witnessed sharp increases.
+The Cash Consolidated Budget3 shows for the years 1954-55 to 1959-60 that the
+domestic payments of the government have been in excess of government receipts in all
+these years, thus, giving a cash deficit of approximately 680 million kyats on the average
+every year.
+Gross domestic product, both in current and constant prices, dipped in 1957-58
+and so did domestic receipts, domestic payments, and cash deficit. Between 1955-56 and
+1956-57 gross domestic product rose and so did also domestic receipts and domestic
+payments but cash deficit of the government declined. These is a decline also in the
+expenditure gap for the same period but the net foreign payments by the private sector
+almost doubled over the previous year. This needs some explanation.
+In 1955-56 the government caused an expenditure gap of K 236 million and, with
+the addition on bank credit expansion of K 33 million, the total private money supply
+increased to K 269 million. The expenditure gap in the previous year 1954-55 was K. 196
+1. The fiscal year is from October thru September.
+2. During the period 1947-52, price of rice was high initially because of the general
+relative shortage of food grains in the world after the World War II, and laterly
+because of the Korean War.
+3. See Table 3. The cash Consolidated Budget includes the variables of our equation
+(5) on page 51.
+4. Gross Domestic Product (GDP) is GNP adjusted for net income payments abroad.
+JBRS, XLV, i, June 1962
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd. Banakok. Thailand.
+
+[[page 11]]
+PUBLIC EXPENDITURES AND INFLATIONARY IMPACT IN BURMA
+TABLE III
+Cash Consolidated Budget of the Public Sector and its effect on Private Money Supply
+with further derivation of Expenditure Gap (in millions of Kyats)
+59
+1954- 1955- 1956-
+1957-
+1958-
+1959.
+1960-
+55
+56
+57
+58
+59
+60
+61
+R.E.* R.E.
+1. Receipts of the government
+2. Less Receipts from abroad
+3. Equal: Domestic Receipts
+2,527 2,651
+3,364
+3,065
+3,177
+3,396 3,409
+903
+1,090
+1,298
+1,095
+1,229 1,246 1,076
+1,624,
+1,561
+2,066
+1,970
+1,948
+2,150 2,333
+4. Expenditures of government
+5. Less: Payments abroad
+6. Equal: Domestic Payments 2,423 2,278
+2,983 2,765
+3,284
+3,147
+3,241
+3,484
+3,544
+560 487
+565
+566
+639
+597
+617
+2,719
+2,581
+2,602
+2,887
+2,927
+7. Cash deficit with private sector 799
+717
+653
+611
+654
+737
+594
+8. Less: Excess of private
+foreign payments over
+foreign receipts
+559
+473
+869
+549
+465
+619
+661
+9. Net change in private savings a +44
++8
+- 8
+-
+- 5
+0
+50
+10
+10. Expenditure Gap 7 (8 + 9) 196
+-
+236
+-208
+67
+189
+58
+- 77
+11. Plus: Expansion in Bank Credit -3
++33
+26
+10
+20
+20
+86
+12. Equal: Changes in private
+money supply
++193
++ 269
+-182
++ 77
++ 209
++78
+13. Gross Domestic Product
+Current Prices
+4,813 5,162
+5,452
+5,373
+5,583 5,985
+6,294
+14. Gross Domestic Product in
+Constant Prices
+4,294 4,458
+4,934 4,770
+5,106 5,466
+5,540
+*R.E. Revised estimates
+a Includes net change in time deposits.
+Source:
+Economic Surveys of Burma, 1956, 1957, 1958, 1959, 1960, 1961 and Union
+Bank of Burma, Bulletins 1956 to 1959 issues.
+million and in comparision to this the 1955-56 gap was almost 20 per cent higher. This
+led to an increase in aggregate expenditure unmatched by the increase in real output.
+Since the excess of net private importswas also limited to K 473 million as against
+K 559 million in 1954-55 the large expenditure gap of 1955-56 led to inflationary pressures.
+The Rangoon cost of living index (1953-100) rose from 93 in June, 1953 to 125 in June,
+1956 and then to 134 in July, 1957. '.
+1. See Table 4
+JBRS, XLV, i, June 1962
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 12]]
+60
+DR. K. S. MALI
+In 1956-57 the government's major concern was to curb inflation. Accordingly the
+government liberalized its private import policy, and the excess of private imports over
+exports amounted to K 869 million against K 473 million of the previous year. This with
+the governments's cash deficit of K 653 million and a fall in private savings of 8 million
+caused a negative expenditure gap of K 208 million. The private money supply, hence,
+should have fallen to K 208 million, but because of the increase in bank credit expansion
+of K 26 million the private money supply fell only by K 182 million. 1 The result of
+these measures and of changes induced thereby was a fall in the Rangoon cost of living
+index from 134 in July, 1957 to 109 in March, 1958. ²
+Gross domestic product, in current and constant prices, increased in 1956-57 but
+diminished in 1957-58. Could these changes be related to the large expenditure gap in
+1955-56 and a negative expenditure gap in 1956-57? Probably not. As already pointed
+out, the problem of how much the expenditure gap will increase total expenditures
+involves so many complex factors, which can not be ascertained in a developing economy
+like Burma, that no simple solution is possible. Even though the gross domestic product
+at constant prices increased in 1956-57 inflationary pressures were generated. How much
+this inflation can be attributed to the excessiveness of the expenditure gap, and how much
+of the increase in gross domestic product was stimulated by the expenditure gap can not
+be ascertained. The fall in gross domestic product in 1957-58 again can not be explained
+by the negative expenditure gap of 1956-57. The exogenous factor, unfavourable weather
+conditions, was also partially responsible for lower gross domestic product.4
+The expenditure gap was again raised in 1958-59, to K 189 million and the
+resulting increase in money supply including that due to bank credit expansion amounted
+to K 209 million. Private net imports again being restricted at a level of K 465 million,
+the situation led to an increase in prices. The Rangoon cost of living index rose from 109
+in March 1958 to 129 in July 1958. The government again liberalized imports by the
+private sector and reduced the expenditure gap to K 58 million in 1959-60.5
+The revised budget estimates for 1960-61 show a negative expenditure gap of 77
+million kyats. This fall in the expenditure gap is due to the decrease in government's cash
+deficit and an increase in net private imports over the previous year.
+1. Because of some errors and ommissions amounting to K 36 million the Ministry of
+National Planning accounted for a net decrease in money supply of K 146 million.
+See Economic Survey of Burma op. cit. 1958. This is not shown in our table 4.
+2. The fall in the cost of living index was partially also due to the price and distribution
+controls imposed by the government.
+3. See pages 51 and 52 above.
+4. Economic Survey of Burma, op. cit., 1959, p.1.
+5. These figures for 1959-60 are estimates.
+JBRS, XLV, i, June 1962
+Copyright© 1998 - Myanmar Book Centre Book Promotion & Service Ltd, Bangkok, Thailand.
+i
+
+[[page 13]]
+PUBLIC EXPENDITURES AND INFLATIONARY IMPACT IN BURMA
+TABLE IV
+Rangoon Cost of Living index for a Burmese Family of Three
+YEARLY AVERAGE
+1952
+1953
+1954
+1955
+1956
+1957
+MONTHLY AVERAGE
+March 1957
+June
+July
+September
+December
+January, 1958
+February
+March
+June
+July
+August
+September
+October
+November
+1953 = 100
+61
+INDEX
+104
+100
+95
+97
+112
+121
+INDEX
+117
+131
+134
+127
+122
+:
+115
+111
+109
+123
+129
+...
+129
+126
+120
+113
+102
+95
+94
+96
+96
+...
+97
+97
+December
+January, 1959
+February
+...
+March
+April
+May
+June
+Source: Union Bank of Burma Bulletin and international Financial Statistics.
+JBRS, XLV, i, June 1962
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service I fd Bangkok Thailand
+
+[[page 14]]
+62
+Computed and Actual Expenditure Gaps
+DR. K. S. MALI
+Comparing the actual expenditure gaps with those computed on different assump-
+tions regarding to multiplier it can be readily seen that the actual expenditure gaps are in
+excess of the computed gaps for the year 1954-55 and 1955-56 under all the three assump-
+tions of multiplier. The effect of these expenditure gaps, we have noted above, was to
+contribute to inflationary pressure. For two years, 1956-57 and 1957-58, the policy of the
+government was to combat the inflationary pressure and a negative expenditure gap was
+created in 1956-57 and a small positive gap was created in 1957-58. The expenditure gaps
+for both these years are below the computed gaps. In 1958-59, as the Rangoon cost of
+living index was getting stabilized in the first half of the calender year, the government
+again created an excessive expenditure gap relative to the computed gaps with multipliers
+3 and 2. This again led to increase in prices and government reduce the expenditure gap
+in 1959-60.
+The variations in actual expenditure gaps relative to computed gaps and in the
+Rangoon cost of living index suggest that the muitiplier in the Burmese economy may be
+any where between 2 and 3. However, a firm estimate of the multiplier can not be given
+for reasons given above.2
+Aggregate Expenditures, Royal Output and Revenue Yield
+Table 5, below, gives the rates of annual increases in aggregate expenditures, real
+output, and revenue yield in Burma over the period 1953-54 to 1960-61.
+TABLE 5
+Rate of Annual Increase in Aggregate Expenditures
+Real Output and Revenue Yield
+1953-1954- 1955- 1956- 1957- 1958- 1959- 1960- Aver-
+54 55 56 57
+58
+59 60
+61 age
+Aggregate Expenditures
+.5
+++
+Real Output
+3.8
+Revenue Yield
+4.2
+11.2 -21.5
+4.6 7.3 5.6 -1.4 3.9 7.2 5.2
+6.1 3.6 10.3
+-4.3 6.9 5.7
+1.4
+30.5 5.8 -9.9 14.8 1.8
+3.9
+4.6
+4.6
+Source: Derived from data given in Economic Survey of Burma 1957 and 1961; and
+Budget Estimates of the Uniou of Burma 1954 to 1961
+1. See table 2
+2. See pages 51 and 52 above
+JBRS, XLV, i, June 1962
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 15]]
+PUBLIC EXPENDITURES AND INFLATIONARY IMPACT IN BURMA
+63
+The aggregate expenditures rose up till 1956-57 though at a varying rate. 1954-55
+and 1955-56, were the years when large expenditure gaps were created and the aggregate
+expenditures increased in these years. The rate of increase in real output in 1954-55 is
+higher than that of aggregate expenditures by 1.5 percent. The Rangoon cost of living
+index was also at 95 and 97 in 1954 and 1955 (calender years) respectively. In 1955-56
+the rate of growth of real output fell below that of aggregate expenditures by 3.7 per-
+centage points. This was the year when a large expenditure gap was created mainly by
+restricting imports. The prices began to rise and the Rangoon cost of living index stood
+at 112 in 1956 and at 121 in 1957.
+In 1956-57, inspite of a large negative expenditure gap the aggregate
+expenditures rose though at a lower rate than that of the previous year. The
+explanation lies in the large rate of growth of real output, by 10.3 per cent, which
+more than off set the deflationary effect of the negative expenditure gap on aggregate
+expenditures. The large negative expenditure gap of 1956-57 was created by liberalizing
+private imports. The effect of which should have been to reduce prices which actually did
+not fall till 1958. This was because of the fact that the rate of growth of real output in
+1957-58 fell drastically to -4.3. As a result of which the rate for aggregate expenditures
+also fell to -1.4 even though the prices remained high. The period 1958-59 to 1960-61
+follows a similar pattern as in the period 1953-54 to 1955-56. A moderately excessive
+expenditure gap was created in 1958-59 again mainly by restricting imports. In 1959-60
+and 1960-61 expenditure gaps were reduced by liberalising private imports to some
+extent.
+The revenue yield in Burma, it should be noted, depends to a very large extent on
+import taxes which include the custom duties and the sale tax. Of the total tax revenue
+import taxes contribute approximately 45 per cent. In table 5, we find that the rate of
+growth of revenue yield fell to -21.5 in 1955-56 and again to -9.9 in 1958-59. These were
+the years when the net private imports were drastically restricted. The years 1954-55,
+1956-57, and 1959-60 show increase in the rate of revenue growth of 11.2, 30.5, and 14.8
+respectively. These were the years when private imports were more liberal than in other
+years. The largest net private imports were effected in 1956-57 when the rate of revenue
+growth increased to 30.5. These movements indicate that the rate of revenue growth have
+fluctuated according to the import policy of the government.
+However, the most interesting comparison in the series in table 5, is of the average
+rates of growth which are 3.9 for aggregate expenditures, 4.6 for real output, and 4.6 for
+revenue growth. The striking fact is that not only the real output and revenue grow at
+the same average rate but that this rate is also above the average rate of growth of aggre-
+gate expenditures. This would suggest that although there may be annual inflationary or
+deflationary movements, on the period as a whole, these movements smoothen out and on
+the net there should be a slight deflation. However, the fact of the situation is that the
+average cost of living index for the period 1953 (=100) to 1960 shows an approximate rise
+JBRS, XLIV, i, June 1962
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 16]]
+64
+DR. K.S. MALI
+by 7 percentage points.1 Apart from this there are severe inflationary pressures localized
+in certain sectors.2 A possible explanation for the lower rate of growth of aggregate
+expenditures may lie in the fact that the relevant price series to compare with changes in
+aggregate expenditures would be General Price Index based upon export, import and
+domestic prices. The export prices for most goods have been falling3 during the period by a
+larger percentage than the import C.I.F. prices and the rise in domestic prices. The net
+result would be a fall in the general price index. The cost of living index in which the
+domestic and import prices predominate and which have been rising, especially the
+domestic prices, 4 would show a rise on the average.5
+In summary, fiscal policy in Burma has to be fashioned to push development via
+creation of expenditure gaps. Creation of expenditure gaps require careful adjustment to
+match the rate of growth of aggregate demand to that of aggregate supply, if inflation is to
+be avoided. In a developing economy, such as Burma, there is no simple solution to
+this.
+Creation of large expenditure gaps is necessitated because of large expenditures
+required for developmental projects while the slow increase in real output can not be
+matched with the large increase in aggregate expenditures generated by the expenditure
+gaps. Inflation thus appears inevitable.
+Inflation may be mitigated by increasing private imports. But increasing private
+imports uses up foreign exchange which is required to meet foreign costs of the capital
+1. Derived from the cost of living index for Burma. Union Bank of Burma Bulletin, 2nd
+Qr. 1961, op. cit. p. 65.
+2. This aspect of the inflationary pressure will be analysed in part II of this paper.
+3. For example the average foreign price of rice fall from K 837 per ton in 1952-53 to
+K 443 in 1958-59 and further to K 407 in 1959-60. Kyats 407 per ton is mentioned
+as provisional price for 1959-60. See Second Four Year Plan op. cit. p. 12.
+4. Domestic prices of imported goods have risen much more sharply than prices of
+domestic products.
+5.
+Cost of
+Living Index
+Wholesale
+Price index
+Unit value index of
+Terms of
+Trade
+of Agricul-
+Exports
+Imports
+tural Produce
+C.I.F.
+1940
+100
+100
+100
+100
+100
+1952
+316
+480
+862
+270
+320
+1958
+353
+522
+564
+228
+247
+1960
+329
+503
+475
+224
+212
+I am grateful to Professor U Aye Hlaing for these indices. It may be noted that
+after 1952 import prices fell relatively less than the export prices, while, the domestic
+agricultural produce price rose.
+JBRS, XLV, i, June 1962
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 17]]
+PUBLIC EXPENDITURES AND INFLATIONARY IMPACT IN BURMA
+65
+program. Private imports, therefore, have to be restricted to conserve foreign exchange, to
+stop foreign leakage, and to avoid balance of payments difficulties which would arise under
+free trade. Thus, for Burma, liberalization of private imports does not provide an ade-
+quate solution to inflation. This solution, perhaps, lies in developing and strengthening
+the non-inflationary sources of demestic finance which would mop up the inflationary
+increase in aggregate expenditures.
+II
+Structure of the Burmese Economy and Inter-Sectoral Flows
+A sectoral approach to the impact of the public expenditures requires identification
+and analysis of at least the broad sectors of the economy. Inflationary pressures may arise
+because of reasons which restrict flows of goods or incomes between the various sectors of
+the economy and thus may cause inflation to be localized in some particular sectors where
+money incomes rise.
+cance.
+Broadly speaking the economic structure of Burma is a dichotomy between
+a large rural sector and a smaller urban sector covering a few large towns and
+some smaller ones. The rural sector includes a subsistence production sector
+whose demand for food and other goods is satisfied very largely within the sector through
+a system of barter exchange. There is very little inter-dependence between this sector and
+the urban sector. Hence neither monetary nor real flows between them are of any signifi-
+The other part of the rural sector is the commercialized rural sector whose agricul-
+tural production, largely rice, is oriented to the demand of the urban sector and the
+foreign export sector. The output of this sector forms the single largest source of nation-
+al income contributing about 40 per cent to the total output. As an item of export its rice
+is again the largest, contributing approximately 70 per cent of the total exports during the
+post World War II period. It is the contribution of this sector that makes Burma an
+"export economy.' The demand of the commercialized rural sector, especially for food
+products, is satisfied largely from production within the sector. A small portion of
+demand is supplied by the output of the urban sector and by imports which also flow
+through the urban sector. There is thus some inter-dependence between the commerciali-
+zed rural sector and the urban sector.
+,,
+The urban sector, in turn, includes two sub-sectors the towns proper and the
+the areas within a radius of five to ten miles. These peripheral areas supply the city
+demand for such products as local fruits, vegetables, poultry, fresh meat products, some
+cottage industry products. There is a great deal of inter-dependence between the periphe-
+ral area and the town proper. However, for our purpose both these areas will be treated
+as urban sector and similarly the rural commercialized sector and the rural subsistance
+sector will be treated together as the rural sector.
+9
+JBRS, XLIV, i, June 1962
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd. Bangkok. Thailand.
+
+[[page 18]]
+66
+DR. K.S. MALI
+Export Generated Inflation
+In an export economy the export surplus forms the main determinant of national
+income, and as such also the largest potential source of either inflation or deflation. In a
+period of rising world prices, the expanding export proceeds increase national income and
+prices and, though more slowly, the demand for imports. Because of the lag between
+rising exports and induced imports, and the government's usual desire to build up foreign
+exchange reserves during an export boom, the period of lag is generally marked by an
+export surplus and mounting reserves. In a country, like Burma, where the domestic
+money supply is based on foreign exchange holdings and can be legally expanded to some
+multiple of these holdings, the export surplus may lead to a serious inflation. The domes-
+tic currency equivalent, or a multiple, of these new exchange holdings, enters the economy
+without being matched, at least in the short run, by any increase in domestic production.
+The inflation may be further aggravated by import controls, as in Burma.
+1
+If inflation is to be avoided the domestic currency equivalent of the export surplus
+must be sterilized either by a voluntary increase in savings or by a governmental taxation
+and a budget surplus.2 In Burma the export surplus is absorbed most effectively by the
+SAMB which drains off almost the whole of increased export earnings from rice. However,
+it is still necessary for the government to sterlize the domestic currency counterpart of new
+foreign exchange reserves which are now received by the SAMB. This counterpart is
+transferred to the government through tax on the SAMB's income and rehabilitation con-
+tribution. The SAMB in Burma thus serves as an effective institutional arrangement to
+check an export generated inflation.
+However, the SAMB receipts from rice exports, being made over to the government,
+enter the government expenditures and create inflationary pressures.³ The introduction
+of SAMB into the system merely changes the channel of money flow. The new export
+earnings instead of flowing through the rural sector now flow through sectors wherein the
+government makes the expenditures, which, in large part in the past, were made in the
+urban sector.
+1. Wallich, Henry C., "The Underdeveloped Countries and the International Monetary
+Machanism," Money, Trade and Economic Growth Eassys in Honour of John Henry
+Williams, New York: Macmillan, 1951; and also his Monetary Problems of an Export
+Economy: The Cuban Experience 1914-1947, Cambridge, 1950
+2. If the government, in turn, spends these funds domestically without releasing their
+foreign exchange equivalent for private imports they will not be sterilized and their
+inflationary impact will probably be as great as if they were all expended privately
+(depending upon the relative multiplier effects of private or government spending).
+3. It is not necessary that only the SAMB receipts entering government expenditures
+would be inflationary. Any other similar source, such as borrowing from the Union
+Bank would be inflationary too.
+JBRS, XLV, i, June 1962
+Copyright© 1998 - Myanmar Book Centre & Rook Promotion & Service Ltd. Ranokok Thailand
+
+[[page 19]]
+PUBLIC EXPENDITURES AND INFLATIONARY IMPACT IN BURMA
+67
+The increased government expenditures in the urban sector create excess demand
+since the elasticity of domestic supply there is low at least in the short run. In addition
+the import controls restrict supplies from abroad. The prices in the urban sector rise,
+and rise more sharply, for imported goods relative to goods of domestic production which
+latter constitute mainly necessaries. The inflation is also largely localized in the urban
+sector and does not spread out to the rural sector on account of not much interflow
+between the two sectors. The urban sector's demand for rural output is relatively inelastic
+because it is a demand for necessary goods. Besides, since the price of rice is fixed by the
+SAMB the increased income of the urban sector does not flow out to the rural sector via
+a higher price of rice.
+The inflationary spread will be somewhat different if the government expenditures
+are made more largely in the rural sector. The excess demand in the rural sector will
+partially spread over to the "superior” goods of the urban sector and to imported goods.
+In this case the dependence of the rural sector upon the urban sector would tend to
+increase.
+The SAMB policy of maintaining a fixed price of rice needs one further considera-
+tion. The fixed price of rice which is weighted more heavily than other prices acts as a
+strong stabilizer on the general price level. However, the fixed price may contribute to
+inflation if it is much below parity with other prices,¹ and thereby adversely affect incen-
+tives for larger output. If mobility between the various sectors is great, reduced incentives
+in agricultural production may move labour to other sectors where its increased output
+may offset the reduction in agricultural output and also the effect of the differential in
+weighting of the two outputs. Thus, the general price level may remain the same. But
+if such a mobility of labour and other resources between sectors does not exist, the reduced
+incentives in agriculture might force a choice of liesure against work. If this happens, the
+aggregate supply would diminish, and if the fall in aggregate supply is more than the fall
+in aggregate demand it would contribute to inflation.
+However, rice is not the
+The fixed price of rice contributes to stability of wages.
+only good which wage earners require. Rise in the prices of other goods which wage
+earners consume does have some effect to push wages up. Such goods are used more by
+labour in the urban areas where the excess demand is usually high and hence frequent
+demands for higher wages from labor in these areas. However, wages in Burma have an
+upward tendency because of labor union action and the keen interest which the govern-
+ment takes in the welfare of labor. It is very likely that the competitive wage for
+unskilled labor may fall as there is a considerable unemployment and underemployment
+both in the urban and the rural sectors.
+1. Such is the case in Burma since the price of rice is fixed while other prices have risen
+by three to four folds.
+JBRS, XLV, i, June 1962
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 20]]
+68
+89
+DR. K. S. MALI
+Pattern of Pubic Expenditures
+Broadly, the expenditures of the government may be divided into capital expenditures
+and current expenditures. These may again be sub-divided into Social Overhead Capital
+(SOC), Directly Productive Activities (DPA), and Social Welfare and Administrative under
+capital expenditures; and Civil Administration, and Defence under current expenditures.
+We may first analyse the breakdown of the capital expenditures.
+Capital Expenditures of the Government
+Table 6, gives a break down of public capital expenditures actually spent over the
+period 1952-53 to 1959-60. The distribution of capital expenditures made during the eight
+years ending 1959-60 is in the order of 20.6 percent for primary sectors and industry
+(DPA). These include agriculture and irrigation, forest, mining, and industry. 35.9
+percent for power, transportation, and communication, (SOC). 43.4 percent for social
+welfare and administration which include construction (residential), social services, mis-
+cellaneous, and law and order. Again under DPA industry held almost equal place with
+agriculture and irrigation although considering the size and importance of the agricultural
+sector industry has been over-emphasized.
+Table 7, gives a breakdown of original budget allocations and actual public expen-
+ditures for the first half of the Eight Year Plan, 1952-53 to 1955-56. The break down
+again reveals that of the total actual expenditures DPA, received 19.3 percent; SOC,
+received 30.7 percent; and Social welfare and administration received 50 percent. Under
+DPA agriculture was very much undermined considering its special position in the
+economy.
+Comparing the actual expenditures with budget allocations we note that expendi-
+tures under agriculture and irrigation fell by 9.2 percentage points short of budget alloca-
+tion whereas under industry actual expenditures were higher than budget allocations by
+2.3 percent. Taking as a group, actual expenditures under DPA fell short of budget
+allocations by 12.1 percent. SOC kept almost even, and Social Welfare and Adminis-
+tration was above budget allocations by 12 percents.
+In 1955-56 due to the critical position of the foreign exchange reserves which had
+reduced from the height of K 1,185 millions in June 1953 to about 415 millions in
+December 1955, the latter half of the Eight Year Plan was modified into a Four Year Plan
+also marked a shift in development policy with regard to agriculture and other primary
+sectors which would be given heavier emphasis in future.
+JBRS, XLV, i, June 1962
+>
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 21]]
+PUBLIC EXPENDITURES AND INFLATIONARY IMPACT IN BURMA
+TABLE VI
+Breakdown of Public Capital Expenditures Spent
+(K million)
+69
+1952- 1953-1954-1955- 1956- 1957-
+1958-1959-
+1952-53
+Expenditure type
+(1)
+53
+54 55
+56
+57
+58
+59
+60
+to
+(R.E.) 1959-60
+(2)
+(3)
+(4)
+(5)
+(6)
+(7)
+(8)
+(9)
+(10)
+1. Agriculture and
+Irrigation
+35.9
+2. Forest
+4.6 107.6 6.5
+(1.4%) (16.9%) (1.2%) (7.1%) (9.4%) (12.1%)
+12.2 11.8 2.8
+3.8
+7.1 5.3
+(3.7%) (1.8%) (0.5%) (0.8%) (1.5%) (1.1%) (1.3%)
+43.8
+60.7
+40.8
+66.5 366.4
+(9.4%) (12.3%) (9.2%)
+5.8
+6.5
+(1.2%)
+55.3
+(1.4%)
+3. Mining
+4.0
+4.9
+0.1
+0.3
+..
+(0:1%)
+24.3
+(0.6%)
+4. Industry
+85.4
+374.5
+(9.4%)
+54.8
+505.7
+5. Power
+0.3 2.9 8.5
+3.3
+(0.1%) (0.5%) (1.6%) (0.8%) (1.1%) (0.7%)
+4.0 47.5 71.4 63.7 54.5 34.6 33.4
+(1.2%) (7.4%)(13.3%)(12.5%)(11.7%) (6.9%) (3.1%) (15.9%)
+2.0 - 69.4 52.5 78.7 75.9 112.4 60.0
+{0.6%)(10.9%) (9.8%)(15.5%)(16.4%)(22.5%)(13.7%) (10.2%) (12.8%)
+6. Transportation 63.7 125.1 104.0 78.6 65.1 89.8 116.8 127.6 770.1
+(19.5%) (19.6%) (19.3%) (15.4%) (14.0%) (18.0%) (26.6%) (23.7%) (19.5%)
+7. Communication
+8. Construction
+9. Social Services
+10. Miscellaneous
+11. Law and Order
+5.0 8.0 16.0 14.4 18.6 24.7 25.1 39.4 141.2
+(1.5%) (1.3%) (3.0%) (2.7%) (4.0%) (4.9%) (5.8%) (5.5%) (3.6%)
+35.2 67.9 129.6 83.7 38.7 17.7 13.9 27.2 413.9
+(10.8%)(10.6%)(24.1%)(16.4%) (8.3%) (3.5%) (3.2%) (5.0%) (10.5%)
+28.9 32.0 41.8 19.8 16.3 18.0 28.3
+(8.8%) (5.0%) (7.7%) (3.9%) (3.5%) (3.6%) (6.5%)
+106.3 50.8 15.4 26.7 32.9 34.8
+(32.5%)(8.0%) (2.8%)(5.3%) (7.1%) (7.0%)
+65.2 115.0 90.2 99.7 106.0 98.3 96.3 87.0 1757.7
+(19.9%) (18.0%)(16.7%) (19.6%) (23.0%) (19.7%) (22.1%) (16.1%) (19.2%)
+36.4
+(8,3%)
+35.5 220.6
+(5.6%)
+(6.6%)
+18.5 321.8
+(3.4%) (8.1%)
+Total
+327.4 638.0 538.7 509.0 463.8 499.6 436.3 538.7 3,951.5
+(100.0%) (100.0%) (100.0%) (100.0%) (100.0%) (100.0%) (100.0%) (100.0%) (100.0%)
+Source: The Second Four Year Plan. Superintendent, Government Printing and
+Stationery, Rangoon.
+JBRS, XLV. i, June 1962
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 22]]
+70
+DR. K.S. MALI
+TABLE VII
+Original Budget Allocations and Actual Public Capital Expenditures
+1952-53 to 1955-56.
+Sector
+Actual
+Original budget allocation.
+Amount
+Percentage
+Amount
+Percentage
+(K million)
+of total
+(K million)
+of total
+Agriculture and irrigation.
+Forestry
+154.6
+7.7
+398
+16.9
+30.6
+1.5
+36
+1.5
+Mining
+15.7
+0.8
+142
+6.0
+Industries
+186.6
+9.3
+166
+7.0
+Power
+202.6
+10.1
+127
+5,4
+Transportation
+371.4
+18.4
+436
+18.5
+Communications
+43.4
+2.2
+159
+6.7
+Construction a
+316.4
+15.7
+239 b
+10.1 b
+Social service c
+122.5
+6.1
+157
+6.7
+Miscellaneous
+199.2
+9.9
+59
+2.5
+Law and order and defence
+370.1
+18.3
+442
+18.7
+Total
+2,013.1
+100
+2,361
+.100
+a Only construction of government buildings.
+b Including construction for other sectors by central government construction agencies
+like the National Housing Board, the Public Works Department, etc.
+c Including grants to local authorities.
+Source: Prime Minister's Office for National Planning and Economic Survey of Burma,
+1952 to 1955-56.
+Table 8, gives a breakdown of planned and actual expenditures of the government
+for the period 1956-57 to 1959-60. The actual expenditures for the period under DPA
+amount to 22.3 percent, under SOC 41.3 percent, and under Social welfare and adminis-
+tration 36.4 percent, of the total. The percentage of expenditures for SOC have increased
+significantly and that under Social welfare and administration have fallen appreciably
+compared to those in the first half of the Eight Year Plan. The percentage for DPA has
+also increased by about 3 percent. The percentage for agriculture and irrigation though
+increased by 3.2 over the first half of the Eight Year Plan period rose very slightly over
+those on industry in the same period. It is no doubt indicative of the aforesaid change in
+policy, however the actual change is not very significant as to fundamentally influence the
+pattern.
+JBRS, XLV, i, June 1962
+Copyright©1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 23]]
+PUBLIC EXPENDITURES AND INFLATIONARY IMPACT IN BURMA
+TABLE VIII
+Allocation of Investment Planned and Implemented under Four-Year Plan
+71
+1952-53
+to
+1956-57
+1957-58
+1958-59
+1959-60
+1956-57 to
+1959-60
+1955-56 Plan Actuals Plan Actuals Plan Actuals Plan R.E.
+(1)
+(2)
+(3) (4) (5) (6) (7) (8)
+Plan
+Implementation
+(9) (10) (11) (12)
+(7.7%)
+Agriculture and 154.6 71.4 43.8 86.2 60.7 86.1 40.8 89.7 66.5 333.4 211.8
+irrigation
+(16.4%) (10.9%)
+Forest
+30.6 13.9 7.1 11.7
+(1.5%)
+5.3 16.3
+5.8 17.4
+6.5
+59.3 24.7
+(2.9%) (1.3%)
+Mining
+15.7 19,6 4.9 – 40.5 3.3 30.2
+0.1
+30.8
+0.3
+121.1
+8.6
+(0.8%)
+(6.0%) (0.4%)
+Industry
+186.6 48.3 54.5 41.6 34.6 36.6 13.4 37.1
+(9.3%)
+85.4 163.6 187.9
+(8.1%) (9.7%)
+Power
+202.6 85.0 75.9 71.3 112.4 51.3 60.0 31.5 54.8 239.1 303.1
+(10.1%)
+Transportation 371.4 136.6 65.1
+(18.4%)
+Communications 43.4 17.2 18.6
+(2.2%)
+Construction
+Social Services
+(11.8%) (15.6%)
+72.9 89.8 60.9 116.2 62.4 127.6 332.8 398.7
+17.1 24.7
+18.1 25.1
+(16.4%) (20.6%)
+17.0 29.4 69.4 97.8
+(3.4%) (5.1%)
+316.4 30.6 38.7 26.9 17.7 27.1
+(15.7%)
+13.9 32.4 27.2
+117.3 97.5
+(5.8%)
+(5.0%)
+122.5 33.9 16.3 39.0 18.0 39.4 28.3 45.8 35.5 157.3 98.1
+(6.1%)
+Miscellaneous 199.2 10.1 32.9 9.6 34.8 8.7 36.4
+(9.9%)
+(7.7%) (5.1%)
+7.7 18.5 36.1 122.6
+(1.8%) (6.3%)
+Law and Order (18.3%) 120.0 106.6 100.0 98.3 100.0 96.3 80.0 87.0 400.0 387.5
+(19.7%) (20.0%)
+TOTAL 2,013.1 585.8 463.8 516.8 499.6 474.7 436.3 451.8 538.7 2,029.1 1,938.4
+The actual expenditures, during 1956-57 to 1959-60, under DPA fell short of the
+planned expenditures by 11.5 percents, under SOC increased by approximately 10 percents,
+while those under Social welfare and and administration kept almost even.
+JBRS, XLV, i, June 1962
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 24]]
+72
+DR. K. S. MALI
+The fundamental fact about the public capital expenditures for the whole period
+1952-53 to 1959-60, is that largest expenditures were made under Social welfare and
+administration which also have the most inflationary impact. Next in order of magnitude
+are the expenditures on SOC which again have a high inflationary impact though not as
+large as that of Social welfare expenditures. Out of the three types of expenditures DPA
+have the least inflationary impact and the lowest expenditures were made under this
+classification.
+Sources of Finance for Public Capital Formation and Inflationary Impact
+The sources of finance for capital formation may be listed as follow: (1) Current
+budget surplus (2) Monetary expansion (3) Drawing down foreign exchange reserves (4)
+Reparations and (5) Net foreign borrowing including foreign loans and free gifts and aids.
+These five sources of finance may be classified into Current Finance to include current
+budget surplus and monetary expansion; and into Non-Current Finance to include
+drawings from foreign exchange reserves, reparations, and net foreign borrowings.
+Out of the five sources of finance only the current budget surplus is non-
+inflationary. The other four sources have varying degrees of inflationary impact. Monetary
+expansion unmatched by growth of real output is purely inflationary. Drawing down of
+foreign exchange reserves, reparations, and net foreign borrowings have both the inflatio-
+nary and non-inflationary aspects. The proportion of these financial sources which is
+spent on consumer imports is non-inflationary whereas the proportion which finances the
+imports of capital goods has an inflationary impact in as much as domestic complementary
+resources have to be financed in local currency. If these complementary resources can
+not be financed out of current budgetary surplus recourse has to be taken to monetary
+expansion which is inflationary.
+The contribution of each source of finance may be examined from table 9 for
+the
+period 1952-53 to 1959-60. The total public capital expenditures have
+been financed 62 percent by current finance out of which 22 percent has been
+through money creation which is purely inflationary. The non-current finance
+contributed 38 percent of the total capital expenditures. This source of finance again
+has very high inflationary impact depending upon the ratio of domestic
+complementary resources to foreign resources, which is something like 5:3 in Burma.
+In conclusion, both the public capital expenditure pattern and the sources of finance
+for capital formation had high inflationary impacts.
+The Current, Defence, and Capital Expenditures
+Table 10, gives a summary view of the current, defence, and capital expenditures of
+the government over the years 1052-53 to 1960-61. All these expenditure series have
+maintained irregular rates of growth. However, for the whole period, the average current
+JBRS, XLV, i, June 1962
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 25]]
+PUBLIC EXPENDITURES AND INFLATIONARY IMPACT IN BURMA
+73
+expenditure formed two thirds of the average total expenditures. This gives a ratio of
+2:1 between the average current and capital expenditures. It may also be noted that this
+ratio is smaller for the years 1952-53 to 1954-55 signifying a larger increase in capital
+expenditures relative to current expenditures in the early years of the Eight Year Plan.
+From 1955-46 to 1960-61 the current expenditures began to gain larger significance relative
+to capital expenditures owing largely to slashing off many capital projects after the
+development of foreign exchange crises in 1955-56. On the other hand current expendi-
+tures, after 1955-56, continued increasing annually though not at a steady rate; the largest
+increases being in 1956-57 and 1957-58.
+TABLE IX
+Sources of Finance for Capital Expenditures of the Government
+(in Kyats million)
+1952-1953- 1954- 1955- 1956-
+53 54 55 56
+57
+R.E. R.E. R.E.
+1957- 1958-1959-
+Total
+58
+59 60
+1. Government Capital
+Expenditures
+Sources
+460 538 582
+483
+481
+523
+517
+542
+4,126
+2. Excess of Receipts
+over Expenditures
+of Government on
+current account
+596 165
+259
+269 181
+161
+20 21
+1,672
+3. Monetary Expansion
+(Government)
+164 86
+238
+244 -180
+62
+189
+58
+861
+4. Drawings on Foreign
+Exchange Reserves
+-300 435
+216-130
+136 -20
+-62
+158
+473
+5. Reparations
+29 140
+150
+109
+95
+523
+6. Net Foreign Borrow-
+ing
+(Loans and
+Aids
+-148
+-131 71 204
+130
+261
+210
+597
+7. Current
+Finance
+(2 + 3)
+760 251 497
+513
+1 223
+209
+79
+2,533
+8. Non-current Finance
+(4+5+6)
+9. Foreign
+(5 +- 6)
+-300 287 85
+-30
+480 300
+308
+463
+1,553
+Finance
+-148 -131 100
+344 280
+370
+303
+1,120
+As per cent of Capital Expenditures
+10. Current Finance (7/1) 165 47 85 106 0.2
+43
+40
+15
+62
+11. Excess of Receipts
+over Current Expen-
+ditures (2/1)
+130 31
+44
+56
+38
+31
+4
+40
+12. Monetary expansion
+(3/1)
+35
+16 41
+50 --37.8
+12
+36
+11
+22
+10
+JBRS, XLV, i, June 1962
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd. Banakok Thailand
+
+[[page 26]]
+74
+DR. K. S. MALI
+TABLE X
+Current, and Defence Expenditures of the Government
+(1952-53 to 1959-60)
+R.E. R.E.
+1952-1953- 1954- 1955- 1956- 1957- 1958- 1959- 1960- Ave-
+53 54 55
+56
+57
+58 59
+60 61 rage
+1. Total Expenditures 987 1347 1310 1067 1203 1338 1383 1421
+1450 1,278
+(a) Current expen-
+ditures
+646 756
+730 745
+815
+937
+965 1039 1047 853
+(b) Capital expen-
+ditures
+341 591
+580
+322 388
+401
+2. Total receipts
+987 1052
+1208
+1033
+1203
+1338
+1383
+1421
+418 382 403 425
+1405 1,225
+(a) Revenue
+re-
+ceipts
+811
+845
+940 738
+963
+1019
+918
+1054 1073 929
+(b) Capital
+re-
+ceipts
+176
+207
+268
+295
+240
+319
+465
+367
+322 296
+3. Total
+Defence
+Expenditures
+288 386
+337
+357
+373
+413
+413 448
+420
+381
+(a) Current Expen-
+ditures
+224
+272
+247
+258
+266
+317
+321
+(b) Capital Expen-
+ditures
+4. 3 as per cent of 2
+29
+3 as per cent of 1
+3 as per cent of
+2(a)
+3 as per cent of
+1(a)
+* 22 34
+64
+114
+37
+29
+29 26
+36
+46
+45
+51
+3(a) as per cent of
+2 (a)
+36
+32
+NU NW
+W A W NN O
+90
+99
+28
+35
+36
+48
+46
+48
+36
+33 34
+2 33 000 7
+107
+96
+92
+34
+31
+30
+31 31
+30
+39 41
+45
+46
+44
+43
+34 28 31
+35
+5222 7 7 2
+2 220 7 7 3
+367
+360
+292
+80
+60
+89
+32
+30 31.77
+32 29 30.00
+43
+39 41.44
+43
+40 45.11
+34 32.33
+3(a) as per cent of
+1 (a)
+29
+36 34 35 33 34 33
+35
+34 33.66
+5. Annual per centage
+change in 1.
+36.47 -2.75 -17.86 12.75 11.22 3.36
+2.75 2.04 5.99
+Annual per centage
+34.03 12.69 5.93
+change in 1(a)
+Annual per centage
+change in 2.
+Annual per centage
+change in 2(a).
+Annual per centage
+change in 3.
+Annual per centage
+change in 3(a)
+Source: Budget Estimates of the Union of Burma, 1952-53 to 1960-61.
+JBRS, XLV, i, June 1962
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+17.03 -3.44 2.05 9.39 14.97
+2.99
+7.67
+.77
+6.43
+6.59 14.83 -14.49 6.78 21.31
+3.36 2.75 1.13
+5.28
+4.19 11.24 -21.49 30.49 5.82 -9.91 14.82 1.80
+4.62
+.00
+4.48 10.72
+8.47 -6.66
+5.53
+21.43 9.19 4.45 3.10 19.17
+1.26 14.33 -1.91
+6.58
+
+[[page 27]]
+PUBLIC EXPENDITURES AND INFLATIONARY IMPACT IN BURMA
+75
+The average rate of increase in total expenditures has been 5.99 percent while that
+of current expenditures has been 6.43 percent. This gives an average rate of increase in
+capital expenditures of 5.55 percent. In Burma, the government expenditures are the
+principal factor for the increase in money supply, which has been increasing at a much
+higher rate (about 10 percent) than the increase in real GDP (4.6 percent), and therefore
+largely contribute to inflation.
+However, the interesting fact to note about the above ratios and rate of growth of
+expenditures is that current expenditures have contributed more to inflation than capital
+expenditures. This would suggest that for purposes of stabilization government policy
+should be directed more to controlling current expenditures than restricting capital expen-
+ditures. Capital expenditures, since they increase output are not so inflationary in their
+impact as the current expenditures which do not contribute to output directly. However,
+capital expenditures can be as inflationary because of production lags which occur between
+the time when the expenditures are made and the output actually comes out in the market.
+The policy of the government to reduce capital expenditures after 1955-56 is quite
+understandable in view of the worsening position of the foreign exchange reserve then. A
+prompt remedy was needed. Such a remedy was available in the curtailment of capital
+expenditures, a large proportion of which was being made abroad to meet the foreign
+costs of the capital program, and in the restriction of private imports. The government
+applied both. Both these policies, however conducive they might have been for the
+immediate improvement of foreign exchange position, so far as stabilization is concerned
+have different effects.
+Restriction of private imports leads to a reduction of surplus on private account
+which, if taxation or non-bank borrowings are not increased correspondingly, would be
+inflationary. As regards curtailment of capital expenditures it would be directly con-
+tributory to stabilization, and yet, it may be inflationary if new production is, thereby,
+reduced more than the reduction in expenditures.¹
+As a percentage
+A large proportion of public expenditures is made on defence.
+of total expenditures and total receipts, defence expenditures amount to an average of 30
+percent and 31.77 percent respectively for the period 1952-53 to 1960-61. The average
+increace in total defence expenditures over the same period has been 5.53 percent whereas
+the average increase for current defence expenditures has been 6.58 percent. The pattern
+of defence expenditures has been the same as that of total expenditures under both the
+capital and current sub-heads.
+1. This can happen when captital expenpitures are cut on projects which have relatively
+low capital/output ratios and give quick returns as against expenditures on projects
+with high capital/output ratios and long production lags. Such a course is obviously
+inadvisable, but may become necessary if projects of latter type have been already
+carried far and can not be dropped without incurring huge losses.
+JBRS, XLV, i, June 1962
+Convright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd. Banokok Thailand
+
+[[page 28]]
+76
+DR. K. S. MALI
+The yearly figures of defence expenditures show a fairly consistent pattern of
+remaining within a range of 7 percentage points around 30 percent of total receipts and
+within 9 percentage points around 30 percent of total expenditures. These ranges signifi-
+cantly narrow down after the year 1956-57. From these percentages it appears that
+defence expenditures are settling down to a permanently built-in level of 30 percent of
+total receipts. This would be around 40 percent of only the revenue receipts. These high
+levels of defence expenditures may be expected to remain for some time in the future. They
+are required, in the first instant, for reasons of security, and in the second instant when
+security is achieved, for maintainence of efficient and well equiped defence forces required
+by a modern independent country. Even if the defence expenditures should witness
+some reduction on the attainment of security about the same increase may be needed
+under police, law and order which departments will need to be expanded into areas freed
+from insurgency. Therefore, the present level of defence expenditures has to be taken
+as a datum for any economic planning or for projections into the future.
+Considering the current expenditures together with revenue receipts, the current
+expenditures have been increasing at an average rate of 6.43 percent compared to the
+average increase of 4.62 percent for the revenue receipts. This clearly shows that the
+pattern of current expenditures and revenue receipts is a sufficiently ripe field for inflation
+whether Burma has a capital formation program or not.
+These facts and analysis strongly indicate that the government should fully explore
+the desirability and the possibilities of reducing and controlling the current expenditures,
+and also of developing its non-inflationary sources of revenue such as taxation and bor-
+rowings from non-bank public. Very little practically, over the past one decade, has been
+done in this direction. Deeper diagonosis need to be made of the economy's fiscal
+problem which seems to lie in an overly expanded current expenditures and an inadequate
+revenue structure. Ad hoc policies, oriented towards improvement of foreign exchange
+position, such as regulation of imports, cut-backs in capital projects are no doubt neces-
+sary for timely and pre-emptory action should not lax on other fronts which may breed
+the real cause of trouble:
+Speculative Activity and Prices
+The large public expenditures resulted in augmenting the private money supply from
+K 599 million in 1952-53 to K 1485 million in 1959.! A large part of these expenditures
+as we have noted above, was made on heads and projects which were in the urban sector.
+For example agriculture, irrigation, and forests, which belong to the rural sector, were
+responsible only for 10.6 percent of the total public capital expenditures.2 The impact
+1. Union Bank of Burma Bulletin, 2nd. Qr., 1961 op. cit., p. 27
+2. The proportion of capital expenditures made in this sector is not an accurate measure.
+However, the proportion of other public expenditures does not seem to be large;
+since administrative establishments are located in larger towns, housing construction
+was also largely in bigger towns, and other welfare projects did not have very signifi-
+cant proportion of total public expenditures.
+JBRS, XLV, i, June 1962
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd. Bangkok, Thailand.
+
+[[page 29]]
+PUBLIC EXPENDITURES AND INFLATIONARY IMPACT IN BURMA
+77
+of public expenditures, therefore, was largely on the urban sector. The urban sector
+experienced a large increase in money supply as well as generation of excess demand.
+Since there is not much outflow of incomes from the urban sector into the rural sector and
+neither to the foreign sector because of restrictions on imports, excess demand became
+localized in the urban sector.
+Large amount of money, especially in the hands of certain business sections, and
+generation of excess damand encourage speculative activity which further aggravate excess
+demand. Sharp price rises have occured in the consumer goods market especially the
+foreign goods, import of which is restricted through an import license system.
+Under such a situation the effect of enhancing the custom duties would be to
+increase prices further rather fall on the seller or the importer as the conventional theory
+of incidence would expect with inelastic supply curve. Two cases, one of consumer
+imports in general, and the other durable consumer goods may be taken to illustrate the
+point.
+For consumer goods imports in general, the supply curve is perfectly inelastic at the
+point of import. However, the supply curve is not perfectly inelastic below this point.
+In other words the speculators can withdraw the supplies from the market and thus raise
+the price further. The withdrawn supplies would be released slowly in the market. This sort
+of speculation can be easily practised with advantage by the sellers if the restricted import
+is much less than what the market demand at the original price would be during the
+period between the first and the second issue of import License.
+In the case of durable consumer goods there is one more consideration. The
+enhancement of customs duty, especially if it is expected to be a permanent one, raises the
+value of the durable good. The good becomes relatively a more valuable asset to hold.
+In more technical language, the marginal effeciency of holding this asset increases. Apart
+from this, durable consumer goods represent items of higher and modern standards of
+living for which there is a growing demand from the educated and the city elite. The
+increasing demand for such goods may be supported by liquidation of other now lesser
+valuable assets to hold, by cutting down consumption, or by a fall in liquid holdings of
+individual.
+Conclusion
+In conclusion, the inflationary pressure in Burma appeared in periods when large
+expenditure gaps were created through excessive public expenditures and restriction of
+imports. The expenditure gaps have been necessitated because of developmental and
+other expanding administrative and welfare expenditures. The present revenue structure
+of Burma is inadequate to siphon off the inflationary gap. Therefore, to control the in-
+flationary pressure, especially in a development setting, the revenue structure needs to be
+expanded and modified.
+JBRS, XLV, i, June 1962
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 30]]
+78
+DR K. S. MALI
+A significant feature of the inflationary is that it is largely localized in the urban
+sector especially in the import goods market. This particular aspect of inflation is con-
+tributed by the dichotomous character of the economy - a rural sector and an urban
+sector-between which there is very little interflow of incomes and goods. The excess
+demand generated by the public expenditures in the urban sector does not spread out
+sufficiently to the rural sector. The spread-out would be more active from the rural
+sector into the urban sector. Therefore, to spread the effect of income generation to the
+whole economy a much larger share of public expenditures should be made in the rural
+sector than has been done hitherto. The increasing rural incomes would induce invest-
+ment expenditures in industry by the private sector, provided proper investment climate is
+created.
+The current expenditures of the government have been increasing at a much faster
+rate than other expenditures, and current revenue. It is, therefore, highly desirable to
+explore all possibilities of reducing and controlling the current expenditures. This would
+not only mitigate inflationary pressure but also leave a larger current budgetary surplus
+for capital expenditures.
+New indirect taxes (or enhancement of rates) such as customs duties, sales taxes can
+have price raising impacts. Therefore, a careful study of the impact of such measure on
+the market should be made before introducing them. Such a study can only be made by
+a thorough analysis of the existing pattern and behavior of the market and the likely
+developments under the impact of proposed measures. Conventional text-book precepts
+and theories cannot be much relied upon for policy matters as they are drawn under sim-
+plified assumptions much removed from reality. They can be our guides provided we are
+constantly aware of their limitations.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.

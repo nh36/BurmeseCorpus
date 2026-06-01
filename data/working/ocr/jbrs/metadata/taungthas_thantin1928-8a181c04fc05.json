@@ -1,0 +1,14 @@
+{
+  "local_file_id": "taungthas_thantin1928-8a181c04fc05",
+  "batch_id": "jbrs-ocr-3349",
+  "file_name": "Taungthas-ThanTin1928.pdf",
+  "path_stub": "Burmese/Burma JBRS/1928/Taungthas-ThanTin1928.pdf",
+  "journal": "JBRS",
+  "year": "1928",
+  "ocr_engine": "google_vision",
+  "pages_completed": 5,
+  "ocr_date": "2026-06-01T19:57:01.428651+00:00",
+  "source_category": "other_source",
+  "language_scope_guess": "Burmese",
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+}

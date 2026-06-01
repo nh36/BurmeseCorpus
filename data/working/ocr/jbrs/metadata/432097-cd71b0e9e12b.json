@@ -1,0 +1,14 @@
+{
+  "local_file_id": "432097-cd71b0e9e12b",
+  "batch_id": "jbrs-ocr-1961",
+  "file_name": "Thrones-YiYi1960.pdf",
+  "path_stub": "Burmese/Burma JBRS/1960/Thrones-YiYi1960.pdf",
+  "journal": "JBRS",
+  "year": "1960",
+  "ocr_engine": "google_vision",
+  "pages_completed": 29,
+  "ocr_date": "2026-06-01T16:23:20.260627+00:00",
+  "source_category": "other_source",
+  "language_scope_guess": "Burmese",
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+}

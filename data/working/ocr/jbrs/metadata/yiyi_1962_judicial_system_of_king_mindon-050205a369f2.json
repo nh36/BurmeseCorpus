@@ -1,0 +1,14 @@
+{
+  "local_file_id": "yiyi_1962_judicial_system_of_king_mindon-050205a369f2",
+  "batch_id": "jbrs-ocr-3351",
+  "file_name": "YiYi-1962-judicial-system-of-king-mindon.pdf",
+  "path_stub": "Burmese/Burma JBRS/1962/YiYi-1962-judicial-system-of-king-mindon.pdf",
+  "journal": "JBRS",
+  "year": "1962",
+  "ocr_engine": "google_vision",
+  "pages_completed": 21,
+  "ocr_date": "2026-06-01T19:58:03.599557+00:00",
+  "source_category": "other_source",
+  "language_scope_guess": "Burmese",
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+}

@@ -1,0 +1,14 @@
+{
+  "local_file_id": "022245-d96384af909d",
+  "batch_id": "jbrs-ocr-0123",
+  "file_name": "CD-ASI-1909.pdf",
+  "path_stub": "Burmese/Burma JBRS/1912/CD-ASI-1909.pdf",
+  "journal": "JBRS",
+  "year": "1909",
+  "ocr_engine": "google_vision",
+  "pages_completed": 2,
+  "ocr_date": "2026-06-01T12:37:22.358800+00:00",
+  "source_category": "other_source",
+  "language_scope_guess": "Burmese",
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+}

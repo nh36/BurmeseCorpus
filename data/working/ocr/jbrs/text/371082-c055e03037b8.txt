@@ -1,0 +1,332 @@
+[[page 1]]
+THE LOGIC OF INFERENCE IN STATISTICAL THEORY'
+by
+R. M. Sundrum, Ph.D. (London) 2
+Inference in discussions of logic is, or at least used to be,
+divided into the two categories of "deductive" and "inductive".
+Adopting for the time being this convenient classification, we note
+that from very early times, the logical rules governing deductive
+inferences have been laid down with great care regarding the basic
+principles and detailed application. The purely logical applications of
+deductive inference have grown up side by side with the great development
+of mathematics, whose main preoccupation has been in the deduction
+of results from given conditions according to well defined rules of
+operation. A considerable part of statistical theory, in particular
+those parts in which mathematical methods have to be applied to
+derive results, depends on this apparatus of deductive inference which
+has been built up through the ages.
+My present concern, however, will mainly be on the position of
+inductive inference, if there is any such thing, and its place in
+statistical theory. I have chosen this particular topic for discussion
+before this Society because I hope that the point of view of the modern
+statistician towards his subject may be instructive to workers in other
+fields, as this point of view appears to me to be the groundwork of all
+scientific procedure and to find its clearest expression in statistical
+theory. Now, the whole process of thought called 'inductive inference'
+is just the ordinary habit of mind known as 'learning from experience.'
+I put it this way to show that this type of learning is much the more
+important one in the ordinary conduct of life. We must remember
+that it was long after enduring civilizations had been built up by some
+such "learning from experience" that the early Greeks and Egyptians
+laid down the logical rules of deductive inference. It is therefore the
+more surprising that it is only recently that the rules governing inductive
+inference were formalised and even later that they were questioned.
+It is, I understand, a lively subject of controversy in philosophy
+whether there is at all a possibility of making valid inferences of this
+type, and if so, in what form or forms it may be conducted. I do
+not want to go into that problem at all in the present discussion. My
+purpose is only to indicate how the problem arises in most statistical
+1. Read on July 29, 1954, with Professor Myo Min in the Chair.
+2. Lecturer in Economics and Statistics at the University of Rangoon.
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 2]]
+STATISTICAL INFERENCE
+83
+work, and how statisticians have found a way of "overcoming" the
+usual difficulties attendant upon such inferences, if so emphatic a word
+as “overcome" may be used in the light of the actual procedures
+they employ.
+In the elementary instruction of the subject of statistics, a student
+is introduced to a large number of techniques which he is recommended
+to apply in different situations that might confront him in his
+professional work. He is not usually taught why he has to apply a
+certain method, and if there are alternative methods, how he is to
+choose from them. This I know from having studied and
+taught the subject in this fashion for a number of years
+in the Rangoon University. Personally speaking therefore, it was
+a revelation to me when I realized that there is a certain philo-
+sophy of statistics which informs the methods currently used by the
+majority of statisticians and when fully interpreted, that it gives the
+rationale of these methods and guides the statistician in his choice
+among alternative methods. If this were the only reason for the
+importance of statistical philosophy, it would not justify me in
+addressing you on this subject, for then it would only be a matter of
+domestic concern to my profession. I have presumed to take up the
+subject with you because I feel that it is the same philosophy, at least
+in broad outline, which provides the basis of all scientific research in its
+search for the underlying regularities of natural phenomena.
+Now the problem of induction arises in statistical work when the
+statistician is required to infer some properties of a population from
+the information provided only by a sample of observations selected
+from that population. Except in so far as his data is usually expressed
+in terms of numerical measures or of simple attributes, this is precisely
+the problem which confronts every scientist who attempts to draw valid
+inferences from observations of experience to an underlying hypothesis
+which explains natural phenomena. One important difference, however,
+is that the statistician can deploy the notion of probability into his
+calculations. In ordinary sampling, that is done by the injunction that
+he should draw a "random" sample from his population, i.e. that he
+should give every member of the population a pre - assigned probability
+of being included in the sample to be drawn. Thus, the statistician is
+not committed to produce "laws of nature” which may be held with
+certainty; on the other hand, his results only assign to various hypo-
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 3]]
+84
+R. M. SUNDRUM
+theses certain measures of reliability, leaving it then to unaided common
+sense to balance these probability measures of the various contending
+hypotheses and to adopt one as a guide to action.
+Having said so much, I must go on to comment on various notions
+of probability current among statisticians and the particular notion I
+adopt as the basis of my present discussion. There are two approaches to
+the concept of probability, one in which probability is used to measure
+some kind of the degree of belief in certain propositions, and one in
+which probability is related to the frequency with which certain
+events tend to happen under certain conditions. Perhaps it helps to call
+them the "subjective” and “objective” definitions respectively. While
+the objective or frequentist approach is held by a considerable majority
+of practising statisticians, I must in all fairness refer to some very great
+authorities on the subject who continue to advocate the practical
+usefulness of the subjective concept. Perhaps the greatest modern.
+exponent of this view is Prof. Harold Jeffreys, particularly in his
+standard work, "The Theory of Probability". The difficulty with this
+particular notion is that it seems to allow different people to estimate the
+probability of the same event or proposition in different ways. Voicing
+again only my personal opinion, the great achievements of Prof. Jeffreys
+is that he suggests a way out of this dilemma. He says that there is
+a certain kind of mind which estimates probabilities which may be
+called that of a "reasonable" or "rational" man and that when all
+estimates of probability used are of this type, it removes this otherwise
+fatal objection to the theory. I have no time here to comment at any
+length on this idea and must content myself with referring all those
+interested to Prof. Jeffrey' book above referred to, or an able exposition
+of various such theories by I. J. Good. ³ I may mention that the work
+on probability theory by Lord Keynes 4 is also an attempt to establish
+this notion of probability.
+I must now go on to consider the relevance of this particular
+notion of probability to the problem of inductive inference. In this
+connection, this particular view of probability appears to have the
+advantage over most objective theories in that we can now speak of the
+"probability of a hypothesis", a concept which is not justified within
+the frequentist school of thought. This advantage may be illustrated
+by an example. Suppose a scientist has accumulated a certain amount
+3. "Probability and the Weighing of Evidence " by I. J. Good (1950).
+"A Treatise on Probability" by J. M. Keynes (1921).
+4.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 4]]
+STATISTICAL INFERENCE
+85
+of evidence on the basis of which he wishes to decide between a
+number of hypotheses which could explain this evidence. Then all he
+has to do is to find the inverse probability of each of these hypotheses
+and then recommend for acceptance that with the greatest probability.
+In view however of many difficulties in the basic theory, perhaps it is
+fair to say that this method of producing inductive generalisations is
+not a standard procedure among most statisticians.
+certain
+,,
+They have tried to build up an alternative procedure based entirely
+on an objective theory of probability as the limit where it exists of the
+relative frequency of events in an indefinite sequence of trials. And in
+the following I shall try to give an outline of this procedure. Faced
+with a certain problem; the statistician sets up a certain hypothesis;
+for example, the hypothesis that the mean of a certain statistical
+distribution is zero. The very enunciation of such a hypothesis
+implies that there are certain alternative hypotheses; and it is the
+highlight of the modern theory of statistical inference that the
+alternatives actually in mind should be stated, at least with sufficient
+explicitness to enable certain consequences of these alternatives to be
+drawn. To begin with, therefore, the statistician has a
+hypothesis, usually (and rather inexplicably) called a "Null
+hypothesis and an alternative hypothesis; let us call them Ho and
+H₁ respectively. Then the statistician collects his evidence, or as we
+say, draws a sample to enable him to discriminate between the two
+hypotheses. But before this, he sets up, on
+on the basis of some
+calculations which he carries out, what is called a "critical region",
+and the whole procedure consists in seeing whether some statistic
+calculated from the sample falls in this critical region or not. If
+the statistic falls in this critical region, he rejects" the
+Null hypothesis and in some sense "accepts" the alternative
+hypothesis; if the statistic falls outside the critical region, into what is
+sometimes called "the region of acceptance", he "accepts" the null
+hypothesis. The whole of my argument depends on the interpretation
+of the word "accept but of this more anon.
+,,
+66
+The statistician thus prescribes a certain unambiguous procedure of
+deciding between alternative hypotheses. Beyond that, he goes on to
+describe the reliability of results obtained by the procedure; he
+recognizes that any such procedure is liable to errors of various types;
+he classifies them and suggests methods of controlling these errors. To
+illustrate, a person following this method may reject the Null
+hypothesis incorrectly, i.e. he may reject the Null hypothesis when it
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+22
+
+[[page 5]]
+86
+R. M. SUNDRUM
+is in fact true. This is termed Error Type I. Alternatively, he may
+accept the Null bypothesis incorrectly, i.e. when the alternative
+hypothesis is in fact true. This is termed Error Type II. Now we
+cannot know whether one or the other error was in fact committed,
+for then we would already know which hypothesis was the true one.
+But the statistician can by the calculus of probability find the
+probability of committing Errors Type I and II by following any
+particular procedure of determining the critical region on which the
+whole test of these hypotheses depends. The statistician can go very
+much beyond this position by laying down methods which reduce
+these errors, or rather, the probabilities of these errors as much as
+possible; this is the problem of discovering the "best" critical region.
+But the important thing for our present purpose is that any conclusion
+drawn by the statistician using this procedure is conditioned by the fact
+that certain errors are involved in these conclusions and the only thing
+we know about these errors is the probability with which they occur.
+Let us illustrate the consequences of this procedure by a concrete
+example. A statistician in the course of his professional work has to
+decide a series of statistical problems, in each of which he sets up a
+Null hypothesis and an alternative hypothesis. In each problem, he
+fixes a critical region such that the probability of Type I error is, say,
+5 per cent and the probability of Type II error is also, say, 5 per cent.
+This means that if the Null hypothesis is true, he might mistakenly
+reject it on an average of 5 per cent of occasions and that if the alter-
+native hypothesis is true, he might again mistakenly accept the Null
+hypothesis on an average of 5 per cent of occasions. He does not
+claim to establish any of these hypotheses, but by keeping the probabi-
+lities of the two kinds of errors sufficiently low, he is content because
+over a series of such problems, he keeps down the frequency with
+which he makes mistakes.
+At this point, the statisistician, goes beyond the strict confines of his
+discipline and at least by implication ventures into the philosophical
+problems of induction. This is brought out by the sense in which a
+statistician accepts a hypothesis. By accepting a hypothesis, the
+statistician does not claim that that hypothesis is in fact true. He
+merely recommends that we act "as if" that hypothesis were true. In
+fact, this is emphasised so much that the latest development in statis-
+tical theory is called "decision function theory" based on the considera-
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 6]]
+STATISTICAL INFERENCE
+.87
+tion that statistical procedures of this type do not reveal any hidden
+laws of Nature but merely recommend one of many possible decisions
+to be taken.
+At this stage, we can draw a number of conclusions about the
+whole philosophy behind these procedures. First we must notice that
+this is far removed from the old idea of 'inductive inference.' In fact
+we do not infer anything by this method. We only act in certain ways
+with the guidance of some evidence provided by available data and
+interpreted by statistical methods. To emphasise this distinction
+strongly, Professor Jerzy Neyman, one of the founders of this theory,
+has proposed that we speak of 'inductive behaviour.' He goes on
+to suggest that this is the essence of the process of 'learning from
+experience' in the ordinary sense of the term and also in the sense in
+which all scientific research is also a matter of learning from experi-
+ence. This helps to emphasise for us the tentativeness of the theories
+we hold and the way in which they depend and change with the
+accumulation of experience. On this philosophy, we do not look upon
+scientific laws as descriptions of eternal regularities in the universe at
+large, but merely as the most convenient conceptualisation of the results
+to help arrive at "decisions."
+Thus the statistician is a positivist in his philosophy. Perhaps it is
+instructive to consider him as an operationalist in the way he defines
+concepts and hypotheses and to look upon this well-defined and
+precise statistical procedure as the 'operation' by which he includes
+them in his Weltanschauung or leaves them out.
+Another conclusion we can draw from all this and which is of
+some importance to the philosophy behind the statistician's work is in
+the way he frames hypotheses. Fundamental to this is the fact that
+the statistician does not accept or reject a particular hypothesis but that
+he does this in relation to some sufficiently well-defined alternative
+hypothesis. It is therefore not impossible that a particular hypothesis
+may be accepted on the same evidence against one alternative but
+rejected against another.
+It is just possible that in this all too short account of the
+statistician's activities, I have unwittingly given further support to the
+popular view which
+view which pictures the statistician as continuously
+accumulating facts and poring over figures. In fact, when I first
+studied the elements of the subject, the common prescription was
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 7]]
+88
+R. M. SUNDRUM
+enshrined in the saying: "You collect the facts and the discoveries will
+make themselves". In contrast to this, the modern theory of the
+subject emphasises to some extent the primacy of the hypothesis over
+the observations. Observations are useless unless they can be
+interpreted in the light of some hypothesis. This doctrine, a central
+one in certain variations of logical positivism, has aroused some
+controversy. Thus the objection is sometimes raised that certain
+observations force a theory upon the observer, as for instance, when
+milk accidentally spilt over a piece of coal turns it into gold. It is
+then alleged that that incident surprises an observer sufficiently to lead
+him to a new hypothesis in chemistry. This, of course, is not quite
+correct for this new experience only serves to reject a certain implicitly
+held hypothesis that milk spilt on coal would not turn it into gold to
+give place to a wider hypothesis which covers this particular
+observation as well.
+At this stage of the discussion, it is perhaps appropriate to digress
+from the main stream of the present argument to emphasise a particular
+point. Statistical theory is NOT a discipline of the same order as
+Economics, Psychology, Physics or Biology. Rather it is a tool which
+should find a place in all such disciplines, like any other tool of
+research. Perhaps, some of the abilities required to fashion statistical
+techniques are so uncommon that a certain amount of specialization is
+necessary and thus accounts for the statistical expert. But once such
+tools have been developed, these should be acquired as essential
+equipment in the intellectual armoury of every scientific researcher.
+,,
+If at the end of this discussion, it is permitted to me to draw to the
+larger world of scientific workers the moral suggested by statistical
+philosophy, it would be this. "Inductive generalizations from
+observations can only be arrived at by a hazardous procedure; they
+must be held with the utmost tentativeness and always with readiness to
+be given up in the light of newer experience. In statistics itself, this is
+stressed for us by the fact that every test of a hypothesis is
+accompanied by a statement of the probabilities of two kinds of errors.
+Further, the hypotheses which have stood the tests put upon them are
+not to be considered so much to reveal the nature of the external
+world" as to guide conduct in the immediate future, i.e. to lay down
+for us certain patterns of "inductive behaviour."
+66
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 8]]
+STATISTICAL INFERENCE
+89
+Another moral to be drawn from all this lies in the great
+dependence of the use of statistical methods on the formulation of
+hypotheses, even prior to the collection of evidence, in fact, to
+suggest what sort of evidence is at all relevant. It is true that a mass
+of facts may suggest a plausible hypothesis, but it is all too often
+forgotten that it suggests hypotheses only to a sufficiently lively
+imagination. We have travelled some distance from the days when the
+great Newton could claim, "Hypotheses non fingo". (I do not make
+hypotheses.) to realize that now it is of the essence of scientific
+research to frame hypotheses of all kinds, to compare them in the light
+of evidence, and choose one of them as a guide to action. Scientific
+research progresses in the hands of gifted people, but it also depends
+on the existence of a healthy mental climate, which permits the
+individual imagination to roam over all possible worlds in search of
+hypotheses.
+23
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.

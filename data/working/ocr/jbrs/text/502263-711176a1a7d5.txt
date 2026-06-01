@@ -1,0 +1,1924 @@
+[[page 1]]
+PROSODIC ANALYSIS AND BURMESE SYLLABLE-INITIAL
+0.
+1.
+2.0.
+3.
+FEATURES *
+R. K. Sprigg§
+Main characteristics of prosodic analysis
+Phonemic analysis and the plurality of phonemic forms
+Prosodic analysis and the unity of its formulae
+Prosodic analysis and variant syllable-initial features
+3.1. Intraverbal junction, stressed
+3.2. Intraverbal junction, non-stressed
+3.3. Interverbal junction
+4.1. Summary of exponents of v, h, and h
+4.2.
+5.
+6.
+Additional exponency for verb lexical items
+The aspiration system and the grammatical classification of lexical
+items
+In conclusion
+0. "Probably the most profoundly
+different from any American point of view
+[in linguistics] is the so-called London
+School, the followers of Professor J.R.
+Firth. Not only is their view of language
+basically different; their terminology con-
+trasts sharply with that used by most
+other linguists. As a result Americans
+find difficulty in reading their papers,
+and so fail to profit by their insights."
+The justification for this criticism is
+perhaps in large part due to the fact that
+the department of which Firth was head
+is at the School of Oriental and African
+Studies; the linguistic interests of his
+followers have, in consequence, been mainly
+concentrated on the languages of Africa
+and the Orient rather than on languages
+that have been prominent enough to attract
+analyses in accordance with other theories.
+The present paper, it must be admitted,
+continues this Oriental and African
+tradition: it is an analysis of certain
+phonetic features of an Oriental language;
+but, since both an American phonemic
+analysis and an American phonemic analysis
+and grammar of Burmese are available for
+comparison, it is possible to contrast a
+prosodic analysis of this language with an
+analysis carried out in accordance at least
+with one other theory.²
+Firth recognized a number of modes,
+or levels, of meaning; this article draws
+on four of these, the phonetic, phonological,
+* Reproduced, with the permission of the author. From Anthropological Linguistics, Vol. 7,
+No. 6, June 1965, a publication of the Archives of the Languages of the World, Anthropological
+Department, Indiana University, Bloomington, Indiana, U.S.A.
+§ M.A. (Cantab.), Lecturer in Phonetics, School of Oriental and African Studies, University
+of London.
+1. For Notes please see at the end of the article. Ed. JBRS.
+JBRS, L, ii, Dec., 1967
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 2]]
+264
+grammatical, and lexical levels, but is
+mainly concerned with applying Firth's
+theory of phonological analysis, generally
+known as prosodic analysis.
+a
+The essentials of this theory have
+been stated as follows. "The aim of
+prosodic analysis in phonology is not
+that of transcription or unilinear repre-
+sentation of languages, but rather
+phonological analysis in terms which take
+account not only of paradigmatic relations
+and contrasts, but also of the equally
+important syntagmatic relations and func-
+tions which are operative in speech.
+Prosodic analysis is, in fact, an abbreviated
+designation of an analysis that makes use
+of two types of element, Prosodies and
+Phonematic Units; ... Phonematic units
+refer to those features or aspects of the
+phonic material which are best regarded
+as referable to minimal segments having
+serial order in relation to each other in
+structures. In the most general terms such
+units constitute the consonant and vowel
+elements or C and V units of a phonological
+structure a great part, sometimes the
+greater part, of the phonic material is
+referable to prosodies, which are, by
+definition, of more than one segment in
+scope or domain of relevance, and may
+in fact belong to structures of any length,...
+We may thus speak of syllable prosodies,
+prosodies of syllable groups, phrase or
+sentence-part prosodies, and sentence pro-
+sodies; and since grammatically defined
+elements may also be characterized by
+prosodic features...we may have in addition
+word and morpheme prosodies."4
+Of particular relevance to the present
+article are: (i) the concept of system, the
+closed set of commutables in which the
+value of each of the commuting prosodic
+or phonematic terms is a function of the
+JBRS, L, ii, Dec., 1967.
+Prosodic Analysis
+number of terms in the system, with the
+result that no term in a two-term system,
+for example, can be identified with any
+term in a system comprising a number of
+terms other than two (though it may be
+compared with it); (ii) the fact that each
+system refers only to the structure, or to
+the place in structure, for which it is set
+up; (iii) the close relationship of phonology
+with grammar; and (iv) the concept of
+exponency, which is used in this article
+to associate individual terms of systems,
+at the phonological level, with the appro-
+priate categories of the phonetic level of
+analysis, thereby renewing connection, in
+experience, with the language under inves-
+tigaton. Prosodic analysis contrasts sharply
+with McDavid's and Cornyn's phonemic
+analyses in all four respects.
+1. Cornyn's phonemic analysis, to
+which the forms of his grammar owe their
+orthographic shape or shapes, comprises
+twenty-nine consonant phonemes (/k kh
+g ŋ hŋ s sh z šc ch j t th d n hn p ph b m
+hm 1 hl Oy wh? /), nine vowel phonemes
+( / ai u ei ou e o ai au/), four tone phone-
+mes ( / I II III IV /), close juncture and
+two types of open juncture.
+8
+McDavid's analysis comprises nineteen
+consonant phonemes (/kg n szš cjt d
+n p b ml @ y w h/ ), nine syllabic phone-
+mes (aiu e o ey ay aw ow/ ), five tone
+phonemes (I II III IV V/), external open.
+juncture, internal open juncture, and
+close juncture.ª
+Variation in the phonetic form of
+particular lexical items under differing
+conditions of junction, tempo, and gram-
+matical function has long been a well-
+known characteristic of Burmese.10 This
+variation is such that it has resulted in some
+lexical items ‘having more than one phone-
+mic form, e.g. (i) for sok drink Cornyn's seven
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 3]]
+R. K. Sprigg
+phonemic forms au?, Jaup, a, Gau,
+Gaut, Jauc, Jauy, as in Gaupp drink,
+Jaummé (he) will drink, maçau@@êibû
+(he) has not drunk yet, autté (he) drinks,
+Jauccàzò let us drink, auyyei drinking
+water; 11 (ii) for koń: good Cornyn's five
+phonemic forms kâuŋ, gâun, kâun, gâum,
+and kâum, as in kâuŋgâun good, káundé
+is good, ma◊wâgâumbû it is not good to go,
+makâumbu (it) is not good; 12 (iii) for nhe:
+McDavid's two phonemic forms/hnêy/
+and / nêy/, as in /hnêy-nêy / slowly; 13
+(iv) for sū su McDavid's two phonemic
+forms/0u he, she and /ù/his, her. 14
+It would indeed be a handicap if every
+reference to a particular lexical item, and
+especially every dictionary entry, had to
+include all its possible phonemic forms, as,
+for example, au?/ Jaup/ Jaum, etc., kâuŋ/
+gâun kâun, etc., hnêy/ nêy; and this
+plurality of phonemic forms would con-
+tinue to complicate the task of the
+lexicographer and others, though to a
+somewhat less extent, if the alternating
+phonemes were indicated in some such way
+as in au? /p/ m, etc., k/ gâuŋ/n/m, etc.,
+and (h) nêy; but there are at least two
+means of avoiding this difficulty.
+The solution adopted by Cornyn and
+by McDavid is to choose one phonemic
+form of each lexical item, and treat it as
+basic. The form they choose for this
+purpose is what Cornyn refers to as 'the
+absolute form' and McDavid as the form
+of syllables 'as pronounced in isolation'.
+The phonemic form treated as basic is in
+fact the form appropriate to what both of
+them term 'open juncture'; and they
+derive their variant 'close-juncture' forms
+from these by substituting other phonemes
+for some of the phonemes contained in the
+'open juncture' form, especially syllable
+initial and syllable - final phonemes, 15
+Cornyn, for example, accounts for the
+265
+variant syllable-final phonemes /p/,/m/,
+//.tc/, and /y/ at (i) above, and for
+//,/n/, and /m/ at (ii), with the state-
+ment: "when a syllable precedes another
+syllable in close juncture, ... the glottal
+closure [of "Tone IV"] is replaced [my
+italics] by a plain unvoiced stop of the
+same position (8) as the initial sound of
+the following syllable". 16 Thus, the glottal
+stop // of 'open juncture', e.g. Jau, is
+replaced in 'close juncture' by /p/,/m/,
+ory according as the initial phoneme of
+the following syllable is, respectively,
+a non-nasal or a voiceless - nasal labial
+phoneme ( p ph b hm/), a voiced-nasal
+labial phoneme (/m/), or the phoneme
+/y/; 17 and the final /n/ of e.g. kâuŋgâun,
+which precedes ‘open juncture', is replaced
+in close juncture' by the phoneme /ŋ/
+in the first syllable of kâuŋgâun, where it
+precedes the velar phoneme /g/, by/n/ in
+kâundé, where it precedes the alveolar
+phoneme /d/, and by /m/ in the second.
+syllable of makâumbû, where it precedes
+the labial phoneme /b/.
+It is not possible to cite corresponding
+examples from McDavid's analysis of
+syllable – final consonantal features because
+his treatment of these is very different from
+Cornyn's, and not far from what is
+advocated in this article; but he is at one
+with Cornyn in his treatment of syllable-
+initial features: "if the preceding syllable
+has tones I, II, III, then fortis stops and
+postdental spirant ... become [my italics]
+(in 'close juncture'] voiced (lenis) stops.
+and spirants".16 Cornyn's analysis of the
+following syllable-initial variants illustrates
+the preference of both of them for 'open-
+juncture' phonemic forms: the syllable-
+initial /k/ in the first syllable of kâungâun
+is said to have been replaced in the second.
+by /g, the syllable-initial /t/ of - té by
+din kâundé, and Cornyn's phoneme /ph/
+JBRS, L, ii, Dec., 1967.
+2 34-U.P.-G 124-1,000+50-13-7-68.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 4]]
+266
+Prosodic Analysis
+as
+McDavid's /p/ and /h/) in - phu by /b/ basic-form concept, the general principle
+in makâumbû. 19
+of treating any one form as basic, or
+a norm, the remaining variants having only
+the status of derived forms, is repugnant to
+prosodic analysis. Firth's phonological
+theory is in this respect in marked contrast
+with theories that have adopted a deriva-
+tional approach;22 and the contrast is great-
+er now than at the time when Cornyn's and
+McDavid's analyses were made; for
+derivation and process now have the added
+support of generative grammars, 23
+These three are examples of replace-
+ment; in dealing with nasal-initial, lateral-
+initial, and semivowel-initial syllables, on
+the other hand, McDavid cites / hnêy-ney/
+slowly (hne:-hne:) as an example of
+disappearance, of the disappearance of the
+phoneme /h/ preceding a nasal in sandhi.20
+Before going on to question the
+principle of giving a different status (basic
+form) to a particular phonemic form of a
+given lexical item at the expense of its
+other forms it should first be made clear
+that the choice of the isolate, or absolute,
+form in preference to other variants raises
+problems of its own, especially for syllables
+such as -té, -mé, -phu, -nè, and yin, which
+Cornyn classifies as 'bound forms' and
+McDavid as ‘particles'.21 Each must, in
+consequence, be preceded by another
+'close
+particle) in
+syllable (verb or
+juncture' with it; and the syllable - initial
+phonemes of each are thus precluded from
+being in absolute position ('open juncture'
+with a preceding form) except in a single
+and rare type of situation. That type of
+situation is the citation situation, in which
+these 'bound forms' are named in isola-
+tion; but even then there are difficulties for
+phonological and phonemic analysis: the
+phonetic form appropriate to citation is,
+for many Burmans, a reading-style form;
+and this may well be different from any of
+its spoken-Burmese counterparts. In fact
+admit the absolute form of these
+particles into the phonemic analysis would
+mean resorting to a different Burmese
+dialect, and confusing it with a study of
+spoken Burmese.
+to
+No further space is devoted to the
+disqualifications of the absolute form for
+the role of basic form in Burmese; for the
+JBRS, L, ii, Dec., 1967.
+The reason why the basic-form con-
+cept is unacceptable to those who favour
+prosodic analysis is that they are impressed
+by the fact that each of the different
+phonetic forms of a given lexical item (or,
+for that matter, the different phonemic
+forms into which these phonetic forms are
+analysed phonemically) is not only appro-
+priate to its own peculiar environment, but
+is, further, apart from free variation,
+uniquely appropriate to it. Each form can-
+not, in fact, be replaced in its proper
+environment by any other form, phonetic
+or phonemic. This irreplaceability of each
+form in its environment gives to each, in this
+view, equal status with any other form of
+that lexical item, as though, in fact, each
+were the norm in its own environment,
+to the exclusion of any other of the variant
+forms. Each of the variant forms ought
+therefore to enjoy the parity of esteem
+earned for it by its unique status in the
+environment appropriate to it, and should
+not be subordinated to any other one of
+the variants.
+Firth's position with regard to the
+status of variant forms is re-inforced by
+a weakness in the basic-form approach:
+the need, on occasions, to have recourse
+to an arbitrary decision; when none of
+the variant forms offers any advantage
+for derivation over the other variants,
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 5]]
+R. K. Sprigg
+the phonemicist is forced to choose his
+basic form arbitrarily, 24 In avoiding the
+basic-form concept Firthian phonology
+avoids this potential arbitrariness too.
+or
+Another avoidable weakness of the
+basic-form approach, as it appears to
+Firth's followers, is the consequential
+use of terms such as 'change', 'replace-
+ment', and 'disappearance'. These are
+process terms; but they are certainly not
+based on physiological processes,
+developments in an utterance whereby
+one posture supersedes another. The
+glottal-stop phoneme of au? is said to
+be 'replaced' by the labial-stop phoneme
+in auppa; in fact there never was any
+glottal-stop articulation to replace in the
+uttering of that example. The relation-
+ship of the glottal-stop phoneme /P/ to
+the labial-stop phoneme /p/ in the two
+examples is not one of replacement but
+one of distribution: the two phonemes are
+complementarily distributed in relation to
+the following phoneme, including juncture,
+Prosodic analysis bypasses misconceptions
+arising out of these process terms, which
+imply more than they can fulfill.
+basic
+phonemic analysis
+267
+2. The basic-form concept, it must
+be admitted, does succeed in avoiding
+the complication,
+the complication, referred to above, of
+having to cite all the variant forms equally
+on all occasions; and one might well
+wonder how prosodic analysis, which
+avoids promoting one of the variant forms
+to the superior degree of basic form,
+and yet claims to give equal status to
+each variant form, can also avoid this
+difficulty. Prosodic analysis's means of
+escape lies not in singling out one form
+for a special status but in devising a
+formula that shall represent all phonetic
+variants equally. It is a summary of all the
+variant forms to have been observed.
+This formula, a lexical-item phonological
+formula, is an abstraction from all the
+variant phonetic forms of the lexical item,
+each of which is an exemplification of
+it.25
+The difference between the two approa-
+ches, the phonemic and the prosodic-
+analysis, to phonetic variation in the form
+of a lexical item can be illustrated by a
+diagram:
+prosodic analysis
+lexical-item
+phonological formula sok
+statement of
+phonemic form
+/Gau?
+derived
+phonemic forms
+Jaup
+/ Jaum /
+etc.
+phonetic exponency
+corresponding
+[Gaup
+Jaum]
+etc.
+phonetic forms
+This article aims to show how some
+at least of the components of a lexical-
+item phonological formula are arrived at,
+and how these components are related to
+the phonetic features by which they are
+exemplified in utterances. It is variation
+in the syllable-initial features of lexical
+items that is the main source of material
+for this purpose; but syntagmatically linked
+exemplifying
+phonetic forms [aúp (aum] etc.
+final features of preceding syllables are
+also necessarily taken into account.26
+3. 7. There is a type of intraverbal
+junction, or junction within word bounda-
+ries (Cornyn's and McDavid's 'close
+juncture'), in which three sets of syllable-
+initial voicing and other associated phone-
+tic features are lexically distinctive:
+JBRS, L, ii, Dec., 1967.
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 6]]
+Prosodic Analysis
+e. g.
+g b z ]
+268
+i.
+voice
+ii.
+voicelessness
++ non-aspiration
++ aspiration
++non-aspiration
++ laxness
+tenseness
+e. g.
++ laxness
+iii.
+voicelessness
+[kh ph tch]
+e. g. [gb dz];
+the three sets of features are co-articulated with plosion or affrication.3
+Each of the three sets of features
+differs from the others in its relations
+with preceding syllable-final features:
+i. syllable-initial voice (plus non-
+aspiration plus laxness) requires voice to
+be also a feature of the preceding syllable-
+final consonant, e. g. ( - gg bb - ];
+---
+ii. syllable-initial aspiration (plus
+voicelessness plus tenseness ) requires
+voicelessness to be a feature of the preceding
+consonant, if any, e. g. [ -- kkh -- pph - ],
+with, as a fast - tempo (ft) alternative,
+voice plus vocality (or vowelness ), e.g.
+[ Vkh - Vph - ];
+-
+iii. syllable-initial voicelessness plus
+laxness (plus non-aspiration) also requires
+voicelessness to be a feature of the preced-
+ing consonant, e. g. [ - kg - - pb -], but
+differs from the type of sequence shown
+at (ii) in not having a fast-tempo alternative.
+Each set of syllable - initial features
+differs from the other two in its implica-
+h
+[{
+-
+[gg ]
+[ - kkh - ]
+-
+[ - Vkh - ]
+h[-kg-]
+]
+khrok-khon: six heads
+27
+tions for immediately preceding features;
+each is appropriate to a different sequence
+or sequences. The sequences are drawn
+from parts of two successive syllables,
+the final part of one and the initial part
+of the following one; they transcend syllable
+boundaries. Each sequence is treated as
+a property of the disyllabic unit, or piece,
+from which it is drawn. In order, then, to
+account for these four types of sequence, as
+exemplified by (i) [ - gg - ] and [-- bb - ],
+(ii) [kkh] and [ - pph - ], and [- Vkh-]
+and [ - Ygh -], and (iii) [ - kg - ] and
+[-ph], one needs to disdinguish three
+types of disyllabic piece. The three types
+are termed:
+i. the v piece, so named from voicing,
+its prominent feature;
+ii. the h piece, so named from its
+aspiration feature;
+iii. the h (non - h) piece, so named
+from its non aspiration feature; e. g.
+[ bb ]
+-
+[ - pph - ]
+$ [ - -
+khrok-khan: six rooms
+[ - Vph - ]
+khrok-kan six pools [- pb - ]
+On the basis of this threefold syntag-
+matic distinction a prosodic system can
+be set up comprising the three terms
+v, h, and h; this system applies to
+disyllabic pieces comprising two syllables
+in intraverbal junction with each other.
+The term aspiration suggests itself as a
+JBRS, L, ii, Dec., 1967.
+CANIC
+khrok-bhū: six boxes
+khrok-bhak six of pairs
+khrok-pā:
+six priests28
+suitable name for the system; for the
+exponents of its terms have much to do
+with aspiration, nonaspiration, and allied
+syllable--initial features, though these
+features are, of course, always considered
+in association with the features of the
+preceding syllable.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service I fd Bangkok Thailand
+
+[[page 7]]
+R. K. Sprigg
+k Quality Piece 29
+269
+As far as this particular type of intraverbal junction (stressed k-quality) is con-
+cerned, the phonetic exponents of the three terms are:
+first syllable
+v vowel, stop + voice
+ŉ vowel,
+stop + voicelessness
+stop + voicelessness
+h vowel,
+(ft)
+e. g.
+second syllable
+plosion + voice
+plosion voicelessness + laxness
+plosion
+voicelessness + aspiration.
+plosion
+voicelessness + aspiration
+v [-Vgg- -Vbb-];
+[-Vkg--Vpb-]; h [-Vkkh- -Vpph-, (ft) - Vkh- -Vph-].
+The lexical item khrok six is exemplified in all three prosodic types of piece,
+but not necessarily with the same syllable-final features in each; these syllable-final
+features are:
+V:
+voice
+h:
+h:
+voicelessness
+voicelessness
+[voice]
+vowel (ft)
+In other words khrok has here three
+different syllable-final features, one appro-
+priate to the v piece ([-g -b]), one to the
+h piece in fast tempo ([-V]), and one
+common to both h and ĥ pieces (I-k -p])
+apart from those fast-tempo examples of
+the h piece which have vocality as final
+feature. These syllable-final features are
+khrok's share of the phonetic exponency
+of each of the three prosodic terms v, h,
+and h; and, before one can predict khrok's
+syllable-final features, it is first necessary
+to know which of the three types of piece
+one is dealing with, and, for the
+piece, which tempo.
+h
+The first-syllable lexical item, khrok
+in this case, can be common to all three
+types of piece, with appropriate phonetic
+variant forms in each; but the second-
+syllable lexical items are restricted: khoň:
+head and bhū: box, for example, when they
+are second-syllable lexical items, are con-
+fined to the v piece, kan pool and på:
+[numeral classifier for monks], correspond
++
+stop
+[-g -b]
++ stop
++stop
+[-k -p]
+[-k -pl
+-VI.
+ingly, to the h piece, and khan: room and
+bhak [numeral classifier for members of
+pairs], to the h piece. Accordingly, each
+of these lexical items can be classified, on
+the basis of the exclusive relationship that
+subsists between each of them and the
+appropriate type of piece, when, that is,
+each is exemplified by the second syllable
+of that piece (but not by the first). khon:
+and bhū can, therefore, be classified in
+this way as v-piece lexical items, kan and
+pā: as h - piece, and khan: and bhak as
+h - piece. This means that, as second
+syllable in the type of intraverbal-junc-
+tion piece so far dealt with, khon: and
+bhū: will have syllable-inital voice ([g- b-])
+as their share of the exponency of v,
+kan and på: will have syllable-inital voice-
+lessness plus laxness ([g-b-], but with
+tenseness [k- p-], and with voice [g- b-],
+as alternative features in certain circum-
+stances) as their share in the h piece; and
+syllable-initial voicelessness plus tenseness
+plus aspiration ([kh- ph-]) will be the share
+of khan: and bhak in the exponency of h.
+JBRS, L, ii, Dec., 1967.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 8]]
+270
+The exponents of v, h, and h, the
+three terms of the aspiration system, have
+so far been stated only in relation to one
+type of intraverbal junction. It is part
+of the exponency of this type of intraverbal
+junction that the first syllable of its
+disyllabic piece has, provided that it is
+also stressed, a final stop, the [-g] or [-k],
+[-b] or [-p], of the examples given above,
+with a final vowel ([-V]) as a fast-tempo
+alternative for the h piece.30 It is also
+part of the exponency of this type, when
+stressed, that the vowel of the first syllable
+of the piece must have short duration,
+and must be one of a
+range of eight
+phonetic types comprising [t, ɛ, a,, el,
+o, at, ao], and that the first syllable
+must have clear voice quality.
+The name given to this type of
+intraverbal-junction piece is k, because
+the letter k of Burmese orthography, when
+Prosodic Analysis
+it is the final letter of the first syllable
+of the disyllabic piece, is one of the com-
+moner orthographic means of indicating
+this particular type, e.g. khrok-khon:,
+khrok-bhū:, khrok-kan.31
+There are, however, other possible
+types of disyllabic intraverbal-junction
+piece in addition to the k; and the initial
+features of khon:, kan, and khan:, and
+of bhū:, pā:, and bhak, are not necessarily
+the same in those other types as they
+are in the k piece. The other two types
+in the stressed piece are termed the m
+and the z. The system to which they
+belong, and in which they commute with
+k, can conveniently be called the quality
+system, because it largely deals with
+differences in the vowel quality and
+duration of the first syllable of the disyllabic
+piece in relation to its final-consonant
+qualities, if any.
+m Quality Piece
+In the m type of disyllabic quality piece, if stressed, the final of the first
+syllable is invariably characterized by
+i.
+ii.
+nasality, e.g. [ŋ m
+VỊ,
+a range of seven types of vowel, [ 1, a, Q, et, oo, at, aQ],
+iii. long vowel duration,
+iv. either constricted or clear (or breathy) voice quality.
+The initial of the second syllable invariably has voice as one of its features. It
+can also have plosion, e.g. [g b], as a feature; but examples of the m quality piece
+have also been observed to have not plosion initially but nasality, e.g. [ŋ m], at
+least in fast-tempo utterances; e.g.
+kon:-kon:
+well
+rhan-bhu-raǹ' king's
+[-ng-]; fast tempo, (-ŋŋ-]
+[-mb-]; fast tempo, [-mm-].
+In these two examples it is not only in the first syllable that nasality is part
+of the exponency of m but also in the initial of the second ([-ŋŋ- -mm-]); and the
+two syllables of the piece are united by this common feature.
+JBRS, L, ii, Dec., 1967.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 9]]
+R. K. Sprigg
+The m type of piece is so named,
+for convenience, from the letter m of
+Burmese orthography, which, when final in
+the first syllable, is a common orthographic
+means of indicating this type of piece
+e. g.
+first syllable
+voice
+m quality piece
+-
+v [ŋg] sum:
+-
+-
+271
+(together with the other nasal letters n,
+as above, n, ñ, ñ, and m).
+In the m quality piece all three terms
+of the aspiration system, v, h, and h,
+have identical exponents:
+khon: three heads; [ - mb -]
+three rooms; [ mb -]
+three pools: [- mb]
+hŋg] sum: khan:
+hŋg] sum: - kan
+Unlike khrok in the k quality piece
+the syllable-final features of sum: as first
+syllable of the m quality piece do not
+vary according as it is exemplified in the v,
+the h, or the aspiration piece. They are
+constant, e. g. ] or [m], in all three:
+voice plus nasality, co-articulated, in these
+examples, with velarity matching the
+syllable initial velarity of khon:, khan:,
+and kan, or with matching labiality in the
+examples containing bhū:, bhak, and pā:.
+In the phonetic form in which the six
+lexical items khon:, khan:, pā:.etc. have
+been observed, plosion ([gb]) is their
+initial feature; but, since the second-syllable
+lexical items of kon:-koň: and rhaň-
+bhu-ran above, the former of which is
+h-piece and the letter h-piece, and a
+consiberable number of other examples
+of the m piece, have nasality, e. g. [ŋ m],
+second syllable
+voice
+sum:
+1
+bhu: three boxes
+sum: - bhak
+three of pairs
+suṁ: – pā:
+-
+three monks.
+as fast tempo initial features, it is probable
+that these six could also have nasality as
+an initial feature under the same conditions,
+in addition to the plosion feature. 32 At
+all events lexical items of all three
+classifications, v-piece (khon:, bhu:, etc.),
+h-piece (khan:, bhak, etc.) and ĥ-piece
+(kan, pă;, etc.), have identical initial
+features as second syllable of the m piece:
+voice, and plosion alternating, in all pro-
+bability, with nasality, e. g. [g/ŋ, b/m].
+Since the three terms of the aspiration
+system (v, h, h) have identical exponents
+in the m quality piece, there are no
+criteria for distinguishing one from another.
+Consequently, it is impossible to classify
+the second-syllable lexical item in such a
+piece. In order to do that it is necessary
+to examine it in one of the types of piece,
+like the k quality piece, in which all three
+types are phonetically distinguished.
+z Quality Piece
+The main features of the z quality piece, are, in stressed junction, that the first
+of the two syllables has:
+i.
+a vowel finally,
+ii. a vowel range comprising the seven types (i e ɛ ao ou],
+iii. long duration,
+iv. either constricted or clear voice quality.
+JBRS, L, ii, Dec., 1967.
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 10]]
+272
+Prosodic Analysis
+The initial of the second syllable of the piece again has voice as feature, if also
+plosive or affricative, regardless of whether the z quality piece is also v, h, or ĥ in
+terms of the aspiration system; e. g.
+z quality piece
+v [ - Vg-] le:-khon: four heads
+h - Vg-] le:-khan: four rooms
+h[Vg] le:-kan four pools
+In these examples the initial of the
+second syllable of each piece is shown
+as having plosion ([gb]) as a feature;
+but in fast-tempo utterances each can
+also have friction ([ y B ]).
+The reason for choosing z as the
+name for this type of piece is that z is
+the initial letter of zero, and the first
+syllable is of a zero-consonant type (the
+letter v, from vowel, which would have
+been preferred because this type of piece
+is commonly indicated in the orthogaphy
+by one of the vowel letters, is already in
+use for one of the terms of the aspiration
+system).35
+In the z quality piece, like the m,
+the second syllable of the piece has voice
+initially, matching the voice of the final
+vowel of the first; and these features are
+the exponent of each of the three terms
+of the aspiration system, v, h, and h. In
+consequence, the v-piece lexical items
+khon: and bhū:, the h-piece items khan:
+and bhak, and the I-piece items kan and
+pā, all alike have voice ( ( g b ]) initially
+in the z quality piece, their share in the
+exponency of v, h, and ŉ respectively
+([ - Vg - Vb 1). From their exponents
+in the z quality piece it is just as impossible
+to identify the v, h, or ǹ term of the
+JBRS, L, ii, Dec., 1967.
+-
+[ Vb ] le:-bhu: four boxes
+[- Vb ] le:-bhak four of pairs.
+[Vb ] le: -pä: four monks
+aspiration system as it is in the m quality
+piece.
+3. 2. The exponents of the three
+terms of the aspiration system, v, h, and
+h, and three terms of the quality system,
+k, m, and z, have so far been illustrated
+from pieces in stressed intraverbal junction,
+intraverbal junction in which at least the
+first of the two syllables of the piece is
+stressed; the exponents of v. h, and h
+cover a wider span of the phonetic data
+in non-stressed intraverbal junction, and
+are also worth illustrating from this type
+of junction for the voicing harmony that
+is a prominent feature of it.
+The distinctive characteristic of the
+non-stressed type of intraverbal junction
+is that the vowel of the first syllable is
+central ([]) and lacks prominence.
+The exponents of v, h, and h in non-
+stressed junction are again drawn from
+both syllables of the piece, but with this
+difference from stressed junction: they
+include initial features of the first syllable
+of the piece as well as initial features of
+the second. Different types of non-stressed
+junction piece need to be distinguished;
+the two types exemplified in this article
+are the h and the h.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 11]]
+R. K. Sprigg
+273
+h Non-stressed-junction Piece
+In this, the h type of non-stressed-junction piece, the exponents of the terms v,
+h, and h of the aspiration system: are:
+first syllable
+second syllable
+v voice
+e. g. [d]
+voice
+e. g. [g b]
+h voice
+e. g. [d]
+voice
+e. g. [g h]
+h voicelessness e. g. [t]
+voicelessness+aspiration e. g. [kh ph];
+e. g.
+v [dǝg-] ta khon:
+one head
+-
+one pool
+www
+[dǝb-] ta-bhū:
+[dəb-] ta-pā:
+[təph–] ta-bhak
+one box
+one monk
+one of a pair.
+h [deg] ta kan
+h [tǝkh ] ta khan: one room
+In the h aspiration piece voicelessness is a feature of both syllables initially ([takh-
+taph]; but in both the v and the h pieces voice is an initial feature of both syllables
+([dǝg dǝb ]), and the two types of piece are not phonetically distinguished.
+The initial features of the first-syllable lexical item ta one depend on the type of
+aspiration piece in which it is exemplified:
+V,
+v, h: voice [d];
+h: voicelessness
+[t].
+ta is treated as uncommitted as regards initial voicing: which of the two features is
+appropriate to it in a given instance is a function of the type of aspiration piece, v, h, or
+ĥ, in which it is examplified. 34
+The reason
+for calling this type of
+non-stressed-junction piece the h is that
+non-aspiration is invariably an initial
+feature of the first syllable of the piece, and
+that, when plosive or affricative, that
+initial also alternates between voice and
+voicelessness. In these two respects it resem-
+bles the ĥ-piece lexical item, e.g. kan, pā:.
+In the examples of ĥ non-stressed
+junction given so far in this section the
+initial of the first syllable is plosive, and
+the second syllable is one of the six lexical
+items khon:, khan:, kan, bhū, bhak, and
+pä; but, for the sake of material to be
+considered in a later section (Additional
+exponency for verb lexical items, 4.2), it is
+important also to illustrate ĥ non-stressed
+junction from examples in which the initial
+of the first syllable is nasal, e.g. [mn ŋ].
+Unfortunately it is not possible to use those
+same six lexical items for this purpose. 35
+In this latter type of h non-stressed
+junction the initial features appropriate to
+the second syllable of the v, the h, and the
+h aspiration piece are the same as for the
+former type; but the initial of the first
+syllable is voiced, e.g. [mn ŋ], and does
+not alternate between voice and voiceless-
+ness, as is the case where plosion is initial
+in the first syllable ([d t]): 56
+JBRS, L, ii, Dec., 1967.
+35-U.P.-G 124-1,000 + 50-16-7-68.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 12]]
+274
+first syllable
+v voice (+ nasality) e.g. [m n]
+h voice (nasality) e.g. [m n]
+h voice (nasality) e.g. [mn]
+e.g.
+-
+v [ŋǝb ] nā:-bhai – phrū
+[med-] man-kyañ:
+[nǝb] na pyaṁ
+[nǝb-] na: pok.
+h{noph…] na: phay
+[nǝph-] nā: - phä – khye;
+-
+voice
+voice
+Prosodic Analysis
+second syllable
+e.g. [b dz]
+e.g. [bg]
+voicelessness + aspiration
+e.g. [ph kh];
+[kind of fish]
+tamarind
+flying-fish
+[perforation in lobe of the ear]
+fresh-water herring
+ear – wax.
+h Non-stressed - junction Piece
+The type of non-stressed - junction
+piece illustrated in the preceding section,
+the h, invariably has non-aspiration as
+an initial feature of the first syllable, com-
+bined with an alternation of voice with
+voicelessness if plosive or affricative, e.g.
+[t/d], or with voice alone if nasal, e.g
+[mn ŋ], with matching voicing and
+aspiration - non - aspiration features in the
+second syllable: in the h type, the initial of
+the first syllable is invariably voiceless, and,
+if plosive or affricative, alternates between
+aspiration and non - aspiration, e.g. [ņ, p/
+ph k/kh t/ th], these features also being
+matched by appropriate initial voicing and
+aspiration - non-aspiration features in the
+38
+ww
+second syllable. The six lexical items
+khon, khan, kan, etc., to which, for the
+sake of comparability, examples have as
+far as possible been restricted so far, can
+also be exemplified in the h non-stressed
+junction piece, but only in that sub-cate-
+gory in which the first syllable has nasality
+([g]) as an initial feature of the first
+syllable. The examples given here have
+therefore been restricted to that sub-
+category (examples of the other sub-
+category, in which the first syllable has
+plosion or affrication as an initial feature,
+eg. [p/ phố kị khi t j tph }, have been
+adequately illustrated elsewhere).
+The exponents of v, h, and h in this type of non-stressed junction are:
+first syllable
+v voicelessness e.g. [p]
+h voicelessness e.g. [n]
+h voicelessness e.g. [p]
+e.g.
+v[nag-] nhạc khôn
+h
+{nak-1 nhạc-kan
+h [nakh -] nhạc - khang
+JBRS, L, ii, Dec., 1967,
+voice
+second syllable
+e.g. [g b]
+voicelessness + non-aspiration e.g. [k_p]
+voicelessness + aspiration
+e.g. [kh ph]
+two heads [ṇɔb -] nhac-bhu:
+two pools [ŋǝp-] nhac-på:
+two rooms [ṇǝph-] nhac-bhak
+two boxes
+two monks
+two of pairs.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 13]]
+R. K. Sprigg
+In this type of non-stressed junction,
+the h type in which the initial of the first
+syllable is nasal, the initial features of that
+syllable are identical in the exponency of
+v, h, and h alike, e.g. [n]: but in the initial
+of the second syllable, on the other hand,
+all three are distinguished (cf. also the
+three-fold distinction in the stressed k
+piece, 3.1); in the corresponding h type of
+piece, it will be recalled, the v and ĥ types
+of aspiration piece were phonetically
+distinguished from the h, e.g. by [g] versus
+[kh], and by [b] versus [ph], but not from
+each other.
+3.3. All the types of junction for which
+the exponents of the three terms of the
+aspiration system, v, h, and ñ, have so far
+been stated have related to one
+or other
+275
+bet-
+type of intraverbal junction, junction
+ween syllables within the word; there
+remains one important type of junction,
+interverbal junction, which, as its name
+suggests, is junction between syllables at
+word boundaries, between the final syllable
+of one word and the initial syllable of the
+following word. Since phrase, clause, sent-
+ence, and utterance boundaries co-incide
+with word boundaries, interverbal junction
+is appropriate to those boundaries too.
+The three types of quality piece, k, m,
+and z, can be exemplified in interverbal
+junction just as they can in intraverbal
+junction; and all three are regularly dis-
+tinguished phonetically. Their distinguish-
+ing features are located in the final of the
+first of the two syllables of the piece:
+vowel range
+dur.
+voice quality
+k [a Q & et a a o✪]
+short
+clear
+final features
+glottality ([])
+PU
+m [a et a a Q OQ]
+long
+clear or constricted
+nasality ([V])
+Z i e ɛ do ou]
+long
+clear or constricted.
+There are no distinctions in the initial features of the second syllable of the
+piece, whether k, m, or z; the same sets of initial features, e.g. [p th b], are common
+to all three, as in the following examples:
+k i.
+ii.
+[ 7 b ]
+22
+[th]
+" th - ]
+}
+[- p- ]
+iii.
+{
+m
+i.
+[a b]
+ii.
+{ (: th – ]
+iii.
+Z
+i.
+ii.
+iii.
+[-a: p -]
+[
+--
+u: b
+-
+]
+i: th - 1
+[-a: p-]
+ma-nak bhay
+-
+ta-yok tha:-mañ
+bhay-lok pe:-ra-sa-lai
+'a-khan: bhay-nhac-khan:
+mran: thin:-sañ
+'im-thon pa-ri-bho-ga
+ū: bhay
+-'a-khan: chi-than
+nha: pri-pri 48
+For the three types of aspiration piece, on the other hand, the v, the h, and h,
+the reverse is the case: they are distinguished by initial features of the second
+JBRS, L, ii, Dec., 1967.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 14]]
+276
+Prosodic Analysis
+syllable, their exponency being identical as regards final features of the first syllable.
+Where the initial of the second syllable is plosive or affricative, and not, for example,
+nasal or lateral, these features are:
+h
+h
+voice
+voicelessness
+voicelessness
++ laxness
++ tenseness + aspiration
++ tenseness + non-aspiration
+e.g. [b g d]
+eg. { phikh th
+e.g. [p k t
+(at least when utterance-initial the voice of the v piece is partial only).
+These distinguishing features of the v, the b, and the ĥ piece, together with
+the fact that the final features are common to all three (k: [?]; m: [V]; z: [V]),
+are illustrated in the immediately preceding set of examples; they are:
+k piece
+[b]
+7th - ]
+V
+(i)
+h (ii)
+[
+h (iii)
+-
+[-' p -]
+m piece
+[V: b ]
+-
+[-V: th]
+83
+[ - V: p - ]
+z piece
+[V: b]
+[-V: th]
+[-V: p-].
+The syllable-initial part of the exponency of v, h, and b is also appropriate
+to the beginning of utterances (the syllable-final features
+V [g-]
+khon:
+head
+h [kh-1
+khan:-ma
+room
+[b]
+[ph -]
+h [k]
+kan
+pool.*1
+Before leaving the subject of interverbal
+junction it should be pointed out that
+there is a class of lexical item that is,
+almost without exception, precluded from
+having the syllable-initial features stated
+for interverbal junction. This is the gram-
+matical class of particle lexical items.
+With three exceptions, the negative particle
+ma and the two nominalizing particles
+'a and ta, the particle category is never
+initial in the word; apart from these three
+exceptions its members are thereby preven-
+ted from having the syllable--initial features
+of interverbal junction. In consequence
+the range of initial features of particle
+lexical items differs from that of verb and
+noun lexical items; and the designation
+particle carries different phonolgical and
+JBRS, L, ii, Dec., 1967.
+may be lacking); e.g.
+box
+bhū:
+bhak [numeral classifier for
+members of pairs]
+phonetic implications for the lexical item
+classified as such from the designations
+verb and noun.
+4.1. It is clear from their various
+statements of exponency that the degree
+to which the three terms of the aspiration
+system, v, h, and h, are distinguished from
+each other varies considerably from one
+type of piece to another; it varies according
+as they are exemplified in the k, the m,
+or the z quality piece, and whether, further,
+that example of the quality piece is also
+an example of interverbal or intraverbal
+junction. If it is an example of intraverbal
+junction, the degree of distinction depends
+on whether it is stressed or non-stressed,
+and if non-stressed, on whether it is, for
+example, h or h non-stressed junction.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 15]]
+•
+R. K. Sprigg
+Because of collocational restrictions
+on khon, khan:, etc., not all the relevant
+types of piece have been exemplified; but
+of those which have, the degree of distinc-
+tion is at its maximum, threefold, (i) in
+the intraverbal stressed k_piece, (ii) in the
+(intraverbal) non-stressed h junction piece,
+and (iii) in interverbal junction. It is at
+V
+h
+277
+its minimum, all three terms having identical
+exponents, in the intraverbal stressed m
+and z pieces (iv). An intermediate degree
+of distinction, twofold, appears in the
+non-stressed ŉ piece (v), in which the
+exponent of v is the same as the exponent
+of h; but both are distinguished from that
+of h; .e.g.
+h
+i. [-gg-] khrok-khon: [- kkh -/- Vkh - ] khrok-khan: [- kg - ] khrok-kan
+ii. [ nag - } nhac-khon; [ pakh -
+1
+nhac-khan: [nck - 1
+khan:-ma
+[k]
+khon:
+iii. [-]
+iv. [ - ng - ] sum-khon [ - ng à }
+v. [Vg/y] le:-khon:
+vi. [dǝgta-khon:
+[kh]
+sum:-khan:
+I
+-
+[- Vg/y - ]
+[tǝkh ]
+le:-khan:
+ta-khan:
+The terms v and h are distinguished
+from each other in three types of piece
+(i-iii); both are distinguished from h in
+four (i-iii, vi); and there are two types
+(iv, v) in which none is distinguished; but
+provided that there is at least one type of
+piece in which two or more syntagmatic dis-
+tinctions are made (three such distinctions
+are made at (i), the k stressed intraverbal-
+junction piece), one is justified in setting
+nhac-kan
+kan 42
+ŋg -] sum:-kan 43
+--
+[Vg/y ]le:-kan
+[dǝg] ta-kan.
+up this or any other prosodic system.
+It is at this stage possible to account
+fully for variation in the syllable-initial
+features of the v-piece lexical items khon:
+and bhu:, for example, the h-piece_lexical
+items khan: and bhak, and the h-piece
+lexical items kan and pâ:. This variation is
+a function of type of quality piece (k, m, z),
+type of stress piece (stressed, non-stressed),
+and type of non-stressed piece (h, h):
+ii
+iii
+iv
+V
+vi
+v-piece, e.g. khon
+bhu:
+[ g
+g
+g/?n g/Y
+g ]
+[b
+b
+b/?m b/B
+b]
+i
+ii
+iii
+iv
+V
+vi
+h-piece, e. g. khan:
+[ kh
+kh
+kh
+g/?ŋ
+g/y
+kh]
+bhak
+[ ph
+ph
+ph
+b/?m
+b/ẞ
+ph]
+h-piece, e. g, kan
+[g
+k
+k
+g/?n g/Y
+g]
+pa:
+[b
+p
+b/?m b/ß
+b].
+A v-piece lexical item invariably has
+voice as an initial feature, e. g. [g/ g/ ?n/
+y b/b/?m/ẞ]; h-piece and h-piece lexical
+items alternate as regards voicing features.
+h-piece lexical items also alternate as
+between aspiration and non-aspiration,
+e. g. [kh/ g/ ?n/y ph/b/ ?m/ BỊ.
+These variations and distinctions in
+voicing, nasality, and aspiration features.
+JBRS, L, ii, Dec., 1967.
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 16]]
+278
+have been illustrated from velar-initial
+and labial-initial lexical items (khoń:,
+khan:, kan; bhū:, bhak, pã:); corresponding
+statements can, of course, be made for
+Prosodic Analysis
+lexical-items with initial alveolarity and
+with dorsopalatality provided that they
+include plosion or affrication among their
+co-articulated features:44
+į
+ii
+iy
+V
+vi
+v-piece:
+[d
+d
+d
+d/n
+d/C
+d]
+[dz
+dz
+dz
+dz/p
+dz
+dz]
+h-piece:
+[ th
+th
+th d/n
+J/P
+th ]
+[tch toh
+teh dza/n
+dz/z
+teh ]
+ĥ-piece:
+[d
+t
+t
+d/n
+d/C
+d]
+dz/7 dz];
+I dz to te dz³/ɲ
+and a substantially similar statement can be made for lexical items in initial
+alveolarity co-articulated with friction:
+v-piece:
+h-piece:
+h-piece:
+[ Z
+Z
+Z
+Z
+Z
+zl
+[ sh
+sh
+sh
+Z
+Z
+sh]
+S
+S
+Z
+Z
+z ].
+4. 2.
+The examples of non-stressed h junction given
+above (3.2) show voice
+as an initial feature of the second syllable of h aspiration pieces in which the first
+syllable has nasality as a feature:
+[ŋǝb na-pyaṁ flying-fish
+[nab-] na-pok perforation in lobe of the ear;
+to these one might add, for example:
+[ŋǝdz] nā:-kri: [small fish resembling the na:-khu; lit. big fish]*
+[ŋob-] na:-pat the large silure
+Some of the lexical items in the above
+examples are verb lexical items: pyaṁ
+fly, pok pierce, krī: big; unlike noun lexical
+items these can be exemplified in the verbal
+phrase, and can combine within word
+limits with members of the verbal-particle
+category. It is also part of the function of
+verb lexical items that they can be exempli-
+fied, as here, in polysyllabic noun words,
+in combination with such noun lexical
+[mop-]
+[map-]
+[mǝte-]
+items as na: fish, na:
+ear, nasal-initial
+lexical items, in which case the verb lexical
+items have voice as an initial feature; but
+there is a grammatically different kind of
+non-stressed ĥ-junction piece in which
+they are again combined with a voiced-
+nasal-initial lexical item, the verbal-particle
+lexical item ma not, and in this type of
+non-stressed piece they have voicelessness
+as an initial feature; e. g.
+ma-pyaṁ-bhū:
+ma-pok-bhū:
+ma-kri-bhū:
+it does not fly
+it is not pierced
+it is not big.45
+* Written ñā:kyañ: and pronounced ŋǝgyi but not big fish literally. Ed. JBRS,
+JBRS, L, ii. Dec., 1967.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 17]]
+R. K. Sprigg
+Verb lexical items, in fact, have voice
+and voicelessness as alternative features
+in non-stressed h junction, the former
+being appropriate to a noun piece and
+the latter to a verb-plus-particle piece.
+In consequence, verb h-piece lexical items
+differ in their potential initial features from
+h-piece noun lexical items: the latter are
+excluded from the particle-plus-verb piece,
+and cannot, therefore, have voicelessness
+as an initial feature in the h non-stressed
+piece. 48 With h-piece lexical item it is, then,
+important to know whether one is dealing
+with a verb or a noun lexical item.
+v-piece khon: head bhu:
+h-piece khan: room
+h-piece kan pool pā:
+-
+279
+5. There is one other important
+characteristic that distinguishes verb lexical
+items from noun lexical items. It has
+already been shown that, if one confines
+oneself for the moment to those lexical
+items which have plosion, affrication, or
+alveolar friction, e. g. [p th d to sh z],
+among their initial features, it is possible
+to say that all such items can be classified,
+in terms of the aspiration system, as either
+v-piece, h-piece, or ĥ-piece according as
+each is (exclusively) exemplified, as second
+syllable of the piece, in the v, the h, or
+the h piece; e. g.
+box
+bhak [numerative for members of pairs]
+[numerative for monks].
+It is important to note that all six of
+the above examples are noun lexical items:
+they cannot (i) be exemplified in the verbal
+phrase, or (ii) combine, within word limits,
+with verbal particles; nor (iii) does any of
+them function as a particle. It was in fact
+precisely because they were noun lexical
+items that they were chosen for inclusion
+in examples of the three terms of the
+aspiration system. Verb lexical items and
+h-piece
+h-piece
+but not
+v-piece
+[kh/g/g/n/y
+[kg/g/n/y
+[g/g/?n/y
+particle lexical items would not have
+been as satisfactory, because it would not
+have been possible to illustrate the v piece
+from them: monosyllabic verb lexical
+items are either h-piece or h-piece, but
+never v-piece. Alternatively one might
+say that verb lexical items have only the
+range of initial features shown in the
+immediately preceding section for h-piece
+and h-piece lexical items; e. g.
+tch/dz/dz/n/z.
+te/dz/dz/n/z
+dz/07/?17/zp
+One might also say that in interverbal
+junction (i. e. when word-initial) verb
+lexical items have voicelessness as their
+initial feature ([pt k tes; ph th kh teh sh]),
+but never voice ([b d g dz z] ).47 Thus,
+to classify a monosyllabic lexical item
+phonologically as v-piece implies classify-
+ing it grammatically as a noun lexical
+item; and classifying a lexical item gram-
+matically as a verb lexical item implies
+sh/z/z]
+s/z/z];
+2/2].
+classification in
+that its phonological
+terms of the aspiration system will be
+either h-piece or h-piece, but cannot be
+v-piece.
+This grammar-based limitation on verb
+lexical items, to the h-piece or to the
+h-piece category, is an important factor
+in deciding how one should analyse à type
+of aspiration piece that has not
+so far
+JBRS, L, ii, Dec., 1967.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 18]]
+280
+been considered in this article. All the
+examples of the aspiration piece thus far
+cited have had plosion, affrication, or
+alveolar friction, e.g. [g/g toh/dz s/z],
+as potentially an initial feature of the
+second syllable of the piece; there remain
+Prosodic Analysis
+all those examples in which the initial of
+the second syllable is incapable of hav-
+ing plosion, affrication, or alveolár friction
+as a feature, but has one of the liquids
+(nasality, laterality, non-alveolar friction,
+non-syllabic vowel) as an initial feature:
+[ m n ŋ ɲ 1 ỗ j w ĥ ]
+[ m n ₁ i 0 p h]
+1
+items, which have voicelessness initially in
+alternation with voice ([ņ/ n], etc.), to be
+classified with the h-piece lexical items
+described above ([k/ g/ g/ ŋ/ Y], etc.);
+for they too have non-aspiration as an
+initial feature, combined with an alternation
+of voice with voicelessness.
+Those liquid-initial lexical items which
+have voicelessness as a potential initial
+feature alternate between voicelessness and
+voice, e.g. [n/n], as in [nene] nhe:-nhe:
+slowly, [m/m], as in [mamma] mhan-mhan
+correctly, [1], as in [la 'la'] lha-lha prettily,
+[0/ŏ], as in [e de t✔] se:-se: tan [name
+of a symbol in the script], [h/ĥ], as in
+Such a classification would rest on
+[tǝhe fiet] ta-hin:-hin: growlingly; 48 the
+similarity of phonetic feature; the arguments
+remainder have voice ([m n ŋ ɲ 1 w]) against it have a grammatical basis. Many
+initially without alternative.
+On purely phonetic grounds one might
+expect those liquid-initial lexical items
+which always have voice as an initial
+feature ([m 1 j], etc.) to be classed with
+the lexical items classified above as v-piece;
+for they too invariably have voice initially
+([g/g/ ?ŋ/y], etc.). Similarly, one might
+expect the remaining liquid-initial lexical
+(verb lexical items)
+of these liquid-initial lexical items are also,
+if classified grammatically, verb lexical
+items; and classifying them as being either
+v-piece or h-piece would run counter to
+the classification of the non-liquid-initial
+lexical items, those which have plosion,
+affrication, or alveolar friction among their
+potential initial features, as being either
+h-piece or h-piece, but not v-piece:
+liquid-initial
+On grammatical grounds it would
+seem preferable to classify as h-piece
+not only those verb lexical items which
+have aspiration (plus plosion, affrication,
+or alveolar friction) as a potential initial
+feature, e.g. [ph/ b/ m/ ẞ teh/ dz/ ɲ/
+sh/ z], but also those which have voice-
+lessness plus liquidity as an initial feature,
+non-liquid
+h-piece
+h-piece
+V
+h
+[ph/ b/ m/ ẞ sh/ z], etc.
+[p/ b/ b/ m ẞ s/ Z/ z), etc.
+JBRS, L, ii, Dec., 1967.
+non-liquid-initial
+h
+h
+e.g. [n/n 1 1], and to classify as h-piece not
+only those verb lexical items which have
+non - aspiration plus voicelessness (plus
+plosion, etc.) as a potential initial feature,
+e.g. [p/ b/ b/ m/ ẞ], but also those which
+have voice plus liquidity as a constant
+initial feature, e.g. [m 1]. The resulting
+ranges of initial features will then be:
+liquid
+[m/ m / 1], etc.
+[m 1]. etc.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 19]]
+R. K. Sprigg
+The former statement, that all verb
+lexical items are either h-piece or h-piece,
+can, then, still stand, for non-liquid and
+for liquid lexical items alike.
+This classification of the liquid_initial
+verb lexical items, as h-piece or as h-piece
+281
+only, is powerfully re-inforced by another
+grammatical characteristic of Burmese. This
+is the fact that certain Burmese verbs
+have two forms, a transitive and an intran-
+sitive, and, further, that the transitive form
+is a h-piece lexical item, while the corres-
+ponding intransitive form is h-piece; e. g.
+h-piece [sh-] chut [tch-]
+h-piece [s-] cut [16] kya
+(h-piece: tear, let fall, set afloat, set free;
+khya
+49
+The number of verbs of this type
+is by no means negligible; hence, to
+classify the liquid-initial lexical items as
+v-piece or h-piece, but the potentially
+non-liquid-initial lexical items as h-piece
+or h-piece, would spoil an otherwise
+straightforward statement, namely that the
+classification h is a phonological exponent
+of the grammatical category transitivity,
+while the h is an exponent of intransitivity,
+for these two-form verbs.
+These two arguments apply to the
+phonolgical classification of liquid-initial
+verb lexical items; but it would clearly
+be economical to extend it to noun and
+to article liquid-initial lexical items.
+6. The variant syllable-initial features
+of Burmese lexical items are analysed by
+Cornyn and by McDavid in such a way
+that they result in differences in the
+phonemic sphere, in differences of phoneme,
+e.g. /k/ and /g/ in /kâuŋ/ and /gâun/ good,
+and /h/ and the disappearance of /h/ in
+hney/ and /ney. The variations appear
+in both phonetic and phonemic spheres
+alike. In a prosodic analysis, in contrast,
+[1-]
+lhwat
+[1-]
+Iwat
+[m-] mhyo
+[m-]
+-piece: be torn, fall, float, be free).
+myo
+the variation in feature is confined to the
+phonetic level. It is a variation in phonetic
+exponency only, the phonological units
+and classifications being constant. Thus,
+a lexical item classified as h-piece is not
+thereby to be considered as aspirated
+initially in all circumstances. It is, on the
+contrary, aspirated in some circumstances
+but not in others; and those circumstances
+are all stated. The classification h distin-
+guishes lexical items with a particular range
+of initial features from two other classes
+of lexical item, at least in nouns, the
+v and the h. Each of these classifications
+by reference to the aspiration system is
+one component of a phonological formula
+comprising all the classifications, in the
+light of other prosodic systems, by which
+one lexical item is distinguished from
+others.5 50
+Each of the components of that
+formula commonly appears at the phonetic
+level in more than one phonetic guise,
+in accordance with differences in prosodic
+and grammatical type of piece, and may
+overlap other components in its phonetic
+features.
+JBRS, L, ii, Dec., 1967.
+236-U.P.--G 124-1,000+ 50-30-7-68.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 20]]
+282
+NOTES
+Prosodic Analysis
+I. H. A. Gleason, An Introduction to Descriptive Linguistics, New York, 1961, 213.
+2. Raven I. McDavid, Jr., Burmese Phonemics, SIL 3,6-18, 1945; William Cornyn, Outline of
+Burmese Grammar, Lg 20:4, Oct. - Dec., 1944, supp.
+3. J. R. Firth, A Synopsis of Linguistic Theory, 1930-55, Studies in Linguistic Analysis,
+Oxford, 1957, 6: "... the suggested procedure for dealing with meaning is its dispersion into modes,
+rather like the dispersion of light of mixed wave lengths into a spectrum".
+4. R. H. Robins, Aspects of Prosodic Analysis, Proceedings of the University of Durham
+Philosophical Society, I, B (Arts), 1, 1957, 3-4; cf. also his General Linguistics in Great Britain
+1930 – 1960, in C. Mohrman, F. Norman, and A. Sommerfelt (eds.), Trends in Modern Linguistics,
+Utrecht, 1963, 28-31.
+5. cf. also Firth, A Synopsis, 17:
+system, systems, terms and units are restricted to a set or
+sets of paradigmatic relations between commutable units or terms which provide values for the
+elements of structure. Though structures are, so to speak, "horizontal" while systems are "vertical",
+neither are to be regarded as segments in any sense".
+"
+6. cf. W. S. Allen, Relationship in Comparative Linguistics, Transactions of the Philological
+Society 1953, 84: They [.e. prosodic analyses) are phonological in the sense that their
+systeins are relevant to the structural positions for which they are estaolished and are congruent with
+other levels of analysis, notably the grammatical.... the tendency for grammatically congruent
+phonological statements to have a certain diachronic and diatopic extension has been evident from
+the time of Bloomfield's Menomini Morphopnonemics".
+7. cf. Firth, A Synopsis, 15 – 16. “Renewal of connection with the language under description
+in experience requires that recognizable phonetic and possibly graphic shape shall be given to what
+have been termed the exponents of the phonological categories".
+8. Cornyn exciudes tonelessness (/a/) and a phonemic /r/ from these totals. His orthography
+is phonemic except in one respect: "the interdental fricative (0/ occurs in both voiceless and voiced
+variants. For convenience we write for the voiced variants" (Outline, 8).
+9. Phonemics, 6 - 10. The status of '/(r)/ and of the initial glorial stop is somewhat uncertain:
+the former is enclosed in brackets; of the latter McDavid says that, since there is no contrast between
+presence and absence of initial glottal stop', he does not regard it as phonemic: but a symbol,
+bracketed, but enclosed in the slants appropriate to a phoneme, '(/'/)'. is nevertheless allotted to the
+initial glottal stop in the list of initial consonants (p. 10). This would bring the number of consonant
+phonemes up to twenty one.
+10. R. K. Sprigg, Junction in Spoken Burmese, Studies in Linguistic Analysis, Oxford,
+1957, 104-5.
+11. Outline, 10 (28), 24 (130).
+12. Ibid., 10 (28), 22 (112).
+13.
+Phonemics, 15 (9,2).
+14.
+Ibid., 17 (4a).
+15. Cornyn, Outline, 9-10 (26-9); McDavid, Phonemics, 6 (1).
+16. Cornyn, Outline, 9-10 (28).
+17. ibid., 7-8 (8-9), 10 (29).
+18. Phonemics, 15 (9.2); cf. also Outline, 10 (29).
+19. Outline, 10 (29); see also 10 (28), 8 (8), 22 (112).
+20. Phonemics, 15 (9.2).
+21. Outline, 11 (32); Phonemics, 7 (3).
+JBRS, L, ii, Dec., 1967.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 21]]
+R. K. Sprigg
+283
+22. cf. A. E. Sharp, A Tonal Analysis of the Disyllabic Noun in the Machame Dialect of
+Chaga, Bulletin of the School of Oriental and African Studies, XVI, 1, 1954. 169: "it is neither
+necessary nor in general practicable to be so limited by the finding of tonemics that we must search
+around for the tonemic marking of the word as it occurs under certain stated conditions in order to
+set up that form as the 'real' or 'basic' tonal analysis of the word in question. To speak, at the
+tonemic level, of the 'basic' tones of a word is, we submit, as much a solecism as to speak of the
+'principal member' or 'norm³ of a phoneme.“
+23. cf. Noam Chomsky, Syntactic Structures, The Hague, 1964, and especially pages 26-7,
+32, and 61. It should be noted that 'tuk/' and 'hit are 're-writes of 'take + past' and 'hit + past'
+respectively: but 'wok!', on the other hand, is treated not as a re-write of * wok! + present but
+simply as a re-write of 'waik' (p.32), i.e. the present form is apparently treated as basic, and the past
+form as derivative.
+24. Gleason, An Introduction, 82 - 3.
+25. cf. also R. K. Sprigg, Prosodic Analysis, and Phonological Formulae, in Tibeto-Burman
+Linguistic Comparison, in Linguistic Comparison in South East Asia and the Pacific, School of
+Oriental and African Studies, London, 1953. 79-80, 81-3, and also, on the word rather than the
+lexical item, A. E. Sharp, in Stress and Juncture in English, TPS 1960, 108: "the word as such has no
+audible features: it exhibits for instance no attributes of stress of a kind that may be "lost" or
+“modified" in sentences. Rather it may be given what I call a "conphonational formula" to
+summarize the totality of its exemplification in utterances.”
+26. Syllable final features have already been dealt with in some detail in Prosodic Analysis,
+85-96 and 98-9.
+27. When co-articulated with plosion or affrication (but not, for example, with nasality or
+laterality) voice implies non--aspiration and laxness, aspiration implies voicelessness and tenseness, and
+voicelessness combined with laxness implies non-aspiration. These implied features are, therefore,
+specified only when it seems useful to do so; for, in general, it is sufficient to refer merely to voice,
+to aspiration, or to voicelessness plus laxness.
+The phonetic spmbols used are those of the International Phonetic Alphabet, with the addition
+of [V], for vocalic articulations.
+28.
+Unless otherwise stated I owe the Burmese examples to my colleague Hla Pe, Reader in
+Burmese, of Moulmein, Lower Burma,
+29. The reasons for the choice of the name 'quality', and a statement of phonetic exponency
+of the term 'k', are given later; cf. also Prosodic Analysis, 86-90.
+30. Non-stressed examples of this type of interverbal junction are given in 2, 1. 2,
+31. Syllable-final p, t, and c of the orthography serve the same purpose, though e does not
+invariably indicate the stressed type of k junction (cf. the c of nhac, 3.2).
+32. rhan-bhu is identified as an example of the h piece on the assumption that its lexical item
+bhu is the same lexical item as that of bhu-rāt, which must be a h-piece lexical item because of the
+initial aspiration ([ph-]) that it has in interverbal junction (3.3).
+33. The consonant symbols ñ and y, when final in the first syllable, also indicate the z piece.
+Although the letter '7' is taken from ‘zero', the concept zero has not been used in this article.
+34. ta one alternates with tac: the latter does not combine with numeratives, and has
+voicelessness ([t]) as a regular initial feature.
+35. This is because of collocational restrictions: these lexical items do not combine with
+suitable lexical items in this type of non stressed intraverbal-junction piece. For 'collocation' see
+J. R. Firth, Modes of Meaning (details of this reference are not available to me at the time of
+writing).
+JBRS, L, ii. Dec., 1967.
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 22]]
+284
+Prosodic Analysis
+36. It is not surprising that nasality should not share in the alternation of voice with
+voicelessness that combines with plosion and affrication; for the range of features that can combine
+with the two latter comprises (i) voice, (ii) voicelessness plus aspiration, and (iii) voicelessness plus
+non-aspiration, c.g. [b ph p] (three sets of features); but only two features, (i) voice, and (ii) voiceless-
+ness, can combine with nasality, with laterality, and, for the most part, with friction, e.g. [m m,
+9 Å, 1 1, ð 0, i øl (in Burmese friction plus alveolarity can combine with the same threefold range
+of features as plosion and affrication, and is therefore affricate-like in this respect: [z sh s]).
+37. There are speakers for whom voicelessness plus non-aspiration is a possible feature of the
+initial of the second syllable of the ŉ piece, but only in a few words, e.g. [ŋap-], not [geb-], in
+ňa: pi salted and pressed fish, nã:-puņṇā: mango fish (lit. Brahmin fish) nhak-pyo plantain. Some
+of these exceptions are probably loan words; others appear to be confined to speakers from Lower
+Burma.
+38.
+The behaviour of the initial nasals [m n ŋ] in the ĥ, and [n] in the h non-stressed-junction
+piece is shared by initial laterals and initial fricatives, with the exception of alveolar friction ([z sh s]).
+Such initials as [mnŋ 1 j] and [m] can therefore be grouped together, as 'liquids', in
+contrast with the plosives and affricates.
+belt.
+39. Sprigg. Junction, 114-16, e.g. [khatch-] khā:-khyap secured round the hips, [kǝb-] khā: - pat
+40. cf. also Sprigg, Junction, 118-19, 122-4, 136-8.
+41. -pā:, numerative for monks, which was used in the other ŉ -piece examples, has not been
+included here because it is never utterance - initial, or even word - initial, except in citation.
+N
+42. These initial features can be preceded by syllable-final [', V,
+43. With probably [-nn-] as a fast-tempo alternative for all three.
+V].
+44. These lexical items have not been termed plosive - initial or affricate - initial because they
+also have, as potential initial features in appropriate circumstances, friction ([y ẞ7]) or a flapped
+articulation ((^) ); and some at least have nasality too, e.g. koň: in [ka ŋŋnal or [kaoŋga]
+koň: - kon: well, and khyak in [thəmiɲɛ] or [thəmiɲdzɛ ?] cook.
+45. cf. also Sprigg, Junction, 112 - 15.
+46. Except for punṇā: and pyo, and one or two other noun lexical items, for those speakers
+who pronounce them with initial voicelessness in ñā: - puññā:, ñhak - pyo ([ŋap -]), etc. (3.2).
+47. The (rare) exceptions, e. g. the voiced - initial verb ka - cã: ([g -]) play, are disyllabic; and
+furthermore the initial voice is to be accounted for as in harmony with the initial voice of the
+second syllable, e.g. [gǝz-].
+48.
+But not [ 6 ], e. g. cit rhañ - rhañ [çese] patiently, not * [peje].
+49. A list of these verbs has been published by Raven I. McDavid, but the reference is not
+available to me at the time of writing.
+50. cf. also Sprigg, Prosodic Analysis, 82 - 3, and R. K. Sprigg, A Comparison of Arakanese
+and Burmese based on Phonological Formulae, in Linguistic Comparison in South East Asia and the
+Pacific, School of Oriental and African Studies, London, 1963, 116, 120-1, 124-5, 126, 130, 131, and
+132.
+JBRS, L, ii, Dec., 1967.
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.

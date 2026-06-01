@@ -1,0 +1,3516 @@
+[[page 1]]
+GRAMMAR ANALYSIS OF PALE CLAUSES & PHARASES *
+Introduction
+Hermann and Magarete Janzen **
+It is the intention of this article to
+give an example of Grammar Analysis
+from an indigenous but not previously
+analysed language of Burma.
+The method employed in this approach
+is taken from different schools of Descriptive
+Linguistics, which have been found helpful
+in the analysis of many previously unknown
+and unanalysed languages in South Ame-
+rica, Africa and Asia.
+The underlying principle is to describe
+any language in terms which fit its own
+structure and as far as possible avoiding
+categories which are not relevant for that
+particular language.
+and
+The outcome of such a procedure
+may be, that some terms may be missing
+in the description of a language which
+are quite common, especially in Classical
+Grammar. For instance there may be no
+tenses such as present, past or future
+used in one language. In the phonology
+there may be certain sounds missing, which
+are found in classical languages,
+sounds (phonemes) may be present which
+are not common in previously known
+languages. Though in many cases certain
+phenomena in a language must be explained
+in terms known to the reader, it must be
+born in mind, that these terms are not
+necessarily identical with those applied for
+other languages. For instance, if the term
+"Plural" is mentioned it may not have
+the same meaning as commonly thought
+of, signifying more than one item, but
+there may be a three member-system, sin-
+gular, dual and plural. Here plural means
+that there are not one or two items invol-
+ved, but many, certainly more than two.
+So every term must be assessed in rela-
+tionship to the whole system of the par-
+ticular language described. Even in lan-
+guages which belong to the same language
+family certain systems have changed more
+or less rapidly throughout the history of
+one language, and therefore more or less
+fixed forms of systems are found in each
+language at a certain time. So for instance,
+the case system of the noun is more
+less developed in different Indogermanic
+Languages and therefore forms distinctly
+different systems in each of these languages.
+or
+A common mistake in Grammar has
+been to describe a language in terms of
+the system of another language which is
+quite different, but which has been gene-
+rally regarded as "superior" or "more
+systematic". e.g. Greek, Latin, Sanskrit
+and Pali have been regarded as so superior
+to other languages that in many languages
+their systems have been adopted without
+question and without regard for the lan-
+guage to which they have been applied.
+The descriptive linguist is wary of adopting
+other systems, and also the reader of a
+description has to beware of comparison,
+assumption and interpretation of some
+items of a system which may seem to
+correspond to something he knows from
+his own language or from languages which
+he has learned.
+In the hundreds of languages which
+have been analysed by descriptive methods
+in this century some general principles
+have been found, which may apply to any
+new language which is to be analysed.
+In any given language we expect to find
+* Read before an ordinary meeting of the BRS held in December 1972, with Professor Mye Min
+in the chair.
+** Compilers of Burmese-German Dictionary
+JBRS, LV, i & ii, Dec., 1972.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 2]]
+48
+a predicate and a subject in the grammar,
+and a certain amount of consonants and
+vowels in the phonological system.
+The
+nature and structure of these may vary
+greatly, but they will have certain forms
+and functions. Therefore, in approaching a
+new language from the descriptive point
+of view the basic question is: What
+is the particular structure of the given
+language? What are the relevant units
+in the structure, and what is their rela-
+tionship and function?
+This paper is not concerned with
+the principles of Generative Grammar,
+which are found in the Transforma-
+tional-Generative Models of Linguistics.
+This may be of value at a later stage,
+where language production and teaching
+and comparison is the main concern.
+It is also neither possible nor convenient
+to apply that method in the early stages
+of analysis, since it requires a linguisti-
+cally trained person who is a native
+speaker of that language to write a
+generative Grammar. In most cases it
+may take a generation to prepare a
+person for such a task. And even in
+preparing people from indigenous lan-
+guages for such a task, methods
+of descriptive linguistics must have been
+applied already by linguists in develop-
+ing teaching material for those pro-
+spective teachers and linguists. In con-
+trast to these comparatively high demands
+for generative linguistics, the linguist
+using a descriptive method of analysis
+needs just informants, i.e. native speakers
+of the language which is to be analysed,
+to supply him with the language data
+which is needed for his analysis.
+The development of linguistic research
+in many languages has shown that the
+descriptive methods helped greatly in
+making the indigenous language groups
+literate and integrating them into educated
+society of their nation. On the inter-
+national level UNESCO has given much
+assistance to developing countries by
+helping to publish language descriptions
+and other descriptive material for the
+JBRS, LV, i & ii, Dec., 1972.
+Hermann & Margarete Janzen
+a
+common good of humanity. From recent
+publications in Burma it can be taken
+that there is a growing interest in ana-
+lysing and describing previously little
+known languages in the country. I have
+tried in this article to demonstrate
+part of the analysis of one of the so
+far unanalysed languages by using the
+tools which descriptive linguistics offers.
+I hope that this article may help readers
+to realize how the task of language
+analysis can be accomplished as well as
+encouraging further research for the
+common good of this country and its
+indigenous language groups.
+The terminology, demonstration of
+material and the transcription of data
+has been made as simple as possible to
+enable readers who are less familiar with
+linguistic terminology to comprehend the
+material described in this article. The
+basic terms used in this description are
+explained in more detail, but compari-
+sion of all terms used in this article
+with similar terms used in other models
+of description has been avoided in order
+not to overburden the reader who is
+less familiar with other descriptive mo-
+dels of linguistic analysis. Furthermore
+redundancy in the presentation of the
+material has been taken into account
+for the same reason of easier comprehen-
+sion. Therefore a simple written state-
+ment may be found side by side with
+formulas and diagrams showing the same.
+feature from different angles.
+Acknowledgements:
+We are grateful to the many Pale
+People who have helped us in collecting
+the material and studying their language,
+to Dr Kathleen Forbes for carefully
+correcting the manuscript and to the
+Burma Research Society for the publi-
+cation of this article.
+Hermann and Margarete Janzen
+Rangoon, Dez. 1972
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 3]]
+Grammar Analysis of Pale Clauses and Phrases
+II The Grammatical model employed in this
+analysis.
+"
+The model employed in this analysis
+called the Syntagmatic Model" or simply
+"Structure-Function" model. This model
+is a hirarchical model which has been
+developed by experience in analysing
+languages. Insights from other descriptive
+grammar models, especially the tagmemic
+and systemic grammar, have been applied
+in developing this mod 1 with the aim of
+keeping the model as simple and at the
+same time as useful as possible.
+The term which are used in this
+model are used in a similar, but not
+always identical way as in the other models
+above mentioned. The term “level” has
+been adopted from tagmemics and there-
+fore does not correspond to the term
+"level" as used by Halliday in this
+Systemic Grammar Model. The terms
+"Unit", ',Class", "Type" come close to
+the usage of the same terms in Systemic
+Grammar. The term “Syntagmatic feature”
+is unique in the Syntagmatic model. It
+is used as a means of describing gram-
+matic relationships, and by this means
+49
+the model becomes more simple, less
+rigid than in Taşmemics, and in my
+opinion more fitting for the description
+of languages in South-East Asia.
+II. 1. The basic terms and categories
+used in this Model.
+Basic terms employed in this model
+are: Hierachy, Level, Unit, Class, Type,
+System, Syntagmatic feature and Con-
+struct.
+II. 1.1. Hierachy and level.
+Hierachy means that the grammatical
+structure of a language is understood to
+consist of different levels (Halliday employs
+here the term "rank”.) These levels
+may be Morpheme,-Word-, Phrase, Clause-
+and Sentence level, which are like flats in
+a multistory building, the lowest level
+consisting of the smallest appartments,
+the highest level of the biggest appartment.
+Se e.g. the English clause: "The small
+children play happily on the green grass".
+could be demonstrated in the grammatic
+levels of the hierachy as follows:
+Clause:
+The small children
+(Subject)
+Play happily
+(Predicate)
+Phrase:
+The small children
+nominal Phrase
+Art. Mod. Head
+play happily
+verbal phrase
+Head Modif.
+on the green grass.
+(Locative)
+on the green grass.
+locat. phrase
+Prep. nom Phrase
+Word:
+The small children play
+art. adj. noun verb
+happily
+adverb
+on
+prep
+the green grass.
+art. adj. noun.
+Morpheme:
+child Ten
+n.root
+plur.
+marker
+happy ly
+verb
+adv.
+marker
+JBRS, LV, i & ii, Dec., 1972.
+7 U.P.-L. 227-1,100-10-12-73.
+M. H. W.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 4]]
+50
+The conditions for establishing levels
+in a hierachy are:
+1) There must be contrast of structure
+and function of one level with the
+Structure and function of the level
+below and above.
+2) There must be at least 2 classes of
+units at a level.
+Hermann & Margarete Janzen
+Units with different internal structure
+clause:
+are distinguished as types e.g. in the
+"The student is happy" and the
+clause: "The student plays happily" the
+phrases is happy" and "plays happily"
+function as predicate in the clause, but
+since the internal structure of these phrases
+differs they are 2 different verb-phrase
+types. "is happy" may be called an
+adjectival verb-phrase type; the phrase
+“plays happity” may be called an adverbial
+3) There must be obligatory and optional verb phrase type.
+items at that level.
+On the highest level in the hierachy
+there will be no clas es, since it does not
+function on a higher level. The lowest
+level in a hierachy does not have structural
+types, since there is no further structure
+existing.
+II. 1. 2. Unit, Class, Type
+The unit which operates on a given
+level bears the same name as its level. So
+there may be morphemes, words, phrases,
+clauses and sentences, which are units
+operating on their respective levels. Every
+unit has a certain s ructure and a specific
+function. A unit functions as an element
+in the structure of the unit of the level
+above, and the structural elements of a
+unit consist of units from the level below.
+Classes of units are defined according
+to their external function as an element on
+the next level above in the hierarchy. So
+there may be a verbal phrase class function-
+ing as the Nucleus (Head) element of the
+cluse. Therefore a class of units consists
+of two or more units which function at
+the same place in the structure of the unit
+on the level above. The criterion for units
+becoming members of one class is their
+paradigmatic substitutability.
+e.g. in the clause "the student learns well”.
+the phrase "learns well" could be replaced
+by the phrase: "stays idle". Both phrases
+are verb phrases, functioning at the same
+place in the clause, and therefore belong
+to the same class, the verbal phrase class.
+JBRS, LV, i & ii, Dec., 1972.
+Such structural groupings into types
+may either parallel the functional groupings
+into classes or cut across them.
+Whenever there are restrictions of
+substitutability of members of one functio-
+nal class, this class is divided into subclasses.
+Minor structural differences of types
+constitute subtypes. These subtypes are
+distinguished and marked by syntagmatic
+features. Types and subtypes or classes
+and subclasses may crosscut each other
+and form an interlocking system, which
+may be demonstrated in a matrix. (see
+e.g. types and subtypes of Palaung clauses.)
+II. 1.3. System
+If there are two or more subclasses
+of units which function alternatively as
+choice classes at a given place in the
+structure they from a system If the number
+of items is limited they form a system
+within a closed-class. If different larger.
+sets of items appear mutually exclusively
+at one place in structure they form a
+system of different subclasses (See examples
+from Pale below). The minimum repuire-
+ment for establishing a system are two
+mutually exclusive items. The grammati-
+cal value or meaning of one member in a
+system is contrastive to the whole sum of
+members in that particular system. In
+English the singular and plur I forms of
+nouns form a system with a twofold con-
+trast. In other languages there may be a
+threefold contrast.
+In Pale the pronoun
+word class forms a five-member-system:
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 5]]
+Grammar Analysis of Pale Clauses and Phrases
+1) singular, 2) dual-inclusive, 3) dual-
+exclusive, 4) plural inclusive, 5) plural
+exclusive.
+If the functional groupings into sub-
+classes parallel the structural groupings
+into subtypes there may be a system of
+subtypes.
+II. 1.4. Syntagmatic features.
+In addition to the structure of a
+unit which consists of a certain number
+of elements, the relationships of these
+elements to one another within that unit
+are of vital importance. The elements
+may have a certain order, there may be
+possible shifts of elements to the front
+or to the middle or end in certain cases,
+some of the elements are optional and
+some obligatory, some elements are closely
+related to one another and some are
+more loosely affiliated to each other.
+There may be phonetic and phonological
+markers such as intonation and certain
+sound differences, differences of pitch or
+tone, or there may be certain particles,
+which are characteristic of one type of
+unit on a given level. All these are
+syntagmatic features, which are to be
+described on each level. Some of these
+features are overtly marked, by means of
+a morpheme, word etc. Some are marked
+in current orthographies, and others have
+to be described in writion statements. In
+English the three clauses: "You go." "You
+go?" and "You go!" have a distinctive
+syntagmatic feature in each clause. : level
+intonation, rising intonation, and a falling
+stressed intonation, which are respectively
+marked by full stop (.) quession mark (?)
+and imparative marker (!)
+II. 1.5. Construct.
+Normally a unit functions at the next
+level above. If it is functioning on a
+lower level or feeds back at the same
+level it is called a construct. eg. in the
+complex clause: "Anybody who visits me
+is welcome", the part "who visits me"
+is a clause functioning as the modifier of
+the subject-phrase, in which "anybody"
+51
+is the nucleus. Thus the clause functions
+on the level belows as a part of the
+phrase. In the case of feedback on the
+same level one may give the following
+example: "The rich man and the poor
+people shared their property." Here "the
+poor people" is a noun phrase in itself
+which is functioning as an adj nct of
+"the rich man," and so becomes the part
+of another noun phrase, which functions
+as subject in the clause.
+II. 2. Modes of presentation
+The grammar description by means
+of the Syntagmatic Model as used in this
+article will be presented mainly by a writ-
+ten statement about the structure and
+function of a unit on its respective level
+as well as the relevant syntagmatic features
+of units. Groupings in classes and types
+as well as existing systems will be stated.
+To highlight certain aspects of the descrip-
+tion different forms of presentation can be
+employed, in order to give a quicker and
+clearer insight into the language described
+or into a certain point of the description.
+The different forms of presentation are:
+(1) the linguistic formula (adopted
+from tagmemics).
+(2) the box diagram.
+(3) the linguistic matrix.
+(4) the summarising chart.
+II. 2.1. The linguistic formula is
+derived from the algebraic formulas. It
+is used to symbolize the structure of a
+unit at a given level in linear sequence
+of its elements. The small lettered
+symbols after the colon (:) represent the
+class functioning at a certain point in
+structure. The capital lettered symbols
+infront of the colon (:) label that particular
+point in the linear structure of the unit
+on which the class operates as an element.
+For labelling the points in the Structure
+terms like Subject, Predicate, Object are
+adopted if possible, if not, terms like
+Item, Head or Modifier are used.
+JBRS, LV, i & ii, Dec., 1972.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 6]]
+52
+The terms for the functional classes
+are chosen according to a common feature
+of all the members of that particular
+class. The symbols refl cting both the
+place in structure and the functional class
+in the fomula are abbreviated forms of
+the respective terms used.
+-
+Signs like + or show obligatory
+present or absent ele nents, and the
+sign shows optional elements.
+This form of presentation is mainly
+designed to show the linear order of the
+obligatory and optional elements in the
+unit and moreover gives a combined view
+of structure and function in a unit of a
+given level. This form of presentation
+is especially useful for units where several
+elements of equal status occur. Therefore
+the English clause: "The rich man and
+Hermann & Margarete Janzen
+the poor people shared their property"
+may be diagrammed as:
+CL
+==
++S: compl np + P: v + O: np
+II. 2.2. The box diagram.
+For the clarification of the relation-
+ships existing between the elements box
+diagrams are useful to give a quick insight
+into the interdependence and importance
+of each element. The term: Nucleus has
+been employed to lable the obligatory
+main part of a unit, the term periphery
+is used for optional elements around the
+The terms inner and outer
+nucleus.
+expansion are terms showing further
+degrees of difference in relationships.*
+Thus the relationships of elements of
+a phrase can be demonstrated as follows:
+The
+big
+boy
+article
+adject.
+noun
+exp₂
+Periphery
+exp2
+Nucleus
+This mode of dia ramming is espe-
+cially useful where the unit consists of an
+obligat ry main element and more or less
+closely connected optional elements pre-
+ceding and/ or following. It may be less
+useful in structures which have a strong
+frame and optional fillers within that
+frame, like infixes etc.
+II. 2.3. The linguistic matrix.
+Wherever types and subtypes or/and
+Classes and subclasses cut across each
+other or certain structural features signal
+grammatic meaning a matrix is helpful to
+show certain patterns and find the relevant
+meaning conveyed by each structural fea-
+ture. Of great importance in the use of
+a matrix is the proper arrangement of
+similar items (e.g. morphemes) in such a
+way that the columns and lines form
+blocks with a common feature or common
+function.
+On the Morpheme-level the morphe-
+mes and their classes and subclasses as
+Compare also the terminology taken in Systemic Grammar and K L. Pike's article on Lan
+guage as particle, wave and field. Both seem to have adopted their symbolism from terms
+used in demonstrating phenomena of nuclear science.
+JBRS, LV, i & ii, Dec. 1972.
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 7]]
+Grammar Analysis of Pale Clauses and Phrases
+well as certain common features within a
+closed class can be effectively demonstra-
+ted by a matrix. On higher levels any two
+groups of items or categories can be com-
+pared and their relationship stated in a
+matrix.
+In this article matrixes are used to
+show the different categories of the Palaung
+personal pronoun system on word level.
+(see IV 3.2.) On phrase level the combina-
+tion of different simple nominal phrase
+types forming complex clause types, (see
+IV.2.1.2.2) and on clause level the clause
+types and their subtypes are shown in a
+matrix. (see IV.1.2.4)
+add
+-
+additional
+adv = Adverb
+Adv P/advp
+-
+asp =
+Aspect
+II. 2.4. The summarizing Chart.
+53
+Summarizing charts can be used as
+they are convenient to highlight certain
+aspects or parts of a language in a synoptic
+view.
+In this paper the relationships of the
+different levels with their classes, types
+and subtypes are demonstrated in a sum-
+marizing chart. (see Appendix 1)
+This from of presentation is useful to
+give a bird's eye view of the basic patterns
+of a language and their basic relation-
+ships.
+ABBREVIATIONS
+Adverbial Phrase
+app == Appositional
+aux = Auxiliary
+Cl/cl
+=
+Clause
+clas == Classifier
+compl
+constr = Construct
+intens ============ Intensifier
+Int = Interrogative
+intr intransitive
+L
+-
+Locative
+M = Modus (in clauses)/Manner
+M
+N
+========
+Modifier (in phrase formula)
+Nucleus
+Ne CL/necl
+-
+Negative
+Nominal-extension-clause
+Complex
+neg
+-
+np/Np
+= Nominal phrase
+Demonstrative
+nu
+-
+Numeral
+des Descriptive
+=
+Object
+dem
+D
+Demonstrative
+emph
+Emphasis
+eq
+--
+Equational
+exp
+expr
+==
+=====
+expansion/expansive
+Expression
+f = Focus
+H
+- Head
+I
+Item
+p
+P
+Positional
+Predicate
+Pos
+-
+Posessive
+PP/pp
+====
+prepositional phrase
+pr = Pronoun
+prep
+Preposition
+plur
+==
+Plural
+○
+-
+Question
+qw
+Question word
+imp Imperative
+=
+JB RS, LV, i & ii, Dec., 1972.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 8]]
+54
+Relator
+Hermann & Margarete Janzen
+SNp/snp simple nominal phrase
+Statement
+R
+ref
+=
+Referent
+St
+=
+Rev CL/revcl
+Reversed order Clause
+tr =
+transitive
+S
+Subject
+S
+=
+Subtype
+Syntagmatic feature
+Sfe
+III. 1. About the Language analysed in
+this paper.
+The language to which the above
+mentioned model of description has been
+applied is the language of the Southern
+Palaung people, also called Pale.
+to
+The Palaung group in general belongs
+the Northern branch of the Mon-
+Khmer language family.
+The Southern Palaung live scattered
+in isolated groups, each group numbered
+several thousand people, all over Southern
+Shan States, and towards the Salween in
+Eastern Shan States of Burma.
+for the
+There is no specific name
+Southern Palaung people or for their
+language. They call themselves "Di Ang”.
+By the Burmese they as well as other
+smaller Palaung groups are referred to
+as,Pale", Sometimes they are referred
+to as "Ngwe-Palaung" or "Silver Palaung”
+in contrast to the "Shwe-Palaung" or
+"Gold-Palaung" people living around
+Namsham. The latter name "Silver
+Palaung" refers more to their difference
+in dress and apparel rather than to
+their racial-or language differences.
+The Southern Palaung language itself
+is so distinctly different from the Gold-
+Palaung language, that the people of both
+groups do not understand each other, so
+that for communication purposes the
+Burmese or Shan language has to be
+used. Phonologically, lexically and gram-
+matically the Southern Palaung language
+is so different from the Northern Palaung
+language group that it can be regarded
+JBRS, LV, i & ii, Dec., 1972.
+V = Verb
+-
+VP/vp Verbal phrase
+W = Word.
+as a seperate language rather than a
+different dialect of the same language.
+In this paper the name "Pale" is
+used in a special sense for the Southern
+Palaung and their language.
+The vocabulary is influenced to some
+degree by loans from the Jung, Shan and
+Burmese languages, and through these by
+loans from Pali and Sanskrit. These loans
+have however been almost completely
+integrated into the systems of the Southern
+Palaung Phonology, Grammar and Lexis.
+The Jung loans have infiltrated through
+Jung religious literature to such an
+extent, that even the intonation patterns
+and the Jung script are
+in
+The Jung script has even
+religious rites.
+been adopted for few translations of
+religious documents into the Pale language.
+common
+Since the phonological systems of
+both, the Jung and southern Palaung
+languages differ greatly these written docu-
+ments show over-and unde differentiation
+in their Orthog aphy, which makes read-
+ing extremely difficult, but is useful for
+research into the southern Palaung lan-
+guage.
+III. 2. The grammatical analysis as
+presented in this paper is based on about
+7000 words of continuous spoken text
+and on about the same amount of elicited
+data from different native speakers of
+the Southern Palaung language. The find-
+ings of the basic analysis have been
+furthermore confirmed by a wide variety
+of transcribed, spoken and literary material
+from this language.
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd. Bangkok, Thailand.
+
+[[page 9]]
+Grammar Analysis of Pale Clauses and Phrases
+III. 3. The transcription used for the
+Pale language samples in this paper is
+nearly phonemic. The symbols have been
+chosen for ease of reading for those who
+are less familiar with phonetic symbols
+and also for easier printing. Therefore
+the symbols used in the transcription do
+not always correspond to their values in
+the I P A.
+Since this paper is concerned with
+phrase and clause structure of Grammar
+only, the given language data is not
+suitable for phonological interpretation
+and comparison of these data.
+IV. Description of Pale Clauses
+and Phrases.
+Clauses and Phrases of the Pale
+language are units which function at
+Clause and Phrase level respectively.
+There are altogether 6 levels in the gram-
+matical hierarchy of the Pale language:
+Discourse level
+Sentence level
+Clause level
+Phrase level
+Word level
+Morpheme level
+The highest level is the Discourse level
+which can only be described in terms of
+its structural markers, which are different
+syntagmatic features. Since the Discourse
+Level does not function in a higher level
+structure but in free context there is no
+functional statement possible.
+The lowest level in the grammatical
+hierachy is the Morpheme level. Only a
+few word classes have further structure,
+mainly the noun-word class which can
+form compounds and the verb-class which
+can have a few prefixes. Thus the Mor-
+pheme Level requires little discussion, and
+most of the words consist of a single
+morpheme.
+IV. 1. The Clause Level.
+55
+The Clause Level consists of Clauses
+which function as elements in the Sentence.
+Clauses can also function as clause-
+constructs in the nucleus or periphery of
+the Nominal Phrase. The functional
+classes of clauses are not stated in this
+paper since there is also no statement
+about the Sentence in which the Clause
+Classes function.
+Generally every clause in the language
+is marked by a pause in speech, which
+according to its length signals different
+relationships in the next higher level, and
+by a characteristic intonation pattern which
+also marks different types of Clauses.
+The structure of a clause may be
+shown by a very general diagram as:
+CI = ±S: np+P: vp±O: »p±R: pp
++M: advp
+IV. 1.2. According to their structure the
+clauses may be subdivided into
+3 different Clause Types:
+1) Statement
+2) Imperative
+3) Interrogative
+1.2.1. The Statement Clause Type is
+marked by a high-falling intonation at the
+end of the Clause. Structually it may be
+further subdivided into 4 subtypes, of
+which the first three subtypes are closer
+in their relationship to each other than
+the fourth. This is true regarding their
+structure as well as their function.
+The four subtypes of the Statement
+Clause are:
+1) transitive
+2) intransitive
+3) descriptive
+4) equational
+JBRS, LV, i & ii, Dec., 1972.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 10]]
+56
+All of these subtypes differ from each
+other in their occurence of the optional,
+elements of the Clause, and furthermore,
+the nuclei of their verbal phrases are filled
+by different Verb classes which are mutu-
+ally exclusive.
+On the basis of frequency of occurence
+and function at different places in the
+structure of the Sentence as well as on
+the basis of their structural similarity, the
+first three subtypes, transitive, intransitive
+and descriptive, may be grouped together
+as the major clause tynes, whereas the
+fourth subtype (equational) may be regard-
+ed as a minor clause type.
+The major subtypes of the Clause can
+function as both nucleus and periphery of
+1.2.1.1.1.
+Cl tr
+=
+1.2.1.1.2.
+Hermann & Margarete Janzen
+a higher level structure, whereas the minor
+subtype (equational) functions only as
+nucleus in a higher level. Frequency
+counts show that the most frequently
+occuring subtype of the Statement Clause
+Type is the transitive clause type, and then
+the number of occurences lessen according
+to the sequence in which these subtypes
+of the clause are listed.
+1.2.1.1. Since the transitive clause.
+described first in terms of its structure, and
+type is most frequently used it may be
+from this both other major subtypes of
+the clause may be described in terms of
+their restrictions.
+The elements of the trar sitive clause type are:
++ S: np P: vp ± 0: np ± R: pp ± M: advp
+The arrangement and status of these elements may be diagram-
+med as follows:
+Manner
+advp
+Subject
+np
+Predicate
+vp
+Object
+np
+Relator
+pp
+Manner
+advp
+outer
+expans.
+inner
+expans.
+inner expans.
+outer
+expans.
+Periphery
+Nucleus
+Periphery
+elements occuring simultaneously in the
+There are never more than two elements
+post-nuclear periphery.
+The Subject Nominal phrase is obligatory present, except where a clause
+functions in a conditional sentence which consists of a string of clauses, where it is
+obligatorily absent, but is understood from the context.
+JBRS, LV, i & ii, Dec., 1972.
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 11]]
+Grammar Analysis of Pale Clauses and Phrases
+1.2.1.1.3. Examples:
+(1) S: np
+P: vp
+masou
+yoât.
+“The dog looks.”
+57
+(2) S: np.
+P: vp
+ma angèou
+dèâm pa
+cat
+jumps holds
+Omp
+ngai da pra tuân. po a blang.
+eyes (of) thef that both 2 sides.
+“The cat jumps and keeps both eyes of the thief_shut.”
+(3) S: np
+Pivp
+0: np
+R: pp
+da i hmât ga
+hè hấp
+ou
+fisherman
+has put
+me
+in
+khèng kasuh ân.
+basket-trap his.
+“The fisherman has caught me in his trap."
+(4) S: np
+Pivp
+0: np
+M : advp
+ma yun
+muy hrèt
+rabbit
+then seeks
+ma pun tuân
+alligator that
+u dzen.
+at once.
+"Then the rabbit seeks the alligator at once.
+(5) S: np
+Pvp
+R: pp
+ai
+hè
+pшân
+khèng dèi
+da pra.
+We 2
+have got
+out of hand (of) thief.
+“We have got (it) back from the thief.”
+(6) S: np
+P: vp
+ma
+pun
+lap loung
+M : advp
+u dzen.
+at once.
+alligator enter go-down
+"The alligator goes into (the trap) at once.”
+(7)
+S: np
+P: vp
+R:pp
+ma jun
+rabbit
+tauh
+says
+di ma pun
+to alligator
+"This is what the rabbit told the alligator.”
+M: advp
+pai ti.
+like this.
+(8) P: vp
+hè
+tâh kauk katât
+have come, bit apart
+0:0p
+po kanu
+ou.
+also fi ger my
+"They have also bitten my finger off."
+JBRS, LV, i & ii, Dec., 1972.
+* 8 U.P.-L. 227-1,100–11-12–73.
+M. H. W.
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 12]]
+58
+Hermann & Margarete Janzen
+(9) P: vp
+0: ng
+ta
+ti.n kasuh
+trap-basket
+..
+use
+R: PP
+khèng um.
+in
+water.
+"(He is) using a trap-basket in the water."
+(10) P: vp
+R: pp
+M: advp
+hè hoât
+khèi
+di ma pun
+has finished talk
+to alligator
+pai ti.
+like this.
+"This the) said to the alligator."
+(11) Pvp
+hè pwần
+toung.
+1.2.1.1.4.
+1.2.1.1.4.1.
+has gone ahead far.
+"He has already proceeded far ahead."
+A special feature of
+the transitive clause
+type is the
+possibility of overlap of 2 clauses.
+Overlap occurs at the post-verbal inner expansion of the
+There are two different types of overlap
+clause.
+(1) the nominal extension clause.
+(2) the verbal extension clause.
+In a nominal extension clause the post verbal inner expansion
+consists of a nominal phrase (Object) which is at the same time the
+pre-verbal inner expansion (Subject) of a second statement clause.
+This construction of a nominal extension clause occurs only with a
+very limited number of transitive verbs functioning as Nucleus of the
+transitive clause, which therefore form a subclass of transitive verbs.
+This overlap can be demonstrated in a box diagram as follows:
+Cl. 1
+Cl. 2
+ân
+he
+dua
+gives (let)
+a ngèo
+cat
+paut
+ride
+ân
+(on) him
+inn.exp
+inn.exp
+inn.exp.
+Nucleus
+Nucl.
+"He lets the cat ride on him.”
+JBRS, LV, i & ii, Dec., 1972.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd. Bangkok. Thailand.
+
+[[page 13]]
+Grammar Analysis of Pale Clauses and Phrases
+It can also be demonstrated in the following formula :
+Cl nex =
++ S₁ : np + P₁ : vp +
+S₂
+:np
+Examples:-
+]
++ P₂ vp± 0₂: np)
+2
+1) ou yoât
+I see
+ngèi ga
+eye (of) fish
+po didang kasau tık.
+be coming big very much
+2)
+"I see the eye of the fish, which appears to be very big.”
+a ngèo tách
+ân
+cat
+gives (lets)
+him
+gong sèân gai khriu tuần,
+hold diamond and gold that.
+he
+59
+"The cat allows him to hold the diamond and the gold.”
+1.2.1.1.4.2.
+In a verbal extension clause the post verbal inner expansion
+consists not of a nominal phrase but it consists of a syntagme tic
+feature: di “to” which is followed by a transitive or intra sitive state-
+ment clause with an obligatorily absent pre-verbal inner expansion
+(Subject.) Whenever a verbal extension clase occurs the Subject of
+the first clause is also the understood Subject of the second clause.
+The verbal extension clause can be demonstrated in a formula
+as follows:
+Cl v.ex + S₁, 2: np + P: vp+0:
+Sfe di + (P: vp + O: np ± R: pp)
+Examples:
+(1)
+Sfe
+Cl₂
+mèi po pèi
+di
+lop hret.
+you will manage
+to
+enter seek.
+“You will probably have to dive and seek (it)”
+JBRS, LV, i & ii, Dec., 1972.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 14]]
+60
+Hermann & Margarete Janzen
+(2)
+Cl₁
+Sf
+Cl₂
+ân yi pшân
+di
+dua di ma yun.
+he asp. be able
+to
+give to the
+rabbit.
+1.2.1.2.
+1.2.1.2.1.
+"He will be able to give (it) to the rabbit.”
+The intransitive subtype of the statement clause may be now
+described by stating the restrictions of the basic clause pattern as it
+has been described in the transitive clause type.
+The elements of the intransitive subtype of the statement clause
+type can be diag ammed as follows:
+Cl intr =========
+S: np + P: vp ± R: pp ± M: advp
+The order, arrangement and status may be described in the same terms as
+the transitive clause type (see box diagram under 1.2.1.1.2.); but the intransitive clause
+type never has an Obj. element in the inner expansion following the nucleus of the
+intransitive clause.
+1.2.1.2.2. Examples:
+(1) S: np
+P: vp
+sèân gai khriu di
+diamond+gold this
+tsouh loung
+falls-goes down
+R: pp
+dèng kadâm wm'
+on bottom (of) water.
+"The diamond and the gold drops down to the bottom of the lake.
+(2) S: np.
+P: vp
+ân
+muy it
+he
+R:PP
+M: advp
+then sleeps
+"He then sleeps in a resthouse.”
+khèng dzeroup
+in resthouse
+u dzen.
+at once.
+(3) S: np
+P: vp
+M: advp
+ma ga tuân
+fish that
+bouk
+goes-up
+"That fish comes up (to the surface) at once."
+(4) S: np
+P: vp
+u
+dzen.
+at once.
+da sathe
+mwy goe.
+rich man
+also sits.
+“The rich man is also sitting down.”
+(5) Pvp
+it
+sleep
+R:PP
+dèng hmoân makuâm ou.
+on head-cushion my.
+"Sleep on my cushion.”
+JBRS, LV, i & ii, Dec., 1972.
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 15]]
+Grammar Analysis of Pale Clauses and Phrases
+(6) S:np
+yam
+vi.n
+M:adv
+pân ti
+after this.
+61
+1.2.1.2.3.
+cries returns
+"After that he goes back crying.”
+(7) P:vp
+hè loung.
+has gone-down
+(He) has gone down."
+The order of elements in the transitive as well as the intransitive
+statement clause type as stated in the above paragraph: 1.2.1.1.1. may
+be changed if a particular element of the clause is emphasized. The
+particular element of the clause which is emphasized will be shifted to
+the front as follows:
+(a) If the emphasized element is an element of the post nuclear
+inner expansion (Object) it will be shifted to the beginning of the
+clause.
+This can be diagrammed as:
+Cl tr O emph = + 0:np ±S:np + P:vp ± R:pp ± M:advp
+eg:
+O:np
+po yâng maga
+also meat of fish
+S:np....
+P:vp
+mapun
+alligator
+puân di houm.
+can eat.
+"Even the fish's meat the alligator can eat.”
+(b) If the emphasized element is the second element of the post
+verbal inner expansion (Relator) or the post nuclear outer expansion
+of the clause (Manner) it is frontshifted and occurs following the
+nucleus.
+This may be diagrammed as:
+Cl R emph
+-
++ S:np + P:vp + R:pp + 0:np A
+JBRS, LV, i & ii, Dec., 1972.
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 16]]
+62
+Hermann & Margarete Janzen
+eg: S: np
+P: vp
+R: pp
+ân hè
+he has
+thsшp
+put-on
+di dèi ân
+to his finger
+0: np
+khriu gai sèân.
+gold diamond. ▲
+"He has put on the gold and diamond (ring) and wear it on his finger.'
+or:
+Cl M emph
+= + S: np + P:vp + M: advp ± 0: np ± R: pp^
+eg: S: np
+P: vp
+ân
+he
+M: advp
+R: pp
+pai ti
+di ma yun.
+like this
+the rabbit.
+A
+hè hoât khwang
+has finished greet
+“Like this he has greeted the rabbit.”
+(c) If the emphasised element is the nucleus of the clause (Pred.)
+the nucleus will shift to the front and the pre-nuclear inner exp. (Subj.)
+will follow the nucleus.
+This may be diagrammed as:
+A
+Cl P emph = + P: vp + S: np + O: np + R: pp + M: advp
+eg: P:vp
+S: op
+R: PP
+po ngauh yâm
+will kill (to) die
+kanya ai
+di ai.
+ruler ours
+to us.
+1.2.1.3.
+"Our master will kill both of us.”
+The descriptive subtype of the statement clause type. The basic
+elements of the descriptive clause type are:
+Cl des
+=
++ S: np + P: vp des
+The verb phrase is manifested by a certain subclass of the verb
+phrases only, the descriptive verb phrase.
+In rare cases the descriptive clause type may have an outer expansion
+(Adverbial) and also the Relator- element.
+JBRS, LV, i & ii, Dec., 1972.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd. Bangkok. Thailand.
+
+[[page 17]]
+Grammar Analysis of Pale Clauses and Phrases
+63
+If the Relator element occurs as a post-nuclear inner expansion
+it is manifested by one subtype of the prepositional phrase, the causal
+prepositional phrase, which never occurs as Relator of other statement
+clause types.
+Therefore the elements of an expanded descriptive clause type may
+be diagrammed as follows:
+Cl des
+-
+± S:np + P:vp des ± R:pp caus ± M:advp
+The arrangement, order and status of the descriptive clause type
+is as described in the transitive clause type. (see 1.2.1.1.2)
+Examples:
+1)
+P:vp des.
+au hngwe,
+(It is) not easy.
+"It is not easy."
+2)
+S:np
+P:vp des.
+nauh
+po dikhwe tık.
+heart
+comes-to be happy very.
+"He will be very happy."
+3)
+S:np
+P:vp des
+M:advp
+ma pun
+muy khme
+pai ti.
+alligator
+then happy
+like this.
+"This way the alligator is happy then.”
+4)
+S:np
+P:vpdes
+R:pp causal
+ou
+mwy hè nun kasau
+also am tired very
+di hau doup n ten không
+from walking along the road
+I
+“I am also very tired from walking along the road in the
+su dat.
+sun hot.
+hot sun."
+1.2.1.4. The equational Clause Type.
+The equational clause type may be structurally further subdivided
+according to the presence or absence of its verbal phrase into
+1) positive
+and
+2) negative subtypes.
+JBRS, LV, i & ii, Dec., 1972.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 18]]
+64
+1.2.1.4.1.
+1.2.1.4.2.
+Hermann & Margarete Janzen
+The positive equational clause type consists of the following
+elements which may be shown according to their order and arrange-
+ment as:
+Cl eq
+-
+± 1,:np ± P:vp eq + I2:np
+The negative equational clause type consists of the following ele-
+ments which may be diagrammed as:
+Cl neg eqI₁:np + P:vp eq +1₂:np
+In both, the negative and positive subtype of the equational clause
+the I₁ element may only be omitted where the clause is functioning in
+a context where I, is understood.
+Examples:
+1) I
+ou
+I (am)
+12
+i di hau oung goè ma pun ti.
+person to go place- sit alligator.
+“I am the one who will go to the alligators place.”
+(2)
+-
+(it is)
++ 12
+goung bai.
+benefit yours.
+“This is your benefit.”
+1.2.2.
+(3) Inp
+P : vp ed
+12: np
+masou ni ye
+muh
+dog this we
+are
+amyou brouh.
+(the) kind (which) barks.
+"We dogs, we are the kind (of creatures) who are liable to
+bark. (any time)."
+(4) Pvp eq
+12: np
+au muh
+ou u vi.
+I only.
+(It) not is
+"It is not only me."
+The Imperative Clause Type.
+The imperative clause type is set up on the basis of its func-
+tion in the sentence as well as on structural differences from the
+Statement Clause.
+The function of the imperative clause type is restricted to a
+context which is marked as direct speech.
+JBRS, LV, i & ii, Dec., 1972.
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 19]]
+Grammar Analysis of Pale Clauses and Phrases
+65
+The basic feature of the imperative clause type is an intona-
+tion pattern in which the pitch is the same as in the statement
+clause type, but in which the stress is heavy on the part of the
+clause which is emphasised.
+The imperative clause type may have the structure of the
+transitive or intransitive clause type, but its functional class func-
+tioning as the prefnuclear inner expansion (subj) is restricted.
+There can only be a 2nd person pronoun (singular, dual or plural)
+functioning as Head of the nominal phrase. Furthermore imperative
+clause types can have an optional Subject-referent which is an
+overtly marked syntagmatic feature of the imperative clause type.
+In the transitive-imperative clause this syntagmatic feature occurs at
+the end of the clause, but in the intransitive-imperative clause it
+occurs following the Nucleus (vp) and preceding other optional items
+of the post nuclear inner and outer expansion of the clause.
+Therefore the imperative clause type may be diagrammed as :
+Cl imp
+=
+Examples:
+± S:op + P: vp ± Sref: np ± O: np.
+(1) (Transitive Imperative.)
+S: pr
+pai
+P: vp
+hau hret
+you 2
+go and seek!
+"Go and seek!!”
+(2) (Intransitive Imperative.)
+P: vp
+hau hau.
+go, go!
+"Go!"
+(3) (Transitive Imperative.)
+S: pr
+P: vp tr
+O inp
+Sfe: np
+mèi
+kauk kadât
+bite apart
+kanu ân
+finger his,
+sou.
+dog!
+you
+“Dog!, you bite his finger off!”
+JBRS, LV, i & ii, Dec., 1972.
+9 U.P.-L. 227-1,10C-11-12-73.
+M. H. W.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 20]]
+99
+66
+(4) Intransitive Imperative.
+Hermann & Margarete Janzen
+S: pr
+P : vpintr
+pai
+you (2)
+vi kadoup viu.
+again follow-each-other return.
+“You both go together and come back again !”
+(5) Intransitive Imperative with no outer expansion occuring.
+Sinp
+P: vp
+Sfe: np
+mèi
+you
+ma pun
+alligator
+tau
+mei.
+run,
+you.
+"Alligator, you'd better run!"
+(6) Intransitive Imperative.
+S: pr
+P: vpintr
+Sfe inp
+R: pp
+mèi
+gwoe
+mèi
+di ti.
+you
+sit-down
+you
+here!
+“You!, come, sit down here !”
+(7) Intransitive Imperative.
+P: vpintr
+loung Six
+go-down straight
+R:PP
+di ni.
+here!
+"Go straight down here!”
+1.2.3. The interrogative Clause type.
+The interrogative clause can only function in a context which is marked as
+direct speech. There are two types of interrogative clauses:
+1.2.3.1.
+and
+(1) the simple interrogative
+(2) the marked interrogative.
+The simple interrogative clause type has only one distinctive feature,
+which marks it as different from the statement clause type. It is marked
+by a rising intonation pattern which accompanies a statement clause.
+This interrogative clause type always requires “yes” or “no” answers
+only.
+Since the only distinctive feature of the simple interrogative-clause is the
+intonation, this clause is marked in orthography by the interrogative marker.
+JBRS, LV, i & ii, Dec., 1972.
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 21]]
+Grammar Analysis of Pale Clauses and Phrases
+1.2.3.2. The marked interrogative clause type.
+67
+In the marked interrogative clause type the presence of a question word is
+the distinctive feature of the marked interrogative clause type. According to the
+choice of question words the marked interrogative clause type may be subdivided
+into 2 further subtypes:
+1.2.3.2.1.
+(1) Interrogative marked by hmau "how"
+(2) Interrogative marked by masei "what”
+(3) Interrogative marked by asei “who"
+The interrogative marked by "hmau" has the basic clause
+structure of a transitive statement clause. According to the occurence
+of “hmau” in the structure 2 further subdivisions are necessary:
+(1) "hmau” occurring initially, followed by a transitive Statement
+clause type and only occurring with the transitive verb: pai
+'man 'ge'
+Examples:
+Q: qw
+Cl tr v ex
+hmau
+how
+ai di
+we(2)
+pai di
+tuh.
+will manage to
+take?
+"How shall we manage to take it?”
+Q:qw
+hmau
+how
+Cl
+di
+po pai.
+will manage?
+"How will we possibly make it?”
+Q: qw
+hmau
+how
+di po pai kha ani
+(we) will manage occasion this.
+"This time, how will we possibly make it?”
+(2) "hmau” occuring at any place in the clause where more specific
+information is required.
+It occurs together with any element of the statement clause.
+"hmau" occurs at that place in the structure as the head or the
+modifier of that particular element where specific information is
+wanted.
+Examples:
+(1) "hmau” as Modifier of the verbal phrase:
+JBRS, LV, i & ii, Dec., 1972.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 22]]
+63
+Asp
+1.2.3.2.2.
+po
+will
+pai
+manage
+M
+Hermann & Margarete Janzen
+hmau
+how?
+"How will we manage?”
+(2) "hmau” as Head of the Object in a clause construct.
+O: cl constr.
+S: np
+mèi
+you
+P: vp
+muh
+are
+dzwy hmau
+have
+matter clalled what?
+“What kind of trouble do you have?”
+(3) “hmau” as Modifier of the
+O: np
+S: mp
+nominal phrase. (in emphasised clause)
+P: vp
+kasung hmau
+ân
+place
+what
+he
+"Where has he arrived now?”
+hè dzâm
+has arrived?
+The Interrogative marked by “mase” may have the structure of an
+equational clause type, where Item2 is filled by a subclass of the
+nominal phrase which is marked by “pi" the nounifying particle.
+Int ClQ:qw ± 1₁:np± P:veq +12:np
+Examples:
+(1)
+Q:qw
+I,:np
+-P
+mase
+what
+ma pun
+alligator
+12:np marked by“pi”
+pi bong mèi.
+(is)
+doing yours
+"What are you doing, alligator?”
+(2)
+Q:qw
+p:ved
+mase
+muh
+I2:np marked by "pi"
+pi jam bai.
+is
+what
+"Why are you crying, what is the reason for it?”
+crying yours?
+(3)
+Q:qw
+-P
+Inp marked by "pi"
+mase
+pi lou mèi sara
+what
+(is)
+wanting yours, tacher?
+"What (special) need do you have today?”
+JBRS, LV, i & ii, Dec., 1972.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 23]]
+Grammar Analysis of Pale Clauses and Phrases
+1.2.3.2.3.
+69
+The Question word asei "who" can be substituted for both question
+words, hmau and mase, and therefore it can occur in any structure of
+the marked iterrogative as described under 1.2.3.2.1 and 1.2.3.2.2.
+In conclusion the clause types and their subtypes can be diagram-
+med in a matrix as follows:
+Statement
+transitive intransitive
+equational
+descriptive
+X
+X
+X
+Interrogative
+✗
+X
+✗
+Imperative
+X
+X
+IV.2. The Phrase level.
+The Phrase level consists of phrases which function as elements in
+the clause. Phrases can also function as phrase constructs as a Nucleus
+or expansion on their own level.
+There are four functional classes of Phrases:
+(1) the Nominal Phrase.
+(2) the Verbal phrase.
+(3) the Prepositional Phrase.
+(4) the Adverbial Phrase.
+2.1. The Nominal Phrase-Class.
+2.1.1.
+2.1.2.
+The Nominal Phrase-Class functions as pre- or post-verbal inner
+expansions of the major Statement Clause types, the Imperative Clause
+type and the Interrogative Clause type which is marked by "hmau".
+It may also function as Item 1 and 2 of the Equational Statement
+Clause type and of Equational Interrogative Clause type marked by
+"mase."
+as
+On phrase level the nominal phrase class may also function
+nominal phrase construct in the Nucleus of the prepositional phrase
+and as possessive of the simple expanded nominal phrase.
+According to its structure the nominal phrase may be subdivided
+into 2 types:
+JBRS, LV, i & ii, Dec., 1972.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service I fd Bangkok Thailand
+
+[[page 24]]
+70
+2.1.2.1.
+2.1.2.1.1.
+2.1.2.1.1.1.
+Hermann & Margarete Janzen
+(1) simple nominal phrase.
+(2) complex nominal phrase.
+The simple nominal phrase type may be further subdivided
+into 3 subtypes:
+(1) expanded nominal phrase
+(2) pronominal nominal phrase
+(3) numeral nominal phrase.
+( SNP 1 )
+( SNP 2 )
+(SNP 3 )
+The expanded nominal phrase has two further subtypes:
+(1) the nominal phrase with 2 expansions.
+(2) the nominal phrase with 1 expansion.
+The expanded nominal phrase with 2 expansions may be
+diagrammed as:
+SNPexp +H: n/cl
+constr/,
+np compl add
+± Pos:np/cl
+constr
++ D: dem Pr
+The status and relationships of the elements of the expansive
+np with 2 expansions may be shown in a box diagram as follows:
+noun
+cl constr.
+nour/pronoun
+dem pron
+np construct
+compl.np add.
+cl construct
+Posessive
+Demonstr.
+inner exp
+outer exp
+Nucleus
+Periphery
+The demonstrative Pronoun class is a deliminating syntagmatic
+feature of the expansive np with 2 expansions. Its occurrence sig-
+nals the end of the phrase.
+JBRS, LV, i & ii, Dec., 1972.
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 25]]
+Grammar Analysis of Pale Clauses and Phrases
+Examples:
+71
+(1) exp np with 2 exp functioning as pre-verbal inner exp of the
+Clause (Subject}
+(a) with Head present only
+H: noun
+ma ga
+he houm.....
+fish
+has eaten.
+"The fish has eaten."
+(b) with Head and 1 expansion present:
+H:n
+Pos:pr
+gam
+ou
+hmwâm.
+benefit
+my
+is good.
+"That's good luck for me.”
+(c) with Head and 2 expansions present:
+H:n
+Pos:pr
+D:dem pr
+nauh
+ân
+twân
+hè si tuh kasau.
+heart
+his
+that
+has want take very-much.
+"In his heart he desires very much to take it."
+(2) Expanded nominal phrase with 2 expansions functioning as post-
+verbal inner expansion of the clause (Object or Relator).
+(a) with Head and Demonstrative present only:
+ma jun mug hret
+rabbit also seeks
+"Then the rabbit seeks
+H:D
+D:dem pr
+ma pun
+alligator
+twan.
+that
+the alligator.”
+(b) Functioning as Head of Prepositional Phrase, with Head and
+2 expansions present:
+H:n
+Pos:cl const
+D:dem
+ân hp loung khèng|| kasuh
+da i hmât ga
+ti.
+he enters go-down into trap
+person catch fish
+this.
+"He goes down into the fisherman's trap."
+(3) Expanded nominal phrase with 2 expansions functioning as
+Item of the equational clause:
+JBRS, LV, i & ii, Dec., 1972.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 26]]
+72
+Pos:n
+Hermann & Margarete Janzen
+H:n
+muh
+gèân
+masou.
+is
+manner of
+dog
+2.1.2.1.1.2.
+"That is the dog's way of doing it.”
+The expansive nominal phrase with 1 expansion may have a
+Noun as its Head and positional word or a reversed-order clause* as
+expansion.
+It may be diagrammed as:
+SNP exp =
++ H:n + M:pos/rev cl
+This subtype of the nominal phrase is restricted in its function
+and can only occur as post--nuclear inner expansion (Object) of the
+transitive statement clause and the transitive imperative clause types.
+2.1.2.1.2.
+H:n
+Pos:rev cl
+dzâm
+arrives
+athfâi.n
+time
+it da
+sathe.
+(of) sleeps rich-man
+'He arrives at a time when the rich man usually sleeps."
+H:n
+houk houk
+go-up, go-up
+na
+place
+M:posit.
+gua.
+upper.
+"(They) go higher and higher up-wards.”
+The pronominal subtype of the simple nominal phrase consists
+of a pronoun only and cannot be further expanded.
+It may be diagrammed as:
+SNP 2
+== + H:pr
+Examples:
+da i hmât ga tшân tjouk
+fisherman that picks-up
+"The fisherman picks it up.'
+,,
+H:pr
+ân
+him
+* The reversed-order clause functoning in this place is a clause construct of a subtype of
+clauses which is relevant on Sentence level in the Relational Sentence type. Therefore it is
+not described in detail in this paper. The main feature of this clause is, that the Subject
+occurs following the Nucleus (Verb Phrase.)
+JBRS, LV, i & ii, Dec., 1972.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 27]]
+Grammar Analysis of Pale Clauses and Phrases
+2.1.2.1.3.
+H:p
+ou
+I
+di jin grouh ou.
+will hold-back speech my.
+"I will refrain from talking."
+73
+noun-classifier.
+The numeral subtype of the simple nominal phrase consists of
+two obligatory elements, a number, followed by a
+Thus it can be diagrammed as:
+Np nu
+=
+Examples:
++H:nu+M:n clas
+hè pwân
+H: nu
+H: n clas
+u
+one
+singèi.
+day.
+2.1.2.2.
+2.1.2.2.1.
+2.1.2.2.1.1.
+has become
+"it is (now) one day long."
+The numeral subtype of the nominal phrase frequently occurs
+in an appositional complex nominal phrase as np2, where np, consists
+of the noun to which the classifier of np₂ refers. (see matrix under
+2.1.2.2.2.)
+The Complex nominal phrase type consists of 2 or more simple
+nominal phrase types.
+According to their structure there are two further subtypes of
+complex nominal phrases. :
+(1) additional complex nominal phrase.
+(2) appositional complex nominal phrase.
+The additional nominal phrase is marked by distinctive syntag-
+matic features which combine 2 simple nominal phrases of the same
+subtype. There are 3 different distinctive syntagmatic features which
+have different structures of combinations.
+The distinctive syntagmatic feature gai “and” occurs in a
+structure which may be diagrammed as:
+Np compl add
+Example:
+-
++ I₁: snp₁/snp₂ + Sfe: gai + 1₂: snp₁/snp₂
+ân muy tuh
+I₁: snp₁
+sèân
+Sfe
+I₂: snp₁
+gai
+he also takes
+diamond and
+khriu da sathe twân.
+gold (of) rich-man that.
+“He then takes the rich man's diamond and gold.”
+10 U.P.-L. 227-1,100-11-12-73.
+JBRS, LV, i & ii, Dec., 1972.
+M. H. W.
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 28]]
+74
+2.1.2.2.1.2.
+Hermann & Margarete Janzen
+The distinctive syntagmatic feature po "also" occurs in a struc-
+ture which may be diagrammed as.
+Np compl add = ± (+ Sf:po + I₁:np1/2) + Sf: po +12: np1/2
+Example:
+Sfe
+I₁:n
+[I₂: n
+po
+angèo
+also
+cat
+po
+also
+masou
+dog
+vi karhom di jam pân ti
+re-unite to weep after. this.
+2.1.2.2.1.3.
+"After this the cat and the dog are weeping together”
+The distinctive syntagmatic feature di “and” or “plus” occurs
+in the same structure as gai “and”, but it combines numeral subtypes
+only.
+2.1.2.2.2.
+Example:
+I: nps
+Sfe
+12: nps
+hè pwân
+u singèi
+one day
+di
+and
+has become
+u hmwy.
+one night.
+“It has been for one day and one night.”
+The appositional nominal phrase has no overt syntagmatic fea-
+ture, but the order in which the elements occur shows the relation-
+ship of the elements to each other. The first element is always the
+Head, the second element is always an apposition of the Head,
+and an optional third element is always a repetition of the first
+element, whereas all three elements have the same semantic referent.
+The elements of the appositional complex nominal phrase consist
+of different types of simple nominal phrases. The possible combina-
+tions of simple nominal phrases forming complex nominal phrases
+can be shown in the matrix below:
+1. Place in
+Structure
+2. Place in Structure
+expans. np
+pron. np.
+expans. np
+pron. op
+numeral np
+✗
+✗
+✗
+add. compl np
+JBRS, LV, i & ii, Dec., 1972.
+X
+X
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 29]]
+Grammar Analysis of Pale Clauses and Phrases
+Examples:
+.2.2.
+11:pr
+12:exp np
+ou
+I
+masou ni
+dog here
+muytu jât lup khèng um dang nu.
+also not dare enter in water big this.
+"I, the dog, also don't dare to enter into this big lake.”
+I₁:pr
+I¿:exp np
+I:ref
+mèi
+masou
+mèi
+you
+dog,
+you
+puân lup khèng um ti.
+can enter into water this.
+“You dog, you can go into this lake.”
+75
+I¡:pr
+I2:exp np
+si
+mèi
+if
+you
+ma yun
+rabbit
+po pai di tuh tâh...
+will manage to take + come...
+“If you, rabbit, can get it and come to us..."
+I₁:exp np
+I₂:pr
+da pra tuân
+ân
+hè hoât tâh...
+thief that
+he
+has finished come.
+"The thief had reached..."
+I₁:pr
+I₂:nu np
+bai
+po a dou
+you (2)
+both(2) animals| go
+ha hau po ma angèo po masou.
+incl. cat
+incl. dog.
+"You two, the dog as well as the cat, both of you go!"
+I₁:add compl
+12:rp np
+masou gai ma angèo
+gai
+dog and cat
+they(2)
+mwy hè pwân pai ti.
+also have got like this.
+"This way the dog and the cat got (it) back.”
+The Verbal Phrase Clause.
+The Verbal Phrase Clause functions as predicate element of the
+statement-, imperative - and interrogative clause types. According to
+their function in different clause types there are 3 different subclasses
+of the verbal phrase, which are also structurally different, and therefore
+may be called subtypes as well.
+JBRS, LV, i & ii, Dec., 1972.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+-
+
+[[page 30]]
+76
+2.2.1.
+Hermann & Margarete Janzen
+(1) the transitive/intransitive verbal phrase.
+(2) the descriptive verbal phrase.
+(3) the equational verbal phrase.
+The transitive/intransitive verbal phrase functions in the transi-
+tive or intransitive Statement Clause as well as in the imperative
+clause type as the Predicate element in the clauses.
+Structurally the transitive/intransitive verbal phrase may be
+diagrammed as:
+Vp tr/intr
+==
++
+M3 pre nucl adv ±M2:aspw ±M₁:auxw + H:v tr/intr v
+± M. adv/vdes
+4
+The arrangement and status of these elements may be diagram-
+mend in a box diagramm as follows.
+Post nuclear
+pre-nuclear aspect
+adverb
+auxiliary/
+tr. V₂
+Verb or
+adverb/
+Sequ. of
+verbs.
+descr.
+verb.
+out. exp2
+[out. exp. inner exp
+inner exp
+periphery
+Nucleus
+periphery
+2.2.1.1.
+2.2.1.1.1.
+2.2.1.1.2.
+2.2.1.2..
+The pre-nuclear inner expansion (auxiliary) is distinguished
+from the outer expansion (pre-nuclear adverb and aspect) a) by its
+function in different types of verbal phrases and b) by the different
+relationships the respective elements enter into.
+(a) The pre-nuclear adverb class and the aspect word class of
+the outer expansion of the transitive/intransitive verbal phrase can
+occur also in the descriptive verbal phrase and in the equational
+verbal phrase, whereas the inner expansion (auxiliary word class and
+post nuclear adverb) can function only in the transitive/intransitive
+verbal phrase.
+(b) The ralationship of the outer expansion (pre-nuclear adverb and
+auxiliary) in the transitive/intransitive verbal phrase is such that it
+modifies the nucleus of the verbal phrase and also the pre-and post
+nuclear inner expansion, whereas the inner expansion of the transitive/
+intransitive verbal phrase modifies the nucleus only.
+The nucleus of the verbal phrase can have two possible verbs in
+sequence. The Nucleus of the transitive/intransitive verbal phrase can
+JBRS, LV, & ii, Dee., 1972.
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 31]]
+Grammar Analysis of Pale Clauses and Phrases
+2.2.1.2.1.
+2.2.1.2.2.
+77
+be distinguished from the inner expansion on the grounds of the
+different relationships those verbs functioning as nucleus can enter into,
+as well as on the grounds of functional restriction of subclasses of
+words.
+The relationship of the 2 verbs functioning as Nucleus of the
+verbal phrase is always a close sequence of 2 actions. The relationship
+between the auxiliary pre-nuclear inner expansion and the verbs of the
+nucleus is such that the auxiliary verb is modifying the nucleus of the
+verbal phrase as a whole The adverbial post-nuclear inner expansion
+of the verbal phrase qualifies the nucleus, and if 2 verbs are present
+as nucleus, it qualifies the last verb only.
+The functional restrictions of occurrence of word classes function-
+ing as Head and inner expansion of the verbal phrase are:
+(a)
+The Head of the Vp can have any member of the transitive or
+intransitive verb class, and in the case of 2 verbs as Head of the
+vp the following sequences of verb classes are possible:
+intrans. + transit. )
+) in vp functioning in transitive
+clauses.
+transit. )
+or descr. +
+(b)
+intrans. +
+intrans. )
+or transit. + intrans. )
+) in vp functioning in intransitive
+clauses.
+The pre- nuclear inner expansion of the vp can consist of any
+member of the auxiliary verb class or a sub-class of the transitive
+verb class (trv2) which occurs also preceding a verbal extension clause.
+(see verbal extension clause 1.2.1.1.4.2.) The post- nuclear inner expan-
+sion can either consist of a member of the adverb - word class or a
+member of the descriptive verb class.
+Generally there are not more than 3 words found in sequence in
+the Nucleus and inner expansion of the verbal phrase.
+Examples:
+(1)
+mèi da sathe
+you rich-man
+po hè
+si
+probably has
+want
+it
+sleep
+Aspect
+outer
+exp.
+“You may want to sleep now, Mr. Rich-man.”
+"
+Aux
+intr
+V
+inner
+exp.
+Nucleus
+JBRS, LV, i & ii, Dec., 1972.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd. Bangkok, Thailand.
+
+[[page 32]]
+78
+Hermann & Margarete Janzen
+(2)
+ou masou ni
+mwy
+I dog this
+also
+tu jât
+not
+due
+lup
+enter
+pre-
+V
+nuclear
+adv
+asp. aux
+tr
+outer
+inner
+exp.
+Nucleus
+khèng um dang nu
+into water big this.
+expansion
+"I, the dog, also do not dare to enter into this big lake."
+(3)
+hè
+hoât
+ân
+lup
+he
+has
+finish
+loung
+enter+go-down
+khèng nam
+into water.
+asp
+tr V2
+intr v+intr v
+out
+inner
+Nucleus
+exp
+exp
+"He has gone down into the water."
+( 4 )
+ân
+he
+hau
+rum
+goes
+together
+intr v
+post nucl
+adverb
+Nucleus
+inn. exp
+2.2.2.
+"He goes together with him.”
+The descriptive verbal phrase class functions as predicate of
+the descriptive statement clause type. Its structure can be diagrammed
+as:
+Vp des M2: pre nuc adv ± M₁: asp+H: des + M3: emph + M4 : intens
+=
+The status and arrangement of the descriptive vp can be also
+diagrammed as:
+JBRS, LV, i & ii, Dec., 1972.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 33]]
+Grammar Analysis of Pale Clauses and Phrases
+pre-nucl
+adverb
+expansion2
+79
+kasau lik
+aspect
+descr. verb
+emph. intens.
+expansion,
+Nucleus.
+expansion
+The Head of the descriptive verb phrase can consists of
+2 descriptive verbs in sequence, but then the post verbal expansion
+never occurs.
+Examples!
+(1)
+M₁:asp
+H:des v
+MĄ:intens.
+nâuh
+heart
+po
+takhwe
+tık.
+will he
+happy
+very much.
+“He will be extremely happy.”
+(2)
+M2
+M₁:asp
+H:des v
+M3:emph
+ou
+I
+"I am very tired."
+mwy
+also
+hè
+nun
+kasau.
+am
+tired
+very
+(3)
+prèi
+jungle
+M:asp
+Hides vdes v
+ko
+became
+vi ập vâh
+re-dark, bright.
+“It became dark and bright again.”
+(4)
+goung mèi
+reward yours
+M₁:asp
+H:des v
+M.:emph
+M4:intens
+hè
+is
+dang
+big
+kasau
+tık.
+very
+much:
+"Yours reward is very great."
+2.2.3.
+The equational verbal phrase.
+The equational verbal phrase functions as predicate in the
+equational clause type. Its structure consists of an optional aspect-
+JBRS, LV, i & ii, Dec., 1972.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 34]]
+80
+Hermann & Margarete Janzen
+modifier followed by the Head which consists of the equational verb:
+muh. The equational verb muh is the only member of the equational
+verb-class.
+The equational verb phrase may be diagrammed as:
+Vp equ.
+—
+± M:aspect + H:muh
+2.3.
+2.3.1.
+2.3.2.
+2.3.2.1.
+2.3.2.2.
+2.3.2.3.
+Examples: see equational statement clause on clause level.
+(Ch. IV.1.2.1.4. examples 3 + 4.)
+1 he prepositional phrase class.
+The prepositional phrase functions as Relator of the transitive,
+intransitive and descriptive statement clause type.
+Structurally the prepositional phrase can be diagrammed as.
+Pp
+=
++R:prep + H:np/clconstr.
+The preposition word-class functioning as Relator element of
+the prepositional phrase is a deliminating syntagmatic feature of the
+prepositional phrase.
+According to the restriction of word classes functioning as
+elements of the prepositional phrase there are 4 subclasses of preposi-
+tional phrases. :
+(1) locative.
+(2) directional.
+(3) causal.
+(4) topical.
+The locative subclass of the prepositional phrase may have any
+member of the prepositional word class functioning as Relator, and it
+can have any kind of nominal phrase as its Head. The Head of the
+nominal phrase functioning as Head of the prepositional phrase how-
+ever, will be filled by nouns, which relate to locations only.
+The directive subclass of the prepositional phrase can only have
+the preposition di “to” functioning as the Relator, which is followed
+by a nominal phrase where the Head consists of a noun or pronoun
+refering to an animate noun.
+The causal subclass of the prepositional phrase can only have
+the preposition di "to" functioning as Relator, and the Head, always
+consists of a transitive or intransitive statement clause-construct with
+an obligatorily absent Subject,
+JBRS, LV, i & ii, Dec., 1972.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 35]]
+Grammar Analysis of Pale Clauses and Phrases
+2.3.2.4.
+2.3.3.
+81
+The topical subclass of prepositional phrase consists of the
+preposition long “about” functioning as Relator followed by any
+nominal phrase or clause construct as Head of the prepositional phrase,
+The prepositional phrase sub-classes 1,2 and 4 (locative, direc-
+tive and topical) can function as Relator elements of the transitive or
+intransitive statement clause type whereas the prepositional phrase
+subclass 3 (causal) can only function as Relator element of the
+descriptive statement clause type.
+2.3.4.
+Examples:
+(a) locative prepositional phrase. :
+sèân
+gai ti tjouh loung
+R:prep
+H:np
+dèng
+kadâm шm.
+on
+diamond their this falls go-down
+bottom of water.
+"Their diamond falls down on the bottom of the lake."
+ân hè hoạt lup loung
+R:prep
+H:np
+khèng
+into
+kasuh da i hmât ga ti.
+basket (of) fisherman this.
+he has finished enter down
+"He has gone down into the fisherman's basket trap.”
+(b) directive prepositional phrase class:
+ma
+yun tâuh
+rabbit says
+R:di
+H:np
+di
+to
+ma pun
+alligator
+pai ti.
+like this.
+"This is what the rabbit told the alligator.”
+ma yun muy ap
+rabbit then hands-over
+R:di
+H:np
+di
+to
+masou gai ma angèo.
+dog and cat.
+“The rabbit then gives it to the dog and the cat.”
+(c) causal prepositional phrase class:
+R:di
+H:cl constr
+ou mwy hè nun kasau
+di
+I also am tired very
+from
+hau doup 'n ten….....
+walk along the road.
+"I am also very tired from walking on the road."
+11 U.P.-L. 227-1,100-1-1-74.
+M. H. W.
+JBRS, LV, i & ii, Dec., 1972.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 36]]
+82
+2.4.
+Hermann & Margarete Janzen
+(d) topical prepositional phrase class:
+ya khèi abum
+grandma tells story
+R:long
+long
+about
+H:np
+khua di khâm dang tuân.
+king
+big that.
+"Grandmother tells the story about that mighty king.”
+The adverbial phrase class.
+The adverbial phrase functions as Manner element of the major
+statement clause types. Since it consists of a small class of more or
+less close-knit morphemes with emerging semantic load further sub-
+divisions are of little practical value. Therefore one may say that
+the adverbial phrase is filled by an adverbial expression.
+Adv p
+==
++ H:adv exp.
+Adverbial expressions are:
+u džen 'at once'
+se se
+'always'
+pai ti
+'like this'
+pai ni
+'like that'
+u
+dèi
+'shortly'
+IV.3.
+Some Statements About Word Level.
+The word level is the level next below the phrase level in the
+hierachy. To round up the picture of the analysis of the clause and
+phrase levels of the Pale language some statements about the word
+level are necessary, though the word level will not be completely described
+in terms of its functional classes and structural types.
+A brief statement of the different word classes will be given, and
+in closed classes the members of that word class will be listed as well
+as occuring systems in a closed class.
+Where ever a word class has further structure this will be mentioned
+but not further demonstrated.
+There are 16 word classes, which function as elements of the
+phrase.
+(1) Noun word class.
+(2) Pronoun word class.
+(3) Demonstrative word class.
+JBRS, LV, i & ii, Dec., 1972.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 37]]
+Grammar Analysis of Pale Clauses and Phrases
+3.1.
+(4) Positional word class.
+(5) Preposition word class.
+(6) Numeral word class.
+(7) Noun classifier class.
+(8) Phrase connective word class.
+(9) Aspect word class.
+(10) Auxiliary word class.
+(11) Verb word class.
+(12)
+Pre-nuclear adverb word class.
+(13) Post nuclear adverb word class.
+(14) Emphatic word class.
+(15) Intensifier word class.
+(16) Question-word class.
+The Noun word class.
+83
+The Noun word class functions as Head of the expanded Nominal
+phrase. (see 2.1.2.1.1.1. and 2 1.2.1.1.2) It can be further described
+in terms of its different structural types. The Noun word class is an
+open class, and some Members of the noun word- class are:
+ma pun
+'alligator'
+‘rabbit'
+3.2
+ma yun
+kasuh
+'trap basket'
+n. ten
+'path'
+wm
+'water'
+The Pronoun word class.
+The pronoun word class functions as Head of the pronominal
+nominal phrase (see 2.1.2.1.) and as a choice class in the posessive
+Place of the expansion of the nominal phrase with 2 expansions. (see
+2.1.2.1.1.1.) The pronouns do not have further structure. It is a closed
+class, and its members are:
+ou 'I, 1. person singular'
+mei 'You, 2. person singular'
+ân 'he, she, it, 3. person singular'
+yai ‘We, 1. person dual exclusive'
+JBRS, LV, i & ii, Dec., 1972.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 38]]
+84
+Hermann & Margarete Janzen
+ye 'We, 1. person plural exclusive'
+bai 'You, 2. person dual'
+be 'You, 2. person plural'
+Pai ‘We, 1. person dual inclusive'
+Pe ‘We, 1. person plural inclusive'
+gai 'They, 3. person dual'
+ge 'They, 3. person plural'
+The non-singular members of the Pronoun word class form
+a system which can be shown in a matrix as follows. :
+1 pers.
+excl.
+incl.
+2. pers.
+3. pers.
+Dual
+y a
+?
+a
+b
+a
+i
+80
+a
+i
+Plural
+e
+P
+b
+g1
+3.3.
+The columns and rows in this matrix show that phonological
+units become grammatically relevant as syntagmatic features on word
+level.
+The consonants mark person, the vowels number.
+y- marks 1. person exclusive,
+P- marks 1. person inclusive,
+b- marks 2. person,
+g- marks 3. person,
+-ai marks Dual number,
+-e marks plural number.
+The Demonstrative word class.
+The demonstrative word class functions as Demonstrative expan-
+sion of the expanded nominal phrase with 2 expansions. (see 2.1.2.
+1.1.1.) There are 2 functional subclasses of the demonstrative word
+class:
+JBRS, LV, i & ii, Dec., 1972.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd Bangkok Thailand
+
+[[page 39]]
+Grammar Analysis of Pale Clauses and Phrases
+3.3.1.
+3.3.2.
+85
+Subclass functions as Demonstrative of the expanded nominal
+phrase with 2 expansions only and comprises the following members:
+ti 'this'
+twân ‘thať (pointing to an already known noun)
+Subclass 2 of the Demonstrative word class functions as Demon-
+strative of the expanded nominal phrase with 2 expansions, but it can
+also function as the positional expansion of the expanded nominal
+phrase with 1 expansion. (see 2.1.2.1.1.2)
+3.4.
+3.4.1.
+3.4.2.
+3.4.3.
+Its members are:
+ni "here"
+nu ‘there'
+The Positional word class functions as Positional expansion of
+the expanded nominal phrase with 1 expansion, (see 2.1.2.1.1.2) It
+has 3 functional subclasses which are closed classes.
+Subclass 1 of the positional word class function as Positional
+only. Its members are:
+doè ‘over there'
+gua 'upper'
+de.t 'lower'
+re.t 'outside'
+ait ‘infront of (before)'
+pân 'behind (after)'
+Subclass 2 of the positional word class functions as positional
+of the expanded nominal phrase with 1 expansion and also as Demon-
+strative of the expanded nominal phrase with 2 expansions. (see 2.1.
+2.1.1.1.) This subclass is identical with the Subclass 2 of the Demon-
+strative word class, and its members are listed under 3.3.2.
+The subclass 3 of the Positional word class functions as Positional
+of the expanded nominal phrase with 1 expansion (see 2.1.2.1.1.2) as
+well as Relator of the locative subtype of the prepositional phrase.
+(see 2.3.2.1.) Its members are:
+dèâng 'on'
+khèâng ‘in, into, inside'
+khrum
+'under'
+khoup ‘besides'
+JBRS, LV, i & ii, Dec., 1972.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 40]]
+86
+3.5.
+3.5.1.
+3.5.2.
+3.5.3.
+3.5.4.
+3.6.
+Hermann & Margarete Janzen
+The Preposition word class.
+The preposition word class functions as Relator of the preposi-
+tional phrase. (see 2.3.2) According to the functional restrictions there
+are 3 subtypes of the preposition word class.
+The subclass 1 of the preposition word class is the largest sub-
+class, and it functions as Relator of the Locative subtype of the preposi-
+tional phrase as well as Positional of the expanded nominal phrase
+with 1 expansion. This subclass is identical with subclass 3 of the
+positional word class and its member are listed under 3.4.3.
+The subclass 2 of the preposition word class functions as Relator
+of the locative, directive, and causal subtypes of the prepositional
+phrases (see 2.3 2.1.3) and it is a 1 member class: di 'to' or 'from'.
+The subclass 3 of the preposition word class functions as Relator
+of the topical subtype of the prepositional phrase only (see 2 3.2.4) and
+has only member: long 'about'.
+The word classes No. 3-5 overlap at certain places according to
+their functional restrictions, which are stated under 3.3 to 3.5.3
+respectively.
+Viewing these 3 word classes together in terms of their function
+a system of 5 subclasses functioning at 3 functional places in structure
+is formed. This is shown in the matrix on page 87.
+The Numeral word class.
+The number word class functions as Head of the numeral type
+of the simple nominal phrase. (see 2.1.2.1.3) It comprises the following
+members.
+'one'
+leh
+'one'
+gшx
+'ten'
+a
+'two'
+mayauh
+'hundred'
+oè
+'three'
+hrèn
+'thousand'
+phuân
+'four'
+hmin
+'tenthousand'
+phân
+‘five'
+dau
+'six'
+bu
+'seven'
+da
+'eight'
+dim
+'nine'
+I
+The umbers above ten have further structure, being compound
+numbers.
+JBRS, LV, i & ii, Dec., 1972.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 41]]
+Grammar Analysis of Pale Clauses and Phrases
+Matrix of Prepositional Subclasses.
+87
+In the first column the members of the classes are listed, and the rows show
+their function as elements of the respective phrases as stated above.
+ti
+twân
+nu
+ni
+dâng
+khèng
+khrum
+khoup
+di
+long
+F
+Positional
+☑
+x
+Preposition
+X
+X
+Demonstrative
+su cl. 1
+X
+K
+su cl. 2
+su cl. 3
+X
+X
+✗
+doè
+X
+gua
+X
+te.t
+X
+pan
+X
+reit
+✗
+ait
+☑
+x
+X
+su cl. 4
+X
+'su cl. 5
+3.7.
+Subclass 1 functions as Demonstrative only, (see 3.3.1.)
+Subclass 2 functions as Positional and Demonstrative, (see 3.3.2. and 3.4.2.)
+Subclass 3 functions as Positional and Preposition, (see 3.4.3. and 3.5.1.)
+Subclass 4 functions as Preposition only, (see 3.5.2. and 3.5.3.)
+Subclass 5 functions as Positional only, (see 3.4.1.)
+The Noun-Classifier word class.
+The Noun classifier word class functions as modifier of the
+numeral subtype of the simple nominal phrase. (see 2.1.2.1.3.) Seman-
+JBRS, LV, i & ii, Dec., 1972.
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 42]]
+88
+3.8.
+3.9.
+Hermann & Margarete Janzen
+tically the noun classifier refers to certain groups of nouns, which are
+collectively labelled by a noun classifier and referred to in counting.
+The noun classifier class comprises the following members:
+boung
+dou
+hnyong
+n. lang
+plak
+i
+'piece' (ref. to things)
+'animal'
+‘long things, also stretches of speech'
+'means of transportation."
+'flat things'
+'persons'
+suum
+kadâng
+‘pair'
+'respected, holy persons.'
+This class has a limited number, but its members are not com-
+pletely listed here.
+The Phrase connective word.
+The phrase connective word class functions as syntagmatic fea-
+tures of the additional complex nominal phrase. (see 2.1.2.2.1.)
+Its members are: di
+'and'
+gai
+po
+'and'
+'included'
+The aspect word class.
+The aspect word calss functions as Aspect of the Verbal phrase
+(see 2.2.1.2.2.2. and 2.2.3.) and comprises the following members.
+hè
+au
+tu
+di
+2 3 3 6 2223
+'definite, realised action'
+'negation (generally)'
+'negation (definite)'
+'definite future'
+‘probable future'
+'contrastive action'
+'coming to the point of realisation'
+po
+yi
+ko
+hi
+'will be (definite in future)'
+pi
+'immidiate fut.'
+si
+'still, (remaining action)'
+JBRS, LV, i & ii, Dec., 1972.
+Convright© 1998 - Myanmar Rook Centre & Book Promotion & Service Ltd Bangkok Thailand
+
+[[page 43]]
+Grammar Analysis of Pale Clauses and Phrases
+so ‘obligational fut. action'
+no 'voluntary action (fut.)'
+hu 'discontinued action'
+ha 'action in process'
+da 'accidental action'
+89
+According to their different semantic loads 2 aspects can occur
+in sequence to complement each other.
+as:
+au hu
+3.10.
+3.11.
+po hè
+yi hè
+ko hè
+po di
+hè ha
+This list of aspect members is complete as far as they have been
+found in text. Some of them are rarely used and it may well be that
+there are more aspects existing still.
+The Auxiliary word class is a choice class functioning as inner
+expansion of the transitive/intransitive verbal phrase. (see 2.2.1.),
+Its members are:
+si 'want'
+yât ‘dare'
+These are the only members of the auxiliary word class.
+All other words function as pre-nuclei inner expansion are members
+of subclass 2 of the transitive verb class. (see 3.11.1.2.)
+The Verb class.
+The Verb class functions as Nucleus of the verbal phrase.
+The verb can have further structure, which is not stated here in detail.
+According to functional restrictions there are 4 subclasses of
+verbs.
+(1) transitive verb subclass.
+(2) intransitive verb subclass.
+(3) descriptive verb subclass.
+(4) equational verb subclass.
+JBRS, LV, i & ii, Dec., 1972.
+12 U.P.-L. 227-1,100-1-1-74.
+M. H. W.
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 44]]
+90
+3.11.1.
+3.11.1.1.
+3.11.1.2.
+3.11.2.
+Hermann & Margarete Janzen
+The transitive verb class functions as Nucleus of the verbal
+phrase in the transitive statement clause (see 1.2.1.1.1.) according to
+functional restrictions the transitive verb class can be further sub-
+divided into 2 subclasses.
+Subclass 1 functions as Nucleus of the transi ive verbal phrase
+in the transitive clause, (see 2.2.1.) and if the Nucleus of the transitive
+verb consists of a verb sequence, the transitive verb subclass is always
+the second verb in the sequence. (see 2.2.1.2.2.a)
+The transitive verb subclass can also function as the first verb
+in the sequence of verbs functioning as Nucleus in the intransitive
+clause. (see 2.2.1.2.2.b) it is an open class.
+Some members are:
+hmat 'catch’
+houm ‘eat'
+un 'to put-down'
+dĉouk ‘to pick up'
+Subclass 2 of the transitive verb class functions as Nucleus of the
+Verbal phrase functioning in the transitive statement clause type.
+(see 2 2.1.) It can also function as auxiliary pre nuclei inner expansion
+of the transitive/intransitive verbal phrase and it is the only class.
+functioning as Nucleus of the verbal phrase of clause 1 of nominal
+or verbal extension clauses. (see 1.2.1.1.4.1.) It is a closed class which
+has a greater number of members, and so only some members are
+listed here:
+nâp 'know'
+p…i ‘manage'
+pшân ‘can'
+hoât 'finish'
+tauh say, intend’
+The intransitive verb class functions as Nucleus of the verbal
+phrase in the intransitive statement clause (see 1.2.1.2.1 and 2.2.1.2.2.6)
+It can also function as Verb No.1 in a sequence of verbs functioning
+as Nucleus of the verbal phrase in the transitive clause. (sec 2.2.1.2.
+2.a)
+The intransitive verb class is an open class. Some members are:
+hau 'to go'
+JBRS, LV, i & ii, Dec., 1972.
+lup ‘enter'
+brouh 'bark’
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 45]]
+"
+Grammar Analysis of Pale Clauses and Phrases
+×
+3.11.3.
+3.11.4.
+3.12.
+3.13.
+3.14.
+lub 'to become clear'
+dihlau ‘to play'
+rây to move”
+91
+The descriptive verb class functions as Nucleus of the descriptive
+verb phrase (see 2.2.2.) It also functions as a choice class as
+adverb of the post nuclear inner expansion of the transitive/intransitive
+verbal phrase (see 2.2.1.) and as verb No. 1 in a sequence of verbs
+functioning as Nucleus of a verbal phrase in an intransitive clause
+(see 2 2.1.2.2.a) It is an open class, and some of the members are:
+dang ‘big'
+hnguiè 'easy'
+boât 'special, holy’
+hmwâm 'good'
+The equational verb class is a one- member word class and funce
+tions as the Nucleus of the verbal phrase in the equational claus3
+type. (see 2.2.3) Its member is:
+muh 'to be'
+The pre- nuclear adverb class functions as Modifiers of the
+transitive/intransitive verbal phrase (see 2.1.1.) and as Modifier, of
+the descriptive verbal phrase (see 2.2.2) It is a closed class and its
+members are:
+mux ‘also, then’
+dzeu 'early'
+The post- nuclear adverb word class.
+The adverb word class is a choice class functioning as the
+Adverb- post nuclear expansion (M) of the transitive/intransitive
+verbal phrase. (see 2.21.) It has a very limited membership, cons st-
+ing of loan words which are not yet fully integrated and a set of
+descriptive verbs, which in a doubled form are interpreted as adverbs:
+sikja 'well' (burm. loan seik kya)
+hèi hèi ‘quickly
+grèi grèi 'slowly'
+The Emphatic word class.
+The emphatic word class is a one- member class functioning as
+post nuclear expansion (M) of the descriptive verbal phrase. (sec
+2.2.2.) Its member is: kasau “very”
+JBRS, LV, i & ii, Dec., 1972.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 46]]
+92
+3.15.
+3.16.
+Hermann & Margarete Janzen
+The Intensifying word class.
+The intensifying word class functions as the Intensifier-post-
+nuclear expansion (M4) of the descriptive verbal phrase (see 2.2.2.)
+and has 1 member only.
+tık 'very much indeed'
+The Question word class.
+The question word class functions on clause level as a syntag-
+matic feature of the marked interrogative clause type. (see 1.2.3.2.)
+Its members are:
+hmau 'how'
+mase ‘what
+ase 'who'
+Appendix 1: Sample text
+(1) do muân muh khoup bang wum dang twân,
+long ago there was besides the water - big that, there
+Long ago it all happened at the bank of a big lake,
+(2) muh ma pun
+was alligator
+u
+dou,
+1 animal,
+mwh da i hmât ga,
+there was fisherman,
+there was an alligator and also a fisherman who
+(3) muh da i hmât hom ga.
+was man (who) catch+cat fish.
+lived on catching fish.
+(4) ma pun twân
+goè,
+au muh doân hmwy
+Not is every night
+The alligator that stayed.
+The alligator lay dawn. There was'nt always
+(5) doàn hnja nâp kauk di hom ma ga. da i
+every morning can bite to eat fish. Person (who)
+fish for him to eat.
+Then that
+person who always
+(6) din kasuh
+tuân
+yi tâh.
+tâh
+(he) came+
+put-down trap-basket that then come,
+puts down his trap basket came along. He came and
+JBRS, LV, i & ii, Dec., 1972.
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 47]]
+Grammar Analysis of Pale Clauses and Phrases
+(1) din kasuh
+không
+um.
+ân hè hoạt
+put-down trap-basket into water. He has finished
+let down his trap-basket into the water. After that
+(2) den kasuch tuân, hnauk.
+put-down basket that, wait.
+he waited for a while.
+(3) ma pun tuân hret di hom ma ga.
+Alligator that seeks to eat fish,
+au hu muh ga.
+not more is fish,
+When the alligator was seeking fish and did not find any
+(4) tâh lup
+khèng kasuh da i hmât ga.
+comes enters into trap-basket (of) fisherman.
+he came and entered into the trap-basket of the fisherman.
+(5) ân hè
+"
+hoât lup loung khèng kasuh
+He has finished enter + go-down into trap-basket
+After having entered into the trap basket of that
+(6) da i hmât ga ti, au phần vi lên,
+hnèi
+(of) fisherman that, not can again go-out. Since
+fisherman he could not get out any more.
+(7) au puân vi lèh ma pun au hu
+Since
+nâp di bong mase.
+not can again go-out, alligator not more knows to do what.
+he could not get out anymore he did not know what to do.
+(8) pân ti da i hmât ga twân tâh u dzen. tâh yoât.
+After that fisherman comes at once, comes and looks-at,
+Then, all of a sudden the fisherman came. He came and looked.
+(9) ma ga hè lup khèng kasuh ou.
+fish has entered into basket my.
+0 atwy ma ga pi
+•
+Oh-- today fish is
+A fish had entered into his basket-trap. Oh- today the fish
+(10) so vật di dang
+kasau. au hngшè. gam ou
+like should have stomach big very, not easy, luck my
+looks like it is very big indeed. That's extraordinary !
+193
+JBRS, LV, i & ii, Dec., 1972.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 48]]
+94
+Hermann & Margarete Janzen
+(1) boat. gam ou hmuâm
+special, luck my good.
+ma ga hè nap
+bo phèi
+Fish really knows will fill
+I have specially good luck. The meat of the fish can
+(2) ou, yâng ân. tâh dzuk kasuh ân
+lèh dak
+me, meat his. (then) comes+pulls basket his, puts-out
+satisfy me.
+(3) шm.
+(4)
+Then he came and pulled the basket trap
+ân hè hoạt lèh tâk wm,
+outside the water. He has finished come-out outside
+outside of the water. When the fish was out of the water,
+yoât ma ga tang tuk không
+of the water, looks-at fish big very extremely in
+he looked at the extremely big fish in the trap-basket.
+(5) kasuh. la ma
+mшh mapun yi hè lup.
+basket. In reality it-was alligator (who) entered
+It really was only an alligator, which he did not know.
+-
+(6) o ân hmât u dzen ma ga ti. hè hoât hmât ma ga ti,
+Oh he catch at once fish this. has finish catch fish this
+Oh- he had caugh this fish at once, and after that
+(7) blèh katèi n. ten. yi kalang ma pun turân, yì you.
+put middle (of) path. Said alligator that, was afraid.
+he would put it in the middle of the path. As for the alligator, he was
+afraid.
+(8) au hu nâp i po pèi ma pun.
+ko hè nâp
+not more know what will manage alligator. (I) have come
+He didn't know any more what could be done. "I know for
+(9) bo yâm ou
+ma pun tâuh, atu da i hmất ga
+to know, will die, I. alligator says, Today fisherman
+sure that I will die," the alligator said, “Today the fisherman
+(10) hè hấp ou khèng kasuh.
+has put me in trap-basket.
+atus hè nâp po touit
+Today surely know will end
+has put me in the trap. Today my life will surely end.”
+JBRS, LV, i & ii, Dec., 1972.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 49]]
+Grammar Analysis of Pale Clauses and Phraseš
+(1) asak ou. ân sikhшy, bo pai hmau, tèih n. muh
+life my. He prays: will manage how, let it be
+He then prayed. "However it may be, let there be a
+(2) du i ge dzu ou.
+person do good to me.
+yi kalang,
+muh ayun u
+Having said so, there was rabbit 1
+person who will help me." And saying this, there was a rabbit.
+(3) dou. ayun goè khoup wm.”
+animal.
+pi sikhury ma pun twân
+Rabbit sit besides water. Prayer alligator that
+He had been sitting by the water-side and had heard the prayer
+(4) yi luh di ma yun.
+came-clear to the rabbit.
+mayun ân tâuh, ou i di
+Rabbit he said, I am the one
+of the alligator. So he said, "I will go to the alligator,
+(5) hau oung goè ma pun ti.
+ou yoât. 0- mase ma pun
+to go place stays alligator this." I look. Oh- what alligator
+I will look what's wrong.” (So he went):
+"Oh, What are you
+(6) pi boung mèi? hmau, mèi muh a hngyan tèih mèi
+work yours? What you have brains, let you be
+doing, alligator? What! Use your brains, so that you
+(7) luit yâm di
+da houm ga ti
+ma yun tâuh di
+free (from) die caused-by fisherman this, rabbit says to
+can escape from the fisherman before he kills you," the
+(8) ma pun pai ti.
+the alligator like this.
+rabbit said to the alligator.
+(9) ma pun tâuh,
+Alligator says,
+on au nập
+ou
+boung. ou au muh
+I not know (what) I do. I not have
+The alligator answered: "I don't know what to do, I don't
+(10) ahngyan. hè nâp bo
+yâm ou
+di da i hmât ga.
+95
+brains. I really know, will die I by the fisherman
+have brains. One thing I know, I will have to die at the hands of the
+fisherman."
+JBRS, LV, i & ii, Dec., 1972..
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 50]]
+96
+se
+(1) atwy
+"Today,
+mèi thoum grouh ou,
+if
+you listen words my,
+Hermann & Margarete Janzen
+ma yun tâuh,
+“the rabbit says.
+"Today, if you listen to me,” the rabbit said,
+(2) mėi di luit yâm. mèi au katuh di yâm.
+"You will escape dying. You not need to die."
+"You will escape death. You don't need to die.”
+(3) hè thoum ma pun tâuh.
+1 do listen, says the alligator.
+pân ti ma yun
+after this the rabbit
+"I do listen," answered the alligator. Then the rabbit
+(4) bo khèi, tèih mèi thoum sikhya, grouh ou, ou muh
+also tells: "let you listen well, (to) words my, I am
+started telling: “You had better listen well to what I the rabbit tell you.
+(5) a yun. mèi pi yâm mèi.
+mèi kwè Tây. sei
+rabbit. you make-die yourself. You don't move.
+If
+You pretend to be dead. Don't move,
+(6) da i hmât ga hè dzouk mèi lèh tâk
+kasuh,
+fisherman has picked-out you go-outside of the basket-trap,
+If the fisherman has picked you out of the basket-trap,
+(7) blèh mèi kadèi n. ten,
+mèi pi yâm mèi,
+puts-on the middle of the path, you make-die yourself,
+if he puts you on the path, you pretend to be dead.
+(8) rk
+phu âm mèi. mèi si tong. se ân hè
+hold-back breath yours. You stay stiff. If he has
+Hold back your breath, stay stiff. Then, when he has
+(9) hoạt
+blèh mèi na re.t tau pân ti.
+finished put you place outside, run after this.
+put you outside, you run.
+(10) mèi ma pun tau mèi tèih n. luit yâm. ou manou
+You alligator, run you. let it escape dying. I teach
+You run..., so that you escape death. I teach you
+JBRS, LV, i & ii, Dec., 1972.
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 51]]
+Grammar Analysis of Pale Clauses and Phrases
+(1) sikhja grouh. mèi thoum, tèih asak méi vi
+well words. You listen, let life your again (be)
+well. You had better listen to me, so that your life will
+(2) toung. dèâng ni sei ou bo lou mei
+long. On top of this, If I will come to need you,
+be long again. Apart from this, if I need you once,
+(3) ma pun,
+ou bo mшh are, a yun ân tânh,
+alligator, (when) I shall have matter, the rabbit says,
+alligator, when I should get into trouble," said the rabbit
+97
+(4) ou di bung mèi
+ma pun.
+pâhti ân mux
+After this he also
+I will rely on you, alligator."
+"I will rely on you.” After that the alligator
+(5) thoum grouh.
+listened words.
+a yun twân, u dzen goè.
+Rabbit that, at once sat-back.
+took his advice. The rabbit sat back all of a sudden.
+(6) da i hmật ga tuân dzouk ân blèh katèi n. ten.
+The fisherman that pick-up him, put middle of the path.
+The fisherman took the alligator out and put him in the middle of the path.
+(7) ma pun bi yâm
+ân u dzen.
+Alligator makes dead himself at once.
+hè hoât
+Has finished
+Then
+au hu muh
+At once the alligator pretended to be dead.
+(8) pi yâm ân ti,
+au hu rây
+make dead himself this, no more moves, no more has
+he did not move any more, and did not breathe.
+(9) phxâm. da ihmật ga tuân, ân tot pi lang ân,
+Fisherman that, he pulls-out knife his.
+breath.
+The fisherman pulled out his knife, in order to cut the
+(10) tâuh di dèâp. you hun
+ma pun
+di lay.
+intends to cut, afraid the skin of alligator will be spoiled.
+alligator up but he was afraid he would spoil the skin.
+JBRS, LV, i & ii, Dec., 1972.
+M. H. W.
+13 U.P.-L. 227-1,100-9-1–74.
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 52]]
+98
+Hermann & Margarete Janzen
+(1) se ân dèâp hum ma pun
+If he cuts, skin alligator
+kapyait
+tears apart + is
+If he cuts, the skin of the alligator will be cut also and
+(2) lwy ân au hu đèập. ma pun hè yâm, ân tânh,
+spoiled. He no more cuts. Alligator has died, he says.
+spoiled. "I won't cut him any more. he is dead," he said.
+(3) au hu muh phuâm.
+ma pun ni ân hè muh hè yâm
+no more is breath. Alligator this he truely has died
+"There is no sign of breathing breath. He must have died already
+(4) khèng kasih ni.
+ou au hu dèâp, ou blèh ân pai ni.
+in the basket here, I not cut, 1 put him like this.
+in the basket here. I won't cut him, I will just put him
+(5) hè hoât tâuh pai ti,
+(6)
+ân muy goè u kadzân.
+Has finished say like this; he then stays-back alittle while.
+down like that. When he had spoken like this, he retired.
+ma yun tâh tuh ma pun.
+ma pun yeit dau
+Rabbit comes touch alligator. Alligator gets-up, runs
+for a moment. The rabbit came and gave him a push, and then
+(7) u džen. da i hmât ga tuân au hu yux. yoât ma pun he
+(8)
+at once. Fisherman that not more sees.
+the alligator got up and ran off at once.
+vi yeit tau
+po u dzup,
+Looks, alligator
+The fisherman
+hè vi lup không
+has again got-up run another time. Has re-entered in
+could not see him anymore. When he looked, the alligator
+(9) um.
+pân ti ma pun gai ma yun tau u dzen.
+water. After this alligator and rabbit run at once.
+had already got up, and had gone back into the water.
+Then the alligator and the rabbit ran away at once.
+(10) bo hoât poung ni,
+ada u khan.
+Will finish story this, as for 1 chapter.
+Here ends the first chapter of the story.
+JBRS, LV, i & ii, Dec., 1972.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 53]]
+BIBLIOGRAPHY
+L. On descriptive Linguistics in General.
+a.
+An explanation to the Layman and student.
+(1) E.A. Nida, Linguistic Interludes. Summer Institute of Linguistics 1947
+Santa Anna California.
+b. Basic Theories underlying the Model of description.
+(1) H.A. Gleason, An Introduction to descriptive Linguistics. New York 1961.
+(2) C.F. Hocket, A Course in modern Linguistics. New York 1958.
+(3) M. Joos, Readings in Linguistics. Chicago, London, Toronto 1967.
+(4) K.L. Pike, Language in Relation to a Unified Theory of structure of
+human behavior. Den Hagg, Paris 1967.
+(5) Language as particle, wave and field. Texas Quarterly 1959.
+(6) M.A.K. Halliday, Categories of theory of Grammar. Word 17, 1961.
+II. On practical description of Languages.
+(1) R.E. Longacre, Grammar Discovery Procedures. (A field Manual) The
+Hague, Paris 1968.
+(2) K.L. Pike, Dimensions of grammatical Constructions,
+Language 38 1962.
+(3) K.L. Pike, On Systems of grammatical structure. Proceedings of the 9
+international Congress of Linguists 1964 The Hague.
+(4) V. Morey, The interrelationship of Aspect- and Focus affixes on 4 gram-
+matical levels of Ata. Oceanic Linguistics 1965.
+(5) R. Engel + R.E. Longacre, Syntactic Matrices in Ostuacan Zoque.
+I JAL 29 1963.
+(6) J.T. Bendor Samuel, A structure-function description of Teerena phrases
+Canadian Journal of Linguistics 8 1963.
+(7) R. Stanford, The Bekwara language of Nigeria-a grammatical description.
+London 1967.
+(8) W.J. Samarin, Field Linguistics, a guide to linguistic field work. Holt,
+Rinehart and Winston 1967.
+III. On Northern Mon Khmer Languages.
+(1) A. Milne, An Elementary Palaung Grammar. Oxford 1921.
+(2) A. Milne, A Dictionary of English- Palaung, Palaung- English. 1931
+Rangoon.
+(3) H.L. Shorto, Word and Syllable patterns in Palaung. BSOAS London
+13 1960.
+JBRS, LV, i & ii, Dec., 1972;
+Convright© 1998 - Myanmar Book Centre & Rook Promotion & Service Ltd Bangkok Thailand

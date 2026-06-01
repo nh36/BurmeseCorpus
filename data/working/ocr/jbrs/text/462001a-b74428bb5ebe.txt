@@ -1,0 +1,1760 @@
+[[page 1]]
+A SURVEY
+OF THE
+HISTORY OF EDUCATION IN BURMA
+BEFORE THE BRITISH CONQUEST
+AND AFTER*
+PART 1
+By
+U KAUNG **
+* A thesis accepted for the Master of Arts degree in Education by the
+University of London in May, 1929- Examiners: Professor J. Dover
+Wilson, Professor of Education, University of London, and Mr. A.E.
+Twentyman: External Examiner: Mr. Arthur Mayhew.
+✶✶ Late Director of Education and Chairman of the Burma Historical
+Commission.
+XI.VI, ii, Dec. 1963
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 2]]
+INTRODUCTION
+My father U Kaung, studied in England for over three years as a Burma
+State Scholar, after having obtained the Bachelor of Arts degree in English
+Honours from the University of Rangoon. The Diploma in Teaching from
+King's College, London he achieved after the first year and from 1928 to 1929
+he undertook research as a post graduate for the M.A. in Education. In 1929
+at the age of 25 he completed the present thesis on the History of Education in
+Burma Before the British Conquest and After, and it was accepted by the University
+of London as 'a worthy contribution to the literature on the philosophy and
+history of education,' with a First Class award in the Thesis Section.
+The Burma State Scholarship authorities of the time encouraged intellec-
+tual ability and favoured the broadening of experience that comes from
+contact with other nations and peoples. On learning that my father stood
+first in the M. A. in Education Examination of the University of London, they
+extended the scholarship by nine months with a bonus of fifty pounds "as a
+reward for good work and to enable him to travel and study the educational
+systems of Denmark, Germany, France and the British Isles with particular
+reference to rural education in which he intended to specialize".
+Throughout his crowded career, my father remained a scholar at heart,
+longing fervently for the time when he would be free from onerous adminis-
+trative duties and able to devote his leisure to studying and writing on
+Burma and the Burmese people that he loved. But it was not to be. He
+died in 1957 while in Calcutta on governmental duties.
+This thesis alone remained of his work, and he had intended to revise
+and publish it eventually to fill the glaring gap for material on the history
+of education in Burma. It is now being published, without the chance of
+further revisions but being a survey and a history, like teak well seasoned,
+it does not, I hope, need the gloss of current polish. Only the bibliography
+has been revised with a view of providing fuller entries.
+Dr. Nyi Nyi, a scholar in education himself, encouraged me to have
+the thesis published. To him and to Thakin Kyaw Sein and the many friends
+of my father, I tender my gratitude. My family and I would also like to thank
+the Editor and the Executive Committee of the Burma Research Society for
+devoting exclusively this number of the journal to my father's survey on the
+History of Education in Burma.
+THAW KAUNG.
+Hon. Librarian,
+Burma Research Society,
+3rd September 1963.
+JBRS, XLVI, ii, Dec. 1963.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+TIINA
+
+[[page 3]]
+Introduction
+Summary
+CONTENTS
+Page
+1
+3
+Prefatory Notes
+I. EDUCATION IN BURMA BEFORE THE BRITISH CONQUEST
+1. Monastery and Lay Schools
+(i) Monastic Education
+(ii) Lay Schools
+5
+n
+7
+9
+33
+2.
+The Beginnings of Christian Missionary Education 1600-1824
+41
+42
+44
+:
+58
+59
+61
+64
+71
+*
+(A) Introductory Remarks
+(B) The Roman Catholic Mission 1721-1824
+II. EDUCATION IN BURMA AFTER THE BRITISH CONQUEST
+3. Roman Catholic and American Baptist Mission Schools 1824-53
+4.
+Introductory Remarks
+(A) Roman Catholic Mission Schools 1824–53
+(B) American Baptist Mission Schools 1824-53
+Education Under the British Government
+(A) The Departmental System
+(B) Vernacular Education 1867-1922
+Appendix
+Bibliography
+27 21
+...
+... 77
+...
+82
+113.
+JBRS, XLVI, ii, Dec. 1963
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 4]]
+SUMMARY
+The thesis deals with education in Burma before the British Conquest
+(Chaps. I-II) and of the foundations of the present grant-in-aid system
+on the three existing types of schools which the Government found when
+it established its Education Department in 1867 (Chaps. III and IV).
+Education in Burma was carried on, from the time of the introduc-
+tion of the religion into the country sometime before the 10th century
+until the establishment of English schools after the conquest in 1826,
+principally by the free schools of the Buddhist monasteries. The origin
+of this form of education, its nature and scope are discussed. It was an
+education which was entirely suited to the Burmese people, and in
+harmony with their life. Its aim was to give religious culture, and not to
+prepare the pupils for worldly success in the narrow sense. This aim was
+achieved through the suitable life and environment of the monastery itself,
+the influence of the monk teachers, and the books studied. But being a
+monastic system it did not provide for the education of girls. Therefore
+for girls, free Lay Schools, kept by men and women for “merit” seem to
+have existed at least for about a hundred years before the British Conquest.
+These schools also prepared the boys for the Monastery Schools. The
+education they provided was similar to that of the monasteries, except
+that the standard reached was lower because they could not retain their
+pupils for as long a period as the former. The two varieties of schools
+together supplied both elementary and higher education in Burmese, Pali
+and the native sciences.
+Apart from these schools, some Christian Missionary Schools existed
+since the 17th century (Chap. II). But until more favourable condi-
+tions for missionary work were secured through the conquest of the
+country by a Christian nation, conversion work did not progress. There-
+fore, educational work also was not significant. However, during the
+19th century the missionaries developed a system of schools which served
+as a foundation for Anglo-Vernacular education, while many Monastery
+and Lay Schools were also absorbed into the system through the efforts
+of the Education Department. Thus, the history of education after the
+Conquest divides itself into the separate strands of Vernacular and
+Anglo-Vernacular education.
+S
+JBRS, XLVI, ii, Dec. 1963
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 5]]
+The new conditions disturbed the people's values; and the new English
+education which became popular because of its power to secure Govern-
+ment employment could not sublimate the purely materialistic aims of
+the pupils.
+The purpose of the study was to compare the education of Burmese
+times with education under the British Government's Education Depart-
+ment. But as it has not been possible to complete it owing to a long
+illness the purpose is not yet fulfilled. The plan, however, was to trace
+the development of the Departmental system in three separate chapters
+(from 1867-1927) dealing with Vernacular education, Anglo-Vernacular
+education, and higher education, and in the final chapter to sum up
+the characteristics of the new system thus developed, comparing its
+aims, methods, and achievements with those of the old system of
+education. The argument of the thesis was to show that owing to the
+narrow vocational aims of the pupils and the circumstances in which
+the system developed, Anglo-Vernacular education has not been able
+to develop the ideals which all schools should teach, and which are
+necessary to take the place of the old ideals that are being forgotten.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 6]]
+7
+GEOGRAPHY.
+PREFATORY NOTES
+Burma consists mainly of the valleys of the Irrawaddy and the Sittang.
+The rest of the country is either mountainous or coastal. In each of the valleys a race
+developed, just as a third race developed in coastal Arakan. The population has always
+had a tendency to get concentrated in the lowlands in the river valleys.
+Its mountains in the north acted as barriers against Chinese immigration, and
+although down the passes Chinese caravans used to come through Burma' on their way
+to the sea, or across Manipur to Afghanistan, Chinese influence must have always been
+limited to the trade routes because its traces are hard to find.2 Indian influences have
+been much more pervasive and continuous; first purely Hindu, and later Buddhist from
+about 300 A.D. onwards. This and other new cultures came for the most part by sea,
+and the centres of new influences have always been in the southern country, in the Delta
+and the coastal regions. The interior Kingdoms usually received them at second hand.
+ETHNOGRAPHY. The indigenous people of Burma are usually divided up into seven
+groups, commonly called "races" in Government reports and Missionary accounts.
+The groups are (1) the Burmans, whose home is the valley of the Irrawaddy and its
+tributaries as far south as the head of the Delta, (II) the Talaings (or Mons) who are
+natives of the valley of the Sittang and the Tenasserim coast, (III) the Arakanese in
+Arakan, (IV) the Shans who have lived and still live on the plateau to the east of the
+Irrawaddy called the Shan States Plateau, (V) the Karens whose original home was the
+hilly regions east of the Sittang and now settled in those parts as well as in the Delta
+regions and the Tenasserim coast, (VI) the Chins on the hills between the Irrawaddy Valley
+and Arakan, and (VII) the Kachins on the hills to the north of Burma.
+This geographical distribution is still largely true except that in Lower Burma people
+of all groups have become mixed together, especially the Burmans and the Talaings with a
+fair number of Karens. The distinction between the Burmans and the Talaings has been
+growing fainter during the last 100 years as a result of an overwhelming migration of
+Burmans to Lower Burma when rice cultivation became profitable with the development
+of an export trade in it from 1826 onwards. Other groups also are being gradually
+absorbed by the Burman group. It is to be noted that the word “Burman” is used in two
+senses. In the narrower sense it means the real Burman, the inhabitant of the valley of
+the Irrawaddy, as distinguished from men of the other groups of indigenous population,
+while in a wider sense it means all the people of Burma taken together. Since the British
+1 The Chinese merchants used the trade routes through Burma since the 2nd century B.C. Two were
+along the Irrawaddy and the Salween, the 3rd down the Chindwin River and through Manipur took the
+caravans a three months' journey to Afghanistan where Chinese silks were exchanged for the gold of
+Europe. (Harvey. Ibid. p. 9)
+Harvey, Ibid. Note at p. 337.
+JBRS, XLVI, ii, Dec. 1963
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 7]]
+Conquest it is the tendency of the foreigners to use the word to include all the civilised
+races of Burma. The Government encourages the usage as conducive to a unification of
+the races. Of the foreigners the most important numerically are the Indians and the
+Chinese.
+HISTORY. In Burma, as a rule, two important kingdoms have existed practically
+always, one in the valley of the Irrawaddy in Upper Burma and the other in the valley of
+the Sittang in Lower Burma. Kings of the Burman race conquered and ruled the other
+kingdoms during three periods in Burmese history. The first Burmese Empire under the
+Pagan Dynasty (1057–1287) lasted over two and a quarter centuries. The second Empire
+under the kings of the Toungoo Dynasty lasted also about two centuries from 1540-1740.
+In 1740 the Talaings rebelled and expelled the Burmese from Pegu, Syriam and Martaban
+where they had settled. They fought their way northwards and entered Burmese territory,
+capturing Ava, the ancient capital in 1752. They took the King prisoner and afterwards
+executed him. It was during this period that Alaungpaya, the founder of the last dynasty
+and Empire in Burma first came into prominence. When the Court and the people round
+the capital were feeling utterly helpless after having suffered defeat at the hands of the.
+Talaings, Alaungpaya who was then a village headman of Shwebo (the office was hereditary)
+rallied them and ultimately succeeded in turning the Talaings out of the Burmese territory
+He followed up his success by attacking the Lower Country, capturing Pegu - its capital in
+1754. In that year he proclaimed himself ruler of the united territory of the old kingdoms
+of both Ava and Pegu. He continued his career as conqueror and organized a successful
+expedition against Tenasserim, Siam and Manipur. He died in 1760. In 1784 Arakan
+was invaded and subdued by his son, Bodawpaya, so that after that year all the territory
+which is now called Burma was under one ruler. The administration, it appears, was well
+organized, but it is believed by some to have been rather severe to the conquered people.
+All this territory continued under the descendants of Alaungpaya until it passed in three
+successive stages under British administration.
+1st. War between British and Burmans, 1824-26.
+Territory lost by Burmans: Arakan and Tenasserim.
+2nd. War between British and Burmans, 1852-53.
+Territory lost by Burmans: Pegu and Martaban (or Shwegyin).
+3rd. War between British and Burmans, 1885.
+Territory lost by Burmans, Upper Burma; End of Burmese Rule.
+JBRS, XLVI, II, Dec. 1963
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 8]]
+PART I.
+CHAPTER ONE
+EDUCATION IN BURMA
+BEFORE THE BRITISH CONQUEST
+Monastery & Lay Schools.
+JBRS, XLVI, ii, Dec. 1963
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 9]]
+CHAPTER ONE
+EDUCATION IN BURMA BEFORE THE BRITISH CONQUEST.
+Burma came under British Government in three separate portions at three different
+times. First, the maritime parts of the county, namely, Arakan and Tenasserim in 1826
+as indemnity for the First Anglo-Burmese War of 1824-26; then the provinces of Pegu and
+Martaban by the annexation after the Second Anglo-Burmese War of 1852; and, finally,
+the last independent portion of Burma, or Upper Burma, in 1885 after the deposition of
+the Burmese King by the British in the same year. The conquest of the country was,
+therefore, gradual, and naturally Burmese life and institutions came under the new in-
+fluence at different times. Thus, for instance, while British rule was changing the economic
+condition of the inhabitants of Arakan and Tenasserim and attracting numerous immigrants
+from Burmese territory, the people of Burma Proper still lived the old life of a slower
+pace and greater stability. It was the same with the people of Upper Burma when Pegu
+and Martaban were annexed. This being so, the educational conditions presently to be
+described must be taken as applicable down to later times in some parts of the country
+than in others. As an instance, while many monasteries were induced to co-operate with
+the Government Education Department in Lower Burma between 1861-1886, in Upper
+Burma under the Burmese kings, conditions were unchanged.
+"
+Education in the Burma of pre-British times was carried on almost entirely by the Hpon-
+gyees or Buddhist monks in their Hpongyee-Kyaungs, or Buddhist monasteries. The
+only additional agency for education was that supplied by the Ain-Kyaungs or Lay Schools,
+which gave education to girls and little boys too young to go to the Monastery School. But
+the important schools as regards numbers as well as in quality and scope of teaching were
+the monasteries. The Lay Schools were few in number and they were preparatory in nature.
+They gave an education which was very similar in aims, methods, and the manuscript texts
+used, to that given in the monasteries, with the difference that they seldom took the pupils
+far. I shall deal with the Monastery Schools and the monastic system of education in the
+first section of this chapter and with the Lay Schools in the second section. The next
+chapter (Chapt. II), completes the account of the nature and extent of education before
+British times by giving the history of the earliest Christian Mission Schools. The educa-
+tional influence of these Mission Schools has often been exaggerated. On the other hand,
+although, as I shall show later, they did not affect the education of the Burmese children
+in Burmese times, their history must be known in order to understand the beginnings, and
+later development of mission education which today affects so large a proportion of non-
+Christian boys receiving English education in Burma.
+SECTION ONE: MONASTIC EDUCATION.
+Monastic education in Burma is as old as Buddhism itself and therefore, a brief
+account of how, when, and in what form the religion was conveyed into the country must
+be given first, although it has been treated more fully by various writers for their own par-
+ticular purposes.
+Without an adequate account of this momentous event, namely the in-
+JBRS, XLVI, ii, Dec. 1963
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 10]]
+troduction of Buddhism into the land and its effects, it is well nigh impossible to understand
+anything Burmese to any great extent. Isolated geographically from the outer world,
+Burma lived throughout the greater part of her history practically to herself, unaffected by
+extraneous influences arising from invasions, commercial relations with other countries,
+and similar forms of contacts which tend to change a people towards the acceptance of
+new ideals and aspirations, and the adoption of new ways of life. But although it lay thus
+detached, the seed of a spiritual and intellectual influence was brought over the sea from
+Southern India (Teligana) early in the Christian Era, and it took root, and grew, affecting
+the whole of her life. Moreover, as the aspiration of Buddhism was broadly human and
+not limited to a race or a class, each people and each individual might take its message to
+heart in an individual way. And so in the case of Burma, the restraints it enjoined, and
+the ideals it held up became the occasions for the unfolding of her own inmost nature. No
+one can study any aspect of Burmese life and thought without being struck by the clearness
+and the permanence of the impress left on it by Buddhism. Literature developed under
+its immediate influence, the first authors in Burma, in fact, being monks. Even poetry
+is usually not "personal" but fine rather with that clear-eyed courage and mellow love for
+all creatures, qualities which have their source in the religion. The influence is equally
+pervasive in the architecture, sculpture, painting, legends, plays and customs of the
+country 2. The very law of the land in fact gradually became Buddhist in its principles
+and practice from a Hindu origin ³. The one important extraneous cultural influence be-
+fore the English Conquest under which she fell was, therefore, of the greatest significance,
+The Buddhist doctrine was introduced into the country enshrined in a canon of scrip-
+tures written in Pali which is for that reason still called the "original language” (Mūlabhāsā)
+by the Burmese. The scriptures consisted of the three Pitakas (Pali: Tipitaka; Burmese:
+Bidaga-thon-bon) of:-
+(a)
+The Vinayapitaka,
+(b) The Suttapitaka,
+(c)
+and the Abhidhamma-pitaka,
+the recension being that which was consecrated in Ceylon.
+A few words must be said here regarding the nature of these books and the nature of
+their appeal to the Burmese people.
+(a) The Vinaya which came to Burma was the monastic code handed down by the
+Theravadin sect in Ceylon; that is, the sect professing the doctrine (vādu) of the theras or the
+1 Ba Thein, U: “A Dictionary of Burmese Authors”, Journal of Burma Research Society. (August, 1920)
+p. 137 et seq. A Prize Article by U Ba Thein (in Burmese).
+2 It is unnecessary to give further instances. Almost every book on Burma in essence is an unconscious
+thesis proving this fact. See Fielding Hall, H: The Soul of a People 1898; and A People at School 1913;
+Ferrars, Max and Bertha, Burma 1900; Nisbet, John: Burma Under British Rule and Before 1901, and others.
+See Bibliography in the Appendix.
+3 See Forchammer, E: The Jardine Prize; an essay on the sources and development of Burmese law,
+Rangoon 1885, in which the thesis is proved carefully,
+JBRS, XLVI, ii, Dec. 1963
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 11]]
+11
+elders. They were the strictest sect during the time of the schisms beginning about two
+hundred years after the Buddha's death, according to tradition, and their revised
+code was therefore, naturally strict in its close adherence to the early simplicity of
+conduct and austere mode of living. The Burmese fraternity preserved it carefully
+in letter and in spirit, studying it from the time of its introduction with diligence,
+and producing from the 11th century to the present time a mass of literature both
+in Pali and Burmese, dealing with it, which includes commentaries, digests, besides
+works which are explanatory or controversial as regards certain rules in the Vinaya.¹
+In later times, Burma became so famous for Vinaya (and Abhidhamma) studies
+that a party of Ceylonese monks went to Amarapura, the Capital, for "valid ordina-
+tion," 2 about the end of the 18th century. I have emphasized this fact about
+the close adherence of the Burmese Monkhood to the Vinaya, because therein lies
+partly the explanation of the unchanging mode of life in the monasteries which I shall
+have to discuss later. The complete Vinaya is rather voluminous,³ but an epitome of
+the discipline in the form of two short metrical texts composed originally in Ceylon,
+Mälasikkhā and Khuddakasikkhā, together with the Dvemātikā and the Kinkhāvitranį
+were recognised, it is not known since when, as sufficient knowledge for those who
+could not study more. The above are called today the "Four Smaller Vinaya" and are
+studied by those who have no time for studying the complete Vinaya.
+But the influence of the Vinaya was necessarily confined to the Order, for it
+was, after all, only canon law. And consisting mainly of prohibitions it could have
+had only a little cultural influence. However, when we come to the Sutta-pitaka we
+find that here was the main source of Burmese moral culture. "Through the
+immense variety of discourses, verses, and legends that make up the Sutta-pitaka, the
+path of the saint is traced for us in every stage from the first moment of religious
+effort to the summit of achievement-arahatship. And the Sutta-pitaka has abundance
+of human nature in it. So in widening and ever widening circles it has sent a moral
+impulse through the life of the whole Burmese people. To give two instances: the
+"Paritta" is a common treasury of good words to ward off the evils of everyday life
+and keep the great maxims of the religion in memory and the Jātaka has found its
+way every where from law codes and chronicles to popular plays. The Burmese child
+grows up steeped in beliefs, practices, and notions of “merit" and "demerit" drawn
+from the Sutta. He has nothing new to learn about this part of his faith when he
+forsakes the world 4 and enters on a monastic life" 5. The writer does justice to the
+1 See Bɔde, Mabel Haynes: The Pali Literature of Burma, Royal Asiatic Society of Great Britain and
+Ireland, Prize Publication Fund, Vol. 2, 1909, for the number of works on Vinaya questions produced
+by Burmese monks.
+2 Bode, Mabel Haynes: Dissertation: A Burmese Historian of Buddhism, 1898, p. 59, footnote 2. Or-
+dination is not valid unless all the details are accurately in keeping with the Vinaya.
+3 As edited by Oldenberg, it is in five volumes.
+4 Every Burmese Buddhist boy enters a monastery as a novice sometime between the ages of thirteen
+and sixteen. A fuller account of the custom and its bearings will be given later.
+5 Bode, M. H: Pali Literature of Burma, p. 60.
+JBRS, XLVI, ii, Dec. 1963
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 12]]
+12
+great moral influence of the Sutta, but she seems to have missed its equally great in-
+fluence on the culture of the people. The five great Nikayas which form the
+Suttapitaka have furnished subjects for most of Burmese art and literature. To give
+one example of its wide influence over varied forms of art, the stories of the Jātaka
+books figure on wood carvings and lacquer-ware besides forming, on the other hand,
+subjects for some of the greatest epics and dramas. It has even affected standards of
+conduct. The Sutta is associated so much in the people's mind with refinement and
+culture, that a knowledge of it is still considered the mark of a cultured gentleman¹.
+Connected with the Suttapitaka is the Paritta (Burmese: Payeik-kyi) which is a
+collection of texts selected from the Suttapitaka. It is the first Pali text learnt by the
+child after he has mastered the Thimbongyi or the spelling book, and is, therefore, the
+most widely known Pali book among all classes of the Burmese laity to this day. It
+has, of course, like other collections of sacred texts all the world over, come to have
+the usual value of a charm and an exorcism. But it has served as a very convenient
+form in which to remember some of the chief texts, and in that way has had considerable
+ethical influence.
+(c) And lastly, there was the Abhidhamma, or the metaphysical portion of the
+Pitakas, which has always been held as "the highest form of study by monk and layman
+alike” with its numerous commentaries, compendeums, and manuals 2.
+Such was the form and content of the Buddhist doctrine which came to Burma.
+As regards the time and the manner in which it was first conveyed into the country,
+there is still some uncertainty among Western scholars who have studied the subject, as
+they are not inclined to accept the tradition of the native chronicles of religion like the
+Sāsanavamsa. But if it is impossible to be exact in fixing the date of its first introduction
+into the country, it is now a fact generally accepted that the religion came by sea, through
+the early established connection with South India, winning to itself first the Talaings of
+Lower Burma. By about the 5th century³ the religion was probably fairly well rooted in
+the Talaing Kingdom of Ramaññadesa (Thaton). Thence, it spread (no doubt through the
+wanderings of monks) further north-west making Buddhist the Pyu people of the city
+state of Tharekhetara (Prome). In the Chronicles of the T'ang Dynasty of China, there
+is a reference to Prome and its people the Pyus who, some believe, were the ancestors of
+the Burmese people. "(The 'piao') dislike taking life. They greet each other by
+CADEI
+1 It is significant that when sometime about 1918-19 Burmese politics began with the agitation for
+Home Rule, the young leaders who were most of them educated in the Anglo-Vernacular Schools,
+and so without an adequate knowledge of their own literature, burnt midnight oil over the Dhamma-
+pada, the Ten Major Zats, and the Buddhavamsa etc. They knew by experience that without a good
+acquaintance with the better known Sutta texts and stories they could not hope to hold the people.
+2 Among the manuals the two that have been most studied by the Burmese are the canonica
+Dhammasanganī and the still popular twelfth century production, the Abhidhammattha sangaha.
+3 Harvey, E: History of Burma, P. 7.
+JBRS, XLVI, ii, Dec. 1953
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 13]]
+13
+clasping the arm with the hand. They know how to make astronomical calculations.
+They are Buddhists and have a hundred monasteries, with bricks of glassware embellished
+with gold and vermillion, gay colours and red kino......At seven years of age the people
+cut their hair and enter a monastery; if at the age of twenty they have not grasped the
+doctrine, they return to lay estate......"1 The T'ang Dynasty ruled from 618-905 A.D.,
+and therefore, the description of the Pyu in the Chronicles must refer to a period some
+time before the end of the 9th century. That the description is on the whole accurate is
+clearly seen when for instance its details about the city walls, etc., are compared with the
+ruins which remain today. This being so, we can say that even before the 9th century,
+Buddhism had already spread northwards from the coast, according to the tendency
+mentioned in the prefatory notes. But for our purpose, a safe starting point is the 11th
+century A.D., when the religion reached the northern kingdom of Pagan.³ It is also a
+convenient starting point for Arakan was "professedly Buddhist" after the 10th century.ª
+2
+Sometime after 800 A.D., Prome decayed through internal dissensions and the people
+migrated northwards up the Irrawaddy to the plains of Myingyan District. There they in-
+termarried with the local tribes and lost their Hinayana Buddhism. But while they
+lost the Hinayana Buddhist culture, which made them remarkable to the Chinese as
+a race that disliked the taking of life, they gained virility and the power and wish
+for dominion. And this fact, coupled with the infusion of new blood through
+intermarriage with the more primitive people eventually produced a race which called
+itself the Bama (Europeanized into 'Burmese'), sometime about the 9th century. At the
+same time they walled Pagan and made it their capital. The religion of the Burmese
+at this period was a mixture of a debased form of Mahayanism and probably some local
+animistic beliefs. The Burmese Chronicles call it Ari-ism from the name of its priests
+who were said to have ministered to the superstitions of the people by faked tree oracles
+"so that the King and all the people misbelieved.” Our available accounts are, of
+course, Hinayana Buddhist accounts, and perhaps the baseness of the Aris and their cult
+is exaggerated. On the other hand, in the absence of other evidence, we must assume
+1 Chronicles of the T'ang Dynasty, Chapter on "The Southern Barbarians" in Parker, E. H: Burma's
+Relations to China, p. 12.
+The whole passage is of intrinsic interest as perhaps the earliest foreign account of the Burmese;
+and I shall have occasion to use it to support my argument later.
+2 See Taw Sein Ko: Report of the Superintendent, Archaeological Survey of Burma, Government Printing,
+1908. Also Harvey, G. E: Ibid, p. 12.
+3 The 11th century is the earliest limit of acceptance of the European scientific historians. The
+history of the period previous to the 11th century given in the Burmese Chronicles is “inval-
+idated" for them by the absence of inscriptions of a date earlier than the 11th century. (Harvey,
+p. 307 Notes). But the reason is hardly sufficient because the Burmese did not write till after the
+11th century and in a country with a climate like that of Burma, the usual sandstone does not last
+long, even supposing that the search for inscriptions had already been systematically and
+thoroughly carried out.
+4 Harvey: Ibid, p. 137.
+JBRS, XLVI, ii, Dec. 1963
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd. Bangkok. Thailand.
+
+[[page 14]]
+14
+that they were neither intellectual nor moral and did nothing for the people.' They
+certainly did not teach the Sanscrit Buddhist Canon they possessed 2 to the people
+either because they did not understand it themselves, or because it was in their in-
+terest to hold the monopoly of knowledge. They probably taught ritual but as the
+ritual was base, according to what we know of it as present, it could not have been
+educative. Ari-ism flourished at Pagan till the middle of the 11th century when in
+1056, Shin Arahan. a young Talaing Buddhist monk converted Anawrahia, the first
+great Burmese King (1044-77) to Hinayana Buddhism. Together they reformed the
+religion by breaking the dominion of the Aris and establishing a Talaing Monk-
+hood. Shin Arahan, however, had brought no sacred books with him for writing
+was perhaps still a rare acquirement and manuscripts perhaps scarce. On the
+other hand, he knew that the conversion of the people could not become real unless
+the books were in the country to guide the new adherents to what is right according to
+the new religion they had accepted. Hc, therefore, urged the King to procure copies
+from the Lower Talaing Kingdom of Thaton where King Manuha owned thirty complete
+sets of the Pali Pitakas. Envoys were sent, but they received only an insulting ṛefusal.
+Forthwith, Anawrahta raised his army and swooped down by river and land, taking Thaton
+after a three months' siege in 1057. He took back with him to Pagan besides the royal
+family and the Court; first of all the monks, the thirty sets of the Pitakas, and the entire
+population numbering about 30,000 including the craftsmen and the builders. As in
+many other similar cases in history, the conquered eventually conquered the conqueror.
+The culture and civilization thus wrested from an unwilling neighbour worked as leaven
+among the Burmese in Pagan. The Hindu arts of writing and arithmetic introduced with
+the religion were adopted, and the Burmese language was reduced to writing in Talaing
+script, soon after this momentous conquest, in 1058.³
+By the next generation, the great and the smaller temples of Pagan had begun to rise
+in "architectural magnificence" from the flatness of the plain showing us to-day that the
+1 All the available evidence is Hirayana Buddhist, viz., Sāsanavaṁsa (1851) by Paññāsāmi
+Gandhavaṁsa (17th century annonymous) and the Hman nan Chronicles (1824) and they, of course,
+have nothing good to say of the Ari. Paññāsāmi for instance in his Sāsanāvamsa refers to them
+always as “false monks" (samaṇakuttaka). M. Duroiselle, who is considered an authority on the
+subject, in his "The Ari of Burma" Annual Report of the Archazological Survey of India (1915-16)
+comes to very much the same conclusion after his examination of their art and inscriptions at
+Thamahti in Pagan. ...“They ministered to the superstition of the people and were priests of Naga
+(Dragon) and spirit worship then prevalent in the land and officiated at the bloody sacrifices
+connected with indigenous worship."
+"They practiced boxing, rode horses, went into battle, drank intoxicants. and exacted jus
+primae noctis from the King downwards." Hmannan Yazawin, I, 223,247,263,258 and at Harvey,
+G.E. Ibid, 17-18.
+2 Epigraphia Birmanica, 1.1.7
+3 The first inscription in Burmese is dated 1058 A.D. Harvey, G.E. Ibid, p. 29. "There are
+earlier ones in Burmese, but this is original, whereas they are copies and their dates are mis-
+copied."
+The inscription itself is in "Original Inscriptions collected by King Bodawpaya in Upper Burma
+and now placed at the Patodawgyi Pagoda, Amarapura”, 1913. Government Printing.
+JBRS, XLVI, ii, Dec. 1963
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 15]]
+15
+new faith found fervent acceptance as much among the people as with the King. Among
+these religious edifices were many monasteries equally well built, and apparently meant
+for a considerable number of monks complete with cells, big hall, and a smaller hall for
+holding a school². To these monasteries the Kings of the Pagan Dynasty (1044-1287)
+invited the most pious and learned monks of the Lower Country, as well as from coun-
+tries further away³. And it was in their schools and colleges that Pali Literature develop-
+ed, attaining a remarkably high standard of scholarship in a short time. This speedy
+maturing of the new learning at Pagan was made possible through the fact that when the
+religion and culture were transplanted, the essentials of their growth in the new land were
+secured by Anawrahta through his transportation of the relics, books, and teachers. They
+formed that necessary nucleus from which a culture could develop, as well as spread
+among the people. The Pitakas were housed in a splendid library (which stands to-day) 5
+and placed at the disposal of the monks both at Pagan and at Kyauk-ku-Onhmin which
+was the centre of learning of the Mramma Sangha, the oldest sect in Pagan. Now copies
+of the sacred texts were secured from Ceylon which Shin Arahan himself compared with
+the Thaton collection. The ground was thus well prepared for the harvest that followed.
+The atmosphere of Pagan was also conducive to scholarly efforts, for the Kings and the
+people alike supported learning and religion. They were aesthetic and spiritual, rather
+than political in their outlook on life as Mr. Harvey tries to point out. "Those who
+doubt the reality of a populous city given up to the spiritual, should read the numberless
+inscriptions of the period, richly human and devout; contemplate the sixteen square miles
+at Pagan, all dedicated to religion; contrast each separate brick from the depths of a great
+pile with the rubble of Norman pillars; reflect that each temple was built not in genera-
+tions but in months; remember how short was the period when Pagan was inhabited;
+think of the literary activities, of the Kyauk-ku Onhmin; add to this our natural pre-
+conception of the conditions necessary to the production of great religious art; and
+then say whether those campaigns for a (sacred) tooth, those heart searchings over the
+loss of a white elephant at which we smile, are not rather possessed of a significance as
+deep to men of the age as the quest of the Holy Grail had for Arthurian Knights.”
+1 Harvey, G.E., Ibid, p. 70.
+18
+2 See Sinclair: “Monasteries of Pagan” in Journal of the Burma Research Society 1920, for plans,
+photographs and descriptions of the more important buildings.
+3 King Narapatisithu (1173-1210), for instance, provided monasteries to all the various Sanghas
+(Sects) at Pagan, at a time of great sectarian controversies. “Fraternities from Ceylon, from con-
+quered Hamsavati, from Siam, Camboja and probably Nepal and China sojourned in Pagan."
+Forchammer, E: Report (Pagan), p. 2.
+4 Bode, M.H: Pali Literature of Burina, 1909, p. 14. In 1154 the monk Aggavamsa completed
+the famous Saddaniti, a grammar of the Tipitaka which established the reputation of Burma
+scholarship in that age... (It is still republished as a classic at the present time). The Thera
+Uttarajiva took a copy of it to the ancient Mahāvihira monastery at Ceylon when he paid a pil-
+grimage to the island in 1180, when it was received with admiration and declared superior to any
+work of the kind written by Sinhalese scholars. (Bode; Ibid, p. 17).
+5 The Libraries of the ancient monasteries were buildings apart. They were called in Pali
+"Ratanamaye pasado". The Burmese merely called them the Pitaka-Building. (Bidaga-tike).
+6 Harvey, G.E., Ibid, p. 70.
+JBRS, XLVI, ii, Dec. 1963
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 16]]
+16
+•
+The first study of the Burmese was Pali grammar. In the course of time, young men
+from among the native Burmese entered the monasteries as novices and learnt from
+Talaing monk masters. The first essay of a Burmese author in Pali scholarship was
+made in 1064, just seven years after the introduction of the new learning when the
+Burmese monk Dhammasenāpati wrote the Karita, a grammatical work in Pali .' The
+study of Pali grammar was, of course, a necessary preliminary to the study of the Pitakas
+and its study was apparently not confined to the monks. Kings, ministers and courtiers
+studied it, and a Kings's daughter wrote a treatise on it to show examples of Pali
+grammatical cases. Learning seemed to have thrived especially during the reign of
+Kyaswa (1234-50) who “loved everybody, read and became master of every book, held
+public disputations, and seven times a day instructed his household." 2 According to
+the Sāsanā vaṁsa, grammar was popular even among the women and young girls
+These glorious days of learning at Pagan lasted over two and a half centuries, and then
+the city fell before the Chinese invasion in 1277, followed by the swamping of the whole
+of the northern country by the Shans, a race new to Burma which reached its valleys
+through the northern passes in the 13th century. The people of Pagan migrated
+southwards to Toungoo, a hill spur stockade under some Burmese lords from Pagan in
+much the same way as the Pyus had done when Prome decayed and fell. Around this
+stockaded village, other villages of Burmese refugees from Pagan began to grow, gradually
+making the country round Toungoo a centre of Burmese population. From 1287 to 1531,
+Burma was again disunited. There grew up many principalities, among the chief being
+Ava, Pegu and Toungoo. It was a chaotic period politically, with rapid changes of
+masters; but the many petty wars during the period probably did not affect religion very
+much. Higher learning, perhaps, was affected by the disturbances at times because
+it thrived generally in and near the cities 5 which usually suffered most from these wars.
+But even in the most turbulent times the monks were immune because the combatants
+venerated them. Mabel Haynes Bode came to the conclusion that scholars studied as
+usual during such periods, from her examination of Pali literature in Burma. "From all
+we can learn about the place and date of the Pali works possible to place between the
+1 Bode, M. H: p. 16.
+2 A translation from a Burmese Chronicle by Bode, M.H: A Burmese Historian of Buddhism-a
+Dissertation for the Ph. D., of Eerne University, 1898, p. 32, Note 2.
+3 Sāsaṇīvaṁsa, p. 78 describes how busy mothers of families in Arimaddana (i.e., Pagan)
+snatched time to learn. Anecdotes are told of their skill in the study and the keenness of their
+wit. See also Bode, M.H: Dissertation, p. 33: Pali Literature, p. 25.
+4 Also Bode, M.H: Dissertation, p. 47.
+5 Where alone the people were rich enough to provide the necessary spacious accomodation
+and a library of texts necessary for literary work. Bode gives an interesting list of a collection of
+295 Pali and Sanscrit texts, given by the Governor of Taungdwin and his wife, together with a
+monastery, garden, paddylands and slaves. The list is from an Inscription dated Burmese Era 804
+(1442 A.D.) recording, according to custom, the gifts of the pious donors. See Bode, M.H:
+Pali Literature, Appendix to Chapter 3, p. 101 et seq. Such gift, varying of course, in lavishness
+according to the means of the donors was, and is, common among all Burmese Buddhists.
+JBRS, XLVI, ii, Dec. 1963
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 17]]
+17
+founding of the Ava Dynasty and the middle of the 16th century, it seems that scholars
+were always to be found busy in the monasteries near the cities. However turbulent the times
+may have been, the reigning families protected the Order and loaded it with bounty.
+Their example was followed by men and women of rank and wealth.” 1 Cultural centres
+such as Martaban, Pegu, Ava, Pinya and Toungoo, therefore, continued to provide a home
+for the scholar-monks.
+About the end of this period of Shan dominion, Burmese literature, the seed of
+which was sown by Anawrahta through his importation of the alphabet during the 11th
+century, produced its first harvest. As we should expect, the first authors were monks.
+Their works show such polish and elegance 2 that it is difficult to believe that
+composition in the Vernacular had not been practised some time before the 15th century,
+although the scholarly tradition had been to compose in the classical language of Pali.
+From this time onwards, there developed side by side with the Pali literature, a Burmese
+literature, both original and translations from Pali, in prose as well as in verse, down
+to the present time.
+By about the 16th century, the spread of religion to all the inhabited parts of Burma
+was probably complete and the monastic system of education for the people in general
+(as distinct from monks) well established. ³ When the European travellers began to
+visit Burma from this century onwards, the country they saw was Buddhist, with customs
+and manners not essentially different from those of to-day. Ralph Fitch, an English
+merchant who visited Pegu in 1569, for instance, describes the Shinpyu ceremony and
+the custom of the Burmese to “go to School until they be twentie years old or more” in
+order to become monks for a certain number of years as is usual for Burmans. During
+the 18th century, the first comprehensive foreigner's account of Burma was written by
+Vincentio San Germano 4 an Italian missionary priest of the Barnabite Society of Milan,
+who resided in Rangoon and Ava from 1783 to 1806. San Germano observed much in
+his own hard way and his chapter on the Talapoins 5 is valuable as the account of a highly
+"critical" observer of long residence in the country. He found Monastic education the
+only form of education in the country. The monasteries, he said, “are the schools and
+1 Bode, M.H: Pali Literature, p. 41.
+2 The works of Sīlavaṁsa (1453-1529), for instance, are considered classics.
+3 Harvey: Ibid, Introduction, p. 20. Of course, it is impossible to say when monastery education
+became general in the present state of our knowledge of Burmese social history. But as I will show
+later, the practice of sending the boys to the monasteries is as old as Buddhist Monachism itself.
+See T'ang Dynasty extract.
+4 See Chapter II, for account of his schools for the Christian Congregation of Syriam and
+Rangoon before the British Conquest. His book written in Latin was translated into English
+by Tandy (Rome) in 1833. Since then there has been many reprints. I have used Jardine's
+edition.
+5 The word used by the Portuguese mercenary soldiers for Buddhist monks. There are many
+suggested origins of the word, but none is satisfactory.
+JBRS, XLVI, ii, Dec. 1963
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 18]]
+18
+indeed the only schools in the empire, as the task of education is entirely committed to
+the Talapoins". "Hence," he continues, "in these convents all the youth of the kingdom
+are placed, as soon as they have attained their sixth or seventh year, and they generally
+wear the habit for two or three years" .1 He found the monastery as ubiquitous as it is
+today. "There is not in any village, however small, which has not one or more large
+wooden houses which are a species of convent, which the Portuguese in India called Baos."
+He found the monasteries also the best built buildings in village and city alike. "The
+Baos are the buildings in which the Burmese architecture is most gorgeous. Some are
+completely cased with fine gold both within and without, particularly those which the
+Emperor and his sons built for the Zarado." 2 Even as regards the reading books used³,
+his description tallies. essentially with conditions that still obtain to-day in the
+monasteries. A comparison of this description of San Germano with the accounts of
+Ralph Fitch, and the unknown Chinese Chronicler of the T'ang Dynasty Chronicles
+before him; and of the numerous authors after him from Symes, Crawfurd, Malcolm,
+Yule onwards, brings out the remarkable fact of the unchanging ways of the Order. 5
+This, as I have suggested at the beginning of the chapter, was due to the reverence for the
+true doctrine brought from Ceylon and to the wish born of this reverent attitude to keep
+it true and unwarped. It has been shown how the monks at Upper Burma first studied
+Pali grammar in order to enable them to study the texts, and how later when equipped
+with the knowledge of Pali, they absorbed themselves first in the study of the three
+books of the Pitaka in the order of Vinaya, Sutta and Abhidhamma; and how later still from
+the 16th century they set themselves to the task of interpreting the Pitaka in the mother
+tongue for the better comprehension of the people. Thus, sedulous in adhering not only
+to the forms (e.g., in the case of Vinayaº), but to the spirit of what they considered was
+1 San Germano: Description of the Burmese Empire, Jardine Edition, p. 155.
+2 i.e., Burmese: Sayadaw. As usual, San Germano uses the words put into currency among
+Europeans by the Portuguese. The Portuguese seemed to have had a particularly insensitive ear.
+3 Ibid. p. 129. The traditional first reader is the Mingala Sutta, from which every Burmese
+boy and girl learns to read his or her first connected sentences after mastering the Thimbongyi
+spelling book. It opens after a short preamble with these memorable words of the Buddha,
+"O Nat! Know that to keep far from the company of the ignorant, to be always in the society of
+the learned and to give respect and honour to whom they are due are the means of overcoming any
+inordinate affection”...
+4 See Bibliography in Appendix.
+-5 Sukamar Dutt's description of life in a Buddhist monastery in the early days of Buddhist
+monachism reads like a description of life in a Burmese monastery today. Dutt, Sukumar:
+Early Buddhist Monachism 600 B.C. 100 B.C.- being a thesis approved by the University of Calcutta
+for the Griffiths Memorial Prize for original research.
+6 The prolonged sectarian differences (not schisms) among the Order at various times in its
+history seem on the surface founded on very small matters. For instance, the famous Parupana-
+Ekamsia Controversy which went on almost throughout the whole of the 18th century, arose from
+a difference in wearing the robe. But these were not small matters considered in the light of the
+ideal of pure and true doctrine (Dhamma) and rule of conduct (Vinaya). See Bode, M.H: Pali
+Literature, p. 64 et seq., for account of the controversy.
+JBRS, XLVI, ii, Dec. 1963
+-
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 19]]
+19
+the truest form of the religion, they seem to have kept monastic life undeveloped and
+unchanged.
+For the same reason, the doctrine and the texts from which it is taught to the pupils
+have remained also unchanged. Therefore, Monastic education which is made up of the
+influence of life of the monasteries and the teaching given in them, has also remained
+practically unchanged.
+For the purpose of this study it will be more convenient to set a time limit than to
+attempt to trace the progress of Monastery education throughout the centuries. The data
+has still to be gathered from Burmese literature and Burmese records' for a well-documen-
+ted history of Monastery education in the past. As mentioned in the preſatory notes,
+research on Burmese subjects has hitherto been almost altogether confined to political his-
+tory, but for a history of education the record of the lives of kings is of less use than that
+of the people. And for the writing of the history of the people the whole of the available.
+historical material2 should be sifted, and the relevant data selected and interpreted. But
+until this history of the people has been written, we must be content merely to describe
+Monastery education in the 18th and the 19th centuries. On the other hand, it will be
+seen from the above historical sketch of the progress of Pali and Burmese monastic
+scholarship, that higher learning with its necessary adjunct of primary education has had
+a continuous existence in the whole of Burma from the 11th century onwards, the number
+of boys and lads who came within the influence of both increasing in the course of the
+following eight hundred years so that when the English Government gathered the first
+statistics of Monastery Schools, in Lower Burma alone in 1870, there were 3,438 Monastery
+Schools with 15,980 novice scholars (Koyins) and 27,793 lay scholars³ (Kyaung thas). The
+1 I have been told that there is valuable material in the monastery histories, and the pagoda
+"thamaings" (i.e., local chronicles) in which the history of the adjacent monastery is usually
+incorporated.
+2 In Burma, the native literature has not yet been studied from the point of view of social
+history. There are the old songs, personal memoirs, local histories (thamaings) and the valuable
+“Sittans” or revenue records in addition to a mass of Hluttaw (or Supreme Council) records on
+administrative and ecclesiastical matters, all this and much more in Burmese alone. Besides this
+material, there are the Pali Chronicles like the Sāsanavaṁsa, Gandavamsa which give the history
+of monastic literature with valuable glimpses of the life of the monks in the past in many an in-
+teresting anecdote (see p. 42, Bode, M.H: Pali Literature, scholarship held by monks in the 15th
+century).
+3 Table: Annual Report 1869-70, p. 19 (It is given in Appendix of this thesis). The figures re-
+present the first statistical information about Monastery Schools. The enumeration was carried out
+by district administrative officers and on the whole the figures seem carefully gathered although,
+as mentioned in the footnote to the table in the Report, the number of monasteries was higher.
+In 1881, when the census was taken for British or Lower Burma, there were 4,279 monasteries:
+paragraph 195, Census Report, 1881. The population of British Burma in 1870 was 2,487,000:
+First Census Report, 1870.
+JBRS, XLVI, ii, Dec. 1963
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 20]]
+20
+20
+following account of Monastery education deals with conditions which prevailed during
+the hundred years before the English Conquest.'
+The one prominent fact about Burmese monasticism which strikes any inquirer, is its
+close weldedness to the life of the people. This is due to two main causes. First according
+to Dana, one of the three main divisions of the Dhamma as taught by the Buddha, charity
+(and love) in thought and deed was a virtue to be fostered in the development of one's
+self. Through the influence of the doctrine, the Burmese people developed that trait of
+'doing all good" for its own sake. As a European Buddhist monk has written: “like a
+flame of fire love kindles love, grows by mere act of loving and nowhere is that great truth
+more understood, and so more followed, than in this Golden Chersonese. Never was
+there a people more generous, more full of charity than this, it has been the wonder of
+every author who has truly gained an insight into the hearts and the lives of this most
+fascinating race. All the land is covered with tokens of their charity 2 from the golden
+glory of the Shwe Dagon Pagoda at Rangoon, gilded all over at intervals of a few years, at a
+cost of lakhs of rupees, by voluntary offerings of the people, to the village well, or monastery,
+or rest houses for chance travellers, down to the little stand containing a few chatties
+(pots) of clear cold water, which even the poorest can set up by the roadside and keep
+daily replenished for the benefit of thirsty passers-by". But the chief and daily expression
+of this charity is the ministration of "the worthy monk" who lives the good life, and
+thereby provides in his person the "worthy recipient" of charity which makes the fulfil-
+ment of the injunction possible. Thus, for instance, the housewife daily “provides” food
+for the monks who can own nothing according to the Vinaya. The monk in return
+teaches the boys, consoles in times of trouble and sorrows by his explanation of the
+unvarying course of the Law that governs the Universe, and offers a valuable personal
+influence in all difficult matters that can be solved only by the advice of a kind, serene
+and detached person. All this he is not bound to do by the Vinaya, but he has done so
+from the beginning, because the religion has elements derived from the human contacts
+besides those contained in the original doctrine. This personal connection of the monks
+and the laymen is the second cause of the close-weldedness of the monastic life and the life
+of the people. That secular life should be so bound up with the religious life of the
+monks was natural in a Burma of a purely agricultural civilization. Even today after a
+hundred years of new influences which tend to divide life into different compartments
+the unity of life remains. But two hundred years ago it must have been more so.
+Moreover, the monks were of the people, recruited from among them and
+usually lived in the monastery of the same village in which they had been born
+1 Burma has been changing during the last hundred years but the changes have been mostly in
+the towns. In remote villages glimpses of the old social order and the old way of life are still to be
+seen, especially in Upper Burma.
+2 The modern expression of this charity is seen in the accumulation of the Endowment Fund of
+the University of Rangoon.
+3 Ananda Maitriya: An Outline of Buddhism, 1911, Publication of the International Buddhist
+Society, Rangoon, p. 3.
+JBRS, XLVI, ii, Dec. 1963
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 21]]
+21
+and brought up. The new recruits did not enter the monastery with the
+particular purpose of becoming monks. Every Burmese boy goes through the
+religious ceremony of Shinpyu through which he is "made a novice" and lives
+for a certain definite period as a regular member of the Order. The period
+customary up to very recent times' was a minimum of three successive rainy seasons, (wā:
+Pali “Vassa”). But since there were no other schools, as at present, most of them stayed
+on for a longer period of three or four complete years to have a thorough grounding in
+education. Some few who wished to become regular monks remained till twenty-one and
+became "ordained" as Upazins. But as there are no permanent vows the entrance into the
+Order, as well as the resuming of the lay estate has always been easy.
+But even before the customary novitiate, it was (and is still) usual for
+Burmese parents to send the boys to the monastery for a training in character, and
+for a preliminary education. Thus, apart from the novices, there have been always
+lay scholars or Kyaungthas who retain their lay dress but live the general life of the
+monastery, and study with the young novices; but who, on the other hand, do not
+keep the rules of the Vinaya. Therefore, in every Monastery School there were these
+two classes of pupils, the novices and the lay boys. Monastery education, therefore,
+includes the education of both, and means the education of a Burmese boy from
+seven, eight, or nine, as the case maybe, when he enters the monastery as a layboy, until
+he leaves it at the age of about sixteen to twenty; that is, if he does not intend remaining
+as a monk after becoming ordained as a fully “admitted” monk. However, it is possible
+to treat the education of the two kinds of pupils together, because they are taught
+together.
+Before we enquire further into this system in which the Burmese boys² were
+educated before the Conquest³ we must first remember the nature of Burmese civilization
+before it came under Western influence.
+1 With the growth of the popularity of English education the town boys could not stay
+even for the minimum three to four months which was customary, as the Anglo-Vernacular
+Schools required from two hundred to two hundred and fifty school meetings a year (at least) from
+them. The majority of the count:y of course still send their sɔns to the mɔnastery for longer
+periods; but, since the economic changes arising from the English Conquest, the pace of
+life is quicker than it used to be, and the period of sojourn is usually shorter.
+2 Through the unfortunate fact that education was carried on in monasteries, the girls
+were excluded from regular education. The daughters of the more well-to-do classes,
+however, seem to have had generally an education as good as that of their brothers. See
+Malcolm, H: (Visit 1836), Edinburgh, 1840. p. 5); Crawfurd, J: Journal of an Embassy to
+Ava 1827, p. 386 et seq., in passage on education speaks of Buddhist nuas who taught
+girls. In the Journal he relates his meetings with Burmese women of rank, and he speaks
+well of their ability and general education.
+3 There were, in 1927, (the latest year for which figures are available), approximately
+18,000 Monastery Schools which have no connection whatsoever with the Department,
+teaching about 200,000 pupils according to their own curriculum and methods. In
+addition there were 1,124 schools with 72,794 pupils (56,465 boys, and 16,32) girls)
+which follow the Department's curriculum and receive grants in kind or money. These do not
+retain the old monastic character because the methods of teaching are the more modern
+methods taught at the Normal Schools and in the Departmental training classes.
+JBRS, XLVI, ii, Dec. 1963
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 22]]
+22
+Economically the people of Burma lived practically until the English Conquest
+in 1826, in a state of complete self-sufficiercy, not only in relation to other countrics but
+even within their own country. Each family was almost a complete production and
+consumption unit. As late as 1829 the English Commissioner of Arakan wrote, "there are no
+artificers in the Province, every Mugh is his own carpenter, house and boat builder and
+all understand wicker work. The women spin and weave and make all the clothes and
+with the exception of potters, silver and blacksmiths, there ars no artificers.”
+Although this was written about Arakan, it represented the condition of practically
+the whole of Burma. The main sources from which the means for the satisfaction of the
+simple needs of the Burmans were derived were (a) the forests which supplied the material
+for house-building, fuel and timber for agricultural implements, (b) household industries
+the chief of which was cloth-making, (c) rivers, and, to a certain extent, the sea from
+which was derived the supply of fish which was the common, though not an important
+item of the Burman's diet and (d) the cultivation of the soil which was the main source.
+of the food supply. Dairy products which are usually an important item in the food of an
+agricultural people were almost unknown as the Burmans, even today, do not relish milk.
+and other articles of food derived from milk. Meat was not a common article of food
+either, because of the Buddhist objection to the killing of animals. Of the four groups
+into which the total income of the Burmans has been divided, the products of agriculture
+were the most important as they supplied the most urgent wants and formed a very large
+part of the total income. This being so, the nature of their civilization was naturally a
+rural civilization and not that of the town, and their life in all respects was intimately
+bound up with agriculture. The mass of the people lived in the village (as they still do
+even after a hundred years of the growth of towns) and the life was similar to that of most
+nations who live the peculiarly intimate and sociable life of agriculturists. It was commu-
+nal in the real sense and co-operation and neighbourliness were such common virtues that
+there was no talk about them. In labour, recreation and worship alike the village was a
+unified thing.
+For instance the ploughing of the unhedged fields was done with the neighbours'
+help, and harvesting and such other labours that required a number of men, were never
+done by hired labour in Burmese times. On the holidays, which in Burma are still "Holy
+days", the religious ceremonies afforded social and recreative opportunities. The life of
+the Burmese villager was thus a harmonious thing, and his energies were expanded on
+related activities which made his life significant. The life of the few towns was also very
+1 Bengal Revenue Consultations, Range 61, Vol. 59, No. 27 of proceedings dated 22nd December.
+"Mugh" was the term used in those days for an inhabitant of Arakan.
+2 Under the Burmese regime the killing of cattle was a criminal offence, eg., in King Bodaw-
+paya's reign (1782-1819) he punished with death the drinking of intoxicants, the smoking of opium,
+and the killing of any large animal, such as an o‹, or a buffalo. Harvey: G. E: Ibid, p. 278. But the
+edicts were hardly necessary for “a strict Burmese will by no means engage in hunting, or indeed in
+killing even a wild animal”, San Germano: Ibid, p. 159.
+JBRS, XLVI, ii, Dec. 1963
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 23]]
+23
+similar to the life of the villages. The same communal feeling and unselfish co-operation
+were equally features of their life. To this day the towns of Upper Burma have a highly
+developed communal spirit. Such co-operation and neighbourliness were possible
+because there were no rigid class or caste barriers. It is true there were at least nominally
+seven classes 1 made up of (1) Those of Royal blood, (II) Public Officers, (III) the Monks,
+(IV) The Merchants and the rich men, (V) Cultivators and labourers, (VI) Slaves and
+(VII) Outcastes. But apart from the Royal Family, the slaves, and the outcastes, all the
+others could intermarry, and mix generally.
+Such was the life to which the boys returned after their period of education in the
+monasteries. The education they received scemed to have fitted them for the life,
+although the fact is not remarkable when one remembers the intimate connection that
+existed between the monastery and the home. The aim of Monastery education was re-
+ligious, but as the whole of secular life was permeated with religion² it was fitting pre-
+paration for it, and could be called national for that reason. The education developed
+Buddhist character, which is indeed a fine character, as we can still see today in some old
+gentlemen who have had the advantage of an education in the monastery in their youth.
+Crawfurd³ and Howard Malcolm, who were both critical of the faults of the people they
+described, found them, on the other hand, polite and cultured. The success of Monastic
+education in giving a literary culture and a real moral training to its pupils was made pos-
+sible in Burmese times by favourable conditions which passed away as the country came
+under a foreign government.
+Of these, the most important was the nature of the Government. The Burmese kings
+were Buddhist, and since Anawrahta's time they were almost without exception, devoutly
+so. Moreover, as shown before, the Dhammasats or the Law Codes became Buddhist in
+the course of time. Thus the King, as well as the spirit of the administration was
+Buddhist.
+And to the monks, the kings and the officials gave deference, consideration and very
+real encouragerent in all their good works, both in their private and public capacity.
+The Hluttaw records show this very real deference of the rulers to the opinions of the
+1 Sce Crawfurd, Ibid. Chapter 5.
+2 As in mediaeval Europe.
+3 Crawfurd. Ibid. p. 12 et seq. 21, 38, 169. See Scott O'Connor's description of an interview with
+Kinwun Mingyi, an ex-minister of King Thibaw, the last King of Burma, in Mandalay and Other
+Cities. but not only were the higher class:s found to be imbued with a buddhist culture, but the
+masses were also found to have been in their degree, similarly b.nefitted by Monastic education. See
+Harvey G. E., Ibid. Note on Administrative Conditions. p. 337.
+4 Selections from the Records of the Hluttaw in Eurmese compiled by Taw Sein Ko, Government
+Translator, Government Printing Press, Rangoon 188), Ch. 1X Ecclesiastical Papers. Also letter
+No. 5, p.160 which is the command of the Supreme Council (Hluttaw) to the Provincial Governors,
+She windawhmu, Yadana-theinga Wun, and Yebetmyin Wun to reassure the minds of the people
+that exemptions from contribution for the maintenance of a cavalry regiment applied for by the
+Chief Monks of the district will be arranged in consultation with the monks, Also the Catalogue
+of the Hluttaw Records Vol. I, 1931 give brief summaries of the letters in Burmese.
+JBRS, XLVI, ii, Dec. 1963
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 24]]
+24
+Monkhood as expressed through the Sudhamma Council of eight chief theras.' Often
+we come across letters granting the intercessions of monks for the life of some condemned
+person or a lightening of taxes or exactions which weighed heavily on the people. The
+monks never meddled in secular affairs and yet their influence on the rulers to show
+mercy and justice to the people is a feature of Burmese history. Again and again we come
+across accounts of their spirited defence of the people against the harder rulers, of their
+effective intercessions for peace, and of their brave discountenancing of the wrong
+doing of Kings. 2 Thus held in veneration and being also provided substantially with
+crown lands to hold in perpetuity, the Monkhood had the necessary conditions for
+thriving. Moreover, in the stable and harmonious social order of Burmese times,
+the organisation of the Order was more perfect, which in turn enabled the enforcement
+of certain standards of virtue among the members within the Kingdom.
+The organisation of the Order (which existed in Upper Independent Burma even as
+late as 1886, when Lower Burma was already 60 years under British Rule) evolved from the
+office of the King's Teacher (archariya) first established with the appointment of Shin
+Arahan by King Anawrahta to the position in the eleventh century; and the succession of
+King's Teachers was unbroken, till the end of the Kingship in 1886, because each King
+chose his teacher on ascending the throne. From this there evolved a whole system of
+local chief monks for each group of monasterics in the villages and the towns receiving
+spirtual and disciplinary direction from the Thathanalaing or the King's Teacher, at the
+Capital. During the 18 th century King Bodawpaya constituted the Sudkammā Council
+referred to by appointing the "four aged and eminent ‘theras' to reform religion in the
+land and end the Parupena-Ekamsika controversy which had divided the Order for a
+century. Later he appointed four more, making a council of eight, since when it became
+the custom for new Kings on coming to the throne, either to confirm the old council (and
+it was usually done) or to appoint new members to it. This Council of eight with the
+Thathanabaing at its head, had the sole concern of looking after the religious interests of
+Burma from the 18th century onwards.4 They appointed the heads of monasteries in the
+3
+1 See description of the organisation of Monkhood of Burma later. A thera is a monk
+of ten years standing.
+2 They always championed the poor, the weak and the distressed, regardless of race or colour.
+For instance Hamilton (year 1727) tells us how distressed European shipwrecked mariners
+always found refuge and attention in the monasteries. If he "wandered into a monastery he
+was safe for the monks would bind up his wounds, feed him, clothe him, and send him as if
+in sanctuary with letters of commendation from monastery to monastery till he reached
+Syriam, there to wait the chance of some passing ship." Hamilton: A New Account of the East
+Indies, vol.11. p.62.
+For their intercession for lives see Harvey G.E: Ibid, p.110, 177, for peace, p.88.
+3 Bode: Pali Litt: p. 75, Hanabhivaṁsa was the Thathanabaing appointed, and he acted as
+President of the Council.
+4 The account which follows is based on a letter from the first Thathanabaing appointed by
+the Br tish Government, Taungbyin-taik-ok Sayalaw to the Editor of Buddhism who enquired
+about the history of the office. See article, "Reɔrganization of the Sangha in Upper Burma", in
+Buddhism, Rangoon. vol.2. no.1. (October 1905) pp. 107–111.
+JBRS, XLVI, ii, Dec. 1963
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 25]]
+25
+City, as well as in the districts, issued orders according to the Vinaya, orders and rules
+for the guidance of monks and novices,1 and decided cases within the province of the
+Vinaya, that is for instance cases, of breach of discipline, or disputes concerning the
+property of the Order. It also had the power to order the arrest and the punishment of
+dissolute monks. For the actual execution of its numerous duties, some of which border on
+the secular, the Sudhamma Sayadaws were given special public officers of the Government.
+There was the Mahadan-wun, or the Chief Punisher, an executive officer of some rank as
+shown by his title of "wun". He directs his eight Mahadan secretaries in the execution of
+the orders of the Sudhamma Council, and prepares with their help the important
+annual report of the Order, the most important part of which is the list of all
+the monks and the novices in the monasteries of each district, with full details
+of age, the number of years already spent as a member of the Order, and various
+other particulars. In addition to the above group of officials there was the
+Wootmyay-wun, or the Commissioner of Ecclesiastical Lands who manages with his
+secretaries the joint property of the Order. Thus in every way the Order was in
+a more healthy state than it is today when this organisation has broken down.
+And, of course, it was the most learned monk in each monastery who
+chosen to teach the pupils.
+was
+It was under such favourable conditions that the Monastic education thrived.
+The three potent influences in Monastery education were those of the monastery.
+environment, the monk teachers, and the content of the instruction.
+First to describe the environment, every village in Burma had at least one Kyaung
+or monastery outside its thorny hedged enclosure, a little distance towards the east or the
+south, directions that are held auspicious. It was built by the village as a community, or
+by some pious well-to-do villager who thereby became entitled to the Honorary title of a
+Kyaung-taga, or "the donor of a monastery". It was the same in the towns, only with
+them the buildings were more elaborate, and bigger in size. The precincts (parawoon)
+of all monasteries were marked off with boundary stones and no layman's house was
+built near enough to allow its shadow to fall within them. A monastery parawoon often
+contained more than one monastery building, but there was always only one head-monk
+called the gaing-ok or tike-ok. The buildings themselves were beautiful in shape and
+colour; being, like the pagodas, concrete expressions of the people's aspirations. As it
+will be seen from the plan, and the explanatory notes in the Appendix to this chapter
+it was a spacious clean building most suitable for the purpose of either study or
+teaching. There was also in each monastery, at least, one “Library box” (Sa-dike) with
+its palm leaf manuscripts, which provided a collection of books for the use of the
+scholars.2
+1 Section B. Chap. II of Selections from the Records of the Hluttaw gives copies of such orders.
+The tone of the letters suggest a real authority.
+2 Malcolm, H., is misleading when he said that the Burmese are only “a people that can read”
+and "not a reading people" because they had no books. (Travels in Burman Empire: 1840, p. 72).
+But he did not know the fact, later found out by Dr. E. Forchammer, (who was delegated by the
+Government in 1878 to collect Burmese Mss.) that most laymen gave their books to the monastery
+and borrowed them only when they wanted to read them. See Forchammer, E: Report on Literary
+Work Performed on behalf of the Government during 1879-80, Rangoon, 1882.
+JBRS, XLVI, ii, Dec. 1963
+F. 4
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 26]]
+26
+The Courtyard or the Kyaung-waing surrounding the buildings was well levelled
+ground, cleared of grass and weeds, and kept well swept and clean, and often sanded.
+This was the playground of the lay scholars.¹ It was, in fact, a pleasant place of shade,
+space, and quiet. There were fruit trees that gave shelter and shade to men, beast, and
+bird. There was also always a good well, often the best in the village, or the quarter in
+which the monastery was situated, and to which the people came to draw water. There
+were walks (Zingyan) where the monks may take their sedate walks necessary to keep
+them in health. It was a sanctuary to which the lay people went on sabbath days. Because
+it was the abode of those who have renounced the world, it was outside the village (and
+separated from the nearby houses if in a town.) But it was never far from it because
+the monk and the layman were dependent on each other.2 Nor was its life cut off from
+secular life by walls and a barred gate, as in the case of ancient European monasteries.
+It was open to all, at all times, and therefore it had no gates in a country with villages
+that were protected by thorny hedges and which gated at sundown. It afforded free
+harbourage for all travellers in a land that therefore needed no inns.³
+Such an environment was in conformity with the traditions of the people in art, life
+and letters, and the fact that its life was apart from the daily life of the people, and yet
+retained daily contacts with it, through, for instance, the daily morning round of “the
+acceptance of food," or Soon Khan, was a valuable advantage. Through this latter cause
+the educands were not severed from the life of their parents, as in the case of the "oblati"
+of Christian monasticism. The lay scholars although generally sleeping in the monastery
+often had their dinner at home, and even the novices who kept the Vinaya discipline
+could visit their parents whenever necessary with the permission of the head of the monas-
+tery. In fact, many of the latter often leſt the Order during the busy planting and har-
+vesting seasons and helped their parents, resuming the robes when such times were over.
+The following is a typical monastery day in pre-British times.
+About (4-4.30 a.m.) 4, a little before daylight "when there is light enough to see the
+veins in the hand", a wooden trough or Kaladet is beaten by the lay scholar or monastery
+servant (Kappiya daga), the sound of which is loud enough to wake the heaviest sleeper,
+1 The novices are not supposed to play, but the seniors usually allowed them.
+2. If you follow the footpath leading eastward from any Burmese village you will inevitably
+reach a monastery in a short time.
+3 The active hospitality of the monk is attested by every European writer on Burma, be he a
+mere traveller, a Christian missionary, or an official on tour. They are given accommodation,
+other simple necessaries such as mats, curtains, pots and pans, firewood etc., and even food if they
+would eat. It has always been so. See Hamilton: loc:cit.
+4 The Burmese used water clocks and the hours I have given would be different according to
+the Burmese division of time which divides a day into 60 hours. The system is now obsolete.
+(Farrars: Burma, App. E. p. 214)
+5 Kapriya-daga is usually a pious old man who has retired from active effort for gain in his
+"third stage of life" to devote the evening and twilight of his life to a preparation for the end.
+He serves in a general capacity as cook, keeper of stores, treasurer, etc. Of course, he accepts no
+wages.
+JBRS, XLVI, ii, Dec. 1963
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 27]]
+27
+everyone gets up, rolls up the mats and puts them by against the walls, and performs
+ablutions. When everyone is ready and in their proper position seated on the floor of
+the hall (Marapkin-see Plar) in front of the image of Euddha a short simple prayer of
+gratitude is offered to the Buddha for his gift of truth (about 5.30 a.m.). Then a light
+breakfast of yagu or rice gruel (the first meal since the noon of the day before in the case
+of the monks and the novices) is consumed (6.15-7 a.m.). After which all go to study
+for the morning is considered the best time for study, especially for memorising (7-8
+a.m.). About 8 o'clock the monks with perhaps the exception of the head of the
+monastery, arrange in order of seniority and start on the daily round to accept alms rice
+(Soon-Khan) from the laity. The round may take from half an hour to an hour to com-
+plete, after which the procession returns to the monastery, the beat by this time getting
+intense for shaven heads and unshod feet. (From about 9 to 11 o'clock the various tasks of
+the monastery are performed by the lay scholars and a few of the younger novices while
+the monks bathe and wash their robes). Meanwhile the second and the last meal of the
+day-i.e. for the monks and novices is set out, and about 11.15 they sit down to it. By
+the time this meal is over it is nigh noon, and soon the Kaladet is again beaten. After
+midday no member of the Order may eat. The novices and the lay boys go to study
+either in the big hall or if it is a big monastery, in small classes in some cool and shady
+corner of the spacious verandah. The monks whose duty is to teach go with their pupils,
+while others either study in the Anauk-Saung¹ (q.v. Plan), do some literary work or
+superintend the copying of manuscripts while the head of the monastery receives visitors
+who usually pay him a visit during the rest hour of the heat of the afternoon, to ask his
+advice or just for conversation.
+By about 3 to 4 p.m. lessons are over. In the cool of the evening domestic duties
+and the remaining monastery tasks are carried out. Then the lay scholars go home for
+dinner. The monks and the novices may perhaps go for a walk to the pagoda nearby,
+or to the village if the monastery is in the country. About 6. 30-7 at one stride comes the
+dark, and the Kaladet is sounded recalling all the inmates of the monastery to its precincts
+for none in robes may be outside the boundaries of a monastery after dusk. From 6.30
+to 8 or 8.30, there is a revision of all that has been learnt by the pupils. Usually the
+venerable head of the monastery hears the repetitions, correcting and guiding when needed.
+The day ends at about 9 o'clock with a short formula of praise in the hall. At the end
+of the prayer an impressive ceremony called the Thathanahlyauk is performed. A young
+novice or a lay scholar with a good voice stands up and announces the hour, the day of
+the week, the day of the month, and the number of years according to the Buddhist era.
+And with this fit ending for a day the community retires to rest. The older monks may
+1 See Ferrars: Burma, 1901, plate 53 for a good photograph showing the study of a head monk
+in a Upper Independent Burma monastery. Plate 40 shows the novices receiving higher instruc-
+tion from a Sadaw, Head Monk, or learned monk. Plate 22 shows an elementary class of what
+appears to be a village monastery. Note the arrangement of lay scholars on the right of the monk,
+and the novices on the left. All the photographs are valuable because they show a monastic life
+which in many a detail was different. They were taken some years before 1892.
+JBRS, XLVI, ii, Dec. 1963
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd. Bangkok, Thailand.
+
+[[page 28]]
+28
+meditate or study for sometime, but the whispering of youth is soon silenced by the
+seniors. And soon nothing breaks the silence except the stray barking of a dog, or
+the sound of music from the distance.
+The second potent factor which worked for the achievement of the aims of Monastic
+education was the personal influence possible when the relation between pupils and
+teacher was also that of the master and disciple. This was especially true when the lay
+scholar became a novice at the age of about 16 and passed on to a higher stage of study.
+For then according to the Vinaya, 2 he was placed under a spiritual and intellectual guide
+or Archariya, who was responsible to the head of the monastery for the guidance of the
+new novice. The duties of this Archariya are well defined in the Vinaya, but in Burma
+they are not strictly followed owing perhaps to their obvious Indian application.
+Nevertheless, the spirit remains, and the Archariya no doubt had a considerable influence
+on the development of the young novice, guiding his reading, explaining difficulties, and
+offering spiritual and intellectual companionship. The importance of this arrangement
+is only realized fully when we remember that there has been no regular Buddhist system of
+Secondary education as for instance in Tibet. 5 The clever boys according to this
+arrangement usually made progress under the guidance and personal teaching of the
+Archariya and were so enabled to lift themselves out above the majority of the
+pupils who leave school with the possession of the mere tools of further study, namely,
+reading, writing and arithmetic. But although the factor of personal influence had
+greatest scope for play in the case of the novice, all the inmates of a cenobeum like a
+Buddhist monastery could not but influence one another living, as they did, a common life,
+eating together, sleeping together and working and studying together.
+The curriculum of Monastic education was also suitable for the formation of character
+and for laying the foundations of Burmese culture. The chief educational organ was the
+Tipitakas in Pali, with their Burmese translations. To this must be added, first the more
+secular arts of arithmetic, astronomy and Burmese medicine; and secondly the religious
+and moral portion of Burmese literature. But it was the Tipitakas which were considered
+important to teach, as well as to learn. Therefore, the study of Pali grammar was a
+necessary part of the curriculum.
+1 Every Burmese boy becomes a novice sometime between the ages of 7 and 16. The ceremony
+(Pali: Pabbejja, Burmese: Shinpyu) and the subsequent sojourn in the monastery for a certain period,
+also considered to this day necessary to make the boy more than “the little animal" he is before
+the Shinpyu, c.f. Baptism. The influence of the custom on school attendance and through the latter
+on the diffusion of the knowledge of the three Rs among the people, procured for the Burmese
+from the earliest times the reputation of a “nation of literates". In 1700, Manucci, writing of
+Pegu, described it as "a Kingdom governed by the pen, for not a single person can go from one
+village into another without a paper or writing”. He was referring to the complex administrative
+machinery which could not have been operated without the unusually high standard of literacy."
+(Harvey, G.E: ibid. p. 351): Manucci: Storia do Mogor. trans. by Irvine, vol. 1. p. 373).
+2 See Vinaya Texts P.P. 157-163, and in Dina Chariyawa.
+3 Das, S.C: Indian Pandits in the Land of Snow, 1833. Lecture 1 gives a good account of the system.
+JBRS, XLVI, ii, Dec. 1963
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 29]]
+29
+As soon as a boy is brought to school he was given a wooden blackboard or a
+parabaik (papier mache folding boards) on which the 33 letters of the Burmese alphabet
+had been written neatly by the monk with a steatite pencil, and after some explanations he
+begins to learn the process of reading and writing simultaneously by copying the letters,
+and calling them out while doing so. Usually a pupil teacher helps him along at this
+stage, and he learns at his own pace the whole of the Thinbongyi, or the traditional
+spelling book, in the usual order. 1 When he has completed this first course in reading
+and writing he is given the first texts 2 to enable him to learn to read connected sentences,
+those most used being the Mangala Sutta³ and the Singālovāda Sutta. 4 From these he
+goes on to the Dhammapada, which is a substantial book, and the Mahāparinibbāna Sutta.
+Through the learning of his earliest reading lessons by the method of repeating these
+ethical and poetical Pali and Burmese texts 5 the boys early came into possession of the
+essential principles of the religion and ethics. 6 At this stage the boys also are taught the
+necessary devotional formulas and daily observances. For instance (a) The Silas
+(Precepts), (b) the Payashikho (devotional formulas), (c) the Payeikkyi (Paritta), a Pali
+text compiled from the Suttas. Besides these, some homilies or works “advising youth”
+on conduct are also often taught although they are not strictly religious. The most
+popular among such works are
+The Lokaniti 7 by U Bok.
+The Puttovāda Son ma sa.
+Kyigan Saya's Questions and Monywe Saya's Responses.
+Sagagyi se myo.
+Anu-Sasana Son ma sa
+and many others.
+1 The Thinbongyi is a well-constructed spelling book, and systematically arranged. It is used in
+all schools at present and forms part of a good series of modern Burmese readers published recently.
+2 Of course either written on parabaiks or palm leaves. It was not till the end of the 19th century
+that the use of slates and printed books became general in the monasteries (Colston: Burma Society
+Journal, vol. 1.). At present in most monasteries, the books used are printed in the numerous
+Burmese and foreign presses that have sprung up especially during the last twenty years.
+3 Sacred Books of the East, vol. X, p. 43, et seq.
+4 Given in Rhys Davids: Buddhism, 12th ed. 1887, p. 143.
+5 All Pali texts have a Burmese translation verse by verse. Therefore, the classical language and
+the mother tongue are learnt together. The practice has enriched the vocabulary of the average
+Burman brought up in the monastery which puts to shame the bare unidiomatic speech.
+6 It is no exaggeration to say that without a knowledge of the Mangala Sutta, Burmese national
+character cannot be properly understood.
+7 Translation by Gray, J: The Niti Literature of Burma. The work is approved by the Text Book
+Committee for use in recognised schools.
+JBRS, XLVI, ii, Dec. 1963
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd. Bangkok, Thailand.
+
+[[page 30]]
+30
+The learning of the above books (of course, with variations according to individual
+preference on the part of the teachers) constituted the literary side of elementary
+instruction. In addition, Burmese arithmetic was also taught in almost everý monastery, &
+These boys in the elementary stage learn the Kogyaung or the 9 x 9 table, learn to
+add, subtract, divide and multiply, the examples taken being from the fields and the market.
+This completes the elementary course for the lay scholars and the younger novices,
+It is the course which constituted the education of the majority of the children in the
+schools. A few, but nevertheless a considerable number of boys, however, stay on after
+twenty as Upazins or fully admitted monks, for the sole purpose of higher education.
+They study Saddā or Pali grammar 2 as a preliminary study and then go to the various
+books of the Tipitaka: Sutta, Vinaya, and the Abhidhamma with their commentaries etc.
+Pali grammar was considered highly desirable to know and even laymen attended classes
+to become proficient in it. This higher education carried on mainly in the canonical
+language of Pali was to a great extent stimulated by the annual Para-ma-byan
+examinations in Pali which was conducted by the Sudhamma Council through its
+executive officers, and which received the encouragement of the Kings.
+The books of the Tipitakas usually studied in the Sutta section were the five great
+Nikayas, namely the Anguttara, Majjima, Digha, Samyutta, and Khuddaka, of which the
+Digha Nikaya "is the best known, the most studied, and the most frequently found”. 4
+The Khuddaka Nikaya is also popular because it contains the 550 Jātaka book and the
+Dhammapada, which are both much loved by the people.
+The Vinaya is also studied but being a code of monastic rules, it is of much less
+educational influence. The goal of Monastic education was undoubtedly the
+Abhidhamma or Buddhist psychological philosophy—the books most used being the
+1 Even in the monasteries of Arakan which were notably backward in education during the 19th
+century, A.B. Savage, Inspector of Primary School;, Akyab, found almost all the monks well versed
+in native arithmetic (Savage's Report in App. XII, A.R. 1870-71) although he could not reward the
+pupils because the rules insisted on a knowledge of western methods. Franci. Mason found the
+teaching of arithmetic fairly general in monasteries (see opinion quoted by J.C. Nesfield. A.R.
+1872-73, p. 121.)
+Ba Bwa (a Burmese Deputy Inspector of Schools) in A.R. 1871-72, p. 56, 57.
+Howard Malcolm. (1836) ibid. p. 72.
+2 Mason, F., "The Pali Language from a Burmese Point of View", in Journal of the American
+Oriental Society, vol. 10, nc, 1 (1872),
+3 These examinations were conducted at the capital and the successful candidates in the three
+standards of Patamagyi, (the highest), Patamalat and Patamange, were honoured by the king
+personally with robes and certificates of honour. These were the University examinations of
+Monastic education.
+Bird, W.B: Wanderings in Burma, 1897, p. 235, gives a description of the buildings at Mandalay
+where the examinations were held in King Mindon's time.”
+4 Bode, M.H., Pali Lit: p. 2, 3.
+JBRS, XLVI, ii, Dec. 1963
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 31]]
+31
+Dhammasangani, Abhidhammatthasangaha and the the Abhidhammatthavibhāvani. '
+Beyond Abhidhamma, the young monk could hardly go further because the secular
+sciences of astronomy 2 (Suryasiddhanta), astrology (Laghugraha), and medicine
+(Dravyaguña) were not fit subjects for monks to study. However, in practice, long
+before he reaches this point he is already practising literary art.
+This was the matter of Monastic education, an educational organ that was wholly
+religious. But because all that was taught either in Pali or Burmese 3 was poetic and
+beautiful in essence as well as in literary style, it had cultural value. Of "useful
+knowledge" as conceived by the English officials who later sought to improve their
+teaching by introducing "the elements of Western knowledge", the pupils learnt nothing
+more than arithmetic. But on the other hand, a thorough grounding in culture, founded
+on the study of the religious literature was given to all who stayed on in the monasteries
+after the elementary course while even those boys who received only the elementary
+course were benefited by training in character given, first, through the carrying out of the
+various duties connected with the common life of the monastery, and, secondly, through
+the actual study of the texts. Moreover, all who went through Monastic education came
+into contact with certain ideals which the later English schools, by the very fact of the
+narrow vocational aims of both the schools and the pupils alike, could not give. It was
+education for education's sake, and in accordance with the belief of the people that
+learning was an end in itself and worth a strenuous pursuit to possess it for its own sake.*
+It was free to the pɔɔr and the rich alike, and the teaching was for ends that were
+above mere gain. It might be argued as it has been argued by Europeans and Americans
+1 Bode, M.H., p. 61.
+2 Although not properly within the religious curriculum most monks studied, and still study
+Bedin or highe: mathematics, and medicine, because the former is necessary to calculate the
+Buddhist Wa or Lent, and other special days connected with the religious life, while the latter is
+good for a monk to know because it enables him to relieve the suffering of others. One of the most
+efficacious Lurmese medicines for plague is the invention of a monk from a monastry in Moulmein.
+The books dealing with "higher mathematics", which are commonly studied in the monasteries are
+(a) Bolinga: a treatise on astrology
+(b) Bobye: The movements of planets.
+Both these two are used for the calculation of the Wa, and other feast days.
+(c) Nayhli: A book which deals with "the revolution of the hours".
+(d) Zay-twet, Commercial Arithemtic (studied by the monks for teaching it to their pupils).
+3 For example, the ten beautiful major lives of the Buddha which attain a high standard
+as epic poetry.
+4 The Lokanti, The Mangala Sutta etc., all extol the virture of learning. It is significant that while
+the ideal of scholarship is dead among men educated in the Anglo-Vernacular Schools (as it is
+possible to see from the dearth of research students in the University of Rangoon), the monk
+scholars of Mandalay and Sagaing etc., have kept the tradition of scholarship alive as we can see
+from the list of publications of the different Burmese presses.
+JBRS, XLVI, ii, Dec. 1963
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 32]]
+32
+interested in education since the Conquest 1 that it was an education which did not
+develop the faculties of the mind, and which relied too much on the memory. But such
+arguments spring from an untrue separation of the mind from the rest of the body.
+Moreover, it has not been proved that a literary education does not develop the mind in the
+same efficient way that is claimed for science, even if the curriculum and the methods of the
+Monastery School prevented the proper development of "the mind” of the pupils, the
+development of their character as a result of the Monastic education was a clear gain.
+But the true value of Monastic education cannot be assessed unless we realise fully the
+simple nature of the old civilization in which it thrived. In this agricultural civilization
+the function of education proper was the training of character 2 according to the
+religious ideals of the community, and that it achieved its function can hardly be doubted
+even under the changing conditions of the last hundred years. The actual training for the
+various occupations was undergone elsewhere, in workshop and field under men who were
+more fitted than monks to teach the processes. Morcover, as the rules of the Order were
+so framed that a monk or a novice might leave the Order and resume his "lay estate" at
+any time, it was possible for the younger novices to participate in the various agricultural
+operations, and it was usual for them to do so. 3 Thus “children grew up among the
+implements they would use in after life. Wooden mills for husking rice, tilt-hammers and
+mortars for pounding, cotton seeders with geared rollers, spinning wheels, weaving looms,
+and other simple machines are in every household, besides agricultural implements, carts,
+boats, all of which are made or kept in repair by the inmates. The workshops of artisans
+of every class are open to view, and the processes are obvious to every passer-by. The
+interest aroused in children is more diversified than in cold countries with their more
+1 And even before the Conquest, all the foreign writers who dealt with the education of the
+Burmese argued on the same lines. For instance San Germano (Missionary): "The study of the
+Talapoins is however rather an exercise of the memory than of the understanding.” ibid p. 181
+Crawfurd (English Envoy 1827) loc. cit. Malcolm (Missionary 1836) ibid. p. 72, “a smattering of
+Pali and astrology etc.,"
+...
+...
+A.D. Maingy (Commissioner of Tenasserim 1833). "The System of education taught. is of little
+practical use and still less calculated to effect the improvement of the mind." In Selected
+Correspondence (q.v. Bibliography) Bigandet (Missionary and a Roman Catholic Bishop in 1855).
+**The masters are unfit to convey instruction in a manner calculated to develop the mind and give
+energy to its faculties ... the faculty of memory alone is heavily taxei... Outline of the Catholic Mission
+p. 63 (q.v. also his Life and Legend of Gaudama, chap: on Monkhood) and also Chief Commissioner
+Phayre (1867) himself, inspite of his more sympathetic attitude towards the aims of Monastic
+education (q.v. Chapter 4 of this study). The history of this hackneyed argument continues
+up to the present time.
+2 As an angry British official wrote annonymously, "What object has education to a country
+Burman except to form his character? And can Burmese character be moulded by studying the
+History or Geography of Europe or standard readers garbled under European supervision?”. He
+was referring to the Anglo-Vernacular Schools in his comparison. (See article in Buddhism
+Rangoon, March 1924, p. 395 et seq. The article is a unique and spirited protest against the lack
+of idealism in the Government's system).
+3 Thus the attendance in all rural Monastery Schools varies according to the time of the year.
+In the rainy season they are full, while in the hot season some of them are almost empty.
+JBRS, XLVI, ii, Dec. 1963
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 33]]
+33
+secluded life. From mimicking the occupations of adults children learn to take part and
+soon begin to take a real share in them. Their trade begins with make-believe wares, then
+from scraps of house and garden produce till it develops into a source of pocket-money,
+and training in business. The years of tutelage merge into the age of responsibility
+without abrupt transition …………”
+For such a simple environment Monastic education was quite adequate, and for the
+mass of the people it is still suitable when given by a real monk teacher according to the
+old methods. It is probable that apart from the teaching of geography, hygiene and such
+new subjects the recognized Vernacular, Lay and Monastic schools of today are not
+superior to the old Monastic schools in the teaching of the essentials of primary
+education, namely the reading and writing of Burmese. 2 On the other hand
+they seem to have been superior to the modern recognized and aided Day Vernacular
+Schools in providing a common life, and more intimate training according to
+native methods. Whatever deficiencies of Monastic education may have been it presented
+no such incongruities as drill, Kindergarten as taught in the usual ritualistic way that is
+common among "trained" Vernacular teachers. All that was taught had meaning and
+significance, and therefore, the knowledge and the culture gained by the pupils was a help
+and a guide to them in later life for which, however, they were not deliberately prepared.
+In its teaching of deference to superiors in knowledge and age, in its inculcation of the
+duties to teachers, parents, and elders; and in generally teaching its pupils the limitations,
+as well as the opportunities of doing good within them, it may be said to provide the
+warp for weaving a life of beautiful pattern on leaving school.
+SECTION TWO: LAY SCHOOLS
+"
+V
+The history of the Lay Schools which supplemented Monastic education in Burmese
+times, is not easy to trace. The Burmese writers, of course as usual, do not refer to
+obvious things. 3 The early foreign writers also do not seem to have noticed their
+existence. In any case none of the writers before Malcolm mentioned them. Malcolm,
+however, speaks of them in connection with the education of women. "They are by
+4
+1 Max Ferrars (some-time Inspector of Schools, and an officiating Director of Public Instruction,
+who was rebuked for discussing principles in his report, in his Burma 1901, p. 10.)
+2 The opinion of the Directors cannot be accepted, regarding “the inefficiency” of the “private”
+Monastery Schools (there are about 18,000) because they do not do much actual inspection even
+among the fewer, and what is considered the more important, Anglo-Vernacular and English
+Schools. The private schools are visited by the over-worked Deputy Inspector, whose conformity
+with departmental ideas is notorious. It would be interesting to carry out a survey of private
+Monastery Schools, and compare their usefulness and influence with the 1,120 aided Monastery
+Schools, and the 4,770 aided Lay Schools.
+3 Writing on "obvious daily things” seems to have been confined to the Persians and the Chinese
+among Eastern peoples. In Burma, the preoccuption of the writers either with pure literature,
+religion, or the history of the past, has deprived us of the material for social history.
+4 He is speaking of Upper Burma which was then under Burmese rule, although Arakan and
+Tenasserim had already come under British government. Ibid. 1840. p. 59.
+JBRS, XLVI, ii, Dec. 1963
+F. 5
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 34]]
+34
+no means denied education, nor is any impediment placed in the way of their attaining it,
+but the monastic character of the schools prevents their admission. Private schools for
+girls are not uncommon in large places." Even Phayre, the Chief Commissioner of British
+Burma, who first initiated the policy of "founding” primary education on indigenous
+schools did not mention them. The fact that they did not find a place in the various
+European descriptions of the education of the Burmese written before the Conquest suggest
+that they were either negligible as schools, or were too few in number to be noticed by
+foreigners. In either case it appears that they were probably not so important as the
+Monastery Schools as educational agencies for the majority of Burmese children. We get
+the verification for this from the first statistics of Burmese “indigenous schools" collected
+for the Department of Public Instruction by District Administrative officers in 1869.1
+According to these statistics there were, in 1869, 340 Lay Schools with 5069 pupils in
+British Burma. The proportion of boys and girls among the pupils was 3,838 boys to 231
+girls. The same enumeration found 3,438 Monastery Schools, with 43,773 pupils (made
+up of 27,793 Lay Scholars and 15,980 Novices.)
+Comparing the numbers of the two different types of schools, the Lay Schools
+numbered only a tenth of the total of Monastery Schools while as regards pupils also,
+they show more modest figures than the monasteries, their total, in fact, amounting to
+less than an eighth of the pupils in Monastery Schools.
+P. Hodern, the first Director, who initiated the idea of founding Primary Education
+on these "secular schools" rather than on the Monastery Schools as Phayre suggested 2
+visited many of them and described their position in the indigenous system as that of
+preparatory schools. “From early morning till late at night with little intermission do
+these old men work with their classes, preparing them for any other school which may be
+within reach." But they were preparatory only in the case of the smaller boys, whose
+parents, if living in towns, naturally wanted them to be educated nearer home, (perhaps
+in the very same street), at the Lay School. In the case of the girls who formed perhaps
+about half 2 the total number of pupils in each school it was the sole means of education.
+Unless they happened to be the daughters of the parents who belonged to the higher
+classes, in which case it was usual to have private tutors,³ they could receive education
+1. A.R. 1869-70. p. 19. The statistics are given in the App. of this study.
+2 See Chap. on Vernacular Education from 1867-1922.
+3 Hodern in the 1st A.R. 1867-68, p. 62-63, also in A.R. para. 34, “The Laymen's schools are as
+a general rule preparatory to the Monastery Schools, and children who commence their education
+in the former almost invariably complete it in the latter."
+4 See the 1870 Statistics referred to (given in App.) which represent the original position of these
+schools, because it was not till 1871 that the Payment by Results system was tried with them.
+5 It is the tradition of the people that it was good for women to know as much as men. One of
+the Burmese woman's ideal of womanhood is Mahothahta's wife whose wit and wisdom, and
+learning is proverbial. Howard Malcolm refers to the education of women and girls in the passage
+referred to, ibid. p. 72. "Women of respectability generally can read, but comparatively few of
+humble life. There is no objection manifested to their learning, but as almost the only schools are
+Kyaungs (monasteries) where girls are not admitted, they are necessarily left untaught except where
+the parents can afford to pay a schoolmaster.”
+JBRS, XLVI, ii, Dec. 1963
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 35]]
+35
+only in the Lay Schools. Therefore these schools seem to have arisen to supply what
+demand there was for girls' education. Mr. Taw Sein Ko, who knew the Lay Schools of
+the "seventies" gives this demand as the main cause of their growth. "The Lay School,
+presided over by a secular Manager or Manageress was intended primarily for the educa-
+tion of girls. The fact that education was resorted to in the latter class of schools and
+that a small proportion of boys was admitted to it was due to the convenience of a
+particular locality.” 1
+As to how long they had been in existence in Burma before the coming of the English
+it is impossible to say with certainty. But there can be little doubt that they came into
+being only some considerable time after the monastic system of education had become
+established among the people.
+When the Department examined the nature of the existing schools in 1870, they found
+them either managed by laymen or women. They were all kept by people who taught
+for "merit" (Kuiho) and no fees were charged.² Some of them may have been
+schools of the type mentioned in the first Education Report for Upper Burma, (A.R.U.B.
+1890–91, p.9.) “managed by men whose fathers kept the school before them, and who
+were especially trained to succeed them in its management”. It is possible that such
+schools kept up for generations existed although there was no stimulation by payment of
+any kind. Because, first, in a simpler civilization the keeping of schools was often
+considered an obligation to the community by many a public-spirited individual.
+was so in England ³ as late as the 19th century. And in India 4 and Tibet. 5
+village schools meant free schools kept by men who earned and wished to earn nothing
+by teaching. Of course, such amateur teaching was possible when it was easy to earn
+a livelihood while doing the particular work of teaching. On the other hand, the fact
+1 Taw Sein Ko; Burmese Sketches. 1913. Vol. II. n. 149.
+2 For many years after most of them became regular grant-earning schools under the Payment
+by Results System, the Dept. found difficulty in enforcing the charging of fees. The fees could not
+be charged because it had never been the custom to do so, and the Manager usually did not receive
+more than the gifts given on certain "worship” days in the year according to the custom of honour-
+ing "those who should be honoured”. (i.e. parents, teachers, and elders.)
+3 Birchenough: History of Elementary Education in England since 1800.
+4 An interesting description of the old Indian 18th century village schools by an officer of Col,
+Baillies detachment has been shown to me by Mr. Das Gupta of the London School of Economics.
+It gives us a different picture of the old form of Indian village education which differs much from
+the account given by Rev. Adam in his Reports of 1835, 1836, 1838 on Vernacular Education in
+Bengal and Behar. I have given the passage in the App. firstly because the description is probably
+not known by historians of Indian education, but secondly because it is illustrative of my general
+argument that under the conditions of native rule, native institutions thrived. Extract in the App.
+is from Memoirs of the Late War in Asia etc. by an officer of Col. Baillies detachment, London 1788,
+App (A) p. 228; Adam's Report is in India Office Lib. 4. H. 3.
+5 The child not intended for the Monkhood is sent to the "Lobta” or village school. The
+school master is called "Gergan" or "Holy Superior", and is a respectable member of the
+community. S.C. Das. Lecture 1: Indian Pandits in the Land of Snow. p, 3.
+JBRS, XLVI, ii, Dec. 1963
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 36]]
+36
+is not to be explained altogether by economics. The original wish must have sprung
+from a certain idealism.
+In these Lay Schools the subjects taught and the methods of teaching were the
+same as those in the monasteries, but in Burmese times they were probably not up to
+the standards of the others. The Monastery Schools could secure good attendance, as
+well as keep their pupils for a longer period, through the practice of undergoing a longer
+term of novitiate, which retained them. Therefore, it was possible for them to give
+the religious and the humanistic training I have described. Probably the Lay Schools
+on the other hand did not keept he boys longer than sixteen, by which age they entered the
+monastery even if they had not done so before. Under such circumstances it was
+difficult to retain the boys. It was the same with the girls, although the reason in their
+case was different. It was usual for girls to stop going to school some time between
+twelve and thirteen, and therefore, they too left the Lay School about the same age as
+the boys. Thus, the Lay School did not have the power to retain either the boys or
+the girls beyond their 12th or 13th year. It is also possible that generally the teachers
+were not as able or learned as those in the Monastery Schools, where some of the best
+intellects of the nation chose to enter the Order. '
+The environment also was natually inferior to that of the monastery in comfort
+as well as in beauty. 2 The school building was after all an ordinary house, without
+that spaciousness of hall and verandah which are the usual possessions of the monastery.³
+Moreover, the fact that they were day-schools and not boarding schools made the
+play of those influences of a common life, which are a feature of Monastery Schools,
+impossible. On the other hand, they fulfilled an important function in the social order
+of Burmese Burma in that they taught the girls whom the monasteries could not
+admit. But if its position as an educational institution was low in Burmese times,
+its future was assured under the different aims of a new government. The new ideal
+was knowledge and not religious culture; and while the monastery was, according to the
+limitation of its virtues, unable to conform to the secular subjects of Geography,
+Arithmetic, and Land-measuring, 5 the Lay Schools, on the other hand, could change
+1 E.g. U Ponnya, the famous poet, who reminds one of John Donne in many ways..
+4
+2 Because the monastery is the best that an individual or a community can build. Section 1
+of this chapter.
+3 See Ferrars, Ibid. Plate 27 for photograph of a good typical Lay School of the early years of
+British Rule. Note the place where the class (about 25 pupils about 10 little girls, and about 15
+little boys) is held. It is the front part of an ordinary Burmese house. Compare it with the school
+room of a monastery. Ibid. Plate 22.
+4 "The Lay managers place their schools unreservedly under the direction of the Government,
+because secular education did not receive state recognition in Burmese times." 1st. Education
+Report for Upper Burma p. 10 (A.R.U.B. 1890-91).
+5 The three subjects "of useful knowledge" introduced into the Monstery and Lay Schools
+according to the schemes (of Phayre and Hodern,) for using indigenous schools, as the foundations
+of Primary education. See chapter on Vernacular education.
+JBRS, XLVI, ii, Dec. 1963
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 37]]
+37
+its curriculum and methods according to the dictates of the Department of Public
+Instruction, because within the latter there were no rules against the teaching of secular
+knowledge. Therefore, when, in 1870, the Department adopted the system of Payment
+by Results for Vernacular education, the Lay Schools were found more willing to receive
+grants and teach according to the Departmental standards than the Monastery Schools.
+..
+From the beginning it was realized by the Director and the Inspector that the
+Government plan would succeed, if it succeeded at all, with the Lay Schools. By 1875,
+four years after the beginning of the Departmental operations, they pronounced the
+scheme a complete success as far as Lay Schools were concerned and began the lament
+on the indifference and apathy of the monks, echoes of which are still heard in the land
+today. Unwin, the first Inspector of Schools, for instance, writes in his report, “Lay
+Schools with fee'd and salaried teachers are, and will continue to be, the sheet anchor of a
+sound system of popular education in the country." Or Hodern, “The system in Lay
+Schools has found more solid foundations and has met with more uniform success.
+Such schools at present do not extend beyond the large villages, but they
+are being established where they never were before, and this is at once the
+best recommendation and the most satisfactory fruit of the system and it is
+satisfactory to notice that under our present plan the attendance of girls has greatly
+increased." Throughout the following fifty-eight years of Departmental direction, the
+Lay Schools have steadily increased from a number which was almost insignificant com-
+pared to that of the Monastery Schools in 1879, to the considerable number of 4,770 re-
+cognised and aided schools 3 in 1927. As I will show later in the chapter on Vernacular
+education from 1867-1922, they form at the present time the backbone of the Depart-
+ment's primary school system. It is the part of the system for the development of which
+the Government is almost wholly responsible. Unlike the Anglo-Vernacular Schools
+which grew as a result of the demand for English education, they grew in numbers mainly
+as a result of the stimulation of the grant-in-aid. From an amateur teacher who taught
+gratis, the Lay School manager became a professional dependent on efficient teaching for
+his livelihood. In producing this new type of school manager the Department achieved
+one of its original aims which was to make the indigenous schools amenable to Depart-
+mental discipline through the grant-in-aid. But, something seems to have evaporated in
+1 Unwin: Report at p. 60. A.R. 1874-75.
+2 A.R. 1874-75. para: 162. The attendance of girls was increased as the direct result of payment
+of grants double the amounts paid for boys.
+3. The figures are for inspected and recognised schools but as most Lay Schools are now grant-
+earning, the figures represent practically all the Lay Schools. It will be seen that the number of
+recognized Lay Schools which outnumbe: the recognized Monastery Schools about (18,000—1,120),
+is much more than the total for Lay Schools (4770); but the fact that among inspected Vernacular
+Schools the latter outnumbers the former, illustrates my point. (See Graph showing the number of
+inspected Vernacular Schools from 1867-1927 in the App. and Table showing the number of
+Monastery and Lay Schools on the list of inspected schools in Lower Burma for 1857-1899 and Table
+for whole of Burma 1889-1927 (also in App.).
+JBRS, XLVI, ii, Dec, 1963
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 38]]
+38
+the process. With the new efficiency of class teaching according to the Western system,
+there has not been a parallel growth of the original personal ideal, and intimate relation-
+ship between teacher and pupil. Culturally also its influence is less effective because the
+teachers are men and women trained in training schools which do not give attention to
+the development of a personality in the teacher, since their object is to turn out teachers
+who can "manage" schools. On the other hand they are full of future possibilities.
+When at some later time, the knowledge has been really possessed 2 by the people they
+will be the schools to teach it.
+The annexed plan is that of a monastery of the usual type common in Burmese times
+and may be taken as the model on which most Hpongyie Kyaungs are constructed. With
+the multiplication of monasteries in British times as a result of the increase of population
+various other types of monasteries have come into existence, but the traditional arrange-
+ments of the chambers and their position according to the cardinal points described below
+are still adhered to.
+The body of the Kyaung consists of the Sanu and the Maraphin. Immediately to the
+east of this central chamber, or hall, is the image chamber, or Pyathat, the Burmese spire.
+The Sanu is really an enclosed verandah used as a reception chamber, and here offerings
+are received and intercourse carried on between the monks and the lay people (Dajaka;
+or Daga-Dagama).
+The central hall or Maraphin as it is called has its floor slightly raised above the level
+of the verandah, which surrounds the whole building. In the centre of this hall is the Raja-
+palindaw or throne on which is placed a large image of Gaudama Buddha. The big box
+of the monastery manuscripts (called Sadike) stands in front of the Raja-palindaw. It is
+in this hall, in front of the image of the Buddha that the teaching is carried on. The
+assemblies for prayer and other purposes are also held in this hall.
+The Ghanda-Kuti is a small chamber used as a dormitory by the Sadawgyi, the head
+of the Monastery.
+To the west of the Maraphin is a small covered verandah called the Kabyin which is
+used as a refectory for the Kyaung-thas or the Lay-scholars of the monastery. Facing this
+to the west is the Anauksaung (or Western quarters) in which the monks are housed.
+1 Which is not altogether real as yet in mɔst schools. Much of (recognized) Vernacular School
+teaching is method bound, and there is a great deal of unintelligent ritualism. The aims of such new
+subjects" as Algebra, Euclid, Manual Training, are not taught in the training schools, and much
+is taught without any real understanding.
+2 Even the text books of this new knowledge are not suitable, because they have either been (until
+very recently e.g. Stilson's Arithmetic) translations by Europeans or Americans unacquainted with
+the Burmese idiom, or they have been the productions of Burmans who have really not understood
+the subject on which they write. The Government offers annually a thousand rupees for the best
+text book in Burmese.
+JBRS, XLVI, ii, Dec. 1963
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 39]]
+39
+The broad verandah which surrounds the whole building is often used for holding
+small classes in hot weather. It serves the usual purpose of a cloister (e.g., for Zingyan
+or meditative walks) and it is made pleasant with pots containing crotons, roses and other
+flowering plants. Broad flights of steps, frequently of masonry, with ornamented balu-
+strades lead up to the verandah from different sides of the building. That facing the
+eastern entrance is reserved for Kings and Sadaws (Buddhist bishops). The western
+flight is used by women. Of the others on the north and south sides one is reserved for
+monks and the other for laymen.
+Monasteries are generally constructed of wood, but in the larger cities and towns, brick
+is used.¹
+1 Bird, G. W., Wanderings in Burma, 1897, pp. 79 80. (Lived twenty years in Burma) See. plate
+50 village Kyaung, 59 Kyaung at the Capital, 52 Palace Kyaung, For typical monasteries of Burmese
+times in Ferrars, Max & Bertha:, Burma, p. VII. The photographs were taken before 1892.
+JBRS, XLVI, ii, Dec. 1963
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 40]]
+N. Entrance
+JBRS, XLVI, ii, Dec. 1963
+40
+PLAN OF A
+HPONGYI KYAUNG'
+E.Entrance
+နာ
+Sadaws &
+Kings
+Open Verandah
+PYATHAT
+(images)
+Hpongyis
+SANÛ
+(Reception Chamber)
+Gaudakudi
+(Dormitory)
+Raja Palin dau
+MARAPHIN
+Open Verandah
+Laymen
+Kabyin (covered verandah)
+A nouk-saung
+(Upasins Qtrs)
+Open
+Verandah
+W.Entrance
+H
+Wome
+BIRD, George W.
+Wanderings in Burma. Lon.:
+J
+Simphin, Marshall, Hamilton, Kent,
+11897. Facing p.79.
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd. Bangkok, Thailand.
+Open Verandah
+$ Entrance

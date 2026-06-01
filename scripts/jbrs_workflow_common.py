@@ -50,6 +50,9 @@ JBRS_OCR_TEXT_INDEX_PATH = JBRS_WORKING_OCR_ROOT / "jbrs_ocr_text_index.tsv"
 JBRS_OCR_PRODUCTION_RUN_LOG_PATH = JBRS_DIRECTORY / "jbrs_ocr_production_run_log.tsv"
 JBRS_OCR_TRANSLATION_HIT_INDEX_PATH = JBRS_DIRECTORY / "jbrs_ocr_translation_hit_index.tsv"
 JBRS_OCR_TOP_EXTRACTION_CANDIDATES_PATH = JBRS_DIRECTORY / "jbrs_ocr_top_extraction_candidates.tsv"
+JBRS_OCR_TOP_INSCRIPTION_EXTRACTION_CANDIDATES_PATH = (
+    JBRS_DIRECTORY / "jbrs_ocr_top_inscription_extraction_candidates.tsv"
+)
 JBRS_OCR_PRODUCTION_SUMMARY_PATH = JBRS_DIRECTORY / "jbrs_ocr_production_summary.json"
 MAX_GITHUB_CONTENTS_SIZE = 1_000_000
 
@@ -258,6 +261,7 @@ JBRS_OCR_TOP_EXTRACTION_CANDIDATES_FIELDS = [
     "ocr_text_path",
     "language_scope_guess",
     "burmese_relevance_guess",
+    "inscriptional_relevance_class",
     "translation_hit_count",
     "text_hit_count",
     "inscription_hit_count",
@@ -267,6 +271,10 @@ JBRS_OCR_TOP_EXTRACTION_CANDIDATES_FIELDS = [
     "recommended_next_action",
     "notes",
 ]
+
+JBRS_OCR_TOP_INSCRIPTION_EXTRACTION_CANDIDATES_FIELDS = (
+    JBRS_OCR_TOP_EXTRACTION_CANDIDATES_FIELDS
+)
 
 JBRS_OCR_LANGUAGE_SCOPE_VALUES = {
     "Burmese",
@@ -285,6 +293,16 @@ JBRS_BURMESE_RELEVANCE_GUESS_VALUES = {
     "non_burmese_inscriptional_context",
     "contextual_only",
     "uncertain_needs_review",
+}
+
+JBRS_INSCRIPTIONAL_RELEVANCE_CLASS_VALUES = {
+    "direct_inscription_translation",
+    "direct_inscription_text",
+    "inscription_commentary_or_citation",
+    "language_history_or_epigraphy",
+    "general_burmese_text_translation",
+    "non_burmese_inscription_context",
+    "uncertain",
 }
 
 TERMINAL_OCR_STATUS_VALUES = {"dry_run_ok", "submitted", "completed", "failed"}
@@ -2485,6 +2503,10 @@ def validate_repo_ocr_artifacts() -> list[str]:
             errors.append(
                 f"OCR top extraction candidate row for {local_file_id} uses unsupported burmese_relevance_guess '{row['burmese_relevance_guess']}'."
             )
+        if row["inscriptional_relevance_class"] not in JBRS_INSCRIPTIONAL_RELEVANCE_CLASS_VALUES:
+            errors.append(
+                f"OCR top extraction candidate row for {local_file_id} uses unsupported inscriptional_relevance_class '{row['inscriptional_relevance_class']}'."
+            )
         if local_file_id not in text_index_by_local_id:
             errors.append(
                 f"OCR top extraction candidate row for {local_file_id} references no OCR text index row."
@@ -2511,6 +2533,29 @@ def validate_repo_ocr_artifacts() -> list[str]:
     if top_twenty_marked < 20:
         errors.append("OCR top extraction candidate report must clearly mark the top 20 rows.")
 
+    top_inscription_rows = read_tsv(JBRS_OCR_TOP_INSCRIPTION_EXTRACTION_CANDIDATES_PATH)
+    if len(top_candidate_rows) >= 20 and len(top_inscription_rows) < 20:
+        errors.append("OCR top inscription extraction candidate report must list 20 rows when enough candidates exist.")
+    for row in top_inscription_rows:
+        local_file_id = row["local_file_id"]
+        if row["inscriptional_relevance_class"] not in JBRS_INSCRIPTIONAL_RELEVANCE_CLASS_VALUES:
+            errors.append(
+                f"OCR top inscription candidate row for {local_file_id} uses unsupported inscriptional_relevance_class '{row['inscriptional_relevance_class']}'."
+            )
+        if local_file_id not in text_index_by_local_id:
+            errors.append(
+                f"OCR top inscription candidate row for {local_file_id} references no OCR text index row."
+            )
+        ocr_text_path = REPO_ROOT / row["ocr_text_path"]
+        if not ocr_text_path.exists():
+            errors.append(
+                f"OCR top inscription candidate row for {local_file_id} points to missing OCR text file {row['ocr_text_path']}."
+            )
+        for field_name in ("reason_for_priority", "recommended_next_action", "notes"):
+            if ABSOLUTE_PATH_PATTERN.search(row[field_name]):
+                errors.append(
+                    f"OCR top inscription candidate row for {local_file_id} contains an absolute path in {field_name}."
+                )
     production_summary = json.loads(JBRS_OCR_PRODUCTION_SUMMARY_PATH.read_text(encoding="utf-8"))
     expected_summary = build_jbrs_ocr_production_summary(
         text_index_rows=text_index_rows,
@@ -2627,6 +2672,7 @@ def validate_jbrs_workflow() -> list[str]:
         JBRS_OCR_TEXT_INDEX_PATH,
         JBRS_OCR_TRANSLATION_HIT_INDEX_PATH,
         JBRS_OCR_TOP_EXTRACTION_CANDIDATES_PATH,
+        JBRS_OCR_TOP_INSCRIPTION_EXTRACTION_CANDIDATES_PATH,
         JBRS_OCR_PRODUCTION_SUMMARY_PATH,
         JBRS_PILOT_SUMMARY_PATH,
         JBRS_README_PATH,
@@ -2967,6 +3013,7 @@ def validate_jbrs_workflow() -> list[str]:
         JBRS_OCR_TEXT_INDEX_PATH,
         JBRS_OCR_TRANSLATION_HIT_INDEX_PATH,
         JBRS_OCR_TOP_EXTRACTION_CANDIDATES_PATH,
+        JBRS_OCR_TOP_INSCRIPTION_EXTRACTION_CANDIDATES_PATH,
         JBRS_OCR_PRODUCTION_SUMMARY_PATH,
     ]:
         text = path.read_text(encoding="utf-8")

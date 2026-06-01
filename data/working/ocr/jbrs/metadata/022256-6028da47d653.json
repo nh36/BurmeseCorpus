@@ -1,0 +1,14 @@
+{
+  "local_file_id": "022256-6028da47d653",
+  "batch_id": "jbrs-ocr-0126",
+  "file_name": "CD-OldBallads.pdf",
+  "path_stub": "Burmese/Burma JBRS/1912/CD-OldBallads.pdf",
+  "journal": "JBRS",
+  "year": "1912",
+  "ocr_engine": "google_vision",
+  "pages_completed": 5,
+  "ocr_date": "2026-06-01T12:37:38.247164+00:00",
+  "source_category": "other_source",
+  "language_scope_guess": "Burmese",
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+}

@@ -1,0 +1,296 @@
+[[page 1]]
+RICE BRAN OIL EXTRACTION PROCESS
+FOR USE IN BURMESE RICE MILLS*
+by
+Myint Pe, Thein Nyun, James Cooperman
+and Freddy Ba Hli,
+Union of Burma Applied Research Institute,
+Kanbe, Rangoon.
+INTRODUCTION
+Burma produces annually an average of 490,500 tons of rice braħ
+which contains more than 50,000 tons of edible oil. At the same time our
+country is importing annually five crores worth of edible oils. We would
+be able to stop this drain on our foreign exchange by extracting the edible
+oil from rice bran and using it for cooking, frying and as salad oil. Why
+has this not been done so far?
+The main reasons are that few people know that there is such a thing
+as rice bran oil and secondly that it can now be extracted profitably in
+Burma. We cannot blame the people for not knowing about this latter
+fact because we ourselves found it out only last year. This paper will
+describe a new extraction unit which has been invented by the Union of
+Burma Applied Research Institute for which patent applications have
+been filed in U. S. A., U. K. and Japan. Previously it was believed that
+rice bran oil could be extracted profitably only with large factories having
+input capacities of at least 50 tons rice bran per day. These factories
+involve large capital expenditures and what is more
+function properly in Burma because the rice bran goes rancid before the
+factory can process it and so most of the oil obtained can be used only
+for industrial purposes.
+PROPERTIES OF RICE BRAN OIL
+serious, cannot
+Regarding the lack of knowledge of rice bran oil it is only recently
+that it was tested scientifically so that its properties became established.
+Tests comparing good rice bran oil with the best cottonseed, corn and
+peanut oil in U. S. A. were reported in the Journal of Industrial and
+Engineering Chemistry, Part I, September 1958, and it was found that
+* Read at the Seventh Annual Research Conference of the Society on 23 XII 58
+with Professor Po Tha in the Chair.
+9
+JBRS, XLII, ii, Dec. 1959
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 2]]
+10
+MYINT PE, etc.
+rice bran oil fried shrimp, chicken, onion rings and fish faster and
+gave a more golden brown colour. Also the foods fried in rice bran oil
+absorbed less oil.
+Tests have also been carried out here with our rice bran oil and it
+has proved to be a good edible oil with no unpleasant effects, and possesses
+satisfactory frying properties. We shall see later that it also is quite
+economical.
+RICE BRAN OIL EXTRACTION
+Three main qualities of Rice Bran are normally obtained from the rice
+mills in Burma.
+(1) First Polishing Rice Bran contains 12 to 16 percent by weight
+of oil. It has less fines and starch content and so is most
+suitable for rice bran oil extraction.
+(2) Second Polishing Rice Bran- contains less oil, 7 to 11 percent and
+more starch which is objectionable for rice bran oil extraction.
+(3)
+Parboiled Rice Bran- has a high oil content of 20 to 25 percent
+but the parboiled rice bran output is considerably lower than the
+First Polishing Rice Bran.
+The high pressure squeezing method of edible oil extraction used for
+groundnut and sessamum is not so successful for rice bran because even
+with high pressures, only a portion of the rice bran oil can be squeezed
+out of the rice bran. So a solvent-extraction method has to be employed.
+The UBARI Rice Bran Oil Extracting Unit is unique in the world because
+it can operate profitably with a small input capacity of only 4 tons per day
+which is very suited to Burmese Rice Mills whose average output is about
+4 tons of Rice Bran per day. The initiative for this development is due
+to Mr. Charles Schuh, who was with the Union of Burma Applied
+Research Institute as Armour Research Foundation Specialist in unit
+operations.
+The basic principle is to percolate a solvent through the rice bran.
+This solvent extracts the oil from the bran and the oilheavy solvent is eva-
+porated, leaving the oil to be filtered. The bran is heated to drive off all
+the remaining solvent and can be sold as a protein rich cattle feed. This
+bran is better for cattle feeding because it no longer will get rancid.
+JBRS, XLII, ii, Dec. 1959
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 3]]
+RICE BRAN OIL EXTRACTION PROCESS
+11
+THE PROBLEM OF RANCIDITY
+The fresh rice bran as it comes out from the rice mill is a wholesome
+powder, with a pleasant nutlike odour and possessing highly nutritive
+properties. But within a few hours it starts to get rancid due to the for-
+mation of free fatty acid which develops at the rate of 1 percent per hour.
+Some regard the rancidity as the action of enzymes, catalysed by moisture.
+A satisfactory explanation is so far not known. However, rice bran oil
+has been demonstrated to oxidise rapidly in the bran, once the bran has
+been polished from the grain. One of the principal causes of deterioration
+of bran during storage is the hydrolysis of glycerides of the oil in bran.
+The problem of rancidity is a serious one and we have solved it by
+the unique design of the extraction unit which enables every Burmese rice
+mill to have its own rice bran oil extracting plant attached to it. In this
+way, the rice bran can be processed immediately it is polished off the
+rice grains in the rice mill. So there is no time for free fatty acid formation
+and the oil coming out is free from fatty acids. Also a much higher
+yield is obtained as there are no losses of oil on processing.
+EXPERIMENTAL WORK
+Laboratory experiments were conducted to test the production of oil
+and a number of tests were run with 30 pound batches. A detailed study
+on the degree of vacuum, rate of percolation, height of bed, solvent-bran
+ratios and estimation of retained solvent in the bran bed after extraction. •
+was made.
+On the basis of data collected from semipilot plant operation
+in the laboratory a pilot plant was designed to conduct process research
+on the large scale to confirm laboratory result and later to set up a
+commercial plant of 4 tons per day capacity.
+As a result of problems which were met in the pilot plant, the idea
+was developed of introducing fresh solvent at intervals. Many variations
+were tried. Finally a satisfactory result was achieved for commercial
+application. The use of vacuum technique is justified economically because
+it helps to keep the operating time to a minimum. This factor lowered
+the capital outlay and cuts operating cost to an appreciable extent. The
+minimum solvent to bran ratio, reduction of solvent loss and the suitable
+boiling range of the solvent contribute towards the economics of the
+plant.
+In addition, the use of low cost, locally fabricated unit decreases the
+capital cost and also the amount of foreign exchange investment.
+JBRS, XLII, ii, Dec. 1959
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 4]]
+12
+MYINT PE, etc.
+COST ANALYSIS OF UBARI RICE BRAN OIL
+EXTRACTION PROCESS
+Capacity 4 tons of Rice Bran/ per 16 hour working day. (2 x 8 hour shifts)
+Extraction machinery, installation, conveyors etc.
+Fixed charges per ton Bran perday processed
+K. 40,000.00
+-
+K. 10,000.00
+Operating costs per ton processed
+Depreciation 10 percent
+Interest on investment @ 4 percent
+Maintenance
+Solvent 5 percent loss/ run @ K. 3.50 per gallon
+Power costs 35 KWH/ ton @ 20 pyas per KWH
+Labour, 3 men per shift
+Insurance and miscellaneous charges
+Assuming cost of Bran per ton
+Manufacturing cost per ton
+:
+:
+:
+...
+K. 5.00
+K.
+2.00
+...
+K.
+0.70
+K. 84.00
+K. 7.00
+...
+K. 12.00
+K. 2.30
+K. 113.00
+K. 55.00
+K. 168.00
+Oil yield average 14 percent - 314 lbs/ ton of Bran.
+For fresh bran input to the unit, the output of oil is free from fatty
+acid and can be sold as edible oil.
+-
+Residue is extracted rice bran .8 tons/ ton of Rice Bran input. This
+extracted rice bran has an average sales price of K. 76.00 net per ton
+(K. 126.00 including bags and labour alongside boat).
+✓ Deducting K. 60.00 for the sale of extracted rice bran, the net manu-
+facturing cost works out to K.108.00 per ton Bran which yields 314 lbs=
+87.5 viss oil.
+Cost of oil K.12.40 per tin (10 viss)
+-
+Comparing with present day wholesale prices of groundnut oil @ K. 45.00
+per 10 viss tin, it is seen that Rice Bran Oil could compete in the market
+very readily.
+ACKNOWLEDGEMENT
+The authors are grateful to Mr. Niels C.Beck, Director-General of
+Union of Burman Applied Research Institute, for permission to
+present this paper.
+JBRS, XLII,ii Dec. 1959
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 5]]
+RICE BRAN OIL EXTRACTION PROCESS
+Table I.
+SINGLE PASS-PERCOLATION.
+Experimental result of extract with Institute pilot plant.
+Wt of
+Mise.
+Extraction.
+Run
+Wt of Bran
+Solvent
+Collected
+Time
+% Yield
+200 lb
+242 lb
+931 lb
+60 min
+7. 1%
+180
+200
+20.25..
+90 min
+11. 6%
+184
+228
+160
+120 min
+14.45%
+286
+333
+146
+260 min
+14. 3%
+173
+2671
+266
+60 min
+.
+15. 4%
+381
+398
+338
+180
+min
+9%
+351
+420
+371
+180 min
+18. 5%
+..
+0
+355
+395
+288
+60
+14. 3%
+Table II.
+TWO STAGE EXTRACTION.
+13
+356 lb
+422 lb
+2383
+15 min 20. 8%
+107 lb
+20
+min
+355
+412 lb
+341
+15 min
+..
+7.5 %
+108 Ib
+15 min (Total oil
+content is
+9.38%)
+358
+428 lb
+301
+25 min
+5.75%
+159 lb
+132
+10 min
+(Total--
+12.3%)
+354
+429 lb
+298
+160 lb
+171
+400
+484 lb
+275.5 lb 1
+28
+184 lb
+221 lb
+120 lb
+156
+22× 22
+20
+15%
+25
+13.376 %
+14. 15%
+JBRS, XLII, ii, Dec. 1959
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand

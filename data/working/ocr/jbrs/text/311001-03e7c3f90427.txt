@@ -1,0 +1,991 @@
+[[page 1]]
+POPULATION WAVES*
+-
+1. In thinking of population growth usually the notion is applied
+consciously or unconsciously — that such growth takes place along a smooth
+curve: either in the form of MALTHUS' geometric progression, the
+interest law, or according to VERHULST-PEARL'S logistic equation, or
+along such curves as have been worked out recently by Dr. KUCZYNSKI
+and his collaborators in order to trace the decline of the European race.
+Practical statisticians, no doubt, realise that populations actually show con-
+siderable deviations from such models, but they have tended on the whole
+to consider such "irregularities" as "random variations" which are best
+smoothed out.
+Having worked on a variety of problems which all involve assumptions
+about the manner in which the numbers of a population change, it appears
+to me now rather doubtful that the preference given to smooth curves is
+justified even as a first approximation. Smoothing always means introduc-
+ing a definite hypothesis about the nature of the causes that determine the
+value of the variable under consideration; in eliminating the irregular oscil-
+lations typical for a population graph, we assume, in fact, that there are
+two sets of causes operating: a fundamental, basic set of causes which, left
+alone, would produce the picture of our smooth curve, and a second set -
+more irregular and haphazard in occurrence and intensity -- which accounts
+for the superimposed aberrations.
+The justification of the procedure of smoothing thus depends essentially
+on the validity of the hypothesis that the basic causes will manifest them-
+selves smoothly. If it can be shown that this is not the case, that the basic
+causes themselves are bound, in fact, to generate oscillations, then the
+operation of smoothing will lose its rationale. Its application will merely
+blur the picture, and possibly even block the way for a correct understanding
+of the causal effects which we wish to elucidate.
+2. The oscillations of which I am talking can easily be demonstrated
+in any Census Report. The following table, taken from the Burma Census
+1931, gives the age-distribution of 10,000 persons of each sex for the
+indigenous population of this country ¹. The figures have been compiled
+for the indigenous inhabitants only, because they reveal best the pure effects
+of population growth, and are not, in any way, affected by migration.
+1
+* A lecture given to the Society on September 6th, 1940.
+Census of India, 1931, Vol. XI, Burma, Part I, Rept. by J. J. BENNISON, Rangoon
+1933, pp. 73 ff.
+See also Census of India, 1921, Vol. X, Burma, Part I Rept. by S. G. GRANTHAM,
+Rangoon 1923, p. 121 ff.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 2]]
+2
+JOUR. BURMA RESEARCH SOC.
+XXXI, I, 1941.
+I
+Age
+Group
+MALES
+FEMALES
+1931
+1921 1911 1901
+1931 1921 1911 1901
+0-
+-
+5
+1397
+1265 1354 1433
+1414
+1286 1372 1442
+-
+5 - 10
+1282 1271
+1355
+1301
+1236
+1260
+1260 1344 1277
+-
+10 15
+1186 1223
+1236
+1143
+1134
+1146 1140 1046
+15 --- 20
+916
+1002 899 877
+1002 1082 966 961
+20 25
+---
+886
+862
+775
+828
+997 941
+864
+917
+-
+25 - 30
+838
+777
+760
+828
+848
+801
+792
+850
+30 --- 35
+776
+722
+767
+799
+737
+687
+727
+756
+-
+35 - 40
+604
+600
+656 626
+560
+539
+584
+552
+-
+40 - 45
+532
+571 566
+539
+504
+558
+552 521
+-
+45 - 50
+412
+446
+409
+407
+397
+406
+374 369
+-
+50 - 5.5
+361
+410
+373 383
+358
+418
+384
+395
+55 --60
+60 65
+-
+283 252
+241 244
+278
+251
+242
+241
+239
+274 278
+229
+264 278
+-
+65 - 70
+130 133 133
+130 126 128
+Its
+The table shows a remarkable instability of the age-structure.
+characteristic features can be studied most effectively by averaging for the
+four censuses the frequencies in each age-group and recording for each
+census the deviations of the actual frequencies from their mean. The result
+is shown in Fig. 1.
+It will be observed that there was in 1901 an abnormally high frequency
+of children in the age-group 0-5 which subsequently produced a wave of
+survivors in the later census records. Similarly the low frequency for the
+age-groups 10-20 in 1901 can be traced as a depression in the waves for
+the following three decades. The waves for females (shown in the Census
+Report 1931 page 73 ff.) run exactly parallel. It is obvious that the new
+wave crest of children which is seen to develop in 1931 originates from the
+survivors of the wave of female children in 1901.
+These waves have a sufficiently large amplitude to exert a significant
+influence on the economic and social conditions of the country. This became
+painfully evident during the Great Depression, in 1929 and the succeeding
+years. There was during those years an unusually large proportion of
+indigenous males in the age-group 15-30 which forms, of course, the most
+active element of a population from which the new entries into the labour
+market are drawn (See Section ABC of the 1921 and DEF of the 1931
+wave). With agriculture disorganised by the impact of the unprecedented
+depression, a large number of these persons - who normally would have
+found accommodation in agricultural pursuits were forced to look for open-
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 3]]
+0
+°
+- 26
++ $
+1021)
+POPULATION WAVES.
+1901
+- 30
+25 ☑0 35
+AGE
+GROUPS
+AGE
+20 25 50
+GROUPS
+40
+4
+1931
+1911
+အ
+3
++0
++15
+-28
+-10
++24
+0
+-25
+..
+AGE DISTRIBUTION OF INDIGENOUS MALES
+SINCE 1901
+Fig. 1.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd. Bangkok. Thailand.
+
+[[page 4]]
+4
+JOUR. BURMA RESEARCH Soc.
+XXXI, I, 1941.
+ings in the industrial labour market which up to that time had been the
+undisputed domain of the Indian immigrant¹.
+Unfortunately, however, the industrial labour market was, during the
+critical years, itself in rather congested condition and offered singularly bad
+chances of accommodation. This can be clearly seen in Fig. 2, in which
+an estimate is shown of the total Indian population in Burma from year to
+year².
+-
+:
+As migrants all over the world, the Indians follow the lure of prosperity:
+hence the striking correlation between the population figures and the Values
+of Burma's foreign trade which may be taken as a rough index of prosperity.
+Indian labourers come in large numbers whenever they are wanted, attracted
+by the prospects of good earnings _ and not driven by famine and desti-
+tution, as the popular saga has it - and they go whenever their earnings
+decline, thus saving Burma the curse of unemployment. But as in all
+markets, this delicately poised adjustment can be thrown out of gear, if the
+situation changes too abruptly and catastrophically. This actually happened
+in 1929 to a certain extent. Although the Indian population contracted
+during the depression by approximately 12%, the contraction naturally was,
+a somewhat slow process which extended over years. Many Indians, we
+may presume, who had come on advances before 1929 found it difficult to
+work off their debts and to accumulate sufficient savings that made it
+possible, and worthwhile for them, to return to their native districts. Thus,
+from 1929 to 1932, a distinct lag can be observed between the population
+figures and the values of trade, a lag which indicates the degree to which
+the industrial labour market was glutted during the three years.
+-
+This unfortunate constellation of a large wave of indigenous males
+looking for employment, and of an industrial labour market which offered no
+chances of employment, undoubtedly contributed to the series of unprece-
+dented riots, and the intense growth of racial animosity, which - busily
+fanned by interested parties _ has never since subsided, and which is likely
+now to produce the usual crop of obnoxious restrictionism, although
+among other things the labour market is long again in perfect adjustment,
+and although at the present, and during the next years, the entry of in-
+digenous people into the labour market will be by no means brisk (See the
+depression GHD of the 1931 wave which is relevant for the present phase).
+3. Naturally the question arises, how do such waves originate?
+little reflection shows that population cycles easily can be produced syntheti-
+1
+-
+-
+A
+"The economic depression* - says BENNISON 1.c. p. 77 - "has caused a great
+deal of unemployment, and this has apparently been aggravated by the unusually large
+proportion of males between 20 and 30."
+2 For details consult the Report of the Indian Immigration Inquiry Committee 1939-40
+which is at present in the press.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 5]]
+ESTIMATED INDIAN POPULATION
+1000000
+IN
++25
+1.2-
+VALUE OF BURMAS FOREIGN TRADE
+ESTIMATED INDIAN POPULATION IN BURMA
+100
+1.1-
+VALUE
+OF TRADE IN
+10000000
+1.0
+50
+.8
+DUDERS
+25
+INDIAN DECK PASSENGERS RECORDED AT RANGOOR
+RATIO SCALES
+1900
+I VALUE OF TRADE
+ESTIMATED INDIAN POPULATION
+ALL OUTGOING PASSENGERS
+INCOMING WOMEN
+375
+350
+CALL INCOMING PASSENGERS |
+325
+1905
+1910
+Fig. 2.
+1920
+1925
+1930
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+300
+POPULATION WAVES.
+INDIAN DECK PASSENGERS RECORDED AT RANGOON
+ALL INCOMING & OUTGOING PASSENGERS IN 1000'S
+INCOMING WOMEN IN 100'S
+200
+1935
+1930
+5
+
+[[page 6]]
+6
+JOUR. BURMA RESEARCH SOC.
+XXXI, I, 1941.
+cally. Take a species, say a beetle, which lives three years only, and which
+propagates in its third year of life. Let the survival rate of the first age-
+group be , of the second +, and assume that each female in the age 2-3
+produces, in the average, 6 new living females. (These values are, of
+course, entirely arbitrary). Then a population of these beetles which, we
+may assume, has in a certain year 1 a thousand females in each age-group-
+males are irrelevant in matters of reproduction - will produce waves in the
+following manner :——
+II
+Age Group
+1
+2
+3
++
+-
+0 1
+1000
+6000
+1999.9
+1000
+1
+2
+-
+-
+2
+1000
+500
+3000
+1000
+3
+1000
+333-3
+166.6
+1000
+Total
+3000
+6833-3
+5166
+3000
+So long as the rates of fertility and mortality remain constant, this
+development will, of course, continue indefinitely in regular three-year cycles.
+The population will oscillate round a stationary level, as the Net Repro-
+duction Rate R (See Appendix, formula 3) is here assumed to be
+1.
+What determines the amplitude of these waves? Without going into the
+Mathematics of the process, it can be seen by means of simple Arithmetic,
+that the amplitudes depend on the assumptions made with regard to the initial
+distribution of females in the age-groups. If one takes in the year 1 the
+numbers 1000, 600, 200 respectively, it is easily seen that the amplitudes of
+the resulting waves become much smaller: and with the numbers 1000, 500,
+167 instead, the waves disappear altogether.
+For a mathematical analysis interested readers are referred to the
+Appendix where a system of equations is given from which all the relevant
+features of the process can be deduced with greatest ease. Here only the
+following observations will be used:
+I. For any given set of fertility and mortality conditions there exists
+always one characteristic age distribution (1000:500:167 in the above
+example) which does not give rise to disequilibrium waves; but whenever
+the population deviates from this equilibrium structure, waves will be set up
+with amplitudes that depend entirely on the degree of these deviations.
+II. It is not necessary that the population should be stationary, as in
+the above example; waves will also occur, if the Net Reproduction Rate
+R> 1, indicating a growing population, or if R < 1, so that the population
+eventually dies out.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 7]]
+7
+POPULATION WAVES.
+III. It is not necessary that the waves repeat themselves year after
+year with the same amplitude. The occurrence of dampening, or of magni-
+fying factors depends entirely on the given fertility and mortality rates.
+IV. Similarly the wave length depends entirely on those rates, so that
+any change of the fertility and mortality conditions will produce waves of
+a different character. Wave length as well as the degree of dampening,
+and the amplitudes will be modified, if the situation changes.
+-
+-
+4. The assertion that a population may oscillate even under absolutely
+constant conditions will encounter, no doubt, a good deal of mental inertia.
+There is in our mind a strong tendency - one might call it a natural preju-
+dice to associate stable conditions with stable effects. Thus Prof.
+PEARL was very surprised when he discovered in breeding experiments
+with the fruit fly Drosophila that, even while keeping "the food conditions
+always optimal both as to quantity and quality", he obtained nevertheless
+the striking result.... that, during both the growth period, and thereafter,
+there (were) violent oscillations of the population in size. . . In fact these
+waves "- he reports¹, “are perhaps the most characteristic feature of popu-
+lation experiments of this particular type. It has not so far been possible to
+devise any method of holding these populations in a steady state at the level
+of the asymptote, when there is at all times an abundance of fresh food. The
+population simply waves up and down about an average size ". 2
+"
+,,
+However, the feeling of surprise will quickly vanish, once one has got
+a clear grasp of the idea that a population system constitutes a kind of a
+natural pendulum. Readers will find the analogy most helpful: a physical
+pendulum also has one characteristic equilibrium position (when it is verti-
+cally hanging downwards) in which it does not produce any oscillations;
+but when it is disturbed in its position, it will begin producing waves pro-
+portionate to the degree of the disturbance.
+--
+In-
+In Nature, of course, neither mortality rates nor - in the age of birth
+control fertility rates will remain constant for any length of time.
+ventions, sanitary improvements, general progress will effect steady changes
+of environment, and in addition epidemics, wars and famines will administer
+to a population system from time to time what might be described as erratic
+shocks. Analytically it is presumably best to keep these two types of change
+1 R. PEARL: Biology of Population Growth, in Proc. of the World Population Con-
+ference, Geneva 1927, publ. Arnold, London 1927.
+2 In Nature constant conditions are, of course, difficult to find, but one may take.
+perhaps, the blood stream as an example of a self-regulating system which provides an almost
+constant environment to micro-organisms such as bacteria or amœbæ that have found their
+way into it. It would be interesting to learn more definitely as to how such parasite popu-
+lations increase in number, and it may not be unlikely that oscillations in their numbers
+account for such curious phenomena as e.g. the occurrence of saddleback curves in the
+clinical picture of Malaria.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 8]]
+8
+JOUR. BURMA RESEARCH SOC.
+XXXI, I, 1941.
+well apart: I conceive of erratic shocks as events which, at irregular
+moments of time, alter abruptly the numbers of a population, without modi-
+fying the trend of the gradually changing mortality and fertility conditions.
+In terms of the model discussed in the preceding section such erratic shocks
+amount to arbitrary modifications of the numbers involved. They will
+naturally set up fluctuations, as they may cause a population to deviate from
+its equilibrium structure (Proposition I), but they will not influence the
+wave length and the degree of dampening.'
+It is otherwise with the more steady changes of environment. The
+difficult problem as to how population growth responds to gradual changes
+of the coefficients of mortality and fertility can be best attacked, perhaps,
+along the following lines: Suppose one divides a given time length t into
+smaller time intervals 0-1-2-3-......t in such a manner that during each
+time interval conditions may be considered as practically constant.
+A popu-
+lation which may have been in equilibrium in the time interval 0-1 will
+then, in the moment 1, come up against a different set of circumstances with
+regard to which it is not any more in equilibrium (Proposition I). Hence
+from 1 onwards oscillations will be generated which may, or may not, have
+died down at the time 2 (Propositions I and III). But at that moment a
+new set of circumstances is encountered which again sets up fresh waves,
+and so forth. With each change of circumstances new waves will be gene-
+rated. These waves will necessarily be irregular in appearance; not only
+will their amplitudes vary, but also their wave lengths, and the degrees of
+dampening will change from interval to interval. (Proposition IV)².
+5.
+-
+It is not surprising, therefore, that such disturbances did not find
+much attention from population theorists who — under the spell of fashion-
+able doctrines on Induction-were disposed rather to looking for "Regu-
+larities in Nature". However, in doing so one blocks the way for an
+understanding of the causal influence of a changing environment on popu-
+lation growth, because it is just by these irregularities that the intervening
+causes make themselves felt. As in the case of the physical pendulum, so
+here the occurrence of regular waves (or the complete absence of oscillations)
+signifies the absence of disturbing causes. If one wishes for instance to
+explain the influence of climatic, and other changes of environment on the
+numbers of certain wild animals, such as are shown ³ in fig. 3, or in the
+1 Cp. R. FRISCH: Propagation and Impulse Problems in Dynamic Economics, in
+Essays in honour of G. CASSEL, London 1933.
+2
+GRANTHAM (1.c. p. 137) suggests that the disturbed condition of the population
+in Burma goes back to the Talaing wars a century ago. Although this is not impossible,
+I feel that this view somewhat overstresses the relative significance of erratic shocks such
+as bloody wars as compared with the effects of gradual changes of environment.
+3 Reproduced from A. D. MIDDLETON: Periodic Fluctuations in British Game
+Populations, J. Animal Ecology III, 1934, p. 231f.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 9]]
+Numbers killed
+1200
+1000-
+800-
+600K
+400-
+200
+500]
+300-
+200
+100-
+500-
+Rabbit
+400
+300-
+200
+100-
+1870
+1880
+POPULATION WAVES.
+1890
+1900
+1910
+1920
+1930
+Fig. 3 The numbers of partridges (Perdix perdix), hares (Lepus europaeus) and rabbits (Oryctolagus
+cuniculus) killed on Norfolk (b) estate, 1863-1931. (Figures smoothed a+b+c.)
+well-known cases of locusts, herrings³, rats and many others which are
+known to fluctuate considerably, the problem would not seem to be one of
+exploring causes for the regular ups and downs of the cycle. Because the
+regular waves are generated by mere inertia; what one really has to account
+for are the very marked irregularities which occur².
+1 "The method of age determination in fish.... was applied with great success for
+the study of herring, and it soon became established that the main cause of the fluctuations
+in the great spring herring fishery was the success, or failure of the individual broods, or
+year-classes comprising the stock" E. HIGGINS: Quarterly Review of Biology, 9, 1934,
+P. 286.
+2
+MIDDLETON observes (1.c. p. 244): "The more regular cycles in numbers of
+North American animals or of Scandinavian Lemmings are most obvious in populations
+which have little contact with man, and it is likely that man's activities tend to mask any
+natural cycles among animal populations. This view is also supported by the fact that
+grouse, whose environment is least subject to man's interference, show a more definite cyclic
+fluctuation than any other British game animals".
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+9
+
+[[page 10]]
+10
+JOUR. BURMA RESEARCH SOC.
+"
+XXXI, I, 1941.
+A case in point is the celebrated pig-cycle of the Economists. This
+curse of the pig industry" has caused a great number of inquiries, and
+even Royal Commissions have sat on pigs in order to suggest remedies 1.
+The explanations given, however, do not seem to be satisfactory. Attempts
+to dissolve the variations of the pig population into regular harmonics have
+failed 2, and explanations in terms of a simple lag in the adjustment of
+farmers to changing prices have not been satisfactory either ³. More
+complicated "epi-cyclic" models have to resort to imputing into farmers
+an alertness and reagibility to prices, and a tendency for making speculative
+errors, which exceeds by far the nervous mentality of excitable stock brokers.
+Such theories, it would appear, rather exaggerate the influence of prices on
+human behaviour.
+The farmers decisions, we may presume, are very little concerned with
+the pig population as a whole: what interests him is merely the number of
+pigs which he is going to keep, and the date suitable for their slaughter.
+With considerable inertia he will stick to the practice of his forefathers,
+and only from time to time will he introduce innovations, and make altera-
+tions of his plans, if market conditions have taken an entirely unexpected
+turn. Thus the pig is left sufficient latitude to do what it has to do by law
+of Nature: namely to react with most violent oscillations to the artificial
+disequilibrium conditions under which it is kept. It is not the farmer who
+is primary responsible for these waves, his contribution would seem to consist
+rather in making these waves more erratic, and more irregular than they
+would occur with pigs in the wild state.
+6. In recent years some interesting theories have been developed
+by LOTKA, VOLTERRA, NICHOLSON, BAILEY and others * which trace
+fluctuations of animal populations to interactions of prey and predator, or
+host and parasite. VOLTERRA'S equations in their simplest form are
+given in the Appendix (see formula 7); they have been experimentally
+verified by GAUSE whose observations are reproduced' in fig. 4 showing
+the struggle for existence of a yeast population and a predatory slipper
+animalcule.
+At first sight it might appear that these theories are at variance with
+the contention of this essay that cyclical elements in population growth are
+present even in cases where no parasites or predators interfere with the
+development. A closer comparison, however, leads to the conclusion that
+1 Rept. of the Reorganisation Commission for Pigs and Pig-Products.
+8
+4
+2 P. D. BRADLEY Jr. and W. L. CRUM: Econometrica VII, 3, p. 221.
+Cp. R. H. COASE and F. R. FOWLER, Economica, May 1935 and February 1937.
+For bibliography see C. ELTON: The Ecology of Animals, London, pp. 61-76.
+Reproduced from G. F. GAUSE: Experimental Demonstration of VOLTERRA's
+Periodic Oscillations in the Numbers of Animals, J. Exp. Biology XII, 1935, p. 44.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 11]]
+POPULATION WAVES.
+Paramecium aurelia
+200
+150+
+100
+50+
+(1)
+3
+"Saccharomyces exiguus
+N,
+(2)
+10
+12
+14
+Days
+b,-1,0
+d₂-0,45
+3
+18
+11
+Fig. 4 Fluctuations in the density of population of Paramecium aurelia (per 15 c.c.) and
+Saccharomyces exiguus (per o‘1 c.mm.).
+-
+there is really no
+no clash. The equation used in this essay easily
+can be brought into a form which corresponds to VOLTERRA'S differential-
+equations (see formulæ 6 and 7 in the Appendix), and it is seen that the
+latter describe a somewhat more complicated case. Whenever classes of
+things which we may leave unspecified, they may be age-groups in a
+homogeneous population, or numbers of different species preying on each
+other depend on each other in a manner described by equations of the
+general type shown in formula 8 in the Appendix, then these things will,
+in general, exhibit an oscillatory behaviour. It would appear, therefore, to
+be merely an accidental matter whether the constituting relationship is that
+of progeny and survivor - a simple type where the non-linear terms in 8
+disappear or of the more complicated type investigated by LOTKA and
+VOLTERRA, where the predator is the survivor of his prey.
+-
+-
+---
+This observation is not without interest, as it would seem e.g. to suggest.
+a possible explanation why ELTON and his collaborators searched in vain
+for any bacillary or virus infection when they forecasted and observed in
+1927 a sudden catastrophic mortality of mice somewhere in Oxfordshire'.
+They did not find at the same time any significant change in predator and
+parasite populations either. May we surmise that these mice were not
+carried away by some unknown scourge, but that they died in fact, from
+the most common of all diseases, against which no herb has been found as
+yet: ordinary death from old age? If the contentions of this paper are
+I Proc. Zoological Soc. London, III, 1931, p. 637.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd. Bangkok. Thailand.
+
+[[page 12]]
+12
+JOUR. BURMA RESEARCH SOC.
+XXXI, I, 1941.
+correct, a fluctuating population must exhibit great variations of the age-
+pyramid, and one feels tempted, therefore, to suggest that what ELTON
+correctly forecasted and actually observed was nothing but a state of affairs
+in which the age-pyramid of his mice population showed a similar top-
+heaviness as the present age-distribution of practically all European races.
+That such undercutting of the age-pyramid actually occurs in wild ani-
+mal populations has been ascertained by FORD, whose observations on
+springtails are reproduced' in fig. 5. Perhaps we have in this phenomenon
+No. per g.
+Length (age) classes (mm.)
+Over 0-555
+0-481-0-355
+0-407-0-451
+2-0
+Prendachoruies subcrassus
+population density
+Mean length (mm.)
+% of population above 0·4 mm,
+I
+R
+0-481
+80%)
+0-444
+(60%)
+0-407
+(40%)
+0-370
+(20%)
+Oct.
+Nov.
+Dec.
+Jan.
+Feb.
+Mar.
+Apr.
+333-0-407
+-333
+Oct.
+Nov.
+Dec.
+Jan.
+Feb.
+Mar
+Mean length (mm.)
+Fig. 5. Pseudachorutes subcrassus. Population trend and age distribution.
+also a clue for the somewhat irregular, but always strictly seasonal outbreaks
+of bubonic plague. It may well be that the "epidemic" dying of rats
+which precedes outbreaks of plague is really not so much due to a sudden
+unexplained virulence of the Pest bacillus, but rather to the exposure of an
+overaged rat population to climatic severities such as drought.
+-
+7. It is tempting - though still somewhat premature to try assessing
+the import of the propositions outlined above for the theory of trade-cycles.
+Some of the earliest attempts of explaining the fairly regular recurrence of
+booms and depressions were of the so-called exogenous type: they considered
+the trade-cycle as a merely passive response of the economic equilibrium
+Reproduced from J. FORD: Fluctuations in Natural Populations of Collembola
+and Acarina, II. J. Animal Ecology VIL. 1938, p. 362. – "Metamorphosis does not occur` in
+Collembola and the size of individuals increases at successive moults. Although this
+increase in size is not necessarily even, nor the time between moults equal, we may, never-
+theless, obtain figures roughly proportional to age by measuring the length of these insects
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+"
+"
+
+[[page 13]]
+13:
+POPULATION WAVES.
+system to variations of crop yield which were alleged to exhibit, owing to
+some unknown cosmic cause, a distinctly cyclical behaviour.
+Although the fundamental idea of these theories is prima facie plausible,
+they had to be abandoned for lack of empirical evidence. Moreover we
+know to-day that the economic system itself is in the nature of a pendulum,
+and that it would endogenously react in an oscillatory fashion, even if all
+exogenous disturbances were entirely irregular erratic shocks 1. Economists
+have learned to consider the world as a continuous flow of goods and
+services, as a collection of resources which behave somewhat in the way of
+heavenly bodies, continuously emitting and absorbing light. All these re-
+sources have to be maintained, they absorb a certain input at every unit
+period which is the absolute condition of their continuing to radiate another
+stream of services, their output. Now the amount of services which can
+be reproduced during a small time-interval dt is obviously dependent on the
+pre-existing resources as well as on the length dt of the time, during which
+these resources were left to operate. Analysing this relationship a bit more
+closely which easily can be done by means of the so-called Marginal Pro-
+ductivity Theory - one is led to a linear system of differential equations,
+very much similar to those given here for the reproduction of a population.
+It is thus seen that production even in its most primitive form, disregarding
+all monetary influences, constitutes already a vibrator system which, owing
+to the inertia of human relations, can give rise to oscillations. * (In reality
+this matter is unfortunately enormously complicated by the interference of
+monetary factors). But though it has thus become evident that a satisfactory
+explanation of trade-cycles must account for the endogenous reactions of the
+economic system, this does not mean that the exogenous attempts were utterly
+unsound. It is perfectly compatible with an endogenous model that some of
+the external factors, viz. the population, vary themselves quasi-cyclically.
+-
+There are, on the other hand, in the economic development of the last
+150 years distinct periods of 25-30 years duration, known as the long
+waves," which display a well defined regularity to which attention has only
+comparatively recently been directed.³ Phases whose general course reveals
+an upward trend seem to be regularly succeeded by periods whose economic
+data prove that the general tendency has been downward. Apart from
+fluctuations within these periods the average price level, business profits.
+and production figures in the one period, the depression period, are lower
+than those on the other, the period of prosperity. Thus in the period
+66
+1 Cp. G. von HABERLER: Prosperity and Depression, L. a. N. Geneva, 1938. ch. I.
+See eg, E. LINDAHL'S formulation of K. WICKSELL'S equilibrium equations
+2
+in LINDAHL; Studies in the Theory of Value and Capital, p. 271 ff.
+3 Cp. HABERLER 1.c. p. 175; W. C. MITCHELL: Business Cycles, ed. 1927,
+p. 226 ff; W. ROEPKE: Crises and Cycles, p. 15 ff- where detailed references can be
+found.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 14]]
+14
+JOUR. BURMA RESEARCH SOC.
+XXXI, I, 1941.
+from 1848 to 1873 the upward tendency dominated, while from 1873 to
+1894 the main tendency was downward, swinging upward again in the
+period from 1895 to 1913". Such long-term periods of depression and
+prosperity naturally lend to the ordinary short-term business cycle a
+favourable or unfavourable note.
+2
+"The riddle of these long waves of depression and prosperity has
+not yet been fully solved "3 But it seems permissible to point out that
+the wave-length of these movements appears to be the same as that
+which is to be expected of waves of human populations. The powerful
+economic influences of the changing age-structure in Europeanised
+countries to-day have been drastically brought home to us in recent
+years; as for the problems of to-day these forces have found new uni-
+versal recognition. But is there any reason to believe that the present
+process of overaging has set in all of a sudden without precedent in
+history? It would seem safe to surmise that the present conspicuous
+slump in population growth can be traced backwards in history as a
+series of less spectacular preliminary waves.*
+B
+-
+-
+-
+The available statistics - all referring to comparatively small and
+arbitrary national units will not, perhaps, easily lend themselves to a
+conspicuous demonstration of this phenomenon. The previous century
+has been an age of almost unfettered migration, and migration mainly
+affecting the reproductive age-groups from 15 to 45 - is, of course, the
+most powerful influence which disturbs the pure effect of population
+waves. Its elimination would require fairly complete information
+about the state of population not only in the countries from which the
+migrants came, but also in the areas to which they turned- and it is
+dubious whether such data are readily obtainable.
+-
+-
+In the case of European countries therefore, one has possibly to go
+back to the times when the transatlantic trek had not yet gathered
+momentum. The birth records of Sweden and Finland - the earliest
+which we possess in Europe, dating back to 1749 — show indeed for a
+century and a half violent and fairly regular disturbances which in the
+case of Sweden gradually disappeared in the second half of the 19th
+century, whereas in Finland (relatively isolated and less affected by
+migration) they persisted much longer. Attention should also be given
+1 ROEPKE 1.c. p. 16.
+2 ROEPKE 1.c. p. 16.
+8 Cp. The Population Problem by A. M. CARR-SAUNDERS, H. D. HENDER-
+SON,R. R. KUCZYNSKI, T. H. MARSHALL and A. PLANT. W. B. REDDAWAY:
+The Economics of a Declining Population. E. C. Snow: The Limits of Industrial
+Employment, J. R. S. S. XCII, 1929, p. 323, and XCVIII, 1935, p. 239.
+Cp. E. CHARLES: The Twilight of Parenthood, p. 40 ff.
+See the graphs given by G. U. YULE, J. R. S. S. LXXXVIII, 1925, p. 26 f.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 15]]
+15
+POPULATION WAVES.
+to the curious and well-known pre-occupation of Mercantilist writers
+with population problems, and their grotesque remedies for the menace
+of underpopulation, for which I have not found so far a really convincing
+explanation.
+It seems that through a series of odd circumstances we possess here
+in Burma records which are more satisfactory
+more satisfactory than the scattered
+material obtainable in other parts of the world. The migration of Bur-
+mese Buddhists has never extended beyond the national boundaries,
+and immigration from India can easily be discerned as racial and religi-
+ous barriers have effectively prevented any serious intermixture. What-
+ever may be said against the Indian caste system; here it has been a
+statistical blessing. Safely sheltered in their little niche the Burmans
+have been left undisturbed to display the Law of Nature. Working in
+the isolation of what is sometimes unkindly called "a stagnant back-
+water" is often a source of despair, but the social scientist has at least.
+the consolation that he can here study the pure effects of population
+growth under the ideal conditions of a test-tube. With the experience
+of Burma during the Great Depression before my eyes, I would certainly
+think it worth while to explore the occurrence, and the influence of
+population waves in other countries in detail. JEVONS and MOORE
+looked for sun-spots and stars in search for their exogenous cycles; per-
+haps one will find some better evidence, if after their magnificent ex-
+peditions into the boundless cosmic wastes, one turns to this earth to
+search for them.
+....
+APPENDIX
+1. Let yo, y₁, Y2, ... yn be the frequencies of females in the age
+groups 0-1, 1-2. .n-(n+1). Let the survival rates of the age groups be
+11/10,12/11, ..ln/In-1, and the specific fertility rates for female births f₁, f₂,
+.fn (some of which may be =0), and assume that both survival and
+fertility rates remain constant for some time.
+The y's at the time 0 are then linked up with the y's at the time t by
+an equation of the form (1) in fig. 6. Denote the matrix of the coefficients
+f and 1 as M. Mt can be evaluated by means of a main axis transformation
+using the roots of the characteristic equation, which is easily seen to assume
+the form of equation (3). It is assumed that no multiple roots occur in
+this equation.
+(1) can then be written in the form (2) where |S| stands for the
+determinant which one obtains by deleting the first line and the last column
+of the determinant in the numerator RHS of (2).
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 16]]
+16
+JOUR. BURMA RESEARCH SOC.
+(1)
+✗(U)
+X (t)
+✗(t)
+K.(t)
+¼ (t)
+(2) Ex (t) (07
+€
+(4)
+IL
+☑
+t-o. 1.2.
+f ff fr X (0)
+•
+X (0)
+X (0)
+Lin-v
+¸t+n-v
+X X.
+(0)
+X(0)
+(0).
+(၀)
+XXXI, 1, 1941.
++A₂n-2
+A]= o
+A-&f. ± A-R, λ= real and positive.
+}, = x , 1
+[cos i sin] [cosisin
+$] . \...[cos - isin &]
+t+n-v
+1+n-v
+cos (t+n-v). E
+sin & (t+n-v).
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 17]]
+(6)
+(5) Yu- *. vy
+9.
+212 ala ale
+b
+b.
+POPULATION WAVES.
+17
+V. 0.1.2
+•
+------
+n.
+an ✗(t)
+y(t)
+C₂
+y(t)
+Dn. (t)
+Jh(t)
+dn.
+dt
+b,N, - k, N, N.
+(T)
+dNe k₂ N, N. - Ő₁ Ne
+-
+dt
+dy.
+dl
+(8)
+dy,
+di
+=
+a. y. + ay₁ + + & Yoy₁+ #ozy.Y₁+-
+b.y. + b₁ y₁ ++by y₁ + bo₁y.y. +--
+Fig. 7.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 18]]
+18
+JOUR. BURMA RESEARCH SOC.
+XXX1, 1, 1941.
+The rule of signs ensures that (3) has always one real, positive root
+which can be seen to be larger, equal to, or smaller than 1 according as to
+whether the Net Reproduction Rate R is larger, equal to, or smaller than 1.
+The other roots will, in general, be complex, but all coefficients of (3) being
+real, they will occur in pairs of conjugate complexes. Hence the imaginary
+factor i can be eliminated from (2).
+This elimination being carried out, the coefficients in the first line of the
+determinant RHS of (2) will with the exception of the first one which
+anyhow is real-assume the form (4) respectively. Thus the factors are
+obtained which are responsible for the periodicity.
+2. If the last column of the determinant RHS of (2) is proportionate
+to the first column, then the periodic factors clearly will exert no influence.
+Thus equation (5) in Fig. 7 is obtained which determines the equilibrium
+structure of the population for any given matrix M.-It further follows
+from these equations that both the wave lengths and the factors r responsible
+for the dampening of the waves depend exclusively on the elements of M.
+3. Similar results are obtained, if one starts with a system of differen-
+tial equations of the form (6), instead of using the relation (1). It merely
+amounts to having momentary instead of annual rates.
+4. (7) are VOLTERRA'S equations in their simplest form. N₁ is the
+density of the population of the prey, N₂ the density of the population of the
+predator, b₁ the birth rate of the prey, g₂ the death rate of the predator,
+k₁N,N, the rate at which the prey is consumed by the predator, and k₂N₁N,
+the rate of growth of the predatory population.
+The equations (7) can be conceived of as a generalisation of (6), both
+systems belonging to the genus of equations (8) which, we may presume,
+has periodic solutions in general.
+5. Further reference: E. C. RHODES. Population Mathematics, J.
+Royal Stat. Soc. N.S. CIII, 1940.
+HARRO BERNARDELLI.
+The author and the Burma Research Society are indebted to the
+editor of the JOURNAL OF ANIMAL ECOLOGY for permission to include
+figures 3 and 5, and to the editor of the
+BIOLOGY for permission to include figure 4.
+JOURNAL OF EXPERIMENTAL
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.

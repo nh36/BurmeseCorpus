@@ -1,0 +1,2505 @@
+[[page 1]]
+1. Introduction'
+COMPOUND NOUNS IN BURMESE* *
+Dr K. Forbes§
+it
+Any sequence which cannot be analy-
+sed in to smaller units, i.e. contains one
+morpheme only, and which can function as
+a free form can be defined as a simple word
+(or minimal word) in Burmese. For example,
+ခေး, ထီ, ဆရာ, စောနာ,2simple nouns and verbs
+can be combined together in various ways
+to form larger sequences which also func-
+tion like nouns. (i.e. endocentric construc-
+tions with a noun head). Thus co “man” is a
+လူ
+monosyllabic noun. But conbinations of co
+with other nouns, verbs, etc., also function
+like nouns, e. g.: co: "criminal", cşm
+"the man who came yesterday”,
+“6 men”. How many "words”
+do these combinations contain? And how
+many "words" are contained in the follow-
+ing combinations including the single
+dissyllabic morpheme : နိုင်ငံ coun-
+try”, နိုင်ငံရေး –politics, နိုင်ငံရေးသမား “politi-
+cian", ε: political society". A
+linguistic answer to this question obviously
+cannot rely on subjective judgements, or,
+for that matter, on meaning, if it is to
+avoid making quite arbitrary decisions,
+but only on data which is linguistically
+definable. In Burmese one can distinguish,
+on the basis of various linguistic criteria,
+between at least three classes of sequences
+of simple one-morpheme words in which
+the sequence
+as a whole has nominal
+function.
+*
+3
+(1) the most closely linked sequences
+which can be called "compound noun"
+and with which we will be chiefly concerned
+in this paper;
+(2) the least closely linked sequences,
+which may be termed "noun phrases";
+(3) borderline cases between compound
+nouns and noun phrases.
+The most important criterion for
+distinguishing between compound nouns
+and noun phrases in Burmese is a phonolo-
+gical one, the contrast between two types
+of transition from syllable to syllable which
+may be termed "close juncture" and "open
+juncture".4 The difference in transition
+between the last two syllables of commis
+Slapeijei:zi? "tea-sieve", and w
+od / lapeijei: + si?! "sieve the tea:" will
+illustrate the contrast between close and
+open juncture in Burmese. One notable
+difference between the two expressions
+is that in the first, the initial consonant
+of of is voiced (/zip/) and in the second
+it is voiceless (/si?/). The first is an example
+of close juncture, the second of open
+juncture. In this paper, all sequences of
+morphemes in close juncture which as a
+group function as nouns and individually
+can occur as simple words elsewhere
+(but many verb morphemes do not actually
+occur without the addition of verbal
+suffixes) are regarded as compound nouns.
+Read before the Language and Cultural Research Division of the Burma Research Congress held
+in Rangoon on 21st March 1967 with Professor Myo Min in the Chair.
+§ Lecturer in English, Arts and Science University, Mandalay,
+1. For Notes see at the end of the article. Ed., JBRS.
+JBRS, L. ii, Dec., 1967.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 2]]
+196
+But sequences in close juncture in which one
+morpheme (the first) does not occur as a
+simple word are also included as compounds
+when they are paralleled by combinations
+of free forms (see below, sect. I on NN
+compounds). Finally, some sequences bet-
+ween the morphemes of which there is a
+kind of transition intermediate between
+close and open juncture, which McDavid
+(sect. 1) calls "internal open juncture", or
+even with external open juncture, have also
+been counted among compound nouns in
+this paper. The contrast between close and
+open juncture, which forms the main basis
+for differentiating between compound
+nouns and nominal phrases in Burmese, is
+also supported by features of Burmese
+morphology and syntax, which will be
+considered after a brief outline of the main
+features of Burmeses juncture.
+Compound Nouns in Burmese
+(2) When a morpheme precedes close
+juncture, its final syllable may have the
+vowel /, but some other vowel when
+followed by open juncture. Contrast om:s
+zagǝbja: “translator", with coo: /zaga:/
+"word". /zəgəbja: shows close juncture
+between /gǝ/ and bja: according to both
+the first and second criteria. But the
+consonant following the juncture is not
+always voiced when ǝ precedes the junc-
+ture. Compare m/kelǝthai:/ "chair"
+with
+ကုလား ထိုင်သည် kola: thaindi:
+"the
+Indian sits".
+(3) A nasalised vowel before open junc-
+ture contrasts with a vowel followed by a
+nasal homorganic with the following conso-
+nant in close juncture if that consonant is a
+stop, affricate or nasal: cf. cos: /lambja
+"guide" (noun) and cola: pja/ "show
+the way:"
+In the following paragraphs, “open
+juncture" should be taken to mean
+(4) When a vowel is followed by the
+"external open juncture" unless otherwise glottal stop in open juncture, it is usually
+stated.
+The chief contrasting characteristics of
+close and open juncture in Burmese are as
+follows:-
+(1) If the syllable following the juncture
+begins with a stop, or affricate or fricative
+other than 6 h, this consonant will always
+be voiced in close juncture when preceded
+by a vowel plus nasal or any open full
+vowel, and sometimes voiced when preceded
+by a. (cf.Sprigg 110 f), whether it is voiced
+in open juncture or not. The contrast
+between close and open juncture thus often
+mainly consists in a contrast between
+voiceless and voiced consonant, as in
+lǝpeijei: tsiP/ and /lopeijei: zi?/ above.
+All the other contrasts between close
+and open juncture concern the syllable
+before the juncture.
+JBRS, L, ii, Dec., 1967.
+followed by a consonant homorganic or
+identical with the following consonant in
+close juncture. In some circumstances, the
+vowel before the close juncture remains
+short and open, being followed neither by
+the glottal stop nor by any other conso-
+nant. (cf. Sprigg 121). For example: the free
+forms /si? da?, ei?/ contrast with the forms
+sit, das, eik- which occur before close
+juncture in the following forms:
+sitta?,
+dassi, o§: /eikkhẩ:/.
+or
+(5) An open vowel before close juncture
+is shorter if it has the tone of co
+သွား (လာ has Cornyn's and McDavid's
+Tone 1, Cornyn's and McDavid's
+Tone 115), than when open juncture follows.
+0006
+(6) If the vowel in Tone II precedes
+close juncture it is high and even rising, but
+in open juncture it falls. (McDavid).
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 3]]
+Dr K. Forbes
+(7) McDavid remarks that some stress
+features are also associated with close
+juncture (sect. 2): "within a group of
+syllables in close juncture a syllable of
+any tone loses stress in proportion to its
+distance from the beginning of the group."
+Cornyn (sect. 10) only mentions this
+feature for sequences such as emočiemoć.
+This gradual reduction in stress is most
+noticeable when the word begins with a
+strongly stressed syllable (i. e. a syllable
+with Tone II, II. or IV when the vowel
+is followed by a consonant other then a
+nasal).
+Most writers on the subject distinguish
+only two types of transition or juncture
+for Burmese (0) Stewart, Cornyn, and
+apparently Sprigg, who at least does not
+mention a third type of juncture). But
+I am inclined to agree with McDavid
+(sect. 1) that a third type of transition
+which he calls “internal open juncture"
+can also be distinguished. He describes
+the features of internal open juncture as
+follows: - before the juncture, syllables
+with Tones I and I have level tone
+and are shorter than when pronounced
+in isolation; the glottalisation of Tone III
+is more rapid; with syllables ending in
+a nasal, the final nasal is sometimes homor-
+ganic with the initial consonant of the
+following syllable and a syllable with Tone
+IV which ends in the glottal stop before
+open juncture may sometimes end in a
+consonant homorganic with the consonant
+following in internal open juncture. Thus
+McDavid's internal open juncture has
+some of the features of close juncture
+(especially, and consistantly, shortening
+of the vowel of syllables in Tones I and
+II), but not not all; notably, the initial
+consonant of the syllable following internal
+open juncture is always the same as in
+external open juncture, whereas in close
+197
+juncture it is usually voiced by contrast
+with a voiceless consonant after open
+juncture. If internal open juncture is very
+often clearly distinguished from close
+juncture, because of the difference in
+treatment of consonants before and after
+the juncture, it is not so clearly distingui-
+shable from external open juncture. when
+a syllable before the juncture has a vowel
+in Tone III or Tone IV, there often seems
+to be no noticeable contrast between two
+kinds of open juncture except a slight
+variation sometimes in the swiftness of
+transition from syllable to syllable, coupled
+with a tendency for the sequence to be
+treated as one stress unit with gradual
+loss of stress (as in close juncture, but
+not mentioned by McDavid as a feature
+of internal open juncture - here, too, the
+degree to which this is noticeable depends
+on the tone pattern of the whole sequence,
+decrease of stress being most noticeable
+in otherwise strongly stressed syllables).
+It is when the syllable before the juncture
+has Tone II, and to a lesser extent Tone I
+that the contrast between two kinds of open
+juncture is clearly noticeable. In particular,
+the shorter vowel with swifter transition
+to the following syllable, which is a mark
+of internal juncture. Although it is thus not
+always possible to draw a clear distinction
+between internal and external open junc-
+ture, nevertheless I have ventured to make
+a limited use of this criterion in distinguish-
+ing between compound and phrases. But
+I have only regarded as compounds those
+forms with internal open juncture where
+there are also other (morphological)
+grounds for regarding them as compounds,
+so that my analysis would not be basically
+affected even if it were held that there are
+too slight grounds for positing a third kind
+of juncture in Burmese. Where two
+constituents are only linked by having
+internal open juncture between them, I have
+JBRS, L, ii, Dec., 1967.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 4]]
+198
+not regarded this as sufficient reason for
+regarding the sequence as a compound, and
+have therefore discounted such sequences
+in this paper. Some examples follow, with
+the internal open juncture marked in the
+phonetic transcription with 620:20
+she: shiya:/ "medical man", 6601opos /se:-
+ဆေးပညာ
+pinnja:/ "medical knowledge", မီးခလုပ်
+/mi:-khǝlou?/ “light switch", co-
+daje: “spiv”, လမ်းမြေပုံ
+co: /la-mje:bou:
+"road map", :: ŏitta:/
+"refrigerator". Characteristically, the second
+constituent of such sequenses contains more
+than one syllable whether it consists of a
+single polysyllabic morpheme or two
+monosyllabic morphemes in close juncture.
+Sequences with an internal open junc-
+ture between two of the morphemes which
+I have regarded as compounds are all
+three-morpheme sequences in which there
+is close juncture between two of the mor-
+phemes and internal open juncture between
+the other two, but in which the natural
+point at which to cut the whole sequence
+into ICs (Immediate Constituents) coincides
+not with the internal open juncture but with
+the close juncture. Also the sequence of
+morphemes in close juncture do not other-
+wise occur as free forms. Such sequences
+fall into two well-defined categories:
+(a) Two of the members constitute a dis-
+syllabic verb, as in:
+jwe: kaup
+pwe: “election" ounðu:/
+00:55:2 sa:ounou:/
+"consumer", :: /to:tɛrje:/ "improve-
+ment". In each of these examples, all the
+morphemes are monosyllabic; there is in-
+ternal juncture between the first and second
+morphemes, close juncture between the
+second and third. Yet clearly the ICs are:
+ရွေးကောက် and ပွဲ, စားသုံး and သူ, တိုးတက် and
+69: Not: ရွေး and ကောက်ပွဲ, nor စား and သုံးသူ,
+nor တိုး und တက်ရေး
+JBRS, L, ii, Dec., 1967.
+Compound Nouns in Burmese
+(b) The sequence has the pattern NVN
+(noun-verb-noun). There is internal open
+juncture between the first two members,
+close juncture between the second two
+members. But again the IC division
+coincides with the close juncture, not with
+the internal open juncture. Examples are:
+ချောင်းဆိုးဆေး /thä:-sho;ze: “cough mix-
+ture, အကြောင်းကြားချက် ata:- ta: d%©P/
+“information".
+In both types the two-morpheme
+sequence in close juncture following the
+internal open juncture does not occur as a
+free form (ဆိုးဆေး in ချောင်းဆိုးဆေး is not to be
+equated with :*: “dye”),
+Finally, on the same principles by
+which some three-morpmheme sequences
+with an internal open juncture have becn
+included among compounds, a few four-
+morpheme sequences have also been
+regarded as compounds. These comprise
+a very small class of sequences with the
+pattern of o600000:. They have close
+juncture between the first and second
+and between the third and fourth syllables,
+but external open juncture between the
+second and third syllables (there is no
+noticeable shortening of the second syllable
+even if it has Tone I or II, and the
+tone is the same as in isolation). Either
+one or both of the two sequences in
+close juncture does not occur except in
+this combination. Thus in this example,
+neither oooo nor doo: occurs in isolation.
+It seems to me that two analyses of
+。。。: are possible. One may break
+it down into the ICs စစ်ဝတ် and စစ်စား,
+so that the IC division would then coin-
+cide with the open juncture, but both
+ICs would be unique in that they occur
+only in combination with each other.
+Another possibility is to analyse စစ်ဝတ်
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 5]]
+Dr K. Forbes
+စစ်စား into two discontinuous ICs: စစ်…….စစ်
+and ဝတ်.......စား. I regard this second
+analysis as preferable, especially as oooo:
+occurs as a dissyllabic verb in Burmese.
+Thus phonologically, Burmese com-
+pounds are mainly set off from phrases by
+the contrasts set out above between close
+juncture and external open juncture. But
+some three-and four-morpheme sequences
+with internal open juncture or external open
+juncture between two members are included
+as compounds if the IC division does
+not coincide with the open juncture, and
+the two-morpheme sequences cut off by
+the open juncture cannot occur in isolation.
+These last two types are thus distinguished
+from phrases partly by phonological (close
+juncture), partly by structural criteria.
+Sprigg also regards the contrasts between
+open and close juncture as the main criterion
+for distinguishing between phrases and
+words, but is not concerned with the mor-
+phological structure of Burmese com-
+pounds.
+Although compounds are mainly set
+off from phrases in Burmese in these
+ways, there is also quite a large group
+of morphemes which show another kind
+of contrast as well: morphemes with the
+prefix -/-/ when preceded and followed
+by open juncture have a contrasting form
+without sa which always occurs when
+close juncture precedes and sometimes
+when close juncture follows. Thus
+amu is a free form which also occurs
+when close juncture follows as in
+-
+376
+JL
+524
+: ǝmuda :/. But when close juncture
+precedes it has the form mu̸/, as in
+/kaummu “good deed". Though
+-
+H
+Ji
+is not a verb stem in Burmese, like
+many other stems to which >>> is prefixed
+-
+--
+199
+(e. g, အ
+(e. g, အ - ရေး - ရာ − ခြင်း), အ-- is very
+/-
+largely used to form nouns from verb
+stems: e. g. : /ǝi:/ “fruit” (noun)< 3:
+(p) 10 i: (ði:)/ “to fruit”; /ǝlou?/
+“work” (noun) < co³ (wpd) /lout(@i:)/ “do,
+make". Forms with may also be pa-
+ralleled by nouns without -,
+with no
+difference of meaning, so 30- is also a
+prefix which can be added to some nouns,
+as in/alɛ?/ beside cons /lɛ?/ "hand",
+: /ǝshu:/ beside
+ဆူး
+shu: "thorn". At
+least the first two kinds of - derivatives
+may appear as the first constituent in NN
+-
+compound as in: အချိုမှုန့်,အလယ်တန်း(ချို – is a
+verb stem, but not cous); and in NV com-
+pounds, as in: အစိုးရ, အကောက်မှူး (စိုး –rule”,
+ကောက် “elect” are verb stems), အရာရှိ အမှုထမ်း
+(- op are not verb stems) etc.
+-
+'
+If the stem of the free form to which
+32 - is prefixed begins with a voiceless stop,
+affricate or /s/,/sh/, then the form of this
+morpheme following close juncture always
+has the corresponding voiced phoneme.
+Contrast the free form af /atche?/ with
+the bound form /d/ in /we:de?/
+"charge" (noun), where /d ɛ/ is preceded
+by close juncture. The two forms /otchɛ?/
+and -ɛ? contrast not only in the pre-
+sence/absence of /ǝ-/, but also in the
+voicelessness voicing of the phoneme
+following /ɔ-‍{.
+The decision to regard sequences with
+close juncture between them as single
+words, sequences with open juncture be-
+tween them mostly as phrases is supported
+by a syntactic analysis of the contexts in
+which such sequences occur. For when
+larger sequences functioning like nouns
+(endocentric constructions with noun
+heads) are analysed into their ICs, one
+JBRS, L, ii, Dec., 1967.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 6]]
+200
+finds that the division between ICs always
+falls first at points of external open
+juncture, and secondly at points of internal
+open juncture, except in a few special
+constructions which have been included
+under compounds above. Only when the
+smaller ICs thus obtained contain mor«
+phemes with only close juncture between
+them does IC division fall at points coin-
+ciding with close juncture.
+When compounds have been distin-
+guished from phrases in the ways outlined
+above, it is found that some of them also
+contrast with phrases in their syntactic
+structure. That is to say, though some of
+them are so-called syntactic compounds,
+others are asyntactic. As it did not seem
+practicable to take this as a primary
+criterion of compounds in Burmese, it has
+been discussed separately after the sections
+on the types of compounds which occur,
+and on the allomorphs of morphemes
+occurri..g both in isolation and in com-
+pounds.
+Compound Nouns in Burmese
+those
+of the phrase. In this paper only
+sequences are considered from which all
+affixes have been detached.
+Only one earlier linguistic description
+of Burmese compounds is known to me,
+viz. that of Cornyn (sects. 121-130), who,
+however, does not use the term "com-
+pound", but only the expression "noun
+phrase". Under this term “noun phrase",
+he includes not only some patterns which
+I have regarded as compounds (NN, sect.
+124, NV, sect. 129, VN, sect. 130), but
+also a number of other sequences which
+I would regard as derivatives (
+sect. 175) or pronouns (2005) or noun
+phrases (သောက်ဘို့ ကောင်းတဲ့လူ) or which I
+would not consider to be noun expressions
+at all, including: VV, e. g. ကောင်းကောင်း
+(164), two-syllable verbs repeated, e. g.
+:: (165), negated doubled verbs,
+e. g. မကြာမကြာ (165), a doubled verb consis.
+ting of two different negated verbs, e. g.
+6:00: (167), a doubled verd consisting
+of a verb plus a rhyming syllable,
+e. g.
+fojlowing patterns: နီတီကီ (169). မြည့်ကြည့်
+(17), ခဖြေးဖြေး (171), အမျိုးမျိုး (173), စိတ်ဧ
+လက်း (174), တခုခု, တယောက်ယောက် (176), တခါ
+ဘာအရောင် ဘာအရောင်,
+တခါ တခါတလေ (177)
+(178).
+We have classed all sequences of (168), and also sequences of the
+morphemes in close juncture which can
+also occur as free forms as compounds in
+Burmese. But a sequence of syllables in
+close juncture may contain not only a
+simple or compound word as defined
+above, but also affixes, usually suffixes
+attached to these simple or compound
+words. Characteristically these affixes are
+bound elements which cannot stand alone
+between pauses. For example,
+602 (indi-
+cating plurality) and (indicating sujbect)
+in mecocom/kale:dwe:ga/. Such affixes
+can be added to any (--) or most (soo)
+of the whole noun class. Free forms func-
+tioning as nouns can also stand alone
+wihout these affixes. It is thus not difficult
+to separate the free and bound morphemes
+in Burmese noun phrases, though there
+may be close juncture between all syllables
+--
+"
+Stewart describes brielly various kinds
+of noun and verb “combination (VN,
+NV, and some combinations of NVN
+("stock phrases") 78f., 93f.). But his
+work, which is after all a practical grammar,
+contains no systematic treatment of com-
+pound nouns
+]}, An **: of the Types of Compound
+that Occur in Burmese
+In this section I shall attempt to set
+forth all the types of compound roun
+which have found to occur in Modern
+JBRS, L, ii, Dec., 1967.
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 7]]
+Dr K. Forbes
+Burmese. The material has been drawn
+both from the spoken language and from
+written documents, especially newspapers
+and magazine articles. We have seen
+above that in Burmese a class of noun
+compounds can be distinguished from
+noun phrases on the basis of contrasting
+features of juncture, in some cases also
+the presence/absence of the derivative
+prefix, sometimes only on the basis
+of features of juncture and constituent
+structure combined. These compounds
+themselves can be subdivided in Burmese
+on the basis of certain kinds of syntactic
+data. In the first place, compounds of
+various types contrast in the syntactic
+function of their parts when used as
+free forms (i. e. they may be combinat-
+ions of noun-noun (NN) noun-verb (NV)
+etc.). These contrasts in the function of
+the parts provide the main framework
+for the classification of the Burmese
+compound nouns. But within the broad
+classes thus arrived at, it has sometimes
+seemed worthwhile to draw subdivisions
+according to two other kinds of syntactic
+criteria:
+(1) according to the classifier required
+by one type of compound compared
+with another or compared with one of
+its constituent morphemes:*
+(2) according to whether the com-
+pounds are transformations of identical
+or different constructions. g
+While semantic contrasts have not
+been directly used as a basis for distinguish-
+ing classes of compounds, nevertheless
+where there are syntactic contrasts I have
+thought it worthwhile to mention the
+semantic differences as well.
+Burmese compounds usually contain
+two or three constituents, rarely more.
+201
+Typically, all constituents are monosyllabic.
+But while it is certainly rare for consti-
+tuents other than the first to contain more
+than one syllable, the first constituent
+itself may contain any number of syllables.
+These polysyllabic members are normally
+nouns (there are very few simple verbs of
+more than one syllable in any case), How-
+ever, the second constituent of a two-mem-
+ber compound may occasionally be dis-
+syllabic, as : in : “pass-list",
+co: in $:coud: "cocoanut rice”. On noun
+phrases with internal or external open
+juncture between the parts when the second
+member is of more than one syllable,
+enough has been said in the Introduction.
+A. Two-Member compounds
+Two-member
+compounds may be
+combinations of:
+(a) Noun-noun (NN);
+(b) noun-verb (NV);
+(c) verb-noun (VN).
+These three types are all rather
+productive in Modern Burmese. A few
+forms which seem to be VV compounds,
+will be discussed briefly after the VN com-
+pounds. No further classification is pos-
+sible if the two-member compounds are
+divided up into classes according to the
+parts of speech to which the constituents
+belong. But it is possible to subdivide the
+first two of these broad classes further on
+the basis of the other two criteria men-
+tioned above, namely, the types of con-
+struction of which the compounds are
+transformations, and/or the classifier they
+require.
+(a) NN Compounds
+Compounds of this class seem to be
+rather freely productive if the second noun
+at least is monosyllabic. NN compounds
+JBRS, L, ii, Dec., 1967.
+26-G 124 1,000+ 50-25-5-68.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 8]]
+202
+may be divided into two main groups, Type
+I: those which are transformations of a
+construction “A and B”, Type II: those
+which are not.
+Type I NN Compounds
+Compound Nouns in Burmese
+First a few examples of the very
+common and productive type where the
+compound takes the same classifier as
+the second member (unless the word is
+not normally enumerated): ဆေးဆိုင်
+*drugstore" ("medicine-shop"), c:
+ɔɔɔ
+The two members of these compounds, "railway" ("iron-road"), : "middle
+commonly called coordinating or copula- grade"("middle(N)-grade”),ǝ:>>>:(“prince”
+tive compounds, are sometimes identical ("king-son"), "citizen" ("country-
+in meaning, sometimes denote a pair of person"), :: “plum" ("plum-fruit”),
+objects or persons which would naturally "mile-post" ("mile-post"), pp
+ပညာရေး
+be classed together. For example, sp: "education" ("knowledge-matter"). From
+"way, means" (lit. "way (means)-way the point of view of meaning, the first
+(road)"), S: "jetty" (lit. "landing noun generally defines the second in the
+place bank"), "parents" ("mother- above examples; they are of the type
+father"), S: "family" ("mother-son"), often called determinative compounds.
+But this classification is not very helpful
+for Burmese since there are
+compounds in which it can be argued
+that the second noun and not the first
+is the determiner, though there is no
+other (i. e. external) reason to distinguish
+them from că etc. Thus in : "light
+bulb (“light-round thing"), it could just
+as well be argued that the second member
+qualifies the first as vice
+versa (on the
+decision to regard as from the noun
+"face" (eye-nose"), but this last
+form at least is hardly felt to be a com-
+pound. Compound of this type are very
+much less common than those of type II,
+but are probably still productive, at least
+when they are combinations of synonyms.
+Type II NN Compounds
+Compounds of this class chiefly differ
+from Type I in that they are not transforms
+of an
+"A and B construction. These
+compounds usually take the same classifier
+as the second member; in fact the classifier
+is quite often identical with the second
+member. But since there did not seem
+to be any value in dividing up these
+compounds on the basis of whether or
+not the classifier is identical with the
+second member, I have not attempted it.
+I have only considered separately those
+NN compounds which do not take the
+same classifier as the second member,
+but the first; secondly, compounds in
+which the second member is identical
+with both a verb stem and a noun stem;
+finally, compounds in which the first
+member only occurs as a bound form.
+JBRS, L, ii, Dec., 1967.
+some NN
+not from the verb : -.
+လုံး and
+below).
+see
+အမ
+There is only on important class
+of Type II NN compounds which do not
+take the same classifier as the second
+member, but rather the same classifier
+as the first member. These are nouns in
+which the second element is
+"female". Thus "bitch" ("dog-female")
+takes the same classifier as
+ခွေး "dog",
+and ဆရာမ
+"woman teacher" ("teacher
+female") the same classifier as ဆရာ "teacher"
+(male). This peculiarity of words combined
+with -8
+would probably justify us in
+regarding - as a suffix.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 9]]
+Dr K. Forbes
+A rather different problem is presented
+by nouns like : “light-bulb", in which
+the second member could at first sight
+be interpreted either as the verb (s:-
+(p) "be round") or as the noun (s)
+"round thing". It seems to me that
+:: must be regarded as an NN com-
+pound just because the classifier is
+identical with the second member. In NV
+compounds (on which see below), the
+classifier is never otherwise identical with
+the verb member. All nouns in -- cội, then,
+are best regarded as NN compounds, and
+.00
+likewise nouns with - as the second
+member, e.g. o "cheroot” (“tobacco-
+roll", from 2:36 “a roll", rather than
+() "to roll”). On other ambiguous cases
+where the second member could be regarded
+as either a noun or verb, see on NV com-
+pounds below.
+203
+independent noun. Similarly unique first
+morphemes are often paralleled by other
+combinations of a free noun with the same
+second member; eg, unique in m
+"cake", and cold in soldes "bread” are
+parallel to ³ (free: "something sweet”)
+in as “sweet food”. Some, perhaps most
+unique morphemes, like (< E. cake)
+and coƐ (probably < Port. pao “bread”)
+are loanwords combined with a native class
+word, such as where ("snack").
+i t
+(b) NV Compounds
+Compound nouns of this class can
+be divided into two broad classes according
+to whether or not
+1002
+they take the same
+classifier as their first constituent. The
+two classes also differ as to the constructions
+of which they are transformations.
+Type INV Compounds
+In a number of NN compounds, the
+one morpheme, in all cases known to me
+the first, is unique, or occurs in several
+compounds, but never in isolation as a free
+form. Many compounds containing these
+bound elements.combined with a noun can
+safely be classed as NN compounds, even
+though the bound elements never function
+as separate nouns in a sentence. For the
+compounds containing bound morphemes
+are paralleled by other compounds with
+a noun in the same position. Thus the names
+of friuts are usually bound, and followed
+by a morpheme meaning “tree”, “fruit”
+etc. But a few fruit names also occur as free
+forms, always nouns: е.g. ɔɔɔ: “papa-
+ya", where: means "fruit", where
+==“papaya”, but also occurs as a free mor-
+pheme meaning "ship". ms:- "cocoanut"
+occurs in အုန်းသီး “cocoanut (fruit)”, အုန်းပင်
+"cocoanutpalm" (-o "tree"), but also in
+အုန်းထမင်း “cocoanit rice", where it is
+paralleled by couε: “milk-rice, i.e. milk-
+&
+pudding”; { “milk” also occurs as an
+and
+"one mad
+both take the same
+These take the same classifier as their
+first constituent; thus one says:
+"one dog", and also
+dog" cat
+ခွေး
+ခွေးရူး
+classifier -6mo. Similarly op "man" and
+the NV compound cocus "youth” both
+take the same classifier -6.
+co "saw"
+လ
+and co: “circular saw" both take the
+classifier -o:,
+etc.
+ခွေးရူး
+can be
+regarded as transformations of such
+same
+con-
+structions as ခွေး(က)ရူးသည်, လူ(က)ငယ်သည် etc.
+Type II NV Compounds
+The second group of NV compounds
+are distinguished from the first in that
+they do not take the same classifier as
+the first constituent: e.g. “one
+gun", but သေနတ်ကိုင်တယောက် “one rifleman"
+(သေနတ်ကိုင် “rifleman”, lit. “gun-hold”),
+so also empε:: "one school", but
+ကျောင်းအုပ်တယောက် “one headmaster”; အိမ်တလုံး
+“one house” but “one homeless
+person, လက်ကဖက် “one hand”, but လက်စွပ်
+JBRS, L, ii, Dec., 1967.
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 10]]
+204
+: "one ring". Transformationally also,
+Type II differs from Type 1:
+may
+Compound Nouns in Burmese
+"translator" (< (Pali)
+"language"
+and "translate"). Nouns of this
+be a transformation of (သု) သေနတ် (ကို) pattern formed with a dissyllabic verb
+ကိုင်သည်, or of သေနက် (ကို) ကိုင်တဲ့လူ
+NV compounds of Type I correspond
+to English constructions of the pattern
+adjective-noun: "rich man, dried fish"
+etc. Those of Type II most commonly
+function as agent nouns, but a few
+refer to objects, like como "ring", mostly
+objects used as instruments: : “lighter".
+I have the impression that the first type.
+is more freely productive than the second.
+It seems that most constructions of the
+ခွေး (က) ရှူးသည် pattern can be transformed
+into NV compounds.
+A few words of the NV class of
+compounds belong to Type I in that
+they are transformations of the same type
+of pattern as cog, but resemble Type II
+compounds in that they do not take the
+same classifier as the first constituent.
+Thus one says
+"one piece of
+chalk" ("chalk", lit. "earth-white")
+but one could not use the same classifier
+for "earth." Similarly 8: “fire” and the
+compound so “iron” (lit. "fire-hot") could
+not take the same classifiers. If such forms
+are to be classified with one of the two
+major types, they belong rather with
+Type I than with Type II.
+The noun constituent is sometimes
+a word of more than one syllable and/or
+a loanword, e.g. ပါမောက္ခချုပ် –rector”(((Pali)
+ပါမောက္ခ “professor" and ချုပ် “chief”),
+goşa "subdepartment” (< (Pali) gos“depart
+ment" and "divide"), "white Flag
+နှစ်ဖြူ
+Communist.' ( só is an abbreviation for
+mis "communist", combined with
+ကွန်မြူနစ်
+“white”), ဂြိုဟ်တု –satellite” (K (Pali) ဂြိုဟ်
+"planet" and --တု “imitate”), ဘာသာပြန်
+seem to be rare. But there is: ခွေးဝင်စား
+"pariah" (ocos: "enter-eat" is a dissyllabic
+verb), p:o: "beggar" ( "beg
+သူဘောင်းစား တောင်းစား
+eat").
+Some forms in which the second
+member is a verb morpheme could actully
+be regarded as NN compounds, taking
+the second element as not simply the
+verb stem, but the bound form of the
+verbal noun in 50-
+(on which, see Intro-
+duction). This is particularly possible in
+cases where the compound is paralleled
+by a noun plus a verbal noun in --..
+Thus one can say not only ပစ္စည်းဟောင်း,
+but also “old property", of
+which the first is a compound, the
+second a phrase. So also coop is paralleled
+by "artificial pearl," by Jo
+ပလဲအဘု ပိတ်ဖြူ ပိတ်
+"white cloth". If these were regarded
+as NN compounds, they would have to
+be placed in a class by themselves since
+they take the classifier appropriate to the
+first member not the second.
+mind this is one good reason for regard-
+ing them as NV compounds rather than
+NN compounds. In any case the majority
+of compnunds I have classed as Type I NV
+compounds are not paralleled by phrases.
+with a verbal noun in this way. Thus
+one can say soos: "hot water" (lit. “water-
+hot"), soos "scar" (lit. "sore(N)-tough"),
+To my
+"criminal" (lit. "man-bad”), but not
+အနွေး, အနာအရွက်, လူအဆိုး
+(c) VN Compounds
+It is convenient to split up nouns
+of this class into two groups: (i) nouns
+in which the second constituent is
+-691,
+-, -ချက်, --ခြင်း, (ii) all other compounds
+of the VN pattern.
+JBRS, L, ii, Dec., 1967.
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 11]]
+Dr K. Forbes
+205
+(i) VN Compounds in-, -- --ချက်, --ခြင်း စမ်းသပ်မှု “test”, ကျဆုံးမှု “death”. Examples
+of alternation between - ရေး – ချက်, ~ မှု
+It seems justifiable to separate these
+VN compounds from the rest for two
+reasons; first, because nouns in
+--60: etc.
+-
+-
+with no difference of meaning between
+the alternatives are : လုံခြုံမှု —ရေး“security”,
+usually have a dissyllabic verb as first. ကိုးတက်မှု -ရေ။ “improvement”, ကျန်းမာမှု -ရေး
+member, which is rather uncommon in
+other VN nouns, secondly, because to a
+limited extent --ရေး, ချက်,
+- can alternate
+( i. e. they are not contrastive). Nouns in
+--ရေး- ချက်, -- especially are extremely
+common and productive.
+are:
+J
+Examples of nouns in 6: etc. with
+a monosyllabic verb as first member
+(and close juncture between the parts)
+လျှောက်ချက် “application”, တိုင်ချက်
+"report", "theft". When the verb is
+dissyllabic, there is always close juncture
+between the second syllable of the verb
+sequence and the following noun, but
+whether there is internal open juncture
+or close juncture between the first two
+syllables depends on which kind of juncture
+there is between the two verb morphemes
+when used as a verb. The juncture always
+remains the same whether the sequence
+of two verb morphemes is used as a
+dissyllsbic verb or as the first constituent
+of a compound noun. But even if there
+is internal open juncture between the two
+verb morphemes the natural point of
+division between the ICs always falls
+between the second verb morpheme and
+the following noun morpheme, and does
+not therefore ever coincide with a point
+of internal open juncture (on the structure
+of these forms, see also above in the
+Introduction). Some examples of dissyllabic
+verb stems combined with -q:, -
+are: q: “independence", :aj
+"peace": "improvement", ::
+"loss", "surprise",ε:"honour",
+ဆုံးဖြတ်ချက် “decision”, လျောက်လဲချက် “plea”,
+"experience", "culture",
+--
+etc.
+“health” ခံစားချက် …မှု “experience”, ချွတ်ယွင်းမှု
+- "deficiency". "It will be evident that
+the VN nouns in this class are often
+equivalent to the verbal nouns of English.
+One exceptional form မတရားမှ "injustice"
+may be included here in which the verb
+morpheme (cxp:, a single verb morpheme,
+though containing two syllables) is preceded
+by the negative bound morpheme
+/mǝ-/.
+(ii) Other Compounds of the VN pattern
+In VN compounds other than those
+described under (i) above, the first con-
+stituent is usually a monosyllabic verb, the
+second a monosyllabic noun: e.g. occ
+"income" ("enter-money”), expƐ:ms "goods
+for sale" ("sell-goods"), cere "birthday"
+("be born-day”), ထိုးဆေး "injection"
+("pierce-medicine"), en "conqueror"
+("win-man"), com "applicant" ("apply-
+man") etc. When the second constituent
+is not - 6919-9
+- etc., a dissyllabic verb as
+first member is not common though such
+forms do occur, e.g. eg: "election"
+(sismom is a dissyllabic verb meaning
+“elect”), ဆွေးနွေးပွဲ “discussion”, ထောက်ပံ့ငွေ
+"stipend", "blackmarketeering
+gang", "right of ownership", onio
+မှောင်ခိုဂိုဏ်း
+"consumer". Most such forms with a
+dissyllabic verb as first member, and also
+a form in which the first constituent con-
+sists of three verbs: $: "seminar”
+(the dissyllabic verbs "exchange views"
+has been combined with cous "gather"),
+nearly all seem to be rather recent coinages.
+In all these forms there is always close
+juncture between the last verb member and
+JBRS, L, ii, Dec., 1967.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 12]]
+206
+the following noun, the same juncture
+(close or internal open) between the mem-
+bers of the verb sequence as there would
+be if it were used as a verb. The IC divi-
+sion always coincides with the close junc-
+ture between the last two members of the
+compound (see also above on nouns in
+-cq: etc., and Introduction).
+ဝယ်အား
+In this class of compounds two
+apparent examples or loantranslations from
+English are worth mentioning:
+“buying power" ("buy-power"). :
+"runway" ("run-way").
+(d) VV Combinations
+There is a very small class of forms
+which function as nouns but of which both
+the constituents are otherwise only used as
+verbs: e.g. ကြော်ငြာ “advertisement”, ကြေငြာ
+“announcement", 05:00: "meeting", ပူးတွဲပါ
+"something attached" (to official docu-
+ments etc.). No other examples of VV
+sequences used as nouns are known to me.
+The first three, ကြော်ငြာ, ကြေငြာ, စည်းဝေး, al
+function as dissyllabic verbs when the usual
+verb suffixes are added. The last form.
+ပူးတွဲပါ, consists of the dissyllabic verb ပူးတဲ့
+"be attached", combined with the mono-
+syllabic verb o "be included" (but
+does not occur as a verb combination).
+Compound Nouns in Burmese
+as nouns in Burmese unless the bound
+form is prefixed to them. What, then,
+are the nouns op:so: etc. abbreviations of?
+To begin with :: itself. This form
+is only, or mainly, colloquial, and is
+paralleled by p, with identical
+အစည်းအဝေး,
+meaning, which is the normal noun form
+derived from a dissyllabic verb (on this
+formation, see below), That :
+အစည်းအဝေး
+could produce an alternative form oco:
+seems to me to be due to the fact that
+sa-
+free forms in generally have bound
+alternants without - which are normal
+as the second element of a compound,
+and common also as the first element
+of compounds (see Introduction), and also
+to the fact that at least a few derivatives
+of the patterns N N have alternative
+forms without either the first or second
+e. g. : beside
+-
+ရာ
+အမူအရာ
+"action". That
+shorter forms of this kind
+are rather
+recent is suggested by the fact that Judson
+(see note 1) not only does not include
+the noun ofiset, but also does not include
+"quarter", que “affairs" (the usual
+modern forms, from the nouns quand
+အကွက်အရေး and အရာ ), but only အရပ်အတွက်
+အရေးအရာ Judson includes both အရိုးအရာ and
+"custom", but according to my inform-
+ment, only the latter is now in use.
+ကြော်ငြာ and ကြေဌာ ( neither of which forms
+are recorded as nouns in Judson, though
+they are SO in the recent တက္ကသိုလ်မြန်မာ
+G
+I do not believe that any of these
+forms are really examples of compound
+nouns formed by combining two verbs. s), cannot be explained. along the
+In my view, စည်းဝေး, ကြော်ငြာ, ကြေငြာ, are
+same lines as opo, since there are no
+to be understood in the first place as VV forms အကြော်အဌာ, အကြော, But they are
+sequences in which two verbs have been paralleled by the synonymous 73400
+combined to form a larger (dissyllabic)
+a larger (dissyllabic) and ကြေငြာစာ(စာ “letter, writing”), ကြော်ငြာ
+verb (not noun) unit. The nouns opſicos etc, and are, I believe, best regarded as
+may then be understood as the verb stem abbreviations of ကြော်ငြာစာ, ကြေငြာစာ. The
+used as a noun or as a kind of abbrevia- odd form cool, I take to be a kind of
+tion. The latter seems to me the more likely abbreviation of solo vel sim. “(the
+solution, since verbs cannot freely function paper) attached”.
+JBRS, L, ii, Dec., 1967.
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+•
+
+[[page 13]]
+Dr K. Forbes:
+B. Compounds Containing Three Members
+rare;
+Four-member compounds are
+but even three-member compounds are
+much less common than compounds
+containing only two contstituents. Nearly
+all types of compounds containing three
+members are actually analysable into two
+ICs which also occur as free forms and
+of which one IC is a simple word, the
+other a compound of one of the types
+207
+Below are set out the patterns which
+three-member compounds can take, with
+examples of each type. There is close junc-
+ture between all syllables, unless otherwise
+stated.
+1. NN < (NN) N: e.g. အလယ်တန်းကျောင်း
+"middle school" ( < xos: “middle
+grade, cope: "school"; cousons: itself is
+from အလယ် “middle”, (အ)တန်း “grade”);
+so also: :compε: "primary school",
+described in section A abov', where, လက်သီးစွမ်း “skill with the lists”, စာအုပ်စင်
+however, three-member compounds in
+which one IC is a dissyllabic verb have
+already been included since they are
+exactly parallel in formation to com-
+pounds in which one member is a
+simple (monosyllabic) verb. One type of
+compound of the pattern NVN which is
+not analysable in this way, will be con-
+sidered separately after the other three-
+morpheme compounds. Considered from
+the point of view of the syntactic function
+of its ICs, the three-member compounds
+follow one of the same patterns as are
+common for two member compounds: NN,
+““bookcase”, မြေပဲဆီ “peanut oil, ဆင်ခြေဖုံး
+"suburb”.
+ရေနွေး
+595586g
+2. NN < (NV) N: e.g. quais: “kettle"
+(< ““hot water”, အိုး “pot”; ရေး ရေ
+"water", za: "hot"): so also:
+"steam", sqq “iced water", ရေချိုငါး
+““freshwater fish”, ရေနံဆီ “kerosene” သူငယ်တန်း
+“infant class” ɖɔwɔ "corpse".
+3. NN< (VN) N: e.g. contas: “lecture
+hall" (< wεms: "class", (m)₁s: "room".
+သင်တန်း (အ)ခန်း
+သင်တန်း from သင် “learn, (အ)ဘန်း “grade”);
+သင်တန်းကျောင်း training school”, သင်ဘန်းသား
+"trainee".
+4. NV<(NN)V; e.g. red cross
+< ကြက်ခြေ “cross”” နီ “red; ကြက်ခြေ itself <
+ကြက် “chicken” ခြေ “leg”), အတွင်းရေးမှူး “secre-
+tary".
+ကြော်
+5. NV< (NV) V; e.g. clichɔmem³ “fried
+dried fish" ( < c "dried fish",
+"fried";cle
+"dry/dried"); so also q
+NV, VN. The combinations which occur.
+in Burmese, with examples, are set out
+below. While I have arranged them in the
+first place according to the syntactic func-
+tion their ICs would have if used as separate
+free forms, the structure of these con-
+stituents has in turn been shown after the
+sign <. In each case the constituent which
+is itself a compound has been bracketed,
+and its pattern indicated within the brackets.
+The unbracketed constituent, designated
+N or V should be understood to be a
+simple, usually monosyllabic noun or verb
+stem. Thus NN < (NN)N : a compound
+whose ICs are both nouns, of which the မြင်ကွင်း < မြင် “see”, (အ)ကွင်း “area"); so
+also: အိပ်ရာခင်း “bed sheet”, စားပွဲခင်း –table-
+first constituent is itself a compound of
+two nouns. NN < (NV) N = an NN com-
+pound of which the first constituent is
+itself a NV compound, the second a simple
+noun.
+from
+coc: "plain tea".
+ရေနွေကြမ်း
+cl "fish",
+ငါး “fish”, ခြောက်
+“crushed ice",
+6. NV<(VN)V: G: "panoramic
+view” ( < မြင်ကွင်း “view”, ကျယ် “wide
+cloth".
+Of these patterns, (1), (2) and (5) are
+the commonest, but all are still productive.
+All consist of a compound first member
+JBRS, L. ii, Dec., 1967.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 14]]
+208
+combined with a simple word which may
+be either a noun or verb (in many cases
+however, where the final member is a
+verb, it could also be interpreted as the
+bound form of a verbal noun in -;
+for a discussion of this matter. see on
+NV nouns above).
+Compound nouns in Burmese
+close juncture between all syllables. But
+in both cases the NV sequence is not
+used as an independent word: ကင်းခြေများ
+“centipede” ( < mɗ: “centipede, scorpion
+et sim." and
+and ခြေများ “many feet” < ခြေ
+“foot”, များ ““be many"); လူစွမ်းကောင်း “an
+extraordinary man” (> co "man" and
+be an
+Three-member nouns of the above: "good ability” < (3) od: “ability”,
+to
+Gmcε: "good"). This seems
+atypical and unproductive pattern
+patterns are occasionally expanded with
+another verb member, especially such
+verbs as ☑: "big", "chief”, è “sub”.
+e. g. အတွင်းရေးမှူးချုပ် “chief secretary”, with
+the pattern NV < (NV) V < ( (NN) V)V
+"x-primeminister," ( (NV)
+V)V.
+Sequences in which the first IC is a
+simple noun or verb, the second a com-
+pound, do not normally have close junc-
+ture between them, but internal/external
+open juncture (see Introduction). Hence
+no sequences with these patterns have
+been included here. Although in some
+cases there is no contrast between close
+and open juncture, as there are no clear
+examples (except :: etc., discussed
+below) with close juncture, the ambiguous
+cases also have been counted as having
+open juncture. Such patterns are:
+-
+1. NN < N (NN): လမ်းမြေပုံ “road
+map” (< cos: “road", "map"; > G
+"earth", "picture"); so also: အိမ်လခ
+"house-rent".
+2. NN < N (VN):
+"night
+class" (< "night" cos: "class", itself
+< သင် “learn”, (အ)တန်း “grade”); so also:
+စာပို့ခ “postage, အိမ်သုတ်ဆေး Chouse paint".
+3. NN<N (NV): "referee"
+ဒိုင်လူကြီး
+(< "referee", o "important person”,
+itself < "man", : "big".
+☐ 9
+g
+There are, however two forms known
+to me with this last pattern which have
+JBRS, L, ii, Dec., 1967.
+Burmese.
+in
+There remains to be considered se-
+quences of the pattern NVN, in which
+neither the first two members nor the
+second two members exist independently
+as a compound noun, and in which there
+is close juncture between the last two
+members, close or internal open juncture
+between the first two menbers. These
+NVN compounds are thus to be distingnish-
+ed from the pattern NN < (NV) N such
+as q, and phrases with the pattern
+N(VN) such as, both of which
+patterns have already been described
+above. The type to be considered
+is quite common and productive in
+modern Burmese.
+next
+Words of this class can be classified
+in two ways, (1) according to the type
+of juncture occurring between the first
+two morphemes, (2) according to the types
+of constructions of which they are trans-
+formations. This second type of classifi-
+cation seems the more significant and
+valuable of the two.
+NVN compounds may have either
+close or internal open juncture between
+the first two morphemes. Forms with
+close juncture between all syllables qualify
+as compound nouns on phonological
+grounds alone. Following the principles
+set out in the Introduction, I have only
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 15]]
+Dr K. Forbes
+209
+juncture between the first and second
+members, as in apodos, that the relative
+newness and unfamiliarity of the compound
+is a factor causing the parts to be less
+closely run together.
+included as NVN compounds those sequen-
+ces with internal open juncture between
+the first two morphomes where there are
+also other clearout morphological and
+syntactic grounds for regarding them as
+compounds, viz. (1) the division between
+ICs coincides not with the open juncture
+but with the close juncture, (2) the two-
+morpheme sequence following the open
+juncture does not exist as an independent
+compound noun. All the forms quoted
+in the following discussion qualify as com-
+pounds on the grounds outlined above. “tailor's shop” ("machine-sow-
+Difficult and ambiguous cases will be
+shop") is presumably a transformation of
+discussed separately at the end of this "the shop where one sow
+section.
+Examples of NVN compounds with
+close juncture bei weren all sylla-
+bles are copy/lataoupbww/ "napkin",
+$: / sa: Dings": "classroom"
+တိုက် / 1
+sa:daidai ? "library"
+/lu:zi:dwe: / "passenger coach", NVN
+compounds with internal open juncture
+between the first two morphemes are:
+corpoſes /ha:khoukg a "grasshopper",
+ceptio: 15 da : sho: ze: / “cough
+mixture, အကြောင်းကြားချက် ၊ ခfs a : tsa:-
+dze?/ “information", sq/ye: tinzɛê}
+"water pump".
+NVN compounds are transformations
+of several different kinds of expressions,
+the two nouns standing in various rela-
+dons to the verb. In some, the first
+noun indicates the instrument with which
+the verbal action is performed. Thus
+with a machine" (in this and the follow-
+ing passage, the affix-linking the
+verb with the following noun indicates
+a much wider range of relationships than
+the English relatives, such as that the
+following noun is the subject or object
+of the verb, place where the verbal action
+takes place, etc.). Possibly
+"grasshopper" ("knife-cut (transitive)-
+anima!" ) also belongs here, if a transform
+Of နှင့်ခတ်သည့်အကောင် the arianal who cuts
+with a knife", but it could also be
+transfytrei from ကဲ့သို့ခုတ်သည့်အကောင် “the
+animal who cuts like a knife". In other
+cases where the first noun indicates
+the instrument of the verbal action,
+the second noun is the object rather than
+the subject of the verbal action, but there
+would be no difference in the construction
+of the Burmese phrase from which they are
+derived. c.g. လက်နှိပ်စက် "typewriter"
+("hand-press-machine") < compon
+"The machine pressed with the hand".
+Compare also:
+"handkerchief"
+("hand-hold-scar") <conpsyɔ] “the
+Though the type of juncture occurring
+between the first and second members of
+NVN compounds may depend in part on
+the type of phrase of which they are
+transforms (see below on sopracco: ), this
+cannot explain why words
+which are
+transformations of the same construction,
+such as and open should
+have different juncture patterns: scarf (one) holds in the hand".
+has close juncture between all syllables
+sqo close juncture only between the
+second and third syllables. It is possible
+that in some cases with internal open
+In others, probably the largest group,
+the compound is a transform of a phrase
+where the first noun is the object of the
+JERS, L, ii, Dec., 1967
+27--G 124-1,000 + 50-30-5-68.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 16]]
+210
+verb, and the NV sequence expresses the
+purpose for which the object denoted by
+the final noun is used. Thus com
+"water for washing the hands" ("hand-
+wash-water") can be considered a trans-
+formation of come "water for washing
+the hand(s)". So also: cos:som "steam-
+roller" ("road-grind-machine"), cle:
+"fishing line” (“fish (N) - catch-string),
+ရေမှုတ်စက် "compressor" ("water-blow
+(transitive)-machine), Solo “pencil shar-
+pener" ("pencil-sharpen-machine"),
+1
+"prize-giving ceremony" ("prize give
+ceremony"), NVN nouns of this class are
+rather common, and certainly productive.
+Terms for new intruments and gadgets are
+sometimes coined on this pattern.
+Less usual, but apparently also produc-
+tive, are NVN compounds in which the
+first noun is the subject of the verb, the
+second the object vel sim.: coo: "passenger
+coach" ("man-ride-coach") <co(m):
+3200 "coach which people ride". So also:
+လူဆင်းပေါက် “manhole ("man - descend-
+hole"). Actually the relation of the first
+noun to the verb is clearly different in
+လက်ဆေးရေ (object) and လူစီးတဲ့ (subject). This
+difference can be marked in Burmese by
+using different particles (-ကို denoting
+object, denoting subject), but in practice,
+if the relationship is unambiguous, it is
+common for no relational affiix to be used
+at all.
+A very few NVN compounds connot
+be regarded as transformations of any of
+the three above types where the first noun
+expresses the instrument (or location) or
+object or subject of the verbal action. For
+example, in cap "cough mixture"
+("throat-bad-medicine"), the NV phrase
+cape:: ("throat-bad") elsewhere functions
+as a verb phrase and means "to cough", so
+that though structurally this is an NVN
+JBRS, L, ii, Dec., 1967.
+Compound nouns in Burmese
+sequence, it is really more parallel to VN
+compounds, except that in this case the
+verb itself contains two members, one of
+them a noun. A comparable form is cqm:ms
+"swimming pool", from the NV sequence
+otherwise used as a verb:
+"swim",
+ရေကူး
+combined with m$ "pool". These verbal
+phrases consisting of a NV sequence are
+marked by the fact that the grammatical
+relationship between the noun and the
+verb is not shown by particles. There is
+open juncture between the first two mor-
+phemes of cap and comms, just as
+and
+ရေကူး
+there is when cap
+function
+as verb stems. It seems to be the rule that
+when this kind of verbal phrase or dis-
+syllabic verbs have internal open juncture
+between the parts, this juncture is
+maintained even when the same sequence
+occurs in a larger noun construction as
+here.
+I have stated above that it is char-
+acteristic of NVN compounds even when
+they have open juncture between the first
+two members, that the IC division does
+not coincide with this juncture. Though
+this analysis seems unquestionable for
+most forms,c.g. ဓားခုတ်ကောင်, စာကြည့်တိုက်,
+လူစီးတဲ့, ရေကူးကန်, other
+cases are more
+ambiguous. Is soos "pencil-sharpener”
+to be interpreted as "pencil-sharpening
+machine (taking ass-together as one IC),
+or as "a sharpening machine for pencils"
+(taking so as one IC)? One may mention
+at this point another form left out of the
+earlier discussion: com "tractor"
+လယ်ထွန်စက်
+("field-plough (vb.)-machine"). the form
+$ (“plough-machine") is also used
+with the same meaning. But must one
+therefore regard cous00 $005 as containing the
+ICs cous "field" and "plough(ing)
+machine? I feel that since ထွန်စက်=လယ်ထွန်စက်,
+and the verb stem co လယ်ထွန်
+plough", either cousoos - may be regarded
+-=
+"to
+ConvrightⓇ 1998 - Myanmar Book Centre & Book Promotion & Service Ltd Bangkok Thailand
+
+[[page 17]]
+Dr K. Forbes
+as an expansion of co- in couscosom, or
+ထွန်-
+as an abbreviation of လယ်ထွန်-- in
+ထွန်စက်, This means to say that then လယ်ထွန်--
+may be regarded as the first 1C of the lon-
+ger compound, with on as the second,
+inspite of the existence of of. In fact
+my feeling is that for all the words in this
+group the most satisfactory approach is
+to take the first two members as one IC,
+the third member as the second IC. This
+means also that the IC division falls at a
+point where there is always close juncture
+between the members (cf. Introduction).
+NN
+Finally, mention should be made of
+one group of phrases of the NVN pattern
+in which there is usually external open
+juncture between the second and third
+members, always close juncture between the
+first two members: e.g. cooε / sambja
++thau: “model prison", : /ko:bai:
++ka: “private car", compεs/1ɛ¢i+ɩøâu:/
+"the present school", como: /lettwe:gã:/
+"laboratory" ( < cumsos "practical
+(32)ǝs: "room"). Only this last form has
+close juncture between all syllables and
+must therefore be classed as a compound
+noun, in which the first IC comacy can also
+occur as a free form, but functions as a
+noun qualifier rather than as a noun. Not
+C. Compounds containing Four Members
+211
+For the sake of convenience, I shall
+discuss here all foursyllable sequences in
+which there is a repetition of the same
+morpheme in the first and third, or in the
+second and fourth syllables, with close junc-
+ture between the first two syllables and the
+external
+last two syllables, and
+open
+juncture between the second and third
+syllables. The forms in this group by no
+means all have the same structure, and
+only a few of them are compounds, but
+it seems worthwhile to consider them
+all together here in view of their super-
+ficial similarity. The whole group can be
+conveniently divided into two major
+types:-
+-
+I. Sequences in which the repeated
+morpheme is the bound form
+32 -10-1
+recurring in the first and third syllables,
+as in အကူအညီ help?.
+II. Sequences in which the repeated
+syllable is not -.
+ɔɔ
+Type I can be further subdivided:
+(1) Nouns based on a dissyllabic
+verbs အကူအညီ “help” { ကူညီ’သည် “help?”
+(vb.) ), အစည်းအဝေး “meeting” ( စည်းဝေး-သည်
+"meet") in which forms and အညီအစည်း
+only လက်တွေ့, but also စံပြ ကိုယ်ပိုင်, လက်ရှိ and အး are not used independently.
+occur as free forms which may be used
+freely as qualifiers of any following noun.
+600 etc. are phrases not compounds
+(apart from လက်တွေ့ခန်း, လက်တွေ့ also occurs
+in sequences with open juncture between
+the second and third members such as
+(2) Forms in which the parts are
+nouns based on verb
+also independent
+stems; e. g, အထင်အမြင် “opinion'' . ( အထင်
+"thought", "sight", from coε "think",
+"see", though the dissyllabic
+verb
+လက်တွေ့စာအုပ် “practical book"). For the IC ထင်မြင်သည် “think” is also used), အစိတ်အပိုင်း
+division falling between the second and
+third members coincides with a point of
+external open juncture. The free combina-
+tion of etc. with any noun also sup-
+ports the interpretation as phrases.
+(52 “a part", : " part", from go
+"divide", SE: "divide"), "sweet
+and sour things” (a)] "something sweet”.
+“something sour", from of "be sweet”,
+"be sour").
+JBRS, L, ii, Dec., 1967.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 18]]
+212
+(3) Forms consisting of a combination
+of two dissyllabic nouns not derived from
+verb stems: eg. အဆင့်အဘန်း rank" { < zz
+"rank",
+"rank"),
+"reasons" { < to; result, အကြောင်း
+46
+“cause”), mosssss "complexion” (< 32000;
+"skin").
+5%
+<flesh",
+3029
+Nouns of the first group,
+like on
+sapi, are
+not compound nouns at all,
+but simply derivatives of dissyllabic verbs
+prefixed to both members. Both
+11
+with e
+ICs are discontinuous: (1) op...ps (2) sɔ,.,00.
+On morphological grounds, then, forms
+like sama are one word in spite of the
+open juncture between the second and
+third syllables; not only does the IC
+division not coincide with the point of
+open juncture, but also the parts separated
+by open juncture do not otherwise occur
+as free forms.
+Compound nouns in Burmese
+with the open juncture after the second
+syllable with both the two syllable units
+occurring also as free forms, rather than
+according to which syllables are repeated.
+Forts in wtich the NC division decs coin-
+cide with the open juncture and in which
+both the two-morpheme units thus divided
+also occur as free forms elsewhere are
+to be regarded as phrases and not com-
+pounds; e.g. egodegones "income and expen-
+diture" (<ogo "income", ecco “expendi-
+ture"), jolojia "body" ( < much
+"body", fufco "body"), codicgadie
+"good and bad inheritance" (< coofice
+"good inheritance", "bad inheri
+tance"). On the other hand, sequences
+which do not fulfill all these conditions,
+Le either where the IC division does
+not coincide with the point of open
+juncture, or, if it does coincide, one or
+both the constituents is not used as
+free form, may be regarded as compounds
+Nor are sequences of either the
+(see also Introduction). Words in this
+second or third types (class are few in number. I do not know
+etc.) compounds either, according to my
+definition in the Introduction. For in both
+classes the division between ICs coincides
+with the point of open juncture, and
+each IC is also a free form. They may
+therefore be classified as nominal phrases.
+common
+Sequences of Type I are much less
+the
+than those which fall in
+first group (Type 1), but probably are
+also still productive. In forms of Type
+II there may be repetition of the same
+morpheme either in the first and third
+syllables (as in
+"body"),
+or in the second and fourth syllables
+(as in "the beginning of the
+rains"). In all forms in this group, all
+four morphemes also occur as free forms.
+It will be more profitable here to split
+up the forms which occur according to
+whether or not the IC division coincides
+JBRS, L, H, Dec., 1967.
+whether it is still productive, for I know
+of no certainly recent examples. But in
+this group may be included:
+"society" (cę occurs as a free form in
+other contexts, but not coros), regiona
+စာရေးစာ
+“clerk" (exes; occurs elsewhere as a free
+form, but not ] }, "loafer"
+(yaco can be used alone as a free form,
+but not cocoć), and the following forms
+in which neither of the two-morpheme
+sequences occurs AS
+So "ornaments for the hands
+and arms", obocoboos "military uniform",
+separate word:
+me
+good "stray dog". It seems to
+that all these forms except soos are
+best interpreted as containing two disconti
+nuous ICs, one of which is a repeated
+morpheme. Thus the ICs of combo:
+ure: (1) conf_com), (2) nc_ox; of
+(1)
+ခွေးလေနွေးလှိုင်း
+4.1(2) 600. The whole form
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 19]]
+Dr K. Forbes
+(လက်ဝတ်လက်စား CLc, is held
+}
+213
+together, c, co, all have allomorphs with
+and without voicing of the initial con-
+sonant: /pɛ: be:/in/mje:be:/; /thi: ~
+di:/ in scoof: /ledi:/;/she:~ ze:/ in cổ:000:
+/thoize://todo: in /shwe
+partly by juncture features (close junc-
+ture after the first and third members).
+but also by the interlocking of the
+discontinous constituents. The correctness
+of this interpretation seems to me to be
+confirmed by the fact that cobons, geos,
+coco are also used as dissyllabic verb
+combinations, making it the more natural
+to link them together as one IC.10
+The following two sections of this
+paper will be concerned with morpho-
+phonemics, i. e. with the allomorphs of
+morphemes which occur in compounds,
+first with those which are phonemically
+conditioned, second with those which are
+at least partly morphologically conditioned.
+III. Phonemically Conditioned Allomorphs
+It follows from the contrasts between
+close and open juncture described in the
+Introduction to this paper that most
+Burmese morphemes that appear in com-
+pounds and that can directly precede or
+follow close juncture have more than one
+allomorph depending on whether they
+occur in isolation or preceded and/or
+followed by close juncture.
+The main types of variation
+can occur are as follows:
+which
+(1) Alternation of Voiced and Voiceless
+Initial Consonants
+dzo:/.
+The contrast between voiceless con-
+sonants and their voiced counterparts is
+phonemic in Burmese when open juncture
+precedes. or example, co: /she:/ "medicine"
+contrasts with scj: /ze:/ “market” ∞6 /ta?/
+"treop" with esos /da?/ "element; /pe:/
+“peas and beans" with /be:/ "duck".
+But medially after close juncture, as
+described above, there is no contrast bet-
+ween voiceless/voiced stops, affricates,
+/s,sh~z/. However, it does not seem to
+cause any difficulties of understanding,
+mainly, no doubt, because there are rela-
+tively far fewer morphemes which, spoken
+in isolation, begin with a voiced consonant.
+Most morphemes beginning with /g. dz, z/,
+for example, are polysyllabic (often loans
+from Pali).But, as has already been point-
+ed out earlier (at the end of the Introduc-
+tion), polysyllabic words rarely occur
+immediately after close juncture. Therefore
+they rarely show alternation of voiceless
+and voiced consonants.
+(2) Alternation of Nasalised Yowel with
+Vowel plus Nasal
+A morpheme which, when spoken in
+isolation, ends in a nasalised vowel, often
+ends in a vowel plus nasal when close
+juncture follows. The nasal before close
+juncture is homorganic with a following
+consonant if that consonant is a stop (/b d
+g/), or affricate (de, 8/) or nasal (/m n
+If a morpheme spoken in isolation
+commences with a voiceless stop, voiceless
+africate (/te, ch. 9/) or /s/ /sh/ the same
+morpheme will have a second allomorph
+beginning with a homorganic voiced con-
+sonant instead of a voiceless consonant,
+which will occur following close juncture). Hence of “rice" has the follow-
+if the preceding syllable ends in a nasal or
+open vowel other than /a/, and sometimes
+if the preceding syllable ends in jaj. Thus
+ing allomorphs according to the nature of
+the initial phoneme of the following mor-
+pheme: /sha: (the free form which also
+JBRS, L, ii, Dec., 1967.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 20]]
+214
+occurs before a vowel in close juncture and
+before some consonants, such as /w.j/);
+/shaŋ/in/shaŋga:/; /shan in ∞∞
+/shanðɛ:/; / sham / in
+Similarly, the free form of
+alternates with /eim/ in
+/shambjou? /.
+"house" /ei:/
+: /eimmo:/, and
+ein/in/einni: dz. Thus, though
+mnŋ contrast with each other when
+preceded by open juncture, they do not
+contrast at the end of a syllable where they
+only occur when close juncture follows,
+and the occurrence of one nasal or another
+is conditioned by the nature of the follow-
+ing phoneme.
+(3) Alternation of Vowel plus [?] and Vowel
+plus Consonant
+A morpheme before open juncture
+ending in a vowel plus glottal stop (5,
+/ɛ?, a P/ etc.) has allomorphs with
+vowel plus consoant when another con-
+sonant follows after close juncture. The
+consonant before the juncture is homor-
+ganic or identical with the consoant
+following the juncture (but sometimes
+before close juncture the vowel is pro-
+nounced short and open with no consonant
+following in the same syllable; this con-
+stitutes an alternnative pronunciation to that
+described and illustrated here). Hence any
+morpheme which in isolation ends in
+/?/ has actually or potentially a considerable
+number of allomorphs. which occur
+before close juncture. For example, où
+/ si ? / "war" has the allomorphs / sit / in
+00
+/ sitta ? /, /sipino/sipbo: /,
+/sim/in osimme P. of /wε? / "pig"
+has
+the allomorphs /was/ in ဝက်ဆီ
+wɛssi: /, /wet in w: /wetha:/, /wɛp/
+in /wɛppau: /etc. All these alterna-
+tions of /P/ with other consonants are
+also non-phonemic, though, of course,
+/t p s/ etc. contrast with each other
+when initial.
+JBRS, L, ii, Dec., 1967.
+Compound nouns in Burmese
+(4) Alternation in the Length af Vowel and
+in the Quality af Tone
+Morphemes ending in vowels with
+Tone I or Tone II (cf. Introduction),
+also have allomorphs in which the vowel
+varies in length if they occur both free
+and as the first element of compounds.
+Vowels with these tones are shorter
+before close juncture or internal open
+juncture than before external open juncture.
+Thus the vowel of 60: /she:/ in isolation
+is longer than before close juncture as in
+c: she zai:/. If a syllable has Tone
+II, it is level before close juncture, and
+higher than before open juncture, when
+it falls.
+Some morphemes occur both as the
+first and as the second element of com-
+pounds, and a few also as the middle
+element of a three-member compound.
+Thus one morpheme may have a con-
+siderable number of allomorphs, all
+phonemically conditioned. For instance,
+o$: "flower" has the following allomorphs:
+(1) pa: in isolation, (2) ba: in:
+mi:ba:, (3) pam/ in ostu pambi:/
+of:
+:
+(4) pan in op pandɛ:/, (5) pan in
+pangai; om "machine" the follow-
+ing: (1) se ?/ in isolation, (2) /zɛ P/ in
+ကားစက် / ka:zs P (3) sɛp in o: /sɛp
+bei:, (4) / sɛm/ in : /semmi:/etc.
+အခင်း ability has the allomorphs:
+(1)/as: in isolation, (2) /zo: in como:
+စမ်း (let9i:z;, (3) zQy/ in လူစွမ်းကောင်း
+luzongãũ:/
+Some Burmese morphemes, however,
+have allomorphs which are not conditioned
+by the phonemic surroundings, or only
+in part. These allomorphs are morphemi-
+cally conditioned.
+IV. Morphemically Conditioned Allomorphs
+There are some morphemes where the
+difference in phonemic shape between the
+allomorph occurring as a free form in
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 21]]
+Dr K. Forbes
+isolation and the bound allomorph occurring
+as the first constituent of compounds, can-
+not be explained, or at least in some cases
+not fully explained, purely as phonemically
+conditioned (i. e. by the nature of the first
+phoneme of the following morpheme).
+In the pairs or sets of allomorphs which
+will be considered here, the free variant
+usually has the stressed vowel /a:/ (in Tone
+I or II), the bound variant, which is
+nearly always spelt in the same way as
+the free variant in Burmese, the unstressed
+vowel ǝ in its final syllable. This com-
+bined vowel (/a: ~ ǝ/) and stress (stressed
+unstressed) contrast is often (but not
+always, see below) the only difference
+between the bound and free forms. The
+I
+free form
+(in Burmese script)
+(1) ဓား “knife
+(2) cl: "fish"
+(3) သား "son"
+(4) “letter"
+11
+Examples of bound
+215
+presence of the weak vowel in the last
+syllable of the bound allomorph can be
+said to be morphemically conditioned
+because it does not depend on the phone-
+mic character of the following morpheme. 12
+It is only characterised by always being
+followed by a morpheme in close jun-
+cture (the unstressed vowel ǝ is always
+followed by close juncture, cf. esp. Sprigg
+110 ff.).
+A list of pairs of allomorphs which
+differ only in that the bound form has
+the unstressed vowel /a/ by contrast with
+the stressed vowel /a:/ in the free form,
+is given below. This and the other lists
+set out below do not claim t be
+exhaustive.
+III
+free form
+form(s) in compounds (in phonetic script)
+(in Burmese script)
+ဓားမ၊ ဓားသွား၊ ဓားပြ
+ငါးခြောက်၊ ငါးရံ့၊ ငါးပိ
+IV
+bound form
+(in phonetic script
+dǝ-/
+ŋa-/
+/ da:
+na:
+သားအိမ်၊ သားဦး
+a:
+0ǝ-/
+စာရေး
+/ sa:
+Sa-
+--
+(5) စကား speech”
+စကားလုံး၊ စကားပြန်
+| zǝga:
+zegǝ-/
+(6) မယား “wife•
+မယားငယ်
+/ mǝja:
+majǝ-/
+(7) တရား “law, justice”
+တရားလို၊ တရားခံ
+tǝja:
+tǝjǝ-/
+(8)
+"Indian"
+ကုလား
+ကုလားမ၊ ကုလားထိုင်
+/ kǝla:
+kalǝ-/
+"a sore"
+အနာရွတ်၊ အနာဖေး
+/ana:
+ana-/
+(9) အနာ
+(In the other tables listed below, the same
+lieu of the complete headings).
+The remaining sets of allomorphs to be
+discussed below, differ not only in the
+charater of the vowel and in the presence or
+absence of stress, but in some other respect(s)
+as well. Thus some morphemes with the
+II
+Roman numerals will be used in
+stressed vowel/a:/ in the free formand the
+unstressed vowel // in the bound form also
+contrast in that the vowel is preceded by a
+voiceless stop in the free form, but some-
+times by a voiced stop in the bound form.
+III
+IV
+I
+00:
+"eat"
+စားပွဲ
+/ sa:
+za-1
+,
+JBRS, L, ii, Dec., 1967.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 22]]
+216
+For further examples, but with other
+differences as well between the free and
+bound forms, see below:
+0009
+031. 22
+/sha: ~ 23-% 0/00: de-/. This voiceless
+/voiced contrast in the free / bound forms is
+phonemically conditioned in a way which
+will be explained at the end of this section.
+There are a few cases in which the
+free form differs from the bound form
+Compound nouns in Burmese
+not only in the nature of the vowel (/a: ~3-))
+and in presence/absence of stress, but also
+in the presence/absence of /w/ before the
+vowel. The alternation (wa:- is mor-
+phemically conditioned, like the alternation
+ja: ǝ-/, and has nothing to do with the
+phonemic shape of the following syllable.
+Only two examples of this alternation arc
+known to me:--
+I
+(1) so: "cow, ox”
+(2) "tooth"
+သွား
+နွားသိုးနွာ
+(၎) သွားတက်သွားး
+nwa:
+no-/
+86
+/ Gwa:
+{i)ða
+(ii) opptasj
+(#)0 --/
+Sometimes the free form has some
+other stressed vowel than /a/ (nasalised or
+(1) s "hair"
+I
+(2) အခွံ “scent”
+(3): "floor"
+(4) cos: "rice"
+(5) a "person, he/she"
+II
+oral), alternating with unstressed, oral /a/
+in the bound form. Examples are:-
+TII
+sha:
+(ပ) ဆံညှ
+(ii) au
+နံ့သာ
+1
+na:
+ကြမ်းပိုး
+ထမင်းနယ်
+(i) သူခိုး၊သူငယ်
+(ii) ff.
+( )သမ်း၊ သူ
+See also on coi tha: ~t~/ below.
+I know of no explanation for the allomorph
+/da-/ of /Bu:/. The alternation /d~ 0/
+seems to be unparalleled.
+lisa:
+/ thami:
+/00:
+2 2 2 2
+IV
+(i) sha-/
+(ii) 22-/
+no-/
+dzo-/
+thama-/
+(i)00-/
+(11) 05-/
+(iii) dǝ-
+A few morphemes have an aspirated ini-
+tial consonant in the last syllable of the free
+form, as against a non-aspirated consonant
+in the bound form, as well as vowel and
+stress alternations as describde above:-
+I
+(1) cool "once"
+(2) a "waist**
+(3) မျက်နှာ –face”
+I
+III
+တခါတည်း
+ခါးပတ်
+takha:
+/kha:
+မျက်နှာသီးမျက်နှာကြီး
+mjɛna:
+ထမ်းပိုး
+/tha:
+2222
+IV
+take-/
+ke--/
+mjɛna-/
+to-/
+(4) cos: "carry"
+JBRS, L, ii, Dec., 1967.
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 23]]
+Dr K. Forbes
+Sprigg gives also (p. 115) မျက်နှာထား,
+which according to him is pronounced
+mjɛnnǝtha:/, i.e. with an unaspirated (and
+voiced) nasal in the second syllable of
+bound as in the examples quoted in
+column II above. However my informant
+pronounces this word as /mjɛŋǝtha:/. This
+is of some interest. For the second mor-
+pheme in i.e. /tha:/, has an
+aspirated initial consonant, whereas all the
+other second morphemes in the forms
+quoted in Column II above have a voiced,
+non-aspirated, initial consonant. This
+would suggest that the presence or absence
+of aspiration in the initial morphemes is,
+at least in my informant's pronunciation,
+phonemically conditioned: if the initial
+consonant of the final syllable is aspirated
+in the free form, it will also be aspirated if
+another syllable with aspirated initial
+follows in close juncture, but will be
+unaspirated if a following syllable in close
+juncture begins with a voiced consonant.
+However; another form is relevant here:
+Both this and the simplex are
+pronounced with initial /s by my informant
+(cf. note 1): sana?, sa:/. He regularly
+pronounces both and
+20
+ass. But at
+least some of the speakers who differentiate
+between /sh/ and /s/, pronounce ∞ as
+sha: but as /soɲa?/ with an unaspi-
+rated fricative, in spite of the following
+aspirated consonant. This contradicts the
+conclusion drawn from my informant's
+pronunciation of e, unless one likes
+to argue that ɲ/in û and /th/ in ∞ɔ:
+are not really on the same level since the
+alveolar stop is always aspirated but the
+voiceless nasal is not always audibly
+aspirated (though structurally
+0
+are
+best regarded as aspirated as well as voice-
+less' 4. But this would be a case of having
+one's cake and eating it, since we have
+already regarded the second nasal of
+/mjɛņa:/ as aspirated at least in the free
+217
+form. Since there is so litt. dence, and
+that conflicting it seems best to leave open
+the question of whether the alternation of
+aspirated and non-aspirated alternants in
+the bound forms is phonemica¡y
+ditioned or not.
+ɔn-
+Of the alternations in the free and
+bound forms described above, the following
+are entirely morphemically conditioned:(i)/
+a:~ə/, (2) /wa: ~ə/, (3) /a:‚î: ~ 0/, (4) /u:~c/,
+All of these alternations simultaneously
+involve a contrast between presence and
+absence of stress. Of the two remaining
+alternations, which both involve the con-
+sonant preceding the final vowel, and are
+both at least partly morphemically con-
+ditioned, one is also partly phonemically
+conditioned: viz. the alternation of voiceless
+(unaspirated) / voiced stops. Whether the
+alternation of aspirated voiceless con-
+sonants with unaspirated voiceless stops or
+unaspirated voiced nasals is phonemically
+conditioned, is uncertain. Both are com-
+bined with alternation of stressed and
+unstressed vowel. We have just seen that the
+evidence for the second type of alternation
+is meagre and conflicting. Nothing can be
+added to the earlier discussion. On the
+other hand the first type of alternation
+is more clearly phonemically conditioned.
+For whether the consonant preceding
+/ǝ/ in the bound form is voiced or not,
+is directly related to the presence/absence
+of voice in the first consonant of the
+following morpheme: either both con-
+sonants (i.e. before and after (ǝ/ ) are
+voiced or both are voiceless. Contrast
+10 ǝ/() in /athi:/(s) with // in
+(သွားချေး)
+/dadt/ (သွားတက်); 9၁- (သူ) in /9okho:/
+in sai? () with /zǝ-/ in /zǝbl:/
+(သူခိုး) with /da-/in dadpi:/ (သူကြီး); /sa-
+/səɲia?/
+(2008). Hence also /za-/ (0>:) in zǝbwɛ:/
+(3), and/dp/ (m³:) in/drobo:/(@S:8),
+(စားပွဲ), (ကြမ်း) in/dabo:/(ကြမ်းပိုး),
+JBRS, L, ii, Dec., 1967.
+☎4 28—U.P. - G 124–1,000 + 50—20-6-68.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 24]]
+218
+all quoted above. It is probable that
+voicing of the consonant before ǝ is
+dependent on whether the consonant after
+/a/ is voiced or not, rather than vice versa.
+The consonant following /ǝ/ seems nor-
+mally to be voiced, as after stressed
+vowels (cf. Introduction, on close juncture),
+but voiceless and aspirated when it is
+the first consonant of a morpheme which,
+when free, has an aspirated initial. There
+are, however, a few exceptions with a
+voiceless consonant before /ǝ/ and a voiced
+consonant after // as in
+faŋɛ:/ or
+Compound nouns in Burmese
+Thus a single morpheme
+may have
+not only a whole series of phonemically
+conditioned allomorphs, but also one or
+more allomorphs partly or fully mor-
+phemically conditioned as well.
+V. Syntactic and Asyntactic Patterns in the
+Compounds
+If a pattern which occurs in compound
+nouns in close juncture is paralleled by
+sequences with the same pattern and open
+juncture between the parts, i.e. a nominal
+phrase, then one can say that such a pat-
+tern in compound nouns is syntactic Con-
+a voiced consonant before ǝ and a
+voiceless consonant after ǝ as inversely, if it is not paralleled by nominal
+/ŋapi/.15
+A few of the compounds cited above
+with a weak vowel in the first member
+as against a full vowel in the correspon-
+ding free form, also have alternative
+pronunciations with a full vowel in the
+first member. Then any differences obtain-
+ing between this first member and its
+free allomorph are phonemically condi-
+tioned as described in section III. Thus
+N
+may be pronounced either /nǝma or
+nwa:ma/. Similarly "cowmilk” is
+either nono/ or nwa:no/. d is uaually
+pronounced zəbi:/ but /sham:bi: is also
+heard. More commonly, the same mor-
+pheme may have a morphemically con-
+ditioned allomorph (with reduced vowel
+etc.) in some compounds (or one com-
+pound), as described above, but phone-
+mically conditioned allomorphs with a
+full vowel in other compounds. Thus coud:
+/themi:/ has not only the allomorph
+/theme-/seen in ; but also /thamin/
+in and /thami:/ as in the simplex in
+coud: has the pronunciation /sa:/ in
+ထမင်းရေ.
+the free form and in e.g., beside
+/sǝ-/ in
+So also ɔɔ:
+စာရေး
+son" is
+pronounced 10 -/ in :: but /0a:/ in
+isolation and in သားချင်း,သားထွေး.
+JBRS, L, ii, Dec., 1967.
+6.
+phrases of the same pattern, then it is
+asyntactic. Each pattern or arrangement of
+nouns and verbs in compounds will be
+considered in turn from this point of view.
+(1) NN Compounds. This type is syntactic.
+For sequences of nouns with open juncture
+between them are also common: e.g.
+copy" "application form” (copy
+(N) "application”, (N) “form”). ɔɔq
+ဌာန
+"Education Department" (poq: (N)
+“education”, gɔs (N) "department").
+Generally, the first noun qualifies the
+second in the phrase, as in most Type II
+NN compounds.
+(2) NV Compounds. These are asyntactic,
+whether of type 1 or Type II, since sequen-
+ces of this pattern with open juncture be-
+tween the members do not function as
+nominal phrases.
+(3) VN Compounds. These are partly
+syntactic, but not fully so. For though any
+verb can precede a noun with open junc-
+ture between the two members, the verb
+itself in such cases is always preceded by
+some other word(s) e.g. an adverb, or a
+noun functioning as its subject or object,
+etc. Or, if the verb is not preceded by any
+other word, it must be linked to the noun
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 25]]
+Dr K. Forbes
+-6000.
+-
+with a relational suffix, such as: -/-/
+Thus one can say:
+"the man
+who came" ("come - o - man”), or
+မနေ့က
+coco "the man who came yesterday", or
+ကားငယ်(တဲ့)လူ “the man who bought the car
+(car-buy-man"), but not woo ("come-
+coc ("come-
+man") alone as a phrase with open jun.
+cture between the parts.
+(4) VV Combinations. There are no
+nominal phrases consisting of a series of
+verbs, and we have seen that this is highly
+abnormal as a compound noun pattern
+also.
+(5) Three-and Four- Morhpeme Com-
+pounds. Of these more complex groups,
+those whose ICs are both nouns are from
+this point of view syntactic, like the two-
+member NN compounds, though they are
+not so when considered from the point of
+view of their ultimate constituents. Three-
+219
+morpheme compounds whose ICs are of the
+pattern NV, are no more syntactic than
+two-morpheme NV compounds. Some NVN
+compounds conform to normal syntactic
+patterns as they stand, especially those of
+the pattern subject-verb-object like :
+("man-ride-carriage"), but most of the
+other NVN compound, in which the first
+noun expresses the instrument as in
+, or the NV sequence expresses the
+purpose for which the last noun is used,
+as in co:69, or in which the NV sequence
+is really equivalent to a verb, so that cape:
+:: etc. are more like examples of VN
+compounds, do not seem to correspond to
+the syntactic patterns of phrases, where a
+relational marker would be required bet-
+ween the verb and the following noun
+(-)/- etc.). Compounds of the လူစု
+coco: pattern are definitely asyntactic, for
+one does not find comparable phrases with
+discontinuous verb constituents.
+006
+မြန်မာဝါကျဖွဲ့ထုံးကျမ်း (4th ed., 1961); Judson,
+NOTES
+(1) The following words will be referred to by the name of the author only throughout this
+paper: J.A.Stewart, 'A Manual of Colloquial Burmese' (1955); Raven 1. McDavid, 'Burmese
+Phonemics', Studies in Linguistics vol. 3. no. 1, (1945); W.Cornyn, ‘Outline of Burmese Grammar`.
+Language Dissertation no. 38, Supplement to Language 20, no. 4, (1944); R.K.Sprigg. 'Junction in
+Spoken Burmese', in Studies in Linguistic Analysis, special volume of the Philological Society. (1957);
+Pe Maung Tin and L. E. Armstrong, 'A Burmese Phonetic Reader', (1925); Pe Maung Tin
+‘Burmese-English Dictionary', revised and enlarged
+by R.C. Stevenson and F.H. Eveleth (1921). Where phonetic transcription of Burmese words is
+required, I have employed that of Sprigg (op. cit.) as most suited to my purpose. But the
+phoneme he transcribes 10, Ỗ/ seems to be an affricate in most people's pronunciation, includ-
+ing that of my informant (/tệ,dð/), and I have referred to it as such in sect. III. For information
+on matters of pronunciation, and the acceptability of certain forms, I am indebted to my husdand,
+Dr Than Tun, a native of Twante, who is, of course, not responsible for any errors that remain.
+The phonetic transcriptions correspond to his pronunciation, except that although he does not
+distinguish ∞ from o, but pronounces both as (s/, I have nevertheless transcribed o as (s),
+as /sh/, since this is a much more common pronunciation, and the matter is, in any case, of no import-
+ance for this paper.
+JBRS, L, ii, Dec,. 1967.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 26]]
+220
+Compound nouns in Burmese
+(2) Everything in this paper should be taken as specifically applying to nouns, unless otherwise
+stated. It is generally agreed that Burmese has three parts of speech, viz, nouns, verbs, particles
+(Cornyn, p. 11. ff., Sprigg, p. 106, Stewart p. 10), or more (Pe Maung Tin passim),
+(3) Cf. e.g. Bloomfield, ‘Language', British edit., 1935, 227 ff., and recently, A.Martinet
+'Elements of General Linguistics', English translation, 1964, 108,
+(4) The chief characteristics of close and open juncture have been discussed most full, by
+McDavid (sects. 1,2,6,9) and especially Sprigg passim. It is also discussed by Cornyn (sect. 25 ff.)
+and Stewart (p. 4-5 on "euphonic changes"). In the description of juncture given below, I have
+been especially indebted to Sprigg, and also to McDavid. I share Sprigg's view that it is not
+satisfactory to describe Burmese juncture in terms of assimilation, which is after all a historical
+concept implying change, and for this reason alone not suited to a descriptive study of the
+modern language, quite apart from the fact that some of the examples of “assimilation" as they
+appear now, are undoubtedly to be explained somewhat differently from a historical point of
+view.
+(5) Cf. McDavid sect. 1, Cornyn sect. 28. Their numbers for the tones will be used throughout
+the rest of this paper: Tone I as in coɔ, Tone II as in ɔɔ, Tone III as in m, Tone IV as inom̃.
+when two
+(6) Pe Maung Tin and Armstrong remark (p. 25) that in 'compounds",
+syllables in this tone (their Tone III) follow each other, the first syllable has a high level tone,
+the second a mid-falling tone, e.g. in မင်းသား, တိုးတိုး (with close juncture); but also in မွေးဖွား, ကြိမ်းဝါး
+with internal open juncture between the syllables (see below).
+(7) Cf. Pe Maung Tin and Armstrong (p.25) in connexion with syllables with McDavid's Tone
+II, their Tone III:
+66
+"
+(8) Sequences of two nouns, in which the first has an affix of relation or number, or an
+equivalent (as when the possessive form contrasts with the non-possessive form only in a
+change of tone), are never in close juncture in Burmese and are always to be considered
+phrases, not compounds. For example, gpji:+ shi:/ "people's shop" (the possessive
+form with Tone III in the second syllable contrasts with the "non-possessive"
+/pji:ŏu: with Tone I in the second syllable); pupimas: /shija:mja: + ǝkha:/ “teachers' room".
+where plural affix-jo: is followed by open juncture.
+(9) On the so-called classifiers, nouns which are required after the numerals (with which
+they are in close juncture) when enumerating objects in Burmese, and which vary according to
+the kind of object enumerated, cf. Cornyn, sect. 141 ff., Hla Pe. Lingua 15 (1965) 163 ff.
+"
+(10) I have found it useful to apply to some kinds of Burmese compounds, which seem to have
+more than one transformational origin, in a broad way the approach used by Chomsky in
+dealing with such ambiguous English constructions as "the shooting of the hunters' etc.
+(Syntactic Structures' (1957) 85 ff.). Unfortunately, Lees' 'The Grammar of Fnglish Nominalisa-
+tion', with a transformotional approach to English compounds, is so far inaccessible to me.
+(11) It is possible, I suppose, to regard some, or even all, VN compounds as really NN
+compounds in which the first constituent is the bound form (without -) of a verbal noun in
+အ-. Thus one could argue that ဆွေးနွေးပွဲ is from အဆွေးအနွေး and ပွဲ ောင်းကုန် from အရောင်း plus ကုန်
+etc. I do not believe this to be a correct interpretation in many cases at least, although it is
+certainly a legitimate interpretation of forms such as ရောင်းကုန်, ဝင်ခွင့် “permission to enter", စားပွဲ
+<< a meal", and many other forms where the verbal noun in sa- formed from the verb member
+is in common use. By contrast, in cases where such a verbal noun is not in use, it seems
+unreasonable to regard the first member as nevertheless form a verbal noun. Thus, for example,
+JBRS, L, ii, Dec., 1967.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd Bangkok Thailand
+
+[[page 27]]
+Dr K. Forbes
+221
+verbal nouns in ca- from the following verbs arc not used: လွတ်လပ်-, ယဉ်ကျေး, ဦး, အောင်-
+There is therefore no doubt that the compounds: လွတ်လပ်ရေး, ယဉ်ကျေးမှု, ခိုးမှု, အောင်သူ can only
+be interpreted as VN compounds.
+(12) Just as nominal derivatives of dissyllabic verbs are formed by prefixing - to boht
+member, so also the pattern described here may be regarded as a parallel way of compounding
+a noun with a dissyllabic verb. Thus, ., could be regarded as a combination
+of a with asco ("loafer"), and so for the other forms except စာရေးစာချီ,for
+does not exist, though အစုအဝေး and အဝတ်အစား do.
+အရေးအခ
+(13) Cf. Nida, 'Morphology, 2nd edit., 1949, 41 f., Harris, Structural Linguistics' 1951, 209 M.
+(14) In the verbs aspiration contrasted with non-aspiration often has a grammatical function, mark-
+ing a contrast between transitive and intransitive verbs, c.g. /pja? “be cut", Gos ¡phja?/
+"cut" (transitive); the same contrast is found in verb stems with a nasal initial: e.g. /mji/
+"be high mii "raise". As for the forms discussed in the text, another possibility is to regard § in
+ps and in as voiceless only (treating the aspiration as non-phonemic): Then the
+pronunciation of jasmiƐnǝtha:/ would be a normal case of a voiceless consonant before
+being followed by an aspirated consonant after /--/ as in å: /ŋǝkho:/etc. (see below). But
+then ɔɔɔб/sǝɲa??, with a voiceless consonant before and after /--/ would be an exceptional form
+in that the consonant after --) would not be aspirated (but cf. cho?).
+-
+(15) Cf. Sprigg 115-6.
+JBRS, L, ii, Dec., 1967.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.

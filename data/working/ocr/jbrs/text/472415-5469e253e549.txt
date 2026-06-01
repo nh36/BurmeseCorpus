@@ -1,0 +1,2402 @@
+[[page 1]]
+R. K. SPRIGG *
+BURMESE ORTHOGRAPHY AND THE TONAL CLASSIFICATION
+OF BURMESE LEXICAL ITEMS
+Tonal analyses of Burmese to date
+have been guided by a number of assump-
+tions some of which can be challenged.
+Three such assumptions are examined in
+this article in order to see whether an
+analysis based on different assumptions
+might not lead to a
+classification of Burmese lexical items;
+this article also seeks to relate the fiudings
+of this analysis to Burmese orthography.
+o: 'eat'). There will inevitably be examples
+that are difficult to analyse lexically with
+any certainty:
+able from the
+is the residue
+‘lord' is certainly detach-
+ဘုရင် of ရှင်ဘုရင် king'; but
+to be treated as a
+more satisfactory single disyllabic lexical item, like op, or
+The term lexical item refers to the
+smallest separable lexical units of Burmese
+word structure, those words and bits of
+words, that is, which cannot be sub-
+divided into further units differing from
+each other in their distribution. Thus,
+as an illustration of the use of the term,
+သွားစရာ ရှိသည်, I have occasion to go, can
+be divided into four lexical items: (i)
+which can be separated from esœp;
+သား
+cf. သွားဘို့ (ii) စရ, which cannot be further
+sub-divided, and which has just been
+shown to be separable from app: (cf. also
+ကြောက်စရာ); (i) ရှိ, which can be separated
+from သည်; cf. ရှိသေးသည်; (iv) သည်, which
+has just been shown to be separable from
+ရှိ (cf, also ကောင်းသ, သွား, ရှိ, and သည်
+a
+are monosyllabic lexical items; is
+ဆရာ
+disyllabic lexical item. Similarly, mos
+can be analysed into the disyllabic lexical
+item pop: and the monosyllabic fuxical
+item opf (it is assumed that mos: cannot
+be further analysed into in 'dance' and
+the
+and ရင် (cf.
+ဘု
+as further analysable into two monosyllabic
+lexical items
+39 of ဘုရား)?
+The purpose of these remarks, however,
+is not to resolve particular problems of
+lexical analysis but merely to illustrate
+what is to be understood by the term
+lexical item.
+1. The Three Assumptions
+The three assumptions are: (i) that
+the most useful unit for tonal analysis
+is the syllable; (ii) that such different
+types of phonetic feature as pitch (high
+versus low), voice quality (clear, or breathy,
+versus constricted, ‘creaky' or glottal-trill, 2
+vowel duration (short versus long), and
+syllable-final consonantal and vocalic fea-
+tures (occlusion alternating with friction and
+with nasality, etc., e. g. [-], [-p], [-0],
+[-s], [-m], [-n], versus nasality, e.g. [-m],
+[-n], including nasality of vowel versus
+vowel-ness, or vocality, e.g. -j], [~u], [-o]
+can be associated with each other in a
+tonal statement; and (iii) that the tonal
+(or tonemic) analysis can be applied
+regardless of differences in grammatical
+function, and therefore in the grammatical
+classification, of the lexical items to which
+it is applied.³
+* Lecturer, School of Oriental and African Studies, University of London.
+1 For Notes see at the end of the article. Ed. JERS.
+415
+JBRS, XLVII, ii, Dec. 1964
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 2]]
+416
+Since each Burmese othographic syllable
+contains an indication of pitch and of
+voice-quality features, usually in the form
+of symbols, such as ရွှေ ပေါက် အောက် မြစ်,
+and was, but also in the form of
+absence of such symbols, e.g. c ‘dance',
+∞ 'rise', and a 'drop', it might at first
+sight seem
+Tonal Classification of Burmese Lexical Items
+more recent analyses Armstrong and Pe
+Maung Tin, Cornyn, McDavid, and Bernot
+specifically state that the syllable is the unit
+on which their tonal analyses are based:
+(i) 'the tone of a certain syllable pronoun-
+ced in isolation, together with all its
+variants in connected speech, may be said
+tone-family or toneme';5
+(1) ‘each syllable consists of a consonant or
+a cluster plus a vowel, spoken on one of
+the four tones or atonically':6 (iii) 'chaque
+syllabe est affectée d'un ton et celui-ci suffit
+à différencier deux syllabes au phonèmes
+identiques'.7
+to form
+that the three assumptions
+could claim the support of the phono-
+logical analysis implicit in the Burmese
+orthography but it will be shown later
+in this article that these indications can
+also be interpreted in a way that is
+opposed to the three assumptions.
+A. The First Assumption
+As regards the first assumption it is
+clear that the syllable is the tonal unit of
+such grammarians as Brown, Bridges, and
+Lonsdale, because it is implied by their
+tone-marking, which is syllabic;4 and in
+tone I
+i
+low, level/rising
+tone II
+i
+high, falling/level/rising
+tone III
+one
+B. The Second Assumption
+As for the second assumption Cornyn,
+for example, describes his four tones (I, II,
+III, IV) and his tonelessness as having the
+following combinations of (i) pitch, (ii)
+voice quality, (iii) vowel duration, and (iv)
+final vocalic and consonantal features:
+iv
+long
+plain/nasal
+iv
+long
+plain/nasal
+i
+high, falling
+tore IV
+i
+high
+slow or not so slow glottal
+closure, or not glottal closure
+111
+short
+iv
+plain/nasal
+ii
+extremely short
+tonelessness
+i
+ii
+WY
+iv
+sharp glottal closure, assimilated,
+in certain types of juncture,
+to the following consonant
+ív
+neutral vowel only
+JBRS, XLVII, ii, Dec. 1964
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 3]]
+R. K. Sprigg
+(the absence of any description under the
+heading (ii) can be taken to imply that
+tone-I, tone-II, tone-IV, and toneless
+syllables do not have the 'slow or not so
+slow glottal closure' that Cornyn attributes,
+under certain conditions, to tone-III).8
+McDavid's description corresponds closely
+to Cornyn's, except that he gives the name
+'tone-V' to Cornyn's 'toneless' syllables.9
+Mme. Bernot's tones 1, 2, and 3 correspond
+to Cornyn's III, I, and II respectively, her
+architoneme in stressed syllables to his tone
+IV, and her architoneme in unstressed
+toneme I
+i
+high/mid/low
+slight fall
+toneme II
+mid/low/very low
+level/slight rise
+ii
+417
+syllables to his tonelessness; but apart from
+these differences of nomenclature her pho-
+netic description differs from his only in
+two details: 'une syllabe au ton 3 est
+caractérisée par
+une note moyenne
+(intermédiaire entre celles des tons 1 and
+2)' and '1' architonème [de syllabe accen-
+tuée] a les caractéristiques du ton (1) por-
+tées à un degré supérieur: la note est
+légèrement plus haute'.10 Armstrong and
+Pe Maung Tin's also differs from Cornyn's
+and McDavid's analyses, and from Bernot's,
+in number of tones and in nomenclature:
+iii
+iv
+weak closure of glottis
+(a) "creaky"
+medium
+(b)
+extremely short
+abrupt closure of glottis
+"breathy"
+very long
+toneme III
+high/mid/low
+"breathy"
+very long
+falling/level
+toneme IV
+low
+It is not, however, the difference in num-
+ber of tones and in nomenclature that is
+relevant at this point but the fact that pitch
+features, voice-quality features, vowel-
+duration features, and such syllable-final
+features as vocality (Cornyn's 'plain final'),
+nasality, and glottal and other types of
+occlusive, are not treated separately from
+each other but combined in phonetic des-
+criptions of each tone.
+C. The Third Assumption
+As regards the third assumption,
+Cornyn, for example, distinguishes particles
+from free forms (nouns and verbs) in his
+extremely short
+ǝ/ and /e/ only.11
+grammatical analysis, but applies a single
+tonal analysis to both categories: in ládé
+for instance, he gives to the particle de the
+same tonal classification (tone I) as to the
+verb lá; in ?ashei? mašidè mwéile the par-
+ticle dè has the same classification (tone III).
+as the verb si. 12 In his example mahmi
+tahmí 'not quite reaching' the verb hmi is
+analysed as tone-III, like, for example, the
+verb pyèi of pyèidé is full. Unlike the
+verb-and-particle pair lá and dé both hml
+and pyèi are admittedly verb lexical items;
+but the grammatical function of mi in the
+phrase mahmi tahmi, which Cornyn terms
+expression, is very different
+a noun
+JBRS, XLVII, ii, Dec. 1964
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 4]]
+418
+Tonal Classification of Burmese Lexical Items
+from that of, for example, pyèi the members of a doubled verb are a
+in pyèidé, which Cornyn terms a
+verb expression (while it is true that the
+hmi of mahmì tahmi is the same in gram-
+malical function as pyèi in the noun expres-
+sion mapyèi tabyèi 'not quite full', it never-
+theless differs from pyèi here in pitch
+behaviour: falling versus level; see section
+III, ex. (c)).3 Similarly McDavid's noun
+examples /ù/ 'his, her' and /min/ 'your'
+differ in grammatical function from his
+noun example /chà/ 'termites', /ù/ and/
+min being qualifying in function, while
+/chà/ is non-qualifying; but all three are
+given the same tonal classification (tone
+III).¹
+By the same principle Armstrong
+and Pe Maung Tin mark the noun lexi-
+cal item Qu' 'his', for example, as toneme-I,
+the same toneme as, for example,
+14
+for
+the verb lexical fi 'know', though the
+noun lexical item is here discharging a
+grammatical function (qualifying) that the
+verb is not.15 Bernot marks the interro-
+gative-particle lexical item 'la as having
+the same tone (her tone 3) as the verb
+'tu, though, as the final syllable of inter-
+rogative sentences its characteristic, though
+not its only, pitch features in the material
+on which this article is based are low
+pitch and rising pitch, e.g. ထိုင် ပါ သ လား
+[- 7) 'does he sit down', တော်ပါပြီလား
+{- is it enough', wé: megumim maud
+ကြီးလား [− – ^ ] (is it) the big tree to the
+east of the road'; but neither of these
+features is attributed to her tone 3.16
+-
+II. Tone Change; Basic Forms
+A. Tone Change
+A result of making these three assump-
+tions is that some of Cornyn's, McDavid's,
+Bernot's, and Armstrong and Pe Maung
+Tin's lexical items show an alternation
+in the tones attributed to them; e.g. 'when
+JBRS, XLVII, ii, Dec. 1964.
+negated verb first member followed by a
+verb with prefixed ta-,
+the first
+member, if tone I, changes to tone III:
+the
+hmide 'reaches': mahmi tahmí ‘not
+quite reaching'; 17 'when a noun expression
+formed with the enclitic -té precedes a
+noun which it modifies (126), the enclitic
+changes to -té (tone III): hmándè is
+correct': hmándè aphyé igóu lổujíndè ‘(1) want
+5-18
+correct answer'; 'some personal
+nouns, and
+a few other noun forms,
+when indicating possession or followed
+by particles, may undergo tone-change;
+that is certain forms in tone-I or tone
+II are sometimes replaced by forms in
+tone III. For example, /0ú/ 'he', 'she',
+10u 'his', 'her'; /min/ 'you' (familiar),
+/min/ 'your'. 19 Bernot does not specifically
+refer to tone change; but she symbolizes an
+alternation of her tone 1 with her archi-
+neme for the lexical item as Ji - (her
+tone 1) in [iu] 'racine' as opposed to
+'bois' and, for example, Oik- and i-,
+as in [ik'kain] 'branch' and [010/01]
+‘fruit' respectively.20
+Cornyn attributes the change of tone in
+verbs only to certain of his tone-I verbs;
+but there are Burmans for whom such verb
+lexical items as copc: and wε: (Cornyn's
+tone-II) also alternate in voice quality,
+being characterized by the constricted voice
+quality in the first word of each of the two
+phrases esmɔd: memoε: 'fairly good' and
+(မိုဃ်း) မလင်း တလင်း just about dawn', and
+by the clear in the second word.21 The
+constricted voice quality is a criterion of
+their tone III for Cornyn and for McDavid,
+and would oblige them to analyse emoε:
+and cod: as tone-III in the first word of
+each phrase (just as it does in the case of
+-
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 5]]
+R. K. Sprigg
+Cornyn's hmi in the preceding paragraph)
+but as tone-II in the second word.
+All such tonally alternating lexical
+items must needs have a double (or
+tonemic) classification, as tone-I/III, e.g.,
+-tè and -té, /ù/ and /0ú/, hmi and hmi,
+or as tone-II/III, e.g., /mîn/ and /min/, and
+presumably l^n and lin, and kâun and kàun,
+too (the alternatives being in each case
+grammatically determined).
+This double classification would be a
+nuisance for the lexicographers; for it would
+add to the complexity of many of his
+dictionary entries. 22 It would also be a
+nuisance for the comparatist, who would
+be faced with a choice between two tonally
+different phonemic forms for many lexical
+items. On what grounds are they to prefer
+Cornyn's and McDavid's tone-I or tone-II
+phonemic forms to their tone-III forms, or
+vice versa?
+B. Basic Forms
+It is clear from Cornyn's and Mc-
+David's phraseology that in all such cases
+they prefer the tone-I or tone-II form to
+the tone-III: it is Cornyn's tone I that is
+said to 'change', not the other way about;
+it is McDavid's tone-I and tone-II forms
+that are 'replaced', not the tone-III; and it
+is Cornyn's tone I that is indicated for the
+particles -té and -mé when these are cited
+in isolation.2 That is to say, Cornyn and
+McDavid treat one of their alternative tonal
+classifications as basic for these lexical
+items, and subordinate the other classifica-
+tion to it.
+23
+The grounds for their choice are not
+stated; but a more serious objection is not
+to the absence of explicit criteria governing
+the choice but rather to the very concept
+of "basic form. What makes this concept
+419
+difficult to justify is the fact that it is just as
+un-Burmese, or, rather, anti-Burmese, to
+use the tone-I or the tone-II form of a
+lexical item in the grammatical conditions
+appropriate to the alternative tone-III form
+as it is to use the tone-III form in the
+grammatical conditions appropriate to the
+tone-I or the tone-II. It is just as un-
+Burmese to use the tone-II form lin and
+the tone-I forms -té and /ou in the gram-
+matical conditions appropriate to the tone-
+Ill forms lin, –tè, and /u/, for example,
+as it would be if one used lin, -tè, and /u/
+where grammatical conditions required lin
+té, or /Qu/. That is to say, each of the
+alternative tones is, as it were, basic in the
+grammatical or phonological conditions
+appropriate to that alternative; and this fact
+must necessarily give each alternative equal
+status with the other alternative. This
+means that the phonetic form appropriate
+to the conditions in which a particular
+lexical item is named or cited, the citation
+form of that lexical item, is not to be
+regarded as in any way superior to other
+phonetic forms of that item: the citation
+phonetic form has a monopoly of the cita-
+tation context, but is inappropriate in any
+other context. To disregard the unique.
+status of each alternative phonetic form in
+the environment appropriate to it by choos-
+ing one phonetic form in preference to the
+other, or to the others, and treating
+it as basic, whether or not it is so
+designated, cannot be other than
+arbitrary; and, furthermore, this disregard
+leads to the use of process terms such
+as 'change' and 'replacement', which
+suggest processes that do not, and can-
+not, take place. It is now recognized
+that the terms 'replacement' and 'change'
+do not refer to articulatory processes and
+the actual replacement of one phoneme
+by another, the superceding, in e.g. the
+JBRS, XLVII, ii, Dec. 1964
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 6]]
+420
+first word of the phrase mahmi tahmi,
+of tone I by tone III, or, in the case
+of /u/, the abandoning of tone I and
+instaneous adoption of tone III; for the
+'replaced' tone I is unattested, and unat-
+testable, in the environment in which it
+is said to have been 'replaced'. Rather,
+these quasi-process terms refer to a
+distributional relationship whereby the two
+phonemes are distributed complementarily
+in relation to grammatical or phonological
+environment for the lexical items con-
+cerned.24 In fact the general principle
+of treating one of alternative tones as
+basic raises such difficulties that it should
+be used only if such a concept is
+unavoidable.
+The type of phonological analysis
+introduced by Professor J.R. Firth (pro.
+sodic analysis) provides. a means of
+avoiding the awkward concepts of 'tone
+change' and 'basic form', and at the
+same time relieves the comparatist and the
+lexicographer of the necessity of choosing
+between variant forms of the same lexical
+item; for the sort of classification that
+it produces for lexical items bypasses
+these and other concepts inherent in
+j.
+,,
+tone-1 word
+tone-2
+II.
+tone-1 word
+ကောင်းပါပြီ
+တော်ပါပြီ -- -
+ကောင်းပါပေသည်
+tone-2
+မှန်ပါပေသည်
+iii.
+tone-! word
+တွေ့သည့် [
+tone-2
+လာသည့်
+-
+iv.
+tone-1 word
+ခပ်တော
+tone-2
+[$6000
+V.
+tone-2
+99
+60000
+မပို့ပါနှင့်
+ပါနှင့်
+tone-1 word
+အခါ
+Tonal Classification of Burmese Lexical Items
+phonemic analysis. 25 It does this by
+taking into account grammatical differences
+wherever these can be shown to be
+significant for the phonological analysis,
+and by singling out for special attention
+syntagmatic associations of the phonetic
+features concerned.26
+III. Syntagmatically associated Pitch
+Features
+In Burmese the pitch behaviour of
+the component syllables of polysyllabic
+words is frequently inter-related; 27 and
+the pitch features of a syllable at one
+place in the word can be associated
+syntagmatically with the pitch features of
+a syllable at another place in it, some-
+times quite far removed from the place
+of the first syllable. Thus, in such types
+of word as the following two (tone-1
+word and tone-2 word) the monosyllbic
+particle lexical items (i) g, (ii)–(iii) wps/wp
+(iv) and (v) s can vary in pitch
+in association with differences in the
+pitch of, in this case, the verb syllable,
+which is commonly the first syllable of
+each word (two pitch levels, high and
+low, are distinguished): 26
+all right
+enough
+it is good all right
+it is true all right
+the time that I met him
+the man that came
+when I drew out
+when I return
+please do not send it
+please do not come
+JBRS, XLVII, ii, Dec. 1964
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd. Bangkok, Thailand.
+
+[[page 7]]
+421
+R. K. Sprigg
+The way in which, in these examples,
+the pitch features of the verb syllable,
+which is the first syllable of the words
+in (i)-(iv) and the second syllable of the
+words in (v), are linked with the pitch
+features of the final syllable appears in
+the following table:
+last syllable
+verb syllable
+1. tone-1 word
+tone-2
+ကောင်း
+high
+6005
+low
+ii. tone-t
+” ”
+ကောင်း
+high
+,,
+မှန်
+tone-2
+III. tone-I
+tone-2
+iv. tone-1
+tone-2
+v. tone-1
+tone-2
+"
+002
+ခပ်
+$ 9
+59
+99
+000
+low
+high, falling
+low, level
+high, falling
+low, level
+high, falling
+low, level
+The pitch features of the verb and
+of the final-particle syllables in these,
+and in certain other grammatically com-
+parable (verb-dependence in pitch beha-
+viour is most satisfactorily accounted for
+by treating pitch behaviour as a feature
+of the word as a whole, of tone-1 and
+tone-2 words, however many syllables
+they contain.
+In other words, from the examples
+(i)-(v) one might say that
+s/p
+2002, and have each two possible
+selections of pitch features, one selection
+appropriate to the tone-1 word, and one
+approriate to the tone-2; and until the
+tone-class of the word is known, it is
+not possible in a given instance to say
+what pitch features appropriate to each
+of these particles, 2*
+level
+falling
+level
+falling
+low, level
+high, falling
+low, level
+high, falling
+low, level
+high, falling
+$*
+သည်
+86
+သည့်
+""
+6003
+33
+000
+The types of pitch behaviour shown
+at (i)-(v) above for the verb lexical
+items in the tone-1 word (ကောင်း
+a
+တွေ့
+and in the tone-2 word (6005, 45,000,
+5), and for the particle lexical items in
+either type of word, are not, however,
+the only possible pitch patterns for these
+and other comparable lexical items. The
+following is representative series of
+examples of pitch patterns appropriate
+to tone-1 and to tone-2 verb-and-particle
+words in which the particle category is
+represented in (a). the sentence--final clause,
+by cop, in (b), the qualifying clause, by
+pf, and in (c), a noun phrase com-
+prising two verb-and-particle words, by
+and by :
+a. sentence-final clause (three-term intonation system)
+int. 1 int. 2 int. 3
+---
+tone-1 word ကောင်းသည် [ ] [ ] [
+tone-2 word
+လာလည် { [--] [.]
+is good
+comes
+JBRS, XLVII, ii, Dec. 1964
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 8]]
+422
+b. qualifying clause
+tone-1 word ကောင်းသည့် [ ~] လူ
+tone-2 word
+လာသည့် [- ] လူ
+Tonal Classification of Burmese Lexical Items
+c. negative reduplicated-verb noun phrase
+tone-1 word
+tone-2 word
+{ မပြည့်
+မပြည့် တပြည့်
+မကောင်း တကောင်း
+{ မပိုင် တထိုင်
+[---]
+[` --]
+a man who is good
+the man who comes
+not quite full
+not too good
+not quite reaching
+not quite sitting
+It shoud first be explained that the
+upper of the two pitch patterns shown (tone.I word) ကောင်း, ပြည့်,
+at (a) under intonation 1 for the tone-2
+word cows, in which wp is characteri-
+zed by a low-and-falling pitch, appears
+to be possible only when all preceding
+words in the clause have low-and-level
+pitch; e.g.
+ရွာ (ကို) လာသည် [ (-) -- ] he come to
+the village; where, on the other hand, a
+high-and-falling pitch is a feature of one
+or more syllables of the preceding words
+in the intonation-1 clause, the appropriate
+pitch features for ps are low-and-level; e.g.
+-
+ဈေး (ကို) လာသည် [ (–) - ~] he comes
+to the market. Thus, cops and other
+tone-2 words containing wp, e.g. Sops,
+ps have alternative pitch patterns
+for the intonation-1 clause; and which of
+the two patterns is appropriate depends
+on the tone classes of the words of
+which that clause is composed. That is,
+each of the alternative patterns is a
+function of the tonal composition of the
+clause.
+C
+From examples (a)-(c) it will be seen
+that the approximate pitch behaviour of
+the verb lexical items : and
+in the tone-1 word and ɔɔ, &, and o
+in the tone-2 word can be summarized as
+follows:
+JBRS, XLVII, ii, Dec. 1964
+(tone-1 word) ကောင်း, ပြည့်
+(tone-2 word) ∞ɔ,
+မှီ, ထိုင်,
+high, falling
+,, level
+( low, level
+high, falling
+the relevant examples are: (i) tone-1 word,
+high and falling: example (a) in intonations
+1 and 2, example (b), and the second word
+of example (c); high and level: example (a)
+in intonation 3, and the first word of exam-
+ple (c); (ii) tone-2 word, low and level:
+examples (a) and (b), and the second word
+of example (c); high and falling: the first
+word of example (c) ).
+It is important to note the following
+two points: (i) that the tone-2-word lexical
+item, e.g.,, can be characterized by a
+high pitch as well as by a low pitch, as in
+the first word of examples of type (c); and
+(ii) that it therefore resembles the tone-1-
+word verb lexical item as regards height of
+pitch but differs from it in being character-
+ized by a fall in pitch as opposed to the
+level pitch, in corresponding circumstances
+(type (c)), of the tone-1-word lexical item.
+In fact, as far as the examples so far given
+are concerned (i-v and a-c), the verb lexi-
+cal item of the tone-1 word is always
+distinguished from the verb lexical item of
+the tone-2 word by one or other of its pitch
+features, if not by height of pitch then by
+Convright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd. Ranokok Thailand
+
+[[page 9]]
+R. K. Sprigg
+level versus falling pitch; but there are
+grounds for believing that pitch differences
+between the tone-1 and the tone-2 words
+are not as clear-cut as they appear to be in
+the examples given so far.
+The examples just given include some
+tone-2 words in which, against the usual
+run of their pitch behaviour, the verb lexical
+item is characterized by a high pitch (in,
+and only in, the negative reduplicated-verb
+noun phrase as at (c) above); but no exam-
+ples have yet been given of tone-1 words
+in which, against the usual run of their
+pitch behaviour, the verb lexical item is
+characterized by a low pitch. There is,
+however, enough evidence in the material
+obtained from U Tin Maung to suggest that
+there is a type of clause in which the verb
+syllable of a tone-1 verb-and-particle word
+is regularly characterized by low pitch, in
+which case tone-1 word and tone-2 word
+share an identical pitch pattern. Indeed,
+the use of the term 'representative', rather
+than 'comprehensive', for the examples of
+the tone-1 word thus far given, (i)-(v) and
+(a)-(c), was deliberate; for a comprehensive
+statement would need to take account of
+such tone-1-word verb-and-particle exam-
+ples as the following, in which the verb
+category is represented by (1) များ; (2) ရှိ;
+(3) စိုက် ; and the particle by သည် :
+1. ကိစ္စ များသည် [… …A] he is busy
+2. တသန်း ရှိသည် [ -, -A] there area million
+3. ငက် စိုက်သ ည် [- ၊ -A] it is akywai that
+they plant
+'
+The pitch pattern of each of these three
+tone-1 words is identical with that of inton-
+ationally comparable tone-2 words; e.g.
+(the verb is represented by con, ε, and
+08, and
+and the particle by ps and :
+423
+ရုံးက လာသည် [- -A] he came from the
+court
+သည်မှာ ထိုင်ပါ [ -- -- - ^] please sit here
+နှစ်ချပ် လိုသည် [ --- A ] he needs two (plates)
+Nevertheless, the pitch pattern in the follow-
+ing examples is sufficient to establish the
+words containing :, 9, and in exam-
+ples (1)-(3) as tone-1 words; for this pattern
+is not shared with the tone-2 word (cf. the
+examples at (a) above), and is therefore a
+criterion of the tone-1 word :
+အလုပ် များလို့ [...]
+there being much
+work to do
+there are a million
+-]
+they plant iakyok
+တသန်း ရှိသည် [ ]
+င ကျောက် စိုက်သည်[
+It should be mentioned, in passing,
+that the low pitches of the verb syllables
+in examples (1)-(3) would presumably
+oblige Cornyn, McDavid, and Bernot
+(but not Armstrong and Pe Maung Tin),
+for whom low pitch is a tone-I
+(Bernot's tone-2) criterion, to treat these
+examples as showing change of tone from
+their tone II, tone III, and tone IV
+respectively (Bernot's tone 3, tone 1, and
+archi-toneme) to their tone I (Bernot's
+tone 2); but such a statement would
+encounter two difficulties: (i) there seem
+to be no environmental ar grammatical
+conditions to which the tone change
+could be attributed; indeed is cha-
+racterized by both (_) and [✓] under,
+what appear to be identical environmental
+and grammatical conditions; and (ii) in
+the case of the tone-I (Bernot's tone 2)
+criterion, low pitch, would conflict with
+the tone-III (Bernot's tone-1) criterion
+slow glottal closure, while, in the case
+of the tone-1 criterion would conflict
+with the tone-IV (Bernot's archi-toneme)
+criterion sharp glottal closure assimilated
+JBRS, XLVII, ii, Dec. 1964
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 10]]
+424
+in certain types of juncture, to the follow-
+ing consonant, with the result that the
+tonal classification of 8 and, and
+corresponding examples, would be in
+doubt.30
+While it is conceded that the alter-
+nation of high with low pitch for
+များ
+ရှိ, စိုက်, and other such verb lexical items
+requires a more detailed study than is
+possible from the relatively few examples
+in the available material, yet the solution
+that a prosodic analysis suggests is clear.
+noun (-0, $:, -1)
+Filling
+Tonal Classification of Burmese Lexical Items
+It is a syntagmatic solution, linking the
+pitch features of the verb syllable to
+those of the following particle syllable or
+syllables within the word, and also to
+pitch features of other words within the
+clause. Associating the pitch features of
+words within the clause in this way would
+require two types of clause intonation to
+be distinguished; these two are here termed
+emphatic and non-emphatic. A specimen
+exponent of the emphatic term, drawn
+from examples (1)-(3), would include the
+following syllable pitch features:
+verb ( များ ရှိ စိုက်)
+low, level
+A specimen exponent of the non-
+emphatic term, on the other hand, drawn
+from the three tone-1-word examples in
+noun (-9, $,- -empm)
+level
+particle (သည်)
+rising-falling
+the paragraph following.
+following that of the
+emphatic-clause examples, would include
+such contrasting features as:
+verb (များ, ရှိ, စိုက်)
+high, falling
+The low pitch of the tone-1-word verb
+syllable in the emphatic clause, in con-
+trast with its alternative high pitch, com-
+bined with the falling pitch of the pre-
+ceding noun syllable, in contrast with its
+alternative level pitch. bring the empha-
+shed noun word into prominence.
+The high and low pliches characteri-
+zing the verb syllable of the verb-and-
+article words များသည် များလို့ ရှိသည်, etc., in
+onjunction with the matching features
+charcterizing the particle syllables, are
+to be treated as alternative, and equal,
+tone-1-word featurss, the low pitch being
+appropriate to the tone-1 word in an
+emphatic clause in which
+particle (လို့, သည်)
+level
+no need to attribute the low pitch that
+characterizes the verb syllable in the
+tone-1 worde in examples (1)-(3) to a
+change of tone but merely to an alter-
+native exponential feature, drawn from
+the exponency of the emphatic clause in
+which the emphasized word precedes the
+word in question.
+and in the examples (1)-(3), with
+the pitch pattern [ ], are just as much
+Thus, များသည် ရှိသည်,
+examples of the tone-1 word as are
+များလို့, ရှိသည်, and စိက်သည် in the following
+paragraph, in which they are characterized
+by the pitch pattern (_); the difference
+in pitch pattern is
+a preceding
+word (%, col) is emphasized, and
+the high pitch being appropriate to all
+other circumstances.
+If it is treated in this way, there is
+JBRS, XLVII, ii, Dec. 1964
+a function of the
+difference in clause intonation (emphatic
+--emphatic).
+versi
+course
+pitch
+true that one of these
+tterns, the one in
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd. Bangkok. Thailand.
+
+[[page 11]]
+R. K. Sprigg
+which the verb syllable has a low pitch
+([_]; examples (1)-(3)), is thereby
+identical with the pitch pattern of the tone-2
+words လာသည်, ထိုင်ပါ, and လိုသည် in the pura-
+graph following those examples; but there
+is in a prosodic analysis no objection to the
+sharing of features by two or more terres of
+the same system, provided that there is at
+least one context in which those terms are
+phonetically distinguished.
+-
+425
+Before leaving the emphatic-intonation
+clause and its exponents it is also perhaps
+worth mentioning that there is some
+evidence, not only in the material supplied
+by U Tin Maung but also in that obtained
+from other Burmans, that a further feature,
+rising-falling pitch, can characterize the
+verb syllable of the cone-2 verb-and-particle
+word; e.g..
+4. ချောင်းရိုးထဲမှာ ချုံကွယ်နေသည် (...) it is in the bed of the creek hiddan by bushes3t
+5. ဆရာကို မျှော်နေသသည်
+6. နွားကို ရှာနေသည်
+( _ _) I am looking out for Teacher³:
+( _ _) he is searching for the cattle
+This feature also appears to be appropriate
+to emphatic clauses, but emphatic clauses
+in which it is the verb-and-particle word,
+and not one of the words preceding it, that
+is emphasized.
+The two emphatic-clause features, the
+low pitch characterizing the verb syllable of
+the tone-1 word and the rising-falling pitch
+characterizing the verb syllable of the tone-2
+word, complete the list of features that can
+characterize verb syllables in these two
+types of word.
+high, falling
+level
+95
+,,
+As far as verb-and-particle words are
+concerned, the verb lexical items emoε:,
+တွေ့, ခပ်, ပုံ ပြည့်, များ, ရှိ, and စိုက် (examples
+(i)–(v), (a)–(c), (1)-(3)) are confined to the
+tone-1 word, and have a share in the pitch
+patterns appropriate to it. They, and all
+other lexical items that behave like them in
+this respect, can be classified as tone-1-
+word lexical items; and the pitch features
+that are their share, as verb lexical items,
+in the pitch patterns of the tone-1 verb-
+and-particles word comprise:
+exx. (i)-(v), (a) int. )-2, (b), (c) second word
+(a) int. 3, (c) first word
+(1)-(3).32
+low,
+All three sets of features, the total pitch
+potentiality of the tone-1-word ve. lexical
+item, are summarized by the classification
++1.
+The verb lexical items တော်, မှန်, လာ, ပြန်,
+Sé, mos, sq, and gɔ (examples (i)–(v),
+(1)-(c), (4)-(6) ), on the other hand, are, as
+low level
+rising-falling
+far as verb-and-particle words are concern-
+ed confined to the tone-2 word, and share
+in the tone-2-word pitch patterns. They,
+and all lexical items of similar hehaviour,
+are accordingly classified as tone-2-word;
+and the pitch features that characterize
+them as components of the some-2 word
+are :
+exx. (i)-(v), (a)-(b), (c) second word
+(4)-(6)
+high, falling
+(c) first word.
+JBRS, XLVII, ii, Dec. 1964
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 12]]
+426
+These three sets of features, the total pitch
+potentiality of the tone-2-word verb lexical
+item, are summarized by the classification
+2.
+Before a verb lexical item can be pro-
+nounced with the appropriate set of pitch
+features, in a verb-and-particle word, it is
+essential to know : (i) its tone classification,
+that is, whether it is '1' or '2'; (ii) whether
+the clause containing it is emphatic or non-
+emphatic, and, if emphatic, whether it is the
+word containing this lexical item that is
+emphasized or a preceding word; (iii) if the
+clause should be sentence-final, whether its
+intonation is type-1, type-2, or type--3
+(examples (a)); and (iv) whether the phrase
+containing it is or is not a negative re-
+duplicate-verb noun phrase (examples (c) ).
+The actual pitch features in a given instance
+depend on these four conditions.
+If one compares the three sets of fea-
+tures that characterize the tone-1-word
+verb lexical item with the three that charac-
+terize the tone-2-word verb lexical item,
+two sets of pitch features, the low-a-level
+and the high-and-falling, will be found to
+be common to both. The low-and-level
+set is common to both in the same condi-
+tions, in the emphatic clause in which a
+preceding word is emphasized; but this set
+can of course characterize the tone-2-word
+lexical item in other conditions besides this.
+The high-and-falling sets, on the other
+hand, never characterizes both classes of
+lexical items under the same conditions,
+and is therefore a criterion by which each
+class can be identified, provided, of course,
+that these different conditions are carefully
+distinguished. The two remaining sets are
+exclusive to one or the other class of lexical
+item, the high-and-level to the tone-1-
+word, and the low-and-rising-falling to the
+tone-2-word; these sets are therefore criteria
+in all conditions.
+JBRS, XLVII, ii, Dec. 1964
+Tonal Classification of Burmese Lexical Items
+In other words, where the verb lexical
+item has high-and-level pitch, it can be
+immediately identified as class-1, and where
+it has low-and-rising-falling pitch, as
+class-2. Where it is characterized by high-
+and-falling pitch, it can be identified as
+class 2 if contained in the first word of a
+negative reduplicated-verb noun phrase,
+6.8, မမှီ [ --] တမှီ, but otherwise as class-1.
+Where it is characterized by low-and-level
+pitch, it can be identified as class-2, except
+in the emphatic clause. In the emphatic
+clause these pitch features provide no clue
+to identification, though other features may
+do so: the constricted voice quality charac-
+terizing the verb syllable in example (2)
+ရှိသည် […]
+above is sufficient to establish
+as a tone-1 word in spite of the low pitch
+that accompanies it; and the same is true
+for the short vowel duration and the final
+occlusion characterizing the syllable in
+[] (example (3) ).
+Expressed in terms of the orthography
+tone-i-word and tone-2-word verb lexical
+items are indicated by one or other of the
+following symbols:
+Tone-1-word verb ('1')
+i 69 ပေါက်
+. နောက် ပစ်
+iii. 5060 ထိုး ရေး ချ
+v. အောက် မြစ်
+e.g.
+သေး, ပိုး, ဖီး, ကား, ကူး
+ထောင်း, ကျုံး
+မဲ, မဲ့
+ပြော, ပျော့, ဟော, တော့
+V. လုံးကြီး တင်, တချောင်းငင်
+vi. absence of any of
+the vowel and final-
+consonant symbols
+vii. m wos,
+0
+10005
+co, &, cœɔε, mill.
+ပိ, ကု
+m, af
+05, 000005,
+စိုက်, ပစ်, ပိတ်, ခင်
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 13]]
+R. K. Sprigg
+Tone-2-word verb ('2')
+1. သဝေထိုးရေးချ ရွှေ့ထိုး
+ii. ယ သတ်
+iii. absence of
+69
+ပေါက် or
+အောက် မြစ်, combined
+with: c သင်္ဘ, ည သတ်,
+20
+Numer: 2005, $ 2005,
+ညကလေး သတ်,
+e.g. cujб, cos
+ရှယ်, ဝယ်
+W 2005, 600: 600: 008;
+ထောင်, ကြုံ
+သဝေထိုး, လုံးကြီး တင်
+တချောင်း ငင်
+iv. absence of 69 607055
+combined with:
+လုံးကြီး တင် ဆန်ခတ်, ရေး ချ,
+နှစ်ချောင်း ငင်
+600,
+ပို
+427
+but these two sets of symbols, the tone-1-
+word set and the tone-2-word, do more than
+distinguish one tone class of verb lexical item
+from another: as far as verb words and
+verb-and-particle words. are concerned,
+they also indicate the tone of the whole
+word, however many syllables it may
+contain, and thereby indicate the pitch
+features of certain particle syllables in
+addition to the verb syllable. Thus, in
+the examples (tone-1 word) and
+$ (tone-2 word) given at (iv) above,
+the tone-1-word symbol S. and the
+tone-2-word symbol & unaccompanied by
+either ပေါက် or အောက် မြစ် indicate the
+following pitch features of both syllables
+of each word :
+8, mɔ, mi
+1st syll.
+(verb) 2nd syll. (particle)
+tone-1 word: 6 high, falling
+low, level
+[-]
+tone-2 word: $ low, level
+[-].
+high, falling
+Although the two symbols & and $ are low-and-rising-falling, but cannot be low-
+orthographically part of the first (verb)
+syllable, of a and us, their influence
+extends to the second (particle) syllable,
+တော့; and, in reading, the correct pitch
+features cannot be given to 600? without
+first examining the verb syllable in order
+to find out the tone of the word as a
+whole.
+The same principle applies to the
+other examples at (i)-(v) above. In
+emily and em: (examples (i)-
+(i)) 09
+colm of the first syllable (verb)
+indicates that these three-syllable and
+four-syllable words are tone-1, that the
+pitch of the verb syllable, the first syllable,
+is therefore high (except, possibly, in an
+emphatic clause), and that the pitch of
+the final syllable, the particles and 5,
+can be low-and-level, high-and-level, or
+and-falling; in confully and slaps on
+the other hand, the 60: 69: in the
+verb syllable of the first word, and the
+absence of ရွှေ ပေါက် and အောက် မြစ် from
+the verb syllable of the second word
+indicate that these words are tone-2, that
+the pitch of the verb syllable is therefore
+low and level, and that the pitch of the
+final (particle) syllables 4 and was can
+be low and falling, as one of several
+possibilites, which also include low and
+level, high and level, and low and rising-
+falling. Similarly, in cop and in
+olse (ezamples (iii) and (v)) the
+Go
+မြစ်
+of the verb syllable indicates that these
+words are tone-1, that the verb syllable
+in each therefore has a high pitch, and
+that the final (particle) syllable has a low
+and level pitch; but the cq: aj unaccom-
+panied by ရွှေ့ပေါက် of လာသည့် and မလာပါနှင့်
+JBRS, XLVII, ii, Dec. 1964
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 14]]
+428
+indicates that these words are tone-2,
+that the pitch of the verb syllable is
+therefore low, and that the pitch of the
+final (particle) syllable is high and falling.
+The same sort of statement can be
+made for words containing a monosyllabic
+noun and a particle. In the following
+examples the tone of the word is indicated
+in the noun syllable by (i) in the tone-1
+tone-1 word (` -]
+tone_2 word (`]
+ထားနှင့်
+ရေနှင့်
+(tone-1 with a knife, from the town,
+with a stick; tone-2: by water, with him).
+The noun-and-particle and the verb-
+and-particle examples thus far given are
+enough to show, as far as pitch behaviour
+is concerned (the pitch not only of the
+noun syllable but also the syntagmatically
+associated pitch behaviour of, for example,
+the verb particles သည်/သည့် and တော့, and
+the noun particle sε), that such verb lexical
+items and noun lexical items as emo: and
+: (Cornyn's and McDavid's tone-II,
+Bernot's tone-3, Armstrong and Tin's
+toneme-III), co and (Cornyn's and Mc-
+6000
+David's tone-III, Bernot's tone-1, Arm-
+strong and Tin's toneme-1), and ǝ and
+♡♡ (Cornyn's and McDavid's tone-IV,
+Bernot's architoneme, Armstrong and Tin's
+toneme-I) cannot be distinguished, and
+should be classed together. The pitch
+behaviour of the words containing them
+can in all cases be accounted for as tone-1;
+hence ကောင်း တွေ့, and ခပ် can all alike be
+classified as tone-1-word verb lexical items,
+and coo:,, and opos as tone-1-word noun
+lexical items.
+The same principle can be applied to
+words containing disyllabic verbs and to
+JBRS, XLVII, ii, Dec. 1964
+Tonal Classification of Burmese Lexical Items
+word, ရွှေ ပေါက်, အောက် မြစ်, and တ သတ်, to
+be interpreted as high and falling pitch
+for the noun syllable and as low and
+level pitch for the particle syllable sε,
+and (ii) in the tone-2 word, wo co:
+unaccompanied by either ecules or
+Go, to be interpreted as low and level
+pitch for the noun syllable, and as high
+and falling pitch for the particle:
+မြို့နှင့်
+သူနှင့်
+တုတ်နှင့်
+words containing disyllabic or trisyllabic
+nouns. 53
+Thus, although the various prosodic
+symbols of Burmese orthography are asso-
+ciated with individual syllables, those which
+are contained in verb-lexical-item and
+noun-lexical-item syllables have a function
+extending beyond the (orthographic) sylla-
+ble containing them. In other words, they
+have a syntagmatic function; and this func-
+tion extends to the whole word. When
+reading, Burmans do indeed apply them to
+the word as a whole unit, allowing them to
+determine the pitch features of those particle
+lexical items which alternate in pitch (under
+the same intonational conditions). That is
+to say, Burmese orthography has word tone
+marks, located in verb and in noun lexical
+items; and these tone marks each imply a
+permitted range of pitch features for the
+particle lexical items that can be associated
+with them.
+IV. The Third Assumption and the
+Grammatical Classification of
+Lexical Items
+The range of pitch features that charac-
+terizes curticle lexical items does not corres-
+pond at all closely to the range that is
+appropriate to verb and to noun lexical
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 15]]
+R. K. Sprigg
+items. The particle lexical item 2005/2005,
+for example, has a multiplicity of possible
+pitch behaviour far outstripping that of
+either the tone-1-word or the tone-2-word
+low, level
+429
+verb lexical item; these particle features, and
+the prosodic conditions appropriate to each,
+are (the references are to section III, exam-
+ples (a)-(c)):
+tone-1 word
+tone-2 word, lower alternative
+tone-1 word
+tone-2 word, upper alternative
+tone-1 word
+(a) int. 1,
+(a) int. 1,
+(b)
+,
+falling
+(a) int. 1,
+rising
+(a) int. 2,
+"
+rising-falling
+(a) int. 3,
+tone-2 word
+high, level
+(a) int. 2,
+tone-2 word
+,
+(b)
+tone-2 word
+,,
+falling
+rising-falling
+(a) int. 3, tone-1 word
+(associated differences in voice quality,
+clear versus constricted, are considered in
+section V).
+-V
+-
+When these seven sets of pitch features
+are compared with the three stated in sec-
+tion III for the tone-1-word verb lexical
+item (high and falling, high-and-level,
+low-and-level) and the three stated for the
+tone-2-word verb lexical item (low-and-
+level, low-and-rising-falling, high-and-
+falling), it will be seen that in aggregate the
+pitch behaviour of this particle lexical item
+differs considerably from that of either the
+tone-1-word or the tone-2-word verb
+lexical item: in one context or another
+all three potential features of each of
+the two classes of verb lexical item
+are shared with
+the particle 25/02.
+It is not, therefore, possible to follow
+Cornyn and McDavid here, and give it
+the same tone classification as
+a verb
+lexical item (Cornyn classifies it as tone-I,
+like the verbs lá and tháin, and as
+tone-III, like the verbs pyèi and 5, with
+tone I as basic). 34 Neither of the figures
+'1' and '2', by which the verb lexical
+items were classified in section III, will
+serve for the much greater range of pitch
+variation of this particle lexical item; and
+furthermore p5/∞ps, and indeed all par-
+ticle lexical items; are not restricted to
+the tone-1 word or the tone-2, or to
+words of any tone. As far as the verb
+and the verb-and-particle type of word is
+concerned, the verb lexical items moε:,
+co, and ǝ are restricted to the tone-1
+word, while co, &, and are restricted
+to the tone-2; but သည်/သည့်, တေ, and နှင့်
+can be exemplified in words of either
+tone (III, i-iv, a-b), with of course
+appropriate differences in pitch features
+accordingly. In short the particle lexical
+items cannot be given a tone classification.
+Furthermore, the alternation in pitch
+of those particle lexical items which do
+alternate, e.g. §, wps/wps, com, xc, is a
+function of word tone; the alternation in
+pitch of verb and of noun lexical items
+is not.
+The phonological distinction between
+tonally classifiable and tonally non-classi-
+fiable lexical items runs parallel to the
+grammatical distinction of verb and noun
+from particle, and illustrates Firth's con-
+tention that phonological analysis should
+JBRS, XLVII, ii, Dec. 1964
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd. Bangkok, Thailand.
+
+[[page 16]]
+430
+Tonal Classification of Burmese Lexical Items
+be congruent with grammatical analysis: For the remaining sub-categories of ver.
+the difference in the pitch behaviour of bal particle (and of noun particle too),
+particle lexical items from verb and from except for ol/l, there is no such alter-
+noun lexical items supports his insistence nation of voice quality; and the voice
+on making provision for the separate quality difference is exploited for purely
+phonological analysis of different gram- lexical differentiation: lexical items belong-
+matical categories. The pitch potentiality ing to them are constantly characterized
+of 05/20, for example, would have to by one type of voice quality or the
+be formulated in terms of its gramma- other, and by that type only. For these
+tical designation: it belongs to a small latter particle lexical items, therefore, a
+statable
+voice-quality system,
+sub-category of verbal particle whose two
+for the
+members, သည်/သည့် and မည်/မည့် can occur syllable, can be established, comprising
+the two terms g and ğ (non-g), the letter
+not only in sentence-final clauses but also
+g, the initial letter of glottal trill, being
+in non-sentence-final clauses that precede,
+and qualify, a
+noun (III, b). In order, adopted for this purpose as a mnemonic.
+therefore, to distinguish it from other Each particle lexical item
+classified as g or as g by reference to
+sub-categories of verbal particle this sub-
+the two terms of this system according as
+category could be named, from its
+distinctive qualifying function, the quali- they are characterized always by con-
+stricted voice quality, e.g. the verbal-particle
+fying sub-category. In a given instance
+the actual pitch features (and voice quality) lexical items ☐ and 5, as in 22:☐
+သွားကြ
+of these two qualifying particles have to
+they will probably go', and the
+be considered in relation to grammatical nominal-particle lexical items
+function (qualifying clause versus non-
+qualifying clause), word tone (tone 1 versus
+tone 2), and, in the sentence-final clause,
+intonation (intonation 1 versus 2 versus 3)
+(examples (a)-(b) of section III).
+V. The Second Assumption and the
+Classification of Lexical Items by
+Features other than those of pitch.
+can then be
+00:
+က and
+6003,
+as in mes, as for that time', or
+always by clear voice quality, e.g. the
+verbal-particle lexical items and
+as in he did not in fact go³,
+and the nominal-particle lexical items oo
+and ч, as in 'inside there'.
+မှာ
+For the two qualifying-particle lexical
+items သည်/သည့် and မည်/မည့်, on the other
+A. Particle Lexical Items: Voice-quality hand, the alternation in voice quality has a
+Classification
+/
+The two qualifying particles
+and are characterized not only
+by the considerable diversity of pitch
+behaviour already illustrated but also,
+unlike most other particles, by an alter-
+nation in voice quality between constricted
+(‘creaky' or glottal-trill), on the one hand,
+and clear (or breathy), on the other.
+JBRS, XLVII, ii, Dec. 1964
+strictly grammatical significance: the
+constricted voice quality characterizes them
+in the qualifying clause (non-sentence-
+final; examples III (b)), and the clear
+voice quality in all other circumstances
+(examples III (a)). Precisely the same
+alternation of features characterizes cer-
+tain monosyllabic-noun lexical items and
+the final syllable of the final lexical item
+of certain polysyllabic nouns according
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 17]]
+P. K. Sprigg
+following noun; e,g.
+431
+as they too are or are not qualifying a their grammatical classification as mem-
+'I' versus c/c bers of the qualifying sub-category of
+‘my'; ɔɖup: 'you' versus ɛp:/ǝdo 'your;' verbal particle, deals with their alterna-
+ရှင်ဘုရင် ရှင်ဘုရင့်
+'king' versus 'king's'. In tion in voice quality: clear, but con-
+fact the final syllable of the qualifier, stricted when qualfying a noun.
+whether word or clause, can be charac-
+terized by constricted voice quality unless
+it is characterized by final occlusion
+(symbolized in the orthography by က်, စ်,
+05, 5). The alternation in voice quality
+is therefore best accounted for by clas-
+siiying သည်|သည့် and မည်/မည့် as g, which
+classification, taken in conjunction with
+Verbal-particle lexical items
+g
+?
+( သည်/သည့်, မည်/မည့်
+other lexical items (except ol/61)
+For the honorific particle 1/6] the
+classification ġ also signifies, as for
+သည်/သည့် and မည်/မည့်, alternative voice
+qualities, constricted and clear; but the
+Honorific-particle lexical item /u]
+(non-emphatic clause: clear
+constricted
+g (emphatic clause:
+This will mean that the classifica--
+tion ġ will have a different significance for
+the qualifying verbal-particle lexical items
+သည်/သည့် and မည်/မည့် from all the other
+(non-qualifying) ğ lexical items (e.g. the
+verbal-particle lexical items (g, co, :, [Go
+save only 01/5]; for these latter do not
+alternate in voice quality:
+qualifying not qualifying
+constricted
+clear
+clear
+constricted voice quality is appropriate
+to the occurrence of this lexical item
+in emphatic clauses, and the clear voice
+quality to all other circumstances; e.g.
+e,g. လာပါမည် I will come
+လာပါ့မည် I will certainly come
+For verbal-particle lexical items there
+is therefore this difference between the
+classification g and the classification ğ:
+g means that the lexical item so clas-
+sified, e.g. ş, 6002, ☐, can be charac-
+terized by constricted voice quality in
+all circumstances; ğ means that the item
+so classified is characterized by clear
+voice quality in all circumstances, unless
+that lexical item is 25/2ps, ups/ups, or
+case ġ means clear
+voice quality or constricted voice quality
+in accordance with the grammatical or
+the phonological conditions stated above.
+1/6, in which
+ပါ ပါ,
+B. Verb Lexical Items: Voice-quality
+Classification
+For verb lexical items too the voice-
+quality difference, constricted vermes clear,
+has an almost exclusively lexical signific-
+ance: monosyllabic-verb lexical items are
+regularly characterized either by one type
+of voice quality or by the other; and these
+can be classified accordingly as g, e.g.
+co 'find', 'dance', 'treat medically',
+or as g, e.g. omod: 'good', con 'sufficient",
+$ 'correct', o 'help', 'draw out'.
+600
+o
+JBRS, XLVII, ii, Dec. 1964
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+"
+
+[[page 18]]
+432
+For monosyllabic-verb lexical items in
+general, then, the classification g is indica-
+ted in the orthography by:
+1. အောက် မြစ်
+ii. လုံးကြီး တင်, တချောင်း ငင်
+iii. absence of any of the
+vowel and final-consonant
+symbols
+.၉. သေ့, ထောင်
+e.g.
+8, ကု
+က, ချ
+the corresponding g lexical items are
+indicated by:
+Eg. သေး, ထောင်း
+i.
+ရွှေ
+ပေါက်
+ii. absence of အောက် မြစ်
+combined with:
+နောက် ပစ်, သဝေ
+ထိုး ရေး ချ
+မဲ, တော
+စိုက်, ပစ်
+. ကသတ်, စ သ, တ သတ်,
+ပ သ
+iv. သ ထိုး ရေး ချ ရွှေ့ထိုး ပျော်, တော်
+သော
+V. ယ သတ်
+ရယ်, ဝယ်
+ပေါက်
+vi. absence of ရွှေ GU
+or အောက် မြစ် com-
+bined with:
+င သတ်, ည
+သတ်,
+သတ် သတ် မသတ်
+သေးသေး တင်;
+ကလေး
+ထောင်, ကြုံ
+သဝေ ထိုး, လုံးကြီး တင် တ
+ချောင်း ဝင်
+သေ, ပို
+vii. လုံးကြီး တင် ဆန် ခတ်, ရေး ချ
+နှစ်ချောင်း ဝင်
+ဖီး, ပီး ကား, ကား
+ကူးကူ
+Tonal Classification of Burmese Lexical Items
+Unlike the tone marks, which apply to
+the word as a whole and have syntagmatic
+implications for syllables in addition to
+the syllable containing the tone mark
+(section III), the voice-quality symbols of
+the orthography apply only to the syllable
+55
+containing them. 5 Thus, for example,
+သေ့
+and are g-syllable verb lexical items,
+ကြ and လိမ့် g-syllable verbal--particle lexical
+items, နှင့် and m g-syllable nominal-
+particle lexical items, and a 'item' and
+'town' g-syllable noun lexical items,
+while သေး and ထောင် are g-syllable verb
+lexical items, ဗြစ် and ပေ g-syllable verbal--
+particle lexical items, မှာ and များ g-syllable
+nominal_particle lexical items, and comf
+“hand’ and 'water' g-syllable noun
+ရေ
+lexical items.
+From this it follows that each of the
+symbols contained in an orthographic
+syllable symbolizing a verb or noun lexical
+item has two functions, a tonal function,
+in relation to the word as a whole, indica.
+ting a tone_1 or a tone-2 word, and a
+voice-quality function, in relation to the
+individual syllable, indicating ag or a g
+syllable; e.g.
+a.
+အောက် မြစ်
+b. လုံးကြီးတင်, တချောင်း ငင်,
+absence of any of the
+vowel and the final-
+consonant symbols
+C. ရွှေ ပေါက်
+-
+word
+tone
+syllable
+voice quality
+examples
+1
+g
+သေ့, ထောင်
+"
+39
+ပိ, ကု, က
+..
+160
+သေး, ထောင်း
+JBRS, XLVII, ii, Dec. 1964
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 19]]
+R. K. Sprigg
+d. absence of အောက် မြစ်
+combined with နောက်
+ပစ်, သဝေ ထိုး ရေး ချ
+e. က သတ်, စ သတ်, etc.
+f. 060
+8 0 2005
+ထုံး ရေး ချ ရွှေ ထိုး
+h. absence of Gg ပေါက် of
+အောက် မြစ် combined
+20 သတ်, etc,,
+with c သတ်,
+သဝေထိုးလုံးကြီး တင် တချောင်း ငင်
+-
+1
+100
+39
+**
+"
+2
+"
+,,
+,,
+Each of the symbols that indicates a g
+syllable (a-b) also indicates that the word
+containing it is tone-1; each of the
+symbols that indicates a tone-2 word
+(f-h) also indicates that the syllable con-
+taining it is ğ. Thus the symbolization
+of g correlates with the symbolization of
+tone 1 (the reverse is not true); and
+the symbolization of tone 2 correlates
+with symbolization of g (the reverse is
+not true).
+Some of the g symbols (c-e) indicate
+tone 1; others (f-h) indicate tone 2. Some
+of the tone-1 symbols (a-b) indicate g;
+others (c-e) indicate ğ.
+To summarize, pitch features and
+voice-quality features are altogether different
+in their syntagmatic implications, and
+therefore in their relations with the word
+and the syllable; they should therefore
+be kept distinct, even though Burmese
+orthography uses single symbol to
+perform both a tonal and a voice-quality
+verb particle
+#Co #Co
+6000
+နှင့်
+tone- 1 word
+[---]
+မပို့တော့ဘူး […
+မပူပါနှင့် […
+[---]
+ù, 6000
+စိုက်, ပစ်
+ပျော်, တော်
+ရှယ်, ဝယ်
+6000€, 600
+433
+a notable and
+function, and achieves
+praiseworthy economy in so doing.
+C. Pitch Features of g and ğ Lexi-
+cal Items (Particle, Verb, Noun)
+The impossibility of making general
+statements associating constricted voice
+quality with high pitch can be shown
+by contrasting the pitch features of
+g-syllable verb and noun lexical items
+with the pitch features of g-syllable
+particle lexical items. Though Cornyn's,
+McDavid's, and Bernot's descriptions of
+Cornyn's and McDavid's tone-III syllable
+and of Bernot's tone-1 syllable, as having
+slow glottal closure at least in some
+types of juncture, and as beginning high
+or as being high, is in the main justi-
+fied when made for verb and for noun
+lexical items (but see section III, ex. 2),58
+the part of the description that concerns
+pitch cannot, in the material on which
+this analysis is based, stand for particle
+lexical items: their pitch is a function of
+word tone; and is either high or low
+accordingly; e.g.
+tone-2 word
+'
+-
+---
+မပြန်တော့ဘူး […
+မလာပါနှင့် [ -
+-]
+-
+--
+JBRS, XLVII, ii, Dec. 1964
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd. Bangkok, Thailand.
+
+[[page 20]]
+434
+*L
+In these examples, (i) the constricted
+voice quality of the verb lexical item
+8 is accompanied by high pitch, (ii)
+the constricted voice quality of the par-
+ticle lexical items and differs
+from that of 8 in that the accompan-
+ying pitch alternates, from low in the
+tone-1 word to high in the tone-2 (cf.
+also section III, examples (iii)-(y)), and
+(iii) the g-syllable particle lexical item
+နှင့် has same (low) pitch in မရ္ဟိပါနှင့် as
+o which is Cornyn's and McDavid's
+tone I and Bernot's toneme 2.
+Tonal Classification of Burmese Lexical Items
+the symbols illustrated at (a)-(h) above
+do not have the tonal function; but
+they do have the voice-quality function,
+with appropriate associated pitch features,
+though seldom the fixed register features
+attributed to them by Cornyn's McDavid,
+and Bernot. 37 Apart from wps/wps and
+ups/ups, which have already been dealt
+with, the symbols at (a)-(b) indicate
+for particle lexical items that they are
+g_syllable, and can therefore be charac-
+terized by constricted voice quality, while,
+the remaining symbols (c)-(h) indicate
+g-syllable particles, always characterized
+For particle lexical items, therefore, by clear voice quality; e.g.
+tone-1 word
+tone-2 word
+Og vbl. part.
+ခပ်တော့
+( -]
+ပြန်တော့ […]
+22
+နှင့် noml. part.
+ထားနှင့်
+[ ~]
+ရေနှင့်
+[-]
+လျှင် gvbl.
+g
+part.
+ခင်းလျှင်
+[M]
+ဆိုလျှင်
+[~ ~]
+,,
+မှာ
+ကျောင်းမှာ [-]
+( )
+noml. part.
+(the translation of the g examples is
+as in section III; the ġ examples translate
+as if you spread, if you say; at school, in
+the field).
+D. Alternation of Voice Quality in
+Verb Lexical Items
+It was stated at (B) above that for
+verb lexical items the function of the voice.
+quality difference, constricted versus clear,
+is, in general, lexical: it distinguishes one
+class of lexical items from another. There
+are however a number of verb lexical items,
+mainly, and perhaps exclusively, intransitive.
+verb lexical items, that are characterized by
+an alternation of voice quality. In this
+respect they resemble the particle lexical
+items သည်/သည့် and မည်မည့် and the roun
+lexical items referred to in section (A)
+above, but of course without their associa
+JBRS, XLVII, ii, Dec. 1964
+ယာမှာ
+ted difference in grammatical function
+(qualifying versus non-qualifying). These
+verb lexical items are those which can
+occur in the negative reduplicated-verb
+noun phrase. They comprise both tone-
+1-word and tone-2-word lexical items, but
+excluding tone-1-word lexical items that
+have the potentiality of syllable-final occlu-
+sion (these excluded tone-1-word lexical
+items, which do not alternate in voice
+quality, are indicated in the orthography
+by the symbols of, 6, 5, and 6).
+The type of noun phrase in question
+comprises two words, in the first of which
+these lexical items are characterized by
+constricted voice quality, but in the second,
+and
+deed in all other circumstances, by
+et voice quality (alternative orthographic
+as we possible in the first word); e.g.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 21]]
+R. K. Sprigg
+constricted
+မကောင်း) -
+မလင်း”
+[- -
+UNE } [--]
+clear
+တကောင်း [- ] not too good
+တလင်း
+(¯ `] (dawn) not quite breaking
+60
+}
+[- }
+တမှီ
+[..] not quite reaching
+မထိုင်
+435
+မထိုင်
+[-]
+[ ] not quite sitting down.
+At the grammatical level of analysis it
+will in any case be necessary to group
+together in a sub-category all verbs that
+can be exemplified in the negative redupli
+cated verb noun phrase; and for all lexical
+items classified in this way g formularizes
+clear voice quality, save only in the first
+word of the negative reduplicated-verb
+phrase, while the classification g formular-
+izes constricted voice quality in all
+circumstances, and, in particular, in both
+words of the negative reduplicated-verb
+phrase; e.g.
+constricted constricted
+မပြည် [ ] တပြည့် [ ]
+မထိ [ ] တထိ [F ^]
+not quite full
+not quite touching.
+In other words, the constricted voice
+quality that characterizes the g syllable,
+e.g. ကောင်း, လင်း, မှီ, ထိုင်, in the first word
+of the phrase is to be analysed differently
+from the constricted voice quality that
+regularly characterizes the g syllable; and
+the question of change of tone, on the
+lines of Cornyn's tone change of hmi'
+(tone I) to hmi (tone III), does not arise.
+In any case the difference in the pitch
+behaviour of and off when characterized
+by constricted voice quality from that of,
+for example,
+of the phrase would present something of
+a problem for the tone-change concept :
+(~)
+(e)∞8
+(မ)မှီ
+(မ)ထိုင်
+voice quality
+constricted
+79
+pitch
+high, level
+"
+,,
+'
+,,
+"
+"
+falling
+,,
+"
+Since has constricted voice quality here.
+Cornyn analyses it as an example of his
+tone III (hmi); and yet it differs in pitch
+behaviour (falling versus level) from
+and on, which Cornyn also analyses as
+tone-III ( pyè, thi), even though all three
+are in the same type of juncture ('open').
+If and are to be analysed as having
+changed into tone III here, one would
+expect them to be identical in pitch fea-
+tures with all other examples of tone III.
+In other words, constricted voice quality is
+not to be regarded as a criterion of g in
+all circumstances: one must also take into
+account pitch features (falling versus level,
+as here), and, at the grammatical level, the
+special conditions appropriate to the nega-
+tive reduplicated-verb noun phrase.
+The constricted voice quality character-
+izing the g-syllable lexical items emɔε:, wε:,
+, etc. in the first word of the negative
+and 8, in the first word reduplicated-verb phrase is sufficiently
+JBRS, XLVII, ii, Dec. 1964
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 22]]
+436
+indicated by the symbols and ∞, and by
+00,
+the reduplication of the verb lexical item;
+and it is not surprising that Burmese
+orthography commonly dispenses with any
+indication of this voice quality apart from
+these. If more specific symbolization were
+thought necessary, it would be preferable
+to add အောက် မြစ်, to form ကောင်း, လင်း, မှီ,
+and ထိုင်; the ပေါက် and the လုံး ကြီး တင် ဆန်
+would then preserve the voice-quality
+classification of the lexical item as g, while
+the would have the purely pho-
+netic, and non-lexical, function of indicat-
+ing the constricted voice quality peculiar to
+this grammatical environment. In the case
+of and similar lexical items in ε,,,
+$, 5, and 6:00: on the function of the
+would unfortunately be ambigu-
+ပေါက် OI
+69
+ous; for ε, 2, §, etc. without
+အောက် မြစ် plus the phonetic အောက် မြစ် …
+cannot be distinguished from the lexically
+classifying ; but adding the
+Gs would in any case be an over-phonetic
+and superfluous device for anyone with
+some knowledge of Burmese.
+Tonal Classification of Burmese Lexical Items
+in the voice-quality and the pitch features
+of certain noun lexical items. This alter-
+nation. and the grammatical categories
+qualifying and non-qualifying of which the
+constricted and the clear voice quality are,
+respectivety, exponents, have indeed already
+been mentioned in the course of dealing
+with သည်သည့် and မည်/မည့် (at (A) ). The
+tone-change concept has been used to
+account for it: ‘certain noun expression
+attributes, which consist of a syllable in
+tone I or II, change to tone III before a
+head noun: khinbya badulê 'who
+are you?': khímbyà Jané jin badúlê
+'who (is) your friend';38 'some personal
+nouns, and a few other noun-forms, when
+indicating possession or followed by parti-
+cles, may undergo tone-change; that is,
+certain forms in Tone I or Tone II are
+-
+sometimes replaced by forms in Tone III.
+For examples, /Ou̸/ ‘he, she', /ù/ ‘his, her³,
+mîn/ 'you' (famil.), /mìn/ 'your'. 39 A like
+change is implied by Armstrong and Pe
+Maung Tin's phonemic form / u:/ (toneme
+II) 'he' as compared with /u/ (toneme I)
+'his'; and by Bernot's phonemic form na
+E. Alternation of Voice Quality in 'je' (toneme 2) as compared with na' 'de
+Noun Lexical Items
+Taken in conjunction with the gram-
+matical analysis the tone classifications 'l'
+and '2', and the voice-quality classifications
+g and g, dispose of any need to introduce
+the concept of tone change or tonal
+replacement for verb lexical items; and
+from the way in which the alternation in
+voice quality of e.g. the verb lexical items
+emo: and :, and the alternation in both
+voice quality and pitch of e.g. the verb
+lexical items and oo, and, a fortiori, the
+particle lexical items p5/0p and p/ps,
+have been so analysed as to exclude the
+tone-change concept, the readar will prob.
+ably have guessed that the same treatment
+is to be given to the well-known alternation
+JBRS, XLVII, ii, Dec. 1964
+moi, mon' (toneme 1). Cornyn's and Mc-
+David's tone-III form, and Armstrong and
+Pe Maung Tin's and Bernot's tone-1, thus
+have the effect of identifying their forms
+/ù/ ‘his”, /mÌn/ ‘your', and na' 'my' tonally
+with such forms as
+' reward',
+6
+20
+* rhinoceros', and the second syllable of
+064 today', though the first three exam-
+ples are qualifying, and the last three are
+not, and though the first three are each one
+of a pair of phonemic forms of the same
+lexical item, while the last three are
+constant.40
+In a phonological analysis of the type
+proposed by Firth there is no obstacle to
+analysing the poun forms (or ∞)“ his', vệ
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd. Bangkok. Thailand.
+
+[[page 23]]
+R. K. Sprigg
+20
+(or ε) ‘your', c (or cl) ‘my', and the
+final syllable of (o) ‘your',
+or of ε king's', differently from
+‘reward' and
+and ကြံ့ “rhinoceros’, for
+example, or from the second syllable
+or 06§, ‘today' or of : 'woman', in
+spite of their having identical voice-quality
+and pitch features. This difference in
+analysis (i) reflects the grammatical
+difference between the forms
+50, မင့်, ခင်ဗျာ့,
+for example, which are qualifying and
+emphatic forms only, and such forms
+which are not
+as
+,
+and 068,
+-
+one
+437
+phy, which sometimes distinguishes the
+g lexical item and the final g syllable
+of a disyllabic lexical item by combining
+အောက် မြစ် with of the ġ symbols
+listed in section (B) above (though stated
+there for verb lexical items they are
+lexical items).
+equaily valid for noun
+Thus, a 'his', 'yours', and c 'my'
+can also be symbolized as သူ မင်း ငါ့,
+in which the indicates the gram-
+matical or emphatic function of these
+forms, and therefore, at the phonetic
+level, the constricted voice quality appro-
+priate to that function, while the
+restricted to qualifying and to emphasis, နှစ်ချောင်း ငင်, the ရွှေပေါက်, and the ရေး ချ
+23
+indicate that their lexical classification
+is and associate them with
+g,
+20, မင်း, and
+and (ii) attempts to relate different
+phonetic forms of the same lexical item,
+as for exrmple သု and သူ, ခင်ဗျာ and ခင်ဗျား, ငါ (the final syllable of ရှင်ဘုရင့် king's’
+to a single common formula.41 The
+constricted voice quality of and of
+the second syllable of cup, for example,
+which has either a grammatical or an
+emphatic significance, need not be analysed
+identically with the constricted voice
+quality of, for example, 25, and the
+second syllable of nes, which has a
+purely lexical significance; ဆု, , and နေ့ in this article ရွှေ ပေါက်, အောက် မြစ်, နှစ်ချောင်း
+are thereby classified as g-syllable lexical
+items, and as such are regularly characteri-
+zed by constricted voice quality, while
+သု/သူ မင့်/မင်း, c/cါ, and -ဗျာ့--ဗျား, for
+example, are classified as ğ lexical items,
+and therefore characterized by either
+constricted or clear voice quality under
+differing grammatical and phonological
+conditions, and so is the second syllable of
+the disyllabic lexical item -/-
+contained in ရှင်ဘုရင်.
+Such an analysis can claim the
+occasional support of Burmese orthogra-
+is ambiguous: it is not possible in
+Burmese orthography to make a distinction
+between (i) absence of both eg colos and
+lexical plus grammatical and
+phonetics, as in ε 'king's'
+and (ii) lexical œy, as in coε ‘stage”).
+If interpreted in the way suggested
+ငင်, က သတ်, and the other Burmese ortho-
+graphic symbols considered here are
+opposed to the three assumptions challen-
+ged at the beginning of the article, and
+appear as an economical set of symbols
+in some cases discharging more than
+one prosodic function simultaneously
+(word tone, syllable voice quality), within
+certain grammatical limitations, and with
+at least the capability of distinguishing
+the grammatical and emphatic functions
+of constricted voice quality from the
+lexical, and thereby facilitating the clas-
+sification of lexical items.
+JBRS, XLVII, ii, Dec. 1964
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd. Bangkok. Thailand.
+
+[[page 24]]
+438
+'Burmese Orthography'-Notes
+1. These examples are taken from J. A.
+Stewart, An Introduction to Colloquial
+Burmese, Rangoon, 1936, 68-9.
+2. Referred to below by the single terms
+'clear' and 'constricted'.
+3. In criticism of these assumptions see
+also R.K. Sprigg, ‘Junction in Spoken
+Burmese', Studies in Linguistic Analysis,
+Oxford, 1957, 126.
+4. R. Grant Brown, Half the Battle in
+Burmese, London, 1909, 12-15; J. E.
+Bridges, The Burmese Manual, London
+and Rangoon, 1906, 182; A.W. Lons-
+dale, Burmese Grammar, Rangoon,
+1899, 33-4.
+5. Lilias E. Armstrong and Pe Maung
+Tin, A Burmese Phonetic Reader, Lon-
+don, 1925, 20.
+6. William Cornyn, 'Outline of Burmese
+Grammar, Language, 20, 4 suppl.,
+Oct. Dec., 1944, 7 (3).
+7. D. Bernot, 'Esquisse d'une description
+phonologique du birman', Bulletin de
+la société linguistique de Paris, 58, 1,
+1963, 164. Cf. also J. R. Firth, ‘Notes
+on the Transcription of Burmese',
+Bulletin of the School of Oriental
+Studies, VII, 1, 1933, 137-9; Raven
+1. McDavid, Jr., 'Burmese Phonemics',
+Studies in Linguistics, 3, 1, 1945, 7 (4);
+J. A. Stewart, Manual of Colloquial
+Burmese, London, 1955, 2.
+8. op. cit., 7-10.
+9. op. cit., 7–8.
+10. op. cit., 222.
+11. op. cit., 21-6.
+12. op. cit., 9 (27), 29 (i54.1).
+13. op. cit., 31-2 (163) (170); 12 (36).
+JBRS, XLVII, ii, Dec. 1964
+Tonal Classification of Burmese Lexical Items
+14. op. cit., 17 (note 4), 8 (6.3).
+15. op. cit., 28.
+16. I owe this material to U Tin Maung,
+an Upper-Burman from Sagaing, and,
+in section V (D), to my colleague Dr.
+Hla Pe, a Lower-Burman from Moul-
+mein.
+17.
+On the corresponding difficulty, in
+Karen, of analysing sentence-final
+particles on the same terms as verbs
+cf. Eugénie J. A. Henderson, 'Tone
+and Intonation in Western Bwe Karen',
+BRSFAP, I, Jan., 1960.
+Cornyn, op. cit., 32 (170).
+18. Cornyn, op. cit., 29 (154.1).
+19. McDavid, op. cit. 17 (4a); see also
+Cornyn, op. cit., 23 (125), and cf.
+Armstrong and Tin, op. cit., 28 (/u/
+‘his', /ŋu:/ ‘he').
+20. My own material suggests that the
+vowel quality characterizing သစ် in သစ်
+ဥ
+would be the same as in သစ်, သစ်ကိုင်း,
+and ; but Bernot's gi' would
+require the same vowel quality, in fact,
+as in 'know'.
+21. cf. Stewart, An Introduction, 84; for the
+pronunciation of these examples I am
+indebted to Dr. Hla Pe.
+22. cf. also, on a similar problem in Karen,
+Henderson, op. cit., 61 (Ja).
+23. op. cit., 12 (36).
+24. cf. also H. A. Gleason, An Introduction
+to Descriptive Linguistics, New York,
+1961, 82-3.
+The reference to phonological
+environment, as distinct from gramma-
+tical environment, is intended to cover
+the sort of phonetic variation that
+characterizes the final syllable of, for
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 25]]
+R. K. Sprigg
+example, ဆရာ/ဆရ?,in ဆရာ့(ကို) မျှော်နေ
+∞ 'I am looking out for Teacher',
+cf. ဆရာ(ကို) ရှာနေသည် “I am looking round
+for a teacher' (Stewart, An Introduction,
+26-7), and that characterizes
+in အိမ့် ရှင် “householder', cf. also အိမ် ရှင်.
+Such variations as these are attribut-
+able to differences of emphasis.
+25. See R. H. Robins, 'Aspects of Prosodic
+Analysis', Proceedings of the University
+of Durham Philosophical Society, I,
+series B (Arts), 1957, 1, 1-12.
+26. cf. also R. K. Sprigg, 'Prosodic Analysis,
+and Phonological Formulae, in Tibeto-
+Burman Linguistic Comparison', Lin-
+guistic Comparison in South East Asia
+and the Pacific, London, 1963, 79-81.
+27. Phonetic criteria for the delimitation
+of the word, based on junction features,
+are stated in 'Junction in Spoken Bur-
+mese. On the basis of these phonetic
+criteria, supported by grammatical
+criteria, ecepciosos, for example, is
+a single six-syllable word. The first
+five syllables can be shown to be in
+intraverbal junction with each other by
+such features as central vowel quality
+(6, 0) initial voicing (o, co), and final
+nasality homorganic with the following
+initial (cope). The syllable so is the
+only one that is not linked by junction
+to the preceding syllable; but it is, in
+some utterances, linked, by its low
+pitch, to the verb syllable (here cœpε:;
+cf. III, example (v), jos), and is
+also to be linked with it on grammati-
+cal grounds: verb and particle regular-
+ly form part of the same word.
+The term word as usued in this
+article corresponds equally to the 'high
+439
+words', 'lexigrams' and '(lexical) words'
+of Minn Latt's recent 'Second Report
+on Studies in Burmese Grammar',
+Archiv Orientálni', 31, 1963, 257-62.
+28. See also ‘Junction in Spoken Burmese',
+126-7. For words containing disyllabic
+verbs a four-term tone system is
+statable ('Junction³, 128).
+29. Certain verbal-particle lexical items,
+e.g. :
+‘ever', §: ‘still', : ‘still', do
+not, perhaps, have two selections of
+features; if not, they lie outside the
+statement made in this paragraph.
+30. From the features listed at (IB) above
+it will be seen that Armstrong and Tin
+do not invariably associate a high pitch
+with their tonemes I and III or a low
+pitch with their tonemes II, but that
+the former two tonemes can.
+31. From Stewart, An Introduction, 95, 26.
+32. This article does not deal with the
+33.
+34.
+35.
+pitch features characterizing verb
+lexical items contained in polysyllabic
+noun words and noun-and-particle
+words; e.g. mɔd: and ☑ in the trisyl-
+labic noun word : "benefactor',
+ġ in the trisyllabic noun word opong
+‘wise man', coɔ and ☑: in the trisyl-
+labic noun word : 'very early'.
+ɔ ☑:
+cf. Sprigg, ‘Junction', 128, where p
+can be characterized by a low and
+falling pitch in the tone-I disyllabic-
+verb-and-particle word, but not in the
+tone-II, tone-III, or tone-IV.
+op. cit., 29 (154).
+There is however a possibility that
+interaverbal junction presence or ab-
+sence of constricted voice quality may
+be linked to presence or absence of
+JBRS, XLVII, ii, Dec. 1964
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 26]]
+440
+glottal plosion as an initial feature of
+a following syllable: in e.g. 8:
+send
+Tonal Classification of Burmese Lexical Items
+37.
+Certain verbal particles, however, e.g.
+သေး ‘still’, ဘူး “ever”, ဦး “still”, seem to
+be regularly characterized by high pitch.
+it, then' and in coɔup ‘I will go on
+waiting' the syllable 2, which follows
+the constricted-voice-quality syllables 8 38. Cornyn, op. cit., 23 (125).
+and co, has a glottal-plosive initial;
+OL
+but in c:co wait for me then', in 39. McDavid, op. cit., 17.
+which it follows the clear-voice-quality
+syllable it has a vowel initial.
+နော်
+Si- 40.
+milarly, ε has a vowel initial in
+'so as to win', in which it fo-
+llows ε, which has clear voice quality.
+If such a relationship could be esta-
+blished between the syllable with con-
+stricted voice quality and the alter-
+nation of initial glottal plosion with
+initial vowel in the following syllable,
+it would become necessary to treat g
+and ğ as applying not to a single sy-
+llable but to a sequence of two sy-
+llables.
+36. Cornyn, op. cit., 9 (26-8); McDavid,
+op. cit., 8 (6.3); Bernot, op. cit., 221-2.
+It is not only in their qualifying func-
+tion that these noun lexical items of
+variable voice quality are characterized
+by their constricted alternative: this
+alternative also characterizes them
+in other circumstances; e, g. မင့်(ကို) ငါ
+မပြောဘူး “I do not speak to you', သူ (ကို)
+[yo 'show to him' (Stewart, An Intro-
+duction, 27). In these examples the
+function of the constricted voice quali-
+ty is taken to be emphatic.
+41. cf. A. E. Sharp, 'Stress and Juncture in
+English', Transactions of the Philological
+Society 1960, 108.
+$$
+JBRS, XLVII, ii, Dec. 1964
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.

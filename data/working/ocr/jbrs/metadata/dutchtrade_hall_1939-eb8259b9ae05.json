@@ -1,0 +1,14 @@
+{
+  "local_file_id": "dutchtrade_hall_1939-eb8259b9ae05",
+  "batch_id": "jbrs-ocr-2145",
+  "file_name": "DutchTrade-Hall-1939.pdf",
+  "path_stub": "Burmese/Burma JBRS/1939/DutchTrade-Hall-1939.pdf",
+  "journal": "JBRS",
+  "year": "1939",
+  "ocr_engine": "google_vision",
+  "pages_completed": 18,
+  "ocr_date": "2026-06-01T19:45:05.275640+00:00",
+  "source_category": "other_source",
+  "language_scope_guess": "Burmese",
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+}

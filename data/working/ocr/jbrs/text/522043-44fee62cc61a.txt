@@ -1,0 +1,2251 @@
+[[page 1]]
+THE PARTS OF SPEECH IN BURMESE AND THE
+BURMESE QUALIFIERS
+Kathleen Forbes †
+A. Previous Literature on the Parts of
+Speech in Burmese
+I know of only two linguists who
+have devoted any systematic considera-
+tion to the number of parts of speech in
+Burmese: Stewart! and Cornyn². The
+two works differ in that one (Stewart's )
+is a practical grammar, the other
+(Cornyn's) a purely linguistic analytical
+study. Both scholars arrived at the view
+that Burmese has only three parts of
+speech: nouns, verbs and particles.
+Hockett defines particles as the uninflect-
+ed forms of the language Stewart (p. 10)
+says the noun and verb form two sharply
+distinguished classes. "The equivalents
+of adjectives and adverbs are obtained
+by subordinated uses of nouns and verbs.”
+Stewart's particles are mostly affixes (noun
+affixes attached to nouns and verb affixes
+attached to verbs) but also free forms
+functioning like prepositions. He does
+not actually indicate how nouns and
+verbs are to be distinguished as classes,
+but takes it for granted. Stewart remarks
+(p.15) that nouns may occur before
+other nouns, when they function as ad-
+nouns (p.65). The following are treated
+as examples of subordination of verbs
+by reduplication (p.82 ff) မြန်မြန် in မြန်မြန်သွား
+("a reduplicated verb preceding and
+subordinated to another verb is the
+usual Burmese substitute for an adverb"
+p. 83, and ကြီးကြီး in အိမ်ကြီးကြီး where the
+reduplicated verb following a noun in-
+dicates an attribute (p.83). Some forms
+are not clearly classified, e.g. classed
+under particles or phrases in vocabulary
+on p.85 are ɔməm “frequently”, “very”,
+com os "handsomely, finely',". Other
+expressions which are not classified as
+**stock
+parts of speech, but simply as
+of words in
+phrases" ( "combinations
+various syntactical relations") are comics,
+လက်ကား, အဆင်သင့်, အချိန်မတော်, အလှည့်ကျ,(p.93),
+samd:may, (p.99). Of his so-called augmenta-
+tions" ("formations consisting of from
+two to six syllables, built up by the aid
+of reduplication, rhyme and alliteration"
+p.103), he remarks that while a few of
+them can function as noun subjects,
+"most are nouns which can only be used
+in subordination to other nouns to verbs"
+e.g. ပက်လက် ကုလားထိုင်, or+အိပ်သည်။ He thus
+jctives (e.g. မီး in မီးရထားသည် in သည်အိမ် regards
+**this place house", “this house” ).
+Stewart points out ( pp.
+18-19 )
+that many noun particles such as sap,
+အသဲ, အရှေ့နောက် also occur as indepen-
+dent nouns. He treats numbers and
+classifiers as two special classes of nouns
+(p.20 fff ). He includes pronouns, de-
+monstratives and interrogatives among
+the nouns (p. 10). On p. 55, Stewart
+says that a sentence can be prefixed to a
+noun and "then becomes an adjective
+qualifying the noun like 07 in 0000008, ပြီး
+in qo. In these cases, cops changes to
+သည့်, မည် to မည့်။ Verhs combined with ဘိ
+as well as with
+are
+00
+termed verbal
+as nouns functioning as quali-
+fiers all such forms as the following:
+(p.103-105) ပက်လက်, ချက်ခြင်း, အတူတူ, ရုတ်တရက်,
+စောစောကြီး, ခပ်စောစော, နီကီတီ, သေသေချာချာ
+(p.107) ကပျာကယ, အဆောတလျင်, မရှိကရှိ။
+Cornyn (sect. 32) includes under nouns:
+ကောင်း ကောင်း, မပြည့် တပြည့်, ကန့်လန့်,နီ တီ တီ .
+He also classes under nouns the following:
+ordinary, interrogative, numerals, classi-
+fiers (sect. 122), noun expression attributes
+formed from verb expressions with particle
+(sect. 126), with (sect. 127), -m, -
+(sect 128). Cornyn says in section 32 that
+"the nouns and verbs... are the minimal
+free forms of the language”. On particles,
+† Lecturer in English, Arts & Sciences University, Mandalay.
+JBRS, LIII, ii, Dec., 1969.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangok, Thailand.
+
+[[page 2]]
+44
+see sects. 50-60, 61-76, 87-108. All the
+affixes seem to be termed particles by
+Cornyn, cf. sects. 36, 43, 50-60, 61-76,
+82 ff, 87 ff. 149 ff.
+B.
+Criteria used for distinguishing the
+Parts of Speech in this Paper
+In this paper, the parts of speech
+will be distinguished according to the
+affixes which can be attached to them,
+sometimes according to their internal
+form, or the position(s) they may occupy
+in the sentence. On this basis I suggest
+that there are four parts of speech in
+Burmese: nouns, verbs, prepositions, qua-
+lifiers. The affixes cannot be regarded
+as a separate part of speech (particles),
+as is done by Cornyn and Stewart, since
+they cannot be placed on the same level
+as full words. However, the affixes must
+of course be divided into various classes
+according to whether they are derivative
+or inflectional, and according to the type
+of word they can be attached to (see
+references to Cornyn above).
+From the point of view of internal
+structure, the nouns may consist of single
+morphemes, or of various combinations
+of nouns and verbs, usually in close
+juncture, forming compound nouns. The
+verb may consist of a single morpheme
+(e.g. ago: "go", co "come") or of two
+verbs combined in close juncture (e.g.
+The Parts of Speech in Burmese
+Ia. Further Characteristics of the Noun
+and Verb Classes
+The noun and the verb are also
+easily distinguished as separate parts of
+speech in Burmese on the basis of the
+suffixes which may be added to each
+class. Verbs can take one of a number
+of suffxes, such as -မည်, --ကြ, -ပါ, --ပြီး,
+which cannot be added to any noun. On
+the other hand, −များ, ---တို့, -တွေ, ‘က,
+can be attached only to nouns. -
+can be added to either nouns or verbs
+but with quite a different signification in
+each case, since it indicates the subject
+in the noun, the present/past tense in the
+verb. Only the noun can be followed by
+a numeral plus classifier. The verb, but
+not the noun form´s), would normally
+come at the end of the clause or sentence
+(usually with an affix attached), especially
+in written Burmese. But word-order
+is not nearly so fixed in colloquial
+Burmese. For further details
+on the
+noun and verb suffixes, the reader is
+referred to Stewart and Cornyn (opp.
+citt.).
+"
+Some members of the noun class
+cannot take all these suffixes, for example,
+cl ‹I”. wɛ: “you” etc., do not take the
+plural suffixes
+-600, -411, but only -တို့။
+These can be regarded as a subgroup
+of the whole noun class and termed
+pronouns. Likewise, proper names, which
+can only take the plural suffix -, e.g.
+ကြို ဆို “welcome", အေးချမ်း be peaceful "). "U Ko and his friends (or family)",
+The preposition class can only consist of
+single morphemes, generally with the
+prefix 33-
+or m (e.g. အတွက် တလျှောက်)
+The class I have called qualifiers may
+consist of single morphemes which also
+function as nouns, or noun combinations
+or verb combinations or nouns or verbs
+with affixes, or various combinations of
+nouns and verbs in close juncture some-
+times with added affixes. The structure
+of this complex class of words forms the
+main topic of this paper and will be
+fully discussed below.
+can
+အ
+on this ground, that they cannot
+take the suffixes -609 and များ be regarded
+as a subgroup of the whole noun class.
+There do not seem to me to be enough
+grounds for separating off either the
+pronouns or the proper names into
+distinct parts of speech. Though both
+etc. and the proper names take the
+same plural suffix, there are good reasons
+for keeping them in separate subgroups
+because of the characteristic formation
+of the proper names which is quite
+different from that of the pronouns.
+JBRS, LIII, ii, Dec., 1969.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangok, Thailand.
+
+[[page 3]]
+Kathleen Forbes
+Cornyn regards the numerals, classi-
+fiers and interrogatives also as subgroups
+of the whole noun class. The classifiers
+form a class apart by virtue of their
+normally taking the position following
+the numeral with which they stand in
+close juncture. But the numerals can
+also stand alone as in counting and in
+mathematics, and classifiers often func
+tion as nouns in other contexts, and
+often indeed are identical with the noun
+preceding the numeral (e.g. အိမ်တအိမ်)
+Therefore it seems justified to regard
+the classifiers as a subgroup of the
+whole noun class. In mathematics, the
+numerals can take the same relational
+45
+(these clauses can then be regarded as
+functioning as nouns); by never taking
+the plural or most other nominal in-
+flexional affixes, nor any verbal affixes.
+are:-
+Some examples of this small class
+အထိ “upto, as far as: လမ်းအထိ လျှောက်
+"he walked up to the road”.
+အလွန် ““beyond”, e.g. in ကမ်းရိုးတန်း အလွန်မှာ
+"the island) is just beyond the
+coast-land”.
+အနက် “among”, as in: သူတို့အနက်မှ တယောက်
+affixes as nouns, .g နှင့် in တစ်နှင့်နှစ်ပေါင်းရင်.ကို ရွှေးပါ “choose one from among them".
+"if one is added to two...", and in
+နှစ်ထဲက တစ်နုတ် two minus one etc, The
+so-called interrogatives ဘာ, ဘယ်,ဘယ်လောက်
+ဘယ်နှစ်, ဘယ်လူ etc., can also in some cases
+take the same suffixes as nouns (e. g.
+ဘာတွေ, ဘယ်ကို, ဘယ်က, ဘယ်လူကို), but can be
+considered a separate subgroup of the
+noun class because of their peculiar
+internal structure, and because they occupy
+fixed positions in the sentence often
+အဖြစ် “as”, e.g.: သံဗူးကို ရေခွက်အဖြစ် သုံးနိုင်
+ပါသည် “the tin can be used as a water-
+cup”.
+အလိုက် “according to”: ရာသီအလိုက် အသီး
+"the fruits come according to the
+season".
+326
+law".
+“according to", e.g.: puessaq 3269:
+different from that of a noun or pronoun. oop "he took action according to the
+The interrogative often stands directly
+before the verb, with other nouns and
+qualifiers preceding the interrogative.
+Contrast သူ ဒီနေ့လာသသား with နေဘယ်သူသာသလဲ။
+Ib.
+သူ့
+Characteristics of
+class
+the prepositional
+It has appeared to me justifiable to
+posit a separate word class, which I will
+call prepositions. These are full words
+which serve the function of indicating
+the relationship of a preceding noun, or
+noun plus qualifier, to the rest of the
+sentence. They are free forms in that
+they are preceded and followed by open
+juncture, but they cannot be used alone
+unlike nouns (except in some cases in a
+different sense, see below). They are
+characterised by always following a noun
+or a noun plus qualifier or a clause
+37
+တွက်
+လာပါသည် “he comes for the child's sake”.
+အတွက် “for the sake of” ခ လေး အ
+"in accordance with", e.g.: puge
+အရေးယူပါသည်“he took action in accor-
+dance with the law" (cf. above).
+3000:
+တလျှောက် “along”; လမ်းကလျှောက် ကားမောင်း
+"he drove the car along the road".
+this is hard to translate in iso-
+lation, but occurs in many set phrases,
+such as; အကျဉ်းအားဖြင့် ““briefly”, အများအားဖြင့်
+““generally”, တကယ်အားဖြင့် ““really", သာမန်အား
+"ordinarily”.
+Of these, some also function as nouns,
+so that the question arises whether they
+ending in a verb plus -သည့် -တဲ့ မည့် မဲ့ form noun phrases in the above sentences,
+JBRS, LIII, ii, Dec., 1969.
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangok, Thailand.
+
+[[page 4]]
+46
+and their use as prepositions can be attri-
+buted to the English translation. Of the
+above words, the following can also act
+as nouns in other contexts: o “mean-
+ing”, အဖြစ် “event” ( အဖြစ်ဆိုးသည်), အတွက်
+380008
+nouns,
+The Parts of Speech in Burmese
+characterised by being followed by one
+of the relational suffixes like -m,
+one of
+the prepositions like :, or by a noun.
+Since -e1c., etc, otherwise follow
+no doubt verbs and other forms
+plus -50p, etc. should also be regar-
+ded as verbal nouns when preceding
+etc., or scope: etc. But when Verb
+etc. forms precede nouns, as in လာ(ကြ)သည့်
+caps, the Verb forms have the func-
+tion of qualifiers. We can say, then,
+either that the group of suffixes
+forms either verbal nouns or qualifiers,
+or that they only form verbal nouns,
+which in front of other nouns function
+as qualifiers, as many, if not all, nouns
+may do. Examples of prepositions with
+such verbal nouns are: အာဏာပိုင်များ မလိုလား
+"calculation", "measurement". How-
+ever, their meaning as nouns is so diffe-
+rent from what I would call their use as
+"prepositions" that the latter usage can-
+not be attributed to the English transla-
+tion. Also significant in my opinion is
+the fact that a native speaker such as
+my informant does not regard the "noun"”
+(as “meaning” etc.) as being the same
+word as the "preposition" (as "among"
+etc. ). The literal meaning of
+"following" (noun from the verb c
+"follow"), and "touching" (noun from
+the verb 8 "touch") is such that it could coop: "he did not come
+be argued that the phrases in which they
+occur above are noun phrases. Neverthe-
+less, quite apart from semantic questions,
+this argument seems to be precluded by
+the fact that a plural suffix would follow
+the first noun not the second.
+ရာသီများအလိုက်, လမ်းများအထိ would be gram-
+matical, but not *ရာသီအလိုက်များ *လမ်းအထိများ၊ ded as noun compounds since the second
+Thus,
+Moreover, where one of these words is
+used relational affixes do not occur, except
+that - e can be added to sașof (“from
+among"). says can also be used as a
+qualifler as in: အလွန် ကောင်းပါသည် jt is
+very good".
+-80
+Most other morphemes which have
+the function of showing the relationship
+of nouns to the rest of the sentence are
+bound morphemes which can never stand
+alone. Examples of such forms are:
+**in**, or indicating subject,
+**inside**, "from" -- "from" or in-
+dicating subject, "to",
+"to", - "with”,
+✓ indicating possession, "like"
+-like".
+- "to", -600:08 “as much as,
+**like" etc.
+because the authorities did not approve";
+ဆရာက ပြောပြသည့်အတိုင်း လုပ်ပါသည် “he acted in
+accordance with what the teacher said".
+Some nouns follow other nouns in
+close juncture, but they cannot be regar-
+noun is not only not the head noun
+(in noun noun compounds, the second
+noun is usually the head in Burmese, cf.
+CNB 202–203), but also the noun without
+the second element does not bear the
+same grammatical relationship to the rest
+of the sentence as the noun with the
+second element. In other words, the
+second noun has the function of indicat-
+ing the relationship of the first noun to
+the rest of the sentence. These forms
+may therefore also be regarded as preposi-
+tions when they are used in this way.
+It may be added in support of this view
+that the plural suffix could be added to
+the first noun but not to the second, —
+which would be impossible in Burmese
+compounds.
+Nouns of this type are all morphemes
+Verbs to which သည့် ... --မည့် …မဲ့ that can be also used as free forms with
+is attached in close juncture, are always
+the
+prefix attached. Examples are:
+JBRS, LIII, ii, Dec., 1969.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangok, Thailand.
+
+[[page 5]]
+Kathleen Forbes
+ပေါ်----လမ်းပေါ်မှာ ကားစီး ရှိပါသည်။ “There
+is a car on the road".
+--နောက်
+47
+of the different types of qualifier, their
+structure will be discussed. These four
+classes have been classified as subgroups
+of one whole part of speech
+on
+the
+အိမ်နောက်မှာ သစ်ပင်ဘပင် ရှိပါသည် ounds of similarity of internal structure.
+"There is a tree behind the house".
+- ---အိပ်ရှေ့မှာ စောင့်နေသည် “He is wait-
+ing in front of the house".
+-ကြောင့် သူ
+ ့ကြောင့် ကျမ ဒက္ခရောက်နေပြီ။
+am in trouble because of him".
+The first three of these forms are
+frequently followed by the suffixes
+General Characteristic of the Class
+of Qualifiers
+Included in the class of qualifiers
+are all the remaining words in Burmese
+which (1) cannot take any of the verbal
+affixes and therefore are not members
+of the verb class, (2) words which cannot
+take the plural affixes of the noun or
+any of the relational affixes of the noun
+such as -,
+except when they follow
+a noun head they then have attached to
+them the affix (es) which would otherwise
+be attached to the noun head and cannot
+be followed by numerals plus classifiers
+like nouns can; (3) words which can
+take certain relational affixes, especially
+-, but this affix is optional, and its
+presence or absence does not alter the
+structure of the sentence.
+C. The Types of Qualifiers found in
+Burmese
+The qualifiers have been divided into
+four classes in this paper: (a) verbal
+qualifiers which normally directly precede
+the verb: (b) prenoun qualifiers which
+directly precede a noun head; (c) post-
+noun qualifiers which directly follow a
+noun head; (d) qualifiers of other qua-
+lifiers which may either precede or follow
+the head qualifier. After a detailed survey
+JBRS, LIII, ii, Dec., 1969..
+All qualifiers of other qualifiers, and
+nearly all prenoun and postnoun qualifiers
+also function as verbal qualifiers. Many
+verbal qualifiers, however, are not em-
+ployed in the other functions.
+Only sequences which form single
+words have been classed as noun or verb
+qualifiers in this paper. The criteria for
+distinguishing between the word and the
+phrase in Burmese I have already dis-
+cussed in full in CNB. They may be
+briefly summarised again here. The word
+may be defined as a single syllable or
+sequence of syllables which is a free
+form from which all affixes such as
+20,-, have been detached (cf.
+CNB p.200). A sequence of syllables only
+forms a word (1) if there is close juncture
+between all the syllables, (2) if there is
+open juncture between two syllables but
+this is not the point at which division
+into ICs would be made (e.g. ရွေးကောက်ပွဲ
+ချောင်းဆိုးဆေး စစ်ဝတ်စစ်စား, CNBp.198), (3) if
+the point of open juncture coincides
+with the IC division, but one of the
+parts so cut off does not stand as a word
+by itself (i.e. cannot stand as a free
+form), .g, လူဝေး in လူစုလူဝေး, စာချိin စာရေး
+], cf. CNB p.212, (4) if the second
+morpheme begins with - when it is a
+free form, but this is detached when
+it is combined with a preceding morpheme;
+i.e. in a sequence of morphemes which
+form a word, no morpheme except the
+first may begin with the prefix -, e.g
+ကောင်းမှူး
+(a) Verbal Qualifiers
+The verbal qualifiers are divided
+here into the following groups, namely
+those formed with :-
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangok, Thailand.
+
+[[page 6]]
+48
+I.
+II.
+III.
+IV.
+V.
+VI.
+single verbs;
+reduplicated single verbs:
+two different verbs;
+a combination of noun plus verb;
+nouns alone;
+unanalysable forms;
+VII. rhyming; and/or alliteration; and/
+or repetition of syllables other than
+oro, but also consisting of consonant
+plus →
+VIII. unanalysable reduplicated syllables
+preceded by က and some other types of
+onomatopoeia.
+I
+Verbal Qualifiers containing single
+verbs only
+There are a few types of verbal
+qualifier in which the qualifier contains
+only one verb. Single verb morphemes
+used in this way always have a prefix or
+suffix.
+(1) A very common type is a verb
+with the prefix - e.g. 200$ "very” çaşı
+"near,"
+“gently," sac "together"
+(e.g. သူတို့ အတူ သွားကြသည် “they go together"),
+4
+65
+The Parts of Speech in Burmese
+(2) Much less commonly, a simple
+verb may have the prefix - as in :-
+တစောင်း –on one’s side” (တစောင်း အိပ်သည်
+**sleep on one's side”)တဝ(စားသည်) “eat one’s
+fill" possibly " "violently", if -$
+here is not from the noun. This
+with
+type seems to be much rarer than op-
+a reduplicated verb.
+(3) A very rare type is the negative
+prefix - with a single verb, only known
+to me in မဘရား “unjustly” (သူက ကျမကို မတရား
+“he accused me unjustly"). As
+only qualifies တရား တရား cannot be
+taken as combined with
+"
+(4) Many verbal qualifiers consist of
+a verb and a bound affix - (this suffix
+can also be used with dissyllabic verbs
+and even phrases) Thus: mig "well",
+များစွာ “much”,ပြင်းစွာ “severely”, လွန်စွာ
+**very much".
+(5) A highly productive pattern con-
+sists of 32 - Verbo. Thus … အကောင်းဆုံး
+“hest”, အနီးဆုံး “nearest”, အမြန်ဆုံး “fastest”.
+As far as I know, this pattern can be used
+with any monosyllabic verb.
+6) A rather rare pattern is exempli-
+အတင်း “by force, as in အုပ်ကို အသင်း လုသည် fied by အထူးပင် “in particular, with the
+"he took the book by force."
+Since is also employed as a noun-
+forming prefix, it could be alleged that
+these are simply nouns used to qualify
+verbs. In reply, it may be answered that:
+they are not used as the object of nouns
+as အများကြီး is in အများကြီး ဝယ်သည်; they are
+often used with (otherwise) intransitive
+verbs like သွားသည်; the verb သည် in the
+example above has another object beside
+:; most important, sa- Verb used as
+a verb qualifier cannot take the usual
+noun affixes (see above).
+discontinuous affixes
+m2...06.
+(7) The suffix -ǝ$ is occasionally added
+to a verb: မြက်ခနဲ (နာသည်) ““(it hurts) because
+of a sprain." See also Appendix to this
+paper.
+II. Verbal qualifiers consisting of a redupli-
+cated verb
+Many verbal qualifiers consist of a
+reduplicated verb stem, alone, or with a
+bound prefix or suffix,
+JBRS, LIII, ii, Dec., 1969.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangok, Thailand.
+
+[[page 7]]
+Kathleen Forbes
+(1) A reduplicated verb alone; 2-dy
+“quietly** (as
+"be quiet")
+ကောင်းကြေ
+"well" သွက် **fluently,
+quickly etc. Although this class is
+extremely productive, not all verbs can
+be reduplicated in this way in the function
+of qualifiers; ovoce appragor would not be
+so used.
+(4) The pattern
+occurring in
+other words of the
+doubt very rare.
+III.
+49
+Verb1 6- Verbi
+"often" (I find no
+same pattern) is no
+Verb Qualifiers containing Combina-
+tions of two different Verbs
+There are many verb qualifier patterns
+usually some kind of prefix or suffix.
+(2) etc. can be preceded and/or containing two different verbs. There is
+followed by various affixes:
+**rather
+(1) A rather rare type of qualifier
+seems to be the pattern Verb: Verb² (i.e.
+(i) the prefixes co- sǝ-, 30- as in
+၁းဖြေး (ဖြေးဖြေး) “slowly, အဝိုင်းဝိုင်း (ရေးသည်) simply two different verbs with no prefixes
+or suffixes): ပြောင်းပြန် “the wrong way
+round”, „č… “in fact", :: "in a low
+voice" are the only examples of this
+**in a
+round manner”,
+carly", Score: "fairly far away":
+(ii) the morphemes --လောက်’ကြီး
+လောက်ကြီး,
+-ကလေး, as in နီးနီးလေး “very near, နည်းနည်း
+type known to me. ပြောင်းပြန် is also often
+used with the morpheme ကြီး attached
+to it. It may be no coincidence that
+these forms are also all alliterative.
+(2) Another, also rare, formation
+without prefixes
+လှလှကြီး (လှလှကြီး without prefixes or suffixes consists o
+"a little" ( is common with
+with other words denoting
+နည်းနည်း, as
+quantity, e.g. econos, but does not add
+much to the meaning), လှလှကြီး (လှလှကြီ,
+နိုင်သည် he won significant victory")
+တော်တော်ကလေး fairly (ခ) ဘော်ဘော်ာလေး...
+(smo) sonicmimet
+ရှေးက လေးစားပါသည် Ma Htay respects her
+father quite a lot");
+as
+are
+cannot
+(iii) relational affixes such
+otherwise attached to nouns, e.g. opuscous
+“easily” (လွယ်လွယ်နဲ့ မရင် “if one
+get it easily), နည်းနည်းမှ 111 စိတ် နည်းနည်းမှ
+မကောင်းပါ 1 feel very regretful;
+(iv) With both prefixes and suffixes:
+တဖြေးဖြေးနဲ့ = ပြေး ခပ်နာနာလေး ရိုက်သည်)
+(hit) fairly hard"
+(3) We may include here the con-
+struction - Verb! 00- Verb, since both
+parts of
+the construction contain the
+same verb. This pattern is very produc
+tive: e.g. မပြည့်တပြည့် ““half-full”, မတမှ “half
+ripe, မလောက်တာကို hardly enough”,
+မအိပ် အိ် (ဖြစ်နေသည်) (he is) half asleep
+20005
+Verb: Verb Verb², i.e. a simple verb
+followed by a reduplicated verb;-- ဝေ့လည်လည်
+as in ဝေလည်လည် ပြောသည် he talks round
+the point" (from the dissyllabic verb
+ဝေ့လည်သည်), ပြုံးချိုချို in a sweet smiling
+manner" (but does not appear
+to be used as a dissyllabic verb, cf.
+Judson ad loc.).
+(3) Dissyllabic verbs can be redupli-
+cated in both parts:- "accurately",
+ရက်ရက်စက်စက် “cruelly”, ပျော်ပျော်ရွှင်ရွှင် “hap-
+pily” (e,g, ဘအိမ်လုံး ပျော်ပျော်ရွှင်ရွှင် နေကြပါသည်
+“the whole household lives happily ).
+This class of qualifiers is also extremely
+productive.
+(4) A very common and highly pro-
+ductive formation consists of 3- prefixed
+to each of the two verbs: e.g. အကြီးအကျယ်
+"widely, very", as in
+"he is very upset", so also "
+full", အလျင်အမြန် “quickly»,
++quickly, အဘော်အသင့်
+fairly, quite.
+JBRS, LII, ii, Dec., 1969.
+U¿P.-J. 94–1.000 +100+31-22-6-71.
+M. H. W.
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangok, Thailand.
+
+[[page 8]]
+50
+(5) Another less common type con-
+The Parts of Speech in Burmese
+(11) A rather rare pattern apparent-
+02
+sists of -Verb co-Verb², as in: sy is -Verb' Verb² Verb², as in:
+"affectionately", "easily”, say
+တပြင်း hurriedly,
+(6) An apparently rather infrequent
+pattern consists of
+Verb:
+001
+Verb² s
+ကဩ “surprised” (သူမှာ ၁ နှစ်သားရ
+"he became surprised")"
+(7) The negative prefix &
+may be
+attached to each part of a dissyllabic
+verb: “imperceptibly", » quem
+"without respect", scopes "in an unsatis
+fied manner", "unsatisfied" (quşu̸ [š
+နေသည် e is unsatisfied}; မသိမသာ occurs in
+such sentences as
+"it
+changed imperceptibly". Occasionally the
+two verbs are of opposite meaning: c
+ပေး as in မနီးမဝေးရှိသည် it is not far away”.
+မကော်ပတရား unjustly, တော် is not
+used as a dissyllabic verb with mspi
+Also
+(8) The pattern Verb! -Verb² seems
+to be an extremely rare type:
+(လာသည်) – (come} silently is the only
+example I find of it.
+Ei
+f
+(9) The formation Verb! Verb² -
+is a common productive type of verbal
+qualifier: eg. လျင်မြန်စွာ “quickly”, ကောင်းမွန်
+ၡာ “wel”, ငြိမ်းချမ်းစွာ ( နေသည်) (stay) peace-
+fully" etc. The relational affix - is
+occasionally added with no difference of
+meaning, as in "respectfully",
+ဘက်ကြွစွာပင် enthusiastically
+(10) Dissyllabic verbs can also take
+the prefix -and the suffix so in
+အကျေနပ်ဆုံး (ဖြစ်သည်) (heis) most satisfied,
+အသင့် မှတ်ဆုံး (ဖြစ်သည်) (itis) most fitting”.
+The basic pattern Verb: Verb Verb
+is much less commonly used with affixes.
+JBRS, LII, ii. Dec., 1969
+ယောက်ကောက် (ပြောသည်) (speak) spluttering-
+ly, and with the afix နဲ ့ တစိုးရိမ်ရိမ်နဲ့
+"anxiously. But while is used as
+a dissyllabic verb, is not.
+(12) I also find in Judson's Burmese-
+English Dictionary (revised Stevenson-
+Eveleth, 1921) the pattern >-Verb¹
+Verb Verb in : "fragrant-
+ly", but if this pattern is still in use (my
+informant could not say for sure whether
+it was or not), it does not at any rate
+seem to be common.
+(13) The formation consisting of a
+dissyllabic verb with both parts redupli-
+cated can have prepositional affixes at-
+tached: “smilingly”.
+(14) The pattern Verb¹-Verb²-Verb¹-
+Verb is seen in: ဆူညံဆူညံ (ဖြစ်နေသည်) –(it is)
+noisy”, (အိမ်တွင်) စုရုံးစုရုံး ဖြစ်နေကြသည် “they
+gathered together (in the house)".
+IV. Verbal Qualifiers consisting of a Com-
+bination of Noun plus Verb
+(1) The simplest of these combina-
+tions consists simply of a noun plus verb:-
+e.g. sa "for nothing", "in time”,
+အလှည့်ကျ “alternately”, အစွမ်းကုန် “to the best
+of one's ability" (e.g. အစွမ်းကုန် ကြိုးစားသည်
+"he tried to the best of his ability").
+This is a common pattern.
+Some other patterns contain more
+than one noun and/or more than one
+verb:
+(2) The formation Noun: Verb¹ Noun¹
+Verb² (i.e. the same nouns in the first
+and third syllables, different verbs in
+the second and fourth syllables) occurs in
+ပတ်ကျေဝတ်ကုန်(လုပ်သည်) –fulflling one's obliga-
+tions (and no more"), This is the only
+example of this pattern known to me.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangok, Thailand.
+
+[[page 9]]
+Kathleen Forbes
+(3) On the other hand, Noun Verbi
+Noun Verb is quite a common pattern:-
+စိတ်ရှည် လက်ရှည် – patiently ” စိတ်အေး လက်အေး
+"calmly", နည်းမှန်လမ်းမှန် “through proper
+channels" (with so "apply"),
+ရေကျန် (ချက်ပါ) “(cook it, so that there is
+little liquid left".
+(4) Another fairly frequent construc-
+tion has the form: Noun Verb: e.g.
+အချိန်မရွှေး at any time”, အဆက်မပြတ် “con-
+tinuous y (eg, မိုး အဆက်မပြတ် ရွာပါသည် “it
+rained continuously"), ["without
+exception".
+51
+by another noun (လူတယောက် etc., but ဘယ်
+wɔnf cɔoord
+နှစ်ယောက် လာသလဲ -- သုံးယောက် လာကြသည် “How
+many people came?" "Three came").
+Whether employed as qualifiers or nouns,
+there is always close juncture between the
+numeral and the classifier.
+- in coal can be contrasted with
+in
+because in mal,
+005708
+co-contrasts
+with other numbers. The same is true of
+02- in the expressions : “every
+other day, also နှင်… (သုံ... etc.) ရက်ခြား
+...(သုံး...
+"every third, fourth day" (e.g. 20:00
+များကို တရက်ခြား ပိုပါသည် “he delivers the papers
+every other day"). Also တယောက်ထည်း,
+alone', as in သူတို့ နှစ်ယောက်ထည်း နေကြပါသည်
+“the two of them stay alone".
+(5) A further possible sequence is Noun "by himself", "two people
+- Verb, as in: "systematically",
+ဂရုတစိုက် “carefully” (သိပ္ပံပစ္စည်းများကို ဂရုတစိုက်
+သိမ်းဆည်းထားမှု “looking after the scientific
+equipment carefully"). This does not
+seem to be a very common formation.
+(6) Rarer still is the pattern Noun-
+Verb-ပင် ---အလားတူပင် similarly is the only
+example known to me.10)
+V. Verbal Qualifiers Containing one
+more Nouns and no Verbs
+or
+Verbal Qualifiers may consist of one or
+two nouns combined with various affixes:
+တ- အ-- --သော် အစဉ် ‘တိုင်, ချင်း၊
+57-
+7
+-op, တိုင်‘ချင်း
+(1) Of the pattern noun with prefix
+00- I find only one example: 00320:
+“violently .g.သူက လူကို တအားထိုးသည် “he
+လူကို တအားထိုးသည် “he
+hit the man hard".
+(2) Numerals plus classifiers occur in
+temporal expressions which function as
+verbal qualifiers:- thus, cool, sñól “once”,
+**twice" (သူက တခါသွားလေးသည် “he went
+once"), ကခေါက်, သုံးခေါက် “once, **three
+times", "once": Numerals combined
+with classifiers otherwise function as
+nouns, though they are usually preceded
+အခါ, ကစက် etc., can be reduplicated:
+ကခါခါ sometimes, တစက်တစက် drop by
+drop", but these are to be regarded as
+phrases not compounds. See on the
+structure of ကခါ, ကစက် in Comments on
+the Structure of the Qualifiers below.
+(3) As far as I know, the construc-
+tion ∞ Noun–e only occurs in the word
+megi “one day" (in the past). Here
+--- is no doubt the numeral - in view
+of the meaning of the whole, but does
+not contrast with နှစ်, သုံး- etc.
+(4) The sequence o-Noun-c: occurs
+in:- တသက်လုံး all one's life” (ကျမဒီမှာ တသက်
+လုံး နေမည် “I will stay here all my life”,)
+အချိန်လုံး ““the whole time", "the
+whole day. These are all temporal ex-
+pressions. - in these expressions is also
+no doubt the same morpheme as os "one",
+but does not contrast with other numerals.
+The same pattern can also be freely used
+to form compound nouns as
+whole house", "the whole road".
+This type was omitted from my paper
+on compound nouns in Burmese.
+"the
+JBRS, LII, ii, Dec., 1969.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangok, Thailand.
+
+[[page 10]]
+52
+(5) Temporal expressions can also
+be formed with the suffix -စဉ် as in: ညစဉ်
+““nightly”, နေ့စဉ် “daily”, နှစ်စဉ် “yearly”;
+င.g..သူက နေ့စဉ်လာပါသည် “he comes daily.
+(6) A few temporal expressions have
+the suffix :: e.g. alone: "every time",
+cose: "daily", cone: "monthly" (e.g.
+မိုးရွာပါသည် “it rains daily").
+be
+some
+added to
+(7) ချင်း can
+nouns to express the idea of
+reciprocity, e.g. "lip to lip",
+မျက်နှာချင်း “face to face` (သူတို့ တယောက်နှင့်
+တယောက် မျက်နှာချင်းဆိုင်ဧနသည် “they are
+to face").
+can
+are face
+(8) The prefix sa-
+be attached
+to a reduplicated noun, occurring in such
+expressions as: soo "repeatedly” sala
+**from time to time", "in parts",
+အပိုင်းပိုင်း(ဖြတ်သည်) ““(cut) in pieces”.
+(9) Perhaps I may add here the
+derivative forms of the word cow which,
+however, is not a noun but a qualifier
+(see next section): of "firstly" and
+ပထမ(ဦး) ဆုံး very first".
+(10) Here also belongs, I think,
+esque "almost simultaneously", where
+ရှေး is used as a qualifier as in eq:00,
+and () is used as a qualifier as in
+သားနှောင်း
+(11) One may add here the redupli-
+cated form a “often" of the unana-
+lysable qualifier which cannot be said
+to be either a noun or a verb.
+The Parts of Speech in Burmese
+"a little while" (e.g. am epuls: "wait a
+little while”), လက်လီ by retail” (ပစ္စည်းကို
+လက်လီရောင်းခြင်း “selling goods by retail),
+ယခု “now”, ထပ်မံ “again”, ဗွက် “stubborn-
+ly", o "intentionally", cow "first",
+"second", "always" etc.
+VII. Verbal Qualifiers containing Rhyming,
+and/or alliteration, and/or Repetition
+of Syllables other than 33 or
+but also consisting of consonant plus/ǝ/.
+Some qualifiers could only be regard-
+ed as unanalysable except that they
+contain one or more of the features listed
+above.
+a
+(1) There are number of com-
+mon qualifiers where the two syllables
+rhyme in Burmese, but which are other-
+wise unanalysable (i.e. they do not consist
+of combinations of verbs or nouns toge-
+ther or with prefixes or suffixes). For
+example: တောက်လျှောက်, as in တောက်လျှောက်သွား
+of "go immediately," o "on one's
+back "(e.g. vosco: “sleeping on one's
+back"), "horizontally," "direct-
+og
+ly” (as in တိုက်ရိုက်ပြောမပြဘူး “he did not
+direct manner"
+a
+(ပေါ်နေသည်) “(stay) afloat.”
+explain in
+ပေါ်လော
+(2) Another type of qualifier consists
+of a verb stem plus a reduplicated
+affix beginning with /t/ which rhymes
+with the verb stem:-e.g. ရူးတူးတူး (ဘဲ)* (be)
+crazy”, ခနဲ့တဲ့တဲ့ “sarcastically” as in ခန့်တဲ့တဲ့
+ပြောသည် “speak sarcastically", မူတူတူ(လုပ်သည်)
+*(act) coyly,” ဝဲတဲတဲ(ပြောသည်) (speak) with
+a country accent" etc.
+(3) Another more elaborate type of
+VI. Verbal Qualifiers consisting of single rhyming occurs in qualifiers with four
+unanalysable Morphemes.
+There are many qualifiers which con-
+are not
+e.g. am
+sist of single morphemes which
+used as nouns or as verbs:
+JBRS, LII, ii, Dec., 1969.
+syllables in which the first two rhyme
+together and the second two rhyme toge-
+ther and the initial consonant of the
+second and fourth syllables is the same.
+Sometimes the initial consonant of the
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd. Bangok. Thailand.
+
+[[page 11]]
+Kathleen Forbes
+in
+53
+exclude
+first and third syllables is identical as of a consonant plus /
+but
+well. There is thus
+these forms
+here the syllables - and - which have
+alliteration as well as rhyming. Another
+figured in so many kinds of qualifier
+feature of qualifiers with this pattern is
+already mentioned above; in the cases
+that the last two syllables are in some
+to be mentioned here, the second and
+cases also used as an adverb alone,
+fourth syllables are frequently mean-
+whereas the first two syllables seem to
+ingless. Sometimes the second and
+be meaningless. Examples: fourth syllables rhyme as in mom
+ကန့် လန့် as ကတိုက်ကရိုက်
+"contrarily" (sco) "horizontal" is also
+in a hurry”, ကပျာကယာ “id.” (from ပျာသည်
+used alone), ဆော်လော်ကန့်လန့်(လုပ်သည်)to go "hurry"), mojom "carelessly", but
+ကပျက်ကရက်
+sometimes the second and fourth syllables
+50%
+against," (3) "standing upright"
+(မတ်တတ် also in ပ်တက် လုပ်သည် stand” ),
+ရီးဘီးရားတား shillyshallying,
+"in confusion."
+ကိုးရိုးကားရား
+(4) There is another formation where
+the first and third syllables are identi-
+cal, the second syllable has the vowel /i:/
+and the last syllable begins with the
+same consonant as the second syllable.
+but rhymes with the third last syllable.
+These forms, then, contain repetition,
+alliteration and rhyming; sometimes the
+first syllable can be equated with a verb
+in use. Thus: ချာယီးပျာယာ(from up to be
+in a hurry"), “in a hurry”
+05
+6
+o Coc
+(from "to lean"?) "with a stagger"
+as in ယိုင်ဘိ ယိုင်တိုင် လျှောက်သည် Walk with a
+stagger", ပေါ့ပေါ့တော့( from ပေါ့သည် )“ heed.
+lessly"), "in an unsettled man-
+ner" (Judson apparently derives this from
+* "of one's own accord", since he
+translates: “in an indefinite, unsettled
+manner...according to one's own will").
+(5) Another type consists of two
+different syllables separated by identical
+syllables.
+(a) the identical syllables may be in
+the second and fourth syllables, as in
+အားရပါး၎ “heartil^ (from the noun အားပါး
+do not rhyme, so: ကပြောင်းကပြန် (=ပြောင်းပြန်)
+ကဗျာကသီ “in a hurry,” ဖရိုဖရဲ in confusion”,
+ဗရမ်းဗတာ unsystematically ", ဗယောက်ဗရက်
+in
+66
+“topsyturvy”, & "uneasy, upset" as
+in စိတ်စနိုးဒနာင် ဖြစ်သည် “he is a little upset”.
+Perhaps we can include here
+နားပူနားဆာ as
+နားပူနားဆာ လုပ်သည် “she is nagging (cf.
+0:00005
+does
+$01000
+not exist alone
+according to my informant). This last
+example suggests that the first and third
+syllables may be shortened forms of
+originally meaningful morphemes.
+VIII. Verbal Qualifiers consisting of an
+unanalysable reduplicated Syllable
+preceded by m- and some other
+types of onomatopoeia
+Qualifiers with this form are used
+as onomatopoeia. Many such forms are
+quoted in the paper of U Tin Hla read
+at the fourth Burma Research Congress,
+March 1969 (မြန်မာစကားလုံးသစ် ဖြစ်ပေါ်ဖန်တီးမှုများ,
+section 16 of cyclostyled sheet) from
+which ! quote; တကျည်ကျည် (ငိုသည်), တဝုတ်ဝုတ်
+(ပောင်သည်), (ကား) တဝီဝီ (မောင်းသည်), သေနတ်
+(). A few of these redupli-
+cated forms without - are used in isola-
+tion by children: "bow-wow”,
+onomatopoeia, see Appendix (d).
+(Judson) and "take satisfaction"): “bang bang". On other types of
+ဟုတ်ဘဲ in earnest". Similar is ဒစ်ကြီး
+ပန်းကြီး(လုပ်သည်) ““(act haughtily” (from ဟန်ကြီး
+သည် “be proud,” cf, also ဟန်ယန်ပန်ပန်
+(b) The identical syllables may be
+the first and third syllables and consist
+(b) Prenoun Qualifiers
+Defined as prenoun qualifiers are all
+those qualifiers which directly precede a
+JBRS, LII, ii, Dec., 1969.
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangok, Thailand.
+
+[[page 12]]
+54
+noun head. Many types of Prenoun
+Qualifiers also occur as verbal qualifiers.
+These will be followed by the letters VQ
+and the appropriate reference in brackets.
+I.
+The Parts of Speech in Burmese
+part”, ရိုးရိုး in ရိုးရိုး ကုန်သည် ဖြစ်သည် “he is a
+simple merchant" (VQ II. 1).
+(2) The reduplicated verb may have
+Prenoan Qualifiers containing a simple (language)". However, reduplicated verbs
+a prefix: ခပ်ရွှင်ရွှင် (စကား) “rather cheerful
+do not seem to be at all common in
+the prenoun position. (VQ II. 2.1)
+Verb
+These are as follows:-
+(1) The pattern - Verb is found in:
+e.. of "middle", in sacomeco: “the
+middle child", အထူး “special” in အထူးလေယာဉ်
+“a special plane”, အမြန် in အမြန်ရထား “fast
+train". But words of the form Verb
+figure much more commonly as postnoun
+qualifiers and as verbal qualifiers (VQ I.1.)
+(2) The pattern o Verb seems to be
+as rare as a prenoun qualifier as it is as
+a verbal qualifier; at any rate I only find:
+ပနိုင် in မနိုင်ဝန် “an impossible load” (VQ 1.3).
+(3) Much more common than either
+of the above formations as a prenoun
+qualifier is the sequence: Verb- as
+in အကောင်းဆုံး 2best” (အကောင်းဆုံး စာအုပ် rhe
+best book”), အနီးဆုံး “neare t” (အနီးဆုံးအိမ်
+"the nearest house") "worst",
+32000: "heaviest” etc. (VQ1.5).
+(4) However, the pattern o-Verb-
+as in မကောင်းဆုံး “least good”, မလှဆုံး “least
+pretty", only seems to occur as a pre-
+noun qualifier and not as a verbal qualifier
+at all.
+(5) One also finds the pattern Verb
+plus /t/ plus a vowel rhyming with the
+vowel of the verb: ပြုံးကုံးကုံး မျက်နှာထားနဲ့
+"with a smiling face" (VQ VII. 2).
+II.
+III.
+can
+Prenoun Qualifiers containing two
+different verbs
+(1) A dissyllabic reduplicated verb
+occur in the prenoun position:
+“tiring work”. (VQ III. 3)
+„docu$:0$:
+(2) A prenoun qualifier may also con-
+sist of a dissyllabic verb with prefixed
+to each of the two parts, but it does not
+appear to be common:- အခိုင်းအစေ (မိန်းကလေး)
+““servant”, အလယ်အလတ် အရွယ် “medium size".
+(VQ III. 4)
+(3) The pattern Verb: Verb² Verb²
+can occasionally come before a noun: Some
+examples are: ပြာနောက်နောက် (အရောင်) “a dull
+blue (colour)". (VQ III. 2), and 8mm
+(မိန်းမ) “thin (woman)”, နီရဲရဲ “bright red",
+Sold etc.
+dissyllabic
+seems to
+(4) Another possible pattern is sa-
+Verb! --- Verb2 -ဆုံး as in အပြင်းအထန်ဆုံး။
+In verbal qualifiers with
+verbs only - Verb: Verb²
+occur. It is permissible in the prenoun
+position also, as in အထူးခြားဆုံးအချက် the
+most unusual thing” (VQ III. 10).
+or
+Prenoun Qualifiers containing a single
+reduplicated verb
+(1) A single reduplicated verb some-
+times occurs as a prenoun qualifier:
+စောစော in စောစောပိုင်းမှာ
+as
+JBRS, LII, ii, Dec., 1969.
+“in the early
+(5) Qualifiers consisting of a single
+one of the
+dissyllabic verb plus
+bound morphemes §,-6077,-ups,
+only occur in the prenoun position. Thus
+သွားမဲ့လူ the man who will go”, ကစားတဲ့
+(သော/သည့်) ကလေး ““the child who is playing",
+"the playing child".
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangok, Thailand.
+
+[[page 13]]
+Kathleen Forbes
+IV.
+Prenoun Qualifiers containing both a
+Noun and a Verb
+(1) A very common sequence is the
+pattern Noun - Verb: 9.g. cly (c)
+"model (worker)" () “privately
+owned (car)", လက်ရှိ (အခြေအနေ)–the present
+(situation)", "basic", etc. Though
+words of the same pattern also occur
+as verbal qualifiers, the same words
+cannot always occur in both positions.
+Thus ကိုယ်ပိုင် could not occur before a
+verb, nor could som occur before a
+noun.
+55
+(2) The pattern Noun: is found
+in အပေါ်ဆုံး (ထပ်, ပုံ etc.) “topmost {storey,
+picture etc.), အစွန်ဆုံး (အခန်း) he end
+(room)”. - preceded by a noun does
+verbal qualifier.
+not seem to occur as a
+6000 at-
+(3) Forms consisting of
+tached to nouns or qualifiers or to nouns
+plus other affixes do not occur as verbal
+qualifiers, but only as prenoun qualifiers:
+ကနေ့သော ညနေ၌ “one day in the evening,
+တချို့သော လူများ “some people”, မောင်မောင်ကဲ့သို့
+so po "people like Maung Maung".
+လူတို့
+66
+(2) ကိုယ့်အားကိုယ်ကိုး in ကိုယ့်အားကိုယ်ကိုး စံနစ်ဖြင့် VI, Pren un Qualifiers consisting of single
+"with a self-reliant method" is presumably
+a combination of Noun Noun² Noun¹
+Verbi.e. the noun (Noun¹) com-
+bined with the Noun - Verb sequence
+အားကိုးသည် . This seems to be an extremely
+rare pattern in the prenoun position,
+and does not occur at all in the other
+positions, as far as I know.
+unanalysable Morphemes which do
+not function as Nouns
+These are numerous. The same words
+can in many cases at least also qualify
+verbs. For example, a "present" (wą
+ခေတ် “the present time”,) အမြဲတမ်း (အလုပ်)
+"permanent (work)", como
+"retail" (conc
+V. Prenoun Qualifiers containing Nouns “retail shop") can all qualify verbs as
+but not Verbs
+(1) Very many, perhaps any, noun
+can be used to qualify other nouns the
+qualifying noun always precedes the head
+noun. Nouns cannot follow other nouns
+as qualifiers in this way. Thus in မြန်မာ
+"the country of Burma", quali-
+fies ups; in cope of "political history",
+နိုင်ငံရေး qulifies ရာဇဝင်, in ပညာရေးဌာန “edu-
+edu-
+cation department", opposes qualifies gos.
+It is common to have a series of more
+than two nouns in which e.g. the first
+qualifies the second and the first and
+second together qualify the third: e.g.
+သိပ္ပံပညာကျောင်း “science education school”,
+where qualifies ups and qualifies
+ကျောင်း, Similarly, in ကော်လှန်ရေး ကောင်စီဥက္ကဋ္ဌ
+"President of the Revolutionary Council",
+တော်လှန်ရေး qualifies ကောင်စီ and တော်လှန်ရေး
+ကောင်စီ qualifies ဥက္ကဋ္ဌ Nouns cannot be
+used alone in this way to qualify verbs.
+well; on the other hand, so "central”,
+တခြား “other”, ပဏာမ preliminary, အချို,
+coal. "some", can only qualify nouns.
+(VQ VI).
+Note. It will be seen that the kinds
+of prenoun qualifier are far fewer than
+the kinds of verbal qualifier. The follow-
+ing types can appear only in the prenoun
+position, but not in the postnoun posi-
+tion or as verbal qualifiers:
+(i) I.4: G ..Verb-ဆုံး, မကောင်းဆုံး၌
+(ii) III. 4; အပြင်း အထန်ဆုံး
+(iii) III. 5: Verb-00p/6000/-00/-/
+မဲ့ သွားမဲ့လူ
+(iv) IV, 2: Noun¹ Noun² Noun¹ Verb':
+ကိုယ့်အား ကိုယ်ကိုး;
+JBRS, LII, ii, Dec., 1969.
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangok, Thailand.
+
+[[page 14]]
+56
+(v) V.1: Nouns;
+(vi) V.2: Noun
+(vii) V.3: Noun etc.- {@007...}
+me, that
+But it does not seem to
+these differences from the verbal qualifiers
+justify positing prenoun qualifiers as a
+separate part of speech.
+C. Postnoun Qualifiers
+The types of qualifier that can occur
+in the postnoun position are fewest in
+number. All except four of the patterns
+which recur as postnoun qualifiers are also
+exemplified as prenoun qualifiers. Of these
+four types, three also occur as verbal
+qualifiers. That a given qualifier does
+really belong with the preceding noun
+and not with the following verb, and
+is therefore a postnoun qualifier and
+not a verbal qualifier, can be ascertained
+easily enough since affixes attached to
+the noun phrase will follow the quali
+fier if it is a postnoun qualifier.
+Thus
+in such a sentence as စာအုပ်အနီကိုဝယ်လိုက်သည်
+"he bought
+the red book", just the
+presence of the object affix after
+the qualifiers, shows that belongs
+with စာအုပ် and not with ပယ်လိုက်သည် . In
+this way, postnoun qualifiers and verbal
+qualifiers can be differentiated without
+resort to semantic considerations. Where
+any group is said here to consist of a
+noun plus a postnoun qualifier, it must
+be understood that such a group is at
+least potentially capable of being follow-
+ed by one or more of the nominal
+affixes, whether it actually is so or not.
+A similar difficulty is raised by
+such sentences as: စာအုပ်အသစ်ဖြစ် ပါ သည် ,
+which might mean either (a) "it is a new
+book", or (b) "the book is new". This
+particular sentence is ambiguous, but
+again the potential position of the affixes
+would solve the problem. Thus
+meaning (a), the plural suffix, for example,
+would follow m and အသစ် would
+JBRS, LII, ii, Dec., 1969.
+with
+The Parts of Speech in Burmese
+therefore be a postnoun qualifier (3
+အသစ်များဖြစ်ကြပါသည် “they are new books”.
+With meaning (b), the plural suffix would
+follow immediately after, and
+alone would then be the predicate of
+ဖြစ်ပါသည် (စာအုပ်များအသစ်ဖြစ်ကြပါသည် “the books
+are new". Predicates like after
+5
+ဖြစ်သည် ဘဲ, I have treated throughout as
+verbal qualifiers.
+The types of postnoun qualifiers are
+as follows :-
+I.
+Postaoun Qualifiers containing a single
+Verb
+(1) A very common pattern is -32
+Verb: e.g. အချို “sweet” (in လက်ဖက်ရည်အချို
+သောက်ပါသည် he drank sweet tea"),
+“new” (စက္ကူ အသစ် သုံးနေကြသည့် tthey are
+30008
+using new currency"), cu: "old", sa
+"red", "big" etc. (VQ I.1, PreN.Q
+I.1).
+W
+(2) A rare pattern consists of
+Verb, only known to me in in cos:
+: "a smallish road". This type seems
+to be equally rare as a verbal qualifier
+a Prenoun Qualifier
+(VQ 1.3), and as
+(PreN.Q I.2)
+(3) Another rare pattern here consists
+of a verb plus - only known to me
+in
+များစွာ သိပ္ပံပညာကျောင်းများစွာတွင် in many
+science schools'). Verbs plus -03 are,
+however, very common as verbal quali-
+fiers (VQ 1.4), but do not occur in the
+prenoun position at all.
+II.
+Postnoun Qualifiers containing a single
+reduplicated Verb
+(1) A reduplicated verb alone may
+be used as a postnoun qualifier: e.g.
+"big" in "a big house",
+"fat" in goo "a fat man", p
+00
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangok, Thailand.
+
+[[page 15]]
+Kathleen Forbes
+57
+"serious" in jo pops "a serious (a Burmese snack) “a snack
+face"; also, in expressions of time: floating on the water.”
+0808 "exact (ly)" and "after,
+beyond”, as in
+"exactly three
+o'clock",
+သုံးနာရီ ကျော်ကျော် after three
+o'clock”. (VQ II. 1, PreN.Q II.1). Here
+တိတိ, ကျော်ကျော် qualify the whole expression
+သုံးနာရီ။
+(2) Probably of the pattern - Verb'
+Verb in :: “each", assuming that :
+V.
+Postnoun Qualifiers containing nouns
+but not Verbs
+The pattern 30- Noun Noun³ occurs
+in the postnoun position, but not in the
+prenoun position :: "of various
+kinds” (ပန်းအမျိုးမျိုး ရှိသည် “there are flowers
+of various kinds"), "various" in
+is the same verb as in သီးခြား “separate". ကိစ္စအရပ်ရပ်နဲ့ ပတ်သက်၍ in connection with
+(VQ II.2).
+(3) A reduplicated verb may also be
+used with ခပ်--- --ကလေး as in သေနတ် ဈေးပေါပေါ
+ကလေးနဲ့ ရသည် “he got the gun at a cheap
+price": ရိုင်ဖယ် ခပ်ဟောင်းဟောင်းနဲ့ “with a rather
+old rifle". (VQ II.2. PreN.Q II.2).
+III. Postnoun Qualifiers containing two
+different Verbs
+32-
+Verb2
+(1) The pattern - Verb!
+is exemplified in the following:
+"full, complete", "accurate
+"
+(ရှင်းလင်းချက် အပြည့်အစုံ ( အတိတကျ) ရေးသည် “he
+wrote a full ( / accurate) explanation"),
+various matters”.
+(V.Q V. 8)
+VI. Postnoun Qualifiers consisting of single
+unanalysable Morphemes
+There seem to be rather few postnoun
+qualifiers of this type, e.g.
+တကာ၊ in
+လူဘကာ၊ “every ne”, အားလုံး “all” (အားလုံး
+as a noun alone:
+can also be used
+အားလုံး စားသည် he ate all"). (V.Q VI
+PreN.Q VI)
+(d) Qualifiers of other Qualifiers
+A few qualifiers can be used to
+qualify other qualifers. တော်တော် fairly"
+is commonly used in this way, as in:
+တော်တော် ကျယ်ကျယ် ဖြစ်နေသည် … it is fairly
+အမြောက်အမြား “many”, (ပစ္စည်း အမြောက်အမြားကို
+gulcops he received many things"). (VQ wide".
+III. 4, PreN.Q III.4}
+(2) The pattern -Verb¹ Verb² Verb²
+Also "purely, utterly",
+e.g. in မုန့်အချိုသက်သက် a snack which is
+purely sweet (i.e. not savoury at all)",
+အလကားသက်သက် ငိုနေသည် “she is crying for
+appears in အဖြူစွတ်စွတ် (ပန်းအဖြူစွတ်စွတ်တွေ ပွင့်နေ nothing at all”. အတော် can be used in
+☐☐ "pure white flowers are blooming”).
+This pattern does not occur as a verbal
+qualifier or as a prenoun qualifier.
+IV.
+Postnoun Qualifiers containing both
+a noua and a verb
+In this position, the pattern Noun--
+Verb occurs in "of all kinds”
+(ပစ္စည်းအမျိုးစုံ ရောင်းသည် “he sells goods of all
+kinds'), ဘောင်းဘီဖင်ကျပ် tight trousers”,
+E & UPJ. 94-1000+100+31-22-6-71.
+the same fashion: လူအတော်များများ ရှိကြပါသည်
+"there are quite a lot of people".
+with colour words employed as adjectives
+is also common: e.g.
+လုံချည်အနီနှနှalight
+red longyi".
+D. Comments on the Structure of the
+Qualifiers
+From the point of view of their
+structure, the qualifiers may be divided
+into four classes: simple; derivative;
+M. H. M.
+JBRS, LII, ii, Dec: 1969.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangok, Thailand.
+
+[[page 16]]
+58
+compound; and a final class which owe
+their form to rhyming
+features.
+I.
+Simple Qualifiers
+Simple qualifiers are
+and
+similar
+those which
+Only
+consist of a single free morpheme.
+two types of qualifiers belong to this
+class.
+un-
+(1) Here must be included the
+analysable verbal, prenoun, and postnoun
+qualifiers such as: ခဏ, လက်လီ, ယခု, တက
+, (VQ VI, PreN.Q VI, PostN.Q VI).
+'
+The Parts of Speech in Burmese
+has this meaning, combinations with it
+will be counted as compounds.
+(3) Derivative qualifiers with the
+မာရား ( VQ I.3), မကြီး
+are:
+prefix
+(PostN.Q_I.2).
+(4) Derivative qualifiers with the
+suffix -6008 are : ပထမသော်, တနေ့သော်
+(VQ V.3)
+(5) Derivative qualifiers with the
+suffix added to verbs : eg. ကောင်းစွာ,
+100
+များစွာ, လွန်စွာ, . (VQ I,4, PostN.Q 1.3)
+(6) Derivative Qualifiers with the
+suffix added to nouns : ညစဉ်, နေ့စဉ်
+(2) Simple nouns functioning as qua-
+lifiers also belong in this classe.g.
+မြန်မာ in မြန်မာနိုင်ငံ ကျောင်းin ကျောင်းပစ္စည်း နှစ်စဉ် (VQ V.5).
+(PreN.Q V.1)
+II. Derivative Qualifiers
+There are a number of derivative
+qualifiers from single nouns and verbs
+formed with the prefixes 2, 00-,
+and the suffixes -သော်, ချင်း -, --စဉ်
+--တိုင်း---ဆုံး the reduplicaied suffix with t,
+-ဆုံး
+and the discontinuous 37 -
+33- ပင်
+-ဆုံး---
+03
+A. Derivative Qualifiers with single Affixes
+(1) Derivative qualifiers with the prefix
+sa- are:
+37-
+Verb :-
+အလွန်, သော
+I.1, PreN.Q I.1, PostN.QÍ.1)
+(2) Derivative qualifiers with
+prefix --
+(a) - Verb in : (VQ I.2).
+(b) op Noun in: (VQ V.1).
+(VQ
+the
+00- is used in many other construc-
+tions with nouns, but always with the
+meaning of "one". Where clearly
+JBRS, LII, ii, Dec., 1969.
+(7) Derivative qualifiers with the suffix
+တိုင်း added to nouns : ခါတိုင်း, နေ့တိုင်း
+(VQ V.6)
+(8) Derivative qualifiers with the suffix
+- ဆုံး : ပထမဆုံး (ပထမ is itself a qualifer),
+အပေါ်ဆုံး ( အပေါ် is a noun) (VQ V.9,
+PerN.Q V.2)
+(9) Derivative qualifiers with the suffix
+-ချင်း added to nouns : မျက်နှာချင်း (VQ V.7).
+(10) Derivative qualifiers with the
+suffixes -0000/-0029/-00/-aps can only
+be attached to verbs as in etc.
+except that -6000 can also be attached
+to nouns : maş on which see below
+C.16. (PreN.Q V.3)
+,
+Note No comment is required on the
+structure of the derivative qualifiers
+So far considered as they only
+contain two simple morphemes.
+(11) In Derivative qualifiers with a
+reduplicated affix beginning with /t/ the
+t phoneme is always followed by a
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangok, Thailand.
+
+[[page 17]]
+Kathleen Forbes
+vowel which rhymes with the vowel of
+the morpheme to which the affix is
+added: e.g. ခနဲ့တဲ့တဲ့ ရူးတူးတူး, နီတီတီ (VQ VI.
+2, PreN.Q II. 3).
+viously ခနဲ and ကဲကဲ,
+Here the ICs are ob-
+98 and ကူးကူး
+prop: etc.
+(12) I suppose that onomatopoeic
+forms such as တကျည်ကျည်, ကဝှက်ဝှက် can be
+analysed as a reduplicated imitative sylla-
+ble to which the prefix - is added (VQ
+VIII).
+B.
+32-
+Derivative Qualifiers with Discontinuous
+Affixes
+(1) Derivative qualifiers formed with
+…ဆုံး …
+as အကောင်းဆုံး, အနီးဆုံး အများဆုံး
+(VQ 1.5). To my mind these are best
+analysed as containing a verb and a dis-
+continuons IC 32- -ဆုံး
+(2) Derivative qualifiers consisting
+of a verb combined with the disconti-
+nuous IC 6- - (PreN. Q I.4), as in
+မကောင်းဆုံး မလှဆုံး
+(3) Derivative qualifiers with the
+affixes -
+the same verb be-
+ing repeated after each affix: e.g.
+တပြည့်, မလောက်ဘလောက် . I regard these as
+consisting of two discontinuous ICs,
+,
+ပြည့် ….ပြည့် etc. It might be
+argued that these consist of two deriva-
+tves and combined, but to be
+treated as one word because the two parts
+do not occur separately as free forms.
+The latter seems to me the less satisfac-
+tory interpretation (VQ II.4).
+(4) A derivative qualifier consisting
+of the discontinuous IC of com-
+bined with another IC consisting of a
+single verb is found in op (VQ L.6).
+C. Conbinations of two Nouns or two
+Verbs or a Noun and a Verb with deriva-
+tive Affix (es)
+Sometimes both the processes of com-
+pounding and derivation are found in
+59
+one form. Such formations will be dis-
+cussed in this section.
+(1) In the first place, a reduplicative
+compound may have a derivative affix
+attached to it:- e.g. sysly: where os -
+has been added to the compound;
+similarly :: (VQ II.2).
+(2) The pattern Verb: Verb² Verb²
+may also have the derivative affix o>- pre-
+fixed to it:တဖြစ်တောက်တောက်. The ICs are
+probably first တ- and ဖြစ်တောက်တောက် of
+which in turn the ICs are ဖြစ် nd ကောက်
+ဘောက် cf, on ဝေလည်လည် under compound
+qualifiers. Another less satisfactory pos-
+sibility, I think, is to treat this as a
+compound of the derivative* og and*
+ကောက်ကောက် (VQ III.11).
+60
+so
+(3) A reduplicative noun compound.
+may also have the derivative prefix
+-50 အထပ်ထပ်, အခါခါ as verbal qualifiers,
+and အမျိုးမျိုး, အရပ်ရပ် as postnoun qualifiers
+(the meaning differs in the two cases).
+But in this case, the reduplicative noun
+compounds are never used alone; com-
+pounding and derivation really take place
+in these forms simultaneously. On the
+other hand, as the forms, 329 etc.
+occur as free forms, perhaps they could
+also be described as having "incomplete
+reduplication". In which case they would
+be a kind of compound. (co etc. is redu-
+plicated, but not ) (VQ V.8, PostN.QV).
+32
+(4) No doubt with the ICs
+Noun Verb and oc, exemplifies a rare
+type of construction (VQ IV.6).
+(5) Another pattern consists of a
+dissyllabic verb such as which is
+actually a verb compound, with a
+derivative affix prefixed to both parts.
+These are in effect derivatives of com-
+pound verbs (cf. CNB 211-212). The
+JBRS, LII, ii, Dec., 1969.
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangok, Thailand.
+
+[[page 18]]
+60
+kind with 33-
+commonest such pattern consists of a
+compound verb of this
+prefixed to both members:
+အလျင်အမြန် To my mind
+e.g.
+these are best
+analysed as consisting of two discon-
+tinuous constituents: 33-
+33-
+and
+ကြီး mus etc. (VQ III.4, PreN.Q 'III.3.
+PostN.Q III.1).
+(6) The very much rarer type co
+has the structure - တ… and ......
+(VQ III.6)
+(7) The forms အလွယ်တကူ and အပူတပြင်း
+are also derivatives of compound verbs
+(လွယ်ကူ and ပူပြင်း) with dicontinuous deriva-
+..). (VQ III.5)
+tive affixes (- -
+11
+(8) The unique မကြာမကြာ I take to be
+a derivative with the negative prefix
+of the reduplicative compound
+(VQ II.5).
+(9) Similarly, မရိုမသေ, မသိမသာ, မကျေမနပ်
+are derivatives in of the compound
+verbs ရှိသေ, သိသာ, ကျေနပ်. (VQ III.7),!!
+6'
+(10) အကျနပ်ဆုံး is formed with a com-
+pound reduplicated verb as one IC and
+the discontinuous affix 33.
+....--ဆုံး as the
+other. (VQ III.10).
+(11) The pattern တိတ်တဆိတ်,
+which
+seems to be unique, consists of a discon-
+tinuous constituent
+The Parts of Speech in Burmese
+(13) A similar pattern is seen in
+စံနစ်တကျ, ဂရုတစိုက်, where the ICs are Noun...
+Verb and . Here again -
+and -တစိုက်
+do not exist as independent free forms.
+(VQ IV.5).
+(14) The pattern
+Verb² occurs in
+consist of the ICs
+as
+Verb: Verb²
+52
+2005-2005. This may
+and 2005. But
+is a compound verb, the ICS
+may be အ-
+may be and
+then plus
+|
+ဆွတ်ဆွတ်; see above onတဖြစ်တောက်တောက်
+(PostN.Q III.2).
+(15) The apparently rare type ex-
+emplified in အမွှေးတကြိုင်ကြိုင် (see VQ III. 12)
+clearly has the ICS 50- 00 and
+GUA....
+ကြိုင်ကြိုင်. I၊ မွှေး ကြိုင်ကြိုင်, မွှေး must be
+regarded as one constituent, and as the
+other (a reduplicative compound).
+(16) Words of the type emocion
+ငြိမ်းချမ်းစွာ consist first of the ICs ကောင်းမွန်
+and go, and j and 100, i.e. a dis-
+syllabic compound to the whole
+which a suffix is added (VQ III 9)
+006$ 6000
+of
+(17) The form
+obviously
+consists of the ICs ODGE and -6207.
+(PreN.Q V.3).
+(18) There is a peculiar kind of
+qualifier with rhyming which seems to be
+a sort of derivative of a dissyllabic verb.
+I mean forms of the type ကိုးလိုးကန့်လန့်, မိုးတိုး
+2008 separated by . On these; see further below on
+rhyming forms. (VQ VII. 3)
+the derivative affix -, (VQ III.8).
+(12) The formation အဆက်မဖြတ်, အချိန်
+ADV
+Verb and
+G.....
+has the ICs Noun
+oega
+In other words they are the negatives of
+III. Compound Qualifiers
+The types of compounding found
+in the compounds are varied and com-
+the phrases အဆက်ဖြတ် and အချိန်ရွေး (သည်). plex. I have included under compounds
+They must be regarded as single words
+because --မဖြတ်, --မရွေး do not exist in-
+dependently of these constructions.
+(VQ IV.4)
+JBRS, LII, ii, Dec., 1969.
+reduplicated forms, i.e. forms consisting
+of, or including, the same verb repeat-
+ed twice. Reduplication is common in
+Burmese qualifiers and is often combined
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangok, Thailand.
+
+[[page 19]]
+Kathleen Forbes
+with other features. I have also inclu-
+61
+(b) Noun¹ Verb! Noun² Verb: e.g.
+ded combinations of two different verbs, စိတ်ရှည်လက်ရှည် နည်းမှန်လမ်းမှန်. In these forms,
+and combinations of nouns with verbs.
+(1) The compound may consist
+simply of a reduplicated verb:-တိတ်တိတ်
+smo:emo: etc. (VQ II.1, PreN.Q II. 1,
+PostN.Q II.1). Or it may consist of a
+dissyllabic verb in which each of the
+parts is reduplicated: e.g. တိတိ ကျကျ ရက်ရက်
+ကျကျ,
+ooo. In these types, the ICs are
+and ကျကျ ရက်ရက် and စက်စက် (VQ III, 3,
+PreN. Q III. 1). These forms may be
+extended with another free morpheme
+added, as in: တော်တော်ကလေး, စောစောကြီး။ “ကလေး
+forms serve simply
+and
+ကြီး
+in these
+as intensives.11a
+(2)
+the constituents are discontinuous, since
+စိတ်လက်, and နည်းလမ်း are also compounds:
+in စိတ်ရှည် လက်ရှည်, စိတ်...လက် is one IC,ရှည်...
+ရှည် the other; in နည်းမှန်လမ်းမှန်,နည်း...လမ်း
+is one IC, the other. (VQ IV.3)
+(c) With the pattern Noun Noun²
+Noun Verb I have found only
+ကိုယ်ကိုး. As အားကိုးသည် is used as a verbal
+phrase, the IC division must be: mus...
+and (PreN.Q IV.2)
+(5) There are also patterns of com-
+pound in which means "one" and is
+not a meaningless derivative prefix. The
+Another pattern involving redu-
+simplest of these patterns is illustrated by
+mal (i.e. numeral plus noun); in this
+plication consists of a single verb followed
+by a reduplicated verb: occups, close juncture with a following morpheme
+pattern other numerals can also be used in
+In these the ICs are no doubt GO and
+လည်လည်,ပြုံး and ချိုချို. ဝေ့လည်လည် is used as
+a dissyllabic verb, whereas sap does
+not occur. (VQ III.2).
+com-
+—ခါ, -ချိန်, -ခေါက်(VQ V.2).တခါ တခါ,တလည်ကလည်
+must be regarded as phrases, not
+pounds, because the point of open juncture
+coincides with the division into ICs and
+both parts can be used separately. The
+same arguments apply for treating of:
+and as phrases also.
+CO --
+also occurs in such compounds as
+(3) The compound may consist sim-
+ply of two different verbs without redu-
+plication: ပြောင်းပြန်, စင်စစ်, ဘီးတိုး, Also ပြောင်း
+ပြန်ကြီး with the Is ပြောင်းပြန် and
+ကြီး
+(VQ III.1).
+ဘသက်လုံး တယောက်ထည်း တရက်ခြား where -
+---လုံးတ သည်။…. .−ခြား can either be
+regarded as a discontinuous constituent, or
+ဘသက် တယောက်, တရက် can each be taken
+as one constituent to which ..လုံး/ -ထည်း/-
+respectively is added (VQ V.2).
+(4) A common type of compound
+consists of noun plus verb: e.g, အခမဲ့, အချိန်
+မီ, (VQ IV. I) and ကမ္ဘာကျော် and အဖိုးတန်
+(PreN.Q II.1). The noun-verb combina
+tion can be more complex:
+8,
+(a) Noun Verb! Noun Verb² o
+(VQ IV.2), where the ICs are
+ဝက်ကျော် and ဝတ်ကုန် but the sequence is to
+be regarded as a compound because, al-
+though the IC division coincides with the
+point of open juncture after the second
+syllable, neither offer norms is em-
+ployed as free form (on this problem, cf.
+CNB p. 212). 12
+(6) A peculiar, and, no doubt, rare
+type consists of two parts of a com-
+pound noun separated by the same verb
+(Noun¹ Verb¹ Noun²Verb¹): :qulaq. The
+ICs are အား..ပါးနှ and
+99. (VQ VII.5)
+(7) Similar in construction is a com-
+pound verb with another verb repeated
+after each part (Verb: Verb² Verb³Verb²) :
+ဟန်ကြီးပန်ကြီး (VQ VII.5).
+JBRS, LII, ii. Dec., 1969
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangok, Thailand.
+
+[[page 20]]
+62
+IV. Qualifiers consisting of Rhyming Forms,
+alliterative Forms, Forms containing
+Repetition of syllables which is not
+reduplication
+(1) Some of the words in this group
+have been treated as derivative forms:
+e.g. such forms as
+where
+ဖူးဘူးဘူး
+the
+syllables beginning with /t are regarded
+as a kind of derivative affix, but it is
+The Parts of Speech in Burmese
+commencing with the same consonant
+(distance alliteration) (VQ_VII.4).
+neces-
+(5) Another type contains repetition
+of the same syllable in the second
+and fourth syllables, sometimes with
+rhyming in the first and third syllables
+and are thus held together as one word.
+The syllables in this set are not
+sarily meaningless (အားရပါးရ, ဟုတ်တိပတ်ကိ,
+the fact that the syllables rhyme which :) (VQ VII.5).
+ဟန်ကြီးပန်ကြီး)
+mainly gives the words form, and holds
+them together as one word. Incidentally,
+the /t/ in these forms is not voiced, so
+that these syllables are not in close
+juncture.
+(6) The identical syllables which hold
+the word together may be the first and
+third, and consist simply of a consonant
+But becasue (9)-(4)-(not voiced in the third syllable) plus the
+etc. cannot stand alone, gos: etc. must
+be considered as forming one word in
+each case (VQ VII.2 PreN.Q 1.5).
+(2) In simpler rhyming forms such as
+ပေါလော, ကိုက်ရိုက် it is the rhyming of the
+syllables which gives the words their
+form. They cannot be regarded as deri-
+vatives or compounds (VQ VIL1).
+(3) Another pattern which I have
+treated as a kind of derivative, is
+. In this type, the second two
+syllables are words whose form depends
+on the fact that the two syllables rhyme.
+The form of the first two syllables, which
+I have treated above as a kind of derivative
+prefix, both contains rhyming within itself
+(-), and is bound up with the follow-
+ing two syllables (a) because the first
+two syllables form a bound morpheme
+and cannot be separated from the second
+two syllables, and (b) in some cases,
+because the words contain a kind of
+distance alliteration, if I may so call it,
+in that the first and third syllables begin
+with the same consonant, and the second
+and fourth syllables commence with the
+same consonant (VQ VII.3).
+(4) In another set the words are given
+form by repetition of the same syllable
+in the first and third syllables (opp)
+and by the second and fourth syllables
+JBRS. LII, ii, Dec., 1969.
+vowel ǝ e.g. -.
+-5>
+0 =
+(ကပျက်ကရက်),
+..... (ဖရိုဖရဲ), ....(ဗရမ်းဗတာ),
+(ogg),
+(စနိုးစနောင်). Sometimes the sylla-
+bles of these words are bound the more
+closely together by the fact that there
+is rhyming in the second and fourth
+syllables or distance alliteration in those
+syllables as well as in the first and third
+syllables (VQ VIL6).
+V.
+Bound Morphemes with Semantic
+Function only
+These are affixes which can be added
+or removed at will without altering the
+basic structure of the qualifier. They
+must therefore be distinguished from
+derivative affixes. These bound morphemes
+usually, however, have the function of
+contributing something to the meaning
+of the word. Another characteristic of
+these affixes is that they can only be
+added to a very few types of qualifier,
+in particular to reduplicated verbs.
+Such affixes are:-
+(a) - "rather":- ခပ်စောစော `rather
+early", ခပ်ဝေးဝေး “rather far away", ခပ်ဖြေးဖြေး
+"rather slowly".
+to nouns means
+(b)
+added
+600°
+"little", but affixed to qualifiers it is
+hardly more than an intensive: နီးနီးလေ
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangok, Thailand.
+
+[[page 21]]
+Kathleen Forbes
+““not far away”, ပါးပါးငး(လှီးပါ) * (slice them)
+(စောင့်ပါ) (wait} just a
+finely", 806008
+moment".
+(c) - means "about" when added
+to expressions of time (8) but
+in the common expressio၊ နည်းနည်းလောက်
+it has very little meaning. co is often
+added to numbers in Burmese without
+as one might expect actually making the
+meaning of the number more indefinite.
+Thus cd is synonymous with
+သုံးခုပေးပါ “Give(me) three",
+(d) -ကြီး in ပြောင်းပြန်ကြီး, ဂေးကြီး, စာ
+☐ is an intensive and does not mean
+"big".
+Some of the optional bound mor-
+phemes are relational affixes when attached
+to nouns and alter their grammatical
+relation to the rest of the sentence, e.g.
+When or care
+"
+added to qualifiers as in လေးစားစွာဖြင့်
+လွယ်လွယ်နဲ့ ပြုံးပြုံးရွှင်ရွှင်နှင့် ( အော်ဟစ်ပါသည်), thy
+add nothing to their meaning, nor do
+they affect their grammatical function.
+When is added to a reduplicated verb
+it does not alter the grammatical func-
+tion, but it contributes something to the
+meaning (cf. VQ II.2 (ii)). - can also
+be added to verbal qualifiers without
+altering their meaning:- e.g. Som very
+( =သိတ်), တော်တော်ကို as in တော်တော်ကို နေမကောင်း
+* "he is rather unwell”.
+EL.
+A Brief Comparsion of the Structure
+of Qualifiers and Nouns
+From the above account of the
+Burmese Qualifiers and the discussion of
+their formation, it will be clear that they
+differ a great deal in structure from the
+derivative nouns and compound nouns
+though there are a few patterns common
+to both groups:
+(a) sa-Verb: saa is a noun, sacoś
+is a qualifier;
+..
+32-
+63
+Verb2: အကူအညီ is a
+(b) Verb¹
+32-
+nouns is a qualifier;
+(c) Noun-Verb:- လူကြီး, မီးခြစ် are
+nouns, အခမဲ့, ကိုယ်ပိုင် are qualifiers:
+(d) Noun¹ Verb¹ Noun¹ Verb²:-
+စပ်ပက် စစ်စား is a noun, demom is a
+qualifier;
+(e) 32- Noun Noun¹:-
+noun, qq is a qualifier:-
+is a
+In addition nouns preceding other
+nouns function as prenoun qualifiers.
+In general, the structure of qualifiers
+is much more varied than of nouns.
+There are in particular far more affixes
+used in qualifiers than in nouns.
+F.
+A Final Note
+The Burmese qualifiers form a large
+and complex topic which I have tried to
+cover in as much detail as possible. This
+has been rendered particularly difficult
+since there is no previous study which
+has separated the qualifiers from the
+nouns and verbs (see part A above). I
+am well aware this paper has not exhaus-
+ted all there is to say on the subject
+though, it has exhausted me. However,
+I have endeavoured to be as accurate and
+thorough as possible. To those who may
+point out errors or omissions, I can only
+offer the same reply as Dr. Johnson when
+he was asked by a lady why he had
+given the wrong meaning for a word in
+his dictionary: "Ignorance, Madam, pure
+ignorance”.
+Footnotes
+November Ist, 1969.
+I am much indebted to my husband,
+Dr. Than Tun for acting as informant
+to the extent of confirming whether forms
+were still current, in many cases provi-
+JBRS, LII, ii. Dec., 1969.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangok, Thailand.
+
+[[page 22]]
+64
+ding suitable translations, and sometimes.
+examples of contexts in which words
+might be used. The material has been
+collected from modern reading material,
+from conversation, and sometimes from
+Stewart's Grammar and Judson's Burmese -
+English Dictionary, but never from the
+The Parts of Speech in Burmese
+noun clauses before etc., comparison
+may perhaps be made with clauses
+ending in various verbal affixes plus
+-ခြင်း of မှု which I have referred to briefly
+elsewhere (JBRS 51 I (1968) p. 27):
+could also be expressed by
+last source without checking with my in- သူလုပ်ခဲ့သည့် အကိုင်း။ -သည့် may be regarded
+formant whether the form concerned
+was still in use.
+(1) Manual of Colloquial Burmese,
+1955.
+(2) Outline of Burmese Grammar.
+Language Dissertation no. 38, 1944,
+Chapter 2 ff. Henceforward these two
+works will be referred to by the names
+of their authors only.
+(3) A Course in Modern Linguistics,
+1958, p. 222.
+(4) Cf. JBRS 50 II (1967) Com-
+pound Nouns in Burmese, p. 195 ff.
+paper will henceforth be referred
+CNB.
+This
+to as
+(5) See section 122, with references
+there.
+(6) See further on classifiers, Hla
+Pe, Lingua 15 (1965) 163 ff.
+as parallel to : here as a nounform-
+ing suffix. I admit that the fact that
+သည့် and -မည့် (along with colloquial --တဲ့
+and also indicate tense through their
+contrast with each other is rather against
+treating them as noun suffixes, and
+weighs in favour of still treating them
+as verbal endings to which
+etc.
+can be added with the function of con-
+junctions. However, suffixes that indicate
+tense and at the same time produce
+nouns are not unknown: we adduce with
+some caution the Greek infinitive endings
+-s-ein/ (future) and /-s-ai/ (past), which
+are however part of a completely different
+verbal system.
+66
+(8) There are also forms like ပြောင်
+ရွှတ်ရွှတ် (လုပ်သည်) 'fool about ** which
+apparently have the same pattern, but
+the reduplicated part-gosos, is not used
+as a separate verb. So also ကြောင်စီစီ(ဖြစ်သည်)
+"look lost" etc.
+(9) We may add here တညီဘညွှတ်ထည်း
+"tenderly".
+(7) On the other hand, အထိ etc. (လုပ်) “(act) in unison”,
+added to clauses in etc. can be said
+to show that 3000 etc. can function as
+conjunctions following clauses as well
+as functioning as prepositions when they
+follow nouns. At the moment I think
+this is also a possibility. and would
+please those who do not like the idea of
+Burmese having prepositions and no con-
+junctions. I have not discussed the
+various roles of the affixes in full here,
+but there are, of course, affixes, if not
+full words, which function like conjunc-
+tions in Burmese, e.g. -ရင်in သူသွားရင်
+"if he goes". As for the point of view
+that the clauses ending in 05/pare
+JBRS, LII, ii, Dec., 1969.
+(10) Another pattern (Noun Verb¹-
+Verb!) has come to my notice in
+သတင်းစာဖတ်နေသည်) (he is reading) in
+luxury”.
+(11) မနီးမဝေး
+မနီးမဝေ: must be regarded as a
+compound of oș; and 9608,
+which do not
+occur elsewhere, since there is no com-
+pound verb com So also eques; is a
+compound of the derivatives in မ-: မရှေး
+and so which do not exist as in-
+dependent words either.
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangok, Thailand.
+
+[[page 23]]
+Kathleen Forbes
+(11 a) Here also
+with the structure
+belongs appisop
+cops, or 2020, 525 (V.Q. III 14)
+65
+(12) This analysis is preferred because com is not used as a compound verb.
+Addenda:
+(a) To VQ III: 12:15. The pattern
+Verb Verb² Verbs Verb is apparently
+seen in: သေပြေးရှင်ပြေး (လုပ်သည်) “to half
+kill yourself doing something". I am
+that the form : here is to be equated
+with the verb : "to run”.
+(b) To VQ VII 4: ရောရီးရောတဲ့ (as in
+ကြိုး ရောရီး ရောè ဖြစ်သည် “the rope is loose')
+is an example of a pattern with identical
+first and third syllables, with the vowel
+(%) in the second syllable, but a
+fourth syllable which does not rhyme
+with the third syllable.
+(c) Add after VQ VII 5 as VQ VII
+6: There is another type consisting of
+the pattern -Verbo -, plus a fourth
+syllable beginning with /y/ and rhyming
+with the verb:
+"improperly
+(o be fitting")
+A few onomatopoeia consist of an
+onomatopoeic syllable plus the suffixas,
+SO: (သေနတ်) ဒိုင်းခနဲ (မြည်သည်) (the gun went
+off) with a bang”, ဘုံးခနဲ ဖြုန်းခနဲ (လဲသည်)
+"(to fall) with a thud, or crash". Inte-
+restingly, my husband, my usual infor-
+mant, uses none of these forms with
+-0%, but another (female) informant, from
+Rangoon, uses all of them. In Burmese,
+onomatopoeia seem to be characterised
+by the patterning of the syllables rather
+than by containing particular sounds or
+groups of sounds within the syllable,
+like English bump, thump; bang, clang;
+clap, clang, clash, etc. But there is one
+sound pattern characteristic of onomato-
+poeia in Burmese, namely, consonant plus
+w plus i: as in
+“make a whistling sound",
+"creak", expressive of disgust.
+the few monosyllabic morphemes of this
+syllable pattern seem to be onomatopoeia.
+Also many words beginning with /h/ are
+$
+၍ ရွှေရ (မည်သည် )
+(မြည်သည်)
+All
+nomatoposic: as, ဟောင်သည် “bark”,ဟုန်းသည်
+roar”, ဟိန်းသည် “growl”, ဟီသည် “neigh”
+(d) To VQ VIII: Other patterns
+"nore, roar","pant",
+found in onomatopoeia are the following:
+"whine roar": "oh!",
+one syllable may be repeated four times
+“Tha, ha !”, လေ တဟူးဟူး တိုက်သည် where တဟူးဟူး
+with slight pause between each of the
+expresses the noise the wind makes. Iso-
+two pairs of syllables: aquilated from the point of view of its form,
+*‘giggle”, ရွှေ ရွှေ ရွှေ ရွှီ မြည်သည် “nag” ဘွတ်တွတ်
+ကွတ်တွတ် ပြောသည် “make a whistling noiser.
+apparently, is ကဘောက်တိ ကဘောက်ချာ (ပြောသည်)
+"speak incoherently".
+XX 9 UP. J. 94-1000+100-4-31-22-6--71:
+M. H. W.
+JBRS, LII, ii, Dec., 1969.
+M.
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangok, Thailand.

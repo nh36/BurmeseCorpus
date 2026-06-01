@@ -1,0 +1,4688 @@
+[[page 1]]
+Dev D. SARIN*
+TEXTURAL CHARACTERISTICS OF CHANNEL SEDIMENTS
+OF THE CHINDWIN RIVER
+Abstract
+As the grain size distribution parameters of the channel sediments
+of the Chindwin River do not exhibit any progressive change downstream,
+it appears that the hydraulic environment remains uniform over the
+distance of 520 river miles. Negative skewness of the channel sediments
+is due to presence of gravel and coarse sand fraction. Abrasion
+appears to be an operative process in the Chindwin River because majority
+of sand-sized minerals (0.125 mm) show an increase in roundness
+downstream. Lack of progressive change in values of sphericity and
+shape factor is due to lower limit of value change, lower size limit
+and mixing of spherical and non-spherical grains due to annual floods
+in the Chindwin River. The scarcity of material in 2-1 mm class
+is primary deficiency in this size class.
+Introduction
+The presence of rounded pebbles in
+streams is a common feature and it is
+obvious that rounding is due to abrasion.
+To study the effects of abrasion on sedimen-
+tary particles laboratory studies have been
+made with an abrasion mill or with rolling
+barrels. The results obtained from these
+experiments are of considerable importance
+no doubt, but it may be argued that the
+abrasion mill studies and the like are poor
+imitations of river action and as such are
+poor substitutes.
+Another common observation is that
+the grain size of sediments carried by
+streams decreases downstream. Since peb-
+bles are rounded it has been presumed that
+the decline in size downstream is also due
+to abrasion. This deduction may be true
+to some extent, but it has also been postu-
+lated that decrease in size downstream is
+due to progressive sorting. What then is
+the truth?
+Much attention of late has been paid
+to the study of compositional and textural
+changes produced in clastics due to stream
+transport. Most of these studies (Krumbein,
+1940, 1942; Sneed and Folk, 1958; Plumley,
+1948) have been directed at pebble-sized
+particles. Sand-sized particles were studied
+by Russell (1937), Russell and Taylor (1937),
+Van Andel (1951) and Pollack (1961).
+Russell (1939, p. 33) summed up the then
+existing state of our knowledge on the
+effects of stream transport on sediments as
+* Department of Geology, University of Mandalay, Mandalay.
+325
+JBRS, XLVII, ii, Dec. 1964
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 2]]
+326
+Textural Characteristics of Channel Sediments of the Chindwin River
+follows: "A review of the literature con-
+cerning the effects of transportation on
+sedimentary particles shows that most con-
+cepts of these effects are supported by
+surprisingly little evidence. Many are based
+almost entirely on deductive reasoning, yet
+they have become generally accepted as
+demonstrated facts and have been used as
+such in the interpretation of ancient sedi-
+ments." It appears that the situation is
+still the same.
+Channel sediments of the Chindwin
+River have been studied with a view to
+ascertain the compositional and textural
+changes produced in sediments during tran-
+sportation. Besides it is hoped that the
+results obtained from this study will serve
+as useful criteria for the recognition of
+ancient channel sediments.
+Fig. 1. Gravel beach at Singkaling Hkamti
+JBRS, XLVII, ii, Dec. 1964
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 3]]
+Dev D. Sarin
+Description of the Chindwin River: The
+Chindwin and its tributaries drain an area
+of approximately 44,000 square miles. It
+rises in Hukawng valley on the Indo-Burma
+border and flows for aproximately 800
+miles on a southerly course before it enters
+into the Irrawaddy River. During the high-
+water season (June to November) the river
+327
+is navigable up to Singkaling Hkamti
+(henceforth called Hkamti). During the
+remainder of the year the water at level at
+places in the middle and upper Chindwin
+is only two and half feet and this makes the
+upper reaches of the river inaccesible by
+steamer. The river is not navigable north
+of Hkamti in any season.
+9
+Fig. 2. Chindwin River cutting across the strike of Tertiary ridge
+JBRS, XLVII, ii, Dec. 1964
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 4]]
+328
+Textural Characteristcs of Channel sediments of the Chindwin River
+For the greater part of its course the
+Chindwin River follows the trend of the
+Tertiary ranges along the western side of
+the Chindwin syncline. Often it cuts across
+from one strike valley to another (Fig. 2),
+returning again lower downstream. Conspi-
+cous cliffs occur where the river banks are
+formed of massive, well-cemented, resistant
+sandstones. Numerous oblique potholes
+(Fig. 3), a few inches in diameter and up to
+20 inches deep, occur in some of the cliffs.
+Fig. 3. Oblique potholes on one of the cliffs
+Above Homalin it is possible to observe
+the mode of transport of the river bed load
+because the water is so clear. Sand general-
+ly moves by rolling; movement by saltation
+takes place only where the surface of bed is
+irregular and increases turbulence. In the
+narrow channels, where the current is
+strong, granules and small pebbles also
+move by rolling. Otherwise they remain
+JBRS, XLVII, ii, Dec. 1964
+stationary. Probably they are transported
+downstream by rolling during the floods.
+Sand and/or gravel banks (Fig. 1)
+always occur at the mouth of tributaries
+where they enter the Chindwin River. They
+are common also in the main river around
+every major curve and also where the valley
+suddenly widens. River bars are not so
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 5]]
+Dev D. Sarin
+common; when present they average six to
+eight feet above the water level of the river
+(during low water season) and show cross-
+stratification dipping downstream. Mega-
+ripples are commonly seen on the surface
+of bars and sand banks.
+In the navigable zone the current flows
+at approximately two miles per hour during
+low water season and four miles per hour
+during high water season (Milliere, 1961).
+The average slope of the river is 1-2 feet
+per mile.
+Earth movements in the Chindwin valley: The
+upper Chindwin district between Hkamti
+and Mingin is essentially a broad syncline
+the middle of which is occupied by Irra-
+waddian sediments and Quatenary alluvial
+deposits. Strike ridges composed of Lower
+Tertiary sandstones extend for many miles
+along the western side of the Chindwin
+valley, with steep dip slopes to the east. On
+the east the valley is bounded by the
+Mettaung and Zibindaung hill ranges of
+western Shwebo and Katha districts. The
+syncline narrows rapidly south of Mingin
+as its axis rises up the Patolon valley.
+329
+Stamp (1940, p. 335), discussing the
+origin of the Chindwin valley, states: "The
+proto-Irrawaddy (or Chindwin-Lower Irra-
+waddy) was thus in existence as the conse-
+quent median stream of a major synclinal
+trough before the advent of the folding
+movements which have rucked that synclin-
+al trough into a succession of north-south
+ridges. So the rivers and its tributaries
+were gradually pushed into their present
+positions by tectonic upheavals." That the
+Chindwin and some of its tributaries are
+antecedent streams is strongly suggested by
+the ease with which these streams cut across
+the strike of the Tertiary ridges.
+Methods of Study
+Sampling: In December 1962, during the
+low water season, channel sediments of the
+Chindwin River were collected at intervals
+of 20 miles (Fig. 4). The first sample was
+collected at Hkamti and numbered K - 0.
+Sample numbers used in Table 2 and
+throughout this paper refer to the river
+miles below Hkamti.
+JBRS, XLVII, ii, Dec. 1964
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 6]]
+CHINDWIN RIVER
+26
+INDIA
+120 •
+SAMPLE
+BURMA
+LOCATION
+AND
+NUMBER
+50
+SCALE IN MILES
+100
+24°
+SAMPLE LOCATION
+94
+26
+0
+HKAMTI
+20°
+40.
+60
+80 °
+1000
+1200
+1/140 HOMALIN
+160
+180°
+200.
+(220•
+CHINDWIN RIVER
+240
+24
+260
+280
+300
+KALEWA
+320
+340
+360
+• 380
+400
+420
+440
+MONYWA
+22°
+460.
+22°
+480 •
+500 •
+520
+IRRAWADDY RIVER
+96°
+Fig. 4
+-
+The Chindwin River, showing location of samples.
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 7]]
+Dev D. Sarin
+For sampling a dredge-like sampler
+was designed. It consisted of a cylindrical
+tube, 11 inches long and three inches in
+diameter, which was sealed at one end. To
+the open end of the tube was attached a
+beveled lip-like device, which projected
+downwards to scrap the top one inch of the
+bed load. Suitable screws were attached to
+the external wall of the sampler through
+which ropes were fastened, so that it could
+be pulled along the river bed from a boat.
+To prevent the sampler from overturning
+the screws were attached near its open end.
+At sampling points, the sampler was
+thrown into the channel from the boat.
+331
+was sieved for 15 minutes with a Ro-Tap
+machine. B.S. sieves spaced at half-phi
+interval were used. Each sieved fraction
+was weighed to the nearest 0.01 gram. The
+sieved fractions were later examined with a
+binocular microscope to determine the
+presence of aggregrates, if any. Most sands
+were without aggregrates, but when an
+exception did occur, the percentage of aggre-
+grates was deducted from the weight of the
+sieved fraction. Presenc of aggregrates is
+undesirable, as it adversely influences
+sensitive parameters like skewness and
+kurtosis.
+Results of the mechanical analysis were
+After running the boat for approximately plotted as cumulative curves on arithmetic
+100 feet the sampler was withdrawn from
+the river and the sediments therein were
+poured into bags made of coarse cloth and
+were suitably numbered. Previous experi-
+ment had proved that bags made of coarse
+cloth were excellent filters, provided that
+water was allowed to run out itself. There
+was practically no loss of sediment, and the
+small amount of fines that might escape
+was common to all samples. Two samples
+were collected at every locality and were
+later combined in the laboratory.
+The samples were taken from on board
+the boat in order to avoid such stirring of
+the bed load as would have occurred if one
+had waded into the channel to collect sam-
+ples. All samples were taken from depths
+which ranged from 10 to 15 feet, to avoid
+influence of depth, if any, on the textural
+characteristics of the samples being collect-
+ed. Except for the gorges, which occur
+at few places, the average depth of the river
+is approximately 10 feet in the low water
+season.
+Grain size analysis: After drying and dis-
+aggregration, 400 grams of each sample
+probability paper and the parameters
+were read to the nearest 0.01 .
+Mineral separation: Mineral separations
+were made on 0.062 and 0.125 mm
+fractions of sands by the conventional
+laboratory methods. Light fractions of
+0.125 mm size of each sample were
+stained, following the technique suggested
+by Hayes and Klugman (1959), to facilitate
+rapid identification of quartz, soda feld-
+spars and potash feldspars.
+Splits of light and heavy minerals
+grains of the 0.062 and 0.125 mm size
+fractions of the samples studied were
+mounted on a glass micro-slide for
+microscopic examination, following the
+technique suggested by Sarin (1960).
+Roundness, sphericity and shape determina-
+tions: Roundness values of individual
+mineral grains were obtained by compari-
+son with Krumbein's silhouettes (Krum-
+bein, 1941). Power's (1953) scale with
+six roundness classes was not used because
+it was felt that comparison with nine
+roundness values of Krumbein would
+yield more accurate results. The sphericity
+JBRS, XLVII, ii, Dec. 1964
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 8]]
+332
+Textural Characteristics of Channel Sediments of the Chindwin River
+of the grains was obtained by the method
+suggested by Aschenbrenner (1956) using
+the values of p and q where
+short intercept
+p = intermediate intercept
+q
+=
+intermediate intercept
+large intercept.
+Two intercepts were measured parallel to
+the slide and the third by focussing the
+microscope on the bottom and top surfaces
+of the grains. The shape factor (F) was
+calculated using the values of p and q
+p
+F =
+q
+Mean values of roundness, sphericity
+and shape factor were computed from
+these data collected during the course of
+the grain count analysis, to determine
+the mineral composition of the 0.062 and
+0.125 mm size fractions.
+During the course of this study the
+microslides as well as the gravels were
+studied at random and not in any
+specific order, to insure against any bias
+developing.
+Size distribution parameter values
+were obtained from the samples collected
+at 20 mile-interval. Data concerning
+detailed mineral composition, roundness.
+and shape factor were obtained from
+samples collected at 40 mile-intervals,
+because it became early in the study that
+there were few marked differences in the
+mineral composition, roundness and spheri-
+city values of the sediments in the
+downstream direction.
+Statistical Parameters Used in the
+Grain Size Analysis
+Many parameters have been introduced
+for describing the grain size distribution of
+JBRS, XLVII, ii, Dec. 1964
+sediments. The parameters of Trask (1932)
+and Krumbein (1936) are quartile measures
+based on 25th., 50th. and 75th. percentiles
+of cumulative curve. Some investigators
+object to the use of these parameters on
+theoretical grounds. Inman (1952) stated
+that since size-frequency curve approaches
+a normal distribution, parameters based on
+quartiles have no particular significance.
+He advocated the use of 16th. and 84th.
+percentiles instead of 25th. and 75th. per-
+centiles. Folk and Ward (1957) suggest the
+use of 5th., 16th., 25th., 50th., 84th. and
+95th percentiles because the parameters
+obtained from Inman's suggested percentiles
+ignore one-third of the distribution, parti-
+cularly the 'tails' which according to them,
+offer the most valuable information. Fried-
+man (1962, p. 724) discussing the relative
+merits of moment and graphical measures,
+states: “Strictly speaking, graphical mea-
+sures, such as the parameters of Inman
+and Folk and Ward, as simple descriptive
+measures are just as valid as moment mea-
+sures, and their 'validity' does not depend
+upon the distribution being log normal."
+The parameters used in this study are
+those defined by Folk and Ward (1957).
+These are based on percentile measurements
+on phi-scale and are described below.
+1. Median diameter:
+Md. 050
+2. Mean diameter:
+Mz
+M₂ =
+16 + $50 ++ 84
+3
+3. Inclusive graphic standard deviation:
+084 - 016 095 - 05
+σ ===>
+4
+4. Inclusive graphic skewness :
+SK
+1
+==
+6.6
+016 + 084-2950 05+095-2050
+2(084 – 016) 2(095-005)
++
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 9]]
+Dev D. Sarin
+5. Graphic kurtosis:
+Kg
+===
+$95 - 65
+2.44 ($75 - $25)
+Statistical treatment:
+From the data ob-
+tained while measuring the roundness,
+sphericity and shape factors of each mineral
+during the course of grain count analysis,
+the mean values for all of these properties
+for every mineral of each sample were
+computed. To examine the linear trend, if
+any, shown by roundness, sphericity, shape
+factor, and grain size distribution para-
+meters a regression line was drawn for each
+plot (Dixon and Massey). The formula
+used was
+Y = a + bx
+where Y is the characteristic whose linear
+trend is being determined and X is the
+distance. Both 'a' and 'b' are unknown;
+'a', also sometimes called the Y-intercept,
+determines the position at which the trend
+line cuts across the Y-axis, while 'b' indi-
+cates the slope of the trend line. If the
+value of 'b' is zero, it indicates the absence
+of any definite trend. In Table 3 are
+listed regression line formulae for
+minerals which show a significant linear
+trend for roundness, sphericity and shape
+factor. Also listed are the formulae for
+the trend of the grain size distribution
+parameters.
+RESULTS OF THE STUDY AND
+INTERPRETATION
+Grain Size Distribution
+333
+The channel samples of the Chindwin
+River are mixtures of gravel and sand-sized
+sediments, with the latter commonly consti-
+tuting the primary mode and the former the
+secondary mode. The gravel fraction varies
+from less than one percent to 69.00 percent
+by weight. Table 1 lists the frequency
+distribution of percentages of the gravel
+class. Materials of silt and clay grade form
+TABLE 1. – Frequency distribution of gravel
+class
+Gravel in percent
+0.1 to 5
+5 to 10
+10 to 15
+15 to 30
+more than 20
+Number of samples
+12
+4
+2
+1
+4
+an insignificant part of the whole bulk.
+Presumably they are carried downstream by
+the river in suspension. Materials of silt
+and clay grade compose from 0.0 to 2.4
+percent of the size dstribution by weight.
+One exception, however, was noted, in the
+case of sample K- 400, where the fines
+constituted 15.2 percent by weight. In 16
+out of 27 samples silt and clay grades were
+absent.
+JBRS, XLVII, ii, Dec. 1964
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 10]]
+PERCENT
+10
+PERCENT
+30
+20
+334
+Textural Characteristics of Channel Sediments of the Chindwin River
+-10
+·20
+30
+REPRESENTATIVE FREQUENCY CURVES
+K-40
+K-60
+0-3
+-2
+0
+i
+2
+3
+8-3 -2
+K-280
+= |
+0
+2
+3
+K-300
+Fig. 5
+Representative frequency ecurves of the channel sediments
+JBRS, XLVII, ii, Dec. 1964
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
++
+
+[[page 11]]
+Dev D. Sarin
+Generally the size distribution is bi-
+modal; 20 out of 27 samples being bimodal.
+The tendency of secondary maxima
+composed of gravel class to lie four
+Wentworth grades away from the modal
+clase was observed, and is common to all
+samples. Four representative frequency
+curves (Fig. 5) display the characteristics
+of the size distribution.
+NUMBER OF SAMPLES
+10
+POSITION OF THE MODAL CLASS
+GRAVEL
+SAND
+0
+1
+3
+SIZE IN PHI UN:TS
+Fig. 6 Prequency distribution of nodal clans
+The position of the modal classes for
+the sand and gravel fractions is shown in
+Fig. 6. It is noteworthy that material of
+-1 to 0 (2-1 mm) never forms a modal
+class. Pettijohn (1940) stated that there was
+a deficiency in the 2-4 mm (granule), the
+2-1 mm (very coarse sand) and the 1/8 to
+1/16 mm (very fine sand) classes. His
+observation was based on the fact that in
+his study of 2000 published mechanical
+analyses the modal class rarely fell in the
+grades mentioned above. Commenting on
+the scarcity of certain grade sizes Pettijohn
+(1957, p. 48-49) states: "One may assume
+that materials in the grades under considera-
+tion were produced by weathering and rock
+disintegration, but that these materials were
+either never deposited as a modal class for
+certain hydraulic reasons or because of
+mechanical instability they disappear during
+the transport process, or we may suppose
+that there is a primary deficiency of certain
+size classes. It may be that all sizes of
+335
+materials are not produced in equal quantity
+by breakdown of the source rocks."
+It is not possible to conceive of a situa-
+tion, whereby hydraulic reasons would be
+responsible for certain sizes not being
+deposited as modal classes, because there is
+no reason why these grades should not be
+concentrated in some hydraulic environ-
+ment, if they were available in sufficient
+quantity. It appears that the deficiency of
+these size grades is either due to (a)
+mechanical instability of certain size grades
+or (b) primary deficiency of these grades.
+Pettijohn (1957) pointed out that the
+particles in the 2 to 8 mm range would be
+structurally weak and would be unable to
+survive vigorous stream action. Kuenen
+(1959) supports this view but with the
+qualification that this hypothesis is applic-
+able only to granular rock particles. As
+fragments of granular rocks in this size
+range are very rare in the Chindwin gravels
+their absence is possibly due to structural
+weakness.
+Granular rocks like granites, grano-
+diorites and gneisses by disintegration will
+yield materials of sand size. Should chemi-
+cal decay be the mode of destruction, only
+quartz of sand size will survive, along with
+the minor accesories. From his study of
+Plutonic rocks Dake (1921) concluded that
+such rocks would rarely yield particles
+coarser than 1.00 mm by decomposition.
+According to his estimate only nine per
+cent of the quartz would exceed 1.00 mm
+in diameter and only 20 per cent would
+exceed 0.6 mm in diameter. It is apparent
+that a large percentage of material that
+would be obtained from decomposition of
+granites would be below 1.00 mm in dia-
+meter. What is true for granites should
+also hold for other granular rocks. Mono-
+mineralic grains coarser than 1.00 mm
+JBRS, XLVII, ii, Dec. 1964
+10
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 12]]
+336
+Textural Characteristics of Channel Sediments of the Chindwin River
+could be obtained from pegmatites and
+quartz and feldspar veins. As these rock
+types are not so common as granites and
+gneisses only a small propotion of mineral
+grains coarser than 1.00 mm will be formed
+by natural processes.
+Non-granular rocks like basalts and
+limestones will disintegrate along joints and
+will yield material considerably coarser than
+pebble size. Should decomposition be the
+dominant process, the basalts will yield
+clays and the limestones will go into solu-
+tion. In either case material of sand size
+will not result.
+In conclusion it may be stated that the
+natural materials produced by disintegration
+and decomposition of rocks will be of the
+following types: (a) large blocks, boulders,
+cobbles and pebbles-these may be of gra-
+nular or non-granular rocks, (b) sands-
+mostly monomineralic grains less than 1.00
+mm in diameter, and (c) silt and clay-sized
+materials chiefly products of rock decom-
+position. It is clear that there will be a
+natural deficiency in between pebble and
+sand size grades (4 to 1 mm); and it is
+possible that there will be a natural defi-
+ciency in between the sand and silt grades.
+-
+Kuenen (1959, p. 15) discussing abra-
+sion and its effect on pebble size states:
+"For all kinds of firm insoluble rocks the
+amount of mechanical abrasion is insuffi-
+cient to reduce pebbles to a different order
+of magnitude, even if they travel right down
+a major river." Plumley (1948) earlier had
+also observed that abrasion does not great-
+ly reduce the size of gravels. If abrasion is
+not responsible for any significant decrease
+in size of gravels it may be presumed that
+natural gravels will not be able to reduce
+the primary deficiency of material in the
+4-1 mm classes. If this is true of pebbles
+JBRS, XLVII, ii, Dec. 1964
+it is more so in the case of sands which
+practically suffer no size reduction due to
+abrasion.
+Median and Mean Size: Values of the two
+parameters of the Chindwin River channel
+sands are shown in Table 2. Clearly the
+values of the median and the mean size do
+not always coincide. However, they do
+coincide when the grain size distribution is
+Median as
+symmetrical.
+a measure of
+average size of sediments is very misleading
+and is a parameter which should be ignored.
+It may be useful when the size distribution
+is symmetrical. Mean size as a measure of
+average size also has its limitations as far
+as bimodal distributions are concerned. But,
+since it is derived from three points on the
+cumulative curve, it gives a better measure
+of average size than the median.
+While the mean size shows a feeble
+trend downstream (Fig. 7), no such trend is
+visible in the case of the median. Pettijohn
+(1957, p. 532) states: "...in general the size
+of the clastic sediments carried in a current.
+progressively decreases in the direction of
+transport." As the trend indicated by the
+mean size is not very significant, the writer
+agrees with Pollack (1961, p. 24) who states
+that, from the study of the mean or the
+median, the direction of current flow can-
+not be ascertained. This would obviously
+be the case if, for example, the Chindwin
+River sediments constituted an unknown
+channel deposit.
+From each sample the mean size of the
+gravel fraction alone was obtained, and the
+long diameter of the largest pebble in each
+sample was also measured. When these two
+parameters were plotted against distance,
+they showed a significant linear trend, as
+shown in Fig. 7. From study of these para-
+meters it should be possible to determine
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 13]]
+Dev D. Sarin
+TABLE 2
+SIZE DISTRIBUTION PARAMETER VALUES
+S. No.
+Median
+Mean
+Sorting
+Skewness
+Kurtosis
+K
+K
+K
+1
+-
+1
+--
+I
+-
+0
+1.00
+1.03
+1.19
++ 0.03
+0.91
+20
+0.46
+0.31
+1.00
+0.32
+1.26
+40
+1.00
+0.86
+0.77
+-- 0.13
+1.01
+K
+1
+60
+0.46
+0.29
+0.97
+0.23
+1.27
+--
+K 80
+0.55
+0.52
+0.98
+0.13
+1.70
+K -100
+0.72
+0.73
+0.48
++ 0.03
+1.02
+K-120
+1.34
+1.22
+0.77
+0.24
+1.22
+K -140
+1.68
+1.69
+0.44
++ 0.10
+1.17
+K-160
+1.16
+0.93
+0.95
+0.52
+1.70
+K -180
+0.94
+0.95
+0.69
+0.06
+1.15
+K -200
+1.86
+1.84
+0.48
+- 0.09
+0.88
+K-220
+1.37
+1.36
+0.40
+0.10
+1.19
+K-240
+2.12
+1.99
+0.87
+- 0.19
+1.16
+K-260
+0.74
+0.62
+0.86
+-
+0.28
+1.27
+K-280
+1.27
+1.23
+0.94
+-- 0.09
+1.04
+K-300
+0.62
+0.21
+1.67
+0.33
+0.82
+K-320
+0.16
+- 0.03
+1.01
+-
+- 0.06
+1.19
+K-340
+1.70
+1.69
+0.72
+0.05
+1.15
+K -360
+1.07
+0.98
+0.53
+- 0.31
+1.16
+K -380
+1.50
+1.41
+0.83
+0.22
+1.17
+K-400
+2.55
+2.62
+0.94
++ 0.12
+1.03
+K-420
+1.00
+0.99
+0.71
+-
+-- 0.08
+1.19
+K -440
+0.26
+- 0.05
+1.45
+MIRA
+0.36
+0.95
+K-460
+1.75
+1.69
+0.66
+-
+0.18
+1.11
+K -480
+1.16
+1.11
+0.69
+- 0.05
+1.14
+K-500
+1.40
+1.33
+0.74
+- 0.07
+0.83
+K-520
+1.82
+1.82
+1.33
++ 0.03
+1.15
+337
+JBRS, XLVII, ii, Dec. 1964
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 14]]
+338
+Textural Characteristics of Channel Sediments of the Chindwin River
+the direction of downcurrent in ancient
+channel deposits should gravel be present
+in them.
+It is pertinent here to discuss the
+effects of dilution due to influx of materials
+brought in by the tributaries to the main
+trunk stream. It was stated earlier that
+whenever a tributary enters the main river
+it always forms a sand or gravel bank
+at its mouth, which may be attributed to
+selective sorting phenomena. It is due to
+the inability of the river to carry certain
+sizes, which lead to the formation of the
+sand banks. Size distribution of sediments
+from three such banks was examined and
+in every case it was noted that the mean
+size of the sediments obtained from the
+sand or gravel bank was at least a
+half-phi grade coarser than that of the
+channel samples. Where the tributaries
+bring in large quantity of gravel the
+banks are mostly composed of gravels.
+However, it is reasonable to expect that
+SIZE DISTRIBUTION PARAMETERS vs. DISTANCE
+GRAVEL ONLY: MEAN SIZE
+☑
+K. DISTANCE
+$
+304
+2.0-1
+1.0-
+£3.0
+MM
+40 →
+LONG
+GRAVEL ONLY:
+DIAMETER vs. DISTANCE
+MM
+40
+2.0
+30-
+-30
+11-0
+20-
+-20
++.20
++.10.
+100
+200
+300
+400
+600
+1600 MILES
+SAND ONLY: SKEWNESS vs. DISTANCE
++20
+--10
++.10
+0.0
+0.0
+1.10.
+--10
+--20
+.20
+·30-
+-.30
+0.0
+-10
+-.20
+-·30.
+100
+200
+300
+400
+500
+600 MILES
+$
+2.0
+1.0+
+0-0-
+WHOLE SEDIMENT: MEAN SIZE vs. DISTANCE
+1.5.
+-2-c
+1.0
+1-0
+0-5-2
+10.0
+0.0
+100
+200
+300
+400
+500
+600
+MILES
+1.5
+1-0
+0.51
+100
+200
+300
+400
+500
+600
+MILES
+WHOLE SEDIMENT: SKEWNESS vs. DISTANCE
+- 10
+0.0
+-10
+--20
+--30
+100
+200
+300
+400
+500
+600 MILES
+WHOLE SEDIMENT: SORTING vs. DISTANCE
+1.0
+-0.5
+001
+100
+200
+300
+400
+500
+600 MILES
+WHOLE SEDIMENT: KURTOSIS vs. DISTANCE
+1-5
+1-0
+-0.5
+100
+200
+300
+400
+800
+650 MILES
+Fig. 7 Sise distribution Parametara ve, distance
+JBRS, XLVII, ii, Dec. 1964
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 15]]
+Dev D. Sarin
+tributary dilution may cause an increase
+in the quantity of certain size grades
+being transported below the point of
+dilution. Should this process be operative,
+it would be reflected by increase in sor-
+ting downstream. As indicated below, no
+trend is noticed when sorting values are
+plotted against distance. It may be
+concluded, therefore, that there is no
+evidence to indicate that tributary dilution
+will cause significant changes in the grain
+size distribution parameters. Whatever effect
+it might have would be lost within a
+few miles. Russell and Taylor (1937, p.
+255) commenting upon tributary dilution.
+state "... the character of the bed load
+contributed to the Mississippi by the four
+tributaries from which samples were
+studied has little effect upon the character
+of the Mississippi river bed load and
+bed material.”
+SKEWNESS
++0.20
+0.00-
+-0-20-
+-0-40-
+PLOT OF MEAN AND SKEWNESS
+3
+0.0
+MEAN SIZE IN PHI UNITS
+1-00
+2.00
+3.00
+Fig. 8 Plot of mean Vs. skewness
+339
+Skewness: Skewness is a measure of the
+Standard Deviation: Folk and Ward's (1957) symmetry of size distribution. Symmetrical
+measure of sorting called Inclusive Graphic
+Standard Deviation has been recom-
+mended amongst others by Friedman (1962)
+who concludes that this measure is suitable
+for the entire range of sorting characteris-
+tics. This measure was preferred for the
+present study because it was felt that for
+the bimodal and non-symmetrical size
+distribution of the type encountered it
+would yield most accurate values.
+Sorting in the Chindwin River sedi-
+ments (Table 2) ranges from 0.40 to 1.67.
+No significant linear trend was noticeable
+when sorting values were plotted against dis-
+ance. (Fig. 7) According to Folk aud
+Ward's (1957) verbal scale of sorting these
+sediments range from moderately sorted
+to poorly sorted; 21 out of 27 samples
+being moderately sorted. Pollack (1961)
+in his study of the South Canadian River
+channel sands found that the sands were
+moderately sorted. In that case, however,
+he was dealing with normal distribution.
+curves have a value of 0.0, and, as
+skewness increases, the value approaches
++ 1.00 or -1.00, depending upon whether
+the asymmetry is caused by a "tail" of
+fine or coarse grades. The skewness of
+the Chindwin sediments is given in Table 2.
+It may be noted that only 5 out of 27
+samples are positively skewed. Skewness
+values range from -0.52 to +- 0.10. As
+in the case of other size distribution
+parameters, skewness values were plotted
+against distance (Fig. 7), and it is clear
+that no significant linear trend is visible.
+Pollack (1961) also noted lack of any
+such trend. According to Folk and Ward's
+(1957) verbal limits, skewness of these
+sediments varies from negatively skewed
+to nearly symmetrical.
+Pollack (1961), in his study of the
+South Canadian River sands, observed
+that almost all his samples were positivley
+skewed. It may be noted that the sediments
+JBRS, XLVII, ii, Dec. 1964
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 16]]
+340
+"
+Textural Characteristics of Channel Sediments of the Chindwin River
+of the South Canadian River sands are
+of sand size and no grades coarser than
+sand were observed. Pollack's (1961)
+observation agrees with Friedman (1961,
+p. 517) who states: "River sands are
+generally positively skewed, as are dune
+sands; but a number of exceptions were
+found. Friedman had ignored river
+sands with more than five percent of
+grains exceeding 0.5 mm in diameter.
+In case of the Chindwin River channel
+sediment material coarser than 0.5 mm
+constitutes from 3.3 to 66.6 percent by
+weight of the grain size distribution.
+Material coarser than 0.5 mm forms 3.3
+percent of the whole only in one sample;
+in all
+other samples this size grade
+constitutes at least 10 percent of the
+whole. The effect of coarse grades on
+skewness is commented upon by Folk
+and Ward (1957, p. 19) thus: "In this
+bimodal distribution, skewness is very
+closely a function of grain size. The trend
+is markedly sinusoidal. The pure sand
+mode when it occurs by itself (at a mean
+size of about 2.5 ) produces a symmetrical
+size curve, but the addition of increasing
+quantity of gravel mode imparts negative
+skewness, which becomes most extreme
+at a mean size of + 0.7 , where the
+skewness averages .50 or more."
+-
+Skewness of sand fraction only was
+calculated, by ignoring the gravel fraction.
+This was done to find whether or not the
+negative skewness of the Chindwin River
+channel sediments is solely due to the
+presence of the gravel fraction. It was
+observed that only nine samples out of 27
+showed positive skewness, as against five
+samples showing positive skewness when
+the whole sediment is considered. However,
+it was noted that in all cases the value of
+negative skewness declined appreciably
+(Table 3). It is thus apparent that, although
+JBRS, XLVII, ii, Dec. 1964
+the presence of gravel in sands considerably
+influences skewness, it is not soley responsi-
+ble for the negative skewness of the Chin-
+dwin sediments. The negative skewness in
+this case has also been caused by the pre-
+sence of noteworthy quantities of coarse
+sand (coarser than 0.5 mm).
+To investigate the relationship, if any,
+between mean size and skewness a plot of
+mean size and skewness was made (Fig. 8).
+There is a certain amount of scatter, but it
+does appear that there is a distinct trend
+between these two parameters. This plot
+supports the contention of Folk and Ward
+(1957) that an addition of coarser grades to
+sand will increase the negative value of
+skewness up to a certain limit.
+Kurtosis: This is a measure of the normal-
+ity of the size distribution by comparing
+the sorting in the central part with sorting
+in the tails of the distribution. The kurtosis
+values of the Chindwin sediments are given
+in Table 2. These values vary from 0.82 to
+1.70. According to Folk and Ward's
+(1957) verbal limits these sands are meso-
+sis were plotted against distance, and, as
+can be seen in Fig. 7, there is a feeble trend
+between kurtosis and distance. Kurtosis
+values decline downstream and it is obvious
+that with distance there is a lesser tendency
+for the grains to cluster around the modal
+class. This observation is at variance with
+Pollack's (1961), who noted that the kurto-
+sis values increase downstream. It may be
+that the trend in the Chindwin River being
+feeble is not significant.
+kurtic to leptokurtic. The values of kurto-
+Except for the mean size and kurtosis,
+both of which show a feeble trend, none of
+the grain size distribution parameters shows
+any significant relationship with distance.
+This lack of relationship reflects the uni-
+formity of hydraulic environment within
+the Chindwin River channel.
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 17]]
+Dev D. Sarin
+TABLE 3
+Skewness values of whole sediment and sand fraction only
+341
+Sample No.
+Percent gravel
+Percent sand
+1.0 to 0.5 mm
+Skewness of
+whole sed.
+Skewness of sand
+fraction only
+-
+K 0
+K
+20
+Bo
+66.6
+10.4
++ 0.03
++ 0.15
+13.0
+46.8
+-- 0.32
+- 0.06
+K
+K
+K
+-
+-
+40
+29.6
+37.4
+-- 0.13
+- 0.10
+60
+11.0
+49.4
+-- 0.24
+-0.18
+-
+80
+8.7
+54.6
+- 0.13
++ 0.19
+K-100
+0.4
+66.8
++ 0.03
++ 0.03
+K-120
+2.3
+17.7
+- 0.24
+- 0.24
+K-140
+0.4
+3.3
++ 0.10
++ 0.10
+K-160
+9.8
+19.3
+- 0.52
+- 0.31
+K. -180
+3.2
+47.0
+-- 0.06
++ 0.03
+K-200
+0.5
+2.8
+- 0.09
+- 0.09
+K-220
+0.3
+21.0
+- 0.10
+-- 0.10
+K-240
+0.2
+9.8
+-0.19
+- 0.19
+K-260
+7.4
+43.3
+- 0.28
+- 0.22
+K-280
+3.6
+29.4
+- 0.09
+0.00
+K-300
+26.8
+22.2
+- 0.33
+- 0.14
+K-320
+17.0
+47.7
+-0.06
+K-340
+0.8
+10.3
+-0.05
+-
+-0.03
+- 0.05
+K-360
+1.5
+36.3
+-- 0.31
+- 0.26
+K-380
+2.4
+18.8
+-0.22
+-- 0.20
+K-400
+0.1
+2.1
++ 0.12
++ 0.12
+K-420
+3.0
+41.4
+-0.08
+K-440
+24.5
+30.8
+K-460
+4.6
+19.6
+mall
+K -480
+9.2
+24.2
+- 0.05
+- 0.36
+-0.18
++ 0.04
+-0.13
+- 0.10
+0.00
+-
+K -500
+3.1
+20.8
+- 0.07
+- 0.03
+K-520
+1.5
+19.6
++ 0.03
++ 0.06
+JBRS, XLVII, ii, Dec. 1964
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 18]]
+342
+Textural Characteristics of Channel Sediments of the Chindwin River
+TABLE 4
+Mineral
+Regression Line formulae of Roundness plotted against distance
+Size Grade in mm
+Magnetite-Ilmenite
+0.125
+0.328 – 0.00002 distance
+Magnetite-Ilmenite
+0.062
+0.269 + 0.00003
+,,
+Haematite
+0.125
++
+0.336 -- 0.00005
+,,
+Haematite
+0.062
+0.383 -- 0.00027
+"
+Amphibole
+0.125
+0.209 + 0.00013
+,,
+Amphibole
+0.062
+0.197 + 0.00013
+,,
+Zircon
+0.125
+-
+0.436 - 0.00010
+,,
+Zircon
+0,062
+3.480 -- 0.00032
+"
+Garnet
+0.125
+0.208 + 0.00018
+,,
+Garnet
+0.062
+0.245 + 0.00001
+,,
+Tourmaline
+0.125
+0.256 - 0.000002
+,,
+Tourmaline
+0.062
+0.198 + 0.00021
+,,
+Corundum
+0.125
+-
+0.260 0.00002
+,,
+Corundum
+0.062
+0.259 - 0.000001
+,,
+Pyroxene
+0.125
+0.211 + 0.00018
+,,
+Pyroxene
+0.062
+0.200 + 0.00029
+,,
+Rutile
+0.125
+0.172 + 0.00008
+,,
+Rutile
+0.062
+0.217 + 0.00020
+"
+Sphene
+0.125
+0.446
+-
+0.00047
+,,
+Epidote
+0.125
+0.372 0.00025
+"
+Quartz
+0.125
+0.250 + 0.00015
+,,
+Feldspar
+0.125
+0.290 + 0.00014
+,,
+Regression Line formulae of Sphericity plotted against distance
+Mineral
+Haematite
+Amphiboles
+Zircon
+Pyroxene
+Rutile
+Size Grade in mm
+0.125
+0.85 0.00016 distance
+0.125
+0.87 + 0.00013
+,,
+0.062
+0.83 + 0.09010
+"
+0.125
+0.82 + 0.00017
+,,
+0.062
+0.78 + 0.00028
+,,
+JBRS, XLVII, ii, Dec. 1964
+Copyright 1998 - Myanmar Book Centre & Book Promotion Service Ltd, Bangkok, Thailand.
+
+[[page 19]]
+Dev D. Sarin
+TABLE 4 (continued)
+Regression Line Formulae of Shape Factor Plotted Against Distance
+Mineral
+Amphibole
+Zircon
+Garnet
+Tourmaline
+Corundum
+Size Grade in mm
+0.125
+1.30
+0.00040 distance
+0.125
+0.79 + 0.00034
+,,
+0.125
+1.02 + 0.00013
+"
+0.125
+0.96 + 0.00039
+,,
+0.062
+1.34 - 0.00100
+"
+Regression Line Formulae of Grain Size Parameters Plotted
+Against Distance
+Grain Size Parameter
+Mean Size
+Gravel Fraction only
+-
+Maximum diameter: Gravel
+-a
+- ☀ 0.220 – 0.00250 distance
+32.2 mm - 0.03520
+,,
+Skewness sand fraction only
+Mean Size
+Total sediment
+Sorting
+Total sediment
+Skewness
+Total sediment
+Kurtosis Total sediment
+0.06 0.00050
++ 0.76 + 0.00100
+4 0.80 + 0.00025
+0.14 - 0.00001
+1.09 - 0.00030
+-
+,,
+"
+,,
+"
+,,
+11
+343
+JBRS, XLVII, ii, Dec. 1964
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 20]]
+344
+Textural Characteristics of Channel Sediments of the Chindwin River
+ROUNDNESS
+rutile and staurolite constitute one group,
+with roundness values between 2 and .3,
+Roundness values for all mineral spe-
+cies which constitute at least one per cent (b) The other group is composed of haema-
+on an average was computed from the
+grain count analysis data. The average
+values for roundness of different minerals
+of the 0.125 and 0.062 mm size fractions is
+presented in Table 5. These values were
+plotted against distance for the minerals
+which show a significant trend downstream
+(Fig. 9 and Fig. 10). The different types of
+trends observed are:
+1. Minerals showing an increase in
+roundness downstream in the 0.125
+and 0.062 mm size fractions are
+amphiboles, pyroxenes and rutile.
+2. Minerals showing downstream
+increase in roundness only in the
+0.125 mm size fractions are garnet,
+corundum, epidote, feldspar and
+quartz.
+tite, zircon, sphene and epidote, with round-
+ness values between .3 and 4. That the
+higher roundness for the latter group is not
+due to their ability to become rounded
+more speedily is indicated by the fact that
+in their case roundness actually declines
+downstream, whereas in the case of the
+former group the roundness values increase
+with distance with the exception of
+magnetite-ilmenite.
+Minerals which show a significant
+increase in roundness down-stream are gar-
+net, amphiboles, pyroxenes, tourmaline,
+rutile, corundum, feldspars and quartz.
+Pollack (1961) noted that such a trend was
+observed only in those minerals whose
+hardness is less than 6. In the case of the
+Chindwin sediments this is not so. It seems
+that in the Chindwin River abrasion is an
+effective process and does affect the sand
+grains to some degree. This is also indica-
+ted by the fact that the 0.062 mm fractions
+of minerals (excepting amphiboles and
+pyroxenes) with a linear trend do not show
+3. Minerals showing decrease in
+roundness downstream are magnet-
+ite-ilmenite (0.125 mm), haematite
+(0.125 and 0.062 mm), zircon
+(0.062 mm) and sphene (0.125 mm). any increase in roundness downstream.
+A study of Table 5 reveals that the
+minerals may be divided into two groups on
+the basis of their roundness values. (a)
+Magnetite-ilmenite, pyrite, amphiboles, gar-
+net, tourmaline, corundum, pyroxenes,
+Pollack (1961, p. 32) stated: "The size of
+some minerals might be below some critical
+point whereby rounding processes are no
+longer effective. This may be why in most
+cases only the 0.125 mm size showed a
+trend while the 0.062 mm size did not."
+JBRS, XLVII, ii, Dec. 1964
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 21]]
+ROUNDNESS vs. DISTANCE
+MAG. ILMENITE 125 MM SIZE
+.40
+40
+·30.
+.20-
+.20
+.20
+200
+400
+600 MILES
+MAG-ILMENITE 062 MM SIZE
+40-
+40
+·30-
+-201
+204
+.20
+200
+400
+600 MILES
+.40-
+HAEMATITE 125 MM SIZE
+20
+•
+.40
+.40
+.30
+-20
+200
+400
+600 MILES
+AMPHIBOLE -125 MM SIZE
+30
+.20
+200
+400
+600 MILES
+AMPHIBOLE 062 MM SIZE
+-.30
+• 20
+200
+400
+600 MILES
+ZIRCON
++125 MM SIZE
+.40
+.30
+200
+400
+600 MILES
+HAEMATITE
+.062 MM SIZE
+ZIRCON
+062 MM SIZE
+.40
+.40
+30-
+-40
+.30
+.
+20-
+:20
+200
+400
+600 MILES
+200
+400
+600 MILES
+1.30.
+20
+GARNET 125 MM SIZE
+.30
+30.
+20
+.20
+200
+400
+600 MILES
+TOURMALINE 062 MM SIZE
+-.30
+20
+200
+400
+600 MILES
+Fig. 9. Roundness vs. distance
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 22]]
++25
+•20-
+.30.
+20
+.30.
+20-F
+.30.
+.20
+ROUNDNESS vs.
+DISTANCE
+PYROXENE
+125 MM SIZE
+CORUNDUM
+125 MM SIZE
+.25
+20
+-30
+20.
+200
+400
+600 MILES
+PYROXENE
+·062 MM SIZE
+.30
+.20
+200
+400
+600 MILES
+SPHENE
+125 MM SIZE
+.40.
+..40
+.30
+.30-
+-30
+•20
+20-
+.20
+200
+400
+600 MILES
+RUTILE 125 MM SIZE
+200
+400
+600 MILES
+EPIDOTE
+125 MM SIZE
+.30
+.20
+.40
+1301
+20
+40
+.30
+.20
+200
+400
+600 MILES
+RUTILE .062 MM SIZE
+.30
+1.20
+.30.
+•25
+200
+400
+600 MILES
+•30
++25.
+QUARTZ ·125 MM SIZE
+200
+400
+600 MILES
+FELDSPAR 125 MM SIZE
+.30
++25
+200
+400
+600 MILES
+.30
+- .25
+200
+400
+600 MILES
+Fig. 10
+-
+Roundness vs. distance
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 23]]
+Dev D. Sarin
+It was observed that the roundness
+values of minerals showed variations in 0.125
+and 0.062 mm classes. Commonly the
+coarser grades are more rounded than the
+finer grades. Reference to Table 5 indicates
+that magnetite-ilmenite, leucoxene, amphi-
+boles, zircon, tourmaline, corundum, sphene
+and epidotes display this relationship
+between size and rounding particularly well.
+347
+The results obtained in this study are
+somewhat at variance from the trends
+observed by Pollack (1961) in the Canadian
+River channel sands. He observed that
+roundness increased with distance in case
+of haematite and sphene. He also observed
+that roundness decreased with distance in
+case of quartz and feldspar. Since in
+his study of light fractions he had selected
+TABLE 5
+Mean Roundness, Mean Sphericity and Mean Shape Factor Values
+MAGNETITE-ILMENITE
+Sample No.
+Size Grade
+in mm
+Mean
+Roundness
+Mean
+Sphericity
+Mean Shape
+Factor
+K
+K
+K
+-
+-
+0
+40
+80
+0.125
+0.35
+.92
+1.04
+0.33
+.91
+1.09
+0.31
+.91
+1.12
+K
+120
+0.33
+.90
+1.06
+K
+160
+0.27
+.92
+1.03
+-
+K 200
+0.28
+.91
+1.01
+K - 240
+0.31
+.91
+0.97
+K - 280
+0.29
+.91
+1.14
+K - 340
+0.27
+.92
+1.05
+K
+380
+0.28
+.92
+1.09
+K
+400
+0.30
+.92
+1.05
+-
+K
+K 480
+K
+K
+-
+520
+K 40
+440
+0.28
+.92
+1.06
+0.27
+.92
+1.04
+0.26
+.92
+1.08
+0
+0.062
+0.31
+.91
+0.99
+0.25
+.89
+1.12
+K
+-
+80
+0.24
+.90
+1.03
+K 120
+K
+K
+1
+-
+-
+-
+160.
+.200
+K 240
+-
+0.27
+.90
+1.114
+0.28
+.91
+1.03
+0.27
+.89
+1.02
+0.26
+.90
+1.09
+K - 280
+0.27
+.92
+1.00
+-
+K 340
+0.32
+.92
+1.02
+K
+-
+380
+0.32
+.91
+1.02
+K
+-
+K 440
+-
+400
+0.29
+.91
+1.04
+0.27
+.91
+0.96
+K
+K
+480
+520
+0.27
+.90
+1.01
+0.26
+.90
+1.09
+JBRS, XLVII, ii, Dec. 1964
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 24]]
+348
+Textural Characteristics of Channel Sediments of the Chindwin River
+TABLE 5 (continued)
+LEUCOXENE
+Sample No.
+Size Grade
+in mm.
+Mean
+Roundness
+Mean
+Sphericity
+Mean Shape
+Factor
+K
+K
+-
+0
+40
+K 80
+K 120
+-
+K . 160
+B
+K 200
+-
+K 240
+-
+0.125
+...
+0.46
+.89
+1.14
+...
+...
+0.34
+.91
+1.16
+0.32
+.90
+0.91
+0.47
+.91
+0.95
+...
+...
+K
+- 280
+0.28
+.93
+1.20
+--
+K 340
+0.37
+.92
+1.06
+K
+380
+0.42
+.93
+1.13
+K 400
+0.36
+.92
+1.07
+K 440
+-
+K 480
+-
+K 520
+-
+0.35
+.93
+1.12
+0.36
+.92
+1.06
+0.34
+.92
+1.15
+-
+-
+K
+K
+1
+-
+K 80
+K
+K
+K
+K
+K
+--
+-
+-
+120
+- 160
+0
+0.062
+40
+0.24
+.92
+1.06
+0.43
+.90
+1.28
+0.38
+.89
+1.05
+0.32
+.88
+0.98
+200
+0.30
+.91
+0.87
+240
+0.22
+.90
+1.16
+280
+0.43
+.92
+1.11
+K
+340
+0.37
+.92
+0.95
+-
+K 380
+0.37
+.90
+1.17
+K
+K
+-
+400
+440
+...
+...
+0.25
+.93
+1.23
+K
+480
+0.26
+.90
+1.20
+K
+. 520
+0.26
+.91
+1.16
+JBRS, XLVII, ii, Dec. 1964
+Copyright 1998 - Myanmar Book Centre Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 25]]
+Dev D. Sarin
+TABLE 5 (continued)
+HAEMATITE
+349.
+Sample No.
+Size Grade
+in mm
+Mean
+Roundness
+Mean
+Mean Shape
+Sphericity
+Factor
+www
+K
+-
+I
+K
+K
+-
+0
+40
+K 80
+120
+I
+ဝိုင် ဝ
+0.125
+0.30
+.83
+1.47
+0.34
+.84
+1.03
+0.22
+.89
+0.94
+0.45
+.84
+1,24
+K
+-
+160
+0.42
+.86
+1.31
+-
+K 200
+0.26
+.91
+1.08
+I
+1
+I
+☑☑
+I
+K
+K
+K
+K
+K
+K
+K
+-
+--
+-
+-
+-
+-
+400
+440
+480
+520
+240
+0.35
+.91
+1.00
+280.
+0.27
+.93
+0.94
+340
+0.43
+.91
+0.92
+380
+0.31
+.92
+1.17
+0.40
+.89
+0.95
+0.23
+.91
+1.22
+0.25
+.92
+1.11
+1
+-
+1
+K
+K
+K
+K
+K
+K
+K
+-
+-
+-
+-
+-
+80
+120
+160
+200
+K 240
+-
+0.30
+.92
+1.20
+0
+0.064
+0.45
+.85
+1.08
+40
+0.32
+.88
+1.12
+0.36
+.93
+0.85
+0.30
+.93
+1.21
+0.36
+.86
+1.20.
+0.32
+.81
+0.78
+0.33
+.87
+1.15
+MMMMM
+K 280
+0.37
+.92
+0.97
+-
+☑☑
+K
+K - 380
+K
+K
+K
+-
+-
+K - 520
+340
+0.28
+.91
+.1.18
+0.27
+.92
+1.11
+400
+0.28
+.86
+1.28
+440.
+0.27
+.89
+1.01
+480
+0.26
+.90
+1.06
+0.24
+.90
+1.04
+JBRS, XLVII, ii, Dec. 1964
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 26]]
+350
+Textural Characteristics of the Channel Sediments of the Chindwin River
+TABLE 5 (continued)
+AMPHIBOLES
+Sample No.
+Size Grade
+in mm
+Mean
+Roundness
+Mean
+Sphericity
+Mean Shape
+Factor
+-
+K
+0
+K
+40
+K
+80
+0.125
+0.20
+.88
+1.41
+0.22
+.89
+1.34
+0.23
+.89
+1.25
+K 120
+K . 160
+-
+0.20
+.88
+1.20
+0.25
+.89
+1.25
+K 200
+0.23
+.89
+1.06
+K
+240
+0.24
+.84
+1.15
+-
+K 280
+0.25
+.86
+1.19
+K 340
+0.25
+.90
+1.13
+K
+-
+380
+0.26
+.90
+1.20
+☑☑
+K
+K
+K
+-
+-
+j
+400
+0.26
+.89
+1.26
+I
+440
+0.25
+.91
+1.18
+K
+-
+480
+520
+0.27
+.92
+1.10
+0.28
+,22
+1.04
+K
+0
+0.062
+0.20
+.88
+1.01
+1
+-
+I
+KKKK
+K
+K
+--
+K 120
+K
+-
+-
+160
+200
+40
+0.20
+.84
+1.14
+80
+0.22
+.85
+0.96
+0.21
+.86
+1.33
+0.23
+.84
+1.21
+0.22
+.82
+1.01
+240
+0.22
+.88
+1.25
+280
+0.22
+.89
+1.14
+-
+340
+0.25
+.89
+1.17
+K 380
+0.25
+.89
+0.94
+I
+K
+K
+-
+K 480
+400
+0.24
+.88
+1.28
+440
+0.26
+.89
+0.89
+0.25
+.89
+0.92
+K
+-
+520
+0.26
+.90
+1.16
+JBRS, XLVII, ii, Dec. 1964
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 27]]
+Dev D. Sarin
+TABLE 5 (continued)
+-
+ZIRCON
+351
+Sample No.
+Size Grade
+in mm
+Mean
+Roundness
+Mean
+Sphericity
+Mean Shape
+Factor
+-
+K
+K
+K
+=
+40
+80
+K 120
+-
+K 160
+-
+K 200
+K
+-
+-
+0
+0.125
+0.40
+.85
+0.73
+0.38
+.84
+0.82
+0.36
+.85
+0.77
+0.51
+.85
+0.90
+0.47
+.84
+0.96
+0.44
+.85
+0.94
+240
+0.40
+.86
+0.87
+K
+280
+0.48
+.88
+0.94
+K 1 343
+0.36
+.90
+0.87
+K
+380
+0.50
+.88
+0.75
+-
+K 400
+0.47
+.90
+0.64
+K 440
+-
+K 480
+K
+www
+-
+520
+0.38
+.88
+1.04
+0.35
+.89
+0.92
+0.32
+.90
+0.90
+1
+I
+K
+K
+K
+K
+-
+-
+-
+-
+40
+80
+120
+K 160
+-
+K 200
+-
+0
+0.062
+0.48
+.83
+0.77
+0.46
+.86
+1.08
+0.47
+.87
+0.66
+0.46
+.89
+1.09
+0.44
+.84
+0.81
+0.42
+.73
+0.72
+-
+K 240
+0.36
+.83
+1.12
+K
+-280
+0.41
+.85
+0.99
+-
+K 340
+0.39
+.84
+1.23
+K
+380
+0.40
+.92
+1.03
+K
+-
+400
+0.33
+.85
+1.30
+K
+K
+K
+-
+440
+0.32
+.85
+0.77
+M
+480
+0.31
+.88
+0.82
+-
+520
+0.30
+.90
+0.96
+12
+JBRS, XLVII, ii, Dec. 1964
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 28]]
+352
+Textural Characteristics of Channel Sediments of the Chindwin River
+TABLE 5
+-
+(continued)
+GARNET
+Sample No.
+Size Grade
+Mean
+Mean
+Mean Shape
+in mm
+Roundness
+Sphericity
+Factor
+1
+{
+K
+K
+K
+-
+-
+40
+80
+K 120
+K
+-
+-
+160
+K 200
+K
+K
+K
+K
+-
+-
+-
+-
+-
+K 400
+M
+K 440
+-
+K - 480
+K - 520
+0
+3.125
+0.22
+.87
+1.01
+0.21
+.89
+1.07
+0.23
+.91
+1.09
+0.26
+.90
+1.03
+0.22
+.93
+1.04
+0.21
+.88
+1.08
+240
+0.22
+.91
+1.01
+. 280
+0.28
+.92
+1.09
+340
+0.30
+.91
+0.92
+380
+0.29
+.92
+1.02
+0.27
+.91
+1.09
+3.28
+.92
+1.08
+0.29
+.92
+1.10
+0.30
+.92
+1.14
+K
+-
+0
+0.062
+0.26
+.89
+1.13
+1
+I
+K 40
+K
+K
+K
+-
+-
+-
+-
+80
+120
+160
+0.29
+.92
+0.93
+0.22
+.88
+1.09
+0.22
+.90
+1.03
+0.22
+.88
+1.03
+K
+-
+200
+0.20
+.75
+0.69
+K - 240
+0.20
+.90
+1.04
+K - 280
+0.41
+.80
+1.02
+-
+K 340
+0.25
+.79
+1.06
+K 380
+0.22
+.92
+0.74
+K
+-
+400
+0.25
+.89
+1.07
+K
+K
+K
+-
+-
+440
+0.26
+.87
+1.11
+-
+480
+520
+0.25
+.86
+1.21
+0.25
+.87
+1.08
+JBRS, XLVII, ii, Dec. 1964
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 29]]
+Dev D. Sarin
+TABLE 5 - (continued)
+TOURMALINE
+Sample No.
+Size Grade
+in mm
+Mean
+Roundness
+Mean
+Sphericity
+Mean Shape
+Factor
+K
+K
+K
+-
+-
+-
+0
+40
+80
+K 120
+-
+K 160
+K
+K
+JAMMA
+-
+200
+240
+0.125
+0.26
+.89
+0.98
+0.26
+.91
+0.93
+0.24
+.89
+1.24
+0.25
+.92
+1.07
+0.30
+.87
+1.05
+0.26
+.89
+0.95
+0.25
+.87
+0.86
+-
+K - 280
+0.28
+.84
+1.22
+K - 340
+0.25
+.88
+1.02
+K
+- 380
+0.26
+.93
+1.04
+-
+K 400
+K
+K
+K
+-
+-
+440
+480
+520
+0.26
+.86
+1.24
+0.28
+.89
+1.19
+0.26
+.87
+1.16
+0.28
+.89
+1.12
+☐
+-
+-
+-
+K
+K
+K
+K
+-
+-
+40
+80
+120
+K 160
+K
+K
+K
+-
+0
+0.062
+0.21
+.89
+0.90
+0.21
+.91
+0.96
+0.20
+.89
+0.85
+0.24
+.92
+1.16
+0.23
+.87
+0.76
+200
+0.24
+.89
+0.94
+240
+0.22
+.87
+0.89
+280
+0.24
+.84
+1.10
+K
+-
+340
+0.25
+.88
+1.01
+-
+K 380
+0.30
+.93
+0.81
+K - 400
+0.34
+.86
+0.92
+K
+440
+0.27
+.89
+0.82
+K 480
+0.30
+.88
+0.88
+-
+K 520
+0.30
+.90
+1.06
+353
+JBRS, XLVII, ii, Dec. 1964
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service 1 td Bangkok Thailand
+
+[[page 30]]
+354
+Textural Characteristics of Channel Sediments of the Chindwin River
+TABLE 5 (continued)
+-
+CORUNDUM
+Sample No.
+Size Grade
+in mm
+Mean
+Roundness
+Mean
+Mean Shape
+Sphericity
+Factor
+-
+-
+K -
+K
+M
+0
+40
+K 80
+-
+K 120
+-
+K 160
+-
+K 200
+-
+K .240
+K
+K
+K
+K
+K 440
+-
+K 480
+K
+-
+520
+0.125
+0.20
+.90
+0.99
+0.31
+.91
+1.19
+0.22
+.93
+1.11.
+0.25
+.93
+0.97
+0.31
+.90
+1.05
+0.26
+.76
+0.92
+0.27
+.92
+0.92
+280
+0.30
+.93
+1.10
+340
+0.31
+.91
+1.13
+380
+0.28
+.92
+0.98
+400
+0.29
+.93
+1.04
+0.23
+.90
+0.96
+0.24
+.91
+0.98
+0.26
+.91
+1.08
+K
+K
+K
+K
+K
+-
+-
+-
+0
+0.062
+0.32
+.91
+1.28
+J
+40
+0.24
+.93
+1.34
+-
+80
+0,24
+.89
+1.25
+-
+120
+0.26
+.90
+1.11
+I
+K
+-
+160
+- 200
+0.23
+.82
+1.53
+0.20
+.77
+1.42
+K - 240
+0.23
+.92
+0.85
+K
+-
+280
+0.30
+.92
+1.06
+K
+K
+-
+340
+0.33
+.93
+1.02
+380
+0.25
+.92
+1.14
+K
+-
+1
+400
+0.26
+.92
+1.14
+K
+K
+K
+440
+0.25
+.91
+0.96
+I
+-
+480
+0.26
+.89
+1.01
+-
+520
+0.25
+.90
+0.92
+JBRS, XLVII, ii, Dec. 1964
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 31]]
+Dev D. Sarin
+TABLE 5 – (continued)
+-
+PYROXENES
+Sample No.
+Size Grade
+in mm
+Mean
+Roundness
+Mean
+Sphericity
+Mean Shape
+Factor
+I
+I
+{
+1
+K
+K 40
+-
+K 80
+K
+K
+K
+-
+--
+120
+160
+200
+0
+0.125
+0.20
+.84
+0.85
+0.23
+.85
+1.28
+0.21
+.88
+1.29
+0.28
+.89
+1,44
+0.24
+.75
+0.94
+0.25
+.72
+0.66
+K
+-
+240
+0.26
+.85
+1.08
+-
+K 280
+0.30
+.89
+1.22
+1
+-
+-
+I
+1
+J
+☑☑
+-
+K
+K
+K
+K 440
+K
+K
+K
+-
+-
+340
+0.23
+.92
+1.25
+380
+0.27
+.93
+0.91
+400
+0.28
+.85
+0.97
+0.29
+.92
+1.06
+480
+0.29
+.91
+0.98
+520
+0.30
+.92
+1.01
+0
+0.062
+0.20
+.90
+1.38
+I
+-
+MAY
+--
+I
+I
+K
+-
+K 80
+K
+K
+K
+K
+K
+K
+-
+GAME
+120
+160
+40
+0.25
+.90
+1.15
+0.20
+.88
+1.06
+0.24
+.89
+1.55
+0.25
+.75
+2.00
+200
+0.23
+.72
+1.22
+240
+0.21
+.85
+1.34
+280
+0.26
+.89
+1.45
+340
+0.30
+.92
+0.93
+K
+380
+0.35
+.93
+1.23
+K
+400
+0.32
+.84
+1.26
+K
+-
+I
+440
+0.31
+.92
+1.02
+K
+I
+480
+0.30
+.90
+1.10
+K - 520
+0.32
+.91
+1.16
+355
+JBRS, XLVII, ii, Dec. 1964
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 32]]
+356
+Textural Characteristics of Channel Sediments of the Chindwin River.
+TABLE 5
+--
+(continued)
+RUTILE
+Sample No.
+Size Grade
+in mm
+Mean
+Roundness
+Mean
+Sphericity
+Mean Shape
+Factor
+-
+-
+K
+-
+0
+K 40
+K
+-
+80
+K 120
+-
+K 160
+-
+K - 200
+K
+K
+0.125
+0.20
+.89
+0.66
+0.25
+.96
+1.11
+0.30
+.89
+1.20
+0.24
+.92
+1.19
+0.27
+.92
+1.48
+0.25
+.92
+1.06
+240
+0.30
+.93
+1.04
+280
+0.25
+.93
+1.01
+☑☑
+-
+340
+0.22
+.88
+1.03
+K - 380
+0.32
+.92
+1.12
+K
+-
+400
+0.25
+.86
+1.30
+-
+-
+K 440
+K
+K
+-
+480
+0.26
+.86
+1.36
+0.24
+.87
+1.24
+520
+0.25
+.89
+1.16
+✓ ✓
+K
+-
+1
+0
+0.062
+0.20
+.82
+0.75
+-
+-
+-
+☑☑
+K
+M
+K 80
+-
+K 120
+-
+K - 160
+K 200
+K
+K
+K
+K
+K
+-
+-
+-
+K 440
+K
+-
+40
+0.20
+.95
+1.14
+0.21
+.70
+0.90
+0.20
+.68
+0.72
+0.25
+.82
+0.92
+0.30
+.83
+0.90
+240
+0.34
+.89
+1.27
+280
+0.35
+.85
+0.98
+340
+0.28
+.83
+1.49
+380
+0.29
+.91
+0.85
+400
+0.30
+.89
+1.45
+0.29
+.93
+0.86
+-
+-
+480
+529
+0.28
+.92
+1.10
+0.30
+.91
+1.02
+JBRS, XLVII, ii, Dec. 1964
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 33]]
+Dev D. Sarin
+TABLE 5
+-
+(continued)
+SPHENE
+Sample No.
+Size Grade
+in mm
+Mean
+Roundness
+Mean
+Sphericity
+Mean Shape
+Factor
+✓ ✓ ✓
+K
+I
+☑M
+K - 0
+K
+K
+-
+-
+40
+80
+120
+K - 160
+0.125
+0.41
+.84
+0.95
+0.48
+.93
+1.04
+0.45
+.89
+1.08
+0.45
+.92
+0.89
+0.36
+.88
+1.26
+K
+-
+200
+0.33
+.86
+1.32
+K - 240
+0.28
+.92
+1.40
+K 280
+...
+4**
+K
+-
+I
+340
+0.30
+.91
+0.75
+1
+I
+-
+1
+1
+K
+K
+K
+K
+K
+-
+-
++
+380
+400
+440
+480
+0.23
+.89
+0.70
+0.30
+.92
+0.86
+0.26
+.90
+0.92
+0.25
+.91
+1.21
+520
+0.25
+.90
+1.03
+K
+0
+0.062
+0.40
+.92
+1.51
+1
+1
+-
+1
+K
+K
+K
+-
+-
+-
+80
+$120
+K 160
+-
+K 200
+K
+K
+K
+K
+K
+K
+1
+1
+-
+-
+-
+1
+-
+240
+280
+380
+440
+480
+✓ ✓
+K
+K
+-
+520
+40
+40
+0.15
+.96
+1.00
+0.25
+.82
+0.41
+0.20
+.91
+0.92
+0.22
+.90
+0.97
+...
+SER
+..
+•
+340
+0.35
+400
+0.35
+.93
+0.85
+12 13 1
+...
+.90
+0.94
+...
+●
+...
+357
+JBRS, XLVII, ii, Dec. 1964
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 34]]
+358
+Textural Characteristics of Channel Sediments of the Chindwin River
+TABLE 5 - (continued)
+EPIDOTES
+Sample No.
+Size Grade
+in mm
+Mean
+Roundness
+Mean
+Sphericity
+Mean Shape
+Factor
+☑☑
+I
+1
+-
+K
+K
+K
+K
+K
+-
+-
+0
+40
+80
+120
+160
+0.125
+0.40
+.88
+0.93
+0.38
+.87
+1.61
+0.36
+.91
+1.05
+0.35
+.88
+0.64
+0.32
+.92
+0.92
+K
+-
+200
+0.25
+.90
+1.02
+-
+K 240
+0.28
+.89
+0.66
+K
+-
+280
+0.30
+.90
+1.01
+{
+1
+!
+1
+✓
+-
+E
+K
+K
+K
+K
+-
+-
+-
+-
+400
+440
+K 480
+K
+K
+K
+K
+K
+K
+K
+✓ ✓ ✓
+K
+-
+-
+-
+-
+-
+-
+520
+80
+120
+160
+200
+240
+K - 280
+K
+☑☑
+K
+K
+-
+-
+1
+-
+340
+380
+400
+K - 440
+K 480
+-
+340
+0.28
+.93
+0.93
+380
+0.27
+.92
+1.00
+0.30
+.92
+0.94
+0.28
+.90
+0.92
+0.26
+.91
+0.99
+0.24
+.90
+1.11
+0
+0.062
+0.20
+.93
+1.16
+40
+0.32
+.91
+1.01
+0.20
+.81
+0.86
+***
+...
+0.50
+.87
+1.80
+0.23
+.90
+0.74
+...
+...
+...
+*
+-
+K . 520
+0.40
+0.28
+40+
+1 22
+.90
+1.12
+.90
+1.18
+0.30
+.92
+1.04
+JBRS, XLVII, ii, Dec. 1964
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 35]]
+Dev D. Sarin
+TABLE 5 - (continued)
+QUARTZ
+359
+Sample No.
+Size Grade
+in mm
+Mean
+Roundness
+Mean
+Sphericity
+Mean Shape
+Factor
+K
+✓
+I
+-
+-
+K
+K
+K
+K
+K
+-
+1
+-
+0
+40
+80
+120
+. 160
+200
+0.125
+0.26
+.90
+1.01
+0.26
+.91
+1.00
+0.27
+.92
+0.95
+0.27
+.91
+1.01
+0.26
+.89
+1.14
+0.29
+.92
+1.16
+--
+K 240
+0.28
+.90
+1.13
+-
+K 280
+0.29
+.89
+1.11
+K
+-
+1
+340
+0.31
+.91
+1.04
+K - 380
+0.31
+.91
+0.98
+K
+1
+400
+0.29
+.91
+1.08
+K
+K
+K
+www
+-
+I
+440
+0.30
+.91
+1.01
+-
+480
+0.32
+.90
+1.13
+1
+520
+0.34
+.92
+1.05
+FELDSPAR
+K
+-
+0
+0.125
+0.30
+.89
+1.10
+✓ ✓ ✓
+K
+-
+I
+40
+0.32
+.90
+0.99
+-
+K
+K
+K
+80
+120
+0.29
+.90
+0.96
+0.29
+.91
+1.05
+160
+0.30
+.91
+1.11
+K
+I
+200
+0.31
+.91
+1.05
+-
+K 240
+0.32
+.89
+1.16
+K
+-
+280
+0.36
+.89
+0.93
+K
+K
+K
+-
+340
+0.38
+.91
+1.00
+- 380
+0.35
+.89
+1.08
+-
+400
+0.32
+.90
+1.06
+☑✓ ✓
+K 440
+0.34
+.91
+1.12
+K
+K
+-
+-
+480
+520
+0.34
+.90
+1.03
+0.35
+.92
+1.06
+JBRS, XLVII, ii, Dec. 1964
+13
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 36]]
+360
+Textural Characteristics of Channel Sediments of the Chindwin River
+coarser grades (0.5 and 0.25 mm) it may be
+that the variauce is due to size in the case
+of quartz and feldspar. In this study zircon
+also shows a decline in roundness down-
+stream. Commenting on decline in round-
+ing downstream Russell and Taylor (1937,
+p. 263) state: "Since changes in mineral
+composition and sorting on the bases of
+shape appear inadequate to explain the
+downstream decrease in roundness of the
+larger grains, this condition would seem to
+be chiefly due to fracturing and chipping.
+There is positive evidence that this is the
+case."
+The decline in roundness of zircon
+may be explained as due to fracturig because
+20 to 30 percent of the zircon grains were
+broken. However, this mechanism fails to
+expalin the decline in roundness of haema-
+tite and sphene because no fractured grains
+of these minerals were encountered. Their
+decline may be due to chemical corrosion,
+or due to reasons which cannot at the mo-
+ment be explained.
+The sand-sized grains of the Chindwin
+River are subangular according to Pettijohn's
+(1957, p. 59) classification. Such a low
+degree of roundness is surprising because
+the drainage basin of the Chindwin River is
+essentially composed of a Tertiary sandstone
+-shale sequence, and from an earlier study
+(Sarin, 1963) it was known that the Tertiary
+sands are subangular with a rounding index
+varying between .2 and .3. It was antici-
+pated that the present river sands derived
+from the Tertiary sandstones would attain a
+higher degree of rounding since they are
+now involved in at least a second cycle of
+sedimentation. This finding supports that
+of Russell and Taylor (1937, p. 266) who
+stated:
+-
+"The sand sizes studied (0.589 0.074 mm
+diameter) show no evidence of becoming
+rounded during transportation by the river.”
+JBRS, XLVII, ii, Dec. 1964
+As mentioned earlier significant linear
+trends towards increase in roundness were
+observed in many minerals, but when the
+increase is only 0.1 (from 0.2 to 0.3) in 520
+miles of river transport, it does not seem to
+be very significant.
+SPHERICITY
+Sphericity of minerals was computed
+from the grain count analysis data. The
+average values of sphericity of minerals of
+the two size grades studied are listed in
+Table 5, and for minerals showing progres-
+sive change downstream the values were
+plotted against distance. This relationship
+is shown in Fig. 11 and the regression line
+formulae in Table 4. The following
+relationships were observed.
+Haematite, amphiboles, zircon, pyrox-
+ene and rutile show a significant increase in
+sphericity downstream. According to Rus-
+sell and Taylor (1937) if transport is domi-
+nantly by traction, the sphericity increases
+downstream, and if by suspension, it dec-
+lines. Although most minerals do not
+exhibit any trend, it is siginificant that
+those which exhibit such a trend show an
+increase in sphericity downstream, thus
+indicating that traction is the dominant
+mode of transport in sand-sized sediments.
+Earlier it has been stated that observations
+in the Chindwin River showed that most
+sands move downstream by rolling.
+The coarser grades (0.125 mm) com-
+monly show higher values of sphericity.
+Similar observations were made by Petti-
+john (1957), and Russell and Taylor (1937).
+Sneed and Folk (1958) had noted a similar
+tendency in their study of pebbles in the
+Lower Colorado River. Pollack (1961),
+however, observed lower sphericity values
+in the coarse sand grades.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 37]]
+Dev D. Sarin
+This
+It is perhaps significant that most mine-
+rals do not show progressive change in
+sphericity downstream. Pollack (1961) had
+also observed a similar lack of trend.
+may be due either to the inability of streams
+to modify the phericity of sand-sized grains,
+or to the inability of sand-sized grains to
+become more spherical due to size limitation.
+Increase in roundness of mineral grains
+is not always accompanied by increase in
+sphericity for a given mineral of a given
+size. Examples are mentioned below:
+a.
+Haematite (0.125 mm) and zircon
+(0.062 mm) show decline in round-
+ness but increase in sphericity
+downstream.
+b. Amphiboles and pyroxenes (0.125
+mm) and rutile (0.062 mm) show
+increase both in roundness and in
+sphericity downstream.
+It is evident that while some minerals
+show downstream increase in roundness
+and sphericity, others do not show such a
+trend. Similar tendency can be noted in
+Pollack's (1961) data, where haematite
+shows downstream increase in roundness
+while its sphericity declines; quartz chows
+the reverse relationship. Lundahl and
+Pettijohn (1943) believe that roundness and
+sphericity bear a linear relationship. Plum
+ley (1948) observed a similar relationship
+in his study of limestone pebbles.
+and Taylor (1937) observe that it is possible
+that decrease in roundness downstream may
+be accompanied by increase in sphericity
+due to fracturing and splitting of grains of
+initial low sphericity.
+SHAPE FACTOR
+Russell
+Shape factor values for minerals of the
+0.125 mm and 0.062 mm size grades of each
+sample were computed from the grain count
+361
+analysis. The mean values obtained are
+listed in Table 5. A study of the table
+reveal the following relationships:
+Most minerals do not exhibit change in
+shape downstream. It was stated earlier
+that similar lack of trend was noted in the
+case of sphericity. The fact that the spheri-
+city and the shape of minerals do not change
+downstream contrasts with their roundness,
+majority of minerals.
+which shows a definite trend for the
+The following minerals show signifi-
+cant downstream trends:
+a. Amphiboles (0.125 mm) and corun-
+dum (0.062 mm) tend to become
+more spherical downstream.
+b. Zircon, garnet and tourmaline
+(0.125 mm) tend to become more
+elongate downstream.
+It is clear that while most minerals do
+not show any progressive change down-
+stream those which do exhibit such a trend
+to be of the coarser grade.
+A study of Table 5 reveals some
+interesting peculiarities about trends in
+shape modification. Smaller size grades
+(0.062 mm) of zircon, amphibole, corundum
+and pyroxene tend to be more elongate than
+their coarser counterparts, whereas, smaller
+size grades of haematite, magnetite-ilmenite,
+and tourmaline tend to be more spherical.
+Pollack (1961) observed that the coarser
+grades of both quartz and feldspar, which
+decrease in roundness downstream, also
+exhibit a tendency to become more elongate
+downstream. He attributed this tendency
+to chipping process. In the case of the
+Chindwin River sands quartz and feldspar
+show no such trend, but zircon, garnet and
+tourmaline do exhibit a tendency to become
+JBRS, XLVII, ii, Dec. 1964.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 38]]
+362
+Textural Characteristics of Channel Sediments of the Chindwin River
+SPHERICITY vs. DISTANCE
+.90
+.80
+190
+•
+80-
+HAEMATITE 125 MM SIZE
+200
+400
+AMPHIBOLE
+125 MM SIZE
+SHAPE FACTOR VS. DISTANCE
+.90
+1·3-
+.80
+1.+
+600 MILES
+.90
+.80
+-70°
+200
+400
+600 MILES
+ZIRCON
+062 MM SIZE
+.90
+90
+Fos.
+.90
+80..
+904
+80-
+.80
+1.0
+200
+400
+600
+MILES
+PYROXENE 125 MM SIZE
+90
+. - 80
+0.9-
+200
+400
+600 MILES
+RUTILE
+.062 MM SIZE
+90
+AMPHIBOLE 125 MM SIZE
+1-3
+200
+400
+600 MILES
+ZIRCON
+125 MM SIZE
+•
+-.90
+-.70
+200
+400
+600 MILES
+GARNET -125 MM SIZE
+1.0
+200
+400
+600 MILES
+TOURMALINE
++125 MM SIZE
+-0.9
+200
+400
+600 MILES
+CORUNDUM
+062 MM SIZE
+1.3
+1-3
+.80
+09-
+200
+400
+600 MILES
+HE
+10.9
+200
+400
+600
+MILES
+Fig. 11
+10+
+Shape and Sphericity vs. distance
+JBRS, XLVII, ii, Dec. 1964
+Convright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd Bangkok Thailand
+
+[[page 39]]
+Dev D. Sarin
+more
+elongate downstream, and it is
+possibile that this may be due to chipping.
+In conclusion, whereas there is a distinct
+increase in roundness downstream, no such
+relationship is visible in the case of spheri-
+city and shape in the majority of the
+minerals. Also no relationship between
+roundness and sphericity has been observed.
+Similar observations were made by Pollack
+(1961, p. 33) and according to him the lack
+of progressive change in roundness, spheri-
+city and shape of mineral grains downstream
+is probably due to “lack of abrasional rigor,
+the possibility of a lower limit of value
+changes, and the possibility of a lower size
+limit below which abrasional forces are
+non-operative”, According to Pettijohn
+(1957) sphericity is a function of the
+original grain shape and as such is little
+modified.
+It may well be that the causes listed
+above are responsible for lack of pro-
+gressive change in sphericity and shape
+factor values. Perhaps there is another
+factor involved; that is flooding. In regions
+of the Chindwin basin type, where the
+annual rainfall is over 200 inches and
+is confined to a limited period (4-5 months),
+floods must greatly increase the capacity
+and competency of the streams, thus
+enabling them to carry in suspension
+part of the bed load hitherto carried by
+traction. This would cause mixing of
+spherical and non-spherical grains. To
+what extent this mixing takes place is not
+known, because studies of this nature
+have not been undertaken; but it is
+probable that it occurs. Should this
+deduction be correct it will make it
+extremely difficult, if not impossible, to
+study the effects of stream transportation
+on the sphericity and the shape of the
+mineral grains.
+SUMMARY AND CONCLUSIONS
+363
+1. The grain size distribution para-
+meters of the channel sands of the Chin-
+dwin River exhibit no distinct downstream
+trend; though there is a tendency for the
+mean size and the kurtosis values to
+decline downstream. This lack of trend
+indicates that the hydraulic conditions of
+the river remain uniform over the distance
+of 520 miles studied. This is also indicated
+by the bimodality of majority of samples.
+2. The mean size of the gravel frac-
+tion only and the long diameter of the
+largest pebble in the distribution show a
+progressive decline downstream. Therefore,
+in the study of ancient channel sediments,
+the downslope direction may be determined
+by the measurement of these two para-
+meters, but not by the variation in the
+mean size of the sands.
+3. There is a marked deficiency in
+the 2-1 mm size class. It is due to
+primary deficiency of material in this
+size range. Lack of granular rock pebbles
+in the 8-2 mm range is attributed to the
+structural weakness of these pebbles.
+4. The effect of tributary dilution on
+the textural characteristics of the river
+sediments is negligible. This is indicated
+by the presence of sand or gravel banks,
+mouths of the tributaries,
+present at
+composed of material much coarser than
+the material present in the river channel;
+and also by the fact that sorting does
+not improve downstream.
+5. The size distribution of the channel
+sands is generally positively skewed (Pol-
+lack, 1961 and Friedman, 1961). This is
+not true, however, in the case of the
+channel sediments of the Chindwin River.
+Their negative skewness is due to (a) the
+JBRS, XLVII, ii, Dec. 1964.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 40]]
+364
+Textural Characteristics Channel Sediments of the Chindwin River
+presence of gravel and (b) the abundance
+of sand coarser than 0.5 mm.
+6. There appears to be a relationship
+between the mean size and skewness in
+the channel sediments of the Chindwin
+River. This observation
+agrees with
+findings by earlier workers.
+7. As the majority of minerals show
+progressive increase in roundness down
+stream, it appears that abrasion occurs
+in the Chindwin River. In most cases
+the coarser grades of any specific mineral
+are consistently more rounded than the
+finer grades.
+8. The increase in roundness down-
+stream is negligible-from 0.2 to 0.3 - in
+all cases. This supports the findings by
+earlier workers that rivers are not very
+effective in rounding sand-sized grains.
+9. The degree of rounding depends on
+the grain size, since, in all cases, the
+coarser grades exhibit these changes more
+conspicuously than the finer grades.
+10. Pollack (1961) attributes lack of
+progressive change downstream in values of
+roundness, sphericity and shape factor to
+"lack of abrasional rigor, the possibility of
+a lower limit of value change, and the possi-
+bility of a lower size limit below which
+abrasional forces are non-operative”. These
+factors may be responsible to some extent,
+but in the present study, it was observed
+that while a majority of minerals exhibited
+progressive increase in roundness down-
+stream, only a few minerals showed such
+a trend in sphericity and shape factor
+values. It is probable that the absence
+of any such progressive changes down-
+stream is due to floods in the Chin-
+dwin River which are responsible for
+mixing of the spherical and non-spherica]
+grains.
+JBRS, XLVI, ii, Dec. 1964
+ACKNOWLEDGMENTS
+The writer is indebted to U Ba Min,
+Buoying Superintendent, River Conser-
+vancy, Mandalay for allowing the use of
+a buoying launch for collection of samples.
+Thanks are also due to U Htun Aung,
+Assistant Buoying Superintendent, who
+helped in the sampling of the channel
+sediments of the Chindwin River. The
+writer gratefully acknowledges the Research
+Grant received from the Burma Research
+Society which made this study possible.
+REFERENCES
+Aschenbrenner, B. C., 1956, “A new method
+of expressing particle sphericity”: Jour.
+Sedimentary Petrology, v. 26, p. 15-31.
+Dake, C.L., 1921, "The problem of the St.
+Peter sandstone": Missouri Univ. School
+of Mines and Met. Bull., v. 6. p. 158-163.
+Dixon, W.J., and Massey, F.J., 1951, Intro-
+ductian to Statistical Analysis: McGraw
+Hill Book Company Inc., New York,
+370 p.
+Folk, R. L., and Ward, W. C., 1957, “Bra-
+zos River bar: A study in the signifi-
+cance of grain-size parameters": Jour.
+Sedimentary Petrology, v. 27, p. 3-26.
+Friedman, G. M., 1961, "Distinction be
+tween dune, beach and river sands from
+their textural characteristics": Jour,
+Sedimentary Petrology, v. 61, p. 514-529.
+"
+1962, “On sorting, sorting coefficients,
+and the lognormality of the grain-size
+distribution of sandstones"; Jour. Geo-
+logy, v. 70, p. 737-753.
+Hayes, J. R., and Klugman, M. A., 1959,
+"Feldspar staining methods": Jour.
+Sedimentary Petrology, v. 29, p. 227-232.
+Inman, D. L., 1952, "Measures for describ-
+ing the size distribution of sediments”:
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 41]]
+Dev D. Sarin
+Jour. Sedimentary Petrology,
+p. 125-145.
+v. 22,
+Krumbein, W. C., 1936, "The use of
+quartile measurements in describing
+and comparing sediments”: Am: Jour.
+Sci., v. 232, p. 98-111.
+1940, "Flood gravel of San Gabriel
+canyon, California: " Geol. Soc. Ame-
+rica Bull., v. 51, p. 639–676.
+1941, "Measurement and geological
+significance of shape and roundness
+of sedimentary particles": Jour.
+Sedimentary Petrology. v. 11, p. 64–72.
+1942, "Flood deposits of Arroyo
+Seco, Los Angeles County, California":
+Geol. Soc. America Bull., v. 53, p.
+1355-1402,
+365
+sands, New Mexico. Texas and Okla-
+homa" Jour. Sedimentary Petrology,
+v. 31, p. 15--37.
+Powers, M. C., 1953, "A new roundness
+scale for sedimentary particles”: Jour.
+Sedimentary Petrology, v. 23, p. 117-
+119.
+,,
+Russell, R. D., 1937, "Mineral composi
+tion of Mississippi River sands
+Geol. Soc. America Bull., v. 48, p.
+1307-1348.
++
+"
+:
+1939, “Effects of transportation on
+sedimentary particles: Recent Marine
+Sediments: Tulsa", Am. Assoc. Petroleum
+Geologisis. p. 32–45.
+and Taylor, R. E., 1937, "Roundness
+and shape of Mississippi River sands":
+Jour. Geology, v. 45, p. 225-267.
+Kuenen, Ph. A., 1959, "Sand - its origin, Sarin, D. D., 1960, "Mounting heavy
+transportation, abrasion and accumula-
+tion":
+Geol. Soc. South Africa.
+annexure v. 62, p. 1-33.
+Pettijohn, F.J., 1940, "Relative abundance
+,
+of size grades of clastic sediments,"
+(abstract) S.E.P.M. program.
+1957, Sedimentary Rocks: Harper
+and Brothers, New York, 718 p.
+_, and Lundahl, A. C., 1943, "Shape,
+and roundness of Lake Erie beach
+sands" Jour. Sedimentary Petrology,
+v. 13, p. 69–578.
+Plumley, W. J., 1948, "Black Hills terrace
+gravels a study in sediment tran-
+sport": Jour. Geology, v. 56, p. 526-577.
+Pollack, J. M., 1961, "Significance of
+compositional and textural properties
+of South Canadian River channel
+mineral grains": Jour. Sedimentary
+Petrology, v. 30, p. 619.
+1963, "Petrography and origin of
+Peguan sandstones exposed at Chauk,
+Burma”: Jour. Sedimentary Petrology,
+v. 33, p. 333–342.
+Sneed, E. D., and Folk, R. L., 1958,
+"Pebbles in the Lower Colorado River,
+Texas; a study in particle morphology":
+Jour. Geology, v. 66, p. 114-150.
+Stamp, L. D., 1940, “The Irrawaddy River”:
+Geog. Jour., v. 95, p. 329-356,
+Trask, P.D., 1932, Origin and Environment
+of Source Sediments of Petroleum
+Gulf Publishing Company, Houston,
+Texas. 323 p.
+Van Andel, T. H., 1951,
+56
+Petrology of
+Durance River sands : 3rd Int. Cong.
+,,
+Sedimentology, Netherlands, p. 43-56.
+JBRS, XLVII, ii, Dec. 1964
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.

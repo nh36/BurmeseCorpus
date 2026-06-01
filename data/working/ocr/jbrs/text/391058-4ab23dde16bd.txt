@@ -1,0 +1,683 @@
+[[page 1]]
+THE MANUFACTURE OF UMBRELLA RIBS '
+by
+B. C. Agrawa! 2
+Introduction
+The umbrella is an essential part of life to the people of tropical
+countries like India, Burma, and other Southeast Asian countries,
+where the rains, as well as the sun, are extreme.
+At present, most of
+the demand is met by imported umbrellas from western countries like
+Germany, Switzerland, Italy, and the United Kingdom. In India
+some factories have been engaged in the manufacture of umbrella ribs
+for the last seven or eight years. The ribs constitute the most
+important component of a modern umbrella. But even now the ribs
+that are being mannfactured in these factories are made from imported
+heat treated wires which form the only important raw material for the
+umbrella ribs industry. In Burma, most of the modern umbrellas and
+umbrella ribs are imported from foreign countries, though some
+traditional designs of umbrellas from bamboo etc. are still
+manufactured in this country. The author of this paper is of strong.
+opinion that umbrella ribs can be manufactured in this country very
+easily with indigenous raw materials. It is this idea which has made
+him take up the study of possibilities for establishing the umbrella rib
+industry from indigenous raw materials, and submit a workable scheme
+for the same, so that it may be useful to those employed, now and in
+the future, in producing umbrella ribs from indigenous raw materials.
+Wire Drawing
+Umbrella ribs demand a wire of good quality steel, rolled to exact
+dimensions and heat treated to the proper specifications. The slender
+rods from which wire is drawn are known as wire rods which are now
+produced by hot rolling. These may be made in various shapes and
+sizes, but for common wires and fine wires, that is, No. 8 and finer,
+No. 5 round rods may be considered as the standard. A No. 5 rod is
+the sinallest round practicable to be produced on a rolling mill, and
+1. Read on December 21, 1955 with Dr. Maung Maung Kha in the Chair,
+2. Assistant Lecturer in Metallurgy, University of Rangoon.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 2]]
+UMBRELLA RIBS
+59
+while the diameter varies, it is considered as having a nominal diameter
+of 0.218". As the rod comes from the rolling mill, it is wound into
+coils. While the wire rod represents a finished product of the rolling
+mills, it constitutes the raw material for the wire mill and should be
+considered as the first step in the making of wire, for upon the quality
+and kind of the rods depend largely the quality and kind of wire drawn
+from it, so that physical defects in the rod will either cause failures in
+drawing or remain as more minute defects in the wire.
+After the steel for umbrella wire has been made according to
+specifications, it is cast into ingots and rolled on the blooming mill in
+the usual manner. The product of the blooming mill is a 4" X 4"
+billet which is cut into lengths to give the desired weight, allowed to
+cool, inspected, reheated and then rolled directly into rods. In some
+cases the blooming mill is succeeded by a billet mill which gives
+billets 2" square or less in size Rods are rolled generally from
+2" or " square billets. The process of rolling is accomplished
+by means of heating the billets in reheating furnaces and giving it
+different passes. When the billets have been rolled to the required
+size, they are passed on to the coiling bed where they are coiled
+down and cooled.
+To produce a satisfactory rod requires exercise of proper care in
+every department concerned with its preparation. To begin with, the
+steel must be properly made and its composition should be uniform
+and as near to the specification as possible; also, it is essential that the
+ingot be properly cast and rolled at a suitable temperature, and that the
+billet be free from pipe, seams, and slivers. Even with perfect billets,
+considerable care and skill are required to produce satisfactory rods.
+Assuming that the rod mill itself has been properly designed and speeded
+and equipped with all necessary accessories, unsatisfactory rods may still
+be produced by improper heating, by the use of improperly designed
+ragging on the roughing rolls, by improper adjustment of the rolls and
+guides or by using the grooves too iong. In order to finish the rod
+correctly, every pass in the mill should be made to produce, as near as
+possible, the section it was originally designed to produce, and to bring
+about this result all the passes must be kept full though none must be
+allowed to overfill. Great emphasis is to be laid upon all these features
+of operation, because from the point of view of the wire mill it is
+essential that the rod be uniform in composition and also in section,
+that it be close to the size and shape required, and that it be free
+from such surface defects as slivers, seams and fins.
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 3]]
+60
+B. C. AGRAWAL
+In order to prepare rods for wire drawing, they are first given a
+number of preliminary treatments, depending upon the grade of steel,
+amount of drawing to be done, and the kind of finish desired. In the
+case of certain high carbon wires like umbrella wire, for example, the
+rods will first be heat treated to give them a uniform structure and to
+develop their drawing properties. In the case of low carbon rods this
+treatment is not necessary.
+The first very important operation prior to wire drawing is the
+cleaning of the hard, black brittle oxide, commonly called scale, which
+forms on the surface of hot rolled rods and annealed wire, and also the
+slow-forming red rust which forms on long exposure to the air. This
+must be entirely removed before drawing, as otherwise the holes in the
+dies would be quickly cut out of shape and the surface of the wire
+spoiled.
+The method employed for cleaning the material consists of dipping
+the coils into a vat of hot dilute sulphuric acid. The concentration of
+the acid varies from about 1 per cent to about 7 per cent, depending
+upon the grade of steel, the finishing temperature of the rods, and the
+compactness of the bundles. The action by which this acid removes
+the scale is more mechanical than chemical, for ferroso-ferric oxide,
+Fe 3 0 4, which is the chief constituent of the scale, is but slightly
+soluble in sulphuric acid. The acid, however, is able to penetrate to
+the metal beneath the scale, where it acts upon the iron, forming iron
+sulphate, a soluble neutral salt, and liberating a mixture of gases, mainly
+composed of hydrogen. This action results in loosening and detaching
+the scale from the surface of the metal, whereupon it sinks to the
+bottom of the vat where it accumulates and must be removed at
+frequent intervals, normally from 12 to 24 hours.
+The temperature of the pickling bath is normally maintained at
+180° F by passing steam through the bath. The velocity of reaction
+between metal and acid is greatly affected by the temperature, being
+about 100 times greater at 190° F than at normal atmospheric tempera_
+tures. But a mean has to be chosen as higher temperatures lead to the
+loss of steam, and of as much as 15 per cent of the acid being carried
+away with the steam. In addition, the direct action of the acid causes
+an excessively heavy loss of steel, great injury to building and machinery,
+and discomfort to the men.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 4]]
+UMBRELLA RIBS
+61
+The time factor depends upon the size, kind and condition of the
+rod to be cleaned and upon the condition of the acid solution. In
+general this time varies from 10 to 30 minutes. The time element is
+especially important in cleaning the high carbon rods used for umbrella
+wires. The effects of the acid treatment are more pronounced upon
+high carbon material than upon low carbon material. If high carbon
+steel is etched too long, the action of the acid may leave a carbonaceous
+deposit upon the surface, a defect known as a "smutty surface". Great
+care is also required in pickling high carbon stock to prevent pitting the
+surface.
+As soon as the material has been pickled, the pin of coil is hoisted
+from the acid vat and dipped into a cold fresh-water vat to remove the
+acid. A stream of water under high pressure is injected against the coils
+to dislodge any pieces of scale or other foreign substances adhering to
+the surface.
+After thorough rinsing of the coils, a coating of slaked lime is
+given to the coils which prevents wear of the die and makes less power
+required. The chief function of the coating is to serve as an absorbent
+and carrier of the die lubricant. Also, being alkaline in character, it
+tends to neutralize any traces of acid remaining after the cleaning
+process and protects the material from oxidation during the interval
+between the cleaning and drawing, and also, to some extent, after
+drawing. The coating liquid is usually kept at a temperature of about
+140 F and the consistency of the emulsion is regulated according to the
+thickness of the coating desired.
+The final treatment given to the material is baking. The first
+object is to dry the coating thoroughly so that it can perform its
+function in the drawing operation. The second object is to remove
+the acid brittleness produced to a greater or less degree in the cleaning
+operation. This brittleness is produced by hydrogen absorbed by the
+steel while it is in the pickling bath, the gas being liberated by the action
+of the acid upon the metal. By baking the material from 3 to 12
+hours at a temperature of 250°F to 400°F, depending upon the kind of
+material, this absorbed hydrogen is driven out and the steel is restored
+to its original toughness.
+These coils are taken to the wire-drawing department. The coils
+are placed separately upon a real drum before the wiredrawing frame.
+16
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 5]]
+62
+B. C. AGRAWAL
+This frame supports a single die and the powerdriven block for drawing
+the rod through the die and any other devices necessary for the proper
+handling of the material. With one of these devices one end of the
+rod is pointed so that it may be threaded through the die hole which
+is somewhat smaller than the rod in section. Next, the die holder, on
+the entering side of the die, is filled with a specially prepared grease, so
+that in passing through the die the rod must first pass through the
+lubricant. The pointed end of the rod is now inserted through the
+proper die hole, where it is grasped by tongs attached to the draw bar,
+and drawn far enough to be attached to the draw block. When this
+block starts revolving, it coils the wire about itself and thus continuously
+draws the rod through the die, thereby bringing about a fixed decrease
+in its sectional area and a proportional increase in length.
+Heat Treatment of Umbrella Wire
+The wire drawn for making umbrella ribs is usually No. 14 gauge
+which corresponds to approximately 0.09 ".
+approximately 0.09". The main property
+required for the umbrella ribs is springiness so that the rib should attain
+its original position when the stresses are released. This means that the
+wire for manufacturing the ribs should be hard as well as ductile.
+These properties are easily attained in a wire which has been “Patented".
+Patenting is a special process, peculiar to the wire industry, for develop-
+ing a sorbitic structure.
+The object of patenting is to develop a sorbitic structure to the
+practical exclusion of Pearlite and free ferrite or free cementite which
+gives high "yield point" and very great tenacity, of the order to
+300.000 to 400,000 pounds per square inch, while retaining considerable
+toughness. This structure represents a step in the transition from
+Austerite to Pearlite, in which the grains are very small and the iron
+carbide is distributed in very finely divided form in the ferrite. To
+produce sorbite, the rate of cooling should be such that the "Ar point"
+is depressed appreciably below its equilibrium value, (to about 550 to
+600°C), when austerite would transform direct into sorbite.
+For patenting, the article is raised gradually to the hardening
+temperature which is slightly above the critical range. For steels of
+0.6% to 0.85% carbon which is generally found in umbrella wire, the
+hardening temperature is from 800 to 850 C. The heating causes the
+ferries to change to the gamma-form, which dissolves the iron carbide,
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 6]]
+UMBRELLA RIBS
+63
+forming a solid solution. The prevention of damage to the surface of
+the steel is effected by using controlled-atmosphere heating furnaces or
+lead bath furnaces. The hardening temperature having been attained
+and the wire being soaked for a suitable time, which varies from 5 to 15
+minutes depending upon carbon content and gauge of wire, it is
+quenched in molten lead kept a temperature of about 370° C. This
+steel now shows a sorbitic structure. Often, after obtaining the struc-
+ture, the wire is drawn once or twice which gives a better tensile strength.
+The actual operation of the heat treatment of umbrella wires is all
+automatic and therefore simple. Once the conditions are adjusted it
+becomes a very simple affair and does not present much difficulty, for
+the furnaces used are controlled automatically. To adjust furnace
+conditions to the proper requirements requires great skill and
+experience. The furnace used is a lead bath furnace which is heated
+either electrically or by ordinary fuel coal or gas. Generally the furnace
+is divided into two main sections, namely (1) the heating section and
+(2) the quenching section. In the heating section the temperature of
+the molten bath is maintained at about 900 C by automatic tempera-
+ture-controlling devices. Lead is used as heating bath because of its
+low melting point (327. C) together with its high boiling point (1525° C).
+It also prevents oxidation of the steel wire which would be excessive if
+the heating were done in an open atmosphere. The quenching section
+of the furnace also consists of a lead bath at a temperature of
+350° C. The wire heated at a temperature of 900° C passes directly into
+this section and is quenched at such a rate as to produce a sorbitic
+structure. Some manufacturers eliminate the quenching section and
+cool the wire directly in air. But there is much more control over the
+structure in lead quenching than in air cooling.
+Sometimes the sorbitic structure is obtained by a method of
+hardening and then tempering to high temperatures. The wire is first
+heated to the hardening temperature as in "Patenting" and then
+suddenly quenched in water to obtain a martensitic structure. This
+martensite is then tempered which gradually transforms it into second-
+ary troostite and then into sorbite as the tempering temperature is
+gradually increased. This process is not generally applicable to
+umbrella wire patenting but some foreign manufacturers of umbrella
+ribs use this method for obtaining a sorbitic structure.
+=
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 7]]
+64
+B. C. AGRAWAL
+The Modern Method of Manufacturing Umbrella Ribs
+The manufacture of umbrella ribs is done in a continuous way, the
+whole work being highly mechanised and done with automatic machines.
+A factory producing some 28,000 round ribs per 8 hours rarely requires
+more than fifty men, including the administrative staff.
+The manufacture of umbrella ribs takes place in the following
+steps:
+Rib Making At present modern automatic machines are used
+for the manufacture of umbrella ribs and stretchers of any wire and
+profile. The machine works the heat treated wire or profile directly
+from coils of about three feet in diameter, thus making unnecessary the
+two further operations of cutting into the required lengths and
+annealing. Also, the storing of the raw material is thus greatly
+simplified. The wire enters the machines and at each working
+operation it is annealed by electrical resistance heating at the place
+where it has to be worked at and cut. Afterwards follow the flattening,
+forming, punching and cutting, and the finished ribs or stretechers leave
+the machine automatically. All these machines can be adjusted for
+any required length or rib or stretcher.
+Fitting of the Joints: This is done by special small presses with
+convertible tools. The joint is cut out from the steel strip and directly
+pressed on the ribs.
+Joining the Ribs and Stretchers: This is a special rib-joining
+machine which has a special eccentric press, with fixed stroke, mounted
+on a special table. A special hitch feed brings the strip for the joints
+to the tool. The engagement of the press is effected by means of a
+guard, which actuates a foot lever.
+Polishing The ribs and stretchers are brushed when they leave
+the machine to remove the roughness of the edge, by means of an
+electrical polishing motor with two free arbors, ready to be fixed with
+circular brushes and polishing wheels.
+Degreasing: The complete ribs are cleaned of grease and dust
+before varnishing, in a Tri-chlore-Ethylene installation. The plant is
+attached with a distillation equipment, to clean the used tri-chlore-
+ethylene solution.
+:
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 8]]
+UMBRELLA RIBS
+65
+Varnishing: This installation consists of an electrical furnace
+with conveyor chain. The ribs are placed on the chain conveyor
+which takes them to the varnishing equipment and dips them into it.
+After this a second mechanism takes off the ribs from the conveyor
+chain and they are then dried in the atmosphere.
+Ribs and stretchers thus form a complete frame of 8 ribs which
+is now ready to be sent to market.
+Experimental Work
+The experimental work was carried on in two stages. In the first
+part, a study of the properties of some of the popular types of
+umbrella ribs and stretchers, imported from different countries, was
+made. Some heat treated umbrella wires which are being imported for
+the manufacture of umbrella ribs in the country were also examined.
+The second part of the experiments performed consisted of the
+important steps in the manufacture of the umbrella ribs from
+indigenous raw materials.
+Part A:-The experimental work was divided into three
+sub-divisions:
+(i) Chemical analysis.
+(ii) Physical properties.
+(iii) Microscopic examination.
+Under chemical analysis, the first qualitative tests were performed
+to search for various alloying elements such as chromium, nickel,
+tungsten, molybdenum, vanadium etc. But the tests gave no indication
+of these elements even in the smallest amounts. From this it was
+inferred that umbrella ribs are manufactured purely from plain carbon
+steels.
+After this a quantitative determination was made of the various
+elements which are generally present in steel, e.g. carbon, silicon,
+manganese, sulphur and phosphorus. The results obtained are tabulated
+in the adjoining table No. 1.
+Physical examination included the measurements, hardness and
+tensile strength of the ribs and stretchers. The results tabulated in table
+No. 1 show that all the ribs of gents' umbrellas belong to a standard
+length and diameter, namely 25" and 0.09" respectively
+and the stretchers nearly 11' in length an 0.13" square.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+"
+
+[[page 9]]
+66
+B. C. AGRAWAL
+The hardness value varies from 300 V.P.N. to 550 V.P.N.
+depending upon the type of heat treatment given to different types of
+ribs and stretchers. Tensile strength paralleled hardness, that is, it
+increased with hardness, which is very typical of heat treated wires with
+the increase.
+For metallographic examination the pieces cut from umbrella ribs
+and wires were mounted in bakelite. After polishing the samples were
+etched with 5% picric acid in alcohol, the time of etching was mostly
+40 seconds. The etched specimens were examined under a Vickers
+Projection Microscope at a high magnificationt of 600 diameters and
+photo-micrographs of all the specimens were taken at still higher
+magnifications of 940 diameters and above, so as to resolve the structure,
+which was not possible at low magnification due to very close embed-
+ding of ferrite and cementite. The exposure time was about 10 seconds,
+under carbon arc light, with yellow filter inserted. This showed a good
+contrast in the structure developed.
+During the examination most of the ribs showed invariably the
+sorbitic structure of patented wire except one of Japanese origin which
+showed only the fibrous structure of cold drawn steel wire. The
+structure showed elongated pearlite (rather fibrous) in a matrix of
+ferrite. There was no indication of any grain boundary and hence
+it is inferred that the wire had been severely cold drawn and that no heat
+treatment whatsoever had been given after wire drawing to recrystallise
+the grains or to obtain a patented structure as in the other ribs.
+Examining the degree of hardness, it was found that the rib was not as
+hard as the others. The stretchers of some of the popular umbrellas
+showed only elongated grains of ferrite with a very little amount of
+pearlite (carbon 0.1%). This type of stretcher is now very common as
+no hardening or patenting is required for this type. This is because the
+stretchers have only to support the ribs and hence much elasticity is not
+required.
+The inference is drawn from these examinations of ribs and stret-
+chers that chemical composition is not as important as heat treatment.
+Any steel wire having a chemical composition within given limits may
+be used for making umbrella ribs after suitable heat treatment to obtain
+the sorbitic structure of patented wire.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 10]]
+UMBRELLA RIBS
+67
+Part B: The experiment performed in this section is sub-divided
+into (1) The hardening and tempering of steel wire to get a
+sorbitic structure
+and (2) The patenting of steel wire.
+For both purposes, steel wire of indigenous origin was obtained
+from an Indian manufacturer. The chemical composition and diameter
+of the wire were similar to that used for the manufacture of
+average umbrella ribs.
+Section 1: The heating of the wire for hardening was carried out
+under special conditions, care being taken to increase the temperature
+of the wire gradually and to hold the wire at soaking temperature for
+some time only. To prevent the steel wire from oxidation during
+heating, the wires were packed in a porcelain tube with wood charcoal.
+A chromel-Alumel thermo-couple was also introduced into the tube to
+note the temperature of the wires inside the tube. The tube was heated
+in an electric muffle furnace and the temperature of the wires inside the
+tube was raised to 870 C. They were soaked at this temperature for
+30 minutes after which the wires were abruptly quenched in cold water.
+Test specimens were made for finding the hardness and micro-structure.
+The results are tabulated in table No. 2.
+The tempering of the hardened steel wire was done in a muffle
+furnace having a lead bath to obtain the sorbitic structure. The
+tempering was carried out at three different temperatures. The detailed
+results are tabulated in table No. 3.
+From table No. 3 it is inferred that wire hardened and tempered at
+450 C in a lead bath is most suitable for the manufacture of umbrella
+ribs as it gives a typical sorbitic structure as well as hardness as shown.
+by most of the imported ribs.
+Section 2 In industry the heat treatment given to the umbrella wire
+is generally by a process of patenting. Experiments on patenting of
+the steel wire were also carried on in the laboratory. For this purpose
+two furnaces were used-one for the high temperature bath for heating
+the steel wire and the other for the low temperature bath for quenching.
+In both the furnaces, lead baths were used which were maintained at
+a temperature of 900 C and 350° C respectively. The wires were heated
+first in the lead bath at 900°C and a soaking time of 15 minutes was
+allowed for perfect homogenization. After that the wires were quenched
+suddenly in the lead bath maintained at a temperature of 350° C.
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+The
+
+[[page 11]]
+68
+B. C. AGRAWAL
+wires were kept for 5 minutes in this bath and then cooled in air at
+room temperature. The samples were then mounted, polished and
+etched with 5% picric acid and examined. The results are tabulated in
+detail in table No. 4.
+From the results of several experiments tabulated in the given tables
+it is concluded that the process most suitable for heat treatment of
+umbrella wires is definitely "Patenting". This enjoys the advantage
+over the quenching and tempering process of being more continuous,
+less time-consuming and less cumbersome. Further, there is no danger
+of the wire showing any decarburized rim, whereas heating or quenching
+cracks during rapid cooling.
+For the establishment of a new industry, the economic considera-
+tion is the first and foremost factor. During the investigation period,
+an economic survey was also made with all relevant details of the cost
+of land, expenditure in constructing the shed and building, cost of
+machinery, working capital and expenditures (which includes depreciation
+of land, building and machinery, cost of raw materials, labour wages,
+staff salaries, power costs, stores and the remuneration of the Managing
+Director). It was found that the price of umbrella ribs made with
+indigenous raw materials would not be higher, if not less, than the
+prices for imported umbrella ribs or wires.
+Conclusion
+In conclusion, the author has no hesitation in stating that with
+increasing industrialization the umbrella ribs industry of indigenous
+origin is only a question of time. The "Government of the Union of
+Burma is contemplating the installation of an electric steel melting
+furnace, to make steel from scrap found in Burma, and of a re-rolling
+mill. A wire drawing plant can also be installed with this which will
+produce steel wires. This will be the raw material for the umbrella rib
+industry. As the umbrella rib industry does not require a very huge
+amount of capital, men with industrial outlook and enterprise
+may enter into the field. The author is of the strong opinion
+that if small industries like the making of umbrella ribs, razor-blades,
+needles, and surgical instruments are started with proper technical
+guidance and modern equipment, they will fetch handsome profits.
+In the beginning the industry may be supported by the Government by
+measures such as restriction of imports, imposition of heavy import
+duties, and subsidies if necessary.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 12]]
+TABLE No. 1.
+UMBRELLA RIBS
+S.
+Umbrella Ribs (Imported.)
+No.
+Dimensions.
+B.S.W.
+Chemical Analysis.
+Length. Diameter. Gauge % C % Mn % Si % S % P
+No.
+1 Italian Umbrella Ribs
+25"
+0.09"
+14
+Hard-
+ness
+V.P.N.
+T.S.
+Tons
+Microstructure.
+Remarks.
+089, 0.18 0.24 0.031 0.02 418 96 Patented wire All the ribs showed
+Sorbitic
+structure.
+sorbitic structure
+of patented wire.
+This means that
+same heat treat-
+ment has been
+given to most of
+the umbrella ribs.
+234
+British Umbrella Ribs
+25"
+0.087"
+14
+Ralli Bros. (English Rib)
+25"
+0.087"
+14
+Japanese Umbrella Rib
+25"
+0.09"
+14
+0.52 0.60
+0.56 0.73
+0.42 0.43
+0.30 -0.023 10.037 397 95
+0.33 0.03 0.049 405
+0.38 10.04 0.049 321
+225
+99
+85
+Umbrella Wire (Imported)
+...
+...
+:
+0.09"
+14
+0.49
+0.71
+0.43 0.055 10.028
+532
+106
+0.59.0.47
+0.32 ! 0.027 – 0.04
+559
+0.54 : 0.53
+0.35 10.045 20.035
+525
+0.10
+0.31 Traces 0.03 0.04
+236
+S Round Wire for Ribs
+6 Fluted Wire for Ribs
+7 Fluted Wire for Stretchers
+8 Square Wire for Stretchers
+Profile
+2.75 mm.
+X4.6 mm.
+Width
+2. 5 mm.
+square
+:
+:
+:
+do.
+do.
+Fibrous struct-
+ure of hard
+drawn medium
+carbon steel
+wire.
+Sorbitic of Pat-
+ented Wire.
+Sorbitic
+Low
+do.
+Carbon
+annealed wire
+structure con-
+sisting
+parti-
+ally elongated
+grains of fer-
+rite & pearl.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+Here no heat treat-
+ment is given and
+the wire is used
+in the cold drawn
+state.
+This is hardened
+& Tempered.
+do.
+Mild Steel Wire
+used only for
+stretcher.
+
+[[page 13]]
+70
+No.
+TABLE No. 2
+Hardening of Steel Wire
+Description
+B. C. AGRAWAL
+Observations
+1
+Diameter of Wire
+2
+Initial Structure of Wire
+3
+Initial Hardness
+4
+Final Hardness
+5
+Furnace atmosphere
+6
+Temperature of Heating
+7
+0.085"
+Beautiful spheroidized Cementite
+166 V.P.N.
+724 V.P.N.
+Reducing
+870 C
+Micro-structure of Hardened Wire Typical Fine Martensite
+Note:The wire also showed large quenching cracks.
+TABLE No. 3
+Effect of Tempering Temperature of Hardened Wire
+Description
+2
+3
+Tempering Temperature
+Bath Used
+360°C
+lead
+400 °C
+450°C
+Tempering Time
+20 min.
+lead
+20 min.
+lead
+20 min.
+Hardness V.P.N. (1) Before
+724
+724
+724
+(2) After
+540
+Micro-structure
+(1) Before
+(2) After
+Martensite
+nature of
+martensite
+473
+Martensite
+454
+Martensite
+Slight acicular
+Very fine
+Pearlite
+(Sorbitic)
+Typical
+Sorbitic
+structure
+Description
+TABLE No. 4
+Patenting of Steel Wire
+Result
+Remarks
+4 Furnace bath
+5 Heating Temperature
+1 Diameter of Wire
+2 Initial Structure of the Wire
+3 Initial hardness
+0.085
+Spheroided
+166 V.P.N.
+lead
+900°
+Same as used for making ribs
+Sub-critical annealing
+Prevents oxidation
+6 Time of Soaking
+15 mins.
+7 Quenching bath & temp.
+Lead at 350°C
+8 Final Hardness
+9 Final Structure.
+457 V.P.N.
+Typical sorbitic
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+Similar to ribs
+do

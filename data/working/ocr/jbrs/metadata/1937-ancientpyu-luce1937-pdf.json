@@ -9,6 +9,6 @@
   "pages_completed": 15,
   "ocr_date": "2026-06-01T08:40:15.706215+00:00",
   "source_category": "other_source",
-  "language_scope_guess": "Mixed Burmese/Pali",
+  "language_scope_guess": "Pyu",
   "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
 }

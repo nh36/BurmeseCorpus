@@ -1,0 +1,14 @@
+{
+  "local_file_id": "minbu_ba_shin1936-4839b22ac3ed",
+  "batch_id": "jbrs-ocr-3338",
+  "file_name": "Minbu_Ba-Shin1936.pdf",
+  "path_stub": "Burmese/Burma JBRS/1936/Minbu_Ba-Shin1936.pdf",
+  "journal": "JBRS",
+  "year": "1936",
+  "ocr_engine": "google_vision",
+  "pages_completed": 10,
+  "ocr_date": "2026-06-01T19:51:42.454130+00:00",
+  "source_category": "other_source",
+  "language_scope_guess": "Burmese",
+  "notes": "Repo-safe OCR export copied from completed gitignored local OCR text; page images and Google Vision JSON remain under data_local/."
+}

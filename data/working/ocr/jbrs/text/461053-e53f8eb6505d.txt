@@ -1,0 +1,834 @@
+[[page 1]]
+AN ACOUSTICAL ANALYSIS OF THE VIBRATIONS OF
+BAMBOO BARS USED IN PATTALARS*
+MAUNG MAUNG KHA**
+INTRODUCTION
+About twenty five years ago a group of physicists in the physics laboratories of
+Harvard University began to study the mechanical behaviour of violins, in the hope of
+finding out how the best ones differ in their vibration from those of inferior kind. The
+investigations in this field were made with the hope that the results might lead to improve-
+ments in new violins. The first publication' included a variety of harmonic patterns
+disclosed in violin tones, the response (or frequency) curves obtained from many old and
+new violins, etc. Similar investigations were also made in the Physics Department of the
+University of Chicago and some other institutions. From the results of numerous experi-
+ments it is now established that with the help of science, violins can be produced with the
+tones almost as rich as the old stradivarious violins.
+About the same time as the Harvard group conducting the first scientific investiga-
+tion on the mechanical behaviour of violins the frequencies of various notes produced in
+"pattalars" (Burmese xylophones) were measured in the physics laboratories of the
+University of Rangoon by Professor J. West and U Khin Zaw and in the Cavendish
+Laboratory, Cambridge, by Mr. Furnivall. Their results were reported in the paper entitled
+'Burmese Music', by U Khin Zaw in the Journal of the Burma Research Society². The
+The present paper contains results of experiments designed to determine the frequency
+spectra of various notes produced by bamboo bars of a number of 'pattalars' with a view
+to finding their overtones or partials and possible effects of moisture on the frequency
+of the notes emitted by bamboo bars.
+THEORY
+The transverse vibration of bars such as those of tuning-forks, 'pattalars' and
+western xylophones follows laws quite different from those followed by the vibration of
+strings such as those of the pianoforte, the violin, the harp, the guitar etc. In theory
+several modes of transverse vibration are possible, but, there are only two cases which are
+of interest from a musical point of view. The first of these is often referred to as a
+'fixed-free' or 'clamped-free' condition, in which the bar or the rod is fastened at one end
+and free at the other. The second case, called 'free-free' condition is that in which the
+rod or the bar is free at both ends. Tuning-forks and reeds are examples of the first case
+* Read at the Tenth Annual Research Conference of the Society on 16th January 1963 with
+U Chit Thoung in the Chair.
+** M.Sc., Ph.D., D.I.C., A. Inst. P., Professor of Physics, University of Rangoon.
+1. J. Acoust. Soc. Am. 17, 169, 1946.
+2. JBRS, Vol. XXX, 1940.
+53
+JBRS, XLVI, i, June 1963
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 2]]
+54
+Maung Maung Kha
+and the bars of the pattalar or xylophone are those of the second case. In the present
+paper a mathematical theory of the transverse vibration of a 'free-free' bar will be briefly
+described.
+Rayleigh has shown that the transverse vibration of a uniform bar can be described
+by an equation of motion of the following form.
+d²y
+dt2
++ k²b² d4y
+dx4
+O
+-(1)
+where x is the distance of any point on the bar from one end; y is the displacement of the
+point in the direction perpendicular to the bar; t is the time; k is the radius of gyration of
+the area of the cross-section of the bar about an axis through its centre of gravity, normal
+to the plane of bending of the bar; and b is the square root of the ratio of the Young's
+modulus and the density of the material of the bar, which is a constant for a given material.
+kb
+For a free-free bar of finite length, L, it is shown that y varies as cos (12 m²t + €)
+so far as the simple harmonic component is concerned. It follows that the frequency of
+vibration, n, of a free-free bar is given by the relation,
+k
+11 =
+b. 2πL²' m²
+T
+(2)
+in which m is an abstract number, being 3.011 2 for the fundamental tone and
+7K 9T
+2
+2
+•
+for successive overtones.
+5π
+2.
+:
+From equation (2) it can be noted that for any given mode of vibration, say for
+example, the fundamental mode, the frequency is inversely proportional to the square of
+the length of the bar. That is, if n¡, n₂, n¸
+are the frequencies of the funda-
+mental mode of vibration of the bars having lengths L₁, Lą, L3 respectively, then,
+1
+010
+12.
+2
+1
+2
+(3)
+etc.
+It follows that n₂:n₁ = L²: L 2½ ½; etc. If n₂ is the octave of n₁, then
+2
+L₁
+2
+L₂
+-
+L₁
+2
+or,
+L2
+=
+√2 1.414
+3. Theory of Sound Vol. I by Lord Rayleigh, pp. 255.
+JBRS, XLVI, i, June 1963
+(4)
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 3]]
+Bamboo Bars Used in Pattalars
+55
+It is seen from above relations that higher frequency bars should be shorter than
+the lower frequency bars, and that the length of a bar is 1.414 times the length of the bar
+whose frequency is an octave higher than the frequency of the former.
+The lengths of the first, eighth, fifteenth and twenty second bamboo bars, which give
+the various C-notes, on a pattalar made by the late U Chit Maung are respectively found
+to be 47 cm, 38.7 cm, 30.8 and 23.4 cm. Three other pattalars of the same make give
+almost the same figures. The ratios of the first to the eighth, the eighth to the fifteenth and
+the fifteenth to the twenty second bars are found to be 1.214, 1.256, and 1.312 respectively.
+These values may be compared with the theoretical value of 1.414. However, it must be
+remembered that the bamboo bars used in ‘pattalars' are not of the same thickness. Slight
+tuning of the bars are usually made by shaving off the inner part of the bamboo, at the
+centre for lowering the pitch and at the ends for raising the pitch. This process may be
+compared with the changing of the pitch of a tuning-fork. If a tuning-fork is filed near the
+stalk (clamped end), the pitch is lowered; and if it be filed near the free end the pitch is
+raised. The effect of shaving at the centre of a bar is the same as lengthening of
+the bar or loading at the free ends, which causes lowering of the pitch. On the other
+hand, the effect of shaving at the ends corresponds to shortening of the bar or loading
+at the centre, which raises the pitch.
+When vibrating at its fundamental frequency, the "free-free" bar has two nodes,
+which were found by Rayleigh to be at 0.224L from each end of the bar, L being the length
+of the bar. For this reason, the bars of the pattalar or the xylophone should be
+supported at the points 0.224 times the length of the bar from the two ends. Incidentally,
+the bars in U Chit Maung's pattalars are usually supported at lengths ranging from 0.213L
+to 0.217L from the ends, while those of a pattalar of an unknown make are supported
+at lengths varying from 0.174L to 0.227L.
+Referring to the equation (2) again, it is obvious that for a given bar of fixed length
+L, the frequencies of the fundamental and successive overtones are as (3.011)², (5)², (7)²,
+(9)2
+That is if no, n₁, n₂ etc are frequencies of the funda-
+mental and successive overtones.
+=
+5
+(3.011)
+2
+= 2.757
+= 5.405
+no
+02
+no
+=
+7
+(3.011)
+2
+ng
+no
+=
+8.935
+==
+It can be observed from these results that in the case of a free-free bar the overtones
+or the upper partials are inharmonic, and form a series corresponding to the numbers 1,
+2.757, 5.405, 8.935 etc. It will thus be noted that the partials in this case bear a different
+relation to one another than in the case of perfectly flexible strings, where the frequencies
+of higher partials or harmonics, are exact multiples of the frequency of the fundamental
+JBRS, XLVI, i, June 1963
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 4]]
+-
+56
+Maung Maung Kha
+mode. Incidentally the term ‘harmonics' is restricted to those partials which are exact
+multiples of the fundamental. Calculated values of the upper partials are given in
+Table I.
+Experimental Investigation
+The present experimental investigation consists of two parts. Since the presence
+and strength of the partials which make up a musical note determine the quality of the
+note, the partials revealed in the frequency spectra of the notes produced by the bamboo
+bars of a number of 'pattalars' are studied in the first part. Effects of moisture content in
+the surface layers of bamboo bars are determined in the second part of the investigation.
+Audio Frequency spectra of Bamboo Bars
+-
+-
+The apparatus consists of the audio frequeney spectrometer type 2110, the level
+recorder type 2304 and the condenser microphone type 4111 made by Bruel & Kjaer
+Co, Denmark. The audio frequency spectrometer has the filters which have mid-frequencies
+at 1/3 octave distance. The frequencies are 16 - 20 - 25 - 31.5 -40 - 50 - 63 – 80 – 100
+125 - 160 - 200 - 250 - 315 - 400 - 500 - 630 – 800 – 1000 – 1250 - 1600 - 2000 - 2500
+- 3150 - 4000 - 5000 - 6300 - 8000 - 10000 - 12500 - 16000 - 20000 - 25000 - 31500 cycles
+per second. Any of the filters can be selected either manually or automatically. In this
+experiment the audio frequeney spectrometer is directly connected to the level recorder by
+means of a flexible shaft in order to make automatic recording of the audio spectrograms.
+The level recorder is provided with a motor which can be made to drive the meter switch
+which selects the filters serially one by one. The speed of the recording paper, which is
+also driven by the motor, is so adjusted that the frequencies indicated on the recording
+paper and the filter frequencies are synchronised. The condenser microphone, which is
+used to pick up the sound to be analysed, is connected to the input of the spectrometer;
+and the output of the spectrometer is connected to the level recorder.
+The microphone is placed at a fixed distance from the bamboo bar of the 'pattalar'
+under investigation, and the bar is struck rapidly with equal force by means of a striker.
+Rapid sounding of the note is necessary to keep the sound level as steady as possible.
+With a little practice it has been possible to produce the sound level having the variation
+of ±5% of the maximum level. Since exact comparison of the partials will not be made in
+the present experiment, this magnitude of variation in the sound level is tolerable. While
+the note is being produced the filters are switched on, starting from 20 cycles per second.
+Response curves at different frequencies are traced in ink on the recording papers.
+First of all the frequency spectra of the same note on four different pattalars are
+compared, starting from the lowest note (labelled No: 1). Three of the pattalars have
+twenty four different bamboo bars, while the remaining pattalar has twenty three. The
+ones containing twenty four bars are made by the late U Chit Maung, a very well-known
+musician, while the maker of the fourth is unknown.
+Fig. 1 shows the frequency spectra for No: 1 bars of three pattalars. The top curve
+belongs to the pattalar of unknown make, while the others belong to those made by
+U Chit Maung. The No: 1 bar has a frequency of about 128 cycles per second. In the
+JBRS, XLVI, i, June 1963
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 5]]
+Bamboo Bars Used in Pattalars
+57
+frequency spectra the peak for the fundamental may or may not fall on the right place on
+the recording paper. That is, the frequency indicated by the peak may not agree with the
+value indicated on the recording paper. If it happens, it may be due to the following
+reasons. Firstly, exact synchronisation may not be obtained between the filter frequency
+and the frequency indicated on the recording paper; and secondly the frequency of the
+fundamental may not be the same as any of the filter frequencies provided by the
+spectrometer. Furthermore, the frequency values of the upper partials often vary from
+the theoretical calculated values given in Table I. It is probably because the calculated
+values are based on the bars of uniform thickness while the bamboo bars used in pattalars
+have varying thickness, even in the same piece. However it is remarkable that the
+relative positions of the fundamental and the upper partials of each note are the
+same for all pattalars under investigation. See Fig. 1, and also refer to Table 1 for
+comparison of the actual and the calculated values. First of all the distances between the
+fundamental and each of the upper partial are taken by means of compass points, and take
+the frequency readings of the upper partials on the recording paper by fixing the fund-
+amental at 128 cycles per second on the same recording paper. Similar process may be
+repeated for other notes. In this way, one can identify which peak is the first upper
+partial or the second or the third etc. Fig. 1 shows that relative positions of the funda-
+mental and upper partials (if they appear at all) are identical in all three spectra. All the
+three bars have very strong second upper partials, marked(2). The first partial seems to
+be missing in the first and the second pattalars, while it appears to a small extent in the
+third. There are also weak partials for all three pattalars in the region from 1500 to
+2000 c.p.s.
+Fig. 2 gives the curves for the three No. 2 bars whose frequencies are about 143
+c.p.s. It may be observed that all the three have strong second partials, as strong as the
+fundamental. A pronounced first partial though not as strong as the second, appears in
+the third pattalar. A fairly strong third partial and a weak fourth partial are also found
+in the second pattalar.
+Fig. 3 shows the curves for No. 3 bars whose fundamental is at 160 cycles per
+second. All the three have pronounced second upper partials. It is interesting to see that
+the second partial of the second curve is as strong as its fundamental. The third partial is
+weak in the first pattalar while it is quite strong in the other two.
+Fig. 4 shows the spectra of the three No. 4 bars whose fundamentals are at about
+173 c.p.s.
+There are moderate second and third partials in the first pattalar, moderate
+third and fourth partials in the second pattalar and only fairly strong third partial in the
+third pattalar.
+Fig. 5 shows the curves for No. 5 bars having fundamentals at about 194 c.p.s.
+All the three notes show pronounced second partials and the first and the second have
+weak first partial. The third curve has no other partials, except the second. It is interes-
+ting to see that the second partial of the second curve is as strong as the fundamental.
+JBRS, XLVI, i, June 1963
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 6]]
+58
+Maung Maung Kha
+Fig. 6 shows the curves for No. 6 bars of fundamental frequency of about 217
+c.p.s. The first curve shows moderate second and weak third partials. The second curve
+shows weak first, moderate second and strong third partials, while the third curve shows
+moderate second and a strong third partials.
+Fig. 7 shows the curves for No. 7 bars having the fundamentals at about 243 c.p.s.
+It can be observed that moderate second partials are common to all three cases. Other
+partials are negligible.
+Fig. 8 shows the curves for No. 8 bars corresponding to the middle C. Here the
+fundamentals are at about 265 c.p.s. Three moderate second partials appear in all
+three curves. A moderate first partial is present only in the second curve.
+Fig. 9 shows the curves for the No: 9 bars whose fundamental lies at about 295
+c.p.s. The fundamental dominates the upper partials which are comparatively weak.
+The first curve shows weak first and second partials, while the second curve shows weak
+first and third partials and the third curve shows the third partial only.
+Fig. 10 shows the curves for No. 10 bars having the fundamentals of 330 c.p.s.
+The curve has a moderate second partial only. The second curve shows a moderately
+strong first partial and a weak third partial. The third curve has the first and the second
+partials, which are both weak.
+Fig. 11 shows the curves for No. 11 bars having the fundamental frequency of about
+356 c.p.s. All three curves show moderate to weak first and second partials.
+Fig. 12 shows the curves for No: 12 bars having the fundamental frequency of about
+397 c.p.s.
+The first curve shows weak first and second partials, while the second shows
+the presence of moderate first partial only and the third shows very weak second partial.
+Fig. 13 shows the curves for No. 13 bars having the fundamental frequency of about
+445 c.p.s.
+The first curve shows a weak second partial only, while the second and the
+third curves show the existence of moderate first partials and no others.
+Fig. 14 shows the curves for No. 14 bars which have the fundamental of 492 c.p.s.
+The first and third curves show negligible partials while the second curve shows a weak
+first partial.
+Fig. 15 shows the curves for No. 15 bars having the fundamental of 543 c.p.s.,
+corresponding to an octave above the middle C. The first and the second curves show
+fairly strong first partial only, while the third curve has no partial at all.
+Fig. 16 shows the curves for No. 16 bars having the fundamental of about
+594 c.p.s.
+All the three curves have only moderate to weak first partial and no higher
+partials.
+Fig. 17 shows the curves for No. 17 bars having the fundamental of about 661 c.p.s.
+The first curve has negligible first partial, while the second and the third have weak and
+moderate first partials respectively.
+JBRS, XLVI, i, June 1963
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 7]]
+Bamboo Bars Used in Patialars
+59
+Fig. 18 shows the curves for No. 18 bars having the fundamental of about 722
+c.p.s. The first curve has no upper partial, while the second and the third show weak
+first partial.
+Fig. 19 shows the curves for No. 19 bars of fundamental frequency of about 800
+c.p.s. All the curves have negligible first partial and no others.
+Fig. 20 shows the three curves for No. 20 bars of fundamental frequency of 884c.p.s.
+The first and the third curves show no upper partials while the second shows almost
+negligible first partial.
+Fig. 21 shows the curves for No. 21 bars of fundamental frequency of about 995
+c.p.s. There are no upper partials in all three curves.
+Fig. 22 shows the curves for No. 22 bars of fundamental frequency of about 1096
+c.p.s, and all the three curves show no upper partials.
+Fig. 23 shows the curves for No. 23 bars having the fundamentals of about 1222
+c.p.s. Here again, there are no upper partials.
+Fig 24 shows the curves for No. 24 bars of the second and the third pattalars
+having fundamental frequency of about 1364 c.p.s. There is no corresponding bamboo
+bar for the first pattalar. The curves show that there are no upper partials.
+Frequency Spectra for Bamboo Bars Struck at the Nodes of the Fundamental Mode
+Distribution and strength of upper partials are found to depend upon the part on the
+bamboo bar where the striker is made to strike. The following are a few examples.
+Fig. 25 shows the curves for the No. 2 bar of the fourth pattalar. The lower curve
+is obtained when the striker is struck at about of the length of the bar, which is one of
+the two nodes of the fundamental mode. It can be seen that a very strong first partial
+appears in the second, while it is absent in the first curve. The third partial intensifies
+while the second partial, which is dominating in the first curve, dwindles in the
+second curve.
+Fig. 26 shows the curves for No. 3 bar of the same pattalar. The second curve
+shows that when the striker hits the bar at one of the nodes of the fundamental mode a
+very strong first partial appears. Note that this partial is absent in the case of the first
+curve which is obtaned when the bar is hit in the middle.
+Fig. 27 shows the curves for No. 7 bar. Here again, hitting the bar at the node
+causes the appearance of a strong first partial, which is absent in the first case.
+Fig. 28 shows the curves for No. 8 bar whose fudamental frequency corresponds to
+the middle C. Here again, the first partial which is absent in the first case strongly
+appears in the second case.
+Fig. 29 shows the curves for No. 21 bar. In this higher frequency region, only
+fundamental appears when the bar is struck in the middle portion. However, striking the
+bar at its node causes the appearance of a moderate first partial, as can be seen in the
+second curve.
+JBRS, XLVI, i, June 1963
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 8]]
+60
+Effect of Padding on the Striker
+Maung Maung Kha
+Fig. 30 shows the curves for No. 2 bar.
+striker has no felt, but only a few layers of muslin.
+The lower curve is obtained when the
+It can be seen that little padding on
+the striker produces richer partials in the higher frequency region.
+Fig. 31 shows the curves for No. 9 bar which show that little padding on the
+striker produces a higher partial in the fourth partial region.
+Fig. 32 shows the curves for No. 16 bar. The lower curve is produced when the
+striker having little padding isused. Normally there are no higher partials; but with little
+padding on the striker two upper partials, the first and the second, appear.
+Fig. 33 shows the curves for No. 22 bar. Here again little padding on the striker
+causes the appearance of the first partial. Ordinarily, this bar has no upper partials.
+Fig. 34 shows the curves for No. 23 bar. As in the above case the first partial
+appears when lightly padded striker is used.
+Fig. 35 shows the curves for No. 24 bar. Here again the first partial appears when
+little padding is used.
+Effect of Resonator
+The notes are also analysed for the pattalar with no resonator. With the sensitivity
+at 100 Mv range, the effect of the resonator is not appreciably detected. When the
+sensitivity is increased to 10 Mv range, it is observed that lower frequency tones lower than
+the fundamental of the bars are detected. This is observed especially at the extreme bars,
+namely No. 1 and No. 2. These two bars are nearest to the points on the resonator at which
+the bars are fastened. Probably, striking at these bars causes more rigorous mechanical
+vibrations of the resonator, and low frequency tones are probably the result of
+these vibrations.
+Fig. 36 shows the curves for No. 1 bar. The upper curve is obtained when the
+resonator is used and the lower curve is for the case where the bars are supported by hand
+and not by resonator. It can be observed that low frequency tones below the fundamental
+appear and that the fundamental and the partials rise in intensity (becomes louder) when
+the resonator is used.
+Fig. 37 shows the curves for No. 24 bar. The upper curve is obtained when the
+resonator is used. The lower curve is obtained when the bars are not mounted on the
+resonator but supported by hand. It is observed again that low frequency tones below
+the fundamental are produced.
+Effect of Moisture Content on Fundamental Frequency of Bamboo Bars
+The apparatus used in this experiment consists of frequency analyser type 2105 of
+Bruel and Kjaer Company of Denmark and an electronic counter type 524 D of Hewlett
+Packard Company and a standard moisture meter.
+JBRS, XLVI, i, June 1963
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 9]]
+Bamboo Bars Used in Pattalars
+61
+First of all the fundamental frequencies of all the bamboo bars are determined by
+means of a sonometer. The tuning of the notes on the sonometer is done with the help of
+a professional musician. To study the possible effect of moisture content on the
+frequencies of the bars, a more precise method is used for measuring frequencies. Electronic
+counter and the frequency analyser metioned above are used. To measure the
+frequency of a bar, the frequency analyser is tuned to the frequency of the bar which has
+been found by the sonometer method. After the output of the frequency analyser is
+connected to the electronic counter, the repeating note from the bar is fed into the
+microphone attached to the frequency analyser. The note is picked up by the microphone,
+passed through the analyser and the frequency of the note is displayed on the electronic
+The electronic counter registers the vibrations in a set time of one second, and
+thus the corresponding frequency of the note is obtained.
+counter.
+Seven bamboo bars from No. 8 (middle C note) to No. 14(B note) are tested in this
+experiment. The bars are first of all soaked with water for about three hours and then the
+water on the surface wiped off by means of a piece of cloth. The moisture content is
+measured by means of the moisture meter. The maximum moisture content held in the
+bamboo bars is found to be 30 arbitrary units. The frequency of each bar is determined
+for the maximum moisture content. Then each bar is allowed to dry. The minimum
+moisture content in each bar is observed to 8 arbitrary units. The frequency of each bar
+is measured at different values of moisture contents. The results of frequeney measurement
+for different moisture content for all seven bars are given in Table II. Variation of
+frequency with moisture content is studied by plotting the frequency against the
+moisture content.
+Fig. 38 shows the frequency-moisture content curve for bar No. 8 (middle C note).
+The frequeney falls with increase of moisture content slowly at first, then rapidly over a wide
+middle region and slowly as the maximum moisture content is approached, The total
+frequency change is from 263 to 252, equal to about 74 cents of musical interval.
+Fig. 39 shows the curve for No. 9 bar (a D-note). Here the frequency falls slowly
+at first and more rapidly until the maximum moisture content is reached. The frequency
+change here is from 294 to 284 which is an interval of about 60 cents.
+Fig. 40 shows the curve for bar No. 10 (a E-note). Here again the frequency falls
+rapidly at first, more rapidly in the middle region and steadily towards the maximum
+moisture content value. The total frequency change is from 329 to 321, equivalent to an
+interval of 43 cents.
+Fig. 41 shows the curve for bar No. 11 (an F-note). The nature of frequency
+change is similar, and the total frequency change is from 356 to 347, being an interval of
+44 cents.
+Fig. 42 shows the curve for bar No. 12 (a G-note). The nature of frequency
+change is a typical one, and the total frequency change is from 392 to 382, about 45 cents.
+Fig. 43 shows the curve for bar No. 13 (a A-note). The nature of frequency
+change here is also typical and the total frequency change is from 446 to 435, about
+43 cents.
+JBRS, XLVI, i, June 1963
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 10]]
+62
+Maung Maung Kha
+Fig. 44 shows the curve for bar No. 14 (a B-note). The nature of frequency
+change is typical, but the total change of frequency is larger, from 495 to 478 which is
+equal to a musical interval of about 61 cents.
+General Conclusion
+It is observed that the values of the upper partials in most cases are found to
+agree fairly well with the calculated values given in Table I. The lower frequency bars
+are found to be rich in upper partials which are almost as strong as the fundamentals
+in many cases. The number and magnitude of upper partials decrease as we
+pass from lower frequency bars towards higher frequency bars. From bar No. 18
+towards the highest frequency bar (No. 23 or No. 24), the notes are found to be monotone,
+having no upper partials. The presence of upper partials in the lower frequency region
+and the absence of them in the higher frequency region have been confirmed by viewing
+the wave forms in an oscilloscope. Upper partials, particularly the second partial, which
+dominate in the low frequency bars are extremely transient in character. It has been
+confirmed by the patterns in the oscilloscope. For this reason, the ear detects the more
+sustained fundamental note. Upper partials are heard when the bar is struck continuously
+for some length of time.
+The part of the bamboo bar at which the striker strikes can cause a change in tone
+quality. If the bamboo bar is struck at about a quarter of the length from one end (i.e. at
+the node of the fundamental), certain partials appear and also the magnitude of the partials
+changes in some cases.
+The padding of the striker knob also plays an important part. If the striker without
+felt covering, but having only a few layers of muslin is used, higher partials, which are not
+found ordinarily, appear. Upper partials appear even in the high frequency region of the
+pattalar, where upper partials are ordinarily absent.
+The effect of the resonator is not detected easily: that is, the difference between
+the presence and absence of the resonator cannot be detected by ear from a distance. But
+near the pattalar, the low frequency tones having frequency lower than the fundamental of
+the bamboo bar are observed. The low frequency tones are believed to be due to vibra-
+tions of the resonator itself.
+The effect of moisture content in bamboo bars on the frequency of the note emitted
+by them is found to be quite remarkable. Frequency of the note is found to fall with
+increase of moisture content in the bamboo bar. The variation of pitch of the bamboo
+bars ranges from 40 to 70 cents which is by no means negligible. The variation of pitch
+of such magnitude is easily detected by a skilled musician.
+Acknowledgement
+Thanks are due to U Than Myint of Physics and Engineering Department of the
+Union of Burma Applied Research Institute for his valuable technical help and Dr. F.
+Ba Hli and U Maung Maung of the same institute for giving facilities for part of the
+experiment.
+JBRS, XLVI, i, June 1963
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 11]]
+Bamboo Bars Used in Pattalars
+TABLE I
+Calculated Values of the Partials
+Upper Partials
+Serial
+No.
+Frequency
+fundamental
+First
+Second
+Third
+Fourth
+4.
+- No + vi
+1.
+128
+353
+692
+1,144
+1,720
+2.
+143
+395
+774
+1,273
+1,922
+3.
+160
+442
+865
+1,420
+2,150
+173
+478
+936
+1,540
+2,325
+5.
+194
+536
+1,046
+1,725
+2,610
+6.
+217
+598
+1,170
+1,930
+2,920
+7.
+243
+670
+1,308
+2,162
+3,270
+8.
+265
+730
+1,432
+2,368
+3,560
+9.
+295
+815
+1,590
+2,630
+3,965
+10.
+330
+910
+1,780
+2,940
+3,440
+11.
+356
+982
+1,920
+3,170
+4,780
+12.
+397
+1,095
+2,140
+3,535
+5,340
+13.
+443
+1,223
+2,385
+3,940
+5,940
+14.
+492
+1,360
+2,650
+4,375.
+6,610
+15.
+534
+1,472
+2,886
+4,770
+7,200
+16.
+594
+1,638
+3,211
+5,307
+8,000
+17.
+661
+1,822
+3,573
+5,906
+8,800
+18.
+722
+1,990
+3,902
+6,451
+9,700
+19.
+800
+2,208
+4,329
+7,157
+10,750
+20.
+884
+2,437
+4,778
+7,898
+11,900
+21.
+995
+2,743
+5,378
+8,890
+13,400
+22.
+1,096
+3,022
+5,924
+9,800
+14,700
+23.
+1,222
+3,369
+6,605
+10,920
+16,450
+24.
+1,364
+3,761
+7,372
+12,200
+18,350
+JBRS, XLVI, i, June 1963
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+63
+
+[[page 12]]
+64
+Maung Maung Kha
+No. of
+Bar
+8
+TABLE II
+9
+10
+11
+12
+13
+14
+Mois-
+ture
+Fre-
+con-
+quency M.C. Freq. M.C.
+CPS
+Freq.
+M.C.
+Freq. M.C.
+Freq.
+M.C. Freq.
+M.C. Freq.
+tent%
+30
+252.4 30
+284
+30
+: 321.5
+30
+347.18 30 382
+28
+252.5
+28 285
+28
+321.6
+28 347.2
+28
+382.2
+30
+30 435.18
+28 435.2
+478.1
+28
+478.6
+26
+252.8
+26
+285.9
+26
+321.8
+26 347.4
+26
+382.6 26 435.4
+26
+479.3
+24
+253.4
+24 286.6
+24
+322.2
+24
+347.8
+24
+383.4
+24
+435.9
+24
+480.4
+22
+254.3 22 287.1
+22
+322.9
+22 348.5
+22
+384.5
+22
+436.5
+22
+482:
+20
+255.5
+20 287.5
+20
+323.9
+20
+349.3
+20
+386
+20
+437.5
+20
+484.8
+18
+257,1
+18 288.3
+18
+325.4
+18 350.6
+18
+388:4
+18
+439.2
+18
+489.1
+16.
+259.2
+16 289.3
+16
+326.8
+16 351.7
+16
+389.9
+16
+422
+16
+491.8
+14
+260,8
+14
+290.8
+14
+327.8
+14
+353
+14
+391
+14
+443,9
+14
+493.3
+12
+262
+12
+292.7
+12
+328.5
+12 . 354.3
+12
+391.8
+12
+. 445
+.12
+494.2
+10
+262.7
+10 294
+10
+329
+10 355.3
+10
+392.4
+10
+445.6
+10
+494.9
+7
+263.3 91 294.3
+81/1 294.6
+7
+329.2
+73 356,2
+71
+392.7
+71
+446
+71
+495.2
+M.C. - Moisture Content %
+Freq. - Frequency C P S
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+JBRS, XLVI, i, June 1963

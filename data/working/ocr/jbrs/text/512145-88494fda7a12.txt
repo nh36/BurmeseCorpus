@@ -1,0 +1,2365 @@
+[[page 1]]
+1. PRELIMINARY
+ALPHABETICAL ORDER IN BURMESE
+1. 1 THE PROBLEM
+John Okell*
+Traditionally the Burmese alphabet
+is recognized as containing 33 consonants
+and 12 vowels, viz.
+consonants
+vowels
+ma O
+0
+00 C
+00
+30
+2 9 2
+3 0
+∞ co
+CN 6 5 3
+0
+g
+D
+D 8
+32
+ရ
+320
+0
+8
+C သ ဗ [•g
+o 8 °
+° 26
+C
+S
+0
+20 5
+37
+This order may be seen for example
+in the pagination of palmleaf manuscripts,
+numbered as follows.
+which are 6
+'
+က ကာ ကိ ကီ ကု ကူ
+ကော ကော် ကံ ကား
+.ခါ ခိ...
+က က
+and so on, each set of 12 leaves being
+known as one l
+The traditional order is widely taught
+and known, and so mikes an excellent
+pre-
+basis for alphabetical order in diction-
+aries, word-lists, encyclopaedias, and other
+alphabetically arranged works of reference.
+However, in order to notate more
+isely the sounds of the language, Burmese
+script has had to make use of a number
+of extra symbols. Among these are 2,
+called ဉကလေး
+nya,' the symbol
+'little
+I called of the 'killer stroke,' the
+}
+vowel symbol
+0
++ and
+the tone-marks
+no
+--- အောက်မြစ် and ---း ရွှေဆီး။ These had
+places in the traditionally accepted order
+of 33 consonants and 12 vowels, and in
+several respects alphabetical order is still
+unsettled today.
+Some of the difficulties stem from
+the position of certain symbols in the
+script. In the roman alphabet, as used
+for English, there is no difficulty in
+taking the letters one by one from left
+to right as they appear on the line. But
+in Burmese script many of the symbols
+are written under, over or round others.
+What ‘comes first' in a word like
+or
+? Fortunately there is a fair degree
+of agreement in taking the initial con-
+sonants first, then the medials, then the
+vowel, and most people agree as
+to which symbols fall into these cate-
+* M.A. (Oxon.); Lecturer in Burmese, School of Oriental and African Studies,
+London University, and assistant editor (since 1962) of A Burmese-English Dic-
+tionary, compiled by J.A. Stewart and others (in progress).
+Note. Details of books and articles mentioned are given in a list at the end of
+this article.
+JBRS, LI, ii, Dec., 1968.
+19 U.P.-H 139-1.000+50÷10-7-69,
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 2]]
+146
+gories. The greatest problems centre
+round the end of a syllable. What,
+for example, is the best order for these
+words: အာ အန အန် အန့် အနှံ အန္တ ? All are
+alike in beginning with 2, so the pre-
+cedence among them must depend on
+what remains. Should +> precede
+because vowels precede consonants in
+Pali and Sanskrit, or should they be
+the other way round? Should & precede
+as in Sanskrit dictionaries, or follow
+because it is ‘longer than $ ? Should
+F
+§
+follow because it is longer, or precede
+because of the order of tones ( mom>:)?
+Should be treated as & with or as
+Should the
+something quite different?
+in
+because it
+begins a new syllable, or follow it because
+န
+$
+§
+precede that in
+with
+with precedes
+§
+s? There
+is as yet no generally accepted answer
+to these and a number of other ques-
+tions, and different people use different
+systems.
+This situation can sometimes lead to
+confusion and frustration in consulting
+Burmese dictionaries and similar works.
+It seemed worthwhile therefore to describe
+and contrast the different systems used
+in some well-known dictionaries. This
+descriptive part of the article occupies
+Section 2 below, and it is hoped that
+besides throwing into relief the areas of
+agreement and difference at present existing,
+it will also be useful as a guide to students
+starting to use Burmese dictionaries.
+Section 3, on the other hand, is
+directed more towards scholars who are
+compiling, or intend to compile, dictiona-
+ries and glossaries of Burmese. It con-
+tains some observations on the advantages
+and disadvantages of the existing systems,
+and suggests measures that might be taken
+Alphabetical Order in Burmese
+to achieve a more convenient alphabetical
+order. Work is under way in Rangoon
+for a new Burmese Burmese dictionary
+for schools; the need for a new handy
+and up-to-date Burmese-English dictionary
+is widely recognized; and now that
+Burmese studies are established and
+growing in continental Europe it is likely
+that there will soon be a demand for
+dictionaries from Burmese into European
+languages other than English. There is
+also room for glossaries of texts set for
+degree courses. The comments and sugges-
+tions of Section 3 are put forward in
+the hope that the scholars responsible
+for these tasks will find them stimulating
+and helpful, even if they are not all
+acceptable as they stand.
+1.2 TERMINOLOGY
+The terms initial (consonant), medtal
+(consonant), vowel, and final (consonant)
+are used to refer e.g. to the mi
+and
+respectively of
+It is important in what follows to
+make a clear distinction between the
+symbol written and the sound uttered.
+For example the word 'star' is written
+with a final consonant but uttered without
+one; the word ∞ 'get up' is written with
+no overt vowel symbol but uttered with
+the vowel a; and the word of 'throw' is
+written without a medial consonant but
+uttered with medial y. Again, words like
+အပ်၊ အိုး၊ အိမ် are written with initial con-
+sonant အ (cf. စပ်၊ စိုး၊ စိမ်) but uttered with
+no initial consonant, i.e. with vowel initial.
+This may explain why s appears in the
+traditional list both as a consonant and
+as a vowel.
+Most of the remarks below apply to
+written symbols, so terms like 'vowel' and
+JBRS, LI, ii, Dec., 1968.
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 3]]
+John Okell
+'consonant' are to be read as referring to
+written symbols (the spelling) for vowels
+and consonants, unless some indication
+is given that they are used to refer to
+vowel and consonant sounds (the pro-
+nunciation).
+Conjunct consonants are those which
+are either written one under the other, e.g.
+ကံ၊ င်၊ etc.; or in a special form viz.
+(00: 000
+C
+and sometimes poll
+The term head is used for an initial
+consonant with or without a medial or
+0
+medials; e.g. the ☐ in ကြိတ်၊ in ပန်း၊
+☐ in and rhyme is used for the
+vowel with or without a final; e.g.
+705
+in. ကြိတ်၊ ကန်း in ပန်း၊+ in မွေး၊
+An open syllable is one without a
+final consonant; eg. စာ၊ ထီး၊ လေ၊ ခု
+and a
+closed syllable is one with a final con-
+sonant; e.g. ဝင်၊ စိတ်၊ ချဉ်၊ ပြွမ်း။
+The symbol means 'zero' and is
+used as a convenient way of referring e.g.
+to the vowel (symbol) in the syllable com
+In referring to symbols in the Burmese
+script which are not used on their own
+but are always attached to a consonant,
+the symbol is used to represent any
+consonant;
+2
+e.g.
+DESCRIPTION
+2. 1 THREE DIFFERENT DICTIONA-
+RIES
+The following description and com-
+parison of different alphabetical orders is
+based primarily on three dictionaries:
+U Wun's Burmese Burmese dictionary,
+Judson's Burmese-English dictionary, (1893
+JBRS, LI, ii, Dec., 1968.
+147
+edition), and Cornyn and Musgrave's
+Burmese-English glossary. All three are
+well known and widely used, and con-
+veniently provide extreme examples of
+different approaches to the problem. The
+ordering systems in U Wun and Judson
+can be seen almost as opposites, while
+Cornyn's system combines features of
+both. Most other dictionaries, encyclo-
+paedias, word-lists, spelling-books, etc.
+follow one or other of these three fairly
+closely. Before looking at the overall
+systems in the three it will be useful to
+deal with a number of minor points of
+variation between them. These mainly
+concern matters on which the traditional
+list is deficient and gives no guidance.
+2,2
+MINOR VARIATIONS
+The traditional list of 12 'vowels' co-
+vers little more than half the possibilities
+used in the full writing system, and so
+leaves considerable room for variation in
+devising alphabetical orders.
+Each vowel may be written in one
+of three tones, which are referred to here
+by Stewart's terms: creaky, level, and
+heavy ( = အောက်မြစ်သံ၊ သံလွင်၊ ရွှေဆီးသံ). These
+terms refer to their pronunciation, as the
+method of marking tone in the script is
+not uniform for all the vowels. It is in
+fact not possible to write a vowel without
+indicating its tone, because the script is
+so arranged that the tone in which a
+vowel is to be pronounced is clear even
+when there is no overt tone-mark. How-
+ever, it is convenient to be able to refer
+to the vowels without specifying the tone,
+and for this purpose I use the unmarked
+forms, i. e. those with tone-mark.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 4]]
+148
+Alphabetical Order in Burmese
+All three dictionaries agree in adding 6+. 6+ 6+: 16+ 6+ 6+: 16+, at 6+:
+to the end of the အင်္ဂါ set, and
+in transferring + to a place among the +. +us +
+final consonants.
+This leaves 7. vowels in
+the following order (disregarding tone).
++
+t 6+ + 6+
+2. 2. 1 The tone-marks are: , c
+( + ), ရွှေဆီး( + ); ရေးချ( + ) ဆန်ခတ် ( နီ )
+နှစ်ချောင်းငင် ( + ); ရှေ့ထိုး ( +5). For some
+IL
+tones of some vowels more than one tone
+mark is used. In their arrangement of
+tone-marks the three dictionaries diverge.
+•
+7 7.
+F.
+--
++
++
+6 + ? 6 + 5 € + 2 + 0 6 + 2 6 + √ 6 + ? 6 + √ 6 + >
+ဟု နိုင် နို
+2. 2. 3 mm Vowels. The following
+symbols, which include those given in
+the list, may be used for syllables
+spoken with no initial consonant. They
+are here called
+the ' vowels.'
+vowels, as against
+U Wun and Cornyn take tones in
+the order creaky-level-heavy, irrespective
+of their spelling; e. g.
+မိ ပီ မီး။ မေ မေ မေး။
+ε ε ε I call this the "pronouncing'
+order.
+အက္ခရာ
+vowel
+32 vowel
+3
+=
+=
+°8 °8
+ဥ
+= 32
+Judson on the other hand takes the
+syllable with the fewest symbols first,
+irrespective of the
+မိ ုး မီး။
+68
+GUI11
+66.
+pronunciation; e. g.
+တင်တင့် တင်း၊
+I call this the ‘spelling' order.
+2. 2. 2 + us may be taken either
+as a final consonant (Judson, Cornyn),
+or as a tone-mark for the vowel +
+(U Wun)
+The resulting gamuts of vowels are
+then as follows.
++o+
+U Wun
+to to
+to
+t t
+•
+==== 32
+-
+El
+12
+30:
+IL
+632
+=
+6300
+= 6375
+အက္ခရာ
+vowels have alterna-
+when it
+Two of the
+tive pronunciations:
+1000 = 0
+means 'be cold, calm' and in names; and
+ဩ
+when
+= အော
+reciting the traditional
+list of 12 vowels, and when it means
+‘be throaty'.
+In alphabetical ordering the
+vowels may either be mixed in with the
+3 vowels (U Wun), or be listed separately
+37
+Judson
+Cornyn
++2 +
+to to
+0
++:
+း
++:
++
++:
++
++
+after the
+IL
+L
+IL
+IL
++:
+to t
+to
+to
+p
+vowels (Judson, Cornyn); i.e.
+JBRS, LI, ii, Dec., 1968.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 5]]
+John Okell
+mixed: 32 330 32011 အိ 39
+3
+ဤ အီး၊
+အီး၊ အု ဥ
+322
++
+အူ ဦ အူး ဦး၊
+etc. to အိုး။
+separate: 30 320 3201...
+to အိုး။ ဣ ဤ ဥ ဦ ဦး
+***
+etc. to ဩော်။
+Initial
+2. 2. 4 Vowels and consonants.
+(spoken) vowels may be listed either
+after the initial (spoken) consonants
+ot
+# G
+149
+။
+I call this the 'aspirate' order.
+It will be seen that in the numerical
+order + appears two places before its
+(U Wun, Cornyn), or before them position in the aspirate order.
+(Judson); i.e.
+consonants before vowels:
+57 320 320: ....
+mǝ...
+to g
+vowels before consonants: အ အာ အား.. to
+အိုး။
+The medial consonants
+2.2.5
+are modi.
+fied forms of initial consonants: initials
+ယ၊ ရ၊ ဝ၊ ဟ are written medially G.
++ 1 + "
+When medials occur singly they
+are listed in the same order as the
+corresponding initials in the traditional
+list; but there is room for variation in
+ordering combinations of them.
+One way (U Wun) takes first of all
+the heads with medial, then heads with
+one medial, then heads with two, and
+finally heads with three; i.e.
++
+G
+# G
+A
+# & ± "
+I call this the 'numerical' order.
+The other way (Judson,
+11
+ည
+2.
+E
+2. 2. 6 ဉကလေး is not given a place in
+the traditional alphabet. It is mostly
+placed after but there are some
+variations. Cornyn reverses the order
+when they are in final position; i.e. he has
+(initial) ည before but (final) § before
+ဉ,
+St Judson writes for § but places
+it after in the normal way. He does
+not recognize initial in the 1893 edition
+(he writes ), and though is in-
+troduced in Eveleth's 1921 edition it is
+not treated as a separate initial, but is
+mixed in with 20% U Wun keeps final
+before but his ordering of initial 20
+and ဉ is unknown as the relevant volume
+of his dictionary is not yet available.
+His list of names (p. 5) suggests that
+he puts ည before
+P, but his မြန်မာသတ်ညွှန်း
+mj: treats both as the same consonant.
+2. 2. 7 + is treated as a final consonant
+in all three dictionaries, but is differently
+placed. U Wun lists it as an alternative
+form of +6, but Judson and Cornyn
+Cornyn)
+tikes first all the heads up to +
+t
+singly, then in pairs; and then
+through the same set with
+; i.c.
+first
+'
+runs
+place it after all
+the other finals: i.e.
+နမ်၊
+လယ်၊
++ လ်၊
++ N
+JBRS, LI, ii, Dec., 1968.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 6]]
+150
+2. 2. 8 Conjunct consonants are normally
+treated as if the upper of the two were
+the final of the first syllable and the
+lower were the inițial of the second
+syllable; e. g.
+သပ္ပါယ် is listed as if it were သပ်ပါယ်
+||
+11
+$1
+3267
+။
+]}
+11
+11
+ခန်တီ
+အင်ဂါ
+200
+11 1 It
+ဥစ်စာ
+In much the same way the special
+forms are listed as the two consonants,
+final and initial, which they represent; so
+is listed as if it were အ၎။
+30
+consonant
+as
+Cornyn however treats a conjunct
+a 'complex symbol' and
+places it after a final with tone-mark; e.g.
+သင်းပင်း before သင်္ကန်း၊ သမ်း before သန်။ ည
+is not usually treated as a conjunct: see
+below 3.4.8.
+2. 2. 9 Abbreviated syllables, such as
+Alphabetical Order in Burmese
+above. From here however they diverge
+into two schools of thought. One school
+represented by U Wun's dictionary, and
+perhaps influenced by the traditional
+spelling books (သတ်ပုံ သတ်ညွှန်း) where final
+consonants (322005) were a prime concern,
+takes next the end of the syllable; while
+the other school, represented by Judson's
+dictionary, with a more Western approach,
+goes on from the beginning of the syllable.
+Cornyn's system is a compromise between
+the two. The three main systems are
+described below, with a few examples,
+and
+then (2.4) set out schematically,
+with a complete list of heads and regular
+rhymes, to show more clearly the difference
+between them.
+After
+2. 3. 1 From the end: U Wun.
+grouping his words by initial and medial,
+U Wun subdivides them into open sylla-
+bles (ending in a vowel) and closed sylla-
+bles (ending in a consonant).
+(A) Open syllables are
+ordered by
+၏၊ ၍၊ ၌၊ ၎င်း, may be listed either under vowel, and then, within the vowel
+their full spelling, i.e. under
+groups, by tone in pronouncing order; so
+the open syllable list under head
+wiemɔƐ: (Judson), or at the end after
+all the alphabetical entries (Cornyn). U
+Wun's convention in this respect is not
+yet known.
+2. 3 THE THREE SYSTEMS
+agree
+in
+Most alphabetical orders
+grouping their entries first into those
+having the same initial consonant, then
+(within these large groups) into smaller
+ones by medials, i.e. listing first the heads
+with no medial, then heads with medials
+in one or other of the two orders shown
+0
+03
+စား၊ နို့ စီ မီး၊ to စိုး။
+•
+..
+© runs:
+(B) Closed syllables are listed only
+after all the open syllables. They are
+grouped first by final, i.e. က် င် စ် ည် ဥ
+05 $ § § 1 +
+တ် န် ပ် မ် ု ငုံ ။ Within finals they are
+grouped by vowel, and within vowels by
+tone, where applicable. So the closed
+syllable list under head o
+စိုက်။ စင့် စင် စင်း၊ စောင့် စောင်
+။ စစ်။ စည့် စည် စည်း၊ စဉ့် စဉ် စဉ်း။
+စိုင်း။
+runs: စက်၊ စောက်
+စောင်း၊ ( စိုင့် ) စိုင်
+***
+L
+to စုံး။
+JBRS, LI, ii, Dec., 1968.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 7]]
+John Okell
+There is however an exception to the
+rule of ordering by final: U Wun limits
+the number of his final rhymes to those
+listed in the 64 'regular' rhymes (see 2. 4
+below). To find words with 'irregular'
+finals outside this list, such as
+60
+us, it is necessary first to pronounce them,
+and then to rewrite this sound with a
+regular rhyme, and look for them under
+that. So, is listed under of (as if
+60 under 6 (as if 6), and under
+1 ( as if ).
+After
+2. 3. 2 From the beginning: Judson.
+grouping by initial and medial, Judson
+subdivides his words by vowel; then,
+within vowel groups, by tone in spelling
+order; within these by final consonant;
+and within these by tone again; e.g. under
+head aj and vowel
+ချိုင် ချိုင့် ချိုင်း ချို ချိုး၊
+his order is:
+occur
+Final consonants normally
+after only one of the three forms of the
+vowel, namely the form without an overt
+tone-mark. As this form is listed first
+in spelling order, the result of Judson's
+arrangement is that each head-and-vowel
+group begins with the first, unmarked,
+tone of the vowel (all), after which come
+the closed syllables (ချိုက်...ချိုင်း), followed
+by the remaining two tones of the vowel
+(ချို ချိုး). The only common exception to
+this result is in the case of words like
+ဇာတ် and ယာဉ် which have a final con-
+sonant after the second tone of the vowel
+( + +ɔ +ɔ ). In this case, in addi-
+tion to the usual group of closed sylla-
+bles following the first tone of the vowel
+JBRS, LI, ii, Dec., 1968.
+151
+(e.g. em w§), there is another group
+following the second tone (e.g.
+).
+Entries containing an open syllable
+followed by a second syllable are mixed,
+within the same head-and-vowel group,
+with entries whose first syllable is closed.
+The order here is governed by the second.
+consonant, whether it is the initial of the
+second syllable or the final of the first:
+e.g. head and vowel 50-
+e.g.
+e.g.
+သုခ၊ သုတ်၊ သုဝမ္မာ၊ သုန်၊ သုဘ၊
+head-and-vowel cop-
+ရောက် ရောဂါ၊ ရောင်၊ ရောရုဝ
+head-and-vowel
+--
+ရက်၊ ရခိုင်၊ ရှင်၊ ရန်၊ ရမက်၊ ရယ်၊ ရဝေ
+It sometimes happens that a second
+syllable's initial in one entry is the same
+as a first syllable's final in another; i. e.
+both entries have the same second con-
+sonant, but it is initial in one entry and
+final in the other. When this happens
+with a number of entries, the ar-
+rangement becomes more complex,
+as initial and final second consonants are
+mixed in a rather arbitrary way. Usually
+they are grouped as in the following
+example, under head and vowel O,
+second consonant şı
+1.
+2.
+00
+final with no second syllable
+သန်
+initial (without medial)
+သန၊ သနင်း၊ သနစ်၊ ... သနံ၊ သနား
+3.(a) final with a second syllable, or con-
+junct; and
+(b) initial with medial
+သန်ချောင်၊ သန္တာ၊ …. သန်လျက်၊ သန္တက်
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 8]]
+Alphabetical Order in Burmese
+152
+4.
+final with tone-mark
+သန့်၊ သန်း
+Sometimes, however, group 3(b) is listed
+after group 4; e . g.
+စန်း before စနွင်း၊ မန်း before မနှစ်၊ အန်း before
+အနွယ်။
+Ordering within these groups is as
+follows.
+group 1: only one possible entry
+group 2: by the second syllable, following
+the same rules as govern the
+ordering of a first syllable
+group 3:
+group 4:
+by the third consonant, which
+may be either initial or medial
+in the second syllable
+by tone-mark, in spelling order
+2. 3. 3 Compromise: Cornyn. Like U
+Wun and Judson, Cornyn first groups
+his entries by initial and medial. He then
+subdivides into two: syllables with ℗ vowel
+and tone-mark, followed by the rest.
+Each of these two groups is then subdivi-
+ded again into two: open syllables,
+followed by closed syllables. This gives
+the following four groups.
+(A) head with vowel and tone-mark:
+open syllable
+e. g.
+0011
+(B) heads with vowel and tone-mark:
+closed syllables
+with remaining
+(D) heads
+vowels: closed syllables
+tones and
+e.g. တိတ် ၊အိမ်၊ တိမ်း၊ တုတ်၊ ကုန်၊ တုန်း၊ တပ်၊
+to တိုင်း။
+တုံ၊ တောက်၊
+Within these groups entries are ordered
+by vowel, then by final, then by tone,
+as applicable.
+Cornyn's arrangement resembles U
+Wun's in its separation of open and
+closed syllables, but in the last group
+is more like Judson's in ordering by
+vowel before final consonant.
+2. 4 SUMMARY AND GAMUTS OF
+THE THREE SYSTEMS
+The three main systems of alphabeti-
+cal ordering described above are set out
+here schematically to facilitate comparison,
+with notes showing which alternative
+they adopt for the 'minor variables'.
+Following each system is a list of
+heads and rhymes as ordered in that
+system. Traditionally there are 64 spelling
+rhymes in Burmese (see e. g. guiósmy food
+vol. i, p. 47, ကဗျာဗန္ဓသာရ p. 37l). This list
+does not run through the whole gamut
+of all possible spelling rhymes, as it
+excludes the irregular finals such as those in
+.g. တက်၊ တင့်၊ တင်၊ တင်း၊ တစ်၊ တည့်… မုခ်၊  ိက္ခာ၊ ခေတ်၊ ပိုဒ်၊ ဗိုလ်, but it is useful for
+to con
+giving an overall
+.g.. တာ၊ တား၊ တိ၊ တီ၊ တီး၊
+တီး၊ တ၊
+:IM
+system works out.
+show the total
+to each group,
+(C) heads with remaining tones and vowels:
+open syllables
+view of the way each
+The figures in brackets
+number of rhymes in
+JBRS, LI, ii, Dec., 1968.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 9]]
+John Okell
+2. 4. 1 U Wun: summary and gamut
+1.
+by initial consonant; initial order
+(below) with
+-
+consonants before vowels
+အက္ခရာ vowels mixed with အ vowels
+-
+ည
+before
+2, or perhaps mixed?
+abbreviations not known
+4.
+5.
+2.
+by medial: numerical order (below)
+6.
+3.
+by syllable type: open before closed 7.
+Head gamut
+153
+(if closed) by final consonant*: as
+initials (below) with
+--
+ည် before ဥ
++ mixed with +8
+-
+as
+conjunct treated
+final with
+initial
+by vowel: revised traditional order
+(below) with
++ included
+by tone: pronouncing order (below)
+by second syllable: go back to 1
+1 initials: 0 2000 CI
+• ∞ C
+ဇ ည(ဉ?)၊ ဋ ဌ ဍ ဎ ဏ
+တ ထ ဒ ဓ န၊ ပ ဖ ဗ ဘ မယ ရ လ ၀
+with အက္ခရာ
+2 medials: +1 #0 ±
++ li
+သ ဟ ဠ အ
++ "
+#G.
+* except irregular finals;
+as described above (2.3.1)
+JBRS, LI, ii, Dec., 1968.
+20 U.P.-H. 139-1,000+50-23-7-69,
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 10]]
+154
+Rhyme gamut
+3 (A) open syllables (21)
+5 by vowel, 6 by tone
++
++၁
+to to to t
+ား
+Alphabetical Order in Burmese
+3 (B) closed syllables (43)
+4 by final, 5 by vowel, 6 by tone
+က် (၁) +က်
+မြောက်
+ုက်
+င် (9) +င့်
+to
++င်း
++ာင့်
+ဆောင်
+ဆောင်း
+တ်(3) +တ်
+နိတ်
++0
+$ (9) +န့်
++
+န်း
+of of of
+Gaugui
++ + + + + ++
++%
+6+
+ototot
+စ် (1) +စ်
+tf
+ကျွန်း
+ပ် (3) +ပ်
+++
+ငယ်
+ည် (3) +ည့်
++ည်
+to
++ည်း
+မ် / နံ (9)
+0+5
+ဦ (3) +၌
++
+tortosto
+သည်း
++မ်း
++$
+နိမ်
+rtortuite to
+JBRS, LI, ii, Dec., 1968.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 11]]
+John Okell
+2. 4. 2 Judson:
+1,
+summary and gamut
+by initial consonant: initial order
+(below) with
+3.
+4,
+-
+vowels before consonants
+အက္ခရာ
+vowels unmixed after
+5.
+vowels
+.
+no in 1893; and
+mixed in
+20
+2
+1921
+-
+abbreviations in full
+6.
+155
+-
+-
+by vowel: revised traditional order
+(below) with
++ excluded
+by tone-mark on vowel: spelling
+order (below)
+by final consonant*: as initials
+(below) with
+ည် before ညီ
++ after all other finals
+conjunct treated as final with initial
+by tone-mark on final: spelling order
+(below)
+2. by medial: aspirate order (below)
+Head gamut
+1 initials: အ၊ အက္ခရာ၊ က ခ ဂ ဃ င
+00
+2 medials: +
++ +J ±
+2
+0 20
+ဝ သ ဟ ဠ
+ဇ ဈ ည ( with ဉ ) ၊ ဋ ဌ ဍ ဎ ဏ၊
+e
+G+ G
+တ ထ ဒ ဓ န၊
+• but finals partly mixed with second syllable initials: as described above (2.3.2)
+JBRS, LI, ii, Dec., 1968
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 12]]
+156
+Rhyme gamut
+Alphabetical Order in Burmese
+3 by vowel, 4 by vowel tone, 5 by final, 6 by final tone
+0 (23) +
+- က်
++င်
++င့်
++င်း
++စ်
++ည်
++ည့်
++ည်း
++ည်
+Gut
+w
+သိန်း
+နှိမ်
+4.3°
+နိမ်း
+of of of of of of of of of of of
+f (11) f
+ဖုတ်
++ည့်
++ ည်း
++တ်
++န့်
++(11) +
+tos
+tf
++န်း
++6
+L
+ယံ
+*
++
+☑
++o
+L
+at at støtrtort start
+ကုန်း
++(3) +
+> (2) +
+ဘေး
++(7) +ာ
+နောက်
+0+
+ု (7)
+JBRS, LI, ii, Dec., 1968.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+ညောင်
+နောင့်
++ာင်း
+6+2
+6+5
+to sto rte rtortortorto
+00
+00
+မင်
+
+[[page 13]]
+John Okell
+2. 4.3 Cornyn: summary and gamut
+157
+4.
+by syllable type: open before closed
+1.
+by initial consonant: initial order
+5.
+by vowel:
+revised traditional order
+2.
+(below) with
+consonants before vowels
+အက္ခရာ
+vowels
+vowels
+T
+before
+ည
+R
+unmixed after
+6.
+30
+abbreviations at end
+by medial: aspirate order (below)
+(below) with
++us excluded
+(if closed) by final consonant!
+initials (below) with
+ဉ် before ည်
+✓ after all other finals
+as
+conjunct as final with initial, but
+after tone-marks
+-
+7.
+by tone: pronouncing order
+3,
+by vowel and tone symbolization:
+vowel and tone before rest
+8.
+by second syllable: go back to 1
+Head gamut
+1. initials:
+2. medials:
+8
+e
+0 80 Cl
+9 00
+°
++ + E
+6
+92299 vemo
+3000
+301 then
+အက္ခရာ
+11
+00
+က မ
+14 B, D, 1968.
+Convright© 1998 Myanmar Rook Centre & Rook Promotion & Service Ltd Ranokok Thailand
+
+[[page 14]]
+158
+Rhyme gamut
+3 (A) vowel and tone, 4 open syllable (1)
++
+Alphabetical Order in Burmese
+3 (B) vowel and tone, 4 closed syllables (20); 6 by final, 7 by tone
++က်
++6
+နှင့်
++{
++ ည့်
+မဂ္ဂ
++8
++င်း
++ဉ်
+00
+--- ည်
++ဉ်း
+မ မြ
++ည်း
++05
++8
++
+လမ်း
++Q5
++$:
+t
+3 (C) other vowels and tones, 4 open syllables (19); 5 by vowel, 7 by tone
+t
++o
++
+IL
++0:
++;
++
+IL
+to
+6+
+6+2
++
+ot
+6+
+€+5
+rto eto čto
++:
+6+:
+<+>
+3 (D) other vowels and tones, 4 closed syllables (24); 5 by vowel, 6 by final, 7 by tone
+0
++(8)
++(8)
+6+5(4)
++(4)
++05
+0+
+to
++$
+to
+နိန်း
+to
++ပ်
+ot
+to
++6
+JBRS, LI, H, Dec., 1968.
+t
++
++
+နောင်
+ot of off off
+3
+400
+120
+ကောင်း
+နိုင်
+င်း
+L
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 15]]
+John Okell
+2.5 OTHER BOOKS
+Most other dictionaries and reference
+books conform more or less closely to one
+or other of the two chief systems, i.e. listing
+either by rhyme with U Wun, or by
+vowel and final with Judson. The
+gsm: for example follows U Wun's
+system exactly; while the Pocket Burmese-
+Russian dictionary follows Judson, as
+does the Burmese-English dictionary by
+Stewart and others, except that here a
+second-syllable initial consonant with
+as
+vowel symbol is placed before a final
+consonant alone; e.g. u is before
+against Judson's before Bull
+The older spelling books are on the
+same principle as U Wun's dictionary.
+ရှင်ဥက္ကံသမာလာ, for example, writing in the
+early 18th century, gives a word vorges
+list (p.9) which closely resembles U Wun's
+order, including the pronouncing order
+of tones, with +05 among the vowels.
+He differs in writing + for 2 (but
+writes in the body of the text, p.76),
+and putting in its traditional place
+after + + + S: This placing derives
+from its earlier form + which made it
+0
+a closed syllable. Curiously, he follows
+159
+order: he mixes the first, third and fourth
+consonants of each of, listing o and 00
+with m; and of with • ; etc.
+°
+U Tha Myat's spelling book has a
+more rational arrangement of vowels: he
+still keeps + among the final consonants,
+but regularizes the placing of + and +
+He keeps the spelling order of tones,
+but lists the fifth and sixth vowels in the
+order + + + + + +
+G
+G
+with ε,
+Like other modern spelling books he
+helpfully introduces a good deal of mix-
+ing in order to list side by side differing
+spellings with the same pronunciation.
+Thus among rhymes he mixes §
+with +, of with 6, and $
+with ; among
+with 2 with 2, & with
+etc., and w with; ; and among medials
+he mixes with
+1
+3 COMMENT
+3.1 DESIDERATA
+with $
+initials he
+mixes G
+,
+with ∞,
+11
+Before coming to consider the ad-
+vantages and disadvantages of the diffe-
+rent systems descrided above, it may be
+one expects of an alphabetical order.
+: in this list with + + + + useful to recall briefly what it is that
+င်း၊
+နောင် ကောင်း၊ and in the body of the text
+(e.g. p.16, 34) he also puts +က် and
++ in this position.
+0
+Other spelling books keep more close-
+ly to the order. U Ohn Shwe for
+example adopts the spelling order of tones
+and ends his vowel gamut with... +
+cta ets + + He also has an unusual
+variation in his initial consonant
+°
+Dictionaries and encyclopaedias are
+works of reference, and it is important
+that an entry should be found easily and
+promptly, avoiding the frustration and
+distraction of turning the pages from
+one place to another in search of a
+word, and enabling the user to return
+quickly to his studies with the in-
+formation he needs.
+JBRS, LI, ii, Dec., 1968.
+|
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 16]]
+160
+It
+Alphabetical Order in Burmese
+tions and references, were given under
+every one of its different spellings, each
+entered in its appropriate place in the
+alphabetical order.
+alphabetical order. (U Wun, however,
+seems to accept repetition: he lists and
+glosses quite separately the three spellings
+The achievement of this end can
+be greatly facilitated by the use of a
+sound alphabetical order, that is to say
+an order
+which is straightforward and
+easy to memorize. To be easily memo-
+rized it should, in the case of Burmese,
+be firmly based on the traditional alpha- The practice of most
+bet (1.1), which is what is taught in
+schools and readily kept in mind.
+may be assumed that anyone likely to
+use a Burmese dictionary will already
+know at least this much. Those features
+of the ordering which are not covered
+by the traditional alphabet should be
+systematic and consistent, with, as far
+as possible, a single principle operating
+throughout, so as to avoid having to
+memorize two systems and to remember
+where each one applies. It would be
+undesirable, for example, to
+pronouncing order of tones
+syllables and the spelling
+closed syllables.
+use the
+for open
+order for
+A second requirement is brought
+about by the existence of variant spellings
+in Burmese. There are many of these
+in contemporary writing alone, but the
+variety is increased by spellings in older
+works and sometimes by hasty printing;
+e. g. o 'current, flow' is also found
+dictionaries is to select one spelling as
+normal and give meanings etc. under that
+spelling only; the other spellings are
+entered in their proper places, but under
+them the reader is cross-referred to the
+normal spelling. Cross-refer nce however
+is time-consuming and irr. ting, and
+though it can hardly be avoided altogether
+its nuisance-value could be much reduced
+by incorporating into the alphabetical
+order measures which, so far as possible,
+placed variant forms and spellings side by
+side, or nearly so, instead of pages
+apart.
+The comments and suggestions made
+below are offered in the light of these
+two desiderata: maximum simplicity and
+minimum cross-reference.
+3.2 DEFECTS OF THE THREE MAIN
+SYSTEMS
+There is a disadvantage in the arrange-
+spelt အယည်။ အယာဉ်။ အယာည်။ အယင်။ အရင်။ ment of each of the three dictionaries
+အရဉ်။ အရှည်၊ အလျဉ်၊ အလျည်။ Judson devotes
+the entire preface of his 1852 edition to
+bewailing the 'chaos' and contradictions
+of Burmese spelling. He
+even asserts
+described above. In Cornyn it is a small
+defect in the system itself, and in U Wun
+and Judson the defects concern the treat-
+ment of matters outside the system,
+that there are 'as many modes of i.e. matters not shown in the gamuts
+orthography as there are writers'.
+above. In each case the defect could be
+remedied by a simple amendment.
+Clearly it would result in an unde-
+sirable amount of repetition in a dictionary
+if the meaning of a word, with quota-
+JBRS, LI, ii Dec., 1968,
+3. 2. 1 The defect in Cornyn's glossary
+is that his grouping of the words under
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 17]]
+John Okell
+each head into four is unnecessarily
+complicated. It would have been simpler
+and more consistent to treat vowel as
+a vowel like the others, and so not to
+separate its tone-mark from the rest.
+In the summary (2.4.3) this would mean
+simply deleting step 3, which would place
+his (A) group at the head of (C), and
+his (B) group at the head of (D). This
+would reduce his four groups to two:
+open syllables arranged by vowel (includ-
+ing ), i. e. + +ာ +း +
+to + : and closed syllables
+by vowel (including
+0
+ဉ္ဇင်း၊
+tots
+င်း။
+Q
++
+also arranged
+TƐ TƐ
+), i.e.
++
+0
++ 5 + 6:11
+bank
++ San
+--
++ of ... etc. to
+This arrangement is referred to below
+as 'amended Cornyn'.
+3. 2. 2 The defect in U Wun's dictionary
+lies in his treatment of the irregular
+finals, which are ordered by pronuncia.
+tion. This can give rise to ambiguity
+in some cases: why should
+under
+Is
+be listed
+(as if) rather than under 8?
+to be listed under $ (as if c) or
+(as if )? But more serious than this
+is the fact that he is using two different
+principles: order by spelling for the
+regular finals, and by pronunciation for
+the irregular ones.
+principles for
+The use of different
+different parts of the ordering is not
+always inadmissible. It may be justified,
+for example, on the grounds that it
+reduces cross-reference, or in the interests
+161
+In this case
+of some other advantage.
+however, there seems to be no such
+justification, and it would be better to
+maintain consistency by ordering either
+wholly by spelling, or wholly by pronuncia-
+tion, but not partially by both. Ordering
+by pronunciation would obviously be
+more suitable for a dictionary which
+gave its entries in a form which represents
+the pronunciation, i. e. in a phonetic
+transcription; but as U Wun's entries
+are in Burmese script, ordering by spelling
+seems more appropriate.
+It would in fact be quite simple to
+accommodate the irregular finals within
+U Wun's system on the basis of their
+spelling alone: e.g. would come under
+စ်; ခေတ် under တ် ( ခတ် ခိတ် ခုတ် ခေတ် ); ပိုဒ်
+under § (between S and §); under §;
+etc.
+3. 2. 3 The defect in Judson's dictionary
+is his treatment of words of more than
+one syllable, where he confusingly mixes
+the finals of first syllables with the ini-
+tials of second syllables in an arbitrary
+way, as described above (2. 3. 2). There
+are many errors and inconsistencies in
+his ordering anyway; e. g. ပဒဲ၊ ပန်၊ ပဒိုင်း၊
+ပနက်။ and တမ်း၊ တမင်၊ …… တမာ တမ်း။ but it is
+probable that a large proportion of them
+are the result of this awkward mixing.
+Many of the errors are corrected in the
+1921 edition, revised by Eveleth, but the
+1893 edition is used here to show more
+spectacularly the pitfalls involved; c.g.
+JBRS, LI, ii, Dec., 1968.
+M21 U.P.-H. 139-1,000+50—24-7-69.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 18]]
+162
+as it stands
+should be
+Alphabetical Order in Burmese
+ကမကထ
+12 ကမခရင်
+13 ကမခါး
+2 ကမန်း
+၅. ကမာ
+ကမ္ဘ
+15 ကမဲ
+9. ကမ်စော်
+5 ကမ္ပည်း
+....
+ကမ္ပ
+10 ကမ်ဗလာ
+7 ကမ္ဘာ
+8 ကမ္ဘ
+16 ကမျည်း
+group 2:
+က with ¢ vowel with-
+မ initial
+group 3:
+and
+with vowel with-
+final or conjunct with
+second syllable
+က with # vowel with-
+မ initial with medial
+ကမကထ
+1
+ကမန်း
+2
+က
+3
+4
+ကမူ
+ကမ္ပည်း
+5
+6
+ကမ္ပလွေ
+ကမ္ဘာ
+7
+8
+ကမ္ဘ
+ကမ်စော်
+9
+ကမ်းလာ
+10
+6
+ကမ်း
+11
+ကမခရှင်
+12
+ကမခါး
+13
+ကမ့်ဘလူ
+14
+ကမ်
+15
+ကဗျည်း
+16
+17 ကမြိုင်
+ကမြိုင်
+17
+14 ကမ့်ဘလူ
+11 ကမ်း
+အနု
+Stewart's Burmese-English dictionary
+too has not altogether avoided the errors
+induced by this complication: အန္တ
+which are group 3 should come after အချို့
+(group 2) and before အနွတ် (group 3), not,
+as they do, between အန and
+အနန္တ
+(group 2): Also အမ်း ( group 4 } should
+come after အမျက်
+အမှား ( group 3) in.
+stead of before.
+The entire problem could be disposed
+of very simp!y by listing all the entries
+where the second consonant is initial
+(whether it has a medial or not) before
+the entries in which it is final, instead of
+partly mixing the two, This would be
+quite straightforward: in the example in
+JBRS, LI, ii, Dec., 1968.
+group 4:
+က with d vowel with-
+final with tone-mark
+န
+န
+2. 3. 2 it would mean listing groups 2
+and 3b (where
+is initial) before groups
+1 and 3a (where is final or conjunct),
+and then group 4 (where is final with
+a tone-mark). In the example just above
+(as corrected) it would result in taking က
+and all second syllables beginning with မ
+before moving on to the new syllable ကမ်း;
+i.e. transferring ကမျည်း...ကမြိုင် to group 2
+after ကမဲ။
+-
+-
+Alternatively, one could achieve an
+equally - or perhaps more satisfactory
+arrangement by placing all initial second
+consonants befere all final second con-
+sonants, as exemplified in the following
+list of selected words.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 19]]
+John Okell
+amended Judson
+alternative
+amended Judson
+initial second
+consonants
+ပုဏ္ဍရိုက်
+ပုတတ်
+ပုတ်
+ပုဒ်
+ပုပ်
+ပုလိပ်
+ပုလဲ
+q t l I , z F i z 7.5
+ပုတ်ပြတ်
+ပုတ်သင်
+ပုကန်
+ပုခက်
+ပုကန်
+ပုဂ္ဂိုလ်
+ပုစွန်
+ပုစ္ဆာ
+ပုစွန်
+1 1 1 1 1 1 1 1.
+ပုရပိုက်
+ပုလိပ်
+ပုလဲ
+ပုဂ္ဂိုလ်
+ပုခက်
+ပုစ္ဆာ
+ပုထုဇဉ်
+ပုတ်ပြတ်
+ပုရပိုက်
+ပုတ်သင်
+ပုဒ်
+ပုပ်
+ပုလ္လိ
+ပုဏ္ဍရိုက်
+ပုတ်
+final second
+consonants
+163
+The irst list orders words beginning
+with ပု by the second consonant, whether
+this is initial or final ( က ခ ဂ် စ ဏ် တ...);
+and where two words have the same
+second consonant, initial precedes final
+(ပုစွန် before ပုစ္ဆာ and ပုတတ် before ပုတ်).
+In the second list all initial second con-
+sonants precede all final second consonants;
+in other words as an open syllable
+precedes as part of a close syllable.
+ပု
+Within the two major groups in the
+second list, words are ordered by second
+consonant as before (initals က ခ စ တ ထ...
+finals § § § § §...). Words with the same
+second consonant are ordered, if initial,
+by the second syllable (ပုလိပ်၊ ပုလဲ); and if
+inal, by tone ( ပုံ ပုံ ပုံး) and then by second
+syllable (ပုတ်ပြတ်၊ ပုတ်သင်)
+•
+3. 3 CHOICE OF PRINCIPLE
+If the amendments suggested above
+were carried out, and if for the moment
+the minor variables of tone-order etc. are
+disregarded, one is left with a choice
+between three clear and workable
+systems.
+1. amended Cornyn: open syllables
+before closed, by vowel before final
+2. U Wun: open syllables before
+closed, by final before vowel; without the
+inconsistency in placing irregular finals
+JBRS, LI, ii, Dec., 1968.
+Coovright© 1998 - Mvanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 20]]
+164
+3. Judson: by vowel and final through-
+out; without the complications engendered
+by his placing of second syllable initials.
+Cornyn
+1. by initial
+2. by medial
+3. by syllable-type
+4. by vowel
+5. by final
+6. by tone
+7. by second
+syllable:
+back to 1.
+U Wun
+1. by initial
+2. by medial
+Alphabetical Order in Burmese
+These three are briefly schematized
+below, with the suggested amendments
+included.
+3. by syllable-type
+4. by final
+5. by vowel
+6. by tone
+7. by second
+syllable:
+back to 1.
+The alternative suggestion for Judson,
+that all open syllables with the same head
+and vowel should precede all closed
+syllables, would mean reversing the order
+of his steps 5 and 6.
+There is perhaps not much to choose
+between the three, and until general
+agreement is reached, the decision of
+future lexicographers remains a matter of
+personal preference. There are considera-
+tions, however, which (for me at least)
+tip the balance slightly in favour of
+Judson.
+Judson
+1. by initial
+2. by medial
+3. by vowel
+4. by vowel tone-mark
+5. by second consonant
+6. by syllable-type
+7. by final tone-mark
+8. by second syllable:
+back to 1.
+First, since all the vowels in the
+closed syllable group are also included in
+the open syllable group, separation makes
+it necessary to list the vowels twice (at
+least) under each head, which seems an
+undesirable feature. Secondly, most alpha-
+betical orders in other scripts begin at
+the beginning of an entry and go on from
+there, and it would be convenient and
+satisfying, if possible, to adopt the same
+procedure for Burmese. When open and
+closed syllables are separated, however,
+one begins at the beginning with initials,
+and goes on to medials, but then one has
+to jump to the end of the syllable to
+establish whether it is open or closed
+before going back again to continue with
+the vowel. Neither of these objections
+3. 3. 1 Separate or mix. U Wun and
+amended Cornyn are alike in that under
+each head they separate the open from
+the closed syllables before dividing by applies to Judson.
+vowel, final, etc. There are sometimes
+advantages in listing together all the
+syllables with finals (e. g. in the spelling
+books), but in the absence of such factors
+the separation is open to two objections.
+JBRS, LI, ii, Dec., 1968.
+3. 3. 2 Ways of mixing. If it is accepted
+that it is preferable to mix open and
+closed syllables, rather than separate
+them, one may turn to consider ways of
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 21]]
+John Okell
+mixing, as Judson's is not the only way.
+After grouping entries by head and vowel,
+one could list all the tones of the vowel
+(i.e. all the open syllables for that vowel)
+before listing the closed syllables; e.g.
+head and vowel ||
+aj
+t
+ချို ချို ချိုး then ချိုက် ချိုင် ချိုင့် ချိုင်း၊
+head
+00
+and vowel tu
+ထိထီထီး then ထိတ် ထိန် …. ထိပ် ထိမ်... ထိမ်း။
+This could be stated simply by saying
+that tone-marks (including ) are given
+precedence over final consonants. Alterna-
+tively, one could place the closed syllables
+before the open syllables; e.g.
+ချိုက် ချိုင် ချိုင့် ချိုင်း then ချိုချိုချိုး၊
+ထိတ် ထိန်... ထိမ်း then ထိ ထီးထီး၊
+i.e. vowel with final consonant precedes
+vowel with tone-mark (including tone-
+mark).
+The phonological neatness of both
+these methods is attractive, but there
+are two snags. There would be a difficulty
+with words which have both a final con-
+sonant and a tone-mark on the vowel,
+such as ဓာတ်၊ ယာဉ်၊ ဥာဏ် etc. (tone-mark
++2), and such spellings 8 'postcard',
+'soup' (tone-mark +).
+A more substantial disadvantage is
+that both methods entail an awkward
+double-function for . When one says
+that tone-marks on the vowel are ranked
+before (or after) final consonants, it is
+tantamount to saying that e.g. al has a
+tone-mark (viz. ), and therefore precedes
+(or follows) ချိုက်… ချိုင်း၊ while the group
+of symbols ǝ in the syllables a
+165
+have, not the tone-mark , but no tone-
+mark at all, because they are closed
+syllables.
+The neatness of these alternative
+ways of mixing may however be attractive
+enough to some to warrant admitting
+this inconsistency, provided that some
+solution can be devised for the first
+difficulty mentioned above.
+The argument in
+3. 3. 3 Conclusion.
+favour of Judson then is that his order,
+as amended, comes closer than the others
+to the sequential principle familiar from
+other alphabets, taking the symbols, so
+far as the nature of the script allows,
+one by one from left to right. It may
+be objected that U Wun's principle is
+familiar to Burmans from their acquain-
+tance with spelling books; but then so is
+Judson's, for his is the same as the
+system used in Pali dictionaries, in which
+.g. ပတ္တ
+falls between costs and ooo instead
+of being taken off to an entirely different
+(closed syllable) section. Judson's order
+also takes in its stride the irregular finals
+and words like 5 and 8 and it is
+fully in accord with the well-known sadl
+list.
+3.4 THE MINOR VARIATIONS
+When he has chosen his overall
+system, the lexicographer must choose
+between the alternatives open to him
+on the 'minor points'. A personal pre-
+ference is expressed below for one of
+the alternatives in each case, together with
+the considerations which seem to favour it.
+Two basic principles are invoked in
+support of some of the preferences. The
+first is 'spelling, not pronunciation': it is
+preferable to arrange entries by reference
+JERS, LI, 1, Dec., 1968.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 22]]
+166
+to their written form entirely, without apy
+looking over one's shoulder at pronun-
+ciation or phonology, unless the dictionary
+is to be in phonetic script. The second is
+'nothing before something': a symbol (or
+group of symbols) on its own should
+precede the same symbol(s) followed by
+further symbol(s); i.e. AB precedes ABA.
+3. 4. 1 Tones. Spelling order is preferable
+to pronouncing order, on the grounds of
+'spelling, not pronuciation' and 'some-
+thing before nothing': o precedes å
+precedes တီ၊ ကော precedes ကော့။
+The case for 6+ before 6+ is
+perhaps arguable: is + 'less than' + ?
+But this order is favoured by being easily
+memorized: it is the way one pronounces
+ဩ ဪ when reciting the traditional
+alphabet.
+3. 4. 2 + It is preferable to list +w
+as a final consonant, rather than as a
+vowel, on the grounds of 'spelling, not
+pronunciation'. Listing it as a vowel is
+also objectionable as it creates an incon-
+sistency with the listing of + as a final,
+though it is normally pronounced as a
+vowel.
+အက္ခရာ
+3. 4. 3 The me vowels are preferably
+mixed with the vowels, rather than
+listed separately; on the principle of mi-
+nimizing cross-reference: it saves looking
+up e.g. c and being cross-referred to
+639511
+3. 4. 4 Vowels and consonants. Words
+with a (spoken) vowel initial are preferably
+placed after words with (spoken) consonant
+initials, rather than before; on the grounds
+that this order is more easily memorized:
+JBRS, LI, ii, Dec., 1968.
+Alphabetical Order in Burmese
+in the traditional alphabet the 'consonants'
+are recited before the 'vowels', and the
+'consonant' list itself ends with a (spoken)
+vowel: 2000
+3711
+£
+3. 4. 5 Medials. Both the numerical and
+the aspirate orders of medials are open
+to the objection that they abandon the
+principle of taking the symbols in the or-
+der suggested by the traditional alphabet,
+and therefore introduce a new principle,
+which is undesirable. It is simple enough
+to order (+) + + + + on the
+alphabetic principle, but there is a problem
+when more than one medial is present.
+In a medial cluster like +, for example,
+is one to say that the 'comes first', so
+or that the
+?
+[
+should follow ☑;
+comes first, so ☑ should follow +.
+A
+Perhaps the best solution is to take
+the individual medials of a cluster in the
+order in which they occur in the alphabet.
+Thus is and then +, not
+t
+then
+is + and then +, not
+and then
+ing order.
+-
+and
+t
+This results in the follow-
+( + ) " +1 +
+H
+Q E C
+as if the words were spelled + +w
++woll +ယဝဟ။ + woll etc.
+There are however many cross-
+reference problems with medials, and
+there are below some suggestions for
+mixing, which, if adopted, would make
+the ‘alphabetical' order above unnecessary.
+6 is better mixed with
+3. 4.
+rather
+20
+ဥ.
+than listed separately, whether initial or
+final; e. g. (Judson system)
+ညာဖက်၊ etc.; and စည်၊ စဉ်၊ စည့်၊ စဥ့်၊ စည်း၊ စဉ်း။
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 23]]
+John Okell
+20
+It is clear from the spelling of Pali
+words like ñāṇa, pañca (pom up), and
+paññā, puñña (ʊ‰ostops), that a corresponds
+to the Pali single consonant, and
+is a conjunct consonant representing ññ
+(§ and 2). But has been used since
+the earliest records as a single consonant
+in Burmese words, occurring even in
+initial position (compare double c in Mon).
+Sometimes even Pali ñ is rendered by 23
+e.g. Judson in 1893 writes for
+As a final too was used until fairly
+recent times for words now spelled +
+The difference in pronunciation was already
+recognized explicitly by the early 18th
+century: ɔɔ (p. 76) separates &
+ရွတ်ရာသော ညသတ် from ပိတ်၍ ရွတ်ရာသော ညသတ်၊
+but even as late as 1893 we find Judson
+has still not completely made the change to
+- he compromises with
+--
+Many words, then, now regularly
+spelled with initial or final if found in
+2,
+a fairly old text, may be spelled with
+20,
+and it would save cross-reference to mix
+the two letters.
+3. 4. 7 + likewise is better mixed with
++ In normal usage today the two are
+distributed among different tones
+vowels as follows.
+and
++ 1 +6 +6 +6 ††††
+°
+all
+167
+me Mixing the two would
+ကမ်စော်၊ ကံစော်။ လုမ်း၊ လုံး။
+therefore save cross-reference.
+In the same way +5, the abbrevia-
+tion for 6+00, would best be listed as
+6+2011
+There are of courge other abbreviated
+finals, such as + for How + 5 for + ာဝ်။
++ for us but these are rarely found
+in texts other than Old Burmese (Pagan
+period), and so do not invite mixing to
+the same extent as + and +
+G
+3.4.8 Conjunct consonants are preferably
+treated as final with initial, rather than
+as separate symbols. This saves cross-
+reference with variant spellings such as
+လိမ္မော်၊ လိမ်မော်၊ အင်္သာ၊ အင်သာ၊ အင်္ဂမုန်း၊ အင်ဂမုန်း။
+to
+Two exceptions must be admitted.
+The first is for 2011 It has been seen
+above (3.4.6) that may be either a
+single or a conjunct consonant. It
+is impossible
+tell by its form
+or position which it is in any particular
+word; e.g. in spit may be conjunct, if
+the word is 'other' from Pali aññaṁ, or
+it may be single, if the word is 'noisy'
+from Burmese poop Since it is used much
+more often as a single consonant, it is
+perhaps better to treat it as such in all
+words, even when in etymology and pro-
+nunciation it represents { with 2." 1 Thus
+ပညာ would be listed as
+as ပဉ် with ဥ၁။
+0
+with
+ညာ,
+not
+The second exception is for the
+However, variant spellings in Old Burmese,
+and contractions such as 'irregular' conjuncts, as in coε: for cou
+ကမ္မ၊ ကံ။ နာမ၊ နံ။
+ကုမ္ဘ၊ ကုံ။ ဘူမိ၊ ဘုံ၊ show that + is an abbreviā- သ္မီး for သမီး၊ လ္ဘက် for လဘက် (လက်ဘက်)။ These
+ted form of + Some older spellings
+use one for the other; c. g.
+are manifestly not analysable as final and
+initial, and must be treated as consecu-
+လိမ်၊ လို့။ tive initials.
+A°
+JBRS, LI, ii. Dec., 1968.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 24]]
+168
+3. 4. 9 The abbreviated syllables
+q: etc. are better listed under their full
+forms rather than separately; because
+their full forms are sometimes used in
+older texts and this listing would save
+cross-reference.
+3. 5 FURTHER SUGGESTIONS
+The suggestions below are put for-
+ward with aim of minimizing cross-
+reference, one of the two desiderata men-
+tioned above (3.1). Sometimes this aim
+may conflict with the first of the desi-
+derata, the achievement of maximum
+simplicity and consistency. It is believed,
+however, that the suggestions below,
+many of which are already in use in
+standard books, are not difficult to grasp
+and remember. They could be set out
+quite simply in a statement at the begin-
+ning of a dictionary, or, where a parti-
+cular measure applies only to entries
+that occupy a few consecutive pages, a
+brief reminder could be put at the foot
+or head of each page.
+3. 5. 1 Medials. If the conventional treat-
+ment of medials were abandoned, much
+page-turning could be saved by mixing
+as follows.
+Many spellings with + have variants
+without, so it would be helpful to mix
+medial and +, and the medial clusters
+without could similarly be mixed with
++
+those with + Thus would be beside
+မင်း မှီ besidc မီ၊ အလျှင် beside အလျင်၊ အလှန်
+besides etc.
+Also + and E are often confused
+and could helpfully be mixed.
+but ချောက် beside ခြောက်၊ ချည်
+များ beside မြား၊ etc.
+JBRS, LI, ii, Dec., 1968.
+This would
+beside ခြည်၊
+Alphabetical Order in Burmese
+Thus the 12 medials
+(including )
+normally listed would be reduced, for the
+purpose of ordering (not of course for
+spelling), to a mere four:
+medial
++ with
+y
+medial
+☐ (with +) with
+☐ (with (+)
+(with
+)
+with
+(with
++with
+yw medial
+W
+medial
+Within each group of medials, entries
+could be ordered as they are above; e.g.
+under head မ with medial y: မျက်၊ (မျှက်၊)
+မြက်၊ (မြွက်၊) (မျင်၊)မျှင်၊ မြင်၊ မြင်၊ (မျင်း) (မျှင်း)
+မြင့်၊ မြင့်၊ (မင်း၊) မျှင်း၊ မြင်း၊ မြင်း၊ etc. The
+spellings in brackets do not (to my
+knowledge) exist, but are put in to show
+more completely how the mixing could
+work.
+#
++
+3. 5. 2 Initial w and ရ could be mixed,
+to save cross-reference between variant
+spellings and to match the mixing of
+and Both also occur as variants of
+00%,
+which could also be mixed with them;
+and if + is mixed with +, giving here
+w=w=q=9=|=2}, it would be helpful
+to mix with these as well.
+3. 5. 3
+with
+2011
+variants
+reference.
+Spellings with could be mixed
+Words spelt with one often have
+with the other (e.g. ငြိ၊ ညိုး
+and mixing would save cross-
+3. 5. 4 Spellings with ↳ often have variants
+with အ
+but there is not a strong case
+for mixing here. It is surely more con-
+sistent to treat ဘ in the same way as
+corresponding letters in other of (viz.
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 25]]
+John Okell
+ǝ), and use it only when it repre-
+1001 of 1 0 3
+sents the correct spelling of a Pali-
+derived word, as in အဘိဓာန်၊ ဘဝ၊
+၊ သေအော
+No-one writes cos for cat ofε for
+3. 6 AMENDED GAMUT
+169
+The gamuts of initials, medials, and
+regular rhymes, arranged on Judson's pri-
+εciple but incorporating the suggestions
+made above, would be as shown below.
+The sign
+is used to mean 'mixed with",
+and the relative order of mixed symbols
+shown below is that suggested for use in
+a dictionary.
+for co; and there is just as little
+reason for writing ဘော် for ဖော်၊ အဘိုး for
+အဖိုး၊ အဘေ for အဖေ There are difficulties
+in the way of rationalization here (e.g.
+in names, ε as a relative): reform
+has been advocated several times but has
+not been widely accepted. In a dictionary,
+however, in order to minimise cross-
+reference, it could well find a place.
+3. 5. 5 Words beginning with the syllable
+(with vowel and tone-mark) nearly
+always also occur without ; . ၉. အမြစ်၊
+ထန်းမြစ်၊ အရွယ်၊ အရွယ်ကူ။ အလုပ်၊ လုပ်သား၊ အသစ်၊
+အိမ်သစ်။ အဘိသိက်၊ ဘိသိက်' အရုပ်၊ ရုပ်၊ အခွင်၊ ခွင့်။
+အမောင်၊ မောင်။ It would therefore save repeti-
+tion and cross-reference in a dictionary
+if such words were listed under the initial
+of their second syllable. The forms with
+could be dealt with quite satisfactorily
+under the forms without it, in much
+the same way as, in an English
+dictionary, the form 'walking',
+is
+example,
+dealt with under
+form 'walk'. This suggestion does not
+of course apply to words beginning with
+initial consonant အ, such as အက်၊ အာ၊ အိပ်၊အိုး
+etc., nor to ™ (‘be dumb') itself.
+32
+initials
+=
+0
+a 0 00 C =
+107
+=
+-
+0
+☑
+စည
+ညှ = ဠ = ဥ = ဌ = ၄
+§ 92
+∞ ∞ 3
+0 0 0
+0 = 00
+00 = 00
+vowels
+33
+00
+3"
+0
+0
+<D
+0
+8
+11
+===
+$ = 3
+==
+G
+=
+11
+0
+-
+320
+80
+=2
+2
+32
+33 =
+အ
+for
+the
+633 =
+37
+6300 =
+3. 5. 6 Finally, words beginning with the
+syllable often have variants with mệt m§:
+and It would perhaps be helpful to
+list all these under – (with vowel and
+Ø tone mark), rather as the London
+telephone directory lists under Mac all
+names beginning with M', Mc, or Mac.
+၁၉-
+medials
++
+ji
+=
+H =
+11
+17
++
+H
+# = +
+-
+* = *
+။
+632
+32
+6330
+987
+-C
+6
+05
+1!
+9
+-
+လျ = လျ = သျှ
+9 20 00
+001
+03,
+1☐
+82.1
+W
+omm
+11
+120
+DAY
+632:
+ဦး
+6025 = 6
+အိုး
+ကြော်
+JBRS, LI, ii, Dec., 1968.
+22 U.P.-H. 139-1,000+50-25-7-69
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 26]]
+170
+Alphabetical Order in Burmese
+rhymes
++ +က် +င် နှင့်
++င်း နှစ်
++င်း +စ်
++ည်=+ဉ်
++ည့်=+ည့်
+နတ်နန်း နန့်
+နန်း
+ပ်
++8
+နမ်=
+မ့်=
+☑
+ဖုတ် န် န့် နန်း
+ပ်
+$=
+နိမ့်=
+မ်း= •
++ည်း= +ဉ်း
++မ်း= +း +ယ် +ာ +း
+:
+း
++:
+နှုတ် ကျွန်
+ညွှန်း -ပ်
+အိမ်=
+-မ့်=
+-မ်း=
+et st 6+8
++ +
+နောနောက် ေနောင် နောင် နောင်းနော 6+5
+တိုက်
+4. CONCLUSION
+င့် ခိုင်း
+To some the achievement of a system-
+atic and consistent alphabetical order
+with a minimum of cross-references may
+seem a trivial matter, underserving of so
+many pages. It is true that in a small
+book it is often possible to find the entry
+one wants by hunting around for a while,
+without serious inconvenience. This is the
+case, for example, with the အက္ခရာစဉ် ဓာတုရသ
+ကျမ်း, which has a restricted number of
+entries. It is arranged on Judson's prin-
+tciple, but with mariy inconsistenc es; e.g,
+before
+အုန်း before ရက်၊ မှုံ
+သား before မုလေး။
+-
+be very troublesome. The difficulties are
+sometimes great enough, particularly when
+one is in a hurry, to lead potential users
+to give up the search, or even to deter
+them altogether from attempting to use
+the dictionary.
+This state of affairs is regrettable and
+unnecessary: a satisfactory alphabetical
+order is a fairly simple matter, and is
+surely worth the effort.
+5. DETAILS OF BOOKS MENTIONED
+ABOVE
+medials with မ run မျ မြ မျှ မ မြ မျှ မြွw and ကဗျာဗန္ဓသာရကျမ်း၊ ပုဂံဝန်ထောက် ဦးတင်
+of 6964
+မာလကာ is listed twice in diferent places:
+p. 158 and p. 160.
+အမျိုးသားစာပုံနှိပ်တိုက်၊ ရန်ကုန်၊ ၁၈၉၂။ နောက်
+ဆက်ဘဲ့ ၁ ၉ ၂ ၉။
+In a large-scale dictionary, however, စွယ်စုံကျော်ထင်ကျမ်း။ ကျီးသဲလေးထပ်ဆရာတော်
+which includes variant spellings, not find-
+ing a word in its proper place, or having
+to leaf through from one spelling to
+another, or having to refer frequently to
+he statement of alphabetical order, can
+JBRS, LI, ii, Dec., 1968.
+ပိဋကတ်ကော်ပြန့်ပွားရေးဌာန၊ မန္တလေး၊ ၁ဂ၆၅ ။
+တက္ကသိုလ်မြန်မာအဘိာန်။ ဦးဝန်
+ပြည်ထောင်စု မြန်မာနိုင်ငံတော်အစိုးရ စာပုံနှိပ်တိုက်။
+ရန်ကုန်။ အတွဲ ၁၊ ၁၉၅၂ (ထွက်ဆဲ)
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 27]]
+John Okell
+မြန်မာစာရေးထုံးကျမ်း။ ဦးသာမြတ်
+စကြာဝဠာပုံနှိပ်တိုက်။ ရန်ကုန်။ ၁၉၅၂
+မြန်မာစွယ်စုံကျမ်း။
+မြန်မာနိုင်ငံဘာသာပြန်စာပေအသင်း။ ရန်ကုန်။ အဘဲ့ ၁၊
+၁၉၅၄ (ဆက်ထွက်ဆဲ)
+မြန်မာသတ်ညွှန်းကျမ်း။ ဦးဝန်
+မြန်မာနိုင်ငံ ဘာသာပြန်စာပေအသင်း၊ ရန်ကုန်။ ၁ ၉ ၅ ၂
+သတ်ပုံအဘိဓာန်မိတ်လင်စုံ၊ ဦးအုန်းရွှေ
+ပညာအလင်းပြစာပုံနှိပ်တိုက်။ ရန်ကုန်၊ ၁၉၅၆
+Burmese-English Dictionary,
+171
+by A. Judson, rev. R. C. Stevenson,
+Government Printing, Rangoon, 1893
+ditto, rev. F. H. Eveleth
+Arnerican
+Baptist Mission Press,
+Rangoon, 1921
+A Burmese-English Dictionary,
+by J. A. Stewart and others,
+Luzac London, 1940-1963 (in progress)
+A Burmese Glossary,
+by W. S. Cornyn and J.K. Musgrave,
+American Council of Learned Socie-
+ties, New York, 1958
+ဝဏ္ဏဗောဓနသတ်အင်း၊ ရှင်ဥက္ကံသမာလာ( ၁ ၆ ၉၅-၁ ၇ ၃ ၃ခန့်) A Pocket Burmese-Russian Dictionary,
+ဟံသာဝတီစာပုံနှိပ်တိုက်၊ ရန်ကုန်။ ၁၉၆ ၁
+by B. A. Ignatenko, ed. U Ko Ko E,
+State Publishing House for Foreign and
+National Dictionaries, Moscow, 1961
+JBRS, LI, ii, Dec., 1968.
+Copvright© 1998 - Mvanmar Book Centre & Book Promotion & Service Ltd. Bandkok. Thailand.

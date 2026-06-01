@@ -1,0 +1,1062 @@
+[[page 1]]
+THE GENERAL STRUCTURE OF LANGUAGES
+SPOKEN IN BURMA ¹
+by
+L. F. Taylor, M. A., I. E. S. (Retd.) 2
+INTRODUCTORY
+1. I believe that the thesis set out in this paper is applicable
+to all the agglutinative and isolating languages spoken on the
+peninsula known as Indo-China or Further India. It is applicable also
+to languages of this class spoken much further afield, such as
+Mongolian which belong to the Ural-Altaic family of speech. But
+it is prudent not to generalise too much, and so I confine it to the
+languages spoken in Burma, though many of these extend widely
+beyond the borders of Burma. It is based upon the study of materials
+collected from seventy or more languages or dialects. It is foresha-
+dowed in a chapter included in my book referred to in para 3 below,
+which was set up in type in 1938. The first draft of the present paper
+was written in 1948. No orginality is claimed for it. I believe that
+Dr. Schmidt of Vienna propounded a similar thesis many years ago.
+2. In the case of inflected Indo-European languages grammar
+is a very complex affair. Nouns, adjectives and pronouns are declined;
+not only are there many cases, but also many declensions. Verbs are
+conjugated in accordance with person, number, tense and mood
+and there are many conjugations. The stem of the word undergoes
+various changes, so the various declensions and conjugations must
+be exhibited in full. In this way all nouns, pronouns, adjectives and
+verbs are included in the grammar, though only selected examples are
+used in handbooks to illustrate each declension and conjugation. In
+the case of agglutinating and isolating languages all this is different.
+Words are not subject to inflection, but maintain their forms unchanged.
+Full words, enclitics, particles or affixes, and word-order are the elements
+that constitute speech. Nouns, pronouns, adjectives and verbs therefore
+belong to the dictionary, and grammar shrinks until it becomes
+synonymous with syntax.
+1. Submitted for publication on January 2, 1953.
+2. At present residing at Charlestown, Nevis, B. W. I.
+26
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 2]]
+102
+L. F. TAYLOR
+3. On page xvii of my book: "Some Indo-Chinese Phonetic
+Transcriptions", referring to the difficulty of providing therein suitable
+outline grammars of the languages dealt with, I ascribed this difficulty
+to "the fact that the grammatical categories and the structures of
+these languages differ so fundamentally from those of Indo-European
+languages, especially Greek and Latin, from which the usual terminology
+is derived, that a correct description is at present impossible to provide.
+An entirely new system of
+system of representing and describing their
+characteristic features must be worked out, based upon their intrinsic
+natures. No unsuitable, even though familiar, system must be
+imposed upon them. " I did however include a short chapter entitled:
+"Word Order in Indo-Chinese Languages" which is precursor of the
+present paper.
+Again, on page xxv I wrote: "This classification of words may
+suit Greek and Latin, but it does not apply very well to English where
+inflections have largely been discarded. It is still less applicable to the
+protean words of the languages with which we are dealing. A different
+set of categories obtains here, and it will be part of the work of the
+Linguistic Survey of Burma to distinguish and define them".
+4. Purpose of the Present Paper. I may now be expected
+to say how far I have advanced in my endeavour to replace the old
+unnatural methods of dealing with these languages by a new, natural
+and scientific method. It is the purpose of this paper to reply to that
+expectation. I shall, of course, have to confine myself to the more
+general features since I am dealing with so many families and groups
+of languages.
+5. The Scientific Approach. Having insisted that the structures
+of these languages cannot be formulated and described in the
+Procrustean bed of Indo-European categories and linguistic terms
+without gross distortion and injury, I now suggest that the natural
+and scientific method is just to allow them to reveal their own
+-structures and features. We must examine them without preconceived
+ideas and describe exactly what we find. This method, which seems
+so very obvious, is precisely the one that has rarely been attempted.
+I possess many dozens of handbooks of the Burmese language, written
+between the years 1815 and 1940. All of them are based upon Indo-
+European categories and formulations, and not one of them is really
+helpful to my purpose. It is true that R. Grant Brown's very readable
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 3]]
+THE GENERAL STRUCTURE OF LANGUAGES SPOKEN IN BURMA
+103
+but slender book: "Half the Battle in Burmese "dces indeed warn
+us against the use of such terminology, and it stresses the uninflected
+nature of the Burmese word and the use made of functional particles,
+but it helps us no further. In fact the only study I have yet come
+across that is based upon scientific lines is that of Dr. William
+S. Cornyn of Yale University, printed as his Dissertation entitled:
+"Outline of Burmese Grammar ", published by the Linguistic Society
+of America in 1944. These older handbooks however are not without
+their convenience and practical use. But they do not provide that scientific
+basis that is needed for accurate description or for a scientific
+survey.
+CHARACTERISTIC FEATURES OF INDO-CHINESE
+LANGUAGES.
+* 6. When we examine these languages without prejudice, and allow
+them to exhibit their proper features in their own way, we notice
+the following characteristics :-
+(1) Morphological Class. Non-inflected, words main-
+taining their forms unchanged; agglutinating and isolating or better:
+analytical and affixing; generally monosyllabic, though variable in this
+respect. Many of the monosyllables betray evidence of being
+broken down forms of very complex monosyllables and even of
+disyllables.
+(Note: The probability is that long ago these languages
+were to some extent inflectional, as Tibetan and
+its dialects are still, though perhaps not to the
+same extent. But this tendency came to an end
+and the inflections were obliterated by extensive
+phonetic decay. My description of them as
+"non-inflected" applies to them in their present
+forms.)
+(2) Classes of words.
+(a) "Full", free and significant words such as can be
+used as primary words,
+words, or as adjuncts to
+these. They constitute the greater part of the
+vocabulary.
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 4]]
+104
+L. F. TAYLOR
+(b) "Empty", attached, formative or functional elements,
+better known as affixes or particles. These largely
+take the place and exercise the functions of Indo-
+European inflections and indicate syntactical relation-
+ships. They cannot stand alone, but are always
+found attached to "full" words or to phrases or
+sentences.
+If full words be likened to the bricks in a structure, then word-
+order and particles resemble the respective arrangement of the bricks,
+and the mortar that keeps them in their proper places. Or, we may
+liken full words to ornate beads upon a string and empty words to
+dummy beads or knots that keep them in their proper places upon the
+thread of intelligible discourse.
+(3) Parts of Speech.
+"Full" words divide themselves into
+three word-classes which may be determined and defined as
+follows:-
+A study of the formal structure of narrative or predicative
+sentences in these languages soon reveals that they consist of two (and
+sometimes more) distinct parts: a subject-phrase and a predicate-phrase.
+The former precedes the later and is separated from it by a pause.
+Generally too there are special affixes or markers which denote which
+phrase is which. We discover also that the primary or head word of
+the subject-phrase, or actor-phrase, differs in important respects from
+the primary word in the predicate-phrase, or action-phrase. Words
+which can fill the position of primary word in the subject-phrase are
+never found filling the primary position in the predicate-phrase.
+Conversely, words which can fill the position of primary word in the
+predicate-phrase can never-unless modified by a proclitic, enclitic or
+infix-fill the position of primary word in the subject-phrase. Further,
+we discover that many subject-phrase_primary words take possessive or
+directional or locative affixes (very similar to English prepositions)
+which are never taken by predicate-phrase primary words; while the
+latter take temporal affixes only rarely found attached to the former.
+Since the primary word in the subject-phrase denotes in most cases
+a person, a living creature or an inanimate thing, i. e. an object, it may
+conveniently be called a "noun". Similarly since the primary word in
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 5]]
+THE GENERAL STRUCTURE OF LANGUAGES SPOKEN IN BURMA
+105
+the predicate-phrase denotes an action or quality, it may be termed a
+"verb”. But these two word classes as thus determined must never be
+confused with the noun and verb classes known to Indo-European
+linguistics. They differ formally from them, though semantically
+they are very similar.
+The subject of discussion in ordinary speech is, therefore, either a
+"noun" or else a noun-phrase of which the primary word is a noun.
+Similary the predicate is either a "verb" or else a verb-phrase of which
+the primary word is a verb.
+Cardinal numbers fall into neither class and therefore constitute a
+word class of their own.
+The three word classes may now be briefly defined as follows :-
+27
+(a) Nouns Any word that can fill the position of
+primary or head word in the subject-phrase of
+a sentence is a noun. It is the bared subject
+of discourse in ordinary speech.
+It is not,
+of course restricted to this position, but is
+characterized by being capable of filling it.
+Nouns may also be used as adjuncts or attri-
+butes to other nouns or even to verbs. There
+are various sub-classes of nouns.
+(b) Verbs: Any word that can fill the position of
+primary word in the predicate-phrase of
+a sentence is a verb. It is the vocal symbol
+of the action performed by the subject or of
+the quality asserted to be possessed by it.
+Verbs may also be used as adjuncts or
+attribute words to nouns and other verbs.
+There are various sub-classes of verbs.
+(c) Cardinal numbers: These differ from nouns and
+verbs in that they are not used as primary
+words in either phrase of the sentence. They
+are usually associated with a classifier as well
+as with the noun that is to be enumerated.
+Even when the noun is omitted, the missing
+word must still be implied.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 6]]
+106
+L. F. TAYLOR
+Since particles or affixes can never stand alone but are only found
+attatched to "full" words or to sentences or phrases or subordinate
+clauses, they can hardly be regarded as words in their own right. They
+are not parts of speech so much as parts of parts of speech.
+(4) Word-Order: This is a feature of considerable syntactical
+importance, particularly so in those languages that make a minimal
+use of particles of affixes.
+(5) Principle regulating word order: This, as we shall soon
+see, is a feature of fundamental importance. In many languages
+the parts of the sentence and the order of words are characteristic
+of a mental attitude which habitually places an adjunct or qualifying
+word before the primary or principal word with which it is associated.
+Other languages adopt the opposite attitude, and place the adjunct
+word after the primary word. We have therefore to deal with two
+types of word order.
+Type A, or "Adjunct-Primary” languages, such as Burmese,
+which place the adjunct (J) before the primary word (P) with which
+it is associated. These may be called the J-P languages.
+Type B, or “Primary-Adjunct“ languages, which place the
+adjunct after the primary word, as in Shan, Mon and Karen. These
+are the P-J languages.
+It is apparent that Type B is in many respects the reverse or mirror
+image of Type A. This fundamental distinction may be used to distin-
+guish the western or Tibeto-Chinese Languages from the eastern or pre-
+Chinese languages such as Shan, Karen, and the Mon-Khmer languages.
+The former belong to Type A, the latter to Type B.
+(6) Position of Particles of Affixes: It is difficult to give
+general rules for their use, as some languages make more use of them
+than others. Moreover there are many kinds of particles fulfilling
+different functions. Those that are similar in function to English
+prepositions are used with great regularity. In Type A languages they
+follow the noun, whereas the adjunct precedes it, thus: J-N-p, where
+p represents such an affix. In Type B languages they precede
+the noun whereas the adjunct follows it, thus: p-N-J. Nexus or
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 7]]
+THE GENERAL STRUCTURE OF LANGUAGES SPOKEN IN BURMA
+107
+connecting particles come between the words or phrases that they join
+together. Terminal affixes come last in a sentence. Mon-Khmer
+languages employ infixes as well as prefixes and suffixes.
+(7) Classification of Particles.
+(a) Sometimes full words are used functionally. There
+are numerous particles that are almost certainly decayed
+or broken down full words. But there are also parti-
+cles that betray no trace of such an origin.
+(b) Some particles are roughly translatable; these are
+often decayed full words. Others merely modify the
+meanings of words to which they are attached, like
+vague adjunts. Others are purely functional and cannot
+be translated. Such possess only syntactical and
+indicatory functions.
+(c) Among the roughly translatable particles are those
+signifying from, towards, together with, by means of,
+as regards, also, thus, indeed so, please, as for, of
+course, not even, more than, yet; and those that can
+be translated by the English relative pronouns: who
+and which.
+}
+(d) Among the untranslatable ones are indicatory particles
+such as those indicating the subject and object; those
+which close or terminate a sentence; those indicating
+interrogation or the imperative. There are also proclitics
+and enclitics such as used to derive an abstract noun
+from a verb. Finally there are particles that are now
+used for euphony only, and others that indicate
+deference or permission.
+It is evident that much investigation will be required before we
+may hope to classify particles satisfactorily and define their correct
+usage. This differs somewhat in different languages so that only very
+general statements are possible here.
+7. Order of parts of simple narrative sentence: As we should
+expect, both types of languages agree in this: the subject, S,
+precedes the verb V. If there is an object O, then in Type A this
+usually comes between the subject and the verb, thus: S + 0 + V. In
+Type B it usually follows the verb, thus: S + V + O. Development or
+Copyright
+1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 8]]
+108
+L. F. TAYLOR
+elaboration of expression consists in restricting or narrowing down:
+or making more definite the general meanings of the primary words
+constituting subject, object or verb, by the addition of attributive or
+qualifying adjuncts, J, and the use of suitable affixes. For instance,
+starting with the primary and general word "dog" we may say it is a
+"big dog", or a “big, brown, male dog”. Each additional adjunct
+and subjunct narrows down the generality of the word "dog",
+dog", and
+if we can add enough adjuncts we shall finish by defining and describing
+fully the particular dog intended. Or, we might shorten this process
+by referring to the animal as "Mr. Brown's dog". Since in Type A
+the adjuncts precede the primary words, and in Type B follow them,
+we may represent the extensions of subject, verb and object, thus:-
+Type A :-
+Type B --
+S +
+N +
+○ +
+N
++ +
+V
+S
++ V
++0
++
+V
+N
++ V
++ N
+J₁-N1 + Ja-N₂ + J3-V
+2
+N₁ - J₁ + V - J 3 + N 2 - J ₂
+1
+1
+GENERAL SYNTAX
+8. We must now study in greater detail the manner in which the
+primary noun and primary verb constituting the simplest form of
+narrative sentence are extended into noun. and verb expressions by
+means of adjuncts and particles. We will consider first the adjuncts to
+the noun; afterwards the adjuncts to the verb. Only regularities will
+be dealt with here, exceptional instances being relegated to para 9
+below.
+(a) The adjunct to a noun may be another noun.
+Thus in:-
+_
+Type A, for our formula J-P we get N-N, the adjunct
+noun proceding the primary noun N.
+Type B, for P-J we get N-N, where the adjunct noun
+follows the primary noun.
+(b) The adjunct to a noun may be a verb, as defined in
+para 6 ( 3 ) above. Thus in :—
+Type A, for J-P we get V-(p) -N, where the adjunct
+verb precedes the primary noun, and may be joined to
+it by a connecting par icle p.
+Type B, for P - J we get N - ( p ) - V.
+In both instances the connecting particle p is shown in
+brackets because it is often omitted.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 9]]
+The General STRUCTURE OF LANGUAGES SPOKEN IN BURMA
+109
+(c) The adjunct to a noun may be a subordinate or relative
+the man who killed the dog'” or
+clause, as in
+"I saw the man
+"
+who did this'". If we represent such
+a clause by K then in:-
+Type A, for J-P, we get K-p-N.
+⠀ Type B, for P-J, we get N-p-K.
+(d) The possessor of an object is an adjunct to the object
+possessed. We have already seen this in the case of
+"Mr. Brown's dog" in para 7 above. The word
+"dog" is general. The dog under consideration is
+Mr. Brown's dog and not Mr. Jones' dog. Just as it
+is "big, brown and male ", so it is characterised by
+belonging to Mr. Brown. So in :—
+Type A, we get the formula P-( p )-N, where P stands
+for Mr. Brown or the possessor, p for the connective
+or possessive affix, and N for the dog or object
+possessed. The affix is often omitted, when in some
+languages the vowel sound in the adjunct P may be
+slightly stressed and shortened.
+(Thus in Burmese for "his house" we can say:
+“thu i ein”, or simply “ thu ein ".)
+Type B, we get the formula N-(p)-P, or simply N-P.
+´ (e) The adjunct to a verb may be another verb. Thus in :-
+Type A, the formula J-P becomes V-V, where the
+former is the adjunct and the latter the primary verb.
+Type B, the formula P-J becomes V-V.
+(Exceptions will be referred to in para 9 below. ),
++
+(f) The adjunct to a verb may be a noun expression,
+such as: "He went to Rangoon, "He went on
+,,
+horseback", "He walked with a stick ". If we denote
+such an expression by E, then in:-
+Type A, the formula J-P becomes E-V.
+Type B, the formula P-J becomes V-E.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 10]]
+110
+L. F. TAYLOR
+(g) Finally, since the direct object of a transitive verb is
+itself an extension of, or adjunct to, the verb, In:-
+Type A, the formula S+V becomes S+O+V, where
+the object precedes the verb. In terms of nouns and
+adjuncts this becomes: J₁ -N₁ + J 2 -N 2 + J 3 -V.
+Type B, the formula S+V becomes S+V+O, where
+the object follows the verb. In terms of nouns and
+adjuncts this becomes: N 1 -J₁ + V-J 3 + N₂-J2.
+9. Exceptions. It is to be expected, of course, that to the above
+rules or formulae of syntax there will be some exceptions. Such is the
+case with the grammatical and syntactical rules of almost every natural
+language. We shall frequently find that some variation of word order
+is permitted if ambiguity will not result thereby. For instance in many
+of the languages dealt with in this paper the object may sometimes be
+brought to the beginning of the sentence for purpose of special emphasis.
+We may note the following as being the most frequent exceptions to
+the rules or formulae described above:
+In Type A languages: which includes Burmese and the related
+Tibeto-Chinese languages
+Rule (b) states that the verbal adjunct to a noun precedes the
+noun, according to the formula V-(p)-N. But it has
+become customary for certain adjuncts to follow the
+noun instead, giving us the combination N-V, such as
+in the Burmese "lugaung" and "thugyi". The number
+of these adjuncts is relatively small, but they are in
+such common use to give the impression that they are
+numerous. It is sufficient to list such instances as
+occasional exceptions.
+Rule
+(e) states that a verbal adjunct to a primary verb precedes
+the primary verb, according to the formula V-V. But
+certain verbal adjuncts, such as the so-called "auxiliary
+verbs", habitually follow the verb, giving us V-V. In
+similar instances the adjunct appears to have captured
+the main significance of the expression and itself
+L
+become the primary word. Here again the exceptions
+must be listed for further study and explanation.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 11]]
+THE GENERAL Structure of Languages Spoken in BURMA
+111
+In Type B Languages, which include the Tai or Shan dialects;
+Mon and Palaung of the Mon-Khmer sub-family; and the dialects of
+Karen:
+Rule (e) states that a verbal adjunct to a primary verb follows
+that verb. But in Tai and Mon it sometimes precedes
+it. But the exceptions are not numerous.
+Rule (d) gives the formula connecting the possessor with the
+object possessed as N-p-P, or simply N-P. But in the
+Karen dialects we find instead the order P-N, which is
+characteristic of Type A.
+Rule (g) states that the object follows the verb, but in Mon it
+may precede the verb for the purpose of emphasis.
+Also in the imperative the object precedes the Mon
+verb instead of following it. Otherwise the rule is
+obeyed.
+10. Development of Sentence: Just as adjunct words have
+been added to primary words to narrow down their general meanings
+and make them more definite, so subjuncts may in turn be added to
+adjuncts to carry the process further. It is as though in English we
+were to develop a sentence as follows:-
+2
+(a) The man left.
+(b) The rich man left yesterday.
+(c) The very rich man who built this house left yesterday
+for London.
+It is upon such lines that the Indo-Chinese sentence is built up.
+Subjuncts are usually added directly to adjuncts, as in our phrase "big,
+brown, male dog". The formula for languages of Type A would be:
+J3-J₂-J1-(p)-N where J3 and J 2 are two subjuncts (such as “big”
+and "brown") added to the adjunct J 1 ("male"). The corresponding
+formula for Type B languages would be: N-(p)-J₁-J2-J3. The
+entire syntactical scheme is founded upon the extension, and hence the
+restriction, of the general meanings of the primary words standing as
+subject, object and verb; in word-order; and in the functions and use
+of affixes or formative or indicating particles.
+SPECIAL CATEGORIES AND COMPARATIVE LINGUISTICS
+11. Since there are only two main types of syntax in our Indo-
+Chinese agglutinating languages, namely our Types A and B, it follows
+that their general structures are so void of variety as to be of little use
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 12]]
+112
+LF. TAYLOR
+related if one happens
+in providing criteria for genealogical classification. They may suffice
+to prove that two languages are probably not
+to belong to type A and the other to type B. (See Appendix 2 where
+I give such reasons for transferring Shan and Karen from membership
+of the Tibeto-Chinese family of Type A to the more eastern pre-Chinese
+languages of Type B.) But they do not suffice to prove that two
+languages belonging to the same type are related. Mongolian, for
+instance, belongs to Type A; so does Burmese. These two languages,
+therefore, have much in common as regards structure, but no scholar
+* claims that they are genealogically related to one another. They belong
+to different families. Our investigations must move on therefore from
+the most general features and begin to deal with more detailed
+matters where individual peculiarities may begin to reveal themselves.
+12. Besides comparing the patterns as a whole, we must seek for
+some common elements to compare in detail. Now the formal features
+of languages are not arbitrary. They reflect common human experien- :
+ces; those found in real life. So we find in discourse and narrative
+certain categories which seek grammatical expression in all languages.
+Such are: (a) number, in nouns and verbs, (b) sex, (c) degrees of
+comparison, including equalities and superlatives, (d) passive forms of
+verbs, (e) causatives, (f) negative expressions, (g) interrogative expres-
+sions, (h) use of classifiers, (i) distributive words and expressions, and
+so on. These features can be singled out, brought together, arranged
+and compared, and so form a wider basis for genealogical comparison.
+It is in the treatment of these categories that we may find the old
+handbooks useful, for many of them have assembled the materials for
+us. But we shall refrain from using such terms as: declension,
+conjugation, case, tense, adjective, adverb, etc. which abound in these
+books, but which all bear Indo-European associations alien to our
+purpose. Though the comparison of these categories will carry us
+further, they will not get us far enough.
++
+။
+13. So next we must study and compare the vocabularies, and it
+will be mainly upon such work that our final genealogical classifications
+must depend. Hence the necessity of having extensive vocabularies at
+our disposal. We must start with those of closely related dialects, such
+as those of Burmese or of Karen. We must derive the phonetic
+Requations that hold between them, and find out what proportion of
+wwords satisfy them always trying to distinguish between words that
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+-
+
+[[page 13]]
+THE GENERAL STRUCTURE OF LANGUAGES SPOKEN IN BURMA
+113
+are native and those that have been borrowed from other languages.
+We must try to reconstruct the parent language from which the dialects
+have sprung (as Karlgren has reconstructed archaic and ancient Chinese
+from its old literary forms and modern dialects). This process must be
+repeated with these parent languages in turn, to see how far we can
+reconstruct the grandparent language. We must penetrate in this way
+as far back as possible into the family tree, for relationships cannot be
+proved further back than genealogy can take us. Mere similarity, as
+we have already admitted, is no true criterion of common descent.
+,,.
+Besides comparing individual words between different languages
+and dialects, we must also compare what are now called "word families
+or “word groups". In almost all the languages spoken in Burma there
+are to be discovered groups of words which are characterised by
+having similar sounds and possessing shades of the same radical
+meanings. Each such group must have been derived from a common
+root. We must compare such groups as wholes and not as individua]
+words. This however will be the subject matter of a subsequent paper
+and need not detain us any longer here.
+CONCLUSION
+"
+14. Linguistic Survey of Burma : Should I be fortunate enough
+to secure the financial assistance that would enable me to complete my
+work, I would publish the results in two series of volumes: (a) Descrip-
+tive, and (b) Comparative. In the former each of the language groups
+(such as Burmese and its dialects) or main languages (such as Kadu
+or Kachin) will be dealt with in turn. I shall avoid the old fashioned
+methods, and allow each group or main language to depict its own
+characteristic features by following closely the methods outlined above.
+Word-order will be made clear; the particles or affixes will be classified
+and listed and their functions defined. Then the "special categories
+will be picked out, arranged and examined. Finally the vocabularies
+will be printed and dealt with in the manner shown in the first part of
+para 13 up to the reconstruction of the parent form from which the
+particular group of dialects has descended. Only after that will the
+comparative volumes be taken in hand. Our task then will be in a
+similar manner to compare the parent languages, and so throw light
+upon the still older grandparent languages, and thus penetrate*
+into the past as far as our materials will take us. This means, in effect,
+that we first compare the Groups together, then the Branches, then the ⚫
+sub-families, and finally, if it proves possible, the Families themselves.
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 14]]
+114
+L. F. TAYLOR
+15. I would have liked to include in this paper actual instances,
+taken from many languages, of the building up processess described in
+para 8, but this would increase its length too considerably. But those
+of my readers who have some working knowledge of any of these
+languages will experience no difficulty in discovering suitable illustrations.
+To others such illustrations would not mean very much.
+16. Summary of principal rules of syntax: In paragraphs
+6 (5), 6 (6), 7 and 8 above I have described the principal rules of
+syntax for the two types of languages. A reference back to these
+paragraphs will reveal how much printed space was required to contain
+the brief descriptions given. I will now tabulate the same rules in the
+same order, employing the formulae of symbolic syntax. They can all be
+formulated so as to appear in two narrow columns some two or three
+inches in length, that is, within the compass of about five square inches.
+Reference.
+Rule.
+Type A.
+Type B.
+p
+-
+N
+P - - V
+N (p) K
+-
+Para 6 (5)
+General principle.
+J - P
+P - J
+8
+00
+"
+Rule (a) N & N.
+N
+-
+- N
+N_N
+8
+•
+00
+"
+(b) N & V.
+V
+(p) – N
+-
+N
+-
+"
+00
+,,
+(c) N & K.
+K
+-
+I
+-
+00
+8
+"
+(d) Possessives.
+P - (p)
+N
+8
+"
+"
+(e) V & V.
+V - V
+A Z
+-
+V
+-
+1
+"
+00
+00
+"
+(f) V & E.
+(r)
+-
+V
+,,
+"
+(g) S & O & V.
+S+V+O
+APPENDIX I.
+E
+S + O + V
+ON SYMBOLIC SYNTAX
+Its purpose and Use.
+-
+N (p) P
+V
+V - E
+I have, in the foregoing paper, made brief use of a system of
+symbolic syntax that I devised for the purpose of illustrating and
+clarifying the relations that connect together the various elements that
+constitute speech sentences in Indo-Chinese languages.
+Mathematicians make extensive use of symbolic forms which
+enable them to express complex situations in simple visual form, so
+that they can view them objectively, concentrate upon the essentials,
+and perform mechanically and easily operations that would otherwise
+prove extremely difficult and complex, if not impossible to carry out.
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 15]]
+THE GENERAL STRUCTURE OF LANGUAGES SPOKEN IN BURMA
+115
+Similarly logicians have felt the need to devise systems of symbolic
+logic in order to objectify and clarify their own peculiar problems.
+Again chemists have for long used symbols to express the natures and
+structures of chemical compounds and reactions. Half a line of symbols
+will show at a glance the molecular compositions of two or three
+different substances; the nature of the reactions that take place when
+they are brought into contact; and the molecular compositions of the
+resulting substances. A verbal description of the same chemical
+substances and their reactions would have filled five or six [lines, and
+made much less impression upon our minds. Indeed the recent deve-
+lopment of organic chemistry would have been impossible without
+the use of chemical symbolism. The fact is that symbols viewed by the
+eye appeal to our minds more clearly and forcibly than strings of
+words, whether written or spoken, can ever do.
+Moreover they are
+more easily manipulated and do not change their significance during
+the process.
+So, in the same way, I have long felt the need for a system of
+symbolic syntax that will exhibit essential relations in concrete visible
+form. We need a device that will ease mental labour and present to
+the eye at a glance the structural features of every language with which
+we have to deal. Beyond that it ought to be of great use when we
+come to compare or contrast the features of different languages. In
+short it ought to be of use in comparative as well as in descriptive
+linguistics. Professor Otto Jespersen published such a system many
+years ago, but it was devised for the structures of Indo-European
+languages, and had to apply to grammatical inflections as well as to
+syntactical features. Consequently it turned out to be deterringly
+complicated. My own system, being devised for agglutinating and
+isolating languages, is simple, elastic, and sufficiently comprehensive
+for our purpose. With suitable modifications it can even be used to
+illustrate word-building and word-structure. It can therefore be used
+for Symbolic Morphology as well as well as Symbolic Syntax.
+2. List of Symbols :
+(a) Heavy capitals to express the most comprehensive
+features; such are:-
+P for primary word, whether noun or verb.
+J for adjuncts, that is qualifying or restricting words,
+whether nouns or verbs.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 16]]
+116
+N for primary noun.
+V for primary verb.
+L. F. TAYLOR
+S for the entire subject, including the subject affix, so
+that S=S- (s). Here S denotes the subject without
+the affix, s denotes the affix, the bracket indicates
+that the affix may be omitted if ambigulty will not
+result therefrom.
+○ for the entire subject, so that O=0-(o).
+(b) Ordinary capitals for "full" words and matters connected
+therewith. Such are:-
+N for nouns when used as adjuncts.
+V for verbs when used as adjuncts.
+J for adjuncts and subjuncts, when ) is not required.
+K for relative subordinate clauses attached to a noun.
+P for the possessor of anything.
+E for noun clauses attached to a verb.
+Q for a cardinal number.
+C for a classifier or "numeral auxiliary ".
+S
+for subject, without affix.
+O for object, without affix.
+Where we have to deal with several nouns or verbs or adjuncts, we
+can distingnish them by suffixing small numerals, thus:-
+N1, N2, N3, N4, etc.
+V1, V2, V3, V4, etc.
+J₁, J 2, J3, J4, etc.
+(c) Small lower case letters to denote particles or affixes,
+thus-
+p for particle generally.
+f for final, terminating or closing affixes.
+i for interrogative particles.
+n for negative affixes or particles.
+c for connecting or nexus affixes.
+s for affix denoting the subject.
+o for affix denoting the object.
+(d) A few" operating symbols" :-
+> for "becomes " or "Is transformed into ".
+<for "is derived from ".
++ for "in addition to ".
+-
+=
+- for "attached to ".
+for "is equivalent to ”.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 17]]
+THE GENERAL STRUCTURE OF LANGUAGES SPOKEN IN BURMA
+3. Practical Test.
+117
+Although the thesis of the foregoing paper was based upon the
+study of seventy languages, nevertheless it must be subjected to the
+practical test of verification. After completing the paper, I decided
+to test the thesis in the following manner. I have available translations
+of the Bible Parable of the Prodigal Son in twenty seven languages
+belonging to four different families and eight different language groups.
+They are :-
+(1) Burmese, Arakanese, Yaw, Tavoyan, Intha, Taungyo, and
+Danu. (2) Maru. (3) Lisaw. (4) Lai, Taungtha and Southern
+Chin. (5) Kachin. (6) Shan (or Tai) and Khun. (7) Mon (or
+Talaing) and Palaung. (8) The Karen dialects: Sgaw, Wewaw, Pwo,
+Mopwa, Karenbyu, Bwe, Padaung, Gheko, Taungthu, and Karenni.
+Down the left hand sides of four long sheets of paper I indicated
+in turn the Rules (a) to (g) formulated in paragraph 8, allowing plenty
+of vertical space for examples illustrating or disobeying each rule.
+Then on sheet 1 I ruled seven vertical colums, one for each of the
+dialects of Burmese. On sheet 2 I ruled six columns, one each for
+Maru, Lisaw, Lai, Taungtha, Southern Chin and Kachin. Sheet 3 had
+colums for Shan, Khun, Mon and Palaung. Finally sheet 4 had columns
+for each of the ten dialects of Karen. The texts were then scrutinised
+and entries made at the proper places in the various columns. Excep-
+tions as well as regularities were noted. After all the texts had been
+dealt with I examined the marked sheets. Although I had expected
+considerable regularity, the results astonished me. Not only did I find
+that the seven dialects of Burmese agreed exactly with one another, but
+the remaining Tibeto-Burmese languages on sheet 2 also agreed exactly
+with them. A single column marked Type A would have sufficed for
+the lot. Similarly on sheet 3 the four languages, representing two
+families, agreed exactly with one another, and also agreed with the ten
+dialects of Karen, with the exception of Rule (d) in which Karen had
+the order of Type A. So that except for this one exception a single
+column marked Type B would have done or all these languages.
+All this goes to show how fundamental and pervading the general
+principle stated in para 6 (5) really is. It is the principle, I referred
+to as the J-P and P-J principle, which characterises the two types of
+structure that I have called Type A and Type B. Perhaps the principle
+might be called "the adjunct and primary principle" for short.
+30
+Copyright 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 18]]
+118
+L. F. TAYLOR
+I venture to think that this test also indicates the value of symbolic
+syntax which enables features from so many languages to be compared
+side by side, set out in narrow vertical columns. I shall now tabulate the
+final results of this testing, indicating exceptional features in brackets.
+The results may be compared with the table at the end of paragraph 16
+of the paper.
+Type A
+Type B
+Rule
+Burmese
+Maru
+7
+and
+3 Chin
+and
+Shan
+Mon
+Karen
+and
+and
+dialects
+Lisaw
+Kachin
+Khun
+Palaung
+10
+dialects
+General
+J-P
+J-P
+J-P
+J-P
+J-P
+J-P
+Rule (a)
+N-N
+N-N
+N-N
+N-N
+N-N
+N-N
+,,
+(b)
+V-p-N
+V-p-N
+V-p-N
+N-p-V
+N-p-V
+N-p-V
+V-N
+V-N
+V-N
+N-V
+N-V
+N-V
+(N-V)
+(N-V) (N-V)
+,,
+(c)
+K-p-N
+K-p-N
+K-p-N
+N-p-K
+N-p-K
+N-p-K
+,,
+(d)
+P-p-N
+P-p-N
+P-p-N
+P-N
+P-N
+P-N
+N-p
+N-P
+(P-N)
+"
+(e)
+V-V
+V-V
+V-V
+V-V
+V-V
+V-V
+(V-V)
+(V-V)
+(V-V)
+(V-V)
+(V-V)
+(V-V)
+""
+(f)
+E-V
+E-V
+E-V
+V-E
+V-E
+V-E
+(g)
+S+O+VS+O+VS+V+O \S+V+O\S+V+O S+V+0
+APPENDIX 2
+CLASSIFICATION OF THE LANGUAGES SPOKEN IN BURMA.
+The Classification officially recognised in India and Burma at the
+time of the 1911 Census was nearly as follows :-
+-
+Family
+Table I
+Sub-family
+Branch
+Group
+Tibeto-
+Burman
+Assam-
+Burmese
+Burma
+Lolo-Muhso
+Kuki-Chin
+Naga
+Kachin
+Sak (Kadu)
+Tibeto-
+Chinese
+Languages
+of
+Burma and
+Indo-China
+Tai-Chinese
+Tai-Karen
+Karen
+Tai (Shan)
+or
+Sinitic
+Chinese
+Chinese
+Austro-
+Asiatic
+Austric
+Austronesian
+Khmer
+Indonesian
+Mon (Talaing)
+Palaung-Wa
+Malay
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+Mon-
+
+[[page 19]]
+THE GENERAL STRUCTURE OF LANGUAGES SPOKEN IN Burma
+119
+In 1921, when preparing to write the Chapter on language for the
+1921 Census Report of Burma, I pointed out to Sir George Grierson
+that Karen differed very considerably from Tibeto-Burman forms of
+speech and obtained his approval to withdraw it from inclusion in that
+family and to show it separately until such time as further research
+might lead to a more final classification of it. But Tai or Shan was
+left as a member of the Tai-Chinese sub-family. Below I present a
+second table of classification with Tai also withdrawn from membership
+of the Tibeto-Chinese family and treated in the same way as Karen.
+I admit that scholars have found many similarities between Tai and
+Chinese, but I consider that these are due to borrowing by the former
+from the latter. I admit also that many competent scholars believe that
+Tai is related to Chinese, which belief pre-supposes that Tai was
+originally a Type A language that subsequently changed over into a
+Type B language. For Tai possesses a typically Type B structure,
+while Chinese possesses a Type A structure. Finally Chinese disobeys
+our Rule (g) by placing the object after the verb instead of before
+Table 2
+Family
+Sub-family
+Branch
+Group
+Western or
+Type A
+Tibeto-Burman
+Assam-
+{Tibeto-Chinese
+Burmese
+languages
+Chinese
+Tai
+Burmese
+Intermediate
+Lolo-Musho
+Kuki-Chin
+Naga
+Kachin
+Sak (Kadu)
+Chinese
+Tai (Shan)
+Karen
+Karen
+Eastern or
+'Type B
+Man
+Miao
+languages
+Pre-Chinese
+Austro-
+Mon-
+Mon (Talaing)
+Austric
+Asiatic
+Khmer
+Palaung-wa
+Austronesian
+Indonesian
+Malay
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
+
+[[page 20]]
+t
+120
+L. F. TAYLOR
+What is of significance is that Tai
+it, but that is not a serious matter.
+exhibits the fundamental P-J characteristic while Chinese exibits the
+opposite J-P characteristic. I am convinced that it would be most
+difficult for a language to change over from Type A to Type B. Such a
+change would be of too fundamental nature to have taken place with-
+out throwing the language into the greatest confusion. Moreover it is
+difficult to believe that any language emerging from such an upheaval
+could succeed in acquiring the regularity of character that now
+characterises the very widely spread dialects of Tai.
+Whereas the Western, or Type A, languages consist of a single
+Family of genealogically related forms of speech, known as the Tibeto-
+Chinese Family (or, sometimes as the Sino-Tibetan), we cannot say
+that the four Eastern or Type B families are related. They are built
+on similar lines, but that is not enough to prove any genealogical
+relationship. Further research will be required to settle this point.
+In the meantime the four families are kept distinct.
+pre-Chinese", for
+I have referred to these Type B languages as
+whereas Chinese and Lolo originated somewhere to the west of the
+areas they now occupy, these other languages appear to have flourished
+over large areas of southern China and south east Asia before Chinese
+had spread to any considerable extent south of the Yang Tse river.
+The term "pre-Chinese" does not imply that these languages are older
+than Chinese, but merely that they occupied the field first. They may
+have been forced southwards to some extent under Chinese pressure
+and have originated northward of the areas in which we now find them.
+Copyright© 1998 - Myanmar Book Centre & Book Promotion & Service Ltd, Bangkok, Thailand.
