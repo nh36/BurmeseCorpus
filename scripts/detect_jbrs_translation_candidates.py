@@ -8,7 +8,10 @@ from corpus_common import read_tsv, write_tsv
 from jbrs_workflow_common import (
     JBRS_ARTICLE_REFERENCE_TARGETS_PATH,
     JBRS_ARTICLE_REFERENCE_TARGETS_REVIEW_PATH,
+    JBRS_CORPUS_CITATION_PRIORITY_QUEUE_PATH,
     JBRS_EMBEDDED_TRANSLATION_EXCERPT_REVIEW_PATH,
+    JBRS_EXTRACTED_SOURCE_TEXT_UNITS_PATH,
+    JBRS_EXTRACTED_TRANSLATION_UNITS_PATH,
     JBRS_FOLLOWUP_SOURCE_LEADS_PATH,
     JBRS_LOCAL_FILE_MANIFEST_PATH,
     JBRS_OCR_BATCH_PLAN_PATH,
@@ -17,6 +20,7 @@ from jbrs_workflow_common import (
     JBRS_PILOT_SUMMARY_PATH,
     JBRS_REFERENCE_FILE_MATCH_PATH,
     JBRS_REFERENCE_HUNT_RAW_PATH,
+    JBRS_STRUCTURED_EXTRACTION_PLAN_PATH,
     JBRS_TRANSLATION_CANDIDATE_LOG_PATH,
     JBRS_TRANSLATION_CANDIDATE_REVIEW_PATH,
     TRANSLATION_CANDIDATE_FIELDS,
@@ -112,6 +116,10 @@ def main() -> None:
     ocr_quality_review_rows = read_tsv(args.ocr_quality_review) if args.ocr_quality_review.exists() else []
     excerpt_review_rows = read_tsv(args.excerpt_review) if args.excerpt_review.exists() else []
     followup_source_lead_rows = read_tsv(args.followup_source_leads) if args.followup_source_leads.exists() else []
+    citation_priority_rows = read_tsv(JBRS_CORPUS_CITATION_PRIORITY_QUEUE_PATH) if JBRS_CORPUS_CITATION_PRIORITY_QUEUE_PATH.exists() else []
+    extraction_plan_rows = read_tsv(JBRS_STRUCTURED_EXTRACTION_PLAN_PATH) if JBRS_STRUCTURED_EXTRACTION_PLAN_PATH.exists() else []
+    extracted_translation_unit_rows = read_tsv(JBRS_EXTRACTED_TRANSLATION_UNITS_PATH) if JBRS_EXTRACTED_TRANSLATION_UNITS_PATH.exists() else []
+    extracted_source_text_unit_rows = read_tsv(JBRS_EXTRACTED_SOURCE_TEXT_UNITS_PATH) if JBRS_EXTRACTED_SOURCE_TEXT_UNITS_PATH.exists() else []
     selected_local_file_ids = resolve_selected_local_file_ids(
         manifest_rows,
         batch_rows,
@@ -150,6 +158,10 @@ def main() -> None:
         excerpt_review_rows,
         followup_source_lead_rows,
         ocr_quality_review_rows,
+        citation_priority_rows,
+        extraction_plan_rows,
+        extracted_translation_unit_rows,
+        extracted_source_text_unit_rows,
     )
     write_summary(args.summary_output, summary)
     print(f"Wrote {len(rows)} JBRS translation-candidate rows to {args.output}")

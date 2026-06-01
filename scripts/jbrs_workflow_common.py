@@ -27,6 +27,7 @@ JBRS_TRANSLATION_CANDIDATE_REVIEW_PATH = JBRS_DIRECTORY / "jbrs_translation_cand
 JBRS_OCR_QUALITY_REVIEW_PATH = JBRS_DIRECTORY / "jbrs_ocr_quality_review.tsv"
 JBRS_EMBEDDED_TRANSLATION_EXCERPT_REVIEW_PATH = JBRS_DIRECTORY / "jbrs_embedded_translation_excerpt_review.tsv"
 JBRS_FOLLOWUP_SOURCE_LEADS_PATH = JBRS_DIRECTORY / "jbrs_followup_source_leads.tsv"
+JBRS_CORPUS_CITATION_PRIORITY_QUEUE_PATH = JBRS_DIRECTORY / "jbrs_corpus_citation_priority_queue.tsv"
 JBRS_STRUCTURED_EXTRACTION_PLAN_PATH = JBRS_DIRECTORY / "jbrs_structured_extraction_plan.tsv"
 JBRS_EXTRACTED_TRANSLATION_UNITS_PATH = JBRS_DIRECTORY / "jbrs_extracted_translation_units.tsv"
 JBRS_EXTRACTED_SOURCE_TEXT_UNITS_PATH = JBRS_DIRECTORY / "jbrs_extracted_source_text_units.tsv"
@@ -253,6 +254,23 @@ FOLLOWUP_SOURCE_LEAD_FIELDS = [
     "notes",
 ]
 
+CORPUS_CITATION_PRIORITY_QUEUE_FIELDS = [
+    "priority_id",
+    "corpus_source_or_manifest",
+    "corpus_citation_text_short",
+    "normalized_source_reference",
+    "candidate_local_file_id",
+    "candidate_file_name",
+    "candidate_batch_id",
+    "matched_jbrs_candidate_key",
+    "language_scope_expected",
+    "burmese_relevance_status",
+    "translation_evidence_type",
+    "priority",
+    "recommended_action",
+    "notes",
+]
+
 TRANSLATION_CANDIDATE_FIELDS = [
     "candidate_id",
     "candidate_key",
@@ -322,6 +340,9 @@ EXTRACTED_TRANSLATION_UNIT_FIELDS = [
     "translation_unit_id",
     "source_local_file_id",
     "batch_id",
+    "candidate_key",
+    "extraction_plan_id",
+    "excerpt_review_id",
     "article_title",
     "page_marker",
     "unit_order",
@@ -343,6 +364,9 @@ EXTRACTED_SOURCE_TEXT_UNIT_FIELDS = [
     "source_text_unit_id",
     "source_local_file_id",
     "batch_id",
+    "candidate_key",
+    "extraction_plan_id",
+    "excerpt_review_id",
     "article_title",
     "page_marker",
     "unit_order",
@@ -492,6 +516,19 @@ def slugify(value: str) -> str:
 
 def bool_string(value: bool) -> str:
     return "true" if value else "false"
+
+
+def is_true(value: str) -> bool:
+    return value.strip().casefold() == "true"
+
+
+def normalized_language_scope(value: str) -> str:
+    return value.strip().casefold()
+
+
+def is_pali_only_language_scope(value: str) -> bool:
+    normalized = normalized_language_scope(value)
+    return "pali" in normalized and "burmese" not in normalized and "mixed" not in normalized
 
 
 def truncate_short(value: str | None, limit: int = SHORT_SNIPPET_LIMIT) -> str:
@@ -1922,11 +1959,19 @@ def build_pilot_summary(
     excerpt_review_rows: list[dict[str, str]] | None = None,
     followup_source_lead_rows: list[dict[str, str]] | None = None,
     ocr_quality_review_rows: list[dict[str, str]] | None = None,
+    citation_priority_rows: list[dict[str, str]] | None = None,
+    extraction_plan_rows: list[dict[str, str]] | None = None,
+    extracted_translation_unit_rows: list[dict[str, str]] | None = None,
+    extracted_source_text_unit_rows: list[dict[str, str]] | None = None,
 ) -> dict[str, object]:
     candidate_review_rows = candidate_review_rows or []
     excerpt_review_rows = excerpt_review_rows or []
     followup_source_lead_rows = followup_source_lead_rows or []
     ocr_quality_review_rows = ocr_quality_review_rows or []
+    citation_priority_rows = citation_priority_rows or []
+    extraction_plan_rows = extraction_plan_rows or []
+    extracted_translation_unit_rows = extracted_translation_unit_rows or []
+    extracted_source_text_unit_rows = extracted_source_text_unit_rows or []
     matched_reference_ids = {
         row["reference_id"]
         for row in match_rows
@@ -1966,6 +2011,31 @@ def build_pilot_summary(
         if row.get("review_status", "") == "verified_translation_coverage"
         and row.get("is_actual_translation_section") == "true"
     )
+    mixed_language_extraction_plan_count = sum(
+        1
+        for row in extraction_plan_rows
+        if row.get("burmese_relevance_status", "") == "mixed_burmese_pali_relevance"
+        or (
+            "pali" in normalized_language_scope(row.get("source_text_language_or_script", ""))
+            and "burmese" in normalized_language_scope(row.get("source_text_language_or_script", ""))
+        )
+    )
+    burmese_relevant_extracted_unit_count = sum(
+        1
+        for row in extracted_translation_unit_rows + extracted_source_text_unit_rows
+        if is_true(row.get("is_burmese_relevant", ""))
+    )
+    pali_only_extracted_unit_count = sum(
+        1
+        for row in extracted_translation_unit_rows
+        if is_true(row.get("includes_pali", ""))
+        and not is_true(row.get("includes_burmese", ""))
+        and not is_true(row.get("includes_other_language", ""))
+    ) + sum(
+        1
+        for row in extracted_source_text_unit_rows
+        if is_pali_only_language_scope(row.get("source_language", ""))
+    )
     return {
         "reference_hunt_count": len(raw_reference_rows),
         "article_reference_target_count": len(target_rows),
@@ -1994,6 +2064,12 @@ def build_pilot_summary(
         "embedded_translation_excerpt_reviewed_count": embedded_translation_excerpt_reviewed_count,
         "standalone_translation_section_count": standalone_translation_section_count,
         "fuller_source_followup_lead_count": len(followup_source_lead_rows),
+        "citation_priority_queue_count": len(citation_priority_rows),
+        "mixed_language_extraction_plan_count": mixed_language_extraction_plan_count,
+        "extracted_source_text_unit_count": len(extracted_source_text_unit_rows),
+        "extracted_translation_unit_count": len(extracted_translation_unit_rows),
+        "burmese_relevant_extracted_unit_count": burmese_relevant_extracted_unit_count,
+        "pali_only_extracted_unit_count": pali_only_extracted_unit_count,
         "bibliography_only_translation_hit_count": bibliography_only_translation_hit_count,
         "verified_translation_coverage_count": verified_translation_coverage_count,
         "edition_or_transliteration_only_count": candidate_type_counts["edition_or_transliteration_only"],
@@ -2008,6 +2084,7 @@ def build_pilot_summary(
             "selectable_for_ocr_count excludes completed and failed rows unless the rerun flags are used explicitly.",
             "Translation candidates are heuristic review leads, not verified translation coverage.",
             "Embedded translation excerpts, bibliography-only hits, and fuller-source follow-up leads are tracked separately from verified translation coverage.",
+            "Citation-priority rows count corpus-driven JBRS leads separately from reviewed mixed-language extraction dry runs.",
         ],
     }
 
@@ -2117,7 +2194,7 @@ def validate_translation_candidate_alignment(
 def build_readme_text() -> str:
     return """# JBRS working metadata
 
-This directory stores working metadata for the *Journal of the Burma Research Society* (JBRS) reference hunt, local-file matching, OCR planning, and translation-candidate triage. It does **not** store source PDFs, page images, Google Vision JSON, or full OCR text.
+This directory stores working metadata for the *Journal of the Burma Research Society* (JBRS) reference hunt, local-file matching, OCR planning, and translation-candidate triage. It does **not** store source PDFs, page images, Google Vision JSON, or raw `data_local/` OCR payloads.
 
 ## Core workflow
 1. Build raw and clean article references: `python3 scripts/build_jbrs_reference_hunt.py`
@@ -2151,10 +2228,11 @@ This directory stores working metadata for the *Journal of the Burma Research So
 - JSON summaries
 - README and scripts
 - short evidence snippets only
+- compact OCR-derived published source/translation units when they are clearly marked as OCR-derived extraction output and linked to source metadata
 
 ## Must not be committed
 - source PDFs or page images
-- full OCR text or long extracted passages
+- raw `data_local/` OCR article_text/page_text dumps or Google Vision runtime payloads
 - Google Vision JSON payloads
 - Nathan's absolute external-drive paths
 - Google credentials, API keys, or service-account secrets
@@ -2210,6 +2288,7 @@ def validate_jbrs_workflow() -> list[str]:
         JBRS_OCR_QUALITY_REVIEW_PATH,
         JBRS_EMBEDDED_TRANSLATION_EXCERPT_REVIEW_PATH,
         JBRS_FOLLOWUP_SOURCE_LEADS_PATH,
+        JBRS_CORPUS_CITATION_PRIORITY_QUEUE_PATH,
         JBRS_STRUCTURED_EXTRACTION_PLAN_PATH,
         JBRS_EXTRACTED_TRANSLATION_UNITS_PATH,
         JBRS_EXTRACTED_SOURCE_TEXT_UNITS_PATH,
@@ -2249,6 +2328,7 @@ def validate_jbrs_workflow() -> list[str]:
     ocr_quality_review_rows = read_tsv(JBRS_OCR_QUALITY_REVIEW_PATH)
     excerpt_review_rows = read_tsv(JBRS_EMBEDDED_TRANSLATION_EXCERPT_REVIEW_PATH)
     followup_source_lead_rows = read_tsv(JBRS_FOLLOWUP_SOURCE_LEADS_PATH)
+    citation_priority_rows = read_tsv(JBRS_CORPUS_CITATION_PRIORITY_QUEUE_PATH)
     extraction_plan_rows = read_tsv(JBRS_STRUCTURED_EXTRACTION_PLAN_PATH)
     extracted_translation_unit_rows = read_tsv(JBRS_EXTRACTED_TRANSLATION_UNITS_PATH)
     extracted_source_text_unit_rows = read_tsv(JBRS_EXTRACTED_SOURCE_TEXT_UNITS_PATH)
@@ -2260,6 +2340,10 @@ def validate_jbrs_workflow() -> list[str]:
     manifest_by_id = {row["local_file_id"]: row for row in manifest_rows}
     batch_by_id = {row["batch_id"]: row for row in batch_rows}
     status_by_batch_id = {row["batch_id"]: row for row in status_rows}
+    candidate_by_key = {candidate_lookup_key(row): row for row in candidate_rows if candidate_lookup_key(row)}
+    excerpt_review_by_id = {
+        row.get("excerpt_review_id", ""): row for row in excerpt_review_rows if row.get("excerpt_review_id", "")
+    }
 
     if summary.get("ocr_batch_plan_count", 0) and not batch_rows:
         errors.append("JBRS pilot summary reports OCR batch rows, but jbrs_ocr_batch_plan.tsv has no rows.")
@@ -2361,6 +2445,7 @@ def validate_jbrs_workflow() -> list[str]:
     )
 
     extraction_plan_ids = set()
+    extraction_plan_by_id: dict[str, dict[str, str]] = {}
     for row in extraction_plan_rows:
         extraction_plan_id = row.get("extraction_plan_id", "")
         if not extraction_plan_id:
@@ -2369,6 +2454,7 @@ def validate_jbrs_workflow() -> list[str]:
         if extraction_plan_id in extraction_plan_ids:
             errors.append(f"Structured extraction plan contains duplicate extraction_plan_id: {extraction_plan_id}")
         extraction_plan_ids.add(extraction_plan_id)
+        extraction_plan_by_id[extraction_plan_id] = row
         if not row.get("source_text_language_or_script", "") or not row.get("translation_language", ""):
             errors.append(f"Structured extraction plan is missing language scope fields: {extraction_plan_id}")
         if row.get("burmese_relevance_status", "") not in {
@@ -2377,18 +2463,119 @@ def validate_jbrs_workflow() -> list[str]:
             "related_non_burmese_pagan_source",
         }:
             errors.append(f"Structured extraction plan has invalid burmese_relevance_status: {extraction_plan_id}")
+        if row.get("burmese_relevance_status", "") == "mixed_burmese_pali_relevance":
+            language_scope = normalized_language_scope(row.get("source_text_language_or_script", ""))
+            if "pali" not in language_scope or "burmese" not in language_scope:
+                errors.append(f"Mixed-language extraction plan lacks explicit Pali/Burmese scope: {extraction_plan_id}")
+
+    citation_priority_ids = set()
+    for row in citation_priority_rows:
+        priority_id = row.get("priority_id", "")
+        if not priority_id:
+            errors.append("Corpus citation priority row is missing priority_id.")
+            continue
+        if priority_id in citation_priority_ids:
+            errors.append(f"Corpus citation priority queue contains duplicate priority_id: {priority_id}")
+        citation_priority_ids.add(priority_id)
+        local_file_id = row.get("candidate_local_file_id", "")
+        if local_file_id and local_file_id not in manifest_by_id:
+            errors.append(f"Corpus citation priority queue points to unknown local file id: {priority_id}")
+        candidate_key = row.get("matched_jbrs_candidate_key", "")
+        if candidate_key:
+            candidate_row = candidate_by_key.get(candidate_key)
+            if not candidate_row:
+                errors.append(f"Corpus citation priority queue points to unknown candidate_key: {priority_id}")
+            elif local_file_id and candidate_row.get("local_file_id", "") != local_file_id:
+                errors.append(f"Corpus citation priority queue local_file_id does not match candidate log: {priority_id}")
+        if row.get("burmese_relevance_status", "") not in {
+            "direct_burmese_relevance",
+            "mixed_burmese_pali_relevance",
+            "related_non_burmese_pagan_source",
+            "bibliography_only_lead",
+        }:
+            errors.append(f"Corpus citation priority queue has invalid burmese_relevance_status: {priority_id}")
+
+    source_unit_ids = {
+        row.get("source_text_unit_id", "")
+        for row in extracted_source_text_unit_rows
+        if row.get("source_text_unit_id", "")
+    }
 
     for row in extracted_translation_unit_rows:
         if not row.get("translation_unit_id", ""):
             errors.append("Extracted translation unit row is missing translation_unit_id.")
         if not row.get("source_local_file_id", "") or not row.get("translation_text", ""):
             errors.append(f"Extracted translation unit is missing required content fields: {row.get('translation_unit_id', '')}")
+        if not row.get("candidate_key", "") or row.get("candidate_key", "") not in candidate_by_key:
+            errors.append(f"Extracted translation unit points to unknown candidate_key: {row.get('translation_unit_id', '')}")
+        plan_row = extraction_plan_by_id.get(row.get("extraction_plan_id", ""))
+        if not row.get("extraction_plan_id", "") or not plan_row:
+            errors.append(f"Extracted translation unit points to unknown extraction_plan_id: {row.get('translation_unit_id', '')}")
+        elif row.get("source_local_file_id", "") != plan_row.get("source_local_file_id", ""):
+            errors.append(f"Extracted translation unit local_file_id disagrees with extraction plan: {row.get('translation_unit_id', '')}")
+        if row.get("source_text_unit_id", "") and row.get("source_text_unit_id", "") not in source_unit_ids:
+            errors.append(f"Extracted translation unit points to unknown source_text_unit_id: {row.get('translation_unit_id', '')}")
+        if not row.get("source_language", "") or not row.get("translation_language", ""):
+            errors.append(f"Extracted translation unit is missing language fields: {row.get('translation_unit_id', '')}")
+        for field in ["is_burmese_relevant", "includes_pali", "includes_burmese", "includes_other_language"]:
+            if row.get(field, "") not in {"true", "false"}:
+                errors.append(f"Extracted translation unit has invalid boolean field {field}: {row.get('translation_unit_id', '')}")
+        if row.get("excerpt_review_id", "") and row.get("excerpt_review_id", "") not in excerpt_review_by_id:
+            errors.append(f"Extracted translation unit points to unknown excerpt_review_id: {row.get('translation_unit_id', '')}")
+        if is_true(row.get("is_burmese_relevant", "")) and not (
+            is_true(row.get("includes_burmese", "")) or (plan_row or {}).get("burmese_relevance_status", "") == "direct_burmese_relevance"
+        ):
+            errors.append(f"Extracted translation unit is marked Burmese-relevant without Burmese scope: {row.get('translation_unit_id', '')}")
+        if (
+            is_true(row.get("includes_pali", ""))
+            and not is_true(row.get("includes_burmese", ""))
+            and not is_true(row.get("includes_other_language", ""))
+            and is_true(row.get("is_burmese_relevant", ""))
+        ):
+            errors.append(f"Pali-only extracted translation unit is incorrectly marked Burmese-relevant: {row.get('translation_unit_id', '')}")
+        if (plan_row or {}).get("burmese_relevance_status", "") == "mixed_burmese_pali_relevance":
+            if not is_true(row.get("includes_pali", "")) or not is_true(row.get("includes_burmese", "")):
+                if "version-specific" not in row.get("notes", "").casefold():
+                    errors.append(f"Mixed-language extraction plan lacks mixed or version-specific translation-unit scope: {row.get('translation_unit_id', '')}")
+        if row.get("review_status", "") == "verified_translation_coverage":
+            if not row.get("inscription_or_text_id", ""):
+                errors.append(f"Verified extracted translation unit lacks inscription_or_text_id linkage: {row.get('translation_unit_id', '')}")
+            if (plan_row or {}).get("needs_manual_source_linkage", "") == "true":
+                errors.append(f"Verified extracted translation unit still points to a plan needing manual source linkage: {row.get('translation_unit_id', '')}")
 
     for row in extracted_source_text_unit_rows:
         if not row.get("source_text_unit_id", ""):
             errors.append("Extracted source-text unit row is missing source_text_unit_id.")
         if not row.get("source_local_file_id", "") or not row.get("source_text", ""):
             errors.append(f"Extracted source-text unit is missing required content fields: {row.get('source_text_unit_id', '')}")
+        if not row.get("candidate_key", "") or row.get("candidate_key", "") not in candidate_by_key:
+            errors.append(f"Extracted source-text unit points to unknown candidate_key: {row.get('source_text_unit_id', '')}")
+        plan_row = extraction_plan_by_id.get(row.get("extraction_plan_id", ""))
+        if not row.get("extraction_plan_id", "") or not plan_row:
+            errors.append(f"Extracted source-text unit points to unknown extraction_plan_id: {row.get('source_text_unit_id', '')}")
+        elif row.get("source_local_file_id", "") != plan_row.get("source_local_file_id", ""):
+            errors.append(f"Extracted source-text unit local_file_id disagrees with extraction plan: {row.get('source_text_unit_id', '')}")
+        if row.get("excerpt_review_id", "") and row.get("excerpt_review_id", "") not in excerpt_review_by_id:
+            errors.append(f"Extracted source-text unit points to unknown excerpt_review_id: {row.get('source_text_unit_id', '')}")
+        if not row.get("source_language", ""):
+            errors.append(f"Extracted source-text unit is missing source_language: {row.get('source_text_unit_id', '')}")
+        if is_true(row.get("is_burmese_relevant", "")) and not (
+            "burmese" in normalized_language_scope(row.get("source_language", ""))
+            or (plan_row or {}).get("burmese_relevance_status", "") == "direct_burmese_relevance"
+        ):
+            errors.append(f"Extracted source-text unit is marked Burmese-relevant without Burmese or direct-relevance scope: {row.get('source_text_unit_id', '')}")
+        if is_pali_only_language_scope(row.get("source_language", "")) and is_true(row.get("is_burmese_relevant", "")):
+            errors.append(f"Pali-only extracted source-text unit is incorrectly marked Burmese-relevant: {row.get('source_text_unit_id', '')}")
+        if (plan_row or {}).get("burmese_relevance_status", "") == "mixed_burmese_pali_relevance":
+            source_language = normalized_language_scope(row.get("source_language", ""))
+            if "pali" not in source_language or "burmese" not in source_language:
+                if "version-specific" not in row.get("notes", "").casefold():
+                    errors.append(f"Mixed-language extraction plan lacks mixed or version-specific source-unit scope: {row.get('source_text_unit_id', '')}")
+        if row.get("review_status", "") == "verified_translation_coverage":
+            if not row.get("inscription_or_text_id", ""):
+                errors.append(f"Verified extracted source-text unit lacks inscription_or_text_id linkage: {row.get('source_text_unit_id', '')}")
+            if (plan_row or {}).get("needs_manual_source_linkage", "") == "true":
+                errors.append(f"Verified extracted source-text unit still points to a plan needing manual source linkage: {row.get('source_text_unit_id', '')}")
 
     for row in manifest_rows:
         for key in ["path_stub_or_redacted_path"]:
@@ -2414,6 +2601,10 @@ def validate_jbrs_workflow() -> list[str]:
         excerpt_review_rows,
         followup_source_lead_rows,
         ocr_quality_review_rows,
+        citation_priority_rows,
+        extraction_plan_rows,
+        extracted_translation_unit_rows,
+        extracted_source_text_unit_rows,
     )
     if summary != summary_expected:
         errors.append("JBRS pilot summary counts do not match the generated artifacts.")
@@ -2431,6 +2622,7 @@ def validate_jbrs_workflow() -> list[str]:
         JBRS_OCR_QUALITY_REVIEW_PATH,
         JBRS_EMBEDDED_TRANSLATION_EXCERPT_REVIEW_PATH,
         JBRS_FOLLOWUP_SOURCE_LEADS_PATH,
+        JBRS_CORPUS_CITATION_PRIORITY_QUEUE_PATH,
         JBRS_STRUCTURED_EXTRACTION_PLAN_PATH,
         JBRS_EXTRACTED_TRANSLATION_UNITS_PATH,
         JBRS_EXTRACTED_SOURCE_TEXT_UNITS_PATH,

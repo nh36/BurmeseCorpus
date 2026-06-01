@@ -22,6 +22,12 @@
   "embedded_translation_excerpt_reviewed_count": 1,
   "standalone_translation_section_count": 2,
   "fuller_source_followup_lead_count": 1,
+  "citation_priority_queue_count": 2,
+  "mixed_language_extraction_plan_count": 1,
+  "extracted_source_text_unit_count": 2,
+  "extracted_translation_unit_count": 2,
+  "burmese_relevant_extracted_unit_count": 2,
+  "pali_only_extracted_unit_count": 2,
   "bibliography_only_translation_hit_count": 1,
   "verified_translation_coverage_count": 0,
   "edition_or_transliteration_only_count": 0,
@@ -31,6 +37,7 @@
     "ready_for_ocr_count and batch_plan_ready_for_ocr_count reflect the batch plan only; status_log_ready_for_ocr_count reflects rows still selectable after consulting the OCR status log.",
     "selectable_for_ocr_count excludes completed and failed rows unless the rerun flags are used explicitly.",
     "Translation candidates are heuristic review leads, not verified translation coverage.",
-    "Embedded translation excerpts, bibliography-only hits, and fuller-source follow-up leads are tracked separately from verified translation coverage."
+    "Embedded translation excerpts, bibliography-only hits, and fuller-source follow-up leads are tracked separately from verified translation coverage.",
+    "Citation-priority rows count corpus-driven JBRS leads separately from reviewed mixed-language extraction dry runs."
   ]
 }

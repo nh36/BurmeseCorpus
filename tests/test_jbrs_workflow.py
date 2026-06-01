@@ -5,6 +5,7 @@ import re
 import sys
 import tempfile
 import unittest
+from collections import defaultdict
 from pathlib import Path
 from types import SimpleNamespace
 from unittest.mock import patch
@@ -21,6 +22,7 @@ from corpus_common import write_tsv
 from jbrs_workflow_common import (
     JBRS_ARTICLE_REFERENCE_TARGETS_PATH,
     JBRS_ARTICLE_REFERENCE_TARGETS_REVIEW_PATH,
+    JBRS_CORPUS_CITATION_PRIORITY_QUEUE_PATH,
     JBRS_EMBEDDED_TRANSLATION_EXCERPT_REVIEW_PATH,
     JBRS_EXTRACTED_SOURCE_TEXT_UNITS_PATH,
     JBRS_EXTRACTED_TRANSLATION_UNITS_PATH,
@@ -63,6 +65,7 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
         cls.candidate_review_rows = read_tsv(JBRS_TRANSLATION_CANDIDATE_REVIEW_PATH)
         cls.excerpt_review_rows = read_tsv(JBRS_EMBEDDED_TRANSLATION_EXCERPT_REVIEW_PATH)
         cls.followup_source_lead_rows = read_tsv(JBRS_FOLLOWUP_SOURCE_LEADS_PATH)
+        cls.citation_priority_rows = read_tsv(JBRS_CORPUS_CITATION_PRIORITY_QUEUE_PATH)
         cls.ocr_quality_review_rows = read_tsv(JBRS_OCR_QUALITY_REVIEW_PATH)
         cls.structured_extraction_plan_rows = read_tsv(JBRS_STRUCTURED_EXTRACTION_PLAN_PATH)
         cls.extracted_translation_unit_rows = read_tsv(JBRS_EXTRACTED_TRANSLATION_UNITS_PATH)
@@ -82,6 +85,7 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
             JBRS_TRANSLATION_CANDIDATE_REVIEW_PATH,
             JBRS_EMBEDDED_TRANSLATION_EXCERPT_REVIEW_PATH,
             JBRS_FOLLOWUP_SOURCE_LEADS_PATH,
+            JBRS_CORPUS_CITATION_PRIORITY_QUEUE_PATH,
             JBRS_OCR_QUALITY_REVIEW_PATH,
             JBRS_STRUCTURED_EXTRACTION_PLAN_PATH,
             JBRS_EXTRACTED_TRANSLATION_UNITS_PATH,
@@ -152,6 +156,10 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
             self.excerpt_review_rows,
             self.followup_source_lead_rows,
             self.ocr_quality_review_rows,
+            self.citation_priority_rows,
+            self.structured_extraction_plan_rows,
+            self.extracted_translation_unit_rows,
+            self.extracted_source_text_unit_rows,
         )
         self.assertEqual(self.summary, rebuilt)
 
@@ -212,6 +220,12 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
         self.assertEqual(self.summary["bibliography_only_translation_hit_count"], 1)
         self.assertEqual(self.summary["standalone_translation_section_count"], 2)
         self.assertEqual(self.summary["fuller_source_followup_lead_count"], 1)
+        self.assertEqual(self.summary["citation_priority_queue_count"], 2)
+        self.assertEqual(self.summary["mixed_language_extraction_plan_count"], 1)
+        self.assertEqual(self.summary["extracted_source_text_unit_count"], 2)
+        self.assertEqual(self.summary["extracted_translation_unit_count"], 2)
+        self.assertEqual(self.summary["burmese_relevant_extracted_unit_count"], 2)
+        self.assertEqual(self.summary["pali_only_extracted_unit_count"], 2)
         self.assertEqual(self.summary["verified_translation_coverage_count"], 0)
 
     def test_structured_extraction_plan_covers_current_jbrs_leads(self) -> None:
@@ -226,14 +240,38 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
         )
         self.assertEqual(plan_by_local_file["1920-shwegugyiinscription-luce1920-pdf"]["burmese_relevance_status"], "related_non_burmese_pagan_source")
         self.assertEqual(plan_by_local_file["1976-anandainscriptions-tinlwin1976-pdf"]["burmese_relevance_status"], "mixed_burmese_pali_relevance")
+        self.assertIn("Pali and Burmese", plan_by_local_file["1976-anandainscriptions-tinlwin1976-pdf"]["source_text_language_or_script"])
         self.assertEqual(plan_by_local_file["1932-burmadebttopagan-luce1932-pdf"]["lead_type"], "embedded_translation_excerpt")
 
-    def test_extraction_dry_run_records_shwegugyi_units_only(self) -> None:
-        self.assertEqual(len(self.extracted_translation_unit_rows), 1)
-        self.assertEqual(len(self.extracted_source_text_unit_rows), 1)
-        self.assertEqual(self.extracted_translation_unit_rows[0]["source_local_file_id"], "1920-shwegugyiinscription-luce1920-pdf")
-        self.assertEqual(self.extracted_source_text_unit_rows[0]["source_language"], "Pali")
-        self.assertEqual(self.extracted_translation_unit_rows[0]["translation_language"], "English")
+    def test_extraction_dry_run_records_shwegugyi_and_ananda_units(self) -> None:
+        translation_by_file = defaultdict(list)
+        for row in self.extracted_translation_unit_rows:
+            translation_by_file[row["source_local_file_id"]].append(row)
+        source_by_file = defaultdict(list)
+        for row in self.extracted_source_text_unit_rows:
+            source_by_file[row["source_local_file_id"]].append(row)
+        self.assertEqual(len(translation_by_file["1920-shwegugyiinscription-luce1920-pdf"]), 1)
+        self.assertEqual(len(source_by_file["1920-shwegugyiinscription-luce1920-pdf"]), 1)
+        self.assertEqual(len(translation_by_file["1976-anandainscriptions-tinlwin1976-pdf"]), 1)
+        self.assertEqual(len(source_by_file["1976-anandainscriptions-tinlwin1976-pdf"]), 1)
+        shwegugyi_translation = translation_by_file["1920-shwegugyiinscription-luce1920-pdf"][0]
+        ananda_translation = translation_by_file["1976-anandainscriptions-tinlwin1976-pdf"][0]
+        ananda_source = source_by_file["1976-anandainscriptions-tinlwin1976-pdf"][0]
+        self.assertEqual(shwegugyi_translation["is_burmese_relevant"], "false")
+        self.assertEqual(shwegugyi_translation["translation_language"], "English")
+        self.assertEqual(shwegugyi_translation["extraction_plan_id"], "jbrs-extract-plan-20260531-001")
+        self.assertEqual(ananda_translation["is_burmese_relevant"], "true")
+        self.assertEqual(ananda_translation["includes_pali"], "true")
+        self.assertEqual(ananda_translation["includes_burmese"], "true")
+        self.assertEqual(ananda_translation["source_text_unit_id"], ananda_source["source_text_unit_id"])
+        self.assertEqual(ananda_source["source_language"], "Mixed Pali/Burmese witness notes")
+        self.assertEqual(ananda_translation["candidate_key"], "jbrs-candidate-key:1976-anandainscriptions-tinlwin1976-pdf:explicit_translation_heading:page-1:e52b351bb422")
+
+    def test_citation_priority_queue_tracks_corpus_derived_jbrs_leads(self) -> None:
+        queue_by_file = {row["candidate_local_file_id"]: row for row in self.citation_priority_rows}
+        self.assertEqual(queue_by_file["1932-burmadebttopagan-luce1932-pdf"]["translation_evidence_type"], "embedded_translation_excerpt")
+        self.assertEqual(queue_by_file["1920-shwegugyiinscription-luce1920-pdf"]["burmese_relevance_status"], "related_non_burmese_pagan_source")
+        self.assertIn("jbrs-target-0012", queue_by_file["1920-shwegugyiinscription-luce1920-pdf"]["corpus_source_or_manifest"])
 
 
 class JBRSWorkflowLogicTests(unittest.TestCase):
@@ -727,6 +765,39 @@ class JBRSWorkflowLogicTests(unittest.TestCase):
         errors = common.validate_translation_candidate_alignment(candidate_rows, review_rows, [], [], [])
         self.assertTrue(any("conflicts with local_file_id" in error for error in errors), errors)
         self.assertTrue(any("lacks OCR quality review" in error for error in errors), errors)
+
+    def test_validator_flags_pali_only_translation_unit_marked_burmese_relevant(self) -> None:
+        original_read_tsv = common.read_tsv
+
+        def fake_read_tsv(path: Path):
+            rows = original_read_tsv(path)
+            if path == common.JBRS_EXTRACTED_TRANSLATION_UNITS_PATH:
+                mutated = [dict(row) for row in rows]
+                mutated[0]["is_burmese_relevant"] = "true"
+                return mutated
+            return rows
+
+        with patch.object(common, "read_tsv", side_effect=fake_read_tsv):
+            errors = common.validate_jbrs_workflow()
+        self.assertTrue(any("Pali-only extracted translation unit is incorrectly marked Burmese-relevant" in error for error in errors), errors)
+
+    def test_validator_flags_mixed_plan_unit_without_mixed_or_version_specific_scope(self) -> None:
+        original_read_tsv = common.read_tsv
+
+        def fake_read_tsv(path: Path):
+            rows = original_read_tsv(path)
+            if path == common.JBRS_EXTRACTED_SOURCE_TEXT_UNITS_PATH:
+                mutated = [dict(row) for row in rows]
+                for row in mutated:
+                    if row["source_local_file_id"] == "1976-anandainscriptions-tinlwin1976-pdf":
+                        row["source_language"] = "Pali"
+                        row["notes"] = "Needs manual linkage."
+                return mutated
+            return rows
+
+        with patch.object(common, "read_tsv", side_effect=fake_read_tsv):
+            errors = common.validate_jbrs_workflow()
+        self.assertTrue(any("Mixed-language extraction plan lacks mixed or version-specific source-unit scope" in error for error in errors), errors)
 
 
 if __name__ == "__main__":

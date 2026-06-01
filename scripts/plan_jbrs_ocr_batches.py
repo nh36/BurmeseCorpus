@@ -7,6 +7,9 @@ from corpus_common import read_tsv, write_tsv
 from jbrs_workflow_common import (
     JBRS_ARTICLE_REFERENCE_TARGETS_PATH,
     DEFAULT_RUNTIME_PATH_CACHE,
+    JBRS_CORPUS_CITATION_PRIORITY_QUEUE_PATH,
+    JBRS_EXTRACTED_SOURCE_TEXT_UNITS_PATH,
+    JBRS_EXTRACTED_TRANSLATION_UNITS_PATH,
     JBRS_LOCAL_FILE_MANIFEST_PATH,
     JBRS_OCR_BATCH_PLAN_PATH,
     JBRS_OCR_QUALITY_REVIEW_PATH,
@@ -16,9 +19,13 @@ from jbrs_workflow_common import (
     JBRS_REFERENCE_HUNT_RAW_PATH,
     JBRS_EMBEDDED_TRANSLATION_EXCERPT_REVIEW_PATH,
     JBRS_FOLLOWUP_SOURCE_LEADS_PATH,
+    JBRS_STRUCTURED_EXTRACTION_PLAN_PATH,
     JBRS_TRANSLATION_CANDIDATE_LOG_PATH,
     JBRS_TRANSLATION_CANDIDATE_REVIEW_PATH,
+    CORPUS_CITATION_PRIORITY_QUEUE_FIELDS,
     EMBEDDED_TRANSLATION_EXCERPT_REVIEW_FIELDS,
+    EXTRACTED_SOURCE_TEXT_UNIT_FIELDS,
+    EXTRACTED_TRANSLATION_UNIT_FIELDS,
     FOLLOWUP_SOURCE_LEAD_FIELDS,
     OCR_BATCH_PLAN_FIELDS,
     OCR_QUALITY_REVIEW_FIELDS,
@@ -63,6 +70,10 @@ def main() -> None:
     ocr_quality_review_rows = read_tsv(args.ocr_quality_review) if args.ocr_quality_review.exists() else []
     excerpt_review_rows = read_tsv(args.excerpt_review) if args.excerpt_review.exists() else []
     followup_source_lead_rows = read_tsv(args.followup_source_leads) if args.followup_source_leads.exists() else []
+    citation_priority_rows = read_tsv(JBRS_CORPUS_CITATION_PRIORITY_QUEUE_PATH) if JBRS_CORPUS_CITATION_PRIORITY_QUEUE_PATH.exists() else []
+    extraction_plan_rows = read_tsv(JBRS_STRUCTURED_EXTRACTION_PLAN_PATH) if JBRS_STRUCTURED_EXTRACTION_PLAN_PATH.exists() else []
+    extracted_translation_unit_rows = read_tsv(JBRS_EXTRACTED_TRANSLATION_UNITS_PATH) if JBRS_EXTRACTED_TRANSLATION_UNITS_PATH.exists() else []
+    extracted_source_text_unit_rows = read_tsv(JBRS_EXTRACTED_SOURCE_TEXT_UNITS_PATH) if JBRS_EXTRACTED_SOURCE_TEXT_UNITS_PATH.exists() else []
     existing_status_rows = read_tsv(args.status_output) if args.status_output.exists() else []
     batch_rows = build_ocr_batch_plan_rows(manifest_rows, match_rows, runtime_path_cache, candidate_rows)
     status_rows = build_ocr_status_log_rows(batch_rows, existing_status_rows)
@@ -78,6 +89,12 @@ def main() -> None:
         write_tsv(args.excerpt_review, [], EMBEDDED_TRANSLATION_EXCERPT_REVIEW_FIELDS)
     if not args.followup_source_leads.exists():
         write_tsv(args.followup_source_leads, [], FOLLOWUP_SOURCE_LEAD_FIELDS)
+    if not JBRS_CORPUS_CITATION_PRIORITY_QUEUE_PATH.exists():
+        write_tsv(JBRS_CORPUS_CITATION_PRIORITY_QUEUE_PATH, [], CORPUS_CITATION_PRIORITY_QUEUE_FIELDS)
+    if not JBRS_EXTRACTED_TRANSLATION_UNITS_PATH.exists():
+        write_tsv(JBRS_EXTRACTED_TRANSLATION_UNITS_PATH, [], EXTRACTED_TRANSLATION_UNIT_FIELDS)
+    if not JBRS_EXTRACTED_SOURCE_TEXT_UNITS_PATH.exists():
+        write_tsv(JBRS_EXTRACTED_SOURCE_TEXT_UNITS_PATH, [], EXTRACTED_SOURCE_TEXT_UNIT_FIELDS)
     summary = build_pilot_summary(
         raw_reference_rows,
         target_rows,
@@ -90,6 +107,10 @@ def main() -> None:
         excerpt_review_rows,
         followup_source_lead_rows,
         ocr_quality_review_rows,
+        citation_priority_rows,
+        extraction_plan_rows,
+        extracted_translation_unit_rows,
+        extracted_source_text_unit_rows,
     )
     write_summary(args.summary_output, summary)
     print(f"Wrote {len(batch_rows)} JBRS OCR batch rows to {args.batch_output}")
