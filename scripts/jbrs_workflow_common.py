@@ -49,6 +49,8 @@ JBRS_WORKING_OCR_METADATA_ROOT = JBRS_WORKING_OCR_ROOT / "metadata"
 JBRS_OCR_TEXT_INDEX_PATH = JBRS_WORKING_OCR_ROOT / "jbrs_ocr_text_index.tsv"
 JBRS_OCR_PRODUCTION_RUN_LOG_PATH = JBRS_DIRECTORY / "jbrs_ocr_production_run_log.tsv"
 JBRS_OCR_TRANSLATION_HIT_INDEX_PATH = JBRS_DIRECTORY / "jbrs_ocr_translation_hit_index.tsv"
+JBRS_OCR_TOP_EXTRACTION_CANDIDATES_PATH = JBRS_DIRECTORY / "jbrs_ocr_top_extraction_candidates.tsv"
+JBRS_OCR_PRODUCTION_SUMMARY_PATH = JBRS_DIRECTORY / "jbrs_ocr_production_summary.json"
 MAX_GITHUB_CONTENTS_SIZE = 1_000_000
 
 RAW_REFERENCE_HUNT_FIELDS = [
@@ -244,6 +246,25 @@ JBRS_OCR_TRANSLATION_HIT_INDEX_FIELDS = [
     "burmese_relevance_guess",
     "priority",
     "next_action",
+    "notes",
+]
+
+JBRS_OCR_TOP_EXTRACTION_CANDIDATES_FIELDS = [
+    "candidate_rank",
+    "local_file_id",
+    "batch_id",
+    "file_name",
+    "year",
+    "ocr_text_path",
+    "language_scope_guess",
+    "burmese_relevance_guess",
+    "translation_hit_count",
+    "text_hit_count",
+    "inscription_hit_count",
+    "strongest_markers",
+    "sample_pages",
+    "reason_for_priority",
+    "recommended_next_action",
     "notes",
 ]
 
@@ -2266,6 +2287,46 @@ def validate_translation_candidate_alignment(
     return errors
 
 
+def build_jbrs_ocr_production_summary(
+    text_index_rows: list[dict[str, str]],
+    translation_hit_rows: list[dict[str, str]],
+    top_candidate_rows: list[dict[str, str]],
+) -> dict[str, int]:
+    translation_hit_local_ids = {
+        row["local_file_id"]
+        for row in translation_hit_rows
+        if row.get("hit_type", "") == "translation_marker" and row.get("local_file_id", "")
+    }
+    inscription_hit_local_ids = {
+        row["local_file_id"]
+        for row in translation_hit_rows
+        if row.get("hit_type", "") == "inscription_marker" and row.get("local_file_id", "")
+    }
+    text_hit_local_ids = {
+        row["local_file_id"]
+        for row in translation_hit_rows
+        if row.get("hit_type", "") == "text_marker" and row.get("local_file_id", "")
+    }
+    scope_counts = defaultdict(int)
+    for row in text_index_rows:
+        scope_counts[row.get("language_scope_guess", "")] += 1
+    return {
+        "ocr_text_index_count": len(text_index_rows),
+        "ocr_translation_hit_count": len(translation_hit_rows),
+        "files_with_translation_hits": len(translation_hit_local_ids),
+        "files_with_inscription_hits": len(inscription_hit_local_ids),
+        "files_with_text_hits": len(text_hit_local_ids),
+        "burmese_scope_file_count": scope_counts["Burmese"],
+        "mixed_burmese_pali_scope_file_count": scope_counts["Mixed Burmese/Pali"],
+        "pali_only_file_count": scope_counts["Pali"],
+        "mon_file_count": scope_counts["Mon"],
+        "pyu_file_count": scope_counts["Pyu"],
+        "uncertain_scope_file_count": scope_counts["mixed_or_uncertain"],
+        "non_burmese_context_file_count": scope_counts["non_burmese_relevant_context"],
+        "top_extraction_candidate_count": len(top_candidate_rows),
+    }
+
+
 def validate_repo_ocr_artifacts() -> list[str]:
     errors: list[str] = []
     forbidden_suffixes = {
@@ -2322,6 +2383,7 @@ def validate_repo_ocr_artifacts() -> list[str]:
             )
 
     text_index_rows = read_tsv(JBRS_OCR_TEXT_INDEX_PATH)
+    text_index_by_local_id = {row["local_file_id"]: row for row in text_index_rows}
     for row in text_index_rows:
         local_file_id = row["local_file_id"]
         ocr_text_path = REPO_ROOT / row["ocr_text_path"]
@@ -2345,6 +2407,11 @@ def validate_repo_ocr_artifacts() -> list[str]:
         if row["ocr_status"] != "completed":
             errors.append(
                 f"OCR text index row {local_file_id} must have ocr_status=completed."
+            )
+    for local_file_id in metadata_files:
+        if local_file_id not in text_index_by_local_id:
+            errors.append(
+                f"OCR metadata file {metadata_files[local_file_id].relative_to(REPO_ROOT)} has no matching OCR text index row."
             )
 
     production_run_rows = read_tsv(JBRS_OCR_PRODUCTION_RUN_LOG_PATH)
@@ -2380,6 +2447,10 @@ def validate_repo_ocr_artifacts() -> list[str]:
             errors.append(
                 f"OCR hit row {row['hit_id']} uses unsupported burmese_relevance_guess '{row['burmese_relevance_guess']}'."
             )
+        if local_file_id not in text_index_by_local_id:
+            errors.append(
+                f"OCR hit row {row['hit_id']} references missing OCR text index row for {local_file_id}."
+            )
         if local_file_id not in text_files:
             errors.append(
                 f"OCR hit row {row['hit_id']} references missing OCR text for {local_file_id}."
@@ -2396,6 +2467,58 @@ def validate_repo_ocr_artifacts() -> list[str]:
             errors.append(
                 f"OCR hit row {row['hit_id']} contains an absolute path in notes."
             )
+    top_candidate_rows = read_tsv(JBRS_OCR_TOP_EXTRACTION_CANDIDATES_PATH)
+    if len(top_candidate_rows) < 50:
+        errors.append("OCR top extraction candidate report must list at least 50 rows.")
+    top_twenty_marked = 0
+    for row in top_candidate_rows:
+        local_file_id = row["local_file_id"]
+        if not row["candidate_rank"].isdigit():
+            errors.append(
+                f"OCR top extraction candidate row for {local_file_id} has non-numeric candidate_rank '{row['candidate_rank']}'."
+            )
+        if row["language_scope_guess"] not in JBRS_OCR_LANGUAGE_SCOPE_VALUES:
+            errors.append(
+                f"OCR top extraction candidate row for {local_file_id} uses unsupported language_scope_guess '{row['language_scope_guess']}'."
+            )
+        if row["burmese_relevance_guess"] not in JBRS_BURMESE_RELEVANCE_GUESS_VALUES:
+            errors.append(
+                f"OCR top extraction candidate row for {local_file_id} uses unsupported burmese_relevance_guess '{row['burmese_relevance_guess']}'."
+            )
+        if local_file_id not in text_index_by_local_id:
+            errors.append(
+                f"OCR top extraction candidate row for {local_file_id} references no OCR text index row."
+            )
+        ocr_text_path = REPO_ROOT / row["ocr_text_path"]
+        if not ocr_text_path.exists():
+            errors.append(
+                f"OCR top extraction candidate row for {local_file_id} points to missing OCR text file {row['ocr_text_path']}."
+            )
+        if row["language_scope_guess"] == "Pali" and row["burmese_relevance_guess"] in {
+            "direct_burmese_relevance",
+            "mixed_burmese_pali_relevance",
+        }:
+            errors.append(
+                f"OCR top extraction candidate row for {local_file_id} marks a Pali-only file as Burmese-relevant."
+            )
+        if "top_20_priority" in row["notes"]:
+            top_twenty_marked += 1
+        for field_name in ("reason_for_priority", "recommended_next_action", "notes"):
+            if ABSOLUTE_PATH_PATTERN.search(row[field_name]):
+                errors.append(
+                    f"OCR top extraction candidate row for {local_file_id} contains an absolute path in {field_name}."
+                )
+    if top_twenty_marked < 20:
+        errors.append("OCR top extraction candidate report must clearly mark the top 20 rows.")
+
+    production_summary = json.loads(JBRS_OCR_PRODUCTION_SUMMARY_PATH.read_text(encoding="utf-8"))
+    expected_summary = build_jbrs_ocr_production_summary(
+        text_index_rows=text_index_rows,
+        translation_hit_rows=translation_hit_rows,
+        top_candidate_rows=top_candidate_rows,
+    )
+    if production_summary != expected_summary:
+        errors.append("JBRS OCR production summary counts do not match the OCR text index, hit index, and top-candidate report.")
     return errors
 
 
@@ -2503,6 +2626,8 @@ def validate_jbrs_workflow() -> list[str]:
         JBRS_OCR_PRODUCTION_RUN_LOG_PATH,
         JBRS_OCR_TEXT_INDEX_PATH,
         JBRS_OCR_TRANSLATION_HIT_INDEX_PATH,
+        JBRS_OCR_TOP_EXTRACTION_CANDIDATES_PATH,
+        JBRS_OCR_PRODUCTION_SUMMARY_PATH,
         JBRS_PILOT_SUMMARY_PATH,
         JBRS_README_PATH,
     ]
@@ -2841,6 +2966,8 @@ def validate_jbrs_workflow() -> list[str]:
         JBRS_OCR_PRODUCTION_RUN_LOG_PATH,
         JBRS_OCR_TEXT_INDEX_PATH,
         JBRS_OCR_TRANSLATION_HIT_INDEX_PATH,
+        JBRS_OCR_TOP_EXTRACTION_CANDIDATES_PATH,
+        JBRS_OCR_PRODUCTION_SUMMARY_PATH,
     ]:
         text = path.read_text(encoding="utf-8")
         if ABSOLUTE_PATH_PATTERN.search(text):

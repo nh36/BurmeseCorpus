@@ -11,9 +11,10 @@ This directory stores working metadata for the *Journal of the Burma Research So
 6. Run OCR preflight before live submission: `python3 scripts/preflight_jbrs_ocr.py --limit 5`
 7. Dry-run the Google Vision workflow: `python3 scripts/ocr_jbrs_google_vision.py --dry-run --limit 5`
 8. Run live Google Vision OCR only after preflight passes: `python3 scripts/ocr_jbrs_google_vision.py --execute --limit 5`
-9. Refresh conservative translation-candidate leads: `python3 scripts/detect_jbrs_translation_candidates.py`
-10. Review article-target cleanup in `jbrs_article_reference_targets_review.tsv` before trusting unresolved bibliographic rows.
-11. Review candidate outcomes in `jbrs_translation_candidate_review.tsv` before treating any OCR hit as translation-bearing.
+9. Export/rebuild repository-safe OCR indexes and ranking artifacts: `python3 scripts/run_jbrs_production_ocr.py --rebuild-indexes-only`
+10. Refresh conservative translation-candidate leads: `python3 scripts/detect_jbrs_translation_candidates.py`
+11. Review article-target cleanup in `jbrs_article_reference_targets_review.tsv` before trusting unresolved bibliographic rows.
+12. Review candidate outcomes in `jbrs_translation_candidate_review.tsv` before treating any OCR hit as translation-bearing.
 
 ## Runtime path cache
 - Local runtime cache path: `data_local/ocr/jbrs/manifest/jbrs_runtime_path_map.json`
@@ -36,6 +37,7 @@ This directory stores working metadata for the *Journal of the Burma Research So
 - short evidence snippets only
 - compact OCR-derived published source/translation units when they are clearly marked as OCR-derived extraction output and linked to source metadata
 - repository-safe OCR text under `data/working/ocr/jbrs/text/` with matching metadata JSON under `data/working/ocr/jbrs/metadata/`
+- OCR summary/ranking artifacts such as `jbrs_ocr_translation_hit_index.tsv`, `jbrs_ocr_top_extraction_candidates.tsv`, and `jbrs_ocr_production_summary.json`
 
 ## Must not be committed
 - source PDFs or page images

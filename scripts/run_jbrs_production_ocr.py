@@ -5,7 +5,7 @@ import argparse
 import hashlib
 import json
 import re
-from collections import defaultdict
+from collections import Counter, defaultdict
 from datetime import UTC, datetime
 from pathlib import Path
 from types import SimpleNamespace
@@ -22,17 +22,21 @@ from jbrs_workflow_common import (
     JBRS_LOCAL_FILE_MANIFEST_PATH,
     JBRS_OCR_BATCH_PLAN_PATH,
     JBRS_OCR_LANGUAGE_SCOPE_VALUES,
+    JBRS_OCR_PRODUCTION_SUMMARY_PATH,
     JBRS_OCR_PRODUCTION_RUN_LOG_FIELDS,
     JBRS_OCR_PRODUCTION_RUN_LOG_PATH,
     JBRS_OCR_STATUS_LOG_PATH,
     JBRS_OCR_TEXT_INDEX_FIELDS,
     JBRS_OCR_TEXT_INDEX_PATH,
+    JBRS_OCR_TOP_EXTRACTION_CANDIDATES_FIELDS,
+    JBRS_OCR_TOP_EXTRACTION_CANDIDATES_PATH,
     JBRS_OCR_TRANSLATION_HIT_INDEX_FIELDS,
     JBRS_OCR_TRANSLATION_HIT_INDEX_PATH,
     JBRS_REFERENCE_FILE_MATCH_PATH,
     JBRS_WORKING_OCR_METADATA_ROOT,
     JBRS_WORKING_OCR_TEXT_ROOT,
     batch_is_selectable_for_ocr,
+    build_jbrs_ocr_production_summary,
 )
 
 SELECTION_TERMS = [
@@ -99,7 +103,36 @@ PALI_MARKERS = ["pali", "pali text"]
 MON_MARKERS = [" mon ", " talaing", "mon inscription", "talaing inscription"]
 PYU_MARKERS = [" pyu ", "pyu inscription", "ancient pyu"]
 CONTEXT_MARKERS = ["burma research society", "j.b.r.s.", "jbrs", "burma", "pagan", "pinya", "ava"]
+BURMESE_CONTEXT_MARKERS = [
+    "burmese",
+    "old burmese",
+    "burmese songs",
+    "burmese text",
+    "burmese inscription",
+]
+PALI_CONTEXT_MARKERS = ["pali", "pali literature", "pali text"]
+MON_CONTEXT_MARKERS = [
+    "mon",
+    "talaing",
+    "mon inscription",
+    "talaing inscription",
+    "talaing epigraphy",
+]
+PYU_CONTEXT_MARKERS = ["pyu", "pyu inscription", "ancient pyu"]
+BURMESE_STRUCTURAL_MARKERS = [
+    "burmese text",
+    "burmese inscription",
+    "old burmese",
+    "burmese songs",
+    "translation of burmese songs",
+    "burmese version",
+    "burmese versions",
+]
+PALI_STRUCTURAL_MARKERS = ["pali text", "pali version", "pali versions", "pali verse"]
+MON_STRUCTURAL_MARKERS = ["talaing inscription", "mon inscription", "old talaing", "talaing epigraphy"]
+PYU_STRUCTURAL_MARKERS = ["pyu inscription", "pyu text", "ancient pyu"]
 PAGE_MARKER_PATTERN = re.compile(r"^\[\[page (?P<page>\d+)\]\]$", re.MULTILINE)
+CANDIDATE_REPORT_LIMIT = 50
 
 
 def parse_args() -> argparse.Namespace:
@@ -118,11 +151,22 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--production-run-log", type=Path, default=JBRS_OCR_PRODUCTION_RUN_LOG_PATH)
     parser.add_argument("--ocr-text-index", type=Path, default=JBRS_OCR_TEXT_INDEX_PATH)
     parser.add_argument("--translation-hit-index", type=Path, default=JBRS_OCR_TRANSLATION_HIT_INDEX_PATH)
+    parser.add_argument(
+        "--top-candidates-path",
+        type=Path,
+        default=JBRS_OCR_TOP_EXTRACTION_CANDIDATES_PATH,
+    )
+    parser.add_argument(
+        "--production-summary-path",
+        type=Path,
+        default=JBRS_OCR_PRODUCTION_SUMMARY_PATH,
+    )
     parser.add_argument("--preflight-report", type=Path, default=DEFAULT_PREFLIGHT_REPORT_PATH)
     parser.add_argument("--limit", type=int, default=100)
     parser.add_argument("--selection-rule", default="citation-match then keyword/article priority")
     parser.add_argument("--execute", action="store_true")
     parser.add_argument("--dry-run", action="store_true")
+    parser.add_argument("--rebuild-indexes-only", action="store_true")
     return parser.parse_args()
 
 
@@ -141,17 +185,41 @@ def normalize_text(value: str) -> str:
     return f" {value.casefold()} "
 
 
+def normalize_searchable_text(*values: str) -> str:
+    normalized_parts: list[str] = []
+    for value in values:
+        if not value:
+            continue
+        normalized = re.sub(r"(?<=[a-z])(?=[A-Z])", " ", value)
+        normalized = re.sub(r"(?<=[A-Za-z])(?=[0-9])|(?<=[0-9])(?=[A-Za-z])", " ", normalized)
+        normalized = re.sub(r"[_./-]+", " ", normalized)
+        normalized_parts.append(normalized)
+    combined = " ".join(normalized_parts).casefold()
+    combined = re.sub(r"[^0-9a-z\s]+", " ", combined)
+    combined = re.sub(r"\s+", " ", combined).strip()
+    return f" {combined} " if combined else " "
+
+
 def marker_present(haystack: str, marker: str) -> bool:
     return marker.casefold() in haystack
+
+
+def phrase_present(haystack: str, marker: str) -> bool:
+    normalized_marker = normalize_searchable_text(marker).strip()
+    return bool(normalized_marker) and f" {normalized_marker} " in haystack
 
 
 def text_has_any_marker(haystack: str, markers: list[str]) -> bool:
     return any(marker_present(haystack, marker) for marker in markers)
 
 
+def text_has_any_phrase(haystack: str, markers: list[str]) -> bool:
+    return any(phrase_present(haystack, marker) for marker in markers)
+
+
 def collect_keyword_hits(*values: str) -> list[str]:
-    haystack = normalize_text(" ".join(value for value in values if value))
-    return [term for term in SELECTION_TERMS if marker_present(haystack, term)]
+    haystack = normalize_searchable_text(*values)
+    return [term for term in SELECTION_TERMS if phrase_present(haystack, term)]
 
 
 def keyword_weight(keyword_hits: list[str]) -> int:
@@ -302,34 +370,47 @@ def split_pages(text: str) -> list[tuple[str, str]]:
 
 
 def guess_language_scope(manifest_row: dict[str, str], batch_row: dict[str, str], text: str) -> str:
-    haystack = normalize_text(
-        " ".join(
-            [
-                manifest_row.get("file_name", ""),
-                manifest_row.get("probable_title_from_filename", ""),
-                manifest_row.get("folder_context", ""),
-                batch_row.get("file_name", ""),
-                text,
-            ]
-        )
+    metadata_haystack = normalize_searchable_text(
+        manifest_row.get("file_name", ""),
+        manifest_row.get("probable_title_from_filename", ""),
+        manifest_row.get("folder_context", ""),
+        manifest_row.get("path_stub_or_redacted_path", ""),
+        batch_row.get("file_name", ""),
+        batch_row.get("path_stub", ""),
     )
-    has_burmese = text_has_any_marker(haystack, BURMESE_MARKERS)
-    has_pali = text_has_any_marker(haystack, PALI_MARKERS)
-    has_mon = text_has_any_marker(haystack, MON_MARKERS)
-    has_pyu = text_has_any_marker(haystack, PYU_MARKERS)
-    if has_burmese and has_pali:
+    text_haystack = normalize_searchable_text(text)
+    broad_text_haystack = normalize_text(text)
+    metadata_has_burmese = text_has_any_phrase(metadata_haystack, BURMESE_CONTEXT_MARKERS)
+    metadata_has_pali = text_has_any_phrase(metadata_haystack, PALI_CONTEXT_MARKERS)
+    metadata_has_mon = text_has_any_phrase(metadata_haystack, MON_CONTEXT_MARKERS)
+    metadata_has_pyu = text_has_any_phrase(metadata_haystack, PYU_CONTEXT_MARKERS)
+    text_has_burmese = text_has_any_phrase(text_haystack, BURMESE_STRUCTURAL_MARKERS)
+    text_has_pali = text_has_any_phrase(text_haystack, PALI_STRUCTURAL_MARKERS)
+    text_has_mon = text_has_any_phrase(text_haystack, MON_STRUCTURAL_MARKERS)
+    text_has_pyu = text_has_any_phrase(text_haystack, PYU_STRUCTURAL_MARKERS)
+    if metadata_has_burmese and (metadata_has_pali or text_has_pali):
         return "Mixed Burmese/Pali"
-    if has_burmese:
+    if metadata_has_burmese:
         return "Burmese"
-    if has_pali:
-        return "Pali"
-    if has_mon:
+    if metadata_has_mon and not metadata_has_burmese:
         return "Mon"
-    if has_pyu:
+    if metadata_has_pyu and not metadata_has_burmese:
         return "Pyu"
-    if text_has_any_marker(haystack, TRANSLATION_MARKERS + TEXT_MARKERS + INSCRIPTION_MARKERS):
+    if metadata_has_pali and not metadata_has_burmese:
+        return "Pali"
+    if text_has_burmese and text_has_pali:
+        return "Mixed Burmese/Pali"
+    if text_has_burmese:
+        return "Burmese"
+    if text_has_mon:
+        return "Mon"
+    if text_has_pyu:
+        return "Pyu"
+    if text_has_pali:
+        return "Pali"
+    if text_has_any_marker(broad_text_haystack, TRANSLATION_MARKERS + TEXT_MARKERS + INSCRIPTION_MARKERS):
         return "mixed_or_uncertain"
-    if text_has_any_marker(haystack, CONTEXT_MARKERS):
+    if text_has_any_marker(broad_text_haystack, CONTEXT_MARKERS):
         return "non_burmese_relevant_context"
     return "mixed_or_uncertain"
 
@@ -429,6 +510,70 @@ def load_repo_export_records(
                 "ocr_status": "completed",
                 "language_scope_guess": language_scope,
                 "notes": metadata["notes"],
+                "text": text,
+                **flags,
+            }
+        )
+    exported_records.sort(key=lambda row: (row["year"], row["file_name"], row["local_file_id"]))
+    return exported_records
+
+
+def load_committed_ocr_records(
+    batch_rows: list[dict[str, str]],
+    status_rows: list[dict[str, str]],
+    manifest_rows: list[dict[str, str]],
+    repo_text_root: Path,
+    repo_metadata_root: Path,
+) -> list[dict[str, str]]:
+    batch_by_local_file_id = {row["local_file_id"]: row for row in batch_rows}
+    completed_local_file_ids = {
+        row["local_file_id"]
+        for row in status_rows
+        if row.get("status") == "completed" and row.get("local_file_id", "")
+    }
+    manifest_by_local_file_id = {row["local_file_id"]: row for row in manifest_rows}
+    exported_records: list[dict[str, str]] = []
+    for metadata_path in sorted(repo_metadata_root.glob("*.json")):
+        local_file_id = metadata_path.stem
+        if local_file_id not in completed_local_file_ids:
+            continue
+        text_path = repo_text_root / f"{local_file_id}.txt"
+        if not text_path.exists():
+            continue
+        metadata = json.loads(metadata_path.read_text(encoding="utf-8"))
+        text = text_path.read_text(encoding="utf-8")
+        batch_row = batch_by_local_file_id.get(
+            local_file_id,
+            {
+                "batch_id": metadata.get("batch_id", ""),
+                "file_name": metadata.get("file_name", ""),
+                "year": str(metadata.get("year", "")),
+                "path_stub": metadata.get("path_stub", ""),
+            },
+        )
+        manifest_row = manifest_by_local_file_id.get(
+            local_file_id,
+            {
+                "file_name": metadata.get("file_name", ""),
+                "probable_title_from_filename": metadata.get("file_name", ""),
+                "folder_context": "",
+                "path_stub_or_redacted_path": metadata.get("path_stub", ""),
+            },
+        )
+        flags = marker_flags(text)
+        exported_records.append(
+            {
+                "local_file_id": local_file_id,
+                "batch_id": batch_row.get("batch_id", metadata.get("batch_id", "")),
+                "file_name": batch_row.get("file_name", metadata.get("file_name", "")),
+                "year": batch_row.get("year", str(metadata.get("year", ""))),
+                "path_stub": batch_row.get("path_stub", metadata.get("path_stub", "")),
+                "ocr_text_path": relative_stub(text_path),
+                "metadata_path": relative_stub(metadata_path),
+                "pages_completed": str(metadata.get("pages_completed", "")),
+                "ocr_status": "completed",
+                "language_scope_guess": guess_language_scope(manifest_row, batch_row, text),
+                "notes": metadata.get("notes", ""),
                 "text": text,
                 **flags,
             }
@@ -553,6 +698,183 @@ def build_translation_hit_rows(
     return deduped
 
 
+def build_top_extraction_candidate_rows(
+    exported_records: list[dict[str, str]],
+    hit_rows: list[dict[str, str]],
+    manifest_rows: list[dict[str, str]],
+    citation_rows: list[dict[str, str]],
+    limit: int = CANDIDATE_REPORT_LIMIT,
+) -> list[dict[str, str]]:
+    manifest_by_local_file_id = {row["local_file_id"]: row for row in manifest_rows}
+    hits_by_local_file_id: dict[str, list[dict[str, str]]] = defaultdict(list)
+    for row in hit_rows:
+        hits_by_local_file_id[row["local_file_id"]].append(row)
+    citation_rows_by_local_file_id: dict[str, list[dict[str, str]]] = defaultdict(list)
+    for row in citation_rows:
+        local_file_id = row.get("candidate_local_file_id", "")
+        if local_file_id:
+            citation_rows_by_local_file_id[local_file_id].append(row)
+
+    scope_rank = {
+        "Burmese": 6,
+        "Mixed Burmese/Pali": 6,
+        "mixed_or_uncertain": 4,
+        "Mon": 3,
+        "Pyu": 2,
+        "Pali": 1,
+        "non_burmese_relevant_context": 0,
+    }
+    ranked_candidates: list[tuple[tuple[int, ...], dict[str, str]]] = []
+    for record in exported_records:
+        local_file_id = record["local_file_id"]
+        local_hits = hits_by_local_file_id.get(local_file_id, [])
+        hit_type_counts = Counter(row["hit_type"] for row in local_hits)
+        marker_counts = Counter(row["matched_marker"] for row in local_hits if row.get("matched_marker", ""))
+        page_scores = Counter()
+        for row in local_hits:
+            page_marker = row.get("page_marker", "")
+            if not page_marker:
+                continue
+            page_scores[page_marker] += {
+                "citation_reference_seed": 5,
+                "translation_marker": 4,
+                "text_marker": 3,
+                "inscription_marker": 2,
+            }.get(row["hit_type"], 1)
+        manifest_row = manifest_by_local_file_id.get(local_file_id, {})
+        is_article_level = boolish(manifest_row.get("is_article_split_pdf", ""))
+        is_whole_volume = boolish(manifest_row.get("is_whole_issue_or_volume", ""))
+        translation_hit_count = hit_type_counts["translation_marker"]
+        text_hit_count = hit_type_counts["text_marker"]
+        inscription_hit_count = hit_type_counts["inscription_marker"]
+        citation_hits = citation_rows_by_local_file_id.get(local_file_id, [])
+        score = (
+            scope_rank.get(record["language_scope_guess"], 0),
+            translation_hit_count,
+            1 if translation_hit_count and text_hit_count else 0,
+            inscription_hit_count,
+            text_hit_count,
+            1 if is_article_level else 0,
+            1 if citation_hits else 0,
+            0 if is_whole_volume else 1,
+            -intish(record.get("year", ""), default=0),
+        )
+        reason_parts = [record["language_scope_guess"]]
+        if translation_hit_count:
+            reason_parts.append(f"{translation_hit_count} translation hits")
+        if inscription_hit_count:
+            reason_parts.append(f"{inscription_hit_count} inscription hits")
+        if text_hit_count:
+            reason_parts.append(f"{text_hit_count} text hits")
+        if is_article_level:
+            reason_parts.append("article-level PDF")
+        if citation_hits:
+            reason_parts.append("corpus-citation priority")
+        recommended_next_action = (
+            "queue_for_structured_extraction_review"
+            if record["language_scope_guess"] in {"Burmese", "Mixed Burmese/Pali"} and translation_hit_count
+            else "review_source_text_boundaries"
+            if record["language_scope_guess"] in {"Burmese", "Mixed Burmese/Pali"} and (text_hit_count or inscription_hit_count)
+            else "keep_searchable_outside_burmese_coverage"
+            if record["language_scope_guess"] == "Pali"
+            else "review_for_non_burmese_epigraphic_context"
+            if record["language_scope_guess"] in {"Mon", "Pyu"}
+            else "manual_scope_review_before_extraction"
+        )
+        notes: list[str] = []
+        if citation_hits:
+            notes.append(
+                "citation_priority="
+                + ",".join(sorted({row.get("priority", "") for row in citation_hits if row.get("priority", "")}))
+            )
+        if is_whole_volume:
+            notes.append("whole_volume_or_issue")
+        strongest_markers = ", ".join(
+            f"{marker} x{count}" for marker, count in marker_counts.most_common(4)
+        )
+        sample_pages = ", ".join(page for page, _ in page_scores.most_common(3))
+        ranked_candidates.append(
+            (
+                score,
+                {
+                    "candidate_rank": "",
+                    "local_file_id": local_file_id,
+                    "batch_id": record["batch_id"],
+                    "file_name": record["file_name"],
+                    "year": record["year"],
+                    "ocr_text_path": record["ocr_text_path"],
+                    "language_scope_guess": record["language_scope_guess"],
+                    "burmese_relevance_guess": burmese_relevance_guess(record["language_scope_guess"]),
+                    "translation_hit_count": str(translation_hit_count),
+                    "text_hit_count": str(text_hit_count),
+                    "inscription_hit_count": str(inscription_hit_count),
+                    "strongest_markers": strongest_markers,
+                    "sample_pages": sample_pages,
+                    "reason_for_priority": "; ".join(reason_parts),
+                    "recommended_next_action": recommended_next_action,
+                    "notes": "; ".join(notes),
+                },
+            )
+        )
+    ranked_candidates.sort(
+        key=lambda item: (
+            -item[0][0],
+            -item[0][1],
+            -item[0][2],
+            -item[0][3],
+            -item[0][4],
+            -item[0][5],
+            -item[0][6],
+            -item[0][7],
+            -item[0][8],
+            item[1]["file_name"],
+            item[1]["local_file_id"],
+        )
+    )
+    grouped_candidates: dict[str, list[tuple[tuple[int, ...], dict[str, str]]]] = defaultdict(list)
+    for score, row in ranked_candidates:
+        grouped_candidates[normalize_searchable_text(row["file_name"]).strip()].append((score, row))
+
+    def local_id_preference(local_file_id: str) -> tuple[int, int]:
+        return (
+            1 if re.match(r"^\d{4}-", local_file_id) else 0,
+            0 if re.search(r"[0-9a-f]{8,}$", local_file_id) else 1,
+        )
+
+    unique_ranked_candidates: list[tuple[tuple[int, ...], dict[str, str]]] = []
+    for grouped_rows in grouped_candidates.values():
+        best_score, best_row = max(
+            grouped_rows,
+            key=lambda item: (
+                local_id_preference(item[1]["local_file_id"]),
+                item[0],
+            ),
+        )
+        unique_ranked_candidates.append((best_score, best_row))
+
+    unique_ranked_candidates.sort(
+        key=lambda item: (
+            -item[0][0],
+            -item[0][1],
+            -item[0][2],
+            -item[0][3],
+            -item[0][4],
+            -item[0][5],
+            -item[0][6],
+            -item[0][7],
+            -item[0][8],
+            item[1]["file_name"],
+            item[1]["local_file_id"],
+        )
+    )
+    candidate_rows = [row for _, row in unique_ranked_candidates[:limit]]
+    for rank, row in enumerate(candidate_rows, start=1):
+        row["candidate_rank"] = str(rank)
+        if rank <= 20:
+            row["notes"] = "; ".join(part for part in [row["notes"], "top_20_priority"] if part)
+    return candidate_rows
+
+
 def upsert_tsv(
     path: Path,
     rows: list[dict[str, str]],
@@ -574,38 +896,51 @@ def run_production_batch(args: argparse.Namespace) -> int:
     manifest_rows = read_tsv(args.manifest)
     match_rows = read_tsv(args.reference_match)
     citation_rows = read_tsv(args.citation_priority_queue)
-    selected_rows, selection_context = select_production_batch_rows(
-        batch_rows=batch_rows,
-        status_rows=status_rows,
-        manifest_rows=manifest_rows,
-        match_rows=match_rows,
-        citation_rows=citation_rows,
-        limit=args.limit,
-    )
-    selected_batch_ids = [row["batch_id"] for row in selected_rows]
-    ocr_args = SimpleNamespace(
-        batch_plan=args.batch_plan,
-        status_log=args.status_log,
-        runtime_path_cache=args.runtime_path_cache,
-        local_output_root=args.local_output_root,
-        preflight_report=args.preflight_report,
-        batch_id=selected_batch_ids,
-        limit=args.limit,
-        execute=args.execute,
-        dry_run=args.dry_run,
-        rerun_failed=False,
-        force_rerun_completed=False,
-    )
     exit_code = 0
-    if selected_batch_ids:
-        exit_code = ocr.run_selected_batches(ocr_args)
+    selected_rows: list[dict[str, str]] = []
+    selection_context = {"skipped_batch_count": 0, "deferred_count": 0}
+    if not args.rebuild_indexes_only:
+        selected_rows, selection_context = select_production_batch_rows(
+            batch_rows=batch_rows,
+            status_rows=status_rows,
+            manifest_rows=manifest_rows,
+            match_rows=match_rows,
+            citation_rows=citation_rows,
+            limit=args.limit,
+        )
+        selected_batch_ids = [row["batch_id"] for row in selected_rows]
+        ocr_args = SimpleNamespace(
+            batch_plan=args.batch_plan,
+            status_log=args.status_log,
+            runtime_path_cache=args.runtime_path_cache,
+            local_output_root=args.local_output_root,
+            preflight_report=args.preflight_report,
+            batch_id=selected_batch_ids,
+            limit=args.limit,
+            execute=args.execute,
+            dry_run=args.dry_run,
+            rerun_failed=False,
+            force_rerun_completed=False,
+        )
+        if selected_batch_ids:
+            exit_code = ocr.run_selected_batches(ocr_args)
+        refreshed_status_rows = read_tsv(args.status_log)
+        load_repo_export_records(
+            status_rows=refreshed_status_rows,
+            batch_rows=batch_rows,
+            manifest_rows=manifest_rows,
+            local_output_root=args.local_output_root,
+            repo_text_root=args.repo_text_root,
+            repo_metadata_root=args.repo_metadata_root,
+        )
+    else:
+        selected_batch_ids = []
+        refreshed_status_rows = status_rows
 
-    refreshed_status_rows = read_tsv(args.status_log)
-    exported_records = load_repo_export_records(
-        status_rows=refreshed_status_rows,
+    exported_records = load_committed_ocr_records(
         batch_rows=batch_rows,
+        status_rows=refreshed_status_rows,
         manifest_rows=manifest_rows,
-        local_output_root=args.local_output_root,
         repo_text_root=args.repo_text_root,
         repo_metadata_root=args.repo_metadata_root,
     )
@@ -617,42 +952,64 @@ def run_production_batch(args: argparse.Namespace) -> int:
 
     hit_rows = build_translation_hit_rows(exported_records, citation_rows)
     write_tsv(args.translation_hit_index, hit_rows, JBRS_OCR_TRANSLATION_HIT_INDEX_FIELDS)
+    top_candidate_rows = build_top_extraction_candidate_rows(
+        exported_records=exported_records,
+        hit_rows=hit_rows,
+        manifest_rows=manifest_rows,
+        citation_rows=citation_rows,
+    )
+    write_tsv(args.top_candidates_path, top_candidate_rows, JBRS_OCR_TOP_EXTRACTION_CANDIDATES_FIELDS)
+    args.production_summary_path.write_text(
+        json.dumps(
+            build_jbrs_ocr_production_summary(
+                text_index_rows=index_rows,
+                translation_hit_rows=hit_rows,
+                top_candidate_rows=top_candidate_rows,
+            ),
+            ensure_ascii=False,
+            indent=2,
+            sort_keys=True,
+        )
+        + "\n",
+        encoding="utf-8",
+    )
 
-    selected_batch_ids_set = set(selected_batch_ids)
-    completed_count = sum(
-        1
-        for row in refreshed_status_rows
-        if row.get("batch_id") in selected_batch_ids_set and row.get("status") == "completed"
-    )
-    failed_count = sum(
-        1
-        for row in refreshed_status_rows
-        if row.get("batch_id") in selected_batch_ids_set and row.get("status") == "failed"
-    )
-    run_id = f"jbrs-prod-ocr-{datetime.now(UTC).strftime('%Y%m%d-%H%M%S')}"
-    run_row = {
-        "run_id": run_id,
-        "run_date": datetime.now(UTC).date().isoformat(),
-        "selection_rule": args.selection_rule,
-        "selected_count": str(len(selected_rows)),
-        "completed_count": str(completed_count),
-        "failed_count": str(failed_count),
-        "skipped_count": str(selection_context["skipped_batch_count"]),
-        "output_text_root": relative_stub(args.repo_text_root),
-        "metadata_root": relative_stub(args.repo_metadata_root),
-        "notes": (
-            ("dry_run; " if args.dry_run else "")
-            + f"deferred_ready_rows={selection_context['deferred_count']}; "
-            + f"selected_batch_ids={','.join(selected_batch_ids[:10])}"
-            + ("..." if len(selected_batch_ids) > 10 else "")
-        ),
-    }
-    upsert_tsv(
-        args.production_run_log,
-        [run_row],
-        JBRS_OCR_PRODUCTION_RUN_LOG_FIELDS,
-        key_field="run_id",
-    )
+    if not args.rebuild_indexes_only:
+        selected_batch_ids_set = set(selected_batch_ids)
+        completed_count = sum(
+            1
+            for row in refreshed_status_rows
+            if row.get("batch_id") in selected_batch_ids_set and row.get("status") == "completed"
+        )
+        failed_count = sum(
+            1
+            for row in refreshed_status_rows
+            if row.get("batch_id") in selected_batch_ids_set and row.get("status") == "failed"
+        )
+        run_id = f"jbrs-prod-ocr-{datetime.now(UTC).strftime('%Y%m%d-%H%M%S')}"
+        run_row = {
+            "run_id": run_id,
+            "run_date": datetime.now(UTC).date().isoformat(),
+            "selection_rule": args.selection_rule,
+            "selected_count": str(len(selected_rows)),
+            "completed_count": str(completed_count),
+            "failed_count": str(failed_count),
+            "skipped_count": str(selection_context["skipped_batch_count"]),
+            "output_text_root": relative_stub(args.repo_text_root),
+            "metadata_root": relative_stub(args.repo_metadata_root),
+            "notes": (
+                ("dry_run; " if args.dry_run else "")
+                + f"deferred_ready_rows={selection_context['deferred_count']}; "
+                + f"selected_batch_ids={','.join(selected_batch_ids[:10])}"
+                + ("..." if len(selected_batch_ids) > 10 else "")
+            ),
+        }
+        upsert_tsv(
+            args.production_run_log,
+            [run_row],
+            JBRS_OCR_PRODUCTION_RUN_LOG_FIELDS,
+            key_field="run_id",
+        )
     return exit_code
 
 

@@ -1,0 +1,15 @@
+{
+  "burmese_scope_file_count": 52,
+  "files_with_inscription_hits": 61,
+  "files_with_text_hits": 31,
+  "files_with_translation_hits": 51,
+  "mixed_burmese_pali_scope_file_count": 8,
+  "mon_file_count": 17,
+  "non_burmese_context_file_count": 11,
+  "ocr_text_index_count": 105,
+  "ocr_translation_hit_count": 950,
+  "pali_only_file_count": 3,
+  "pyu_file_count": 5,
+  "top_extraction_candidate_count": 50,
+  "uncertain_scope_file_count": 9
+}

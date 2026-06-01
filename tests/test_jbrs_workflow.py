@@ -30,8 +30,12 @@ from jbrs_workflow_common import (
     JBRS_FOLLOWUP_SOURCE_LEADS_PATH,
     JBRS_LOCAL_FILE_MANIFEST_PATH,
     JBRS_OCR_BATCH_PLAN_PATH,
+    JBRS_OCR_PRODUCTION_SUMMARY_PATH,
     JBRS_OCR_QUALITY_REVIEW_PATH,
     JBRS_OCR_STATUS_LOG_PATH,
+    JBRS_OCR_TEXT_INDEX_PATH,
+    JBRS_OCR_TOP_EXTRACTION_CANDIDATES_PATH,
+    JBRS_OCR_TRANSLATION_HIT_INDEX_PATH,
     JBRS_PILOT_SUMMARY_PATH,
     JBRS_REFERENCE_HUNT_RAW_PATH,
     JBRS_REFERENCE_FILE_MATCH_PATH,
@@ -42,6 +46,7 @@ from jbrs_workflow_common import (
     OCR_STATUS_LOG_FIELDS,
     build_ocr_batch_plan_rows,
     build_ocr_status_log_rows,
+    build_jbrs_ocr_production_summary,
     build_pilot_summary,
     classify_reference_kind,
     classify_translation_candidate,
@@ -71,7 +76,13 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
         cls.structured_extraction_plan_rows = read_tsv(JBRS_STRUCTURED_EXTRACTION_PLAN_PATH)
         cls.extracted_translation_unit_rows = read_tsv(JBRS_EXTRACTED_TRANSLATION_UNITS_PATH)
         cls.extracted_source_text_unit_rows = read_tsv(JBRS_EXTRACTED_SOURCE_TEXT_UNITS_PATH)
+        cls.ocr_text_index_rows = read_tsv(JBRS_OCR_TEXT_INDEX_PATH)
+        cls.ocr_translation_hit_rows = read_tsv(JBRS_OCR_TRANSLATION_HIT_INDEX_PATH)
+        cls.ocr_top_candidate_rows = read_tsv(JBRS_OCR_TOP_EXTRACTION_CANDIDATES_PATH)
         cls.summary = json.loads(JBRS_PILOT_SUMMARY_PATH.read_text(encoding="utf-8"))
+        cls.ocr_production_summary = json.loads(
+            JBRS_OCR_PRODUCTION_SUMMARY_PATH.read_text(encoding="utf-8")
+        )
 
     def test_generated_files_exist(self) -> None:
         for path in [
@@ -91,9 +102,28 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
             JBRS_STRUCTURED_EXTRACTION_PLAN_PATH,
             JBRS_EXTRACTED_TRANSLATION_UNITS_PATH,
             JBRS_EXTRACTED_SOURCE_TEXT_UNITS_PATH,
+            JBRS_OCR_TEXT_INDEX_PATH,
+            JBRS_OCR_TRANSLATION_HIT_INDEX_PATH,
+            JBRS_OCR_TOP_EXTRACTION_CANDIDATES_PATH,
+            JBRS_OCR_PRODUCTION_SUMMARY_PATH,
             JBRS_PILOT_SUMMARY_PATH,
         ]:
             self.assertTrue(path.exists(), path)
+
+    def test_ocr_production_summary_matches_generated_counts(self) -> None:
+        expected = build_jbrs_ocr_production_summary(
+            text_index_rows=self.ocr_text_index_rows,
+            translation_hit_rows=self.ocr_translation_hit_rows,
+            top_candidate_rows=self.ocr_top_candidate_rows,
+        )
+        self.assertEqual(self.ocr_production_summary, expected)
+
+    def test_ocr_top_candidate_report_marks_top_twenty_and_has_at_least_fifty_rows(self) -> None:
+        self.assertGreaterEqual(len(self.ocr_top_candidate_rows), 50)
+        top_twenty_marked = [
+            row for row in self.ocr_top_candidate_rows if "top_20_priority" in row["notes"]
+        ]
+        self.assertGreaterEqual(len(top_twenty_marked), 20)
 
     def test_shorttitle_metadata_hit_stays_out_of_clean_targets(self) -> None:
         raw_row = next(row for row in self.raw_rows if row["matched_reference_text_short"] == "shorttitle = {JBRS},")
@@ -852,6 +882,79 @@ class JBRSWorkflowLogicTests(unittest.TestCase):
         message = '{ "error": { "code": 401, "message": "Request had invalid authentication credentials." } }'
         self.assertTrue(ocr.is_refreshable_auth_error(message))
         self.assertFalse(ocr.is_refreshable_auth_error("quota project missing"))
+
+    def test_language_scope_prefers_burmese_title_context_for_grant_brown(self) -> None:
+        manifest_row = {
+            "file_name": "GrantBrown-1911-BurmeseSongs.pdf",
+            "probable_title_from_filename": "Burmese Songs",
+            "folder_context": "",
+            "path_stub_or_redacted_path": "1911/GrantBrown-1911-BurmeseSongs.pdf",
+        }
+        batch_row = {
+            "file_name": "GrantBrown-1911-BurmeseSongs.pdf",
+            "path_stub": "1911/GrantBrown-1911-BurmeseSongs.pdf",
+        }
+        text = "TRANSLATION OF BURMESE SONGS\\nBURMESE TEXT\\nThis article mentions Pali metres only in passing."
+        self.assertEqual(production.guess_language_scope(manifest_row, batch_row, text), "Burmese")
+
+    def test_language_scope_keeps_pali_literature_as_pali(self) -> None:
+        manifest_row = {
+            "file_name": "Haynes-PaliLiterature-1911.pdf",
+            "probable_title_from_filename": "Pali Literature of Burma",
+            "folder_context": "",
+            "path_stub_or_redacted_path": "1911/Haynes-PaliLiterature-1911.pdf",
+        }
+        batch_row = {
+            "file_name": "Haynes-PaliLiterature-1911.pdf",
+            "path_stub": "1911/Haynes-PaliLiterature-1911.pdf",
+        }
+        text = "The Pali Literature of Burma discusses Burmese tradition and Burmese monasteries."
+        self.assertEqual(production.guess_language_scope(manifest_row, batch_row, text), "Pali")
+
+    def test_language_scope_keeps_talaing_epigraphy_as_mon(self) -> None:
+        manifest_row = {
+            "file_name": "TalaingEpigraphy-Blagden1912.pdf",
+            "probable_title_from_filename": "Notes on Talaing Epigraphy",
+            "folder_context": "",
+            "path_stub_or_redacted_path": "1912/TalaingEpigraphy-Blagden1912.pdf",
+        }
+        batch_row = {
+            "file_name": "TalaingEpigraphy-Blagden1912.pdf",
+            "path_stub": "1912/TalaingEpigraphy-Blagden1912.pdf",
+        }
+        text = "The Talaing text was checked by the Pali and Burmese versions."
+        self.assertEqual(production.guess_language_scope(manifest_row, batch_row, text), "Mon")
+
+    def test_language_scope_keeps_ananda_as_mixed_burmese_pali(self) -> None:
+        manifest_row = {
+            "file_name": "AnandaInscriptions-Tinlwin1976.pdf",
+            "probable_title_from_filename": "Ananda Inscriptions",
+            "folder_context": "",
+            "path_stub_or_redacted_path": "1976/AnandaInscriptions-Tinlwin1976.pdf",
+        }
+        batch_row = {
+            "file_name": "AnandaInscriptions-Tinlwin1976.pdf",
+            "path_stub": "1976/AnandaInscriptions-Tinlwin1976.pdf",
+        }
+        text = (
+            "There are four versions of the inscriptions: two in Pali and two in Burmese. "
+            "The Pali versions are in prose and the Burmese versions are translations of the Pali ones."
+        )
+        self.assertEqual(production.guess_language_scope(manifest_row, batch_row, text), "Mixed Burmese/Pali")
+
+    def test_language_scope_keeps_shwegugyi_as_pali(self) -> None:
+        manifest_row = {
+            "file_name": "ShwegugyiInscription-Luce1920.pdf",
+            "probable_title_from_filename": "The Shwegugyi Pagoda Inscription",
+            "folder_context": "",
+            "path_stub_or_redacted_path": "1920/ShwegugyiInscription-Luce1920.pdf",
+        }
+        batch_row = {
+            "file_name": "ShwegugyiInscription-Luce1920.pdf",
+            "path_stub": "1920/ShwegugyiInscription-Luce1920.pdf",
+        }
+        text = "PALI TEXT\\nTRANSLATION\\nThe record is written in Burmese characters."
+        self.assertEqual(production.guess_language_scope(manifest_row, batch_row, text), "Pali")
 
 
 if __name__ == "__main__":
