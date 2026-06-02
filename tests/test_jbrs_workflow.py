@@ -23,7 +23,9 @@ from corpus_common import write_tsv
 from jbrs_workflow_common import (
     CORPUS_CITATION_INVENTORY_PATH,
     CORPUS_CITATION_SOURCE_FILE_MATCH_PATH,
+    CORPUS_CITATION_SOURCE_FILE_MATCH_REVIEW_PATH,
     CORPUS_CITATION_TARGETS_PATH,
+    CORPUS_CITATION_WORKFLOW_SUMMARY_PATH,
     CORPUS_CITED_SOURCE_OCR_QUEUE_PATH,
     CORPUS_TRANSLATION_SOURCE_DASHBOARD_PATH,
     JBRS_ARTICLE_REFERENCE_TARGETS_PATH,
@@ -87,8 +89,12 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
         cls.citation_inventory_rows = read_tsv(CORPUS_CITATION_INVENTORY_PATH)
         cls.citation_target_rows = read_tsv(CORPUS_CITATION_TARGETS_PATH)
         cls.citation_source_match_rows = read_tsv(CORPUS_CITATION_SOURCE_FILE_MATCH_PATH)
+        cls.citation_source_match_review_rows = read_tsv(CORPUS_CITATION_SOURCE_FILE_MATCH_REVIEW_PATH)
         cls.citation_dashboard_rows = read_tsv(CORPUS_TRANSLATION_SOURCE_DASHBOARD_PATH)
         cls.citation_ocr_queue_rows = read_tsv(CORPUS_CITED_SOURCE_OCR_QUEUE_PATH)
+        cls.citation_workflow_summary = json.loads(
+            CORPUS_CITATION_WORKFLOW_SUMMARY_PATH.read_text(encoding="utf-8")
+        )
         cls.ocr_text_index_rows = read_tsv(JBRS_OCR_TEXT_INDEX_PATH)
         cls.ocr_translation_hit_rows = read_tsv(JBRS_OCR_TRANSLATION_HIT_INDEX_PATH)
         cls.ocr_top_candidate_rows = read_tsv(JBRS_OCR_TOP_EXTRACTION_CANDIDATES_PATH)
@@ -123,8 +129,10 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
             CORPUS_CITATION_INVENTORY_PATH,
             CORPUS_CITATION_TARGETS_PATH,
             CORPUS_CITATION_SOURCE_FILE_MATCH_PATH,
+            CORPUS_CITATION_SOURCE_FILE_MATCH_REVIEW_PATH,
             CORPUS_TRANSLATION_SOURCE_DASHBOARD_PATH,
             CORPUS_CITED_SOURCE_OCR_QUEUE_PATH,
+            CORPUS_CITATION_WORKFLOW_SUMMARY_PATH,
             JBRS_OCR_TEXT_INDEX_PATH,
             JBRS_OCR_TRANSLATION_HIT_INDEX_PATH,
             JBRS_OCR_TOP_EXTRACTION_CANDIDATES_PATH,
@@ -146,11 +154,32 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
         self.assertTrue(target_ids.issubset(inventory_target_ids))
         self.assertTrue(dashboard_target_ids.issubset(target_ids))
         self.assertTrue(all(row["inscription_id"] or row["corpus_record_id"] for row in self.citation_dashboard_rows))
+        self.assertTrue(all(row["corpus_language_scope"] for row in self.citation_dashboard_rows))
+        self.assertTrue(all(row["source_work_language_scope"] for row in self.citation_dashboard_rows))
+        self.assertTrue(all(row["citation_relevance_to_burmese_corpus"] for row in self.citation_dashboard_rows))
 
-    def test_corpus_citation_workflow_distinguishes_ocr_available_and_targeted_ocr_rows(self) -> None:
+    def test_burmese_corpus_rows_are_not_demoted_only_because_source_scope_is_mixed(self) -> None:
+        affected_rows = [
+            row
+            for row in self.citation_dashboard_rows
+            if row["corpus_language_scope"] in {"Burmese", "Old Burmese", "Mixed Burmese/Pali"}
+            and row["source_work_language_scope"] == "mixed_or_uncertain"
+        ]
+        self.assertTrue(affected_rows)
+        self.assertTrue(
+            all(row["extraction_status"] != "out_of_scope_non_burmese" for row in affected_rows)
+        )
+
+    def test_corpus_citation_workflow_distinguishes_reviewed_ocr_queue_rows(self) -> None:
         match_statuses = Counter(row["match_status"] for row in self.citation_source_match_rows)
-        self.assertGreater(match_statuses["already_ocr_available"], 0)
         self.assertGreater(match_statuses["needs_ocr"], 0)
+        self.assertGreater(
+            match_statuses["needs_manual_review"] + match_statuses["no_local_candidate_found"],
+            0,
+        )
+        review_by_target_id = {
+            row["citation_target_id"]: row for row in self.citation_source_match_review_rows
+        }
         queued_target_ids = {row["citation_target_id"] for row in self.citation_ocr_queue_rows}
         self.assertTrue(queued_target_ids)
         self.assertTrue(
@@ -161,6 +190,37 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
                     if row["needs_ocr"] == "true"
                 }
             )
+        )
+        self.assertTrue(
+            all(
+                review_by_target_id[row["citation_target_id"]]["queue_for_targeted_ocr"] == "true"
+                and review_by_target_id[row["citation_target_id"]]["review_status"] in {"accepted_match", "corrected_match"}
+                for row in self.citation_ocr_queue_rows
+            )
+        )
+
+    def test_high_impact_review_rows_correct_known_bad_matches(self) -> None:
+        review_by_key = {
+            row["normalized_source_key"]: row for row in self.citation_source_match_review_rows
+        }
+        match_by_key = {
+            row["normalized_source_key"]: row for row in self.citation_source_match_rows
+        }
+        self.assertEqual(
+            review_by_key["lucePeMaungTinInscriptionsOfBurma"]["review_status"],
+            "corrected_match",
+        )
+        self.assertEqual(
+            match_by_key["lucePeMaungTinInscriptionsOfBurma"]["matched_local_file_id"],
+            "inscriptions_of_burma-b7c07d9f6d02",
+        )
+        self.assertEqual(
+            match_by_key["ppaCatalogue"]["match_status"],
+            "needs_manual_review",
+        )
+        self.assertEqual(
+            match_by_key["uPeMaungTin1966myazediInscription"]["match_status"],
+            "needs_manual_review",
         )
 
     def test_extracted_units_now_link_back_to_corpus_citation_targets(self) -> None:
@@ -179,6 +239,20 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
                 self.assertIn(row["citation_target_id"], target_ids)
                 self.assertTrue(row["normalized_source_key"], row["source_text_unit_id"])
             self.assertTrue(row["alignment_confidence"], row["source_text_unit_id"])
+
+    def test_corpus_citation_workflow_summary_matches_current_outputs(self) -> None:
+        self.assertEqual(
+            self.citation_workflow_summary["citation_inventory_count"],
+            len(self.citation_inventory_rows),
+        )
+        self.assertEqual(
+            self.citation_workflow_summary["citation_target_count"],
+            len(self.citation_target_rows),
+        )
+        self.assertEqual(
+            self.citation_workflow_summary["ocr_queue_count"],
+            len(self.citation_ocr_queue_rows),
+        )
 
     def test_ocr_production_summary_matches_generated_counts(self) -> None:
         expected = build_jbrs_ocr_production_summary(

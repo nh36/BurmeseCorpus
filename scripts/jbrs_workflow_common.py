@@ -60,8 +60,12 @@ JBRS_FILE_ALIAS_MAP_PATH = JBRS_DIRECTORY / "jbrs_file_alias_map.tsv"
 CORPUS_CITATION_INVENTORY_PATH = BIBLIOGRAPHY_DIRECTORY / "corpus_citation_inventory.tsv"
 CORPUS_CITATION_TARGETS_PATH = BIBLIOGRAPHY_DIRECTORY / "corpus_citation_targets.tsv"
 CORPUS_CITATION_SOURCE_FILE_MATCH_PATH = BIBLIOGRAPHY_DIRECTORY / "corpus_citation_source_file_match.tsv"
+CORPUS_CITATION_SOURCE_FILE_MATCH_REVIEW_PATH = (
+    BIBLIOGRAPHY_DIRECTORY / "corpus_citation_source_file_match_review.tsv"
+)
 CORPUS_TRANSLATION_SOURCE_DASHBOARD_PATH = BIBLIOGRAPHY_DIRECTORY / "corpus_translation_source_dashboard.tsv"
 CORPUS_CITED_SOURCE_OCR_QUEUE_PATH = BIBLIOGRAPHY_DIRECTORY / "corpus_cited_source_ocr_queue.tsv"
+CORPUS_CITATION_WORKFLOW_SUMMARY_PATH = BIBLIOGRAPHY_DIRECTORY / "corpus_citation_workflow_summary.json"
 MAX_GITHUB_CONTENTS_SIZE = 1_000_000
 
 RAW_REFERENCE_HUNT_FIELDS = [
@@ -584,7 +588,9 @@ CORPUS_CITATION_INVENTORY_FIELDS = [
     "mentions_edition",
     "mentions_rubbing_or_plate",
     "mentions_commentary_only",
-    "language_scope_from_corpus",
+    "corpus_language_scope",
+    "source_work_language_scope",
+    "citation_relevance_to_burmese_corpus",
     "citation_target_id",
     "notes",
 ]
@@ -603,7 +609,7 @@ CORPUS_CITATION_TARGET_FIELDS = [
     "likely_contains_source_text",
     "likely_contains_edition_only",
     "likely_contains_commentary_only",
-    "language_scope_expected",
+    "source_work_language_scope",
     "target_priority",
     "notes",
 ]
@@ -626,12 +632,29 @@ CORPUS_CITATION_SOURCE_FILE_MATCH_FIELDS = [
     "notes",
 ]
 
+CORPUS_CITATION_SOURCE_FILE_MATCH_REVIEW_FIELDS = [
+    "citation_target_id",
+    "normalized_source_key",
+    "current_match_status",
+    "current_matched_local_file_id",
+    "current_matched_file_name",
+    "review_status",
+    "reviewed_match_status",
+    "reviewed_matched_local_file_id",
+    "reviewed_matched_file_name",
+    "review_confidence",
+    "review_basis",
+    "queue_for_targeted_ocr",
+    "notes",
+]
+
 CORPUS_TRANSLATION_SOURCE_DASHBOARD_FIELDS = [
     "dashboard_id",
     "inscription_id",
     "corpus_record_id",
     "corpus_title_or_label",
     "corpus_language_field",
+    "corpus_language_scope",
     "citation_target_id",
     "citation_raw",
     "normalized_source_key",
@@ -639,7 +662,8 @@ CORPUS_TRANSLATION_SOURCE_DASHBOARD_FIELDS = [
     "matched_ocr_text_path",
     "translation_status_from_citation",
     "source_text_status_from_citation",
-    "language_scope_expected",
+    "source_work_language_scope",
+    "citation_relevance_to_burmese_corpus",
     "is_burmese_relevant",
     "source_match_status",
     "ocr_status",
@@ -702,6 +726,21 @@ CORPUS_CITATION_MATCH_STATUSES = {
     "needs_ocr",
     "needs_manual_review",
 }
+CORPUS_CITATION_MATCH_REVIEW_STATUSES = {
+    "accepted_match",
+    "corrected_match",
+    "rejected_wrong_match",
+    "needs_manual_file_hunt",
+    "multiple_local_witnesses",
+    "not_needed_internal_source",
+}
+CORPUS_CITATION_RELEVANCE_STATUSES = {
+    "direct_burmese_relevance",
+    "mixed_burmese_pali_relevance",
+    "non_burmese_parallel_only",
+    "supporting_context_only",
+    "out_of_scope_non_burmese_record",
+}
 CORPUS_CITATION_EXTRACTION_STATUSES = {
     "not_started",
     "ready_for_ocr",
@@ -714,6 +753,30 @@ CORPUS_CITATION_EXTRACTION_STATUSES = {
     "out_of_scope_non_burmese",
     "unclear_needs_manual_review",
 }
+
+
+def corpus_citation_match_has_strong_evidence(row: dict[str, str]) -> bool:
+    match_status = row.get("match_status", "")
+    match_basis = row.get("match_basis", "")
+    file_name = row.get("matched_file_name", "")
+    target_key = row.get("normalized_source_key", "")
+    if match_status not in {"needs_ocr", "already_ocr_available"}:
+        return False
+    if not row.get("matched_local_file_id", "") or not file_name:
+        return False
+    lowered_file_name = file_name.casefold()
+    lowered_basis = match_basis.casefold()
+    if "source_library:" in lowered_basis:
+        title_tokens = {
+            token
+            for token in re.findall(r"[a-z0-9]+", target_key.casefold())
+            if len(token) >= 4 and token not in {"source", "catalogue", "catalog"}
+        }
+        overlap = {token for token in title_tokens if token in lowered_file_name}
+        return len(overlap) >= 2
+    if "jbrs_ocr_index:" in lowered_basis:
+        return "title:" in lowered_basis and "author:" in lowered_basis
+    return False
 
 JOURNAL_PATTERNS = [
     re.compile(pattern, re.IGNORECASE)
@@ -2938,10 +3001,12 @@ def validate_corpus_citation_workflow(
     inventory_rows: list[dict[str, str]],
     target_rows: list[dict[str, str]],
     source_match_rows: list[dict[str, str]],
+    source_match_review_rows: list[dict[str, str]],
     dashboard_rows: list[dict[str, str]],
     ocr_queue_rows: list[dict[str, str]],
     extracted_translation_unit_rows: list[dict[str, str]],
     extracted_source_text_unit_rows: list[dict[str, str]],
+    summary: dict[str, object],
 ) -> list[str]:
     errors: list[str] = []
     if not inventory_rows:
@@ -2956,10 +3021,20 @@ def validate_corpus_citation_workflow(
             errors.append(
                 f"Corpus citation inventory row {row.get('citation_raw', '<unknown>')} lacks corpus_record_id and inscription_id."
             )
-        scope = row.get("language_scope_from_corpus", "")
+        scope = row.get("corpus_language_scope", "")
         if scope and scope not in CORPUS_CITATION_LANGUAGE_SCOPES:
             errors.append(
-                f"Corpus citation inventory row {row.get('citation_raw', '<unknown>')} has unsupported language_scope_from_corpus '{scope}'."
+                f"Corpus citation inventory row {row.get('citation_raw', '<unknown>')} has unsupported corpus_language_scope '{scope}'."
+            )
+        source_scope = row.get("source_work_language_scope", "")
+        if source_scope and source_scope not in CORPUS_CITATION_LANGUAGE_SCOPES:
+            errors.append(
+                f"Corpus citation inventory row {row.get('citation_raw', '<unknown>')} has unsupported source_work_language_scope '{source_scope}'."
+            )
+        relevance = row.get("citation_relevance_to_burmese_corpus", "")
+        if relevance and relevance not in CORPUS_CITATION_RELEVANCE_STATUSES:
+            errors.append(
+                f"Corpus citation inventory row {row.get('citation_raw', '<unknown>')} has unsupported citation_relevance_to_burmese_corpus '{relevance}'."
             )
         target_id = row.get("citation_target_id", "")
         if target_id not in target_ids:
@@ -2970,13 +3045,16 @@ def validate_corpus_citation_workflow(
             inventory_counts_by_target[target_id] += 1
 
     source_match_by_target_id = {row["citation_target_id"]: row for row in source_match_rows if row.get("citation_target_id")}
+    review_by_target_id = {
+        row["citation_target_id"]: row for row in source_match_review_rows if row.get("citation_target_id")
+    }
     for row in target_rows:
         target_id = row.get("citation_target_id", "")
         if row.get("source_type") not in CORPUS_CITATION_SOURCE_TYPES:
             errors.append(f"Corpus citation target {target_id} has unsupported source_type '{row.get('source_type', '')}'.")
-        if row.get("language_scope_expected") not in CORPUS_CITATION_LANGUAGE_SCOPES:
+        if row.get("source_work_language_scope") not in CORPUS_CITATION_LANGUAGE_SCOPES:
             errors.append(
-                f"Corpus citation target {target_id} has unsupported language_scope_expected '{row.get('language_scope_expected', '')}'."
+                f"Corpus citation target {target_id} has unsupported source_work_language_scope '{row.get('source_work_language_scope', '')}'."
             )
         if row.get("target_priority") not in CORPUS_CITATION_TARGET_PRIORITIES:
             errors.append(
@@ -2998,6 +3076,26 @@ def validate_corpus_citation_workflow(
             )
         if row.get("needs_ocr", "false") == "true" and not row.get("matched_local_file_id"):
             errors.append(f"Corpus citation source-file match row {target_id} requires OCR but has no matched_local_file_id.")
+        if row.get("match_confidence") in {"medium", "high"}:
+            review_row = review_by_target_id.get(target_id)
+            if not review_row and not corpus_citation_match_has_strong_evidence(row):
+                errors.append(
+                    f"Corpus citation source-file match row {target_id} is {row.get('match_confidence')} confidence without review evidence."
+                )
+
+    for row in source_match_review_rows:
+        target_id = row.get("citation_target_id", "")
+        if target_id not in target_ids:
+            errors.append(f"Corpus citation source-file review row links to unknown citation_target_id '{target_id}'.")
+        if row.get("review_status") not in CORPUS_CITATION_MATCH_REVIEW_STATUSES:
+            errors.append(
+                f"Corpus citation source-file review row {target_id} has unsupported review_status '{row.get('review_status', '')}'."
+            )
+        reviewed_match_status = row.get("reviewed_match_status", "")
+        if reviewed_match_status and reviewed_match_status not in CORPUS_CITATION_MATCH_STATUSES:
+            errors.append(
+                f"Corpus citation source-file review row {target_id} has unsupported reviewed_match_status '{reviewed_match_status}'."
+            )
 
     for row in dashboard_rows:
         dashboard_id = row.get("dashboard_id", "<unknown>")
@@ -3007,9 +3105,17 @@ def validate_corpus_citation_workflow(
             errors.append(f"Corpus translation source dashboard row {dashboard_id} lacks inscription_id and corpus_record_id.")
         if target_id not in target_ids:
             errors.append(f"Corpus translation source dashboard row {dashboard_id} links to unknown citation_target_id '{target_id}'.")
-        if row.get("language_scope_expected") not in CORPUS_CITATION_LANGUAGE_SCOPES:
+        if row.get("corpus_language_scope") not in CORPUS_CITATION_LANGUAGE_SCOPES:
             errors.append(
-                f"Corpus translation source dashboard row {dashboard_id} has unsupported language_scope_expected '{row.get('language_scope_expected', '')}'."
+                f"Corpus translation source dashboard row {dashboard_id} has unsupported corpus_language_scope '{row.get('corpus_language_scope', '')}'."
+            )
+        if row.get("source_work_language_scope") not in CORPUS_CITATION_LANGUAGE_SCOPES:
+            errors.append(
+                f"Corpus translation source dashboard row {dashboard_id} has unsupported source_work_language_scope '{row.get('source_work_language_scope', '')}'."
+            )
+        if row.get("citation_relevance_to_burmese_corpus") not in CORPUS_CITATION_RELEVANCE_STATUSES:
+            errors.append(
+                f"Corpus translation source dashboard row {dashboard_id} has unsupported citation_relevance_to_burmese_corpus '{row.get('citation_relevance_to_burmese_corpus', '')}'."
             )
         if row.get("source_match_status") not in CORPUS_CITATION_MATCH_STATUSES:
             errors.append(
@@ -3019,6 +3125,14 @@ def validate_corpus_citation_workflow(
             errors.append(
                 f"Corpus translation source dashboard row {dashboard_id} has unsupported extraction_status '{row.get('extraction_status', '')}'."
             )
+        if (
+            row.get("corpus_language_scope") in {"Burmese", "Old Burmese", "Mixed Burmese/Pali"}
+            and row.get("source_work_language_scope") == "mixed_or_uncertain"
+            and row.get("extraction_status") == "out_of_scope_non_burmese"
+        ):
+            errors.append(
+                f"Corpus translation source dashboard row {dashboard_id} marks a Burmese corpus citation out_of_scope_non_burmese only because the source work scope is mixed_or_uncertain."
+            )
 
     for row in ocr_queue_rows:
         queue_id = row.get("ocr_queue_id", "<unknown>")
@@ -3027,10 +3141,13 @@ def validate_corpus_citation_workflow(
             errors.append(f"Corpus cited-source OCR queue row {queue_id} links to unknown citation_target_id '{target_id}'.")
             continue
         match_row = source_match_by_target_id.get(target_id)
+        review_row = review_by_target_id.get(target_id)
         if not match_row or match_row.get("needs_ocr") != "true":
             errors.append(f"Corpus cited-source OCR queue row {queue_id} does not come from a cited source needing OCR.")
         if target_id not in dashboard_target_ids:
             errors.append(f"Corpus cited-source OCR queue row {queue_id} has no matching dashboard rows.")
+        if not review_row or review_row.get("queue_for_targeted_ocr") != "true":
+            errors.append(f"Corpus cited-source OCR queue row {queue_id} does not come from a reviewed plausible match.")
 
     target_ids_by_local_file_id: dict[str, set[str]] = defaultdict(set)
     for row in source_match_rows:
@@ -3056,6 +3173,35 @@ def validate_corpus_citation_workflow(
                     errors.append(
                         f"Extracted {label} unit {row_id} should link to citation_target_id '{expected_target_id}' for local file {local_file_id}."
                     )
+
+    expected_summary = {
+        "citation_inventory_count": len(inventory_rows),
+        "distinct_inscription_count": len(
+            {
+                row.get("inscription_id") or row.get("corpus_record_id")
+                for row in inventory_rows
+                if row.get("inscription_id") or row.get("corpus_record_id")
+            }
+        ),
+        "citation_target_count": len(target_rows),
+        "matched_target_count": sum(1 for row in source_match_rows if row.get("matched_local_file_id")),
+        "ocr_queue_count": len(ocr_queue_rows),
+        "manual_file_hunt_count": sum(1 for row in source_match_rows if row.get("needs_manual_file_hunt") == "true"),
+        "likely_translation_target_count": sum(
+            1 for row in target_rows if row.get("likely_contains_translation") == "true"
+        ),
+        "likely_source_text_target_count": sum(
+            1 for row in target_rows if row.get("likely_contains_source_text") == "true"
+        ),
+        "extraction_ready_count": sum(
+            1 for row in dashboard_rows if row.get("extraction_status") == "ready_for_extraction"
+        ),
+    }
+    for key, expected_value in expected_summary.items():
+        if summary.get(key) != expected_value:
+            errors.append(
+                f"Corpus citation workflow summary {key}={summary.get(key)!r} does not match expected value {expected_value!r}."
+            )
 
     return errors
 
@@ -3090,8 +3236,10 @@ def validate_jbrs_workflow() -> list[str]:
         CORPUS_CITATION_INVENTORY_PATH,
         CORPUS_CITATION_TARGETS_PATH,
         CORPUS_CITATION_SOURCE_FILE_MATCH_PATH,
+        CORPUS_CITATION_SOURCE_FILE_MATCH_REVIEW_PATH,
         CORPUS_TRANSLATION_SOURCE_DASHBOARD_PATH,
         CORPUS_CITED_SOURCE_OCR_QUEUE_PATH,
+        CORPUS_CITATION_WORKFLOW_SUMMARY_PATH,
         JBRS_PILOT_SUMMARY_PATH,
         JBRS_README_PATH,
     ]
@@ -3135,8 +3283,10 @@ def validate_jbrs_workflow() -> list[str]:
     citation_inventory_rows = read_tsv(CORPUS_CITATION_INVENTORY_PATH)
     citation_target_rows = read_tsv(CORPUS_CITATION_TARGETS_PATH)
     citation_source_match_rows = read_tsv(CORPUS_CITATION_SOURCE_FILE_MATCH_PATH)
+    citation_source_match_review_rows = read_tsv(CORPUS_CITATION_SOURCE_FILE_MATCH_REVIEW_PATH)
     citation_dashboard_rows = read_tsv(CORPUS_TRANSLATION_SOURCE_DASHBOARD_PATH)
     citation_ocr_queue_rows = read_tsv(CORPUS_CITED_SOURCE_OCR_QUEUE_PATH)
+    citation_workflow_summary = json.loads(CORPUS_CITATION_WORKFLOW_SUMMARY_PATH.read_text(encoding="utf-8"))
     summary = json.loads(JBRS_PILOT_SUMMARY_PATH.read_text(encoding="utf-8"))
     readme_text = JBRS_README_PATH.read_text(encoding="utf-8")
 
@@ -3392,10 +3542,12 @@ def validate_jbrs_workflow() -> list[str]:
             inventory_rows=citation_inventory_rows,
             target_rows=citation_target_rows,
             source_match_rows=citation_source_match_rows,
+            source_match_review_rows=citation_source_match_review_rows,
             dashboard_rows=citation_dashboard_rows,
             ocr_queue_rows=citation_ocr_queue_rows,
             extracted_translation_unit_rows=extracted_translation_unit_rows,
             extracted_source_text_unit_rows=extracted_source_text_unit_rows,
+            summary=citation_workflow_summary,
         )
     )
 

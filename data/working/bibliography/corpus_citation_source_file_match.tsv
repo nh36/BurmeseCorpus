@@ -3,8 +3,8 @@ corpus-citation-target-0001	annualReportsArchaeologicalSurveyIndia							no_loca
 corpus-citation-target-0002	anthology							no_local_candidate_found	low			false	true	
 corpus-citation-target-0003	britishLibraryOrientalManuscripts							no_local_candidate_found	low			false	true	
 corpus-citation-target-0004	bulletinBurmaHistoricalCommission							no_local_candidate_found	low			false	true	
-corpus-citation-target-0005	duroiselle1921list	duroiselle_1921_list_of_inscriptions-fd372f9141d6		Duroiselle 1921 List of Inscriptions.pdf	Duroiselle 1921 List of Inscriptions.pdf			needs_ocr	medium	source_library:Shared local-authority tokens: duroiselle, list		true	false	
-corpus-citation-target-0006	epigraphiaBirmanica							no_local_candidate_found	low			false	true	
+corpus-citation-target-0005	duroiselle1921list	duroiselle_1921_list_of_inscriptions-fd372f9141d6		Duroiselle 1921 List of Inscriptions.pdf	Duroiselle 1921 List of Inscriptions.pdf			needs_ocr	high	Exact title and author alignment to local Duroiselle 1921 List witness.	not_requested	true	false	Reviewed exact local catalogue witness; safe for targeted OCR if not already OCRed.
+corpus-citation-target-0006	epigraphiaBirmanica							no_local_candidate_found	medium	Series-level EB authority has not yet been tied to a specific local fascicle or article file.		false	true	Do not queue OCR until the EB citation is resolved to a specific fascicle or article.
 corpus-citation-target-0007	fam-raw-12							no_local_candidate_found	low			false	true	
 corpus-citation-target-0008	fam-raw-17							no_local_candidate_found	low			false	true	
 corpus-citation-target-0009	fam-raw-184-bed-b-614-2							no_local_candidate_found	low			false	true	
@@ -200,7 +200,7 @@ corpus-citation-target-0198	fam-raw-copies-list-212							no_local_candidate_fou
 corpus-citation-target-0199	fam-raw-copies-list-217							no_local_candidate_found	low			false	true	
 corpus-citation-target-0200	fam-raw-copies-list-402-second-inscr							no_local_candidate_found	low			false	true	
 corpus-citation-target-0201	fam-raw-cp-a-first-part							no_local_candidate_found	low			false	true	
-corpus-citation-target-0202	fam-raw-duroiselle-arasi-1912-hledaung-inscr							multiple_candidates	medium			false	false	Multiple JBRS candidates scored equally on author/year/title overlap.
+corpus-citation-target-0202	fam-raw-duroiselle-arasi-1912-hledaung-inscr							needs_manual_review	medium	Multiple candidate files remain unresolved.		false	true	Multiple JBRS candidates scored equally on author/year/title overlap. | Do not queue OCR until the Hledaung inscription article is pinned to a specific local file.
 corpus-citation-target-0203	fam-raw-frasch-coastal-peripheries							no_local_candidate_found	low			false	true	
 corpus-citation-target-0204	fam-raw-frasch-mhrj-1998							no_local_candidate_found	low			false	true	
 corpus-citation-target-0205	fam-raw-frasch-pagan							no_local_candidate_found	low			false	true	
@@ -346,7 +346,7 @@ corpus-citation-target-0344	fam-raw-rsasb-1926							no_local_candidate_found	lo
 corpus-citation-target-0345	fam-raw-rsasb-926-and-app-g							no_local_candidate_found	low			false	true	
 corpus-citation-target-0346	fam-raw-similar-but-incomplete-version-pl-ii-144							no_local_candidate_found	low			false	true	
 corpus-citation-target-0347	fam-raw-strachan-pagan							no_local_candidate_found	low			false	true	
-corpus-citation-target-0348	fam-raw-than-tun-hnaung-dwe							multiple_candidates	medium			false	false	Multiple JBRS candidates scored equally on author/year/title overlap.
+corpus-citation-target-0348	fam-raw-than-tun-hnaung-dwe							needs_manual_review	medium	Multiple candidate files remain unresolved.		false	true	Multiple JBRS candidates scored equally on author/year/title overlap. | Do not queue OCR until the Than Tun witness is pinned to a specific file.
 corpus-citation-target-0349	fam-raw-u-maung-maung-lat-nos-1-2							no_local_candidate_found	low			false	true	
 corpus-citation-target-0350	fam-raw-u-nyein-maung-s-update-to-obi-5-htupayon							no_local_candidate_found	low			false	true	
 corpus-citation-target-0351	fam-raw-u-nyein-maung-she-haung-pancama-twe-nauk-hset-twe							no_local_candidate_found	low			false	true	
@@ -354,26 +354,26 @@ corpus-citation-target-0352	fam-raw-ub1							no_local_candidate_found	low			fal
 corpus-citation-target-0353	fam-raw-unknown							no_local_candidate_found	low			false	true	
 corpus-citation-target-0354	fraschBaganEpigraphicDatabasePartA							no_local_candidate_found	low			false	true	
 corpus-citation-target-0355	fraschBaganEpigraphicDatabasePartB							no_local_candidate_found	low			false	true	
-corpus-citation-target-0356	gHLuceNotebookD							multiple_candidates	medium			false	false	Multiple JBRS candidates scored equally on author/year/title overlap.
-corpus-citation-target-0357	gHLuceNotebookJ							multiple_candidates	medium			false	false	Multiple JBRS candidates scored equally on author/year/title overlap.
+corpus-citation-target-0356	gHLuceNotebookD							needs_manual_review	medium	Private notebook locator system rather than a target publication.		false	false	Multiple JBRS candidates scored equally on author/year/title overlap. | Notebook locators should support citation interpretation, not drive OCR queue selection.
+corpus-citation-target-0357	gHLuceNotebookJ							needs_manual_review	medium	Private notebook locator system rather than a target publication.		false	false	Multiple JBRS candidates scored equally on author/year/title overlap. | Notebook locators should support citation interpretation, not drive OCR queue selection.
 corpus-citation-target-0358	harvey1925historyBurma							no_local_candidate_found	low			false	true	
-corpus-citation-target-0359	htway1974oldest	tin_htway_1974_oldest_burmese_inscriptio-026cc9578084		Tin Htway 1974 Oldest Burmese Inscription.pdf	Tin Htway 1974 Oldest Burmese Inscription.pdf			needs_ocr	high	source_library:Shared local-authority tokens: htway, oldest, tin		true	false	
+corpus-citation-target-0359	htway1974oldest	tin_htway_1974_oldest_burmese_inscriptio-026cc9578084		Tin Htway 1974 Oldest Burmese Inscription.pdf	Tin Htway 1974 Oldest Burmese Inscription.pdf			needs_ocr	high	Local title and author align cleanly to the cited Tin Htway article.	not_requested	true	false	Reviewed exact article witness; queue only through the citation-led OCR table.
 corpus-citation-target-0360	journalBurmaResearchSociety							no_local_candidate_found	low			false	true	
 corpus-citation-target-0361	journalRoyalAsiaticSociety							no_local_candidate_found	low			false	true	
-corpus-citation-target-0362	luce197615th	luce_and_tin_htway_1976_15th_century_ins-ff06c93703ea		Luce and Tin Htway 1976 15th Century Inscription and Library at Pagan.pdf	Luce and Tin Htway 1976 15th Century Inscription and Library at Pagan.pdf			needs_ocr	high	source_library:Shared local-authority tokens: 15th, century, htway, library, luce, tin		true	false	
-corpus-citation-target-0363	lucePeMaungTinInscriptionsOfBurma	pe_maung_tin_luce_1960_glass_palace_chro-3f81fffbb8f6		Pe Maung Tin & Luce 1960 Glass Palace Chronicles.pdf	Pe Maung Tin & Luce 1960 Glass Palace Chronicles.pdf			needs_ocr	high	source_library:Shared local-authority tokens: luce, maung, tin		true	false	
-corpus-citation-target-0364	lwin1989rajakumars							multiple_candidates	medium			false	false	Multiple JBRS candidates scored equally on author/year/title overlap.
+corpus-citation-target-0362	luce197615th	luce_and_tin_htway_1976_15th_century_ins-ff06c93703ea		Luce and Tin Htway 1976 15th Century Inscription and Library at Pagan.pdf	Luce and Tin Htway 1976 15th Century Inscription and Library at Pagan.pdf			needs_ocr	high	Local title and authors align cleanly to the cited Luce and Tin Htway article.	not_requested	true	false	Reviewed exact article witness; queue only through the citation-led OCR table.
+corpus-citation-target-0363	lucePeMaungTinInscriptionsOfBurma	inscriptions_of_burma-b7c07d9f6d02		_မန_မ_တ__င__ရင___က__က_စ_(Inscriptions of Burma).pdf	_မန_မ_တ__င__ရင___က__က_စ_(Inscriptions of Burma).pdf			needs_ocr	medium	Rejected Glass Palace Chronicles; corrected to the local file explicitly titled Inscriptions of Burma.	not_requested	true	false	Glass Palace Chronicles is not Inscriptions of Burma and must not feed targeted OCR.
+corpus-citation-target-0364	lwin1989rajakumars							needs_manual_review	medium	Multiple candidate files remain unresolved.		false	true	Multiple JBRS candidates scored equally on author/year/title overlap. | Do not queue OCR until the Rajakumar citation is pinned to a specific file.
 corpus-citation-target-0365	mandalayPalaceStoneCollection							no_local_candidate_found	low			false	true	
 corpus-citation-target-0366	mmSourceFamily							no_local_candidate_found	low			false	true	
-corpus-citation-target-0367	oldBurmeseInscriptions	frasch_1996_pagan_machineenglishtranslat-6f1791859aa4		Frasch-1996-Pagan-MachineEnglishTranslation-OLD-VERSION.pdf	Frasch-1996-Pagan-MachineEnglishTranslation-OLD-VERSION.pdf			needs_ocr	medium	source_library:Shared local-authority tokens: frasch, old		true	false	
-corpus-citation-target-0368	ppaCatalogue	022245-d96384af909d	jbrs-ocr-0123	CD-ASI-1909.pdf	1909-annual-report-9-archaeological-survey-of-india.pdf	data/working/ocr/jbrs/text/022245-d96384af909d.txt	data/working/ocr/jbrs/metadata/022245-d96384af909d.json	already_ocr_available	medium	jbrs_ocr_index:author:archaeological,survey	completed	false	false	
+corpus-citation-target-0367	oldBurmeseInscriptions							needs_manual_review	medium	OBI is an internal corpus source family with multiple local volume witnesses, not one Frasch proxy PDF.		false	false	Treat OBI as an internal structured-corpus source rather than a single OCR target.
+corpus-citation-target-0368	ppaCatalogue							needs_manual_review	medium	Rejected OCRed ASI annual report; it is not Inscriptions of Pagan, Pinya and Ava.		false	true	Do not OCR the annual report as a stand-in for PPA.
 corpus-citation-target-0369	rayTheravadaBuddhism							no_local_candidate_found	low			false	true	
 corpus-citation-target-0370	rdasbSourceFamily							no_local_candidate_found	low			false	true	
-corpus-citation-target-0371	sipSelectionsPagan							multiple_candidates	medium			false	false	Multiple JBRS candidates scored equally on author/year/title overlap.
-corpus-citation-target-0372	tnInscriptionsPaganPinyaAva							no_local_candidate_found	low			false	true	
+corpus-citation-target-0371	sipSelectionsPagan							needs_manual_review	medium	Multiple candidate files remain unresolved.		false	true	Multiple JBRS candidates scored equally on author/year/title overlap. | SIP remains a manual witness-identification task before any OCR queueing.
+corpus-citation-target-0372	tnInscriptionsPaganPinyaAva							no_local_candidate_found	medium	No plausible local file has been confirmed for TN yet.		false	true	Do not queue OCR until a TN witness is matched to a specific local file.
 corpus-citation-target-0373	uKyawBaganMinsa							no_local_candidate_found	low			false	true	
 corpus-citation-target-0374	uMinHsweSourceFamily							no_local_candidate_found	low			false	true	
-corpus-citation-target-0375	uPeMaungTin1966myazediInscription	pe_maung_tin_luce_1960_glass_palace_chro-3f81fffbb8f6		Pe Maung Tin & Luce 1960 Glass Palace Chronicles.pdf	Pe Maung Tin & Luce 1960 Glass Palace Chronicles.pdf			needs_ocr	medium	source_library:Shared local-authority tokens: maung, tin		true	false	
-corpus-citation-target-0376	uThaMyat1958paliVersionMyazedi	ib_ccclxi_myazedi_pali-b16e2d2e1d06		IB_CCCLXI_Myazedi-Pali.pdf	IB_CCCLXI_Myazedi-Pali.pdf			needs_ocr	medium	source_library:Shared local-authority tokens: myazedi, pali		true	false	
+corpus-citation-target-0375	uPeMaungTin1966myazediInscription							needs_manual_review	medium	Rejected Glass Palace Chronicles; the local Myazedi file needs separate confirmation before OCR.		false	true	A separate local Myazedi Inscription file exists, but the edition/year linkage still needs confirmation.
+corpus-citation-target-0376	uThaMyat1958paliVersionMyazedi	ib_ccclxi_myazedi_pali-b16e2d2e1d06		IB_CCCLXI_Myazedi-Pali.pdf	IB_CCCLXI_Myazedi-Pali.pdf			needs_ocr	medium	Local IB_CCCLXI Myazedi Pali file matches the cited Pali-version witness.	not_requested	true	false	Keep as a reviewed Pali parallel witness, but do not queue it for Burmese-focused targeted OCR.
 corpus-citation-target-0377	ubSourceFamily							no_local_candidate_found	low			false	true	
-corpus-citation-target-0378	uemSelectionsPagan							multiple_candidates	medium			false	false	Multiple JBRS candidates scored equally on author/year/title overlap.
+corpus-citation-target-0378	uemSelectionsPagan							needs_manual_review	medium	No reviewed single-file witness is yet confirmed for UEM.		false	true	Multiple JBRS candidates scored equally on author/year/title overlap. | Do not queue OCR until a UEM witness is pinned to a specific file.

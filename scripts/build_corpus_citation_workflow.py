@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import json
 import re
 from collections import Counter, defaultdict
 from pathlib import Path
@@ -11,8 +12,12 @@ from jbrs_workflow_common import (
     CORPUS_CITATION_INVENTORY_PATH,
     CORPUS_CITATION_LANGUAGE_SCOPES,
     CORPUS_CITATION_MATCH_STATUSES,
+    CORPUS_CITATION_MATCH_REVIEW_STATUSES,
+    CORPUS_CITATION_RELEVANCE_STATUSES,
     CORPUS_CITATION_SOURCE_FILE_MATCH_FIELDS,
     CORPUS_CITATION_SOURCE_FILE_MATCH_PATH,
+    CORPUS_CITATION_SOURCE_FILE_MATCH_REVIEW_FIELDS,
+    CORPUS_CITATION_SOURCE_FILE_MATCH_REVIEW_PATH,
     CORPUS_CITATION_SOURCE_TYPES,
     CORPUS_CITATION_TARGET_FIELDS,
     CORPUS_CITATION_TARGET_PRIORITIES,
@@ -21,6 +26,7 @@ from jbrs_workflow_common import (
     CORPUS_CITED_SOURCE_OCR_QUEUE_PATH,
     CORPUS_TRANSLATION_SOURCE_DASHBOARD_FIELDS,
     CORPUS_TRANSLATION_SOURCE_DASHBOARD_PATH,
+    CORPUS_CITATION_WORKFLOW_SUMMARY_PATH,
     EXTRACTED_SOURCE_TEXT_UNIT_FIELDS,
     EXTRACTED_TRANSLATION_UNIT_FIELDS,
     JBRS_EXTRACTED_SOURCE_TEXT_UNITS_PATH,
@@ -86,6 +92,147 @@ COMMENTARY_KEYWORDS = (
 )
 NON_BURMESE_SCOPES = {"Pali", "Mon", "Pyu"}
 BURMESE_RELEVANT_SCOPES = {"Burmese", "Old Burmese", "Mixed Burmese/Pali"}
+OCR_REVIEW_READY_STATUSES = {"accepted_match", "corrected_match"}
+MEDIUM_HIGH_REVIEW_KEYS = {
+    "duroiselle1921list": {
+        "review_status": "accepted_match",
+        "reviewed_match_status": "needs_ocr",
+        "review_confidence": "high",
+        "review_basis": "Exact title and author alignment to local Duroiselle 1921 List witness.",
+        "queue_for_targeted_ocr": "true",
+        "notes": "Reviewed exact local catalogue witness; safe for targeted OCR if not already OCRed.",
+    },
+    "fam-raw-duroiselle-arasi-1912-hledaung-inscr": {
+        "review_status": "needs_manual_file_hunt",
+        "reviewed_match_status": "needs_manual_review",
+        "review_confidence": "medium",
+        "review_basis": "Multiple candidate files remain unresolved.",
+        "queue_for_targeted_ocr": "false",
+        "notes": "Do not queue OCR until the Hledaung inscription article is pinned to a specific local file.",
+    },
+    "fam-raw-than-tun-hnaung-dwe": {
+        "review_status": "needs_manual_file_hunt",
+        "reviewed_match_status": "needs_manual_review",
+        "review_confidence": "medium",
+        "review_basis": "Multiple candidate files remain unresolved.",
+        "queue_for_targeted_ocr": "false",
+        "notes": "Do not queue OCR until the Than Tun witness is pinned to a specific file.",
+    },
+    "gHLuceNotebookD": {
+        "review_status": "not_needed_internal_source",
+        "reviewed_match_status": "needs_manual_review",
+        "review_confidence": "medium",
+        "review_basis": "Private notebook locator system rather than a target publication.",
+        "queue_for_targeted_ocr": "false",
+        "notes": "Notebook locators should support citation interpretation, not drive OCR queue selection.",
+    },
+    "gHLuceNotebookJ": {
+        "review_status": "not_needed_internal_source",
+        "reviewed_match_status": "needs_manual_review",
+        "review_confidence": "medium",
+        "review_basis": "Private notebook locator system rather than a target publication.",
+        "queue_for_targeted_ocr": "false",
+        "notes": "Notebook locators should support citation interpretation, not drive OCR queue selection.",
+    },
+    "htway1974oldest": {
+        "review_status": "accepted_match",
+        "reviewed_match_status": "needs_ocr",
+        "review_confidence": "high",
+        "review_basis": "Local title and author align cleanly to the cited Tin Htway article.",
+        "queue_for_targeted_ocr": "true",
+        "notes": "Reviewed exact article witness; queue only through the citation-led OCR table.",
+    },
+    "luce197615th": {
+        "review_status": "accepted_match",
+        "reviewed_match_status": "needs_ocr",
+        "review_confidence": "high",
+        "review_basis": "Local title and authors align cleanly to the cited Luce and Tin Htway article.",
+        "queue_for_targeted_ocr": "true",
+        "notes": "Reviewed exact article witness; queue only through the citation-led OCR table.",
+    },
+    "lucePeMaungTinInscriptionsOfBurma": {
+        "review_status": "corrected_match",
+        "reviewed_match_status": "needs_ocr",
+        "reviewed_matched_local_file_id": "inscriptions_of_burma-b7c07d9f6d02",
+        "reviewed_matched_file_name": "_မန_မ_တ__င__ရင___က__က_စ_(Inscriptions of Burma).pdf",
+        "review_confidence": "medium",
+        "review_basis": "Rejected Glass Palace Chronicles; corrected to the local file explicitly titled Inscriptions of Burma.",
+        "queue_for_targeted_ocr": "true",
+        "notes": "Glass Palace Chronicles is not Inscriptions of Burma and must not feed targeted OCR.",
+    },
+    "lwin1989rajakumars": {
+        "review_status": "needs_manual_file_hunt",
+        "reviewed_match_status": "needs_manual_review",
+        "review_confidence": "medium",
+        "review_basis": "Multiple candidate files remain unresolved.",
+        "queue_for_targeted_ocr": "false",
+        "notes": "Do not queue OCR until the Rajakumar citation is pinned to a specific file.",
+    },
+    "oldBurmeseInscriptions": {
+        "review_status": "multiple_local_witnesses",
+        "reviewed_match_status": "needs_manual_review",
+        "review_confidence": "medium",
+        "review_basis": "OBI is an internal corpus source family with multiple local volume witnesses, not one Frasch proxy PDF.",
+        "queue_for_targeted_ocr": "false",
+        "notes": "Treat OBI as an internal structured-corpus source rather than a single OCR target.",
+    },
+    "ppaCatalogue": {
+        "review_status": "rejected_wrong_match",
+        "reviewed_match_status": "needs_manual_review",
+        "review_confidence": "medium",
+        "review_basis": "Rejected OCRed ASI annual report; it is not Inscriptions of Pagan, Pinya and Ava.",
+        "queue_for_targeted_ocr": "false",
+        "notes": "Do not OCR the annual report as a stand-in for PPA.",
+    },
+    "sipSelectionsPagan": {
+        "review_status": "needs_manual_file_hunt",
+        "reviewed_match_status": "needs_manual_review",
+        "review_confidence": "medium",
+        "review_basis": "Multiple candidate files remain unresolved.",
+        "queue_for_targeted_ocr": "false",
+        "notes": "SIP remains a manual witness-identification task before any OCR queueing.",
+    },
+    "tnInscriptionsPaganPinyaAva": {
+        "review_status": "needs_manual_file_hunt",
+        "reviewed_match_status": "no_local_candidate_found",
+        "review_confidence": "medium",
+        "review_basis": "No plausible local file has been confirmed for TN yet.",
+        "queue_for_targeted_ocr": "false",
+        "notes": "Do not queue OCR until a TN witness is matched to a specific local file.",
+    },
+    "uPeMaungTin1966myazediInscription": {
+        "review_status": "rejected_wrong_match",
+        "reviewed_match_status": "needs_manual_review",
+        "review_confidence": "medium",
+        "review_basis": "Rejected Glass Palace Chronicles; the local Myazedi file needs separate confirmation before OCR.",
+        "queue_for_targeted_ocr": "false",
+        "notes": "A separate local Myazedi Inscription file exists, but the edition/year linkage still needs confirmation.",
+    },
+    "uThaMyat1958paliVersionMyazedi": {
+        "review_status": "accepted_match",
+        "reviewed_match_status": "needs_ocr",
+        "review_confidence": "medium",
+        "review_basis": "Local IB_CCCLXI Myazedi Pali file matches the cited Pali-version witness.",
+        "queue_for_targeted_ocr": "false",
+        "notes": "Keep as a reviewed Pali parallel witness, but do not queue it for Burmese-focused targeted OCR.",
+    },
+    "uemSelectionsPagan": {
+        "review_status": "needs_manual_file_hunt",
+        "reviewed_match_status": "needs_manual_review",
+        "review_confidence": "medium",
+        "review_basis": "No reviewed single-file witness is yet confirmed for UEM.",
+        "queue_for_targeted_ocr": "false",
+        "notes": "Do not queue OCR until a UEM witness is pinned to a specific file.",
+    },
+    "epigraphiaBirmanica": {
+        "review_status": "needs_manual_file_hunt",
+        "reviewed_match_status": "no_local_candidate_found",
+        "review_confidence": "medium",
+        "review_basis": "Series-level EB authority has not yet been tied to a specific local fascicle or article file.",
+        "queue_for_targeted_ocr": "false",
+        "notes": "Do not queue OCR until the EB citation is resolved to a specific fascicle or article.",
+    },
+}
 
 
 def normalize(value: str | None) -> str:
@@ -150,6 +297,8 @@ def split_locator(locator: str) -> tuple[str, str]:
 def language_scope_from_record(record: dict[str, str]) -> str:
     value = normalize(record.get("language_original", ""))
     lowered = value.casefold()
+    if "burmese" in lowered and "pali" in lowered:
+        return "Mixed Burmese/Pali"
     if "mya" in lowered or "burmese" in lowered:
         return "Old Burmese"
     if "pali" in lowered:
@@ -163,17 +312,73 @@ def language_scope_from_record(record: dict[str, str]) -> str:
     return "mixed_or_uncertain"
 
 
-def aggregate_language_scope(scopes: set[str]) -> str:
-    filtered = {scope for scope in scopes if scope}
-    if not filtered:
-        return "unknown"
-    if filtered <= {"Old Burmese", "Burmese"}:
-        return "Old Burmese" if "Old Burmese" in filtered else "Burmese"
-    if filtered <= {"Old Burmese", "Burmese", "Pali", "Mixed Burmese/Pali"}:
+def source_work_language_scope(
+    raw_row: dict[str, str],
+    source_row: dict[str, str] | None,
+    citation_raw: str,
+    title: str,
+) -> str:
+    haystack = " ".join(
+        normalize(value)
+        for value in (
+            citation_raw,
+            title,
+            (source_row or {}).get("canonical_title", ""),
+            (source_row or {}).get("short_title", ""),
+            raw_row.get("locator", ""),
+            raw_row.get("raw_reference_string", ""),
+        )
+    ).casefold()
+    if "burmese" in haystack and "pali" in haystack:
         return "Mixed Burmese/Pali"
-    if len(filtered) == 1:
-        return next(iter(filtered))
-    return "mixed_or_uncertain"
+    if "old burmese" in haystack:
+        return "Old Burmese"
+    if "burmese" in haystack:
+        return "Burmese"
+    if "pali" in haystack:
+        return "Pali"
+    if "mon" in haystack:
+        return "Mon"
+    if "pyu" in haystack:
+        return "Pyu"
+    if any(
+        keyword in haystack
+        for keyword in (
+            "inscriptions of burma",
+            "selections from the inscriptions of pagan",
+            "inscriptions of pagan, pinya and ava",
+            "epigraphia birmanica",
+            "list of inscriptions found in burma",
+        )
+    ):
+        return "mixed_or_uncertain"
+    return "mixed_or_uncertain" if haystack else "unknown"
+
+
+def citation_relevance_to_burmese_corpus(
+    corpus_scope: str,
+    source_scope: str,
+    citation_raw: str,
+    title: str,
+    flags: dict[str, str],
+) -> str:
+    haystack = f"{citation_raw} {title}".casefold()
+    if corpus_scope not in BURMESE_RELEVANT_SCOPES:
+        return "out_of_scope_non_burmese_record"
+    if corpus_scope == "Mixed Burmese/Pali":
+        return "mixed_burmese_pali_relevance"
+    if any(keyword in haystack for keyword in ("pali version", "mon version", "pyu version", "parallel version")):
+        return "non_burmese_parallel_only"
+    if (
+        source_scope in NON_BURMESE_SCOPES
+        and flags.get("mentions_translation") != "true"
+        and flags.get("mentions_text") != "true"
+        and flags.get("mentions_edition") != "true"
+    ):
+        return "supporting_context_only"
+    if source_scope == "Mixed Burmese/Pali":
+        return "mixed_burmese_pali_relevance"
+    return "direct_burmese_relevance"
 
 
 def citation_content_flags(citation_raw: str, title: str, source_type: str) -> dict[str, str]:
@@ -251,13 +456,13 @@ def normalized_source_key(raw_row: dict[str, str]) -> str:
 
 
 def priority_from_flags(target: dict[str, str]) -> str:
-    scope = target["language_scope_expected"]
+    scope = target["source_work_language_scope"]
     translation = target["likely_contains_translation"] == "true"
     source_text = target["likely_contains_source_text"] == "true"
     commentary_only = target["likely_contains_commentary_only"] == "true"
-    if scope in BURMESE_RELEVANT_SCOPES and translation:
+    if translation:
         return "high"
-    if scope in BURMESE_RELEVANT_SCOPES and source_text:
+    if source_text:
         return "medium"
     if commentary_only or scope in NON_BURMESE_SCOPES:
         return "low"
@@ -361,6 +566,222 @@ def build_jbrs_candidate_pool(
             "match_basis": "jbrs_ocr_index",
         }
     return list(candidates_by_local_id.values())
+
+
+def default_review_row(match_row: dict[str, str]) -> dict[str, str]:
+    return {
+        "citation_target_id": match_row["citation_target_id"],
+        "normalized_source_key": match_row["normalized_source_key"],
+        "current_match_status": match_row["match_status"],
+        "current_matched_local_file_id": match_row["matched_local_file_id"],
+        "current_matched_file_name": match_row["matched_file_name"],
+        "review_status": "needs_manual_file_hunt",
+        "reviewed_match_status": "needs_manual_review",
+        "reviewed_matched_local_file_id": "",
+        "reviewed_matched_file_name": "",
+        "review_confidence": match_row["match_confidence"] or "medium",
+        "review_basis": "Auto-seeded review placeholder for a medium/high-confidence match.",
+        "queue_for_targeted_ocr": "false",
+        "notes": "Auto-seeded placeholder: confirm or correct this match before targeted OCR.",
+    }
+
+
+def load_review_rows(auto_match_rows: list[dict[str, str]]) -> list[dict[str, str]]:
+    existing_rows = read_tsv(CORPUS_CITATION_SOURCE_FILE_MATCH_REVIEW_PATH) if CORPUS_CITATION_SOURCE_FILE_MATCH_REVIEW_PATH.exists() else []
+    existing_by_key = {
+        row.get("normalized_source_key") or row.get("citation_target_id", ""): row
+        for row in existing_rows
+        if (row.get("normalized_source_key") or row.get("citation_target_id")) and row.get("review_status")
+    }
+    review_rows: list[dict[str, str]] = []
+    for match_row in auto_match_rows:
+        key = match_row["normalized_source_key"]
+        existing = existing_by_key.get(key) or existing_by_key.get(match_row["citation_target_id"], {})
+        seeded = MEDIUM_HIGH_REVIEW_KEYS.get(key)
+        if not existing and not seeded and match_row["match_confidence"] not in {"medium", "high"}:
+            continue
+        review_row = {
+            "citation_target_id": match_row["citation_target_id"],
+            "normalized_source_key": key,
+            "current_match_status": match_row["match_status"],
+            "current_matched_local_file_id": match_row["matched_local_file_id"],
+            "current_matched_file_name": match_row["matched_file_name"],
+            "review_status": "",
+            "reviewed_match_status": "",
+            "reviewed_matched_local_file_id": "",
+            "reviewed_matched_file_name": "",
+            "review_confidence": "",
+            "review_basis": "",
+            "queue_for_targeted_ocr": "false",
+            "notes": "",
+        }
+        if existing:
+            for field in CORPUS_CITATION_SOURCE_FILE_MATCH_REVIEW_FIELDS:
+                if field.startswith("current_"):
+                    continue
+                review_row[field] = normalize(existing.get(field, review_row.get(field, "")))
+        elif seeded:
+            for field, value in seeded.items():
+                review_row[field] = value
+        elif match_row["match_confidence"] in {"medium", "high"}:
+            review_row.update(default_review_row(match_row))
+        review_rows.append(review_row)
+    return review_rows
+
+
+def resolved_match_fields_from_local_id(
+    local_file_id: str,
+    local_manifest_by_id: dict[str, dict[str, str]],
+    ocr_by_local_id: dict[str, dict[str, str]],
+) -> dict[str, str]:
+    if not local_file_id:
+        return {
+            "matched_local_file_id": "",
+            "matched_batch_id": "",
+            "matched_file_name": "",
+            "matched_canonical_file_name": "",
+            "matched_ocr_text_path": "",
+            "matched_metadata_path": "",
+            "ocr_status": "",
+        }
+    manifest_row = local_manifest_by_id.get(local_file_id, {})
+    ocr_row = ocr_by_local_id.get(local_file_id, {})
+    file_name = manifest_row.get("file_name", "") or ocr_row.get("file_name", "")
+    return {
+        "matched_local_file_id": local_file_id,
+        "matched_batch_id": ocr_row.get("batch_id", ""),
+        "matched_file_name": file_name,
+        "matched_canonical_file_name": ocr_row.get("canonical_file_name", "") or file_name,
+        "matched_ocr_text_path": ocr_row.get("ocr_text_path", ""),
+        "matched_metadata_path": ocr_row.get("metadata_path", ""),
+        "ocr_status": ocr_row.get("ocr_status", ""),
+    }
+
+
+def apply_review_to_match(
+    match_row: dict[str, str],
+    review_row: dict[str, str] | None,
+    local_manifest_by_id: dict[str, dict[str, str]],
+    ocr_by_local_id: dict[str, dict[str, str]],
+) -> dict[str, str]:
+    if not review_row or not review_row.get("review_status"):
+        return match_row
+    resolved = dict(match_row)
+    review_status = review_row["review_status"]
+    reviewed_match_status = review_row.get("reviewed_match_status", "") or match_row["match_status"]
+    reviewed_local_file_id = review_row.get("reviewed_matched_local_file_id", "")
+    if review_status == "corrected_match":
+        resolved.update(resolved_match_fields_from_local_id(reviewed_local_file_id, local_manifest_by_id, ocr_by_local_id))
+    elif review_status in {"rejected_wrong_match", "needs_manual_file_hunt", "multiple_local_witnesses", "not_needed_internal_source"}:
+        resolved.update(resolved_match_fields_from_local_id("", local_manifest_by_id, ocr_by_local_id))
+    resolved["match_status"] = reviewed_match_status
+    resolved["match_confidence"] = review_row.get("review_confidence", "") or resolved["match_confidence"]
+    resolved["match_basis"] = review_row.get("review_basis", "") or resolved["match_basis"]
+    resolved["needs_ocr"] = "false"
+    resolved["needs_manual_file_hunt"] = "false"
+    if resolved["match_status"] == "needs_ocr" and resolved.get("matched_local_file_id"):
+        resolved["needs_ocr"] = "true"
+        resolved["ocr_status"] = resolved.get("ocr_status", "") or "not_requested"
+    elif resolved["match_status"] == "no_local_candidate_found":
+        resolved["needs_manual_file_hunt"] = "true"
+    elif resolved["match_status"] == "needs_manual_review" and review_status in {
+        "rejected_wrong_match",
+        "needs_manual_file_hunt",
+    }:
+        resolved["needs_manual_file_hunt"] = "true"
+    note_bits = [bit for bit in [match_row.get("notes", ""), review_row.get("notes", "")] if bit]
+    resolved["notes"] = " | ".join(dict.fromkeys(note_bits))
+    return resolved
+
+
+def build_workflow_summary(
+    inventory_rows: list[dict[str, str]],
+    target_rows: list[dict[str, str]],
+    match_rows: list[dict[str, str]],
+    review_rows: list[dict[str, str]],
+    dashboard_rows: list[dict[str, str]],
+    ocr_queue_rows: list[dict[str, str]],
+) -> dict[str, object]:
+    citation_indicator_counts = {
+        field: sum(1 for row in inventory_rows if row.get(field) == "true")
+        for field in (
+            "mentions_translation",
+            "mentions_text",
+            "mentions_transcription",
+            "mentions_edition",
+            "mentions_rubbing_or_plate",
+            "mentions_commentary_only",
+        )
+    }
+    target_by_id = {row["citation_target_id"]: row for row in target_rows}
+    review_by_target_id = {row["citation_target_id"]: row for row in review_rows if row.get("citation_target_id")}
+    grouped_dashboard: dict[str, list[dict[str, str]]] = defaultdict(list)
+    for row in dashboard_rows:
+        grouped_dashboard[row["citation_target_id"]].append(row)
+    priority_rows: list[dict[str, object]] = []
+    priority_rank = {"high": 0, "medium": 1, "low": 2}
+    extraction_rank = {
+        "ready_for_extraction": 0,
+        "ready_for_ocr": 1,
+        "ocr_available_needs_review": 2,
+        "source_not_found": 3,
+        "unclear_needs_manual_review": 4,
+    }
+    for target_id, rows in grouped_dashboard.items():
+        candidate_rows = [row for row in rows if row["extraction_status"] in extraction_rank]
+        if not candidate_rows:
+            continue
+        dashboard_row = sorted(
+            candidate_rows,
+            key=lambda row: (extraction_rank[row["extraction_status"]], row["dashboard_id"]),
+        )[0]
+        inscriptions = sorted({row["inscription_id"] for row in rows if row.get("inscription_id")})
+        priority_rows.append(
+            {
+                "citation_target_id": target_id,
+                "normalized_source_key": dashboard_row["normalized_source_key"],
+                "normalized_title": target_by_id[target_id]["normalized_title"],
+                "target_priority": target_by_id[target_id]["target_priority"],
+                "extraction_status": dashboard_row["extraction_status"],
+                "source_match_status": dashboard_row["source_match_status"],
+                "review_status": review_by_target_id.get(target_id, {}).get("review_status", ""),
+                "inscription_id_or_count": inscriptions[0] if len(inscriptions) == 1 else f"{len(inscriptions)} inscriptions",
+            }
+        )
+    priority_rows.sort(
+        key=lambda row: (
+            extraction_rank.get(str(row["extraction_status"]), 9),
+            priority_rank.get(str(row["target_priority"]), 9),
+            str(row["citation_target_id"]),
+        )
+    )
+    return {
+        "citation_inventory_count": len(inventory_rows),
+        "distinct_inscription_count": len(
+            {
+                row.get("inscription_id") or row.get("corpus_record_id")
+                for row in inventory_rows
+                if row.get("inscription_id") or row.get("corpus_record_id")
+            }
+        ),
+        "citation_target_count": len(target_rows),
+        "matched_target_count": sum(1 for row in match_rows if row.get("matched_local_file_id")),
+        "ocr_queue_count": len(ocr_queue_rows),
+        "manual_file_hunt_count": sum(1 for row in match_rows if row.get("needs_manual_file_hunt") == "true"),
+        "likely_translation_target_count": sum(
+            1 for row in target_rows if row.get("likely_contains_translation") == "true"
+        ),
+        "likely_source_text_target_count": sum(
+            1 for row in target_rows if row.get("likely_contains_source_text") == "true"
+        ),
+        "extraction_ready_count": sum(
+            1 for row in dashboard_rows if row.get("extraction_status") == "ready_for_extraction"
+        ),
+        "citation_indicator_counts": citation_indicator_counts,
+        "match_status_counts": dict(Counter(row["match_status"] for row in match_rows)),
+        "dashboard_extraction_status_counts": dict(Counter(row["extraction_status"] for row in dashboard_rows)),
+        "top_ocr_extraction_priorities": priority_rows[:20],
+    }
 
 
 def link_extraction_units(
@@ -468,6 +889,7 @@ def main() -> None:
             source_library_by_work_candidate[row["work_candidate_id"]].append(row)
     local_manifest_rows = read_tsv(LOCAL_FILE_MANIFEST_PATH)
     local_manifest_by_copied_path = {row["copied_path"]: row for row in local_manifest_rows if row.get("copied_path")}
+    local_manifest_by_id = {row["canonical_local_file_id"]: row for row in local_manifest_rows if row.get("canonical_local_file_id")}
     jbrs_manifest_rows = read_tsv(JBRS_LOCAL_FILE_MANIFEST_PATH)
     jbrs_manifest_by_local_id = {row["local_file_id"]: row for row in jbrs_manifest_rows if row.get("local_file_id")}
     ocr_rows = read_tsv(JBRS_OCR_TEXT_INDEX_PATH)
@@ -487,6 +909,15 @@ def main() -> None:
             author, title, year = choose_target_text(raw_row, source_row, citation_raw)
             locator_volume_issue, locator_page_or_plate = split_locator(raw_row.get("locator", ""))
             flags = citation_content_flags(citation_raw, title, source_type)
+            corpus_scope = language_scope_from_record(record)
+            work_scope = source_work_language_scope(raw_row, source_row, citation_raw, title)
+            citation_relevance = citation_relevance_to_burmese_corpus(
+                corpus_scope,
+                work_scope,
+                citation_raw,
+                title,
+                flags,
+            )
             inventory_row = {
                 "corpus_record_id": record["record_id"],
                 "inscription_id": build_inscription_id(record),
@@ -502,7 +933,9 @@ def main() -> None:
                 "source_volume_issue": locator_volume_issue,
                 "source_page_or_plate": locator_page_or_plate,
                 **flags,
-                "language_scope_from_corpus": language_scope_from_record(record),
+                "corpus_language_scope": corpus_scope,
+                "source_work_language_scope": work_scope,
+                "citation_relevance_to_burmese_corpus": citation_relevance,
                 "citation_target_id": target_id,
                 "notes": normalize(raw_row.get("notes", "")),
             }
@@ -519,7 +952,7 @@ def main() -> None:
                     "year": year,
                     "volume_issues": set(),
                     "page_or_plates": set(),
-                    "language_scopes": set(),
+                    "source_work_language_scope": work_scope,
                     "flags": Counter(),
                     "source_type": source_type,
                 },
@@ -530,7 +963,6 @@ def main() -> None:
                 bucket["volume_issues"].add(locator_volume_issue)
             if locator_page_or_plate:
                 bucket["page_or_plates"].add(locator_page_or_plate)
-            bucket["language_scopes"].add(inventory_row["language_scope_from_corpus"])
             for key, value in flags.items():
                 if value == "true":
                     bucket["flags"][key] += 1
@@ -563,7 +995,7 @@ def main() -> None:
                 and bucket["flags"]["mentions_translation"] == 0
                 and bucket["flags"]["mentions_text"] == 0
             ),
-            "language_scope_expected": aggregate_language_scope(bucket["language_scopes"]),
+            "source_work_language_scope": bucket["source_work_language_scope"],
             "target_priority": "medium",
             "notes": f"{len(bucket['citation_rows'])} corpus citation rows",
         }
@@ -694,6 +1126,17 @@ def main() -> None:
             }
         )
 
+    review_rows = load_review_rows(match_rows)
+    review_row_by_target_id = {row["citation_target_id"]: row for row in review_rows if row.get("citation_target_id")}
+    match_rows = [
+        apply_review_to_match(
+            row,
+            review_row_by_target_id.get(row["citation_target_id"]),
+            local_manifest_by_id,
+            ocr_by_local_id,
+        )
+        for row in match_rows
+    ]
     match_row_by_target_id = {row["citation_target_id"]: row for row in match_rows}
     extracted_translation_rows = read_tsv(JBRS_EXTRACTED_TRANSLATION_UNITS_PATH)
     extracted_source_rows = read_tsv(JBRS_EXTRACTED_SOURCE_TEXT_UNITS_PATH)
@@ -713,14 +1156,19 @@ def main() -> None:
     for index, inventory_row in enumerate(inventory_rows, start=1):
         target_row = target_rows_by_id[inventory_row["citation_target_id"]]
         match_row = match_row_by_target_id[inventory_row["citation_target_id"]]
-        is_burmese_relevant = target_row["language_scope_expected"] in BURMESE_RELEVANT_SCOPES
+        citation_relevance = inventory_row["citation_relevance_to_burmese_corpus"]
+        is_burmese_relevant = citation_relevance in {
+            "direct_burmese_relevance",
+            "mixed_burmese_pali_relevance",
+            "supporting_context_only",
+        }
         if target_row["citation_target_id"] in extracted_by_target_id:
             extraction_status = "extracted_verified" if any(
                 row.get("review_status") == "verified_translation_coverage"
                 for row in extracted_by_target_id[target_row["citation_target_id"]]
             ) else "extracted_needs_review"
             next_action = "review_extracted_units"
-        elif not is_burmese_relevant:
+        elif citation_relevance in {"out_of_scope_non_burmese_record", "non_burmese_parallel_only"}:
             extraction_status = "out_of_scope_non_burmese"
             next_action = "retain_as_non_burmese_support"
         elif target_row["likely_contains_translation"] != "true" and target_row["likely_contains_source_text"] != "true":
@@ -745,6 +1193,7 @@ def main() -> None:
                 "corpus_record_id": inventory_row["corpus_record_id"],
                 "corpus_title_or_label": inventory_row["corpus_title_or_label"],
                 "corpus_language_field": inventory_row["corpus_language_field"],
+                "corpus_language_scope": inventory_row["corpus_language_scope"],
                 "citation_target_id": inventory_row["citation_target_id"],
                 "citation_raw": inventory_row["citation_raw"],
                 "normalized_source_key": target_row["normalized_source_key"],
@@ -760,7 +1209,8 @@ def main() -> None:
                     if target_row["likely_contains_source_text"] == "true"
                     else "no_source_text_indicator"
                 ),
-                "language_scope_expected": target_row["language_scope_expected"],
+                "source_work_language_scope": inventory_row["source_work_language_scope"],
+                "citation_relevance_to_burmese_corpus": citation_relevance,
                 "is_burmese_relevant": bool_text(is_burmese_relevant),
                 "source_match_status": match_row["match_status"],
                 "ocr_status": match_row["ocr_status"],
@@ -781,6 +1231,11 @@ def main() -> None:
     dashboard_by_target_id: dict[str, list[dict[str, str]]] = defaultdict(list)
     for row in dashboard_rows:
         dashboard_by_target_id[row["citation_target_id"]].append(row)
+    queue_approved_target_ids = {
+        row["citation_target_id"]
+        for row in review_rows
+        if row.get("queue_for_targeted_ocr") == "true" and row.get("review_status") in OCR_REVIEW_READY_STATUSES
+    }
 
     def queue_sort_key(row: dict[str, str]) -> tuple[int, str]:
         priority_rank = {"high": 0, "medium": 1, "low": 2}
@@ -791,7 +1246,14 @@ def main() -> None:
     queue_candidates = [
         row
         for row in match_rows
-        if row["needs_ocr"] == "true" and row["citation_target_id"] in dashboard_by_target_id
+        if row["needs_ocr"] == "true"
+        and row["citation_target_id"] in dashboard_by_target_id
+        and row["citation_target_id"] in queue_approved_target_ids
+        and any(
+            dashboard_row["is_burmese_relevant"] == "true"
+            and dashboard_row["extraction_status"] == "ready_for_ocr"
+            for dashboard_row in dashboard_by_target_id[row["citation_target_id"]]
+        )
     ]
     queue_candidates.sort(key=queue_sort_key)
     for index, match_row in enumerate(queue_candidates, start=1):
@@ -820,13 +1282,31 @@ def main() -> None:
             }
         )
 
+    workflow_summary = build_workflow_summary(
+        inventory_rows=inventory_rows,
+        target_rows=target_rows,
+        match_rows=match_rows,
+        review_rows=review_rows,
+        dashboard_rows=dashboard_rows,
+        ocr_queue_rows=ocr_queue_rows,
+    )
+
     write_tsv(CORPUS_CITATION_INVENTORY_PATH, inventory_rows, CORPUS_CITATION_INVENTORY_FIELDS)
     write_tsv(CORPUS_CITATION_TARGETS_PATH, target_rows, CORPUS_CITATION_TARGET_FIELDS)
     write_tsv(CORPUS_CITATION_SOURCE_FILE_MATCH_PATH, match_rows, CORPUS_CITATION_SOURCE_FILE_MATCH_FIELDS)
+    write_tsv(
+        CORPUS_CITATION_SOURCE_FILE_MATCH_REVIEW_PATH,
+        review_rows,
+        CORPUS_CITATION_SOURCE_FILE_MATCH_REVIEW_FIELDS,
+    )
     write_tsv(CORPUS_TRANSLATION_SOURCE_DASHBOARD_PATH, dashboard_rows, CORPUS_TRANSLATION_SOURCE_DASHBOARD_FIELDS)
     write_tsv(CORPUS_CITED_SOURCE_OCR_QUEUE_PATH, ocr_queue_rows, CORPUS_CITED_SOURCE_OCR_QUEUE_FIELDS)
     write_tsv(JBRS_EXTRACTED_TRANSLATION_UNITS_PATH, linked_translation_rows, EXTRACTED_TRANSLATION_UNIT_FIELDS)
     write_tsv(JBRS_EXTRACTED_SOURCE_TEXT_UNITS_PATH, linked_source_rows, EXTRACTED_SOURCE_TEXT_UNIT_FIELDS)
+    CORPUS_CITATION_WORKFLOW_SUMMARY_PATH.write_text(
+        json.dumps(workflow_summary, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+    )
 
     print(f"Structured OBI records with citations: {len(corpus_rows)}")
     print(f"Corpus citation inventory rows: {len(inventory_rows)}")

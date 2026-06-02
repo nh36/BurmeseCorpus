@@ -1,0 +1,123 @@
+{
+  "citation_inventory_count": 4737,
+  "distinct_inscription_count": 752,
+  "citation_target_count": 378,
+  "matched_target_count": 5,
+  "ocr_queue_count": 2,
+  "manual_file_hunt_count": 370,
+  "likely_translation_target_count": 0,
+  "likely_source_text_target_count": 27,
+  "extraction_ready_count": 0,
+  "citation_indicator_counts": {
+    "mentions_translation": 0,
+    "mentions_text": 4030,
+    "mentions_transcription": 0,
+    "mentions_edition": 4022,
+    "mentions_rubbing_or_plate": 547,
+    "mentions_commentary_only": 705
+  },
+  "match_status_counts": {
+    "no_local_candidate_found": 363,
+    "needs_ocr": 5,
+    "needs_manual_review": 10
+  },
+  "dashboard_extraction_status_counts": {
+    "unclear_needs_manual_review": 10,
+    "ready_for_ocr": 8,
+    "source_not_found": 6,
+    "citation_not_translation": 8,
+    "out_of_scope_non_burmese": 4705
+  },
+  "top_ocr_extraction_priorities": [
+    {
+      "citation_target_id": "corpus-citation-target-0005",
+      "normalized_source_key": "duroiselle1921list",
+      "normalized_title": "List of Inscriptions Found in Burma",
+      "target_priority": "medium",
+      "extraction_status": "ready_for_ocr",
+      "source_match_status": "needs_ocr",
+      "review_status": "accepted_match",
+      "inscription_id_or_count": "465 inscriptions"
+    },
+    {
+      "citation_target_id": "corpus-citation-target-0363",
+      "normalized_source_key": "lucePeMaungTinInscriptionsOfBurma",
+      "normalized_title": "Inscriptions of Burma",
+      "target_priority": "medium",
+      "extraction_status": "ready_for_ocr",
+      "source_match_status": "needs_ocr",
+      "review_status": "corrected_match",
+      "inscription_id_or_count": "589 inscriptions"
+    },
+    {
+      "citation_target_id": "corpus-citation-target-0006",
+      "normalized_source_key": "epigraphiaBirmanica",
+      "normalized_title": "Epigraphia Birmanica",
+      "target_priority": "medium",
+      "extraction_status": "source_not_found",
+      "source_match_status": "no_local_candidate_found",
+      "review_status": "needs_manual_file_hunt",
+      "inscription_id_or_count": "2 inscriptions"
+    },
+    {
+      "citation_target_id": "corpus-citation-target-0372",
+      "normalized_source_key": "tnInscriptionsPaganPinyaAva",
+      "normalized_title": "Inscriptions of Pagan, Pinya and Ava",
+      "target_priority": "medium",
+      "extraction_status": "source_not_found",
+      "source_match_status": "no_local_candidate_found",
+      "review_status": "needs_manual_file_hunt",
+      "inscription_id_or_count": "204 inscriptions"
+    },
+    {
+      "citation_target_id": "corpus-citation-target-0364",
+      "normalized_source_key": "lwin1989rajakumars",
+      "normalized_title": "Rajakumar's Inscription in Pali, in Takkasuil ... (repr. Yangon 1989)",
+      "target_priority": "medium",
+      "extraction_status": "unclear_needs_manual_review",
+      "source_match_status": "needs_manual_review",
+      "review_status": "needs_manual_file_hunt",
+      "inscription_id_or_count": "2 inscriptions"
+    },
+    {
+      "citation_target_id": "corpus-citation-target-0367",
+      "normalized_source_key": "oldBurmeseInscriptions",
+      "normalized_title": "Old Burmese Inscriptions",
+      "target_priority": "medium",
+      "extraction_status": "unclear_needs_manual_review",
+      "source_match_status": "needs_manual_review",
+      "review_status": "multiple_local_witnesses",
+      "inscription_id_or_count": "597 inscriptions"
+    },
+    {
+      "citation_target_id": "corpus-citation-target-0368",
+      "normalized_source_key": "ppaCatalogue",
+      "normalized_title": "Inscriptions of Pagan, Pinya and Ava",
+      "target_priority": "medium",
+      "extraction_status": "unclear_needs_manual_review",
+      "source_match_status": "needs_manual_review",
+      "review_status": "rejected_wrong_match",
+      "inscription_id_or_count": "234 inscriptions"
+    },
+    {
+      "citation_target_id": "corpus-citation-target-0375",
+      "normalized_source_key": "uPeMaungTin1966myazediInscription",
+      "normalized_title": "The Myazedi Inscription",
+      "target_priority": "medium",
+      "extraction_status": "unclear_needs_manual_review",
+      "source_match_status": "needs_manual_review",
+      "review_status": "rejected_wrong_match",
+      "inscription_id_or_count": "2 inscriptions"
+    },
+    {
+      "citation_target_id": "corpus-citation-target-0378",
+      "normalized_source_key": "uemSelectionsPagan",
+      "normalized_title": "Selections from the Inscriptions of Pagan",
+      "target_priority": "medium",
+      "extraction_status": "unclear_needs_manual_review",
+      "source_match_status": "needs_manual_review",
+      "review_status": "needs_manual_file_hunt",
+      "inscription_id_or_count": "72 inscriptions"
+    }
+  ]
+}
