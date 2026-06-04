@@ -8,6 +8,14 @@
   "likely_translation_target_count": 0,
   "likely_source_text_target_count": 27,
   "extraction_ready_count": 0,
+  "out_of_scope_non_burmese_total": 4705,
+  "out_of_scope_non_burmese_burmese_record_count": 2,
+  "out_of_scope_non_burmese_non_burmese_record_count": 9,
+  "wrongly_out_of_scope_burmese_record_count": 0,
+  "mixed_record_needs_review_count": 0,
+  "non_burmese_parallel_or_context_count": 2,
+  "direct_burmese_record_citation_count": 32,
+  "mixed_source_for_burmese_record_count": 28,
   "citation_indicator_counts": {
     "mentions_translation": 0,
     "mentions_text": 4030,
@@ -27,6 +35,11 @@
     "source_not_found": 6,
     "citation_not_translation": 8,
     "out_of_scope_non_burmese": 4705
+  },
+  "out_of_scope_audit_status_counts": {
+    "non_burmese_parallel_or_context": 2,
+    "correctly_out_of_scope_non_burmese_record": 9,
+    "unclear_needs_manual_review": 4694
   },
   "top_ocr_extraction_priorities": [
     {

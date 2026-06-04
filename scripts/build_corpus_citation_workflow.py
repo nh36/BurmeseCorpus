@@ -24,6 +24,8 @@ from jbrs_workflow_common import (
     CORPUS_CITATION_TARGETS_PATH,
     CORPUS_CITED_SOURCE_OCR_QUEUE_FIELDS,
     CORPUS_CITED_SOURCE_OCR_QUEUE_PATH,
+    CORPUS_OUT_OF_SCOPE_NON_BURMESE_AUDIT_FIELDS,
+    CORPUS_OUT_OF_SCOPE_NON_BURMESE_AUDIT_PATH,
     CORPUS_TRANSLATION_SOURCE_DASHBOARD_FIELDS,
     CORPUS_TRANSLATION_SOURCE_DASHBOARD_PATH,
     CORPUS_CITATION_WORKFLOW_SUMMARY_PATH,
@@ -700,6 +702,7 @@ def build_workflow_summary(
     match_rows: list[dict[str, str]],
     review_rows: list[dict[str, str]],
     dashboard_rows: list[dict[str, str]],
+    out_of_scope_audit_rows: list[dict[str, str]],
     ocr_queue_rows: list[dict[str, str]],
 ) -> dict[str, object]:
     citation_indicator_counts = {
@@ -755,6 +758,9 @@ def build_workflow_summary(
             str(row["citation_target_id"]),
         )
     )
+    burmese_record_rows = [
+        row for row in dashboard_rows if row.get("corpus_language_scope") in {"Burmese", "Old Burmese"}
+    ]
     return {
         "citation_inventory_count": len(inventory_rows),
         "distinct_inscription_count": len(
@@ -777,11 +783,85 @@ def build_workflow_summary(
         "extraction_ready_count": sum(
             1 for row in dashboard_rows if row.get("extraction_status") == "ready_for_extraction"
         ),
+        "out_of_scope_non_burmese_total": len(out_of_scope_audit_rows),
+        "out_of_scope_non_burmese_burmese_record_count": sum(
+            1 for row in out_of_scope_audit_rows if row.get("corpus_language_scope") in {"Burmese", "Old Burmese"}
+        ),
+        "out_of_scope_non_burmese_non_burmese_record_count": sum(
+            1 for row in out_of_scope_audit_rows if row.get("corpus_language_scope") in {"Pali", "Mon", "Pyu"}
+        ),
+        "wrongly_out_of_scope_burmese_record_count": sum(
+            1 for row in out_of_scope_audit_rows if row.get("audit_status") == "wrongly_out_of_scope_burmese_record"
+        ),
+        "mixed_record_needs_review_count": sum(
+            1 for row in out_of_scope_audit_rows if row.get("audit_status") == "mixed_record_needs_review"
+        ),
+        "non_burmese_parallel_or_context_count": sum(
+            1 for row in out_of_scope_audit_rows if row.get("audit_status") == "non_burmese_parallel_or_context"
+        ),
+        "direct_burmese_record_citation_count": sum(
+            1 for row in burmese_record_rows if row.get("citation_relevance_to_burmese_corpus") == "direct_burmese_relevance"
+        ),
+        "mixed_source_for_burmese_record_count": sum(
+            1
+            for row in burmese_record_rows
+            if row.get("source_work_language_scope") in {"mixed_or_uncertain", "Mixed Burmese/Pali"}
+        ),
         "citation_indicator_counts": citation_indicator_counts,
         "match_status_counts": dict(Counter(row["match_status"] for row in match_rows)),
         "dashboard_extraction_status_counts": dict(Counter(row["extraction_status"] for row in dashboard_rows)),
+        "out_of_scope_audit_status_counts": dict(Counter(row["audit_status"] for row in out_of_scope_audit_rows)),
         "top_ocr_extraction_priorities": priority_rows[:20],
     }
+
+
+def classify_out_of_scope_row(row: dict[str, str]) -> tuple[str, str]:
+    corpus_scope = row.get("corpus_language_scope", "")
+    relevance = row.get("citation_relevance_to_burmese_corpus", "")
+    if corpus_scope in {"Burmese", "Old Burmese"}:
+        if relevance == "non_burmese_parallel_only":
+            return "non_burmese_parallel_or_context", "parallel_non_burmese_record"
+        if relevance == "supporting_context_only":
+            return "non_burmese_parallel_or_context", "non_burmese_context"
+        return "wrongly_out_of_scope_burmese_record", "burmese_record_should_not_be_out_of_scope"
+    if corpus_scope == "Mixed Burmese/Pali":
+        return "mixed_record_needs_review", "mixed_record_scope"
+    if corpus_scope in {"Pali", "Mon", "Pyu"}:
+        return "correctly_out_of_scope_non_burmese_record", "non_burmese_record_language_scope"
+    if relevance == "non_burmese_parallel_only":
+        return "non_burmese_parallel_or_context", "parallel_non_burmese_record"
+    if relevance == "supporting_context_only":
+        return "non_burmese_parallel_or_context", "non_burmese_context"
+    if corpus_scope == "unknown":
+        return "unclear_needs_manual_review", "missing_corpus_language_scope"
+    return "unclear_needs_manual_review", "unclear_corpus_language_scope"
+
+
+def build_out_of_scope_audit_rows(dashboard_rows: list[dict[str, str]]) -> list[dict[str, str]]:
+    audit_rows: list[dict[str, str]] = []
+    for row in dashboard_rows:
+        if row.get("extraction_status") != "out_of_scope_non_burmese":
+            continue
+        audit_status, audit_reason = classify_out_of_scope_row(row)
+        audit_rows.append(
+            {
+                "dashboard_id": row["dashboard_id"],
+                "corpus_record_id": row["corpus_record_id"],
+                "inscription_id": row["inscription_id"],
+                "corpus_language_field": row["corpus_language_field"],
+                "corpus_language_scope": row["corpus_language_scope"],
+                "source_work_language_scope": row["source_work_language_scope"],
+                "citation_relevance_to_burmese_corpus": row["citation_relevance_to_burmese_corpus"],
+                "citation_target_id": row["citation_target_id"],
+                "normalized_source_key": row["normalized_source_key"],
+                "raw_citation": row["citation_raw"],
+                "extraction_status": row["extraction_status"],
+                "next_action": row["next_action"],
+                "audit_status": audit_status,
+                "audit_reason": audit_reason,
+            }
+        )
+    return audit_rows
 
 
 def link_extraction_units(
@@ -1231,6 +1311,7 @@ def main() -> None:
     dashboard_by_target_id: dict[str, list[dict[str, str]]] = defaultdict(list)
     for row in dashboard_rows:
         dashboard_by_target_id[row["citation_target_id"]].append(row)
+    out_of_scope_audit_rows = build_out_of_scope_audit_rows(dashboard_rows)
     queue_approved_target_ids = {
         row["citation_target_id"]
         for row in review_rows
@@ -1288,6 +1369,7 @@ def main() -> None:
         match_rows=match_rows,
         review_rows=review_rows,
         dashboard_rows=dashboard_rows,
+        out_of_scope_audit_rows=out_of_scope_audit_rows,
         ocr_queue_rows=ocr_queue_rows,
     )
 
@@ -1300,6 +1382,11 @@ def main() -> None:
         CORPUS_CITATION_SOURCE_FILE_MATCH_REVIEW_FIELDS,
     )
     write_tsv(CORPUS_TRANSLATION_SOURCE_DASHBOARD_PATH, dashboard_rows, CORPUS_TRANSLATION_SOURCE_DASHBOARD_FIELDS)
+    write_tsv(
+        CORPUS_OUT_OF_SCOPE_NON_BURMESE_AUDIT_PATH,
+        out_of_scope_audit_rows,
+        CORPUS_OUT_OF_SCOPE_NON_BURMESE_AUDIT_FIELDS,
+    )
     write_tsv(CORPUS_CITED_SOURCE_OCR_QUEUE_PATH, ocr_queue_rows, CORPUS_CITED_SOURCE_OCR_QUEUE_FIELDS)
     write_tsv(JBRS_EXTRACTED_TRANSLATION_UNITS_PATH, linked_translation_rows, EXTRACTED_TRANSLATION_UNIT_FIELDS)
     write_tsv(JBRS_EXTRACTED_SOURCE_TEXT_UNITS_PATH, linked_source_rows, EXTRACTED_SOURCE_TEXT_UNIT_FIELDS)

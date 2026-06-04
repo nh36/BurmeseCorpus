@@ -27,6 +27,7 @@ from jbrs_workflow_common import (
     CORPUS_CITATION_TARGETS_PATH,
     CORPUS_CITATION_WORKFLOW_SUMMARY_PATH,
     CORPUS_CITED_SOURCE_OCR_QUEUE_PATH,
+    CORPUS_OUT_OF_SCOPE_NON_BURMESE_AUDIT_PATH,
     CORPUS_TRANSLATION_SOURCE_DASHBOARD_PATH,
     JBRS_ARTICLE_REFERENCE_TARGETS_PATH,
     JBRS_ARTICLE_REFERENCE_TARGETS_REVIEW_PATH,
@@ -91,6 +92,7 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
         cls.citation_source_match_rows = read_tsv(CORPUS_CITATION_SOURCE_FILE_MATCH_PATH)
         cls.citation_source_match_review_rows = read_tsv(CORPUS_CITATION_SOURCE_FILE_MATCH_REVIEW_PATH)
         cls.citation_dashboard_rows = read_tsv(CORPUS_TRANSLATION_SOURCE_DASHBOARD_PATH)
+        cls.citation_out_of_scope_audit_rows = read_tsv(CORPUS_OUT_OF_SCOPE_NON_BURMESE_AUDIT_PATH)
         cls.citation_ocr_queue_rows = read_tsv(CORPUS_CITED_SOURCE_OCR_QUEUE_PATH)
         cls.citation_workflow_summary = json.loads(
             CORPUS_CITATION_WORKFLOW_SUMMARY_PATH.read_text(encoding="utf-8")
@@ -131,6 +133,7 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
             CORPUS_CITATION_SOURCE_FILE_MATCH_PATH,
             CORPUS_CITATION_SOURCE_FILE_MATCH_REVIEW_PATH,
             CORPUS_TRANSLATION_SOURCE_DASHBOARD_PATH,
+            CORPUS_OUT_OF_SCOPE_NON_BURMESE_AUDIT_PATH,
             CORPUS_CITED_SOURCE_OCR_QUEUE_PATH,
             CORPUS_CITATION_WORKFLOW_SUMMARY_PATH,
             JBRS_OCR_TEXT_INDEX_PATH,
@@ -253,6 +256,27 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
             self.citation_workflow_summary["ocr_queue_count"],
             len(self.citation_ocr_queue_rows),
         )
+
+    def test_out_of_scope_audit_covers_dashboard_rows_and_keeps_wrong_count_zero(self) -> None:
+        out_of_scope_dashboard_ids = {
+            row["dashboard_id"]
+            for row in self.citation_dashboard_rows
+            if row["extraction_status"] == "out_of_scope_non_burmese"
+        }
+        audit_dashboard_ids = {row["dashboard_id"] for row in self.citation_out_of_scope_audit_rows}
+        self.assertEqual(audit_dashboard_ids, out_of_scope_dashboard_ids)
+        self.assertEqual(
+            self.citation_workflow_summary["out_of_scope_non_burmese_total"],
+            len(self.citation_out_of_scope_audit_rows),
+        )
+        self.assertEqual(
+            self.citation_workflow_summary["wrongly_out_of_scope_burmese_record_count"],
+            0,
+        )
+        for row in self.citation_out_of_scope_audit_rows:
+            if row["corpus_language_scope"] in {"Burmese", "Old Burmese"}:
+                self.assertEqual(row["audit_status"], "non_burmese_parallel_or_context")
+                self.assertIn(row["audit_reason"], {"parallel_non_burmese_record", "non_burmese_context"})
 
     def test_ocr_production_summary_matches_generated_counts(self) -> None:
         expected = build_jbrs_ocr_production_summary(
