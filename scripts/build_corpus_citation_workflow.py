@@ -35,6 +35,7 @@ from jbrs_workflow_common import (
     JBRS_EXTRACTED_TRANSLATION_UNITS_PATH,
     JBRS_LOCAL_FILE_MANIFEST_PATH,
     JBRS_OCR_TEXT_INDEX_PATH,
+    LOCAL_SOURCE_OCR_TEXT_INDEX_PATH,
     LOCAL_FILE_MANIFEST_PATH,
     SOURCE_LIBRARY_MANIFEST_PATH,
 )
@@ -681,7 +682,10 @@ def apply_review_to_match(
     resolved["match_basis"] = review_row.get("review_basis", "") or resolved["match_basis"]
     resolved["needs_ocr"] = "false"
     resolved["needs_manual_file_hunt"] = "false"
-    if resolved["match_status"] == "needs_ocr" and resolved.get("matched_local_file_id"):
+    if resolved.get("matched_ocr_text_path") and resolved["match_status"] != "multiple_candidates":
+        resolved["match_status"] = "already_ocr_available"
+        resolved["ocr_status"] = resolved.get("ocr_status", "") or "completed"
+    elif resolved["match_status"] == "needs_ocr" and resolved.get("matched_local_file_id"):
         resolved["needs_ocr"] = "true"
         resolved["ocr_status"] = resolved.get("ocr_status", "") or "not_requested"
     elif resolved["match_status"] == "no_local_candidate_found":
@@ -973,6 +977,8 @@ def main() -> None:
     jbrs_manifest_rows = read_tsv(JBRS_LOCAL_FILE_MANIFEST_PATH)
     jbrs_manifest_by_local_id = {row["local_file_id"]: row for row in jbrs_manifest_rows if row.get("local_file_id")}
     ocr_rows = read_tsv(JBRS_OCR_TEXT_INDEX_PATH)
+    if LOCAL_SOURCE_OCR_TEXT_INDEX_PATH.exists():
+        ocr_rows.extend(read_tsv(LOCAL_SOURCE_OCR_TEXT_INDEX_PATH))
     ocr_by_local_id = {row["local_file_id"]: row for row in ocr_rows if row.get("local_file_id")}
     jbrs_candidate_pool = build_jbrs_candidate_pool(jbrs_manifest_rows, ocr_rows)
 

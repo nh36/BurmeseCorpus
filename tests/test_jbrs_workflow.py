@@ -53,6 +53,7 @@ from jbrs_workflow_common import (
     JBRS_STRUCTURED_EXTRACTION_PLAN_PATH,
     JBRS_TRANSLATION_CANDIDATE_LOG_PATH,
     JBRS_TRANSLATION_CANDIDATE_REVIEW_PATH,
+    LOCAL_SOURCE_OCR_TEXT_INDEX_PATH,
     OCR_BATCH_PLAN_FIELDS,
     OCR_STATUS_LOG_FIELDS,
     build_ocr_batch_plan_rows,
@@ -218,6 +219,17 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
             "inscriptions_of_burma-b7c07d9f6d02",
         )
         self.assertEqual(
+            match_by_key["lucePeMaungTinInscriptionsOfBurma"]["match_status"],
+            "already_ocr_available",
+        )
+        self.assertEqual(
+            match_by_key["lucePeMaungTinInscriptionsOfBurma"]["ocr_status"],
+            "completed",
+        )
+        self.assertTrue(
+            (ROOT / match_by_key["lucePeMaungTinInscriptionsOfBurma"]["matched_ocr_text_path"]).exists()
+        )
+        self.assertEqual(
             match_by_key["ppaCatalogue"]["match_status"],
             "needs_manual_review",
         )
@@ -256,6 +268,18 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
             self.citation_workflow_summary["ocr_queue_count"],
             len(self.citation_ocr_queue_rows),
         )
+
+    def test_local_source_repo_safe_ocr_index_integrates_into_citation_workflow(self) -> None:
+        self.assertTrue(LOCAL_SOURCE_OCR_TEXT_INDEX_PATH.exists())
+        local_ocr_rows = read_tsv(LOCAL_SOURCE_OCR_TEXT_INDEX_PATH)
+        row = next(
+            entry for entry in local_ocr_rows if entry["local_file_id"] == "inscriptions_of_burma-b7c07d9f6d02"
+        )
+        self.assertEqual(row["ocr_status"], "completed")
+        self.assertTrue((ROOT / row["ocr_text_path"]).exists())
+        self.assertTrue((ROOT / row["metadata_path"]).exists())
+        queued_target_ids = {entry["citation_target_id"] for entry in self.citation_ocr_queue_rows}
+        self.assertNotIn("corpus-citation-target-0363", queued_target_ids)
 
     def test_out_of_scope_audit_covers_dashboard_rows_and_keeps_wrong_count_zero(self) -> None:
         out_of_scope_dashboard_ids = {

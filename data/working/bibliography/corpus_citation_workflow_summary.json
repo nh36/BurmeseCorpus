@@ -3,11 +3,11 @@
   "distinct_inscription_count": 752,
   "citation_target_count": 378,
   "matched_target_count": 5,
-  "ocr_queue_count": 2,
+  "ocr_queue_count": 1,
   "manual_file_hunt_count": 370,
   "likely_translation_target_count": 0,
   "likely_source_text_target_count": 27,
-  "extraction_ready_count": 0,
+  "extraction_ready_count": 4,
   "out_of_scope_non_burmese_total": 4705,
   "out_of_scope_non_burmese_burmese_record_count": 2,
   "out_of_scope_non_burmese_non_burmese_record_count": 9,
@@ -26,12 +26,14 @@
   },
   "match_status_counts": {
     "no_local_candidate_found": 363,
-    "needs_ocr": 5,
-    "needs_manual_review": 10
+    "needs_ocr": 4,
+    "needs_manual_review": 10,
+    "already_ocr_available": 1
   },
   "dashboard_extraction_status_counts": {
     "unclear_needs_manual_review": 10,
-    "ready_for_ocr": 8,
+    "ready_for_ocr": 4,
+    "ready_for_extraction": 4,
     "source_not_found": 6,
     "citation_not_translation": 8,
     "out_of_scope_non_burmese": 4705
@@ -43,6 +45,16 @@
   },
   "top_ocr_extraction_priorities": [
     {
+      "citation_target_id": "corpus-citation-target-0363",
+      "normalized_source_key": "lucePeMaungTinInscriptionsOfBurma",
+      "normalized_title": "Inscriptions of Burma",
+      "target_priority": "medium",
+      "extraction_status": "ready_for_extraction",
+      "source_match_status": "already_ocr_available",
+      "review_status": "corrected_match",
+      "inscription_id_or_count": "589 inscriptions"
+    },
+    {
       "citation_target_id": "corpus-citation-target-0005",
       "normalized_source_key": "duroiselle1921list",
       "normalized_title": "List of Inscriptions Found in Burma",
@@ -51,16 +63,6 @@
       "source_match_status": "needs_ocr",
       "review_status": "accepted_match",
       "inscription_id_or_count": "465 inscriptions"
-    },
-    {
-      "citation_target_id": "corpus-citation-target-0363",
-      "normalized_source_key": "lucePeMaungTinInscriptionsOfBurma",
-      "normalized_title": "Inscriptions of Burma",
-      "target_priority": "medium",
-      "extraction_status": "ready_for_ocr",
-      "source_match_status": "needs_ocr",
-      "review_status": "corrected_match",
-      "inscription_id_or_count": "589 inscriptions"
     },
     {
       "citation_target_id": "corpus-citation-target-0006",
