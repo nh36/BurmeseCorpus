@@ -10,11 +10,16 @@ from pathlib import Path
 from corpus_common import ensure_parent, read_tsv, write_tsv
 from jbrs_workflow_common import (
     CORPUS_TRANSLATION_SOURCE_DASHBOARD_PATH,
+    INSCRIPTIONS_OF_BURMA_CROSS_REFERENCE_INDEX_FIELDS,
+    INSCRIPTIONS_OF_BURMA_CROSS_REFERENCE_INDEX_PATH,
     JBRS_OCR_TEXT_INDEX_FIELDS,
     LOCAL_FILE_MANIFEST_PATH,
     LOCAL_SOURCE_OCR_TEXT_INDEX_PATH,
     LOCAL_SOURCE_WORKING_OCR_METADATA_ROOT,
     LOCAL_SOURCE_WORKING_OCR_TEXT_ROOT,
+    PPA_SOURCE_HUNT_PATH,
+    SOURCE_HUNT_FIELDS,
+    TN_SOURCE_HUNT_PATH,
 )
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
@@ -50,6 +55,17 @@ EXTRACTED_UNIT_FIELDS = [
 ]
 
 SAMPLE_REVIEW_FIELDS = EXTRACTED_UNIT_FIELDS + ["review_category"]
+TARGETED_CANDIDATE_IDS = {
+    "luce_pemaungtin_1928_inscriptions_of_pag-da9f6d6d89b3",
+    "taw_sein_ko_1899_inscriptions_of_pagan-254902496aa8",
+}
+REFERENCE_LOOKAHEAD = (
+    r"(?=(?:\bList\b|\bPPA\b|\bTN\b|\bSIP\b|\bUBI\b|\bUB\s+I{1,2}\b|\bJBRS\b|"
+    r"\bA\.?\s*\d|\bA\.|\bB\s*II\b|\bFrom\b|\bAt\b|\bIn\b|\bNow\b|\bDitto\b|\bStone\b|"
+    r"\bPillar\b|\bFragment\b|\bThis\b|\bSouth\b|\bWest\b|\bEast\b|\bTwo-faced\b|"
+    r"\b[A-Z][a-z]{2,}\b|"
+    r"\blarge\b|\bsmaller\b|$))"
+)
 
 
 def compact(value: str) -> str:
@@ -359,6 +375,190 @@ def build_index_units(entries: list[dict[str, str]], link_rows: dict[str, dict[s
     return rows
 
 
+def joined_full_matches(patterns: list[str], text: str) -> list[str]:
+    values: list[str] = []
+    for pattern in patterns:
+        for match in re.finditer(pattern, text):
+            values.append(compact(match.group(0)))
+    return list(dict.fromkeys(values))
+
+
+def captured_reference_values(prefix: str, patterns: list[str], text: str) -> list[str]:
+    values: list[str] = []
+    for pattern in patterns:
+        for match in re.finditer(pattern, text):
+            captured = compact(match.group(1)).strip(" ,.;")
+            if captured:
+                values.append(f"{prefix} {captured}".strip())
+    return list(dict.fromkeys(values))
+
+
+def strip_reference_segments(text: str, segments: list[str]) -> str:
+    cleaned = text
+    cleaned = re.sub(r"^Plate\s+[A-Za-z0-9IVXLCDM]+(?:\s*[ab])?\.\s*", "", cleaned)
+    for segment in segments:
+        cleaned = cleaned.replace(segment, "")
+    cleaned = re.sub(r"\s+", " ", cleaned)
+    cleaned = re.sub(r"\s+([,.;)])", r"\1", cleaned)
+    cleaned = re.sub(r"([(])\s+", r"\1", cleaned)
+    cleaned = re.sub(r"\s{2,}", " ", cleaned)
+    return cleaned.strip(" .;,-")
+
+
+def build_cross_reference_rows(index_units: list[dict[str, str]]) -> list[dict[str, str]]:
+    rows: list[dict[str, str]] = []
+    for unit in index_units:
+        entry_text = unit["ocr_text"].replace("\n", " ")
+        list_refs = captured_reference_values("List", [rf"\bList\s+(.+?){REFERENCE_LOOKAHEAD}"], entry_text)
+        ppa_refs = captured_reference_values("PPA", [rf"\bPPA\s+(.+?){REFERENCE_LOOKAHEAD}"], entry_text)
+        tn_refs = captured_reference_values("TN", [rf"\bTN\s+(.+?){REFERENCE_LOOKAHEAD}"], entry_text)
+        sip_refs = captured_reference_values("SIP", [rf"\bSIP\s+(.+?){REFERENCE_LOOKAHEAD}"], entry_text)
+        ub_refs = captured_reference_values(
+            "",
+            [
+                rf"\b(UBI\s+.+?){REFERENCE_LOOKAHEAD}",
+                rf"\b(UB\s+I{1,2}\s+.+?){REFERENCE_LOOKAHEAD}",
+            ],
+            entry_text,
+        )
+        jbrs_refs = captured_reference_values("JBRS", [rf"\bJBRS\s+(.+?){REFERENCE_LOOKAHEAD}"], entry_text)
+        other_refs = joined_full_matches([r"\bA\.?\s*\d+[^.;]*", r"\bB\s*II\s+\d+[^.;]*"], entry_text)
+        place_or_object_description = strip_reference_segments(
+            entry_text,
+            list_refs + ppa_refs + tn_refs + sip_refs + ub_refs + jbrs_refs + other_refs,
+        )
+        page_match = re.search(r"page\s+(\d+)", unit["source_page_or_locator"])
+        rows.append(
+            {
+                "iob_plate": unit["source_entry_number"],
+                "iob_plate_normalized": normalize_plate_key(unit["source_entry_number"]),
+                "iob_page": page_match.group(1) if page_match else "",
+                "list_ref": " | ".join(list_refs),
+                "ppa_ref": " | ".join(ppa_refs),
+                "tn_ref": " | ".join(tn_refs),
+                "sip_ref": " | ".join(sip_refs),
+                "ub_ref": " | ".join(ub_refs),
+                "jbrs_ref": " | ".join(jbrs_refs),
+                "other_ref": " | ".join(other_refs),
+                "place_or_object_description": place_or_object_description,
+                "linked_inscription_id": unit["linked_inscription_id"],
+                "linked_corpus_record_id": unit["linked_corpus_record_id"],
+                "link_confidence": unit["confidence"],
+                "link_basis": unit["link_basis"],
+                "needs_manual_review": unit["needs_manual_review"],
+                "notes": unit["notes"],
+            }
+        )
+    return rows
+
+
+def manifest_candidate(manifest_by_id: dict[str, dict[str, str]], candidate_id: str) -> dict[str, str]:
+    return manifest_by_id[candidate_id]
+
+
+def candidate_path_stub_or_source(manifest_row: dict[str, str]) -> str:
+    parts = [manifest_row.get("copied_path", ""), manifest_row.get("primary_original_path", "")]
+    return " | ".join(part for part in parts if part)
+
+
+def build_tn_source_hunt_rows(manifest_by_id: dict[str, dict[str, str]]) -> list[dict[str, str]]:
+    taw_sein_ko = manifest_candidate(manifest_by_id, "taw_sein_ko_1899_inscriptions_of_pagan-254902496aa8")
+    luce_1928 = manifest_candidate(manifest_by_id, "luce_pemaungtin_1928_inscriptions_of_pag-da9f6d6d89b3")
+    return [
+        {
+            "candidate_id": "tn-source-hunt-0001",
+            "candidate_file_id": taw_sein_ko["canonical_local_file_id"],
+            "candidate_file_name": taw_sein_ko["file_name"],
+            "candidate_path_stub_or_source": candidate_path_stub_or_source(taw_sein_ko),
+            "candidate_title": "Inscriptions of Pagan",
+            "candidate_author": "Taw Sein Ko",
+            "candidate_year": "1899",
+            "evidence_for_match": "Shares the core inscription-series title and the 1899 year with the TN abbreviation entry.",
+            "evidence_against_match": "IOB abbreviation page 5 defines TN as Tun Nyein's 'Inscriptions of Pagan, Pinya, and Ava. Translation, with Notes.' This local file is by Taw Sein Ko, omits Pinya/Ava, and does not advertise translation with notes.",
+            "match_status": "rejected_wrong_author",
+            "needs_manual_review": "false",
+            "notes": "Strong false friend for TN; keep available only as a nearby inscription-series witness.",
+        },
+        {
+            "candidate_id": "tn-source-hunt-0002",
+            "candidate_file_id": luce_1928["canonical_local_file_id"],
+            "candidate_file_name": luce_1928["file_name"],
+            "candidate_path_stub_or_source": candidate_path_stub_or_source(luce_1928),
+            "candidate_title": "Inscriptions of Pagan",
+            "candidate_author": "G. H. Luce; Pe Maung Tin",
+            "candidate_year": "1928",
+            "evidence_for_match": "Shares the inscription-series title stem and clearly belongs to the same Pagan-inscription source cluster.",
+            "evidence_against_match": "This is the 1928 Luce/Pe Maung Tin witness used for SIP, not the 1899 Tun Nyein translation-with-notes witness.",
+            "match_status": "rejected_wrong_year",
+            "needs_manual_review": "false",
+            "notes": "Useful for SIP follow-up, but not a plausible TN file.",
+        },
+        {
+            "candidate_id": "tn-source-hunt-0003",
+            "candidate_file_id": "",
+            "candidate_file_name": "",
+            "candidate_path_stub_or_source": "local_file_manifest.tsv | source_library_manifest.tsv | jbrs_ocr_text_index.tsv | local_source_ocr_text_index.tsv",
+            "candidate_title": "Inscriptions of Pagan, Pinya, and Ava. Translation, with Notes",
+            "candidate_author": "Tun Nyein",
+            "candidate_year": "1899",
+            "evidence_for_match": "IOB abbreviation page 5 confirms the target witness title, author, and year.",
+            "evidence_against_match": "No local file manifest, source-library authority row, or OCR index row currently matches Tun Nyein / U Tun Nyein with the full title and translation-with-notes wording.",
+            "match_status": "no_local_candidate_found",
+            "needs_manual_review": "false",
+            "notes": "Targeted TN hunt is currently unresolved locally; manual acquisition or further bibliographic pinning is required before OCR.",
+        },
+    ]
+
+
+def build_ppa_source_hunt_rows(manifest_by_id: dict[str, dict[str, str]]) -> list[dict[str, str]]:
+    taw_sein_ko = manifest_candidate(manifest_by_id, "taw_sein_ko_1899_inscriptions_of_pagan-254902496aa8")
+    luce_1928 = manifest_candidate(manifest_by_id, "luce_pemaungtin_1928_inscriptions_of_pag-da9f6d6d89b3")
+    return [
+        {
+            "candidate_id": "ppa-source-hunt-0001",
+            "candidate_file_id": taw_sein_ko["canonical_local_file_id"],
+            "candidate_file_name": taw_sein_ko["file_name"],
+            "candidate_path_stub_or_source": candidate_path_stub_or_source(taw_sein_ko),
+            "candidate_title": "Inscriptions of Pagan",
+            "candidate_author": "Taw Sein Ko",
+            "candidate_year": "1899",
+            "evidence_for_match": "Shares the core title stem 'Inscriptions of Pagan' and is a local monograph witness rather than a journal article.",
+            "evidence_against_match": "IOB abbreviation page 5 defines PPA as the 1892 'Inscriptions of Pagan, Pinya, and Ava' witness. This file is 1899, omits Pinya/Ava, and appears to be a different Taw Sein Ko work.",
+            "match_status": "rejected_wrong_year",
+            "needs_manual_review": "false",
+            "notes": "Keep as a nearby inscription-series witness, but not as the 1892 PPA source text.",
+        },
+        {
+            "candidate_id": "ppa-source-hunt-0002",
+            "candidate_file_id": luce_1928["canonical_local_file_id"],
+            "candidate_file_name": luce_1928["file_name"],
+            "candidate_path_stub_or_source": candidate_path_stub_or_source(luce_1928),
+            "candidate_title": "Inscriptions of Pagan",
+            "candidate_author": "G. H. Luce; Pe Maung Tin",
+            "candidate_year": "1928",
+            "evidence_for_match": "Shares the inscription-series title stem and is explicitly a Pagan inscriptions source book.",
+            "evidence_against_match": "This is the later SIP selection/edition, not the 1892 PPA witness.",
+            "match_status": "rejected_wrong_year",
+            "needs_manual_review": "false",
+            "notes": "Useful for SIP follow-up, but not a plausible PPA file.",
+        },
+        {
+            "candidate_id": "ppa-source-hunt-0003",
+            "candidate_file_id": "",
+            "candidate_file_name": "",
+            "candidate_path_stub_or_source": "local_file_manifest.tsv | source_library_manifest.tsv | jbrs_ocr_text_index.tsv | local_source_ocr_text_index.tsv",
+            "candidate_title": "Inscriptions of Pagan, Pinya and Ava",
+            "candidate_author": "Archaeological Survey of Burma (ed.)",
+            "candidate_year": "1892",
+            "evidence_for_match": "IOB abbreviation page 5 confirms the PPA title and 1892 date as the expected source-text witness.",
+            "evidence_against_match": "No local file manifest, source-library authority row, or OCR index row currently matches a 1892 PPA witness after rejecting the earlier ASI annual-report stand-in.",
+            "match_status": "no_local_candidate_found",
+            "needs_manual_review": "false",
+            "notes": "Targeted PPA hunt is currently unresolved locally; keep blocked until a real 1892 witness is located.",
+        },
+    ]
+
+
 def build_sample_review(units: list[dict[str, str]]) -> list[dict[str, str]]:
     linked = [row for row in units if row["linked_corpus_record_id"]][:10]
     ambiguous = [
@@ -412,15 +612,21 @@ def build_repo_safe_metadata(local_metadata: dict[str, object], text: str, manif
         "probable_author": "G. H. Luce; Pe Maung Tin",
         "year": "",
         "source_category": "book_or_portfolio_pdf",
+        "source_role": "cross_reference_witness",
         "contains_translation_marker": "true" if re.search(r"\btranslation\b", text, re.IGNORECASE) else "false",
+        "contains_inscription_level_translation": "false",
         "contains_text_marker": "true" if re.search(r"\btext\b", text, re.IGNORECASE) else "false",
+        "contains_source_text_marker": "true" if re.search(r"\btext\b", text, re.IGNORECASE) else "false",
+        "contains_extractable_source_text": "false",
         "contains_inscription_marker": "true" if re.search(r"\binscriptions?\b", text, re.IGNORECASE) else "false",
+        "contains_plate_index": "true",
+        "contains_facsimile_plates": "true",
         "contains_burmese_marker": "true" if re.search(r"\bBurmese\b|[က-႟]", text) else "false",
         "contains_pali_marker": "true" if re.search(r"\bPali\b", text, re.IGNORECASE) else "false",
         "contains_mon_marker": "true" if re.search(r"\bMon\b", text, re.IGNORECASE) else "false",
         "contains_pyu_marker": "true" if re.search(r"\bPyu\b", text, re.IGNORECASE) else "false",
         "checksum_or_file_fingerprint": hashlib.sha256(text.encode("utf-8")).hexdigest(),
-        "notes": "Repo-safe OCR export for the reviewed Inscriptions of Burma source. The OCR shows facsimile plates plus bilingual front matter and English/Burmese plate indexes; no inscription-level English translations were identified in this volume.",
+        "notes": "Repo-safe OCR export for the reviewed Inscriptions of Burma source. Treat it as a cross-reference witness: facsimile plates plus bilingual front matter and English/Burmese plate indexes, with no inscription-level English translations and no safely extractable inscription text from the plate OCR.",
     }
 
 
@@ -497,6 +703,20 @@ def main() -> None:
     units.extend(index_units)
     units.extend(build_unclear_plate_units(pages))
     write_tsv(EXTRACTED_UNITS_PATH, units, EXTRACTED_UNIT_FIELDS)
+    write_tsv(
+        INSCRIPTIONS_OF_BURMA_CROSS_REFERENCE_INDEX_PATH,
+        build_cross_reference_rows(index_units),
+        INSCRIPTIONS_OF_BURMA_CROSS_REFERENCE_INDEX_FIELDS,
+    )
+    manifest_by_id = {
+        row["canonical_local_file_id"]: row
+        for row in read_tsv(LOCAL_FILE_MANIFEST_PATH)
+        if row.get("canonical_local_file_id") in TARGETED_CANDIDATE_IDS
+    }
+    tn_rows = build_tn_source_hunt_rows(manifest_by_id)
+    write_tsv(TN_SOURCE_HUNT_PATH, tn_rows, SOURCE_HUNT_FIELDS)
+    if not any(row["match_status"] in {"accepted_match", "plausible_match"} for row in tn_rows):
+        write_tsv(PPA_SOURCE_HUNT_PATH, build_ppa_source_hunt_rows(manifest_by_id), SOURCE_HUNT_FIELDS)
     write_tsv(SAMPLE_REVIEW_PATH, build_sample_review(units), SAMPLE_REVIEW_FIELDS)
     write_notes()
 

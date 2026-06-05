@@ -15,13 +15,19 @@
   "probable_author": "G. H. Luce; Pe Maung Tin",
   "year": "",
   "source_category": "book_or_portfolio_pdf",
+  "source_role": "cross_reference_witness",
   "contains_translation_marker": "true",
+  "contains_inscription_level_translation": "false",
   "contains_text_marker": "true",
+  "contains_source_text_marker": "true",
+  "contains_extractable_source_text": "false",
   "contains_inscription_marker": "true",
+  "contains_plate_index": "true",
+  "contains_facsimile_plates": "true",
   "contains_burmese_marker": "true",
   "contains_pali_marker": "true",
   "contains_mon_marker": "true",
   "contains_pyu_marker": "true",
   "checksum_or_file_fingerprint": "0d28939ae0946156149d95637a5ee7f1d86787cd3f6bac9f6eecce26ba70e565",
-  "notes": "Repo-safe OCR export for the reviewed Inscriptions of Burma source. The OCR shows facsimile plates plus bilingual front matter and English/Burmese plate indexes; no inscription-level English translations were identified in this volume."
+  "notes": "Repo-safe OCR export for the reviewed Inscriptions of Burma source. Treat it as a cross-reference witness: facsimile plates plus bilingual front matter and English/Burmese plate indexes, with no inscription-level English translations and no safely extractable inscription text from the plate OCR."
 }

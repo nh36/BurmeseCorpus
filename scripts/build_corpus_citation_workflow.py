@@ -96,6 +96,12 @@ COMMENTARY_KEYWORDS = (
 NON_BURMESE_SCOPES = {"Pali", "Mon", "Pyu"}
 BURMESE_RELEVANT_SCOPES = {"Burmese", "Old Burmese", "Mixed Burmese/Pali"}
 OCR_REVIEW_READY_STATUSES = {"accepted_match", "corrected_match"}
+NON_EXTRACTIVE_SOURCE_ROLES = {
+    "catalogue_or_list_witness",
+    "cross_reference_witness",
+    "commentary_witness",
+    "internal_corpus_source",
+}
 MEDIUM_HIGH_REVIEW_KEYS = {
     "duroiselle1921list": {
         "review_status": "accepted_match",
@@ -234,6 +240,81 @@ MEDIUM_HIGH_REVIEW_KEYS = {
         "review_basis": "Series-level EB authority has not yet been tied to a specific local fascicle or article file.",
         "queue_for_targeted_ocr": "false",
         "notes": "Do not queue OCR until the EB citation is resolved to a specific fascicle or article.",
+    },
+}
+SOURCE_ROLE_OVERRIDES = {
+    "duroiselle1921list": {
+        "source_role": "catalogue_or_list_witness",
+        "likely_contains_translation": "false",
+        "likely_contains_source_text": "false",
+        "likely_contains_edition_only": "false",
+        "likely_contains_commentary_only": "false",
+        "target_priority": "low",
+        "notes": "Reclassified as a catalogue/list cross-reference witness, not a source-text or translation witness for extraction.",
+    },
+    "lucePeMaungTinInscriptionsOfBurma": {
+        "source_role": "cross_reference_witness",
+        "likely_contains_translation": "false",
+        "likely_contains_source_text": "false",
+        "likely_contains_edition_only": "false",
+        "likely_contains_commentary_only": "false",
+        "target_priority": "low",
+        "notes": "OCRed source inspection shows facsimile plates plus bilingual plate indexes, not inscription-level text or translation.",
+    },
+    "oldBurmeseInscriptions": {
+        "source_role": "internal_corpus_source",
+        "likely_contains_translation": "false",
+        "likely_contains_source_text": "false",
+        "likely_contains_edition_only": "false",
+        "likely_contains_commentary_only": "false",
+        "target_priority": "low",
+        "notes": "Treat OBI as the internal structured corpus source family rather than as an OCR target.",
+    },
+    "ppaCatalogue": {
+        "source_role": "source_text_witness",
+        "source_type": "corpus_volume",
+        "normalized_year": "1892",
+        "likely_contains_translation": "false",
+        "likely_contains_source_text": "true",
+        "likely_contains_edition_only": "true",
+        "likely_contains_commentary_only": "false",
+        "target_priority": "high",
+        "notes": "IOB abbreviation list confirms PPA as an 1892 Inscriptions of Pagan, Pinya and Ava source-text/edition witness.",
+    },
+    "sipSelectionsPagan": {
+        "source_role": "edition_witness",
+        "likely_contains_translation": "false",
+        "likely_contains_source_text": "true",
+        "likely_contains_edition_only": "true",
+        "likely_contains_commentary_only": "false",
+        "target_priority": "medium",
+        "notes": "IOB abbreviation list confirms SIP as a Pagan inscription selection/edition witness.",
+    },
+    "tnInscriptionsPaganPinyaAva": {
+        "source_role": "translation_witness",
+        "normalized_year": "1899",
+        "likely_contains_translation": "true",
+        "likely_contains_source_text": "false",
+        "likely_contains_edition_only": "false",
+        "likely_contains_commentary_only": "false",
+        "target_priority": "high",
+        "notes": "IOB abbreviation list confirms TN as Tun Nyein's 1899 translation witness with notes.",
+    },
+}
+TARGETED_SOURCE_HUNT_REVIEW_UPDATES = {
+    "ppaCatalogue": {
+        "review_status": "needs_manual_file_hunt",
+        "reviewed_match_status": "no_local_candidate_found",
+        "queue_for_targeted_ocr": "false",
+        "review_basis": "Rejected the earlier ASI stand-in, then targeted local-file hunt found no plausible 1892 PPA witness.",
+        "notes": "See ppa_source_hunt.tsv for rejected near-title candidates and the no-local-candidate result.",
+    },
+    "tnInscriptionsPaganPinyaAva": {
+        "review_status": "needs_manual_file_hunt",
+        "reviewed_match_status": "no_local_candidate_found",
+        "queue_for_targeted_ocr": "false",
+        "review_basis": "Targeted local-file hunt found no Tun Nyein witness; near-title hits are Taw Sein Ko 1899 and Luce/Pe Maung Tin 1928, both rejected.",
+        "notes": "See tn_source_hunt.tsv for the targeted local-source search evidence.",
     },
 }
 
@@ -700,6 +781,62 @@ def apply_review_to_match(
     return resolved
 
 
+def source_role_from_target_row(target_row: dict[str, str]) -> str:
+    if target_row.get("source_type") == "catalogue":
+        return "catalogue_or_list_witness"
+    if target_row.get("likely_contains_translation") == "true" and target_row.get("likely_contains_source_text") != "true":
+        return "translation_witness"
+    if target_row.get("likely_contains_source_text") == "true" and target_row.get("likely_contains_edition_only") == "true":
+        return "edition_witness"
+    if target_row.get("likely_contains_source_text") == "true":
+        return "source_text_witness"
+    if target_row.get("likely_contains_commentary_only") == "true":
+        return "commentary_witness"
+    return "mixed_or_uncertain"
+
+
+def apply_target_role_override(target_row: dict[str, str]) -> dict[str, str]:
+    override = SOURCE_ROLE_OVERRIDES.get(target_row["normalized_source_key"], {})
+    resolved = dict(target_row)
+    resolved["source_role"] = override.get("source_role", resolved.get("source_role", "mixed_or_uncertain"))
+    for field in (
+        "source_type",
+        "normalized_year",
+        "likely_contains_translation",
+        "likely_contains_source_text",
+        "likely_contains_edition_only",
+        "likely_contains_commentary_only",
+        "target_priority",
+    ):
+        if field in override:
+            resolved[field] = override[field]
+    note_bits = [resolved.get("notes", "")]
+    if override.get("notes"):
+        note_bits.append(override["notes"])
+    resolved["notes"] = " | ".join(dict.fromkeys(bit for bit in note_bits if bit))
+    return resolved
+
+
+def apply_source_role_constraints_to_review_row(
+    review_row: dict[str, str],
+    target_row: dict[str, str],
+) -> dict[str, str]:
+    resolved = dict(review_row)
+    override = TARGETED_SOURCE_HUNT_REVIEW_UPDATES.get(target_row["normalized_source_key"], {})
+    for field, value in override.items():
+        resolved[field] = value
+    if target_row.get("source_role") in NON_EXTRACTIVE_SOURCE_ROLES:
+        resolved["queue_for_targeted_ocr"] = "false"
+        if resolved.get("reviewed_match_status") == "needs_ocr":
+            resolved["reviewed_match_status"] = "exact_or_near_exact_match"
+        note_bits = [
+            resolved.get("notes", ""),
+            f"Source role {target_row.get('source_role', '')} is non-extractive for source-text/translation OCR queueing.",
+        ]
+        resolved["notes"] = " | ".join(dict.fromkeys(bit for bit in note_bits if bit))
+    return resolved
+
+
 def build_workflow_summary(
     inventory_rows: list[dict[str, str]],
     target_rows: list[dict[str, str]],
@@ -1082,10 +1219,13 @@ def main() -> None:
                 and bucket["flags"]["mentions_text"] == 0
             ),
             "source_work_language_scope": bucket["source_work_language_scope"],
+            "source_role": "mixed_or_uncertain",
             "target_priority": "medium",
             "notes": f"{len(bucket['citation_rows'])} corpus citation rows",
         }
         target_row["target_priority"] = priority_from_flags(target_row)
+        target_row["source_role"] = source_role_from_target_row(target_row)
+        target_row = apply_target_role_override(target_row)
         target_rows.append(target_row)
         target_id_by_key[citation_key] = target_row["citation_target_id"]
 
@@ -1212,7 +1352,13 @@ def main() -> None:
             }
         )
 
-    review_rows = load_review_rows(match_rows)
+    review_rows = [
+        apply_source_role_constraints_to_review_row(
+            row,
+            target_rows_by_id[row["citation_target_id"]],
+        )
+        for row in load_review_rows(match_rows)
+    ]
     review_row_by_target_id = {row["citation_target_id"]: row for row in review_rows if row.get("citation_target_id")}
     match_rows = [
         apply_review_to_match(
@@ -1257,6 +1403,13 @@ def main() -> None:
         elif citation_relevance in {"out_of_scope_non_burmese_record", "non_burmese_parallel_only"}:
             extraction_status = "out_of_scope_non_burmese"
             next_action = "retain_as_non_burmese_support"
+        elif target_row["source_role"] in NON_EXTRACTIVE_SOURCE_ROLES:
+            extraction_status = "citation_not_translation"
+            next_action = (
+                "use_as_cross_reference"
+                if target_row["source_role"] in {"catalogue_or_list_witness", "cross_reference_witness"}
+                else "no_extraction_action"
+            )
         elif target_row["likely_contains_translation"] != "true" and target_row["likely_contains_source_text"] != "true":
             extraction_status = "citation_not_translation"
             next_action = "no_extraction_action"
@@ -1283,15 +1436,22 @@ def main() -> None:
                 "citation_target_id": inventory_row["citation_target_id"],
                 "citation_raw": inventory_row["citation_raw"],
                 "normalized_source_key": target_row["normalized_source_key"],
+                "source_role": target_row["source_role"],
                 "matched_local_file_id": match_row["matched_local_file_id"],
                 "matched_ocr_text_path": match_row["matched_ocr_text_path"],
                 "translation_status_from_citation": (
-                    "likely_translation_source"
+                    "cross_reference_only"
+                    if target_row["source_role"] in {"catalogue_or_list_witness", "cross_reference_witness"}
+                    else "likely_translation_source"
                     if target_row["likely_contains_translation"] == "true"
                     else "no_translation_indicator"
                 ),
                 "source_text_status_from_citation": (
-                    "likely_source_text"
+                    "plate_or_index_witness"
+                    if target_row["source_role"] == "cross_reference_witness"
+                    else "catalogue_or_list_witness"
+                    if target_row["source_role"] == "catalogue_or_list_witness"
+                    else "likely_source_text"
                     if target_row["likely_contains_source_text"] == "true"
                     else "no_source_text_indicator"
                 ),

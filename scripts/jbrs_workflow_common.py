@@ -73,6 +73,11 @@ CORPUS_OUT_OF_SCOPE_NON_BURMESE_AUDIT_PATH = (
 )
 CORPUS_CITED_SOURCE_OCR_QUEUE_PATH = BIBLIOGRAPHY_DIRECTORY / "corpus_cited_source_ocr_queue.tsv"
 CORPUS_CITATION_WORKFLOW_SUMMARY_PATH = BIBLIOGRAPHY_DIRECTORY / "corpus_citation_workflow_summary.json"
+INSCRIPTIONS_OF_BURMA_CROSS_REFERENCE_INDEX_PATH = (
+    BIBLIOGRAPHY_DIRECTORY / "inscriptions_of_burma_cross_reference_index.tsv"
+)
+TN_SOURCE_HUNT_PATH = BIBLIOGRAPHY_DIRECTORY / "tn_source_hunt.tsv"
+PPA_SOURCE_HUNT_PATH = BIBLIOGRAPHY_DIRECTORY / "ppa_source_hunt.tsv"
 MAX_GITHUB_CONTENTS_SIZE = 1_000_000
 
 RAW_REFERENCE_HUNT_FIELDS = [
@@ -617,6 +622,7 @@ CORPUS_CITATION_TARGET_FIELDS = [
     "likely_contains_edition_only",
     "likely_contains_commentary_only",
     "source_work_language_scope",
+    "source_role",
     "target_priority",
     "notes",
 ]
@@ -665,6 +671,7 @@ CORPUS_TRANSLATION_SOURCE_DASHBOARD_FIELDS = [
     "citation_target_id",
     "citation_raw",
     "normalized_source_key",
+    "source_role",
     "matched_local_file_id",
     "matched_ocr_text_path",
     "translation_status_from_citation",
@@ -676,6 +683,41 @@ CORPUS_TRANSLATION_SOURCE_DASHBOARD_FIELDS = [
     "ocr_status",
     "extraction_status",
     "next_action",
+    "notes",
+]
+
+INSCRIPTIONS_OF_BURMA_CROSS_REFERENCE_INDEX_FIELDS = [
+    "iob_plate",
+    "iob_plate_normalized",
+    "iob_page",
+    "list_ref",
+    "ppa_ref",
+    "tn_ref",
+    "sip_ref",
+    "ub_ref",
+    "jbrs_ref",
+    "other_ref",
+    "place_or_object_description",
+    "linked_inscription_id",
+    "linked_corpus_record_id",
+    "link_confidence",
+    "link_basis",
+    "needs_manual_review",
+    "notes",
+]
+
+SOURCE_HUNT_FIELDS = [
+    "candidate_id",
+    "candidate_file_id",
+    "candidate_file_name",
+    "candidate_path_stub_or_source",
+    "candidate_title",
+    "candidate_author",
+    "candidate_year",
+    "evidence_for_match",
+    "evidence_against_match",
+    "match_status",
+    "needs_manual_review",
     "notes",
 ]
 
@@ -741,6 +783,22 @@ CORPUS_CITATION_SOURCE_TYPES = {
     "unclear",
 }
 CORPUS_CITATION_TARGET_PRIORITIES = {"high", "medium", "low"}
+CORPUS_CITATION_SOURCE_ROLES = {
+    "translation_witness",
+    "source_text_witness",
+    "edition_witness",
+    "catalogue_or_list_witness",
+    "cross_reference_witness",
+    "commentary_witness",
+    "internal_corpus_source",
+    "mixed_or_uncertain",
+}
+NON_EXTRACTIVE_SOURCE_ROLES = {
+    "catalogue_or_list_witness",
+    "cross_reference_witness",
+    "commentary_witness",
+    "internal_corpus_source",
+}
 CORPUS_CITATION_MATCH_STATUSES = {
     "exact_or_near_exact_match",
     "plausible_match",
@@ -3101,6 +3159,8 @@ def validate_corpus_citation_workflow(
             errors.append(
                 f"Corpus citation target {target_id} has unsupported target_priority '{row.get('target_priority', '')}'."
             )
+        if row.get("source_role") not in CORPUS_CITATION_SOURCE_ROLES:
+            errors.append(f"Corpus citation target {target_id} has unsupported source_role '{row.get('source_role', '')}'.")
         if inventory_counts_by_target[target_id] == 0:
             errors.append(f"Corpus citation target {target_id} does not link back to any corpus citation inventory row.")
         if target_id not in source_match_by_target_id:
@@ -3158,6 +3218,10 @@ def validate_corpus_citation_workflow(
             errors.append(
                 f"Corpus translation source dashboard row {dashboard_id} has unsupported citation_relevance_to_burmese_corpus '{row.get('citation_relevance_to_burmese_corpus', '')}'."
             )
+        if row.get("source_role") not in CORPUS_CITATION_SOURCE_ROLES:
+            errors.append(
+                f"Corpus translation source dashboard row {dashboard_id} has unsupported source_role '{row.get('source_role', '')}'."
+            )
         if row.get("source_match_status") not in CORPUS_CITATION_MATCH_STATUSES:
             errors.append(
                 f"Corpus translation source dashboard row {dashboard_id} has unsupported source_match_status '{row.get('source_match_status', '')}'."
@@ -3173,6 +3237,13 @@ def validate_corpus_citation_workflow(
         ):
             errors.append(
                 f"Corpus translation source dashboard row {dashboard_id} marks a Burmese corpus citation out_of_scope_non_burmese only because the source work scope is mixed_or_uncertain."
+            )
+        if (
+            row.get("source_role") in NON_EXTRACTIVE_SOURCE_ROLES
+            and row.get("extraction_status") in {"ready_for_ocr", "ready_for_extraction"}
+        ):
+            errors.append(
+                f"Corpus translation source dashboard row {dashboard_id} is {row.get('source_role', '')} but still marked {row.get('extraction_status', '')}."
             )
 
     out_of_scope_dashboard_rows = [
@@ -3228,6 +3299,11 @@ def validate_corpus_citation_workflow(
             errors.append(f"Corpus cited-source OCR queue row {queue_id} has no matching dashboard rows.")
         if not review_row or review_row.get("queue_for_targeted_ocr") != "true":
             errors.append(f"Corpus cited-source OCR queue row {queue_id} does not come from a reviewed plausible match.")
+        target_row = next((item for item in target_rows if item.get("citation_target_id") == target_id), {})
+        if target_row.get("source_role") in NON_EXTRACTIVE_SOURCE_ROLES:
+            errors.append(
+                f"Corpus cited-source OCR queue row {queue_id} points at non-extractive source_role '{target_row.get('source_role', '')}'."
+            )
 
     target_ids_by_local_file_id: dict[str, set[str]] = defaultdict(set)
     for row in source_match_rows:

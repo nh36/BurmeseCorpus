@@ -1,2 +1,1 @@
 ocr_queue_id	citation_target_id	inscription_id_or_count	matched_local_file_id	batch_id	file_name	canonical_file_name	reason_for_ocr	priority	ocr_status	notes
-corpus-cited-ocr-0001	corpus-citation-target-0005	465 inscriptions	duroiselle_1921_list_of_inscriptions-fd372f9141d6		Duroiselle 1921 List of Inscriptions.pdf	Duroiselle 1921 List of Inscriptions.pdf	cited source likely contains source text	medium	queued_targeted_ocr	465 linked inscriptions in structured corpus.

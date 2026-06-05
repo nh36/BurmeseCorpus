@@ -29,6 +29,7 @@ from jbrs_workflow_common import (
     CORPUS_CITED_SOURCE_OCR_QUEUE_PATH,
     CORPUS_OUT_OF_SCOPE_NON_BURMESE_AUDIT_PATH,
     CORPUS_TRANSLATION_SOURCE_DASHBOARD_PATH,
+    INSCRIPTIONS_OF_BURMA_CROSS_REFERENCE_INDEX_PATH,
     JBRS_ARTICLE_REFERENCE_TARGETS_PATH,
     JBRS_ARTICLE_REFERENCE_TARGETS_REVIEW_PATH,
     JBRS_CORPUS_CITATION_PRIORITY_QUEUE_PATH,
@@ -54,6 +55,8 @@ from jbrs_workflow_common import (
     JBRS_TRANSLATION_CANDIDATE_LOG_PATH,
     JBRS_TRANSLATION_CANDIDATE_REVIEW_PATH,
     LOCAL_SOURCE_OCR_TEXT_INDEX_PATH,
+    PPA_SOURCE_HUNT_PATH,
+    TN_SOURCE_HUNT_PATH,
     OCR_BATCH_PLAN_FIELDS,
     OCR_STATUS_LOG_FIELDS,
     build_ocr_batch_plan_rows,
@@ -98,6 +101,9 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
         cls.citation_workflow_summary = json.loads(
             CORPUS_CITATION_WORKFLOW_SUMMARY_PATH.read_text(encoding="utf-8")
         )
+        cls.iob_cross_reference_rows = read_tsv(INSCRIPTIONS_OF_BURMA_CROSS_REFERENCE_INDEX_PATH)
+        cls.tn_source_hunt_rows = read_tsv(TN_SOURCE_HUNT_PATH)
+        cls.ppa_source_hunt_rows = read_tsv(PPA_SOURCE_HUNT_PATH) if PPA_SOURCE_HUNT_PATH.exists() else []
         cls.ocr_text_index_rows = read_tsv(JBRS_OCR_TEXT_INDEX_PATH)
         cls.ocr_translation_hit_rows = read_tsv(JBRS_OCR_TRANSLATION_HIT_INDEX_PATH)
         cls.ocr_top_candidate_rows = read_tsv(JBRS_OCR_TOP_EXTRACTION_CANDIDATES_PATH)
@@ -137,6 +143,8 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
             CORPUS_OUT_OF_SCOPE_NON_BURMESE_AUDIT_PATH,
             CORPUS_CITED_SOURCE_OCR_QUEUE_PATH,
             CORPUS_CITATION_WORKFLOW_SUMMARY_PATH,
+            INSCRIPTIONS_OF_BURMA_CROSS_REFERENCE_INDEX_PATH,
+            TN_SOURCE_HUNT_PATH,
             JBRS_OCR_TEXT_INDEX_PATH,
             JBRS_OCR_TRANSLATION_HIT_INDEX_PATH,
             JBRS_OCR_TOP_EXTRACTION_CANDIDATES_PATH,
@@ -185,7 +193,6 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
             row["citation_target_id"]: row for row in self.citation_source_match_review_rows
         }
         queued_target_ids = {row["citation_target_id"] for row in self.citation_ocr_queue_rows}
-        self.assertTrue(queued_target_ids)
         self.assertTrue(
             queued_target_ids.issubset(
                 {
@@ -202,6 +209,8 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
                 for row in self.citation_ocr_queue_rows
             )
         )
+        self.assertNotIn("corpus-citation-target-0363", queued_target_ids)
+        self.assertNotIn("corpus-citation-target-0005", queued_target_ids)
 
     def test_high_impact_review_rows_correct_known_bad_matches(self) -> None:
         review_by_key = {
@@ -231,7 +240,7 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
         )
         self.assertEqual(
             match_by_key["ppaCatalogue"]["match_status"],
-            "needs_manual_review",
+            "no_local_candidate_found",
         )
         self.assertEqual(
             match_by_key["uPeMaungTin1966myazediInscription"]["match_status"],
@@ -278,8 +287,58 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
         self.assertEqual(row["ocr_status"], "completed")
         self.assertTrue((ROOT / row["ocr_text_path"]).exists())
         self.assertTrue((ROOT / row["metadata_path"]).exists())
+        metadata = json.loads((ROOT / row["metadata_path"]).read_text(encoding="utf-8"))
+        self.assertEqual(metadata["source_role"], "cross_reference_witness")
+        self.assertEqual(metadata["contains_translation_marker"], "true")
+        self.assertEqual(metadata["contains_inscription_level_translation"], "false")
+        self.assertEqual(metadata["contains_extractable_source_text"], "false")
+        self.assertEqual(metadata["contains_plate_index"], "true")
+        self.assertEqual(metadata["contains_facsimile_plates"], "true")
         queued_target_ids = {entry["citation_target_id"] for entry in self.citation_ocr_queue_rows}
         self.assertNotIn("corpus-citation-target-0363", queued_target_ids)
+
+    def test_iob_target_is_cross_reference_only_and_not_extraction_ready(self) -> None:
+        target_by_key = {
+            row["normalized_source_key"]: row for row in self.citation_target_rows
+        }
+        iob_target = target_by_key["lucePeMaungTinInscriptionsOfBurma"]
+        self.assertEqual(iob_target["source_role"], "cross_reference_witness")
+        self.assertEqual(iob_target["likely_contains_translation"], "false")
+        self.assertEqual(iob_target["likely_contains_source_text"], "false")
+        duroiselle_target = target_by_key["duroiselle1921list"]
+        self.assertEqual(duroiselle_target["source_role"], "catalogue_or_list_witness")
+        iob_dashboard_rows = [
+            row for row in self.citation_dashboard_rows if row["citation_target_id"] == "corpus-citation-target-0363"
+        ]
+        self.assertTrue(iob_dashboard_rows)
+        self.assertTrue(all(row["source_role"] == "cross_reference_witness" for row in iob_dashboard_rows))
+        burmese_relevant_rows = [row for row in iob_dashboard_rows if row["is_burmese_relevant"] == "true"]
+        self.assertTrue(burmese_relevant_rows)
+        self.assertTrue(all(row["extraction_status"] == "citation_not_translation" for row in burmese_relevant_rows))
+        self.assertTrue(all(row["next_action"] == "use_as_cross_reference" for row in burmese_relevant_rows))
+        self.assertFalse(
+            any(row["extraction_status"] in {"ready_for_extraction", "ready_for_ocr"} for row in iob_dashboard_rows)
+        )
+
+    def test_iob_cross_reference_index_tracks_plate_rows_and_links(self) -> None:
+        self.assertGreater(len(self.iob_cross_reference_rows), 100)
+        linked_rows = [row for row in self.iob_cross_reference_rows if row["linked_corpus_record_id"]]
+        self.assertGreaterEqual(len(linked_rows), 60)
+        self.assertTrue(all(row["iob_plate"] and row["iob_plate_normalized"] and row["iob_page"] for row in self.iob_cross_reference_rows))
+        self.assertTrue(any(row["tn_ref"] and row["ppa_ref"] for row in self.iob_cross_reference_rows))
+
+    def test_tn_and_ppa_source_hunts_capture_false_friends_and_missing_witnesses(self) -> None:
+        tn_by_status = Counter(row["match_status"] for row in self.tn_source_hunt_rows)
+        self.assertEqual(tn_by_status["accepted_match"] + tn_by_status["plausible_match"], 0)
+        self.assertEqual(tn_by_status["no_local_candidate_found"], 1)
+        taw_sein_ko = next(
+            row for row in self.tn_source_hunt_rows if row["candidate_file_id"] == "taw_sein_ko_1899_inscriptions_of_pagan-254902496aa8"
+        )
+        self.assertEqual(taw_sein_ko["match_status"], "rejected_wrong_author")
+        self.assertTrue(PPA_SOURCE_HUNT_PATH.exists())
+        ppa_by_status = Counter(row["match_status"] for row in self.ppa_source_hunt_rows)
+        self.assertEqual(ppa_by_status["accepted_match"] + ppa_by_status["plausible_match"], 0)
+        self.assertEqual(ppa_by_status["no_local_candidate_found"], 1)
 
     def test_out_of_scope_audit_covers_dashboard_rows_and_keeps_wrong_count_zero(self) -> None:
         out_of_scope_dashboard_ids = {

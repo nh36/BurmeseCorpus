@@ -3,11 +3,11 @@
   "distinct_inscription_count": 752,
   "citation_target_count": 378,
   "matched_target_count": 5,
-  "ocr_queue_count": 1,
+  "ocr_queue_count": 0,
   "manual_file_hunt_count": 370,
-  "likely_translation_target_count": 0,
-  "likely_source_text_target_count": 27,
-  "extraction_ready_count": 4,
+  "likely_translation_target_count": 1,
+  "likely_source_text_target_count": 23,
+  "extraction_ready_count": 0,
   "out_of_scope_non_burmese_total": 4705,
   "out_of_scope_non_burmese_burmese_record_count": 2,
   "out_of_scope_non_burmese_non_burmese_record_count": 9,
@@ -25,17 +25,16 @@
     "mentions_commentary_only": 705
   },
   "match_status_counts": {
-    "no_local_candidate_found": 363,
-    "needs_ocr": 4,
-    "needs_manual_review": 10,
+    "no_local_candidate_found": 364,
+    "exact_or_near_exact_match": 1,
+    "needs_manual_review": 9,
+    "needs_ocr": 3,
     "already_ocr_available": 1
   },
   "dashboard_extraction_status_counts": {
-    "unclear_needs_manual_review": 10,
-    "ready_for_ocr": 4,
-    "ready_for_extraction": 4,
-    "source_not_found": 6,
-    "citation_not_translation": 8,
+    "source_not_found": 8,
+    "citation_not_translation": 18,
+    "unclear_needs_manual_review": 6,
     "out_of_scope_non_burmese": 4705
   },
   "out_of_scope_audit_status_counts": {
@@ -45,24 +44,24 @@
   },
   "top_ocr_extraction_priorities": [
     {
-      "citation_target_id": "corpus-citation-target-0363",
-      "normalized_source_key": "lucePeMaungTinInscriptionsOfBurma",
-      "normalized_title": "Inscriptions of Burma",
-      "target_priority": "medium",
-      "extraction_status": "ready_for_extraction",
-      "source_match_status": "already_ocr_available",
-      "review_status": "corrected_match",
-      "inscription_id_or_count": "589 inscriptions"
+      "citation_target_id": "corpus-citation-target-0368",
+      "normalized_source_key": "ppaCatalogue",
+      "normalized_title": "Inscriptions of Pagan, Pinya and Ava",
+      "target_priority": "high",
+      "extraction_status": "source_not_found",
+      "source_match_status": "no_local_candidate_found",
+      "review_status": "needs_manual_file_hunt",
+      "inscription_id_or_count": "234 inscriptions"
     },
     {
-      "citation_target_id": "corpus-citation-target-0005",
-      "normalized_source_key": "duroiselle1921list",
-      "normalized_title": "List of Inscriptions Found in Burma",
-      "target_priority": "medium",
-      "extraction_status": "ready_for_ocr",
-      "source_match_status": "needs_ocr",
-      "review_status": "accepted_match",
-      "inscription_id_or_count": "465 inscriptions"
+      "citation_target_id": "corpus-citation-target-0372",
+      "normalized_source_key": "tnInscriptionsPaganPinyaAva",
+      "normalized_title": "Inscriptions of Pagan, Pinya and Ava",
+      "target_priority": "high",
+      "extraction_status": "source_not_found",
+      "source_match_status": "no_local_candidate_found",
+      "review_status": "needs_manual_file_hunt",
+      "inscription_id_or_count": "204 inscriptions"
     },
     {
       "citation_target_id": "corpus-citation-target-0006",
@@ -75,16 +74,6 @@
       "inscription_id_or_count": "2 inscriptions"
     },
     {
-      "citation_target_id": "corpus-citation-target-0372",
-      "normalized_source_key": "tnInscriptionsPaganPinyaAva",
-      "normalized_title": "Inscriptions of Pagan, Pinya and Ava",
-      "target_priority": "medium",
-      "extraction_status": "source_not_found",
-      "source_match_status": "no_local_candidate_found",
-      "review_status": "needs_manual_file_hunt",
-      "inscription_id_or_count": "204 inscriptions"
-    },
-    {
       "citation_target_id": "corpus-citation-target-0364",
       "normalized_source_key": "lwin1989rajakumars",
       "normalized_title": "Rajakumar's Inscription in Pali, in Takkasuil ... (repr. Yangon 1989)",
@@ -93,26 +82,6 @@
       "source_match_status": "needs_manual_review",
       "review_status": "needs_manual_file_hunt",
       "inscription_id_or_count": "2 inscriptions"
-    },
-    {
-      "citation_target_id": "corpus-citation-target-0367",
-      "normalized_source_key": "oldBurmeseInscriptions",
-      "normalized_title": "Old Burmese Inscriptions",
-      "target_priority": "medium",
-      "extraction_status": "unclear_needs_manual_review",
-      "source_match_status": "needs_manual_review",
-      "review_status": "multiple_local_witnesses",
-      "inscription_id_or_count": "597 inscriptions"
-    },
-    {
-      "citation_target_id": "corpus-citation-target-0368",
-      "normalized_source_key": "ppaCatalogue",
-      "normalized_title": "Inscriptions of Pagan, Pinya and Ava",
-      "target_priority": "medium",
-      "extraction_status": "unclear_needs_manual_review",
-      "source_match_status": "needs_manual_review",
-      "review_status": "rejected_wrong_match",
-      "inscription_id_or_count": "234 inscriptions"
     },
     {
       "citation_target_id": "corpus-citation-target-0375",
