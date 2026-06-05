@@ -38,6 +38,8 @@ from jbrs_workflow_common import (
     LOCAL_SOURCE_OCR_TEXT_INDEX_PATH,
     LOCAL_FILE_MANIFEST_PATH,
     SIP_INSCRIPTION_WITNESS_UNITS_PATH,
+    SIP_ACCEPTED_WITNESS_UNITS_PATH,
+    SIP_MANUAL_REVIEW_PACKET_PATH,
     SIP_UNLINKED_WITNESS_REVIEW_PATH,
     SIP_EXTRACTED_UNITS_PATH,
     SIP_WITNESS_TEXT_COMPARISON_PATH,
@@ -879,6 +881,8 @@ def build_workflow_summary(
     sip_inscription_witness_rows = (
         read_tsv(SIP_INSCRIPTION_WITNESS_UNITS_PATH) if SIP_INSCRIPTION_WITNESS_UNITS_PATH.exists() else []
     )
+    sip_accepted_export_rows = read_tsv(SIP_ACCEPTED_WITNESS_UNITS_PATH) if SIP_ACCEPTED_WITNESS_UNITS_PATH.exists() else []
+    sip_manual_review_rows = read_tsv(SIP_MANUAL_REVIEW_PACKET_PATH) if SIP_MANUAL_REVIEW_PACKET_PATH.exists() else []
     sip_unlinked_review_rows = (
         read_tsv(SIP_UNLINKED_WITNESS_REVIEW_PATH) if SIP_UNLINKED_WITNESS_REVIEW_PATH.exists() else []
     )
@@ -1000,6 +1004,7 @@ def build_workflow_summary(
         "sip_accepted_inscription_witness_count": sum(
             1 for row in sip_inscription_witness_rows if row.get("review_status") == "accepted_inscription_witness"
         ),
+        "sip_accepted_witness_export_count": len(sip_accepted_export_rows),
         "sip_units_needing_text_cleanup_count": sum(
             1 for row in sip_witness_unit_rows if row.get("review_status") == "needs_text_cleanup"
         ),
@@ -1023,6 +1028,16 @@ def build_workflow_summary(
         ),
         "sip_units_too_noisy_to_link_count": sum(
             1 for row in sip_unlinked_review_rows if row.get("unlinked_review_status") == "too_noisy_to_link"
+        ),
+        "sip_manual_review_packet_count": len(sip_manual_review_rows),
+        "sip_manual_review_candidate_link_count": sum(
+            1 for row in sip_manual_review_rows if row.get("candidate_corpus_record_ids")
+        ),
+        "sip_unlinked_no_match_count": sum(
+            1 for row in sip_unlinked_review_rows if row.get("unlinked_review_status") == "no_structured_corpus_match_found"
+        ),
+        "sip_accepted_units_with_cleaned_text_count": sum(
+            1 for row in sip_accepted_export_rows if row.get("cleaned_witness_text")
         ),
         "sip_high_confidence_link_count": sum(
             1
