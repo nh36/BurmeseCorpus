@@ -4,6 +4,7 @@ from __future__ import annotations
 import hashlib
 import json
 import re
+from collections import Counter, defaultdict
 from pathlib import Path
 
 from corpus_common import ensure_parent, read_tsv, write_tsv
@@ -15,11 +16,20 @@ from jbrs_workflow_common import (
     LOCAL_SOURCE_WORKING_OCR_METADATA_ROOT,
     LOCAL_SOURCE_WORKING_OCR_TEXT_ROOT,
     MISSING_HIGH_VALUE_SOURCES_PATH,
+    SIP_CORPUS_LINK_REVIEW_FIELDS,
+    SIP_CORPUS_LINK_REVIEW_PATH,
     SIP_CROSS_REFERENCE_TARGET_FIELDS,
     SIP_CROSS_REFERENCE_TARGETS_PATH,
     SIP_EXTRACTED_UNITS_PATH,
     SIP_EXTRACTION_NOTES_PATH,
     SIP_LINKED_SAMPLE_REVIEW_PATH,
+    SIP_TEXT_COMPARISON_STATUSES,
+    SIP_WITNESS_OCR_QUALITIES,
+    SIP_WITNESS_REVIEW_STATUSES,
+    SIP_WITNESS_TEXT_COMPARISON_FIELDS,
+    SIP_WITNESS_TEXT_COMPARISON_PATH,
+    SIP_WITNESS_UNIT_FIELDS,
+    SIP_WITNESS_UNITS_PATH,
 )
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
@@ -35,6 +45,8 @@ LOCAL_OCR_METADATA_PATH = (
 )
 REPO_OCR_TEXT_PATH = LOCAL_SOURCE_WORKING_OCR_TEXT_ROOT / f"{TARGET_LOCAL_FILE_ID}.txt"
 REPO_OCR_METADATA_PATH = LOCAL_SOURCE_WORKING_OCR_METADATA_ROOT / f"{TARGET_LOCAL_FILE_ID}.json"
+CORPUS_INSCRIPTIONS_PATH = REPO_ROOT / "data/release/corpus_release_v0_3/inscriptions.jsonl"
+CORPUS_LINES_PATH = REPO_ROOT / "data/release/corpus_release_v0_3/lines.jsonl"
 
 SIP_EXTRACTED_UNIT_FIELDS = [
     "extracted_unit_id",
@@ -138,6 +150,10 @@ def build_cross_reference_targets() -> list[dict[str, str]]:
             }
         )
     return targets
+
+
+def read_jsonl(path: Path) -> list[dict[str, object]]:
+    return [json.loads(line) for line in path.read_text(encoding="utf-8").splitlines() if line.strip()]
 
 
 def block_text_for_pages(page_map: dict[int, list[str]], start_page: int, end_page: int) -> str:
@@ -281,6 +297,243 @@ def build_ocr_noise_unit(page_map: dict[int, list[str]]) -> dict[str, str]:
     }
 
 
+def page_range_label(start_page: int, end_page: int) -> str:
+    return f"{start_page}" if start_page == end_page else f"{start_page}-{end_page}"
+
+
+def clean_witness_text(raw_text: str) -> str:
+    cleaned_lines: list[str] = []
+    for raw_line in raw_text.splitlines():
+        stripped = raw_line.strip()
+        if not stripped or stripped.startswith("[["):
+            continue
+        line = compact(raw_line)
+        line = re.sub(r"\*{2,}|\.(?:\s*\.){2,}", "[unclear]", line)
+        line = re.sub(r"\[\s*\]", "[unclear]", line)
+        line = re.sub(r"\[unclear\](?:\s*\[unclear\])+", "[unclear]", line)
+        cleaned_lines.append(line)
+    return "\n".join(cleaned_lines).strip()
+
+
+def normalize_for_compare(text: str) -> str:
+    cleaned = re.sub(r"\[\[.*?\]\]", " ", text)
+    cleaned = re.sub(r"(?m)^\(?[0-9၀-၉]+[\)\].။\-\s]*", "", cleaned)
+    cleaned = cleaned.replace("[unclear]", "")
+    cleaned = re.sub(r"[\s\.,;:()\\/\-\[\]{}*]+", "", cleaned)
+    return cleaned
+
+
+def ngrams(text: str, size: int = 5) -> set[str]:
+    if len(text) < size:
+        return set()
+    return {text[index : index + size] for index in range(len(text) - size + 1)}
+
+
+def ocr_quality_for_text(raw_text: str) -> str:
+    cleaned = clean_witness_text(raw_text)
+    if len(cleaned) < 80:
+        return "unusable"
+    unclear_count = cleaned.count("[unclear]")
+    latin_count = len(re.findall(r"[A-Za-z]", cleaned))
+    burmese_count = len(re.findall(r"[က-႟]", cleaned))
+    latin_ratio = latin_count / max(len(cleaned), 1)
+    if unclear_count >= 6 or (burmese_count and latin_ratio > 0.10):
+        return "noisy_but_salvageable"
+    if unclear_count >= 1 or latin_ratio > 0.03:
+        return "usable_with_minor_noise"
+    return "good"
+
+
+def comparison_status_for_texts(cleaned_witness_text: str, corpus_text: str, ocr_quality: str) -> str:
+    if not corpus_text.strip():
+        return "corpus_text_absent_sip_supplies_candidate"
+    witness_norm = normalize_for_compare(cleaned_witness_text)
+    corpus_norm = normalize_for_compare(corpus_text)
+    if len(witness_norm) < 40 or len(corpus_norm) < 40:
+        return "ocr_too_noisy" if ocr_quality == "noisy_but_salvageable" else "corpus_text_not_comparable"
+    witness_grams = ngrams(witness_norm)
+    corpus_grams = ngrams(corpus_norm)
+    if not witness_grams or not corpus_grams:
+        return "corpus_text_not_comparable"
+    overlap = len(witness_grams & corpus_grams) / max(1, min(len(witness_grams), len(corpus_grams)))
+    if overlap >= 0.08:
+        return "corpus_text_present_sip_confirms"
+    if ocr_quality == "noisy_but_salvageable":
+        return "ocr_too_noisy"
+    return "corpus_text_present_sip_differs"
+
+
+def comparison_note(status: str) -> str:
+    mapping = {
+        "corpus_text_present_sip_confirms": "Corpus text is present and the SIP witness broadly confirms the same inscription text.",
+        "corpus_text_present_sip_differs": "Corpus text is present, but the SIP witness diverges or preserves materially different readings/snippets.",
+        "corpus_text_absent_sip_supplies_candidate": "No structured corpus text is currently linked, so SIP supplies a candidate witness text.",
+        "corpus_text_not_comparable": "The linked corpus text could not be compared safely against the SIP witness snippet.",
+        "ocr_too_noisy": "The SIP OCR remains too noisy for a stable comparison.",
+    }
+    return mapping[status]
+
+
+def snippet(text: str, limit: int = 220) -> str:
+    return compact(text.replace("\n", " "))[:limit]
+
+
+def load_corpus_context() -> tuple[dict[str, dict[str, object]], dict[str, str]]:
+    inscription_by_record_id: dict[str, dict[str, object]] = {}
+    for row in read_jsonl(CORPUS_INSCRIPTIONS_PATH):
+        inscription_by_record_id[str(row["record_id"])] = row
+    line_rows_by_record_id: dict[str, list[tuple[int, str]]] = defaultdict(list)
+    for row in read_jsonl(CORPUS_LINES_PATH):
+        line_rows_by_record_id[str(row["record_id"])].append(
+            (int(row.get("line_number_arabic") or 0), str(row.get("text_original", "")))
+        )
+    corpus_text_by_record_id: dict[str, str] = {}
+    for record_id, line_rows in line_rows_by_record_id.items():
+        ordered = [text for _, text in sorted(line_rows, key=lambda item: (item[0], item[1])) if text.strip()]
+        corpus_text_by_record_id[record_id] = "\n".join(ordered).strip()
+    return inscription_by_record_id, corpus_text_by_record_id
+
+
+def build_witness_units(
+    sip_units: list[dict[str, str]],
+) -> tuple[list[dict[str, str]], int]:
+    witness_rows: list[dict[str, str]] = []
+    rejected_noise_count = 0
+    for index, row in enumerate(sip_units, start=1):
+        raw_text = row["ocr_text"].strip()
+        cleaned_text = clean_witness_text(raw_text)
+        ocr_quality = ocr_quality_for_text(raw_text)
+        if ocr_quality == "unusable":
+            rejected_noise_count += 1
+            continue
+        if row["linked_corpus_record_id"]:
+            review_status = "accepted_witness_unit" if ocr_quality == "good" else "needs_text_cleanup"
+            link_confidence = "high"
+        else:
+            review_status = "needs_link_review"
+            link_confidence = "medium"
+        page_range = sip_page_range(row["source_page_or_locator"])
+        if page_range:
+            start_page, end_page = page_range
+            printed_page_range = page_range_label(start_page, end_page)
+            ocr_page_range = page_range_label(start_page + 10, end_page + 10)
+        else:
+            printed_page_range = row["source_page_or_locator"]
+            ocr_page_range = ""
+        witness_rows.append(
+            {
+                "witness_unit_id": f"sip-witness-{index:03d}",
+                "source_key": TARGET_SOURCE_KEY,
+                "citation_target_id": TARGET_CITATION_TARGET_ID,
+                "matched_local_file_id": TARGET_LOCAL_FILE_ID,
+                "printed_page_range": printed_page_range,
+                "ocr_page_range": ocr_page_range,
+                "sip_ref": row["source_page_or_locator"],
+                "iob_plate": next((part.strip() for part in row["detected_inscription_identifier"].split("|") if part.strip().startswith("Plate ")), ""),
+                "list_ref": next((part.strip() for part in row["detected_inscription_identifier"].split("|") if part.strip().startswith("List ")), ""),
+                "ppa_ref": "",
+                "tn_ref": "",
+                "linked_inscription_id": row["linked_inscription_id"],
+                "linked_corpus_record_id": row["linked_corpus_record_id"],
+                "unit_type": row["unit_type"],
+                "language": row["detected_language"],
+                "raw_ocr_text": raw_text,
+                "cleaned_witness_text": cleaned_text,
+                "witness_text": cleaned_text,
+                "ocr_quality": ocr_quality,
+                "link_confidence": link_confidence,
+                "link_basis": row["link_basis"],
+                "review_status": review_status,
+                "notes": row["notes"],
+            }
+        )
+    return witness_rows, rejected_noise_count
+
+
+def enrich_witness_units_with_cross_refs(
+    witness_rows: list[dict[str, str]],
+    sip_targets: list[dict[str, str]],
+) -> list[dict[str, str]]:
+    target_by_ref = {row["sip_ref"]: row for row in sip_targets}
+    enriched: list[dict[str, str]] = []
+    for row in witness_rows:
+        target = target_by_ref.get(row["sip_ref"], {})
+        enriched.append(
+            {
+                **row,
+                "iob_plate": target.get("iob_plate", row["iob_plate"]),
+                "list_ref": target.get("list_ref", row["list_ref"]),
+                "ppa_ref": target.get("ppa_ref", ""),
+                "tn_ref": target.get("tn_ref", ""),
+            }
+        )
+    return enriched
+
+
+def build_link_review_rows(
+    witness_rows: list[dict[str, str]],
+    inscription_by_record_id: dict[str, dict[str, object]],
+    corpus_text_by_record_id: dict[str, str],
+) -> list[dict[str, str]]:
+    rows: list[dict[str, str]] = []
+    for row in witness_rows:
+        record_id = row["linked_corpus_record_id"]
+        corpus_record = inscription_by_record_id.get(record_id, {})
+        corpus_text = corpus_text_by_record_id.get(record_id, "")
+        comparison_status = comparison_status_for_texts(row["cleaned_witness_text"], corpus_text, row["ocr_quality"])
+        if not record_id:
+            review_decision = "needs_human_review"
+        elif row["review_status"] == "accepted_witness_unit":
+            review_decision = "accept_link"
+        else:
+            review_decision = "accept_link_but_text_needs_cleanup"
+        rows.append(
+            {
+                "witness_unit_id": row["witness_unit_id"],
+                "sip_ref": row["sip_ref"],
+                "iob_plate": row["iob_plate"],
+                "linked_inscription_id": row["linked_inscription_id"],
+                "linked_corpus_record_id": record_id,
+                "existing_corpus_has_text": "true" if corpus_text else "false",
+                "existing_corpus_language": str(corpus_record.get("language_original") or ""),
+                "witness_text_snippet": snippet(row["cleaned_witness_text"]),
+                "corpus_text_snippet": snippet(corpus_text),
+                "link_confidence": row["link_confidence"],
+                "link_basis": row["link_basis"],
+                "review_decision": review_decision,
+                "notes": comparison_note(comparison_status),
+            }
+        )
+    return rows
+
+
+def build_text_comparison_rows(
+    witness_rows: list[dict[str, str]],
+    corpus_text_by_record_id: dict[str, str],
+) -> list[dict[str, str]]:
+    rows: list[dict[str, str]] = []
+    for row in witness_rows:
+        if row["link_confidence"] != "high" or not row["linked_corpus_record_id"]:
+            continue
+        corpus_text = corpus_text_by_record_id.get(row["linked_corpus_record_id"], "")
+        status = comparison_status_for_texts(row["cleaned_witness_text"], corpus_text, row["ocr_quality"])
+        rows.append(
+            {
+                "linked_corpus_record_id": row["linked_corpus_record_id"],
+                "linked_inscription_id": row["linked_inscription_id"],
+                "sip_ref": row["sip_ref"],
+                "iob_plate": row["iob_plate"],
+                "sip_witness_text_snippet": snippet(row["cleaned_witness_text"]),
+                "corpus_text_snippet": snippet(corpus_text),
+                "comparison_status": status,
+                "observed_difference": comparison_note(status),
+                "needs_manual_review": "true" if status in {"corpus_text_present_sip_differs", "ocr_too_noisy", "corpus_text_not_comparable"} else "false",
+                "notes": row["link_basis"],
+            }
+        )
+    return rows
+
+
 def build_repo_safe_metadata(local_metadata: dict[str, object], text: str, manifest_row: dict[str, str]) -> dict[str, object]:
     return {
         "local_file_id": TARGET_LOCAL_FILE_ID,
@@ -383,9 +636,35 @@ def write_missing_high_value_sources_note() -> None:
     MISSING_HIGH_VALUE_SOURCES_PATH.write_text(note, encoding="utf-8")
 
 
-def build_sample_review(units: list[dict[str, str]]) -> list[dict[str, str]]:
-    linked = [row for row in units if row["linked_corpus_record_id"]][:10]
-    uncertain = [row for row in units if row["needs_manual_review"] == "true" and row["unit_type"] == "source_text"][:5]
+def build_sample_review(
+    units: list[dict[str, str]],
+    witness_rows: list[dict[str, str]],
+    rejected_noise_count: int,
+) -> list[dict[str, str]]:
+    def sample_row_from_witness(row: dict[str, str]) -> dict[str, str]:
+        return {
+            "extracted_unit_id": row["witness_unit_id"],
+            "citation_target_id": row["citation_target_id"],
+            "normalized_source_key": row["source_key"],
+            "matched_local_file_id": row["matched_local_file_id"],
+            "source_page_or_locator": row["sip_ref"],
+            "source_entry_number": row["sip_ref"],
+            "detected_inscription_identifier": " | ".join(
+                bit for bit in [row.get("list_ref", ""), row.get("iob_plate", "")] if bit
+            ),
+            "detected_language": row["language"],
+            "unit_type": row["unit_type"],
+            "ocr_text": row["witness_text"],
+            "confidence": row["link_confidence"],
+            "linked_corpus_record_id": row["linked_corpus_record_id"],
+            "linked_inscription_id": row["linked_inscription_id"],
+            "link_basis": row["link_basis"],
+            "needs_manual_review": "true" if row["review_status"] != "accepted_witness_unit" else "false",
+            "notes": row["notes"],
+        }
+
+    linked = [sample_row_from_witness(row) for row in witness_rows if row["linked_corpus_record_id"]][:10]
+    uncertain = [sample_row_from_witness(row) for row in witness_rows if row["review_status"] == "needs_link_review"][:5]
     commentary = [row for row in units if row["unit_type"] in {"commentary", "catalogue_entry"}][:3]
     noisy = [row for row in units if row["unit_type"] == "unclear"][:2]
     selected: list[dict[str, str]] = []
@@ -434,7 +713,19 @@ def main() -> None:
     units.extend(build_sip_units(page_map, sip_targets))
     units.append(build_ocr_noise_unit(page_map))
     write_tsv(SIP_EXTRACTED_UNITS_PATH, units, SIP_EXTRACTED_UNIT_FIELDS)
-    write_tsv(SIP_LINKED_SAMPLE_REVIEW_PATH, build_sample_review(units), SIP_SAMPLE_REVIEW_FIELDS)
+    inscription_by_record_id, corpus_text_by_record_id = load_corpus_context()
+    witness_rows, rejected_noise_count = build_witness_units([row for row in units if row["unit_type"] == "source_text"])
+    witness_rows = enrich_witness_units_with_cross_refs(witness_rows, sip_targets)
+    link_review_rows = build_link_review_rows(witness_rows, inscription_by_record_id, corpus_text_by_record_id)
+    comparison_rows = build_text_comparison_rows(witness_rows, corpus_text_by_record_id)
+    write_tsv(SIP_WITNESS_UNITS_PATH, witness_rows, SIP_WITNESS_UNIT_FIELDS)
+    write_tsv(SIP_CORPUS_LINK_REVIEW_PATH, link_review_rows, SIP_CORPUS_LINK_REVIEW_FIELDS)
+    write_tsv(SIP_WITNESS_TEXT_COMPARISON_PATH, comparison_rows, SIP_WITNESS_TEXT_COMPARISON_FIELDS)
+    write_tsv(
+        SIP_LINKED_SAMPLE_REVIEW_PATH,
+        build_sample_review(units, witness_rows, rejected_noise_count),
+        SIP_SAMPLE_REVIEW_FIELDS + ["review_category"] if "review_category" not in SIP_SAMPLE_REVIEW_FIELDS else SIP_SAMPLE_REVIEW_FIELDS,
+    )
     write_notes()
     write_missing_high_value_sources_note()
 

@@ -1,6 +1,5 @@
 extracted_unit_id	citation_target_id	normalized_source_key	matched_local_file_id	source_page_or_locator	source_entry_number	detected_inscription_identifier	detected_language	unit_type	ocr_text	confidence	linked_corpus_record_id	linked_inscription_id	link_basis	needs_manual_review	notes	review_category
-sip-unit-005	corpus-citation-target-0371	sipSelectionsPagan	luce_pemaungtin_1928_inscriptions_of_pag-da9f6d6d89b3	SIP 25-26	SIP 25-26	List 161 | Plate XXIV | From the Thambyin Yingaung pagoda, north of the Mingalazedi, Pagan. Now at Pagan Museum (Stone 54)	Old Burmese/Burmese	source_text	"[[SIP page 25 / OCR page 35]]
-(၃) သရပ။ သန်တူလွန်၇ရုတ်သူကြာနိယ် လနသတ်ပိန်လက်နှိုက်
+sip-witness-005	corpus-citation-target-0371	sipSelectionsPagan	luce_pemaungtin_1928_inscriptions_of_pag-da9f6d6d89b3	SIP 25-26	SIP 25-26	List 161 | Plate XXIV	Old Burmese/Burmese	source_text	"(၃) သရပ။ သန်တူလွန်၇ရုတ်သူကြာနိယ် လနသတ်ပိန်လက်နှိုက်
 သုံပဟိုက်လျှင်ယောက်ဖျာထက်
 (၄) ဥတ်ဖွယ်ဦရွယ်ပု၏။ သကရစ် ၅၆ဝ ပတ်သစ်သန်တူညွှတ် ၂ ရွက်သု
 ကြာနိယ်။အန်လျှင်ထွက်လို့
@@ -19,7 +18,6 @@ sip-unit-005	corpus-citation-target-0371	sipSelectionsPagan	luce_pemaungtin_1928
 ဟိသောလဲတဥတ္တမကြံရွာနှိုက်
 (၁၁) ၂၂၃ စိတ်။သုတံ ၁၁ ယောက် မူကြိုဝ်ရွာတောင်တလုံရွာင်နှိုက်လဲတဲ့ ၉ဝ။
 သုတံ ၁၂ ယောက်။
-[[SIP page 26 / OCR page 36]]
 ၅
 (၁၂) ချက်ဝိုင်လဲတံ ၂ဝ။ သုတံ ၅ ယောက်။ မခရာရွာခွင်ဟိသောလဲတံမြင် ချွန်
 ရွာနှိုက် ၃ဝ။
@@ -39,8 +37,7 @@ sip-unit-005	corpus-citation-target-0371	sipSelectionsPagan	luce_pemaungtin_1928
 (၁၀) မင်ကြီလေရေစင်တီသွန်နွှယ်အနုမောတနာ
 (၁၁) ခပ်တပ်မူ၏ထိပ်သီုင်သောသရာဟူ
 4"	high	obi-v01-n0045-ob-p0073	obi-v01-n0045	IOB cross-reference: Plate XXIV -> SIP 25-26.	false	Linked through exact corpus plate citation(s): Pl. I 24. | Extracted from SIP printed pages 25-26 using the OCR page offset observed from the scanned volume.	linked_source_text
-sip-unit-006	corpus-citation-target-0371	sipSelectionsPagan	luce_pemaungtin_1928_inscriptions_of_pag-da9f6d6d89b3	SIP 29	SIP 29	List 273 (a) | List 273 (b), which is on the platform of the | Plate XXXI | From the enclosure of the Khemawara pagoda, north-east of Pagan. Now at Pagan Museum (Stone 50). This inscription is of one face only; it has no connexion with Lokananda pagoda, Thiripyissaya, Pagan	Old Burmese/Burmese	source_text	"[[SIP page 29 / OCR page 39]]
-ja
+sip-witness-006	corpus-citation-target-0371	sipSelectionsPagan	luce_pemaungtin_1928_inscriptions_of_pag-da9f6d6d89b3	SIP 29	SIP 29	List 273 (a) | List 273 (b), which is on the platform of the | Plate XXXI	Old Burmese/Burmese	source_text	"ja
 (၂၆) ၊ လုနှစ်တွက်သေါအကုတိယ် ၂၃၀ အနှစ် ၄ သန်မှတနိယ်ဟိသေါသင်္ဃာ
 တငြယ်၊ လုနှစ်တွက်သေါအကူတိ။
 (၂၇) ၉၂၁ ကူတိယ်အ မွတ်အနှစ် ၆ သန်မှ တနိယ်ဟိသော ရေါရပ်ငြယ်။ ခုနှစ်
@@ -59,8 +56,7 @@ ja
 ယောက်လွှန်ပြိငတိုဝ်ဘုရာ
 (၃၄) ကောတမလွန်ဩင်မလွန်ဩင်မလွတ်တတ်သပြိတ္တာ သိုဝ်သပြိတ္တာလေ
 ဖွစ်စေသဟေ၊ နောင်လါလ"	high	obi-v01-n0052-ob-p0083	obi-v01-n0052	IOB cross-reference: Plate XXXI -> SIP 29.	false	Linked through exact corpus plate citation(s): Pl. I 31. | Extracted from SIP printed pages 29-29 using the OCR page offset observed from the scanned volume.	linked_source_text
-sip-unit-008	corpus-citation-target-0371	sipSelectionsPagan	luce_pemaungtin_1928_inscriptions_of_pag-da9f6d6d89b3	SIP 30-32	SIP 30-32	Plate XXXVI | Plate XXXVI. Saw Rahan Thein inscription, Tuywindaung, Pagan	Old Burmese/Burmese	source_text	"[[SIP page 30 / OCR page 40]]
-၂၉
+sip-witness-008	corpus-citation-target-0371	sipSelectionsPagan	luce_pemaungtin_1928_inscriptions_of_pag-da9f6d6d89b3	SIP 30-32	SIP 30-32	Plate XXXVI	Old Burmese/Burmese	source_text	"၂၉
 (၃၅) တံသဘုရါတိုပ်ကိုင် လေမဘူစေသတေ။ ငာကောင်မှုကိုပ် ပင်ပါခေl
 မင်မင်မျာမင်သါအမ
 (၃၆) ်စစ်သူကြီပိုဒ်ပါ ရဟန်သင်္ဃာတိုင်သည် အရိယ်အရံ မူလေယူပါ၏။ င
@@ -82,7 +78,6 @@ sip-unit-008	corpus-citation-target-0371	sipSelectionsPagan	luce_pemaungtin_1928
 (ဂ) ပင်စရကန်ပယ်လဲ ၅ဝ။အမိဖုရှာတောင်ဖွင်သည်လှူသောခတောင်
 (၉) ဖုန်လ် ၄ဝ။အမိဖုရှာမ္မစ်ဖွင်သည်ရှိသောပုတက်ကိုမျှင်လဲ ၃၁ဝ။
 (၁၀) (အိုင်ဆောက်ပန်သာ ၃ယောက်ကိုင်လှူရွယ်မင်ကြီစည်သူရုယ်သောဦ
-[[SIP page 31 / OCR page 41]]
 ၃ဝ
 (၁၁) ဆာက်ကိုင်လဲ ၃။အစပ်မင်လှလှူသောစလင်ကျန်ရင်လဲ ၃ဝ။
 (၁၂) မျှာသာ ၂ဝ မပင်စရငသီနသင်ရွာလဲ ၂ ၀။က္ကောက်သယောင်လဲ ၁
@@ -94,7 +89,7 @@ sip-unit-008	corpus-citation-target-0371	sipSelectionsPagan	luce_pemaungtin_1928
 (၁၇) နယ်ပင်ငိမကြလင် ၁ လင်ငယန် ၁ ီဟီမာ ၁ ကြာလင် ၁ ဟင်ယေ ၁
 (၁ဂ) ဒီငပြက် ၁ ငိငသုက် ၁ ငကလဲ ၁ သားပုတ် ၁ နိုငထုယ် ၁ ငသုက် ၁ မျာ
 (၁၉) ယသုတ် ၁ ယင်ကောင်
-....
+[unclear]
 ၁၇။ ။စောရဟန်းသိမ်ကျောက်စာ၊တူရွင်းတောင်။
 (၁) ဝ။တုရင်တောင်ထက်စပ်ရဟန်သိမ်
 (၂) ပျာက်ခရကာမောင်နှတ်ဆာက်အ (ဖွယ်) အိုအိ
@@ -104,7 +99,6 @@ sip-unit-008	corpus-citation-target-0371	sipSelectionsPagan	luce_pemaungtin_1928
 (၆) စိယ်ဟုရကာ၊ဤယ်သိမ်ဆောက်သကာသကရစ်
 ( ၇) ၅၇၄ ခုကြာတိုက်နှစ်နယုန်လဆန် ၁
 (ဂ) ၂ တန်နှင်ကုနူယ်နိယ်အမြုတ်တက်သိင်ခာလ
-[[SIP page 32 / OCR page 42]]
 ၃၁
 (၉) ရက်အခာနှံနာက်တစ်ပဟိုအိအာဆောက်သ(က)
 (၁၀)ဟ်၊၍ယ်သိမ်ဏ္ဍောက်သမိုတ်သကာ၊မင်ဆာ
@@ -128,9 +122,8 @@ sip-unit-008	corpus-citation-target-0371	sipSelectionsPagan	luce_pemaungtin_1928
 (၂၄) ်တွင်ကာက္ခံသိ ၂၀၀၊ဝထွတ်ကာအထက်
 (၂၅) သက်ခံ ၁ ထည်။အဩက်သက်ခံ ၁ ထည်။
 ၁
-(၂၆) ပျာ ၁ အို(။) သိမ်သောကာ။ဘွိုင်သတ်တျာ"	high	obi-v01-n0062-ob-p0097	obi-v01-n0062	IOB cross-reference: Plate XXXVI -> SIP 30-32.	false	Linked through exact corpus plate citation(s): Pl. I 36. | Extracted from SIP printed pages 30-32 using the OCR page offset observed from the scanned volume.	linked_source_text
-sip-unit-009	corpus-citation-target-0371	sipSelectionsPagan	luce_pemaungtin_1928_inscriptions_of_pag-da9f6d6d89b3	SIP 39-42	SIP 39-42	List 213 | Plate LXIX | UB I 184-185. From the Sawminlat pagoda, north of the Ananda pagoda, Pagan. Now at Pagan Museum (Stone 46, East face)	Old Burmese/Burmese	source_text	"[[SIP page 39 / OCR page 49]]
-po
+(၂၆) ပျာ ၁ အို(။) သိမ်သောကာ။ဘွိုင်သတ်တျာ"	high	obi-v01-n0062-ob-p0097	obi-v01-n0062	IOB cross-reference: Plate XXXVI -> SIP 30-32.	true	Linked through exact corpus plate citation(s): Pl. I 36. | Extracted from SIP printed pages 30-32 using the OCR page offset observed from the scanned volume.	linked_source_text
+sip-witness-009	corpus-citation-target-0371	sipSelectionsPagan	luce_pemaungtin_1928_inscriptions_of_pag-da9f6d6d89b3	SIP 39-42	SIP 39-42	List 213 | Plate LXIX	Old Burmese/Burmese	source_text	"po
 (၂၁) တန်တိုင်တစ်ထပ်သော အပန်ကျင်ကာ သာသနာကိုင် ချွတ်ရယ်ညှင်
 ကျင်သောလှိုင် အရိယာတိုက်နိယ်စိ သောငှာ မျာစွာသော လောင်
 လေအစန်ပြု၏
@@ -150,7 +143,6 @@ po
 လွှဲသော။ ပုရှာတရာသင်္ဃာတို့၌ချိုသာစိန္တသောငှာ။ပြည်အစနှိုက်
 (၂၇) က၁။ဥတ်နှင့်မြယ်မြီစွာဖွယ်သောကပ္ပိယကူဋီယ်လေ&ဧ။ အလုပ်အ
 ကွည်လေမျာစွာ ထာပိယ်ဧအ်၊လိယ်မျက်နှာလာလာသောသူတို
-[[SIP page 40 / OCR page 50]]
 PC
 (၂၀) ၌ရိယ်အလိုပ်ရစ်မြို့သောငှာ။ဥတ်နှင့်မြယ်မြံစွာပွသို့သောချိတ်တွင်လေ
 တူ၏။ ဤယ်မျှသောအနှစ်မောင်နှ’သော ကောင်းမွသိမ်သကာ။
@@ -173,7 +165,6 @@ PC
 သိမ်ငြိမ်ရာဖြစ်သောနေ
 (၅) ရပန်ချီစာကိုပ်လိုချွင်သောကြောင်ရှေငွေစသော ဥစ္စာရုတ္တန်းမျာစွာ
 စွန်ချယ်တိုင်ချွတ်
-[[SIP page 41 / OCR page 51]]
 ၄၀
 (၆) ၏အရှေ့စိုက်ရခဲစွာသော ရတနာသုံပါထာအသောငှာ တင်စွာသောဥ
 အတိသောတ
@@ -193,7 +184,6 @@ PC
 လတ်နဲ
 (၁၄) ရွာတောင် အရှေ့တောင်လဲ ၃ဝဝ ကျည်နကပိုင်လ် ၅ဝဝ ၁လှူသော
 အလွ
-[[SIP page 42 / OCR page 52]]
 ၄၁
 (၁၅) ကိုင်လူယက်ဖျက်ဆီသသူကာ ဤလူလက်ထက်လေ အပ္ပစ် ဂ ပါရောက်
 စေသတေ
@@ -214,8 +204,7 @@ PC
 (၂၃) ကြီ ၂ စွာသော အမတ်လေရွာ သူဆင်ရဲလော လုစ်သော
 ကာလု
 6"	high	obi-v01-n0135-ob-p0218	obi-v01-n0135	IOB cross-reference: Plate LXIX -> SIP 39-42.	false	Linked through exact corpus plate citation(s): Pl. I 69. | Extracted from SIP printed pages 39-42 using the OCR page offset observed from the scanned volume.	linked_source_text
-sip-unit-011	corpus-citation-target-0371	sipSelectionsPagan	luce_pemaungtin_1928_inscriptions_of_pag-da9f6d6d89b3	SIP 42-44	SIP 42-44	List 223 | Plate LXXIX b | Ditto (West face)	Old Burmese/Burmese	source_text	"[[SIP page 42 / OCR page 52]]
-၄၁
+sip-witness-011	corpus-citation-target-0371	sipSelectionsPagan	luce_pemaungtin_1928_inscriptions_of_pag-da9f6d6d89b3	SIP 42-44	SIP 42-44	List 223 | Plate LXXIX b	Old Burmese/Burmese	source_text	"၄၁
 (၁၅) ကိုင်လူယက်ဖျက်ဆီသသူကာ ဤလူလက်ထက်လေ အပ္ပစ် ဂ ပါရောက်
 စေသတေ
 (၁၆) ခန္ဓာပျက်ရှုယ်သေခသောလေသည္ကိုေငရယ် ကာလသုတ်ငရဲ တာပနငရဲ
@@ -235,7 +224,6 @@ sip-unit-011	corpus-citation-target-0371	sipSelectionsPagan	luce_pemaungtin_1928
 (၂၃) ကြီ ၂ စွာသော အမတ်လေရွာ သူဆင်ရဲလော လုစ်သော
 ကာလု
 6
-[[SIP page 43 / OCR page 53]]
 ၄၂
 (၂၄) ချွတ် နတ်ဖြစ်သော လေနတ် ဖွတ် ဖွစ်စေသော စတူမဟာရစ် တာပ
 တိန်သာ
@@ -254,7 +242,6 @@ sip-unit-011	corpus-citation-target-0371	sipSelectionsPagan	luce_pemaungtin_1928
 (၃)ယ်ဧအ်။ အနန္တသူဩင်အေ။ ငာမာသင်သာနှင့် ယောက်ဖမန္တလဘိနှစ်
 ကာမကြ
 (၄) င်။တြာတကာတန်ဆပ်တပ်ပိုယ်အေ။အတိုင်ရလှသောဖုတ်ငာမ္မယ် ၁
-[[SIP page 44 / OCR page 54]]
 (၁၆) ကို
 (၁၇) ဩဝန်နှစ်လက် ရှက်သူကြာနီအာအတံကျာဆင်သောစ
 မိနယ်ကိုလတ် - အပေါင် ၁၃ ယောက် ။ ။ သကရစ် ၅၉၅ ခု
@@ -274,8 +261,7 @@ sip-unit-011	corpus-citation-target-0371	sipSelectionsPagan	luce_pemaungtin_1928
 (၂၆) ကဝိရာဇဂုံ (ကယ်) ၁ မီတ္တာဝိကြံ ၁ ကမ္မသမန် ၁ ကျွန်ဖွစ်သာငာမပ်
 ၁ ဤမျှသော
 (၂၇) ထိုဝ်မှောက်တံကြသတေအတံ (တဈာ) ဆင်သောသင်႕တိုင် ဗိုလ်တ"	high	obi-v01-n0146-tx-p0246	obi-v01-n0146	IOB cross-reference: Plate LXXIX b -> SIP 42-44.	false	Linked through exact corpus plate citation(s): Pl. I 79b. | Extracted from SIP printed pages 42-44 using the OCR page offset observed from the scanned volume.	linked_source_text
-sip-unit-012	corpus-citation-target-0371	sipSelectionsPagan	luce_pemaungtin_1928_inscriptions_of_pag-da9f6d6d89b3	SIP 45-47	SIP 45-47	List 230 | Plate XC | Ditto (North face)	Old Burmese/Burmese	source_text	"[[SIP page 45 / OCR page 55]]
-12
+sip-witness-012	corpus-citation-target-0371	sipSelectionsPagan	luce_pemaungtin_1928_inscriptions_of_pag-da9f6d6d89b3	SIP 45-47	SIP 45-47	List 230 | Plate XC	Old Burmese/Burmese	source_text	"12
 ၄၄
 (၂ဂ) မိယ်လ်ဂျာတိုဟူး၏ ပယ်ထက်သွာ အစွယ်သင်တို့ကာ မြင်စိယ်
 ဟုသ
@@ -285,7 +271,7 @@ sip-unit-012	corpus-citation-target-0371	sipSelectionsPagan	luce_pemaungtin_1928
 ()
 (၃၁) စဖင်ဟိတ်နှင်ပတာမှောက်စာရိယ်ကြအ် (။) အနန္တ သူချင်ရတ
 နာကို
-(၃၂) ထံကာနိယ်တိုင်ထွက်ဧအ် ပယ်ထက်သွာာစွယ်သ(င်) .... (ယ်)ထွက်
+(၃၂) ထံကာနိယ်တိုင်ထွက်ဧအ် ပယ်ထက်သွာာစွယ်သ(င်) [unclear] (ယ်)ထွက်
 အထင်ပယ်ထ
 (၃၃) က်န္ဓာ ငာစွယ်သင်စာရိယ်ပိယ်သောတိုင် မထွက်ချွတ်ခရကာ။ ကျွန်အို
 ကြက် ၁
@@ -295,7 +281,6 @@ sip-unit-012	corpus-citation-target-0371	sipSelectionsPagan	luce_pemaungtin_1928
 တံတျာတ
 (၃၆) န်ဆိပ်တပ်ပိယ်ဧအ်။ = ။
 -- ။
-[[SIP page 46 / OCR page 56]]
 5805
 နယ်
 ။
@@ -320,7 +305,6 @@ sip-unit-012	corpus-citation-target-0371	sipSelectionsPagan	luce_pemaungtin_1928
 တူနိယ်ညန်ဆိုင်ငြယ်ဧအ်။ မောင်မို့ယ်လေမြယ်ဧ
 (၉) အိ။ဟုရွယ်ဟင်ရံပအက်မည်သောမြို့ယ်တွင်လည်ကောင်။အင်ကိုဝ်ခပင်စုံ
 ၄၅ဝ ဖုန်တလှူတုံက်၊ဗိုလ်သူကြီသံဗျင်သ
-[[SIP page 47 / OCR page 57]]
 ၄၆
 (၁၀) ဘျာ ၁။ သီကြီးဖတ် ၁။ သံင်သိရိန္ဒြစည် ၊ ဤယ်ဗိုလ်သူကြီး ၃
 ယောက်သောက်။ ပတည်သောအကိုဘာကို
@@ -339,9 +323,8 @@ sip-unit-012	corpus-citation-target-0371	sipSelectionsPagan	luce_pemaungtin_1928
 (၁၇) ယျပွတ်တာ်ကောင် နှိုက်နိယ်သော။ သိင်သင်္ဃာတို၌သည်။ မင်ကြီအာ
 ကြာလိုက်ဧအ်၊ မဟာရစ်။ ဤယ်ဇေယျပွတ်ဧအ်။ မ
 (၁၀) ဟါဒါန်ကာ။ တက္ကောင် ပုရှာလျှင်လှူခသတေဟုသော ကြာလိုက်၏။
-ဤယ်သို ့ ကြာလိုက်ရကာ။ မင်ကြီလေပြညာတ်ကြီ"	high	obi-v01-n0160-ob-p0267	obi-v01-n0160	IOB cross-reference: Plate XC -> SIP 45-47.	false	Linked through exact corpus plate citation(s): Pl. I 90. | Extracted from SIP printed pages 45-47 using the OCR page offset observed from the scanned volume.	linked_source_text
-sip-unit-014	corpus-citation-target-0371	sipSelectionsPagan	luce_pemaungtin_1928_inscriptions_of_pag-da9f6d6d89b3	SIP 49-52	SIP 49-52	List 479 | Plate XCVIII | Ditto (West face).,. In the Sudaungbyi inscription-shed, West Pwazaw, Pagan (stone in south-west corner, West face)	Old Burmese/Burmese	source_text	"[[SIP page 49 / OCR page 59]]
-၄၀
+ဤယ်သို ့ ကြာလိုက်ရကာ။ မင်ကြီလေပြညာတ်ကြီ"	high	obi-v01-n0160-ob-p0267	obi-v01-n0160	IOB cross-reference: Plate XC -> SIP 45-47.	true	Linked through exact corpus plate citation(s): Pl. I 90. | Extracted from SIP printed pages 45-47 using the OCR page offset observed from the scanned volume.	linked_source_text
+sip-witness-014	corpus-citation-target-0371	sipSelectionsPagan	luce_pemaungtin_1928_inscriptions_of_pag-da9f6d6d89b3	SIP 49-52	SIP 49-52	List 479 | Plate XCVIII	Old Burmese/Burmese	source_text	"၄၀
 (၃) င၁မိထုယ်လျှင်တေငာမိအေဟုရွယ်။ ဤမ်နိယ်ပိယ်အေ။ ဤမ်ထောင်
 ကျွန်လယ်လေပိယ်တ
 (၄) ်မူ၏။ဤမ်လေနိယ်၏။ကျွန်လောစိယ်ဧအ်။ လယ်လေငာစာဧအ်။
@@ -359,7 +342,6 @@ sip-unit-014	corpus-citation-target-0371	sipSelectionsPagan	luce_pemaungtin_1928
 (၁၀) . ကိုင်ဆောက်တည်ခရုယ်ာထွက်ခဘဲ။ ဤမ်ထောင်ကျွန်လယ် လှူလျှင်
 အေ။
 [ကြောင်းရေ ၂၇ အဆုံး။
-[[SIP page 50 / OCR page 60]]
 90
 ၄။ ဝန်ဘုရား on လူ
 (၁) ။၁။သကရစ် ၅၉၀ ခု၊ကြတိုက်နှင့် ပါဠိ ကြောင်း
@@ -380,7 +362,6 @@ sip-unit-014	corpus-citation-target-0371	sipSelectionsPagan	luce_pemaungtin_1928
 သောဖွယ် ၂
 (၂၄)ကျပ်ကနှာပြင်သစ်ဖိုင် ၁ဝ။တံဘိုင်က္ကောက်အဖိုင်ကာ ၃ ကျပ်သွယ်ကူ
 (၅) ညောင်တံဆာရက်စုဖွဲ့ အကတိယ်ရိပ်ကခွက်၃ချွပ်သောကာယ်၁၃
-[[SIP page 51 / OCR page 61]]
 (၆) နာ ၅ ခုသာငယ် ၂။ အသက်ငယ်သော နှ င်း၊ လင်ပန်းသောပုယ
 (၇) ၂၁ ၆၂ တနှက်သောက၁မိုင် ၇၇ ရုပ် နိုင်ကာ ၂ (၄) ဂ
 တနက်။
@@ -390,14 +371,13 @@ Oli
 (၁၀) ပုရာန်ရိခာစပါ ၁၄၀။ပန်ဒီရဲ၁၁ပါ ၅၄ တင်။တည်သည်ပန်းပုရိခ
 (၁၁) ပါ၂၀ ပါနိုင်ကာ (၄) သင်သော ၁ လျှပ်သွင်သာငယ်ဟူမူကာ
 (၃၀) တ္ထုပ်
-(၁၂) ဟိ၏။ကူထွတ်ကြိယ်ပီသဖွယ်သာယ် ၃ ကျပ်။ ရှယ်... သယ်
+(၁၂) ဟိ၏။ကူထွတ်ကြိယ်ပီသဖွယ်သာယ် ၃ ကျပ်။ ရှယ်[unclear] သယ်
 (၁၃) ပ်။ပြတာ ၃ ကျပ်သောငုယ် ၂ ကျင်းကူထွတ်လက်ခ8ယ်သယ်
 30
 (၁၄) ။သံဖိုယ် ၁၁၊ကြောင် နာယ် ငုပ်လျှောက် ဝယ်သောငယ် ၂ဝ။ ( သစ်
 (၁၅) သောလှည်ခပိယ်မသယ် ၁စိထန်ဟင်္သပဟာဘုန်မိယ်ကူ
 of
 (၁၆) ခြိတ်ကံကုတ်ခပင်းသက်ပိုင်ကာချက်၅၀ခန့်ဆယ်ဘူ(သော)
-[[SIP page 52 / OCR page 62]]
 မာ
 (၄) ဂ
 ၊ ညဝ
@@ -421,9 +401,8 @@ of
 ကာနယ်
 (၂၆) ၁ + ကုလာက္ပောင်ဖွယ်သောပုရာန်လက်ခ ၃။ ၂။ လည်ခခွက် ၁၉
 (၂၇) ငယ် ၂ ကျပ်။ ၁၃၅၂ ( ၆ သေ၁) ငှက် ၂ ကျပ်၊ စပါး(၄)တင်သော
-ငယ် (၂)"	high	obi-v01-n0129-tx-p0209	obi-v01-n0129	IOB cross-reference: Plate XCVIII -> SIP 49-52.	false	Linked through exact corpus plate citation(s): Pl. I 98. | Extracted from SIP printed pages 49-52 using the OCR page offset observed from the scanned volume.	linked_source_text
-sip-unit-015	corpus-citation-target-0371	sipSelectionsPagan	luce_pemaungtin_1928_inscriptions_of_pag-da9f6d6d89b3	SIP 52-55	SIP 52-55	List 242 | Plate CV a | Ditto (Reverse),,,. From the south side of the enclosure of the Shinbinbodhi pagoda, Pagan. Now at Pagan Museum (Stone 60, West face)	Old Burmese/Burmese	source_text	"[[SIP page 52 / OCR page 62]]
-မာ
+ငယ် (၂)"	high	obi-v01-n0129-tx-p0209	obi-v01-n0129	IOB cross-reference: Plate XCVIII -> SIP 49-52.	true	Linked through exact corpus plate citation(s): Pl. I 98. | Extracted from SIP printed pages 49-52 using the OCR page offset observed from the scanned volume.	linked_source_text
+sip-witness-015	corpus-citation-target-0371	sipSelectionsPagan	luce_pemaungtin_1928_inscriptions_of_pag-da9f6d6d89b3	SIP 52-55	SIP 52-55	List 242 | Plate CV a	Old Burmese/Burmese	source_text	"မာ
 (၄) ဂ
 ၊ ညဝ
 က
@@ -447,7 +426,6 @@ sip-unit-015	corpus-citation-target-0371	sipSelectionsPagan	luce_pemaungtin_1928
 (၂၆) ၁ + ကုလာက္ပောင်ဖွယ်သောပုရာန်လက်ခ ၃။ ၂။ လည်ခခွက် ၁၉
 (၂၇) ငယ် ၂ ကျပ်။ ၁၃၅၂ ( ၆ သေ၁) ငှက် ၂ ကျပ်၊ စပါး(၄)တင်သော
 ငယ် (၂)
-[[SIP page 53 / OCR page 63]]
 (JB) SH = 1.
 10
 ၂၅။ ။ပုဂံမြို့ရှင်ပဗောဓိဘုရားတံတိုင်းအတွင်းတောင်ဘက်ရှိ ကျောက်စာ။
@@ -465,7 +443,6 @@ sip-unit-015	corpus-citation-target-0371	sipSelectionsPagan	luce_pemaungtin_1928
 (၁၂) ယ် ၂၀။ စာသင်ညောင် ၅ ခု ပုဧအ်။ ဂျွစ်ဩက်ကုငယ်
 (၁၃) လဆိယ်ရိယ် အဲ။ကျောင်တွင်ပုဆိုပုာဆိုင်။
 (၁၄) ညောင် ၃ ပင်စိုက်၏။ ရိယ်ဤမ် ၃ ပါ။ သမရိဝိ
-[[SIP page 54 / OCR page 64]]
 50
 (၃) နန္ဒလာနယ်ကား နတ်တပ်လဆုတ် ၉ ရက်
 (၁၇) သုကြာနိယ်ကာလွှတ်စက် ကွကါသိုင်လဆုတ် ၃၅
@@ -485,7 +462,6 @@ sip-unit-015	corpus-citation-target-0371	sipSelectionsPagan	luce_pemaungtin_1928
 (၂၉) (က၀) သူပိယ်ခသောပေါက်ပင် ဖလယ်သာ ၇၀ ရှိယ်ဦလယ်သာ ၂၀
 အခပေါင်လယ် (ဂ)
 (၃၁) ၉ဝကြည်နှင်စုံအပေါင် ၃၀၀။ ဤကာကျောင်နိယ်တတ်သာသိခင်စာစိယ်
-[[SIP page 55 / OCR page 65]]
 (၃၂) အာ) ကျွန်လှူသော (ဘေ) လယ်လုံမှုစိယ်သော ၊ မင်လဝိသော
 ပြင်မယ်ပုံလယ်
 (၃၃) ၃၀ ၀၀၁ကောင်စာသင်ခပင်ပ္ပိယ်စာမူစိယ်သတေးနောင်ပိယ်သောမစ
@@ -502,8 +478,7 @@ sip-unit-015	corpus-citation-target-0371	sipSelectionsPagan	luce_pemaungtin_1928
 ကေမရိယ်တွက်နိုင်သော
 (၃၉) သင်္ခရာနှိုက်ပြီတွင်စိယ်သား၍အလှူကိုခံပင်သသူတို့ကာ ငာနှင့်
 အကူအကိုင်ရစိယ်သကေ"	high	obi-v01-n0179-tx-p0306	obi-v01-n0179	IOB cross-reference: Plate CV a -> SIP 52-55.	false	Linked through exact corpus plate citation(s): Pl. I 105a. | Extracted from SIP printed pages 52-55 using the OCR page offset observed from the scanned volume.	linked_source_text
-sip-unit-001	corpus-citation-target-0371	sipSelectionsPagan	luce_pemaungtin_1928_inscriptions_of_pag-da9f6d6d89b3	SIP 13-15	SIP 13-15	List 81 a | Plate IV | Pillar in the north porch of the Dhammayangyi, Pagan (South face)	Old Burmese/Burmese	source_text	"[[SIP page 13 / OCR page 23]]
-၁၂
+sip-witness-001	corpus-citation-target-0371	sipSelectionsPagan	luce_pemaungtin_1928_inscriptions_of_pag-da9f6d6d89b3	SIP 13-15	SIP 13-15	List 81 a | Plate IV	Old Burmese/Burmese	source_text	"၁၂
 (၁၃) ဩက်မစ်ကွေ့နှိုက်လဲ ၃၀။ စည်သူမင်ကြီကွတ်သည်အိမ်ဘုန်သင်ကူဘု
 ရာ ရွယ်ရှ
 (၁၄) သလဲစလင်အရပ်ဥယန်မအရှိယ်လဲ ၁၀ တနှောင်ကြည်လဲ ၃၀ မခရာ
@@ -521,7 +496,6 @@ sip-unit-001	corpus-citation-target-0371	sipSelectionsPagan	luce_pemaungtin_1928
 လျှင်ရ
 (၂ဝ) စပါစေသတေ။ ဝ ။
 ကျောက်စာကြောင်းရေ ၃၂ ဆုံး၏။
-[[SIP page 14 / OCR page 24]]
 ၁၃
 ၇။ ။စည်သူမင်းကြီး ကျောက်စာ ။
 (၁) ။။စည်သူမင်ကြီသကရစ် ၅၁ (၃) ဣမ်နှိမ်ကာ နန်မက်နေဟင်
@@ -529,9 +503,9 @@ sip-unit-001	corpus-citation-target-0371	sipSelectionsPagan	luce_pemaungtin_1928
 (င)
 (၄)
 မူသကာ ၃၇။]
-က်တပ်အပေါင် ၆၃။မွောက်ဖက်ကိုင်တို(င်)...[လည်တဝ်မူ၏။
+က်တပ်အပေါင် ၆၃။မွောက်ဖက်ကိုင်တို(င်)[unclear][လည်တဝ်မူ၏။
 (၅)
-....
+[unclear]
 သွာတင်မူလ
 ကားမူ၏အရှေ့ဖက်သွါဘပ်မူလေ၏
 ကာပူ၏အနော]
@@ -547,7 +521,6 @@ sip-unit-001	corpus-citation-target-0371	sipSelectionsPagan	luce_pemaungtin_1928
 (၃) လာနိယ်။ ပုသျှနက္ခတ်မိနလဂါ။ ၁ ပြီ ရ် ၂ နဦ
 (၄) သာအဟ်၊ အမိမရိယ်ခဖုတ်သောက္ကောက်စာ။ အ (ထာ)
 ကျောက်မျက်နှာတခြမ်းပျက်စီး၍၊[ ဤကဲ့သို့ကွင်းထဲ၌ရှိသောစကားကို ကျောက်စာအုပ်မှ နုတ်ထုတ်သည်။
-[[SIP page 15 / OCR page 25]]
 (၅၂) ပလတ်အရင်မှရှယ်ရိယ်ပါသော၊ က (လာန်) အိအိဖု (ဟ် ) ဟောင်
 (၆) ။ကလာန်လု။သံပျာင်ဥဟ်။သံပျာင် ( ခု)န်သိဟ် ပယ် ( စု) ဘဲ။
 (၇) - ဤယ်မျှသော၊သူတို ့၌ ရိယ်ရစ်သော။ ပုဟာကျွာန်ကံ
@@ -568,8 +541,7 @@ sip-unit-001	corpus-citation-target-0371	sipSelectionsPagan	luce_pemaungtin_1928
 (၂၀) (စ်) ညာ ၁၊ ညီငာထိင် ၁။ ာလှော ၁။ ငာဆန် ၁။ မိယဟ်ယ
 (၂၁) ကွယ် ၁။ သတ်ငာခရိတ်ဖုတ် ၁။ သဟော်မု၌ ၁။ ငာတိုင်
 (၂၂) ၁။ အိမ်လွမ် ကွယ် ၁။ သဟ် ငာစိ၌ ၁။ သိဟ် အိက်ညိပ်"	medium				true	English index-of-plates entry extracted from the OCRed volume. | Extracted from SIP printed pages 13-15 using the OCR page offset observed from the scanned volume.	uncertain_link
-sip-unit-002	corpus-citation-target-0371	sipSelectionsPagan	luce_pemaungtin_1928_inscriptions_of_pag-da9f6d6d89b3	SIP 15-16	SIP 15-16	List 81 b | Plate V | Ditto (North face)	Old Burmese/Burmese	source_text	"[[SIP page 15 / OCR page 25]]
-(၅၂) ပလတ်အရင်မှရှယ်ရိယ်ပါသော၊ က (လာန်) အိအိဖု (ဟ် ) ဟောင်
+sip-witness-002	corpus-citation-target-0371	sipSelectionsPagan	luce_pemaungtin_1928_inscriptions_of_pag-da9f6d6d89b3	SIP 15-16	SIP 15-16	List 81 b | Plate V	Old Burmese/Burmese	source_text	"(၅၂) ပလတ်အရင်မှရှယ်ရိယ်ပါသော၊ က (လာန်) အိအိဖု (ဟ် ) ဟောင်
 (၆) ။ကလာန်လု။သံပျာင်ဥဟ်။သံပျာင် ( ခု)န်သိဟ် ပယ် ( စု) ဘဲ။
 (၇) - ဤယ်မျှသော၊သူတို ့၌ ရိယ်ရစ်သော။ ပုဟာကျွာန်ကံ
 (ဂ) ကူန်ခြံ ၁။ မိယတ် ယ ုတ် ၁။ သိဟ် အိပ် ပုယ် ၁။ လာင်
@@ -589,7 +561,6 @@ sip-unit-002	corpus-citation-target-0371	sipSelectionsPagan	luce_pemaungtin_1928
 (၂၀) (စ်) ညာ ၁၊ ညီငာထိင် ၁။ ာလှော ၁။ ငာဆန် ၁။ မိယဟ်ယ
 (၂၁) ကွယ် ၁။ သတ်ငာခရိတ်ဖုတ် ၁။ သဟော်မု၌ ၁။ ငာတိုင်
 (၂၂) ၁။ အိမ်လွမ် ကွယ် ၁။ သဟ် ငာစိ၌ ၁။ သိဟ် အိက်ညိပ်
-[[SIP page 16 / OCR page 26]]
 ၁၉
 (၂၃) ၁။အိမ် ၁။ ငာမည္ဟုတ်၁။ မိယဉ် ယိက် ၁။ အိမ်ဖုန်
 ၉၁။
@@ -613,8 +584,7 @@ CO
 (၁၂) င်းတာကြိမ်။ ရိယာတိ႔ သိုကိတ်ပန်။ငိမအိအိထွ
 လအ
 (၁၃) န်။မောင်ငာဦင်။ဝီစာင်။ငိတာလောက်။ဝီတာချ"	medium				true	English index-of-plates entry extracted from the OCRed volume. | Extracted from SIP printed pages 15-16 using the OCR page offset observed from the scanned volume.	uncertain_link
-sip-unit-003	corpus-citation-target-0371	sipSelectionsPagan	luce_pemaungtin_1928_inscriptions_of_pag-da9f6d6d89b3	SIP 19-20	SIP 19-20	List 123a | Plate X a | From the South Guni pagoda, about 300 ft. south of the Dhammayangyi, Pagan. Now at Pagan Museum (Stone 54 East face)	Old Burmese/Burmese	source_text	"[[SIP page 19 / OCR page 29]]
-50
+sip-witness-003	corpus-citation-target-0371	sipSelectionsPagan	luce_pemaungtin_1928_inscriptions_of_pag-da9f6d6d89b3	SIP 19-20	SIP 19-20	List 123a | Plate X a	Old Burmese/Burmese	source_text	"50
 ၁၀။ ပုဂံမြို့အရွှေတောင်ယွန်း၊ စူဠာမဏိကျောက်စာ၊
 (၁) ၊ ၊နမႈသဗ္ဗညာယ၊ ၊သကရစ် ၅၄၅ ခုစိဿနှစ်
 (၂) တန်ဆောင်မှုန်ညွှန် ၃ ချက်ကြာသပတေနေအာစိက္ခုတ်ကွန်ထက်
@@ -632,7 +602,6 @@ sip-unit-003	corpus-citation-target-0371	sipSelectionsPagan	luce_pemaungtin_1928
 (၉) လေဠုတ်မှရုယ်ပြိ၏ထိုင်ပြီမှလျှင်အထက်တဆင်ဂျွတ်မှတုံဧပြီ၏
 (၁ဝ) ထိုင်ပြီမှလျှင် အထက်ဖုရာပျွတ်မူသည်ပြီဟူ မင်ကြီကို နာတိလျောက်
 (၁၁) ၏ (မင်) ကြီကုတ်တွင် ဝင်ရွှေဖုရာရွှေနတ်မူသအခာနှိုက်လျှင်မဟာ
-[[SIP page 20 / OCR page 30]]
 ၁၉
 (၁၂) ကြီ) ကိုဝ်ခပ်တီမူရယ် ရေစင်တဲ့ ချွ သက္ကာ သာသနာ ၅၁ဝဝ တေရစ်စိမ်
 သော
@@ -652,8 +621,7 @@ sip-unit-003	corpus-citation-target-0371	sipSelectionsPagan	luce_pemaungtin_1928
 (၁၂) ဟုတ္တာ။ဤယ်ကူနှင့်ပိတကတ်လွှတ်သောရှင်
 (၁၃) အာ။ သင်ကန် ၁ (၂) ဝ သောကစသောအလှူကြီ
 ကျောက်စာ စာရင်း၌ ၅၅၃ ဟုတ်သည်။"	medium				true	English index-of-plates entry extracted from the OCRed volume. | Extracted from SIP printed pages 19-20 using the OCR page offset observed from the scanned volume.	uncertain_link
-sip-unit-004	corpus-citation-target-0371	sipSelectionsPagan	luce_pemaungtin_1928_inscriptions_of_pag-da9f6d6d89b3	SIP 21	SIP 21	List 123 b | Plate X b | Ditto (West face)	Old Burmese/Burmese	source_text	"[[SIP page 21 / OCR page 31]]
-jo
+sip-witness-004	corpus-citation-target-0371	sipSelectionsPagan	luce_pemaungtin_1928_inscriptions_of_pag-da9f6d6d89b3	SIP 21	SIP 21	List 123 b | Plate X b	Old Burmese/Burmese	source_text	"jo
 (၁၄) လယ်၏။ပုဟာမသောကြာ၊ပ
 (၁၅) . ကုရ်မည်သောစည်လျှင် ဖွင်နိုင်ထထလော
 (၁၆) ည်နှိပ်လိုရကာ။စည်ကြီပန်တျာ ပျူသော
@@ -677,8 +645,7 @@ ICO
 ။
 O
 ကျောဘက်"	medium				true	English index-of-plates entry extracted from the OCRed volume. | Extracted from SIP printed pages 21-21 using the OCR page offset observed from the scanned volume.	uncertain_link
-sip-unit-007	corpus-citation-target-0371	sipSelectionsPagan	luce_pemaungtin_1928_inscriptions_of_pag-da9f6d6d89b3	SIP 29-30	SIP 29-30	List 174 | Plate XXXIV | From the Mahadhi pagoda, north of the Mingalazedi, Pagan. Now at Pagan Museum (Stone 49 East face)	Old Burmese/Burmese	source_text	"[[SIP page 29 / OCR page 39]]
-ja
+sip-witness-007	corpus-citation-target-0371	sipSelectionsPagan	luce_pemaungtin_1928_inscriptions_of_pag-da9f6d6d89b3	SIP 29-30	SIP 29-30	List 174 | Plate XXXIV	Old Burmese/Burmese	source_text	"ja
 (၂၆) ၊ လုနှစ်တွက်သေါအကုတိယ် ၂၃၀ အနှစ် ၄ သန်မှတနိယ်ဟိသေါသင်္ဃာ
 တငြယ်၊ လုနှစ်တွက်သေါအကူတိ။
 (၂၇) ၉၂၁ ကူတိယ်အ မွတ်အနှစ် ၆ သန်မှ တနိယ်ဟိသော ရေါရပ်ငြယ်။ ခုနှစ်
@@ -697,7 +664,6 @@ ja
 ယောက်လွှန်ပြိငတိုဝ်ဘုရာ
 (၃၄) ကောတမလွန်ဩင်မလွန်ဩင်မလွတ်တတ်သပြိတ္တာ သိုဝ်သပြိတ္တာလေ
 ဖွစ်စေသဟေ၊ နောင်လါလ
-[[SIP page 30 / OCR page 40]]
 ၂၉
 (၃၅) တံသဘုရါတိုပ်ကိုင် လေမဘူစေသတေ။ ငာကောင်မှုကိုပ် ပင်ပါခေl
 မင်မင်မျာမင်သါအမ

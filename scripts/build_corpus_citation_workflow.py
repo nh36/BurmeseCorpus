@@ -38,6 +38,9 @@ from jbrs_workflow_common import (
     LOCAL_SOURCE_OCR_TEXT_INDEX_PATH,
     LOCAL_FILE_MANIFEST_PATH,
     SIP_EXTRACTED_UNITS_PATH,
+    SIP_WITNESS_TEXT_COMPARISON_PATH,
+    SIP_WITNESS_UNITS_PATH,
+    SIP_CROSS_REFERENCE_TARGETS_PATH,
     SOURCE_LIBRARY_MANIFEST_PATH,
 )
 
@@ -868,6 +871,10 @@ def build_workflow_summary(
     out_of_scope_audit_rows: list[dict[str, str]],
     ocr_queue_rows: list[dict[str, str]],
 ) -> dict[str, object]:
+    sip_cross_reference_rows = read_tsv(SIP_CROSS_REFERENCE_TARGETS_PATH) if SIP_CROSS_REFERENCE_TARGETS_PATH.exists() else []
+    sip_extracted_unit_rows = read_tsv(SIP_EXTRACTED_UNITS_PATH) if SIP_EXTRACTED_UNITS_PATH.exists() else []
+    sip_witness_unit_rows = read_tsv(SIP_WITNESS_UNITS_PATH) if SIP_WITNESS_UNITS_PATH.exists() else []
+    sip_text_comparison_rows = read_tsv(SIP_WITNESS_TEXT_COMPARISON_PATH) if SIP_WITNESS_TEXT_COMPARISON_PATH.exists() else []
     citation_indicator_counts = {
         field: sum(1 for row in inventory_rows if row.get(field) == "true")
         for field in (
@@ -974,6 +981,35 @@ def build_workflow_summary(
         "match_status_counts": dict(Counter(row["match_status"] for row in match_rows)),
         "dashboard_extraction_status_counts": dict(Counter(row["extraction_status"] for row in dashboard_rows)),
         "out_of_scope_audit_status_counts": dict(Counter(row["audit_status"] for row in out_of_scope_audit_rows)),
+        "sip_cross_reference_target_count": len(sip_cross_reference_rows),
+        "sip_extracted_unit_count": len(sip_extracted_unit_rows),
+        "sip_witness_unit_count": len(sip_witness_unit_rows),
+        "sip_accepted_witness_unit_count": sum(
+            1 for row in sip_witness_unit_rows if row.get("review_status") == "accepted_witness_unit"
+        ),
+        "sip_units_needing_text_cleanup_count": sum(
+            1 for row in sip_witness_unit_rows if row.get("review_status") == "needs_text_cleanup"
+        ),
+        "sip_units_needing_link_review_count": sum(
+            1 for row in sip_witness_unit_rows if row.get("review_status") == "needs_link_review"
+        ),
+        "sip_rejected_ocr_noise_count": sum(
+            1 for row in sip_witness_unit_rows if row.get("review_status") == "rejected_ocr_noise"
+        ),
+        "sip_high_confidence_link_count": sum(
+            1
+            for row in sip_witness_unit_rows
+            if row.get("link_confidence") == "high"
+            and row.get("linked_corpus_record_id")
+            and row.get("linked_inscription_id")
+        ),
+        "sip_corpus_text_comparison_count": len(sip_text_comparison_rows),
+        "sip_units_supplying_candidate_text_count": sum(
+            1
+            for row in sip_text_comparison_rows
+            if row.get("comparison_status") == "corpus_text_absent_sip_supplies_candidate"
+        ),
+        "missing_high_value_source_count": 2,
         "top_ocr_extraction_priorities": priority_rows[:20],
     }
 

@@ -43,6 +43,17 @@
     "correctly_out_of_scope_non_burmese_record": 9,
     "unclear_needs_manual_review": 4656
   },
+  "sip_cross_reference_target_count": 15,
+  "sip_extracted_unit_count": 18,
+  "sip_witness_unit_count": 15,
+  "sip_accepted_witness_unit_count": 5,
+  "sip_units_needing_text_cleanup_count": 3,
+  "sip_units_needing_link_review_count": 7,
+  "sip_rejected_ocr_noise_count": 0,
+  "sip_high_confidence_link_count": 8,
+  "sip_corpus_text_comparison_count": 8,
+  "sip_units_supplying_candidate_text_count": 0,
+  "missing_high_value_source_count": 2,
   "top_ocr_extraction_priorities": [
     {
       "citation_target_id": "corpus-citation-target-0368",
