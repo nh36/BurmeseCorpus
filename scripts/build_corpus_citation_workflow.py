@@ -37,6 +37,8 @@ from jbrs_workflow_common import (
     JBRS_OCR_TEXT_INDEX_PATH,
     LOCAL_SOURCE_OCR_TEXT_INDEX_PATH,
     LOCAL_FILE_MANIFEST_PATH,
+    SIP_INSCRIPTION_WITNESS_UNITS_PATH,
+    SIP_UNLINKED_WITNESS_REVIEW_PATH,
     SIP_EXTRACTED_UNITS_PATH,
     SIP_WITNESS_TEXT_COMPARISON_PATH,
     SIP_WITNESS_UNITS_PATH,
@@ -874,6 +876,12 @@ def build_workflow_summary(
     sip_cross_reference_rows = read_tsv(SIP_CROSS_REFERENCE_TARGETS_PATH) if SIP_CROSS_REFERENCE_TARGETS_PATH.exists() else []
     sip_extracted_unit_rows = read_tsv(SIP_EXTRACTED_UNITS_PATH) if SIP_EXTRACTED_UNITS_PATH.exists() else []
     sip_witness_unit_rows = read_tsv(SIP_WITNESS_UNITS_PATH) if SIP_WITNESS_UNITS_PATH.exists() else []
+    sip_inscription_witness_rows = (
+        read_tsv(SIP_INSCRIPTION_WITNESS_UNITS_PATH) if SIP_INSCRIPTION_WITNESS_UNITS_PATH.exists() else []
+    )
+    sip_unlinked_review_rows = (
+        read_tsv(SIP_UNLINKED_WITNESS_REVIEW_PATH) if SIP_UNLINKED_WITNESS_REVIEW_PATH.exists() else []
+    )
     sip_text_comparison_rows = read_tsv(SIP_WITNESS_TEXT_COMPARISON_PATH) if SIP_WITNESS_TEXT_COMPARISON_PATH.exists() else []
     citation_indicator_counts = {
         field: sum(1 for row in inventory_rows if row.get(field) == "true")
@@ -984,21 +992,41 @@ def build_workflow_summary(
         "sip_cross_reference_target_count": len(sip_cross_reference_rows),
         "sip_extracted_unit_count": len(sip_extracted_unit_rows),
         "sip_witness_unit_count": len(sip_witness_unit_rows),
+        "sip_parent_witness_unit_count": len(sip_witness_unit_rows),
+        "sip_inscription_witness_unit_count": len(sip_inscription_witness_rows),
         "sip_accepted_witness_unit_count": sum(
             1 for row in sip_witness_unit_rows if row.get("review_status") == "accepted_witness_unit"
+        ),
+        "sip_accepted_inscription_witness_count": sum(
+            1 for row in sip_inscription_witness_rows if row.get("review_status") == "accepted_inscription_witness"
         ),
         "sip_units_needing_text_cleanup_count": sum(
             1 for row in sip_witness_unit_rows if row.get("review_status") == "needs_text_cleanup"
         ),
+        "sip_inscription_units_needing_text_cleanup_count": sum(
+            1 for row in sip_inscription_witness_rows if row.get("review_status") == "needs_text_cleanup"
+        ),
         "sip_units_needing_link_review_count": sum(
             1 for row in sip_witness_unit_rows if row.get("review_status") == "needs_link_review"
+        ),
+        "sip_inscription_units_needing_segmentation_review_count": sum(
+            1 for row in sip_inscription_witness_rows if row.get("review_status") == "needs_segmentation_review"
+        ),
+        "sip_inscription_units_needing_link_review_count": sum(
+            1 for row in sip_inscription_witness_rows if row.get("review_status") == "needs_link_review"
         ),
         "sip_rejected_ocr_noise_count": sum(
             1 for row in sip_witness_unit_rows if row.get("review_status") == "rejected_ocr_noise"
         ),
+        "sip_unlinked_witness_unit_count": sum(
+            1 for row in sip_inscription_witness_rows if not row.get("linked_corpus_record_id")
+        ),
+        "sip_units_too_noisy_to_link_count": sum(
+            1 for row in sip_unlinked_review_rows if row.get("unlinked_review_status") == "too_noisy_to_link"
+        ),
         "sip_high_confidence_link_count": sum(
             1
-            for row in sip_witness_unit_rows
+            for row in sip_inscription_witness_rows
             if row.get("link_confidence") == "high"
             and row.get("linked_corpus_record_id")
             and row.get("linked_inscription_id")

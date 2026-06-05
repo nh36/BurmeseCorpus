@@ -85,6 +85,8 @@ SIP_LINKED_SAMPLE_REVIEW_PATH = BIBLIOGRAPHY_DIRECTORY / "sip_linked_sample_revi
 SIP_WITNESS_UNITS_PATH = BIBLIOGRAPHY_DIRECTORY / "sip_witness_units.tsv"
 SIP_CORPUS_LINK_REVIEW_PATH = BIBLIOGRAPHY_DIRECTORY / "sip_corpus_link_review.tsv"
 SIP_WITNESS_TEXT_COMPARISON_PATH = BIBLIOGRAPHY_DIRECTORY / "sip_witness_text_comparison.tsv"
+SIP_INSCRIPTION_WITNESS_UNITS_PATH = BIBLIOGRAPHY_DIRECTORY / "sip_inscription_witness_units.tsv"
+SIP_UNLINKED_WITNESS_REVIEW_PATH = BIBLIOGRAPHY_DIRECTORY / "sip_unlinked_witness_review.tsv"
 MISSING_HIGH_VALUE_SOURCES_PATH = BIBLIOGRAPHY_DIRECTORY / "missing_high_value_sources.md"
 MAX_GITHUB_CONTENTS_SIZE = 1_000_000
 
@@ -799,6 +801,52 @@ SIP_WITNESS_TEXT_COMPARISON_FIELDS = [
     "notes",
 ]
 
+SIP_INSCRIPTION_WITNESS_UNIT_FIELDS = [
+    "sip_inscription_unit_id",
+    "parent_witness_unit_id",
+    "source_key",
+    "citation_target_id",
+    "matched_local_file_id",
+    "sip_ref",
+    "printed_page_start",
+    "printed_page_end",
+    "ocr_page_start",
+    "ocr_page_end",
+    "iob_plate",
+    "list_ref",
+    "ppa_ref",
+    "tn_ref",
+    "detected_entry_number",
+    "detected_entry_title",
+    "detected_entry_location",
+    "linked_inscription_id",
+    "linked_corpus_record_id",
+    "unit_type",
+    "language",
+    "raw_ocr_text",
+    "cleaned_witness_text",
+    "ocr_quality",
+    "segmentation_confidence",
+    "link_confidence",
+    "link_basis",
+    "review_status",
+    "notes",
+]
+
+SIP_UNLINKED_WITNESS_REVIEW_FIELDS = [
+    "sip_inscription_unit_id",
+    "parent_witness_unit_id",
+    "sip_ref",
+    "iob_plate",
+    "detected_entry_number",
+    "linked_inscription_id",
+    "linked_corpus_record_id",
+    "unlinked_review_status",
+    "candidate_corpus_record_ids",
+    "basis",
+    "notes",
+]
+
 CORPUS_CITED_SOURCE_OCR_QUEUE_FIELDS = [
     "ocr_queue_id",
     "citation_target_id",
@@ -902,6 +950,21 @@ SIP_TEXT_COMPARISON_STATUSES = {
     "corpus_text_absent_sip_supplies_candidate",
     "corpus_text_not_comparable",
     "ocr_too_noisy",
+}
+SIP_INSCRIPTION_WITNESS_REVIEW_STATUSES = {
+    "accepted_inscription_witness",
+    "needs_text_cleanup",
+    "needs_segmentation_review",
+    "needs_link_review",
+    "rejected_ocr_noise",
+    "uncertain",
+}
+SIP_SEGMENTATION_CONFIDENCE_LEVELS = {"high", "medium", "low"}
+SIP_UNLINKED_WITNESS_REVIEW_STATUSES = {
+    "linked_after_segmentation",
+    "plausible_link_needs_human_review",
+    "no_structured_corpus_match_found",
+    "too_noisy_to_link",
 }
 NON_EXTRACTIVE_SOURCE_ROLES = {
     "catalogue_or_list_witness",
@@ -3217,8 +3280,10 @@ def validate_corpus_citation_workflow(
     extracted_source_text_unit_rows: list[dict[str, str]],
     sip_cross_reference_rows: list[dict[str, str]],
     sip_witness_unit_rows: list[dict[str, str]],
+    sip_inscription_witness_rows: list[dict[str, str]],
     sip_link_review_rows: list[dict[str, str]],
     sip_text_comparison_rows: list[dict[str, str]],
+    sip_unlinked_review_rows: list[dict[str, str]],
     summary: dict[str, object],
 ) -> list[str]:
     errors: list[str] = []
@@ -3465,19 +3530,71 @@ def validate_corpus_citation_workflow(
         if row.get("link_confidence") == "high" and not row.get("linked_inscription_id"):
             errors.append(f"SIP high-confidence witness unit {witness_unit_id} lacks linked_inscription_id.")
 
+    for row in sip_text_comparison_rows:
+        if row.get("comparison_status") not in SIP_TEXT_COMPARISON_STATUSES:
+            errors.append(
+                f"SIP witness-text comparison row {row.get('sip_ref', '<unknown>')} has invalid comparison_status '{row.get('comparison_status', '')}'."
+            )
+
+    sip_inscription_ids: set[str] = set()
+    for row in sip_inscription_witness_rows:
+        unit_id = row.get("sip_inscription_unit_id", "<unknown>")
+        sip_inscription_ids.add(unit_id)
+        if not row.get("parent_witness_unit_id"):
+            errors.append(f"SIP inscription witness unit {unit_id} is missing parent_witness_unit_id.")
+        elif row.get("parent_witness_unit_id") not in sip_witness_ids:
+            errors.append(
+                f"SIP inscription witness unit {unit_id} points to unknown parent_witness_unit_id '{row.get('parent_witness_unit_id', '')}'."
+            )
+        if row.get("citation_target_id") not in target_ids:
+            errors.append(
+                f"SIP inscription witness unit {unit_id} links to unknown citation_target_id '{row.get('citation_target_id', '')}'."
+            )
+        if not row.get("matched_local_file_id"):
+            errors.append(f"SIP inscription witness unit {unit_id} is missing matched_local_file_id.")
+        if row.get("unit_type") not in SIP_WITNESS_UNIT_TYPES:
+            errors.append(
+                f"SIP inscription witness unit {unit_id} has invalid unit_type '{row.get('unit_type', '')}'."
+            )
+        if row.get("ocr_quality") not in SIP_WITNESS_OCR_QUALITIES:
+            errors.append(
+                f"SIP inscription witness unit {unit_id} has invalid ocr_quality '{row.get('ocr_quality', '')}'."
+            )
+        if row.get("segmentation_confidence") not in SIP_SEGMENTATION_CONFIDENCE_LEVELS:
+            errors.append(
+                f"SIP inscription witness unit {unit_id} has invalid segmentation_confidence '{row.get('segmentation_confidence', '')}'."
+            )
+        if row.get("review_status") not in SIP_INSCRIPTION_WITNESS_REVIEW_STATUSES:
+            errors.append(
+                f"SIP inscription witness unit {unit_id} has invalid review_status '{row.get('review_status', '')}'."
+            )
+        if row.get("cleaned_witness_text") and not row.get("raw_ocr_text"):
+            errors.append(f"SIP inscription witness unit {unit_id} has cleaned_witness_text without raw_ocr_text.")
+        if row.get("review_status") == "accepted_inscription_witness" and (
+            not row.get("linked_corpus_record_id") or not row.get("linked_inscription_id")
+        ):
+            errors.append(
+                f"SIP accepted inscription witness unit {unit_id} lacks linked_corpus_record_id or linked_inscription_id."
+            )
+        if row.get("review_status") == "rejected_ocr_noise" and row.get("linked_corpus_record_id"):
+            errors.append(f"SIP rejected_ocr_noise unit {unit_id} should not keep a corpus link.")
+
     for row in sip_link_review_rows:
         witness_unit_id = row.get("witness_unit_id", "<unknown>")
-        if witness_unit_id not in sip_witness_ids:
+        if witness_unit_id not in sip_witness_ids and witness_unit_id not in sip_inscription_ids:
             errors.append(f"SIP corpus-link review row points to unknown witness_unit_id '{witness_unit_id}'.")
         if row.get("review_decision") not in SIP_CORPUS_LINK_REVIEW_DECISIONS:
             errors.append(
                 f"SIP corpus-link review row {witness_unit_id} has invalid review_decision '{row.get('review_decision', '')}'."
             )
 
-    for row in sip_text_comparison_rows:
-        if row.get("comparison_status") not in SIP_TEXT_COMPARISON_STATUSES:
+    for row in sip_unlinked_review_rows:
+        unit_id = row.get("sip_inscription_unit_id", "<unknown>")
+        if unit_id not in sip_inscription_ids:
+            errors.append(f"SIP unlinked-review row points to unknown sip_inscription_unit_id '{unit_id}'.")
+        if row.get("unlinked_review_status") not in SIP_UNLINKED_WITNESS_REVIEW_STATUSES:
             errors.append(
-                f"SIP witness-text comparison row {row.get('sip_ref', '<unknown>')} has invalid comparison_status '{row.get('comparison_status', '')}'."
+                f"SIP unlinked-review row {unit_id} has invalid unlinked_review_status '{row.get('unlinked_review_status', '')}'."
             )
 
     expected_summary = {
@@ -3533,21 +3650,41 @@ def validate_corpus_citation_workflow(
         "sip_cross_reference_target_count": len(sip_cross_reference_rows),
         "sip_extracted_unit_count": len(read_tsv(SIP_EXTRACTED_UNITS_PATH)),
         "sip_witness_unit_count": len(sip_witness_unit_rows),
+        "sip_parent_witness_unit_count": len(sip_witness_unit_rows),
+        "sip_inscription_witness_unit_count": len(sip_inscription_witness_rows),
         "sip_accepted_witness_unit_count": sum(
             1 for row in sip_witness_unit_rows if row.get("review_status") == "accepted_witness_unit"
+        ),
+        "sip_accepted_inscription_witness_count": sum(
+            1 for row in sip_inscription_witness_rows if row.get("review_status") == "accepted_inscription_witness"
         ),
         "sip_units_needing_text_cleanup_count": sum(
             1 for row in sip_witness_unit_rows if row.get("review_status") == "needs_text_cleanup"
         ),
+        "sip_inscription_units_needing_text_cleanup_count": sum(
+            1 for row in sip_inscription_witness_rows if row.get("review_status") == "needs_text_cleanup"
+        ),
         "sip_units_needing_link_review_count": sum(
             1 for row in sip_witness_unit_rows if row.get("review_status") == "needs_link_review"
+        ),
+        "sip_inscription_units_needing_segmentation_review_count": sum(
+            1 for row in sip_inscription_witness_rows if row.get("review_status") == "needs_segmentation_review"
+        ),
+        "sip_inscription_units_needing_link_review_count": sum(
+            1 for row in sip_inscription_witness_rows if row.get("review_status") == "needs_link_review"
         ),
         "sip_rejected_ocr_noise_count": sum(
             1 for row in sip_witness_unit_rows if row.get("review_status") == "rejected_ocr_noise"
         ),
+        "sip_unlinked_witness_unit_count": sum(
+            1 for row in sip_inscription_witness_rows if not row.get("linked_corpus_record_id")
+        ),
+        "sip_units_too_noisy_to_link_count": sum(
+            1 for row in sip_unlinked_review_rows if row.get("unlinked_review_status") == "too_noisy_to_link"
+        ),
         "sip_high_confidence_link_count": sum(
             1
-            for row in sip_witness_unit_rows
+            for row in sip_inscription_witness_rows
             if row.get("link_confidence") == "high"
             and row.get("linked_corpus_record_id")
             and row.get("linked_inscription_id")
@@ -3614,6 +3751,8 @@ def validate_jbrs_workflow() -> list[str]:
         SIP_WITNESS_UNITS_PATH,
         SIP_CORPUS_LINK_REVIEW_PATH,
         SIP_WITNESS_TEXT_COMPARISON_PATH,
+        SIP_INSCRIPTION_WITNESS_UNITS_PATH,
+        SIP_UNLINKED_WITNESS_REVIEW_PATH,
         MISSING_HIGH_VALUE_SOURCES_PATH,
         JBRS_PILOT_SUMMARY_PATH,
         JBRS_README_PATH,
@@ -3664,8 +3803,10 @@ def validate_jbrs_workflow() -> list[str]:
     citation_ocr_queue_rows = read_tsv(CORPUS_CITED_SOURCE_OCR_QUEUE_PATH)
     sip_cross_reference_rows = read_tsv(SIP_CROSS_REFERENCE_TARGETS_PATH)
     sip_witness_unit_rows = read_tsv(SIP_WITNESS_UNITS_PATH)
+    sip_inscription_witness_rows = read_tsv(SIP_INSCRIPTION_WITNESS_UNITS_PATH)
     sip_link_review_rows = read_tsv(SIP_CORPUS_LINK_REVIEW_PATH)
     sip_text_comparison_rows = read_tsv(SIP_WITNESS_TEXT_COMPARISON_PATH)
+    sip_unlinked_review_rows = read_tsv(SIP_UNLINKED_WITNESS_REVIEW_PATH)
     citation_workflow_summary = json.loads(CORPUS_CITATION_WORKFLOW_SUMMARY_PATH.read_text(encoding="utf-8"))
     summary = json.loads(JBRS_PILOT_SUMMARY_PATH.read_text(encoding="utf-8"))
     readme_text = JBRS_README_PATH.read_text(encoding="utf-8")
@@ -3930,8 +4071,10 @@ def validate_jbrs_workflow() -> list[str]:
             extracted_source_text_unit_rows=extracted_source_text_unit_rows,
             sip_cross_reference_rows=sip_cross_reference_rows,
             sip_witness_unit_rows=sip_witness_unit_rows,
+            sip_inscription_witness_rows=sip_inscription_witness_rows,
             sip_link_review_rows=sip_link_review_rows,
             sip_text_comparison_rows=sip_text_comparison_rows,
+            sip_unlinked_review_rows=sip_unlinked_review_rows,
             summary=citation_workflow_summary,
         )
     )

@@ -10,5 +10,6 @@
 - **Segmentation strategy**:
   1. Keep the title page, preface, and contents as commentary/catalogue context.
   2. Use the IOB-derived `sip_cross_reference_targets.tsv` rows as the extraction spine.
-  3. Extract one SIP unit per cited SIP page range, linking only the rows that already have high-confidence corpus links through the IOB concordance.
-  4. Leave uncertain SIP references and noisy/end-matter artifacts marked for manual review.
+  3. Keep `sip_witness_units.tsv` as the parent page-range witness layer.
+  4. Split those parent ranges into inscription-level units in `sip_inscription_witness_units.tsv` wherever OCR headings make that possible.
+  5. Link only the inscription-level subunits that can be aligned confidently through exact SIP citation evidence or strong text overlap with the structured corpus.

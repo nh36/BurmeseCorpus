@@ -60,8 +60,10 @@ from jbrs_workflow_common import (
     SIP_CROSS_REFERENCE_TARGETS_PATH,
     SIP_CORPUS_LINK_REVIEW_PATH,
     SIP_EXTRACTED_UNITS_PATH,
+    SIP_INSCRIPTION_WITNESS_UNITS_PATH,
     SIP_EXTRACTION_NOTES_PATH,
     SIP_LINKED_SAMPLE_REVIEW_PATH,
+    SIP_UNLINKED_WITNESS_REVIEW_PATH,
     SIP_WITNESS_TEXT_COMPARISON_PATH,
     SIP_WITNESS_UNITS_PATH,
     TN_SOURCE_HUNT_PATH,
@@ -115,8 +117,10 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
         cls.sip_cross_reference_rows = read_tsv(SIP_CROSS_REFERENCE_TARGETS_PATH) if SIP_CROSS_REFERENCE_TARGETS_PATH.exists() else []
         cls.sip_extracted_unit_rows = read_tsv(SIP_EXTRACTED_UNITS_PATH) if SIP_EXTRACTED_UNITS_PATH.exists() else []
         cls.sip_witness_unit_rows = read_tsv(SIP_WITNESS_UNITS_PATH) if SIP_WITNESS_UNITS_PATH.exists() else []
+        cls.sip_inscription_witness_rows = read_tsv(SIP_INSCRIPTION_WITNESS_UNITS_PATH) if SIP_INSCRIPTION_WITNESS_UNITS_PATH.exists() else []
         cls.sip_link_review_rows = read_tsv(SIP_CORPUS_LINK_REVIEW_PATH) if SIP_CORPUS_LINK_REVIEW_PATH.exists() else []
         cls.sip_text_comparison_rows = read_tsv(SIP_WITNESS_TEXT_COMPARISON_PATH) if SIP_WITNESS_TEXT_COMPARISON_PATH.exists() else []
+        cls.sip_unlinked_review_rows = read_tsv(SIP_UNLINKED_WITNESS_REVIEW_PATH) if SIP_UNLINKED_WITNESS_REVIEW_PATH.exists() else []
         cls.ocr_text_index_rows = read_tsv(JBRS_OCR_TEXT_INDEX_PATH)
         cls.ocr_translation_hit_rows = read_tsv(JBRS_OCR_TRANSLATION_HIT_INDEX_PATH)
         cls.ocr_top_candidate_rows = read_tsv(JBRS_OCR_TOP_EXTRACTION_CANDIDATES_PATH)
@@ -161,11 +165,13 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
             PPA_SOURCE_HUNT_PATH,
             SIP_CROSS_REFERENCE_TARGETS_PATH,
             SIP_EXTRACTED_UNITS_PATH,
+            SIP_INSCRIPTION_WITNESS_UNITS_PATH,
             SIP_EXTRACTION_NOTES_PATH,
             SIP_LINKED_SAMPLE_REVIEW_PATH,
             SIP_WITNESS_UNITS_PATH,
             SIP_CORPUS_LINK_REVIEW_PATH,
             SIP_WITNESS_TEXT_COMPARISON_PATH,
+            SIP_UNLINKED_WITNESS_REVIEW_PATH,
             MISSING_HIGH_VALUE_SOURCES_PATH,
             JBRS_OCR_TEXT_INDEX_PATH,
             JBRS_OCR_TRANSLATION_HIT_INDEX_PATH,
@@ -401,14 +407,18 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
         self.assertGreaterEqual(len(self.sip_witness_unit_rows), 10)
         self.assertGreaterEqual(sum(1 for row in self.sip_witness_unit_rows if row["linked_corpus_record_id"]), 5)
         self.assertTrue(any(row["unit_type"] == "source_text" for row in self.sip_witness_unit_rows))
-        self.assertTrue(any(row["review_status"] == "accepted_witness_unit" for row in self.sip_witness_unit_rows))
+        self.assertGreaterEqual(len(self.sip_inscription_witness_rows), len(self.sip_witness_unit_rows))
+        self.assertTrue(any(row["review_status"] == "accepted_inscription_witness" for row in self.sip_inscription_witness_rows))
         self.assertTrue(all(row["citation_target_id"] and row["matched_local_file_id"] for row in self.sip_witness_unit_rows))
         self.assertTrue(all(row["raw_ocr_text"] for row in self.sip_witness_unit_rows))
         self.assertTrue(all(row["cleaned_witness_text"] for row in self.sip_witness_unit_rows))
+        self.assertTrue(all(row["parent_witness_unit_id"] for row in self.sip_inscription_witness_rows))
+        self.assertTrue(all(row["raw_ocr_text"] for row in self.sip_inscription_witness_rows))
 
     def test_sip_witness_link_review_and_comparison_outputs_are_populated(self) -> None:
         self.assertGreaterEqual(len(self.sip_link_review_rows), 10)
         self.assertGreaterEqual(len(self.sip_text_comparison_rows), 5)
+        self.assertGreaterEqual(len(self.sip_unlinked_review_rows), 5)
         self.assertTrue(
             all(
                 row["review_decision"] in {
@@ -432,6 +442,17 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
                 for row in self.sip_text_comparison_rows
             )
         )
+        self.assertTrue(
+            all(
+                row["unlinked_review_status"] in {
+                    "linked_after_segmentation",
+                    "plausible_link_needs_human_review",
+                    "no_structured_corpus_match_found",
+                    "too_noisy_to_link",
+                }
+                for row in self.sip_unlinked_review_rows
+            )
+        )
 
     def test_sip_summary_counts_match_artifacts(self) -> None:
         self.assertEqual(
@@ -447,12 +468,40 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
             len(self.sip_witness_unit_rows),
         )
         self.assertEqual(
+            self.citation_workflow_summary["sip_parent_witness_unit_count"],
+            len(self.sip_witness_unit_rows),
+        )
+        self.assertEqual(
+            self.citation_workflow_summary["sip_inscription_witness_unit_count"],
+            len(self.sip_inscription_witness_rows),
+        )
+        self.assertEqual(
             self.citation_workflow_summary["sip_high_confidence_link_count"],
             sum(
                 1
-                for row in self.sip_witness_unit_rows
+                for row in self.sip_inscription_witness_rows
                 if row["link_confidence"] == "high" and row["linked_corpus_record_id"] and row["linked_inscription_id"]
             ),
+        )
+        self.assertEqual(
+            self.citation_workflow_summary["sip_accepted_inscription_witness_count"],
+            sum(1 for row in self.sip_inscription_witness_rows if row["review_status"] == "accepted_inscription_witness"),
+        )
+        self.assertEqual(
+            self.citation_workflow_summary["sip_inscription_units_needing_text_cleanup_count"],
+            sum(1 for row in self.sip_inscription_witness_rows if row["review_status"] == "needs_text_cleanup"),
+        )
+        self.assertEqual(
+            self.citation_workflow_summary["sip_inscription_units_needing_segmentation_review_count"],
+            sum(1 for row in self.sip_inscription_witness_rows if row["review_status"] == "needs_segmentation_review"),
+        )
+        self.assertEqual(
+            self.citation_workflow_summary["sip_inscription_units_needing_link_review_count"],
+            sum(1 for row in self.sip_inscription_witness_rows if row["review_status"] == "needs_link_review"),
+        )
+        self.assertEqual(
+            self.citation_workflow_summary["sip_unlinked_witness_unit_count"],
+            sum(1 for row in self.sip_inscription_witness_rows if not row["linked_corpus_record_id"]),
         )
         self.assertEqual(
             self.citation_workflow_summary["sip_corpus_text_comparison_count"],
