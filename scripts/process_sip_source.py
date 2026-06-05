@@ -20,6 +20,8 @@ from jbrs_workflow_common import (
     SIP_CORPUS_LINK_REVIEW_PATH,
     SIP_ACCEPTED_WITNESS_UNIT_FIELDS,
     SIP_ACCEPTED_WITNESS_UNITS_PATH,
+    SIP_ACCEPTED_WITNESS_REVIEW_FIELDS,
+    SIP_ACCEPTED_WITNESS_REVIEW_PATH,
     SIP_CROSS_REFERENCE_TARGET_FIELDS,
     SIP_CROSS_REFERENCE_TARGETS_PATH,
     SIP_EXTRACTED_UNITS_PATH,
@@ -898,6 +900,45 @@ def comparison_by_unit_id(rows: list[dict[str, str]]) -> dict[str, dict[str, str
     return mapping
 
 
+def refine_accepted_export_text(text: str) -> tuple[str, list[str]]:
+    removed: list[str] = []
+    kept_lines: list[str] = []
+    for line in text.splitlines():
+        stripped = line.strip()
+        if not stripped:
+            kept_lines.append("")
+            continue
+        if re.fullmatch(r"\[\[(?:SIP|OCR) page [^\]]+\]\]", stripped):
+            removed.append(stripped)
+            continue
+        if re.fullmatch(r"[0-9]+", stripped):
+            removed.append(stripped)
+            continue
+        kept_lines.append(line.rstrip())
+    return "\n".join(kept_lines).strip(), removed
+
+
+def accepted_export_qc_status(cleaned_text: str, removed_artifacts: list[str]) -> str:
+    if "[unclear]" in cleaned_text:
+        return "clean_with_unclear_markers"
+    if re.search(r"\[\[(?:SIP|OCR) page", cleaned_text):
+        return "contains_possible_page_artifact"
+    if removed_artifacts:
+        return "clean_for_review"
+    return "clean_for_review"
+
+
+def accepted_export_qc_notes(removed_artifacts: list[str], cleaned_text: str) -> str:
+    notes: list[str] = []
+    if removed_artifacts:
+        notes.append(f"Removed obvious page artifacts: {', '.join(removed_artifacts)}")
+    if "[unclear]" in cleaned_text:
+        notes.append("Cleaned text retains explicit [unclear] markers.")
+    if not notes:
+        notes.append("No obvious wrapper or page-number artifacts detected.")
+    return " | ".join(notes)
+
+
 def build_accepted_witness_export_rows(
     inscription_rows: list[dict[str, str]],
     comparison_rows: list[dict[str, str]],
@@ -910,6 +951,9 @@ def build_accepted_witness_export_rows(
     for row in inscription_rows:
         if row["review_status"] != "accepted_inscription_witness":
             continue
+        cleaned_text, removed_artifacts = refine_accepted_export_text(row["cleaned_witness_text"])
+        qc_status = accepted_export_qc_status(cleaned_text, removed_artifacts)
+        qc_notes = accepted_export_qc_notes(removed_artifacts, cleaned_text)
         comparison_row = comparison_by_key.get(
             (row["linked_corpus_record_id"], row["sip_ref"], row["iob_plate"]),
             {},
@@ -934,13 +978,15 @@ def build_accepted_witness_export_rows(
                 "unit_type": row["unit_type"],
                 "language": row["language"],
                 "raw_ocr_text": row["raw_ocr_text"],
-                "cleaned_witness_text": row["cleaned_witness_text"],
+                "cleaned_witness_text": cleaned_text,
                 "ocr_quality": row["ocr_quality"],
                 "segmentation_confidence": row["segmentation_confidence"],
                 "link_confidence": row["link_confidence"],
                 "link_basis": row["link_basis"],
                 "corpus_text_snippet": comparison_row.get("corpus_text_snippet", ""),
                 "comparison_status": comparison_row.get("comparison_status", ""),
+                "accepted_export_qc_status": qc_status,
+                "accepted_export_qc_notes": qc_notes,
                 "notes": row["notes"],
             }
         )
@@ -950,17 +996,38 @@ def build_accepted_witness_export_rows(
 def recommended_action(row: dict[str, str], unlinked_row: dict[str, str]) -> str:
     if row["review_status"] == "rejected_ocr_noise" or unlinked_row.get("unlinked_review_status") == "too_noisy_to_link":
         return "ignore_ocr_noise"
-    if row["review_status"] == "needs_segmentation_review":
-        return "inspect_source_page"
+    if unlinked_row.get("candidate_corpus_record_ids"):
+        return "check_candidate_corpus_record"
     if row.get("list_ref"):
-        return "search_structured_corpus_by_list_ref"
-    if row.get("detected_entry_title"):
-        return "search_structured_corpus_by_title"
-    if row.get("detected_entry_location"):
-        return "search_structured_corpus_by_location"
+        return "compare_with_list_ref"
     if row.get("iob_plate"):
-        return "check_against_iob_plate"
-    return "defer_until_ppa_or_tn_available"
+        return "compare_with_iob_plate"
+    if row.get("ppa_ref") or row.get("tn_ref"):
+        return "defer_until_ppa_or_tn_available"
+    return "inspect_source_page"
+
+
+def candidate_basis_for_row(row: dict[str, str], unlinked_row: dict[str, str]) -> str:
+    bits: list[str] = []
+    if unlinked_row.get("candidate_corpus_record_ids"):
+        bits.append("local candidate ids from SIP-to-corpus cross-reference search")
+    if row.get("list_ref"):
+        bits.append(f"list ref {row['list_ref']}")
+    if row.get("iob_plate"):
+        bits.append(f"IOB plate {row['iob_plate']}")
+    if row.get("ppa_ref"):
+        bits.append(f"PPA ref {row['ppa_ref']}")
+    if row.get("tn_ref"):
+        bits.append(f"TN ref {row['tn_ref']}")
+    if row.get("detected_entry_title"):
+        bits.append(f"title {row['detected_entry_title']}")
+    if row.get("detected_entry_location"):
+        bits.append(f"location {row['detected_entry_location']}")
+    if unlinked_row.get("basis"):
+        bits.append(unlinked_row["basis"])
+    if row.get("link_basis"):
+        bits.append(row["link_basis"])
+    return merge_note_bits(*bits)
 
 
 def build_manual_review_packet_rows(
@@ -986,6 +1053,7 @@ def build_manual_review_packet_rows(
                 if inscription_by_record_id.get(record_id, {}).get("inscription_id", "")
             }
         )
+        candidate_basis = candidate_basis_for_row(row, unlinked_row)
         rows.append(
             {
                 "sip_inscription_unit_id": row["sip_inscription_unit_id"],
@@ -1002,11 +1070,44 @@ def build_manual_review_packet_rows(
                 "cleaned_witness_text_snippet": snippet(row["cleaned_witness_text"]),
                 "candidate_corpus_record_ids": unlinked_row.get("candidate_corpus_record_ids", ""),
                 "candidate_inscription_ids": " | ".join(candidate_inscription_ids),
+                "candidate_basis": candidate_basis,
                 "current_review_status": row["review_status"],
                 "unlinked_review_status": unlinked_row.get("unlinked_review_status", ""),
                 "reason_for_review": merge_note_bits(row["notes"], unlinked_row.get("basis", ""), unlinked_row.get("notes", "")),
                 "recommended_human_action": recommended_action(row, unlinked_row),
                 "notes": merge_note_bits(row["link_basis"], unlinked_row.get("basis", "")),
+            }
+        )
+    return rows
+
+
+def build_accepted_review_rows(accepted_export_rows: list[dict[str, str]]) -> list[dict[str, str]]:
+    rows: list[dict[str, str]] = []
+    for row in accepted_export_rows:
+        review_question = "confirm_text_alignment"
+        if row["accepted_export_qc_status"] == "contains_possible_page_artifact" or row["accepted_export_qc_notes"].startswith(
+            "Removed obvious page artifacts"
+        ):
+            review_question = "check_possible_page_artifact"
+        elif row["comparison_status"] == "corpus_text_present_sip_differs":
+            review_question = "compare_variant_readings"
+        elif row["comparison_status"] == "corpus_text_absent_sip_supplies_candidate":
+            review_question = "verify_title_or_entry_number"
+        rows.append(
+            {
+                "sip_inscription_unit_id": row["sip_inscription_unit_id"],
+                "sip_ref": row["sip_ref"],
+                "iob_plate": row["iob_plate"],
+                "detected_entry_number": row["detected_entry_number"],
+                "detected_entry_title": row["detected_entry_title"],
+                "linked_inscription_id": row["linked_inscription_id"],
+                "linked_corpus_record_id": row["linked_corpus_record_id"],
+                "cleaned_witness_text_snippet": snippet(row["cleaned_witness_text"]),
+                "corpus_text_snippet": row["corpus_text_snippet"],
+                "comparison_status": row["comparison_status"],
+                "accepted_export_qc_status": row["accepted_export_qc_status"],
+                "review_question": review_question,
+                "notes": merge_note_bits(row["accepted_export_qc_notes"], row["notes"]),
             }
         )
     return rows
@@ -1217,12 +1318,14 @@ def main() -> None:
     unlinked_review_rows = build_unlinked_review_rows(inscription_rows, citation_map, sip_targets, inscription_by_record_id)
     accepted_export_rows = build_accepted_witness_export_rows(inscription_rows, comparison_rows)
     manual_review_packet_rows = build_manual_review_packet_rows(inscription_rows, unlinked_review_rows, inscription_by_record_id)
+    accepted_review_rows = build_accepted_review_rows(accepted_export_rows)
     write_tsv(SIP_WITNESS_UNITS_PATH, witness_rows, SIP_WITNESS_UNIT_FIELDS)
     write_tsv(SIP_INSCRIPTION_WITNESS_UNITS_PATH, inscription_rows, SIP_INSCRIPTION_WITNESS_UNIT_FIELDS)
     write_tsv(SIP_CORPUS_LINK_REVIEW_PATH, link_review_rows, SIP_CORPUS_LINK_REVIEW_FIELDS)
     write_tsv(SIP_WITNESS_TEXT_COMPARISON_PATH, comparison_rows, SIP_WITNESS_TEXT_COMPARISON_FIELDS)
     write_tsv(SIP_UNLINKED_WITNESS_REVIEW_PATH, unlinked_review_rows, SIP_UNLINKED_WITNESS_REVIEW_FIELDS)
     write_tsv(SIP_ACCEPTED_WITNESS_UNITS_PATH, accepted_export_rows, SIP_ACCEPTED_WITNESS_UNIT_FIELDS)
+    write_tsv(SIP_ACCEPTED_WITNESS_REVIEW_PATH, accepted_review_rows, SIP_ACCEPTED_WITNESS_REVIEW_FIELDS)
     write_tsv(SIP_MANUAL_REVIEW_PACKET_PATH, manual_review_packet_rows, SIP_MANUAL_REVIEW_PACKET_FIELDS)
     write_tsv(
         SIP_LINKED_SAMPLE_REVIEW_PATH,

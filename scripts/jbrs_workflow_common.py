@@ -88,6 +88,7 @@ SIP_WITNESS_TEXT_COMPARISON_PATH = BIBLIOGRAPHY_DIRECTORY / "sip_witness_text_co
 SIP_INSCRIPTION_WITNESS_UNITS_PATH = BIBLIOGRAPHY_DIRECTORY / "sip_inscription_witness_units.tsv"
 SIP_UNLINKED_WITNESS_REVIEW_PATH = BIBLIOGRAPHY_DIRECTORY / "sip_unlinked_witness_review.tsv"
 SIP_ACCEPTED_WITNESS_UNITS_PATH = BIBLIOGRAPHY_DIRECTORY / "sip_accepted_witness_units.tsv"
+SIP_ACCEPTED_WITNESS_REVIEW_PATH = BIBLIOGRAPHY_DIRECTORY / "sip_accepted_witness_review.tsv"
 SIP_MANUAL_REVIEW_PACKET_PATH = BIBLIOGRAPHY_DIRECTORY / "sip_manual_review_packet.tsv"
 MISSING_HIGH_VALUE_SOURCES_PATH = BIBLIOGRAPHY_DIRECTORY / "missing_high_value_sources.md"
 MAX_GITHUB_CONTENTS_SIZE = 1_000_000
@@ -875,6 +876,24 @@ SIP_ACCEPTED_WITNESS_UNIT_FIELDS = [
     "link_basis",
     "corpus_text_snippet",
     "comparison_status",
+    "accepted_export_qc_status",
+    "accepted_export_qc_notes",
+    "notes",
+]
+
+SIP_ACCEPTED_WITNESS_REVIEW_FIELDS = [
+    "sip_inscription_unit_id",
+    "sip_ref",
+    "iob_plate",
+    "detected_entry_number",
+    "detected_entry_title",
+    "linked_inscription_id",
+    "linked_corpus_record_id",
+    "cleaned_witness_text_snippet",
+    "corpus_text_snippet",
+    "comparison_status",
+    "accepted_export_qc_status",
+    "review_question",
     "notes",
 ]
 
@@ -893,6 +912,7 @@ SIP_MANUAL_REVIEW_PACKET_FIELDS = [
     "cleaned_witness_text_snippet",
     "candidate_corpus_record_ids",
     "candidate_inscription_ids",
+    "candidate_basis",
     "current_review_status",
     "unlinked_review_status",
     "reason_for_review",
@@ -997,6 +1017,13 @@ SIP_CORPUS_LINK_REVIEW_DECISIONS = {
     "reject_link",
     "needs_human_review",
 }
+
+SIP_ACCEPTED_EXPORT_QC_STATUSES = {
+    "clean_for_review",
+    "clean_with_unclear_markers",
+    "contains_possible_page_artifact",
+    "needs_human_text_check",
+}
 SIP_TEXT_COMPARISON_STATUSES = {
     "corpus_text_present_sip_confirms",
     "corpus_text_present_sip_differs",
@@ -1020,11 +1047,10 @@ SIP_UNLINKED_WITNESS_REVIEW_STATUSES = {
     "too_noisy_to_link",
 }
 SIP_MANUAL_REVIEW_ACTIONS = {
+    "check_candidate_corpus_record",
+    "compare_with_iob_plate",
+    "compare_with_list_ref",
     "inspect_source_page",
-    "check_against_iob_plate",
-    "search_structured_corpus_by_title",
-    "search_structured_corpus_by_list_ref",
-    "search_structured_corpus_by_location",
     "defer_until_ppa_or_tn_available",
     "ignore_ocr_noise",
 }
@@ -3347,6 +3373,7 @@ def validate_corpus_citation_workflow(
     sip_text_comparison_rows: list[dict[str, str]],
     sip_unlinked_review_rows: list[dict[str, str]],
     sip_accepted_export_rows: list[dict[str, str]],
+    sip_accepted_review_rows: list[dict[str, str]],
     sip_manual_review_rows: list[dict[str, str]],
     summary: dict[str, object],
 ) -> list[str]:
@@ -3662,6 +3689,7 @@ def validate_corpus_citation_workflow(
             )
 
     inscription_by_id = {row["sip_inscription_unit_id"]: row for row in sip_inscription_witness_rows if row.get("sip_inscription_unit_id")}
+    accepted_export_by_id = {row.get("sip_inscription_unit_id", ""): row for row in sip_accepted_export_rows if row.get("sip_inscription_unit_id")}
     for row in sip_accepted_export_rows:
         unit_id = row.get("sip_inscription_unit_id", "<unknown>")
         source_row = inscription_by_id.get(unit_id)
@@ -3670,10 +3698,51 @@ def validate_corpus_citation_workflow(
             continue
         if source_row.get("review_status") != "accepted_inscription_witness":
             errors.append(f"SIP accepted export row {unit_id} does not come from an accepted_inscription_witness source row.")
-        if not row.get("linked_inscription_id") or not row.get("linked_corpus_record_id"):
-            errors.append(f"SIP accepted export row {unit_id} lacks linked_inscription_id or linked_corpus_record_id.")
+        if row.get("accepted_export_qc_status") not in SIP_ACCEPTED_EXPORT_QC_STATUSES:
+            errors.append(
+                f"SIP accepted export row {unit_id} has invalid accepted_export_qc_status '{row.get('accepted_export_qc_status', '')}'."
+            )
+        if "[[SIP page" in row.get("cleaned_witness_text", ""):
+            errors.append(f"SIP accepted export row {unit_id} still contains a SIP page wrapper in cleaned_witness_text.")
         if row.get("cleaned_witness_text") and not row.get("raw_ocr_text"):
             errors.append(f"SIP accepted export row {unit_id} has cleaned_witness_text without raw_ocr_text.")
+        if not row.get("linked_inscription_id") or not row.get("linked_corpus_record_id"):
+            errors.append(f"SIP accepted export row {unit_id} lacks linked_inscription_id or linked_corpus_record_id.")
+    accepted_review_by_id = {row.get("sip_inscription_unit_id", ""): row for row in sip_accepted_review_rows if row.get("sip_inscription_unit_id")}
+    if set(accepted_review_by_id) != set(accepted_export_by_id):
+        missing_review_ids = sorted(set(accepted_export_by_id) - set(accepted_review_by_id))
+        extra_review_ids = sorted(set(accepted_review_by_id) - set(accepted_export_by_id))
+        if missing_review_ids:
+            errors.append(
+                "SIP accepted-review rows are missing accepted-export IDs: " + ", ".join(missing_review_ids)
+            )
+        if extra_review_ids:
+            errors.append(
+                "SIP accepted-review rows include non-accepted-export IDs: " + ", ".join(extra_review_ids)
+            )
+    for row in sip_accepted_review_rows:
+        unit_id = row.get("sip_inscription_unit_id", "<unknown>")
+        source_row = accepted_export_by_id.get(unit_id)
+        if not source_row:
+            errors.append(f"SIP accepted-review row points to unknown sip_inscription_unit_id '{unit_id}'.")
+            continue
+        if row.get("accepted_export_qc_status") not in SIP_ACCEPTED_EXPORT_QC_STATUSES:
+            errors.append(
+                f"SIP accepted-review row {unit_id} has invalid accepted_export_qc_status '{row.get('accepted_export_qc_status', '')}'."
+            )
+        if row.get("review_question") not in {
+            "confirm_text_alignment",
+            "check_possible_page_artifact",
+            "compare_variant_readings",
+            "verify_title_or_entry_number",
+        }:
+            errors.append(
+                f"SIP accepted-review row {unit_id} has invalid review_question '{row.get('review_question', '')}'."
+            )
+        if row.get("comparison_status") != source_row.get("comparison_status"):
+            errors.append(f"SIP accepted-review row {unit_id} disagrees with accepted export comparison_status.")
+        if row.get("cleaned_witness_text_snippet") and not source_row.get("cleaned_witness_text"):
+            errors.append(f"SIP accepted-review row {unit_id} has a snippet without a matching accepted export text.")
 
     for row in sip_manual_review_rows:
         unit_id = row.get("sip_inscription_unit_id", "<unknown>")
@@ -3687,6 +3756,8 @@ def validate_corpus_citation_workflow(
             errors.append(
                 f"SIP manual-review packet row {unit_id} has invalid recommended_human_action '{row.get('recommended_human_action', '')}'."
             )
+        if row.get("candidate_basis") == "":
+            errors.append(f"SIP manual-review packet row {unit_id} is missing candidate_basis.")
 
     expected_summary = {
         "citation_inventory_count": len(inventory_rows),
@@ -3750,6 +3821,15 @@ def validate_corpus_citation_workflow(
             1 for row in sip_inscription_witness_rows if row.get("review_status") == "accepted_inscription_witness"
         ),
         "sip_accepted_witness_export_count": len(sip_accepted_export_rows),
+        "sip_accepted_export_qc_clean_count": sum(
+            1 for row in sip_accepted_export_rows if row.get("accepted_export_qc_status") == "clean_for_review"
+        ),
+        "sip_accepted_export_qc_unclear_count": sum(
+            1 for row in sip_accepted_export_rows if row.get("accepted_export_qc_status") == "clean_with_unclear_markers"
+        ),
+        "sip_accepted_export_qc_needs_human_text_check_count": sum(
+            1 for row in sip_accepted_export_rows if row.get("accepted_export_qc_status") == "needs_human_text_check"
+        ),
         "sip_units_needing_text_cleanup_count": sum(
             1 for row in sip_witness_unit_rows if row.get("review_status") == "needs_text_cleanup"
         ),
@@ -3777,6 +3857,12 @@ def validate_corpus_citation_workflow(
         "sip_manual_review_packet_count": len(sip_manual_review_rows),
         "sip_manual_review_candidate_link_count": sum(
             1 for row in sip_manual_review_rows if row.get("candidate_corpus_record_ids")
+        ),
+        "sip_manual_review_rows_with_candidate_ids_count": sum(
+            1 for row in sip_manual_review_rows if row.get("candidate_corpus_record_ids")
+        ),
+        "sip_manual_review_rows_without_candidate_ids_count": sum(
+            1 for row in sip_manual_review_rows if not row.get("candidate_corpus_record_ids")
         ),
         "sip_unlinked_no_match_count": sum(
             1 for row in sip_unlinked_review_rows if row.get("unlinked_review_status") == "no_structured_corpus_match_found"
@@ -3856,6 +3942,7 @@ def validate_jbrs_workflow() -> list[str]:
         SIP_INSCRIPTION_WITNESS_UNITS_PATH,
         SIP_UNLINKED_WITNESS_REVIEW_PATH,
         SIP_ACCEPTED_WITNESS_UNITS_PATH,
+        SIP_ACCEPTED_WITNESS_REVIEW_PATH,
         SIP_MANUAL_REVIEW_PACKET_PATH,
         MISSING_HIGH_VALUE_SOURCES_PATH,
         JBRS_PILOT_SUMMARY_PATH,
@@ -3912,6 +3999,7 @@ def validate_jbrs_workflow() -> list[str]:
     sip_text_comparison_rows = read_tsv(SIP_WITNESS_TEXT_COMPARISON_PATH)
     sip_unlinked_review_rows = read_tsv(SIP_UNLINKED_WITNESS_REVIEW_PATH)
     sip_accepted_export_rows = read_tsv(SIP_ACCEPTED_WITNESS_UNITS_PATH)
+    sip_accepted_review_rows = read_tsv(SIP_ACCEPTED_WITNESS_REVIEW_PATH)
     sip_manual_review_rows = read_tsv(SIP_MANUAL_REVIEW_PACKET_PATH)
     citation_workflow_summary = json.loads(CORPUS_CITATION_WORKFLOW_SUMMARY_PATH.read_text(encoding="utf-8"))
     summary = json.loads(JBRS_PILOT_SUMMARY_PATH.read_text(encoding="utf-8"))
@@ -4182,6 +4270,7 @@ def validate_jbrs_workflow() -> list[str]:
             sip_text_comparison_rows=sip_text_comparison_rows,
             sip_unlinked_review_rows=sip_unlinked_review_rows,
             sip_accepted_export_rows=sip_accepted_export_rows,
+            sip_accepted_review_rows=sip_accepted_review_rows,
             sip_manual_review_rows=sip_manual_review_rows,
             summary=citation_workflow_summary,
         )

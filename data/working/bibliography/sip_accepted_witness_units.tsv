@@ -1,4 +1,4 @@
-sip_inscription_unit_id	parent_witness_unit_id	source_key	citation_target_id	matched_local_file_id	sip_ref	iob_plate	list_ref	ppa_ref	tn_ref	detected_entry_number	detected_entry_title	detected_entry_location	linked_inscription_id	linked_corpus_record_id	unit_type	language	raw_ocr_text	cleaned_witness_text	ocr_quality	segmentation_confidence	link_confidence	link_basis	corpus_text_snippet	comparison_status	notes
+sip_inscription_unit_id	parent_witness_unit_id	source_key	citation_target_id	matched_local_file_id	sip_ref	iob_plate	list_ref	ppa_ref	tn_ref	detected_entry_number	detected_entry_title	detected_entry_location	linked_inscription_id	linked_corpus_record_id	unit_type	language	raw_ocr_text	cleaned_witness_text	ocr_quality	segmentation_confidence	link_confidence	link_basis	corpus_text_snippet	comparison_status	accepted_export_qc_status	accepted_export_qc_notes	notes
 sip-witness-005-seg-02	sip-witness-005	sipSelectionsPagan	corpus-citation-target-0371	luce_pemaungtin_1928_inscriptions_of_pag-da9f6d6d89b3	SIP 25-26	Plate XXIV	List 161			14	သံပျင်ရင်ကောင်ဘုရားကျောက်စာ၊ ပုဂံမင်္ဂလာစေတီမြောက်။		obi-v01-n0045	obi-v01-n0045-ob-p0073	source_text	Old Burmese/Burmese	"၁၄။ ။သံပျင်ရင်ကောင်ဘုရားကျောက်စာ၊ ပုဂံမင်္ဂလာစေတီမြောက်။
 (၁) ။ ဝ ၊သကရစ် ၅၆၄ ခုဘဿနှစ်ကု
 (၂) ဆုန်လှန် ၂ ရွက် ၅ နိယ်အာ အံမ္မပေင
@@ -22,8 +22,7 @@ sip-witness-005-seg-02	sip-witness-005	sipSelectionsPagan	corpus-citation-target
 (ဂ) အက္ခသောက္ကောင်ကိုဝ်ရှယ်အသိင်ဖွစ်သောစေသူ
 (၉) မင်ကြီကိုရေစင်တဲတိုက်လိယ်ရကာအသျှင်
 (၁၀) မင်ကြီလေရေစင်တီသွန်နွှယ်အနုမောတနာ
-(၁၁) ခပ်တပ်မူ၏ထိပ်သီုင်သောသရာဟူ
-4"	good	high	high	Best corpus-text overlap within parent sip-witness-005.	𝚘 ။ သကရစ် ၅၆၄ ခု ဘဿနှစ် ကု ဆုန်လ္ဆန် ၂ ရျက် ၅ နေိယ်အာ အံမ္မပေ င ဖုန်သွာပဲကိုဝ်၊ မင်ကြီစေယ်သူ ဖုန်တ် လှူသော ခံလှူမ္လေမ္လတ် ပ္လင်အပ ပ္လင်ပ ရွာရှေယ် မ္လေတံကာ ၃၀ တာသော ရ ေ သာ တာရကာ ၂၈ ပဲယ် ဖုန်တ် လှူ၏ ထိုဝ်သိုဝ် လှူတ်မူရကာ သ	corpus_text_present_sip_confirms	Linked through exact corpus plate citation(s): Pl. I 24. | Extracted from SIP printed pages 25-26 using the OCR page offset observed from the scanned volume. | Detected 1 inscription heading(s) inside the parent SIP witness range. | Segmented from parent sip-witness-005.
+(၁၁) ခပ်တပ်မူ၏ထိပ်သီုင်သောသရာဟူ"	good	high	high	Best corpus-text overlap within parent sip-witness-005.	𝚘 ။ သကရစ် ၅၆၄ ခု ဘဿနှစ် ကု ဆုန်လ္ဆန် ၂ ရျက် ၅ နေိယ်အာ အံမ္မပေ င ဖုန်သွာပဲကိုဝ်၊ မင်ကြီစေယ်သူ ဖုန်တ် လှူသော ခံလှူမ္လေမ္လတ် ပ္လင်အပ ပ္လင်ပ ရွာရှေယ် မ္လေတံကာ ၃၀ တာသော ရ ေ သာ တာရကာ ၂၈ ပဲယ် ဖုန်တ် လှူ၏ ထိုဝ်သိုဝ် လှူတ်မူရကာ သ	corpus_text_present_sip_confirms	clean_for_review	Removed obvious page artifacts: 4	Linked through exact corpus plate citation(s): Pl. I 24. | Extracted from SIP printed pages 25-26 using the OCR page offset observed from the scanned volume. | Detected 1 inscription heading(s) inside the parent SIP witness range. | Segmented from parent sip-witness-005.
 sip-witness-008-seg-03	sip-witness-008	sipSelectionsPagan	corpus-citation-target-0371	luce_pemaungtin_1928_inscriptions_of_pag-da9f6d6d89b3	SIP 30-32	Plate XXXVI				17	စောရဟန်းသိမ်ကျောက်စာ၊တူရွင်းတောင်။		obi-v01-n0062	obi-v01-n0062-ob-p0097	source_text	Old Burmese/Burmese	"၁၇။ ။စောရဟန်းသိမ်ကျောက်စာ၊တူရွင်းတောင်။
 (၁) ဝ။တုရင်တောင်ထက်စပ်ရဟန်သိမ်
 (၂) ပျာက်ခရကာမောင်နှတ်ဆာက်အ (ဖွယ်) အိုအိ
@@ -89,7 +88,7 @@ sip-witness-008-seg-03	sip-witness-008	sipSelectionsPagan	corpus-citation-target
 (၂၄) ်တွင်ကာက္ခံသိ ၂၀၀၊ဝထွတ်ကာအထက်
 (၂၅) သက်ခံ ၁ ထည်။အဩက်သက်ခံ ၁ ထည်။
 ၁
-(၂၆) ပျာ ၁ အို(။) သိမ်သောကာ။ဘွိုင်သတ်တျာ"	good	high	high	Best corpus-text overlap within parent sip-witness-008.	𝚘 ။ တူရင်တောင်ထက် စဝ်ရဟန်သိမ် ပျာက်ခရကာ မောင်နှုတ်ဆက် အ(မွမ်ရ) အိုအ် ပန်ဒိုသင် စာခိပိုဟ် ဤယ် ၂ ကြာရကာ၊ ပုရှာ လောင်မင် ဥိစိနာ မင်ကြီ ရ်္ဟုယ်တောင် တက်ဧ ၁ နှစ်သော ကြာရကာ၊ မင်ကြီ ပ္လု စိယ်ဟုရကာ၊ ဤယ်သိမ် ဆောက်သကာ သကရစ် ၅၇၄ ခု	corpus_text_present_sip_confirms	Linked through exact corpus plate citation(s): Pl. I 36. | Extracted from SIP printed pages 30-32 using the OCR page offset observed from the scanned volume. | Detected 2 inscription heading(s) inside the parent SIP witness range. | Segmented from parent sip-witness-008.
+(၂၆) ပျာ ၁ အို(။) သိမ်သောကာ။ဘွိုင်သတ်တျာ"	good	high	high	Best corpus-text overlap within parent sip-witness-008.	𝚘 ။ တူရင်တောင်ထက် စဝ်ရဟန်သိမ် ပျာက်ခရကာ မောင်နှုတ်ဆက် အ(မွမ်ရ) အိုအ် ပန်ဒိုသင် စာခိပိုဟ် ဤယ် ၂ ကြာရကာ၊ ပုရှာ လောင်မင် ဥိစိနာ မင်ကြီ ရ်္ဟုယ်တောင် တက်ဧ ၁ နှစ်သော ကြာရကာ၊ မင်ကြီ ပ္လု စိယ်ဟုရကာ၊ ဤယ်သိမ် ဆောက်သကာ သကရစ် ၅၇၄ ခု	corpus_text_present_sip_confirms	clean_for_review	No obvious wrapper or page-number artifacts detected.	Linked through exact corpus plate citation(s): Pl. I 36. | Extracted from SIP printed pages 30-32 using the OCR page offset observed from the scanned volume. | Detected 2 inscription heading(s) inside the parent SIP witness range. | Segmented from parent sip-witness-008.
 sip-witness-011-seg-02	sip-witness-011	sipSelectionsPagan	corpus-citation-target-0371	luce_pemaungtin_1928_inscriptions_of_pag-da9f6d6d89b3	SIP 42-44	Plate LXXIX b	List 223	PPA 237 238	TN 108 109	21	ခလေးထောင့်ကန်အရပ်၊ လေးမျက်နှာ ဘုရားကျောက်စာ၊		obi-v01-n0146	obi-v01-n0146-tx-p0246	source_text	Old Burmese/Burmese	"၂၁။ ။ခလေးထောင့်ကန်အရပ်၊ လေးမျက်နှာ ဘုရားကျောက်စာ၊
 (၁) ။သိင်အနန္တသူစကာနှပိယ်သွာမျာ စကာသဧအ်။ ကျွန်ငာမယ်ကိုဝိ
 ကာပိ
@@ -143,7 +142,7 @@ sip-witness-011-seg-02	sip-witness-011	sipSelectionsPagan	corpus-citation-target
 သကာ
 (၂၆) ကဝိရာဇဂုံ (ကယ်) ၁ မီတ္တာဝိကြံ ၁ ကမ္မသမန် ၁ ကျွန်ဖွစ်သာငာမပ်
 ၁ ဤမျှသော
-(၂၇) ထိုဝ်မှောက်တံကြသတေအတံ (တဈာ) ဆင်သောသင်႕တိုင် ဗိုလ်တ"	good	high	high	Best corpus-text overlap within parent sip-witness-011.	သ္ခိင်အနန္တသူ စကာနှင္အ်၊ ပိယ်သ္မာမျာ စကာသင္အ်ဧအ်။ ကျါန် ငါမွယ်ကိုဝ်ကာ ပိ ယ်သ္မာလင်မျာ အနန္တသူကိုဝ် ပိယ်သော စင်ဧအ်။ ကျွန်ငါမွယ်ကိုဝ်ကာ အနန္တသူ ရစိ ယ်ဧအ်။ အနန္တသူ ဩင်ဧအ်။ ငါမာသင် သာနှင္အ် ယောက်ဖ မန္တလဘိရစ်ကာ င်။ တျြာတကာ တန	corpus_text_present_sip_confirms	Linked through exact corpus plate citation(s): Pl. I 79b. | Extracted from SIP printed pages 42-44 using the OCR page offset observed from the scanned volume. | Detected 1 inscription heading(s) inside the parent SIP witness range. | Segmented from parent sip-witness-011.
+(၂၇) ထိုဝ်မှောက်တံကြသတေအတံ (တဈာ) ဆင်သောသင်႕တိုင် ဗိုလ်တ"	good	high	high	Best corpus-text overlap within parent sip-witness-011.	သ္ခိင်အနန္တသူ စကာနှင္အ်၊ ပိယ်သ္မာမျာ စကာသင္အ်ဧအ်။ ကျါန် ငါမွယ်ကိုဝ်ကာ ပိ ယ်သ္မာလင်မျာ အနန္တသူကိုဝ် ပိယ်သော စင်ဧအ်။ ကျွန်ငါမွယ်ကိုဝ်ကာ အနန္တသူ ရစိ ယ်ဧအ်။ အနန္တသူ ဩင်ဧအ်။ ငါမာသင် သာနှင္အ် ယောက်ဖ မန္တလဘိရစ်ကာ င်။ တျြာတကာ တန	corpus_text_present_sip_confirms	clean_for_review	No obvious wrapper or page-number artifacts detected.	Linked through exact corpus plate citation(s): Pl. I 79b. | Extracted from SIP printed pages 42-44 using the OCR page offset observed from the scanned volume. | Detected 1 inscription heading(s) inside the parent SIP witness range. | Segmented from parent sip-witness-011.
 sip-witness-012-seg-02	sip-witness-012	sipSelectionsPagan	corpus-citation-target-0371	luce_pemaungtin_1928_inscriptions_of_pag-da9f6d6d89b3	SIP 45-47	Plate XC	List 230			22	ဇေယပွတ်ဘုရားကျောက်စာ၊ပုဂံအရွှေတောင်။		obi-v01-n0160	obi-v01-n0160-ob-p0267	source_text	Old Burmese/Burmese	"၂၂။ ဇေယပွတ်ဘုရားကျောက်စာ၊ပုဂံအရွှေတောင်။
 (၁) ဝ ။ သကရစ် ၅၇၃ ခု အာသိန်နှစ်။ တာ်ညင်ညွှန် ၁ဝ ရက်ကြသပတိယ်
 နိယ်အာ၊ဥစိနာမင်ရွယ်တောင်တက်၏။ ရွယ်တော
@@ -189,7 +188,6 @@ sip-witness-012-seg-02	sip-witness-012	sipSelectionsPagan	corpus-citation-target
 (၂) င်တက်ပြီး၊ သကရစ် ၅၈၅ ခု။အာသိန်နှစ်။ပ သိုညွှန် ၇ ရွက်ကြသပ
 တိယ်နိယ်အား လွွှတ်စွာသောပုရှာလေါင်ကိုဝ်။ သံဗျ
 (၃) င်ဇေယျပွတ်။ ပန်စရကာ။ ဖုန်တပ်လှူသောပိုဒ်ဖွယ်တွင်။ဟင်ရံပအက်မ
-6
 သလ္လိယ် ၃ဝဝ ရှာဖုန်တာင်လှူ၏။ ပုရှာလောင်ဖု
 (၄) န်တာဝိသူရကာ။ ပိုလ်သူကြိသံဗျင်သတျာ ၁ ယောက်။သံဗျင်စင်ကြယ် ၁။
 သံဗျင်ကြံမဖတ် ၁။ သံဗျင်သိရိခြံပိစည် ၁။ဤယ်ပို
@@ -221,7 +219,7 @@ sip-witness-012-seg-02	sip-witness-012	sipSelectionsPagan	corpus-citation-target
 (၁၇) ယျပွတ်တာ်ကောင် နှိုက်နိယ်သော။ သိင်သင်္ဃာတို၌သည်။ မင်ကြီအာ
 ကြာလိုက်ဧအ်၊ မဟာရစ်။ ဤယ်ဇေယျပွတ်ဧအ်။ မ
 (၁၀) ဟါဒါန်ကာ။ တက္ကောင် ပုရှာလျှင်လှူခသတေဟုသော ကြာလိုက်၏။
-ဤယ်သို ့ ကြာလိုက်ရကာ။ မင်ကြီလေပြညာတ်ကြီ"	good	high	high	Best corpus-text overlap within parent sip-witness-012.	𝚘 ။ သကရစ် ၅၇၃ ခု အာသိန်နှစ်။ တ်ာသ္လင်လ္ဆန် ၁၀ ရျက် ကြသပတိယ် င်တက်ပြီ။ ။ သကရစ် ၅၈၅ ခု။ အာသိန်နှစ်။ ပ္လသိုဝ်လ္ဆန် ၇ ရျက် ကြသပတိယ် နိယ်အာ။ မ္လတ်စွာသော ပုရှာလောင်ကိုဝ်။ သံဗျ င် ဇေယျသွတ်။ ပန်စရကာ။ ဖုန်တာဝ်လှူသော မိုဝ်မ္လိယ်တွ	corpus_text_present_sip_confirms	Linked through exact corpus plate citation(s): Pl. I 90. | Extracted from SIP printed pages 45-47 using the OCR page offset observed from the scanned volume. | Detected 1 inscription heading(s) inside the parent SIP witness range. | Segmented from parent sip-witness-012.
+ဤယ်သို ့ ကြာလိုက်ရကာ။ မင်ကြီလေပြညာတ်ကြီ"	good	high	high	Best corpus-text overlap within parent sip-witness-012.	𝚘 ။ သကရစ် ၅၇၃ ခု အာသိန်နှစ်။ တ်ာသ္လင်လ္ဆန် ၁၀ ရျက် ကြသပတိယ် င်တက်ပြီ။ ။ သကရစ် ၅၈၅ ခု။ အာသိန်နှစ်။ ပ္လသိုဝ်လ္ဆန် ၇ ရျက် ကြသပတိယ် နိယ်အာ။ မ္လတ်စွာသော ပုရှာလောင်ကိုဝ်။ သံဗျ င် ဇေယျသွတ်။ ပန်စရကာ။ ဖုန်တာဝ်လှူသော မိုဝ်မ္လိယ်တွ	corpus_text_present_sip_confirms	clean_for_review	Removed obvious page artifacts: 6	Linked through exact corpus plate citation(s): Pl. I 90. | Extracted from SIP printed pages 45-47 using the OCR page offset observed from the scanned volume. | Detected 1 inscription heading(s) inside the parent SIP witness range. | Segmented from parent sip-witness-012.
 sip-witness-015-seg-03	sip-witness-015	sipSelectionsPagan	corpus-citation-target-0371	luce_pemaungtin_1928_inscriptions_of_pag-da9f6d6d89b3	SIP 52-55	Plate CV a	List 242	PPA 63 | PPA 181-182	TN 30 | TN 86-87	25	ပုဂံမြို့ရှင်ပဗောဓိဘုရားတံတိုင်းအတွင်းတောင်ဘက်ရှိ ကျောက်စာ။		obi-v01-n0179	obi-v01-n0179-tx-p0306	source_text	Old Burmese/Burmese	"၂၅။ ။ပုဂံမြို့ရှင်ပဗောဓိဘုရားတံတိုင်းအတွင်းတောင်ဘက်ရှိ ကျောက်စာ။
 (၁) ။ ။သကရာဇ် ၅၉၇ ခု ကြတိုက်နှစ်။ သိုဝ်လဆုတ် ၃ ရက်။ တန်းနှ
 (၂) င် လါနိယ်ဘက် ၉ လွှာခွယ်ပုနိုင်ကူထာပနား၏။ ။ဂ ရွက်လျှင်ပြီ
@@ -288,7 +286,6 @@ sip-witness-015-seg-03	sip-witness-015	sipSelectionsPagan	corpus-citation-target
 (၁၂) ယ် ၂၀။ စာသင်ညောင် ၅ ခု ပုဧအ်။ ဂျွစ်ဩက်ကုငယ်
 (၁၃) လဆိယ်ရိယ် အဲ။ကျောင်တွင်ပုဆိုပုာဆိုင်။
 (၁၄) ညောင် ၃ ပင်စိုက်၏။ ရိယ်ဤမ် ၃ ပါ။ သမရိဝိ
-50
 (၃) နန္ဒလာနယ်ကား နတ်တပ်လဆုတ် ၉ ရက်
 (၁၇) သုကြာနိယ်ကာလွှတ်စက် ကွကါသိုင်လဆုတ် ၃၅
 (၁၁) တန်နိုင်ငံနယ် ယာနာ၏။ ဝ ၊လက်ရာအာ
@@ -322,4 +319,4 @@ sip-witness-015-seg-03	sip-witness-015	sipSelectionsPagan	corpus-citation-target
 (၃၀) - စိယ်သတေ။ Zယ်ပုံလုံကြုံမကဖြစ်လတ္တံ့သောပုရှာက်ိုး မဖူစိယ် သ
 ကေမရိယ်တွက်နိုင်သော
 (၃၉) သင်္ခရာနှိုက်ပြီတွင်စိယ်သား၍အလှူကိုခံပင်သသူတို့ကာ ငာနှင့်
-အကူအကိုင်ရစိယ်သကေ"	good	high	high	Best corpus-text overlap within parent sip-witness-015.	။ သကရာစ် ၅၉၈ ခု ကြတိုက်နှစ်။ ပ္လသိုဝ်လဆုတ် ၃ ရျက်။ တန်နှ င်လာ နိယ္အ်တက် ၉ ဖ္လွါခွယ် ပုထိုဝ်ကူ ထာပနာဧအ်။ ၂၈ ရျက်လျှင် ပြိ ဧအ်။ ကူထာပနာသောနိဟ္အ်လျှင် ရိယ်တွင် တူဧအ်။ တပိုဝ်ထွယ်လ ဆုတ် ၁၃ ရျက် သောကြာနိယ်လျှင် တန်တိုင် တည်ဧအ်	corpus_text_present_sip_confirms	Linked through exact corpus plate citation(s): Pl. I 105a. | Extracted from SIP printed pages 52-55 using the OCR page offset observed from the scanned volume. | Detected 2 inscription heading(s) inside the parent SIP witness range. | Segmented from parent sip-witness-015.
+အကူအကိုင်ရစိယ်သကေ"	good	high	high	Best corpus-text overlap within parent sip-witness-015.	။ သကရာစ် ၅၉၈ ခု ကြတိုက်နှစ်။ ပ္လသိုဝ်လဆုတ် ၃ ရျက်။ တန်နှ င်လာ နိယ္အ်တက် ၉ ဖ္လွါခွယ် ပုထိုဝ်ကူ ထာပနာဧအ်။ ၂၈ ရျက်လျှင် ပြိ ဧအ်။ ကူထာပနာသောနိဟ္အ်လျှင် ရိယ်တွင် တူဧအ်။ တပိုဝ်ထွယ်လ ဆုတ် ၁၃ ရျက် သောကြာနိယ်လျှင် တန်တိုင် တည်ဧအ်	corpus_text_present_sip_confirms	clean_for_review	Removed obvious page artifacts: 50	Linked through exact corpus plate citation(s): Pl. I 105a. | Extracted from SIP printed pages 52-55 using the OCR page offset observed from the scanned volume. | Detected 2 inscription heading(s) inside the parent SIP witness range. | Segmented from parent sip-witness-015.

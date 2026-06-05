@@ -1005,6 +1005,15 @@ def build_workflow_summary(
             1 for row in sip_inscription_witness_rows if row.get("review_status") == "accepted_inscription_witness"
         ),
         "sip_accepted_witness_export_count": len(sip_accepted_export_rows),
+        "sip_accepted_export_qc_clean_count": sum(
+            1 for row in sip_accepted_export_rows if row.get("accepted_export_qc_status") == "clean_for_review"
+        ),
+        "sip_accepted_export_qc_unclear_count": sum(
+            1 for row in sip_accepted_export_rows if row.get("accepted_export_qc_status") == "clean_with_unclear_markers"
+        ),
+        "sip_accepted_export_qc_needs_human_text_check_count": sum(
+            1 for row in sip_accepted_export_rows if row.get("accepted_export_qc_status") == "needs_human_text_check"
+        ),
         "sip_units_needing_text_cleanup_count": sum(
             1 for row in sip_witness_unit_rows if row.get("review_status") == "needs_text_cleanup"
         ),
@@ -1032,6 +1041,12 @@ def build_workflow_summary(
         "sip_manual_review_packet_count": len(sip_manual_review_rows),
         "sip_manual_review_candidate_link_count": sum(
             1 for row in sip_manual_review_rows if row.get("candidate_corpus_record_ids")
+        ),
+        "sip_manual_review_rows_with_candidate_ids_count": sum(
+            1 for row in sip_manual_review_rows if row.get("candidate_corpus_record_ids")
+        ),
+        "sip_manual_review_rows_without_candidate_ids_count": sum(
+            1 for row in sip_manual_review_rows if not row.get("candidate_corpus_record_ids")
         ),
         "sip_unlinked_no_match_count": sum(
             1 for row in sip_unlinked_review_rows if row.get("unlinked_review_status") == "no_structured_corpus_match_found"
