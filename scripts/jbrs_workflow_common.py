@@ -78,6 +78,11 @@ INSCRIPTIONS_OF_BURMA_CROSS_REFERENCE_INDEX_PATH = (
 )
 TN_SOURCE_HUNT_PATH = BIBLIOGRAPHY_DIRECTORY / "tn_source_hunt.tsv"
 PPA_SOURCE_HUNT_PATH = BIBLIOGRAPHY_DIRECTORY / "ppa_source_hunt.tsv"
+SIP_CROSS_REFERENCE_TARGETS_PATH = BIBLIOGRAPHY_DIRECTORY / "sip_cross_reference_targets.tsv"
+SIP_EXTRACTION_NOTES_PATH = BIBLIOGRAPHY_DIRECTORY / "sip_extraction_notes.md"
+SIP_EXTRACTED_UNITS_PATH = BIBLIOGRAPHY_DIRECTORY / "sip_extracted_units.tsv"
+SIP_LINKED_SAMPLE_REVIEW_PATH = BIBLIOGRAPHY_DIRECTORY / "sip_linked_sample_review.tsv"
+MISSING_HIGH_VALUE_SOURCES_PATH = BIBLIOGRAPHY_DIRECTORY / "missing_high_value_sources.md"
 MAX_GITHUB_CONTENTS_SIZE = 1_000_000
 
 RAW_REFERENCE_HUNT_FIELDS = [
@@ -717,6 +722,21 @@ SOURCE_HUNT_FIELDS = [
     "evidence_for_match",
     "evidence_against_match",
     "match_status",
+    "needs_manual_review",
+    "notes",
+]
+
+SIP_CROSS_REFERENCE_TARGET_FIELDS = [
+    "sip_ref",
+    "iob_plate",
+    "iob_plate_normalized",
+    "list_ref",
+    "ppa_ref",
+    "tn_ref",
+    "place_or_object_description",
+    "linked_inscription_id",
+    "linked_corpus_record_id",
+    "link_confidence",
     "needs_manual_review",
     "notes",
 ]

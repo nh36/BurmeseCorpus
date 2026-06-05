@@ -37,6 +37,7 @@ from jbrs_workflow_common import (
     JBRS_OCR_TEXT_INDEX_PATH,
     LOCAL_SOURCE_OCR_TEXT_INDEX_PATH,
     LOCAL_FILE_MANIFEST_PATH,
+    SIP_EXTRACTED_UNITS_PATH,
     SOURCE_LIBRARY_MANIFEST_PATH,
 )
 
@@ -102,6 +103,19 @@ NON_EXTRACTIVE_SOURCE_ROLES = {
     "commentary_witness",
     "internal_corpus_source",
 }
+
+
+def merge_note_bits(*values: str) -> str:
+    parts: list[str] = []
+    seen: set[str] = set()
+    for value in values:
+        for part in [item.strip() for item in value.split("|") if item.strip()]:
+            if part not in seen:
+                seen.add(part)
+                parts.append(part)
+    return " | ".join(parts)
+
+
 MEDIUM_HIGH_REVIEW_KEYS = {
     "duroiselle1921list": {
         "review_status": "accepted_match",
@@ -194,12 +208,14 @@ MEDIUM_HIGH_REVIEW_KEYS = {
         "notes": "Do not OCR the annual report as a stand-in for PPA.",
     },
     "sipSelectionsPagan": {
-        "review_status": "needs_manual_file_hunt",
-        "reviewed_match_status": "needs_manual_review",
-        "review_confidence": "medium",
-        "review_basis": "Multiple candidate files remain unresolved.",
-        "queue_for_targeted_ocr": "false",
-        "notes": "SIP remains a manual witness-identification task before any OCR queueing.",
+        "review_status": "accepted_match",
+        "reviewed_match_status": "needs_ocr",
+        "reviewed_matched_local_file_id": "luce_pemaungtin_1928_inscriptions_of_pag-da9f6d6d89b3",
+        "reviewed_matched_file_name": "Luce 1928 inscriptions of Pagan.pdf",
+        "review_confidence": "high",
+        "review_basis": "Title page and sampled OCR confirm Selections from the Inscriptions of Pagan by Pe Maung Tin and G. H. Luce, University of Rangoon Department of Oriental Studies Publication No. 1 (1928).",
+        "queue_for_targeted_ocr": "true",
+        "notes": "Reviewed exact SIP witness; use this 1928 Luce and Pe Maung Tin file for the SIP extraction slice.",
     },
     "tnInscriptionsPaganPinyaAva": {
         "review_status": "needs_manual_file_hunt",
@@ -283,11 +299,12 @@ SOURCE_ROLE_OVERRIDES = {
     },
     "sipSelectionsPagan": {
         "source_role": "edition_witness",
+        "normalized_year": "1928",
         "likely_contains_translation": "false",
         "likely_contains_source_text": "true",
         "likely_contains_edition_only": "true",
         "likely_contains_commentary_only": "false",
-        "target_priority": "medium",
+        "target_priority": "high",
         "notes": "IOB abbreviation list confirms SIP as a Pagan inscription selection/edition witness.",
     },
     "tnInscriptionsPaganPinyaAva": {
@@ -308,6 +325,16 @@ TARGETED_SOURCE_HUNT_REVIEW_UPDATES = {
         "queue_for_targeted_ocr": "false",
         "review_basis": "Rejected the earlier ASI stand-in, then targeted local-file hunt found no plausible 1892 PPA witness.",
         "notes": "See ppa_source_hunt.tsv for rejected near-title candidates and the no-local-candidate result.",
+    },
+    "sipSelectionsPagan": {
+        "review_status": "accepted_match",
+        "reviewed_match_status": "needs_ocr",
+        "reviewed_matched_local_file_id": "luce_pemaungtin_1928_inscriptions_of_pag-da9f6d6d89b3",
+        "reviewed_matched_file_name": "Luce 1928 inscriptions of Pagan.pdf",
+        "review_confidence": "high",
+        "queue_for_targeted_ocr": "true",
+        "review_basis": "Title page and OCR confirm Selections from the Inscriptions of Pagan by Pe Maung Tin and G. H. Luce, University of Rangoon Department of Oriental Studies Publication No. 1 (1928).",
+        "notes": "Reviewed exact SIP witness for the SIP extraction slice.",
     },
     "tnInscriptionsPaganPinyaAva": {
         "review_status": "needs_manual_file_hunt",
@@ -776,8 +803,7 @@ def apply_review_to_match(
         "needs_manual_file_hunt",
     }:
         resolved["needs_manual_file_hunt"] = "true"
-    note_bits = [bit for bit in [match_row.get("notes", ""), review_row.get("notes", "")] if bit]
-    resolved["notes"] = " | ".join(dict.fromkeys(note_bits))
+    resolved["notes"] = merge_note_bits(match_row.get("notes", ""), review_row.get("notes", ""))
     return resolved
 
 
@@ -810,10 +836,7 @@ def apply_target_role_override(target_row: dict[str, str]) -> dict[str, str]:
     ):
         if field in override:
             resolved[field] = override[field]
-    note_bits = [resolved.get("notes", "")]
-    if override.get("notes"):
-        note_bits.append(override["notes"])
-    resolved["notes"] = " | ".join(dict.fromkeys(bit for bit in note_bits if bit))
+    resolved["notes"] = merge_note_bits(resolved.get("notes", ""), override.get("notes", ""))
     return resolved
 
 
@@ -829,11 +852,10 @@ def apply_source_role_constraints_to_review_row(
         resolved["queue_for_targeted_ocr"] = "false"
         if resolved.get("reviewed_match_status") == "needs_ocr":
             resolved["reviewed_match_status"] = "exact_or_near_exact_match"
-        note_bits = [
+        resolved["notes"] = merge_note_bits(
             resolved.get("notes", ""),
             f"Source role {target_row.get('source_role', '')} is non-extractive for source-text/translation OCR queueing.",
-        ]
-        resolved["notes"] = " | ".join(dict.fromkeys(bit for bit in note_bits if bit))
+        )
     return resolved
 
 
@@ -1383,6 +1405,10 @@ def main() -> None:
     for row in linked_translation_rows + linked_source_rows:
         if row.get("citation_target_id"):
             extracted_by_target_id[row["citation_target_id"]].append(row)
+    if SIP_EXTRACTED_UNITS_PATH.exists():
+        for row in read_tsv(SIP_EXTRACTED_UNITS_PATH):
+            if row.get("citation_target_id"):
+                extracted_by_target_id[row["citation_target_id"]].append(row)
 
     dashboard_rows: list[dict[str, str]] = []
     for index, inventory_row in enumerate(inventory_rows, start=1):

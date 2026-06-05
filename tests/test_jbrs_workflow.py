@@ -55,7 +55,12 @@ from jbrs_workflow_common import (
     JBRS_TRANSLATION_CANDIDATE_LOG_PATH,
     JBRS_TRANSLATION_CANDIDATE_REVIEW_PATH,
     LOCAL_SOURCE_OCR_TEXT_INDEX_PATH,
+    MISSING_HIGH_VALUE_SOURCES_PATH,
     PPA_SOURCE_HUNT_PATH,
+    SIP_CROSS_REFERENCE_TARGETS_PATH,
+    SIP_EXTRACTED_UNITS_PATH,
+    SIP_EXTRACTION_NOTES_PATH,
+    SIP_LINKED_SAMPLE_REVIEW_PATH,
     TN_SOURCE_HUNT_PATH,
     OCR_BATCH_PLAN_FIELDS,
     OCR_STATUS_LOG_FIELDS,
@@ -104,6 +109,8 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
         cls.iob_cross_reference_rows = read_tsv(INSCRIPTIONS_OF_BURMA_CROSS_REFERENCE_INDEX_PATH)
         cls.tn_source_hunt_rows = read_tsv(TN_SOURCE_HUNT_PATH)
         cls.ppa_source_hunt_rows = read_tsv(PPA_SOURCE_HUNT_PATH) if PPA_SOURCE_HUNT_PATH.exists() else []
+        cls.sip_cross_reference_rows = read_tsv(SIP_CROSS_REFERENCE_TARGETS_PATH) if SIP_CROSS_REFERENCE_TARGETS_PATH.exists() else []
+        cls.sip_extracted_unit_rows = read_tsv(SIP_EXTRACTED_UNITS_PATH) if SIP_EXTRACTED_UNITS_PATH.exists() else []
         cls.ocr_text_index_rows = read_tsv(JBRS_OCR_TEXT_INDEX_PATH)
         cls.ocr_translation_hit_rows = read_tsv(JBRS_OCR_TRANSLATION_HIT_INDEX_PATH)
         cls.ocr_top_candidate_rows = read_tsv(JBRS_OCR_TOP_EXTRACTION_CANDIDATES_PATH)
@@ -145,6 +152,12 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
             CORPUS_CITATION_WORKFLOW_SUMMARY_PATH,
             INSCRIPTIONS_OF_BURMA_CROSS_REFERENCE_INDEX_PATH,
             TN_SOURCE_HUNT_PATH,
+            PPA_SOURCE_HUNT_PATH,
+            SIP_CROSS_REFERENCE_TARGETS_PATH,
+            SIP_EXTRACTED_UNITS_PATH,
+            SIP_EXTRACTION_NOTES_PATH,
+            SIP_LINKED_SAMPLE_REVIEW_PATH,
+            MISSING_HIGH_VALUE_SOURCES_PATH,
             JBRS_OCR_TEXT_INDEX_PATH,
             JBRS_OCR_TRANSLATION_HIT_INDEX_PATH,
             JBRS_OCR_TOP_EXTRACTION_CANDIDATES_PATH,
@@ -339,6 +352,51 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
         ppa_by_status = Counter(row["match_status"] for row in self.ppa_source_hunt_rows)
         self.assertEqual(ppa_by_status["accepted_match"] + ppa_by_status["plausible_match"], 0)
         self.assertEqual(ppa_by_status["no_local_candidate_found"], 1)
+
+    def test_sip_match_is_confirmed_and_ocr_exported(self) -> None:
+        review_by_key = {
+            row["normalized_source_key"]: row for row in self.citation_source_match_review_rows
+        }
+        match_by_key = {
+            row["normalized_source_key"]: row for row in self.citation_source_match_rows
+        }
+        self.assertEqual(review_by_key["sipSelectionsPagan"]["review_status"], "accepted_match")
+        self.assertEqual(
+            review_by_key["sipSelectionsPagan"]["reviewed_matched_local_file_id"],
+            "luce_pemaungtin_1928_inscriptions_of_pag-da9f6d6d89b3",
+        )
+        self.assertEqual(match_by_key["sipSelectionsPagan"]["match_status"], "already_ocr_available")
+        self.assertEqual(
+            match_by_key["sipSelectionsPagan"]["matched_local_file_id"],
+            "luce_pemaungtin_1928_inscriptions_of_pag-da9f6d6d89b3",
+        )
+        self.assertEqual(match_by_key["sipSelectionsPagan"]["ocr_status"], "completed")
+        self.assertTrue((ROOT / match_by_key["sipSelectionsPagan"]["matched_ocr_text_path"]).exists())
+        self.assertTrue((ROOT / match_by_key["sipSelectionsPagan"]["matched_metadata_path"]).exists())
+
+    def test_sip_repo_safe_metadata_marks_edition_without_translation(self) -> None:
+        local_ocr_rows = read_tsv(LOCAL_SOURCE_OCR_TEXT_INDEX_PATH)
+        row = next(
+            entry for entry in local_ocr_rows if entry["local_file_id"] == "luce_pemaungtin_1928_inscriptions_of_pag-da9f6d6d89b3"
+        )
+        metadata = json.loads((ROOT / row["metadata_path"]).read_text(encoding="utf-8"))
+        self.assertEqual(metadata["source_role"], "edition_witness")
+        self.assertEqual(metadata["contains_translation_marker"], "false")
+        self.assertEqual(metadata["contains_inscription_level_translation"], "false")
+        self.assertEqual(metadata["contains_extractable_source_text"], "true")
+
+    def test_sip_cross_reference_and_extraction_outputs_are_populated(self) -> None:
+        self.assertGreaterEqual(len(self.sip_cross_reference_rows), 10)
+        self.assertGreaterEqual(sum(1 for row in self.sip_cross_reference_rows if row["linked_corpus_record_id"]), 5)
+        self.assertGreaterEqual(len(self.sip_extracted_unit_rows), 10)
+        self.assertGreaterEqual(sum(1 for row in self.sip_extracted_unit_rows if row["linked_corpus_record_id"]), 5)
+        self.assertTrue(any(row["unit_type"] == "source_text" for row in self.sip_extracted_unit_rows))
+
+    def test_missing_high_value_sources_note_preserves_tn_and_ppa_gap(self) -> None:
+        note = MISSING_HIGH_VALUE_SOURCES_PATH.read_text(encoding="utf-8")
+        self.assertIn("Tun Nyein", note)
+        self.assertIn("PPA", note)
+        self.assertIn("not found locally", note)
 
     def test_out_of_scope_audit_covers_dashboard_rows_and_keeps_wrong_count_zero(self) -> None:
         out_of_scope_dashboard_ids = {
