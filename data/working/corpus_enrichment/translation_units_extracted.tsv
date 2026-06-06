@@ -136,7 +136,7 @@ On Sunday the fourth waxing of Kason
 In the five hundred and third year to build
 At an auspicious moment. That same year
 On Thursday eleventh waning of Nadaw"	published_translation	JBRS 10(2), 1920, pp. 67-74 explicitly matches the Shwegugyi Pagoda Inscription corpus record.	high	false	Completed published translation integrated into the enriched corpus candidate.
-jbrs-translation-unit-20260606-001	tunAungChainRajakumar2001	Tun Aung Chain, The Rajakumar Inscription (Cultural Classics, Yangon Universities Press, 2001, pp. 25-37)	tun_aung_chain_2001_rajakumar_inscriptio-d55d64ebc41c	Cultural Classics 2001, Appendix I: Translations, pp. 33-36 (OCR pages 10-13)	obi-v01-n0001-tx-p0001	obi-v01-n0001-tx-p0001	English	"Myanmar Text (A 39 lines, B 34, lines) tr. Charles Duroiselle (1919)
+rajakumar-translation-2001-myanmar	tunAungChainRajakumar2001	Tun Aung Chain, The Rajakumar Inscription, Cultural Classics, Yangon Universities Press, 2001, pp. 25-37	tun_aung_chain_2001_rajakumar_inscriptio-d55d64ebc41c	Cultural Classics 2001, Appendix I Myanmar Text, pp. 33-34 (OCR pages 10-11)	obi-v01-n0001-tx-p0001	obi-v01-n0001-tx-p0001	English	"Myanmar Text (A 39 lines, B 34, lines) tr. Charles Duroiselle (1919)
 rev. Tun Aung Chain
 Prosperity! Honour to the Buddha! One thousand six hundred and
 twenty-eight years of the Buddha's religion having elapsed, Úri
@@ -165,9 +165,8 @@ pagoda and Buddha, and thus said: “Let this deed of mine be the cause of my
 obtaining Omniscience! After me, (whosoever) whether (he be) my son, or
 
 grandson, or relative, or any other person, if he oppresses the slaves I have
-offered to this Buddha, may he not behold the Buddha Arimittiyâ!""
-
-Mon Text (A 33 lines B 46 lines) tr. C.O.Blagden (1919)
+offered to this Buddha, may he not behold the Buddha Arimittiyâ!"""	published_translation	The Myanmar Text section aligns with the Myanmar Rajakumar/Myazedi corpus record title, references, and matching narrative formulae (Arimaddanapur, Tribhuvanadityadhammaraj, Trilokavatamsika, 1628 era + 28 regnal years, and three-village donation).	high	false	version_label=Myanmar Text; integrated to Myanmar Rajakumar/Myazedi record.
+rajakumar-translation-2001-mon	tunAungChainRajakumar2001	Tun Aung Chain, The Rajakumar Inscription, Cultural Classics, Yangon Universities Press, 2001, pp. 25-37	tun_aung_chain_2001_rajakumar_inscriptio-d55d64ebc41c	Cultural Classics 2001, Appendix I Mon Text, pp. 34-35 (OCR pages 11-12)			English	"Mon Text (A 33 lines B 46 lines) tr. C.O.Blagden (1919)
 rev. Tun Aung Chain
 Prosperity! Honour to Buddha! Prosperity! After the religion of the
 Lord Buddha had gone on for one thousand six hundred and twenty-eight
@@ -198,9 +197,8 @@ for the golden Buddha that he (had) enshrined in this cave-pagoda, (and)
 prayed thus: ""May this act of mine be a cause for the attainment (by me) of
 Omniscience! Be it my child be it my grandchild, be it my kinsman, be it (any)
 other person, if he do violence to the slaves whom I am giving to this
-Buddha, may he not get sight of the exalted Buddha Mettey!""
-
-Pyu Text (A 26 lines B 29 lines)
+Buddha, may he not get sight of the exalted Buddha Mettey!"""	published_translation	No structured corpus record with a Rajakumar/Myazedi Mon-language counterpart was found in corpus_release_v0_3 inscriptions/lines and citation layers.	needs_review	true	version_label=Mon Text; extracted but kept unlinked pending a Mon corpus record.
+rajakumar-translation-2001-pyu	tunAungChainRajakumar2001	Tun Aung Chain, The Rajakumar Inscription, Cultural Classics, Yangon Universities Press, 2001, pp. 25-37	tun_aung_chain_2001_rajakumar_inscriptio-d55d64ebc41c	Cultural Classics 2001, Appendix I Pyu Text, p. 35 (OCR page 12)			English	"Pyu Text (A 26 lines B 29 lines)
 rev. Tun Aung Chain
 tr. C.O.Blagden (1911)
 ligion of the
@@ -261,9 +259,8 @@ doing be a cause for giving me Omniscience (and) wisdom! As for these
 slaves, be it my son, be it my grandson, be it my kinsman, be it any other
 person, [if he shall do violence to those that I have dedicated to this Budha,
 may he never be permitted to approach the presence of] the lord Budha
-Arimedeya!""
-
-Pali Text (A 41 lines, B 40, lines) tr. Charles Duroiselle (1919)
+Arimedeya!"""	published_partial_translation	The Appendix I Pyu section is present but no structured Rajakumar/Myazedi Pyu record is available in corpus_release_v0_3 for secure linkage.	needs_review	true	version_label=Pyu Text; extracted as partial due OCR clipping and kept unlinked.
+rajakumar-translation-2001-pali	tunAungChainRajakumar2001	Tun Aung Chain, The Rajakumar Inscription, Cultural Classics, Yangon Universities Press, 2001, pp. 25-37	tun_aung_chain_2001_rajakumar_inscriptio-d55d64ebc41c	Cultural Classics 2001, Appendix I Pali Text, pp. 35-36 (OCR pages 12-13)	obi-v01-n0001-tx-p0002	obi-v01-n0001-tx-p0002	English	"Pali Text (A 41 lines, B 40, lines) tr. Charles Duroiselle (1919)
 Prosperity! Having bowed to the Buddha and other (two) Excellent
 Objects, I shall relate the noble work of merit performed, in the Conqueror's
 dispensation, by Râjakumâra. Hearken to me! When one thousand six
@@ -302,4 +299,4 @@ son, or grandson, or any other relative, with evil intent and
 unbelieving mind should oppress those slaves, dwellers in the three
 villages, whom I have dedicated to the cave-pagoda and the golden
 image of the Great Sage, may this vile person be precluded from
-beholding Metteyya, the Chief of men!"""	published_translation	Article title and Appendix I translation content (Rājakumār/Myazedi, Arimaddanapur, Tribhuvanadityadhammaraj, Trilokavatamsika, 1628 AB/28 regnal years, and village-donation formula) align directly with the structured corpus Rajakumar inscription record metadata and transliteration.	high	false	Published Appendix I translations (Myanmar/Mon/Pyu/Pali sections) integrated as one Rajakumar translation witness.
+beholding Metteyya, the Chief of men!"""	published_translation	The Pali Text section matches the Pali Rajakumar/Myazedi corpus record language and reference profile (List-52, IOB4-361/b, EB Vol.1 no.1), with identical storyline and dedication formula.	high	false	version_label=Pali Text; integrated to Pali Rajakumar/Myazedi record.

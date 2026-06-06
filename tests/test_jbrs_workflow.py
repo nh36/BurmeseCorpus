@@ -142,6 +142,9 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
         cls.translation_action_rows = read_tsv(TRANSLATION_SOURCE_ACTION_TABLE_PATH)
         cls.translation_unit_rows = read_tsv(TRANSLATION_UNITS_EXTRACTED_PATH)
         cls.translation_integration_preview_rows = read_tsv(TRANSLATION_INTEGRATION_PREVIEW_PATH)
+        cls.rajakumar_version_linkage_rows = read_tsv(
+            ROOT / "data" / "working" / "corpus_enrichment" / "rajakumar_version_linkage.tsv"
+        )
         cls.ananda_identifying_evidence_rows = read_tsv(
             ROOT / "data" / "working" / "corpus_enrichment" / "ananda_identifying_evidence.tsv"
         )
@@ -210,6 +213,7 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
             TRANSLATION_INTEGRATION_PREVIEW_PATH,
             TRANSLATION_SOURCE_ACTION_TABLE_PATH,
             TRANSLATION_UNITS_EXTRACTED_PATH,
+            ROOT / "data" / "working" / "corpus_enrichment" / "rajakumar_version_linkage.tsv",
             ROOT / "data" / "working" / "corpus_enrichment" / "ananda_identifying_evidence.tsv",
             ROOT / "data" / "working" / "corpus_enrichment" / "ananda_linkage_candidates.tsv",
             CORPUS_RELEASE_INSCRIPTIONS_PATH,
@@ -652,9 +656,10 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
         self.assertEqual(ananda_action["linked_inscription_count"], "0")
         self.assertIn("Resolved as out of scope", ananda_action["notes"])
         rajakumar_action = next(row for row in self.translation_action_rows if row["source_key"] == "tunAungChainRajakumar2001")
-        self.assertEqual(rajakumar_action["action_status"], "translation_integrated")
-        self.assertEqual(rajakumar_action["linked_corpus_record_count"], "1")
-        self.assertEqual(rajakumar_action["linked_inscription_count"], "1")
+        self.assertEqual(rajakumar_action["action_status"], "translation_integrated_partial_version_split")
+        self.assertEqual(rajakumar_action["linked_corpus_record_count"], "2")
+        self.assertEqual(rajakumar_action["linked_inscription_count"], "2")
+        self.assertIn("Mon and Pyu remain candidate-only", rajakumar_action["notes"])
         myazedi_action = next(row for row in self.translation_action_rows if row["source_key"] == "peMaungTinMyazedi1974")
         self.assertEqual(myazedi_action["action_status"], "wrong_source_rejected")
         shwegugyi_unit = next(row for row in self.translation_unit_rows if row["source_key"] == "jbrsShwegugyi1920")
@@ -663,32 +668,58 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
         self.assertTrue(shwegugyi_unit["translation_text"])
         self.assertIn("Reverence to the Buddha", shwegugyi_unit["translation_text"])
         self.assertGreater(len(shwegugyi_unit["translation_text"]), 1000)
-        rajakumar_unit = next(row for row in self.translation_unit_rows if row["source_key"] == "tunAungChainRajakumar2001")
-        self.assertEqual(rajakumar_unit["linked_corpus_record_id"], "obi-v01-n0001-tx-p0001")
-        self.assertEqual(rajakumar_unit["translation_status"], "published_translation")
-        self.assertIn("Tribhuvanadity", rajakumar_unit["translation_text"])
-        self.assertGreater(len(rajakumar_unit["translation_text"]), 5000)
+        rajakumar_units = [row for row in self.translation_unit_rows if row["source_key"] == "tunAungChainRajakumar2001"]
+        self.assertEqual(len(rajakumar_units), 4)
+        units_by_id = {row["translation_unit_id"]: row for row in rajakumar_units}
+        self.assertIn("rajakumar-translation-2001-myanmar", units_by_id)
+        self.assertIn("rajakumar-translation-2001-mon", units_by_id)
+        self.assertIn("rajakumar-translation-2001-pyu", units_by_id)
+        self.assertIn("rajakumar-translation-2001-pali", units_by_id)
+        self.assertEqual(units_by_id["rajakumar-translation-2001-myanmar"]["linked_corpus_record_id"], "obi-v01-n0001-tx-p0001")
+        self.assertEqual(units_by_id["rajakumar-translation-2001-pali"]["linked_corpus_record_id"], "obi-v01-n0001-tx-p0002")
+        self.assertEqual(units_by_id["rajakumar-translation-2001-mon"]["linked_corpus_record_id"], "")
+        self.assertEqual(units_by_id["rajakumar-translation-2001-pyu"]["linked_corpus_record_id"], "")
+        self.assertTrue(units_by_id["rajakumar-translation-2001-mon"]["needs_human_review"] == "true")
+        self.assertTrue(units_by_id["rajakumar-translation-2001-pyu"]["needs_human_review"] == "true")
+        self.assertIn("version_label=", units_by_id["rajakumar-translation-2001-myanmar"]["notes"])
+        self.assertIn("version_label=", units_by_id["rajakumar-translation-2001-mon"]["notes"])
+        self.assertIn("version_label=", units_by_id["rajakumar-translation-2001-pyu"]["notes"])
+        self.assertIn("version_label=", units_by_id["rajakumar-translation-2001-pali"]["notes"])
+        # Guardrail: non-Burmese Rajakumar versions must not be attached to the Burmese record.
+        for row in rajakumar_units:
+            if row["translation_unit_id"] in {"rajakumar-translation-2001-mon", "rajakumar-translation-2001-pyu", "rajakumar-translation-2001-pali"}:
+                self.assertNotEqual(row["linked_corpus_record_id"], "obi-v01-n0001-tx-p0001")
         self.assertFalse(any(row["source_key"] == "jbrsAnanda1976" for row in self.translation_unit_rows))
 
     def test_translation_integration_preview_tracks_completed_translation(self) -> None:
-        self.assertEqual(len(self.translation_integration_preview_rows), 2)
-        preview_by_source = {
-            row["source_key"]: row for row in self.translation_integration_preview_rows
-        }
-        self.assertIn("jbrsShwegugyi1920", preview_by_source)
-        self.assertIn("tunAungChainRajakumar2001", preview_by_source)
-        shwegugyi_row = preview_by_source["jbrsShwegugyi1920"]
+        self.assertEqual(len(self.translation_integration_preview_rows), 3)
+        shwegugyi_row = next(row for row in self.translation_integration_preview_rows if row["source_key"] == "jbrsShwegugyi1920")
         self.assertEqual(shwegugyi_row["linked_corpus_record_id"], "obi-v01-n0004-ob-p0011")
         self.assertEqual(shwegugyi_row["translation_status"], "published_translation")
         self.assertTrue(shwegugyi_row["translation_text_snippet"])
         self.assertGreater(int(shwegugyi_row["translation_length_chars"]), 1000)
         self.assertEqual(shwegugyi_row["has_existing_transcription"], "true")
-        rajakumar_row = preview_by_source["tunAungChainRajakumar2001"]
-        self.assertEqual(rajakumar_row["linked_corpus_record_id"], "obi-v01-n0001-tx-p0001")
-        self.assertEqual(rajakumar_row["translation_status"], "published_translation")
-        self.assertTrue(rajakumar_row["translation_text_snippet"])
-        self.assertGreater(int(rajakumar_row["translation_length_chars"]), 5000)
-        self.assertEqual(rajakumar_row["has_existing_transcription"], "true")
+        rajakumar_rows = [
+            row for row in self.translation_integration_preview_rows if row["source_key"] == "tunAungChainRajakumar2001"
+        ]
+        self.assertEqual(len(rajakumar_rows), 2)
+        rajakumar_ids = {row["linked_corpus_record_id"] for row in rajakumar_rows}
+        self.assertEqual(rajakumar_ids, {"obi-v01-n0001-tx-p0001", "obi-v01-n0001-tx-p0002"})
+        for row in rajakumar_rows:
+            self.assertEqual(row["translation_status"], "published_translation")
+            self.assertTrue(row["translation_text_snippet"])
+            self.assertGreater(int(row["translation_length_chars"]), 1000)
+            self.assertEqual(row["has_existing_transcription"], "true")
+
+    def test_rajakumar_version_linkage_table_captures_unlinked_mon_and_pyu(self) -> None:
+        self.assertEqual(len(self.rajakumar_version_linkage_rows), 4)
+        linkage_by_version = {
+            row["version_label"]: row for row in self.rajakumar_version_linkage_rows
+        }
+        self.assertEqual(linkage_by_version["Myanmar Text"]["decision"], "accept_link")
+        self.assertEqual(linkage_by_version["Pali Text"]["decision"], "accept_link")
+        self.assertEqual(linkage_by_version["Mon Text"]["decision"], "no_matching_corpus_record_found")
+        self.assertEqual(linkage_by_version["Pyu Text"]["decision"], "no_matching_corpus_record_found")
 
     def test_ananda_linkage_dossier_stays_non_integrated(self) -> None:
         self.assertTrue(self.ananda_identifying_evidence_rows)
@@ -778,7 +809,7 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
             self.enriched_summary["translation_units_integrated_count"],
             sum(len(row.get("translations", [])) for row in self.enriched_candidate_records if row.get("translation_status") == "translation_integrated"),
         )
-        self.assertEqual(self.enriched_summary["published_translation_units_integrated_count"], 2)
+        self.assertEqual(self.enriched_summary["published_translation_units_integrated_count"], 3)
         self.assertEqual(self.enriched_summary["published_partial_translation_units_integrated_count"], 0)
 
     def test_sip_summary_counts_match_artifacts(self) -> None:

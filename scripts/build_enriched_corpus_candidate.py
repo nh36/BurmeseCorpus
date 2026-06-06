@@ -3,6 +3,7 @@ from __future__ import annotations
 import argparse
 import json
 from pathlib import Path
+import re
 
 from corpus_common import REPO_ROOT, read_jsonl, read_tsv, write_jsonl, write_tsv
 
@@ -33,7 +34,7 @@ MYAZEDI_TRANSLATION_SOURCE_KEY = "peMaungTinMyazedi1974"
 MYAZEDI_TRANSLATION_BIBLIOGRAPHIC_LABEL = "U Pe Maung Tin, Myazedi Inscription"
 RAJAKUMAR_TRANSLATION_SOURCE_KEY = "tunAungChainRajakumar2001"
 RAJAKUMAR_TRANSLATION_BIBLIOGRAPHIC_LABEL = (
-    "Tun Aung Chain, The Rajakumar Inscription (Cultural Classics, Yangon Universities Press, 2001, pp. 25-37)"
+    "Tun Aung Chain, The Rajakumar Inscription, Cultural Classics, Yangon Universities Press, 2001, pp. 25-37"
 )
 
 CORPUS_ENRICHMENT_DIRECTORY = REPO_ROOT / "data" / "working" / "corpus_enrichment"
@@ -303,13 +304,13 @@ def build_translation_source_action_rows(
             "matched_file_name": "Tun Aung Chain 2001 Rajakumar Inscription.pdf",
             "already_ocr_available": "true",
             "contains_english_translation": "true",
-            "translation_scope": "standalone_inscription_translation",
-            "linked_corpus_record_count": "1",
-            "linked_inscription_count": "1",
-            "action_status": "translation_integrated",
-            "next_action": "Keep the integrated Rajakumar/Myazedi translation in the enriched candidate and continue with the next translation target.",
-            "evidence": "Single-file targeted OCR recovered Appendix I translation sections (Myanmar/Mon/Pyu/Pali) and the article title, matching the structured corpus Rajakumar/Myazedi record metadata.",
-            "notes": "Published English translation integrated with high-confidence linkage to obi-v01-n0001-tx-p0001.",
+            "translation_scope": "standalone_inscription_translation_version_split",
+            "linked_corpus_record_count": "2",
+            "linked_inscription_count": "2",
+            "action_status": "translation_integrated_partial_version_split",
+            "next_action": "Keep Myanmar and Pali versions integrated; hold Mon and Pyu as unlinked candidate units until matching corpus records are available.",
+            "evidence": "Appendix I provides separate Myanmar/Mon/Pyu/Pali sections; structured corpus has secure Rajakumar/Myazedi matches for Myanmar and Pali, but no corresponding Mon/Pyu records.",
+            "notes": "Version split complete for extraction. Myanmar linked to obi-v01-n0001-tx-p0001 and Pali linked to obi-v01-n0001-tx-p0002; Mon and Pyu remain candidate-only/unlinked.",
         },
         {
             "source_key": TN_SOURCE_KEY,
@@ -407,57 +408,128 @@ def build_translation_units_extracted_rows(translation_units: list[dict]) -> lis
                 "notes": "Completed published translation integrated into the enriched corpus candidate.",
             }
         )
-    rajakumar_text = (
-        RAJAKUMAR_TRANSLATION_TEXT_PATH.read_text(encoding="utf-8").strip()
-        if RAJAKUMAR_TRANSLATION_TEXT_PATH.exists()
-        else ""
-    )
+    rajakumar_text = RAJAKUMAR_TRANSLATION_TEXT_PATH.read_text(encoding="utf-8").strip() if RAJAKUMAR_TRANSLATION_TEXT_PATH.exists() else ""
     if rajakumar_text:
-        rows.append(
+        heading_pattern = re.compile(
+            r"^(Myanmar Text \(A 39 lines, B 34, lines\) tr\. Charles Duroiselle \(1919\)|"
+            r"Mon Text \(A 33 lines B 46 lines\) tr\. C\.O\.Blagden \(1919\)|"
+            r"Pyu Text \(A 26 lines B 29 lines\)|"
+            r"Pali Text \(A 41 lines, B 40, lines\) tr\. Charles Duroiselle \(1919\))$",
+            re.MULTILINE,
+        )
+        headings = [(match.group(0), match.start()) for match in heading_pattern.finditer(rajakumar_text)]
+        section_text_by_heading: dict[str, str] = {}
+        for index, (heading, start) in enumerate(headings):
+            end = headings[index + 1][1] if index + 1 < len(headings) else len(rajakumar_text)
+            section_text_by_heading[heading] = rajakumar_text[start:end].strip()
+
+        common_label = "Tun Aung Chain, The Rajakumar Inscription, Cultural Classics, Yangon Universities Press, 2001, pp. 25-37"
+        common_file_id = "tun_aung_chain_2001_rajakumar_inscriptio-d55d64ebc41c"
+        unit_specs = [
             {
-                "translation_unit_id": "jbrs-translation-unit-20260606-001",
-                "source_key": RAJAKUMAR_TRANSLATION_SOURCE_KEY,
-                "source_bibliographic_label": (
-                    "Tun Aung Chain, The Rajakumar Inscription (Cultural Classics, Yangon Universities Press, 2001, pp. 25-37)"
-                ),
-                "matched_local_file_id": "tun_aung_chain_2001_rajakumar_inscriptio-d55d64ebc41c",
-                "source_locator": "Cultural Classics 2001, Appendix I: Translations, pp. 33-36 (OCR pages 10-13)",
+                "translation_unit_id": "rajakumar-translation-2001-myanmar",
+                "heading": "Myanmar Text (A 39 lines, B 34, lines) tr. Charles Duroiselle (1919)",
+                "source_locator": "Cultural Classics 2001, Appendix I Myanmar Text, pp. 33-34 (OCR pages 10-11)",
                 "linked_inscription_id": "obi-v01-n0001-tx-p0001",
                 "linked_corpus_record_id": "obi-v01-n0001-tx-p0001",
-                "translation_language": "English",
-                "translation_text": rajakumar_text,
                 "translation_status": "published_translation",
                 "link_basis": (
-                    "Article title and Appendix I translation content (Rājakumār/Myazedi, Arimaddanapur, Tribhuvanadityadhammaraj, "
-                    "Trilokavatamsika, 1628 AB/28 regnal years, and village-donation formula) align directly with the structured corpus "
-                    "Rajakumar inscription record metadata and transliteration."
+                    "The Myanmar Text section aligns with the Myanmar Rajakumar/Myazedi corpus record "
+                    "title, references, and matching narrative formulae (Arimaddanapur, Tribhuvanadityadhammaraj, "
+                    "Trilokavatamsika, 1628 era + 28 regnal years, and three-village donation)."
                 ),
                 "confidence": "high",
                 "needs_human_review": "false",
-                "notes": "Published Appendix I translations (Myanmar/Mon/Pyu/Pali sections) integrated as one Rajakumar translation witness.",
-            }
-        )
+                "notes": "version_label=Myanmar Text; integrated to Myanmar Rajakumar/Myazedi record.",
+            },
+            {
+                "translation_unit_id": "rajakumar-translation-2001-mon",
+                "heading": "Mon Text (A 33 lines B 46 lines) tr. C.O.Blagden (1919)",
+                "source_locator": "Cultural Classics 2001, Appendix I Mon Text, pp. 34-35 (OCR pages 11-12)",
+                "linked_inscription_id": "",
+                "linked_corpus_record_id": "",
+                "translation_status": "published_translation",
+                "link_basis": (
+                    "No structured corpus record with a Rajakumar/Myazedi Mon-language counterpart was found "
+                    "in corpus_release_v0_3 inscriptions/lines and citation layers."
+                ),
+                "confidence": "needs_review",
+                "needs_human_review": "true",
+                "notes": "version_label=Mon Text; extracted but kept unlinked pending a Mon corpus record.",
+            },
+            {
+                "translation_unit_id": "rajakumar-translation-2001-pyu",
+                "heading": "Pyu Text (A 26 lines B 29 lines)",
+                "source_locator": "Cultural Classics 2001, Appendix I Pyu Text, p. 35 (OCR page 12)",
+                "linked_inscription_id": "",
+                "linked_corpus_record_id": "",
+                "translation_status": "published_partial_translation",
+                "link_basis": (
+                    "The Appendix I Pyu section is present but no structured Rajakumar/Myazedi Pyu record is "
+                    "available in corpus_release_v0_3 for secure linkage."
+                ),
+                "confidence": "needs_review",
+                "needs_human_review": "true",
+                "notes": "version_label=Pyu Text; extracted as partial due OCR clipping and kept unlinked.",
+            },
+            {
+                "translation_unit_id": "rajakumar-translation-2001-pali",
+                "heading": "Pali Text (A 41 lines, B 40, lines) tr. Charles Duroiselle (1919)",
+                "source_locator": "Cultural Classics 2001, Appendix I Pali Text, pp. 35-36 (OCR pages 12-13)",
+                "linked_inscription_id": "obi-v01-n0001-tx-p0002",
+                "linked_corpus_record_id": "obi-v01-n0001-tx-p0002",
+                "translation_status": "published_translation",
+                "link_basis": (
+                    "The Pali Text section matches the Pali Rajakumar/Myazedi corpus record language and "
+                    "reference profile (List-52, IOB4-361/b, EB Vol.1 no.1), with identical storyline and dedication formula."
+                ),
+                "confidence": "high",
+                "needs_human_review": "false",
+                "notes": "version_label=Pali Text; integrated to Pali Rajakumar/Myazedi record.",
+            },
+        ]
+        for spec in unit_specs:
+            section_text = section_text_by_heading.get(spec["heading"], "")
+            if not section_text:
+                continue
+            rows.append(
+                {
+                    "translation_unit_id": spec["translation_unit_id"],
+                    "source_key": RAJAKUMAR_TRANSLATION_SOURCE_KEY,
+                    "source_bibliographic_label": common_label,
+                    "matched_local_file_id": common_file_id,
+                    "source_locator": spec["source_locator"],
+                    "linked_inscription_id": spec["linked_inscription_id"],
+                    "linked_corpus_record_id": spec["linked_corpus_record_id"],
+                    "translation_language": "English",
+                    "translation_text": section_text,
+                    "translation_status": spec["translation_status"],
+                    "link_basis": spec["link_basis"],
+                    "confidence": spec["confidence"],
+                    "needs_human_review": spec["needs_human_review"],
+                    "notes": spec["notes"],
+                }
+            )
     return rows
 
 
 def build_translation_integration_preview_rows(translation_rows: list[dict]) -> list[dict]:
     rows: list[dict] = []
-    title_by_source = {
-        SHWEGUGYI_TRANSLATION_SOURCE_KEY: "ရွှေဂူကြီးဘုရားကျောက်စာ",
-        RAJAKUMAR_TRANSLATION_SOURCE_KEY: "မြစေတီဘုရားကျောက်စာ၊ မြန်မာ (ရာဇကုမာရကျောက်စာ)",
+    title_by_record = {
+        "obi-v01-n0004-ob-p0011": "ရွှေဂူကြီးဘုရားကျောက်စာ",
+        "obi-v01-n0001-tx-p0001": "မြစေတီဘုရားကျောက်စာ၊ မြန်မာ (ရာဇကုမာရကျောက်စာ)",
+        "obi-v01-n0001-tx-p0002": "မြစေတီဘုရား ကျောက်စာ ပါဠိ (ရာဇကုမာရကျောက်စာ)",
     }
     for row in translation_rows:
         text = row.get("translation_text", "")
-        if not text:
+        record_id = row.get("linked_corpus_record_id", "").strip()
+        if not text or not record_id:
             continue
         rows.append(
             {
-                "linked_corpus_record_id": row.get("linked_corpus_record_id", ""),
+                "linked_corpus_record_id": record_id,
                 "linked_inscription_id": row.get("linked_inscription_id", ""),
-                "title_or_label": title_by_source.get(
-                    row.get("source_key", ""),
-                    row.get("linked_inscription_id", ""),
-                ),
+                "title_or_label": title_by_record.get(record_id, row.get("linked_inscription_id", "")),
                 "source_key": row.get("source_key", ""),
                 "source_locator": row.get("source_locator", ""),
                 "translation_status": row.get("translation_status", ""),

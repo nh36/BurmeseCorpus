@@ -1116,6 +1116,9 @@ TRANSLATION_SOURCE_ACTION_STATUSES = {
     "out_of_scope_late_ink_wall_inscription",
     "not_old_burmese_corpus_target",
     "translation_integrated",
+    "translation_integrated_version_split_complete",
+    "translation_integrated_partial_version_split",
+    "translation_integrated_myanmar_only",
 }
 
 TRANSLATION_SOURCE_ACTION_TABLE_FIELDS = [
