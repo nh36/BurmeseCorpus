@@ -9,7 +9,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Iterable
 
-from corpus_common import ensure_parent, read_tsv
+from corpus_common import ensure_parent, read_jsonl, read_tsv
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 BIBLIOGRAPHY_DIRECTORY = REPO_ROOT / "data/working/bibliography"
@@ -91,6 +91,11 @@ SIP_ACCEPTED_WITNESS_UNITS_PATH = BIBLIOGRAPHY_DIRECTORY / "sip_accepted_witness
 SIP_ACCEPTED_WITNESS_REVIEW_PATH = BIBLIOGRAPHY_DIRECTORY / "sip_accepted_witness_review.tsv"
 SIP_MANUAL_REVIEW_PACKET_PATH = BIBLIOGRAPHY_DIRECTORY / "sip_manual_review_packet.tsv"
 MISSING_HIGH_VALUE_SOURCES_PATH = BIBLIOGRAPHY_DIRECTORY / "missing_high_value_sources.md"
+CORPUS_RELEASE_INSCRIPTIONS_PATH = REPO_ROOT / "data/release/corpus_release_v0_3/inscriptions.jsonl"
+CORPUS_ENRICHMENT_DIRECTORY = REPO_ROOT / "data/working/corpus_enrichment"
+ENRICHED_CORPUS_SCHEMA_NOTE_PATH = CORPUS_ENRICHMENT_DIRECTORY / "enriched_corpus_schema_note.md"
+ENRICHED_CORPUS_CANDIDATE_PATH = CORPUS_ENRICHMENT_DIRECTORY / "inscriptions_enriched_candidate.jsonl"
+ENRICHED_CANDIDATE_PREVIEW_PATH = CORPUS_ENRICHMENT_DIRECTORY / "enriched_candidate_preview.tsv"
 MAX_GITHUB_CONTENTS_SIZE = 1_000_000
 
 RAW_REFERENCE_HUNT_FIELDS = [
@@ -1054,6 +1059,46 @@ SIP_MANUAL_REVIEW_ACTIONS = {
     "defer_until_ppa_or_tn_available",
     "ignore_ocr_noise",
 }
+ENRICHED_RECORD_TRANSLATION_STATUSES = {
+    "no_translation_known",
+    "translation_source_missing",
+    "translation_available_unintegrated",
+    "translation_integrated",
+    "translation_needs_review",
+}
+ENRICHED_WITNESS_STATUSES = {
+    "ocr_clean_for_review",
+    "ocr_with_unclear_markers",
+    "contains_possible_page_artifact",
+    "needs_manual_text_check",
+}
+ENRICHED_TRANSLATION_ENTRY_STATUSES = {
+    "published_translation",
+    "draft_translation",
+    "machine_assisted_draft",
+    "needs_translation_review",
+}
+ENRICHED_TRANSLATION_CANDIDATE_STATUSES = {
+    "missing_high_value_source",
+    "candidate_source_located",
+    "candidate_source_review_pending",
+}
+ENRICHED_PREVIEW_FIELDS = [
+    "linked_corpus_record_id",
+    "linked_inscription_id",
+    "title_or_label",
+    "language",
+    "has_existing_transcription",
+    "has_source_text_witness",
+    "source_text_witness_count",
+    "has_translation",
+    "translation_status",
+    "translation_candidate_sources",
+    "sip_ref",
+    "iob_plate",
+    "comparison_status",
+    "preview_note",
+]
 NON_EXTRACTIVE_SOURCE_ROLES = {
     "catalogue_or_list_witness",
     "cross_reference_witness",
@@ -3894,6 +3939,200 @@ def validate_corpus_citation_workflow(
     return errors
 
 
+def validate_enriched_corpus_candidate(
+    *,
+    baseline_records: list[dict],
+    enriched_records: list[dict],
+    sip_accepted_export_rows: list[dict],
+    enriched_preview_rows: list[dict],
+) -> list[str]:
+    errors: list[str] = []
+    baseline_by_id = {row.get("record_id", ""): row for row in baseline_records if row.get("record_id")}
+    enriched_by_id = {row.get("record_id", ""): row for row in enriched_records if row.get("record_id")}
+    sip_by_unit_id = {
+        row.get("sip_inscription_unit_id", ""): row
+        for row in sip_accepted_export_rows
+        if row.get("sip_inscription_unit_id")
+    }
+    sip_record_ids = {row.get("linked_corpus_record_id", "") for row in sip_accepted_export_rows if row.get("linked_corpus_record_id")}
+
+    if len(enriched_records) != len(baseline_records):
+        errors.append(
+            "Enriched corpus candidate row count does not match corpus_release_v0_3 inscriptions row count."
+        )
+    if set(enriched_by_id) != set(baseline_by_id):
+        missing_ids = sorted(set(baseline_by_id) - set(enriched_by_id))
+        extra_ids = sorted(set(enriched_by_id) - set(baseline_by_id))
+        if missing_ids:
+            errors.append(
+                "Enriched corpus candidate is missing baseline record_id values: "
+                + ", ".join(missing_ids[:5])
+            )
+        if extra_ids:
+            errors.append(
+                "Enriched corpus candidate contains unknown record_id values: "
+                + ", ".join(extra_ids[:5])
+            )
+
+    required_witness_fields = {
+        "source_key",
+        "source_bibliographic_label",
+        "source_locator",
+        "witness_status",
+    }
+    required_translation_source_fields = {
+        "source_key",
+        "source_bibliographic_label",
+    }
+    for record_id, baseline_row in baseline_by_id.items():
+        enriched_row = enriched_by_id.get(record_id)
+        if not enriched_row:
+            continue
+        for key, value in baseline_row.items():
+            if key not in enriched_row:
+                errors.append(f"Enriched record {record_id} is missing baseline field '{key}'.")
+                continue
+            if enriched_row.get(key) != value:
+                errors.append(
+                    f"Enriched record {record_id} changed baseline field '{key}' value."
+                )
+        if enriched_row.get("translation_status") and (
+            enriched_row.get("translation_status") not in ENRICHED_RECORD_TRANSLATION_STATUSES
+        ):
+            errors.append(
+                f"Enriched record {record_id} has invalid translation_status "
+                f"'{enriched_row.get('translation_status', '')}'."
+            )
+        source_text_witnesses = enriched_row.get("source_text_witnesses")
+        if source_text_witnesses is not None:
+            if not isinstance(source_text_witnesses, list):
+                errors.append(f"Enriched record {record_id} has non-array source_text_witnesses.")
+            else:
+                for index, witness in enumerate(source_text_witnesses):
+                    witness_key = f"{record_id} source_text_witnesses[{index}]"
+                    if not isinstance(witness, dict):
+                        errors.append(f"{witness_key} is not an object.")
+                        continue
+                    for field in required_witness_fields:
+                        if not witness.get(field):
+                            errors.append(f"{witness_key} is missing required field '{field}'.")
+                    if witness.get("witness_status") and witness.get("witness_status") not in ENRICHED_WITNESS_STATUSES:
+                        errors.append(
+                            f"{witness_key} has invalid witness_status '{witness.get('witness_status', '')}'."
+                        )
+                    if witness.get("source_key") == "sipSelectionsPagan":
+                        sip_unit_id = witness.get("sip_inscription_unit_id", "")
+                        source_row = sip_by_unit_id.get(sip_unit_id)
+                        if not source_row:
+                            errors.append(
+                                f"{witness_key} does not map to sip_accepted_witness_units.tsv via sip_inscription_unit_id."
+                            )
+                            continue
+                        if source_row.get("linked_corpus_record_id") != record_id:
+                            errors.append(
+                                f"{witness_key} points to SIP unit {sip_unit_id} linked to another record_id."
+                            )
+                        if witness.get("witness_text_raw", "") != source_row.get("raw_ocr_text", ""):
+                            errors.append(
+                                f"{witness_key} witness_text_raw differs from SIP accepted raw_ocr_text."
+                            )
+                        if witness.get("witness_text_cleaned", "") != source_row.get("cleaned_witness_text", ""):
+                            errors.append(
+                                f"{witness_key} witness_text_cleaned differs from SIP accepted cleaned_witness_text."
+                            )
+
+        translations = enriched_row.get("translations")
+        if translations is not None:
+            if not isinstance(translations, list):
+                errors.append(f"Enriched record {record_id} has non-array translations.")
+            else:
+                for index, translation in enumerate(translations):
+                    translation_key = f"{record_id} translations[{index}]"
+                    if not isinstance(translation, dict):
+                        errors.append(f"{translation_key} is not an object.")
+                        continue
+                    if not translation.get("language"):
+                        errors.append(f"{translation_key} is missing required field 'language'.")
+                    if not translation.get("text") and not translation.get("translation_status"):
+                        errors.append(
+                            f"{translation_key} must include either translation text or translation_status."
+                        )
+                    missing_source_fields = [
+                        field for field in required_translation_source_fields if not translation.get(field)
+                    ]
+                    if missing_source_fields:
+                        errors.append(
+                            f"{translation_key} is missing source metadata fields: {', '.join(missing_source_fields)}."
+                        )
+                    if translation.get("translation_status") and (
+                        translation.get("translation_status") not in ENRICHED_TRANSLATION_ENTRY_STATUSES
+                    ):
+                        errors.append(
+                            f"{translation_key} has invalid translation_status "
+                            f"'{translation.get('translation_status', '')}'."
+                        )
+
+        translation_candidates = enriched_row.get("translation_source_candidates")
+        if translation_candidates is not None:
+            if not isinstance(translation_candidates, list):
+                errors.append(f"Enriched record {record_id} has non-array translation_source_candidates.")
+            else:
+                for index, candidate in enumerate(translation_candidates):
+                    candidate_key = f"{record_id} translation_source_candidates[{index}]"
+                    if not isinstance(candidate, dict):
+                        errors.append(f"{candidate_key} is not an object.")
+                        continue
+                    for field in ["source_key", "source_bibliographic_label", "status", "basis"]:
+                        if not candidate.get(field):
+                            errors.append(f"{candidate_key} is missing required field '{field}'.")
+                    if candidate.get("status") and (
+                        candidate.get("status") not in ENRICHED_TRANSLATION_CANDIDATE_STATUSES
+                    ):
+                        errors.append(
+                            f"{candidate_key} has invalid status '{candidate.get('status', '')}'."
+                        )
+
+    for record_id in sorted(sip_record_ids):
+        enriched_row = enriched_by_id.get(record_id, {})
+        source_text_witnesses = enriched_row.get("source_text_witnesses")
+        if not source_text_witnesses:
+            errors.append(
+                f"SIP-linked record {record_id} in accepted export is missing source_text_witnesses in enriched candidate."
+            )
+            continue
+        if not any(witness.get("source_key") == "sipSelectionsPagan" for witness in source_text_witnesses):
+            errors.append(
+                f"SIP-linked record {record_id} is missing sipSelectionsPagan source_text_witness entry."
+            )
+
+    preview_record_ids = {
+        row.get("linked_corpus_record_id", "") for row in enriched_preview_rows if row.get("linked_corpus_record_id")
+    }
+    if preview_record_ids != sip_record_ids:
+        missing_preview_ids = sorted(sip_record_ids - preview_record_ids)
+        extra_preview_ids = sorted(preview_record_ids - sip_record_ids)
+        if missing_preview_ids:
+            errors.append(
+                "Enriched preview is missing SIP-linked record IDs: "
+                + ", ".join(missing_preview_ids)
+            )
+        if extra_preview_ids:
+            errors.append(
+                "Enriched preview includes non-SIP record IDs: "
+                + ", ".join(extra_preview_ids)
+            )
+    for row in enriched_preview_rows:
+        record_id = row.get("linked_corpus_record_id", "<unknown>")
+        if row.get("translation_status") and row.get("translation_status") not in ENRICHED_RECORD_TRANSLATION_STATUSES:
+            errors.append(
+                f"Enriched preview row {record_id} has invalid translation_status '{row.get('translation_status', '')}'."
+            )
+        if row.get("has_source_text_witness") != "true":
+            errors.append(f"Enriched preview row {record_id} should set has_source_text_witness=true.")
+
+    return errors
+
+
 def validate_jbrs_workflow() -> list[str]:
     errors: list[str] = []
     required_paths = [
@@ -3947,6 +4186,10 @@ def validate_jbrs_workflow() -> list[str]:
         MISSING_HIGH_VALUE_SOURCES_PATH,
         JBRS_PILOT_SUMMARY_PATH,
         JBRS_README_PATH,
+        CORPUS_RELEASE_INSCRIPTIONS_PATH,
+        ENRICHED_CORPUS_SCHEMA_NOTE_PATH,
+        ENRICHED_CORPUS_CANDIDATE_PATH,
+        ENRICHED_CANDIDATE_PREVIEW_PATH,
     ]
     for path in required_paths:
         if not path.exists():
@@ -3956,12 +4199,18 @@ def validate_jbrs_workflow() -> list[str]:
 
     batch_header, batch_row_count = tsv_header_and_row_count(JBRS_OCR_BATCH_PLAN_PATH, OCR_BATCH_PLAN_FIELDS)
     status_header, status_row_count = tsv_header_and_row_count(JBRS_OCR_STATUS_LOG_PATH, OCR_STATUS_LOG_FIELDS)
+    enriched_preview_header, enriched_preview_row_count = tsv_header_and_row_count(
+        ENRICHED_CANDIDATE_PREVIEW_PATH, ENRICHED_PREVIEW_FIELDS
+    )
     expected_batch_header = "\t".join(OCR_BATCH_PLAN_FIELDS)
     expected_status_header = "\t".join(OCR_STATUS_LOG_FIELDS)
+    expected_enriched_preview_header = "\t".join(ENRICHED_PREVIEW_FIELDS)
     if batch_header != expected_batch_header:
         errors.append("JBRS OCR batch plan TSV is blank or missing the expected header.")
     if status_header != expected_status_header:
         errors.append("JBRS OCR status log TSV is blank or missing the expected header.")
+    if enriched_preview_header != expected_enriched_preview_header:
+        errors.append("Enriched candidate preview TSV is blank or missing the expected header.")
     if JBRS_OCR_BATCH_PLAN_PATH.stat().st_size > MAX_GITHUB_CONTENTS_SIZE:
         errors.append("JBRS OCR batch plan TSV exceeds the GitHub contents-view size threshold.")
     if JBRS_OCR_STATUS_LOG_PATH.stat().st_size > MAX_GITHUB_CONTENTS_SIZE:
@@ -4001,6 +4250,21 @@ def validate_jbrs_workflow() -> list[str]:
     sip_accepted_export_rows = read_tsv(SIP_ACCEPTED_WITNESS_UNITS_PATH)
     sip_accepted_review_rows = read_tsv(SIP_ACCEPTED_WITNESS_REVIEW_PATH)
     sip_manual_review_rows = read_tsv(SIP_MANUAL_REVIEW_PACKET_PATH)
+    enriched_preview_rows = read_tsv(ENRICHED_CANDIDATE_PREVIEW_PATH)
+    try:
+        baseline_corpus_records = read_jsonl(CORPUS_RELEASE_INSCRIPTIONS_PATH)
+    except json.JSONDecodeError as exc:
+        errors.append(
+            f"Baseline corpus inscriptions JSONL is invalid at line {exc.lineno}: {exc.msg}"
+        )
+        return errors
+    try:
+        enriched_corpus_records = read_jsonl(ENRICHED_CORPUS_CANDIDATE_PATH)
+    except json.JSONDecodeError as exc:
+        errors.append(
+            f"Enriched corpus candidate JSONL is invalid at line {exc.lineno}: {exc.msg}"
+        )
+        return errors
     citation_workflow_summary = json.loads(CORPUS_CITATION_WORKFLOW_SUMMARY_PATH.read_text(encoding="utf-8"))
     summary = json.loads(JBRS_PILOT_SUMMARY_PATH.read_text(encoding="utf-8"))
     readme_text = JBRS_README_PATH.read_text(encoding="utf-8")
@@ -4025,6 +4289,8 @@ def validate_jbrs_workflow() -> list[str]:
         errors.append("JBRS OCR batch plan TSV row count does not match parsed batch rows.")
     if len(status_rows) != status_row_count:
         errors.append("JBRS OCR status log TSV row count does not match parsed status rows.")
+    if len(enriched_preview_rows) != enriched_preview_row_count:
+        errors.append("Enriched candidate preview TSV row count does not match parsed preview rows.")
     if len(batch_rows) != len(batch_by_id):
         errors.append("JBRS OCR batch plan contains duplicate batch_id values.")
     if len(status_rows) != len(status_by_batch_id):
@@ -4275,6 +4541,14 @@ def validate_jbrs_workflow() -> list[str]:
             summary=citation_workflow_summary,
         )
     )
+    errors.extend(
+        validate_enriched_corpus_candidate(
+            baseline_records=baseline_corpus_records,
+            enriched_records=enriched_corpus_records,
+            sip_accepted_export_rows=sip_accepted_export_rows,
+            enriched_preview_rows=enriched_preview_rows,
+        )
+    )
 
     if "Berkeley IOB catalogue record is not a verified local witness" not in readme_text:
         errors.append("JBRS README is missing the Berkeley/IOB non-promotion guardrail.")
@@ -4334,6 +4608,9 @@ def validate_jbrs_workflow() -> list[str]:
         CORPUS_CITATION_SOURCE_FILE_MATCH_PATH,
         CORPUS_TRANSLATION_SOURCE_DASHBOARD_PATH,
         CORPUS_CITED_SOURCE_OCR_QUEUE_PATH,
+        ENRICHED_CORPUS_SCHEMA_NOTE_PATH,
+        ENRICHED_CORPUS_CANDIDATE_PATH,
+        ENRICHED_CANDIDATE_PREVIEW_PATH,
     ]:
         text = path.read_text(encoding="utf-8")
         if ABSOLUTE_PATH_PATTERN.search(text):

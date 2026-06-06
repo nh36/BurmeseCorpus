@@ -19,8 +19,9 @@ import ocr_jbrs_google_vision as ocr
 import detect_jbrs_translation_candidates as detect
 import jbrs_workflow_common as common
 import run_jbrs_production_ocr as production
-from corpus_common import write_tsv
+from corpus_common import read_jsonl, write_tsv
 from jbrs_workflow_common import (
+    CORPUS_RELEASE_INSCRIPTIONS_PATH,
     CORPUS_CITATION_INVENTORY_PATH,
     CORPUS_CITATION_SOURCE_FILE_MATCH_PATH,
     CORPUS_CITATION_SOURCE_FILE_MATCH_REVIEW_PATH,
@@ -56,6 +57,9 @@ from jbrs_workflow_common import (
     JBRS_TRANSLATION_CANDIDATE_REVIEW_PATH,
     LOCAL_SOURCE_OCR_TEXT_INDEX_PATH,
     MISSING_HIGH_VALUE_SOURCES_PATH,
+    ENRICHED_CORPUS_SCHEMA_NOTE_PATH,
+    ENRICHED_CORPUS_CANDIDATE_PATH,
+    ENRICHED_CANDIDATE_PREVIEW_PATH,
     PPA_SOURCE_HUNT_PATH,
     SIP_CROSS_REFERENCE_TARGETS_PATH,
     SIP_ACCEPTED_WITNESS_UNITS_PATH,
@@ -127,6 +131,9 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
         cls.sip_accepted_export_rows = read_tsv(SIP_ACCEPTED_WITNESS_UNITS_PATH) if SIP_ACCEPTED_WITNESS_UNITS_PATH.exists() else []
         cls.sip_accepted_review_rows = read_tsv(SIP_ACCEPTED_WITNESS_REVIEW_PATH) if SIP_ACCEPTED_WITNESS_REVIEW_PATH.exists() else []
         cls.sip_manual_review_rows = read_tsv(SIP_MANUAL_REVIEW_PACKET_PATH) if SIP_MANUAL_REVIEW_PACKET_PATH.exists() else []
+        cls.corpus_release_records = read_jsonl(CORPUS_RELEASE_INSCRIPTIONS_PATH)
+        cls.enriched_candidate_records = read_jsonl(ENRICHED_CORPUS_CANDIDATE_PATH)
+        cls.enriched_preview_rows = read_tsv(ENRICHED_CANDIDATE_PREVIEW_PATH)
         cls.ocr_text_index_rows = read_tsv(JBRS_OCR_TEXT_INDEX_PATH)
         cls.ocr_translation_hit_rows = read_tsv(JBRS_OCR_TRANSLATION_HIT_INDEX_PATH)
         cls.ocr_top_candidate_rows = read_tsv(JBRS_OCR_TOP_EXTRACTION_CANDIDATES_PATH)
@@ -182,6 +189,10 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
             SIP_ACCEPTED_WITNESS_REVIEW_PATH,
             SIP_MANUAL_REVIEW_PACKET_PATH,
             MISSING_HIGH_VALUE_SOURCES_PATH,
+            ENRICHED_CORPUS_SCHEMA_NOTE_PATH,
+            ENRICHED_CORPUS_CANDIDATE_PATH,
+            ENRICHED_CANDIDATE_PREVIEW_PATH,
+            CORPUS_RELEASE_INSCRIPTIONS_PATH,
             JBRS_OCR_TEXT_INDEX_PATH,
             JBRS_OCR_TRANSLATION_HIT_INDEX_PATH,
             JBRS_OCR_TOP_EXTRACTION_CANDIDATES_PATH,
@@ -497,6 +508,54 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
                 for row in self.sip_unlinked_review_rows
             )
         )
+
+    def test_enriched_candidate_preserves_baseline_fields_and_adds_sip_witnesses(self) -> None:
+        base_by_id = {row["record_id"]: row for row in self.corpus_release_records}
+        enriched_by_id = {row["record_id"]: row for row in self.enriched_candidate_records}
+        sip_by_unit_id = {row["sip_inscription_unit_id"]: row for row in self.sip_accepted_export_rows}
+        sip_record_ids = {row["linked_corpus_record_id"] for row in self.sip_accepted_export_rows}
+
+        self.assertEqual(set(base_by_id), set(enriched_by_id))
+        self.assertEqual(len(self.corpus_release_records), len(self.enriched_candidate_records))
+
+        for record_id, base_row in base_by_id.items():
+            enriched_row = enriched_by_id[record_id]
+            for key, value in base_row.items():
+                self.assertIn(key, enriched_row)
+                self.assertEqual(
+                    enriched_row[key],
+                    value,
+                    f"Baseline field {key} changed for {record_id}",
+                )
+
+        for record_id in sip_record_ids:
+            enriched_row = enriched_by_id[record_id]
+            self.assertIn("source_text_witnesses", enriched_row)
+            self.assertTrue(enriched_row["source_text_witnesses"])
+            self.assertIn(enriched_row["translation_status"], common.ENRICHED_RECORD_TRANSLATION_STATUSES)
+            self.assertIn(enriched_row["enrichment_status"], {"enriched_with_sip_witnesses", "enriched_with_sip_and_candidates"})
+
+            for witness in enriched_row["source_text_witnesses"]:
+                self.assertEqual(witness["source_key"], "sipSelectionsPagan")
+                self.assertTrue(witness["source_bibliographic_label"])
+                self.assertTrue(witness["source_locator"])
+                self.assertIn(witness["witness_status"], common.ENRICHED_WITNESS_STATUSES)
+                self.assertTrue(witness["sip_inscription_unit_id"])
+                source_row = sip_by_unit_id[witness["sip_inscription_unit_id"]]
+                self.assertEqual(source_row["linked_corpus_record_id"], record_id)
+                self.assertEqual(witness["witness_text_raw"], source_row["raw_ocr_text"])
+                self.assertEqual(witness["witness_text_cleaned"], source_row["cleaned_witness_text"])
+
+    def test_enriched_preview_rows_cover_sip_links_only(self) -> None:
+        sip_record_ids = {row["linked_corpus_record_id"] for row in self.sip_accepted_export_rows}
+        preview_record_ids = {row["linked_corpus_record_id"] for row in self.enriched_preview_rows}
+        self.assertEqual(preview_record_ids, sip_record_ids)
+        self.assertEqual(len(self.enriched_preview_rows), len(self.sip_accepted_export_rows))
+        for row in self.enriched_preview_rows:
+            self.assertEqual(row["has_source_text_witness"], "true")
+            self.assertIn(row["translation_status"], common.ENRICHED_RECORD_TRANSLATION_STATUSES)
+            self.assertTrue(row["comparison_status"])
+            self.assertTrue(row["title_or_label"])
 
     def test_sip_summary_counts_match_artifacts(self) -> None:
         self.assertEqual(
@@ -1248,6 +1307,26 @@ class JBRSWorkflowLogicTests(unittest.TestCase):
             any("pilot summary reports OCR batch rows" in error for error in errors),
             errors,
         )
+
+    def test_validator_flags_enriched_sip_witness_without_sip_mapping(self) -> None:
+        original_read_jsonl = common.read_jsonl
+
+        def fake_read_jsonl(path: Path):
+            rows = original_read_jsonl(path)
+            if path == common.ENRICHED_CORPUS_CANDIDATE_PATH:
+                mutated = [dict(row) for row in rows]
+                for row in mutated:
+                    witnesses = row.get("source_text_witnesses")
+                    if witnesses:
+                        row["source_text_witnesses"] = [dict(witness) for witness in witnesses]
+                        row["source_text_witnesses"][0]["sip_inscription_unit_id"] = "missing-sip-unit-id"
+                        return mutated
+                return mutated
+            return rows
+
+        with patch.object(common, "read_jsonl", side_effect=fake_read_jsonl):
+            errors = common.validate_jbrs_workflow()
+        self.assertTrue(any("does not map to sip_accepted_witness_units.tsv" in error for error in errors), errors)
 
     def test_narrow_candidate_selection_can_resolve_batch_ids(self) -> None:
         manifest_rows = [
