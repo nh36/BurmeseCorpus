@@ -1111,6 +1111,7 @@ TRANSLATION_SOURCE_ACTION_STATUSES = {
     "wrong_source_rejected",
     "no_translation_present",
     "needs_human_bibliographic_review",
+    "linkage_unresolved_needs_human_review",
     "translation_integrated",
 }
 

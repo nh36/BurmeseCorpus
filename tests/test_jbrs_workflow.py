@@ -638,12 +638,18 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
         self.assertEqual(shwegugyi_action["action_status"], "translation_integrated")
         tn_action = next(row for row in self.translation_action_rows if row["source_key"] == "tnInscriptionsPaganPinyaAva")
         self.assertEqual(tn_action["action_status"], "source_missing_acquire_manually")
+        ananda_action = next(row for row in self.translation_action_rows if row["source_key"] == "jbrsAnanda1976")
+        self.assertEqual(ananda_action["action_status"], "linkage_unresolved_needs_human_review")
+        self.assertEqual(ananda_action["linked_corpus_record_count"], "0")
+        self.assertEqual(ananda_action["linked_inscription_count"], "0")
+        self.assertIn("no high-confidence corpus link", ananda_action["notes"])
         shwegugyi_unit = next(row for row in self.translation_unit_rows if row["source_key"] == "jbrsShwegugyi1920")
         self.assertEqual(shwegugyi_unit["linked_corpus_record_id"], "obi-v01-n0004-ob-p0011")
         self.assertEqual(shwegugyi_unit["translation_status"], "published_translation")
         self.assertTrue(shwegugyi_unit["translation_text"])
         self.assertIn("Reverence to the Buddha", shwegugyi_unit["translation_text"])
         self.assertGreater(len(shwegugyi_unit["translation_text"]), 1000)
+        self.assertFalse(any(row["source_key"] == "jbrsAnanda1976" for row in self.translation_unit_rows))
 
     def test_translation_integration_preview_tracks_completed_translation(self) -> None:
         self.assertEqual(len(self.translation_integration_preview_rows), 1)
