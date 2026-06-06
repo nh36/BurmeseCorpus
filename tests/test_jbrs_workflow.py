@@ -68,6 +68,7 @@ from jbrs_workflow_common import (
     TN_TRANSLATION_TARGETS_PATH,
     TN_TRANSLATION_TARGET_STATUS_PATH,
     TN_TRANSLATION_CANDIDATES_REVIEW_PATH,
+    TN_MANUAL_RESOLUTION_LOG_PATH,
     TN_TRANSLATION_INTEGRATION_PREVIEW_PATH,
     TN_WORKING_OCR_PLAIN_TEXT_PATH,
     TN_WORKING_OCR_CLEANED_TEXT_PATH,
@@ -159,6 +160,7 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
         cls.tn_translation_target_rows = read_tsv(TN_TRANSLATION_TARGETS_PATH)
         cls.tn_translation_target_status_rows = read_tsv(TN_TRANSLATION_TARGET_STATUS_PATH)
         cls.tn_translation_review_rows = read_tsv(TN_TRANSLATION_CANDIDATES_REVIEW_PATH)
+        cls.tn_manual_resolution_rows = read_tsv(TN_MANUAL_RESOLUTION_LOG_PATH)
         cls.tn_translation_preview_rows = read_tsv(TN_TRANSLATION_INTEGRATION_PREVIEW_PATH)
         cls.tn_ocr_metadata_index = json.loads(TN_WORKING_OCR_METADATA_INDEX_PATH.read_text(encoding="utf-8"))
         cls.rajakumar_version_linkage_rows = read_tsv(
@@ -236,6 +238,7 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
             TN_TRANSLATION_TARGETS_PATH,
             TN_TRANSLATION_TARGET_STATUS_PATH,
             TN_TRANSLATION_CANDIDATES_REVIEW_PATH,
+            TN_MANUAL_RESOLUTION_LOG_PATH,
             TN_TRANSLATION_INTEGRATION_PREVIEW_PATH,
             TN_WORKING_OCR_PLAIN_TEXT_PATH,
             TN_WORKING_OCR_CLEANED_TEXT_PATH,
@@ -792,10 +795,12 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
         self.assertEqual(len(self.tn_translation_target_status_rows), len(self.tn_translation_target_rows))
         allowed_statuses = {
             "integrated",
-            "candidate_needs_human_review",
-            "not_extractable_from_current_ocr",
-            "duplicate_or_subentry_of_integrated_translation",
-            "deferred_complex_boundary",
+            "integrated_after_manual_review",
+            "confirmed_duplicate_or_overlap",
+            "not_extractable_even_after_page_inspection",
+            "deferred_requires_scholarly_judgement",
+            "no_corresponding_translation_found",
+            "still_unresolved",
         }
         self.assertTrue(all(row["current_status"] in allowed_statuses for row in self.tn_translation_target_status_rows))
         target_keys = {
@@ -811,6 +816,25 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
         self.assertTrue(all(row["tn_locator"] for row in self.tn_translation_review_rows))
         self.assertTrue(all(row["reason_uncertain"] for row in self.tn_translation_review_rows))
         self.assertTrue(all(row["recommended_human_action"] for row in self.tn_translation_review_rows))
+        self.assertTrue(
+            all(
+                row["reason_uncertain"] not in {"missing_or_uncertain_corpus_link", "linkage_or_boundary_unclear"}
+                for row in self.tn_translation_review_rows
+            )
+        )
+        self.assertTrue(all("page_image_inspection=attempted" in row["notes"] for row in self.tn_translation_review_rows))
+        self.assertGreaterEqual(len(self.tn_manual_resolution_rows), 10)
+        self.assertTrue(all(row["tn_locator"] for row in self.tn_manual_resolution_rows))
+        self.assertTrue(all(row["resolution_status"] in allowed_statuses for row in self.tn_manual_resolution_rows))
+        self.assertTrue(all("page_image_inspection=attempted" in row["notes"] for row in self.tn_manual_resolution_rows))
+        unresolved_locators = {
+            row["tn_locator"]
+            for row in self.tn_translation_target_status_rows
+            if row["current_status"] not in {"integrated", "integrated_after_manual_review"}
+        }
+        unresolved_locators.update(row["tn_locator"] for row in self.tn_translation_review_rows)
+        manual_locators = {row["tn_locator"] for row in self.tn_manual_resolution_rows}
+        self.assertTrue(unresolved_locators.issubset(manual_locators))
         self.assertGreaterEqual(len(self.tn_translation_preview_rows), 12)
         self.assertTrue(all(row["tn_locator"] for row in self.tn_translation_preview_rows))
 

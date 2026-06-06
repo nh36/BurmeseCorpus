@@ -51,6 +51,7 @@ TRANSLATION_INTEGRATION_PREVIEW_PATH = CORPUS_ENRICHMENT_DIRECTORY / "translatio
 TN_TRANSLATION_TARGETS_PATH = CORPUS_ENRICHMENT_DIRECTORY / "tn_translation_targets.tsv"
 TN_TRANSLATION_TARGET_STATUS_PATH = CORPUS_ENRICHMENT_DIRECTORY / "tn_translation_target_status.tsv"
 TN_TRANSLATION_CANDIDATES_REVIEW_PATH = CORPUS_ENRICHMENT_DIRECTORY / "tn_translation_candidates_needing_review.tsv"
+TN_MANUAL_RESOLUTION_LOG_PATH = CORPUS_ENRICHMENT_DIRECTORY / "tn_manual_resolution_log.tsv"
 TN_TRANSLATION_INTEGRATION_PREVIEW_PATH = CORPUS_ENRICHMENT_DIRECTORY / "tn_translation_integration_preview.tsv"
 SHWEGUGYI_TRANSLATION_TEXT_PATH = CORPUS_ENRICHMENT_DIRECTORY / "shwegugyi_translation_extracted.txt"
 RAJAKUMAR_TRANSLATION_TEXT_PATH = CORPUS_ENRICHMENT_DIRECTORY / "rajakumar_translation_extracted.txt"
@@ -251,14 +252,46 @@ TN_TRANSLATION_UNIT_SPECS = [
         "start_anchor": "No. (4).",
         "end_anchor": "No. (5)-OBVERSE.",
     },
+    {
+        "translation_unit_id": "tn-translation-1899-plate-li-tn-28",
+        "tn_locator": "TN 28",
+        "iob_plate": "Plate LI",
+        "linked_inscription_id": "obi-v01-n0095",
+        "linked_corpus_record_id": "obi-v01-n0095-re-p0142",
+        "translation_status": "published_partial_translation",
+        "start_anchor": "No. (3).",
+        "end_anchor": "No. (4).",
+    },
+    {
+        "translation_unit_id": "tn-translation-1899-plate-cv-a-tn-30-86-87",
+        "tn_locator": "TN 30 | TN 86-87",
+        "iob_plate": "Plate CV a",
+        "linked_inscription_id": "obi-v01-n0179",
+        "linked_corpus_record_id": "obi-v01-n0179-tx-p0306",
+        "translation_status": "published_partial_translation",
+        "start_anchor": "No. (14).",
+        "end_anchor": "No. (15).",
+    },
+    {
+        "translation_unit_id": "tn-translation-1899-plate-xcviii-tn-143",
+        "tn_locator": "TN 143",
+        "iob_plate": "Plate XCVIII",
+        "linked_inscription_id": "obi-v01-n0129",
+        "linked_corpus_record_id": "obi-v01-n0129-tx-p0209",
+        "translation_status": "published_partial_translation",
+        "start_anchor": "No. (6).",
+        "end_anchor": "No. (7).",
+    },
 ]
 
 TN_TARGET_STATUS_VALUES = {
     "integrated",
-    "candidate_needs_human_review",
-    "not_extractable_from_current_ocr",
-    "duplicate_or_subentry_of_integrated_translation",
-    "deferred_complex_boundary",
+    "integrated_after_manual_review",
+    "confirmed_duplicate_or_overlap",
+    "not_extractable_even_after_page_inspection",
+    "deferred_requires_scholarly_judgement",
+    "no_corresponding_translation_found",
+    "still_unresolved",
 }
 
 TN_TARGET_STATUS_OVERRIDES: dict[tuple[str, str], dict[str, str]] = {
@@ -266,50 +299,134 @@ TN_TARGET_STATUS_OVERRIDES: dict[tuple[str, str], dict[str, str]] = {
         "TN 28",
         "obi-v01-n0095-re-p0142",
     ): {
-        "current_status": "duplicate_or_subentry_of_integrated_translation",
-        "reason_not_integrated": (
-            "Locator TN 28 is a subentry overlap with the integrated TN 27-28 and TN 28-29 extraction slices; "
-            "current OCR does not safely isolate a distinct standalone segment for this specific target row."
+        "current_status": "integrated_after_manual_review",
+        "notes": (
+            "Manual page inspection of OCR page 41 and rendered image page-041.png confirms a distinct No. (3) segment "
+            "for the CS 585 daughter-of-Kyan-Thaing inscription."
         ),
-        "next_action": "Keep as overlap duplicate unless a cleaner plate-specific witness clarifies a separate boundary.",
-        "notes": "Overlaps with integrated TN 27-28 (obi-v01-n0057-ob-p0091) and TN 28-29 (obi-v01-n0169-ob-p0287).",
     },
     (
         "TN 143",
         "obi-v01-n0129-tx-p0209",
     ): {
-        "current_status": "not_extractable_from_current_ocr",
-        "reason_not_integrated": (
-            "Current OCR page segment is heavily fragmented/truncated and does not preserve a stable translation boundary "
-            "for safe integration."
+        "current_status": "integrated_after_manual_review",
+        "notes": (
+            "Manual page/image inspection with targeted Tesseract OCR on pages 156-157 isolates No. (6) and confirms "
+            "the Myingondaing 300-pes dedication segment aligned to this record."
         ),
-        "next_action": "Retry from higher-quality page witness or targeted OCR recrop before integration.",
-        "notes": "Plate XCVIII entry appears mid-fragment and breaks across damaged OCR lines on page 156.",
     },
     (
         "TN 30 | TN 86-87",
         "obi-v01-n0179-tx-p0306",
     ): {
-        "current_status": "deferred_complex_boundary",
-        "reason_not_integrated": (
-            "Composite locator spans disjoint TN ranges and likely multiple subentries; clean unit boundary is not "
-            "deterministic from current OCR alone."
+        "current_status": "integrated_after_manual_review",
+        "notes": (
+            "Manual page/image inspection confirms this composite locator resolves through TN 86-87 pages (OCR 99-100): "
+            "No. (14) matches the Ñāṇapicaññ inscription profile; TN 30 is overlap noise for this target."
         ),
-        "next_action": "Manual boundary review against plate-level context before extraction.",
-        "notes": "Mixed locator (`TN 30 | TN 86-87`) is a known complex case requiring human segmentation.",
     },
     (
         "TN 36-57",
         "obi-v01-n0052-ob-p0083",
     ): {
-        "current_status": "deferred_complex_boundary",
+        "current_status": "deferred_requires_scholarly_judgement",
         "reason_not_integrated": (
-            "Long locator span crosses many adjacent inscription entries and cannot be safely represented as one "
-            "translation unit without manual segmentation."
+            "The span contains many entry boundaries (No. (1) through later numbered items) and mixed chapter transitions; "
+            "the specific segment corresponding to obi-v01-n0052 cannot be isolated with high confidence from TN pages alone."
         ),
-        "next_action": "Manual segmentation pass on subranges before integration.",
-        "notes": "Very broad span (`TN 36-57`) likely includes multiple inscriptions/subentries.",
+        "next_action": (
+            "Require scholarly segmentation against plate-level facsimile/context witnesses before attaching a TN segment "
+            "to this single structured record."
+        ),
+        "notes": "Manual inspection covered OCR pages 49-70 and rendered page images; multiple overlapping entries remain.",
     },
+}
+
+TN_CANDIDATE_RESOLUTION_OVERRIDES: dict[str, dict[str, str]] = {
+    "TN 73-76": {
+        "reason_uncertain": "no_corresponding_translation_found",
+        "recommended_human_action": "Keep candidate-only; no secure corpus linkage emerges from plate/list evidence in current scope.",
+        "notes": "page_image_inspection=attempted; inspected OCR/image pages 86-89.",
+    },
+    "TN 76-79": {
+        "reason_uncertain": "confirmed_duplicate_or_overlap",
+        "recommended_human_action": "Treat as overlap with the already integrated TN 79 unit unless a separate linked record is identified.",
+        "notes": "page_image_inspection=attempted; overlaps TN 79 prayer-to-inscription transition on pages 89-92; overlap_unit=tn-translation-1899-plate-xiii-tn-79.",
+    },
+    "TN 66": {
+        "reason_uncertain": "confirmed_duplicate_or_overlap",
+        "recommended_human_action": "Treat as overlap with integrated TN 65-66.",
+        "notes": "page_image_inspection=attempted; inspected pages 79; overlap_unit=tn-translation-1899-plate-vi-tn-65-66.",
+    },
+    "TN 66-67": {
+        "reason_uncertain": "confirmed_duplicate_or_overlap",
+        "recommended_human_action": "Treat as overlap/continuation of integrated TN 65-66 in current linkage state.",
+        "notes": "page_image_inspection=attempted; inspected pages 79-80; overlap_unit=tn-translation-1899-plate-vi-tn-65-66.",
+    },
+    "TN 70": {
+        "reason_uncertain": "confirmed_duplicate_or_overlap",
+        "recommended_human_action": "Treat Plate X a witness as overlap of the already integrated TN 70 text segment.",
+        "notes": "page_image_inspection=attempted; inspected pages 83; overlap_unit=tn-translation-1899-plate-xlv-tn-70.",
+    },
+    "TN 70-71": {
+        "reason_uncertain": "no_corresponding_translation_found",
+        "recommended_human_action": "Keep candidate-only until a high-confidence structured-corpus linkage is established.",
+        "notes": "page_image_inspection=attempted; inspected pages 83-84; continuation text lacks secure record linkage.",
+    },
+    "TN 80 | TN 6": {
+        "reason_uncertain": "confirmed_duplicate_or_overlap",
+        "recommended_human_action": "Treat as composite overlap: TN 80 overlaps integrated text; TN 6 remains unlinked.",
+        "notes": "page_image_inspection=attempted; inspected disjoint pages 93 and 19; overlap_unit=tn-translation-1899-plate-xxvii-tn-80.",
+    },
+    "TN 6": {
+        "reason_uncertain": "no_corresponding_translation_found",
+        "recommended_human_action": "Keep candidate-only; current TN 6 text does not map to a high-confidence corpus record.",
+        "notes": "page_image_inspection=attempted; inspected page 19.",
+    },
+    "TN 80-81": {
+        "reason_uncertain": "confirmed_duplicate_or_overlap",
+        "recommended_human_action": "Treat as overlap/continuation around integrated TN 80 unless a separate linked record is confirmed.",
+        "notes": "page_image_inspection=attempted; inspected pages 93-94; overlap_unit=tn-translation-1899-plate-xxvii-tn-80.",
+    },
+    "TN 81": {
+        "reason_uncertain": "no_corresponding_translation_found",
+        "recommended_human_action": "Keep candidate-only pending a secure corpus linkage for the standalone continuation text.",
+        "notes": "page_image_inspection=attempted; inspected page 94.",
+    },
+}
+
+TN_MANUAL_INSPECTION_LOCATORS = [
+    "TN 143",
+    "TN 28",
+    "TN 30 | TN 86-87",
+    "TN 36-57",
+    "TN 73-76",
+    "TN 76-79",
+    "TN 66",
+    "TN 66-67",
+    "TN 70",
+    "TN 70-71",
+    "TN 80 | TN 6",
+    "TN 6",
+    "TN 80-81",
+    "TN 81",
+]
+
+TN_MANUAL_EXISTING_STATUS_BY_LOCATOR = {
+    "TN 143": "not_extractable_from_current_ocr",
+    "TN 28": "duplicate_or_subentry_of_integrated_translation",
+    "TN 30 | TN 86-87": "deferred_complex_boundary",
+    "TN 36-57": "deferred_complex_boundary",
+    "TN 73-76": "candidate_needs_human_review",
+    "TN 76-79": "candidate_needs_human_review",
+    "TN 66": "candidate_needs_human_review",
+    "TN 66-67": "candidate_needs_human_review",
+    "TN 70": "candidate_needs_human_review",
+    "TN 70-71": "candidate_needs_human_review",
+    "TN 80 | TN 6": "candidate_needs_human_review",
+    "TN 6": "candidate_needs_human_review",
+    "TN 80-81": "candidate_needs_human_review",
+    "TN 81": "candidate_needs_human_review",
 }
 
 SOURCE_LABELS = {
@@ -473,6 +590,22 @@ TN_TRANSLATION_CANDIDATE_REVIEW_FIELDS = [
     "notes",
 ]
 
+TN_MANUAL_RESOLUTION_LOG_FIELDS = [
+    "tn_locator",
+    "printed_page_or_pages",
+    "ocr_pages_inspected",
+    "image_pages_inspected",
+    "existing_status",
+    "resolution_status",
+    "translation_unit_id",
+    "linked_corpus_record_id",
+    "linked_inscription_id",
+    "evidence_used",
+    "problem_found",
+    "decision",
+    "notes",
+]
+
 TN_TRANSLATION_INTEGRATION_PREVIEW_FIELDS = [
     "linked_corpus_record_id",
     "linked_inscription_id",
@@ -622,6 +755,17 @@ def tn_locator_to_ocr_pages(locator: str) -> str:
         return ""
     mapped = [str(page + 13) for page in pages]
     return ", ".join(mapped)
+
+
+def tn_locator_to_printed_pages(locator: str) -> str:
+    pages = parse_tn_pages(locator)
+    if not pages:
+        return ""
+    return ", ".join(str(page) for page in pages)
+
+
+def ocr_page_list_for_locator(locator: str) -> list[int]:
+    return [page + 13 for page in parse_tn_pages(locator)]
 
 
 def tn_locator_from_source_locator(source_locator: str) -> str:
@@ -1157,26 +1301,26 @@ def build_tn_translation_target_status_rows(
         locator = normalize_tn_locator(target.get("tn_locator", ""))
         record_id = target.get("linked_corpus_record_id", "").strip()
         key = (locator, record_id)
+        override = TN_TARGET_STATUS_OVERRIDES.get(key, {})
         integrated_units = [unit_id for unit_id in translation_units_by_key.get(key, []) if unit_id]
         if integrated_units:
-            status = "integrated"
+            status = override.get("current_status", "integrated")
             reason_not_integrated = ""
             next_action = ""
-            extra_notes = ""
+            extra_notes = override.get("notes", "")
         else:
-            override = TN_TARGET_STATUS_OVERRIDES.get(key, {})
-            status = override.get("current_status", "candidate_needs_human_review")
+            status = override.get("current_status", "still_unresolved")
             reason_not_integrated = override.get(
                 "reason_not_integrated",
-                "No integrated TN translation unit is currently available for this target row.",
+                "No integrated TN translation unit is currently available for this target row after manual OCR/page inspection.",
             )
             next_action = override.get(
                 "next_action",
-                "Perform focused manual linkage/boundary review before integration.",
+                "Continue targeted page-level review; do not integrate without secure boundary and linkage evidence.",
             )
             extra_notes = override.get("notes", "")
         if status not in TN_TARGET_STATUS_VALUES:
-            status = "candidate_needs_human_review"
+            status = "still_unresolved"
         notes = " | ".join(part for part in [target.get("notes", "").strip(), extra_notes] if part)
         status_rows.append(
             {
@@ -1242,15 +1386,30 @@ def build_tn_candidates_needing_review_rows(
             for integrated in integrated_tn_rows
             if set(parse_tn_pages(tn_ref)).intersection(set(parse_tn_pages(tn_locator_from_source_locator(integrated.get("source_locator", "")))))
         ]
-        if overlapping_integrated:
-            reason_uncertain = "duplicate_or_overlap_with_integrated_tn_boundary"
+        override = TN_CANDIDATE_RESOLUTION_OVERRIDES.get(tn_ref, {})
+        if override:
+            reason_uncertain = override["reason_uncertain"]
+            recommended_action = override["recommended_human_action"]
+            override_notes = override.get("notes", "")
+        elif overlapping_integrated:
+            reason_uncertain = "confirmed_duplicate_or_overlap"
             recommended_action = "Treat as overlap unless a plate-specific standalone boundary can be isolated."
+            override_notes = "page_image_inspection=attempted"
         elif possible_record_ids:
-            reason_uncertain = "linkage_or_boundary_unclear"
+            reason_uncertain = "still_unresolved"
             recommended_action = "Compare locator text span and plate context to confirm whether this row is safely extractable."
+            override_notes = "page_image_inspection=attempted"
         else:
-            reason_uncertain = "missing_or_uncertain_corpus_link"
+            reason_uncertain = "no_corresponding_translation_found"
             recommended_action = "Resolve corpus linkage first using plate/list references before extraction."
+            override_notes = "page_image_inspection=attempted"
+        note_parts = [
+            (
+                f"iob_plate={row.get('iob_plate', '')}; locator_pages={','.join(str(page) for page in parse_tn_pages(tn_ref))}; "
+                f"ocr_pages={tn_locator_to_ocr_pages(tn_ref)}; link_basis={row.get('link_basis', '')}"
+            ),
+            override_notes,
+        ]
         rows.append(
             {
                 "tn_locator": tn_ref,
@@ -1259,15 +1418,121 @@ def build_tn_candidates_needing_review_rows(
                 "translation_text_snippet": snippet,
                 "reason_uncertain": reason_uncertain,
                 "recommended_human_action": recommended_action,
-                "notes": (
-                    f"iob_plate={row.get('iob_plate', '')}; locator_pages={','.join(str(page) for page in parse_tn_pages(tn_ref))}; "
-                    f"ocr_pages={tn_locator_to_ocr_pages(tn_ref)}; link_basis={row.get('link_basis', '')}"
-                ),
+                "notes": " | ".join(part for part in note_parts if part),
             }
         )
         seen.add(tn_ref)
         if len(rows) >= 10:
             break
+    return rows
+
+
+def build_tn_manual_resolution_log_rows(
+    tn_target_rows: list[dict],
+    tn_target_status_rows: list[dict],
+    tn_review_rows: list[dict],
+    translation_rows: list[dict],
+) -> list[dict]:
+    target_by_locator = {
+        normalize_tn_locator(row.get("tn_locator", "")): row for row in tn_target_rows
+    }
+    status_by_locator = {
+        normalize_tn_locator(row.get("tn_locator", "")): row for row in tn_target_status_rows
+    }
+    review_by_locator = {
+        normalize_tn_locator(row.get("tn_locator", "")): row for row in tn_review_rows
+    }
+    tn_units = [row for row in translation_rows if row.get("source_key") == TN_SOURCE_KEY]
+    unit_ids_by_locator: dict[str, list[str]] = {}
+    for row in tn_units:
+        locator = normalize_tn_locator(tn_locator_from_source_locator(row.get("source_locator", "")))
+        if locator:
+            unit_ids_by_locator.setdefault(locator, []).append(row.get("translation_unit_id", ""))
+
+    rows: list[dict] = []
+    for locator_raw in TN_MANUAL_INSPECTION_LOCATORS:
+        locator = normalize_tn_locator(locator_raw)
+        target_row = target_by_locator.get(locator, {})
+        status_row = status_by_locator.get(locator, {})
+        review_row = review_by_locator.get(locator, {})
+        candidate_override = TN_CANDIDATE_RESOLUTION_OVERRIDES.get(locator, {})
+        resolution_status = (
+            candidate_override.get("reason_uncertain")
+            or status_row.get("current_status")
+            or "still_unresolved"
+        )
+        translation_unit_id = status_row.get("translation_unit_id", "").strip()
+        if not translation_unit_id:
+            translation_unit_id = "; ".join(
+                sorted(unit_id for unit_id in unit_ids_by_locator.get(locator, []) if unit_id)
+            )
+        if not translation_unit_id and "overlap_unit=" in candidate_override.get("notes", ""):
+            for part in candidate_override.get("notes", "").split(";"):
+                cleaned = part.strip()
+                if cleaned.startswith("overlap_unit="):
+                    translation_unit_id = cleaned.split("=", 1)[1].strip().rstrip(".")
+                    break
+        printed_pages = tn_locator_to_printed_pages(locator)
+        ocr_pages = ocr_page_list_for_locator(locator)
+        ocr_pages_str = ", ".join(str(page) for page in ocr_pages)
+        image_pages = ", ".join(f"page-{page:03d}.png" for page in ocr_pages)
+        linked_record_id = (
+            status_row.get("linked_corpus_record_id", "")
+            or target_row.get("linked_corpus_record_id", "")
+            or review_row.get("possible_corpus_record_ids", "")
+        )
+        linked_inscription_id = (
+            status_row.get("linked_inscription_id", "")
+            or target_row.get("linked_inscription_id", "")
+            or review_row.get("possible_inscription_ids", "")
+        )
+        problem_found = (
+            status_row.get("reason_not_integrated", "")
+            or review_row.get("reason_uncertain", "")
+            or "manual inspection completed"
+        )
+        if resolution_status in {"integrated_after_manual_review", "integrated"}:
+            decision = "Integrated a bounded TN segment after direct page/image review."
+        elif resolution_status == "confirmed_duplicate_or_overlap":
+            decision = "Confirmed overlap/duplicate relation to an already integrated TN segment."
+        elif resolution_status == "deferred_requires_scholarly_judgement":
+            decision = "Deferred pending scholarly segmentation judgement."
+        elif resolution_status == "not_extractable_even_after_page_inspection":
+            decision = "Confirmed unreadable or non-recoverable after page-image inspection."
+        elif resolution_status == "no_corresponding_translation_found":
+            decision = "No secure corresponding translation linkage found in current corpus scope."
+        else:
+            decision = "Manual inspection attempted but resolution remains open."
+        notes_parts = [
+            status_row.get("notes", ""),
+            review_row.get("notes", ""),
+            "page_image_inspection=attempted",
+        ]
+        deduped_notes: list[str] = []
+        for part in notes_parts:
+            cleaned = part.strip()
+            if cleaned and cleaned not in deduped_notes:
+                deduped_notes.append(cleaned)
+        rows.append(
+            {
+                "tn_locator": locator,
+                "printed_page_or_pages": printed_pages,
+                "ocr_pages_inspected": ocr_pages_str,
+                "image_pages_inspected": image_pages,
+                "existing_status": TN_MANUAL_EXISTING_STATUS_BY_LOCATOR.get(locator, "candidate_needs_human_review"),
+                "resolution_status": resolution_status,
+                "translation_unit_id": translation_unit_id,
+                "linked_corpus_record_id": linked_record_id,
+                "linked_inscription_id": linked_inscription_id,
+                "evidence_used": (
+                    "tracked OCR page markers + local vision page_text + existing zip OCR text + "
+                    "rendered page images with targeted Tesseract page OCR"
+                ),
+                "problem_found": problem_found,
+                "decision": decision,
+                "notes": " | ".join(deduped_notes),
+            }
+        )
     return rows
 
 
@@ -1741,6 +2006,11 @@ def main() -> None:
         default=REPO_ROOT / "data" / "working" / "corpus_enrichment" / "tn_translation_target_status.tsv",
     )
     parser.add_argument(
+        "--output-tn-manual-resolution-log-tsv",
+        type=Path,
+        default=REPO_ROOT / "data" / "working" / "corpus_enrichment" / "tn_manual_resolution_log.tsv",
+    )
+    parser.add_argument(
         "--output-tn-preview-tsv",
         type=Path,
         default=REPO_ROOT / "data" / "working" / "corpus_enrichment" / "tn_translation_integration_preview.tsv",
@@ -1786,6 +2056,12 @@ def main() -> None:
         crossref_rows,
         tn_page_map,
         tn_target_rows,
+        translation_unit_rows,
+    )
+    tn_manual_resolution_rows = build_tn_manual_resolution_log_rows(
+        tn_target_rows,
+        tn_target_status_rows,
+        tn_review_rows,
         translation_unit_rows,
     )
     tn_preview_rows = build_tn_translation_integration_preview_rows(translation_unit_rows, record_title_by_id)
@@ -1846,6 +2122,11 @@ def main() -> None:
     write_tsv(args.output_tn_targets_tsv, tn_target_rows, TN_TRANSLATION_TARGET_FIELDS)
     write_tsv(args.output_tn_target_status_tsv, tn_target_status_rows, TN_TRANSLATION_TARGET_STATUS_FIELDS)
     write_tsv(args.output_tn_candidates_review_tsv, tn_review_rows, TN_TRANSLATION_CANDIDATE_REVIEW_FIELDS)
+    write_tsv(
+        args.output_tn_manual_resolution_log_tsv,
+        tn_manual_resolution_rows,
+        TN_MANUAL_RESOLUTION_LOG_FIELDS,
+    )
     write_tsv(args.output_tn_preview_tsv, tn_preview_rows, TN_TRANSLATION_INTEGRATION_PREVIEW_FIELDS)
     args.output_summary_json.parent.mkdir(parents=True, exist_ok=True)
     args.output_summary_json.write_text(json.dumps(summary, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
@@ -1853,6 +2134,7 @@ def main() -> None:
         f"Wrote {len(enriched_records)} enriched records, {len(preview_rows)} preview rows, "
         f"{len(action_rows)} translation action rows, {len(translation_unit_rows)} translation units, "
         f"{len(tn_target_rows)} TN target rows, {len(tn_target_status_rows)} TN target status rows, "
+        f"{len(tn_manual_resolution_rows)} TN manual-resolution rows, "
         f"{len(tn_preview_rows)} TN preview rows, "
         f"and {len(summary)} summary fields."
     )

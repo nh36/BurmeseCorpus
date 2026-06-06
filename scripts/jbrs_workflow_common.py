@@ -114,6 +114,7 @@ TN_OCR_SOURCE_NOTE_PATH = CORPUS_ENRICHMENT_DIRECTORY / "tn_ocr_source_note.md"
 TN_TRANSLATION_TARGETS_PATH = CORPUS_ENRICHMENT_DIRECTORY / "tn_translation_targets.tsv"
 TN_TRANSLATION_TARGET_STATUS_PATH = CORPUS_ENRICHMENT_DIRECTORY / "tn_translation_target_status.tsv"
 TN_TRANSLATION_CANDIDATES_REVIEW_PATH = CORPUS_ENRICHMENT_DIRECTORY / "tn_translation_candidates_needing_review.tsv"
+TN_MANUAL_RESOLUTION_LOG_PATH = CORPUS_ENRICHMENT_DIRECTORY / "tn_manual_resolution_log.tsv"
 TN_TRANSLATION_INTEGRATION_PREVIEW_PATH = CORPUS_ENRICHMENT_DIRECTORY / "tn_translation_integration_preview.tsv"
 IOB_SOURCE_KEY = "lucePeMaungTinInscriptionsOfBurma"
 LIST_SOURCE_KEY = "duroiselle1921list"
@@ -404,10 +405,12 @@ JBRS_OCR_LANGUAGE_SCOPE_VALUES = {
 }
 TN_TRANSLATION_TARGET_CURRENT_STATUSES = {
     "integrated",
-    "candidate_needs_human_review",
-    "not_extractable_from_current_ocr",
-    "duplicate_or_subentry_of_integrated_translation",
-    "deferred_complex_boundary",
+    "integrated_after_manual_review",
+    "confirmed_duplicate_or_overlap",
+    "not_extractable_even_after_page_inspection",
+    "deferred_requires_scholarly_judgement",
+    "no_corresponding_translation_found",
+    "still_unresolved",
 }
 
 JBRS_BURMESE_RELEVANCE_GUESS_VALUES = {
@@ -1207,6 +1210,21 @@ TN_TRANSLATION_TARGET_STATUS_FIELDS = [
     "translation_unit_id",
     "reason_not_integrated",
     "next_action",
+    "notes",
+]
+TN_MANUAL_RESOLUTION_LOG_FIELDS = [
+    "tn_locator",
+    "printed_page_or_pages",
+    "ocr_pages_inspected",
+    "image_pages_inspected",
+    "existing_status",
+    "resolution_status",
+    "translation_unit_id",
+    "linked_corpus_record_id",
+    "linked_inscription_id",
+    "evidence_used",
+    "problem_found",
+    "decision",
     "notes",
 ]
 ENRICHED_PREVIEW_FIELDS = [
@@ -4453,6 +4471,7 @@ def validate_jbrs_workflow() -> list[str]:
         TN_TRANSLATION_TARGETS_PATH,
         TN_TRANSLATION_TARGET_STATUS_PATH,
         TN_TRANSLATION_CANDIDATES_REVIEW_PATH,
+        TN_MANUAL_RESOLUTION_LOG_PATH,
         TN_TRANSLATION_INTEGRATION_PREVIEW_PATH,
         TN_WORKING_OCR_PLAIN_TEXT_PATH,
         TN_WORKING_OCR_CLEANED_TEXT_PATH,
@@ -4475,12 +4494,16 @@ def validate_jbrs_workflow() -> list[str]:
     tn_target_status_header, _ = tsv_header_and_row_count(
         TN_TRANSLATION_TARGET_STATUS_PATH, TN_TRANSLATION_TARGET_STATUS_FIELDS
     )
+    tn_manual_resolution_header, _ = tsv_header_and_row_count(
+        TN_MANUAL_RESOLUTION_LOG_PATH, TN_MANUAL_RESOLUTION_LOG_FIELDS
+    )
     enriched_preview_header, enriched_preview_row_count = tsv_header_and_row_count(
         ENRICHED_CANDIDATE_PREVIEW_PATH, ENRICHED_PREVIEW_FIELDS
     )
     expected_batch_header = "\t".join(OCR_BATCH_PLAN_FIELDS)
     expected_status_header = "\t".join(OCR_STATUS_LOG_FIELDS)
     expected_tn_target_status_header = "\t".join(TN_TRANSLATION_TARGET_STATUS_FIELDS)
+    expected_tn_manual_resolution_header = "\t".join(TN_MANUAL_RESOLUTION_LOG_FIELDS)
     expected_enriched_preview_header = "\t".join(ENRICHED_PREVIEW_FIELDS)
     if batch_header != expected_batch_header:
         errors.append("JBRS OCR batch plan TSV is blank or missing the expected header.")
@@ -4490,6 +4513,8 @@ def validate_jbrs_workflow() -> list[str]:
         errors.append("Enriched candidate preview TSV is blank or missing the expected header.")
     if tn_target_status_header != expected_tn_target_status_header:
         errors.append("TN translation target status TSV is blank or missing the expected header.")
+    if tn_manual_resolution_header != expected_tn_manual_resolution_header:
+        errors.append("TN manual resolution log TSV is blank or missing the expected header.")
     if JBRS_OCR_BATCH_PLAN_PATH.stat().st_size > MAX_GITHUB_CONTENTS_SIZE:
         errors.append("JBRS OCR batch plan TSV exceeds the GitHub contents-view size threshold.")
     if JBRS_OCR_STATUS_LOG_PATH.stat().st_size > MAX_GITHUB_CONTENTS_SIZE:
@@ -4536,6 +4561,7 @@ def validate_jbrs_workflow() -> list[str]:
     tn_target_rows = read_tsv(TN_TRANSLATION_TARGETS_PATH)
     tn_target_status_rows = read_tsv(TN_TRANSLATION_TARGET_STATUS_PATH)
     tn_review_rows = read_tsv(TN_TRANSLATION_CANDIDATES_REVIEW_PATH)
+    tn_manual_resolution_rows = read_tsv(TN_MANUAL_RESOLUTION_LOG_PATH)
     tn_preview_rows = read_tsv(TN_TRANSLATION_INTEGRATION_PREVIEW_PATH)
     enriched_summary = json.loads(ENRICHED_CANDIDATE_SUMMARY_PATH.read_text(encoding="utf-8"))
     try:
@@ -4911,7 +4937,7 @@ def validate_jbrs_workflow() -> list[str]:
         if status not in TN_TRANSLATION_TARGET_CURRENT_STATUSES:
             errors.append(f"TN target status row has invalid current_status: {row.get('tn_locator', '')} / {row.get('linked_corpus_record_id', '')}")
             continue
-        if status == "integrated":
+        if status in {"integrated", "integrated_after_manual_review"}:
             translation_unit_id = row.get("translation_unit_id", "").strip()
             if not translation_unit_id:
                 errors.append(f"Integrated TN target status row is missing translation_unit_id: {row.get('tn_locator', '')}")
@@ -4924,6 +4950,33 @@ def validate_jbrs_workflow() -> list[str]:
                 errors.append(f"Non-integrated TN target status row is missing reason_not_integrated: {row.get('tn_locator', '')}")
             if not row.get("next_action", "").strip():
                 errors.append(f"Non-integrated TN target status row is missing next_action: {row.get('tn_locator', '')}")
+    generic_tn_review_statuses = {"missing_or_uncertain_corpus_link", "linkage_or_boundary_unclear"}
+    for row in tn_review_rows:
+        if row.get("reason_uncertain", "") in generic_tn_review_statuses:
+            errors.append(f"TN review row still uses generic reason_uncertain: {row.get('tn_locator', '')}")
+        if "page_image_inspection=attempted" not in row.get("notes", ""):
+            errors.append(f"TN review row is missing explicit page/image inspection note: {row.get('tn_locator', '')}")
+
+    manual_log_by_locator = {
+        row.get("tn_locator", "").strip(): row for row in tn_manual_resolution_rows if row.get("tn_locator", "").strip()
+    }
+    unresolved_locators = {
+        row.get("tn_locator", "").strip()
+        for row in tn_target_status_rows
+        if row.get("current_status", "") not in {"integrated", "integrated_after_manual_review"}
+    }
+    unresolved_locators.update(row.get("tn_locator", "").strip() for row in tn_review_rows if row.get("tn_locator", "").strip())
+    for locator in unresolved_locators:
+        manual_row = manual_log_by_locator.get(locator)
+        if not manual_row:
+            errors.append(f"TN manual resolution log is missing locator {locator}.")
+            continue
+        if not manual_row.get("resolution_status", ""):
+            errors.append(f"TN manual resolution log row is missing resolution_status: {locator}")
+        if manual_row.get("resolution_status", "") not in TN_TRANSLATION_TARGET_CURRENT_STATUSES:
+            errors.append(f"TN manual resolution log has invalid resolution_status: {locator}")
+        if "page_image_inspection=attempted" not in manual_row.get("notes", ""):
+            errors.append(f"TN manual resolution log row lacks page/image inspection marker: {locator}")
 
     for row in tn_target_rows:
         if ABSOLUTE_PATH_PATTERN.search(" ".join(row.values())):
@@ -4936,6 +4989,10 @@ def validate_jbrs_workflow() -> list[str]:
     for row in tn_review_rows:
         if ABSOLUTE_PATH_PATTERN.search(" ".join(row.values())):
             errors.append("tn_translation_candidates_needing_review.tsv contains an absolute path.")
+            break
+    for row in tn_manual_resolution_rows:
+        if ABSOLUTE_PATH_PATTERN.search(" ".join(row.values())):
+            errors.append("tn_manual_resolution_log.tsv contains an absolute path.")
             break
     for row in tn_preview_rows:
         if ABSOLUTE_PATH_PATTERN.search(" ".join(row.values())):
@@ -5025,6 +5082,7 @@ def validate_jbrs_workflow() -> list[str]:
         TN_TRANSLATION_TARGETS_PATH,
         TN_TRANSLATION_TARGET_STATUS_PATH,
         TN_TRANSLATION_CANDIDATES_REVIEW_PATH,
+        TN_MANUAL_RESOLUTION_LOG_PATH,
         TN_TRANSLATION_INTEGRATION_PREVIEW_PATH,
     ]:
         text = path.read_text(encoding="utf-8")

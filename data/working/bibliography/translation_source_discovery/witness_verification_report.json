@@ -54,11 +54,11 @@
   "eb_translation_unconfirmed_count": 3,
   "eb_fascicle_content_inspection_count": 10,
   "direct_witness_search_result_counts": {
-    "direct_witness_found": 0,
+    "not_found": 19,
+    "candidate_found": 5,
     "blocked_by_missing_local_index": 0,
     "bibliographic_clue_found": 8,
-    "not_found": 19,
-    "candidate_found": 5
+    "direct_witness_found": 0
   },
   "verified_translation_after_inspection_count": 0,
   "verified_edition_after_inspection_count": 4,
