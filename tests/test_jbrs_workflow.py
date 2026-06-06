@@ -66,6 +66,7 @@ from jbrs_workflow_common import (
     TRANSLATION_UNITS_EXTRACTED_PATH,
     TN_OCR_SOURCE_NOTE_PATH,
     TN_TRANSLATION_TARGETS_PATH,
+    TN_TRANSLATION_TARGET_STATUS_PATH,
     TN_TRANSLATION_CANDIDATES_REVIEW_PATH,
     TN_TRANSLATION_INTEGRATION_PREVIEW_PATH,
     TN_WORKING_OCR_PLAIN_TEXT_PATH,
@@ -156,6 +157,7 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
         cls.translation_unit_rows = read_tsv(TRANSLATION_UNITS_EXTRACTED_PATH)
         cls.translation_integration_preview_rows = read_tsv(TRANSLATION_INTEGRATION_PREVIEW_PATH)
         cls.tn_translation_target_rows = read_tsv(TN_TRANSLATION_TARGETS_PATH)
+        cls.tn_translation_target_status_rows = read_tsv(TN_TRANSLATION_TARGET_STATUS_PATH)
         cls.tn_translation_review_rows = read_tsv(TN_TRANSLATION_CANDIDATES_REVIEW_PATH)
         cls.tn_translation_preview_rows = read_tsv(TN_TRANSLATION_INTEGRATION_PREVIEW_PATH)
         cls.tn_ocr_metadata_index = json.loads(TN_WORKING_OCR_METADATA_INDEX_PATH.read_text(encoding="utf-8"))
@@ -232,6 +234,7 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
             TRANSLATION_UNITS_EXTRACTED_PATH,
             TN_OCR_SOURCE_NOTE_PATH,
             TN_TRANSLATION_TARGETS_PATH,
+            TN_TRANSLATION_TARGET_STATUS_PATH,
             TN_TRANSLATION_CANDIDATES_REVIEW_PATH,
             TN_TRANSLATION_INTEGRATION_PREVIEW_PATH,
             TN_WORKING_OCR_PLAIN_TEXT_PATH,
@@ -786,6 +789,24 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
         self.assertTrue(all(row["linked_corpus_record_id"] for row in self.tn_translation_target_rows))
         self.assertTrue(all(row["source_of_link"] for row in self.tn_translation_target_rows))
         self.assertTrue(all(row["priority"] in {"high", "medium"} for row in self.tn_translation_target_rows))
+        self.assertEqual(len(self.tn_translation_target_status_rows), len(self.tn_translation_target_rows))
+        allowed_statuses = {
+            "integrated",
+            "candidate_needs_human_review",
+            "not_extractable_from_current_ocr",
+            "duplicate_or_subentry_of_integrated_translation",
+            "deferred_complex_boundary",
+        }
+        self.assertTrue(all(row["current_status"] in allowed_statuses for row in self.tn_translation_target_status_rows))
+        target_keys = {
+            (row["tn_locator"], row["linked_corpus_record_id"])
+            for row in self.tn_translation_target_rows
+        }
+        status_keys = {
+            (row["tn_locator"], row["linked_corpus_record_id"])
+            for row in self.tn_translation_target_status_rows
+        }
+        self.assertEqual(target_keys, status_keys)
         self.assertGreaterEqual(len(self.tn_translation_review_rows), 1)
         self.assertTrue(all(row["tn_locator"] for row in self.tn_translation_review_rows))
         self.assertTrue(all(row["reason_uncertain"] for row in self.tn_translation_review_rows))

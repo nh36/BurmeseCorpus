@@ -112,6 +112,7 @@ TRANSLATION_SOURCE_ACTION_TABLE_PATH = CORPUS_ENRICHMENT_DIRECTORY / "translatio
 TRANSLATION_UNITS_EXTRACTED_PATH = CORPUS_ENRICHMENT_DIRECTORY / "translation_units_extracted.tsv"
 TN_OCR_SOURCE_NOTE_PATH = CORPUS_ENRICHMENT_DIRECTORY / "tn_ocr_source_note.md"
 TN_TRANSLATION_TARGETS_PATH = CORPUS_ENRICHMENT_DIRECTORY / "tn_translation_targets.tsv"
+TN_TRANSLATION_TARGET_STATUS_PATH = CORPUS_ENRICHMENT_DIRECTORY / "tn_translation_target_status.tsv"
 TN_TRANSLATION_CANDIDATES_REVIEW_PATH = CORPUS_ENRICHMENT_DIRECTORY / "tn_translation_candidates_needing_review.tsv"
 TN_TRANSLATION_INTEGRATION_PREVIEW_PATH = CORPUS_ENRICHMENT_DIRECTORY / "tn_translation_integration_preview.tsv"
 IOB_SOURCE_KEY = "lucePeMaungTinInscriptionsOfBurma"
@@ -400,6 +401,13 @@ JBRS_OCR_LANGUAGE_SCOPE_VALUES = {
     "Pyu",
     "mixed_or_uncertain",
     "non_burmese_relevant_context",
+}
+TN_TRANSLATION_TARGET_CURRENT_STATUSES = {
+    "integrated",
+    "candidate_needs_human_review",
+    "not_extractable_from_current_ocr",
+    "duplicate_or_subentry_of_integrated_translation",
+    "deferred_complex_boundary",
 }
 
 JBRS_BURMESE_RELEVANCE_GUESS_VALUES = {
@@ -1183,6 +1191,22 @@ TRANSLATION_INTEGRATION_PREVIEW_FIELDS = [
     "has_existing_transcription",
     "link_basis",
     "needs_human_review",
+    "notes",
+]
+TN_TRANSLATION_TARGET_STATUS_FIELDS = [
+    "tn_locator",
+    "linked_corpus_record_id",
+    "linked_inscription_id",
+    "title_or_label",
+    "iob_plate",
+    "list_ref",
+    "ppa_ref",
+    "sip_ref",
+    "priority",
+    "current_status",
+    "translation_unit_id",
+    "reason_not_integrated",
+    "next_action",
     "notes",
 ]
 ENRICHED_PREVIEW_FIELDS = [
@@ -4427,6 +4451,7 @@ def validate_jbrs_workflow() -> list[str]:
         TRANSLATION_INTEGRATION_PREVIEW_PATH,
         TN_OCR_SOURCE_NOTE_PATH,
         TN_TRANSLATION_TARGETS_PATH,
+        TN_TRANSLATION_TARGET_STATUS_PATH,
         TN_TRANSLATION_CANDIDATES_REVIEW_PATH,
         TN_TRANSLATION_INTEGRATION_PREVIEW_PATH,
         TN_WORKING_OCR_PLAIN_TEXT_PATH,
@@ -4447,11 +4472,15 @@ def validate_jbrs_workflow() -> list[str]:
 
     batch_header, batch_row_count = tsv_header_and_row_count(JBRS_OCR_BATCH_PLAN_PATH, OCR_BATCH_PLAN_FIELDS)
     status_header, status_row_count = tsv_header_and_row_count(JBRS_OCR_STATUS_LOG_PATH, OCR_STATUS_LOG_FIELDS)
+    tn_target_status_header, _ = tsv_header_and_row_count(
+        TN_TRANSLATION_TARGET_STATUS_PATH, TN_TRANSLATION_TARGET_STATUS_FIELDS
+    )
     enriched_preview_header, enriched_preview_row_count = tsv_header_and_row_count(
         ENRICHED_CANDIDATE_PREVIEW_PATH, ENRICHED_PREVIEW_FIELDS
     )
     expected_batch_header = "\t".join(OCR_BATCH_PLAN_FIELDS)
     expected_status_header = "\t".join(OCR_STATUS_LOG_FIELDS)
+    expected_tn_target_status_header = "\t".join(TN_TRANSLATION_TARGET_STATUS_FIELDS)
     expected_enriched_preview_header = "\t".join(ENRICHED_PREVIEW_FIELDS)
     if batch_header != expected_batch_header:
         errors.append("JBRS OCR batch plan TSV is blank or missing the expected header.")
@@ -4459,6 +4488,8 @@ def validate_jbrs_workflow() -> list[str]:
         errors.append("JBRS OCR status log TSV is blank or missing the expected header.")
     if enriched_preview_header != expected_enriched_preview_header:
         errors.append("Enriched candidate preview TSV is blank or missing the expected header.")
+    if tn_target_status_header != expected_tn_target_status_header:
+        errors.append("TN translation target status TSV is blank or missing the expected header.")
     if JBRS_OCR_BATCH_PLAN_PATH.stat().st_size > MAX_GITHUB_CONTENTS_SIZE:
         errors.append("JBRS OCR batch plan TSV exceeds the GitHub contents-view size threshold.")
     if JBRS_OCR_STATUS_LOG_PATH.stat().st_size > MAX_GITHUB_CONTENTS_SIZE:
@@ -4503,6 +4534,7 @@ def validate_jbrs_workflow() -> list[str]:
     translation_unit_rows = read_tsv(TRANSLATION_UNITS_EXTRACTED_PATH)
     translation_preview_rows = read_tsv(TRANSLATION_INTEGRATION_PREVIEW_PATH)
     tn_target_rows = read_tsv(TN_TRANSLATION_TARGETS_PATH)
+    tn_target_status_rows = read_tsv(TN_TRANSLATION_TARGET_STATUS_PATH)
     tn_review_rows = read_tsv(TN_TRANSLATION_CANDIDATES_REVIEW_PATH)
     tn_preview_rows = read_tsv(TN_TRANSLATION_INTEGRATION_PREVIEW_PATH)
     enriched_summary = json.loads(ENRICHED_CANDIDATE_SUMMARY_PATH.read_text(encoding="utf-8"))
@@ -4860,9 +4892,46 @@ def validate_jbrs_workflow() -> list[str]:
         if row.get("translation_status", "") not in {"published_translation", "published_partial_translation"}:
             errors.append(f"TN translation unit {unit_id} has invalid translation_status for integrated TN batch.")
 
+    tn_target_keys = {
+        (row.get("tn_locator", "").strip(), row.get("linked_corpus_record_id", "").strip())
+        for row in tn_target_rows
+        if row.get("tn_locator", "").strip() and row.get("linked_corpus_record_id", "").strip()
+    }
+    tn_target_status_keys = [
+        (row.get("tn_locator", "").strip(), row.get("linked_corpus_record_id", "").strip())
+        for row in tn_target_status_rows
+    ]
+    if len(tn_target_status_keys) != len(set(tn_target_status_keys)):
+        errors.append("tn_translation_target_status.tsv contains duplicate tn_locator + linked_corpus_record_id rows.")
+    if set(tn_target_status_keys) != tn_target_keys:
+        errors.append("tn_translation_target_status.tsv does not account for every TN target row exactly once.")
+    tn_unit_id_set = {row.get("translation_unit_id", "") for row in tn_translation_units if row.get("translation_unit_id", "")}
+    for row in tn_target_status_rows:
+        status = row.get("current_status", "")
+        if status not in TN_TRANSLATION_TARGET_CURRENT_STATUSES:
+            errors.append(f"TN target status row has invalid current_status: {row.get('tn_locator', '')} / {row.get('linked_corpus_record_id', '')}")
+            continue
+        if status == "integrated":
+            translation_unit_id = row.get("translation_unit_id", "").strip()
+            if not translation_unit_id:
+                errors.append(f"Integrated TN target status row is missing translation_unit_id: {row.get('tn_locator', '')}")
+            else:
+                for unit_id in [part.strip() for part in translation_unit_id.split(";") if part.strip()]:
+                    if unit_id not in tn_unit_id_set:
+                        errors.append(f"TN target status row references unknown TN translation unit: {unit_id}")
+        else:
+            if not row.get("reason_not_integrated", "").strip():
+                errors.append(f"Non-integrated TN target status row is missing reason_not_integrated: {row.get('tn_locator', '')}")
+            if not row.get("next_action", "").strip():
+                errors.append(f"Non-integrated TN target status row is missing next_action: {row.get('tn_locator', '')}")
+
     for row in tn_target_rows:
         if ABSOLUTE_PATH_PATTERN.search(" ".join(row.values())):
             errors.append("tn_translation_targets.tsv contains an absolute path.")
+            break
+    for row in tn_target_status_rows:
+        if ABSOLUTE_PATH_PATTERN.search(" ".join(row.values())):
+            errors.append("tn_translation_target_status.tsv contains an absolute path.")
             break
     for row in tn_review_rows:
         if ABSOLUTE_PATH_PATTERN.search(" ".join(row.values())):
@@ -4950,6 +5019,13 @@ def validate_jbrs_workflow() -> list[str]:
         ENRICHED_CORPUS_CANDIDATE_PATH,
         ENRICHED_CANDIDATE_PREVIEW_PATH,
         ENRICHED_CANDIDATE_SUMMARY_PATH,
+        TRANSLATION_SOURCE_ACTION_TABLE_PATH,
+        TRANSLATION_UNITS_EXTRACTED_PATH,
+        TRANSLATION_INTEGRATION_PREVIEW_PATH,
+        TN_TRANSLATION_TARGETS_PATH,
+        TN_TRANSLATION_TARGET_STATUS_PATH,
+        TN_TRANSLATION_CANDIDATES_REVIEW_PATH,
+        TN_TRANSLATION_INTEGRATION_PREVIEW_PATH,
     ]:
         text = path.read_text(encoding="utf-8")
         if ABSOLUTE_PATH_PATTERN.search(text):
