@@ -1,0 +1,25 @@
+{
+  "generated_at_utc": "2026-06-06T14:03:24.806827+00:00",
+  "source_pdf": "data/local/pagan_pinya_ava_ocr/source/hvd-hxx68w-1780753436.pdf",
+  "ocr_engine": "Google Cloud Vision DOCUMENT_TEXT_DETECTION",
+  "pdf_rendering": "pdftoppm/pdftocairo PNG at 300 dpi",
+  "manifest": {
+    "local_file_id": "pagan_pinya_ava_1899_hvd_hxx68w",
+    "source_file_name": "hvd-hxx68w-1780753436.pdf",
+    "path_stub": "data/local/pagan_pinya_ava_ocr/source/hvd-hxx68w-1780753436.pdf",
+    "ocr_engine": "google_vision",
+    "ocr_date": "2026-06-06T14:01:28.486243+00:00",
+    "page_count": 203,
+    "language_hints": [
+      "en",
+      "my"
+    ],
+    "image_preprocessing_used": "pdftoppm-300dpi",
+    "google_vision_batch_id_if_any": "pagan-pinya-ava-ocr-0001",
+    "checksum_or_file_fingerprint": "aa6f8420f2511ccc1563cd0bb4b665599cf484c9f3e10481291769f898ae72f3",
+    "notes": "Raw per-page Vision JSON is intentionally kept under data/local/ and excluded from git."
+  },
+  "page_count_detected": 203,
+  "page_json_file_count": 203,
+  "google_vision_json_path_stub": "data/local/pagan_pinya_ava_ocr/output/vision_run/google_vision_json/pagan-pinya-ava-1899-hvd-hxx68w/page-XXXX.json"
+}

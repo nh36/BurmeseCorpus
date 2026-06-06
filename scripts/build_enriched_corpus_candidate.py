@@ -10,7 +10,10 @@ from corpus_common import REPO_ROOT, read_jsonl, read_tsv, write_jsonl, write_ts
 SIP_SOURCE_KEY = "sipSelectionsPagan"
 SIP_BIBLIOGRAPHIC_LABEL = "Pe Maung Tin and G. H. Luce, Selections from the Inscriptions of Pagan, 1928"
 TN_SOURCE_KEY = "tnInscriptionsPaganPinyaAva"
-TN_BIBLIOGRAPHIC_LABEL = "U Tun Nyein, Inscriptions of Pagan, Pinya and Ava: Translation, with Notes, Rangoon, 1899"
+TN_BIBLIOGRAPHIC_LABEL = (
+    "U Tun Nyein / Taw Sein Ko / Forchhammer, Inscriptions of Pagan, Pinya and Ava: Translation, with Notes. "
+    "Rangoon: Government Press, 1899."
+)
 PPA_SOURCE_KEY = "ppaCatalogue"
 PPA_BIBLIOGRAPHIC_LABEL = "Inscriptions of Pagan, Pinya and Ava, Rangoon, 1892"
 IOB_SOURCE_KEY = "lucePeMaungTinInscriptionsOfBurma"
@@ -38,14 +41,96 @@ RAJAKUMAR_TRANSLATION_BIBLIOGRAPHIC_LABEL = (
 )
 
 CORPUS_ENRICHMENT_DIRECTORY = REPO_ROOT / "data" / "working" / "corpus_enrichment"
+TN_OCR_DIRECTORY = REPO_ROOT / "data" / "working" / "ocr" / "pagan_pinya_ava_1899"
 ENRICHED_CORPUS_CANDIDATE_PATH = CORPUS_ENRICHMENT_DIRECTORY / "inscriptions_enriched_candidate.jsonl"
 ENRICHED_CANDIDATE_PREVIEW_PATH = CORPUS_ENRICHMENT_DIRECTORY / "enriched_candidate_preview.tsv"
 ENRICHED_CANDIDATE_SUMMARY_PATH = CORPUS_ENRICHMENT_DIRECTORY / "enriched_candidate_summary.json"
 TRANSLATION_SOURCE_ACTION_TABLE_PATH = CORPUS_ENRICHMENT_DIRECTORY / "translation_source_action_table.tsv"
 TRANSLATION_UNITS_EXTRACTED_PATH = CORPUS_ENRICHMENT_DIRECTORY / "translation_units_extracted.tsv"
 TRANSLATION_INTEGRATION_PREVIEW_PATH = CORPUS_ENRICHMENT_DIRECTORY / "translation_integration_preview.tsv"
+TN_TRANSLATION_TARGETS_PATH = CORPUS_ENRICHMENT_DIRECTORY / "tn_translation_targets.tsv"
+TN_TRANSLATION_CANDIDATES_REVIEW_PATH = CORPUS_ENRICHMENT_DIRECTORY / "tn_translation_candidates_needing_review.tsv"
+TN_TRANSLATION_INTEGRATION_PREVIEW_PATH = CORPUS_ENRICHMENT_DIRECTORY / "tn_translation_integration_preview.tsv"
 SHWEGUGYI_TRANSLATION_TEXT_PATH = CORPUS_ENRICHMENT_DIRECTORY / "shwegugyi_translation_extracted.txt"
 RAJAKUMAR_TRANSLATION_TEXT_PATH = CORPUS_ENRICHMENT_DIRECTORY / "rajakumar_translation_extracted.txt"
+TN_OCR_PLAIN_TEXT_PATH = TN_OCR_DIRECTORY / "ocr_plain_text_with_page_breaks.txt"
+TN_OCR_CLEANED_TEXT_PATH = TN_OCR_DIRECTORY / "ocr_cleaned_text_light.txt"
+
+TN_LOCAL_FILE_ID = "hvd-hxx68w-1780753436"
+TN_LOCAL_FILE_NAME = "hvd-hxx68w-1780753436.pdf"
+
+TN_TRANSLATION_UNIT_SPECS = [
+    {
+        "translation_unit_id": "tn-translation-1899-plate-xlv-tn-70",
+        "tn_locator": "TN 70",
+        "iob_plate": "Plate XLV",
+        "linked_inscription_id": "obi-v01-n0081",
+        "linked_corpus_record_id": "obi-v01-n0081-ob-p0125",
+        "translation_status": "published_partial_translation",
+        "start_anchor": "No. (5).",
+        "end_anchor": None,
+    },
+    {
+        "translation_unit_id": "tn-translation-1899-plate-xxvii-tn-80",
+        "tn_locator": "TN 80",
+        "iob_plate": "Plate XXVII",
+        "linked_inscription_id": "obi-v01-n0047",
+        "linked_corpus_record_id": "obi-v01-n0047-ob-p0075",
+        "translation_status": "published_partial_translation",
+        "start_anchor": "Reverse.",
+        "end_anchor": None,
+    },
+    {
+        "translation_unit_id": "tn-translation-1899-plate-lix-tn-92",
+        "tn_locator": "TN 92",
+        "iob_plate": "Plate LIX",
+        "linked_inscription_id": "obi-v01-n0007",
+        "linked_corpus_record_id": "obi-v01-n0007-ob-p0022",
+        "translation_status": "published_partial_translation",
+        "start_anchor": "No. (21).",
+        "end_anchor": None,
+    },
+    {
+        "translation_unit_id": "tn-translation-1899-plate-lxxiv-tn-100-101",
+        "tn_locator": "TN 100 101",
+        "iob_plate": "Plate LXXIV",
+        "linked_inscription_id": "obi-v01-n0097",
+        "linked_corpus_record_id": "obi-v01-n0097-tx-p0156",
+        "translation_status": "published_partial_translation",
+        "start_anchor": "Substance of inscription.-Building of cave, monastery, and image,",
+        "end_anchor": None,
+    },
+    {
+        "translation_unit_id": "tn-translation-1899-plate-lxxvi-tn-102-103",
+        "tn_locator": "TN 102-103",
+        "iob_plate": "Plate LXXVI",
+        "linked_inscription_id": "obi-v01-n0142",
+        "linked_corpus_record_id": "obi-v01-n0142-tx-p0238",
+        "translation_status": "published_partial_translation",
+        "start_anchor": "No. (3).",
+        "end_anchor": None,
+    },
+    {
+        "translation_unit_id": "tn-translation-1899-plate-lxxviii-a-tn-106",
+        "tn_locator": "TN 106",
+        "iob_plate": "Plate LXXVIII a",
+        "linked_inscription_id": "obi-v01-n0142",
+        "linked_corpus_record_id": "obi-v01-n0142-tx-p0238",
+        "translation_status": "published_partial_translation",
+        "start_anchor": "No. (7).*",
+        "end_anchor": None,
+    },
+    {
+        "translation_unit_id": "tn-translation-1899-plate-lxxix-b-tn-108-109",
+        "tn_locator": "TN 108 109",
+        "iob_plate": "Plate LXXIX b",
+        "linked_inscription_id": "obi-v01-n0146",
+        "linked_corpus_record_id": "obi-v01-n0146-tx-p0246",
+        "translation_status": "published_partial_translation",
+        "start_anchor": "Substance of inscription.-Erection of cave and dedication thereto",
+        "end_anchor": None,
+    },
+]
 
 SOURCE_LABELS = {
     SIP_SOURCE_KEY: SIP_BIBLIOGRAPHIC_LABEL,
@@ -81,7 +166,7 @@ STATUS_BY_KEY = {
     IOB_SOURCE_KEY: "linked",
     LIST_SOURCE_KEY: "cited_or_cross_referenced",
     PPA_SOURCE_KEY: "missing_high_value_source",
-    TN_SOURCE_KEY: "missing_high_value_source",
+    TN_SOURCE_KEY: "cited_or_cross_referenced",
     SIP_SOURCE_KEY: "linked",
     UB_SOURCE_KEY: "cited_or_cross_referenced",
     JBRS_SOURCE_KEY: "cited_or_cross_referenced",
@@ -167,6 +252,45 @@ SUMMARY_FIELDS = [
     "records_with_existing_full_transliteration",
 ]
 
+TN_TRANSLATION_TARGET_FIELDS = [
+    "tn_locator",
+    "linked_corpus_record_id",
+    "linked_inscription_id",
+    "title_or_label",
+    "iob_plate",
+    "list_ref",
+    "ppa_ref",
+    "sip_ref",
+    "source_of_link",
+    "priority",
+    "notes",
+]
+
+TN_TRANSLATION_CANDIDATE_REVIEW_FIELDS = [
+    "tn_locator",
+    "possible_corpus_record_ids",
+    "possible_inscription_ids",
+    "translation_text_snippet",
+    "reason_uncertain",
+    "recommended_human_action",
+    "notes",
+]
+
+TN_TRANSLATION_INTEGRATION_PREVIEW_FIELDS = [
+    "linked_corpus_record_id",
+    "linked_inscription_id",
+    "title_or_label",
+    "tn_locator",
+    "source_locator",
+    "translation_status",
+    "translation_length_chars",
+    "translation_text_snippet",
+    "link_basis",
+    "confidence",
+    "needs_human_review",
+    "notes",
+]
+
 
 def join_unique(values: list[str]) -> str:
     seen: list[str] = []
@@ -179,6 +303,100 @@ def join_unique(values: list[str]) -> str:
 
 def source_label(source_key: str) -> str:
     return SOURCE_LABELS.get(source_key, source_key)
+
+
+def normalize_tn_locator(raw: str) -> str:
+    cleaned = raw.strip()
+    cleaned = re.sub(r"\b([0-9])o\b", r"\g<1>0", cleaned, flags=re.IGNORECASE)
+    cleaned = re.sub(r"\bo([0-9])\b", r"0\g<1>", cleaned, flags=re.IGNORECASE)
+    cleaned = re.sub(r"\s+", " ", cleaned).strip()
+    return cleaned
+
+
+def parse_tn_pages(locator: str) -> list[int]:
+    normalized = normalize_tn_locator(locator)
+    if not normalized:
+        return []
+    pages: list[int] = []
+    for chunk in re.split(r"\|", normalized):
+        part = chunk.strip()
+        if not part:
+            continue
+        part = re.sub(r"^TN\s*", "", part, flags=re.IGNORECASE)
+        for start, end in re.findall(r"(\d+)\s*-\s*(\d+)", part):
+            start_page = int(start)
+            end_page = int(end)
+            if end_page < start_page:
+                start_page, end_page = end_page, start_page
+            pages.extend(range(start_page, end_page + 1))
+        part_without_ranges = re.sub(r"\d+\s*-\s*\d+", "", part)
+        pages.extend(int(match) for match in re.findall(r"\d+", part_without_ranges))
+    deduped = sorted(set(pages))
+    return deduped
+
+
+def parse_page_marked_text(marked_text: str) -> dict[int, str]:
+    marker_pattern = re.compile(r"^\[\[page\s+(\d+)\]\]$", re.MULTILINE)
+    matches = list(marker_pattern.finditer(marked_text))
+    page_map: dict[int, str] = {}
+    for index, match in enumerate(matches):
+        page_number = int(match.group(1))
+        start = match.end()
+        end = matches[index + 1].start() if index + 1 < len(matches) else len(marked_text)
+        page_map[page_number] = marked_text[start:end].strip()
+    return page_map
+
+
+def clean_tn_page_text(page_text: str) -> str:
+    cleaned_lines: list[str] = []
+    for raw_line in page_text.splitlines():
+        line = raw_line.strip()
+        if not line:
+            if cleaned_lines and cleaned_lines[-1] == "":
+                continue
+            cleaned_lines.append("")
+            continue
+        if line in {"INSCRIPTIONS OF PAGAN, PINYA, AND AVA.", "TOO"}:
+            continue
+        if re.fullmatch(r"\d+", line):
+            continue
+        cleaned_lines.append(raw_line.rstrip())
+    return "\n".join(cleaned_lines).strip()
+
+
+def extract_tn_translation_text(
+    *,
+    locator: str,
+    page_map: dict[int, str],
+    start_anchor: str | None = None,
+    end_anchor: str | None = None,
+) -> str:
+    tn_pages = parse_tn_pages(locator)
+    if not tn_pages:
+        return ""
+    ocr_pages = [page + 13 for page in tn_pages]
+    segments = [
+        clean_tn_page_text(page_map.get(ocr_page, ""))
+        for ocr_page in ocr_pages
+        if page_map.get(ocr_page, "").strip()
+    ]
+    combined = "\n\n".join(segment for segment in segments if segment).strip()
+    if not combined:
+        return ""
+    if start_anchor and start_anchor in combined:
+        combined = combined.split(start_anchor, 1)[1].strip()
+        combined = f"{start_anchor}\n{combined}".strip()
+    if end_anchor and end_anchor in combined:
+        combined = combined.split(end_anchor, 1)[0].strip()
+    return combined
+
+
+def tn_locator_to_ocr_pages(locator: str) -> str:
+    pages = parse_tn_pages(locator)
+    if not pages:
+        return ""
+    mapped = [str(page + 13) for page in pages]
+    return ", ".join(mapped)
 
 
 def build_crossref_entry(source_key: str, source_locator: str, basis: str) -> dict:
@@ -195,6 +413,7 @@ def build_crossref_entry(source_key: str, source_locator: str, basis: str) -> di
 def build_translation_source_action_rows(
     sip_rows: list[dict],
     iob_rows: list[dict],
+    tn_translation_units: list[dict],
 ) -> list[dict]:
     sip_linked_count = len(
         {
@@ -231,6 +450,14 @@ def build_translation_source_action_rows(
             if row.get("linked_corpus_record_id", "").strip()
         }
     )
+    tn_integrated_record_count = len(
+        {
+            row.get("linked_corpus_record_id", "").strip()
+            for row in tn_translation_units
+            if row.get("linked_corpus_record_id", "").strip()
+        }
+    )
+    tn_integrated_unit_count = len(tn_translation_units)
     action_specs = [
         {
             "source_key": SHWEGUGYI_TRANSLATION_SOURCE_KEY,
@@ -247,6 +474,7 @@ def build_translation_source_action_rows(
             "next_action": "Keep Shwegugyi integrated and proceed to the next translation-bearing source.",
             "evidence": "jbrs_translation_candidate_review.tsv and the completed translation unit confirm a standalone translation section.",
             "notes": "The complete published English translation is now integrated into the enriched corpus candidate.",
+            "tracked_ocr_text_path": "",
         },
         {
             "source_key": ANANDA_TRANSLATION_SOURCE_KEY,
@@ -263,6 +491,7 @@ def build_translation_source_action_rows(
             "next_action": "Do not attempt further Ananda linkage unless project scope is expanded.",
             "evidence": "The article concerns late eighteenth-century Ananda Okkyaung ink/wall inscriptions with Pali and Burmese versions, not a corpus-linked Old Burmese lithic inscription.",
             "notes": "Resolved as out of scope for the current Old Burmese / Burmese structured inscription enrichment workflow. The source concerns late eighteenth-century Ananda Okkyaung ink/wall inscriptions with Pali and Burmese versions, not a corpus-linked Old Burmese lithic inscription. Do not attempt further linkage unless project scope changes.",
+            "tracked_ocr_text_path": "",
         },
         {
             "source_key": FRASCH_MACHINE_TRANSLATION_SOURCE_KEY,
@@ -279,6 +508,7 @@ def build_translation_source_action_rows(
             "next_action": "Do not treat this as an inscription translation source for the corpus candidate.",
             "evidence": "The local PDF is a machine translation of Frasch's book, not a direct inscription translation.",
             "notes": "Useful as background prose only, not as a corpus translation witness.",
+            "tracked_ocr_text_path": "",
         },
         {
             "source_key": MYAZEDI_TRANSLATION_SOURCE_KEY,
@@ -295,6 +525,7 @@ def build_translation_source_action_rows(
             "next_action": "Acquire a correct article scan before revisiting this source.",
             "evidence": "Direct extraction from the current local file yields bibliographic request-card metadata rather than article body text or translation content.",
             "notes": "Current local witness is not usable for translation extraction; keep this source closed until a better scan is supplied.",
+            "tracked_ocr_text_path": "",
         },
         {
             "source_key": RAJAKUMAR_TRANSLATION_SOURCE_KEY,
@@ -311,22 +542,33 @@ def build_translation_source_action_rows(
             "next_action": "Keep Myanmar and Pali versions integrated; hold Mon and Pyu as unlinked candidate units until matching corpus records are available.",
             "evidence": "Appendix I provides separate Myanmar/Mon/Pyu/Pali sections; structured corpus has secure Rajakumar/Myazedi matches for Myanmar and Pali, but no corresponding Mon/Pyu records.",
             "notes": "Version split complete for extraction. Myanmar linked to obi-v01-n0001-tx-p0001 and Pali linked to obi-v01-n0001-tx-p0002; Mon and Pyu remain candidate-only/unlinked.",
+            "tracked_ocr_text_path": "",
         },
         {
             "source_key": TN_SOURCE_KEY,
             "bibliographic_label": TN_BIBLIOGRAPHIC_LABEL,
-            "local_file_status": "missing_local_file",
-            "matched_local_file_id": "",
-            "matched_file_name": "",
-            "already_ocr_available": "false",
+            "local_file_status": "matched_local_file_available",
+            "matched_local_file_id": TN_LOCAL_FILE_ID,
+            "matched_file_name": TN_LOCAL_FILE_NAME,
+            "already_ocr_available": "true",
             "contains_english_translation": "true",
             "translation_scope": "standalone_inscription_translation",
             "linked_corpus_record_count": str(tn_linked_count),
             "linked_inscription_count": str(tn_linked_count),
-            "action_status": "source_missing_acquire_manually",
-            "next_action": "Acquire a local scan or photocopy of TN 1899 before attempting translation extraction.",
-            "evidence": "The IOB cross-reference index supplies TN references, but no local TN witness has been confirmed.",
-            "notes": "This remains the high-value missing source for translation integration.",
+            "action_status": "ready_to_extract_translation",
+            "next_action": (
+                "Continue TN extraction from tracked OCR text, integrating only high-confidence corpus links; "
+                "keep unresolved TN locators in a separate review table."
+            ),
+            "evidence": (
+                "Tracked OCR outputs now exist under data/working/ocr/pagan_pinya_ava_1899/, "
+                "and IOB cross-reference rows provide TN locators plus high-confidence record links."
+            ),
+            "notes": (
+                f"First TN batch integrated: {tn_integrated_unit_count} units across {tn_integrated_record_count} records. "
+                "Additional TN locators remain for later extraction."
+            ),
+            "tracked_ocr_text_path": str(TN_OCR_CLEANED_TEXT_PATH.relative_to(REPO_ROOT)),
         },
         {
             "source_key": PPA_SOURCE_KEY,
@@ -343,6 +585,7 @@ def build_translation_source_action_rows(
             "next_action": "Acquire a local scan or photocopy of PPA if later edition/source-text comparison is needed.",
             "evidence": "The IOB cross-reference index supplies PPA references, but no local PPA witness has been confirmed.",
             "notes": "Use as a bibliography/source-text lead, not as an English translation source yet.",
+            "tracked_ocr_text_path": "",
         },
         {
             "source_key": SIP_SOURCE_KEY,
@@ -359,6 +602,7 @@ def build_translation_source_action_rows(
             "next_action": "Keep SIP as source-text witness evidence only.",
             "evidence": "Accepted SIP witness units confirm source text but no English inscription translation.",
             "notes": "SIP remains provenance for source text, not translation.",
+            "tracked_ocr_text_path": "",
         },
         {
             "source_key": IOB_SOURCE_KEY,
@@ -375,6 +619,7 @@ def build_translation_source_action_rows(
             "next_action": "Keep IOB as a cross-reference witness only.",
             "evidence": "The repo-safe OCR metadata marks IOB as a plate-index cross-reference rather than an extractable inscription translation.",
             "notes": "Useful for concordance and plate linking, not translation extraction.",
+            "tracked_ocr_text_path": "",
         },
     ]
 
@@ -384,7 +629,11 @@ def build_translation_source_action_rows(
     return rows
 
 
-def build_translation_units_extracted_rows(translation_units: list[dict]) -> list[dict]:
+def build_translation_units_extracted_rows(
+    translation_units: list[dict],
+    iob_rows: list[dict],
+    tn_page_map: dict[int, str],
+) -> list[dict]:
     rows: list[dict] = []
     translation_text = SHWEGUGYI_TRANSLATION_TEXT_PATH.read_text(encoding="utf-8").strip()
     for unit in translation_units:
@@ -510,12 +759,75 @@ def build_translation_units_extracted_rows(translation_units: list[dict]) -> lis
                     "notes": spec["notes"],
                 }
             )
+
+    iob_high_rows = [
+        row
+        for row in iob_rows
+        if row.get("linked_corpus_record_id", "").strip()
+        and row.get("tn_ref", "").strip()
+        and row.get("link_confidence", "").strip() == "high"
+        and row.get("needs_manual_review", "").strip() == "false"
+    ]
+    iob_lookup: dict[tuple[str, str], dict] = {}
+    for row in iob_high_rows:
+        key = (
+            normalize_tn_locator(row.get("tn_ref", "")),
+            row.get("linked_corpus_record_id", "").strip(),
+        )
+        iob_lookup[key] = row
+
+    for spec in TN_TRANSLATION_UNIT_SPECS:
+        linked_record_id = spec["linked_corpus_record_id"]
+        iob_row = iob_lookup.get((normalize_tn_locator(spec["tn_locator"]), linked_record_id))
+        if not iob_row:
+            continue
+        translation_text = extract_tn_translation_text(
+            locator=spec["tn_locator"],
+            page_map=tn_page_map,
+            start_anchor=spec.get("start_anchor"),
+            end_anchor=spec.get("end_anchor"),
+        )
+        if not translation_text:
+            continue
+        ocr_pages = tn_locator_to_ocr_pages(spec["tn_locator"])
+        source_locator = (
+            f"{spec['tn_locator']} ({spec['iob_plate']}; OCR pages {ocr_pages})"
+            if ocr_pages
+            else f"{spec['tn_locator']} ({spec['iob_plate']})"
+        )
+        rows.append(
+            {
+                "translation_unit_id": spec["translation_unit_id"],
+                "source_key": TN_SOURCE_KEY,
+                "source_bibliographic_label": TN_BIBLIOGRAPHIC_LABEL,
+                "matched_local_file_id": TN_LOCAL_FILE_ID,
+                "source_locator": source_locator,
+                "linked_inscription_id": spec["linked_inscription_id"],
+                "linked_corpus_record_id": linked_record_id,
+                "translation_language": "English",
+                "translation_text": translation_text,
+                "translation_status": spec["translation_status"],
+                "link_basis": (
+                    f"High-confidence IOB concordance link ({spec['iob_plate']}, {spec['tn_locator']}) to "
+                    f"{linked_record_id}; extracted from tracked TN OCR pages."
+                ),
+                "confidence": "high",
+                "needs_human_review": "false",
+                "notes": (
+                    f"version_label=TN locator {spec['tn_locator']}; source_iob_plate={spec['iob_plate']}; "
+                    "extracted from data/working/ocr/pagan_pinya_ava_1899/ocr_cleaned_text_light.txt."
+                ),
+            }
+        )
     return rows
 
 
-def build_translation_integration_preview_rows(translation_rows: list[dict]) -> list[dict]:
+def build_translation_integration_preview_rows(
+    translation_rows: list[dict],
+    record_title_by_id: dict[str, str],
+) -> list[dict]:
     rows: list[dict] = []
-    title_by_record = {
+    fallback_title_by_record = {
         "obi-v01-n0004-ob-p0011": "ရွှေဂူကြီးဘုရားကျောက်စာ",
         "obi-v01-n0001-tx-p0001": "မြစေတီဘုရားကျောက်စာ၊ မြန်မာ (ရာဇကုမာရကျောက်စာ)",
         "obi-v01-n0001-tx-p0002": "မြစေတီဘုရား ကျောက်စာ ပါဠိ (ရာဇကုမာရကျောက်စာ)",
@@ -529,7 +841,11 @@ def build_translation_integration_preview_rows(translation_rows: list[dict]) -> 
             {
                 "linked_corpus_record_id": record_id,
                 "linked_inscription_id": row.get("linked_inscription_id", ""),
-                "title_or_label": title_by_record.get(record_id, row.get("linked_inscription_id", "")),
+                "title_or_label": (
+                    record_title_by_id.get(record_id, "")
+                    or fallback_title_by_record.get(record_id, "")
+                    or row.get("linked_inscription_id", "")
+                ),
                 "source_key": row.get("source_key", ""),
                 "source_locator": row.get("source_locator", ""),
                 "translation_status": row.get("translation_status", ""),
@@ -537,6 +853,121 @@ def build_translation_integration_preview_rows(translation_rows: list[dict]) -> 
                 "translation_length_chars": str(len(text)),
                 "has_existing_transcription": "true",
                 "link_basis": row.get("link_basis", ""),
+                "needs_human_review": row.get("needs_human_review", "false"),
+                "notes": row.get("notes", ""),
+            }
+        )
+    return rows
+
+
+def choose_tn_target_priority(tn_locator: str) -> str:
+    page_count = len(parse_tn_pages(tn_locator))
+    return "high" if 1 <= page_count <= 2 else "medium"
+
+
+def build_tn_translation_targets_rows(
+    iob_rows: list[dict],
+    record_title_by_id: dict[str, str],
+) -> list[dict]:
+    rows: list[dict] = []
+    seen: set[tuple[str, str]] = set()
+    for row in iob_rows:
+        tn_ref = normalize_tn_locator(row.get("tn_ref", ""))
+        linked_record_id = row.get("linked_corpus_record_id", "").strip()
+        linked_inscription_id = row.get("linked_inscription_id", "").strip() or linked_record_id
+        if not tn_ref or not linked_record_id:
+            continue
+        if row.get("link_confidence", "").strip() != "high" or row.get("needs_manual_review", "").strip() != "false":
+            continue
+        key = (tn_ref, linked_record_id)
+        if key in seen:
+            continue
+        seen.add(key)
+        rows.append(
+            {
+                "tn_locator": tn_ref,
+                "linked_corpus_record_id": linked_record_id,
+                "linked_inscription_id": linked_inscription_id,
+                "title_or_label": record_title_by_id.get(linked_record_id, "") or linked_inscription_id,
+                "iob_plate": row.get("iob_plate", ""),
+                "list_ref": row.get("list_ref", ""),
+                "ppa_ref": row.get("ppa_ref", ""),
+                "sip_ref": row.get("sip_ref", ""),
+                "source_of_link": (
+                    "inscriptions_of_burma_cross_reference_index.tsv high-confidence "
+                    "plate-to-record concordance"
+                ),
+                "priority": choose_tn_target_priority(tn_ref),
+                "notes": row.get("link_basis", ""),
+            }
+        )
+    rows.sort(key=lambda item: (item["priority"] != "high", item["tn_locator"], item["linked_corpus_record_id"]))
+    return rows
+
+
+def build_tn_candidates_needing_review_rows(
+    iob_rows: list[dict],
+    tn_page_map: dict[int, str],
+) -> list[dict]:
+    rows: list[dict] = []
+    seen: set[str] = set()
+    for row in iob_rows:
+        tn_ref = normalize_tn_locator(row.get("tn_ref", ""))
+        if not tn_ref or tn_ref in seen:
+            continue
+        link_confidence = row.get("link_confidence", "").strip()
+        needs_review = row.get("needs_manual_review", "").strip() == "true"
+        linked_record_id = row.get("linked_corpus_record_id", "").strip()
+        if link_confidence == "high" and not needs_review and linked_record_id:
+            continue
+        snippet = extract_tn_translation_text(locator=tn_ref, page_map=tn_page_map)[:220].replace("\n", " ")
+        rows.append(
+            {
+                "tn_locator": tn_ref,
+                "possible_corpus_record_ids": linked_record_id,
+                "possible_inscription_ids": row.get("linked_inscription_id", "").strip(),
+                "translation_text_snippet": snippet,
+                "reason_uncertain": (
+                    "IOB cross-reference row remains medium-confidence or requires manual review for linkage."
+                ),
+                "recommended_human_action": (
+                    "Compare TN page text with plate description and structured corpus references before integration."
+                ),
+                "notes": f"iob_plate={row.get('iob_plate', '')}; link_basis={row.get('link_basis', '')}",
+            }
+        )
+        seen.add(tn_ref)
+        if len(rows) >= 10:
+            break
+    return rows
+
+
+def build_tn_translation_integration_preview_rows(
+    translation_rows: list[dict],
+    record_title_by_id: dict[str, str],
+) -> list[dict]:
+    rows: list[dict] = []
+    for row in translation_rows:
+        if row.get("source_key") != TN_SOURCE_KEY:
+            continue
+        record_id = row.get("linked_corpus_record_id", "").strip()
+        if not record_id:
+            continue
+        tn_locator_match = re.search(r"TN\s*[\d\- ]+", row.get("source_locator", ""))
+        tn_locator = tn_locator_match.group(0).strip() if tn_locator_match else ""
+        text = row.get("translation_text", "")
+        rows.append(
+            {
+                "linked_corpus_record_id": record_id,
+                "linked_inscription_id": row.get("linked_inscription_id", ""),
+                "title_or_label": record_title_by_id.get(record_id, "") or row.get("linked_inscription_id", ""),
+                "tn_locator": tn_locator,
+                "source_locator": row.get("source_locator", ""),
+                "translation_status": row.get("translation_status", ""),
+                "translation_length_chars": str(len(text)),
+                "translation_text_snippet": text[:220].replace("\n", " "),
+                "link_basis": row.get("link_basis", ""),
+                "confidence": row.get("confidence", ""),
                 "needs_human_review": row.get("needs_human_review", "false"),
                 "notes": row.get("notes", ""),
             }
@@ -628,7 +1059,14 @@ def build_sip_witness(row: dict) -> dict:
     }
 
 
-def build_translation_candidates(crossrefs: list[dict]) -> list[dict]:
+def build_translation_candidates(crossrefs: list[dict], *, tn_source_available: bool) -> list[dict]:
+    candidate_status = "candidate_source_located" if tn_source_available else "missing_high_value_source"
+    basis = (
+        "IOB cross-reference index gives a TN reference, and tracked OCR text is available at "
+        "data/working/ocr/pagan_pinya_ava_1899/ocr_cleaned_text_light.txt."
+        if tn_source_available
+        else "IOB cross-reference index gives a TN reference, but no local TN file is currently available."
+    )
     candidates: list[dict] = []
     for entry in crossrefs:
         if entry["source_key"] != TN_SOURCE_KEY:
@@ -638,8 +1076,8 @@ def build_translation_candidates(crossrefs: list[dict]) -> list[dict]:
                 "source_key": TN_SOURCE_KEY,
                 "source_bibliographic_label": TN_BIBLIOGRAPHIC_LABEL,
                 "source_locator_hint": entry["source_locator"],
-                "status": "missing_high_value_source",
-                "basis": "IOB cross-reference index gives a TN reference, but no local TN file is currently available.",
+                "status": candidate_status,
+                "basis": basis,
             }
         )
     seen: set[tuple[str, str, str]] = set()
@@ -733,6 +1171,8 @@ def build_enriched_records(
     sip_rows: list[dict],
     crossref_rows: list[dict],
     translation_unit_rows: list[dict],
+    *,
+    tn_source_available: bool,
 ) -> tuple[list[dict], list[dict], dict[str, int]]:
     sip_by_record: dict[str, list[dict]] = {}
     for row in sip_rows:
@@ -783,7 +1223,7 @@ def build_enriched_records(
             continue
 
         enriched = dict(record)
-        translation_candidates = build_translation_candidates(crossrefs)
+        translation_candidates = build_translation_candidates(crossrefs, tn_source_available=tn_source_available)
 
         if record_sip_rows:
             sip_witnesses = [build_sip_witness(row) for row in record_sip_rows]
@@ -839,7 +1279,7 @@ def build_enriched_records(
         if translation_candidates:
             enriched["enrichment_notes"] += " TN translation candidate preserved without adding translation text."
         if record_translation_units:
-            enriched["enrichment_notes"] += " Published translation integrated from a local JBRS article."
+            enriched["enrichment_notes"] += " Published translation integrated from a tracked local source witness."
 
         enriched_records.append(enriched)
         preview_rows.append(
@@ -956,24 +1396,63 @@ def main() -> None:
         type=Path,
         default=REPO_ROOT / "data" / "working" / "corpus_enrichment" / "translation_integration_preview.tsv",
     )
+    parser.add_argument(
+        "--output-tn-targets-tsv",
+        type=Path,
+        default=REPO_ROOT / "data" / "working" / "corpus_enrichment" / "tn_translation_targets.tsv",
+    )
+    parser.add_argument(
+        "--output-tn-candidates-review-tsv",
+        type=Path,
+        default=REPO_ROOT / "data" / "working" / "corpus_enrichment" / "tn_translation_candidates_needing_review.tsv",
+    )
+    parser.add_argument(
+        "--output-tn-preview-tsv",
+        type=Path,
+        default=REPO_ROOT / "data" / "working" / "corpus_enrichment" / "tn_translation_integration_preview.tsv",
+    )
     args = parser.parse_args()
 
     inscriptions = read_jsonl(args.input_inscriptions)
+    record_title_by_id = {
+        row.get("record_id", ""): (row.get("title_original", "") or row.get("title_transliteration", ""))
+        for row in inscriptions
+        if row.get("record_id")
+    }
     sip_rows = read_tsv(args.sip_accepted_path)
     crossref_rows = read_tsv(args.iob_crossref_path)
     extracted_translation_units = read_tsv(REPO_ROOT / "data" / "working" / "bibliography" / "jbrs" / "jbrs_extracted_translation_units.tsv")
-    translation_unit_rows = build_translation_units_extracted_rows(extracted_translation_units)
+    tn_marked_text = (
+        TN_OCR_PLAIN_TEXT_PATH.read_text(encoding="utf-8")
+        if TN_OCR_PLAIN_TEXT_PATH.exists()
+        else (TN_OCR_CLEANED_TEXT_PATH.read_text(encoding="utf-8") if TN_OCR_CLEANED_TEXT_PATH.exists() else "")
+    )
+    tn_page_map = parse_page_marked_text(tn_marked_text) if tn_marked_text else {}
+    translation_unit_rows = build_translation_units_extracted_rows(
+        extracted_translation_units,
+        crossref_rows,
+        tn_page_map,
+    )
+    tn_translation_units = [row for row in translation_unit_rows if row.get("source_key") == TN_SOURCE_KEY]
 
     enriched_records, preview_rows, summary = build_enriched_records(
         inscriptions,
         sip_rows,
         crossref_rows,
         translation_unit_rows,
+        tn_source_available=TN_OCR_CLEANED_TEXT_PATH.exists(),
     )
-    translation_preview_rows = build_translation_integration_preview_rows(translation_unit_rows)
+    translation_preview_rows = build_translation_integration_preview_rows(
+        translation_unit_rows,
+        record_title_by_id,
+    )
+    tn_target_rows = build_tn_translation_targets_rows(crossref_rows, record_title_by_id)
+    tn_review_rows = build_tn_candidates_needing_review_rows(crossref_rows, tn_page_map)
+    tn_preview_rows = build_tn_translation_integration_preview_rows(translation_unit_rows, record_title_by_id)
     action_rows = build_translation_source_action_rows(
         sip_rows,
         crossref_rows,
+        tn_translation_units,
     )
     write_jsonl(args.output_jsonl, enriched_records)
     write_tsv(args.output_preview_tsv, preview_rows, PREVIEW_FIELDS)
@@ -992,6 +1471,7 @@ def main() -> None:
         "next_action",
         "evidence",
         "notes",
+        "tracked_ocr_text_path",
     ])
     write_tsv(args.output_translation_units_tsv, translation_unit_rows, [
         "translation_unit_id",
@@ -1023,11 +1503,15 @@ def main() -> None:
         "needs_human_review",
         "notes",
     ])
+    write_tsv(args.output_tn_targets_tsv, tn_target_rows, TN_TRANSLATION_TARGET_FIELDS)
+    write_tsv(args.output_tn_candidates_review_tsv, tn_review_rows, TN_TRANSLATION_CANDIDATE_REVIEW_FIELDS)
+    write_tsv(args.output_tn_preview_tsv, tn_preview_rows, TN_TRANSLATION_INTEGRATION_PREVIEW_FIELDS)
     args.output_summary_json.parent.mkdir(parents=True, exist_ok=True)
     args.output_summary_json.write_text(json.dumps(summary, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(
         f"Wrote {len(enriched_records)} enriched records, {len(preview_rows)} preview rows, "
         f"{len(action_rows)} translation action rows, {len(translation_unit_rows)} translation units, "
+        f"{len(tn_target_rows)} TN target rows, {len(tn_preview_rows)} TN preview rows, "
         f"and {len(summary)} summary fields."
     )
 

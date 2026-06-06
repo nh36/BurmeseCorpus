@@ -64,6 +64,19 @@ from jbrs_workflow_common import (
     TRANSLATION_INTEGRATION_PREVIEW_PATH,
     TRANSLATION_SOURCE_ACTION_TABLE_PATH,
     TRANSLATION_UNITS_EXTRACTED_PATH,
+    TN_OCR_SOURCE_NOTE_PATH,
+    TN_TRANSLATION_TARGETS_PATH,
+    TN_TRANSLATION_CANDIDATES_REVIEW_PATH,
+    TN_TRANSLATION_INTEGRATION_PREVIEW_PATH,
+    TN_WORKING_OCR_PLAIN_TEXT_PATH,
+    TN_WORKING_OCR_CLEANED_TEXT_PATH,
+    TN_WORKING_OCR_REPORT_PATH,
+    TN_WORKING_OCR_COMPARISON_REPORT_PATH,
+    TN_WORKING_OCR_SOURCE_SELECTION_REPORT_PATH,
+    TN_WORKING_OCR_METADATA_INDEX_PATH,
+    TN_WORKING_OCR_QUALITY_ASSESSMENT_PATH,
+    TN_WORKING_OCR_README_PATH,
+    TN_WORKING_OCR_PIPELINE_SCRIPT_PATH,
     PPA_SOURCE_HUNT_PATH,
     SIP_CROSS_REFERENCE_TARGETS_PATH,
     SIP_ACCEPTED_WITNESS_UNITS_PATH,
@@ -142,6 +155,10 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
         cls.translation_action_rows = read_tsv(TRANSLATION_SOURCE_ACTION_TABLE_PATH)
         cls.translation_unit_rows = read_tsv(TRANSLATION_UNITS_EXTRACTED_PATH)
         cls.translation_integration_preview_rows = read_tsv(TRANSLATION_INTEGRATION_PREVIEW_PATH)
+        cls.tn_translation_target_rows = read_tsv(TN_TRANSLATION_TARGETS_PATH)
+        cls.tn_translation_review_rows = read_tsv(TN_TRANSLATION_CANDIDATES_REVIEW_PATH)
+        cls.tn_translation_preview_rows = read_tsv(TN_TRANSLATION_INTEGRATION_PREVIEW_PATH)
+        cls.tn_ocr_metadata_index = json.loads(TN_WORKING_OCR_METADATA_INDEX_PATH.read_text(encoding="utf-8"))
         cls.rajakumar_version_linkage_rows = read_tsv(
             ROOT / "data" / "working" / "corpus_enrichment" / "rajakumar_version_linkage.tsv"
         )
@@ -213,6 +230,19 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
             TRANSLATION_INTEGRATION_PREVIEW_PATH,
             TRANSLATION_SOURCE_ACTION_TABLE_PATH,
             TRANSLATION_UNITS_EXTRACTED_PATH,
+            TN_OCR_SOURCE_NOTE_PATH,
+            TN_TRANSLATION_TARGETS_PATH,
+            TN_TRANSLATION_CANDIDATES_REVIEW_PATH,
+            TN_TRANSLATION_INTEGRATION_PREVIEW_PATH,
+            TN_WORKING_OCR_PLAIN_TEXT_PATH,
+            TN_WORKING_OCR_CLEANED_TEXT_PATH,
+            TN_WORKING_OCR_REPORT_PATH,
+            TN_WORKING_OCR_COMPARISON_REPORT_PATH,
+            TN_WORKING_OCR_SOURCE_SELECTION_REPORT_PATH,
+            TN_WORKING_OCR_METADATA_INDEX_PATH,
+            TN_WORKING_OCR_QUALITY_ASSESSMENT_PATH,
+            TN_WORKING_OCR_README_PATH,
+            TN_WORKING_OCR_PIPELINE_SCRIPT_PATH,
             ROOT / "data" / "working" / "corpus_enrichment" / "rajakumar_version_linkage.tsv",
             ROOT / "data" / "working" / "corpus_enrichment" / "ananda_identifying_evidence.tsv",
             ROOT / "data" / "working" / "corpus_enrichment" / "ananda_linkage_candidates.tsv",
@@ -611,8 +641,11 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
                     self.assertTrue(translation["source_key"])
                     self.assertTrue(translation["source_bibliographic_label"])
                     self.assertTrue(translation["source_locator"])
-                    self.assertEqual(translation["translation_status"], "published_translation")
-                    self.assertEqual(translation["confidence"], "high")
+                    self.assertIn(
+                        translation["translation_status"],
+                        {"published_translation", "published_partial_translation"},
+                    )
+                    self.assertIn(translation["confidence"], {"high", "medium-high"})
 
     def test_enriched_preview_rows_cover_sip_links_only(self) -> None:
         enriched_record_ids = {
@@ -649,7 +682,13 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
         shwegugyi_action = next(row for row in self.translation_action_rows if row["source_key"] == "jbrsShwegugyi1920")
         self.assertEqual(shwegugyi_action["action_status"], "translation_integrated")
         tn_action = next(row for row in self.translation_action_rows if row["source_key"] == "tnInscriptionsPaganPinyaAva")
-        self.assertEqual(tn_action["action_status"], "source_missing_acquire_manually")
+        self.assertEqual(tn_action["action_status"], "ready_to_extract_translation")
+        self.assertEqual(tn_action["matched_local_file_id"], "hvd-hxx68w-1780753436")
+        self.assertEqual(tn_action["matched_file_name"], "hvd-hxx68w-1780753436.pdf")
+        self.assertEqual(
+            tn_action["tracked_ocr_text_path"],
+            "data/working/ocr/pagan_pinya_ava_1899/ocr_cleaned_text_light.txt",
+        )
         ananda_action = next(row for row in self.translation_action_rows if row["source_key"] == "jbrsAnanda1976")
         self.assertEqual(ananda_action["action_status"], "out_of_scope_late_ink_wall_inscription")
         self.assertEqual(ananda_action["linked_corpus_record_count"], "0")
@@ -689,10 +728,23 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
         for row in rajakumar_units:
             if row["translation_unit_id"] in {"rajakumar-translation-2001-mon", "rajakumar-translation-2001-pyu", "rajakumar-translation-2001-pali"}:
                 self.assertNotEqual(row["linked_corpus_record_id"], "obi-v01-n0001-tx-p0001")
+        tn_units = [row for row in self.translation_unit_rows if row["source_key"] == "tnInscriptionsPaganPinyaAva"]
+        self.assertGreaterEqual(len(tn_units), 5)
+        self.assertLessEqual(len(tn_units), 10)
+        self.assertTrue(all(row["matched_local_file_id"] == "hvd-hxx68w-1780753436" for row in tn_units))
+        self.assertTrue(all(row["linked_corpus_record_id"] for row in tn_units))
+        self.assertTrue(all(row["linked_inscription_id"] for row in tn_units))
+        self.assertTrue(
+            all(
+                row["translation_status"] in {"published_translation", "published_partial_translation"}
+                for row in tn_units
+            )
+        )
+        self.assertTrue(all("TN " in row["source_locator"] for row in tn_units))
         self.assertFalse(any(row["source_key"] == "jbrsAnanda1976" for row in self.translation_unit_rows))
 
     def test_translation_integration_preview_tracks_completed_translation(self) -> None:
-        self.assertEqual(len(self.translation_integration_preview_rows), 3)
+        self.assertGreaterEqual(len(self.translation_integration_preview_rows), 8)
         shwegugyi_row = next(row for row in self.translation_integration_preview_rows if row["source_key"] == "jbrsShwegugyi1920")
         self.assertEqual(shwegugyi_row["linked_corpus_record_id"], "obi-v01-n0004-ob-p0011")
         self.assertEqual(shwegugyi_row["translation_status"], "published_translation")
@@ -710,6 +762,52 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
             self.assertTrue(row["translation_text_snippet"])
             self.assertGreater(int(row["translation_length_chars"]), 1000)
             self.assertEqual(row["has_existing_transcription"], "true")
+        tn_rows = [
+            row for row in self.translation_integration_preview_rows if row["source_key"] == "tnInscriptionsPaganPinyaAva"
+        ]
+        self.assertGreaterEqual(len(tn_rows), 5)
+        self.assertTrue(all(row["translation_status"] in {"published_translation", "published_partial_translation"} for row in tn_rows))
+        self.assertTrue(all(row["has_existing_transcription"] == "true" for row in tn_rows))
+        self.assertTrue(all(row["source_locator"] for row in tn_rows))
+        self.assertTrue(all(row["linked_corpus_record_id"] for row in tn_rows))
+
+    def test_tn_targets_and_review_tables_exist_with_expected_shape(self) -> None:
+        self.assertGreaterEqual(len(self.tn_translation_target_rows), 10)
+        self.assertTrue(all(row["tn_locator"] for row in self.tn_translation_target_rows))
+        self.assertTrue(all(row["linked_corpus_record_id"] for row in self.tn_translation_target_rows))
+        self.assertTrue(all(row["source_of_link"] for row in self.tn_translation_target_rows))
+        self.assertTrue(all(row["priority"] in {"high", "medium"} for row in self.tn_translation_target_rows))
+        self.assertGreaterEqual(len(self.tn_translation_review_rows), 1)
+        self.assertTrue(all(row["tn_locator"] for row in self.tn_translation_review_rows))
+        self.assertTrue(all(row["reason_uncertain"] for row in self.tn_translation_review_rows))
+        self.assertTrue(all(row["recommended_human_action"] for row in self.tn_translation_review_rows))
+        self.assertGreaterEqual(len(self.tn_translation_preview_rows), 5)
+        self.assertTrue(all(row["tn_locator"] for row in self.tn_translation_preview_rows))
+
+    def test_tn_working_ocr_artifacts_use_relative_paths(self) -> None:
+        tracked_paths = [
+            TN_WORKING_OCR_PLAIN_TEXT_PATH,
+            TN_WORKING_OCR_CLEANED_TEXT_PATH,
+            TN_WORKING_OCR_REPORT_PATH,
+            TN_WORKING_OCR_COMPARISON_REPORT_PATH,
+            TN_WORKING_OCR_SOURCE_SELECTION_REPORT_PATH,
+            TN_WORKING_OCR_METADATA_INDEX_PATH,
+            TN_WORKING_OCR_QUALITY_ASSESSMENT_PATH,
+            TN_WORKING_OCR_README_PATH,
+            TN_WORKING_OCR_PIPELINE_SCRIPT_PATH,
+            TN_OCR_SOURCE_NOTE_PATH,
+        ]
+        absolute_pattern = re.compile(r"(^|\\s)/Users/|(^|\\s)/Volumes/")
+        for path in tracked_paths:
+            text = path.read_text(encoding="utf-8", errors="replace")
+            self.assertIsNone(
+                absolute_pattern.search(text),
+                f"absolute local path found in tracked TN OCR artifact: {path}",
+            )
+        self.assertEqual(self.tn_ocr_metadata_index["source_pdf"], "data/local/pagan_pinya_ava_ocr/source/hvd-hxx68w-1780753436.pdf")
+        self.assertEqual(self.tn_ocr_metadata_index["page_count_detected"], 203)
+        self.assertEqual(self.tn_ocr_metadata_index["page_json_file_count"], 203)
+        self.assertIn("google_vision_json_path_stub", self.tn_ocr_metadata_index)
 
     def test_rajakumar_version_linkage_table_captures_unlinked_mon_and_pyu(self) -> None:
         self.assertEqual(len(self.rajakumar_version_linkage_rows), 4)
@@ -809,8 +907,24 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
             self.enriched_summary["translation_units_integrated_count"],
             sum(len(row.get("translations", [])) for row in self.enriched_candidate_records if row.get("translation_status") == "translation_integrated"),
         )
-        self.assertEqual(self.enriched_summary["published_translation_units_integrated_count"], 3)
-        self.assertEqual(self.enriched_summary["published_partial_translation_units_integrated_count"], 0)
+        self.assertEqual(
+            self.enriched_summary["published_translation_units_integrated_count"],
+            sum(
+                1
+                for row in self.enriched_candidate_records
+                for translation in row.get("translations", [])
+                if translation.get("translation_status") == "published_translation"
+            ),
+        )
+        self.assertEqual(
+            self.enriched_summary["published_partial_translation_units_integrated_count"],
+            sum(
+                1
+                for row in self.enriched_candidate_records
+                for translation in row.get("translations", [])
+                if translation.get("translation_status") == "published_partial_translation"
+            ),
+        )
 
     def test_sip_summary_counts_match_artifacts(self) -> None:
         self.assertEqual(

@@ -93,6 +93,16 @@ SIP_MANUAL_REVIEW_PACKET_PATH = BIBLIOGRAPHY_DIRECTORY / "sip_manual_review_pack
 MISSING_HIGH_VALUE_SOURCES_PATH = BIBLIOGRAPHY_DIRECTORY / "missing_high_value_sources.md"
 CORPUS_RELEASE_INSCRIPTIONS_PATH = REPO_ROOT / "data/release/corpus_release_v0_3/inscriptions.jsonl"
 CORPUS_ENRICHMENT_DIRECTORY = REPO_ROOT / "data/working/corpus_enrichment"
+TN_WORKING_OCR_DIRECTORY = REPO_ROOT / "data/working/ocr/pagan_pinya_ava_1899"
+TN_WORKING_OCR_PLAIN_TEXT_PATH = TN_WORKING_OCR_DIRECTORY / "ocr_plain_text_with_page_breaks.txt"
+TN_WORKING_OCR_CLEANED_TEXT_PATH = TN_WORKING_OCR_DIRECTORY / "ocr_cleaned_text_light.txt"
+TN_WORKING_OCR_REPORT_PATH = TN_WORKING_OCR_DIRECTORY / "ocr_report.md"
+TN_WORKING_OCR_COMPARISON_REPORT_PATH = TN_WORKING_OCR_DIRECTORY / "comparison_report.md"
+TN_WORKING_OCR_SOURCE_SELECTION_REPORT_PATH = TN_WORKING_OCR_DIRECTORY / "source_selection_report.md"
+TN_WORKING_OCR_METADATA_INDEX_PATH = TN_WORKING_OCR_DIRECTORY / "ocr_metadata_index.json"
+TN_WORKING_OCR_QUALITY_ASSESSMENT_PATH = TN_WORKING_OCR_DIRECTORY / "pdf_quality_assessment.json"
+TN_WORKING_OCR_README_PATH = TN_WORKING_OCR_DIRECTORY / "README.md"
+TN_WORKING_OCR_PIPELINE_SCRIPT_PATH = TN_WORKING_OCR_DIRECTORY / "run_vision_ocr_pipeline.py"
 ENRICHED_CORPUS_SCHEMA_NOTE_PATH = CORPUS_ENRICHMENT_DIRECTORY / "enriched_corpus_schema_note.md"
 ENRICHED_CORPUS_CANDIDATE_PATH = CORPUS_ENRICHMENT_DIRECTORY / "inscriptions_enriched_candidate.jsonl"
 ENRICHED_CANDIDATE_PREVIEW_PATH = CORPUS_ENRICHMENT_DIRECTORY / "enriched_candidate_preview.tsv"
@@ -100,6 +110,10 @@ ENRICHED_CANDIDATE_SUMMARY_PATH = CORPUS_ENRICHMENT_DIRECTORY / "enriched_candid
 TRANSLATION_INTEGRATION_PREVIEW_PATH = CORPUS_ENRICHMENT_DIRECTORY / "translation_integration_preview.tsv"
 TRANSLATION_SOURCE_ACTION_TABLE_PATH = CORPUS_ENRICHMENT_DIRECTORY / "translation_source_action_table.tsv"
 TRANSLATION_UNITS_EXTRACTED_PATH = CORPUS_ENRICHMENT_DIRECTORY / "translation_units_extracted.tsv"
+TN_OCR_SOURCE_NOTE_PATH = CORPUS_ENRICHMENT_DIRECTORY / "tn_ocr_source_note.md"
+TN_TRANSLATION_TARGETS_PATH = CORPUS_ENRICHMENT_DIRECTORY / "tn_translation_targets.tsv"
+TN_TRANSLATION_CANDIDATES_REVIEW_PATH = CORPUS_ENRICHMENT_DIRECTORY / "tn_translation_candidates_needing_review.tsv"
+TN_TRANSLATION_INTEGRATION_PREVIEW_PATH = CORPUS_ENRICHMENT_DIRECTORY / "tn_translation_integration_preview.tsv"
 IOB_SOURCE_KEY = "lucePeMaungTinInscriptionsOfBurma"
 LIST_SOURCE_KEY = "duroiselle1921list"
 PPA_SOURCE_KEY = "ppaCatalogue"
@@ -1094,6 +1108,7 @@ ENRICHED_WITNESS_STATUSES = {
 }
 ENRICHED_TRANSLATION_ENTRY_STATUSES = {
     "published_translation",
+    "published_partial_translation",
     "draft_translation",
     "machine_assisted_draft",
     "needs_translation_review",
@@ -1136,6 +1151,7 @@ TRANSLATION_SOURCE_ACTION_TABLE_FIELDS = [
     "next_action",
     "evidence",
     "notes",
+    "tracked_ocr_text_path",
 ]
 
 TRANSLATION_UNITS_EXTRACTED_FIELDS = [
@@ -4406,6 +4422,22 @@ def validate_jbrs_workflow() -> list[str]:
         ENRICHED_CORPUS_CANDIDATE_PATH,
         ENRICHED_CANDIDATE_PREVIEW_PATH,
         ENRICHED_CANDIDATE_SUMMARY_PATH,
+        TRANSLATION_SOURCE_ACTION_TABLE_PATH,
+        TRANSLATION_UNITS_EXTRACTED_PATH,
+        TRANSLATION_INTEGRATION_PREVIEW_PATH,
+        TN_OCR_SOURCE_NOTE_PATH,
+        TN_TRANSLATION_TARGETS_PATH,
+        TN_TRANSLATION_CANDIDATES_REVIEW_PATH,
+        TN_TRANSLATION_INTEGRATION_PREVIEW_PATH,
+        TN_WORKING_OCR_PLAIN_TEXT_PATH,
+        TN_WORKING_OCR_CLEANED_TEXT_PATH,
+        TN_WORKING_OCR_REPORT_PATH,
+        TN_WORKING_OCR_COMPARISON_REPORT_PATH,
+        TN_WORKING_OCR_SOURCE_SELECTION_REPORT_PATH,
+        TN_WORKING_OCR_METADATA_INDEX_PATH,
+        TN_WORKING_OCR_QUALITY_ASSESSMENT_PATH,
+        TN_WORKING_OCR_README_PATH,
+        TN_WORKING_OCR_PIPELINE_SCRIPT_PATH,
     ]
     for path in required_paths:
         if not path.exists():
@@ -4467,6 +4499,12 @@ def validate_jbrs_workflow() -> list[str]:
     sip_accepted_review_rows = read_tsv(SIP_ACCEPTED_WITNESS_REVIEW_PATH)
     sip_manual_review_rows = read_tsv(SIP_MANUAL_REVIEW_PACKET_PATH)
     enriched_preview_rows = read_tsv(ENRICHED_CANDIDATE_PREVIEW_PATH)
+    translation_action_rows = read_tsv(TRANSLATION_SOURCE_ACTION_TABLE_PATH)
+    translation_unit_rows = read_tsv(TRANSLATION_UNITS_EXTRACTED_PATH)
+    translation_preview_rows = read_tsv(TRANSLATION_INTEGRATION_PREVIEW_PATH)
+    tn_target_rows = read_tsv(TN_TRANSLATION_TARGETS_PATH)
+    tn_review_rows = read_tsv(TN_TRANSLATION_CANDIDATES_REVIEW_PATH)
+    tn_preview_rows = read_tsv(TN_TRANSLATION_INTEGRATION_PREVIEW_PATH)
     enriched_summary = json.loads(ENRICHED_CANDIDATE_SUMMARY_PATH.read_text(encoding="utf-8"))
     try:
         baseline_corpus_records = read_jsonl(CORPUS_RELEASE_INSCRIPTIONS_PATH)
@@ -4767,6 +4805,88 @@ def validate_jbrs_workflow() -> list[str]:
             enriched_summary=enriched_summary,
         )
     )
+
+    tn_action_row = next(
+        (row for row in translation_action_rows if row.get("source_key") == TN_SOURCE_KEY),
+        None,
+    )
+    if not tn_action_row:
+        errors.append("Translation action table is missing tnInscriptionsPaganPinyaAva row.")
+    else:
+        if tn_action_row.get("action_status") == "source_missing_acquire_manually":
+            errors.append("TN source remains marked missing despite tracked OCR outputs.")
+        tracked_ocr_text_path = tn_action_row.get("tracked_ocr_text_path", "")
+        if not tracked_ocr_text_path:
+            errors.append("TN action row is missing tracked_ocr_text_path.")
+        elif tracked_ocr_text_path != "data/working/ocr/pagan_pinya_ava_1899/ocr_cleaned_text_light.txt":
+            errors.append("TN action row tracked_ocr_text_path does not point to tracked TN OCR text.")
+        if ABSOLUTE_PATH_PATTERN.search(tracked_ocr_text_path):
+            errors.append("TN action row tracked_ocr_text_path must be repository-relative.")
+
+    tn_translation_units = [row for row in translation_unit_rows if row.get("source_key") == TN_SOURCE_KEY]
+    if not (5 <= len(tn_translation_units) <= 10):
+        errors.append(
+            f"Expected first TN extraction batch to include 5-10 translation units, found {len(tn_translation_units)}."
+        )
+    tn_preview_record_ids = {row.get("linked_corpus_record_id", "") for row in tn_preview_rows}
+    tn_global_preview_record_ids = {
+        row.get("linked_corpus_record_id", "")
+        for row in translation_preview_rows
+        if row.get("source_key") == TN_SOURCE_KEY
+    }
+    for row in tn_translation_units:
+        unit_id = row.get("translation_unit_id", "")
+        for field in [
+            "source_key",
+            "source_locator",
+            "linked_corpus_record_id",
+            "linked_inscription_id",
+            "translation_status",
+            "translation_text",
+        ]:
+            if not row.get(field, ""):
+                errors.append(f"TN translation unit {unit_id} is missing required field {field}.")
+        if row.get("matched_local_file_id", "") != "hvd-hxx68w-1780753436":
+            errors.append(f"TN translation unit {unit_id} has unexpected matched_local_file_id.")
+        if "data/local/" in row.get("notes", ""):
+            errors.append(f"TN translation unit {unit_id} notes reference data/local path.")
+        record_id = row.get("linked_corpus_record_id", "")
+        if record_id and not any(candidate.get("record_id") == record_id for candidate in enriched_corpus_records):
+            errors.append(f"TN translation unit {unit_id} points to unknown enriched record {record_id}.")
+        if record_id and record_id not in tn_preview_record_ids:
+            errors.append(f"TN translation unit {unit_id} missing from tn_translation_integration_preview.tsv.")
+        if record_id and record_id not in tn_global_preview_record_ids:
+            errors.append(f"TN translation unit {unit_id} missing from translation_integration_preview.tsv.")
+        if row.get("translation_status", "") not in {"published_translation", "published_partial_translation"}:
+            errors.append(f"TN translation unit {unit_id} has invalid translation_status for integrated TN batch.")
+
+    for row in tn_target_rows:
+        if ABSOLUTE_PATH_PATTERN.search(" ".join(row.values())):
+            errors.append("tn_translation_targets.tsv contains an absolute path.")
+            break
+    for row in tn_review_rows:
+        if ABSOLUTE_PATH_PATTERN.search(" ".join(row.values())):
+            errors.append("tn_translation_candidates_needing_review.tsv contains an absolute path.")
+            break
+    for row in tn_preview_rows:
+        if ABSOLUTE_PATH_PATTERN.search(" ".join(row.values())):
+            errors.append("tn_translation_integration_preview.tsv contains an absolute path.")
+            break
+    for path in [
+        TN_WORKING_OCR_PLAIN_TEXT_PATH,
+        TN_WORKING_OCR_CLEANED_TEXT_PATH,
+        TN_WORKING_OCR_REPORT_PATH,
+        TN_WORKING_OCR_COMPARISON_REPORT_PATH,
+        TN_WORKING_OCR_SOURCE_SELECTION_REPORT_PATH,
+        TN_WORKING_OCR_METADATA_INDEX_PATH,
+        TN_WORKING_OCR_QUALITY_ASSESSMENT_PATH,
+        TN_WORKING_OCR_README_PATH,
+        TN_WORKING_OCR_PIPELINE_SCRIPT_PATH,
+        TN_OCR_SOURCE_NOTE_PATH,
+    ]:
+        text = path.read_text(encoding="utf-8", errors="replace")
+        if ABSOLUTE_PATH_PATTERN.search(text):
+            errors.append(f"Tracked TN OCR artifact contains an absolute path: {path.relative_to(REPO_ROOT)}")
 
     if "Berkeley IOB catalogue record is not a verified local witness" not in readme_text:
         errors.append("JBRS README is missing the Berkeley/IOB non-promotion guardrail.")

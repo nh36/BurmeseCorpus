@@ -1,0 +1,33 @@
+{
+  "files": {
+    "Inscriptions of Pagan (Taw Sein Ko).pdf": {
+      "path": "data/local/pagan_pinya_ava_ocr/source/Inscriptions of Pagan (Taw Sein Ko).pdf",
+      "file_size_bytes": 6113433,
+      "pages": 202,
+      "page_size": "456 x 702.48 pts",
+      "first_pages_text_snippet": "",
+      "image_rows": 612,
+      "avg_x_ppi": 700.57,
+      "median_x_ppi": 600.0,
+      "avg_y_ppi": 700.57,
+      "fullpage_like_image_rows": 202
+    },
+    "hvd-hxx68w-1780753436.pdf": {
+      "path": "data/local/pagan_pinya_ava_ocr/source/hvd-hxx68w-1780753436.pdf",
+      "file_size_bytes": 25657421,
+      "pages": 203,
+      "page_size": "612 x 792 pts (letter)",
+      "first_pages_text_snippet": "Inscriptions of Pagan, Pinya and Ava. Translation, with notes Archaeological Survey of India. Rangoon, Printed by the superintendent, government printing, Burma, 1899. Find this Book Online: https://hdl.handle.net/2027/hvd.hxx68w Public Dom",
+      "image_rows": 1015,
+      "avg_x_ppi": 253.34,
+      "median_x_ppi": 132.5,
+      "avg_y_ppi": 253.34,
+      "fullpage_like_image_rows": 202
+    }
+  },
+  "heuristic_scores": {
+    "Inscriptions of Pagan (Taw Sein Ko).pdf": 13.017014950000002,
+    "hvd-hxx68w-1780753436.pdf": 14.390279816666668
+  },
+  "selected_pdf": "hvd-hxx68w-1780753436.pdf"
+}
