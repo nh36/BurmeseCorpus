@@ -97,6 +97,7 @@ ENRICHED_CORPUS_SCHEMA_NOTE_PATH = CORPUS_ENRICHMENT_DIRECTORY / "enriched_corpu
 ENRICHED_CORPUS_CANDIDATE_PATH = CORPUS_ENRICHMENT_DIRECTORY / "inscriptions_enriched_candidate.jsonl"
 ENRICHED_CANDIDATE_PREVIEW_PATH = CORPUS_ENRICHMENT_DIRECTORY / "enriched_candidate_preview.tsv"
 ENRICHED_CANDIDATE_SUMMARY_PATH = CORPUS_ENRICHMENT_DIRECTORY / "enriched_candidate_summary.json"
+TRANSLATION_INTEGRATION_PREVIEW_PATH = CORPUS_ENRICHMENT_DIRECTORY / "translation_integration_preview.tsv"
 TRANSLATION_SOURCE_ACTION_TABLE_PATH = CORPUS_ENRICHMENT_DIRECTORY / "translation_source_action_table.tsv"
 TRANSLATION_UNITS_EXTRACTED_PATH = CORPUS_ENRICHMENT_DIRECTORY / "translation_units_extracted.tsv"
 IOB_SOURCE_KEY = "lucePeMaungTinInscriptionsOfBurma"
@@ -1110,6 +1111,7 @@ TRANSLATION_SOURCE_ACTION_STATUSES = {
     "wrong_source_rejected",
     "no_translation_present",
     "needs_human_bibliographic_review",
+    "translation_integrated",
 }
 
 TRANSLATION_SOURCE_ACTION_TABLE_FIELDS = [
@@ -1142,6 +1144,21 @@ TRANSLATION_UNITS_EXTRACTED_FIELDS = [
     "translation_status",
     "link_basis",
     "confidence",
+    "needs_human_review",
+    "notes",
+]
+
+TRANSLATION_INTEGRATION_PREVIEW_FIELDS = [
+    "linked_corpus_record_id",
+    "linked_inscription_id",
+    "title_or_label",
+    "source_key",
+    "source_locator",
+    "translation_status",
+    "translation_text_snippet",
+    "translation_length_chars",
+    "has_existing_transcription",
+    "link_basis",
     "needs_human_review",
     "notes",
 ]

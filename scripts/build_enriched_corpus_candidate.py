@@ -34,6 +34,15 @@ MYAZEDI_TRANSLATION_BIBLIOGRAPHIC_LABEL = "U Pe Maung Tin, Myazedi Inscription"
 RAJAKUMAR_TRANSLATION_SOURCE_KEY = "tunAungChainRajakumar2001"
 RAJAKUMAR_TRANSLATION_BIBLIOGRAPHIC_LABEL = "Tun Aung Chain, Rajakumar Inscription"
 
+CORPUS_ENRICHMENT_DIRECTORY = REPO_ROOT / "data" / "working" / "corpus_enrichment"
+ENRICHED_CORPUS_CANDIDATE_PATH = CORPUS_ENRICHMENT_DIRECTORY / "inscriptions_enriched_candidate.jsonl"
+ENRICHED_CANDIDATE_PREVIEW_PATH = CORPUS_ENRICHMENT_DIRECTORY / "enriched_candidate_preview.tsv"
+ENRICHED_CANDIDATE_SUMMARY_PATH = CORPUS_ENRICHMENT_DIRECTORY / "enriched_candidate_summary.json"
+TRANSLATION_SOURCE_ACTION_TABLE_PATH = CORPUS_ENRICHMENT_DIRECTORY / "translation_source_action_table.tsv"
+TRANSLATION_UNITS_EXTRACTED_PATH = CORPUS_ENRICHMENT_DIRECTORY / "translation_units_extracted.tsv"
+TRANSLATION_INTEGRATION_PREVIEW_PATH = CORPUS_ENRICHMENT_DIRECTORY / "translation_integration_preview.tsv"
+SHWEGUGYI_TRANSLATION_TEXT_PATH = CORPUS_ENRICHMENT_DIRECTORY / "shwegugyi_translation_extracted.txt"
+
 SOURCE_LABELS = {
     SIP_SOURCE_KEY: SIP_BIBLIOGRAPHIC_LABEL,
     TN_SOURCE_KEY: TN_BIBLIOGRAPHIC_LABEL,
@@ -230,10 +239,10 @@ def build_translation_source_action_rows(
             "translation_scope": "standalone_inscription_translation",
             "linked_corpus_record_count": "1",
             "linked_inscription_count": "1",
-            "action_status": "ready_to_extract_translation",
-            "next_action": "Extend the existing Shwegugyi extraction slice and keep the translation integrated into the enriched corpus record.",
-            "evidence": "jbrs_translation_candidate_review.tsv and jbrs_extracted_translation_units.tsv both confirm a standalone translation section.",
-            "notes": "This is the first local translation slice integrated into the enriched corpus candidate.",
+            "action_status": "translation_integrated",
+            "next_action": "Review the integrated Shwegugyi translation in the enriched candidate; then proceed to Ananda linkage.",
+            "evidence": "jbrs_translation_candidate_review.tsv and the completed translation unit confirm a standalone translation section.",
+            "notes": "The complete published English translation is now integrated into the enriched corpus candidate.",
         },
         {
             "source_key": ANANDA_TRANSLATION_SOURCE_KEY,
@@ -373,6 +382,7 @@ def build_translation_source_action_rows(
 
 def build_translation_units_extracted_rows(translation_units: list[dict]) -> list[dict]:
     rows: list[dict] = []
+    translation_text = SHWEGUGYI_TRANSLATION_TEXT_PATH.read_text(encoding="utf-8").strip()
     for unit in translation_units:
         if unit.get("source_local_file_id") != "1920-shwegugyiinscription-luce1920-pdf":
             continue
@@ -382,16 +392,41 @@ def build_translation_units_extracted_rows(translation_units: list[dict]) -> lis
                 "source_key": SHWEGUGYI_TRANSLATION_SOURCE_KEY,
                 "source_bibliographic_label": SHWEGUGYI_TRANSLATION_BIBLIOGRAPHIC_LABEL,
                 "matched_local_file_id": unit.get("source_local_file_id", ""),
-                "source_locator": "JBRS 10(2), 1920, pp. 67-74; page 1",
+                "source_locator": "JBRS 10(2), 1920, pp. 67-74",
                 "linked_inscription_id": "obi-v01-n0004-ob-p0011",
                 "linked_corpus_record_id": "obi-v01-n0004-ob-p0011",
                 "translation_language": unit.get("translation_language", "English"),
-                "translation_text": unit.get("translation_text", ""),
+                "translation_text": translation_text,
                 "translation_status": "published_translation",
                 "link_basis": "JBRS 10(2), 1920, pp. 67-74 explicitly matches the Shwegugyi Pagoda Inscription corpus record.",
                 "confidence": "high",
                 "needs_human_review": "false",
-                "notes": "Dry-run extracted translation unit integrated into the enriched corpus candidate as the first translation slice.",
+                "notes": "Completed published translation integrated into the enriched corpus candidate.",
+            }
+        )
+    return rows
+
+
+def build_translation_integration_preview_rows(translation_rows: list[dict]) -> list[dict]:
+    rows: list[dict] = []
+    for row in translation_rows:
+        text = row.get("translation_text", "")
+        if not text:
+            continue
+        rows.append(
+            {
+                "linked_corpus_record_id": row.get("linked_corpus_record_id", ""),
+                "linked_inscription_id": row.get("linked_inscription_id", ""),
+                "title_or_label": "ရွှေဂူကြီးဘုရားကျောက်စာ",
+                "source_key": row.get("source_key", ""),
+                "source_locator": row.get("source_locator", ""),
+                "translation_status": row.get("translation_status", ""),
+                "translation_text_snippet": text[:180].replace("\n", " "),
+                "translation_length_chars": str(len(text)),
+                "has_existing_transcription": "true",
+                "link_basis": row.get("link_basis", ""),
+                "needs_human_review": row.get("needs_human_review", "false"),
+                "notes": row.get("notes", ""),
             }
         )
     return rows
@@ -661,6 +696,7 @@ def build_enriched_records(
                         "source_bibliographic_label": translation_row.get("source_bibliographic_label", ""),
                         "source_locator": translation_row.get("source_locator", ""),
                         "translation_status": translation_row.get("translation_status", "published_translation"),
+                        "confidence": translation_row.get("confidence", "high"),
                         "notes": translation_row.get("notes", ""),
                     }
                 )
@@ -740,6 +776,23 @@ def build_enriched_records(
             1 for row in enriched_records if row.get("translation_status") == "translation_integrated"
         ),
         "records_with_existing_full_transliteration": sum(1 for row in enriched_records if row.get("full_transliteration")),
+        "translation_units_integrated_count": sum(
+            len(row.get("translations", []))
+            for row in enriched_records
+            if row.get("translation_status") == "translation_integrated"
+        ),
+        "published_translation_units_integrated_count": sum(
+            1
+            for row in enriched_records
+            for translation in row.get("translations", [])
+            if translation.get("translation_status") == "published_translation"
+        ),
+        "published_partial_translation_units_integrated_count": sum(
+            1
+            for row in enriched_records
+            for translation in row.get("translations", [])
+            if translation.get("translation_status") == "published_partial_translation"
+        ),
     }
     return enriched_records, preview_rows, summary
 
@@ -786,6 +839,11 @@ def main() -> None:
         type=Path,
         default=REPO_ROOT / "data" / "working" / "corpus_enrichment" / "translation_units_extracted.tsv",
     )
+    parser.add_argument(
+        "--output-translation-preview-tsv",
+        type=Path,
+        default=REPO_ROOT / "data" / "working" / "corpus_enrichment" / "translation_integration_preview.tsv",
+    )
     args = parser.parse_args()
 
     inscriptions = read_jsonl(args.input_inscriptions)
@@ -800,6 +858,7 @@ def main() -> None:
         crossref_rows,
         translation_unit_rows,
     )
+    translation_preview_rows = build_translation_integration_preview_rows(translation_unit_rows)
     action_rows = build_translation_source_action_rows(
         sip_rows,
         crossref_rows,
@@ -835,6 +894,20 @@ def main() -> None:
         "translation_status",
         "link_basis",
         "confidence",
+        "needs_human_review",
+        "notes",
+    ])
+    write_tsv(args.output_translation_preview_tsv, translation_preview_rows, [
+        "linked_corpus_record_id",
+        "linked_inscription_id",
+        "title_or_label",
+        "source_key",
+        "source_locator",
+        "translation_status",
+        "translation_text_snippet",
+        "translation_length_chars",
+        "has_existing_transcription",
+        "link_basis",
         "needs_human_review",
         "notes",
     ])

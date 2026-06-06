@@ -1,5 +1,4 @@
-translation_unit_id	source_key	source_bibliographic_label	matched_local_file_id	source_locator	linked_inscription_id	linked_corpus_record_id	translation_language	translation_text	translation_status	link_basis	confidence	needs_human_review	notes
-jbrs-translation-unit-20260531-001	jbrsShwegugyi1920	U Pe Maung Tin and G. H. Luce, The Shwegugyi Pagoda Inscription, Pagan, 1141 A.D. (JBRS 10(2), 1920, pp. 67-74)	1920-shwegugyiinscription-luce1920-pdf	JBRS 10(2), 1920, pp. 67-74	obi-v01-n0004-ob-p0011	obi-v01-n0004-ob-p0011	English	"Reverence to the Buddha, whose pure mind
+Reverence to the Buddha, whose pure mind
 Made for the earth a Sun-his noble Law,
 That all three worlds may follow him and reach
 Salvation, who were powerless else to cross
@@ -33,9 +32,9 @@ There was a king most wise, the lord of men,
 Who loved the hearing of good Law; his name
 This just and righteous ruler of the land
 So truly wise with best intelligence
-He ordered: ""Make a pleasing lovely room,
+He ordered: "Make a pleasing lovely room,
 A fragrant chamber for the mighty sage
-And images of spirits."" This great king
+And images of spirits." This great king
 An image glorious-wonderful and fair
 Might never wink,—so purely wise was he.
 He copied; clad the monks with many a set
@@ -129,10 +128,10 @@ Niccasa a ca n sento b l nam avij Set forth the transience of conditioned things
 Wrecking the notion of dull fools who deemed
 All things are stable,' and at last attained
 The city of Nirvana, safe retreat
-That city lavish of abounding bliss!""
+That city lavish of abounding bliss!"
 This is the stone inscription of the king
 The elements of wisdom, the Three Gems
 On Sunday the fourth waxing of Kason
 In the five hundred and third year to build
 At an auspicious moment. That same year
-On Thursday eleventh waning of Nadaw"	published_translation	JBRS 10(2), 1920, pp. 67-74 explicitly matches the Shwegugyi Pagoda Inscription corpus record.	high	false	Completed published translation integrated into the enriched corpus candidate.
+On Thursday eleventh waning of Nadaw

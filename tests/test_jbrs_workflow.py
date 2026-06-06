@@ -61,6 +61,7 @@ from jbrs_workflow_common import (
     ENRICHED_CORPUS_CANDIDATE_PATH,
     ENRICHED_CANDIDATE_PREVIEW_PATH,
     ENRICHED_CANDIDATE_SUMMARY_PATH,
+    TRANSLATION_INTEGRATION_PREVIEW_PATH,
     TRANSLATION_SOURCE_ACTION_TABLE_PATH,
     TRANSLATION_UNITS_EXTRACTED_PATH,
     PPA_SOURCE_HUNT_PATH,
@@ -140,6 +141,7 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
         cls.enriched_summary = json.loads(ENRICHED_CANDIDATE_SUMMARY_PATH.read_text(encoding="utf-8"))
         cls.translation_action_rows = read_tsv(TRANSLATION_SOURCE_ACTION_TABLE_PATH)
         cls.translation_unit_rows = read_tsv(TRANSLATION_UNITS_EXTRACTED_PATH)
+        cls.translation_integration_preview_rows = read_tsv(TRANSLATION_INTEGRATION_PREVIEW_PATH)
         cls.ocr_text_index_rows = read_tsv(JBRS_OCR_TEXT_INDEX_PATH)
         cls.ocr_translation_hit_rows = read_tsv(JBRS_OCR_TRANSLATION_HIT_INDEX_PATH)
         cls.ocr_top_candidate_rows = read_tsv(JBRS_OCR_TOP_EXTRACTION_CANDIDATES_PATH)
@@ -199,6 +201,7 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
             ENRICHED_CORPUS_CANDIDATE_PATH,
             ENRICHED_CANDIDATE_PREVIEW_PATH,
             ENRICHED_CANDIDATE_SUMMARY_PATH,
+            TRANSLATION_INTEGRATION_PREVIEW_PATH,
             TRANSLATION_SOURCE_ACTION_TABLE_PATH,
             TRANSLATION_UNITS_EXTRACTED_PATH,
             CORPUS_RELEASE_INSCRIPTIONS_PATH,
@@ -597,6 +600,7 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
                     self.assertTrue(translation["source_bibliographic_label"])
                     self.assertTrue(translation["source_locator"])
                     self.assertEqual(translation["translation_status"], "published_translation")
+                    self.assertEqual(translation["confidence"], "high")
 
     def test_enriched_preview_rows_cover_sip_links_only(self) -> None:
         enriched_record_ids = {
@@ -631,7 +635,7 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
         self.assertTrue(all(row["local_file_status"] for row in self.translation_action_rows))
         self.assertTrue(all(row["matched_local_file_id"] or row["action_status"] == "source_missing_acquire_manually" for row in self.translation_action_rows))
         shwegugyi_action = next(row for row in self.translation_action_rows if row["source_key"] == "jbrsShwegugyi1920")
-        self.assertEqual(shwegugyi_action["action_status"], "ready_to_extract_translation")
+        self.assertEqual(shwegugyi_action["action_status"], "translation_integrated")
         tn_action = next(row for row in self.translation_action_rows if row["source_key"] == "tnInscriptionsPaganPinyaAva")
         self.assertEqual(tn_action["action_status"], "source_missing_acquire_manually")
         shwegugyi_unit = next(row for row in self.translation_unit_rows if row["source_key"] == "jbrsShwegugyi1920")
@@ -639,6 +643,16 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
         self.assertEqual(shwegugyi_unit["translation_status"], "published_translation")
         self.assertTrue(shwegugyi_unit["translation_text"])
         self.assertIn("Reverence to the Buddha", shwegugyi_unit["translation_text"])
+        self.assertGreater(len(shwegugyi_unit["translation_text"]), 1000)
+
+    def test_translation_integration_preview_tracks_completed_translation(self) -> None:
+        self.assertEqual(len(self.translation_integration_preview_rows), 1)
+        row = self.translation_integration_preview_rows[0]
+        self.assertEqual(row["linked_corpus_record_id"], "obi-v01-n0004-ob-p0011")
+        self.assertEqual(row["translation_status"], "published_translation")
+        self.assertTrue(row["translation_text_snippet"])
+        self.assertGreater(int(row["translation_length_chars"]), 1000)
+        self.assertEqual(row["has_existing_transcription"], "true")
 
     def test_enriched_summary_counts_match_artifacts(self) -> None:
         enriched_by_id = {row["record_id"]: row for row in self.enriched_candidate_records}
@@ -707,6 +721,12 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
             self.enriched_summary["records_with_existing_full_transliteration"],
             sum(1 for row in self.enriched_candidate_records if row.get("full_transliteration")),
         )
+        self.assertEqual(
+            self.enriched_summary["translation_units_integrated_count"],
+            sum(len(row.get("translations", [])) for row in self.enriched_candidate_records if row.get("translation_status") == "translation_integrated"),
+        )
+        self.assertEqual(self.enriched_summary["published_translation_units_integrated_count"], 1)
+        self.assertEqual(self.enriched_summary["published_partial_translation_units_integrated_count"], 0)
 
     def test_sip_summary_counts_match_artifacts(self) -> None:
         self.assertEqual(
