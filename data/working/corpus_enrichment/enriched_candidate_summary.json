@@ -12,5 +12,9 @@
   "records_with_existing_full_transliteration": 1121,
   "translation_units_integrated_count": 30,
   "published_translation_units_integrated_count": 3,
-  "published_partial_translation_units_integrated_count": 27
+  "published_partial_translation_units_integrated_count": 27,
+  "joined_records": 1152,
+  "records_with_line_rows": 1115,
+  "records_without_line_rows": 37,
+  "total_line_rows_joined": 24299
 }

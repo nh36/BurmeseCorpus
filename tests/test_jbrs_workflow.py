@@ -29,6 +29,7 @@ from jbrs_workflow_common import (
     CORPUS_CITATION_WORKFLOW_SUMMARY_PATH,
     CORPUS_CITED_SOURCE_OCR_QUEUE_PATH,
     CORPUS_OUT_OF_SCOPE_NON_BURMESE_AUDIT_PATH,
+    CORPUS_RELEASE_LINES_PATH,
     CORPUS_TRANSLATION_SOURCE_DASHBOARD_PATH,
     INSCRIPTIONS_OF_BURMA_CROSS_REFERENCE_INDEX_PATH,
     JBRS_ARTICLE_REFERENCE_TARGETS_PATH,
@@ -72,6 +73,8 @@ from jbrs_workflow_common import (
     TN_RESIDUAL_UNRESOLVED_PATH,
     TN_TRANSLATION_INTEGRATION_PREVIEW_PATH,
     V04_INSCRIPTIONS_CANDIDATE_PATH,
+    V04_INSCRIPTIONS_WITH_LINES_CANDIDATE_PATH,
+    V04_ENRICHED_WITH_LINES_SAMPLE_PATH,
     V04_TRANSLATION_UNITS_CANDIDATE_PATH,
     V04_ENRICHMENT_PREVIEW_CANDIDATE_PATH,
     V04_TN_UNRESOLVED_REVIEW_PATH,
@@ -171,11 +174,14 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
         cls.tn_residual_unresolved_rows = read_tsv(TN_RESIDUAL_UNRESOLVED_PATH)
         cls.tn_translation_preview_rows = read_tsv(TN_TRANSLATION_INTEGRATION_PREVIEW_PATH)
         cls.v04_candidate_records = read_jsonl(V04_INSCRIPTIONS_CANDIDATE_PATH)
+        cls.v04_joined_candidate_records = read_jsonl(V04_INSCRIPTIONS_WITH_LINES_CANDIDATE_PATH)
+        cls.v04_joined_sample_records = json.loads(V04_ENRICHED_WITH_LINES_SAMPLE_PATH.read_text(encoding="utf-8"))
         cls.v04_translation_unit_rows = read_tsv(V04_TRANSLATION_UNITS_CANDIDATE_PATH)
         cls.v04_enrichment_preview_rows = read_tsv(V04_ENRICHMENT_PREVIEW_CANDIDATE_PATH)
         cls.v04_tn_unresolved_rows = read_tsv(V04_TN_UNRESOLVED_REVIEW_PATH)
         cls.v04_review_checklist_rows = read_tsv(V04_REVIEW_CHECKLIST_PATH)
         cls.v04_release_notes_text = V04_RELEASE_NOTES_DRAFT_PATH.read_text(encoding="utf-8")
+        cls.corpus_release_line_rows = read_jsonl(CORPUS_RELEASE_LINES_PATH)
         cls.tn_ocr_metadata_index = json.loads(TN_WORKING_OCR_METADATA_INDEX_PATH.read_text(encoding="utf-8"))
         cls.rajakumar_version_linkage_rows = read_tsv(
             ROOT / "data" / "working" / "corpus_enrichment" / "rajakumar_version_linkage.tsv"
@@ -256,8 +262,10 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
             TN_RESIDUAL_UNRESOLVED_PATH,
             TN_TRANSLATION_INTEGRATION_PREVIEW_PATH,
             V04_INSCRIPTIONS_CANDIDATE_PATH,
+            V04_INSCRIPTIONS_WITH_LINES_CANDIDATE_PATH,
             V04_TRANSLATION_UNITS_CANDIDATE_PATH,
             V04_ENRICHMENT_PREVIEW_CANDIDATE_PATH,
+            V04_ENRICHED_WITH_LINES_SAMPLE_PATH,
             V04_TN_UNRESOLVED_REVIEW_PATH,
             V04_REVIEW_CHECKLIST_PATH,
             V04_RELEASE_NOTES_DRAFT_PATH,
@@ -920,14 +928,30 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
         self.assertEqual(len(self.v04_candidate_records), len(self.corpus_release_records))
         baseline_by_id = {row["record_id"]: row for row in self.corpus_release_records}
         v04_by_id = {row["record_id"]: row for row in self.v04_candidate_records}
+        joined_by_id = {row["record_id"]: row for row in self.v04_joined_candidate_records}
         self.assertEqual(set(v04_by_id), set(baseline_by_id))
+        self.assertEqual(set(joined_by_id), set(baseline_by_id))
+        self.assertEqual(len(self.v04_joined_candidate_records), len(self.corpus_release_records))
         for record_id, baseline in baseline_by_id.items():
             self.assertEqual(v04_by_id[record_id].get("full_transliteration"), baseline.get("full_transliteration"))
+            self.assertEqual(joined_by_id[record_id].get("full_transliteration"), baseline.get("full_transliteration"))
+            self.assertIsInstance(joined_by_id[record_id].get("lines"), list)
+            self.assertEqual(joined_by_id[record_id].get("translations", []), v04_by_id[record_id].get("translations", []))
 
         integrated_units = [row for row in self.translation_unit_rows if row["linked_corpus_record_id"]]
         v04_unit_ids = {row["translation_unit_id"] for row in self.v04_translation_unit_rows if row["translation_unit_id"]}
         for unit in integrated_units:
             self.assertIn(unit["translation_unit_id"], v04_unit_ids)
+            joined_record = joined_by_id[unit["linked_corpus_record_id"]]
+            self.assertTrue(
+                any(
+                    translation.get("source_key") == unit["source_key"]
+                    and translation.get("source_locator") == unit["source_locator"]
+                    and translation.get("text") == unit["translation_text"]
+                    for translation in joined_record.get("translations", [])
+                ),
+                f"{unit['translation_unit_id']} not found in joined record {unit['linked_corpus_record_id']}",
+            )
 
         unresolved_locators = {
             row["tn_locator"] for row in self.v04_tn_unresolved_rows if row["tn_locator"]
@@ -952,15 +976,45 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
             )
         )
 
+        all_joined_lines = [line for record in self.v04_joined_candidate_records for line in record.get("lines", [])]
+        baseline_line_count_by_record = Counter(row["record_id"] for row in self.corpus_release_line_rows if row.get("record_id"))
+        self.assertEqual(len(all_joined_lines), len(self.corpus_release_line_rows))
+        self.assertEqual(len({line["line_id"] for line in all_joined_lines}), len(self.corpus_release_line_rows))
+        self.assertTrue(all(isinstance(record.get("lines"), list) for record in self.v04_joined_candidate_records))
+        self.assertEqual(
+            sum(1 for record in self.v04_joined_candidate_records if record.get("lines")),
+            sum(1 for count in baseline_line_count_by_record.values() if count > 0),
+        )
+        self.assertEqual(
+            sum(1 for record in self.v04_joined_candidate_records if not record.get("lines")),
+            sum(1 for record_id in baseline_by_id if baseline_line_count_by_record.get(record_id, 0) == 0),
+        )
+        self.assertEqual(len(self.v04_joined_sample_records), 5)
+        self.assertEqual(
+            {row["record_id"] for row in self.v04_joined_sample_records},
+            {
+                "obi-v01-n0001-tx-p0001",
+                "obi-v01-n0004-ob-p0011",
+                "obi-v01-n0029-re-p0051",
+                "obi-v01-n0045-ob-p0073",
+                "obi-v01-n0010-ob-p0026",
+            },
+        )
+        self.assertTrue(all(isinstance(row.get("lines"), list) for row in self.v04_joined_sample_records))
+        self.assertTrue(all(row["line_join_status"] in {"line_rows_joined", "no_line_rows_found"} for row in self.v04_joined_candidate_records))
+
         self.assertTrue(self.v04_review_checklist_rows)
         self.assertTrue(
             all(row["status"] in {"needs_human_review", "done", "blocked"} for row in self.v04_review_checklist_rows)
         )
+        self.assertTrue(all(row["status"] == "done" for row in self.v04_review_checklist_rows))
         self.assertTrue(
             all(row["final_status"] and row["reason_not_integrated"] for row in self.v04_tn_unresolved_rows)
         )
         self.assertIn("v0.4 candidate release notes", self.v04_release_notes_text)
         self.assertIn("Residual unresolved TN items", self.v04_release_notes_text)
+        self.assertIn("inscriptions_enriched_with_lines_v0_4_candidate.jsonl", self.v04_release_notes_text)
+        self.assertIn("translations remain full text in both files", self.v04_release_notes_text)
 
     def test_tn_working_ocr_artifacts_use_relative_paths(self) -> None:
         tracked_paths = [

@@ -9,6 +9,17 @@
 - SIP source-text witness count (record-level): 5
 - cross-reference enrichment counts: IOB=63, List=43, PPA=21, TN-candidate=21
 
+## Joined review/use file
+
+- `inscriptions_enriched_v0_4_candidate.jsonl` is the inscription-level enriched file.
+- `inscriptions_enriched_with_lines_v0_4_candidate.jsonl` is the joined review/use file with line-level rows embedded.
+- translations remain full text in both files.
+- line-level data are preserved from `data/release/corpus_release_v0_3/lines.jsonl`, not regenerated.
+- joined records: 1152
+- records with line rows: 1115
+- records without line rows: 37
+- total line rows joined: 24299
+
 ## Sources integrated
 
 - U Pe Maung Tin and G. H. Luce, The Shwegugyi Pagoda Inscription, Pagan, 1141 A.D. (JBRS 10(2), 1920, pp. 67-74)

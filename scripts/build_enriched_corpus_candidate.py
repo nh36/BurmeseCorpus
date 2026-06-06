@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import argparse
 import json
+from collections import defaultdict
 from pathlib import Path
 import re
 
@@ -42,6 +43,8 @@ RAJAKUMAR_TRANSLATION_BIBLIOGRAPHIC_LABEL = (
 
 CORPUS_ENRICHMENT_DIRECTORY = REPO_ROOT / "data" / "working" / "corpus_enrichment"
 TN_OCR_DIRECTORY = REPO_ROOT / "data" / "working" / "ocr" / "pagan_pinya_ava_1899"
+CORPUS_RELEASE_INSCRIPTIONS_PATH = REPO_ROOT / "data" / "release" / "corpus_release_v0_3" / "inscriptions.jsonl"
+CORPUS_RELEASE_LINES_PATH = REPO_ROOT / "data" / "release" / "corpus_release_v0_3" / "lines.jsonl"
 ENRICHED_CORPUS_CANDIDATE_PATH = CORPUS_ENRICHMENT_DIRECTORY / "inscriptions_enriched_candidate.jsonl"
 ENRICHED_CANDIDATE_PREVIEW_PATH = CORPUS_ENRICHMENT_DIRECTORY / "enriched_candidate_preview.tsv"
 ENRICHED_CANDIDATE_SUMMARY_PATH = CORPUS_ENRICHMENT_DIRECTORY / "enriched_candidate_summary.json"
@@ -56,8 +59,12 @@ TN_RESIDUAL_UNRESOLVED_PATH = CORPUS_ENRICHMENT_DIRECTORY / "tn_residual_unresol
 TN_TRANSLATION_INTEGRATION_PREVIEW_PATH = CORPUS_ENRICHMENT_DIRECTORY / "tn_translation_integration_preview.tsv"
 RELEASE_CANDIDATE_V04_DIRECTORY = CORPUS_ENRICHMENT_DIRECTORY / "release_candidate_v0_4"
 V04_INSCRIPTIONS_CANDIDATE_PATH = RELEASE_CANDIDATE_V04_DIRECTORY / "inscriptions_enriched_v0_4_candidate.jsonl"
+V04_INSCRIPTIONS_WITH_LINES_CANDIDATE_PATH = (
+    RELEASE_CANDIDATE_V04_DIRECTORY / "inscriptions_enriched_with_lines_v0_4_candidate.jsonl"
+)
 V04_TRANSLATION_UNITS_CANDIDATE_PATH = RELEASE_CANDIDATE_V04_DIRECTORY / "translation_units_v0_4_candidate.tsv"
 V04_ENRICHMENT_PREVIEW_CANDIDATE_PATH = RELEASE_CANDIDATE_V04_DIRECTORY / "enrichment_preview_v0_4_candidate.tsv"
+V04_ENRICHED_WITH_LINES_SAMPLE_PATH = RELEASE_CANDIDATE_V04_DIRECTORY / "enriched_with_lines_sample_v0_4.json"
 V04_TN_UNRESOLVED_REVIEW_PATH = RELEASE_CANDIDATE_V04_DIRECTORY / "tn_unresolved_review_v0_4.tsv"
 V04_REVIEW_CHECKLIST_PATH = RELEASE_CANDIDATE_V04_DIRECTORY / "review_checklist_v0_4.tsv"
 V04_RELEASE_NOTES_DRAFT_PATH = RELEASE_CANDIDATE_V04_DIRECTORY / "release_notes_v0_4_draft.md"
@@ -1915,6 +1922,51 @@ def build_v04_review_checklist_rows(
     return rows
 
 
+def build_joined_enriched_records_with_lines(
+    enriched_records: list[dict],
+    line_rows: list[dict],
+) -> tuple[list[dict], dict[str, int]]:
+    lines_by_record_id: dict[str, list[dict]] = defaultdict(list)
+    for line_row in line_rows:
+        record_id = (line_row.get("record_id") or "").strip()
+        if not record_id:
+            continue
+        lines_by_record_id[record_id].append(dict(line_row))
+
+    joined_records: list[dict] = []
+    records_with_line_rows = 0
+    total_line_rows_joined = 0
+    for record in enriched_records:
+        record_id = record.get("record_id", "")
+        record_lines = [dict(line_row) for line_row in lines_by_record_id.get(record_id, [])]
+        joined_record = dict(record)
+        joined_record["lines"] = record_lines
+        joined_record["line_join_status"] = "line_rows_joined" if record_lines else "no_line_rows_found"
+        joined_records.append(joined_record)
+        if record_lines:
+            records_with_line_rows += 1
+            total_line_rows_joined += len(record_lines)
+
+    return joined_records, {
+        "joined_records": len(joined_records),
+        "records_with_line_rows": records_with_line_rows,
+        "records_without_line_rows": len(joined_records) - records_with_line_rows,
+        "total_line_rows_joined": total_line_rows_joined,
+    }
+
+
+def build_v04_enriched_with_lines_sample(joined_records: list[dict]) -> list[dict]:
+    sample_record_ids = [
+        "obi-v01-n0001-tx-p0001",
+        "obi-v01-n0004-ob-p0011",
+        "obi-v01-n0029-re-p0051",
+        "obi-v01-n0045-ob-p0073",
+        "obi-v01-n0010-ob-p0026",
+    ]
+    joined_by_id = {record.get("record_id", ""): record for record in joined_records if record.get("record_id")}
+    return [joined_by_id[record_id] for record_id in sample_record_ids if record_id in joined_by_id]
+
+
 def render_markdown_bullets(items: list[str]) -> str:
     if not items:
         return "- none"
@@ -1924,6 +1976,7 @@ def render_markdown_bullets(items: list[str]) -> str:
 def build_v04_release_notes_text(
     *,
     summary: dict,
+    joined_summary: dict,
     action_rows: list[dict],
     tn_residual_rows: list[dict],
     translation_rows: list[dict],
@@ -1977,6 +2030,17 @@ def build_v04_release_notes_text(
 - SIP source-text witness count (record-level): {summary.get("records_with_sip_source_text_witness", 0)}
 - cross-reference enrichment counts: IOB={summary.get("records_with_iob_crossref", 0)}, List={summary.get("records_with_list_crossref", 0)}, PPA={summary.get("records_with_ppa_candidate", 0)}, TN-candidate={summary.get("records_with_tn_translation_candidate", 0)}
 
+## Joined review/use file
+
+- `inscriptions_enriched_v0_4_candidate.jsonl` is the inscription-level enriched file.
+- `inscriptions_enriched_with_lines_v0_4_candidate.jsonl` is the joined review/use file with line-level rows embedded.
+- translations remain full text in both files.
+- line-level data are preserved from `data/release/corpus_release_v0_3/lines.jsonl`, not regenerated.
+- joined records: {joined_summary.get("joined_records", 0)}
+- records with line rows: {joined_summary.get("records_with_line_rows", 0)}
+- records without line rows: {joined_summary.get("records_without_line_rows", 0)}
+- total line rows joined: {joined_summary.get("total_line_rows_joined", 0)}
+
 ## Sources integrated
 
 {render_markdown_bullets(integrated_sources)}
@@ -2011,14 +2075,19 @@ def build_v04_release_notes_text(
 def write_v04_candidate_package(
     *,
     enriched_records: list[dict],
+    joined_records: list[dict],
+    joined_summary: dict,
+    joined_sample_records: list[dict],
     preview_rows: list[dict],
     translation_unit_rows: list[dict],
     tn_residual_rows: list[dict],
     summary: dict,
     action_rows: list[dict],
     output_inscriptions_jsonl: Path,
+    output_inscriptions_with_lines_jsonl: Path,
     output_translation_units_tsv: Path,
     output_enrichment_preview_tsv: Path,
+    output_enriched_with_lines_sample_json: Path,
     output_tn_unresolved_review_tsv: Path,
     output_review_checklist_tsv: Path,
     output_release_notes_md: Path,
@@ -2040,6 +2109,7 @@ def write_v04_candidate_package(
         "notes",
     ]
     write_jsonl(output_inscriptions_jsonl, enriched_records)
+    write_jsonl(output_inscriptions_with_lines_jsonl, joined_records)
     write_tsv(output_translation_units_tsv, translation_unit_rows, translation_unit_fields)
     write_tsv(output_enrichment_preview_tsv, preview_rows, PREVIEW_FIELDS)
     write_tsv(output_tn_unresolved_review_tsv, tn_residual_rows, TN_RESIDUAL_UNRESOLVED_FIELDS)
@@ -2050,12 +2120,18 @@ def write_v04_candidate_package(
     write_tsv(output_review_checklist_tsv, checklist_rows, V04_REVIEW_CHECKLIST_FIELDS)
     release_notes = build_v04_release_notes_text(
         summary=summary,
+        joined_summary=joined_summary,
         action_rows=action_rows,
         tn_residual_rows=tn_residual_rows,
         translation_rows=translation_unit_rows,
     )
     output_release_notes_md.parent.mkdir(parents=True, exist_ok=True)
     output_release_notes_md.write_text(release_notes, encoding="utf-8")
+    output_enriched_with_lines_sample_json.parent.mkdir(parents=True, exist_ok=True)
+    output_enriched_with_lines_sample_json.write_text(
+        json.dumps(joined_sample_records, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+    )
 
 
 def build_tn_translation_integration_preview_rows(
@@ -2470,7 +2546,12 @@ def main() -> None:
     parser.add_argument(
         "--input-inscriptions",
         type=Path,
-        default=REPO_ROOT / "data" / "release" / "corpus_release_v0_3" / "inscriptions.jsonl",
+        default=CORPUS_RELEASE_INSCRIPTIONS_PATH,
+    )
+    parser.add_argument(
+        "--input-lines",
+        type=Path,
+        default=CORPUS_RELEASE_LINES_PATH,
     )
     parser.add_argument(
         "--sip-accepted-path",
@@ -2552,6 +2633,11 @@ def main() -> None:
         default=V04_INSCRIPTIONS_CANDIDATE_PATH,
     )
     parser.add_argument(
+        "--output-v04-inscriptions-with-lines-jsonl",
+        type=Path,
+        default=V04_INSCRIPTIONS_WITH_LINES_CANDIDATE_PATH,
+    )
+    parser.add_argument(
         "--output-v04-translation-units-tsv",
         type=Path,
         default=V04_TRANSLATION_UNITS_CANDIDATE_PATH,
@@ -2560,6 +2646,11 @@ def main() -> None:
         "--output-v04-enrichment-preview-tsv",
         type=Path,
         default=V04_ENRICHMENT_PREVIEW_CANDIDATE_PATH,
+    )
+    parser.add_argument(
+        "--output-v04-enriched-with-lines-sample-json",
+        type=Path,
+        default=V04_ENRICHED_WITH_LINES_SAMPLE_PATH,
     )
     parser.add_argument(
         "--output-v04-tn-unresolved-review-tsv",
@@ -2579,6 +2670,7 @@ def main() -> None:
     args = parser.parse_args()
 
     inscriptions = read_jsonl(args.input_inscriptions)
+    line_rows = read_jsonl(args.input_lines)
     record_title_by_id = {
         row.get("record_id", ""): (row.get("title_original", "") or row.get("title_transliteration", ""))
         for row in inscriptions
@@ -2607,6 +2699,8 @@ def main() -> None:
         translation_unit_rows,
         tn_source_available=TN_OCR_CLEANED_TEXT_PATH.exists(),
     )
+    joined_records, joined_summary = build_joined_enriched_records_with_lines(enriched_records, line_rows)
+    joined_sample_records = build_v04_enriched_with_lines_sample(joined_records)
     translation_preview_rows = build_translation_integration_preview_rows(
         translation_unit_rows,
         record_title_by_id,
@@ -2702,20 +2796,30 @@ def main() -> None:
     write_tsv(args.output_tn_preview_tsv, tn_preview_rows, TN_TRANSLATION_INTEGRATION_PREVIEW_FIELDS)
     write_v04_candidate_package(
         enriched_records=enriched_records,
+        joined_records=joined_records,
+        joined_summary=joined_summary,
+        joined_sample_records=joined_sample_records,
         preview_rows=preview_rows,
         translation_unit_rows=translation_unit_rows,
         tn_residual_rows=tn_residual_unresolved_rows,
         summary=summary,
         action_rows=action_rows,
         output_inscriptions_jsonl=args.output_v04_inscriptions_jsonl,
+        output_inscriptions_with_lines_jsonl=args.output_v04_inscriptions_with_lines_jsonl,
         output_translation_units_tsv=args.output_v04_translation_units_tsv,
         output_enrichment_preview_tsv=args.output_v04_enrichment_preview_tsv,
+        output_enriched_with_lines_sample_json=args.output_v04_enriched_with_lines_sample_json,
         output_tn_unresolved_review_tsv=args.output_v04_tn_unresolved_review_tsv,
         output_review_checklist_tsv=args.output_v04_review_checklist_tsv,
         output_release_notes_md=args.output_v04_release_notes_md,
     )
     args.output_summary_json.parent.mkdir(parents=True, exist_ok=True)
-    args.output_summary_json.write_text(json.dumps(summary, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    joined_summary_output = dict(summary)
+    joined_summary_output.update(joined_summary)
+    args.output_summary_json.write_text(
+        json.dumps(joined_summary_output, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+    )
     print(
         f"Wrote {len(enriched_records)} enriched records, {len(preview_rows)} preview rows, "
         f"{len(action_rows)} translation action rows, {len(translation_unit_rows)} translation units, "
@@ -2723,6 +2827,7 @@ def main() -> None:
         f"{len(tn_manual_resolution_rows)} TN manual-resolution rows, "
         f"{len(tn_residual_unresolved_rows)} TN residual unresolved rows, "
         f"{len(tn_preview_rows)} TN preview rows, "
+        f"{len(joined_records)} joined records, {joined_summary['total_line_rows_joined']} joined line rows, "
         "and v0.4 draft candidate files, "
         f"and {len(summary)} summary fields."
     )

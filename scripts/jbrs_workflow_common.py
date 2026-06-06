@@ -92,6 +92,7 @@ SIP_ACCEPTED_WITNESS_REVIEW_PATH = BIBLIOGRAPHY_DIRECTORY / "sip_accepted_witnes
 SIP_MANUAL_REVIEW_PACKET_PATH = BIBLIOGRAPHY_DIRECTORY / "sip_manual_review_packet.tsv"
 MISSING_HIGH_VALUE_SOURCES_PATH = BIBLIOGRAPHY_DIRECTORY / "missing_high_value_sources.md"
 CORPUS_RELEASE_INSCRIPTIONS_PATH = REPO_ROOT / "data/release/corpus_release_v0_3/inscriptions.jsonl"
+CORPUS_RELEASE_LINES_PATH = REPO_ROOT / "data/release/corpus_release_v0_3/lines.jsonl"
 CORPUS_ENRICHMENT_DIRECTORY = REPO_ROOT / "data/working/corpus_enrichment"
 TN_WORKING_OCR_DIRECTORY = REPO_ROOT / "data/working/ocr/pagan_pinya_ava_1899"
 TN_WORKING_OCR_PLAIN_TEXT_PATH = TN_WORKING_OCR_DIRECTORY / "ocr_plain_text_with_page_breaks.txt"
@@ -119,8 +120,12 @@ TN_RESIDUAL_UNRESOLVED_PATH = CORPUS_ENRICHMENT_DIRECTORY / "tn_residual_unresol
 TN_TRANSLATION_INTEGRATION_PREVIEW_PATH = CORPUS_ENRICHMENT_DIRECTORY / "tn_translation_integration_preview.tsv"
 RELEASE_CANDIDATE_V04_DIRECTORY = CORPUS_ENRICHMENT_DIRECTORY / "release_candidate_v0_4"
 V04_INSCRIPTIONS_CANDIDATE_PATH = RELEASE_CANDIDATE_V04_DIRECTORY / "inscriptions_enriched_v0_4_candidate.jsonl"
+V04_INSCRIPTIONS_WITH_LINES_CANDIDATE_PATH = (
+    RELEASE_CANDIDATE_V04_DIRECTORY / "inscriptions_enriched_with_lines_v0_4_candidate.jsonl"
+)
 V04_TRANSLATION_UNITS_CANDIDATE_PATH = RELEASE_CANDIDATE_V04_DIRECTORY / "translation_units_v0_4_candidate.tsv"
 V04_ENRICHMENT_PREVIEW_CANDIDATE_PATH = RELEASE_CANDIDATE_V04_DIRECTORY / "enrichment_preview_v0_4_candidate.tsv"
+V04_ENRICHED_WITH_LINES_SAMPLE_PATH = RELEASE_CANDIDATE_V04_DIRECTORY / "enriched_with_lines_sample_v0_4.json"
 V04_TN_UNRESOLVED_REVIEW_PATH = RELEASE_CANDIDATE_V04_DIRECTORY / "tn_unresolved_review_v0_4.tsv"
 V04_REVIEW_CHECKLIST_PATH = RELEASE_CANDIDATE_V04_DIRECTORY / "review_checklist_v0_4.tsv"
 V04_RELEASE_NOTES_DRAFT_PATH = RELEASE_CANDIDATE_V04_DIRECTORY / "release_notes_v0_4_draft.md"
@@ -4484,6 +4489,7 @@ def validate_jbrs_workflow() -> list[str]:
         CORPUS_CITED_SOURCE_OCR_QUEUE_PATH,
         CORPUS_CITATION_WORKFLOW_SUMMARY_PATH,
         INSCRIPTIONS_OF_BURMA_CROSS_REFERENCE_INDEX_PATH,
+        CORPUS_RELEASE_LINES_PATH,
         TN_SOURCE_HUNT_PATH,
         PPA_SOURCE_HUNT_PATH,
         SIP_CROSS_REFERENCE_TARGETS_PATH,
@@ -4517,8 +4523,10 @@ def validate_jbrs_workflow() -> list[str]:
         TN_RESIDUAL_UNRESOLVED_PATH,
         TN_TRANSLATION_INTEGRATION_PREVIEW_PATH,
         V04_INSCRIPTIONS_CANDIDATE_PATH,
+        V04_INSCRIPTIONS_WITH_LINES_CANDIDATE_PATH,
         V04_TRANSLATION_UNITS_CANDIDATE_PATH,
         V04_ENRICHMENT_PREVIEW_CANDIDATE_PATH,
+        V04_ENRICHED_WITH_LINES_SAMPLE_PATH,
         V04_TN_UNRESOLVED_REVIEW_PATH,
         V04_REVIEW_CHECKLIST_PATH,
         V04_RELEASE_NOTES_DRAFT_PATH,
@@ -4668,6 +4676,27 @@ def validate_jbrs_workflow() -> list[str]:
     except json.JSONDecodeError as exc:
         errors.append(
             f"v0.4 candidate JSONL is invalid at line {exc.lineno}: {exc.msg}"
+        )
+        return errors
+    try:
+        v04_joined_candidate_records = read_jsonl(V04_INSCRIPTIONS_WITH_LINES_CANDIDATE_PATH)
+    except json.JSONDecodeError as exc:
+        errors.append(
+            f"v0.4 joined-with-lines JSONL is invalid at line {exc.lineno}: {exc.msg}"
+        )
+        return errors
+    try:
+        baseline_line_rows = read_jsonl(CORPUS_RELEASE_LINES_PATH)
+    except json.JSONDecodeError as exc:
+        errors.append(
+            f"Baseline corpus line JSONL is invalid at line {exc.lineno}: {exc.msg}"
+        )
+        return errors
+    try:
+        v04_joined_sample_records = json.loads(V04_ENRICHED_WITH_LINES_SAMPLE_PATH.read_text(encoding="utf-8"))
+    except json.JSONDecodeError as exc:
+        errors.append(
+            f"v0.4 joined sample JSON is invalid at line {exc.lineno}: {exc.msg}"
         )
         return errors
     citation_workflow_summary = json.loads(CORPUS_CITATION_WORKFLOW_SUMMARY_PATH.read_text(encoding="utf-8"))
@@ -5151,6 +5180,88 @@ def validate_jbrs_workflow() -> list[str]:
         ):
             errors.append(f"Integrated translation unit not found in v0.4 candidate record translations: {unit_id}")
 
+    if len(v04_joined_candidate_records) != len(baseline_corpus_records):
+        errors.append(
+            f"v0.4 joined-with-lines candidate record count {len(v04_joined_candidate_records)} does not match baseline v0.3 count {len(baseline_corpus_records)}."
+        )
+    joined_by_record_id = {
+        row.get("record_id", ""): row for row in v04_joined_candidate_records if row.get("record_id", "")
+    }
+    if set(joined_by_record_id) != set(baseline_by_record_id):
+        errors.append("v0.4 joined-with-lines candidate record IDs do not match baseline v0.3 record IDs.")
+    joined_line_ids: list[str] = []
+    joined_line_records_with_rows = 0
+    joined_line_records_without_rows = 0
+    for record_id, baseline in baseline_by_record_id.items():
+        joined_record = joined_by_record_id.get(record_id)
+        if not joined_record:
+            continue
+        if joined_record.get("full_transliteration") != baseline.get("full_transliteration"):
+            errors.append(f"v0.4 joined-with-lines candidate changed full_transliteration for record {record_id}.")
+        lines = joined_record.get("lines")
+        if not isinstance(lines, list):
+            errors.append(f"v0.4 joined-with-lines candidate record {record_id} is missing a lines array.")
+            continue
+        if lines:
+            joined_line_records_with_rows += 1
+            if joined_record.get("line_join_status") != "line_rows_joined":
+                errors.append(f"v0.4 joined-with-lines candidate record {record_id} has incorrect line_join_status.")
+        else:
+            joined_line_records_without_rows += 1
+            if joined_record.get("line_join_status") != "no_line_rows_found":
+                errors.append(f"v0.4 joined-with-lines candidate record {record_id} has incorrect empty line_join_status.")
+        for line in lines:
+            if not isinstance(line, dict):
+                errors.append(f"v0.4 joined-with-lines candidate record {record_id} contains a non-object line row.")
+                continue
+            line_id = line.get("line_id", "")
+            if not line_id:
+                errors.append(f"v0.4 joined-with-lines candidate record {record_id} contains a line row without line_id.")
+                continue
+            joined_line_ids.append(line_id)
+    baseline_line_ids = [row.get("line_id", "") for row in baseline_line_rows if row.get("line_id", "")]
+    if len(joined_line_ids) != len(baseline_line_rows):
+        errors.append(
+            f"v0.4 joined-with-lines candidate embedded line count {len(joined_line_ids)} does not match baseline v0.3 count {len(baseline_line_rows)}."
+        )
+    if len(joined_line_ids) != len(set(joined_line_ids)):
+        errors.append("v0.4 joined-with-lines candidate contains duplicate line_id values.")
+    if set(joined_line_ids) != set(baseline_line_ids):
+        errors.append("v0.4 joined-with-lines candidate line_ids do not match baseline v0.3 line_ids.")
+    baseline_line_count_by_record = Counter(
+        row.get("record_id", "") for row in baseline_line_rows if row.get("record_id", "")
+    )
+    joined_line_count_by_record = Counter(
+        line.get("record_id", "")
+        for joined_record in v04_joined_candidate_records
+        for line in joined_record.get("lines", [])
+        if line.get("record_id", "")
+    )
+    for record_id, count in baseline_line_count_by_record.items():
+        if joined_line_count_by_record.get(record_id, 0) != count:
+            errors.append(f"v0.4 joined-with-lines candidate line count mismatch for record {record_id}.")
+    if joined_line_records_with_rows + joined_line_records_without_rows != len(v04_joined_candidate_records):
+        errors.append("v0.4 joined-with-lines candidate line-join record counts do not sum to the record count.")
+    if v04_joined_sample_records and not isinstance(v04_joined_sample_records, list):
+        errors.append("v0.4 joined sample file must contain a JSON array of records.")
+    if not (3 <= len(v04_joined_sample_records) <= 5):
+        errors.append("v0.4 joined sample file must contain 3 to 5 representative records.")
+    sample_record_ids = {
+        row.get("record_id", "") for row in v04_joined_sample_records if isinstance(row, dict) and row.get("record_id", "")
+    }
+    if not sample_record_ids.issubset(set(joined_by_record_id)):
+        errors.append("v0.4 joined sample file contains unknown record IDs.")
+    for row in v04_joined_sample_records:
+        if not isinstance(row, dict):
+            errors.append("v0.4 joined sample file contains a non-object record.")
+            continue
+        if not isinstance(row.get("lines"), list):
+            errors.append(f"v0.4 joined sample record {row.get('record_id', '')} is missing a lines array.")
+        if row.get("record_id", "") and row.get("record_id", "") in joined_by_record_id:
+            joined_record = joined_by_record_id[row["record_id"]]
+            if row.get("translations") != joined_record.get("translations"):
+                errors.append(f"v0.4 joined sample record {row.get('record_id', '')} does not match joined translations.")
+
     unresolved_v04_locators = {
         row.get("tn_locator", "").strip()
         for row in v04_tn_unresolved_rows
@@ -5238,6 +5349,12 @@ def validate_jbrs_workflow() -> list[str]:
         if ABSOLUTE_PATH_PATTERN.search(" ".join(row.values())):
             errors.append("review_checklist_v0_4.tsv contains an absolute path.")
             break
+    for record in v04_joined_candidate_records:
+        if ABSOLUTE_PATH_PATTERN.search(json.dumps(record, ensure_ascii=False)):
+            errors.append("inscriptions_enriched_with_lines_v0_4_candidate.jsonl contains an absolute path.")
+            break
+    if ABSOLUTE_PATH_PATTERN.search(json.dumps(v04_joined_sample_records, ensure_ascii=False)):
+        errors.append("enriched_with_lines_sample_v0_4.json contains an absolute path.")
     for path in [
         TN_WORKING_OCR_PLAIN_TEXT_PATH,
         TN_WORKING_OCR_CLEANED_TEXT_PATH,
