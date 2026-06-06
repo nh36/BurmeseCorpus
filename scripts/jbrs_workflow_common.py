@@ -96,6 +96,14 @@ CORPUS_ENRICHMENT_DIRECTORY = REPO_ROOT / "data/working/corpus_enrichment"
 ENRICHED_CORPUS_SCHEMA_NOTE_PATH = CORPUS_ENRICHMENT_DIRECTORY / "enriched_corpus_schema_note.md"
 ENRICHED_CORPUS_CANDIDATE_PATH = CORPUS_ENRICHMENT_DIRECTORY / "inscriptions_enriched_candidate.jsonl"
 ENRICHED_CANDIDATE_PREVIEW_PATH = CORPUS_ENRICHMENT_DIRECTORY / "enriched_candidate_preview.tsv"
+ENRICHED_CANDIDATE_SUMMARY_PATH = CORPUS_ENRICHMENT_DIRECTORY / "enriched_candidate_summary.json"
+IOB_SOURCE_KEY = "lucePeMaungTinInscriptionsOfBurma"
+LIST_SOURCE_KEY = "duroiselle1921list"
+PPA_SOURCE_KEY = "ppaCatalogue"
+TN_SOURCE_KEY = "tnInscriptionsPaganPinyaAva"
+SIP_SOURCE_KEY = "sipSelectionsPagan"
+UB_SOURCE_KEY = "ubSourceFamily"
+JBRS_SOURCE_KEY = "journalBurmaResearchSociety"
 MAX_GITHUB_CONTENTS_SIZE = 1_000_000
 
 RAW_REFERENCE_HUNT_FIELDS = [
@@ -1066,6 +1074,14 @@ ENRICHED_RECORD_TRANSLATION_STATUSES = {
     "translation_integrated",
     "translation_needs_review",
 }
+ENRICHED_RECORD_ENRICHMENT_STATUSES = {
+    "baseline_no_enrichment",
+    "enriched_with_bibliographic_crossrefs",
+    "enriched_with_bibliographic_crossrefs_and_candidates",
+    "enriched_with_sip_witnesses",
+    "enriched_with_sip_and_crossrefs",
+    "enriched_with_sip_and_candidates",
+}
 ENRICHED_WITNESS_STATUSES = {
     "ocr_clean_for_review",
     "ocr_with_unclear_markers",
@@ -1091,13 +1107,32 @@ ENRICHED_PREVIEW_FIELDS = [
     "has_existing_transcription",
     "has_source_text_witness",
     "source_text_witness_count",
+    "has_bibliographic_crossrefs",
+    "crossref_sources",
     "has_translation",
     "translation_status",
     "translation_candidate_sources",
+    "translation_candidate_locators",
     "sip_ref",
     "iob_plate",
+    "list_ref",
+    "ppa_ref",
+    "tn_ref",
     "comparison_status",
     "preview_note",
+]
+ENRICHED_SUMMARY_FIELDS = [
+    "total_records",
+    "records_with_any_enrichment",
+    "records_with_sip_source_text_witness",
+    "records_with_iob_crossref",
+    "records_with_list_crossref",
+    "records_with_ppa_candidate",
+    "records_with_tn_translation_candidate",
+    "records_with_translation_status_no_translation_known",
+    "records_with_translation_status_translation_source_missing",
+    "records_with_translation_integrated",
+    "records_with_existing_full_transliteration",
 ]
 NON_EXTRACTIVE_SOURCE_ROLES = {
     "catalogue_or_list_witness",
@@ -3945,6 +3980,7 @@ def validate_enriched_corpus_candidate(
     enriched_records: list[dict],
     sip_accepted_export_rows: list[dict],
     enriched_preview_rows: list[dict],
+    enriched_summary: dict[str, int] | None = None,
 ) -> list[str]:
     errors: list[str] = []
     baseline_by_id = {row.get("record_id", ""): row for row in baseline_records if row.get("record_id")}
@@ -3984,6 +4020,14 @@ def validate_enriched_corpus_candidate(
         "source_key",
         "source_bibliographic_label",
     }
+    required_crossref_fields = {
+        "source_key",
+        "source_label",
+        "source_locator",
+        "source_role",
+        "status",
+        "basis",
+    }
     for record_id, baseline_row in baseline_by_id.items():
         enriched_row = enriched_by_id.get(record_id)
         if not enriched_row:
@@ -4003,6 +4047,13 @@ def validate_enriched_corpus_candidate(
                 f"Enriched record {record_id} has invalid translation_status "
                 f"'{enriched_row.get('translation_status', '')}'."
             )
+        if enriched_row.get("enrichment_status") and (
+            enriched_row.get("enrichment_status") not in ENRICHED_RECORD_ENRICHMENT_STATUSES
+        ):
+            errors.append(
+                f"Enriched record {record_id} has invalid enrichment_status "
+                f"'{enriched_row.get('enrichment_status', '')}'."
+            )
         source_text_witnesses = enriched_row.get("source_text_witnesses")
         if source_text_witnesses is not None:
             if not isinstance(source_text_witnesses, list):
@@ -4020,6 +4071,13 @@ def validate_enriched_corpus_candidate(
                         errors.append(
                             f"{witness_key} has invalid witness_status '{witness.get('witness_status', '')}'."
                         )
+                    provenance = witness.get("provenance")
+                    if not isinstance(provenance, dict):
+                        errors.append(f"{witness_key} is missing provenance.")
+                    else:
+                        for field in ["source_file", "sip_inscription_unit_id", "accepted_export_qc_status"]:
+                            if not provenance.get(field):
+                                errors.append(f"{witness_key} provenance is missing required field '{field}'.")
                     if witness.get("source_key") == "sipSelectionsPagan":
                         sip_unit_id = witness.get("sip_inscription_unit_id", "")
                         source_row = sip_by_unit_id.get(sip_unit_id)
@@ -4041,6 +4099,22 @@ def validate_enriched_corpus_candidate(
                                 f"{witness_key} witness_text_cleaned differs from SIP accepted cleaned_witness_text."
                             )
 
+        bibliographic_crossrefs = enriched_row.get("bibliographic_crossrefs")
+        if bibliographic_crossrefs is not None:
+            if not isinstance(bibliographic_crossrefs, list):
+                errors.append(f"Enriched record {record_id} has non-array bibliographic_crossrefs.")
+            else:
+                for index, crossref in enumerate(bibliographic_crossrefs):
+                    crossref_key = f"{record_id} bibliographic_crossrefs[{index}]"
+                    if not isinstance(crossref, dict):
+                        errors.append(f"{crossref_key} is not an object.")
+                        continue
+                    for field in required_crossref_fields:
+                        if not crossref.get(field):
+                            errors.append(f"{crossref_key} is missing required field '{field}'.")
+                    if crossref.get("status") not in {"linked", "cited_or_cross_referenced", "missing_high_value_source"}:
+                        errors.append(f"{crossref_key} has invalid status '{crossref.get('status', '')}'.")
+
         translations = enriched_row.get("translations")
         if translations is not None:
             if not isinstance(translations, list):
@@ -4053,9 +4127,9 @@ def validate_enriched_corpus_candidate(
                         continue
                     if not translation.get("language"):
                         errors.append(f"{translation_key} is missing required field 'language'.")
-                    if not translation.get("text") and not translation.get("translation_status"):
+                    if translation.get("text") and enriched_row.get("translation_status") != "translation_integrated":
                         errors.append(
-                            f"{translation_key} must include either translation text or translation_status."
+                            f"{translation_key} contains translation text without translation_integrated status."
                         )
                     missing_source_fields = [
                         field for field in required_translation_source_fields if not translation.get(field)
@@ -4092,6 +4166,13 @@ def validate_enriched_corpus_candidate(
                             f"{candidate_key} has invalid status '{candidate.get('status', '')}'."
                         )
 
+        if enriched_row.get("translation_status") == "translation_source_missing" and not enriched_row.get(
+            "translation_source_candidates"
+        ):
+            errors.append(
+                f"Enriched record {record_id} has translation_source_missing without translation_source_candidates."
+            )
+
     for record_id in sorted(sip_record_ids):
         enriched_row = enriched_by_id.get(record_id, {})
         source_text_witnesses = enriched_row.get("source_text_witnesses")
@@ -4105,20 +4186,28 @@ def validate_enriched_corpus_candidate(
                 f"SIP-linked record {record_id} is missing sipSelectionsPagan source_text_witness entry."
             )
 
+    enriched_record_ids = {
+        record_id
+        for record_id, row in enriched_by_id.items()
+        if row.get("source_text_witnesses")
+        or row.get("bibliographic_crossrefs")
+        or row.get("translation_source_candidates")
+        or row.get("translation_status")
+    }
     preview_record_ids = {
         row.get("linked_corpus_record_id", "") for row in enriched_preview_rows if row.get("linked_corpus_record_id")
     }
-    if preview_record_ids != sip_record_ids:
-        missing_preview_ids = sorted(sip_record_ids - preview_record_ids)
-        extra_preview_ids = sorted(preview_record_ids - sip_record_ids)
+    if preview_record_ids != enriched_record_ids:
+        missing_preview_ids = sorted(enriched_record_ids - preview_record_ids)
+        extra_preview_ids = sorted(preview_record_ids - enriched_record_ids)
         if missing_preview_ids:
             errors.append(
-                "Enriched preview is missing SIP-linked record IDs: "
+                "Enriched preview is missing enriched record IDs: "
                 + ", ".join(missing_preview_ids)
             )
         if extra_preview_ids:
             errors.append(
-                "Enriched preview includes non-SIP record IDs: "
+                "Enriched preview includes non-enriched record IDs: "
                 + ", ".join(extra_preview_ids)
             )
     for row in enriched_preview_rows:
@@ -4127,8 +4216,64 @@ def validate_enriched_corpus_candidate(
             errors.append(
                 f"Enriched preview row {record_id} has invalid translation_status '{row.get('translation_status', '')}'."
             )
-        if row.get("has_source_text_witness") != "true":
-            errors.append(f"Enriched preview row {record_id} should set has_source_text_witness=true.")
+        if row.get("has_source_text_witness") not in {"true", "false"}:
+            errors.append(f"Enriched preview row {record_id} has invalid has_source_text_witness value.")
+        if row.get("has_bibliographic_crossrefs") not in {"true", "false"}:
+            errors.append(f"Enriched preview row {record_id} has invalid has_bibliographic_crossrefs value.")
+        if row.get("has_source_text_witness") == "true" and not row.get("source_text_witness_count"):
+            errors.append(f"Enriched preview row {record_id} is missing source_text_witness_count.")
+
+    if enriched_summary is not None:
+        summary_expected = {
+            "total_records": len(enriched_records),
+            "records_with_any_enrichment": sum(
+                1
+                for row in enriched_records
+                if row.get("source_text_witnesses")
+                or row.get("bibliographic_crossrefs")
+                or row.get("translation_source_candidates")
+                or row.get("translations")
+                or row.get("translation_status")
+            ),
+            "records_with_sip_source_text_witness": sum(1 for row in enriched_records if row.get("source_text_witnesses")),
+            "records_with_iob_crossref": sum(
+                1
+                for row in enriched_records
+                if any(entry.get("source_key") == IOB_SOURCE_KEY for entry in row.get("bibliographic_crossrefs", []))
+            ),
+            "records_with_list_crossref": sum(
+                1
+                for row in enriched_records
+                if any(entry.get("source_key") == LIST_SOURCE_KEY for entry in row.get("bibliographic_crossrefs", []))
+            ),
+            "records_with_ppa_candidate": sum(
+                1
+                for row in enriched_records
+                if any(entry.get("source_key") == PPA_SOURCE_KEY for entry in row.get("bibliographic_crossrefs", []))
+            ),
+            "records_with_tn_translation_candidate": sum(
+                1
+                for row in enriched_records
+                if any(entry.get("source_key") == TN_SOURCE_KEY for entry in row.get("translation_source_candidates", []))
+            ),
+            "records_with_translation_status_no_translation_known": sum(
+                1 for row in enriched_records if row.get("translation_status") == "no_translation_known"
+            ),
+            "records_with_translation_status_translation_source_missing": sum(
+                1 for row in enriched_records if row.get("translation_status") == "translation_source_missing"
+            ),
+            "records_with_translation_integrated": sum(
+                1 for row in enriched_records if row.get("translation_status") == "translation_integrated"
+            ),
+            "records_with_existing_full_transliteration": sum(
+                1 for row in enriched_records if row.get("full_transliteration")
+            ),
+        }
+        for key, expected_value in summary_expected.items():
+            if enriched_summary.get(key) != expected_value:
+                errors.append(
+                    f"Enriched candidate summary {key}={enriched_summary.get(key)!r} does not match expected value {expected_value!r}."
+                )
 
     return errors
 
@@ -4190,6 +4335,7 @@ def validate_jbrs_workflow() -> list[str]:
         ENRICHED_CORPUS_SCHEMA_NOTE_PATH,
         ENRICHED_CORPUS_CANDIDATE_PATH,
         ENRICHED_CANDIDATE_PREVIEW_PATH,
+        ENRICHED_CANDIDATE_SUMMARY_PATH,
     ]
     for path in required_paths:
         if not path.exists():
@@ -4251,6 +4397,7 @@ def validate_jbrs_workflow() -> list[str]:
     sip_accepted_review_rows = read_tsv(SIP_ACCEPTED_WITNESS_REVIEW_PATH)
     sip_manual_review_rows = read_tsv(SIP_MANUAL_REVIEW_PACKET_PATH)
     enriched_preview_rows = read_tsv(ENRICHED_CANDIDATE_PREVIEW_PATH)
+    enriched_summary = json.loads(ENRICHED_CANDIDATE_SUMMARY_PATH.read_text(encoding="utf-8"))
     try:
         baseline_corpus_records = read_jsonl(CORPUS_RELEASE_INSCRIPTIONS_PATH)
     except json.JSONDecodeError as exc:
@@ -4547,6 +4694,7 @@ def validate_jbrs_workflow() -> list[str]:
             enriched_records=enriched_corpus_records,
             sip_accepted_export_rows=sip_accepted_export_rows,
             enriched_preview_rows=enriched_preview_rows,
+            enriched_summary=enriched_summary,
         )
     )
 
@@ -4611,6 +4759,7 @@ def validate_jbrs_workflow() -> list[str]:
         ENRICHED_CORPUS_SCHEMA_NOTE_PATH,
         ENRICHED_CORPUS_CANDIDATE_PATH,
         ENRICHED_CANDIDATE_PREVIEW_PATH,
+        ENRICHED_CANDIDATE_SUMMARY_PATH,
     ]:
         text = path.read_text(encoding="utf-8")
         if ABSOLUTE_PATH_PATTERN.search(text):

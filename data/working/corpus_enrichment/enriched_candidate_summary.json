@@ -1,0 +1,13 @@
+{
+  "total_records": 1152,
+  "records_with_any_enrichment": 63,
+  "records_with_sip_source_text_witness": 5,
+  "records_with_iob_crossref": 63,
+  "records_with_list_crossref": 43,
+  "records_with_ppa_candidate": 21,
+  "records_with_tn_translation_candidate": 21,
+  "records_with_translation_status_no_translation_known": 42,
+  "records_with_translation_status_translation_source_missing": 21,
+  "records_with_translation_integrated": 0,
+  "records_with_existing_full_transliteration": 1121
+}

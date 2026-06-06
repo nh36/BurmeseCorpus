@@ -35,7 +35,27 @@ Per witness object (minimal required):
 
 For SIP-derived witnesses, include `sip_inscription_unit_id` for direct provenance back-linking.
 
-### 2. `translation_status`
+### 2. `bibliographic_crossrefs`
+
+Array of structured cross-reference objects derived from the IOB plate index and related citation targets.
+
+Per cross-reference object (minimal required):
+
+- `source_key`
+- `source_label`
+- `source_locator`
+- `source_role`
+- `status`
+- `basis`
+
+Examples include:
+
+- `lucePeMaungTinInscriptionsOfBurma` with `source_role = cross_reference_or_plate_witness`
+- `duroiselle1921list` with `source_role = catalogue_or_list`
+- `ppaCatalogue` with `source_role = source_text_or_edition_candidate`
+- `tnInscriptionsPaganPinyaAva` with `source_role = translation_candidate`
+
+### 3. `translation_status`
 
 Record-level translation availability status:
 
@@ -45,7 +65,7 @@ Record-level translation availability status:
 - `translation_integrated`
 - `translation_needs_review`
 
-### 3. `translations`
+### 4. `translations`
 
 Whole-inscription translation array (empty for SIP-linked records at present):
 
@@ -57,7 +77,7 @@ Whole-inscription translation array (empty for SIP-linked records at present):
 - `translation_status` (`published_translation`, `draft_translation`, `machine_assisted_draft`, `needs_translation_review`)
 - `notes`
 
-### 4. `translation_source_candidates`
+### 5. `translation_source_candidates`
 
 Optional array used when translation evidence is cited but source is missing.
 
@@ -67,19 +87,20 @@ Optional array used when translation evidence is cited but source is missing.
 - `status` (currently `missing_high_value_source`)
 - `basis`
 
-### 5. `enrichment_status` and `enrichment_notes`
+### 6. `enrichment_status` and `enrichment_notes`
 
 Lightweight record-level enrichment marker and note:
 
-- `enrichment_status` values used now: `enriched_with_sip_witnesses`, `enriched_with_sip_and_candidates`
+- `enrichment_status` values used now: `baseline_no_enrichment`, `enriched_with_bibliographic_crossrefs`, `enriched_with_bibliographic_crossrefs_and_candidates`, `enriched_with_sip_witnesses`, `enriched_with_sip_and_crossrefs`, `enriched_with_sip_and_candidates`
 - `enrichment_notes` is a short provenance note for enrichment decisions
 
-## SIP-first implementation choice
+## SIP-first, then cross-reference enrichment
 
 - Build `inscriptions_enriched_candidate.jsonl` from `corpus_release_v0_3/inscriptions.jsonl`.
-- Enrich only records linked by `sip_accepted_witness_units.tsv`.
+- Enrich records linked by `sip_accepted_witness_units.tsv` with `source_text_witnesses`.
+- Enrich records linked by `inscriptions_of_burma_cross_reference_index.tsv` with `bibliographic_crossrefs`.
 - Preserve all existing corpus fields exactly (no overwrite of existing transcription or metadata fields).
-- Leave non-SIP-linked records unchanged for this first pass.
+- Leave unlinked records unchanged.
 
 ## Translation-forward compatibility (TN path)
 

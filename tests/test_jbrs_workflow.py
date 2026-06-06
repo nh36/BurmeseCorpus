@@ -60,6 +60,7 @@ from jbrs_workflow_common import (
     ENRICHED_CORPUS_SCHEMA_NOTE_PATH,
     ENRICHED_CORPUS_CANDIDATE_PATH,
     ENRICHED_CANDIDATE_PREVIEW_PATH,
+    ENRICHED_CANDIDATE_SUMMARY_PATH,
     PPA_SOURCE_HUNT_PATH,
     SIP_CROSS_REFERENCE_TARGETS_PATH,
     SIP_ACCEPTED_WITNESS_UNITS_PATH,
@@ -134,6 +135,7 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
         cls.corpus_release_records = read_jsonl(CORPUS_RELEASE_INSCRIPTIONS_PATH)
         cls.enriched_candidate_records = read_jsonl(ENRICHED_CORPUS_CANDIDATE_PATH)
         cls.enriched_preview_rows = read_tsv(ENRICHED_CANDIDATE_PREVIEW_PATH)
+        cls.enriched_summary = json.loads(ENRICHED_CANDIDATE_SUMMARY_PATH.read_text(encoding="utf-8"))
         cls.ocr_text_index_rows = read_tsv(JBRS_OCR_TEXT_INDEX_PATH)
         cls.ocr_translation_hit_rows = read_tsv(JBRS_OCR_TRANSLATION_HIT_INDEX_PATH)
         cls.ocr_top_candidate_rows = read_tsv(JBRS_OCR_TOP_EXTRACTION_CANDIDATES_PATH)
@@ -192,6 +194,7 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
             ENRICHED_CORPUS_SCHEMA_NOTE_PATH,
             ENRICHED_CORPUS_CANDIDATE_PATH,
             ENRICHED_CANDIDATE_PREVIEW_PATH,
+            ENRICHED_CANDIDATE_SUMMARY_PATH,
             CORPUS_RELEASE_INSCRIPTIONS_PATH,
             JBRS_OCR_TEXT_INDEX_PATH,
             JBRS_OCR_TRANSLATION_HIT_INDEX_PATH,
@@ -513,10 +516,18 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
         base_by_id = {row["record_id"]: row for row in self.corpus_release_records}
         enriched_by_id = {row["record_id"]: row for row in self.enriched_candidate_records}
         sip_by_unit_id = {row["sip_inscription_unit_id"]: row for row in self.sip_accepted_export_rows}
-        sip_record_ids = {row["linked_corpus_record_id"] for row in self.sip_accepted_export_rows}
+        enriched_record_ids = {
+            record_id
+            for record_id, row in enriched_by_id.items()
+            if row.get("source_text_witnesses")
+            or row.get("bibliographic_crossrefs")
+            or row.get("translation_source_candidates")
+            or row.get("translation_status")
+        }
 
         self.assertEqual(set(base_by_id), set(enriched_by_id))
         self.assertEqual(len(self.corpus_release_records), len(self.enriched_candidate_records))
+        self.assertEqual(len(enriched_record_ids), self.enriched_summary["records_with_any_enrichment"])
 
         for record_id, base_row in base_by_id.items():
             enriched_row = enriched_by_id[record_id]
@@ -528,34 +539,131 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
                     f"Baseline field {key} changed for {record_id}",
                 )
 
-        for record_id in sip_record_ids:
+        for record_id in enriched_record_ids:
             enriched_row = enriched_by_id[record_id]
-            self.assertIn("source_text_witnesses", enriched_row)
-            self.assertTrue(enriched_row["source_text_witnesses"])
+            self.assertIn(enriched_row["enrichment_status"], common.ENRICHED_RECORD_ENRICHMENT_STATUSES)
             self.assertIn(enriched_row["translation_status"], common.ENRICHED_RECORD_TRANSLATION_STATUSES)
-            self.assertIn(enriched_row["enrichment_status"], {"enriched_with_sip_witnesses", "enriched_with_sip_and_candidates"})
+            self.assertTrue(enriched_row["translation_status"])
 
-            for witness in enriched_row["source_text_witnesses"]:
-                self.assertEqual(witness["source_key"], "sipSelectionsPagan")
-                self.assertTrue(witness["source_bibliographic_label"])
-                self.assertTrue(witness["source_locator"])
-                self.assertIn(witness["witness_status"], common.ENRICHED_WITNESS_STATUSES)
-                self.assertTrue(witness["sip_inscription_unit_id"])
-                source_row = sip_by_unit_id[witness["sip_inscription_unit_id"]]
-                self.assertEqual(source_row["linked_corpus_record_id"], record_id)
-                self.assertEqual(witness["witness_text_raw"], source_row["raw_ocr_text"])
-                self.assertEqual(witness["witness_text_cleaned"], source_row["cleaned_witness_text"])
+            if enriched_row.get("source_text_witnesses"):
+                for witness in enriched_row["source_text_witnesses"]:
+                    self.assertEqual(witness["source_key"], "sipSelectionsPagan")
+                    self.assertTrue(witness["source_bibliographic_label"])
+                    self.assertTrue(witness["source_locator"])
+                    self.assertIn(witness["witness_status"], common.ENRICHED_WITNESS_STATUSES)
+                    self.assertTrue(witness["sip_inscription_unit_id"])
+                    self.assertIsInstance(witness.get("provenance"), dict)
+                    source_row = sip_by_unit_id[witness["sip_inscription_unit_id"]]
+                    self.assertEqual(source_row["linked_corpus_record_id"], record_id)
+                    self.assertEqual(witness["witness_text_raw"], source_row["raw_ocr_text"])
+                    self.assertEqual(witness["witness_text_cleaned"], source_row["cleaned_witness_text"])
+
+            if enriched_row.get("bibliographic_crossrefs"):
+                for crossref in enriched_row["bibliographic_crossrefs"]:
+                    self.assertTrue(crossref["source_key"])
+                    self.assertTrue(crossref["source_label"])
+                    self.assertTrue(crossref["source_locator"])
+                    self.assertTrue(crossref["source_role"])
+                    self.assertTrue(crossref["status"])
+                    self.assertTrue(crossref["basis"])
+
+            if enriched_row.get("translation_source_candidates"):
+                self.assertEqual(enriched_row["translation_status"], "translation_source_missing")
+                for candidate in enriched_row["translation_source_candidates"]:
+                    self.assertTrue(candidate["source_key"])
+                    self.assertTrue(candidate["source_bibliographic_label"])
+                    self.assertTrue(candidate["status"])
+                    self.assertTrue(candidate["basis"])
+                    self.assertTrue(candidate.get("source_locator_hint"))
+            elif enriched_row.get("translation_status") == "translation_source_missing":
+                self.fail(f"{record_id} is missing translation_source_candidates")
 
     def test_enriched_preview_rows_cover_sip_links_only(self) -> None:
-        sip_record_ids = {row["linked_corpus_record_id"] for row in self.sip_accepted_export_rows}
+        enriched_record_ids = {
+            row["record_id"]
+            for row in self.enriched_candidate_records
+            if row.get("source_text_witnesses")
+            or row.get("bibliographic_crossrefs")
+            or row.get("translation_source_candidates")
+            or row.get("translation_status")
+        }
         preview_record_ids = {row["linked_corpus_record_id"] for row in self.enriched_preview_rows}
-        self.assertEqual(preview_record_ids, sip_record_ids)
-        self.assertEqual(len(self.enriched_preview_rows), len(self.sip_accepted_export_rows))
+        self.assertEqual(preview_record_ids, enriched_record_ids)
+        self.assertEqual(len(self.enriched_preview_rows), self.enriched_summary["records_with_any_enrichment"])
         for row in self.enriched_preview_rows:
-            self.assertEqual(row["has_source_text_witness"], "true")
+            self.assertIn(row["has_source_text_witness"], {"true", "false"})
+            self.assertIn(row["has_bibliographic_crossrefs"], {"true", "false"})
             self.assertIn(row["translation_status"], common.ENRICHED_RECORD_TRANSLATION_STATUSES)
-            self.assertTrue(row["comparison_status"])
             self.assertTrue(row["title_or_label"])
+            self.assertTrue(row["crossref_sources"] or row["has_source_text_witness"] == "true")
+
+    def test_enriched_summary_counts_match_artifacts(self) -> None:
+        enriched_by_id = {row["record_id"]: row for row in self.enriched_candidate_records}
+        self.assertEqual(self.enriched_summary["total_records"], len(self.enriched_candidate_records))
+        self.assertEqual(
+            self.enriched_summary["records_with_any_enrichment"],
+            sum(
+                1
+                for row in self.enriched_candidate_records
+                if row.get("source_text_witnesses")
+                or row.get("bibliographic_crossrefs")
+                or row.get("translation_source_candidates")
+                or row.get("translations")
+                or row.get("translation_status")
+            ),
+        )
+        self.assertEqual(
+            self.enriched_summary["records_with_sip_source_text_witness"],
+            sum(1 for row in self.enriched_candidate_records if row.get("source_text_witnesses")),
+        )
+        self.assertEqual(
+            self.enriched_summary["records_with_iob_crossref"],
+            sum(
+                1
+                for row in self.enriched_candidate_records
+                if any(entry.get("source_key") == "lucePeMaungTinInscriptionsOfBurma" for entry in row.get("bibliographic_crossrefs", []))
+            ),
+        )
+        self.assertEqual(
+            self.enriched_summary["records_with_list_crossref"],
+            sum(
+                1
+                for row in self.enriched_candidate_records
+                if any(entry.get("source_key") == "duroiselle1921list" for entry in row.get("bibliographic_crossrefs", []))
+            ),
+        )
+        self.assertEqual(
+            self.enriched_summary["records_with_ppa_candidate"],
+            sum(
+                1
+                for row in self.enriched_candidate_records
+                if any(entry.get("source_key") == "ppaCatalogue" for entry in row.get("bibliographic_crossrefs", []))
+            ),
+        )
+        self.assertEqual(
+            self.enriched_summary["records_with_tn_translation_candidate"],
+            sum(
+                1
+                for row in self.enriched_candidate_records
+                if any(entry.get("source_key") == "tnInscriptionsPaganPinyaAva" for entry in row.get("translation_source_candidates", []))
+            ),
+        )
+        self.assertEqual(
+            self.enriched_summary["records_with_translation_status_translation_source_missing"],
+            sum(1 for row in self.enriched_candidate_records if row.get("translation_status") == "translation_source_missing"),
+        )
+        self.assertEqual(
+            self.enriched_summary["records_with_translation_status_no_translation_known"],
+            sum(1 for row in self.enriched_candidate_records if row.get("translation_status") == "no_translation_known"),
+        )
+        self.assertEqual(
+            self.enriched_summary["records_with_translation_integrated"],
+            sum(1 for row in self.enriched_candidate_records if row.get("translation_status") == "translation_integrated"),
+        )
+        self.assertEqual(
+            self.enriched_summary["records_with_existing_full_transliteration"],
+            sum(1 for row in self.enriched_candidate_records if row.get("full_transliteration")),
+        )
 
     def test_sip_summary_counts_match_artifacts(self) -> None:
         self.assertEqual(
