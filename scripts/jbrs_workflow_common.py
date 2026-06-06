@@ -4824,9 +4824,9 @@ def validate_jbrs_workflow() -> list[str]:
             errors.append("TN action row tracked_ocr_text_path must be repository-relative.")
 
     tn_translation_units = [row for row in translation_unit_rows if row.get("source_key") == TN_SOURCE_KEY]
-    if not (5 <= len(tn_translation_units) <= 10):
+    if not (12 <= len(tn_translation_units) <= 30):
         errors.append(
-            f"Expected first TN extraction batch to include 5-10 translation units, found {len(tn_translation_units)}."
+            f"Expected TN extraction coverage to include 12-30 translation units after batch expansion, found {len(tn_translation_units)}."
         )
     tn_preview_record_ids = {row.get("linked_corpus_record_id", "") for row in tn_preview_rows}
     tn_global_preview_record_ids = {

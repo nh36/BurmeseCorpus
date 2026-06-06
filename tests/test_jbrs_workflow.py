@@ -729,8 +729,8 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
             if row["translation_unit_id"] in {"rajakumar-translation-2001-mon", "rajakumar-translation-2001-pyu", "rajakumar-translation-2001-pali"}:
                 self.assertNotEqual(row["linked_corpus_record_id"], "obi-v01-n0001-tx-p0001")
         tn_units = [row for row in self.translation_unit_rows if row["source_key"] == "tnInscriptionsPaganPinyaAva"]
-        self.assertGreaterEqual(len(tn_units), 5)
-        self.assertLessEqual(len(tn_units), 10)
+        self.assertGreaterEqual(len(tn_units), 12)
+        self.assertLessEqual(len(tn_units), 30)
         self.assertTrue(all(row["matched_local_file_id"] == "hvd-hxx68w-1780753436" for row in tn_units))
         self.assertTrue(all(row["linked_corpus_record_id"] for row in tn_units))
         self.assertTrue(all(row["linked_inscription_id"] for row in tn_units))
@@ -741,10 +741,19 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
             )
         )
         self.assertTrue(all("TN " in row["source_locator"] for row in tn_units))
+        forbidden_markers = [
+            "Generated through HathiTrust",
+            "Public Domain",
+            "https://hdl.handle.net/2027/hvd.hxx68w",
+            "Digitized by",
+        ]
+        for row in tn_units:
+            for marker in forbidden_markers:
+                self.assertNotIn(marker, row["translation_text"], f"{row['translation_unit_id']} still contains OCR boilerplate")
         self.assertFalse(any(row["source_key"] == "jbrsAnanda1976" for row in self.translation_unit_rows))
 
     def test_translation_integration_preview_tracks_completed_translation(self) -> None:
-        self.assertGreaterEqual(len(self.translation_integration_preview_rows), 8)
+        self.assertGreaterEqual(len(self.translation_integration_preview_rows), 15)
         shwegugyi_row = next(row for row in self.translation_integration_preview_rows if row["source_key"] == "jbrsShwegugyi1920")
         self.assertEqual(shwegugyi_row["linked_corpus_record_id"], "obi-v01-n0004-ob-p0011")
         self.assertEqual(shwegugyi_row["translation_status"], "published_translation")
@@ -765,7 +774,7 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
         tn_rows = [
             row for row in self.translation_integration_preview_rows if row["source_key"] == "tnInscriptionsPaganPinyaAva"
         ]
-        self.assertGreaterEqual(len(tn_rows), 5)
+        self.assertGreaterEqual(len(tn_rows), 12)
         self.assertTrue(all(row["translation_status"] in {"published_translation", "published_partial_translation"} for row in tn_rows))
         self.assertTrue(all(row["has_existing_transcription"] == "true" for row in tn_rows))
         self.assertTrue(all(row["source_locator"] for row in tn_rows))
@@ -781,8 +790,27 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
         self.assertTrue(all(row["tn_locator"] for row in self.tn_translation_review_rows))
         self.assertTrue(all(row["reason_uncertain"] for row in self.tn_translation_review_rows))
         self.assertTrue(all(row["recommended_human_action"] for row in self.tn_translation_review_rows))
-        self.assertGreaterEqual(len(self.tn_translation_preview_rows), 5)
+        self.assertGreaterEqual(len(self.tn_translation_preview_rows), 12)
         self.assertTrue(all(row["tn_locator"] for row in self.tn_translation_preview_rows))
+
+    def test_every_integrated_tn_unit_is_present_in_enriched_candidate(self) -> None:
+        enriched_by_record = {row["record_id"]: row for row in self.enriched_candidate_records}
+        tn_units = [row for row in self.translation_unit_rows if row["source_key"] == "tnInscriptionsPaganPinyaAva"]
+        for unit in tn_units:
+            record_id = unit["linked_corpus_record_id"]
+            self.assertTrue(record_id, f"{unit['translation_unit_id']} missing linked_corpus_record_id")
+            enriched_row = enriched_by_record.get(record_id)
+            self.assertIsNotNone(enriched_row, f"missing enriched record {record_id}")
+            translations = enriched_row.get("translations", [])
+            self.assertTrue(
+                any(
+                    translation.get("source_key") == "tnInscriptionsPaganPinyaAva"
+                    and translation.get("source_locator") == unit["source_locator"]
+                    and translation.get("text") == unit["translation_text"]
+                    for translation in translations
+                ),
+                f"{unit['translation_unit_id']} not found in enriched record {record_id}",
+            )
 
     def test_tn_working_ocr_artifacts_use_relative_paths(self) -> None:
         tracked_paths = [

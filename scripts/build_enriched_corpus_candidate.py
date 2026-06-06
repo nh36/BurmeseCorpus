@@ -68,7 +68,7 @@ TN_TRANSLATION_UNIT_SPECS = [
         "linked_corpus_record_id": "obi-v01-n0081-ob-p0125",
         "translation_status": "published_partial_translation",
         "start_anchor": "No. (5).",
-        "end_anchor": None,
+        "end_anchor": "No. (6).-OBVERSE.",
     },
     {
         "translation_unit_id": "tn-translation-1899-plate-xxvii-tn-80",
@@ -88,7 +88,7 @@ TN_TRANSLATION_UNIT_SPECS = [
         "linked_corpus_record_id": "obi-v01-n0007-ob-p0022",
         "translation_status": "published_partial_translation",
         "start_anchor": "No. (21).",
-        "end_anchor": None,
+        "end_anchor": "No. (22).",
     },
     {
         "translation_unit_id": "tn-translation-1899-plate-lxxiv-tn-100-101",
@@ -98,7 +98,7 @@ TN_TRANSLATION_UNIT_SPECS = [
         "linked_corpus_record_id": "obi-v01-n0097-tx-p0156",
         "translation_status": "published_partial_translation",
         "start_anchor": "Substance of inscription.-Building of cave, monastery, and image,",
-        "end_anchor": None,
+        "end_anchor": "No. (3).",
     },
     {
         "translation_unit_id": "tn-translation-1899-plate-lxxvi-tn-102-103",
@@ -108,7 +108,7 @@ TN_TRANSLATION_UNIT_SPECS = [
         "linked_corpus_record_id": "obi-v01-n0142-tx-p0238",
         "translation_status": "published_partial_translation",
         "start_anchor": "No. (3).",
-        "end_anchor": None,
+        "end_anchor": "No. (4).",
     },
     {
         "translation_unit_id": "tn-translation-1899-plate-lxxviii-a-tn-106",
@@ -118,7 +118,7 @@ TN_TRANSLATION_UNIT_SPECS = [
         "linked_corpus_record_id": "obi-v01-n0142-tx-p0238",
         "translation_status": "published_partial_translation",
         "start_anchor": "No. (7).*",
-        "end_anchor": None,
+        "end_anchor": "No. (8).",
     },
     {
         "translation_unit_id": "tn-translation-1899-plate-lxxix-b-tn-108-109",
@@ -128,7 +128,97 @@ TN_TRANSLATION_UNIT_SPECS = [
         "linked_corpus_record_id": "obi-v01-n0146-tx-p0246",
         "translation_status": "published_partial_translation",
         "start_anchor": "Substance of inscription.-Erection of cave and dedication thereto",
+        "end_anchor": "No. (12).",
+    },
+    {
+        "translation_unit_id": "tn-translation-1899-plate-vi-tn-65-66",
+        "tn_locator": "TN 65-66",
+        "iob_plate": "Plate VI",
+        "linked_inscription_id": "obi-v01-n0021",
+        "linked_corpus_record_id": "obi-v01-n0021-ob-p0042",
+        "translation_status": "published_partial_translation",
+        "start_anchor": "No. (10).",
+        "end_anchor": "No. (1).-OBVERSE.",
+    },
+    {
+        "translation_unit_id": "tn-translation-1899-plate-xli-tn-69",
+        "tn_locator": "TN 69",
+        "iob_plate": "Plate XLI",
+        "linked_inscription_id": "obi-v01-n0070",
+        "linked_corpus_record_id": "obi-v01-n0070-ob-p0111",
+        "translation_status": "published_partial_translation",
+        "start_anchor": "On Sunday, the 7th waxing of Tabodwè, 615 Sakkarâj, Nga Môn",
+        "end_anchor": "No. (4).",
+    },
+    {
+        "translation_unit_id": "tn-translation-1899-plate-xiii-tn-79",
+        "tn_locator": "TN 79",
+        "iob_plate": "Plate XIII",
+        "linked_inscription_id": "obi-v01-n0027",
+        "linked_corpus_record_id": "obi-v01-n0027-ob-p0048",
+        "translation_status": "published_partial_translation",
+        "start_anchor": "This inscription is erected by King Alaungsithu",
         "end_anchor": None,
+    },
+    {
+        "translation_unit_id": "tn-translation-1899-plate-lxii-tn-82-83",
+        "tn_locator": "TN 82-83",
+        "iob_plate": "Plate LXII",
+        "linked_inscription_id": "obi-v01-n0130",
+        "linked_corpus_record_id": "obi-v01-n0130-ob-p0211",
+        "translation_status": "published_partial_translation",
+        "start_anchor": "No. (8).",
+        "end_anchor": "No. (9).",
+    },
+    {
+        "translation_unit_id": "tn-translation-1899-plate-lxxxviii-tn-84",
+        "tn_locator": "TN 84",
+        "iob_plate": "Plate LXXXVIII",
+        "linked_inscription_id": "obi-v01-n0161",
+        "linked_corpus_record_id": "obi-v01-n0161-ob-p0270",
+        "translation_status": "published_partial_translation",
+        "start_anchor": "No. (11).",
+        "end_anchor": "No. (12).",
+    },
+    {
+        "translation_unit_id": "tn-translation-1899-plate-lxxxv-tn-84-85",
+        "tn_locator": "TN 84 85",
+        "iob_plate": "Plate LXXXV",
+        "linked_inscription_id": "obi-v01-n0154",
+        "linked_corpus_record_id": "obi-v01-n0154-ob-p0257",
+        "translation_status": "published_partial_translation",
+        "start_anchor": "No. (12).",
+        "end_anchor": "No. (13).",
+    },
+    {
+        "translation_unit_id": "tn-translation-1899-plate-ci-tn-85-86",
+        "tn_locator": "TN 85 86",
+        "iob_plate": "Plate CI",
+        "linked_inscription_id": "obi-v01-n0178",
+        "linked_corpus_record_id": "obi-v01-n0178-tx-p0305",
+        "translation_status": "published_partial_translation",
+        "start_anchor": "No. (13).",
+        "end_anchor": "No. (14).",
+    },
+    {
+        "translation_unit_id": "tn-translation-1899-plate-lxxxiii-tn-107",
+        "tn_locator": "TN 107",
+        "iob_plate": "Plate LXXXIII",
+        "linked_inscription_id": "obi-v01-n0128",
+        "linked_corpus_record_id": "obi-v01-n0128-ob-p0208",
+        "translation_status": "published_partial_translation",
+        "start_anchor": "By virtue of this offering may I always be free from want.",
+        "end_anchor": "No. (9).",
+    },
+    {
+        "translation_unit_id": "tn-translation-1899-plate-lxviii-tn-107-108",
+        "tn_locator": "TN 107-108",
+        "iob_plate": "Plate LXVIII",
+        "linked_inscription_id": "obi-v01-n0143",
+        "linked_corpus_record_id": "obi-v01-n0143-ob-p0240",
+        "translation_status": "published_partial_translation",
+        "start_anchor": "No. (9).",
+        "end_anchor": "No. (10).",
     },
 ]
 
@@ -348,6 +438,12 @@ def parse_page_marked_text(marked_text: str) -> dict[int, str]:
 
 
 def clean_tn_page_text(page_text: str) -> str:
+    boilerplate_patterns = [
+        re.compile(r"generated through hathitrust", re.IGNORECASE),
+        re.compile(r"https?://hdl\.handle\.net/2027/hvd\.hxx68w", re.IGNORECASE),
+        re.compile(r"public domain", re.IGNORECASE),
+        re.compile(r"digitized by", re.IGNORECASE),
+    ]
     cleaned_lines: list[str] = []
     for raw_line in page_text.splitlines():
         line = raw_line.strip()
@@ -356,12 +452,34 @@ def clean_tn_page_text(page_text: str) -> str:
                 continue
             cleaned_lines.append("")
             continue
-        if line in {"INSCRIPTIONS OF PAGAN, PINYA, AND AVA.", "TOO"}:
+        if line.upper() in {"INSCRIPTIONS OF PAGAN, PINYA, AND AVA.", "INSCRIPTIONS OF PAGAN, PIÑYA, AND AVA.", "TOO"}:
             continue
         if re.fullmatch(r"\d+", line):
             continue
+        if all(pattern.search(line) for pattern in [boilerplate_patterns[1], boilerplate_patterns[2]]):
+            continue
+        if any(pattern.search(line) for pattern in boilerplate_patterns):
+            # Keep only the non-boilerplate remainder when boilerplate is prefixed/suffixed to a content line.
+            stripped_line = line
+            stripped_line = re.sub(r"Generated through HathiTrust on [^\n]*", "", stripped_line, flags=re.IGNORECASE)
+            stripped_line = re.sub(r"https?://hdl\.handle\.net/2027/hvd\.hxx68w\s*/\s*Public Domain", "", stripped_line, flags=re.IGNORECASE)
+            stripped_line = re.sub(r"Public Domain", "", stripped_line, flags=re.IGNORECASE)
+            stripped_line = re.sub(r"Digitized by", "", stripped_line, flags=re.IGNORECASE)
+            stripped_line = stripped_line.strip(" -|")
+            if not stripped_line:
+                continue
+            line = stripped_line
+            raw_line = stripped_line
+        if re.fullmatch(r"[•\.\-,;:]+", line):
+            continue
         cleaned_lines.append(raw_line.rstrip())
-    return "\n".join(cleaned_lines).strip()
+    # Remove direct page-boundary duplication from stitched ranges.
+    deduped_lines: list[str] = []
+    for item in cleaned_lines:
+        if deduped_lines and item and item == deduped_lines[-1]:
+            continue
+        deduped_lines.append(item)
+    return "\n".join(deduped_lines).strip()
 
 
 def extract_tn_translation_text(
@@ -565,8 +683,8 @@ def build_translation_source_action_rows(
                 "and IOB cross-reference rows provide TN locators plus high-confidence record links."
             ),
             "notes": (
-                f"First TN batch integrated: {tn_integrated_unit_count} units across {tn_integrated_record_count} records. "
-                "Additional TN locators remain for later extraction."
+                f"TN extraction integrated so far: {tn_integrated_unit_count} units across {tn_integrated_record_count} records. "
+                "Additional TN locators remain for later extraction/review."
             ),
             "tracked_ocr_text_path": str(TN_OCR_CLEANED_TEXT_PATH.relative_to(REPO_ROOT)),
         },
@@ -933,7 +1051,10 @@ def build_tn_candidates_needing_review_rows(
                 "recommended_human_action": (
                     "Compare TN page text with plate description and structured corpus references before integration."
                 ),
-                "notes": f"iob_plate={row.get('iob_plate', '')}; link_basis={row.get('link_basis', '')}",
+                "notes": (
+                    f"iob_plate={row.get('iob_plate', '')}; locator_pages={','.join(str(page) for page in parse_tn_pages(tn_ref))}; "
+                    f"ocr_pages={tn_locator_to_ocr_pages(tn_ref)}; link_basis={row.get('link_basis', '')}"
+                ),
             }
         )
         seen.add(tn_ref)
@@ -1423,9 +1544,9 @@ def main() -> None:
     crossref_rows = read_tsv(args.iob_crossref_path)
     extracted_translation_units = read_tsv(REPO_ROOT / "data" / "working" / "bibliography" / "jbrs" / "jbrs_extracted_translation_units.tsv")
     tn_marked_text = (
-        TN_OCR_PLAIN_TEXT_PATH.read_text(encoding="utf-8")
-        if TN_OCR_PLAIN_TEXT_PATH.exists()
-        else (TN_OCR_CLEANED_TEXT_PATH.read_text(encoding="utf-8") if TN_OCR_CLEANED_TEXT_PATH.exists() else "")
+        TN_OCR_CLEANED_TEXT_PATH.read_text(encoding="utf-8")
+        if TN_OCR_CLEANED_TEXT_PATH.exists()
+        else (TN_OCR_PLAIN_TEXT_PATH.read_text(encoding="utf-8") if TN_OCR_PLAIN_TEXT_PATH.exists() else "")
     )
     tn_page_map = parse_page_marked_text(tn_marked_text) if tn_marked_text else {}
     translation_unit_rows = build_translation_units_extracted_rows(
