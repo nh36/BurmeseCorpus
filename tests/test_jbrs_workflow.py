@@ -142,6 +142,12 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
         cls.translation_action_rows = read_tsv(TRANSLATION_SOURCE_ACTION_TABLE_PATH)
         cls.translation_unit_rows = read_tsv(TRANSLATION_UNITS_EXTRACTED_PATH)
         cls.translation_integration_preview_rows = read_tsv(TRANSLATION_INTEGRATION_PREVIEW_PATH)
+        cls.ananda_identifying_evidence_rows = read_tsv(
+            ROOT / "data" / "working" / "corpus_enrichment" / "ananda_identifying_evidence.tsv"
+        )
+        cls.ananda_linkage_candidate_rows = read_tsv(
+            ROOT / "data" / "working" / "corpus_enrichment" / "ananda_linkage_candidates.tsv"
+        )
         cls.ocr_text_index_rows = read_tsv(JBRS_OCR_TEXT_INDEX_PATH)
         cls.ocr_translation_hit_rows = read_tsv(JBRS_OCR_TRANSLATION_HIT_INDEX_PATH)
         cls.ocr_top_candidate_rows = read_tsv(JBRS_OCR_TOP_EXTRACTION_CANDIDATES_PATH)
@@ -204,6 +210,8 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
             TRANSLATION_INTEGRATION_PREVIEW_PATH,
             TRANSLATION_SOURCE_ACTION_TABLE_PATH,
             TRANSLATION_UNITS_EXTRACTED_PATH,
+            ROOT / "data" / "working" / "corpus_enrichment" / "ananda_identifying_evidence.tsv",
+            ROOT / "data" / "working" / "corpus_enrichment" / "ananda_linkage_candidates.tsv",
             CORPUS_RELEASE_INSCRIPTIONS_PATH,
             JBRS_OCR_TEXT_INDEX_PATH,
             JBRS_OCR_TRANSLATION_HIT_INDEX_PATH,
@@ -639,10 +647,10 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
         tn_action = next(row for row in self.translation_action_rows if row["source_key"] == "tnInscriptionsPaganPinyaAva")
         self.assertEqual(tn_action["action_status"], "source_missing_acquire_manually")
         ananda_action = next(row for row in self.translation_action_rows if row["source_key"] == "jbrsAnanda1976")
-        self.assertEqual(ananda_action["action_status"], "linkage_unresolved_needs_human_review")
+        self.assertEqual(ananda_action["action_status"], "linkage_unresolved_after_full_corpus_search")
         self.assertEqual(ananda_action["linked_corpus_record_count"], "0")
         self.assertEqual(ananda_action["linked_inscription_count"], "0")
-        self.assertIn("no high-confidence corpus link", ananda_action["notes"])
+        self.assertIn("exhaustive corpus search", ananda_action["notes"])
         shwegugyi_unit = next(row for row in self.translation_unit_rows if row["source_key"] == "jbrsShwegugyi1920")
         self.assertEqual(shwegugyi_unit["linked_corpus_record_id"], "obi-v01-n0004-ob-p0011")
         self.assertEqual(shwegugyi_unit["translation_status"], "published_translation")
@@ -659,6 +667,23 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
         self.assertTrue(row["translation_text_snippet"])
         self.assertGreater(int(row["translation_length_chars"]), 1000)
         self.assertEqual(row["has_existing_transcription"], "true")
+
+    def test_ananda_linkage_dossier_stays_unresolved_after_full_search(self) -> None:
+        self.assertTrue(self.ananda_identifying_evidence_rows)
+        self.assertTrue(self.ananda_linkage_candidate_rows)
+        self.assertFalse(any(row["decision"] == "accept_link" for row in self.ananda_linkage_candidate_rows))
+        self.assertTrue(
+            any(
+                row["decision"] in {"possible_link_needs_human_review", "reject_link"}
+                for row in self.ananda_linkage_candidate_rows
+            )
+        )
+        evidence_types = {row["evidence_type"] for row in self.ananda_identifying_evidence_rows}
+        self.assertIn("title", evidence_types)
+        self.assertIn("author", evidence_types)
+        self.assertIn("translation_heading", evidence_types)
+        self.assertIn("donor_name", evidence_types)
+        self.assertIn("monk_name", evidence_types)
 
     def test_enriched_summary_counts_match_artifacts(self) -> None:
         enriched_by_id = {row["record_id"]: row for row in self.enriched_candidate_records}

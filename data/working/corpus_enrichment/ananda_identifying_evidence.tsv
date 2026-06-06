@@ -1,0 +1,13 @@
+evidence_type	evidence_value	source_page_or_locator	normalized_search_form	notes
+title	ANANDA BRICK MONASTERY INSCRIPTIONS OF PAGAN	page 1	ananda brick monastery inscriptions of pagan	Printed article title.
+author	Tin Lwin	page 1	tin lwin	Byline on the title page.
+publication	JBRS, LIX, i & ii, Dec., 1976	pages 1-5	jbrs lix ii dec 1976	Publication metadata on the opening pages.
+translation_heading	Translation of the text in P1	page 6	translation of the text in p1	Start of the main translation section.
+translation_heading	Translation of the text in A	page 13	translation of the text in a	Start of the appendix translation section.
+version_labels	P1, B1, P2, B2, A	pages 1-14	p1 b1 p2 b2 a	Article uses five version labels for the inscription set.
+date_formula	2319 / 1137 / 1147 / 1775 / 1785	pages 6-14	2319 1137 1147 1775 1785	Date formulas recur across the translation, variants, and appendix.
+donor_name	Uttanarājā / Utthanarājā	pages 6, 10, 13, 14	uttanaraja	Donor/attribution name in the translated text and appendix.
+monk_name	Sudhammālaṁkāra	pages 3, 7, 11, 13, 14	sudhammalankara	Recipient monk named in the translation and appendix.
+monastery_terms	brick monastery / Ananda Okkyaung	pages 5-14	brick monastery ananda okkyaung	Monastery type and photograph caption.
+structural_terms	four entrances / four enclosures / nine doors / three staircases	pages 6-11	four entrances four enclosures nine doors three staircases	Details from the translated monastery description.
+gift_formula	donation-water; upper storey; lower storey	pages 7-11	donation water upper storey lower storey	Translated offering formula repeated in the article.

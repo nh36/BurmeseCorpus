@@ -1112,6 +1112,7 @@ TRANSLATION_SOURCE_ACTION_STATUSES = {
     "no_translation_present",
     "needs_human_bibliographic_review",
     "linkage_unresolved_needs_human_review",
+    "linkage_unresolved_after_full_corpus_search",
     "translation_integrated",
 }
 
