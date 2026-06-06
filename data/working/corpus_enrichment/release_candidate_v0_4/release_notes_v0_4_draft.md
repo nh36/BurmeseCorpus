@@ -31,8 +31,10 @@
 ## Known limitations
 
 - No residual TN unresolved items remain.
-- Rajakumar Mon and Pyu units remain candidate-only until secure corpus-record links are found.
+- Rajakumar Mon and Pyu units are classified as `no_matching_structured_record_found` and remain unlinked translation candidates, not integrations.
 - Ananda remains out of scope for this release-candidate workflow.
+- PPA remains a missing source-text/edition witness and is not a translation blocker for this draft candidate.
+- `peMaungTinMyazedi1974` is a wrong local witness and is excluded from the release workflow.
 - This is a draft release candidate and not yet a Zenodo package.
 
 ## Pre-release review for Nathan

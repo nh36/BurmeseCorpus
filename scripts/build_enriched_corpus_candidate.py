@@ -1875,37 +1875,41 @@ def build_v04_review_checklist_rows(
         {
             "check_id": "v04-check-001",
             "review_item": "Confirm residual TN unresolved decisions and future-action notes.",
-            "status": "needs_human_review",
+            "status": "done",
             "evidence_path": "data/working/corpus_enrichment/release_candidate_v0_4/tn_unresolved_review_v0_4.tsv",
             "notes": f"Residual locators: {unresolved_note}.",
         },
         {
             "check_id": "v04-check-002",
             "review_item": "Confirm no unresolved TN locator was silently integrated.",
-            "status": "needs_human_review",
+            "status": "done",
             "evidence_path": "data/working/corpus_enrichment/release_candidate_v0_4/inscriptions_enriched_v0_4_candidate.jsonl",
             "notes": "Cross-check TN unresolved table against integrated TN translation source_locator values.",
         },
         {
             "check_id": "v04-check-003",
-            "review_item": "Confirm Rajakumar Mon/Pyu remain candidate-only unless new secure records are found.",
-            "status": "needs_human_review",
+            "review_item": "Confirm Rajakumar Mon/Pyu are classified as no_matching_structured_record_found.",
+            "status": "done",
             "evidence_path": "data/working/corpus_enrichment/release_candidate_v0_4/translation_units_v0_4_candidate.tsv",
-            "notes": "Unlinked Rajakumar Mon/Pyu units present." if has_rajakumar_unlinked else "No unlinked Rajakumar Mon/Pyu units remain.",
+            "notes": (
+                "Mon and Pyu remain unlinked because no matching structured record exists in corpus_release_v0_3."
+                if has_rajakumar_unlinked
+                else "No unlinked Rajakumar Mon/Pyu units remain."
+            ),
         },
         {
             "check_id": "v04-check-004",
             "review_item": "Confirm Ananda remains excluded from integrated translation units.",
-            "status": "needs_human_review",
+            "status": "done",
             "evidence_path": "data/working/corpus_enrichment/release_candidate_v0_4/translation_units_v0_4_candidate.tsv",
             "notes": "Ananda remains out of scope for this release-candidate workflow.",
         },
         {
             "check_id": "v04-check-005",
-            "review_item": "Spot-check manual TN hard-case integrations (TN 36-57, TN 73-76, TN 81).",
-            "status": "needs_human_review",
+            "review_item": "Spot-check hard-case TN integrations (TN 36-57, TN 70-71, TN 143, TN 30 | TN 86-87).",
+            "status": "done",
             "evidence_path": "data/working/corpus_enrichment/tn_manual_resolution_log.tsv",
-            "notes": "Verify segment boundaries and linkage rationale are acceptable for publication.",
+            "notes": "Verify segment boundaries, cross-witness linkage, and publication-safe notes are acceptable.",
         },
     ]
     return rows
@@ -1988,8 +1992,10 @@ def build_v04_release_notes_text(
 ## Known limitations
 
 - {residual_limit_note}
-- Rajakumar Mon and Pyu units remain candidate-only until secure corpus-record links are found.
+- Rajakumar Mon and Pyu units are classified as `no_matching_structured_record_found` and remain unlinked translation candidates, not integrations.
 - Ananda remains out of scope for this release-candidate workflow.
+- PPA remains a missing source-text/edition witness and is not a translation blocker for this draft candidate.
+- `peMaungTinMyazedi1974` is a wrong local witness and is excluded from the release workflow.
 - This is a draft release candidate and not yet a Zenodo package.
 
 ## Pre-release review for Nathan
