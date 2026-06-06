@@ -415,6 +415,7 @@ JBRS_OCR_LANGUAGE_SCOPE_VALUES = {
 TN_TRANSLATION_TARGET_CURRENT_STATUSES = {
     "integrated",
     "integrated_after_manual_review",
+    "integrated_after_cross_witness_match",
     "confirmed_duplicate_or_overlap",
     "not_extractable_even_after_page_inspection",
     "deferred_requires_scholarly_judgement",
@@ -5028,7 +5029,7 @@ def validate_jbrs_workflow() -> list[str]:
         if status not in TN_TRANSLATION_TARGET_CURRENT_STATUSES:
             errors.append(f"TN target status row has invalid current_status: {row.get('tn_locator', '')} / {row.get('linked_corpus_record_id', '')}")
             continue
-        if status in {"integrated", "integrated_after_manual_review"}:
+        if status in {"integrated", "integrated_after_manual_review", "integrated_after_cross_witness_match"}:
             translation_unit_id = row.get("translation_unit_id", "").strip()
             if not translation_unit_id:
                 errors.append(f"Integrated TN target status row is missing translation_unit_id: {row.get('tn_locator', '')}")
@@ -5058,7 +5059,7 @@ def validate_jbrs_workflow() -> list[str]:
     unresolved_locators = {
         row.get("tn_locator", "").strip()
         for row in tn_target_status_rows
-        if row.get("current_status", "") not in {"integrated", "integrated_after_manual_review"}
+        if row.get("current_status", "") not in {"integrated", "integrated_after_manual_review", "integrated_after_cross_witness_match"}
     }
     unresolved_locators.update(row.get("tn_locator", "").strip() for row in tn_review_rows if row.get("tn_locator", "").strip())
     for locator in unresolved_locators:

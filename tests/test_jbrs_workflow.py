@@ -820,6 +820,7 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
         allowed_statuses = {
             "integrated",
             "integrated_after_manual_review",
+            "integrated_after_cross_witness_match",
             "confirmed_duplicate_or_overlap",
             "not_extractable_even_after_page_inspection",
             "deferred_requires_scholarly_judgement",
@@ -883,6 +884,14 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
         )
         if tn_36_57["current_status"] not in {"integrated", "integrated_after_manual_review"}:
             self.assertTrue(tn_36_57["reason_not_integrated"])
+        tn_70_71 = next(
+            row
+            for row in self.tn_translation_target_status_rows
+            if row["tn_locator"] == "TN 70-71" and row["linked_corpus_record_id"] == "obi-v01-n0029-re-p0051"
+        )
+        self.assertEqual(tn_70_71["current_status"], "integrated_after_cross_witness_match")
+        self.assertIn("tn-translation-1899-plate-x-b-tn-70-71-no-6", tn_70_71["translation_unit_id"])
+        self.assertFalse(any(row["tn_locator"] == "TN 70-71" for row in self.tn_residual_unresolved_rows))
         self.assertTrue(self.tn_residual_unresolved_rows is not None)
         self.assertTrue(
             all(row["final_status"] and row["reason_not_integrated"] for row in self.tn_residual_unresolved_rows)

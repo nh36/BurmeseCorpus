@@ -3,9 +3,9 @@
 ## Candidate summary
 
 - total records: 1152
-- records with any enrichment: 68
-- records with integrated translations: 26
-- integrated translation-unit count: 29
+- records with any enrichment: 69
+- records with integrated translations: 27
+- integrated translation-unit count: 30
 - SIP source-text witness count (record-level): 5
 - cross-reference enrichment counts: IOB=63, List=43, PPA=21, TN-candidate=21
 
@@ -26,18 +26,18 @@
 
 ## Residual unresolved TN items
 
-- TN 70-71 — translation_fragment_without_secure_locator: translation_fragment_without_secure_locator
+- none
 
 ## Known limitations
 
-- TN residual unresolved cases remain and are preserved as review material only.
+- No residual TN unresolved items remain.
 - Rajakumar Mon and Pyu units remain candidate-only until secure corpus-record links are found.
 - Ananda remains out of scope for this release-candidate workflow.
 - This is a draft release candidate and not yet a Zenodo package.
 
 ## Pre-release review for Nathan
 
-- Review `tn_unresolved_review_v0_4.tsv` and decide whether any residual TN item should be closed, deferred, or escalated.
+- `tn_unresolved_review_v0_4.tsv` is empty; any future TN residue should be re-opened from source evidence before publication.
 - Spot-check manual hard-case integrations in `tn_manual_resolution_log.tsv` against cited boundaries.
 - Confirm source exclusions (especially Ananda/out-of-scope items) are still desired for this release.
 - Approve record-level and translation-unit counts before any external publication step.

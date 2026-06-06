@@ -81,6 +81,30 @@ TN_TRANSLATION_UNIT_SPECS = [
         "end_anchor": "No. (6).-OBVERSE.",
     },
     {
+        "translation_unit_id": "tn-translation-1899-plate-x-b-tn-70-71-no-6",
+        "tn_locator": "TN 70-71",
+        "iob_plate": "Plate X b",
+        "linked_inscription_id": "obi-v01-n0029",
+        "linked_corpus_record_id": "obi-v01-n0029-re-p0051",
+        "translation_status": "published_partial_translation",
+        "start_anchor": "No. (6).",
+        "end_anchor": "No. (7).",
+        "allow_locator_only_match": "true",
+        "source_locator_override": (
+            "TN 70-71 (Plate X b; linked through SIP 21 / IOB Plate X b source-text match, "
+            "not through prior corpus plate metadata; OCR pages 83, 84)"
+        ),
+        "link_basis": (
+            "Cross-witness source-text match: SIP 21 and IOB Plate X b resolve to the West-face continuation on "
+            "obi-v01-n0029-re-p0051, bounded here to No. (6) only; No. (5) remains the already integrated overlap."
+        ),
+        "confidence": "high",
+        "notes": (
+            "version_label=TN locator TN 70-71; subentry=No. (6) only; source_iob_plate=Plate X b; "
+            "linked through SIP 21 / IOB Plate X b source-text match, not prior corpus plate metadata."
+        ),
+    },
+    {
         "translation_unit_id": "tn-translation-1899-plate-xxvii-tn-80",
         "tn_locator": "TN 80",
         "iob_plate": "Plate XXVII",
@@ -379,6 +403,7 @@ TN_TRANSLATION_UNIT_SPECS = [
 TN_TARGET_STATUS_VALUES = {
     "integrated",
     "integrated_after_manual_review",
+    "integrated_after_cross_witness_match",
     "confirmed_duplicate_or_overlap",
     "not_extractable_even_after_page_inspection",
     "deferred_requires_scholarly_judgement",
@@ -427,6 +452,35 @@ TN_TARGET_STATUS_OVERRIDES: dict[tuple[str, str], dict[str, str]] = {
             "(Kemawaya, CS 569, King Nandaungmya) and supports secure linkage to obi-v01-n0052-ob-p0083."
         ),
     },
+    (
+        "TN 70-71",
+        "obi-v01-n0029-re-p0051",
+    ): {
+        "current_status": "integrated_after_cross_witness_match",
+        "notes": (
+            "SIP 21 / IOB Plate X b source-text matching resolves the west-face continuation to "
+            "obi-v01-n0029-re-p0051; bounded here to No. (6) only because No. (5) already overlaps an integrated unit."
+        ),
+    },
+}
+
+TN_CROSSWITNESS_TARGET_OVERRIDES: dict[str, dict[str, str]] = {
+    "TN 70-71": {
+        "linked_inscription_id": "obi-v01-n0029",
+        "linked_corpus_record_id": "obi-v01-n0029-re-p0051",
+        "link_confidence": "high",
+        "needs_manual_review": "false",
+        "source_of_link": (
+            "SIP 21 / IOB Plate X b source-text match, not prior corpus plate metadata"
+        ),
+        "link_basis": (
+            "Cross-witness source-text match: SIP 21 and IOB Plate X b resolve to the West-face continuation on "
+            "obi-v01-n0029-re-p0051, bounded here to No. (6) only; No. (5) remains the already integrated overlap."
+        ),
+        "notes": (
+            "Linked through SIP 21 / IOB Plate X b source-text match, not through prior corpus plate metadata."
+        ),
+    }
 }
 
 TN_CANDIDATE_RESOLUTION_OVERRIDES: dict[str, dict[str, str]] = {
@@ -451,15 +505,14 @@ TN_CANDIDATE_RESOLUTION_OVERRIDES: dict[str, dict[str, str]] = {
         "notes": "page_image_inspection=attempted; inspected pages 83; overlap_unit=tn-translation-1899-plate-xlv-tn-70.",
     },
     "TN 70-71": {
-        "reason_uncertain": "translation_fragment_without_secure_locator",
+        "reason_uncertain": "integrated_after_cross_witness_match",
         "recommended_human_action": (
-            "Keep unresolved: TN 70-71 is a mixed span that overlaps integrated No. (5) and then continues into "
-            "No. (6)/(7) without a secure standalone locator-to-record linkage for the non-overlap segment."
+            "Integrated the bounded No. (6) segment after SIP 21 / IOB Plate X b source-text matching; keep No. (5) "
+            "as the already integrated overlap and do not extend into No. (7)."
         ),
         "notes": (
             "page_image_inspection=attempted; inspected pages 83-85 with targeted Tesseract OCR on pages 83-84; "
-            "span includes end of No. (5), full No. (6), and start of No. (7), so the non-overlap part cannot be "
-            "safely linked as a standalone structured-record translation."
+            "SIP 21 / IOB Plate X b source-text match links the bounded No. (6) continuation to obi-v01-n0029-re-p0051."
         ),
     },
     "TN 80 | TN 6": {
@@ -536,9 +589,9 @@ TN_MANUAL_NOTES_OVERRIDES = {
         "and supports linkage to obi-v01-n0004-ob-p0011."
     ),
     "TN 70-71": (
-        "Manual inspection of OCR pages 83-85 confirms TN 70-71 is a multi-entry span crossing No. (5), No. (6), "
-        "and No. (7): No. (5) overlaps integrated tn-translation-1899-plate-xlv-tn-70, while the remaining segment "
-        "lacks secure standalone structured-record linkage."
+        "Manual inspection of OCR pages 83-85 plus SIP 21 / IOB Plate X b source-text matching resolves the bounded "
+        "No. (6) segment to obi-v01-n0029-re-p0051; No. (5) remains the already integrated overlap and No. (7) is "
+        "not included."
     ),
     "TN 81": (
         "Manual page/image inspection of OCR page 94 isolates No. (6) "
@@ -1408,16 +1461,30 @@ def build_tn_translation_targets_rows(
     seen: set[tuple[str, str]] = set()
     for row in iob_rows:
         tn_ref = normalize_tn_locator(row.get("tn_ref", ""))
-        linked_record_id = row.get("linked_corpus_record_id", "").strip()
-        linked_inscription_id = row.get("linked_inscription_id", "").strip() or linked_record_id
+        override = TN_CROSSWITNESS_TARGET_OVERRIDES.get(tn_ref, {})
+        linked_record_id = row.get("linked_corpus_record_id", "").strip() or override.get("linked_corpus_record_id", "").strip()
+        linked_inscription_id = (
+            row.get("linked_inscription_id", "").strip()
+            or override.get("linked_inscription_id", "").strip()
+            or linked_record_id
+        )
         if not tn_ref or not linked_record_id:
             continue
-        if row.get("link_confidence", "").strip() != "high" or row.get("needs_manual_review", "").strip() != "false":
+        if (
+            not override
+            and (row.get("link_confidence", "").strip() != "high" or row.get("needs_manual_review", "").strip() != "false")
+        ):
             continue
         key = (tn_ref, linked_record_id)
         if key in seen:
             continue
         seen.add(key)
+        link_basis = override.get("link_basis", "").strip() or row.get("link_basis", "").strip() or (
+            "inscriptions_of_burma_cross_reference_index.tsv high-confidence plate-to-record concordance"
+        )
+        source_of_link = override.get("source_of_link", "").strip() or (
+            "inscriptions_of_burma_cross_reference_index.tsv high-confidence plate-to-record concordance"
+        )
         rows.append(
             {
                 "tn_locator": tn_ref,
@@ -1428,12 +1495,9 @@ def build_tn_translation_targets_rows(
                 "list_ref": row.get("list_ref", ""),
                 "ppa_ref": row.get("ppa_ref", ""),
                 "sip_ref": row.get("sip_ref", ""),
-                "source_of_link": (
-                    "inscriptions_of_burma_cross_reference_index.tsv high-confidence "
-                    "plate-to-record concordance"
-                ),
+                "source_of_link": source_of_link,
                 "priority": choose_tn_target_priority(tn_ref),
-                "notes": row.get("link_basis", ""),
+                "notes": link_basis,
             }
         )
     rows.sort(key=lambda item: (item["priority"] != "high", item["tn_locator"], item["linked_corpus_record_id"]))
@@ -1673,6 +1737,8 @@ def build_tn_manual_resolution_log_rows(
             decision = "Deferred pending scholarly segmentation judgement."
         elif resolution_status == "not_extractable_even_after_page_inspection":
             decision = "Confirmed unreadable or non-recoverable after page-image inspection."
+        elif resolution_status == "integrated_after_cross_witness_match":
+            decision = "Integrated a bounded TN segment after cross-witness source-text match."
         elif resolution_status == "no_corresponding_translation_found":
             decision = "No secure corresponding translation linkage found in current corpus scope."
         else:
@@ -1732,7 +1798,12 @@ def build_tn_residual_unresolved_rows(
     for status_row in tn_target_status_rows:
         locator = normalize_tn_locator(status_row.get("tn_locator", ""))
         status = status_row.get("current_status", "")
-        if status in {"integrated", "integrated_after_manual_review", "confirmed_duplicate_or_overlap"}:
+        if status in {
+            "integrated",
+            "integrated_after_manual_review",
+            "integrated_after_cross_witness_match",
+            "confirmed_duplicate_or_overlap",
+        }:
             continue
         final_status = (
             "deferred_requires_scholarly_segmentation_against_source_text"
@@ -1881,6 +1952,16 @@ def build_v04_release_notes_text(
         f"{row.get('tn_locator', '')} — {row.get('final_status', '')}: {row.get('reason_not_integrated', '')}"
         for row in tn_residual_rows
     ]
+    residual_limit_note = (
+        "No residual TN unresolved items remain."
+        if not tn_residual_rows
+        else "TN residual unresolved cases remain and are preserved as review material only."
+    )
+    review_line = (
+        "- `tn_unresolved_review_v0_4.tsv` is empty; any future TN residue should be re-opened from source evidence before publication."
+        if not tn_residual_rows
+        else "- Review `tn_unresolved_review_v0_4.tsv` and decide whether any residual TN item should be closed, deferred, or escalated."
+    )
     notes = f"""# v0.4 candidate release notes (draft)
 
 ## Candidate summary
@@ -1906,14 +1987,14 @@ def build_v04_release_notes_text(
 
 ## Known limitations
 
-- TN residual unresolved cases remain and are preserved as review material only.
+- {residual_limit_note}
 - Rajakumar Mon and Pyu units remain candidate-only until secure corpus-record links are found.
 - Ananda remains out of scope for this release-candidate workflow.
 - This is a draft release candidate and not yet a Zenodo package.
 
 ## Pre-release review for Nathan
 
-- Review `tn_unresolved_review_v0_4.tsv` and decide whether any residual TN item should be closed, deferred, or escalated.
+- {review_line[2:] if review_line.startswith("- ") else review_line}
 - Spot-check manual hard-case integrations in `tn_manual_resolution_log.tsv` against cited boundaries.
 - Confirm source exclusions (especially Ananda/out-of-scope items) are still desired for this release.
 - Approve record-level and translation-unit counts before any external publication step.
