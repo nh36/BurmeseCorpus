@@ -115,6 +115,7 @@ TN_TRANSLATION_TARGETS_PATH = CORPUS_ENRICHMENT_DIRECTORY / "tn_translation_targ
 TN_TRANSLATION_TARGET_STATUS_PATH = CORPUS_ENRICHMENT_DIRECTORY / "tn_translation_target_status.tsv"
 TN_TRANSLATION_CANDIDATES_REVIEW_PATH = CORPUS_ENRICHMENT_DIRECTORY / "tn_translation_candidates_needing_review.tsv"
 TN_MANUAL_RESOLUTION_LOG_PATH = CORPUS_ENRICHMENT_DIRECTORY / "tn_manual_resolution_log.tsv"
+TN_RESIDUAL_UNRESOLVED_PATH = CORPUS_ENRICHMENT_DIRECTORY / "tn_residual_unresolved_after_manual_review.tsv"
 TN_TRANSLATION_INTEGRATION_PREVIEW_PATH = CORPUS_ENRICHMENT_DIRECTORY / "tn_translation_integration_preview.tsv"
 IOB_SOURCE_KEY = "lucePeMaungTinInscriptionsOfBurma"
 LIST_SOURCE_KEY = "duroiselle1921list"
@@ -411,6 +412,16 @@ TN_TRANSLATION_TARGET_CURRENT_STATUSES = {
     "deferred_requires_scholarly_judgement",
     "no_corresponding_translation_found",
     "still_unresolved",
+}
+
+TN_RESIDUAL_FINAL_STATUSES = {
+    "deferred_requires_scholarly_segmentation_against_source_text",
+    "not_extractable_even_after_page_inspection",
+    "still_unresolved",
+    "out_of_current_corpus_scope",
+    "no_structured_record_found",
+    "translation_fragment_without_secure_locator",
+    "probable_overlap_but_no_record_link",
 }
 
 JBRS_BURMESE_RELEVANCE_GUESS_VALUES = {
@@ -1132,6 +1143,7 @@ ENRICHED_TRANSLATION_CANDIDATE_STATUSES = {
 
 TRANSLATION_SOURCE_ACTION_STATUSES = {
     "ready_to_extract_translation",
+    "tn_extraction_substantially_complete_manual_residue_remaining",
     "needs_targeted_ocr",
     "source_missing_acquire_manually",
     "wrong_source_rejected",
@@ -1225,6 +1237,20 @@ TN_MANUAL_RESOLUTION_LOG_FIELDS = [
     "evidence_used",
     "problem_found",
     "decision",
+    "notes",
+]
+TN_RESIDUAL_UNRESOLVED_FIELDS = [
+    "tn_locator",
+    "iob_plate",
+    "list_ref",
+    "ppa_ref",
+    "possible_corpus_record_ids",
+    "possible_inscription_ids",
+    "translation_text_snippet",
+    "final_status",
+    "evidence_checked",
+    "reason_not_integrated",
+    "future_action",
     "notes",
 ]
 ENRICHED_PREVIEW_FIELDS = [
@@ -4472,6 +4498,7 @@ def validate_jbrs_workflow() -> list[str]:
         TN_TRANSLATION_TARGET_STATUS_PATH,
         TN_TRANSLATION_CANDIDATES_REVIEW_PATH,
         TN_MANUAL_RESOLUTION_LOG_PATH,
+        TN_RESIDUAL_UNRESOLVED_PATH,
         TN_TRANSLATION_INTEGRATION_PREVIEW_PATH,
         TN_WORKING_OCR_PLAIN_TEXT_PATH,
         TN_WORKING_OCR_CLEANED_TEXT_PATH,
@@ -4497,6 +4524,9 @@ def validate_jbrs_workflow() -> list[str]:
     tn_manual_resolution_header, _ = tsv_header_and_row_count(
         TN_MANUAL_RESOLUTION_LOG_PATH, TN_MANUAL_RESOLUTION_LOG_FIELDS
     )
+    tn_residual_unresolved_header, _ = tsv_header_and_row_count(
+        TN_RESIDUAL_UNRESOLVED_PATH, TN_RESIDUAL_UNRESOLVED_FIELDS
+    )
     enriched_preview_header, enriched_preview_row_count = tsv_header_and_row_count(
         ENRICHED_CANDIDATE_PREVIEW_PATH, ENRICHED_PREVIEW_FIELDS
     )
@@ -4504,6 +4534,7 @@ def validate_jbrs_workflow() -> list[str]:
     expected_status_header = "\t".join(OCR_STATUS_LOG_FIELDS)
     expected_tn_target_status_header = "\t".join(TN_TRANSLATION_TARGET_STATUS_FIELDS)
     expected_tn_manual_resolution_header = "\t".join(TN_MANUAL_RESOLUTION_LOG_FIELDS)
+    expected_tn_residual_unresolved_header = "\t".join(TN_RESIDUAL_UNRESOLVED_FIELDS)
     expected_enriched_preview_header = "\t".join(ENRICHED_PREVIEW_FIELDS)
     if batch_header != expected_batch_header:
         errors.append("JBRS OCR batch plan TSV is blank or missing the expected header.")
@@ -4515,6 +4546,8 @@ def validate_jbrs_workflow() -> list[str]:
         errors.append("TN translation target status TSV is blank or missing the expected header.")
     if tn_manual_resolution_header != expected_tn_manual_resolution_header:
         errors.append("TN manual resolution log TSV is blank or missing the expected header.")
+    if tn_residual_unresolved_header != expected_tn_residual_unresolved_header:
+        errors.append("TN residual unresolved TSV is blank or missing the expected header.")
     if JBRS_OCR_BATCH_PLAN_PATH.stat().st_size > MAX_GITHUB_CONTENTS_SIZE:
         errors.append("JBRS OCR batch plan TSV exceeds the GitHub contents-view size threshold.")
     if JBRS_OCR_STATUS_LOG_PATH.stat().st_size > MAX_GITHUB_CONTENTS_SIZE:
@@ -4562,6 +4595,7 @@ def validate_jbrs_workflow() -> list[str]:
     tn_target_status_rows = read_tsv(TN_TRANSLATION_TARGET_STATUS_PATH)
     tn_review_rows = read_tsv(TN_TRANSLATION_CANDIDATES_REVIEW_PATH)
     tn_manual_resolution_rows = read_tsv(TN_MANUAL_RESOLUTION_LOG_PATH)
+    tn_residual_unresolved_rows = read_tsv(TN_RESIDUAL_UNRESOLVED_PATH)
     tn_preview_rows = read_tsv(TN_TRANSLATION_INTEGRATION_PREVIEW_PATH)
     enriched_summary = json.loads(ENRICHED_CANDIDATE_SUMMARY_PATH.read_text(encoding="utf-8"))
     try:
@@ -4950,7 +4984,11 @@ def validate_jbrs_workflow() -> list[str]:
                 errors.append(f"Non-integrated TN target status row is missing reason_not_integrated: {row.get('tn_locator', '')}")
             if not row.get("next_action", "").strip():
                 errors.append(f"Non-integrated TN target status row is missing next_action: {row.get('tn_locator', '')}")
-    generic_tn_review_statuses = {"missing_or_uncertain_corpus_link", "linkage_or_boundary_unclear"}
+    generic_tn_review_statuses = {
+        "missing_or_uncertain_corpus_link",
+        "linkage_or_boundary_unclear",
+        "no_corresponding_translation_found",
+    }
     for row in tn_review_rows:
         if row.get("reason_uncertain", "") in generic_tn_review_statuses:
             errors.append(f"TN review row still uses generic reason_uncertain: {row.get('tn_locator', '')}")
@@ -4978,6 +5016,45 @@ def validate_jbrs_workflow() -> list[str]:
         if "page_image_inspection=attempted" not in manual_row.get("notes", ""):
             errors.append(f"TN manual resolution log row lacks page/image inspection marker: {locator}")
 
+    tn_36_57_row = next(
+        (
+            row
+            for row in tn_target_status_rows
+            if row.get("tn_locator", "").strip() == "TN 36-57"
+            and row.get("linked_corpus_record_id", "").strip() == "obi-v01-n0052-ob-p0083"
+        ),
+        None,
+    )
+    if not tn_36_57_row:
+        errors.append("TN target status table is missing TN 36-57 / obi-v01-n0052-ob-p0083.")
+    else:
+        tn_36_57_status = tn_36_57_row.get("current_status", "")
+        if tn_36_57_status not in {
+            "integrated",
+            "integrated_after_manual_review",
+            "deferred_requires_scholarly_judgement",
+            "not_extractable_even_after_page_inspection",
+            "still_unresolved",
+        }:
+            errors.append(f"TN 36-57 has unsupported final status: {tn_36_57_status}")
+        if tn_36_57_status not in {"integrated", "integrated_after_manual_review"} and not tn_36_57_row.get(
+            "reason_not_integrated", ""
+        ).strip():
+            errors.append("TN 36-57 is non-integrated but missing reason_not_integrated.")
+
+    for row in tn_residual_unresolved_rows:
+        locator = row.get("tn_locator", "").strip()
+        if not locator:
+            errors.append("TN residual unresolved row is missing tn_locator.")
+            continue
+        final_status = row.get("final_status", "").strip()
+        if final_status not in TN_RESIDUAL_FINAL_STATUSES:
+            errors.append(f"TN residual unresolved row has invalid final_status: {locator}")
+        if not row.get("reason_not_integrated", "").strip():
+            errors.append(f"TN residual unresolved row is missing reason_not_integrated: {locator}")
+        if not row.get("evidence_checked", "").strip():
+            errors.append(f"TN residual unresolved row is missing evidence_checked: {locator}")
+
     for row in tn_target_rows:
         if ABSOLUTE_PATH_PATTERN.search(" ".join(row.values())):
             errors.append("tn_translation_targets.tsv contains an absolute path.")
@@ -4993,6 +5070,10 @@ def validate_jbrs_workflow() -> list[str]:
     for row in tn_manual_resolution_rows:
         if ABSOLUTE_PATH_PATTERN.search(" ".join(row.values())):
             errors.append("tn_manual_resolution_log.tsv contains an absolute path.")
+            break
+    for row in tn_residual_unresolved_rows:
+        if ABSOLUTE_PATH_PATTERN.search(" ".join(row.values())):
+            errors.append("tn_residual_unresolved_after_manual_review.tsv contains an absolute path.")
             break
     for row in tn_preview_rows:
         if ABSOLUTE_PATH_PATTERN.search(" ".join(row.values())):

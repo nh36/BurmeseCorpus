@@ -52,6 +52,7 @@ TN_TRANSLATION_TARGETS_PATH = CORPUS_ENRICHMENT_DIRECTORY / "tn_translation_targ
 TN_TRANSLATION_TARGET_STATUS_PATH = CORPUS_ENRICHMENT_DIRECTORY / "tn_translation_target_status.tsv"
 TN_TRANSLATION_CANDIDATES_REVIEW_PATH = CORPUS_ENRICHMENT_DIRECTORY / "tn_translation_candidates_needing_review.tsv"
 TN_MANUAL_RESOLUTION_LOG_PATH = CORPUS_ENRICHMENT_DIRECTORY / "tn_manual_resolution_log.tsv"
+TN_RESIDUAL_UNRESOLVED_PATH = CORPUS_ENRICHMENT_DIRECTORY / "tn_residual_unresolved_after_manual_review.tsv"
 TN_TRANSLATION_INTEGRATION_PREVIEW_PATH = CORPUS_ENRICHMENT_DIRECTORY / "tn_translation_integration_preview.tsv"
 SHWEGUGYI_TRANSLATION_TEXT_PATH = CORPUS_ENRICHMENT_DIRECTORY / "shwegugyi_translation_extracted.txt"
 RAJAKUMAR_TRANSLATION_TEXT_PATH = CORPUS_ENRICHMENT_DIRECTORY / "rajakumar_translation_extracted.txt"
@@ -282,6 +283,68 @@ TN_TRANSLATION_UNIT_SPECS = [
         "start_anchor": "No. (6).",
         "end_anchor": "No. (7).",
     },
+    {
+        "translation_unit_id": "tn-translation-1899-plate-xxxi-tn-36-57-no-1",
+        "tn_locator": "TN 36-57",
+        "iob_plate": "Plate XXXI",
+        "linked_inscription_id": "obi-v01-n0052",
+        "linked_corpus_record_id": "obi-v01-n0052-ob-p0083",
+        "translation_status": "published_partial_translation",
+        "start_anchor": "No. (1).—OBVERSE.\nLocality. Within the walls of the Kemawaya pagoda.",
+        "end_anchor": "REVERSE.",
+        "source_locator_override": "TN 36-57 (Plate XXXI, No. (1) obverse segment; OCR pages 49-70)",
+        "link_basis": (
+            "Manual cross-witness segmentation of TN 36-57 isolates the Plate XXXI No. (1) obverse block "
+            "(Kemawaya pagoda, CS 569, King Nandaungmya), matching obi-v01-n0052-ob-p0083 and SIP Plate XXXI linkage."
+        ),
+        "confidence": "high",
+        "notes": (
+            "version_label=TN locator TN 36-57; subentry=No. (1) obverse only; source_iob_plate=Plate XXXI; "
+            "cross_witness=SIP 29 / List 273(a) / PPA 109-111."
+        ),
+    },
+    {
+        "translation_unit_id": "tn-translation-1899-plate-i-tn-73-76-no-1",
+        "tn_locator": "TN 73-76",
+        "iob_plate": "Plate I",
+        "linked_inscription_id": "obi-v01-n0004",
+        "linked_corpus_record_id": "obi-v01-n0004-ob-p0011",
+        "translation_status": "published_partial_translation",
+        "start_anchor": "No. (1).*",
+        "end_anchor": "No. (2).*",
+        "allow_locator_only_match": "true",
+        "source_locator_override": "TN 73-76 (Plate I, No. (1) segment before No. (2); OCR pages 86-89)",
+        "link_basis": (
+            "Targeted manual linkage: TN 73-76 contains Plate I No. (1) Shwegugyi translation block "
+            "(Alaungsithu, CS 503), which aligns with List 66(a), PPA 159, and obi-v01-n0004-ob-p0011 references."
+        ),
+        "confidence": "medium-high",
+        "notes": (
+            "version_label=TN locator TN 73-76; subentry=No. (1) only; source_iob_plate=Plate I; "
+            "linked via List 66(a) / PPA 159 / TN p.73 concordance."
+        ),
+    },
+    {
+        "translation_unit_id": "tn-translation-1899-plate-xxxvii-tn-81-no-6",
+        "tn_locator": "TN 81",
+        "iob_plate": "Plate XXXVII",
+        "linked_inscription_id": "obi-v01-n0063",
+        "linked_corpus_record_id": "obi-v01-n0063-ob-p0099",
+        "translation_status": "published_partial_translation",
+        "start_anchor": "No. (6).",
+        "end_anchor": "No. (7).",
+        "allow_locator_only_match": "true",
+        "source_locator_override": "TN 81 (Plate XXXVII, No. (6) segment before No. (7); OCR page 94)",
+        "link_basis": (
+            "Targeted manual linkage: TN 81 No. (6) gives Thingyi Dhammapala (CS 574) "
+            "and Shinbinbawdi context, matching List 175 / PPA 169 and obi-v01-n0063-ob-p0099."
+        ),
+        "confidence": "medium-high",
+        "notes": (
+            "version_label=TN locator TN 81; subentry=No. (6) only; source_iob_plate=Plate XXXVII; "
+            "linked via List 175 / PPA 169 / TN p.81 concordance."
+        ),
+    },
 ]
 
 TN_TARGET_STATUS_VALUES = {
@@ -329,25 +392,15 @@ TN_TARGET_STATUS_OVERRIDES: dict[tuple[str, str], dict[str, str]] = {
         "TN 36-57",
         "obi-v01-n0052-ob-p0083",
     ): {
-        "current_status": "deferred_requires_scholarly_judgement",
-        "reason_not_integrated": (
-            "The span contains many entry boundaries (No. (1) through later numbered items) and mixed chapter transitions; "
-            "the specific segment corresponding to obi-v01-n0052 cannot be isolated with high confidence from TN pages alone."
+        "current_status": "integrated_after_manual_review",
+        "notes": (
+            "Manual TN 36-57 segmentation against page images and cross-witness references isolates Plate XXXI No. (1) "
+            "(Kemawaya, CS 569, King Nandaungmya) and supports secure linkage to obi-v01-n0052-ob-p0083."
         ),
-        "next_action": (
-            "Require scholarly segmentation against plate-level facsimile/context witnesses before attaching a TN segment "
-            "to this single structured record."
-        ),
-        "notes": "Manual inspection covered OCR pages 49-70 and rendered page images; multiple overlapping entries remain.",
     },
 }
 
 TN_CANDIDATE_RESOLUTION_OVERRIDES: dict[str, dict[str, str]] = {
-    "TN 73-76": {
-        "reason_uncertain": "no_corresponding_translation_found",
-        "recommended_human_action": "Keep candidate-only; no secure corpus linkage emerges from plate/list evidence in current scope.",
-        "notes": "page_image_inspection=attempted; inspected OCR/image pages 86-89.",
-    },
     "TN 76-79": {
         "reason_uncertain": "confirmed_duplicate_or_overlap",
         "recommended_human_action": "Treat as overlap with the already integrated TN 79 unit unless a separate linked record is identified.",
@@ -369,9 +422,12 @@ TN_CANDIDATE_RESOLUTION_OVERRIDES: dict[str, dict[str, str]] = {
         "notes": "page_image_inspection=attempted; inspected pages 83; overlap_unit=tn-translation-1899-plate-xlv-tn-70.",
     },
     "TN 70-71": {
-        "reason_uncertain": "no_corresponding_translation_found",
-        "recommended_human_action": "Keep candidate-only until a high-confidence structured-corpus linkage is established.",
-        "notes": "page_image_inspection=attempted; inspected pages 83-84; continuation text lacks secure record linkage.",
+        "reason_uncertain": "probable_overlap_but_no_record_link",
+        "recommended_human_action": (
+            "Keep unresolved: this span appears to continue nearby TN material, but no single structured record can "
+            "be linked with secure boundaries from current OCR and concordance evidence."
+        ),
+        "notes": "page_image_inspection=attempted; inspected pages 83-84; continuation text crosses nearby entries without a secure standalone record match.",
     },
     "TN 80 | TN 6": {
         "reason_uncertain": "confirmed_duplicate_or_overlap",
@@ -379,20 +435,32 @@ TN_CANDIDATE_RESOLUTION_OVERRIDES: dict[str, dict[str, str]] = {
         "notes": "page_image_inspection=attempted; inspected disjoint pages 93 and 19; overlap_unit=tn-translation-1899-plate-xxvii-tn-80.",
     },
     "TN 6": {
-        "reason_uncertain": "no_corresponding_translation_found",
-        "recommended_human_action": "Keep candidate-only; current TN 6 text does not map to a high-confidence corpus record.",
-        "notes": "page_image_inspection=attempted; inspected page 19.",
+        "reason_uncertain": "translation_fragment_without_secure_locator",
+        "recommended_human_action": (
+            "Keep unresolved: TN 6 points into continuation/fragment material (No. 13A/B/C context) without a safely "
+            "extractable standalone translation segment for one structured record."
+        ),
+        "notes": "page_image_inspection=attempted; inspected page 19; text is continuation-heavy and does not expose a secure standalone boundary.",
     },
     "TN 80-81": {
         "reason_uncertain": "confirmed_duplicate_or_overlap",
         "recommended_human_action": "Treat as overlap/continuation around integrated TN 80 unless a separate linked record is confirmed.",
         "notes": "page_image_inspection=attempted; inspected pages 93-94; overlap_unit=tn-translation-1899-plate-xxvii-tn-80.",
     },
-    "TN 81": {
-        "reason_uncertain": "no_corresponding_translation_found",
-        "recommended_human_action": "Keep candidate-only pending a secure corpus linkage for the standalone continuation text.",
-        "notes": "page_image_inspection=attempted; inspected page 94.",
-    },
+}
+
+TN_CANDIDATE_REVIEW_SUPPRESSED_LOCATORS = {"TN 73-76", "TN 81"}
+TN_CANDIDATE_REVIEW_LOCATORS = {
+    "TN 73-76",
+    "TN 76-79",
+    "TN 66",
+    "TN 66-67",
+    "TN 70",
+    "TN 70-71",
+    "TN 80 | TN 6",
+    "TN 6",
+    "TN 80-81",
+    "TN 81",
 }
 
 TN_MANUAL_INSPECTION_LOCATORS = [
@@ -427,6 +495,39 @@ TN_MANUAL_EXISTING_STATUS_BY_LOCATOR = {
     "TN 6": "candidate_needs_human_review",
     "TN 80-81": "candidate_needs_human_review",
     "TN 81": "candidate_needs_human_review",
+}
+
+TN_MANUAL_NOTES_OVERRIDES = {
+    "TN 73-76": (
+        "Manual page/image inspection of OCR pages 86-89 isolates Plate I No. (1) "
+        "and supports linkage to obi-v01-n0004-ob-p0011."
+    ),
+    "TN 81": (
+        "Manual page/image inspection of OCR page 94 isolates No. (6) "
+        "and supports linkage to obi-v01-n0063-ob-p0099."
+    ),
+}
+
+TN_RESIDUAL_UNRESOLVED_FIELDS = [
+    "tn_locator",
+    "iob_plate",
+    "list_ref",
+    "ppa_ref",
+    "possible_corpus_record_ids",
+    "possible_inscription_ids",
+    "translation_text_snippet",
+    "final_status",
+    "evidence_checked",
+    "reason_not_integrated",
+    "future_action",
+    "notes",
+]
+
+TN_REVIEW_FINAL_UNRESOLVED_REASONS = {
+    "out_of_current_corpus_scope",
+    "no_structured_record_found",
+    "translation_fragment_without_secure_locator",
+    "probable_overlap_but_no_record_link",
 }
 
 SOURCE_LABELS = {
@@ -684,6 +785,7 @@ def clean_tn_page_text(page_text: str) -> str:
         re.compile(r"public domain", re.IGNORECASE),
         re.compile(r"digitized by", re.IGNORECASE),
     ]
+    exact_drop_lines = {"google", "original from", "harvard university"}
     cleaned_lines: list[str] = []
     for raw_line in page_text.splitlines():
         line = raw_line.strip()
@@ -691,6 +793,8 @@ def clean_tn_page_text(page_text: str) -> str:
             if cleaned_lines and cleaned_lines[-1] == "":
                 continue
             cleaned_lines.append("")
+            continue
+        if line.casefold() in exact_drop_lines:
             continue
         if line.upper() in {"INSCRIPTIONS OF PAGAN, PINYA, AND AVA.", "INSCRIPTIONS OF PAGAN, PIÑYA, AND AVA.", "TOO"}:
             continue
@@ -932,10 +1036,10 @@ def build_translation_source_action_rows(
             "translation_scope": "standalone_inscription_translation",
             "linked_corpus_record_count": str(tn_linked_count),
             "linked_inscription_count": str(tn_linked_count),
-            "action_status": "ready_to_extract_translation",
+            "action_status": "tn_extraction_substantially_complete_manual_residue_remaining",
             "next_action": (
-                "Continue TN extraction from tracked OCR text, integrating only high-confidence corpus links; "
-                "keep unresolved TN locators in a separate review table."
+                "Keep TN integrated set stable and resolve the small residual unresolved cases only when "
+                "new witness-quality evidence appears."
             ),
             "evidence": (
                 "Tracked OCR outputs now exist under data/working/ocr/pagan_pinya_ava_1899/, "
@@ -943,7 +1047,7 @@ def build_translation_source_action_rows(
             ),
             "notes": (
                 f"TN extraction integrated so far: {tn_integrated_unit_count} units across {tn_integrated_record_count} records. "
-                "Additional TN locators remain for later extraction/review."
+                "Only a compact manually logged residual unresolved set remains."
             ),
             "tracked_ocr_text_path": str(TN_OCR_CLEANED_TEXT_PATH.relative_to(REPO_ROOT)),
         },
@@ -1145,6 +1249,11 @@ def build_translation_units_extracted_rows(
         and row.get("link_confidence", "").strip() == "high"
         and row.get("needs_manual_review", "").strip() == "false"
     ]
+    iob_rows_by_locator = {
+        normalize_tn_locator(row.get("tn_ref", "")): row
+        for row in iob_rows
+        if normalize_tn_locator(row.get("tn_ref", ""))
+    }
     iob_lookup: dict[tuple[str, str], dict] = {}
     for row in iob_high_rows:
         key = (
@@ -1155,7 +1264,10 @@ def build_translation_units_extracted_rows(
 
     for spec in TN_TRANSLATION_UNIT_SPECS:
         linked_record_id = spec["linked_corpus_record_id"]
-        iob_row = iob_lookup.get((normalize_tn_locator(spec["tn_locator"]), linked_record_id))
+        locator = normalize_tn_locator(spec["tn_locator"])
+        iob_row = iob_lookup.get((locator, linked_record_id))
+        if not iob_row and spec.get("allow_locator_only_match") == "true":
+            iob_row = iob_rows_by_locator.get(locator)
         if not iob_row:
             continue
         translation_text = extract_tn_translation_text(
@@ -1167,7 +1279,7 @@ def build_translation_units_extracted_rows(
         if not translation_text:
             continue
         ocr_pages = tn_locator_to_ocr_pages(spec["tn_locator"])
-        source_locator = (
+        source_locator = spec.get("source_locator_override", "").strip() or (
             f"{spec['tn_locator']} ({spec['iob_plate']}; OCR pages {ocr_pages})"
             if ocr_pages
             else f"{spec['tn_locator']} ({spec['iob_plate']})"
@@ -1184,13 +1296,13 @@ def build_translation_units_extracted_rows(
                 "translation_language": "English",
                 "translation_text": translation_text,
                 "translation_status": spec["translation_status"],
-                "link_basis": (
+                "link_basis": spec.get("link_basis", "").strip() or (
                     f"High-confidence IOB concordance link ({spec['iob_plate']}, {spec['tn_locator']}) to "
                     f"{linked_record_id}; extracted from tracked TN OCR pages."
                 ),
-                "confidence": "high",
-                "needs_human_review": "false",
-                "notes": (
+                "confidence": spec.get("confidence", "high"),
+                "needs_human_review": spec.get("needs_human_review", "false"),
+                "notes": spec.get("notes", "").strip() or (
                     f"version_label=TN locator {spec['tn_locator']}; source_iob_plate={spec['iob_plate']}; "
                     "extracted from data/working/ocr/pagan_pinya_ava_1899/ocr_cleaned_text_light.txt."
                 ),
@@ -1360,6 +1472,10 @@ def build_tn_candidates_needing_review_rows(
         tn_ref = normalize_tn_locator(row.get("tn_ref", ""))
         if not tn_ref or tn_ref in seen:
             continue
+        if tn_ref not in TN_CANDIDATE_REVIEW_LOCATORS:
+            continue
+        if tn_ref in TN_CANDIDATE_REVIEW_SUPPRESSED_LOCATORS:
+            continue
         link_confidence = row.get("link_confidence", "").strip()
         needs_review = row.get("needs_manual_review", "").strip() == "true"
         linked_record_id = row.get("linked_corpus_record_id", "").strip()
@@ -1444,10 +1560,12 @@ def build_tn_manual_resolution_log_rows(
     }
     tn_units = [row for row in translation_rows if row.get("source_key") == TN_SOURCE_KEY]
     unit_ids_by_locator: dict[str, list[str]] = {}
+    first_unit_by_locator: dict[str, dict] = {}
     for row in tn_units:
         locator = normalize_tn_locator(tn_locator_from_source_locator(row.get("source_locator", "")))
         if locator:
             unit_ids_by_locator.setdefault(locator, []).append(row.get("translation_unit_id", ""))
+            first_unit_by_locator.setdefault(locator, row)
 
     rows: list[dict] = []
     for locator_raw in TN_MANUAL_INSPECTION_LOCATORS:
@@ -1456,16 +1574,22 @@ def build_tn_manual_resolution_log_rows(
         status_row = status_by_locator.get(locator, {})
         review_row = review_by_locator.get(locator, {})
         candidate_override = TN_CANDIDATE_RESOLUTION_OVERRIDES.get(locator, {})
-        resolution_status = (
-            candidate_override.get("reason_uncertain")
-            or status_row.get("current_status")
-            or "still_unresolved"
-        )
+        candidate_reason = candidate_override.get("reason_uncertain", "")
+        if status_row.get("current_status"):
+            resolution_status = status_row.get("current_status")
+        elif candidate_reason == "confirmed_duplicate_or_overlap":
+            resolution_status = "confirmed_duplicate_or_overlap"
+        elif candidate_reason in TN_REVIEW_FINAL_UNRESOLVED_REASONS:
+            resolution_status = "no_corresponding_translation_found"
+        else:
+            resolution_status = "still_unresolved"
         translation_unit_id = status_row.get("translation_unit_id", "").strip()
         if not translation_unit_id:
             translation_unit_id = "; ".join(
                 sorted(unit_id for unit_id in unit_ids_by_locator.get(locator, []) if unit_id)
             )
+        if not status_row.get("current_status") and translation_unit_id:
+            resolution_status = "integrated_after_manual_review"
         if not translation_unit_id and "overlap_unit=" in candidate_override.get("notes", ""):
             for part in candidate_override.get("notes", "").split(";"):
                 cleaned = part.strip()
@@ -1481,11 +1605,15 @@ def build_tn_manual_resolution_log_rows(
             or target_row.get("linked_corpus_record_id", "")
             or review_row.get("possible_corpus_record_ids", "")
         )
+        if not linked_record_id:
+            linked_record_id = first_unit_by_locator.get(locator, {}).get("linked_corpus_record_id", "")
         linked_inscription_id = (
             status_row.get("linked_inscription_id", "")
             or target_row.get("linked_inscription_id", "")
             or review_row.get("possible_inscription_ids", "")
         )
+        if not linked_inscription_id:
+            linked_inscription_id = first_unit_by_locator.get(locator, {}).get("linked_inscription_id", "")
         problem_found = (
             status_row.get("reason_not_integrated", "")
             or review_row.get("reason_uncertain", "")
@@ -1506,6 +1634,7 @@ def build_tn_manual_resolution_log_rows(
         notes_parts = [
             status_row.get("notes", ""),
             review_row.get("notes", ""),
+            TN_MANUAL_NOTES_OVERRIDES.get(locator, ""),
             "page_image_inspection=attempted",
         ]
         deduped_notes: list[str] = []
@@ -1533,6 +1662,84 @@ def build_tn_manual_resolution_log_rows(
                 "notes": " | ".join(deduped_notes),
             }
         )
+    return rows
+
+
+def build_tn_residual_unresolved_rows(
+    tn_target_status_rows: list[dict],
+    tn_review_rows: list[dict],
+    iob_rows: list[dict],
+    translation_rows: list[dict],
+) -> list[dict]:
+    integrated_locators = {
+        normalize_tn_locator(tn_locator_from_source_locator(row.get("source_locator", "")))
+        for row in translation_rows
+        if row.get("source_key") == TN_SOURCE_KEY and row.get("linked_corpus_record_id", "").strip()
+    }
+    iob_by_locator = {
+        normalize_tn_locator(row.get("tn_ref", "")): row
+        for row in iob_rows
+        if normalize_tn_locator(row.get("tn_ref", ""))
+    }
+    rows: list[dict] = []
+
+    for status_row in tn_target_status_rows:
+        locator = normalize_tn_locator(status_row.get("tn_locator", ""))
+        status = status_row.get("current_status", "")
+        if status in {"integrated", "integrated_after_manual_review", "confirmed_duplicate_or_overlap"}:
+            continue
+        final_status = (
+            "deferred_requires_scholarly_segmentation_against_source_text"
+            if status == "deferred_requires_scholarly_judgement"
+            else status
+        )
+        rows.append(
+            {
+                "tn_locator": locator,
+                "iob_plate": status_row.get("iob_plate", ""),
+                "list_ref": status_row.get("list_ref", ""),
+                "ppa_ref": status_row.get("ppa_ref", ""),
+                "possible_corpus_record_ids": status_row.get("linked_corpus_record_id", ""),
+                "possible_inscription_ids": status_row.get("linked_inscription_id", ""),
+                "translation_text_snippet": "",
+                "final_status": final_status,
+                "evidence_checked": (
+                    f"tn_target_status={status}; notes={status_row.get('notes', '')}"
+                ).strip(),
+                "reason_not_integrated": status_row.get("reason_not_integrated", ""),
+                "future_action": status_row.get("next_action", ""),
+                "notes": status_row.get("notes", ""),
+            }
+        )
+
+    for review_row in tn_review_rows:
+        locator = normalize_tn_locator(review_row.get("tn_locator", ""))
+        final_status = review_row.get("reason_uncertain", "")
+        if final_status not in TN_REVIEW_FINAL_UNRESOLVED_REASONS:
+            continue
+        if locator in integrated_locators:
+            continue
+        iob_row = iob_by_locator.get(locator, {})
+        rows.append(
+            {
+                "tn_locator": locator,
+                "iob_plate": iob_row.get("iob_plate", ""),
+                "list_ref": iob_row.get("list_ref", ""),
+                "ppa_ref": iob_row.get("ppa_ref", ""),
+                "possible_corpus_record_ids": review_row.get("possible_corpus_record_ids", ""),
+                "possible_inscription_ids": review_row.get("possible_inscription_ids", ""),
+                "translation_text_snippet": review_row.get("translation_text_snippet", ""),
+                "final_status": final_status,
+                "evidence_checked": (
+                    f"iob_link_basis={iob_row.get('link_basis', '')}; review_notes={review_row.get('notes', '')}"
+                ).strip(),
+                "reason_not_integrated": final_status,
+                "future_action": review_row.get("recommended_human_action", ""),
+                "notes": review_row.get("notes", ""),
+            }
+        )
+
+    rows.sort(key=lambda item: item.get("tn_locator", ""))
     return rows
 
 
@@ -2011,6 +2218,15 @@ def main() -> None:
         default=REPO_ROOT / "data" / "working" / "corpus_enrichment" / "tn_manual_resolution_log.tsv",
     )
     parser.add_argument(
+        "--output-tn-residual-unresolved-tsv",
+        type=Path,
+        default=REPO_ROOT
+        / "data"
+        / "working"
+        / "corpus_enrichment"
+        / "tn_residual_unresolved_after_manual_review.tsv",
+    )
+    parser.add_argument(
         "--output-tn-preview-tsv",
         type=Path,
         default=REPO_ROOT / "data" / "working" / "corpus_enrichment" / "tn_translation_integration_preview.tsv",
@@ -2062,6 +2278,12 @@ def main() -> None:
         tn_target_rows,
         tn_target_status_rows,
         tn_review_rows,
+        translation_unit_rows,
+    )
+    tn_residual_unresolved_rows = build_tn_residual_unresolved_rows(
+        tn_target_status_rows,
+        tn_review_rows,
+        crossref_rows,
         translation_unit_rows,
     )
     tn_preview_rows = build_tn_translation_integration_preview_rows(translation_unit_rows, record_title_by_id)
@@ -2127,6 +2349,11 @@ def main() -> None:
         tn_manual_resolution_rows,
         TN_MANUAL_RESOLUTION_LOG_FIELDS,
     )
+    write_tsv(
+        args.output_tn_residual_unresolved_tsv,
+        tn_residual_unresolved_rows,
+        TN_RESIDUAL_UNRESOLVED_FIELDS,
+    )
     write_tsv(args.output_tn_preview_tsv, tn_preview_rows, TN_TRANSLATION_INTEGRATION_PREVIEW_FIELDS)
     args.output_summary_json.parent.mkdir(parents=True, exist_ok=True)
     args.output_summary_json.write_text(json.dumps(summary, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
@@ -2135,6 +2362,7 @@ def main() -> None:
         f"{len(action_rows)} translation action rows, {len(translation_unit_rows)} translation units, "
         f"{len(tn_target_rows)} TN target rows, {len(tn_target_status_rows)} TN target status rows, "
         f"{len(tn_manual_resolution_rows)} TN manual-resolution rows, "
+        f"{len(tn_residual_unresolved_rows)} TN residual unresolved rows, "
         f"{len(tn_preview_rows)} TN preview rows, "
         f"and {len(summary)} summary fields."
     )

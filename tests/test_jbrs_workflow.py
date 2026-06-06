@@ -69,6 +69,7 @@ from jbrs_workflow_common import (
     TN_TRANSLATION_TARGET_STATUS_PATH,
     TN_TRANSLATION_CANDIDATES_REVIEW_PATH,
     TN_MANUAL_RESOLUTION_LOG_PATH,
+    TN_RESIDUAL_UNRESOLVED_PATH,
     TN_TRANSLATION_INTEGRATION_PREVIEW_PATH,
     TN_WORKING_OCR_PLAIN_TEXT_PATH,
     TN_WORKING_OCR_CLEANED_TEXT_PATH,
@@ -161,6 +162,7 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
         cls.tn_translation_target_status_rows = read_tsv(TN_TRANSLATION_TARGET_STATUS_PATH)
         cls.tn_translation_review_rows = read_tsv(TN_TRANSLATION_CANDIDATES_REVIEW_PATH)
         cls.tn_manual_resolution_rows = read_tsv(TN_MANUAL_RESOLUTION_LOG_PATH)
+        cls.tn_residual_unresolved_rows = read_tsv(TN_RESIDUAL_UNRESOLVED_PATH)
         cls.tn_translation_preview_rows = read_tsv(TN_TRANSLATION_INTEGRATION_PREVIEW_PATH)
         cls.tn_ocr_metadata_index = json.loads(TN_WORKING_OCR_METADATA_INDEX_PATH.read_text(encoding="utf-8"))
         cls.rajakumar_version_linkage_rows = read_tsv(
@@ -239,6 +241,7 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
             TN_TRANSLATION_TARGET_STATUS_PATH,
             TN_TRANSLATION_CANDIDATES_REVIEW_PATH,
             TN_MANUAL_RESOLUTION_LOG_PATH,
+            TN_RESIDUAL_UNRESOLVED_PATH,
             TN_TRANSLATION_INTEGRATION_PREVIEW_PATH,
             TN_WORKING_OCR_PLAIN_TEXT_PATH,
             TN_WORKING_OCR_CLEANED_TEXT_PATH,
@@ -688,7 +691,10 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
         shwegugyi_action = next(row for row in self.translation_action_rows if row["source_key"] == "jbrsShwegugyi1920")
         self.assertEqual(shwegugyi_action["action_status"], "translation_integrated")
         tn_action = next(row for row in self.translation_action_rows if row["source_key"] == "tnInscriptionsPaganPinyaAva")
-        self.assertEqual(tn_action["action_status"], "ready_to_extract_translation")
+        self.assertEqual(
+            tn_action["action_status"],
+            "tn_extraction_substantially_complete_manual_residue_remaining",
+        )
         self.assertEqual(tn_action["matched_local_file_id"], "hvd-hxx68w-1780753436")
         self.assertEqual(tn_action["matched_file_name"], "hvd-hxx68w-1780753436.pdf")
         self.assertEqual(
@@ -818,7 +824,12 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
         self.assertTrue(all(row["recommended_human_action"] for row in self.tn_translation_review_rows))
         self.assertTrue(
             all(
-                row["reason_uncertain"] not in {"missing_or_uncertain_corpus_link", "linkage_or_boundary_unclear"}
+                row["reason_uncertain"]
+                not in {
+                    "missing_or_uncertain_corpus_link",
+                    "linkage_or_boundary_unclear",
+                    "no_corresponding_translation_found",
+                }
                 for row in self.tn_translation_review_rows
             )
         )
@@ -837,6 +848,27 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
         self.assertTrue(unresolved_locators.issubset(manual_locators))
         self.assertGreaterEqual(len(self.tn_translation_preview_rows), 12)
         self.assertTrue(all(row["tn_locator"] for row in self.tn_translation_preview_rows))
+        tn_36_57 = next(
+            row
+            for row in self.tn_translation_target_status_rows
+            if row["tn_locator"] == "TN 36-57" and row["linked_corpus_record_id"] == "obi-v01-n0052-ob-p0083"
+        )
+        self.assertIn(
+            tn_36_57["current_status"],
+            {
+                "integrated",
+                "integrated_after_manual_review",
+                "deferred_requires_scholarly_judgement",
+                "not_extractable_even_after_page_inspection",
+                "still_unresolved",
+            },
+        )
+        if tn_36_57["current_status"] not in {"integrated", "integrated_after_manual_review"}:
+            self.assertTrue(tn_36_57["reason_not_integrated"])
+        self.assertTrue(self.tn_residual_unresolved_rows is not None)
+        self.assertTrue(
+            all(row["final_status"] and row["reason_not_integrated"] for row in self.tn_residual_unresolved_rows)
+        )
 
     def test_every_integrated_tn_unit_is_present_in_enriched_candidate(self) -> None:
         enriched_by_record = {row["record_id"]: row for row in self.enriched_candidate_records}
