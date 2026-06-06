@@ -1,4 +1,6 @@
-# Ananda translation linkage note
+# Ananda translation linkage note (closed for current scope)
+
+Resolved as out of scope for the current Old Burmese / Burmese structured inscription enrichment workflow. The source concerns late eighteenth-century Ananda Okkyaung ink/wall inscriptions with Pali and Burmese versions, not a corpus-linked Old Burmese lithic inscription. Do not attempt further linkage unless project scope changes.
 
 The article is *ANANDA BRICK MONASTERY INSCRIPTIONS OF PAGAN* by Tin Lwin, JBRS LIX (i & ii), Dec. 1976. The translation runs from pp. 106-114, with `Translation of the text in P1` on p. 106 and `Translation of the text in A` on pp. 113-114.
 

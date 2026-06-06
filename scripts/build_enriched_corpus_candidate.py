@@ -32,7 +32,9 @@ FRASCH_MACHINE_TRANSLATION_BIBLIOGRAPHIC_LABEL = "Tilman Frasch, Pagan: Staat un
 MYAZEDI_TRANSLATION_SOURCE_KEY = "peMaungTinMyazedi1974"
 MYAZEDI_TRANSLATION_BIBLIOGRAPHIC_LABEL = "U Pe Maung Tin, Myazedi Inscription"
 RAJAKUMAR_TRANSLATION_SOURCE_KEY = "tunAungChainRajakumar2001"
-RAJAKUMAR_TRANSLATION_BIBLIOGRAPHIC_LABEL = "Tun Aung Chain, Rajakumar Inscription"
+RAJAKUMAR_TRANSLATION_BIBLIOGRAPHIC_LABEL = (
+    "Tun Aung Chain, The Rajakumar Inscription (Cultural Classics, Yangon Universities Press, 2001, pp. 25-37)"
+)
 
 CORPUS_ENRICHMENT_DIRECTORY = REPO_ROOT / "data" / "working" / "corpus_enrichment"
 ENRICHED_CORPUS_CANDIDATE_PATH = CORPUS_ENRICHMENT_DIRECTORY / "inscriptions_enriched_candidate.jsonl"
@@ -42,6 +44,7 @@ TRANSLATION_SOURCE_ACTION_TABLE_PATH = CORPUS_ENRICHMENT_DIRECTORY / "translatio
 TRANSLATION_UNITS_EXTRACTED_PATH = CORPUS_ENRICHMENT_DIRECTORY / "translation_units_extracted.tsv"
 TRANSLATION_INTEGRATION_PREVIEW_PATH = CORPUS_ENRICHMENT_DIRECTORY / "translation_integration_preview.tsv"
 SHWEGUGYI_TRANSLATION_TEXT_PATH = CORPUS_ENRICHMENT_DIRECTORY / "shwegugyi_translation_extracted.txt"
+RAJAKUMAR_TRANSLATION_TEXT_PATH = CORPUS_ENRICHMENT_DIRECTORY / "rajakumar_translation_extracted.txt"
 
 SOURCE_LABELS = {
     SIP_SOURCE_KEY: SIP_BIBLIOGRAPHIC_LABEL,
@@ -240,7 +243,7 @@ def build_translation_source_action_rows(
             "linked_corpus_record_count": "1",
             "linked_inscription_count": "1",
             "action_status": "translation_integrated",
-            "next_action": "Review the integrated Shwegugyi translation in the enriched candidate; then proceed to Ananda linkage.",
+            "next_action": "Keep Shwegugyi integrated and proceed to the next translation-bearing source.",
             "evidence": "jbrs_translation_candidate_review.tsv and the completed translation unit confirm a standalone translation section.",
             "notes": "The complete published English translation is now integrated into the enriched corpus candidate.",
         },
@@ -255,10 +258,10 @@ def build_translation_source_action_rows(
             "translation_scope": "mixed_inscription_translation",
             "linked_corpus_record_count": "0",
             "linked_inscription_count": "0",
-            "action_status": "linkage_unresolved_after_full_corpus_search",
-            "next_action": "Hold until a direct structured-corpus crosswalk or newly supplied scan provides a verifiable record match.",
-            "evidence": "Full-field searches across inscriptions.jsonl, lines.jsonl, and citation/crosswalk tables found only contextual and date-collision matches, not a high-confidence structured corpus record match.",
-            "notes": "Translation is present locally, but the exhaustive corpus search still did not produce a verifiable corpus link.",
+            "action_status": "out_of_scope_late_ink_wall_inscription",
+            "next_action": "Do not attempt further Ananda linkage unless project scope is expanded.",
+            "evidence": "The article concerns late eighteenth-century Ananda Okkyaung ink/wall inscriptions with Pali and Burmese versions, not a corpus-linked Old Burmese lithic inscription.",
+            "notes": "Resolved as out of scope for the current Old Burmese / Burmese structured inscription enrichment workflow. The source concerns late eighteenth-century Ananda Okkyaung ink/wall inscriptions with Pali and Burmese versions, not a corpus-linked Old Burmese lithic inscription. Do not attempt further linkage unless project scope changes.",
         },
         {
             "source_key": FRASCH_MACHINE_TRANSLATION_SOURCE_KEY,
@@ -284,13 +287,13 @@ def build_translation_source_action_rows(
             "matched_file_name": "PeMaungTin 1974 MyazediInscription.PDF",
             "already_ocr_available": "false",
             "contains_english_translation": "false",
-            "translation_scope": "inscription_article_needs_review",
+            "translation_scope": "wrong_local_witness",
             "linked_corpus_record_count": "0",
             "linked_inscription_count": "0",
-            "action_status": "needs_human_bibliographic_review",
-            "next_action": "Inspect the actual article or a better scan before assuming an English translation is present.",
-            "evidence": "The locally copied PDF currently yields only bibliographic metadata in text extraction.",
-            "notes": "This file remains plausible but unconfirmed for translation extraction.",
+            "action_status": "wrong_source_rejected",
+            "next_action": "Acquire a correct article scan before revisiting this source.",
+            "evidence": "Direct extraction from the current local file yields bibliographic request-card metadata rather than article body text or translation content.",
+            "notes": "Current local witness is not usable for translation extraction; keep this source closed until a better scan is supplied.",
         },
         {
             "source_key": RAJAKUMAR_TRANSLATION_SOURCE_KEY,
@@ -298,15 +301,15 @@ def build_translation_source_action_rows(
             "local_file_status": "matched_local_file_available",
             "matched_local_file_id": "tun_aung_chain_2001_rajakumar_inscriptio-d55d64ebc41c",
             "matched_file_name": "Tun Aung Chain 2001 Rajakumar Inscription.pdf",
-            "already_ocr_available": "false",
-            "contains_english_translation": "false",
-            "translation_scope": "inscription_article_needs_targeted_ocr",
-            "linked_corpus_record_count": "0",
-            "linked_inscription_count": "0",
-            "action_status": "needs_targeted_ocr",
-            "next_action": "Run targeted OCR or locate a text-layer copy before promoting it as a translation source.",
-            "evidence": "The local file is present but currently yields no text layer in direct PDF extraction.",
-            "notes": "Likely useful if a better copy is located, but not yet translation-confirmed.",
+            "already_ocr_available": "true",
+            "contains_english_translation": "true",
+            "translation_scope": "standalone_inscription_translation",
+            "linked_corpus_record_count": "1",
+            "linked_inscription_count": "1",
+            "action_status": "translation_integrated",
+            "next_action": "Keep the integrated Rajakumar/Myazedi translation in the enriched candidate and continue with the next translation target.",
+            "evidence": "Single-file targeted OCR recovered Appendix I translation sections (Myanmar/Mon/Pyu/Pali) and the article title, matching the structured corpus Rajakumar/Myazedi record metadata.",
+            "notes": "Published English translation integrated with high-confidence linkage to obi-v01-n0001-tx-p0001.",
         },
         {
             "source_key": TN_SOURCE_KEY,
@@ -404,11 +407,45 @@ def build_translation_units_extracted_rows(translation_units: list[dict]) -> lis
                 "notes": "Completed published translation integrated into the enriched corpus candidate.",
             }
         )
+    rajakumar_text = (
+        RAJAKUMAR_TRANSLATION_TEXT_PATH.read_text(encoding="utf-8").strip()
+        if RAJAKUMAR_TRANSLATION_TEXT_PATH.exists()
+        else ""
+    )
+    if rajakumar_text:
+        rows.append(
+            {
+                "translation_unit_id": "jbrs-translation-unit-20260606-001",
+                "source_key": RAJAKUMAR_TRANSLATION_SOURCE_KEY,
+                "source_bibliographic_label": (
+                    "Tun Aung Chain, The Rajakumar Inscription (Cultural Classics, Yangon Universities Press, 2001, pp. 25-37)"
+                ),
+                "matched_local_file_id": "tun_aung_chain_2001_rajakumar_inscriptio-d55d64ebc41c",
+                "source_locator": "Cultural Classics 2001, Appendix I: Translations, pp. 33-36 (OCR pages 10-13)",
+                "linked_inscription_id": "obi-v01-n0001-tx-p0001",
+                "linked_corpus_record_id": "obi-v01-n0001-tx-p0001",
+                "translation_language": "English",
+                "translation_text": rajakumar_text,
+                "translation_status": "published_translation",
+                "link_basis": (
+                    "Article title and Appendix I translation content (Rājakumār/Myazedi, Arimaddanapur, Tribhuvanadityadhammaraj, "
+                    "Trilokavatamsika, 1628 AB/28 regnal years, and village-donation formula) align directly with the structured corpus "
+                    "Rajakumar inscription record metadata and transliteration."
+                ),
+                "confidence": "high",
+                "needs_human_review": "false",
+                "notes": "Published Appendix I translations (Myanmar/Mon/Pyu/Pali sections) integrated as one Rajakumar translation witness.",
+            }
+        )
     return rows
 
 
 def build_translation_integration_preview_rows(translation_rows: list[dict]) -> list[dict]:
     rows: list[dict] = []
+    title_by_source = {
+        SHWEGUGYI_TRANSLATION_SOURCE_KEY: "ရွှေဂူကြီးဘုရားကျောက်စာ",
+        RAJAKUMAR_TRANSLATION_SOURCE_KEY: "မြစေတီဘုရားကျောက်စာ၊ မြန်မာ (ရာဇကုမာရကျောက်စာ)",
+    }
     for row in translation_rows:
         text = row.get("translation_text", "")
         if not text:
@@ -417,7 +454,10 @@ def build_translation_integration_preview_rows(translation_rows: list[dict]) -> 
             {
                 "linked_corpus_record_id": row.get("linked_corpus_record_id", ""),
                 "linked_inscription_id": row.get("linked_inscription_id", ""),
-                "title_or_label": "ရွှေဂူကြီးဘုရားကျောက်စာ",
+                "title_or_label": title_by_source.get(
+                    row.get("source_key", ""),
+                    row.get("linked_inscription_id", ""),
+                ),
                 "source_key": row.get("source_key", ""),
                 "source_locator": row.get("source_locator", ""),
                 "translation_status": row.get("translation_status", ""),

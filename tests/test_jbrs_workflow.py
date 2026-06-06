@@ -647,28 +647,50 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
         tn_action = next(row for row in self.translation_action_rows if row["source_key"] == "tnInscriptionsPaganPinyaAva")
         self.assertEqual(tn_action["action_status"], "source_missing_acquire_manually")
         ananda_action = next(row for row in self.translation_action_rows if row["source_key"] == "jbrsAnanda1976")
-        self.assertEqual(ananda_action["action_status"], "linkage_unresolved_after_full_corpus_search")
+        self.assertEqual(ananda_action["action_status"], "out_of_scope_late_ink_wall_inscription")
         self.assertEqual(ananda_action["linked_corpus_record_count"], "0")
         self.assertEqual(ananda_action["linked_inscription_count"], "0")
-        self.assertIn("exhaustive corpus search", ananda_action["notes"])
+        self.assertIn("Resolved as out of scope", ananda_action["notes"])
+        rajakumar_action = next(row for row in self.translation_action_rows if row["source_key"] == "tunAungChainRajakumar2001")
+        self.assertEqual(rajakumar_action["action_status"], "translation_integrated")
+        self.assertEqual(rajakumar_action["linked_corpus_record_count"], "1")
+        self.assertEqual(rajakumar_action["linked_inscription_count"], "1")
+        myazedi_action = next(row for row in self.translation_action_rows if row["source_key"] == "peMaungTinMyazedi1974")
+        self.assertEqual(myazedi_action["action_status"], "wrong_source_rejected")
         shwegugyi_unit = next(row for row in self.translation_unit_rows if row["source_key"] == "jbrsShwegugyi1920")
         self.assertEqual(shwegugyi_unit["linked_corpus_record_id"], "obi-v01-n0004-ob-p0011")
         self.assertEqual(shwegugyi_unit["translation_status"], "published_translation")
         self.assertTrue(shwegugyi_unit["translation_text"])
         self.assertIn("Reverence to the Buddha", shwegugyi_unit["translation_text"])
         self.assertGreater(len(shwegugyi_unit["translation_text"]), 1000)
+        rajakumar_unit = next(row for row in self.translation_unit_rows if row["source_key"] == "tunAungChainRajakumar2001")
+        self.assertEqual(rajakumar_unit["linked_corpus_record_id"], "obi-v01-n0001-tx-p0001")
+        self.assertEqual(rajakumar_unit["translation_status"], "published_translation")
+        self.assertIn("Tribhuvanadity", rajakumar_unit["translation_text"])
+        self.assertGreater(len(rajakumar_unit["translation_text"]), 5000)
         self.assertFalse(any(row["source_key"] == "jbrsAnanda1976" for row in self.translation_unit_rows))
 
     def test_translation_integration_preview_tracks_completed_translation(self) -> None:
-        self.assertEqual(len(self.translation_integration_preview_rows), 1)
-        row = self.translation_integration_preview_rows[0]
-        self.assertEqual(row["linked_corpus_record_id"], "obi-v01-n0004-ob-p0011")
-        self.assertEqual(row["translation_status"], "published_translation")
-        self.assertTrue(row["translation_text_snippet"])
-        self.assertGreater(int(row["translation_length_chars"]), 1000)
-        self.assertEqual(row["has_existing_transcription"], "true")
+        self.assertEqual(len(self.translation_integration_preview_rows), 2)
+        preview_by_source = {
+            row["source_key"]: row for row in self.translation_integration_preview_rows
+        }
+        self.assertIn("jbrsShwegugyi1920", preview_by_source)
+        self.assertIn("tunAungChainRajakumar2001", preview_by_source)
+        shwegugyi_row = preview_by_source["jbrsShwegugyi1920"]
+        self.assertEqual(shwegugyi_row["linked_corpus_record_id"], "obi-v01-n0004-ob-p0011")
+        self.assertEqual(shwegugyi_row["translation_status"], "published_translation")
+        self.assertTrue(shwegugyi_row["translation_text_snippet"])
+        self.assertGreater(int(shwegugyi_row["translation_length_chars"]), 1000)
+        self.assertEqual(shwegugyi_row["has_existing_transcription"], "true")
+        rajakumar_row = preview_by_source["tunAungChainRajakumar2001"]
+        self.assertEqual(rajakumar_row["linked_corpus_record_id"], "obi-v01-n0001-tx-p0001")
+        self.assertEqual(rajakumar_row["translation_status"], "published_translation")
+        self.assertTrue(rajakumar_row["translation_text_snippet"])
+        self.assertGreater(int(rajakumar_row["translation_length_chars"]), 5000)
+        self.assertEqual(rajakumar_row["has_existing_transcription"], "true")
 
-    def test_ananda_linkage_dossier_stays_unresolved_after_full_search(self) -> None:
+    def test_ananda_linkage_dossier_stays_non_integrated(self) -> None:
         self.assertTrue(self.ananda_identifying_evidence_rows)
         self.assertTrue(self.ananda_linkage_candidate_rows)
         self.assertFalse(any(row["decision"] == "accept_link" for row in self.ananda_linkage_candidate_rows))
@@ -756,7 +778,7 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
             self.enriched_summary["translation_units_integrated_count"],
             sum(len(row.get("translations", [])) for row in self.enriched_candidate_records if row.get("translation_status") == "translation_integrated"),
         )
-        self.assertEqual(self.enriched_summary["published_translation_units_integrated_count"], 1)
+        self.assertEqual(self.enriched_summary["published_translation_units_integrated_count"], 2)
         self.assertEqual(self.enriched_summary["published_partial_translation_units_integrated_count"], 0)
 
     def test_sip_summary_counts_match_artifacts(self) -> None:

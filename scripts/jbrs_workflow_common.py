@@ -1113,6 +1113,8 @@ TRANSLATION_SOURCE_ACTION_STATUSES = {
     "needs_human_bibliographic_review",
     "linkage_unresolved_needs_human_review",
     "linkage_unresolved_after_full_corpus_search",
+    "out_of_scope_late_ink_wall_inscription",
+    "not_old_burmese_corpus_target",
     "translation_integrated",
 }
 
