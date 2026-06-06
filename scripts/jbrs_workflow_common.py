@@ -124,6 +124,10 @@ V04_INSCRIPTIONS_WITH_LINES_CANDIDATE_PATH = (
     RELEASE_CANDIDATE_V04_DIRECTORY / "inscriptions_enriched_with_lines_v0_4_candidate.jsonl"
 )
 V04_TRANSLATION_UNITS_CANDIDATE_PATH = RELEASE_CANDIDATE_V04_DIRECTORY / "translation_units_v0_4_candidate.tsv"
+V04_TRANSLATION_COVERAGE_AUDIT_PATH = RELEASE_CANDIDATE_V04_DIRECTORY / "translation_coverage_audit_v0_4.tsv"
+V04_TRANSLATED_RECORDS_WITHOUT_LINES_PATH = (
+    RELEASE_CANDIDATE_V04_DIRECTORY / "translated_records_without_lines_v0_4.tsv"
+)
 V04_ENRICHMENT_PREVIEW_CANDIDATE_PATH = RELEASE_CANDIDATE_V04_DIRECTORY / "enrichment_preview_v0_4_candidate.tsv"
 V04_ENRICHED_WITH_LINES_SAMPLE_PATH = RELEASE_CANDIDATE_V04_DIRECTORY / "enriched_with_lines_sample_v0_4.json"
 V04_TN_UNRESOLVED_REVIEW_PATH = RELEASE_CANDIDATE_V04_DIRECTORY / "tn_unresolved_review_v0_4.tsv"
@@ -1149,6 +1153,13 @@ ENRICHED_TRANSLATION_ENTRY_STATUSES = {
     "machine_assisted_draft",
     "needs_translation_review",
 }
+TRANSLATION_COVERAGE_VALUES = {
+    "full_inscription",
+    "full_version",
+    "partial_inscription",
+    "excerpt",
+    "uncertain",
+}
 ENRICHED_TRANSLATION_CANDIDATE_STATUSES = {
     "missing_high_value_source",
     "candidate_source_located",
@@ -1202,10 +1213,34 @@ TRANSLATION_UNITS_EXTRACTED_FIELDS = [
     "translation_language",
     "translation_text",
     "translation_status",
+    "translation_coverage",
+    "translation_coverage_basis",
     "link_basis",
     "confidence",
     "needs_human_review",
     "notes",
+]
+TRANSLATION_COVERAGE_AUDIT_FIELDS = [
+    "translation_unit_id",
+    "linked_corpus_record_id",
+    "linked_inscription_id",
+    "title_original",
+    "source_key",
+    "source_locator",
+    "translation_status",
+    "translation_coverage",
+    "translation_coverage_basis",
+    "translation_length_chars",
+    "line_count_for_record",
+    "has_full_transliteration",
+    "review_priority",
+    "notes",
+]
+TRANSLATED_RECORDS_WITHOUT_LINES_FIELDS = [
+    "record_id",
+    "inscription_id",
+    "translation_count",
+    "reason",
 ]
 
 TRANSLATION_INTEGRATION_PREVIEW_FIELDS = [
@@ -4320,6 +4355,17 @@ def validate_enriched_corpus_candidate(
                             f"{translation_key} has invalid translation_status "
                             f"'{translation.get('translation_status', '')}'."
                         )
+                    coverage = translation.get("translation_coverage", "")
+                    if not coverage:
+                        errors.append(f"{translation_key} is missing required field 'translation_coverage'.")
+                    elif coverage not in TRANSLATION_COVERAGE_VALUES:
+                        errors.append(
+                            f"{translation_key} has invalid translation_coverage '{coverage}'."
+                        )
+                    if not translation.get("translation_coverage_basis", "").strip():
+                        errors.append(
+                            f"{translation_key} is missing required field 'translation_coverage_basis'."
+                        )
 
         translation_candidates = enriched_row.get("translation_source_candidates")
         if translation_candidates is not None:
@@ -4525,6 +4571,8 @@ def validate_jbrs_workflow() -> list[str]:
         V04_INSCRIPTIONS_CANDIDATE_PATH,
         V04_INSCRIPTIONS_WITH_LINES_CANDIDATE_PATH,
         V04_TRANSLATION_UNITS_CANDIDATE_PATH,
+        V04_TRANSLATION_COVERAGE_AUDIT_PATH,
+        V04_TRANSLATED_RECORDS_WITHOUT_LINES_PATH,
         V04_ENRICHMENT_PREVIEW_CANDIDATE_PATH,
         V04_ENRICHED_WITH_LINES_SAMPLE_PATH,
         V04_TN_UNRESOLVED_REVIEW_PATH,
@@ -4560,6 +4608,12 @@ def validate_jbrs_workflow() -> list[str]:
     v04_translation_units_header, _ = tsv_header_and_row_count(
         V04_TRANSLATION_UNITS_CANDIDATE_PATH, TRANSLATION_UNITS_EXTRACTED_FIELDS
     )
+    v04_translation_coverage_audit_header, _ = tsv_header_and_row_count(
+        V04_TRANSLATION_COVERAGE_AUDIT_PATH, TRANSLATION_COVERAGE_AUDIT_FIELDS
+    )
+    v04_translated_without_lines_header, _ = tsv_header_and_row_count(
+        V04_TRANSLATED_RECORDS_WITHOUT_LINES_PATH, TRANSLATED_RECORDS_WITHOUT_LINES_FIELDS
+    )
     v04_enrichment_preview_header, _ = tsv_header_and_row_count(
         V04_ENRICHMENT_PREVIEW_CANDIDATE_PATH, ENRICHED_PREVIEW_FIELDS
     )
@@ -4578,6 +4632,8 @@ def validate_jbrs_workflow() -> list[str]:
     expected_tn_manual_resolution_header = "\t".join(TN_MANUAL_RESOLUTION_LOG_FIELDS)
     expected_tn_residual_unresolved_header = "\t".join(TN_RESIDUAL_UNRESOLVED_FIELDS)
     expected_v04_translation_units_header = "\t".join(TRANSLATION_UNITS_EXTRACTED_FIELDS)
+    expected_v04_translation_coverage_audit_header = "\t".join(TRANSLATION_COVERAGE_AUDIT_FIELDS)
+    expected_v04_translated_without_lines_header = "\t".join(TRANSLATED_RECORDS_WITHOUT_LINES_FIELDS)
     expected_v04_enrichment_preview_header = "\t".join(ENRICHED_PREVIEW_FIELDS)
     expected_v04_tn_unresolved_header = "\t".join(TN_RESIDUAL_UNRESOLVED_FIELDS)
     expected_v04_review_checklist_header = "\t".join(V04_REVIEW_CHECKLIST_FIELDS)
@@ -4596,6 +4652,10 @@ def validate_jbrs_workflow() -> list[str]:
         errors.append("TN residual unresolved TSV is blank or missing the expected header.")
     if v04_translation_units_header != expected_v04_translation_units_header:
         errors.append("v0.4 translation units TSV is blank or missing the expected header.")
+    if v04_translation_coverage_audit_header != expected_v04_translation_coverage_audit_header:
+        errors.append("v0.4 translation coverage audit TSV is blank or missing the expected header.")
+    if v04_translated_without_lines_header != expected_v04_translated_without_lines_header:
+        errors.append("v0.4 translated-records-without-lines TSV is blank or missing the expected header.")
     if v04_enrichment_preview_header != expected_v04_enrichment_preview_header:
         errors.append("v0.4 enrichment preview TSV is blank or missing the expected header.")
     if v04_tn_unresolved_header != expected_v04_tn_unresolved_header:
@@ -4652,6 +4712,8 @@ def validate_jbrs_workflow() -> list[str]:
     tn_residual_unresolved_rows = read_tsv(TN_RESIDUAL_UNRESOLVED_PATH)
     tn_preview_rows = read_tsv(TN_TRANSLATION_INTEGRATION_PREVIEW_PATH)
     v04_translation_units_rows = read_tsv(V04_TRANSLATION_UNITS_CANDIDATE_PATH)
+    v04_translation_coverage_audit_rows = read_tsv(V04_TRANSLATION_COVERAGE_AUDIT_PATH)
+    v04_translated_without_lines_rows = read_tsv(V04_TRANSLATED_RECORDS_WITHOUT_LINES_PATH)
     v04_enrichment_preview_rows = read_tsv(V04_ENRICHMENT_PREVIEW_CANDIDATE_PATH)
     v04_tn_unresolved_rows = read_tsv(V04_TN_UNRESOLVED_REVIEW_PATH)
     v04_review_checklist_rows = read_tsv(V04_REVIEW_CHECKLIST_PATH)
@@ -5039,6 +5101,46 @@ def validate_jbrs_workflow() -> list[str]:
         if row.get("translation_status", "") not in {"published_translation", "published_partial_translation"}:
             errors.append(f"TN translation unit {unit_id} has invalid translation_status for integrated TN batch.")
 
+    translation_unit_by_id = {}
+    for row in translation_unit_rows:
+        unit_id = row.get("translation_unit_id", "")
+        if not unit_id:
+            errors.append("translation_units_extracted.tsv contains a row without translation_unit_id.")
+            continue
+        if unit_id in translation_unit_by_id:
+            errors.append(f"translation_units_extracted.tsv contains duplicate translation_unit_id: {unit_id}")
+            continue
+        translation_unit_by_id[unit_id] = row
+        coverage = row.get("translation_coverage", "").strip()
+        if coverage not in TRANSLATION_COVERAGE_VALUES:
+            errors.append(f"Translation unit {unit_id} has invalid translation_coverage: {coverage or '<blank>'}")
+        if not row.get("translation_coverage_basis", "").strip():
+            errors.append(f"Translation unit {unit_id} is missing translation_coverage_basis.")
+
+    v04_translation_unit_by_id = {}
+    for row in v04_translation_units_rows:
+        unit_id = row.get("translation_unit_id", "")
+        if not unit_id:
+            errors.append("translation_units_v0_4_candidate.tsv contains a row without translation_unit_id.")
+            continue
+        if unit_id in v04_translation_unit_by_id:
+            errors.append(f"translation_units_v0_4_candidate.tsv contains duplicate translation_unit_id: {unit_id}")
+            continue
+        v04_translation_unit_by_id[unit_id] = row
+        coverage = row.get("translation_coverage", "").strip()
+        if coverage not in TRANSLATION_COVERAGE_VALUES:
+            errors.append(f"v0.4 translation unit {unit_id} has invalid translation_coverage: {coverage or '<blank>'}")
+        if not row.get("translation_coverage_basis", "").strip():
+            errors.append(f"v0.4 translation unit {unit_id} is missing translation_coverage_basis.")
+        base_row = translation_unit_by_id.get(unit_id)
+        if base_row:
+            if row.get("translation_coverage", "") != base_row.get("translation_coverage", ""):
+                errors.append(f"v0.4 translation unit {unit_id} changed translation_coverage from translation_units_extracted.tsv.")
+            if row.get("translation_coverage_basis", "") != base_row.get("translation_coverage_basis", ""):
+                errors.append(
+                    f"v0.4 translation unit {unit_id} changed translation_coverage_basis from translation_units_extracted.tsv."
+                )
+
     tn_target_keys = {
         (row.get("tn_locator", "").strip(), row.get("linked_corpus_record_id", "").strip())
         for row in tn_target_rows
@@ -5176,13 +5278,77 @@ def validate_jbrs_workflow() -> list[str]:
             translation.get("source_key") == unit.get("source_key", "")
             and translation.get("source_locator") == unit.get("source_locator", "")
             and translation.get("text") == unit.get("translation_text", "")
+            and translation.get("translation_coverage") == unit.get("translation_coverage", "")
+            and translation.get("translation_coverage_basis") == unit.get("translation_coverage_basis", "")
             for translation in translations
         ):
             errors.append(f"Integrated translation unit not found in v0.4 candidate record translations: {unit_id}")
 
+    audit_by_unit_id = {}
+    for row in v04_translation_coverage_audit_rows:
+        unit_id = row.get("translation_unit_id", "").strip()
+        if not unit_id:
+            errors.append("translation_coverage_audit_v0_4.tsv contains a row without translation_unit_id.")
+            continue
+        if unit_id in audit_by_unit_id:
+            errors.append(f"translation_coverage_audit_v0_4.tsv contains duplicate translation_unit_id: {unit_id}")
+            continue
+        audit_by_unit_id[unit_id] = row
+        coverage = row.get("translation_coverage", "").strip()
+        if coverage not in TRANSLATION_COVERAGE_VALUES:
+            errors.append(f"translation_coverage_audit_v0_4.tsv has invalid translation_coverage for {unit_id}.")
+        if not row.get("translation_coverage_basis", "").strip():
+            errors.append(f"translation_coverage_audit_v0_4.tsv missing translation_coverage_basis for {unit_id}.")
+        if row.get("has_full_transliteration", "") not in {"true", "false"}:
+            errors.append(f"translation_coverage_audit_v0_4.tsv has invalid has_full_transliteration for {unit_id}.")
+        if not row.get("review_priority", "").strip():
+            errors.append(f"translation_coverage_audit_v0_4.tsv missing review_priority for {unit_id}.")
+
+    if set(audit_by_unit_id) != set(translation_unit_by_id):
+        missing = sorted(set(translation_unit_by_id) - set(audit_by_unit_id))
+        extra = sorted(set(audit_by_unit_id) - set(translation_unit_by_id))
+        if missing:
+            errors.append(
+                "translation_coverage_audit_v0_4.tsv is missing translation units: " + ", ".join(missing[:5])
+            )
+        if extra:
+            errors.append(
+                "translation_coverage_audit_v0_4.tsv has unknown translation units: " + ", ".join(extra[:5])
+            )
+    baseline_line_count_by_record = Counter(
+        row.get("record_id", "") for row in baseline_line_rows if row.get("record_id", "")
+    )
+    for unit_id, unit in translation_unit_by_id.items():
+        audit_row = audit_by_unit_id.get(unit_id)
+        if not audit_row:
+            continue
+        record_id = unit.get("linked_corpus_record_id", "").strip()
+        if audit_row.get("linked_corpus_record_id", "").strip() != record_id:
+            errors.append(f"translation_coverage_audit_v0_4.tsv linked_corpus_record_id mismatch for {unit_id}.")
+        if audit_row.get("translation_coverage", "").strip() != unit.get("translation_coverage", "").strip():
+            errors.append(f"translation_coverage_audit_v0_4.tsv translation_coverage mismatch for {unit_id}.")
+        if audit_row.get("translation_coverage_basis", "").strip() != unit.get("translation_coverage_basis", "").strip():
+            errors.append(f"translation_coverage_audit_v0_4.tsv translation_coverage_basis mismatch for {unit_id}.")
+        if audit_row.get("translation_length_chars", "").strip() != str(len(unit.get("translation_text", ""))):
+            errors.append(f"translation_coverage_audit_v0_4.tsv translation_length_chars mismatch for {unit_id}.")
+        expected_line_count = str(baseline_line_count_by_record.get(record_id, 0))
+        if audit_row.get("line_count_for_record", "").strip() != expected_line_count:
+            errors.append(f"translation_coverage_audit_v0_4.tsv line_count_for_record mismatch for {unit_id}.")
+        expected_has_full_translit = (
+            "true"
+            if record_id and bool(baseline_by_record_id.get(record_id, {}).get("full_transliteration"))
+            else "false"
+        )
+        if audit_row.get("has_full_transliteration", "").strip() != expected_has_full_translit:
+            errors.append(f"translation_coverage_audit_v0_4.tsv has_full_transliteration mismatch for {unit_id}.")
+
     if len(v04_joined_candidate_records) != len(baseline_corpus_records):
         errors.append(
             f"v0.4 joined-with-lines candidate record count {len(v04_joined_candidate_records)} does not match baseline v0.3 count {len(baseline_corpus_records)}."
+        )
+    if len(v04_joined_candidate_records) != 1152:
+        errors.append(
+            f"v0.4 joined-with-lines candidate record count must be 1152, found {len(v04_joined_candidate_records)}."
         )
     joined_by_record_id = {
         row.get("record_id", ""): row for row in v04_joined_candidate_records if row.get("record_id", "")
@@ -5224,13 +5390,14 @@ def validate_jbrs_workflow() -> list[str]:
         errors.append(
             f"v0.4 joined-with-lines candidate embedded line count {len(joined_line_ids)} does not match baseline v0.3 count {len(baseline_line_rows)}."
         )
+    if len(joined_line_ids) != 24299:
+        errors.append(
+            f"v0.4 joined-with-lines candidate must embed 24299 line rows, found {len(joined_line_ids)}."
+        )
     if len(joined_line_ids) != len(set(joined_line_ids)):
         errors.append("v0.4 joined-with-lines candidate contains duplicate line_id values.")
     if set(joined_line_ids) != set(baseline_line_ids):
         errors.append("v0.4 joined-with-lines candidate line_ids do not match baseline v0.3 line_ids.")
-    baseline_line_count_by_record = Counter(
-        row.get("record_id", "") for row in baseline_line_rows if row.get("record_id", "")
-    )
     joined_line_count_by_record = Counter(
         line.get("record_id", "")
         for joined_record in v04_joined_candidate_records
@@ -5242,6 +5409,39 @@ def validate_jbrs_workflow() -> list[str]:
             errors.append(f"v0.4 joined-with-lines candidate line count mismatch for record {record_id}.")
     if joined_line_records_with_rows + joined_line_records_without_rows != len(v04_joined_candidate_records):
         errors.append("v0.4 joined-with-lines candidate line-join record counts do not sum to the record count.")
+    translated_without_lines_actual = sorted(
+        record.get("record_id", "")
+        for record in v04_joined_candidate_records
+        if record.get("record_id", "")
+        and record.get("translations")
+        and not record.get("lines")
+    )
+    translated_without_lines_reported: list[str] = []
+    for row in v04_translated_without_lines_rows:
+        record_id = row.get("record_id", "").strip()
+        if not record_id:
+            errors.append("translated_records_without_lines_v0_4.tsv contains a row without record_id.")
+            continue
+        translated_without_lines_reported.append(record_id)
+        if record_id not in translated_without_lines_actual:
+            errors.append(
+                f"translated_records_without_lines_v0_4.tsv includes record not present in joined translated-without-lines set: {record_id}"
+            )
+        if not row.get("reason", "").strip():
+            errors.append(f"translated_records_without_lines_v0_4.tsv row missing reason: {record_id}")
+    if set(translated_without_lines_actual) != set(translated_without_lines_reported):
+        missing = sorted(set(translated_without_lines_actual) - set(translated_without_lines_reported))
+        extra = sorted(set(translated_without_lines_reported) - set(translated_without_lines_actual))
+        if missing:
+            errors.append(
+                "translated_records_without_lines_v0_4.tsv is missing translated records without lines: "
+                + ", ".join(missing[:5])
+            )
+        if extra:
+            errors.append(
+                "translated_records_without_lines_v0_4.tsv has extra records: "
+                + ", ".join(extra[:5])
+            )
     if v04_joined_sample_records and not isinstance(v04_joined_sample_records, list):
         errors.append("v0.4 joined sample file must contain a JSON array of records.")
     if not (3 <= len(v04_joined_sample_records) <= 5):
@@ -5287,8 +5487,29 @@ def validate_jbrs_workflow() -> list[str]:
 
     for record in v04_candidate_records:
         for translation in record.get("translations", []):
+            coverage = translation.get("translation_coverage", "")
+            if coverage not in TRANSLATION_COVERAGE_VALUES:
+                errors.append(
+                    f"v0.4 candidate translation on {record.get('record_id', '')} has invalid translation_coverage: {coverage or '<blank>'}"
+                )
+            if not translation.get("translation_coverage_basis", "").strip():
+                errors.append(
+                    f"v0.4 candidate translation on {record.get('record_id', '')} is missing translation_coverage_basis."
+                )
             if translation.get("source_key") == ANANDA_TRANSLATION_SOURCE_KEY:
                 errors.append(f"Ananda translation appears in v0.4 candidate record {record.get('record_id', '')}.")
+
+    for record in v04_joined_candidate_records:
+        for translation in record.get("translations", []):
+            coverage = translation.get("translation_coverage", "")
+            if coverage not in TRANSLATION_COVERAGE_VALUES:
+                errors.append(
+                    f"v0.4 joined translation on {record.get('record_id', '')} has invalid translation_coverage: {coverage or '<blank>'}"
+                )
+            if not translation.get("translation_coverage_basis", "").strip():
+                errors.append(
+                    f"v0.4 joined translation on {record.get('record_id', '')} is missing translation_coverage_basis."
+                )
 
     for row in v04_tn_unresolved_rows:
         if not row.get("final_status", "").strip():
@@ -5306,6 +5527,8 @@ def validate_jbrs_workflow() -> list[str]:
         errors.append("v0.4 release notes draft is missing the expected heading.")
     if "Residual unresolved TN items" not in v04_release_notes_text:
         errors.append("v0.4 release notes draft is missing residual TN section.")
+    if "Translation coverage summary" not in v04_release_notes_text:
+        errors.append("v0.4 release notes draft is missing translation coverage summary section.")
     if ABSOLUTE_PATH_PATTERN.search(v04_release_notes_text):
         errors.append("v0.4 release notes draft contains an absolute path.")
 
@@ -5336,6 +5559,14 @@ def validate_jbrs_workflow() -> list[str]:
     for row in v04_translation_units_rows:
         if ABSOLUTE_PATH_PATTERN.search(" ".join(row.values())):
             errors.append("translation_units_v0_4_candidate.tsv contains an absolute path.")
+            break
+    for row in v04_translation_coverage_audit_rows:
+        if ABSOLUTE_PATH_PATTERN.search(" ".join(row.values())):
+            errors.append("translation_coverage_audit_v0_4.tsv contains an absolute path.")
+            break
+    for row in v04_translated_without_lines_rows:
+        if ABSOLUTE_PATH_PATTERN.search(" ".join(row.values())):
+            errors.append("translated_records_without_lines_v0_4.tsv contains an absolute path.")
             break
     for row in v04_enrichment_preview_rows:
         if ABSOLUTE_PATH_PATTERN.search(" ".join(row.values())):
@@ -5435,6 +5666,8 @@ def validate_jbrs_workflow() -> list[str]:
         ENRICHED_CANDIDATE_SUMMARY_PATH,
         TRANSLATION_SOURCE_ACTION_TABLE_PATH,
         TRANSLATION_UNITS_EXTRACTED_PATH,
+        V04_TRANSLATION_COVERAGE_AUDIT_PATH,
+        V04_TRANSLATED_RECORDS_WITHOUT_LINES_PATH,
         TRANSLATION_INTEGRATION_PREVIEW_PATH,
         TN_TRANSLATION_TARGETS_PATH,
         TN_TRANSLATION_TARGET_STATUS_PATH,

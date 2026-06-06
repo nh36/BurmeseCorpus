@@ -55,9 +55,9 @@
   "eb_fascicle_content_inspection_count": 10,
   "direct_witness_search_result_counts": {
     "blocked_by_missing_local_index": 0,
-    "not_found": 19,
-    "direct_witness_found": 0,
     "bibliographic_clue_found": 8,
+    "direct_witness_found": 0,
+    "not_found": 19,
     "candidate_found": 5
   },
   "verified_translation_after_inspection_count": 0,

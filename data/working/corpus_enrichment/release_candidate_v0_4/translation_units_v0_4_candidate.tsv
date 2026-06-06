@@ -1,4 +1,4 @@
-translation_unit_id	source_key	source_bibliographic_label	matched_local_file_id	source_locator	linked_inscription_id	linked_corpus_record_id	translation_language	translation_text	translation_status	link_basis	confidence	needs_human_review	notes
+translation_unit_id	source_key	source_bibliographic_label	matched_local_file_id	source_locator	linked_inscription_id	linked_corpus_record_id	translation_language	translation_text	translation_status	translation_coverage	translation_coverage_basis	link_basis	confidence	needs_human_review	notes
 jbrs-translation-unit-20260531-001	jbrsShwegugyi1920	U Pe Maung Tin and G. H. Luce, The Shwegugyi Pagoda Inscription, Pagan, 1141 A.D. (JBRS 10(2), 1920, pp. 67-74)	1920-shwegugyiinscription-luce1920-pdf	JBRS 10(2), 1920, pp. 67-74	obi-v01-n0004-ob-p0011	obi-v01-n0004-ob-p0011	English	"Reverence to the Buddha, whose pure mind
 Made for the earth a Sun-his noble Law,
 That all three worlds may follow him and reach
@@ -135,7 +135,7 @@ The elements of wisdom, the Three Gems
 On Sunday the fourth waxing of Kason
 In the five hundred and third year to build
 At an auspicious moment. That same year
-On Thursday eleventh waning of Nadaw"	published_translation	JBRS 10(2), 1920, pp. 67-74 explicitly matches the Shwegugyi Pagoda Inscription corpus record.	high	false	Completed published translation integrated into the enriched corpus candidate.
+On Thursday eleventh waning of Nadaw"	published_translation	full_inscription	JBRS 10(2), 1920, pp. 67-74 presents a continuous complete translation for the linked inscription.	JBRS 10(2), 1920, pp. 67-74 explicitly matches the Shwegugyi Pagoda Inscription corpus record.	high	false	Completed published translation integrated into the enriched corpus candidate.
 rajakumar-translation-2001-myanmar	tunAungChainRajakumar2001	Tun Aung Chain, The Rajakumar Inscription, Cultural Classics, Yangon Universities Press, 2001, pp. 25-37	tun_aung_chain_2001_rajakumar_inscriptio-d55d64ebc41c	Cultural Classics 2001, Appendix I Myanmar Text, pp. 33-34 (OCR pages 10-11)	obi-v01-n0001-tx-p0001	obi-v01-n0001-tx-p0001	English	"Myanmar Text (A 39 lines, B 34, lines) tr. Charles Duroiselle (1919)
 rev. Tun Aung Chain
 Prosperity! Honour to the Buddha! One thousand six hundred and
@@ -165,7 +165,7 @@ pagoda and Buddha, and thus said: “Let this deed of mine be the cause of my
 obtaining Omniscience! After me, (whosoever) whether (he be) my son, or
 
 grandson, or relative, or any other person, if he oppresses the slaves I have
-offered to this Buddha, may he not behold the Buddha Arimittiyâ!"""	published_translation	The Myanmar Text section aligns with the Myanmar Rajakumar/Myazedi corpus record title, references, and matching narrative formulae (Arimaddanapur, Tribhuvanadityadhammaraj, Trilokavatamsika, 1628 era + 28 regnal years, and three-village donation).	high	false	version_label=Myanmar Text; integrated to Myanmar Rajakumar/Myazedi record.
+offered to this Buddha, may he not behold the Buddha Arimittiyâ!"""	published_translation	full_version	Source labels this as Myanmar Text and provides a continuous complete translation of that version.	The Myanmar Text section aligns with the Myanmar Rajakumar/Myazedi corpus record title, references, and matching narrative formulae (Arimaddanapur, Tribhuvanadityadhammaraj, Trilokavatamsika, 1628 era + 28 regnal years, and three-village donation).	high	false	version_label=Myanmar Text; integrated to Myanmar Rajakumar/Myazedi record.
 rajakumar-translation-2001-mon	tunAungChainRajakumar2001	Tun Aung Chain, The Rajakumar Inscription, Cultural Classics, Yangon Universities Press, 2001, pp. 25-37	tun_aung_chain_2001_rajakumar_inscriptio-d55d64ebc41c	Cultural Classics 2001, Appendix I Mon Text, pp. 34-35 (OCR pages 11-12)			English	"Mon Text (A 33 lines B 46 lines) tr. C.O.Blagden (1919)
 rev. Tun Aung Chain
 Prosperity! Honour to Buddha! Prosperity! After the religion of the
@@ -197,7 +197,7 @@ for the golden Buddha that he (had) enshrined in this cave-pagoda, (and)
 prayed thus: ""May this act of mine be a cause for the attainment (by me) of
 Omniscience! Be it my child be it my grandchild, be it my kinsman, be it (any)
 other person, if he do violence to the slaves whom I am giving to this
-Buddha, may he not get sight of the exalted Buddha Mettey!"""	published_translation	No structured corpus record with a Rajakumar/Myazedi Mon-language counterpart was found in corpus_release_v0_3 inscriptions/lines and citation layers.	needs_review	true	version_label=Mon Text; extracted but kept unlinked pending a Mon corpus record.
+Buddha, may he not get sight of the exalted Buddha Mettey!"""	published_translation	full_version	Source labels this as Mon Text and presents a continuous translation of that version, but no matching structured corpus record is linked.	No structured corpus record with a Rajakumar/Myazedi Mon-language counterpart was found in corpus_release_v0_3 inscriptions/lines and citation layers.	needs_review	true	version_label=Mon Text; extracted but kept unlinked pending a Mon corpus record.
 rajakumar-translation-2001-pyu	tunAungChainRajakumar2001	Tun Aung Chain, The Rajakumar Inscription, Cultural Classics, Yangon Universities Press, 2001, pp. 25-37	tun_aung_chain_2001_rajakumar_inscriptio-d55d64ebc41c	Cultural Classics 2001, Appendix I Pyu Text, p. 35 (OCR page 12)			English	"Pyu Text (A 26 lines B 29 lines)
 rev. Tun Aung Chain
 tr. C.O.Blagden (1911)
@@ -259,7 +259,7 @@ doing be a cause for giving me Omniscience (and) wisdom! As for these
 slaves, be it my son, be it my grandson, be it my kinsman, be it any other
 person, [if he shall do violence to those that I have dedicated to this Budha,
 may he never be permitted to approach the presence of] the lord Budha
-Arimedeya!"""	published_partial_translation	The Appendix I Pyu section is present but no structured Rajakumar/Myazedi Pyu record is available in corpus_release_v0_3 for secure linkage.	needs_review	true	version_label=Pyu Text; extracted as partial due OCR clipping and kept unlinked.
+Arimedeya!"""	published_partial_translation	excerpt	Extracted Pyu section is clipped in local OCR and retained only as an excerpt-level translation segment.	The Appendix I Pyu section is present but no structured Rajakumar/Myazedi Pyu record is available in corpus_release_v0_3 for secure linkage.	needs_review	true	version_label=Pyu Text; extracted as partial due OCR clipping and kept unlinked.
 rajakumar-translation-2001-pali	tunAungChainRajakumar2001	Tun Aung Chain, The Rajakumar Inscription, Cultural Classics, Yangon Universities Press, 2001, pp. 25-37	tun_aung_chain_2001_rajakumar_inscriptio-d55d64ebc41c	Cultural Classics 2001, Appendix I Pali Text, pp. 35-36 (OCR pages 12-13)	obi-v01-n0001-tx-p0002	obi-v01-n0001-tx-p0002	English	"Pali Text (A 41 lines, B 40, lines) tr. Charles Duroiselle (1919)
 Prosperity! Having bowed to the Buddha and other (two) Excellent
 Objects, I shall relate the noble work of merit performed, in the Conqueror's
@@ -299,7 +299,7 @@ son, or grandson, or any other relative, with evil intent and
 unbelieving mind should oppress those slaves, dwellers in the three
 villages, whom I have dedicated to the cave-pagoda and the golden
 image of the Great Sage, may this vile person be precluded from
-beholding Metteyya, the Chief of men!"""	published_translation	The Pali Text section matches the Pali Rajakumar/Myazedi corpus record language and reference profile (List-52, IOB4-361/b, EB Vol.1 no.1), with identical storyline and dedication formula.	high	false	version_label=Pali Text; integrated to Pali Rajakumar/Myazedi record.
+beholding Metteyya, the Chief of men!"""	published_translation	full_version	Source labels this as Pali Text and provides a continuous complete translation of that version.	The Pali Text section matches the Pali Rajakumar/Myazedi corpus record language and reference profile (List-52, IOB4-361/b, EB Vol.1 no.1), with identical storyline and dedication formula.	high	false	version_label=Pali Text; integrated to Pali Rajakumar/Myazedi record.
 tn-translation-1899-plate-xlv-tn-70	tnInscriptionsPaganPinyaAva	U Tun Nyein / Taw Sein Ko / Forchhammer, Inscriptions of Pagan, Pinya and Ava: Translation, with Notes. Rangoon: Government Press, 1899.	hvd-hxx68w-1780753436	TN 70 (Plate XLV; OCR pages 83)	obi-v01-n0081	obi-v01-n0081-ob-p0125	English	"No. (5).
 Locality. Within the porch of the Damayangyi pagoda.
 Date. 581 Sakkarâj (1219 A.D.).
@@ -312,7 +312,7 @@ total 5.
 I have dedicated these slaves to the pagoda. If any of
 my descendants molest them or their descendants, may they live
 short and inglorious lives, and be burnt in avici hell.""
-"""	published_partial_translation	High-confidence IOB concordance link (Plate XLV, TN 70) to obi-v01-n0081-ob-p0125; extracted from tracked TN OCR pages.	high	false	version_label=TN locator TN 70; source_iob_plate=Plate XLV; extracted from data/working/ocr/pagan_pinya_ava_1899/ocr_cleaned_text_light.txt.
+"""	published_partial_translation	partial_inscription	TN numbered entry provides a bounded segment translation for this linked inscription record, not the full inscription text.	High-confidence IOB concordance link (Plate XLV, TN 70) to obi-v01-n0081-ob-p0125; extracted from tracked TN OCR pages.	high	false	version_label=TN locator TN 70; source_iob_plate=Plate XLV; extracted from data/working/ocr/pagan_pinya_ava_1899/ocr_cleaned_text_light.txt.
 tn-translation-1899-plate-x-b-tn-70-71-no-6	tnInscriptionsPaganPinyaAva	U Tun Nyein / Taw Sein Ko / Forchhammer, Inscriptions of Pagan, Pinya and Ava: Translation, with Notes. Rangoon: Government Press, 1899.	hvd-hxx68w-1780753436	TN 70-71 (Plate X b; linked through SIP 21 / IOB Plate X b source-text match, not through prior corpus plate metadata; OCR pages 83, 84)	obi-v01-n0029	obi-v01-n0029-re-p0051	English	"No. (6).
 -OBVERSE.
 Locality. At the Taungkuni pagoda, about 300 feet south of Dama-
@@ -368,7 +368,7 @@ Yaung, Nga Yôn and daughters O Sat, O Swin, Ya Keik and
 daughters O Thi, O Hmo, Ŏ Pwa and O Pôn, Nga Pa, Nga Mwe
 and brother Nga Myaik; total 100.
 ""For this my meritorious deed may I become a wise and distin-
-guished Rahan in the time of the next Buddha."""	published_partial_translation	Cross-witness source-text match: SIP 21 and IOB Plate X b resolve to the West-face continuation on obi-v01-n0029-re-p0051, bounded here to No. (6) only; No. (5) remains the already integrated overlap.	high	false	version_label=TN locator TN 70-71; subentry=No. (6) only; source_iob_plate=Plate X b; linked through SIP 21 / IOB Plate X b source-text match, not prior corpus plate metadata.
+guished Rahan in the time of the next Buddha."""	published_partial_translation	partial_inscription	TN numbered entry provides a bounded segment translation for this linked inscription record, not the full inscription text.	Cross-witness source-text match: SIP 21 and IOB Plate X b resolve to the West-face continuation on obi-v01-n0029-re-p0051, bounded here to No. (6) only; No. (5) remains the already integrated overlap.	high	false	version_label=TN locator TN 70-71; subentry=No. (6) only; source_iob_plate=Plate X b; linked through SIP 21 / IOB Plate X b source-text match, not prior corpus plate metadata.
 tn-translation-1899-plate-xxvii-tn-80	tnInscriptionsPaganPinyaAva	U Tun Nyein / Taw Sein Ko / Forchhammer, Inscriptions of Pagan, Pinya and Ava: Translation, with Notes. Rangoon: Government Press, 1899.	hvd-hxx68w-1780753436	TN 80 (Plate XXVII; OCR pages 93)	obi-v01-n0047	obi-v01-n0047-ob-p0075	English	"Reverse.
 Date. 558 Sakkaraj (1196 A.D.).
 Founder. Thakin Pwèthaung.*
@@ -411,7 +411,7 @@ pagoda.
 ON Sunday, the 9th waning of Wagaung, 570 Sakkarāj, Nga
 San Thin dedicated to the pagoda the following to slaves, namely:
 *Probably a Minister of Narapatisithu.
-† This is evidently Prince Pyanchi, third son of Narapatisithu by Queen Usaukpan."	published_partial_translation	High-confidence IOB concordance link (Plate XXVII, TN 80) to obi-v01-n0047-ob-p0075; extracted from tracked TN OCR pages.	high	false	version_label=TN locator TN 80; source_iob_plate=Plate XXVII; extracted from data/working/ocr/pagan_pinya_ava_1899/ocr_cleaned_text_light.txt.
+† This is evidently Prince Pyanchi, third son of Narapatisithu by Queen Usaukpan."	published_partial_translation	partial_inscription	TN numbered entry provides a bounded segment translation for this linked inscription record, not the full inscription text.	High-confidence IOB concordance link (Plate XXVII, TN 80) to obi-v01-n0047-ob-p0075; extracted from tracked TN OCR pages.	high	false	version_label=TN locator TN 80; source_iob_plate=Plate XXVII; extracted from data/working/ocr/pagan_pinya_ava_1899/ocr_cleaned_text_light.txt.
 tn-translation-1899-plate-lix-tn-92	tnInscriptionsPaganPinyaAva	U Tun Nyein / Taw Sein Ko / Forchhammer, Inscriptions of Pagan, Pinya and Ava: Translation, with Notes. Rangoon: Government Press, 1899.	hvd-hxx68w-1780753436	TN 92 (Plate LIX; OCR pages 105)	obi-v01-n0007	obi-v01-n0007-ob-p0022	English	"No. (21).
 Locality. Within the walls of the Shinbinbawdi pagoda, on the
 northern side.
@@ -434,7 +434,7 @@ Three slaves, Nga Chat, Nga U Ga, and .
 were also
 offered. ""May those who destroy the garden offered by me, fail to
 enjoy happiness in the abode of men and nats, and may they
-suffer as"	published_partial_translation	High-confidence IOB concordance link (Plate LIX, TN 92) to obi-v01-n0007-ob-p0022; extracted from tracked TN OCR pages.	high	false	version_label=TN locator TN 92; source_iob_plate=Plate LIX; extracted from data/working/ocr/pagan_pinya_ava_1899/ocr_cleaned_text_light.txt.
+suffer as"	published_partial_translation	partial_inscription	TN numbered entry provides a bounded segment translation for this linked inscription record, not the full inscription text.	High-confidence IOB concordance link (Plate LIX, TN 92) to obi-v01-n0007-ob-p0022; extracted from tracked TN OCR pages.	high	false	version_label=TN locator TN 92; source_iob_plate=Plate LIX; extracted from data/working/ocr/pagan_pinya_ava_1899/ocr_cleaned_text_light.txt.
 tn-translation-1899-plate-lxxiv-tn-100-101	tnInscriptionsPaganPinyaAva	U Tun Nyein / Taw Sein Ko / Forchhammer, Inscriptions of Pagan, Pinya and Ava: Translation, with Notes. Rangoon: Government Press, 1899.	hvd-hxx68w-1780753436	TN 100 101 (Plate LXXIV; OCR pages 113, 114)	obi-v01-n0097	obi-v01-n0097-tx-p0156	English	"Substance of inscription.-Building of cave, monastery, and image,
 and dedication thereto of slaves, lands, cattle, and utensils
 On Wednesday, the 3rd waning of Tabaung 592 Sakkarâj, Ma hâ-
@@ -514,7 +514,7 @@ and brother Nga Wa Thin. These slaves were purchased from
 Nga U Yaung. The slaves who have to look after the paddy-land
 and garden at Thapanzeik are--Nga Myo and wife O Mauk,
 daughter O Kala, son Nga Yauk; Nga Dauk Cha and sons Nga
-Kywin and Nga Swin; total 7."	published_partial_translation	High-confidence IOB concordance link (Plate LXXIV, TN 100 101) to obi-v01-n0097-tx-p0156; extracted from tracked TN OCR pages.	high	false	version_label=TN locator TN 100 101; source_iob_plate=Plate LXXIV; extracted from data/working/ocr/pagan_pinya_ava_1899/ocr_cleaned_text_light.txt.
+Kywin and Nga Swin; total 7."	published_partial_translation	partial_inscription	TN numbered entry provides a bounded segment translation for this linked inscription record, not the full inscription text.	High-confidence IOB concordance link (Plate LXXIV, TN 100 101) to obi-v01-n0097-tx-p0156; extracted from tracked TN OCR pages.	high	false	version_label=TN locator TN 100 101; source_iob_plate=Plate LXXIV; extracted from data/working/ocr/pagan_pinya_ava_1899/ocr_cleaned_text_light.txt.
 tn-translation-1899-plate-lxxvi-tn-102-103	tnInscriptionsPaganPinyaAva	U Tun Nyein / Taw Sein Ko / Forchhammer, Inscriptions of Pagan, Pinya and Ava: Translation, with Notes. Rangoon: Government Press, 1899.	hvd-hxx68w-1780753436	TN 102-103 (Plate LXXVI; OCR pages 115, 116)	obi-v01-n0142	obi-v01-n0142-tx-p0238	English	"No. (3).
 Locality. On the northern pillar within the inscription ca ve,
 near the Lemyethna pagoda.
@@ -568,7 +568,7 @@ through Dhammatheinga being. 38. The slaves purchased
 through Lohathinga were Nga U and brother Nga Nyein; Nga
 Thauk and wife O Chat, son Nga Chan; O Twe and sons Nga
 Aung Bye, Nga Myo; Nga Pin Di and sisters O Bye, Hmu Ya O
-(last line)."	published_partial_translation	High-confidence IOB concordance link (Plate LXXVI, TN 102-103) to obi-v01-n0142-tx-p0238; extracted from tracked TN OCR pages.	high	false	version_label=TN locator TN 102-103; source_iob_plate=Plate LXXVI; extracted from data/working/ocr/pagan_pinya_ava_1899/ocr_cleaned_text_light.txt.
+(last line)."	published_partial_translation	partial_inscription	TN numbered entry provides a bounded segment translation for this linked inscription record, not the full inscription text.	High-confidence IOB concordance link (Plate LXXVI, TN 102-103) to obi-v01-n0142-tx-p0238; extracted from tracked TN OCR pages.	high	false	version_label=TN locator TN 102-103; source_iob_plate=Plate LXXVI; extracted from data/working/ocr/pagan_pinya_ava_1899/ocr_cleaned_text_light.txt.
 tn-translation-1899-plate-lxxviii-a-tn-106	tnInscriptionsPaganPinyaAva	U Tun Nyein / Taw Sein Ko / Forchhammer, Inscriptions of Pagan, Pinya and Ava: Translation, with Notes. Rangoon: Government Press, 1899.	hvd-hxx68w-1780753436	TN 106 (Plate LXXVIII a; OCR pages 119)	obi-v01-n0142	obi-v01-n0142-tx-p0238	English	"No. (7).*
 Locality. Same as No. (6).
 Date. 589 Sakkarâj (1227 A.D.).
@@ -598,7 +598,7 @@ Nga Mun, Nga Hlun and an infant; total 36. On Thursday, the
 7th waxing of Tawthalin 589 Sakkaraj, the following slaves were
 dedicated, namely, Nga U and sons Nga Pyi, Nga Ti; Nga Myit
 and son Nga Aung; Nga Taw and brother Nga Kaw; Nga Kwè
-Thein and son Nga Aung Myin; Nga Maw;"	published_partial_translation	High-confidence IOB concordance link (Plate LXXVIII a, TN 106) to obi-v01-n0142-tx-p0238; extracted from tracked TN OCR pages.	high	false	version_label=TN locator TN 106; source_iob_plate=Plate LXXVIII a; extracted from data/working/ocr/pagan_pinya_ava_1899/ocr_cleaned_text_light.txt.
+Thein and son Nga Aung Myin; Nga Maw;"	published_partial_translation	partial_inscription	TN numbered entry provides a bounded segment translation for this linked inscription record, not the full inscription text.	High-confidence IOB concordance link (Plate LXXVIII a, TN 106) to obi-v01-n0142-tx-p0238; extracted from tracked TN OCR pages.	high	false	version_label=TN locator TN 106; source_iob_plate=Plate LXXVIII a; extracted from data/working/ocr/pagan_pinya_ava_1899/ocr_cleaned_text_light.txt.
 tn-translation-1899-plate-lxxix-b-tn-108-109	tnInscriptionsPaganPinyaAva	U Tun Nyein / Taw Sein Ko / Forchhammer, Inscriptions of Pagan, Pinya and Ava: Translation, with Notes. Rangoon: Government Press, 1899.	hvd-hxx68w-1780753436	TN 108 109 (Plate LXXIX b; OCR pages 121, 122)	obi-v01-n0146	obi-v01-n0146-tx-p0246	English	"Substance of inscription.-Erection of cave and dedication thereto
 of slaves, lands, and cattle.
 and
@@ -665,7 +665,7 @@ the presence of King Sithu, Thugyis Thitsayapade and Paditha, and
 Mahawè, in accordance with their decision that Anandathu was the
 owner of the slaves and not Nga Swè Thin. The witnesses to the
 decision were
-(last line)."	published_partial_translation	High-confidence IOB concordance link (Plate LXXIX b, TN 108 109) to obi-v01-n0146-tx-p0246; extracted from tracked TN OCR pages.	high	false	version_label=TN locator TN 108 109; source_iob_plate=Plate LXXIX b; extracted from data/working/ocr/pagan_pinya_ava_1899/ocr_cleaned_text_light.txt.
+(last line)."	published_partial_translation	partial_inscription	TN numbered entry provides a bounded segment translation for this linked inscription record, not the full inscription text.	High-confidence IOB concordance link (Plate LXXIX b, TN 108 109) to obi-v01-n0146-tx-p0246; extracted from tracked TN OCR pages.	high	false	version_label=TN locator TN 108 109; source_iob_plate=Plate LXXIX b; extracted from data/working/ocr/pagan_pinya_ava_1899/ocr_cleaned_text_light.txt.
 tn-translation-1899-plate-vi-tn-65-66	tnInscriptionsPaganPinyaAva	U Tun Nyein / Taw Sein Ko / Forchhammer, Inscriptions of Pagan, Pinya and Ava: Translation, with Notes. Rangoon: Government Press, 1899.	hvd-hxx68w-1780753436	TN 65-66 (Plate VI; OCR pages 78, 79)	obi-v01-n0021	obi-v01-n0021-ob-p0042	English	"No. (10).
 Locality. In the porch of the Tainggyut pagoda.
 Date. 541 Sakkarāj (1179 A.D.).
@@ -695,7 +695,7 @@ masters, friends, and relatives escape the miseries of life in the
 present and the future and ultimately attain Nirvâna; and may
 I become a Buddha.""
 INSCRIPTIONS OF PAGAN.
-VI. Found on the south-east of Pagan."	published_partial_translation	High-confidence IOB concordance link (Plate VI, TN 65-66) to obi-v01-n0021-ob-p0042; extracted from tracked TN OCR pages.	high	false	version_label=TN locator TN 65-66; source_iob_plate=Plate VI; extracted from data/working/ocr/pagan_pinya_ava_1899/ocr_cleaned_text_light.txt.
+VI. Found on the south-east of Pagan."	published_partial_translation	partial_inscription	TN numbered entry provides a bounded segment translation for this linked inscription record, not the full inscription text.	High-confidence IOB concordance link (Plate VI, TN 65-66) to obi-v01-n0021-ob-p0042; extracted from tracked TN OCR pages.	high	false	version_label=TN locator TN 65-66; source_iob_plate=Plate VI; extracted from data/working/ocr/pagan_pinya_ava_1899/ocr_cleaned_text_light.txt.
 tn-translation-1899-plate-xli-tn-69	tnInscriptionsPaganPinyaAva	U Tun Nyein / Taw Sein Ko / Forchhammer, Inscriptions of Pagan, Pinya and Ava: Translation, with Notes. Rangoon: Government Press, 1899.	hvd-hxx68w-1780753436	TN 69 (Plate XLI; OCR pages 82)	obi-v01-n0070	obi-v01-n0070-ob-p0111	English	"On Sunday, the 7th waxing of Tabodwè, 615 Sakkarâj, Nga Môn
 Thin and his wife dedicated the following slaves: O Mye, Nga.
 Yan, and Nga Aung Zin, son of Nga Pôn Su, who was purchased
@@ -712,7 +712,7 @@ royal monastery and his successors exercise any control over these
 slaves, but let my descendants after me look after them. By virtue
 of this my meritorious deed, may I have the opportunity of behold-
 ing the next Buddha;t may I ultimately attain omniscience, and
-may I be able to succour both men and devás."""	published_partial_translation	High-confidence IOB concordance link (Plate XLI, TN 69) to obi-v01-n0070-ob-p0111; extracted from tracked TN OCR pages.	high	false	version_label=TN locator TN 69; source_iob_plate=Plate XLI; extracted from data/working/ocr/pagan_pinya_ava_1899/ocr_cleaned_text_light.txt.
+may I be able to succour both men and devás."""	published_partial_translation	partial_inscription	TN numbered entry provides a bounded segment translation for this linked inscription record, not the full inscription text.	High-confidence IOB concordance link (Plate XLI, TN 69) to obi-v01-n0070-ob-p0111; extracted from tracked TN OCR pages.	high	false	version_label=TN locator TN 69; source_iob_plate=Plate XLI; extracted from data/working/ocr/pagan_pinya_ava_1899/ocr_cleaned_text_light.txt.
 tn-translation-1899-plate-xiii-tn-79	tnInscriptionsPaganPinyaAva	U Tun Nyein / Taw Sein Ko / Forchhammer, Inscriptions of Pagan, Pinya and Ava: Translation, with Notes. Rangoon: Government Press, 1899.	hvd-hxx68w-1780753436	TN 79 (Plate XIII; OCR pages 92)	obi-v01-n0027	obi-v01-n0027-ob-p0048	English	"This inscription is erected by King Alaungsithu
 , who was full of
 wisdom and prudence; who was a seeker after omniscience and
@@ -751,7 +751,7 @@ Buddhas, though their number may reach that of the atoms in a
 heap of earth.""
 * The word 00:08: (thingyi) meant a military officer as well as a Buddhist ecclesi-
 astical dignitary. So the founder might have been either the preceptor of a military
-officer of Narapatisithu's reign or simply an abbot."	published_partial_translation	High-confidence IOB concordance link (Plate XIII, TN 79) to obi-v01-n0027-ob-p0048; extracted from tracked TN OCR pages.	high	false	version_label=TN locator TN 79; source_iob_plate=Plate XIII; extracted from data/working/ocr/pagan_pinya_ava_1899/ocr_cleaned_text_light.txt.
+officer of Narapatisithu's reign or simply an abbot."	published_partial_translation	partial_inscription	TN numbered entry provides a bounded segment translation for this linked inscription record, not the full inscription text.	High-confidence IOB concordance link (Plate XIII, TN 79) to obi-v01-n0027-ob-p0048; extracted from tracked TN OCR pages.	high	false	version_label=TN locator TN 79; source_iob_plate=Plate XIII; extracted from data/working/ocr/pagan_pinya_ava_1899/ocr_cleaned_text_light.txt.
 tn-translation-1899-plate-lxii-tn-82-83	tnInscriptionsPaganPinyaAva	U Tun Nyein / Taw Sein Ko / Forchhammer, Inscriptions of Pagan, Pinya and Ava: Translation, with Notes. Rangoon: Government Press, 1899.	hvd-hxx68w-1780753436	TN 82-83 (Plate LXII; OCR pages 95, 96)	obi-v01-n0130	obi-v01-n0130-ob-p0211	English	"No. (8).
 Locality. Within the walls of the Shinbinbawdi pagoda, on the east-
 ern side.
@@ -771,7 +771,7 @@ Chattayapyitsi of Kanya, Nga Che Thin of Tandawyaw, Nga Myat
 of Kinpa, Nga Mye Thin and O Ti Thin of Yinthapanbin, Nga
 Kyè Thin, Bi Thôk Thin, Pinthaung Waik, Thingattabi, Thinzaye
 of Thinthi village, Thôktaba, Pônthi's sister, Nga Kaing, and
-Nga Set."	published_partial_translation	High-confidence IOB concordance link (Plate LXII, TN 82-83) to obi-v01-n0130-ob-p0211; extracted from tracked TN OCR pages.	high	false	version_label=TN locator TN 82-83; source_iob_plate=Plate LXII; extracted from data/working/ocr/pagan_pinya_ava_1899/ocr_cleaned_text_light.txt.
+Nga Set."	published_partial_translation	partial_inscription	TN numbered entry provides a bounded segment translation for this linked inscription record, not the full inscription text.	High-confidence IOB concordance link (Plate LXII, TN 82-83) to obi-v01-n0130-ob-p0211; extracted from tracked TN OCR pages.	high	false	version_label=TN locator TN 82-83; source_iob_plate=Plate LXII; extracted from data/working/ocr/pagan_pinya_ava_1899/ocr_cleaned_text_light.txt.
 tn-translation-1899-plate-lxxxviii-tn-84	tnInscriptionsPaganPinyaAva	U Tun Nyein / Taw Sein Ko / Forchhammer, Inscriptions of Pagan, Pinya and Ava: Translation, with Notes. Rangoon: Government Press, 1899.	hvd-hxx68w-1780753436	TN 84 (Plate LXXXVIII; OCR pages 97)	obi-v01-n0161	obi-v01-n0161-ob-p0270	English	"No. (11).
 (five lines).
 Locality. Within the walls of the Shinbinbawdi pagoda, on the east-
@@ -792,7 +792,7 @@ also made in the same year, namely, one brass tray, one pestle,
 and one lamp-stand.
 ""
 May those who destroy our offerings live short and ignominious
-lives and fail to behold any of the coming Buddhas."""	published_partial_translation	High-confidence IOB concordance link (Plate LXXXVIII, TN 84) to obi-v01-n0161-ob-p0270; extracted from tracked TN OCR pages.	high	false	version_label=TN locator TN 84; source_iob_plate=Plate LXXXVIII; extracted from data/working/ocr/pagan_pinya_ava_1899/ocr_cleaned_text_light.txt.
+lives and fail to behold any of the coming Buddhas."""	published_partial_translation	partial_inscription	TN numbered entry provides a bounded segment translation for this linked inscription record, not the full inscription text.	High-confidence IOB concordance link (Plate LXXXVIII, TN 84) to obi-v01-n0161-ob-p0270; extracted from tracked TN OCR pages.	high	false	version_label=TN locator TN 84; source_iob_plate=Plate LXXXVIII; extracted from data/working/ocr/pagan_pinya_ava_1899/ocr_cleaned_text_light.txt.
 tn-translation-1899-plate-lxxxv-tn-84-85	tnInscriptionsPaganPinyaAva	U Tun Nyein / Taw Sein Ko / Forchhammer, Inscriptions of Pagan, Pinya and Ava: Translation, with Notes. Rangoon: Government Press, 1899.	hvd-hxx68w-1780753436	TN 84 85 (Plate LXXXV; OCR pages 97, 98)	obi-v01-n0154	obi-v01-n0154-ob-p0257	English	"No. (12).
 Locality. Within the walls of the Shinbinbawdi pagoda, on the east-
 ern side.
@@ -832,7 +832,7 @@ meant for the Buddha, five for the law, ten for the monkhood, and
 two large brass trays; one cover;
 one pestle; one copper kettle;
 one spittoon.
-(3 lines)."	published_partial_translation	High-confidence IOB concordance link (Plate LXXXV, TN 84 85) to obi-v01-n0154-ob-p0257; extracted from tracked TN OCR pages.	high	false	version_label=TN locator TN 84 85; source_iob_plate=Plate LXXXV; extracted from data/working/ocr/pagan_pinya_ava_1899/ocr_cleaned_text_light.txt.
+(3 lines)."	published_partial_translation	partial_inscription	TN numbered entry provides a bounded segment translation for this linked inscription record, not the full inscription text.	High-confidence IOB concordance link (Plate LXXXV, TN 84 85) to obi-v01-n0154-ob-p0257; extracted from tracked TN OCR pages.	high	false	version_label=TN locator TN 84 85; source_iob_plate=Plate LXXXV; extracted from data/working/ocr/pagan_pinya_ava_1899/ocr_cleaned_text_light.txt.
 tn-translation-1899-plate-ci-tn-85-86	tnInscriptionsPaganPinyaAva	U Tun Nyein / Taw Sein Ko / Forchhammer, Inscriptions of Pagan, Pinya and Ava: Translation, with Notes. Rangoon: Government Press, 1899.	hvd-hxx68w-1780753436	TN 85 86 (Plate CI; OCR pages 98, 99)	obi-v01-n0178	obi-v01-n0178-tx-p0305	English	"No. (13).
 Locality. Within the walls of the Shinbinbawdi pagoda, on the east-
 ern side.
@@ -860,7 +860,7 @@ dedication were monk Gunati; U Pagôk; Chatta Tathi; Myana
 Thago; Kanta Wadi; and I Lwa; total six witnesses in the same
 year,
 • •
-(4 lines)."	published_partial_translation	High-confidence IOB concordance link (Plate CI, TN 85 86) to obi-v01-n0178-tx-p0305; extracted from tracked TN OCR pages.	high	false	version_label=TN locator TN 85 86; source_iob_plate=Plate CI; extracted from data/working/ocr/pagan_pinya_ava_1899/ocr_cleaned_text_light.txt.
+(4 lines)."	published_partial_translation	partial_inscription	TN numbered entry provides a bounded segment translation for this linked inscription record, not the full inscription text.	High-confidence IOB concordance link (Plate CI, TN 85 86) to obi-v01-n0178-tx-p0305; extracted from tracked TN OCR pages.	high	false	version_label=TN locator TN 85 86; source_iob_plate=Plate CI; extracted from data/working/ocr/pagan_pinya_ava_1899/ocr_cleaned_text_light.txt.
 tn-translation-1899-plate-lxxvii-tn-105	tnInscriptionsPaganPinyaAva	U Tun Nyein / Taw Sein Ko / Forchhammer, Inscriptions of Pagan, Pinya and Ava: Translation, with Notes. Rangoon: Government Press, 1899.	hvd-hxx68w-1780753436	TN 105 (Plate LXXVII; OCR pages 118)	obi-v01-n0142	obi-v01-n0142-tx-p0238	English	"No. (6).
 Locality. On the northern pillar within the inscription cave near
 the Lemyethna pagoda.
@@ -882,7 +882,7 @@ Taya De, Nga Sè, and Pôk Thatayo. The slaves kept in Ka-
 naingzi village were-Nga Pa and sons Nga Paga, Nga Taung Thu
 and Nga Tayate; Nga Kabu and sons Nga Pet, Nga Than, Nga
 Ma Lauk; Nga Than Bôn and sons Nga Paing, Nga Nyet;
-(two lines)."	published_partial_translation	High-confidence IOB concordance link (Plate LXXVII, TN 105) to obi-v01-n0142-tx-p0238; extracted from tracked TN OCR pages.	high	false	version_label=TN locator TN 105; source_iob_plate=Plate LXXVII; extracted from data/working/ocr/pagan_pinya_ava_1899/ocr_cleaned_text_light.txt.
+(two lines)."	published_partial_translation	partial_inscription	TN numbered entry provides a bounded segment translation for this linked inscription record, not the full inscription text.	High-confidence IOB concordance link (Plate LXXVII, TN 105) to obi-v01-n0142-tx-p0238; extracted from tracked TN OCR pages.	high	false	version_label=TN locator TN 105; source_iob_plate=Plate LXXVII; extracted from data/working/ocr/pagan_pinya_ava_1899/ocr_cleaned_text_light.txt.
 tn-translation-1899-plate-lxxxiii-tn-107	tnInscriptionsPaganPinyaAva	U Tun Nyein / Taw Sein Ko / Forchhammer, Inscriptions of Pagan, Pinya and Ava: Translation, with Notes. Rangoon: Government Press, 1899.	hvd-hxx68w-1780753436	TN 107 (Plate LXXXIII; OCR pages 120)	obi-v01-n0128	obi-v01-n0128-ob-p0208	English	"By virtue of this offering may I always be free from want.
 As
 a man may I be rewarded with the happiness of a Çakravatin, and
@@ -898,7 +898,7 @@ of Wagaung, the following slaves
 were further dedicated to the image, namely, O Pyi Mè and
 daughter Thanbaya; O Wun; Nga Kan Gu;
 • •
-(two lines)."	published_partial_translation	High-confidence IOB concordance link (Plate LXXXIII, TN 107) to obi-v01-n0128-ob-p0208; extracted from tracked TN OCR pages.	high	false	version_label=TN locator TN 107; source_iob_plate=Plate LXXXIII; extracted from data/working/ocr/pagan_pinya_ava_1899/ocr_cleaned_text_light.txt.
+(two lines)."	published_partial_translation	partial_inscription	TN numbered entry provides a bounded segment translation for this linked inscription record, not the full inscription text.	High-confidence IOB concordance link (Plate LXXXIII, TN 107) to obi-v01-n0128-ob-p0208; extracted from tracked TN OCR pages.	high	false	version_label=TN locator TN 107; source_iob_plate=Plate LXXXIII; extracted from data/working/ocr/pagan_pinya_ava_1899/ocr_cleaned_text_light.txt.
 tn-translation-1899-plate-lxviii-tn-107-108	tnInscriptionsPaganPinyaAva	U Tun Nyein / Taw Sein Ko / Forchhammer, Inscriptions of Pagan, Pinya and Ava: Translation, with Notes. Rangoon: Government Press, 1899.	hvd-hxx68w-1780753436	TN 107-108 (Plate LXVIII; OCR pages 120, 121)	obi-v01-n0143	obi-v01-n0143-ob-p0240	English	"No. (9).
 Locality.—In the inscription cave attached to the Lemyethna pagoda.
 Date. 591 Sakkarâj (1229 A.D.).
@@ -917,7 +917,7 @@ attain Buddhahood. May those who destroy my offering be burnt
 in the eight principal hells.""
 The witnesses to the offering were-monks Thetta Ditha, Nyana
 Teikthi, Thudamayinthi, Thatpuyithakawi
-(last line)."	published_partial_translation	High-confidence IOB concordance link (Plate LXVIII, TN 107-108) to obi-v01-n0143-ob-p0240; extracted from tracked TN OCR pages.	high	false	version_label=TN locator TN 107-108; source_iob_plate=Plate LXVIII; extracted from data/working/ocr/pagan_pinya_ava_1899/ocr_cleaned_text_light.txt.
+(last line)."	published_partial_translation	partial_inscription	TN numbered entry provides a bounded segment translation for this linked inscription record, not the full inscription text.	High-confidence IOB concordance link (Plate LXVIII, TN 107-108) to obi-v01-n0143-ob-p0240; extracted from tracked TN OCR pages.	high	false	version_label=TN locator TN 107-108; source_iob_plate=Plate LXVIII; extracted from data/working/ocr/pagan_pinya_ava_1899/ocr_cleaned_text_light.txt.
 tn-translation-1899-plate-l-tn-27-28	tnInscriptionsPaganPinyaAva	U Tun Nyein / Taw Sein Ko / Forchhammer, Inscriptions of Pagan, Pinya and Ava: Translation, with Notes. Rangoon: Government Press, 1899.	hvd-hxx68w-1780753436	TN 27-28 (Plate L; OCR pages 40, 41)	obi-v01-n0057	obi-v01-n0057-ob-p0091	English	"No. (2).
 Locality. Within the group of pagodas on the west bank of the
 stream.
@@ -960,7 +960,7 @@ make rice-offerings with the produce thereof. The slaves dedicat-
 were drummers Nga Myet Mè,
 Nga Pan Tu, Nga U, Nga Sein, Nga Pyinnya and Nga.
 Pantaya O Mi; Pantaya O Kyan; Pantaya Tan Bu; Pantaya
-ed to"	published_partial_translation	High-confidence IOB concordance link (Plate L, TN 27-28) to obi-v01-n0057-ob-p0091; extracted from tracked TN OCR pages.	high	false	version_label=TN locator TN 27-28; source_iob_plate=Plate L; extracted from data/working/ocr/pagan_pinya_ava_1899/ocr_cleaned_text_light.txt.
+ed to"	published_partial_translation	partial_inscription	TN numbered entry provides a bounded segment translation for this linked inscription record, not the full inscription text.	High-confidence IOB concordance link (Plate L, TN 27-28) to obi-v01-n0057-ob-p0091; extracted from tracked TN OCR pages.	high	false	version_label=TN locator TN 27-28; source_iob_plate=Plate L; extracted from data/working/ocr/pagan_pinya_ava_1899/ocr_cleaned_text_light.txt.
 tn-translation-1899-plate-xciii-tn-28-29	tnInscriptionsPaganPinyaAva	U Tun Nyein / Taw Sein Ko / Forchhammer, Inscriptions of Pagan, Pinya and Ava: Translation, with Notes. Rangoon: Government Press, 1899.	hvd-hxx68w-1780753436	TN 28-29 (Plate XCIII; OCR pages 41, 42)	obi-v01-n0169	obi-v01-n0169-ob-p0287	English	"No. (4).
 Locality. On the south side of a road which is about 200 feet
 from the two Kunsaw pagodas on the west bank of the Wetkyi-
@@ -1009,7 +1009,7 @@ and sister Pin Wi; Kalabu, his wife Hi Tu, daughter Eik Si; Mu
 Bya Nge's son Nga Pu Gan and his brother Nga Twe; Ko Tu, his
 wife Kan Nu, son Thôk Tara, and sister O Set Che; Thin Go Hè,
 his wife Thu La Na, daughter Ku Kan and granddaughter Chat
-* Donor of a religious institution."	published_partial_translation	High-confidence IOB concordance link (Plate XCIII, TN 28-29) to obi-v01-n0169-ob-p0287; extracted from tracked TN OCR pages.	high	false	version_label=TN locator TN 28-29; source_iob_plate=Plate XCIII; extracted from data/working/ocr/pagan_pinya_ava_1899/ocr_cleaned_text_light.txt.
+* Donor of a religious institution."	published_partial_translation	partial_inscription	TN numbered entry provides a bounded segment translation for this linked inscription record, not the full inscription text.	High-confidence IOB concordance link (Plate XCIII, TN 28-29) to obi-v01-n0169-ob-p0287; extracted from tracked TN OCR pages.	high	false	version_label=TN locator TN 28-29; source_iob_plate=Plate XCIII; extracted from data/working/ocr/pagan_pinya_ava_1899/ocr_cleaned_text_light.txt.
 tn-translation-1899-plate-li-tn-28	tnInscriptionsPaganPinyaAva	U Tun Nyein / Taw Sein Ko / Forchhammer, Inscriptions of Pagan, Pinya and Ava: Translation, with Notes. Rangoon: Government Press, 1899.	hvd-hxx68w-1780753436	TN 28 (Plate LI; OCR pages 41)	obi-v01-n0095	obi-v01-n0095-re-p0142	English	"No. (3).
 Locality. Within the group of monasteries on the west bank of the
 stream.
@@ -1028,7 +1028,7 @@ eight principal hells, namely, Sañjivo, Kāļasutto, Sanghâto, Roruvo,
 Maharoruvo, Tapano, Patāpano, and Avici. The witnesses present
 at the offering were: Saya Ka, monks Thetadithapamauk, Nyana-
 teiktha, Thudamayinthi, Thatparotheikki, Taunglat, Anandanyana-
-bôkdi, Thudamalinga, Tilawkasaduyin, Dhammayazathiri."	published_partial_translation	High-confidence IOB concordance link (Plate LI, TN 28) to obi-v01-n0095-re-p0142; extracted from tracked TN OCR pages.	high	false	version_label=TN locator TN 28; source_iob_plate=Plate LI; extracted from data/working/ocr/pagan_pinya_ava_1899/ocr_cleaned_text_light.txt.
+bôkdi, Thudamalinga, Tilawkasaduyin, Dhammayazathiri."	published_partial_translation	partial_inscription	TN numbered entry provides a bounded segment translation for this linked inscription record, not the full inscription text.	High-confidence IOB concordance link (Plate LI, TN 28) to obi-v01-n0095-re-p0142; extracted from tracked TN OCR pages.	high	false	version_label=TN locator TN 28; source_iob_plate=Plate LI; extracted from data/working/ocr/pagan_pinya_ava_1899/ocr_cleaned_text_light.txt.
 tn-translation-1899-plate-lxxi-tn-6-no-12	tnInscriptionsPaganPinyaAva	U Tun Nyein / Taw Sein Ko / Forchhammer, Inscriptions of Pagan, Pinya and Ava: Translation, with Notes. Rangoon: Government Press, 1899.	hvd-hxx68w-1780753436	TN 6 (No. (12) segment; Plate LXXI / List 224 / PPA 17; OCR page 19)	obi-v01-n0148	obi-v01-n0148-ob-p0249	English	"No. (12).
 Locality. At the southern porch of the Thate-Môkku Pagoda.
 Date. 595 Sakkaraj (1233 A.D.).
@@ -1037,7 +1037,7 @@ slaves to some pagoda or monastery.
 [A few words only in lines 1-8 have been deciphered. They
 indicate that certain lands and slaves were dedicated to some pagoda
 or monastery on Thursday the 5th waxing of Tabaung 595 Sak-
-karāj.]"	published_partial_translation	Manual TN page/image inspection of printed page 6 (OCR page 19) isolates No. (12) as a bounded segment; structured record obi-v01-n0148-ob-p0249 cites TN, p. 6 with List 224 / PPA 17 / IOB1-71 (Pl. I 71-72), matching date, locality, and inscription profile.	high	false	version_label=TN locator TN 6; subentry=No. (12) only; source_iob_plate=Plate LXXI; linked via TN p.6 / List 224 / PPA 17 / IOB1-71 concordance.
+karāj.]"	published_partial_translation	partial_inscription	TN numbered entry provides a bounded segment translation for this linked inscription record, not the full inscription text.	Manual TN page/image inspection of printed page 6 (OCR page 19) isolates No. (12) as a bounded segment; structured record obi-v01-n0148-ob-p0249 cites TN, p. 6 with List 224 / PPA 17 / IOB1-71 (Pl. I 71-72), matching date, locality, and inscription profile.	high	false	version_label=TN locator TN 6; subentry=No. (12) only; source_iob_plate=Plate LXXI; linked via TN p.6 / List 224 / PPA 17 / IOB1-71 concordance.
 tn-translation-1899-plate-cv-a-tn-30-86-87	tnInscriptionsPaganPinyaAva	U Tun Nyein / Taw Sein Ko / Forchhammer, Inscriptions of Pagan, Pinya and Ava: Translation, with Notes. Rangoon: Government Press, 1899.	hvd-hxx68w-1780753436	TN 30 | TN 86-87 (Plate CV a; OCR pages 43, 99, 100)	obi-v01-n0179	obi-v01-n0179-tx-p0306	English	"No. (14).
 Locality. Within the walls of the Shinbinbawdi pagoda, on the
 southern side.
@@ -1096,7 +1096,7 @@ who approve of my offering share the merit with me.""
 Thirty cows were also offered to the pagoda. Bôkdalinga, the
 mason, was rewarded with an elephant and four suits of clothes,
 and Seiktara Misin, the painter, with an elephant, a pony, and two
-suits of clothes."	published_partial_translation	High-confidence IOB concordance link (Plate CV a, TN 30 | TN 86-87) to obi-v01-n0179-tx-p0306; extracted from tracked TN OCR pages.	high	false	version_label=TN locator TN 30 | TN 86-87; source_iob_plate=Plate CV a; extracted from data/working/ocr/pagan_pinya_ava_1899/ocr_cleaned_text_light.txt.
+suits of clothes."	published_partial_translation	partial_inscription	TN numbered entry provides a bounded segment translation for this linked inscription record, not the full inscription text.	High-confidence IOB concordance link (Plate CV a, TN 30 | TN 86-87) to obi-v01-n0179-tx-p0306; extracted from tracked TN OCR pages.	high	false	version_label=TN locator TN 30 | TN 86-87; source_iob_plate=Plate CV a; extracted from data/working/ocr/pagan_pinya_ava_1899/ocr_cleaned_text_light.txt.
 tn-translation-1899-plate-xcviii-tn-143	tnInscriptionsPaganPinyaAva	U Tun Nyein / Taw Sein Ko / Forchhammer, Inscriptions of Pagan, Pinya and Ava: Translation, with Notes. Rangoon: Government Press, 1899.	hvd-hxx68w-1780753436	TN 143 (Plate XCVIII; OCR pages 156)	obi-v01-n0129	obi-v01-n0129-tx-p0209	English	"No. (6).
 Locality. Within the inscription cave attached to the Sudaungbye
 pagoda.
@@ -1110,7 +1110,7 @@ cave. The request was acceded to and in return the king offered
 read out in the Tamaka monastery by Minister Thirimingalabiyit.
 The officials who demarcated the land were Nga Pyi Thin, Nga Pôn
 Biyit Thin, and Thaman. The monk, in his turn, dedicated this
-land to the pagoda built by him."	published_partial_translation	High-confidence IOB concordance link (Plate XCVIII, TN 143) to obi-v01-n0129-tx-p0209; extracted from tracked TN OCR pages.	high	false	version_label=TN locator TN 143; source_iob_plate=Plate XCVIII; extracted from data/working/ocr/pagan_pinya_ava_1899/ocr_cleaned_text_light.txt.
+land to the pagoda built by him."	published_partial_translation	partial_inscription	TN numbered entry provides a bounded segment translation for this linked inscription record, not the full inscription text.	High-confidence IOB concordance link (Plate XCVIII, TN 143) to obi-v01-n0129-tx-p0209; extracted from tracked TN OCR pages.	high	false	version_label=TN locator TN 143; source_iob_plate=Plate XCVIII; extracted from data/working/ocr/pagan_pinya_ava_1899/ocr_cleaned_text_light.txt.
 tn-translation-1899-plate-xxxi-tn-36-57-no-1	tnInscriptionsPaganPinyaAva	U Tun Nyein / Taw Sein Ko / Forchhammer, Inscriptions of Pagan, Pinya and Ava: Translation, with Notes. Rangoon: Government Press, 1899.	hvd-hxx68w-1780753436	TN 36-57 (Plate XXXI, No. (1) obverse segment; OCR pages 49-70)	obi-v01-n0052	obi-v01-n0052-ob-p0083	English	"No. (1).—OBVERSE.
 Locality. Within the walls of the Kemawaya pagoda.
 Date 569 Sakkarâj (1207 A.D.).
@@ -1164,7 +1164,7 @@ has been exerted in vain. May they have no opportunity of behold-
 ing any future Buddha. On the other hand, may those who approve
 of my offering, who refrain from appropriating any portion of it to
 their own use, or who in any way maintain its continuance, become
-rulers of the universe, rich and prosperous men."""	published_partial_translation	Manual cross-witness segmentation of TN 36-57 isolates the Plate XXXI No. (1) obverse block (Kemawaya pagoda, CS 569, King Nandaungmya), matching obi-v01-n0052-ob-p0083 and SIP Plate XXXI linkage.	high	false	version_label=TN locator TN 36-57; subentry=No. (1) obverse only; source_iob_plate=Plate XXXI; cross_witness=SIP 29 / List 273(a) / PPA 109-111.
+rulers of the universe, rich and prosperous men."""	published_partial_translation	partial_inscription	TN numbered entry provides a bounded segment translation for this linked inscription record, not the full inscription text.	Manual cross-witness segmentation of TN 36-57 isolates the Plate XXXI No. (1) obverse block (Kemawaya pagoda, CS 569, King Nandaungmya), matching obi-v01-n0052-ob-p0083 and SIP Plate XXXI linkage.	high	false	version_label=TN locator TN 36-57; subentry=No. (1) obverse only; source_iob_plate=Plate XXXI; cross_witness=SIP 29 / List 273(a) / PPA 109-111.
 tn-translation-1899-plate-i-tn-73-76-no-1	tnInscriptionsPaganPinyaAva	U Tun Nyein / Taw Sein Ko / Forchhammer, Inscriptions of Pagan, Pinya and Ava: Translation, with Notes. Rangoon: Government Press, 1899.	hvd-hxx68w-1780753436	TN 73-76 (Plate I, No. (1) segment before No. (2); OCR pages 86-89)	obi-v01-n0004	obi-v01-n0004-ob-p0011	English	"No. (1).*
 Locality.—Close to the eastern wall of the Shwegugyi pagoda porch.
 Date.—503 Sakkarâj (1241 A.D.).
@@ -1297,7 +1297,7 @@ and heretics who thought themselves Buddhas. May I become such
 a Buddha.
 ""The Buddha, whose origin is as excellent as that of his prede-
 cessors, performed the whole of the five kinds of duties incumbent
-on all Buddhas. May I be able to do so."""	published_partial_translation	Targeted manual linkage: TN 73-76 contains Plate I No. (1) Shwegugyi translation block (Alaungsithu, CS 503), which aligns with List 66(a), PPA 159, and obi-v01-n0004-ob-p0011 references.	medium-high	false	version_label=TN locator TN 73-76; subentry=No. (1) only; source_iob_plate=Plate I; linked via List 66(a) / PPA 159 / TN p.73 concordance.
+on all Buddhas. May I be able to do so."""	published_partial_translation	partial_inscription	TN numbered entry provides a bounded segment translation for this linked inscription record, not the full inscription text.	Targeted manual linkage: TN 73-76 contains Plate I No. (1) Shwegugyi translation block (Alaungsithu, CS 503), which aligns with List 66(a), PPA 159, and obi-v01-n0004-ob-p0011 references.	medium-high	false	version_label=TN locator TN 73-76; subentry=No. (1) only; source_iob_plate=Plate I; linked via List 66(a) / PPA 159 / TN p.73 concordance.
 tn-translation-1899-plate-xxxvii-tn-81-no-6	tnInscriptionsPaganPinyaAva	U Tun Nyein / Taw Sein Ko / Forchhammer, Inscriptions of Pagan, Pinya and Ava: Translation, with Notes. Rangoon: Government Press, 1899.	hvd-hxx68w-1780753436	TN 81 (Plate XXXVII, No. (6) segment before No. (7); OCR page 94)	obi-v01-n0063	obi-v01-n0063-ob-p0099	English	"No. (6).
 Locality. Within the walls of the Shinbinbawdi pagoda, on the
 south side.
@@ -1317,4 +1317,4 @@ offerings were also made, namely, 300 ticals of silver, one large
 lamp with stand, one large brass tray, one large pestle, and one large
 brass kettle.
 ""May those who destroy my offering be deprived of the oppor-
-tunity of beholding any of the coming Buddhas."""	published_partial_translation	Targeted manual linkage: TN 81 No. (6) gives Thingyi Dhammapala (CS 574) and Shinbinbawdi context, matching List 175 / PPA 169 and obi-v01-n0063-ob-p0099.	medium-high	false	version_label=TN locator TN 81; subentry=No. (6) only; source_iob_plate=Plate XXXVII; linked via List 175 / PPA 169 / TN p.81 concordance.
+tunity of beholding any of the coming Buddhas."""	published_partial_translation	partial_inscription	TN numbered entry provides a bounded segment translation for this linked inscription record, not the full inscription text.	Targeted manual linkage: TN 81 No. (6) gives Thingyi Dhammapala (CS 574) and Shinbinbawdi context, matching List 175 / PPA 169 and obi-v01-n0063-ob-p0099.	medium-high	false	version_label=TN locator TN 81; subentry=No. (6) only; source_iob_plate=Plate XXXVII; linked via List 175 / PPA 169 / TN p.81 concordance.

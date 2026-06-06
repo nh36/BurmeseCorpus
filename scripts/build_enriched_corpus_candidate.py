@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import argparse
 import json
-from collections import defaultdict
+from collections import Counter, defaultdict
 from pathlib import Path
 import re
 
@@ -65,6 +65,12 @@ V04_INSCRIPTIONS_WITH_LINES_CANDIDATE_PATH = (
 V04_TRANSLATION_UNITS_CANDIDATE_PATH = RELEASE_CANDIDATE_V04_DIRECTORY / "translation_units_v0_4_candidate.tsv"
 V04_ENRICHMENT_PREVIEW_CANDIDATE_PATH = RELEASE_CANDIDATE_V04_DIRECTORY / "enrichment_preview_v0_4_candidate.tsv"
 V04_ENRICHED_WITH_LINES_SAMPLE_PATH = RELEASE_CANDIDATE_V04_DIRECTORY / "enriched_with_lines_sample_v0_4.json"
+V04_TRANSLATION_COVERAGE_AUDIT_PATH = (
+    RELEASE_CANDIDATE_V04_DIRECTORY / "translation_coverage_audit_v0_4.tsv"
+)
+V04_TRANSLATED_RECORDS_WITHOUT_LINES_PATH = (
+    RELEASE_CANDIDATE_V04_DIRECTORY / "translated_records_without_lines_v0_4.tsv"
+)
 V04_TN_UNRESOLVED_REVIEW_PATH = RELEASE_CANDIDATE_V04_DIRECTORY / "tn_unresolved_review_v0_4.tsv"
 V04_REVIEW_CHECKLIST_PATH = RELEASE_CANDIDATE_V04_DIRECTORY / "review_checklist_v0_4.tsv"
 V04_RELEASE_NOTES_DRAFT_PATH = RELEASE_CANDIDATE_V04_DIRECTORY / "release_notes_v0_4_draft.md"
@@ -75,6 +81,35 @@ TN_OCR_CLEANED_TEXT_PATH = TN_OCR_DIRECTORY / "ocr_cleaned_text_light.txt"
 
 TN_LOCAL_FILE_ID = "hvd-hxx68w-1780753436"
 TN_LOCAL_FILE_NAME = "hvd-hxx68w-1780753436.pdf"
+TRANSLATION_COVERAGE_VALUES = {
+    "full_inscription",
+    "full_version",
+    "partial_inscription",
+    "excerpt",
+    "uncertain",
+}
+TRANSLATION_COVERAGE_AUDIT_FIELDS = [
+    "translation_unit_id",
+    "linked_corpus_record_id",
+    "linked_inscription_id",
+    "title_original",
+    "source_key",
+    "source_locator",
+    "translation_status",
+    "translation_coverage",
+    "translation_coverage_basis",
+    "translation_length_chars",
+    "line_count_for_record",
+    "has_full_transliteration",
+    "review_priority",
+    "notes",
+]
+TRANSLATED_RECORDS_WITHOUT_LINES_FIELDS = [
+    "record_id",
+    "inscription_id",
+    "translation_count",
+    "reason",
+]
 
 TN_TRANSLATION_UNIT_SPECS = [
     {
@@ -1238,6 +1273,10 @@ def build_translation_units_extracted_rows(
                 "translation_language": unit.get("translation_language", "English"),
                 "translation_text": translation_text,
                 "translation_status": "published_translation",
+                "translation_coverage": "full_inscription",
+                "translation_coverage_basis": (
+                    "JBRS 10(2), 1920, pp. 67-74 presents a continuous complete translation for the linked inscription."
+                ),
                 "link_basis": "JBRS 10(2), 1920, pp. 67-74 explicitly matches the Shwegugyi Pagoda Inscription corpus record.",
                 "confidence": "high",
                 "needs_human_review": "false",
@@ -1269,6 +1308,10 @@ def build_translation_units_extracted_rows(
                 "linked_inscription_id": "obi-v01-n0001-tx-p0001",
                 "linked_corpus_record_id": "obi-v01-n0001-tx-p0001",
                 "translation_status": "published_translation",
+                "translation_coverage": "full_version",
+                "translation_coverage_basis": (
+                    "Source labels this as Myanmar Text and provides a continuous complete translation of that version."
+                ),
                 "link_basis": (
                     "The Myanmar Text section aligns with the Myanmar Rajakumar/Myazedi corpus record "
                     "title, references, and matching narrative formulae (Arimaddanapur, Tribhuvanadityadhammaraj, "
@@ -1285,6 +1328,10 @@ def build_translation_units_extracted_rows(
                 "linked_inscription_id": "",
                 "linked_corpus_record_id": "",
                 "translation_status": "published_translation",
+                "translation_coverage": "full_version",
+                "translation_coverage_basis": (
+                    "Source labels this as Mon Text and presents a continuous translation of that version, but no matching structured corpus record is linked."
+                ),
                 "link_basis": (
                     "No structured corpus record with a Rajakumar/Myazedi Mon-language counterpart was found "
                     "in corpus_release_v0_3 inscriptions/lines and citation layers."
@@ -1300,6 +1347,10 @@ def build_translation_units_extracted_rows(
                 "linked_inscription_id": "",
                 "linked_corpus_record_id": "",
                 "translation_status": "published_partial_translation",
+                "translation_coverage": "excerpt",
+                "translation_coverage_basis": (
+                    "Extracted Pyu section is clipped in local OCR and retained only as an excerpt-level translation segment."
+                ),
                 "link_basis": (
                     "The Appendix I Pyu section is present but no structured Rajakumar/Myazedi Pyu record is "
                     "available in corpus_release_v0_3 for secure linkage."
@@ -1315,6 +1366,10 @@ def build_translation_units_extracted_rows(
                 "linked_inscription_id": "obi-v01-n0001-tx-p0002",
                 "linked_corpus_record_id": "obi-v01-n0001-tx-p0002",
                 "translation_status": "published_translation",
+                "translation_coverage": "full_version",
+                "translation_coverage_basis": (
+                    "Source labels this as Pali Text and provides a continuous complete translation of that version."
+                ),
                 "link_basis": (
                     "The Pali Text section matches the Pali Rajakumar/Myazedi corpus record language and "
                     "reference profile (List-52, IOB4-361/b, EB Vol.1 no.1), with identical storyline and dedication formula."
@@ -1340,6 +1395,8 @@ def build_translation_units_extracted_rows(
                     "translation_language": "English",
                     "translation_text": section_text,
                     "translation_status": spec["translation_status"],
+                    "translation_coverage": spec["translation_coverage"],
+                    "translation_coverage_basis": spec["translation_coverage_basis"],
                     "link_basis": spec["link_basis"],
                     "confidence": spec["confidence"],
                     "needs_human_review": spec["needs_human_review"],
@@ -1402,6 +1459,11 @@ def build_translation_units_extracted_rows(
                 "translation_language": "English",
                 "translation_text": translation_text,
                 "translation_status": spec["translation_status"],
+                "translation_coverage": spec.get("translation_coverage", "partial_inscription"),
+                "translation_coverage_basis": spec.get(
+                    "translation_coverage_basis",
+                    "TN numbered entry provides a bounded segment translation for this linked inscription record, not the full inscription text.",
+                ),
                 "link_basis": spec.get("link_basis", "").strip() or (
                     f"High-confidence IOB concordance link ({spec['iob_plate']}, {spec['tn_locator']}) to "
                     f"{linked_record_id}; extracted from tracked TN OCR pages."
@@ -1967,6 +2029,66 @@ def build_v04_enriched_with_lines_sample(joined_records: list[dict]) -> list[dic
     return [joined_by_id[record_id] for record_id in sample_record_ids if record_id in joined_by_id]
 
 
+def build_translation_coverage_audit_rows(
+    translation_rows: list[dict],
+    *,
+    title_by_record_id: dict[str, str],
+    line_count_by_record_id: dict[str, int],
+    has_full_transliteration_by_record_id: dict[str, bool],
+) -> list[dict]:
+    rows: list[dict] = []
+    for row in translation_rows:
+        record_id = row.get("linked_corpus_record_id", "").strip()
+        needs_review = row.get("needs_human_review", "").strip().lower() == "true"
+        coverage = row.get("translation_coverage", "").strip() or "uncertain"
+        basis = row.get("translation_coverage_basis", "").strip() or "Coverage basis not provided."
+        if coverage not in TRANSLATION_COVERAGE_VALUES:
+            coverage = "uncertain"
+        review_priority = (
+            "high"
+            if needs_review or not record_id or coverage in {"partial_inscription", "excerpt", "uncertain"}
+            else "normal"
+        )
+        rows.append(
+            {
+                "translation_unit_id": row.get("translation_unit_id", ""),
+                "linked_corpus_record_id": record_id,
+                "linked_inscription_id": row.get("linked_inscription_id", ""),
+                "title_original": title_by_record_id.get(record_id, ""),
+                "source_key": row.get("source_key", ""),
+                "source_locator": row.get("source_locator", ""),
+                "translation_status": row.get("translation_status", ""),
+                "translation_coverage": coverage,
+                "translation_coverage_basis": basis,
+                "translation_length_chars": str(len(row.get("translation_text", ""))),
+                "line_count_for_record": str(line_count_by_record_id.get(record_id, 0)),
+                "has_full_transliteration": (
+                    "true" if record_id and has_full_transliteration_by_record_id.get(record_id, False) else "false"
+                ),
+                "review_priority": review_priority,
+                "notes": row.get("notes", ""),
+            }
+        )
+    return rows
+
+
+def build_translated_records_without_lines_rows(joined_records: list[dict]) -> list[dict]:
+    rows: list[dict] = []
+    for record in joined_records:
+        translations = record.get("translations", [])
+        lines = record.get("lines", [])
+        if translations and not lines:
+            rows.append(
+                {
+                    "record_id": record.get("record_id", ""),
+                    "inscription_id": record.get("record_id", ""),
+                    "translation_count": str(len(translations)),
+                    "reason": "Record has integrated translations but no line rows in corpus_release_v0_3/lines.jsonl.",
+                }
+            )
+    return rows
+
+
 def render_markdown_bullets(items: list[str]) -> str:
     if not items:
         return "- none"
@@ -1981,6 +2103,10 @@ def build_v04_release_notes_text(
     tn_residual_rows: list[dict],
     translation_rows: list[dict],
 ) -> str:
+    coverage_counts = Counter(
+        (row.get("translation_coverage", "").strip() or "uncertain")
+        for row in translation_rows
+    )
     integrated_source_keys = sorted(
         {
             row.get("source_key", "")
@@ -2041,6 +2167,15 @@ def build_v04_release_notes_text(
 - records without line rows: {joined_summary.get("records_without_line_rows", 0)}
 - total line rows joined: {joined_summary.get("total_line_rows_joined", 0)}
 
+## Translation coverage summary
+
+- full_inscription: {coverage_counts.get("full_inscription", 0)}
+- full_version: {coverage_counts.get("full_version", 0)}
+- partial_inscription: {coverage_counts.get("partial_inscription", 0)}
+- excerpt: {coverage_counts.get("excerpt", 0)}
+- uncertain: {coverage_counts.get("uncertain", 0)}
+- joined records preserve full translations while embedding line-level rows.
+
 ## Sources integrated
 
 {render_markdown_bullets(integrated_sources)}
@@ -2080,12 +2215,16 @@ def write_v04_candidate_package(
     joined_sample_records: list[dict],
     preview_rows: list[dict],
     translation_unit_rows: list[dict],
+    translation_coverage_audit_rows: list[dict],
+    translated_records_without_lines_rows: list[dict],
     tn_residual_rows: list[dict],
     summary: dict,
     action_rows: list[dict],
     output_inscriptions_jsonl: Path,
     output_inscriptions_with_lines_jsonl: Path,
     output_translation_units_tsv: Path,
+    output_translation_coverage_audit_tsv: Path,
+    output_translated_records_without_lines_tsv: Path,
     output_enrichment_preview_tsv: Path,
     output_enriched_with_lines_sample_json: Path,
     output_tn_unresolved_review_tsv: Path,
@@ -2103,6 +2242,8 @@ def write_v04_candidate_package(
         "translation_language",
         "translation_text",
         "translation_status",
+        "translation_coverage",
+        "translation_coverage_basis",
         "link_basis",
         "confidence",
         "needs_human_review",
@@ -2111,6 +2252,16 @@ def write_v04_candidate_package(
     write_jsonl(output_inscriptions_jsonl, enriched_records)
     write_jsonl(output_inscriptions_with_lines_jsonl, joined_records)
     write_tsv(output_translation_units_tsv, translation_unit_rows, translation_unit_fields)
+    write_tsv(
+        output_translation_coverage_audit_tsv,
+        translation_coverage_audit_rows,
+        TRANSLATION_COVERAGE_AUDIT_FIELDS,
+    )
+    write_tsv(
+        output_translated_records_without_lines_tsv,
+        translated_records_without_lines_rows,
+        TRANSLATED_RECORDS_WITHOUT_LINES_FIELDS,
+    )
     write_tsv(output_enrichment_preview_tsv, preview_rows, PREVIEW_FIELDS)
     write_tsv(output_tn_unresolved_review_tsv, tn_residual_rows, TN_RESIDUAL_UNRESOLVED_FIELDS)
     checklist_rows = build_v04_review_checklist_rows(
@@ -2440,6 +2591,11 @@ def build_enriched_records(
                         "source_bibliographic_label": translation_row.get("source_bibliographic_label", ""),
                         "source_locator": translation_row.get("source_locator", ""),
                         "translation_status": translation_row.get("translation_status", "published_translation"),
+                        "translation_coverage": translation_row.get("translation_coverage", "uncertain"),
+                        "translation_coverage_basis": translation_row.get(
+                            "translation_coverage_basis",
+                            "Coverage classification not provided in translation unit table.",
+                        ),
                         "confidence": translation_row.get("confidence", "high"),
                         "notes": translation_row.get("notes", ""),
                     }
@@ -2643,6 +2799,16 @@ def main() -> None:
         default=V04_TRANSLATION_UNITS_CANDIDATE_PATH,
     )
     parser.add_argument(
+        "--output-v04-translation-coverage-audit-tsv",
+        type=Path,
+        default=V04_TRANSLATION_COVERAGE_AUDIT_PATH,
+    )
+    parser.add_argument(
+        "--output-v04-translated-records-without-lines-tsv",
+        type=Path,
+        default=V04_TRANSLATED_RECORDS_WITHOUT_LINES_PATH,
+    )
+    parser.add_argument(
         "--output-v04-enrichment-preview-tsv",
         type=Path,
         default=V04_ENRICHMENT_PREVIEW_CANDIDATE_PATH,
@@ -2701,6 +2867,28 @@ def main() -> None:
     )
     joined_records, joined_summary = build_joined_enriched_records_with_lines(enriched_records, line_rows)
     joined_sample_records = build_v04_enriched_with_lines_sample(joined_records)
+    line_count_by_record_id = Counter(
+        row.get("record_id", "")
+        for row in line_rows
+        if row.get("record_id", "")
+    )
+    title_by_record_id = {
+        row.get("record_id", ""): row.get("title_original", "")
+        for row in inscriptions
+        if row.get("record_id", "")
+    }
+    has_full_transliteration_by_record_id = {
+        row.get("record_id", ""): bool(row.get("full_transliteration"))
+        for row in inscriptions
+        if row.get("record_id", "")
+    }
+    translation_coverage_audit_rows = build_translation_coverage_audit_rows(
+        translation_unit_rows,
+        title_by_record_id=title_by_record_id,
+        line_count_by_record_id=line_count_by_record_id,
+        has_full_transliteration_by_record_id=has_full_transliteration_by_record_id,
+    )
+    translated_records_without_lines_rows = build_translated_records_without_lines_rows(joined_records)
     translation_preview_rows = build_translation_integration_preview_rows(
         translation_unit_rows,
         record_title_by_id,
@@ -2761,6 +2949,8 @@ def main() -> None:
         "translation_language",
         "translation_text",
         "translation_status",
+        "translation_coverage",
+        "translation_coverage_basis",
         "link_basis",
         "confidence",
         "needs_human_review",
@@ -2801,12 +2991,16 @@ def main() -> None:
         joined_sample_records=joined_sample_records,
         preview_rows=preview_rows,
         translation_unit_rows=translation_unit_rows,
+        translation_coverage_audit_rows=translation_coverage_audit_rows,
+        translated_records_without_lines_rows=translated_records_without_lines_rows,
         tn_residual_rows=tn_residual_unresolved_rows,
         summary=summary,
         action_rows=action_rows,
         output_inscriptions_jsonl=args.output_v04_inscriptions_jsonl,
         output_inscriptions_with_lines_jsonl=args.output_v04_inscriptions_with_lines_jsonl,
         output_translation_units_tsv=args.output_v04_translation_units_tsv,
+        output_translation_coverage_audit_tsv=args.output_v04_translation_coverage_audit_tsv,
+        output_translated_records_without_lines_tsv=args.output_v04_translated_records_without_lines_tsv,
         output_enrichment_preview_tsv=args.output_v04_enrichment_preview_tsv,
         output_enriched_with_lines_sample_json=args.output_v04_enriched_with_lines_sample_json,
         output_tn_unresolved_review_tsv=args.output_v04_tn_unresolved_review_tsv,
@@ -2827,6 +3021,8 @@ def main() -> None:
         f"{len(tn_manual_resolution_rows)} TN manual-resolution rows, "
         f"{len(tn_residual_unresolved_rows)} TN residual unresolved rows, "
         f"{len(tn_preview_rows)} TN preview rows, "
+        f"{len(translation_coverage_audit_rows)} translation coverage audit rows, "
+        f"{len(translated_records_without_lines_rows)} translated-records-without-lines rows, "
         f"{len(joined_records)} joined records, {joined_summary['total_line_rows_joined']} joined line rows, "
         "and v0.4 draft candidate files, "
         f"and {len(summary)} summary fields."

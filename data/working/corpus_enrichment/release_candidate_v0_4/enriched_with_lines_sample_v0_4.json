@@ -51,6 +51,8 @@
         "source_bibliographic_label": "Tun Aung Chain, The Rajakumar Inscription, Cultural Classics, Yangon Universities Press, 2001, pp. 25-37",
         "source_locator": "Cultural Classics 2001, Appendix I Myanmar Text, pp. 33-34 (OCR pages 10-11)",
         "translation_status": "published_translation",
+        "translation_coverage": "full_version",
+        "translation_coverage_basis": "Source labels this as Myanmar Text and provides a continuous complete translation of that version.",
         "confidence": "high",
         "notes": "version_label=Myanmar Text; integrated to Myanmar Rajakumar/Myazedi record."
       }
@@ -480,6 +482,8 @@
         "source_bibliographic_label": "U Pe Maung Tin and G. H. Luce, The Shwegugyi Pagoda Inscription, Pagan, 1141 A.D. (JBRS 10(2), 1920, pp. 67-74)",
         "source_locator": "JBRS 10(2), 1920, pp. 67-74",
         "translation_status": "published_translation",
+        "translation_coverage": "full_inscription",
+        "translation_coverage_basis": "JBRS 10(2), 1920, pp. 67-74 presents a continuous complete translation for the linked inscription.",
         "confidence": "high",
         "notes": "Completed published translation integrated into the enriched corpus candidate."
       },
@@ -490,6 +494,8 @@
         "source_bibliographic_label": "U Tun Nyein / Taw Sein Ko / Forchhammer, Inscriptions of Pagan, Pinya and Ava: Translation, with Notes. Rangoon: Government Press, 1899.",
         "source_locator": "TN 73-76 (Plate I, No. (1) segment before No. (2); OCR pages 86-89)",
         "translation_status": "published_partial_translation",
+        "translation_coverage": "partial_inscription",
+        "translation_coverage_basis": "TN numbered entry provides a bounded segment translation for this linked inscription record, not the full inscription text.",
         "confidence": "medium-high",
         "notes": "version_label=TN locator TN 73-76; subentry=No. (1) only; source_iob_plate=Plate I; linked via List 66(a) / PPA 159 / TN p.73 concordance."
       }
@@ -1067,6 +1073,8 @@
         "source_bibliographic_label": "U Tun Nyein / Taw Sein Ko / Forchhammer, Inscriptions of Pagan, Pinya and Ava: Translation, with Notes. Rangoon: Government Press, 1899.",
         "source_locator": "TN 70-71 (Plate X b; linked through SIP 21 / IOB Plate X b source-text match, not through prior corpus plate metadata; OCR pages 83, 84)",
         "translation_status": "published_partial_translation",
+        "translation_coverage": "partial_inscription",
+        "translation_coverage_basis": "TN numbered entry provides a bounded segment translation for this linked inscription record, not the full inscription text.",
         "confidence": "high",
         "notes": "version_label=TN locator TN 70-71; subentry=No. (6) only; source_iob_plate=Plate X b; linked through SIP 21 / IOB Plate X b source-text match, not prior corpus plate metadata."
       }

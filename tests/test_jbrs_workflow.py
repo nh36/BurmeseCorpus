@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import subprocess
 import re
 import sys
 import tempfile
@@ -76,6 +77,8 @@ from jbrs_workflow_common import (
     V04_INSCRIPTIONS_WITH_LINES_CANDIDATE_PATH,
     V04_ENRICHED_WITH_LINES_SAMPLE_PATH,
     V04_TRANSLATION_UNITS_CANDIDATE_PATH,
+    V04_TRANSLATION_COVERAGE_AUDIT_PATH,
+    V04_TRANSLATED_RECORDS_WITHOUT_LINES_PATH,
     V04_ENRICHMENT_PREVIEW_CANDIDATE_PATH,
     V04_TN_UNRESOLVED_REVIEW_PATH,
     V04_REVIEW_CHECKLIST_PATH,
@@ -177,6 +180,8 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
         cls.v04_joined_candidate_records = read_jsonl(V04_INSCRIPTIONS_WITH_LINES_CANDIDATE_PATH)
         cls.v04_joined_sample_records = json.loads(V04_ENRICHED_WITH_LINES_SAMPLE_PATH.read_text(encoding="utf-8"))
         cls.v04_translation_unit_rows = read_tsv(V04_TRANSLATION_UNITS_CANDIDATE_PATH)
+        cls.v04_translation_coverage_audit_rows = read_tsv(V04_TRANSLATION_COVERAGE_AUDIT_PATH)
+        cls.v04_translated_without_lines_rows = read_tsv(V04_TRANSLATED_RECORDS_WITHOUT_LINES_PATH)
         cls.v04_enrichment_preview_rows = read_tsv(V04_ENRICHMENT_PREVIEW_CANDIDATE_PATH)
         cls.v04_tn_unresolved_rows = read_tsv(V04_TN_UNRESOLVED_REVIEW_PATH)
         cls.v04_review_checklist_rows = read_tsv(V04_REVIEW_CHECKLIST_PATH)
@@ -264,6 +269,8 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
             V04_INSCRIPTIONS_CANDIDATE_PATH,
             V04_INSCRIPTIONS_WITH_LINES_CANDIDATE_PATH,
             V04_TRANSLATION_UNITS_CANDIDATE_PATH,
+            V04_TRANSLATION_COVERAGE_AUDIT_PATH,
+            V04_TRANSLATED_RECORDS_WITHOUT_LINES_PATH,
             V04_ENRICHMENT_PREVIEW_CANDIDATE_PATH,
             V04_ENRICHED_WITH_LINES_SAMPLE_PATH,
             V04_TN_UNRESOLVED_REVIEW_PATH,
@@ -742,6 +749,8 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
         shwegugyi_unit = next(row for row in self.translation_unit_rows if row["source_key"] == "jbrsShwegugyi1920")
         self.assertEqual(shwegugyi_unit["linked_corpus_record_id"], "obi-v01-n0004-ob-p0011")
         self.assertEqual(shwegugyi_unit["translation_status"], "published_translation")
+        self.assertEqual(shwegugyi_unit["translation_coverage"], "full_inscription")
+        self.assertTrue(shwegugyi_unit["translation_coverage_basis"])
         self.assertTrue(shwegugyi_unit["translation_text"])
         self.assertIn("Reverence to the Buddha", shwegugyi_unit["translation_text"])
         self.assertGreater(len(shwegugyi_unit["translation_text"]), 1000)
@@ -756,6 +765,10 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
         self.assertEqual(units_by_id["rajakumar-translation-2001-pali"]["linked_corpus_record_id"], "obi-v01-n0001-tx-p0002")
         self.assertEqual(units_by_id["rajakumar-translation-2001-mon"]["linked_corpus_record_id"], "")
         self.assertEqual(units_by_id["rajakumar-translation-2001-pyu"]["linked_corpus_record_id"], "")
+        self.assertEqual(units_by_id["rajakumar-translation-2001-myanmar"]["translation_coverage"], "full_version")
+        self.assertEqual(units_by_id["rajakumar-translation-2001-mon"]["translation_coverage"], "full_version")
+        self.assertEqual(units_by_id["rajakumar-translation-2001-pyu"]["translation_coverage"], "excerpt")
+        self.assertEqual(units_by_id["rajakumar-translation-2001-pali"]["translation_coverage"], "full_version")
         self.assertTrue(units_by_id["rajakumar-translation-2001-mon"]["needs_human_review"] == "true")
         self.assertTrue(units_by_id["rajakumar-translation-2001-pyu"]["needs_human_review"] == "true")
         self.assertIn("version_label=", units_by_id["rajakumar-translation-2001-myanmar"]["notes"])
@@ -769,6 +782,8 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
         tn_units = [row for row in self.translation_unit_rows if row["source_key"] == "tnInscriptionsPaganPinyaAva"]
         self.assertGreaterEqual(len(tn_units), 12)
         self.assertLessEqual(len(tn_units), 30)
+        self.assertTrue(all(row["translation_coverage"] == "partial_inscription" for row in tn_units))
+        self.assertTrue(all(row["translation_coverage_basis"] for row in tn_units))
         self.assertTrue(all(row["matched_local_file_id"] == "hvd-hxx68w-1780753436" for row in tn_units))
         self.assertTrue(all(row["linked_corpus_record_id"] for row in tn_units))
         self.assertTrue(all(row["linked_inscription_id"] for row in tn_units))
@@ -789,6 +804,10 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
             for marker in forbidden_markers:
                 self.assertNotIn(marker, row["translation_text"], f"{row['translation_unit_id']} still contains OCR boilerplate")
         self.assertFalse(any(row["source_key"] == "jbrsAnanda1976" for row in self.translation_unit_rows))
+        self.assertTrue(
+            all(row["translation_coverage"] in common.TRANSLATION_COVERAGE_VALUES for row in self.translation_unit_rows)
+        )
+        self.assertTrue(all(row["translation_coverage_basis"] for row in self.translation_unit_rows))
 
     def test_translation_integration_preview_tracks_completed_translation(self) -> None:
         self.assertGreaterEqual(len(self.translation_integration_preview_rows), 15)
@@ -919,6 +938,8 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
                     translation.get("source_key") == "tnInscriptionsPaganPinyaAva"
                     and translation.get("source_locator") == unit["source_locator"]
                     and translation.get("text") == unit["translation_text"]
+                    and translation.get("translation_coverage") == unit["translation_coverage"]
+                    and translation.get("translation_coverage_basis") == unit["translation_coverage_basis"]
                     for translation in translations
                 ),
                 f"{unit['translation_unit_id']} not found in enriched record {record_id}",
@@ -926,6 +947,7 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
 
     def test_v04_candidate_outputs_preserve_core_constraints(self) -> None:
         self.assertEqual(len(self.v04_candidate_records), len(self.corpus_release_records))
+        self.assertEqual(len(self.v04_joined_candidate_records), 1152)
         baseline_by_id = {row["record_id"]: row for row in self.corpus_release_records}
         v04_by_id = {row["record_id"]: row for row in self.v04_candidate_records}
         joined_by_id = {row["record_id"]: row for row in self.v04_joined_candidate_records}
@@ -937,6 +959,9 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
             self.assertEqual(joined_by_id[record_id].get("full_transliteration"), baseline.get("full_transliteration"))
             self.assertIsInstance(joined_by_id[record_id].get("lines"), list)
             self.assertEqual(joined_by_id[record_id].get("translations", []), v04_by_id[record_id].get("translations", []))
+            for translation in v04_by_id[record_id].get("translations", []):
+                self.assertIn(translation.get("translation_coverage"), common.TRANSLATION_COVERAGE_VALUES)
+                self.assertTrue(translation.get("translation_coverage_basis"))
 
         integrated_units = [row for row in self.translation_unit_rows if row["linked_corpus_record_id"]]
         v04_unit_ids = {row["translation_unit_id"] for row in self.v04_translation_unit_rows if row["translation_unit_id"]}
@@ -948,6 +973,8 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
                     translation.get("source_key") == unit["source_key"]
                     and translation.get("source_locator") == unit["source_locator"]
                     and translation.get("text") == unit["translation_text"]
+                    and translation.get("translation_coverage") == unit["translation_coverage"]
+                    and translation.get("translation_coverage_basis") == unit["translation_coverage_basis"]
                     for translation in joined_record.get("translations", [])
                 ),
                 f"{unit['translation_unit_id']} not found in joined record {unit['linked_corpus_record_id']}",
@@ -967,6 +994,8 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
         rajakumar_pyu = next(row for row in self.v04_translation_unit_rows if row["translation_unit_id"] == "rajakumar-translation-2001-pyu")
         self.assertEqual(rajakumar_mon["linked_corpus_record_id"], "")
         self.assertEqual(rajakumar_pyu["linked_corpus_record_id"], "")
+        self.assertTrue(all(row["translation_coverage"] in common.TRANSLATION_COVERAGE_VALUES for row in self.v04_translation_unit_rows))
+        self.assertTrue(all(row["translation_coverage_basis"] for row in self.v04_translation_unit_rows))
         self.assertFalse(any(row["source_key"] == "jbrsAnanda1976" for row in self.v04_translation_unit_rows))
         self.assertFalse(
             any(
@@ -978,6 +1007,7 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
 
         all_joined_lines = [line for record in self.v04_joined_candidate_records for line in record.get("lines", [])]
         baseline_line_count_by_record = Counter(row["record_id"] for row in self.corpus_release_line_rows if row.get("record_id"))
+        self.assertEqual(len(all_joined_lines), 24299)
         self.assertEqual(len(all_joined_lines), len(self.corpus_release_line_rows))
         self.assertEqual(len({line["line_id"] for line in all_joined_lines}), len(self.corpus_release_line_rows))
         self.assertTrue(all(isinstance(record.get("lines"), list) for record in self.v04_joined_candidate_records))
@@ -989,6 +1019,27 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
             sum(1 for record in self.v04_joined_candidate_records if not record.get("lines")),
             sum(1 for record_id in baseline_by_id if baseline_line_count_by_record.get(record_id, 0) == 0),
         )
+        translated_without_lines_actual = sorted(
+            row["record_id"]
+            for row in self.v04_joined_candidate_records
+            if row.get("translations") and not row.get("lines")
+        )
+        translated_without_lines_reported = sorted(
+            row["record_id"] for row in self.v04_translated_without_lines_rows if row.get("record_id")
+        )
+        self.assertEqual(translated_without_lines_actual, translated_without_lines_reported)
+        for row in self.v04_translated_without_lines_rows:
+            self.assertTrue(row["reason"])
+
+        audit_by_unit = {row["translation_unit_id"]: row for row in self.v04_translation_coverage_audit_rows}
+        self.assertEqual(set(audit_by_unit), set(v04_unit_ids))
+        for unit in self.v04_translation_unit_rows:
+            audit_row = audit_by_unit[unit["translation_unit_id"]]
+            self.assertEqual(audit_row["translation_coverage"], unit["translation_coverage"])
+            self.assertEqual(audit_row["translation_coverage_basis"], unit["translation_coverage_basis"])
+            self.assertEqual(audit_row["translation_length_chars"], str(len(unit["translation_text"])))
+            self.assertIn(audit_row["has_full_transliteration"], {"true", "false"})
+            self.assertTrue(audit_row["review_priority"])
         self.assertEqual(len(self.v04_joined_sample_records), 5)
         self.assertEqual(
             {row["record_id"] for row in self.v04_joined_sample_records},
@@ -1013,8 +1064,31 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
         )
         self.assertIn("v0.4 candidate release notes", self.v04_release_notes_text)
         self.assertIn("Residual unresolved TN items", self.v04_release_notes_text)
+        self.assertIn("Translation coverage summary", self.v04_release_notes_text)
         self.assertIn("inscriptions_enriched_with_lines_v0_4_candidate.jsonl", self.v04_release_notes_text)
         self.assertIn("translations remain full text in both files", self.v04_release_notes_text)
+
+    def test_show_enriched_record_helper(self) -> None:
+        script_path = ROOT / "scripts" / "show_enriched_record.py"
+        target_record_id = "obi-v01-n0001-tx-p0001"
+        summary_run = subprocess.run(
+        ["python3", str(script_path), target_record_id, "--format", "summary"],
+        check=True,
+        capture_output=True,
+        text=True,
+        )
+        self.assertIn(f"record_id: {target_record_id}", summary_run.stdout)
+        self.assertIn("translation_count:", summary_run.stdout)
+        json_run = subprocess.run(
+        ["python3", str(script_path), target_record_id, "--format", "json"],
+        check=True,
+        capture_output=True,
+        text=True,
+        )
+        payload = json.loads(json_run.stdout)
+        self.assertEqual(payload["record_id"], target_record_id)
+        self.assertIn("lines", payload)
+        self.assertIn("translations", payload)
 
     def test_tn_working_ocr_artifacts_use_relative_paths(self) -> None:
         tracked_paths = [

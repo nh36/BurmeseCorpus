@@ -20,6 +20,15 @@
 - records without line rows: 37
 - total line rows joined: 24299
 
+## Translation coverage summary
+
+- full_inscription: 1
+- full_version: 3
+- partial_inscription: 27
+- excerpt: 1
+- uncertain: 0
+- joined records preserve full translations while embedding line-level rows.
+
 ## Sources integrated
 
 - U Pe Maung Tin and G. H. Luce, The Shwegugyi Pagoda Inscription, Pagan, 1141 A.D. (JBRS 10(2), 1920, pp. 67-74)
