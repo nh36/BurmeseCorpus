@@ -117,6 +117,13 @@ TN_TRANSLATION_CANDIDATES_REVIEW_PATH = CORPUS_ENRICHMENT_DIRECTORY / "tn_transl
 TN_MANUAL_RESOLUTION_LOG_PATH = CORPUS_ENRICHMENT_DIRECTORY / "tn_manual_resolution_log.tsv"
 TN_RESIDUAL_UNRESOLVED_PATH = CORPUS_ENRICHMENT_DIRECTORY / "tn_residual_unresolved_after_manual_review.tsv"
 TN_TRANSLATION_INTEGRATION_PREVIEW_PATH = CORPUS_ENRICHMENT_DIRECTORY / "tn_translation_integration_preview.tsv"
+RELEASE_CANDIDATE_V04_DIRECTORY = CORPUS_ENRICHMENT_DIRECTORY / "release_candidate_v0_4"
+V04_INSCRIPTIONS_CANDIDATE_PATH = RELEASE_CANDIDATE_V04_DIRECTORY / "inscriptions_enriched_v0_4_candidate.jsonl"
+V04_TRANSLATION_UNITS_CANDIDATE_PATH = RELEASE_CANDIDATE_V04_DIRECTORY / "translation_units_v0_4_candidate.tsv"
+V04_ENRICHMENT_PREVIEW_CANDIDATE_PATH = RELEASE_CANDIDATE_V04_DIRECTORY / "enrichment_preview_v0_4_candidate.tsv"
+V04_TN_UNRESOLVED_REVIEW_PATH = RELEASE_CANDIDATE_V04_DIRECTORY / "tn_unresolved_review_v0_4.tsv"
+V04_REVIEW_CHECKLIST_PATH = RELEASE_CANDIDATE_V04_DIRECTORY / "review_checklist_v0_4.tsv"
+V04_RELEASE_NOTES_DRAFT_PATH = RELEASE_CANDIDATE_V04_DIRECTORY / "release_notes_v0_4_draft.md"
 IOB_SOURCE_KEY = "lucePeMaungTinInscriptionsOfBurma"
 LIST_SOURCE_KEY = "duroiselle1921list"
 PPA_SOURCE_KEY = "ppaCatalogue"
@@ -124,6 +131,7 @@ TN_SOURCE_KEY = "tnInscriptionsPaganPinyaAva"
 SIP_SOURCE_KEY = "sipSelectionsPagan"
 UB_SOURCE_KEY = "ubSourceFamily"
 JBRS_SOURCE_KEY = "journalBurmaResearchSociety"
+ANANDA_TRANSLATION_SOURCE_KEY = "jbrsAnanda1976"
 MAX_GITHUB_CONTENTS_SIZE = 1_000_000
 
 RAW_REFERENCE_HUNT_FIELDS = [
@@ -1251,6 +1259,13 @@ TN_RESIDUAL_UNRESOLVED_FIELDS = [
     "evidence_checked",
     "reason_not_integrated",
     "future_action",
+    "notes",
+]
+V04_REVIEW_CHECKLIST_FIELDS = [
+    "check_id",
+    "review_item",
+    "status",
+    "evidence_path",
     "notes",
 ]
 ENRICHED_PREVIEW_FIELDS = [
@@ -4500,6 +4515,12 @@ def validate_jbrs_workflow() -> list[str]:
         TN_MANUAL_RESOLUTION_LOG_PATH,
         TN_RESIDUAL_UNRESOLVED_PATH,
         TN_TRANSLATION_INTEGRATION_PREVIEW_PATH,
+        V04_INSCRIPTIONS_CANDIDATE_PATH,
+        V04_TRANSLATION_UNITS_CANDIDATE_PATH,
+        V04_ENRICHMENT_PREVIEW_CANDIDATE_PATH,
+        V04_TN_UNRESOLVED_REVIEW_PATH,
+        V04_REVIEW_CHECKLIST_PATH,
+        V04_RELEASE_NOTES_DRAFT_PATH,
         TN_WORKING_OCR_PLAIN_TEXT_PATH,
         TN_WORKING_OCR_CLEANED_TEXT_PATH,
         TN_WORKING_OCR_REPORT_PATH,
@@ -4527,6 +4548,18 @@ def validate_jbrs_workflow() -> list[str]:
     tn_residual_unresolved_header, _ = tsv_header_and_row_count(
         TN_RESIDUAL_UNRESOLVED_PATH, TN_RESIDUAL_UNRESOLVED_FIELDS
     )
+    v04_translation_units_header, _ = tsv_header_and_row_count(
+        V04_TRANSLATION_UNITS_CANDIDATE_PATH, TRANSLATION_UNITS_EXTRACTED_FIELDS
+    )
+    v04_enrichment_preview_header, _ = tsv_header_and_row_count(
+        V04_ENRICHMENT_PREVIEW_CANDIDATE_PATH, ENRICHED_PREVIEW_FIELDS
+    )
+    v04_tn_unresolved_header, _ = tsv_header_and_row_count(
+        V04_TN_UNRESOLVED_REVIEW_PATH, TN_RESIDUAL_UNRESOLVED_FIELDS
+    )
+    v04_review_checklist_header, _ = tsv_header_and_row_count(
+        V04_REVIEW_CHECKLIST_PATH, V04_REVIEW_CHECKLIST_FIELDS
+    )
     enriched_preview_header, enriched_preview_row_count = tsv_header_and_row_count(
         ENRICHED_CANDIDATE_PREVIEW_PATH, ENRICHED_PREVIEW_FIELDS
     )
@@ -4535,6 +4568,10 @@ def validate_jbrs_workflow() -> list[str]:
     expected_tn_target_status_header = "\t".join(TN_TRANSLATION_TARGET_STATUS_FIELDS)
     expected_tn_manual_resolution_header = "\t".join(TN_MANUAL_RESOLUTION_LOG_FIELDS)
     expected_tn_residual_unresolved_header = "\t".join(TN_RESIDUAL_UNRESOLVED_FIELDS)
+    expected_v04_translation_units_header = "\t".join(TRANSLATION_UNITS_EXTRACTED_FIELDS)
+    expected_v04_enrichment_preview_header = "\t".join(ENRICHED_PREVIEW_FIELDS)
+    expected_v04_tn_unresolved_header = "\t".join(TN_RESIDUAL_UNRESOLVED_FIELDS)
+    expected_v04_review_checklist_header = "\t".join(V04_REVIEW_CHECKLIST_FIELDS)
     expected_enriched_preview_header = "\t".join(ENRICHED_PREVIEW_FIELDS)
     if batch_header != expected_batch_header:
         errors.append("JBRS OCR batch plan TSV is blank or missing the expected header.")
@@ -4548,6 +4585,14 @@ def validate_jbrs_workflow() -> list[str]:
         errors.append("TN manual resolution log TSV is blank or missing the expected header.")
     if tn_residual_unresolved_header != expected_tn_residual_unresolved_header:
         errors.append("TN residual unresolved TSV is blank or missing the expected header.")
+    if v04_translation_units_header != expected_v04_translation_units_header:
+        errors.append("v0.4 translation units TSV is blank or missing the expected header.")
+    if v04_enrichment_preview_header != expected_v04_enrichment_preview_header:
+        errors.append("v0.4 enrichment preview TSV is blank or missing the expected header.")
+    if v04_tn_unresolved_header != expected_v04_tn_unresolved_header:
+        errors.append("v0.4 TN unresolved review TSV is blank or missing the expected header.")
+    if v04_review_checklist_header != expected_v04_review_checklist_header:
+        errors.append("v0.4 review checklist TSV is blank or missing the expected header.")
     if JBRS_OCR_BATCH_PLAN_PATH.stat().st_size > MAX_GITHUB_CONTENTS_SIZE:
         errors.append("JBRS OCR batch plan TSV exceeds the GitHub contents-view size threshold.")
     if JBRS_OCR_STATUS_LOG_PATH.stat().st_size > MAX_GITHUB_CONTENTS_SIZE:
@@ -4597,7 +4642,12 @@ def validate_jbrs_workflow() -> list[str]:
     tn_manual_resolution_rows = read_tsv(TN_MANUAL_RESOLUTION_LOG_PATH)
     tn_residual_unresolved_rows = read_tsv(TN_RESIDUAL_UNRESOLVED_PATH)
     tn_preview_rows = read_tsv(TN_TRANSLATION_INTEGRATION_PREVIEW_PATH)
+    v04_translation_units_rows = read_tsv(V04_TRANSLATION_UNITS_CANDIDATE_PATH)
+    v04_enrichment_preview_rows = read_tsv(V04_ENRICHMENT_PREVIEW_CANDIDATE_PATH)
+    v04_tn_unresolved_rows = read_tsv(V04_TN_UNRESOLVED_REVIEW_PATH)
+    v04_review_checklist_rows = read_tsv(V04_REVIEW_CHECKLIST_PATH)
     enriched_summary = json.loads(ENRICHED_CANDIDATE_SUMMARY_PATH.read_text(encoding="utf-8"))
+    v04_release_notes_text = V04_RELEASE_NOTES_DRAFT_PATH.read_text(encoding="utf-8")
     try:
         baseline_corpus_records = read_jsonl(CORPUS_RELEASE_INSCRIPTIONS_PATH)
     except json.JSONDecodeError as exc:
@@ -4610,6 +4660,13 @@ def validate_jbrs_workflow() -> list[str]:
     except json.JSONDecodeError as exc:
         errors.append(
             f"Enriched corpus candidate JSONL is invalid at line {exc.lineno}: {exc.msg}"
+        )
+        return errors
+    try:
+        v04_candidate_records = read_jsonl(V04_INSCRIPTIONS_CANDIDATE_PATH)
+    except json.JSONDecodeError as exc:
+        errors.append(
+            f"v0.4 candidate JSONL is invalid at line {exc.lineno}: {exc.msg}"
         )
         return errors
     citation_workflow_summary = json.loads(CORPUS_CITATION_WORKFLOW_SUMMARY_PATH.read_text(encoding="utf-8"))
@@ -5055,6 +5112,91 @@ def validate_jbrs_workflow() -> list[str]:
         if not row.get("evidence_checked", "").strip():
             errors.append(f"TN residual unresolved row is missing evidence_checked: {locator}")
 
+    baseline_by_record_id = {row.get("record_id", ""): row for row in baseline_corpus_records if row.get("record_id", "")}
+    v04_by_record_id = {row.get("record_id", ""): row for row in v04_candidate_records if row.get("record_id", "")}
+    if len(v04_candidate_records) != len(baseline_corpus_records):
+        errors.append(
+            f"v0.4 candidate record count {len(v04_candidate_records)} does not match baseline v0.3 count {len(baseline_corpus_records)}."
+        )
+    if set(v04_by_record_id) != set(baseline_by_record_id):
+        errors.append("v0.4 candidate record IDs do not match baseline v0.3 record IDs.")
+    for record_id, baseline in baseline_by_record_id.items():
+        v04_record = v04_by_record_id.get(record_id)
+        if not v04_record:
+            continue
+        if v04_record.get("full_transliteration") != baseline.get("full_transliteration"):
+            errors.append(f"v0.4 candidate changed full_transliteration for record {record_id}.")
+
+    v04_translation_unit_ids = {
+        row.get("translation_unit_id", "")
+        for row in v04_translation_units_rows
+        if row.get("translation_unit_id", "")
+    }
+    integrated_units = [row for row in translation_unit_rows if row.get("linked_corpus_record_id", "").strip()]
+    for unit in integrated_units:
+        unit_id = unit.get("translation_unit_id", "")
+        if unit_id not in v04_translation_unit_ids:
+            errors.append(f"Integrated translation unit missing from v0.4 translation_units table: {unit_id}")
+        record_id = unit.get("linked_corpus_record_id", "")
+        v04_record = v04_by_record_id.get(record_id)
+        if not v04_record:
+            continue
+        translations = v04_record.get("translations", [])
+        if not any(
+            translation.get("source_key") == unit.get("source_key", "")
+            and translation.get("source_locator") == unit.get("source_locator", "")
+            and translation.get("text") == unit.get("translation_text", "")
+            for translation in translations
+        ):
+            errors.append(f"Integrated translation unit not found in v0.4 candidate record translations: {unit_id}")
+
+    unresolved_v04_locators = {
+        row.get("tn_locator", "").strip()
+        for row in v04_tn_unresolved_rows
+        if row.get("tn_locator", "").strip()
+    }
+    for row in v04_translation_units_rows:
+        if row.get("source_key", "") != TN_SOURCE_KEY:
+            continue
+        if not row.get("linked_corpus_record_id", "").strip():
+            continue
+        locator_match = re.search(r"TN\s*[\d\- ]+(?:\s*\|\s*TN\s*[\d\- ]+)?", row.get("source_locator", ""))
+        locator = locator_match.group(0).strip() if locator_match else ""
+        if locator and locator in unresolved_v04_locators:
+            errors.append(f"Unresolved TN locator was silently integrated into v0.4: {locator}")
+
+    for row in v04_translation_units_rows:
+        unit_id = row.get("translation_unit_id", "")
+        if unit_id in {"rajakumar-translation-2001-mon", "rajakumar-translation-2001-pyu"}:
+            if row.get("linked_corpus_record_id", "").strip() or row.get("linked_inscription_id", "").strip():
+                errors.append(f"Rajakumar Mon/Pyu unit must remain candidate-only in v0.4: {unit_id}")
+        if row.get("source_key", "") == ANANDA_TRANSLATION_SOURCE_KEY:
+            errors.append("Ananda translation unit should not appear in v0.4 translation units.")
+
+    for record in v04_candidate_records:
+        for translation in record.get("translations", []):
+            if translation.get("source_key") == ANANDA_TRANSLATION_SOURCE_KEY:
+                errors.append(f"Ananda translation appears in v0.4 candidate record {record.get('record_id', '')}.")
+
+    for row in v04_tn_unresolved_rows:
+        if not row.get("final_status", "").strip():
+            errors.append(f"v0.4 TN unresolved row missing final_status: {row.get('tn_locator', '')}")
+        if not row.get("reason_not_integrated", "").strip():
+            errors.append(f"v0.4 TN unresolved row missing reason_not_integrated: {row.get('tn_locator', '')}")
+
+    for row in v04_review_checklist_rows:
+        if not row.get("check_id", "").strip() or not row.get("review_item", "").strip():
+            errors.append("v0.4 review checklist row is missing check_id or review_item.")
+        if row.get("status", "") not in {"needs_human_review", "done", "blocked"}:
+            errors.append(f"v0.4 review checklist row has unsupported status: {row.get('check_id', '')}")
+
+    if "v0.4 candidate release notes" not in v04_release_notes_text:
+        errors.append("v0.4 release notes draft is missing the expected heading.")
+    if "Residual unresolved TN items" not in v04_release_notes_text:
+        errors.append("v0.4 release notes draft is missing residual TN section.")
+    if ABSOLUTE_PATH_PATTERN.search(v04_release_notes_text):
+        errors.append("v0.4 release notes draft contains an absolute path.")
+
     for row in tn_target_rows:
         if ABSOLUTE_PATH_PATTERN.search(" ".join(row.values())):
             errors.append("tn_translation_targets.tsv contains an absolute path.")
@@ -5078,6 +5220,22 @@ def validate_jbrs_workflow() -> list[str]:
     for row in tn_preview_rows:
         if ABSOLUTE_PATH_PATTERN.search(" ".join(row.values())):
             errors.append("tn_translation_integration_preview.tsv contains an absolute path.")
+            break
+    for row in v04_translation_units_rows:
+        if ABSOLUTE_PATH_PATTERN.search(" ".join(row.values())):
+            errors.append("translation_units_v0_4_candidate.tsv contains an absolute path.")
+            break
+    for row in v04_enrichment_preview_rows:
+        if ABSOLUTE_PATH_PATTERN.search(" ".join(row.values())):
+            errors.append("enrichment_preview_v0_4_candidate.tsv contains an absolute path.")
+            break
+    for row in v04_tn_unresolved_rows:
+        if ABSOLUTE_PATH_PATTERN.search(" ".join(row.values())):
+            errors.append("tn_unresolved_review_v0_4.tsv contains an absolute path.")
+            break
+    for row in v04_review_checklist_rows:
+        if ABSOLUTE_PATH_PATTERN.search(" ".join(row.values())):
+            errors.append("review_checklist_v0_4.tsv contains an absolute path.")
             break
     for path in [
         TN_WORKING_OCR_PLAIN_TEXT_PATH,

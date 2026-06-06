@@ -54,6 +54,13 @@ TN_TRANSLATION_CANDIDATES_REVIEW_PATH = CORPUS_ENRICHMENT_DIRECTORY / "tn_transl
 TN_MANUAL_RESOLUTION_LOG_PATH = CORPUS_ENRICHMENT_DIRECTORY / "tn_manual_resolution_log.tsv"
 TN_RESIDUAL_UNRESOLVED_PATH = CORPUS_ENRICHMENT_DIRECTORY / "tn_residual_unresolved_after_manual_review.tsv"
 TN_TRANSLATION_INTEGRATION_PREVIEW_PATH = CORPUS_ENRICHMENT_DIRECTORY / "tn_translation_integration_preview.tsv"
+RELEASE_CANDIDATE_V04_DIRECTORY = CORPUS_ENRICHMENT_DIRECTORY / "release_candidate_v0_4"
+V04_INSCRIPTIONS_CANDIDATE_PATH = RELEASE_CANDIDATE_V04_DIRECTORY / "inscriptions_enriched_v0_4_candidate.jsonl"
+V04_TRANSLATION_UNITS_CANDIDATE_PATH = RELEASE_CANDIDATE_V04_DIRECTORY / "translation_units_v0_4_candidate.tsv"
+V04_ENRICHMENT_PREVIEW_CANDIDATE_PATH = RELEASE_CANDIDATE_V04_DIRECTORY / "enrichment_preview_v0_4_candidate.tsv"
+V04_TN_UNRESOLVED_REVIEW_PATH = RELEASE_CANDIDATE_V04_DIRECTORY / "tn_unresolved_review_v0_4.tsv"
+V04_REVIEW_CHECKLIST_PATH = RELEASE_CANDIDATE_V04_DIRECTORY / "review_checklist_v0_4.tsv"
+V04_RELEASE_NOTES_DRAFT_PATH = RELEASE_CANDIDATE_V04_DIRECTORY / "release_notes_v0_4_draft.md"
 SHWEGUGYI_TRANSLATION_TEXT_PATH = CORPUS_ENRICHMENT_DIRECTORY / "shwegugyi_translation_extracted.txt"
 RAJAKUMAR_TRANSLATION_TEXT_PATH = CORPUS_ENRICHMENT_DIRECTORY / "rajakumar_translation_extracted.txt"
 TN_OCR_PLAIN_TEXT_PATH = TN_OCR_DIRECTORY / "ocr_plain_text_with_page_breaks.txt"
@@ -520,6 +527,14 @@ TN_RESIDUAL_UNRESOLVED_FIELDS = [
     "evidence_checked",
     "reason_not_integrated",
     "future_action",
+    "notes",
+]
+
+V04_REVIEW_CHECKLIST_FIELDS = [
+    "check_id",
+    "review_item",
+    "status",
+    "evidence_path",
     "notes",
 ]
 
@@ -1743,6 +1758,188 @@ def build_tn_residual_unresolved_rows(
     return rows
 
 
+def build_v04_review_checklist_rows(
+    *,
+    tn_residual_rows: list[dict],
+    translation_rows: list[dict],
+) -> list[dict]:
+    unresolved_locators = ", ".join(sorted(row.get("tn_locator", "") for row in tn_residual_rows if row.get("tn_locator", "")))
+    unresolved_note = unresolved_locators or "none"
+    has_rajakumar_unlinked = any(
+        row.get("source_key") == RAJAKUMAR_TRANSLATION_SOURCE_KEY and not row.get("linked_corpus_record_id", "").strip()
+        for row in translation_rows
+    )
+    rows = [
+        {
+            "check_id": "v04-check-001",
+            "review_item": "Confirm residual TN unresolved decisions and future-action notes.",
+            "status": "needs_human_review",
+            "evidence_path": "data/working/corpus_enrichment/release_candidate_v0_4/tn_unresolved_review_v0_4.tsv",
+            "notes": f"Residual locators: {unresolved_note}.",
+        },
+        {
+            "check_id": "v04-check-002",
+            "review_item": "Confirm no unresolved TN locator was silently integrated.",
+            "status": "needs_human_review",
+            "evidence_path": "data/working/corpus_enrichment/release_candidate_v0_4/inscriptions_enriched_v0_4_candidate.jsonl",
+            "notes": "Cross-check TN unresolved table against integrated TN translation source_locator values.",
+        },
+        {
+            "check_id": "v04-check-003",
+            "review_item": "Confirm Rajakumar Mon/Pyu remain candidate-only unless new secure records are found.",
+            "status": "needs_human_review",
+            "evidence_path": "data/working/corpus_enrichment/release_candidate_v0_4/translation_units_v0_4_candidate.tsv",
+            "notes": "Unlinked Rajakumar Mon/Pyu units present." if has_rajakumar_unlinked else "No unlinked Rajakumar Mon/Pyu units remain.",
+        },
+        {
+            "check_id": "v04-check-004",
+            "review_item": "Confirm Ananda remains excluded from integrated translation units.",
+            "status": "needs_human_review",
+            "evidence_path": "data/working/corpus_enrichment/release_candidate_v0_4/translation_units_v0_4_candidate.tsv",
+            "notes": "Ananda remains out of scope for this release-candidate workflow.",
+        },
+        {
+            "check_id": "v04-check-005",
+            "review_item": "Spot-check manual TN hard-case integrations (TN 36-57, TN 73-76, TN 81).",
+            "status": "needs_human_review",
+            "evidence_path": "data/working/corpus_enrichment/tn_manual_resolution_log.tsv",
+            "notes": "Verify segment boundaries and linkage rationale are acceptable for publication.",
+        },
+    ]
+    return rows
+
+
+def render_markdown_bullets(items: list[str]) -> str:
+    if not items:
+        return "- none"
+    return "\n".join(f"- {item}" for item in items)
+
+
+def build_v04_release_notes_text(
+    *,
+    summary: dict,
+    action_rows: list[dict],
+    tn_residual_rows: list[dict],
+    translation_rows: list[dict],
+) -> str:
+    integrated_source_keys = sorted(
+        {
+            row.get("source_key", "")
+            for row in translation_rows
+            if row.get("linked_corpus_record_id", "").strip()
+        }
+    )
+    integrated_sources = [source_label(key) for key in integrated_source_keys if key]
+    blocked_source_rows = [
+        row
+        for row in action_rows
+        if row.get("action_status")
+        not in {
+            "translation_integrated",
+            "translation_integrated_version_split_complete",
+            "translation_integrated_partial_version_split",
+            "translation_integrated_myanmar_only",
+            "tn_extraction_substantially_complete_manual_residue_remaining",
+        }
+    ]
+    blocked_sources = [
+        f"{row.get('source_key', '')}: {row.get('action_status', '')}"
+        for row in blocked_source_rows
+    ]
+    residual_lines = [
+        f"{row.get('tn_locator', '')} — {row.get('final_status', '')}: {row.get('reason_not_integrated', '')}"
+        for row in tn_residual_rows
+    ]
+    notes = f"""# v0.4 candidate release notes (draft)
+
+## Candidate summary
+
+- total records: {summary.get("total_records", 0)}
+- records with any enrichment: {summary.get("records_with_any_enrichment", 0)}
+- records with integrated translations: {summary.get("records_with_translation_integrated", 0)}
+- integrated translation-unit count: {summary.get("translation_units_integrated_count", 0)}
+- SIP source-text witness count (record-level): {summary.get("records_with_sip_source_text_witness", 0)}
+- cross-reference enrichment counts: IOB={summary.get("records_with_iob_crossref", 0)}, List={summary.get("records_with_list_crossref", 0)}, PPA={summary.get("records_with_ppa_candidate", 0)}, TN-candidate={summary.get("records_with_tn_translation_candidate", 0)}
+
+## Sources integrated
+
+{render_markdown_bullets(integrated_sources)}
+
+## Sources excluded or blocked
+
+{render_markdown_bullets(blocked_sources)}
+
+## Residual unresolved TN items
+
+{render_markdown_bullets(residual_lines)}
+
+## Known limitations
+
+- TN residual unresolved cases remain and are preserved as review material only.
+- Rajakumar Mon and Pyu units remain candidate-only until secure corpus-record links are found.
+- Ananda remains out of scope for this release-candidate workflow.
+- This is a draft release candidate and not yet a Zenodo package.
+
+## Pre-release review for Nathan
+
+- Review `tn_unresolved_review_v0_4.tsv` and decide whether any residual TN item should be closed, deferred, or escalated.
+- Spot-check manual hard-case integrations in `tn_manual_resolution_log.tsv` against cited boundaries.
+- Confirm source exclusions (especially Ananda/out-of-scope items) are still desired for this release.
+- Approve record-level and translation-unit counts before any external publication step.
+"""
+    return notes
+
+
+def write_v04_candidate_package(
+    *,
+    enriched_records: list[dict],
+    preview_rows: list[dict],
+    translation_unit_rows: list[dict],
+    tn_residual_rows: list[dict],
+    summary: dict,
+    action_rows: list[dict],
+    output_inscriptions_jsonl: Path,
+    output_translation_units_tsv: Path,
+    output_enrichment_preview_tsv: Path,
+    output_tn_unresolved_review_tsv: Path,
+    output_review_checklist_tsv: Path,
+    output_release_notes_md: Path,
+) -> None:
+    translation_unit_fields = [
+        "translation_unit_id",
+        "source_key",
+        "source_bibliographic_label",
+        "matched_local_file_id",
+        "source_locator",
+        "linked_inscription_id",
+        "linked_corpus_record_id",
+        "translation_language",
+        "translation_text",
+        "translation_status",
+        "link_basis",
+        "confidence",
+        "needs_human_review",
+        "notes",
+    ]
+    write_jsonl(output_inscriptions_jsonl, enriched_records)
+    write_tsv(output_translation_units_tsv, translation_unit_rows, translation_unit_fields)
+    write_tsv(output_enrichment_preview_tsv, preview_rows, PREVIEW_FIELDS)
+    write_tsv(output_tn_unresolved_review_tsv, tn_residual_rows, TN_RESIDUAL_UNRESOLVED_FIELDS)
+    checklist_rows = build_v04_review_checklist_rows(
+        tn_residual_rows=tn_residual_rows,
+        translation_rows=translation_unit_rows,
+    )
+    write_tsv(output_review_checklist_tsv, checklist_rows, V04_REVIEW_CHECKLIST_FIELDS)
+    release_notes = build_v04_release_notes_text(
+        summary=summary,
+        action_rows=action_rows,
+        tn_residual_rows=tn_residual_rows,
+        translation_rows=translation_unit_rows,
+    )
+    output_release_notes_md.parent.mkdir(parents=True, exist_ok=True)
+    output_release_notes_md.write_text(release_notes, encoding="utf-8")
+
+
 def build_tn_translation_integration_preview_rows(
     translation_rows: list[dict],
     record_title_by_id: dict[str, str],
@@ -2231,6 +2428,36 @@ def main() -> None:
         type=Path,
         default=REPO_ROOT / "data" / "working" / "corpus_enrichment" / "tn_translation_integration_preview.tsv",
     )
+    parser.add_argument(
+        "--output-v04-inscriptions-jsonl",
+        type=Path,
+        default=V04_INSCRIPTIONS_CANDIDATE_PATH,
+    )
+    parser.add_argument(
+        "--output-v04-translation-units-tsv",
+        type=Path,
+        default=V04_TRANSLATION_UNITS_CANDIDATE_PATH,
+    )
+    parser.add_argument(
+        "--output-v04-enrichment-preview-tsv",
+        type=Path,
+        default=V04_ENRICHMENT_PREVIEW_CANDIDATE_PATH,
+    )
+    parser.add_argument(
+        "--output-v04-tn-unresolved-review-tsv",
+        type=Path,
+        default=V04_TN_UNRESOLVED_REVIEW_PATH,
+    )
+    parser.add_argument(
+        "--output-v04-review-checklist-tsv",
+        type=Path,
+        default=V04_REVIEW_CHECKLIST_PATH,
+    )
+    parser.add_argument(
+        "--output-v04-release-notes-md",
+        type=Path,
+        default=V04_RELEASE_NOTES_DRAFT_PATH,
+    )
     args = parser.parse_args()
 
     inscriptions = read_jsonl(args.input_inscriptions)
@@ -2355,6 +2582,20 @@ def main() -> None:
         TN_RESIDUAL_UNRESOLVED_FIELDS,
     )
     write_tsv(args.output_tn_preview_tsv, tn_preview_rows, TN_TRANSLATION_INTEGRATION_PREVIEW_FIELDS)
+    write_v04_candidate_package(
+        enriched_records=enriched_records,
+        preview_rows=preview_rows,
+        translation_unit_rows=translation_unit_rows,
+        tn_residual_rows=tn_residual_unresolved_rows,
+        summary=summary,
+        action_rows=action_rows,
+        output_inscriptions_jsonl=args.output_v04_inscriptions_jsonl,
+        output_translation_units_tsv=args.output_v04_translation_units_tsv,
+        output_enrichment_preview_tsv=args.output_v04_enrichment_preview_tsv,
+        output_tn_unresolved_review_tsv=args.output_v04_tn_unresolved_review_tsv,
+        output_review_checklist_tsv=args.output_v04_review_checklist_tsv,
+        output_release_notes_md=args.output_v04_release_notes_md,
+    )
     args.output_summary_json.parent.mkdir(parents=True, exist_ok=True)
     args.output_summary_json.write_text(json.dumps(summary, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(
@@ -2364,6 +2605,7 @@ def main() -> None:
         f"{len(tn_manual_resolution_rows)} TN manual-resolution rows, "
         f"{len(tn_residual_unresolved_rows)} TN residual unresolved rows, "
         f"{len(tn_preview_rows)} TN preview rows, "
+        "and v0.4 draft candidate files, "
         f"and {len(summary)} summary fields."
     )
 

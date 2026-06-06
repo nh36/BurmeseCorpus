@@ -71,6 +71,12 @@ from jbrs_workflow_common import (
     TN_MANUAL_RESOLUTION_LOG_PATH,
     TN_RESIDUAL_UNRESOLVED_PATH,
     TN_TRANSLATION_INTEGRATION_PREVIEW_PATH,
+    V04_INSCRIPTIONS_CANDIDATE_PATH,
+    V04_TRANSLATION_UNITS_CANDIDATE_PATH,
+    V04_ENRICHMENT_PREVIEW_CANDIDATE_PATH,
+    V04_TN_UNRESOLVED_REVIEW_PATH,
+    V04_REVIEW_CHECKLIST_PATH,
+    V04_RELEASE_NOTES_DRAFT_PATH,
     TN_WORKING_OCR_PLAIN_TEXT_PATH,
     TN_WORKING_OCR_CLEANED_TEXT_PATH,
     TN_WORKING_OCR_REPORT_PATH,
@@ -164,6 +170,12 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
         cls.tn_manual_resolution_rows = read_tsv(TN_MANUAL_RESOLUTION_LOG_PATH)
         cls.tn_residual_unresolved_rows = read_tsv(TN_RESIDUAL_UNRESOLVED_PATH)
         cls.tn_translation_preview_rows = read_tsv(TN_TRANSLATION_INTEGRATION_PREVIEW_PATH)
+        cls.v04_candidate_records = read_jsonl(V04_INSCRIPTIONS_CANDIDATE_PATH)
+        cls.v04_translation_unit_rows = read_tsv(V04_TRANSLATION_UNITS_CANDIDATE_PATH)
+        cls.v04_enrichment_preview_rows = read_tsv(V04_ENRICHMENT_PREVIEW_CANDIDATE_PATH)
+        cls.v04_tn_unresolved_rows = read_tsv(V04_TN_UNRESOLVED_REVIEW_PATH)
+        cls.v04_review_checklist_rows = read_tsv(V04_REVIEW_CHECKLIST_PATH)
+        cls.v04_release_notes_text = V04_RELEASE_NOTES_DRAFT_PATH.read_text(encoding="utf-8")
         cls.tn_ocr_metadata_index = json.loads(TN_WORKING_OCR_METADATA_INDEX_PATH.read_text(encoding="utf-8"))
         cls.rajakumar_version_linkage_rows = read_tsv(
             ROOT / "data" / "working" / "corpus_enrichment" / "rajakumar_version_linkage.tsv"
@@ -243,6 +255,12 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
             TN_MANUAL_RESOLUTION_LOG_PATH,
             TN_RESIDUAL_UNRESOLVED_PATH,
             TN_TRANSLATION_INTEGRATION_PREVIEW_PATH,
+            V04_INSCRIPTIONS_CANDIDATE_PATH,
+            V04_TRANSLATION_UNITS_CANDIDATE_PATH,
+            V04_ENRICHMENT_PREVIEW_CANDIDATE_PATH,
+            V04_TN_UNRESOLVED_REVIEW_PATH,
+            V04_REVIEW_CHECKLIST_PATH,
+            V04_RELEASE_NOTES_DRAFT_PATH,
             TN_WORKING_OCR_PLAIN_TEXT_PATH,
             TN_WORKING_OCR_CLEANED_TEXT_PATH,
             TN_WORKING_OCR_REPORT_PATH,
@@ -888,6 +906,52 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
                 ),
                 f"{unit['translation_unit_id']} not found in enriched record {record_id}",
             )
+
+    def test_v04_candidate_outputs_preserve_core_constraints(self) -> None:
+        self.assertEqual(len(self.v04_candidate_records), len(self.corpus_release_records))
+        baseline_by_id = {row["record_id"]: row for row in self.corpus_release_records}
+        v04_by_id = {row["record_id"]: row for row in self.v04_candidate_records}
+        self.assertEqual(set(v04_by_id), set(baseline_by_id))
+        for record_id, baseline in baseline_by_id.items():
+            self.assertEqual(v04_by_id[record_id].get("full_transliteration"), baseline.get("full_transliteration"))
+
+        integrated_units = [row for row in self.translation_unit_rows if row["linked_corpus_record_id"]]
+        v04_unit_ids = {row["translation_unit_id"] for row in self.v04_translation_unit_rows if row["translation_unit_id"]}
+        for unit in integrated_units:
+            self.assertIn(unit["translation_unit_id"], v04_unit_ids)
+
+        unresolved_locators = {
+            row["tn_locator"] for row in self.v04_tn_unresolved_rows if row["tn_locator"]
+        }
+        for row in self.v04_translation_unit_rows:
+            if row["source_key"] != "tnInscriptionsPaganPinyaAva" or not row["linked_corpus_record_id"]:
+                continue
+            locator_match = re.search(r"TN\s*[\d\- ]+(?:\s*\|\s*TN\s*[\d\- ]+)?", row["source_locator"])
+            locator = locator_match.group(0).strip() if locator_match else ""
+            self.assertNotIn(locator, unresolved_locators)
+
+        rajakumar_mon = next(row for row in self.v04_translation_unit_rows if row["translation_unit_id"] == "rajakumar-translation-2001-mon")
+        rajakumar_pyu = next(row for row in self.v04_translation_unit_rows if row["translation_unit_id"] == "rajakumar-translation-2001-pyu")
+        self.assertEqual(rajakumar_mon["linked_corpus_record_id"], "")
+        self.assertEqual(rajakumar_pyu["linked_corpus_record_id"], "")
+        self.assertFalse(any(row["source_key"] == "jbrsAnanda1976" for row in self.v04_translation_unit_rows))
+        self.assertFalse(
+            any(
+                translation.get("source_key") == "jbrsAnanda1976"
+                for record in self.v04_candidate_records
+                for translation in record.get("translations", [])
+            )
+        )
+
+        self.assertTrue(self.v04_review_checklist_rows)
+        self.assertTrue(
+            all(row["status"] in {"needs_human_review", "done", "blocked"} for row in self.v04_review_checklist_rows)
+        )
+        self.assertTrue(
+            all(row["final_status"] and row["reason_not_integrated"] for row in self.v04_tn_unresolved_rows)
+        )
+        self.assertIn("v0.4 candidate release notes", self.v04_release_notes_text)
+        self.assertIn("Residual unresolved TN items", self.v04_release_notes_text)
 
     def test_tn_working_ocr_artifacts_use_relative_paths(self) -> None:
         tracked_paths = [
