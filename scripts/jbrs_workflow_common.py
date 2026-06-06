@@ -97,6 +97,8 @@ ENRICHED_CORPUS_SCHEMA_NOTE_PATH = CORPUS_ENRICHMENT_DIRECTORY / "enriched_corpu
 ENRICHED_CORPUS_CANDIDATE_PATH = CORPUS_ENRICHMENT_DIRECTORY / "inscriptions_enriched_candidate.jsonl"
 ENRICHED_CANDIDATE_PREVIEW_PATH = CORPUS_ENRICHMENT_DIRECTORY / "enriched_candidate_preview.tsv"
 ENRICHED_CANDIDATE_SUMMARY_PATH = CORPUS_ENRICHMENT_DIRECTORY / "enriched_candidate_summary.json"
+TRANSLATION_SOURCE_ACTION_TABLE_PATH = CORPUS_ENRICHMENT_DIRECTORY / "translation_source_action_table.tsv"
+TRANSLATION_UNITS_EXTRACTED_PATH = CORPUS_ENRICHMENT_DIRECTORY / "translation_units_extracted.tsv"
 IOB_SOURCE_KEY = "lucePeMaungTinInscriptionsOfBurma"
 LIST_SOURCE_KEY = "duroiselle1921list"
 PPA_SOURCE_KEY = "ppaCatalogue"
@@ -1081,6 +1083,7 @@ ENRICHED_RECORD_ENRICHMENT_STATUSES = {
     "enriched_with_sip_witnesses",
     "enriched_with_sip_and_crossrefs",
     "enriched_with_sip_and_candidates",
+    "enriched_with_translation",
 }
 ENRICHED_WITNESS_STATUSES = {
     "ocr_clean_for_review",
@@ -1099,6 +1102,49 @@ ENRICHED_TRANSLATION_CANDIDATE_STATUSES = {
     "candidate_source_located",
     "candidate_source_review_pending",
 }
+
+TRANSLATION_SOURCE_ACTION_STATUSES = {
+    "ready_to_extract_translation",
+    "needs_targeted_ocr",
+    "source_missing_acquire_manually",
+    "wrong_source_rejected",
+    "no_translation_present",
+    "needs_human_bibliographic_review",
+}
+
+TRANSLATION_SOURCE_ACTION_TABLE_FIELDS = [
+    "source_key",
+    "bibliographic_label",
+    "local_file_status",
+    "matched_local_file_id",
+    "matched_file_name",
+    "already_ocr_available",
+    "contains_english_translation",
+    "translation_scope",
+    "linked_corpus_record_count",
+    "linked_inscription_count",
+    "action_status",
+    "next_action",
+    "evidence",
+    "notes",
+]
+
+TRANSLATION_UNITS_EXTRACTED_FIELDS = [
+    "translation_unit_id",
+    "source_key",
+    "source_bibliographic_label",
+    "matched_local_file_id",
+    "source_locator",
+    "linked_inscription_id",
+    "linked_corpus_record_id",
+    "translation_language",
+    "translation_text",
+    "translation_status",
+    "link_basis",
+    "confidence",
+    "needs_human_review",
+    "notes",
+]
 ENRICHED_PREVIEW_FIELDS = [
     "linked_corpus_record_id",
     "linked_inscription_id",

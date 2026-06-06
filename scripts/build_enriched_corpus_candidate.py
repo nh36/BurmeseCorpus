@@ -20,6 +20,19 @@ UB_SOURCE_KEY = "ubSourceFamily"
 UB_BIBLIOGRAPHIC_LABEL = "Inscriptions Collected in Upper Burma"
 JBRS_SOURCE_KEY = "journalBurmaResearchSociety"
 JBRS_BIBLIOGRAPHIC_LABEL = "Journal of the Burma Research Society"
+SHWEGUGYI_TRANSLATION_SOURCE_KEY = "jbrsShwegugyi1920"
+SHWEGUGYI_TRANSLATION_BIBLIOGRAPHIC_LABEL = (
+    "U Pe Maung Tin and G. H. Luce, The Shwegugyi Pagoda Inscription, Pagan, 1141 A.D. "
+    "(JBRS 10(2), 1920, pp. 67-74)"
+)
+ANANDA_TRANSLATION_SOURCE_KEY = "jbrsAnanda1976"
+ANANDA_TRANSLATION_BIBLIOGRAPHIC_LABEL = "Ananda Brick Monastery Inscriptions of Pagan"
+FRASCH_MACHINE_TRANSLATION_SOURCE_KEY = "fraschPaganMachineTranslation2004"
+FRASCH_MACHINE_TRANSLATION_BIBLIOGRAPHIC_LABEL = "Tilman Frasch, Pagan: Staat und Staat"
+MYAZEDI_TRANSLATION_SOURCE_KEY = "peMaungTinMyazedi1974"
+MYAZEDI_TRANSLATION_BIBLIOGRAPHIC_LABEL = "U Pe Maung Tin, Myazedi Inscription"
+RAJAKUMAR_TRANSLATION_SOURCE_KEY = "tunAungChainRajakumar2001"
+RAJAKUMAR_TRANSLATION_BIBLIOGRAPHIC_LABEL = "Tun Aung Chain, Rajakumar Inscription"
 
 SOURCE_LABELS = {
     SIP_SOURCE_KEY: SIP_BIBLIOGRAPHIC_LABEL,
@@ -29,6 +42,11 @@ SOURCE_LABELS = {
     LIST_SOURCE_KEY: LIST_BIBLIOGRAPHIC_LABEL,
     UB_SOURCE_KEY: UB_BIBLIOGRAPHIC_LABEL,
     JBRS_SOURCE_KEY: JBRS_BIBLIOGRAPHIC_LABEL,
+    SHWEGUGYI_TRANSLATION_SOURCE_KEY: SHWEGUGYI_TRANSLATION_BIBLIOGRAPHIC_LABEL,
+    ANANDA_TRANSLATION_SOURCE_KEY: ANANDA_TRANSLATION_BIBLIOGRAPHIC_LABEL,
+    FRASCH_MACHINE_TRANSLATION_SOURCE_KEY: FRASCH_MACHINE_TRANSLATION_BIBLIOGRAPHIC_LABEL,
+    MYAZEDI_TRANSLATION_SOURCE_KEY: MYAZEDI_TRANSLATION_BIBLIOGRAPHIC_LABEL,
+    RAJAKUMAR_TRANSLATION_SOURCE_KEY: RAJAKUMAR_TRANSLATION_BIBLIOGRAPHIC_LABEL,
 }
 
 SOURCE_ROLE_BY_KEY = {
@@ -39,6 +57,11 @@ SOURCE_ROLE_BY_KEY = {
     SIP_SOURCE_KEY: "source_text_witness",
     UB_SOURCE_KEY: "catalogue_or_list",
     JBRS_SOURCE_KEY: "commentary_witness",
+    SHWEGUGYI_TRANSLATION_SOURCE_KEY: "translation_witness",
+    ANANDA_TRANSLATION_SOURCE_KEY: "translation_witness",
+    FRASCH_MACHINE_TRANSLATION_SOURCE_KEY: "translation_witness",
+    MYAZEDI_TRANSLATION_SOURCE_KEY: "translation_candidate",
+    RAJAKUMAR_TRANSLATION_SOURCE_KEY: "translation_candidate",
 }
 
 STATUS_BY_KEY = {
@@ -49,6 +72,11 @@ STATUS_BY_KEY = {
     SIP_SOURCE_KEY: "linked",
     UB_SOURCE_KEY: "cited_or_cross_referenced",
     JBRS_SOURCE_KEY: "cited_or_cross_referenced",
+    SHWEGUGYI_TRANSLATION_SOURCE_KEY: "linked",
+    ANANDA_TRANSLATION_SOURCE_KEY: "linked",
+    FRASCH_MACHINE_TRANSLATION_SOURCE_KEY: "cited_or_cross_referenced",
+    MYAZEDI_TRANSLATION_SOURCE_KEY: "needs_manual_review",
+    RAJAKUMAR_TRANSLATION_SOURCE_KEY: "needs_targeted_ocr",
 }
 
 WITNESS_STATUS_BY_QC = {
@@ -65,6 +93,7 @@ ENRICHMENT_STATUSES = {
     "enriched_with_sip_witnesses",
     "enriched_with_sip_and_crossrefs",
     "enriched_with_sip_and_candidates",
+    "enriched_with_translation",
 }
 
 TRANSLATION_STATUSES = {
@@ -148,6 +177,224 @@ def build_crossref_entry(source_key: str, source_locator: str, basis: str) -> di
         "status": STATUS_BY_KEY[source_key],
         "basis": basis,
     }
+
+
+def build_translation_source_action_rows(
+    sip_rows: list[dict],
+    iob_rows: list[dict],
+) -> list[dict]:
+    sip_linked_count = len(
+        {
+            (row.get("linked_corpus_record_id") or row.get("linked_inscription_id") or "").strip()
+            for row in sip_rows
+            if (row.get("linked_corpus_record_id") or row.get("linked_inscription_id") or "").strip()
+        }
+    )
+    sip_inscription_count = len(
+        {
+            (row.get("linked_inscription_id") or row.get("linked_corpus_record_id") or "").strip()
+            for row in sip_rows
+            if (row.get("linked_inscription_id") or row.get("linked_corpus_record_id") or "").strip()
+        }
+    )
+    tn_linked_count = len(
+        {
+            row.get("linked_corpus_record_id", "").strip()
+            for row in iob_rows
+            if row.get("tn_ref") and row.get("linked_corpus_record_id", "").strip()
+        }
+    )
+    ppa_linked_count = len(
+        {
+            row.get("linked_corpus_record_id", "").strip()
+            for row in iob_rows
+            if row.get("ppa_ref") and row.get("linked_corpus_record_id", "").strip()
+        }
+    )
+    iob_linked_count = len(
+        {
+            row.get("linked_corpus_record_id", "").strip()
+            for row in iob_rows
+            if row.get("linked_corpus_record_id", "").strip()
+        }
+    )
+    action_specs = [
+        {
+            "source_key": SHWEGUGYI_TRANSLATION_SOURCE_KEY,
+            "bibliographic_label": SHWEGUGYI_TRANSLATION_BIBLIOGRAPHIC_LABEL,
+            "local_file_status": "matched_local_file_available",
+            "matched_local_file_id": "1920-shwegugyiinscription-luce1920-pdf",
+            "matched_file_name": "ShwegugyiInscription-Luce1920.pdf",
+            "already_ocr_available": "true",
+            "contains_english_translation": "true",
+            "translation_scope": "standalone_inscription_translation",
+            "linked_corpus_record_count": "1",
+            "linked_inscription_count": "1",
+            "action_status": "ready_to_extract_translation",
+            "next_action": "Extend the existing Shwegugyi extraction slice and keep the translation integrated into the enriched corpus record.",
+            "evidence": "jbrs_translation_candidate_review.tsv and jbrs_extracted_translation_units.tsv both confirm a standalone translation section.",
+            "notes": "This is the first local translation slice integrated into the enriched corpus candidate.",
+        },
+        {
+            "source_key": ANANDA_TRANSLATION_SOURCE_KEY,
+            "bibliographic_label": ANANDA_TRANSLATION_BIBLIOGRAPHIC_LABEL,
+            "local_file_status": "matched_local_file_available",
+            "matched_local_file_id": "1976-anandainscriptions-tinlwin1976-pdf",
+            "matched_file_name": "AnandaInscriptions-Tinlwin1976.pdf",
+            "already_ocr_available": "true",
+            "contains_english_translation": "true",
+            "translation_scope": "mixed_inscription_translation",
+            "linked_corpus_record_count": "0",
+            "linked_inscription_count": "0",
+            "action_status": "needs_human_bibliographic_review",
+            "next_action": "Identify the matching structured corpus record before promoting this translation section into the corpus candidate.",
+            "evidence": "jbrs_translation_candidate_review.tsv confirms a standalone translation section in the OCRed article.",
+            "notes": "Translation is present locally, but the corpus record linkage has not been resolved in this slice.",
+        },
+        {
+            "source_key": FRASCH_MACHINE_TRANSLATION_SOURCE_KEY,
+            "bibliographic_label": FRASCH_MACHINE_TRANSLATION_BIBLIOGRAPHIC_LABEL,
+            "local_file_status": "matched_local_file_available",
+            "matched_local_file_id": "frasch_1996_pagan_machineenglishtranslat-6f1791859aa4",
+            "matched_file_name": "Frasch-1996-Pagan-MachineEnglishTranslation-OLD-VERSION.pdf",
+            "already_ocr_available": "true",
+            "contains_english_translation": "true",
+            "translation_scope": "secondary_history_translation",
+            "linked_corpus_record_count": "0",
+            "linked_inscription_count": "0",
+            "action_status": "wrong_source_rejected",
+            "next_action": "Do not treat this as an inscription translation source for the corpus candidate.",
+            "evidence": "The local PDF is a machine translation of Frasch's book, not a direct inscription translation.",
+            "notes": "Useful as background prose only, not as a corpus translation witness.",
+        },
+        {
+            "source_key": MYAZEDI_TRANSLATION_SOURCE_KEY,
+            "bibliographic_label": MYAZEDI_TRANSLATION_BIBLIOGRAPHIC_LABEL,
+            "local_file_status": "matched_local_file_available",
+            "matched_local_file_id": "pemaungtin_1974_myazediinscription-56bbc5aae6bb",
+            "matched_file_name": "PeMaungTin 1974 MyazediInscription.PDF",
+            "already_ocr_available": "false",
+            "contains_english_translation": "false",
+            "translation_scope": "inscription_article_needs_review",
+            "linked_corpus_record_count": "0",
+            "linked_inscription_count": "0",
+            "action_status": "needs_human_bibliographic_review",
+            "next_action": "Inspect the actual article or a better scan before assuming an English translation is present.",
+            "evidence": "The locally copied PDF currently yields only bibliographic metadata in text extraction.",
+            "notes": "This file remains plausible but unconfirmed for translation extraction.",
+        },
+        {
+            "source_key": RAJAKUMAR_TRANSLATION_SOURCE_KEY,
+            "bibliographic_label": RAJAKUMAR_TRANSLATION_BIBLIOGRAPHIC_LABEL,
+            "local_file_status": "matched_local_file_available",
+            "matched_local_file_id": "tun_aung_chain_2001_rajakumar_inscriptio-d55d64ebc41c",
+            "matched_file_name": "Tun Aung Chain 2001 Rajakumar Inscription.pdf",
+            "already_ocr_available": "false",
+            "contains_english_translation": "false",
+            "translation_scope": "inscription_article_needs_targeted_ocr",
+            "linked_corpus_record_count": "0",
+            "linked_inscription_count": "0",
+            "action_status": "needs_targeted_ocr",
+            "next_action": "Run targeted OCR or locate a text-layer copy before promoting it as a translation source.",
+            "evidence": "The local file is present but currently yields no text layer in direct PDF extraction.",
+            "notes": "Likely useful if a better copy is located, but not yet translation-confirmed.",
+        },
+        {
+            "source_key": TN_SOURCE_KEY,
+            "bibliographic_label": TN_BIBLIOGRAPHIC_LABEL,
+            "local_file_status": "missing_local_file",
+            "matched_local_file_id": "",
+            "matched_file_name": "",
+            "already_ocr_available": "false",
+            "contains_english_translation": "true",
+            "translation_scope": "standalone_inscription_translation",
+            "linked_corpus_record_count": str(tn_linked_count),
+            "linked_inscription_count": str(tn_linked_count),
+            "action_status": "source_missing_acquire_manually",
+            "next_action": "Acquire a local scan or photocopy of TN 1899 before attempting translation extraction.",
+            "evidence": "The IOB cross-reference index supplies TN references, but no local TN witness has been confirmed.",
+            "notes": "This remains the high-value missing source for translation integration.",
+        },
+        {
+            "source_key": PPA_SOURCE_KEY,
+            "bibliographic_label": PPA_BIBLIOGRAPHIC_LABEL,
+            "local_file_status": "missing_local_file",
+            "matched_local_file_id": "",
+            "matched_file_name": "",
+            "already_ocr_available": "false",
+            "contains_english_translation": "false",
+            "translation_scope": "edition_or_catalogue_candidate",
+            "linked_corpus_record_count": str(ppa_linked_count),
+            "linked_inscription_count": str(ppa_linked_count),
+            "action_status": "source_missing_acquire_manually",
+            "next_action": "Acquire a local scan or photocopy of PPA if later edition/source-text comparison is needed.",
+            "evidence": "The IOB cross-reference index supplies PPA references, but no local PPA witness has been confirmed.",
+            "notes": "Use as a bibliography/source-text lead, not as an English translation source yet.",
+        },
+        {
+            "source_key": SIP_SOURCE_KEY,
+            "bibliographic_label": SIP_BIBLIOGRAPHIC_LABEL,
+            "local_file_status": "matched_local_file_available",
+            "matched_local_file_id": "luce_pemaungtin_1928_inscriptions_of_pag-da9f6d6d89b3",
+            "matched_file_name": "Luce&PeMaungTin 1928 inscriptions of Pagan.pdf",
+            "already_ocr_available": "true",
+            "contains_english_translation": "false",
+            "translation_scope": "source_text_only",
+            "linked_corpus_record_count": str(sip_linked_count),
+            "linked_inscription_count": str(sip_inscription_count),
+            "action_status": "no_translation_present",
+            "next_action": "Keep SIP as source-text witness evidence only.",
+            "evidence": "Accepted SIP witness units confirm source text but no English inscription translation.",
+            "notes": "SIP remains provenance for source text, not translation.",
+        },
+        {
+            "source_key": IOB_SOURCE_KEY,
+            "bibliographic_label": IOB_BIBLIOGRAPHIC_LABEL,
+            "local_file_status": "matched_local_file_available",
+            "matched_local_file_id": "inscriptions_of_burma-b7c07d9f6d02",
+            "matched_file_name": "Inscriptions of Burma.pdf",
+            "already_ocr_available": "true",
+            "contains_english_translation": "false",
+            "translation_scope": "plate_index_only",
+            "linked_corpus_record_count": str(iob_linked_count),
+            "linked_inscription_count": str(iob_linked_count),
+            "action_status": "no_translation_present",
+            "next_action": "Keep IOB as a cross-reference witness only.",
+            "evidence": "The repo-safe OCR metadata marks IOB as a plate-index cross-reference rather than an extractable inscription translation.",
+            "notes": "Useful for concordance and plate linking, not translation extraction.",
+        },
+    ]
+
+    rows: list[dict] = []
+    for spec in action_specs:
+        rows.append(spec)
+    return rows
+
+
+def build_translation_units_extracted_rows(translation_units: list[dict]) -> list[dict]:
+    rows: list[dict] = []
+    for unit in translation_units:
+        if unit.get("source_local_file_id") != "1920-shwegugyiinscription-luce1920-pdf":
+            continue
+        rows.append(
+            {
+                "translation_unit_id": "jbrs-translation-unit-20260531-001",
+                "source_key": SHWEGUGYI_TRANSLATION_SOURCE_KEY,
+                "source_bibliographic_label": SHWEGUGYI_TRANSLATION_BIBLIOGRAPHIC_LABEL,
+                "matched_local_file_id": unit.get("source_local_file_id", ""),
+                "source_locator": "JBRS 10(2), 1920, pp. 67-74; page 1",
+                "linked_inscription_id": "obi-v01-n0004-ob-p0011",
+                "linked_corpus_record_id": "obi-v01-n0004-ob-p0011",
+                "translation_language": unit.get("translation_language", "English"),
+                "translation_text": unit.get("translation_text", ""),
+                "translation_status": "published_translation",
+                "link_basis": "JBRS 10(2), 1920, pp. 67-74 explicitly matches the Shwegugyi Pagoda Inscription corpus record.",
+                "confidence": "high",
+                "needs_human_review": "false",
+                "notes": "Dry-run extracted translation unit integrated into the enriched corpus candidate as the first translation slice.",
+            }
+        )
+    return rows
 
 
 def build_crossrefs_from_iob_row(row: dict) -> tuple[list[dict], dict]:
@@ -263,7 +510,9 @@ def build_translation_candidates(crossrefs: list[dict]) -> list[dict]:
     return deduped
 
 
-def choose_enrichment_status(has_sip: bool, has_crossrefs: bool, has_tn_candidates: bool) -> str:
+def choose_enrichment_status(has_sip: bool, has_crossrefs: bool, has_tn_candidates: bool, has_translation: bool) -> str:
+    if has_translation and not (has_sip or has_crossrefs or has_tn_candidates):
+        return "enriched_with_translation"
     if has_sip and has_tn_candidates:
         return "enriched_with_sip_and_candidates"
     if has_sip and has_crossrefs:
@@ -274,6 +523,8 @@ def choose_enrichment_status(has_sip: bool, has_crossrefs: bool, has_tn_candidat
         return "enriched_with_bibliographic_crossrefs_and_candidates"
     if has_crossrefs:
         return "enriched_with_bibliographic_crossrefs"
+    if has_translation:
+        return "enriched_with_translation"
     return "baseline_no_enrichment"
 
 
@@ -288,7 +539,14 @@ def build_preview_row(record: dict, sip_rows: list[dict], crossrefs: list[dict],
     record_ppa_refs = [row.get("ppa_ref", "") for row in sip_rows]
     record_tn_refs = [row.get("tn_ref", "") for row in sip_rows]
 
-    if sip_rows and crossrefs:
+    has_translation = bool(record.get("translations"))
+    if has_translation and sip_rows and crossrefs:
+        preview_note = "Published English translation integrated with SIP witness and IOB cross-reference evidence."
+    elif has_translation and crossrefs:
+        preview_note = "Published English translation integrated with IOB cross-reference evidence."
+    elif has_translation:
+        preview_note = "Published English translation integrated."
+    elif sip_rows and crossrefs:
         preview_note = "SIP source-text witness and IOB cross-reference enrichment."
     elif sip_rows:
         preview_note = "SIP source-text witness integrated."
@@ -297,7 +555,7 @@ def build_preview_row(record: dict, sip_rows: list[dict], crossrefs: list[dict],
     else:
         preview_note = "IOB cross-reference enrichment."
 
-    translation_status = "translation_source_missing" if translation_candidates else "no_translation_known"
+    translation_status = record.get("translation_status", "no_translation_known")
 
     return {
         "linked_corpus_record_id": record["record_id"],
@@ -309,7 +567,7 @@ def build_preview_row(record: dict, sip_rows: list[dict], crossrefs: list[dict],
         "source_text_witness_count": str(len(sip_rows)),
         "has_bibliographic_crossrefs": "true" if crossrefs else "false",
         "crossref_sources": join_unique(crossref_labels),
-        "has_translation": "true" if record.get("translations") else "false",
+        "has_translation": "true" if has_translation else "false",
         "translation_status": translation_status,
         "translation_candidate_sources": join_unique(candidate_labels),
         "translation_candidate_locators": join_unique(candidate_locators),
@@ -327,6 +585,7 @@ def build_enriched_records(
     inscriptions: list[dict],
     sip_rows: list[dict],
     crossref_rows: list[dict],
+    translation_unit_rows: list[dict],
 ) -> tuple[list[dict], list[dict], dict[str, int]]:
     sip_by_record: dict[str, list[dict]] = {}
     for row in sip_rows:
@@ -336,11 +595,17 @@ def build_enriched_records(
 
     crossref_by_record: dict[str, list[dict]] = {}
     iob_rows_by_record: dict[str, list[dict]] = {}
+    translation_unit_by_record: dict[str, list[dict]] = {}
     for row in crossref_rows:
         record_id = (row.get("linked_corpus_record_id") or "").strip()
         if not record_id:
             continue
         iob_rows_by_record.setdefault(record_id, []).append(row)
+    for row in translation_unit_rows:
+        record_id = (row.get("linked_corpus_record_id") or "").strip()
+        if not record_id:
+            continue
+        translation_unit_by_record.setdefault(record_id, []).append(row)
 
     enriched_records: list[dict] = []
     preview_rows: list[dict] = []
@@ -348,6 +613,7 @@ def build_enriched_records(
         record_id = record.get("record_id", "")
         record_iob_rows = iob_rows_by_record.get(record_id, [])
         record_sip_rows = sip_by_record.get(record_id, [])
+        record_translation_units = translation_unit_by_record.get(record_id, [])
 
         crossrefs: list[dict] = []
         candidate_summary = {
@@ -365,7 +631,7 @@ def build_enriched_records(
             for key, value in row_summary.items():
                 candidate_summary[key] = candidate_summary[key] or value
 
-        if not crossrefs and not record_sip_rows:
+        if not crossrefs and not record_sip_rows and not record_translation_units:
             enriched_records.append(record)
             continue
 
@@ -384,16 +650,34 @@ def build_enriched_records(
         if translation_candidates:
             enriched["translation_source_candidates"] = translation_candidates
 
-        enriched["translations"] = []
-        enriched["translation_status"] = (
-            "translation_source_missing"
-            if translation_candidates
-            else "no_translation_known"
-        )
+        if record_translation_units:
+            translations: list[dict] = []
+            for translation_row in record_translation_units:
+                translations.append(
+                    {
+                        "language": translation_row.get("translation_language", "English"),
+                        "text": translation_row.get("translation_text", ""),
+                        "source_key": translation_row.get("source_key", ""),
+                        "source_bibliographic_label": translation_row.get("source_bibliographic_label", ""),
+                        "source_locator": translation_row.get("source_locator", ""),
+                        "translation_status": translation_row.get("translation_status", "published_translation"),
+                        "notes": translation_row.get("notes", ""),
+                    }
+                )
+            enriched["translations"] = translations
+            enriched["translation_status"] = "translation_integrated"
+        else:
+            enriched["translations"] = []
+            enriched["translation_status"] = (
+                "translation_source_missing"
+                if translation_candidates
+                else "no_translation_known"
+            )
         enriched["enrichment_status"] = choose_enrichment_status(
             has_sip=bool(sip_witnesses),
             has_crossrefs=bool(crossrefs),
             has_tn_candidates=bool(translation_candidates),
+            has_translation=bool(record_translation_units),
         )
         enriched["enrichment_notes"] = (
             "SIP witness provenance integrated; "
@@ -406,10 +690,12 @@ def build_enriched_records(
         )
         if translation_candidates:
             enriched["enrichment_notes"] += " TN translation candidate preserved without adding translation text."
+        if record_translation_units:
+            enriched["enrichment_notes"] += " Published translation integrated from a local JBRS article."
 
         enriched_records.append(enriched)
         preview_rows.append(
-            build_preview_row(record, record_sip_rows, crossrefs, translation_candidates)
+            build_preview_row(enriched, record_sip_rows, crossrefs, translation_candidates)
         )
 
     summary = {
@@ -490,19 +776,73 @@ def main() -> None:
         type=Path,
         default=REPO_ROOT / "data" / "working" / "corpus_enrichment" / "enriched_candidate_summary.json",
     )
+    parser.add_argument(
+        "--output-translation-actions-tsv",
+        type=Path,
+        default=REPO_ROOT / "data" / "working" / "corpus_enrichment" / "translation_source_action_table.tsv",
+    )
+    parser.add_argument(
+        "--output-translation-units-tsv",
+        type=Path,
+        default=REPO_ROOT / "data" / "working" / "corpus_enrichment" / "translation_units_extracted.tsv",
+    )
     args = parser.parse_args()
 
     inscriptions = read_jsonl(args.input_inscriptions)
     sip_rows = read_tsv(args.sip_accepted_path)
     crossref_rows = read_tsv(args.iob_crossref_path)
+    extracted_translation_units = read_tsv(REPO_ROOT / "data" / "working" / "bibliography" / "jbrs" / "jbrs_extracted_translation_units.tsv")
+    translation_unit_rows = build_translation_units_extracted_rows(extracted_translation_units)
 
-    enriched_records, preview_rows, summary = build_enriched_records(inscriptions, sip_rows, crossref_rows)
+    enriched_records, preview_rows, summary = build_enriched_records(
+        inscriptions,
+        sip_rows,
+        crossref_rows,
+        translation_unit_rows,
+    )
+    action_rows = build_translation_source_action_rows(
+        sip_rows,
+        crossref_rows,
+    )
     write_jsonl(args.output_jsonl, enriched_records)
     write_tsv(args.output_preview_tsv, preview_rows, PREVIEW_FIELDS)
+    write_tsv(args.output_translation_actions_tsv, action_rows, [
+        "source_key",
+        "bibliographic_label",
+        "local_file_status",
+        "matched_local_file_id",
+        "matched_file_name",
+        "already_ocr_available",
+        "contains_english_translation",
+        "translation_scope",
+        "linked_corpus_record_count",
+        "linked_inscription_count",
+        "action_status",
+        "next_action",
+        "evidence",
+        "notes",
+    ])
+    write_tsv(args.output_translation_units_tsv, translation_unit_rows, [
+        "translation_unit_id",
+        "source_key",
+        "source_bibliographic_label",
+        "matched_local_file_id",
+        "source_locator",
+        "linked_inscription_id",
+        "linked_corpus_record_id",
+        "translation_language",
+        "translation_text",
+        "translation_status",
+        "link_basis",
+        "confidence",
+        "needs_human_review",
+        "notes",
+    ])
     args.output_summary_json.parent.mkdir(parents=True, exist_ok=True)
     args.output_summary_json.write_text(json.dumps(summary, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(
         f"Wrote {len(enriched_records)} enriched records, {len(preview_rows)} preview rows, "
+        f"{len(action_rows)} translation action rows, {len(translation_unit_rows)} translation units, "
         f"and {len(summary)} summary fields."
     )
 

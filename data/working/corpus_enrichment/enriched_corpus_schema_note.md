@@ -67,7 +67,7 @@ Record-level translation availability status:
 
 ### 4. `translations`
 
-Whole-inscription translation array (empty for SIP-linked records at present):
+Whole-inscription translation array. The first working slice is already populated for the Shwegugyi record:
 
 - `language`
 - `text`
@@ -91,7 +91,7 @@ Optional array used when translation evidence is cited but source is missing.
 
 Lightweight record-level enrichment marker and note:
 
-- `enrichment_status` values used now: `baseline_no_enrichment`, `enriched_with_bibliographic_crossrefs`, `enriched_with_bibliographic_crossrefs_and_candidates`, `enriched_with_sip_witnesses`, `enriched_with_sip_and_crossrefs`, `enriched_with_sip_and_candidates`
+- `enrichment_status` values used now: `baseline_no_enrichment`, `enriched_with_bibliographic_crossrefs`, `enriched_with_bibliographic_crossrefs_and_candidates`, `enriched_with_sip_witnesses`, `enriched_with_sip_and_crossrefs`, `enriched_with_sip_and_candidates`, `enriched_with_translation`
 - `enrichment_notes` is a short provenance note for enrichment decisions
 
 ## SIP-first, then cross-reference enrichment
@@ -99,6 +99,7 @@ Lightweight record-level enrichment marker and note:
 - Build `inscriptions_enriched_candidate.jsonl` from `corpus_release_v0_3/inscriptions.jsonl`.
 - Enrich records linked by `sip_accepted_witness_units.tsv` with `source_text_witnesses`.
 - Enrich records linked by `inscriptions_of_burma_cross_reference_index.tsv` with `bibliographic_crossrefs`.
+- Enrich records linked to a reviewed local translation unit with `translations` and `translation_status = translation_integrated`.
 - Preserve all existing corpus fields exactly (no overwrite of existing transcription or metadata fields).
 - Leave unlinked records unchanged.
 
@@ -107,7 +108,7 @@ Lightweight record-level enrichment marker and note:
 When TN witness text is acquired and extracted:
 
 1. Keep existing SIP `source_text_witnesses` entries.
-2. Add TN translation entries directly to `translations`.
+2. Add TN translation entries directly to `translations`, alongside any existing Shwegugyi-style integrated translations.
 3. Update `translation_status` to `translation_integrated` or `translation_needs_review`.
 4. Remove/resolve corresponding `translation_source_candidates` rows as they become integrated.
 

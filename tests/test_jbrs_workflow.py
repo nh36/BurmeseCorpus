@@ -61,6 +61,8 @@ from jbrs_workflow_common import (
     ENRICHED_CORPUS_CANDIDATE_PATH,
     ENRICHED_CANDIDATE_PREVIEW_PATH,
     ENRICHED_CANDIDATE_SUMMARY_PATH,
+    TRANSLATION_SOURCE_ACTION_TABLE_PATH,
+    TRANSLATION_UNITS_EXTRACTED_PATH,
     PPA_SOURCE_HUNT_PATH,
     SIP_CROSS_REFERENCE_TARGETS_PATH,
     SIP_ACCEPTED_WITNESS_UNITS_PATH,
@@ -136,6 +138,8 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
         cls.enriched_candidate_records = read_jsonl(ENRICHED_CORPUS_CANDIDATE_PATH)
         cls.enriched_preview_rows = read_tsv(ENRICHED_CANDIDATE_PREVIEW_PATH)
         cls.enriched_summary = json.loads(ENRICHED_CANDIDATE_SUMMARY_PATH.read_text(encoding="utf-8"))
+        cls.translation_action_rows = read_tsv(TRANSLATION_SOURCE_ACTION_TABLE_PATH)
+        cls.translation_unit_rows = read_tsv(TRANSLATION_UNITS_EXTRACTED_PATH)
         cls.ocr_text_index_rows = read_tsv(JBRS_OCR_TEXT_INDEX_PATH)
         cls.ocr_translation_hit_rows = read_tsv(JBRS_OCR_TRANSLATION_HIT_INDEX_PATH)
         cls.ocr_top_candidate_rows = read_tsv(JBRS_OCR_TOP_EXTRACTION_CANDIDATES_PATH)
@@ -195,6 +199,8 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
             ENRICHED_CORPUS_CANDIDATE_PATH,
             ENRICHED_CANDIDATE_PREVIEW_PATH,
             ENRICHED_CANDIDATE_SUMMARY_PATH,
+            TRANSLATION_SOURCE_ACTION_TABLE_PATH,
+            TRANSLATION_UNITS_EXTRACTED_PATH,
             CORPUS_RELEASE_INSCRIPTIONS_PATH,
             JBRS_OCR_TEXT_INDEX_PATH,
             JBRS_OCR_TRANSLATION_HIT_INDEX_PATH,
@@ -568,15 +574,29 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
                     self.assertTrue(crossref["basis"])
 
             if enriched_row.get("translation_source_candidates"):
-                self.assertEqual(enriched_row["translation_status"], "translation_source_missing")
-                for candidate in enriched_row["translation_source_candidates"]:
-                    self.assertTrue(candidate["source_key"])
-                    self.assertTrue(candidate["source_bibliographic_label"])
-                    self.assertTrue(candidate["status"])
-                    self.assertTrue(candidate["basis"])
-                    self.assertTrue(candidate.get("source_locator_hint"))
+                if enriched_row["translation_status"] == "translation_source_missing":
+                    for candidate in enriched_row["translation_source_candidates"]:
+                        self.assertTrue(candidate["source_key"])
+                        self.assertTrue(candidate["source_bibliographic_label"])
+                        self.assertTrue(candidate["status"])
+                        self.assertTrue(candidate["basis"])
+                        self.assertTrue(candidate.get("source_locator_hint"))
+                elif enriched_row["translation_status"] != "translation_integrated":
+                    self.fail(
+                        f"{record_id} has translation candidates but unexpected status {enriched_row['translation_status']}"
+                    )
             elif enriched_row.get("translation_status") == "translation_source_missing":
                 self.fail(f"{record_id} is missing translation_source_candidates")
+
+            if enriched_row["translation_status"] == "translation_integrated":
+                self.assertTrue(enriched_row.get("translations"))
+                for translation in enriched_row["translations"]:
+                    self.assertTrue(translation["language"])
+                    self.assertTrue(translation["text"])
+                    self.assertTrue(translation["source_key"])
+                    self.assertTrue(translation["source_bibliographic_label"])
+                    self.assertTrue(translation["source_locator"])
+                    self.assertEqual(translation["translation_status"], "published_translation")
 
     def test_enriched_preview_rows_cover_sip_links_only(self) -> None:
         enriched_record_ids = {
@@ -593,9 +613,32 @@ class JBRSWorkflowArtifactTests(unittest.TestCase):
         for row in self.enriched_preview_rows:
             self.assertIn(row["has_source_text_witness"], {"true", "false"})
             self.assertIn(row["has_bibliographic_crossrefs"], {"true", "false"})
+            self.assertIn(row["has_translation"], {"true", "false"})
             self.assertIn(row["translation_status"], common.ENRICHED_RECORD_TRANSLATION_STATUSES)
             self.assertTrue(row["title_or_label"])
-            self.assertTrue(row["crossref_sources"] or row["has_source_text_witness"] == "true")
+            self.assertTrue(
+                row["crossref_sources"]
+                or row["has_source_text_witness"] == "true"
+                or row["has_translation"] == "true"
+            )
+
+    def test_translation_action_table_and_units_are_populated(self) -> None:
+        self.assertGreaterEqual(len(self.translation_action_rows), 8)
+        self.assertGreaterEqual(len(self.translation_unit_rows), 1)
+        self.assertTrue(all(row["action_status"] in common.TRANSLATION_SOURCE_ACTION_STATUSES for row in self.translation_action_rows))
+        self.assertTrue(all(row["source_key"] for row in self.translation_action_rows))
+        self.assertTrue(all(row["bibliographic_label"] for row in self.translation_action_rows))
+        self.assertTrue(all(row["local_file_status"] for row in self.translation_action_rows))
+        self.assertTrue(all(row["matched_local_file_id"] or row["action_status"] == "source_missing_acquire_manually" for row in self.translation_action_rows))
+        shwegugyi_action = next(row for row in self.translation_action_rows if row["source_key"] == "jbrsShwegugyi1920")
+        self.assertEqual(shwegugyi_action["action_status"], "ready_to_extract_translation")
+        tn_action = next(row for row in self.translation_action_rows if row["source_key"] == "tnInscriptionsPaganPinyaAva")
+        self.assertEqual(tn_action["action_status"], "source_missing_acquire_manually")
+        shwegugyi_unit = next(row for row in self.translation_unit_rows if row["source_key"] == "jbrsShwegugyi1920")
+        self.assertEqual(shwegugyi_unit["linked_corpus_record_id"], "obi-v01-n0004-ob-p0011")
+        self.assertEqual(shwegugyi_unit["translation_status"], "published_translation")
+        self.assertTrue(shwegugyi_unit["translation_text"])
+        self.assertIn("Reverence to the Buddha", shwegugyi_unit["translation_text"])
 
     def test_enriched_summary_counts_match_artifacts(self) -> None:
         enriched_by_id = {row["record_id"]: row for row in self.enriched_candidate_records}
