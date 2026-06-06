@@ -3,9 +3,9 @@
 ## Candidate summary
 
 - total records: 1152
-- records with any enrichment: 67
-- records with integrated translations: 25
-- integrated translation-unit count: 28
+- records with any enrichment: 68
+- records with integrated translations: 26
+- integrated translation-unit count: 29
 - SIP source-text witness count (record-level): 5
 - cross-reference enrichment counts: IOB=63, List=43, PPA=21, TN-candidate=21
 
@@ -26,8 +26,7 @@
 
 ## Residual unresolved TN items
 
-- TN 6 — translation_fragment_without_secure_locator: translation_fragment_without_secure_locator
-- TN 70-71 — probable_overlap_but_no_record_link: probable_overlap_but_no_record_link
+- TN 70-71 — translation_fragment_without_secure_locator: translation_fragment_without_secure_locator
 
 ## Known limitations
 

@@ -1,6 +1,6 @@
 {
   "total_records": 1152,
-  "records_with_any_enrichment": 67,
+  "records_with_any_enrichment": 68,
   "records_with_sip_source_text_witness": 5,
   "records_with_iob_crossref": 63,
   "records_with_list_crossref": 43,
@@ -8,9 +8,9 @@
   "records_with_tn_translation_candidate": 21,
   "records_with_translation_status_no_translation_known": 42,
   "records_with_translation_status_translation_source_missing": 0,
-  "records_with_translation_integrated": 25,
+  "records_with_translation_integrated": 26,
   "records_with_existing_full_transliteration": 1121,
-  "translation_units_integrated_count": 28,
+  "translation_units_integrated_count": 29,
   "published_translation_units_integrated_count": 3,
-  "published_partial_translation_units_integrated_count": 25
+  "published_partial_translation_units_integrated_count": 26
 }

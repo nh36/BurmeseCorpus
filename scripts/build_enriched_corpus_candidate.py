@@ -271,6 +271,28 @@ TN_TRANSLATION_UNIT_SPECS = [
         "end_anchor": "No. (4).",
     },
     {
+        "translation_unit_id": "tn-translation-1899-plate-lxxi-tn-6-no-12",
+        "tn_locator": "TN 6",
+        "iob_plate": "Plate LXXI",
+        "linked_inscription_id": "obi-v01-n0148",
+        "linked_corpus_record_id": "obi-v01-n0148-ob-p0249",
+        "translation_status": "published_partial_translation",
+        "start_anchor": "No. (12).",
+        "end_anchor": "No. (13A.).",
+        "allow_locator_only_match": "true",
+        "source_locator_override": "TN 6 (No. (12) segment; Plate LXXI / List 224 / PPA 17; OCR page 19)",
+        "link_basis": (
+            "Manual TN page/image inspection of printed page 6 (OCR page 19) isolates No. (12) as a bounded segment; "
+            "structured record obi-v01-n0148-ob-p0249 cites TN, p. 6 with List 224 / PPA 17 / IOB1-71 (Pl. I 71-72), "
+            "matching date, locality, and inscription profile."
+        ),
+        "confidence": "high",
+        "notes": (
+            "version_label=TN locator TN 6; subentry=No. (12) only; source_iob_plate=Plate LXXI; "
+            "linked via TN p.6 / List 224 / PPA 17 / IOB1-71 concordance."
+        ),
+    },
+    {
         "translation_unit_id": "tn-translation-1899-plate-cv-a-tn-30-86-87",
         "tn_locator": "TN 30 | TN 86-87",
         "iob_plate": "Plate CV a",
@@ -429,25 +451,24 @@ TN_CANDIDATE_RESOLUTION_OVERRIDES: dict[str, dict[str, str]] = {
         "notes": "page_image_inspection=attempted; inspected pages 83; overlap_unit=tn-translation-1899-plate-xlv-tn-70.",
     },
     "TN 70-71": {
-        "reason_uncertain": "probable_overlap_but_no_record_link",
+        "reason_uncertain": "translation_fragment_without_secure_locator",
         "recommended_human_action": (
-            "Keep unresolved: this span appears to continue nearby TN material, but no single structured record can "
-            "be linked with secure boundaries from current OCR and concordance evidence."
+            "Keep unresolved: TN 70-71 is a mixed span that overlaps integrated No. (5) and then continues into "
+            "No. (6)/(7) without a secure standalone locator-to-record linkage for the non-overlap segment."
         ),
-        "notes": "page_image_inspection=attempted; inspected pages 83-84; continuation text crosses nearby entries without a secure standalone record match.",
+        "notes": (
+            "page_image_inspection=attempted; inspected pages 83-85 with targeted Tesseract OCR on pages 83-84; "
+            "span includes end of No. (5), full No. (6), and start of No. (7), so the non-overlap part cannot be "
+            "safely linked as a standalone structured-record translation."
+        ),
     },
     "TN 80 | TN 6": {
         "reason_uncertain": "confirmed_duplicate_or_overlap",
-        "recommended_human_action": "Treat as composite overlap: TN 80 overlaps integrated text; TN 6 remains unlinked.",
-        "notes": "page_image_inspection=attempted; inspected disjoint pages 93 and 19; overlap_unit=tn-translation-1899-plate-xxvii-tn-80.",
-    },
-    "TN 6": {
-        "reason_uncertain": "translation_fragment_without_secure_locator",
         "recommended_human_action": (
-            "Keep unresolved: TN 6 points into continuation/fragment material (No. 13A/B/C context) without a safely "
-            "extractable standalone translation segment for one structured record."
+            "Treat as composite overlap around TN 80; this mixed locator should not be used for additional linkage "
+            "now that TN 6 is resolved through a separate bounded No. (12) segment."
         ),
-        "notes": "page_image_inspection=attempted; inspected page 19; text is continuation-heavy and does not expose a secure standalone boundary.",
+        "notes": "page_image_inspection=attempted; inspected disjoint pages 93 and 19; overlap_unit=tn-translation-1899-plate-xxvii-tn-80.",
     },
     "TN 80-81": {
         "reason_uncertain": "confirmed_duplicate_or_overlap",
@@ -456,7 +477,7 @@ TN_CANDIDATE_RESOLUTION_OVERRIDES: dict[str, dict[str, str]] = {
     },
 }
 
-TN_CANDIDATE_REVIEW_SUPPRESSED_LOCATORS = {"TN 73-76", "TN 81"}
+TN_CANDIDATE_REVIEW_SUPPRESSED_LOCATORS = {"TN 73-76", "TN 81", "TN 6"}
 TN_CANDIDATE_REVIEW_LOCATORS = {
     "TN 73-76",
     "TN 76-79",
@@ -505,9 +526,19 @@ TN_MANUAL_EXISTING_STATUS_BY_LOCATOR = {
 }
 
 TN_MANUAL_NOTES_OVERRIDES = {
+    "TN 6": (
+        "Manual page/image inspection of printed page 6 (OCR page 19) isolates No. (12) as a bounded segment "
+        "(southern porch of Thate-Môkku, CS 595) and supports linkage to obi-v01-n0148-ob-p0249 via TN p. 6 / "
+        "List 224 / PPA 17 / IOB1-71 concordance."
+    ),
     "TN 73-76": (
         "Manual page/image inspection of OCR pages 86-89 isolates Plate I No. (1) "
         "and supports linkage to obi-v01-n0004-ob-p0011."
+    ),
+    "TN 70-71": (
+        "Manual inspection of OCR pages 83-85 confirms TN 70-71 is a multi-entry span crossing No. (5), No. (6), "
+        "and No. (7): No. (5) overlaps integrated tn-translation-1899-plate-xlv-tn-70, while the remaining segment "
+        "lacks secure standalone structured-record linkage."
     ),
     "TN 81": (
         "Manual page/image inspection of OCR page 94 isolates No. (6) "
